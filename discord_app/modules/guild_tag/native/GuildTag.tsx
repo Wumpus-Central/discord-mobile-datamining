@@ -1,31 +1,31 @@
-// === Module 8830: GuildTag ===
+// === Module 8839: GuildTag ===
 
-// Module 8830 (GuildTag)
+// Module 8839 (GuildTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import GuildTagUtils from "GuildTagUtils" /* 8265 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import GuildTagUtils from "GuildTagUtils" /* 8273 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildTagBadgeSize = fn(7860).GuildTagBadgeSize;
+let GuildTagBadgeSize = fn(7869).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 }, tag: null };
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1382);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
 let obj4 = { lineHeight: num, textAlignVertical: null, overflow: "hidden" };
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1382);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

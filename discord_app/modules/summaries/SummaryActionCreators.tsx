@@ -1,16 +1,16 @@
-// === Module 9627: SummaryActionCreators ===
+// === Module 9646: SummaryActionCreators ===
 
-// Module 9627 (SummaryActionCreators)
+// Module 9646 (SummaryActionCreators)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import SummaryStore from "SummaryStore" /* 9572 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import SummaryStore from "SummaryStore" /* 9585 */;
 
 require = fn;
 function fetchSummary() {
@@ -441,7 +441,7 @@ let closure_18 = async function _fetchSummariesBulk(arg0) {
     flag2 = true;
   }
   closure_131_2 = flag2;
-  return "Reflect";
+  return "Set";
 };
 let closure_20 = async function _deleteSummary(arg0) {
   if (c6 === 2) {

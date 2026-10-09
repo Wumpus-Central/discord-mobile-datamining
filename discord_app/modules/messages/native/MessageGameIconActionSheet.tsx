@@ -1,18 +1,18 @@
-// === Module 11424: MessageGameIconActionSheet ===
+// === Module 11331: MessageGameIconActionSheet ===
 
-// Module 11424 (MessageGameIconActionSheet)
+// Module 11331 (MessageGameIconActionSheet)
 import nativeDefault from "native" /* 587 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
 
 const require = fn;
 const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
-const PlatformUtils = fn(1381);
+const createStyles = fn(5091);
+const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageG
                   const obj5 = { startExpanded: true, children: null };
                   const obj6 = { style: contentWrapper, children: tmp30 };
                   obj5.children = closure_6(View, obj6);
-                  const tmp37 = closure_6(tmp(6829).BottomSheet, obj5);
+                  const tmp37 = closure_6(tmp(6836).BottomSheet, obj5);
                   cResult[27] = tmp4.contentWrapper;
                   cResult[28] = tmp30;
                   cResult[29] = tmp37;
@@ -159,14 +159,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageG
         const obj10 = { variant: "text-sm/medium", children: null };
         const items3 = [tmp17, " ", tmp19];
         obj10.children = items3;
-        const tmp25 = closure_7(tmp(5086).Text, obj10);
+        const tmp25 = closure_7(tmp(5087).Text, obj10);
         cResult[16] = tmp17;
         cResult[17] = tmp19;
         cResult[18] = tmp25;
         tmp23 = tmp25;
       }
       const obj11 = { style: tmp4.timestamp, variant: "text-xs/medium", color: "text-muted", children: messageTimestamp };
-      const tmp16 = closure_6(tmp(5086).Text, obj11);
+      const tmp16 = closure_6(tmp(5087).Text, obj11);
       cResult[10] = messageTimestamp;
       cResult[11] = tmp4.timestamp;
       cResult[12] = tmp16;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageG
     const items1 = [closure_6(tmp2(1200).Icon, obj4), ];
     const obj7 = { style: tmp.gameDescriptionWrapper, children: null };
     const obj8 = { style: tmp.timestamp, variant: "text-xs/medium", color: "text-muted", children: applicationId.messageTimestamp };
-    const items2 = [closure_6(tmp2(5086).Text, obj8), ];
+    const items2 = [closure_6(tmp2(5087).Text, obj8), ];
     const obj9 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1126).intl;
     const obj10 = { applicationName: stateFromStores.name };
@@ -212,13 +212,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageG
     const obj11 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     items3[2] = intl2.format(tmp2(1126).t.BPDKoA, obj11);
     obj9.children = items3;
-    items2[1] = closure_7(tmp2(5086).Text, obj9);
+    items2[1] = closure_7(tmp2(5087).Text, obj9);
     obj7.children = items2;
     items1[1] = closure_7(View, obj7);
     obj3.children = items1;
     obj2.children = closure_7(View, obj3);
     obj5.children = closure_6(View, obj2);
-    tmp5Result = closure_6(tmp2(6829).BottomSheet, obj5);
+    tmp5Result = closure_6(tmp2(6836).BottomSheet, obj5);
   }
   return tmp5Result;
 });

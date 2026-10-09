@@ -1,7 +1,7 @@
-// === Module 16947: conjurePlanBot ===
+// === Module 17079: conjurePlanBot ===
 
-// Module 16947 (conjurePlanBot)
-import Server from "Server" /* 1997 */;
+// Module 17079 (conjurePlanBot)
+import Server from "Server" /* 1998 */;
 import size from "module_2" /* 2 */;
 
 function isAppCommand(kind) {

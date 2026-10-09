@@ -1,9 +1,9 @@
-// === Module 7024: MobileWebHandoffLinking ===
+// === Module 7027: MobileWebHandoffLinking ===
 
-// Module 7024 (MobileWebHandoffLinking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import FingerprintUtils from "FingerprintUtils" /* 1277 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 7027 */;
+// Module 7027 (MobileWebHandoffLinking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import FingerprintUtils from "FingerprintUtils" /* 1278 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 7030 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -87,7 +87,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

@@ -1,20 +1,20 @@
-// === Module 16518: FavoritesGuildSidebarHeader ===
+// === Module 16641: FavoritesGuildSidebarHeader ===
 
-// Module 16518 (FavoritesGuildSidebarHeader)
+// Module 16641 (FavoritesGuildSidebarHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import ChatIcon from "ChatIcon" /* 8174 */;
-import TextIcon from "TextIcon" /* 8183 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 8204 */;
-import FavoritesHooks from "FavoritesHooks" /* 10294 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10297 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12698 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import ChatIcon from "ChatIcon" /* 8182 */;
+import TextIcon from "TextIcon" /* 8191 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 8212 */;
+import FavoritesHooks from "FavoritesHooks" /* 10279 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10282 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 12643 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,11 +35,11 @@ function EmptyBody() {
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16426).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16545).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

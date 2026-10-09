@@ -1,18 +1,18 @@
-// === Module 16798: SubscribeButton ===
+// === Module 16922: SubscribeButton ===
 
-// Module 16798 (SubscribeButton)
+// Module 16922 (SubscribeButton)
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9333 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5299 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9371 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15435 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4700 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4702 */;
 
 require = fn;
 function useCreateRoleSubscription(listingId) {
@@ -110,28 +110,28 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(15322);
+  let obj = changeToListingId(15435);
   const obj3 = { children: null };
-  const obj2 = activeListingId(4659)(activeSubscription.currentPeriodEnd);
+  const obj2 = activeListingId(4661)(activeSubscription.currentPeriodEnd);
   const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1126).intl;
-  const formatResult = activeListingId(4659)(activeSubscription.currentPeriodEnd).format("MMMM Do");
-  obj4.children = intl.format(activeSubscription(1126).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(4659)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
-  const items = [closure_12(activeSubscription(5086).Text, obj4), closure_12(activeSubscription(1200).Spacer, { size: 16 }), ];
+  const formatResult = activeListingId(4661)(activeSubscription.currentPeriodEnd).format("MMMM Do");
+  obj4.children = intl.format(activeSubscription(1126).t.lA7ztO, { activeListingName: _slicedToArray(obj.useName(activeListingId), 1)[0], billingEndDate: activeListingId(4661)(activeSubscription.currentPeriodEnd).format("MMMM Do"), emphasisHook });
+  const items = [closure_12(activeSubscription(5087).Text, obj4), closure_12(activeSubscription(1200).Spacer, { size: 16 }), ];
   const obj6 = { text: null, onPress: null };
   const intl2 = activeSubscription(1126).intl;
   obj6.text = intl2.string(activeSubscription(1126).t.SACegK);
   obj6.onPress = function handleSwitchTiers() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(16799, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
+    obj.openLazy(asyncRequireImpl(16923, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, { activeSubscription, activeListingId, changeToListingId });
   };
-  items[2] = closure_12(activeSubscription(16792).ArrowButton, obj6);
+  items[2] = closure_12(activeSubscription(16916).ArrowButton, obj6);
   obj3.children = items;
   return closure_13(View, obj3);
 }
 const View = fn(17).View;
 const AnalyticsLocations = fn(1085).AnalyticsLocations;
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ReactCompilerGating = fn(558);

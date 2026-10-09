@@ -1,14 +1,14 @@
-// === Module 16943: conjurePlanWidget ===
+// === Module 17075: conjurePlanWidget ===
 
-// Module 16943 (conjurePlanWidget)
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 13102 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 13185 */;
-import ApplicationAssetType from "ApplicationAssetType" /* 16944 */;
-import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 16945 */;
+// Module 17075 (conjurePlanWidget)
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 13195 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 13278 */;
+import ApplicationAssetType from "ApplicationAssetType" /* 17076 */;
+import ApplicationAssetVisibility from "ApplicationAssetVisibility" /* 17077 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
 
 const require = globalThis.__r;
 
@@ -177,7 +177,7 @@ function buildConjurePlanWidgetRendererProps(widget_config, widget_preview, tmp1
   }
   tmp2 = entries[Symbol.iterator]();
 }
-const getAttachmentUrl = fn(13072).getAttachmentUrl;
+const getAttachmentUrl = fn(13164).getAttachmentUrl;
 const localizedStrings = [];
 let closure_8 = {};
 let c9 = 256;

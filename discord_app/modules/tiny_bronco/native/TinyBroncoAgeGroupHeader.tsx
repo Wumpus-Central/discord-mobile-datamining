@@ -1,15 +1,15 @@
-// === Module 14813: TinyBroncoAgeGroupHeader ===
+// === Module 14921: TinyBroncoAgeGroupHeader ===
 
-// Module 14813 (TinyBroncoAgeGroupHeader)
+// Module 14921 (TinyBroncoAgeGroupHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3149 from "module_3149" /* 3149 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9102 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14814 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9595 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14922 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,11 +18,11 @@ function handleOpenBlog() {
   AgeVerificationActionCreatorsDefault.openUrl(TINY_BRONCO_BLOG_URL);
 }
 const View = fn(17).View;
-const TINY_BRONCO_BLOG_URL = fn(5933).TINY_BRONCO_BLOG_URL;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const TINY_BRONCO_BLOG_URL = fn(5934).TINY_BRONCO_BLOG_URL;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { header: { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 }, notice: null, noticeIcon: null, noticeBody: null, noticeDismiss: null, description: null };
 let obj3 = { gap: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_24 };
 obj2.notice = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
@@ -32,12 +32,12 @@ obj2.noticeDismiss = { flexShrink: 0 };
 let obj4 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.TEXT_LINK, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
 obj2.description = { gap: nativeDefault.space.PX_8 };
 let closure_10 = createStyles.createStyles(obj2);
-let items = [fn(2048).DismissibleContent.TINY_BRONCO_NOTICE];
+let items = [fn(2049).DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj6 = {};
-obj6[fn(9102).AgeGroupState.ADULT] = _modDef3149["8TWztV"];
-obj6[fn(9102).AgeGroupState.TEEN] = _modDef3149.qSkhZH;
-obj6[fn(9102).AgeGroupState.UNVERIFIED] = _modDef3149.vGxRDB;
+obj6[fn(9595).AgeGroupState.ADULT] = _modDef3149["8TWztV"];
+obj6[fn(9595).AgeGroupState.TEEN] = _modDef3149.qSkhZH;
+obj6[fn(9595).AgeGroupState.UNVERIFIED] = _modDef3149.vGxRDB;
 let ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusNotice(ageGroup) {
   const cResult = require("c").c(20);
@@ -62,7 +62,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
     if (null != tmp6[0]) {
       const _Symbol3 = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp12 = closure_8(tmp(5012).CircleInformationIcon, { size: "xs", color: "text-link" });
+        const tmp12 = closure_8(tmp(5013).CircleInformationIcon, { size: "xs", color: "text-link" });
         cResult[2] = tmp12;
         let tmp10 = tmp12;
       } else {
@@ -102,7 +102,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
         }
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp28 = closure_8(tmp(6210).XSmallIcon, { size: "sm", color: "icon-strong" });
+          const tmp28 = closure_8(tmp(6212).XSmallIcon, { size: "sm", color: "icon-strong" });
           cResult[11] = tmp28;
           let tmp26 = tmp28;
         } else {
@@ -134,14 +134,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
           tmp32 = tmp35;
         }
         const obj7 = { style: tmp4.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: tmp24, hitSlop: 12, onPress: tmp8, children: tmp26 };
-        const tmp31 = closure_8(tmp(6189).PressableOpacity, obj7);
+        const tmp31 = closure_8(tmp(6191).PressableOpacity, obj7);
         cResult[12] = tmp8;
         cResult[13] = tmp4.noticeDismiss;
         cResult[14] = tmp31;
         tmp29 = tmp31;
       }
       obj8 = { style: tmp4.noticeBody, variant: "text-sm/normal", color: "text-default", children: tmp17 };
-      const tmp23 = closure_8(tmp(5086).Text, obj8);
+      const tmp23 = closure_8(tmp(5087).Text, obj8);
       cResult[7] = tmp4.noticeBody;
       cResult[8] = tmp17;
       cResult[9] = tmp23;
@@ -162,19 +162,19 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
     tmp8 = null;
     if (null != tmp5[0]) {
       const obj3 = { style: tmp.notice, children: null };
-      const obj4 = { style: tmp.noticeIcon, children: closure_8(tmp2(5012).CircleInformationIcon, { size: "xs", color: "text-link" }) };
+      const obj4 = { style: tmp.noticeIcon, children: closure_8(tmp2(5013).CircleInformationIcon, { size: "xs", color: "text-link" }) };
       items = [closure_8(View, obj4), , ];
       const obj5 = { style: tmp.noticeBody, variant: "text-sm/normal", color: "text-default", children: null };
       const intl = tmp2(1126).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       obj5.children = intl.format(obj6[arg0.ageGroup], obj6);
-      items[1] = closure_8(tmp2(5086).Text, obj5);
+      items[1] = closure_8(tmp2(5087).Text, obj5);
       const obj7 = { style: tmp.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 12, onPress: null, children: null };
       const intl2 = tmp2(1126).intl;
       obj7.accessibilityLabel = intl2.string(tmp2(1126).t.WAI6xu);
       obj7.onPress = tmp7;
-      obj7.children = closure_8(tmp2(6210).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_8(tmp2(6189).PressableOpacity, obj7);
+      obj7.children = closure_8(tmp2(6212).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_8(tmp2(6191).PressableOpacity, obj7);
       obj3.children = items;
       tmp8 = closure_9(View, obj3);
     }
@@ -182,9 +182,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Accoun
   return tmp8;
 });
 let obj8 = {};
-obj8[fn(9102).AgeGroupState.ADULT] = _modDef3149.t5QjmQ;
-obj8[fn(9102).AgeGroupState.TEEN] = _modDef3149["41MDhK"];
-obj8[fn(9102).AgeGroupState.UNVERIFIED] = _modDef3149.m95jW8;
+obj8[fn(9595).AgeGroupState.ADULT] = _modDef3149.t5QjmQ;
+obj8[fn(9595).AgeGroupState.TEEN] = _modDef3149["41MDhK"];
+obj8[fn(9595).AgeGroupState.UNVERIFIED] = _modDef3149.m95jW8;
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGroupDescription(ageGroup) {
   const cResult = c.c(3);

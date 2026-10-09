@@ -1,10 +1,10 @@
-// === Module 6641: EyeSlashIcon ===
+// === Module 6648: EyeSlashIcon ===
 
-// Module 6641 (EyeSlashIcon)
+// Module 6648 (EyeSlashIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod6642 from "module_6642" /* 6642 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod6649 from "module_6649" /* 6649 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EyeSlashIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod6642;
+    const tmpResult = _mod6649;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EyeSlashIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6642, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod6649, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

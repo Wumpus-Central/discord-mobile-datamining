@@ -1,6 +1,6 @@
-// === Module 14821: SettingsAgeGroupResetAlert ===
+// === Module 14929: SettingsAgeGroupResetAlert ===
 
-// Module 14821 (SettingsAgeGroupResetAlert)
+// Module 14929 (SettingsAgeGroupResetAlert)
 import _modDef3117 from "module_3117" /* 3117 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -48,13 +48,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
               c2 = 1;
               c1 = 2;
               c3 = 1;
-              const obj6 = { value: tmp3(5929).resetAgeVerification(), done: false };
+              const obj6 = { value: tmp3(5930).resetAgeVerification(), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
             c2 = 0;
             const intl = tmp3(1126).intl;
-            tmp3(4765).presentError(intl.string(tmp3(1126).t.fEptJP));
+            tmp3(4767).presentError(intl.string(tmp3(1126).t.fEptJP));
             const _Error = Error;
             const error = new Error("Reset failed");
             throw error;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
             const obj7 = { value, done: true };
             return obj7;
           } else {
-            tmp3(5299).dismissAlert(closure_2_6);
+            tmp3(5300).dismissAlert(closure_2_6);
             tmp3.goBack();
             c2 = 0;
             c3 = 3;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   }
   if (cResult[5] !== tmp5) {
     const obj3 = { variant: "destructive", onPress: tmp5, text: tmp12 };
-    const tmp17 = closure_4(tmp(5303).AlertActionButton, obj3, "confirm");
+    const tmp17 = closure_4(tmp(5304).AlertActionButton, obj3, "confirm");
     cResult[5] = tmp5;
     cResult[6] = tmp17;
     let tmp15 = tmp17;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     const obj4 = { variant: "secondary", text: null };
     const intl4 = tmp(1126).intl;
     obj4.text = intl4.string(tmp(1126).t["ETE/oC"]);
-    const tmp20 = closure_4(tmp(5303).AlertActionButton, obj4, "cancel");
+    const tmp20 = closure_4(tmp(5304).AlertActionButton, obj4, "cancel");
     cResult[7] = tmp20;
     let tmp18 = tmp20;
   } else {
@@ -144,8 +144,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     let obj6 = { children: null };
     const items = [tmp15, tmp18];
     obj6.children = items;
-    obj5.actions = closure_5(tmp(5303).AlertActions, obj6);
-    const tmp24 = closure_4(tmp(5303).AlertModal, obj5);
+    obj5.actions = closure_5(tmp(5304).AlertActions, obj6);
+    const tmp24 = closure_4(tmp(5304).AlertModal, obj5);
     cResult[8] = tmp15;
     cResult[9] = tmp24;
     let tmp21 = tmp24;
@@ -182,13 +182,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj6 = { value: tmp3(5929).resetAgeVerification(), done: false };
+            const obj6 = { value: tmp3(5930).resetAgeVerification(), done: false };
             return obj6;
           }
         } else if (1 === tmp7) {
           dependencyMap = 0;
           const intl = tmp3(1126).intl;
-          tmp3(4765).presentError(intl.string(tmp3(1126).t.fEptJP));
+          tmp3(4767).presentError(intl.string(tmp3(1126).t.fEptJP));
           const _Error = Error;
           const error = new Error("Reset failed");
           throw error;
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
           const obj7 = { value, done: true };
           return obj7;
         } else {
-          tmp3(5299).dismissAlert(closure_1_6);
+          tmp3(5300).dismissAlert(closure_1_6);
           closure_128_0.goBack();
           dependencyMap = 0;
           c3 = 3;

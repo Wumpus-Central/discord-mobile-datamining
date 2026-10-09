@@ -1,44 +1,44 @@
-// === Module 15169: QuestCard ===
+// === Module 15280: QuestCard ===
 
-// Module 15169 (QuestCard)
+// Module 15280 (QuestCard)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ColorUtils from "ColorUtils" /* 4927 */;
-import design_shared from "design/shared" /* 4930 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5725 */;
-import MetricEvents from "MetricEvents" /* 5730 */;
-import AdCreativeType from "AdCreativeType" /* 5984 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
-import captureAdUserAction from "captureAdUserAction" /* 7405 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7415 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7416 */;
-import OrbsIcon from "OrbsIcon" /* 9009 */;
-import AssetUtils from "AssetUtils" /* 9544 */;
-import QuestUtils from "QuestUtils" /* 10572 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10582 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15198 */;
-import openVideoQuestModalDefault from "openVideoQuestModal" /* 15205 */;
-import VideoQuestModal from "VideoQuestModal" /* 15206 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ColorUtils from "ColorUtils" /* 4928 */;
+import design_shared from "design/shared" /* 4931 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5726 */;
+import MetricEvents from "MetricEvents" /* 5731 */;
+import AdCreativeType from "AdCreativeType" /* 5986 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7409 */;
+import captureAdUserAction from "captureAdUserAction" /* 7410 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7420 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7421 */;
+import OrbsIcon from "OrbsIcon" /* 9020 */;
+import QuestUtils from "QuestUtils" /* 9146 */;
+import AssetUtils from "AssetUtils" /* 9157 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9176 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 15311 */;
+import openVideoQuestModalDefault from "openVideoQuestModal" /* 15318 */;
+import VideoQuestModal from "VideoQuestModal" /* 15319 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
-import QuestStore from "QuestStore" /* 7379 */;
+import UserStore from "UserStore" /* 1390 */;
+import QuestStore from "QuestStore" /* 7384 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
+({ StyleSheet, View: metroRequire } = get_ActivityIndicator);
+let QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
 const NOOP = fn(1096).NOOP;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createStyles = fn(5090);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+let createStyles = fn(5091);
 let result = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const internal = nativeDefault.internal;
@@ -47,7 +47,7 @@ let result = createStyles.experimental_createToken((theme) => {
   const isThemeDarkResult = design_shared.isThemeDark(theme);
   return ColorUtils.hexOpacityToRgba(semanticColor, 0);
 });
-createStyles = fn(5090);
+createStyles = fn(5091);
 let result1 = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const isThemeDarkResult = design_shared.isThemeDark(theme);
@@ -60,13 +60,13 @@ let result1 = createStyles.experimental_createToken((theme) => {
   }
   return ColorUtils.hexOpacityToRgba(semanticColor, num);
 });
-createStyles = fn(5090);
+createStyles = fn(5091);
 let result2 = createStyles.experimental_createToken((theme) => {
   const colors = nativeDefault.colors;
   return design_shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
-const PX_16 = nativeDefault.space.PX_16;
-createStyles = fn(5090);
+let PX_16 = nativeDefault.space.PX_16;
+createStyles = fn(5091);
 let obj = { container: { position: "relative", padding: 0, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: nativeDefault.space.PX_16, overflow: "hidden" }, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, previewBadgeText: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, promotedByRow: null, shrinkableText: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, rewardSubtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };
 let obj6 = { position: "relative", padding: 0, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: nativeDefault.space.PX_16, overflow: "hidden" };
 obj.heroContainer = { display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: nativeDefault.space.PX_12 };
@@ -100,9 +100,9 @@ obj.detailsTextContainer = { flex: 1, justifyContent: "center" };
 let obj13 = { flexDirection: "row", alignItems: "center", rowGap: nativeDefault.space.PX_4, columnGap: nativeDefault.space.PX_8, flexWrap: "wrap" };
 obj.buttonContainers = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12 };
 obj.equalWidthContainer = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
-let closure_16 = createStyles.createStyles(obj);
-createStyles = fn(5090);
-let closure_17 = createStyles.createStyleProperties({ gradientStart: result, gradientMid: result1, gradientEnd: result2 });
+let closure_15 = createStyles.createStyles(obj);
+createStyles = fn(5091);
+let closure_16 = createStyles.createStyleProperties({ gradientStart: result, gradientMid: result1, gradientEnd: result2 });
 let obj14 = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12 };
 size = fn(2);
 let result3 = size.fileFinishedImporting("modules/quests/native/QuestCard.tsx");
@@ -121,7 +121,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     obj = AdAnalyticsInterfaceExperiment;
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15313, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
   }
   const tmp = _require;
   const tmp2 = QUEST_HOME_MOBILE;
@@ -133,8 +133,8 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
   }
   ({ questContentPosition: asyncGeneratorStep, sourceQuestContent } = questContent);
   let obj = require("useBadgeTextVariant");
-  noop = tmp(tmp2[15]).getQuestLogger({ quest, location: first.QUEST_HOME_MOBILE });
-  let obj2 = { quest, location: first.QUEST_HOME_MOBILE };
+  noop = tmp(tmp2[15]).getQuestLogger({ quest, location: QuestsExperimentLocations.QUEST_HOME_MOBILE });
+  let obj2 = { quest, location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   let tmpResult = tmp(tmp2[15]);
   closure_6 = tmp(tmp2[16]).useTrackQuestContentClickedWithImpression();
   const tmpResult44 = tmp(tmp2[16]);
@@ -145,12 +145,12 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
   if (userStatus != null) {
     enrolledAt = userStatus.enrolledAt;
   }
-  const tmp8 = closure_16();
-  const shrinkableText = tmp8;
-  const diff = quest(tmp2[18])().width - 2 * hasWatchVideoOnMobileTasks;
-  UserStore = diff;
+  const tmp8 = hasWatchVideoOnMobileTasks();
+  const authStore = tmp8;
+  const diff = quest(tmp2[18])().width - 2 * PX_16;
+  QuestStore = diff;
   let result = 0.2803030303030303 * diff;
-  QuestStore = result;
+  QuestsExperimentLocations = result;
   let items = [quest, diff, result];
   const memo = noop.useMemo(() => {
     const questAsset = AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.HERO);
@@ -172,22 +172,22 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     }
     return tmp5;
   }, items);
-  const tmp10 = hasWatchVideoOnMobileTasks;
+  const tmp10 = PX_16;
   const tmp7 = null != enrolledAt;
   const tmpResult46 = tmp(tmp2[17]);
   const questGameLogotypeAssetUrl = tmp(tmp2[20]).useQuestGameLogotypeAssetUrl(quest);
   const tmpResult47 = tmp(tmp2[20]);
-  ({ gradientEnd, gradientStart, gradientMid } = product());
-  const tmp15 = product();
+  ({ gradientEnd, gradientStart, gradientMid } = closure_16());
+  const tmp15 = closure_16();
   let items1 = [quest.id];
   const tmp16 = sourceQuestContent(tmp(tmp2[21]).useRecyclingState(null, items1), 2);
-  first = tmp16[0];
-  onPress = tmp18;
+  const onPress = tmp16[0];
+  closure_11 = tmp18;
   let items2 = [tmp16[1]];
   const callback = noop.useCallback(() => {
     closure_11(false);
   }, items2);
-  let items3 = [first, quest.id, QUEST_HOME_MOBILE];
+  let items3 = [onPress, quest.id, QUEST_HOME_MOBILE];
   const effect = noop.useEffect(() => {
     if (false === first) {
       const obj2 = { name: MetricEvents.MetricEvents.QUEST_CONTENT_RENDERING_FAILURE, tags: null };
@@ -202,8 +202,8 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     }
   }, items3);
   const tmpResult48 = tmp(tmp2[21]);
-  const items4 = [UserStore];
-  const stateFromStores = tmp(tmp2[25]).useStateFromStores(items4, () => diff.getCurrentUser());
+  const items4 = [authStore];
+  const stateFromStores = tmp(tmp2[25]).useStateFromStores(items4, () => authStore.getCurrentUser());
   const tmpResult49 = tmp(tmp2[25]);
   const defaultRewardNameWithArticle = tmp(tmp2[26]).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
   const tmpResult50 = tmp(tmp2[26]);
@@ -219,6 +219,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
   const questFormattedDate = tmp(tmp2[17]).useQuestFormattedDate(completedAt, { year: "numeric", month: "long", day: "numeric" });
   const tmpResult52 = tmp(tmp2[17]);
   const hasWatchVideoTasksResult = tmp(tmp2[27]).hasWatchVideoTasks(quest);
+  PX_16 = hasWatchVideoTasksResult;
   const tmpResult53 = tmp(tmp2[27]);
   hasWatchVideoOnMobileTasks = tmp(tmp2[20]).useHasWatchVideoOnMobileTasks(quest.config);
   const userStatus3 = quest.userStatus;
@@ -257,12 +258,12 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     }
   }
   const fetchCollectiblesProduct = tmp(tmp2[32]).useFetchCollectiblesProduct(skuId);
-  product = fetchCollectiblesProduct.product;
+  const product = fetchCollectiblesProduct.product;
   const isFetching = fetchCollectiblesProduct.isFetching;
   const tmpResult60 = tmp(tmp2[32]);
-  const items6 = [UserStore];
+  const items6 = [authStore];
   const currentUserHasVerifiedEmailOrPhone = tmp(tmp2[25]).useStateFromStores(items6, () => {
-    const currentUser = diff.getCurrentUser();
+    const currentUser = authStore.getCurrentUser();
     result = undefined;
     if (currentUser != null) {
       result = currentUser.hasVerifiedEmailOrPhone();
@@ -270,9 +271,9 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
     return result;
   });
   const tmpResult61 = tmp(tmp2[25]);
-  const items7 = [UserStore];
+  const items7 = [authStore];
   const currentUserHasVerifiedEmail = tmp(tmp2[25]).useStateFromStores(items7, () => {
-    const currentUser = diff.getCurrentUser();
+    const currentUser = authStore.getCurrentUser();
     let verified;
     if (currentUser != null) {
       verified = currentUser.verified;
@@ -412,19 +413,19 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             num = 16 / scaledTextLineHeight;
           }
           result = result3 / 8;
-          const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: shrinkableText.shrinkableText };
+          const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: authStore.shrinkableText };
           const size = { width: result3, height: result3, marginRight: result, marginTop: 0, transform: null };
           const items = [{ translateY: num }];
           size.transform = items;
           if (closure_16) {
             if (result2) {
-              const obj3 = { style: shrinkableText.orbWithAmountRow, children: null };
+              const obj3 = { style: authStore.orbWithAmountRow, children: null };
               const obj4 = { size: "custom", color: "mobile-text-heading-primary", style: size };
-              const items1 = [__initData(OrbsIcon.OrbsIcon, obj4), , ];
+              const items1 = [closure_2_11(OrbsIcon.OrbsIcon, obj4), , ];
               const obj5 = { style: null };
               const obj6 = { width: result };
               obj5.style = obj6;
-              items1[1] = __initData(React5, obj5);
+              items1[1] = closure_2_11(timestampProducer, obj5);
               const obj7 = {};
               const merged = Object.assign(obj2);
               const intl4 = util.intl;
@@ -434,9 +435,9 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               }
               const obj8 = { orbAmount: num4 };
               obj7.children = intl4.format(util.t["nLXlh+"], obj8);
-              items1[2] = __initData(Text_Text.Text, obj7);
+              items1[2] = closure_2_11(Text_Text.Text, obj7);
               obj3.children = items1;
-              let tmp15Result = __initData2(React5, obj3);
+              let tmp15Result = __initData(timestampProducer, obj3);
             }
             return tmp15Result;
           }
@@ -444,9 +445,9 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             const obj9 = {};
             const merged1 = Object.assign(obj2);
             obj9.children = defaultRewardName;
-            tmp15Result = __initData(Text_Text.Text, obj9);
+            tmp15Result = closure_2_11(Text_Text.Text, obj9);
           } else if (result2) {
-            const obj10 = { style: shrinkableText.rewardSubtitleRow, children: null };
+            const obj10 = { style: authStore.rewardSubtitleRow, children: null };
             const obj11 = {};
             const merged2 = Object.assign(obj2);
             const intl2 = util.intl;
@@ -456,14 +457,14 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 }
             };
             obj11.children = intl2.format(util.t["0IUT4Y"], obj12);
-            const items2 = [__initData(Text_Text.Text, obj11), ];
-            const obj13 = { style: shrinkableText.orbWithAmountRow, children: null };
+            const items2 = [closure_2_11(Text_Text.Text, obj11), ];
+            const obj13 = { style: authStore.orbWithAmountRow, children: null };
             const obj14 = { size: "custom", color: "mobile-text-heading-primary", style: size };
-            const items3 = [__initData(OrbsIcon.OrbsIcon, obj14), , ];
+            const items3 = [closure_2_11(OrbsIcon.OrbsIcon, obj14), , ];
             const obj15 = { style: null };
             const obj16 = { width: result };
             obj15.style = obj16;
-            items3[1] = __initData(React5, obj15);
+            items3[1] = closure_2_11(timestampProducer, obj15);
             const obj17 = {};
             const merged3 = Object.assign(obj2);
             const intl3 = util.intl;
@@ -473,11 +474,11 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             }
             const obj18 = { orbAmount: num3 };
             obj17.children = intl3.format(util.t["nLXlh+"], obj18);
-            items3[2] = __initData(Text_Text.Text, obj17);
+            items3[2] = closure_2_11(Text_Text.Text, obj17);
             obj13.children = items3;
-            items2[1] = __initData2(React5, obj13);
+            items2[1] = __initData(timestampProducer, obj13);
             obj10.children = items2;
-            tmp15Result = __initData2(React5, obj10);
+            tmp15Result = __initData(timestampProducer, obj10);
           } else {
             const obj19 = {};
             const merged4 = Object.assign(obj2);
@@ -488,7 +489,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 }
             };
             obj19.children = intl.format(util.t["0IUT4Y"], obj20);
-            tmp15Result = __initData(Text_Text.Text, obj19);
+            tmp15Result = closure_2_11(Text_Text.Text, obj19);
           }
           obj = PlatformUtils;
         }, items10);
@@ -581,14 +582,14 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         obj16.style = tmp8.heroImg;
         obj16.onError = callback;
         obj16.accessibilityLabel = quest.config.messages.questName;
-        const items15 = [defaultRewardNameWithArticle(quest(tmp2[63]), obj16), , , ];
+        const items15 = [closure_11(quest(tmp2[63]), obj16), , , ];
         let obj18 = { style: tmp8.heroLinearGradientOverlay, start: null, end: null, colors: null };
         const tmp9Result = quest(tmp2[62]);
         obj18.start = tmp(tmp2[65]).VerticalGradient.START;
         obj18.end = tmp(tmp2[65]).VerticalGradient.END;
         const items16 = [gradientStart, gradientMid, gradientEnd];
         obj18.colors = items16;
-        items15[1] = defaultRewardNameWithArticle(quest(tmp2[64]), obj18);
+        items15[1] = closure_11(quest(tmp2[64]), obj18);
         let preview = quest.preview;
         if (preview) {
           let obj19 = { style: tmp8.previewBadge, children: null };
@@ -602,7 +603,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const obj21 = { style: tmp8.heroFooterContainer, children: null };
         const obj22 = { style: tmp8.heroFooterLeftContainer, children: null };
         const obj23 = { assetUrl: questGameLogotypeAssetUrl, onError: callback };
-        const items17 = [defaultRewardNameWithArticle(quest(tmp2[66]), obj23), ];
+        const items17 = [closure_11(quest(tmp2[66]), obj23), ];
         const obj24 = { style: tmp8.promotedByRow, children: null };
         let str2 = "text-overlay-light";
         let str3 = "text-overlay-light";
@@ -612,17 +613,20 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         const obj25 = { variant: "text-xs/medium", color: str3, style: tmp8.shrinkableText, children: null };
         const intl8 = tmp(tmp2[47]).intl;
         obj25.children = intl8.string(tmp(tmp2[47]).t.VAbKhK);
-        const items18 = [defaultRewardNameWithArticle(tmp(tmp2[59]).Text, obj25), , ];
-        const obj26 = { source: quest(tmp2[67]), style: { height: 16, width: 16 }, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+        const items18 = [closure_11(tmp(tmp2[59]).Text, obj25), , ];
+        const obj26 = { source: null, style: null, accessible: true, accessibilityRole: "image", accessibilityLabel: null };
+        const tmp9Result3 = quest(tmp2[64]);
+        obj26.source = quest(tmp2[67]);
+        obj26.style = { height: 16, width: 16 };
         const intl9 = tmp(tmp2[47]).intl;
         obj26.accessibilityLabel = intl9.string(tmp(tmp2[47]).t.OfMjx9);
-        items18[1] = defaultRewardNameWithArticle(closure_6, obj26);
+        items18[1] = closure_11(quest(tmp2[63]), obj26);
         const obj27 = { variant: "text-xs/medium", color: "text-overlay-light", style: tmp8.shrinkableText, children: quest.config.messages.gamePublisher };
-        items18[2] = defaultRewardNameWithArticle(tmp(tmp2[59]).Text, obj27);
+        items18[2] = closure_11(tmp(tmp2[59]).Text, obj27);
         obj24.children = items18;
-        items17[1] = questEnrollmentBlockedUntil(shrinkableText, obj24);
+        items17[1] = defaultRewardNameWithArticle(closure_6, obj24);
         obj22.children = items17;
-        const items19 = [questEnrollmentBlockedUntil(shrinkableText, obj22), ];
+        const items19 = [defaultRewardNameWithArticle(closure_6, obj22), ];
         let tmp98Result = !isQuestExpiredResult;
         if (!isQuestExpiredResult) {
           tmp98Result = !tmp34;
@@ -639,9 +643,9 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         }
         items19[1] = tmp98Result;
         obj21.children = items19;
-        items15[3] = questEnrollmentBlockedUntil(shrinkableText, obj21);
+        items15[3] = defaultRewardNameWithArticle(closure_6, obj21);
         obj14.children = items15;
-        const items20 = [questEnrollmentBlockedUntil(shrinkableText, obj14), , ];
+        const items20 = [defaultRewardNameWithArticle(closure_6, obj14), , ];
         const obj30 = { style: tmp8.detailsWrapper, children: null };
         const obj31 = { style: tmp8.detailsContainer, children: null };
         const obj32 = { style: tmp8.rewardImgContainer, children: null };
@@ -653,10 +657,10 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           tmp98Result6 = tmp98(quest(tmp2[69]), size);
         }
         obj32.children = tmp98Result6;
-        const items21 = [defaultRewardNameWithArticle(shrinkableText, obj32), ];
+        const items21 = [closure_11(closure_6, obj32), ];
         const obj34 = { style: tmp8.detailsTextContainer, children: null };
         const obj35 = { variant: "eyebrow", color: "text-brand", style: tmp8.questName, accessibilityRole: "header", children: formatToPlainStringResult };
-        const items22 = [defaultRewardNameWithArticle(tmp(tmp2[59]).Text, obj35), ];
+        const items22 = [closure_11(tmp(tmp2[59]).Text, obj35), ];
         const obj36 = { style: tmp8.bodyContainer, children: null };
         const obj37 = { style: tmp8.subtitleRow, children: null };
         const items23 = [memo1, ];
@@ -666,7 +670,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         }
         items23[1] = shouldShowBonusOrbsUX;
         obj37.children = items23;
-        const items24 = [questEnrollmentBlockedUntil(shrinkableText, obj37), ];
+        const items24 = [defaultRewardNameWithArticle(closure_6, obj37), ];
         let tmp98Result7 = null != formatToPlainStringResult1;
         if (tmp98Result7) {
           const obj39 = { variant: "text-sm/medium", color: "text-muted", children: formatToPlainStringResult1 };
@@ -674,12 +678,12 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         }
         items24[1] = tmp98Result7;
         obj36.children = items24;
-        items22[1] = questEnrollmentBlockedUntil(shrinkableText, obj36);
+        items22[1] = defaultRewardNameWithArticle(closure_6, obj36);
         obj34.children = items22;
-        items21[1] = questEnrollmentBlockedUntil(shrinkableText, obj34);
+        items21[1] = defaultRewardNameWithArticle(closure_6, obj34);
         obj31.children = items21;
-        obj30.children = questEnrollmentBlockedUntil(shrinkableText, obj31);
-        items20[1] = defaultRewardNameWithArticle(shrinkableText, obj30);
+        obj30.children = defaultRewardNameWithArticle(closure_6, obj31);
+        items20[1] = closure_11(closure_6, obj30);
         const obj40 = { direction: "horizontal", align: "center", spacing: quest(tmp2[9]).space.PX_8, style: tmp8.buttonContainers, children: null };
         const obj41 = { children: null };
         if (tmp46) {
@@ -689,7 +693,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           const items25 = [tmp98(tmp(tmp2[72]).Button, obj42), ];
           const obj43 = {
             onPress: function showQuestEnrollmentBlockedBottomSheet() {
-                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15247, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
+                      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15360, dependencyMap.paths), "QuestEnrollmentBlockedBottomSheet", { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent });
                     },
             variant: "tertiary",
             text: null
@@ -728,7 +732,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
           obj41.children = items26;
           tmp111 = obj41;
         }
-        const items27 = [questEnrollmentBlockedUntil(hasWatchVideoTasksResult, tmp111), , , ];
+        const items27 = [defaultRewardNameWithArticle(questEnrollmentBlockedUntil, tmp111), , , ];
         let tmp98Result9 = tmp98Result10;
         if (tmp98Result10) {
           tmp98Result9 = hasWatchVideoTasksResult;
@@ -758,12 +762,12 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
         }
         items27[2] = tmp98Result10;
         const obj50 = { quest, showShareLink: !isQuestExpiredResult, location: tmp4.QUESTS_CARD, sourceQuestContent };
-        items27[3] = defaultRewardNameWithArticle(quest(tmp2[76]), obj50);
+        items27[3] = closure_11(quest(tmp2[76]), obj50);
         obj40.children = items27;
-        items20[2] = questEnrollmentBlockedUntil(tmp(tmp2[71]).Stack, obj40);
+        items20[2] = defaultRewardNameWithArticle(tmp(tmp2[71]).Stack, obj40);
         obj13.children = items20;
-        obj11.children = questEnrollmentBlockedUntil(tmp9Result, obj13);
-        return defaultRewardNameWithArticle(tmp(tmp2[61]).Card, obj11);
+        obj11.children = defaultRewardNameWithArticle(tmp9Result, obj13);
+        return closure_11(tmp(tmp2[61]).Card, obj11);
       }
       const obj51 = { text: null, loading: null, onPress: null };
       let intl3 = tmp(tmp2[47]).intl;
@@ -815,7 +819,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               openVideoQuestModalDefault(obj2);
             } else {
               const obj3 = { questId: quest.id, questContentPosition, sourceQuestContent };
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", obj3);
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15313, dependencyMap.paths), "QuestBottomSheet", obj3);
             }
           };
           let tmp65 = null;
@@ -856,7 +860,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
             obj56.onPress = function onPress() {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
-              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15200, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
+              ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15313, dependencyMap.paths), "QuestBottomSheet", { questId: quest.id, questContentPosition, sourceQuestContent });
             };
           }
         }
@@ -903,7 +907,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
                 tmp2(QUEST_HOME_MOBILE[51]);
                 let obj4 = { questContent, questContentCTA: null, sourceQuestContent: null };
                 if (!isMobileActivityQuest) {
-                  if (!closure_1_14) {
+                  if (!PX_16) {
                     let START_QUEST = tmp2(QUEST_HOME_MOBILE[24]).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj4.questContentCTA = START_QUEST;
@@ -922,7 +926,7 @@ export const QuestCard = noop.memo(function QuestCard(questContent) {
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              if (closure_1_14) {
+              if (PX_16) {
                 if (hasWatchVideoOnMobileTasks) {
                   const obj = { questId: id.id, sourceQuestContent };
                   quest(QUEST_HOME_MOBILE[50])(obj);

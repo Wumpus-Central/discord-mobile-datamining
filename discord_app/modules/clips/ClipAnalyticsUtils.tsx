@@ -1,15 +1,15 @@
-// === Module 7422: ClipAnalyticsUtils ===
+// === Module 7427: ClipAnalyticsUtils ===
 
-// Module 7422 (ClipAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import _modDef5200 from "module_5200" /* 5200 */;
-import VideoQualityStats from "VideoQualityStats" /* 5290 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 5896 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5269 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7423 */;
-import ClipsStore from "ClipsStore" /* 2017 */;
+// Module 7427 (ClipAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import _modDef5201 from "module_5201" /* 5201 */;
+import VideoQualityStats from "VideoQualityStats" /* 5291 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 5897 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5270 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
+import ClipsStore from "ClipsStore" /* 2018 */;
 
 require = fn;
 function getClipSignalTypes(arg0) {
@@ -139,7 +139,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(7735);
+const ClipsConstants = fn(7744);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
@@ -274,7 +274,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef5200(isFavorite, tmp)) {
+    if (!_modDef5201(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -282,7 +282,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef5200(name, tmp5)) {
+    if (!_modDef5201(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -302,7 +302,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef5200(start1, start)) {
+    if (!_modDef5201(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -318,7 +318,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef5200(end1, end)) {
+    if (!_modDef5201(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -334,7 +334,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef5200(applicationAudio1, applicationAudio)) {
+    if (!_modDef5201(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -350,7 +350,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef5200(voiceAudio1, voiceAudio)) {
+    if (!_modDef5201(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -366,7 +366,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef5200(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5201(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -388,7 +388,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef5200(preset1, preset)) {
+    if (!_modDef5201(preset1, preset)) {
       tmp31 = preset1;
     }
   }

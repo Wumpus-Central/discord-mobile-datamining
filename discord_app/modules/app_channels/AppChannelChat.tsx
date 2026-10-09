@@ -1,10 +1,10 @@
-// === Module 9249: AppChannelChat ===
+// === Module 9287: AppChannelChat ===
 
-// Module 9249 (AppChannelChat)
-import SidebarActionTypes from "SidebarActionTypes" /* 6068 */;
-import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 9250 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6066 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
+// Module 9287 (AppChannelChat)
+import SidebarActionTypes from "SidebarActionTypes" /* 6070 */;
+import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 9288 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6068 */;
+import ReadStateStore from "ReadStateStore" /* 6042 */;
 
 const require = globalThis.__r;
 

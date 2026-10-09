@@ -1,8 +1,8 @@
-// === Module 14050: MenuPopout ===
+// === Module 14147: MenuPopout ===
 
-// Module 14050 (MenuPopout)
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 9991 */;
-import Menu from "Menu" /* 14043 */;
+// Module 14147 (MenuPopout)
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10010 */;
+import Menu from "Menu" /* 14140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -58,8 +58,8 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
     children: menuItems.map((item, index) => {
       const obj = { children: null };
       const merged = Object.assign(item);
-      obj.children = offset(menuItems(14049).MenuItem, { showIconFirst: true });
-      return offset(menuItems(14048).MenuGroup, obj, "chat-context-menu-group-" + index);
+      obj.children = offset(menuItems(14146).MenuItem, { showIconFirst: true });
+      return offset(menuItems(14145).MenuGroup, obj, "chat-context-menu-group-" + index);
     })
   }), items1);
   const items2 = [memo, key, onRequestOpen];

@@ -1,24 +1,24 @@
-// === Module 5905: AgeVerificationUtils ===
+// === Module 5906: AgeVerificationUtils ===
 
-// Module 5905 (AgeVerificationUtils)
+// Module 5906 (AgeVerificationUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Server from "Server" /* 1997 */;
+import Server from "Server" /* 1998 */;
 import _modDef3117 from "module_3117" /* 3117 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5917 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 5919 */;
-import usePreviousDefault from "usePrevious" /* 5928 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 5929 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5918 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5919 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 5920 */;
+import usePreviousDefault from "usePrevious" /* 5929 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 5930 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 5906 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5907 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 5907 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5908 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 5428 */;
-import UserStore from "UserStore" /* 1389 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 5913 */;
+import MessageStore from "MessageStore" /* 5429 */;
+import UserStore from "UserStore" /* 1390 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 5914 */;
 
 const require = globalThis.__r;
 
@@ -100,11 +100,11 @@ let closure_23 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(5914).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(5915).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const MessageEmbedTypes = fn(1085).MessageEmbedTypes;
 const AgeGateConstants = fn(1110);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: map1 } = AgeGateConstants);
-let items = [fn(5915).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(5915).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(5915).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
+let items = [fn(5916).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(5916).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(5916).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
 const set = new Set(items);
 let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);

@@ -1,9 +1,9 @@
-// === Module 10649: confirmActivityLaunchChecks ===
+// === Module 10793: confirmActivityLaunchChecks ===
 
-// Module 10649 (confirmActivityLaunchChecks)
+// Module 10793 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
 
 const require = fn;
 function getOrFetchApplicationForLaunch() {
@@ -50,7 +50,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -150,7 +150,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
           ({ currentEmbeddedApplication: closure_129_0, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: closure_129_1, onConfirmActivityLaunchChecksAlertOpen: closure_129_2 } = closure_0);
           c2 = 1;
           c3 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -166,24 +166,25 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               closure_0 = fn;
               selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
               value = selfEmbeddedActivities.get(closure_0.id);
+              closure_1 = value;
               let _location;
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(4696).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4698).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(10652)(tmp, channel, () => {
-                    value(c2[10])().leaveActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
+                  shouldClosePopout(10797)(tmp, channel, () => {
+                    const result = closure_0(c2[10]).leaveEmbeddedActivity({ location: value.location, applicationId: closure_2_0.id, shouldClosePopout });
                     closure_0(true);
                   }, () => closure_0(false));
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(4696);
+              const obj2 = closure_1_0(4698);
             });
             c2 = 2;
             c3 = 1;
@@ -246,7 +247,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -386,7 +387,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {

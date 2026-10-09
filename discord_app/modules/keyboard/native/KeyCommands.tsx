@@ -1,8 +1,8 @@
-// === Module 5371: KeyCommands ===
+// === Module 5372: KeyCommands ===
 
-// Module 5371 (KeyCommands)
+// Module 5372 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5372 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5373 */;
 
 const require = globalThis.__r;
 

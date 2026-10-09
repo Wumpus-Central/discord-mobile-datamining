@@ -1,27 +1,27 @@
-// === Module 15860: PremiumTrialOfferActionSheetContent ===
+// === Module 15973: PremiumTrialOfferActionSheetContent ===
 
-// Module 15860 (PremiumTrialOfferActionSheetContent)
+// Module 15973 (PremiumTrialOfferActionSheetContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4726 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7733 */;
-import FolderIcon from "FolderIcon" /* 8177 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
-import UserIcon from "UserIcon" /* 11431 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 12878 */;
-import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 15861 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15863 */;
+import PremiumUtils from "PremiumUtils" /* 4728 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7742 */;
+import FolderIcon from "FolderIcon" /* 8185 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9016 */;
+import UserIcon from "UserIcon" /* 11338 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 12847 */;
+import NitroWumpusFlightRight3dIllustration from "NitroWumpusFlightRight3dIllustration" /* 15974 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15978 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { contentContainer: { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 }, buttonContainer: { marginVertical: 6, width: "100%", height: 48 }, title: { width: "100%", textAlign: "center" }, heroIllustrationContainer: { alignItems: "center", justifyContent: "center", height: 188, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

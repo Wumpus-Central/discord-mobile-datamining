@@ -1,11 +1,11 @@
-// === Module 15870: OrbOnboardingPill ===
+// === Module 15985: OrbOnboardingPill ===
 
-// Module 15870 (OrbOnboardingPill)
+// Module 15985 (OrbOnboardingPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import OrbsIcon from "OrbsIcon" /* 9009 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import OrbsIcon from "OrbsIcon" /* 9020 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -56,7 +56,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function OrbOnboardin
   return React4(View, obj);
 });
 tmp4.displayName = "OrbOnboardingPill";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj3 = { container: { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 } };
 let closure_5 = createStyles.createStyles(obj3);
 const size = fn(2);

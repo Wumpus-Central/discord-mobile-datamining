@@ -1,18 +1,18 @@
-// === Module 16408: useGuildHasLiveChannelNotice ===
+// === Module 16527: useGuildHasLiveChannelNotice ===
 
-// Module 16408 (useGuildHasLiveChannelNotice)
-import StageChannelParticipants from "StageChannelParticipants" /* 5955 */;
+// Module 16527 (useGuildHasLiveChannelNotice)
+import StageChannelParticipants from "StageChannelParticipants" /* 5957 */;
 import noop from "module_19" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5892 */;
-import StageInstanceStore from "StageInstanceStore" /* 2068 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16409 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5893 */;
+import StageInstanceStore from "StageInstanceStore" /* 2069 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5115 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16528 */;
 
 require = fn;
-let closure_11 = fn(2069).GuildScheduledEventEntityTypes;
+let closure_11 = fn(2070).GuildScheduledEventEntityTypes;
 const Permissions = fn(1096).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -196,7 +196,7 @@ export const useGuildHasLiveChannelNotice = tmp2;
 export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildLiveChannelNoticeInfo(arg0) {
   const cResult = activeEventOrStageInstanceChannel(576).c(29);
   const obj = activeEventOrStageInstanceChannel(576);
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16411).useActiveEventOrStageInstanceChannel(arg0);
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16530).useActiveEventOrStageInstanceChannel(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
     cResult[0] = items;
@@ -231,10 +231,10 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
       }
     }
   }
-  const obj2 = activeEventOrStageInstanceChannel(16411);
+  const obj2 = activeEventOrStageInstanceChannel(16530);
   const stateFromStores = activeEventOrStageInstanceChannel(504).useStateFromStores(first, S);
   const tmpResult = activeEventOrStageInstanceChannel(504);
-  const guildActiveEvent = activeEventOrStageInstanceChannel(8630).useGuildActiveEvent(arg0);
+  const guildActiveEvent = activeEventOrStageInstanceChannel(8638).useGuildActiveEvent(arg0);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
@@ -352,7 +352,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
       }
     }
   }
-  const tmpResult5 = activeEventOrStageInstanceChannel(8630);
+  const tmpResult5 = activeEventOrStageInstanceChannel(8638);
   const stateFromStores1 = activeEventOrStageInstanceChannel(504).useStateFromStores(tmp10, tmp11, tmp14);
   const tmpResult6 = activeEventOrStageInstanceChannel(504);
   if (activeEventOrStageInstanceChannel != null) {
@@ -368,7 +368,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
       }
     }
   }
-  const tmpResult7 = activeEventOrStageInstanceChannel(5961);
+  const tmpResult7 = activeEventOrStageInstanceChannel(5963);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
@@ -424,7 +424,7 @@ export const useGuildLiveChannelNoticeInfo = ReactCompilerGating.isReactCompiler
       }
     }
   }
-  const tmp16 = activeEventOrStageInstanceChannel(5961).useActualStageSpeakerCount(undefined) > 0;
+  const tmp16 = activeEventOrStageInstanceChannel(5963).useActualStageSpeakerCount(undefined) > 0;
   const stateFromStores2 = activeEventOrStageInstanceChannel(504).useStateFromStores(tmp17, I);
   if (cResult[11] === activeEventOrStageInstanceChannel) {
     class I {

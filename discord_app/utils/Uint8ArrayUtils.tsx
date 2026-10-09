@@ -1,6 +1,6 @@
-// === Module 2047: Uint8ArrayUtils ===
+// === Module 2048: Uint8ArrayUtils ===
 
-// Module 2047 (Uint8ArrayUtils)
+// Module 2048 (Uint8ArrayUtils)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");

@@ -1,25 +1,25 @@
-// === Module 10136: useWishlistRecommendations ===
+// === Module 10121: useWishlistRecommendations ===
 
-// Module 10136 (useWishlistRecommendations)
+// Module 10121 (useWishlistRecommendations)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 8956 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8957 */;
-import useGetOrFetchStorefrontPrices from "useGetOrFetchStorefrontPrices" /* 8958 */;
-import useWishlistApplicationIds from "useWishlistApplicationIds" /* 10138 */;
-import useWishlistSkuFilter from "useWishlistSkuFilter" /* 10139 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 8967 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8968 */;
+import useGetOrFetchStorefrontPrices from "useGetOrFetchStorefrontPrices" /* 8969 */;
+import useWishlistApplicationIds from "useWishlistApplicationIds" /* 10123 */;
+import useWishlistSkuFilter from "useWishlistSkuFilter" /* 10124 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10137 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6918 */;
+import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10122 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6925 */;
 
 require = fn;
-let closure_8 = fn(6918).WishlistRecommendationReason;
+let closure_8 = fn(6925).WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
 let combinedSkusToUserAndReason = { state: "success", data: new WishlistRecommendationRecord({ skus: [], skus_to_user_and_reason: {}, applications: [] }), fetchedAt: 0 };
 let ReactCompilerGating = fn(558);
@@ -44,7 +44,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSor
     if (cResult[3] === userIdsAndWishlistIds) {
       let tmp8 = cResult[4];
     }
-    const fetchWishlists = applicationIdsFilter(8949).useFetchWishlists(tmp8);
+    const fetchWishlists = applicationIdsFilter(8960).useFetchWishlists(tmp8);
     ({ wishlists, isFetching, errors } = fetchWishlists);
     if (cResult[5] === applicationIdsFilter) {
       if (cResult[6] === wishlists) {
@@ -250,7 +250,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSor
         }
       }
       const _Object = Object;
-      const found = wishlists.filter(applicationIdsFilter(1387).isNotNullish);
+      const found = wishlists.filter(applicationIdsFilter(1388).isNotNullish);
       const found1 = found.flatMap(tmp24).filter(tmp25);
       const fromEntriesResult = Object.fromEntries(found1.map(T));
       cResult[8] = applicationIdsFilter;
@@ -258,7 +258,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSor
       cResult[10] = fromEntriesResult;
       const flatMapResult = found.flatMap(tmp24);
     }
-    const found2 = wishlists.filter(applicationIdsFilter(1387).isNotNullish);
+    const found2 = wishlists.filter(applicationIdsFilter(1388).isNotNullish);
     const obj3 = {};
     const iter = found2[Symbol.iterator]();
     iter.next();
@@ -367,7 +367,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSor
     cResult[6] = wishlists;
     cResult[7] = obj3;
     tmp10 = obj3;
-    const tmpResult2 = applicationIdsFilter(8949);
+    const tmpResult2 = applicationIdsFilter(8960);
   }
   const obj4 = { wishlistIdsAndUsers: userIdsAndWishlistIds, source };
   cResult[2] = source;

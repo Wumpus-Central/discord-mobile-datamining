@@ -1,27 +1,27 @@
-// === Module 14964: ConnectGuardianBottomSheet ===
+// === Module 15076: ConnectGuardianBottomSheet ===
 
-// Module 14964 (ConnectGuardianBottomSheet)
+// Module 15076 (ConnectGuardianBottomSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14965 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 14966 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 15077 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 15078 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7252 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7248).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7253).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 }, info: null, centered: null, cardContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
 obj2.info = { alignItems: "center", gap: nativeDefault.space.PX_8 };

@@ -1,6 +1,6 @@
-// === Module 1246: ProtoUtils ===
+// === Module 1247: ProtoUtils ===
 
-// Module 1246 (ProtoUtils)
+// Module 1247 (ProtoUtils)
 import _mod1210 from "module_1210" /* 1210 */;
 import size from "module_2" /* 2 */;
 

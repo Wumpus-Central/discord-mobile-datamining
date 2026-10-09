@@ -1,10 +1,10 @@
-// === Module 12901: GuildVerificationUtils ===
+// === Module 12981: GuildVerificationUtils ===
 
-// Module 12901 (GuildVerificationUtils)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
-import transitionToMemberVerification from "transitionToMemberVerification" /* 6106 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6149 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4900 */;
+// Module 12981 (GuildVerificationUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4903 */;
+import transitionToMemberVerification from "transitionToMemberVerification" /* 6108 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6151 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4901 */;
 
 require = fn;
 const GuildFeatures = fn(1085).GuildFeatures;

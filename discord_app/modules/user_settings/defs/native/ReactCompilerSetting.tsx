@@ -1,9 +1,9 @@
-// === Module 16089: ReactCompilerSetting ===
+// === Module 16205: ReactCompilerSetting ===
 
-// Module 16089 (ReactCompilerSetting)
+// Module 16205 (ReactCompilerSetting)
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import WrenchIcon from "WrenchIcon" /* 15666 */;
-import SettingBuilders from "SettingBuilders" /* 11262 */;
+import WrenchIcon from "WrenchIcon" /* 15779 */;
+import SettingBuilders from "SettingBuilders" /* 10629 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

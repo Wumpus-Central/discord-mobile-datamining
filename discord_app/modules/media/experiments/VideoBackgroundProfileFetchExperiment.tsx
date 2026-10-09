@@ -1,8 +1,8 @@
-// === Module 8354: VideoBackgroundProfileFetchExperiment ===
+// === Module 8362: VideoBackgroundProfileFetchExperiment ===
 
-// Module 8354 (VideoBackgroundProfileFetchExperiment)
+// Module 8362 (VideoBackgroundProfileFetchExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

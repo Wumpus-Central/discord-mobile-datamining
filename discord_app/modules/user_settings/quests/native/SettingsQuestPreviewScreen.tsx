@@ -1,15 +1,15 @@
-// === Module 15250: SettingsQuestPreviewScreen ===
+// === Module 15363: SettingsQuestPreviewScreen ===
 
-// Module 15250 (SettingsQuestPreviewScreen)
+// Module 15363 (SettingsQuestPreviewScreen)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import QuestActionCreators from "QuestActionCreators" /* 9537 */;
-import QuestCardPreview from "QuestCardPreview" /* 15251 */;
-import QuestEmbedPreview from "QuestEmbedPreview" /* 15253 */;
+import QuestActionCreators from "QuestActionCreators" /* 9150 */;
+import QuestCardPreview from "QuestCardPreview" /* 15364 */;
+import QuestEmbedPreview from "QuestEmbedPreview" /* 15366 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7379 */;
+import QuestStore from "QuestStore" /* 7384 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, controlBarContainer: { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 }, segmentedControlContainer: { paddingHorizontal: PX_16 }, pagesContainer: { flex: 1, width: "100%" }, activityIndicator: null, allSectionsContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let obj4 = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
@@ -33,7 +33,7 @@ let result = size.fileFinishedImporting("modules/user_settings/quests/native/Set
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsQuestPreviewScreen() {
   const cResult = params(576).c(88);
   let obj = params(576);
-  params = params(1503).useRoute().params;
+  params = params(1504).useRoute().params;
   closure_13();
   let questId;
   if (params != null) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
-  const obj2 = params(1503);
+  const obj2 = params(1504);
   stateFromStores = params(504).useStateFromStores(first1, tmp11, tmp12);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ThemeStore];

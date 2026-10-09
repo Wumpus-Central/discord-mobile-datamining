@@ -1,14 +1,14 @@
-// === Module 12142: NotificationPermissionUtil ===
+// === Module 12079: NotificationPermissionUtil ===
 
-// Module 12142 (NotificationPermissionUtil)
+// Module 12079 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7500 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 12150 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7505 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12087 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12140 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12077 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -65,7 +65,7 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
           const obj3 = closure_132_1(closure_132_2[10]);
         } else if (closure_131_3 !== closure_132_10.AUTHORIZED) {
           const permission = closure_132_1(closure_132_2[12]).requestPermission((permission_granted) => {
-            action_location(1264).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type, action_location, permission_granted });
+            action_location(1265).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type, action_location, permission_granted });
             dependencyMap();
           });
           const obj = closure_132_1(closure_132_2[12]);
@@ -149,9 +149,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12141).EventActionType;
+const EventActionType = fn(12078).EventActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_10 = fn(7477).NotificationAuthorizationStatus;
+let closure_10 = fn(7482).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanSeePushNotificationNudge() {

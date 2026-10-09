@@ -1,12 +1,12 @@
-// === Module 6162: ExpressionSourceRecord ===
+// === Module 6166: ExpressionSourceRecord ===
 
-// Module 6162 (ExpressionSourceRecord)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+// Module 6166 (ExpressionSourceRecord)
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
 import SetUtils from "SetUtils" /* 2081 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import Record from "Record" /* 1404 */;
+import Record from "Record" /* 1405 */;
 
 require = fn;
 function getEmojiSourceData() {
@@ -86,7 +86,7 @@ prototype["getIconSource"] = function getIconSource(size) {
   if (hasItem === undefined) {
     flag = false;
   }
-  return self(1414).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1415).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;

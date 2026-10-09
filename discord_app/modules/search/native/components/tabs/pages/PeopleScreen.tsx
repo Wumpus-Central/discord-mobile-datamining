@@ -1,18 +1,18 @@
-// === Module 17175: PeopleScreen ===
+// === Module 17325: PeopleScreen ===
 
-// Module 17175 (PeopleScreen)
-import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+// Module 17325 (PeopleScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12011 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12082 */;
-import SearchQueryStore from "SearchQueryStore" /* 12067 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12019 */;
+import SearchQueryStore from "SearchQueryStore" /* 12004 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-const constants2 = fn(9246).SearchResultContentEntityTypes;
+const constants2 = fn(9284).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -424,7 +424,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }, items2);
   const items3 = [onPressGroupDMItem, searchContext];
   callback1 = fullscreenPlaceholderCount.useCallback((channelId, index) => {
-    const result = tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
     onPressGroupDMItem(channelId);
   }, items3);
   const items4 = [callback, callback1, stateFromStores1, fullscreenPlaceholderCount, stateFromStores];

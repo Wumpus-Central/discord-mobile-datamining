@@ -1,13 +1,13 @@
-// === Module 11301: useBatchUpdateSelectOption ===
+// === Module 10669: useBatchUpdateSelectOption ===
 
-// Module 11301 (useBatchUpdateSelectOption)
+// Module 10669 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6783 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6790 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6778 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5973 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6785 */;
 
 const require = globalThis.__r;
 
@@ -204,14 +204,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBatch
         const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-          obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+          obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
           acc[item] = obj;
           return acc;
         }, {}));
         const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
           const obj = { flags: null };
           const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-          obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+          obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
           acc[item] = obj;
           return acc;
         }, {}));
@@ -296,14 +296,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBatch
     const merged = Object.assign(addedChannelIds.reduce((acc, item) => {
       const obj = { flags: null };
       const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-      obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+      obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
       acc[item] = obj;
       return acc;
     }, {}));
     const merged1 = Object.assign(removedChannelIds.reduce((acc, item) => {
       const obj = { flags: null };
       const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-      obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+      obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
       acc[item] = obj;
       return acc;
     }, {}));

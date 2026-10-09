@@ -1,18 +1,18 @@
-// === Module 18338: ContentInventoryManager ===
+// === Module 18500: ContentInventoryManager ===
 
-// Module 18338 (ContentInventoryManager)
+// Module 18500 (ContentInventoryManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13816 */;
-import ContentInventoryFeature from "ContentInventoryFeature" /* 18339 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13910 */;
+import ContentInventoryFeature from "ContentInventoryFeature" /* 18501 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
-import IdleStore from "IdleStore" /* 5884 */;
-import WindowStore from "WindowStore" /* 6070 */;
-import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 11624 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8430 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
+import IdleStore from "IdleStore" /* 5885 */;
+import WindowStore from "WindowStore" /* 6072 */;
+import ContentInventoryPersistedStore from "ContentInventoryPersistedStore" /* 11557 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8438 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
 
 require = fn;
 function getBackoffJitter() {
@@ -204,7 +204,7 @@ let closure_24 = async function _fetchInventory(arg0) {
           closure_130_7 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -363,7 +363,7 @@ function handleFetchGameProfileFeed() {
     fetchInventory(obj);
   }
 }
-const ContentInventoryFeedKey = fn(8445).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8453).ContentInventoryFeedKey;
 const PlatformTypes = fn(1085).PlatformTypes;
 let closure_11 = 2 * DurationsDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
@@ -373,7 +373,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(13216).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(13309).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handlePostConnectionOpen, CONNECTION_CLOSED: handleConnectionClosed, WINDOW_FOCUS: handleUpdatePollingState, IDLE: handleUpdatePollingState, CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: handleUpdatePollingState, CONTENT_INVENTORY_MANUAL_REFRESH: handleManualRefresh, CONTENT_INVENTORY_INBOX_STALE: handleInboxStale, SPOTIFY_NEW_TRACK: handleSpotifyNewTrack, GAME_PROFILE_OPEN: handleFetchGameProfileFeed };

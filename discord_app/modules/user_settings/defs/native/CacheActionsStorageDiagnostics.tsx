@@ -1,34 +1,19 @@
-// === Module 15677: CacheActionsStorageDiagnostics ===
+// === Module 15790: CacheActionsStorageDiagnostics ===
 
-// Module 15677 (CacheActionsStorageDiagnostics)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
+// Module 15790 (CacheActionsStorageDiagnostics)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function showStorageDiagnosticsToast(text) {
-  const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("CacheActionsStorageDiagnostics");
-  const obj2 = ToastActionCreatorsDefault;
-  if (designSystemsNotificationComponents) {
-    const obj3 = { text, icon: CircleInformationIcon.CircleInformationIcon };
-    obj2.openMana(key, obj3);
-  } else {
-    const obj4 = {
-      key,
-      icon() {
-          return closure_1_6(CircleInformationIcon.CircleInformationIcon, {});
-        },
-      content: text
-    };
-    obj2.open(obj4);
-  }
+  const obj = ToastActionCreatorsDefault;
+  obj.openMana("storage-diagnostics-upload", { text, icon: CircleInformationIcon.CircleInformationIcon });
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let c8 = "storage-diagnostics-upload";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsStorageDiagnostics.tsx");
 
@@ -63,14 +48,14 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
             onBusyChange = tmp8;
             closure_128_0 = undefined;
             if (!ref.current) {
-              if (null != tmp4(tmp45[7]).uploadStorageDiagnostics) {
+              if (null != tmp4(tmp45[6]).uploadStorageDiagnostics) {
                 ref.current = true;
                 onBusyChange(true);
                 importDefault(true);
                 c3 = 2;
                 c4 = 3;
                 c5 = 1;
-                const obj4 = { value: tmp4(tmp45[7]).uploadStorageDiagnostics(), done: false };
+                const obj4 = { value: tmp4(tmp45[6]).uploadStorageDiagnostics(), done: false };
                 return obj4;
               }
             }
@@ -79,8 +64,8 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            const intl = onBusyChange(tmp45[8]).intl;
-            showStorageDiagnosticsToast(intl.string(onBusyChange(tmp45[8]).t["L/aQij"]));
+            const intl = onBusyChange(tmp45[7]).intl;
+            showStorageDiagnosticsToast(intl.string(onBusyChange(tmp45[7]).t["L/aQij"]));
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -94,8 +79,8 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
             return obj;
           } else {
             closure_128_0 = value;
-            const intl2 = onBusyChange(tmp45[8]).intl;
-            const t = onBusyChange(tmp45[8]).t;
+            const intl2 = onBusyChange(tmp45[7]).intl;
+            const t = onBusyChange(tmp45[7]).t;
             if (closure_128_0) {
               let cHxSwT = t.H99tIV;
             } else {
@@ -132,7 +117,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
   let obj2 = { variant: "text-sm/normal", color: "text-subtle", children: null };
   let intl = onBusyChange(1126).intl;
   obj2.children = intl.string(onBusyChange(1126).t.Fzi4HX);
-  const items = [closure_6(onBusyChange(5086).Text, obj2), ];
+  const items = [closure_6(onBusyChange(5087).Text, obj2), ];
   let obj3 = { variant: "secondary", text: null, loading: null, disabled: null, onPress: null };
   let intl2 = onBusyChange(1126).intl;
   obj3.text = intl2.string(onBusyChange(1126).t.VSunuT);
@@ -148,7 +133,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
     }
     return applyArgumentsResult;
   };
-  items[1] = closure_6(onBusyChange(5375).Button, obj3);
+  items[1] = closure_6(onBusyChange(5376).Button, obj3);
   obj.children = items;
-  return closure_7(onBusyChange(5373).Stack, obj);
+  return closure_7(onBusyChange(5374).Stack, obj);
 };

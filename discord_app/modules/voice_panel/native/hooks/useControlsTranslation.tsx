@@ -1,14 +1,14 @@
-// === Module 17632: useControlsTranslation ===
+// === Module 17784: useControlsTranslation ===
 
-// Module 17632 (useControlsTranslation)
-import spring from "spring" /* 5374 */;
+// Module 17784 (useControlsTranslation)
+import spring from "spring" /* 5375 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11989).MODE_CHANGE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11992).CALL_TILE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11926).MODE_CHANGE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11929).CALL_TILE_GUTTER;
 const __initData = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
 const __initData2 = { code: "function useControlsTranslationTsx2(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
 const ReactCompilerGating = fn(558);

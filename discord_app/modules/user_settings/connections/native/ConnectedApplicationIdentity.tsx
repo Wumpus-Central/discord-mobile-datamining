@@ -1,14 +1,14 @@
-// === Module 15047: ConnectedApplicationIdentity ===
+// === Module 15159: ConnectedApplicationIdentity ===
 
-// Module 15047 (ConnectedApplicationIdentity)
+// Module 15159 (ConnectedApplicationIdentity)
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
-import Icon from "Icon" /* 5377 */;
-import common_AlertDefault from "common/Alert" /* 5394 */;
-import InfoBoxDefault from "InfoBox" /* 10485 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
+import Icon from "Icon" /* 5378 */;
+import common_AlertDefault from "common/Alert" /* 5395 */;
+import InfoBoxDefault from "InfoBox" /* 10475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

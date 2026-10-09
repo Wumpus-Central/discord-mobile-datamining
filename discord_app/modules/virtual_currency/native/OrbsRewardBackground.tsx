@@ -1,13 +1,13 @@
-// === Module 11171: OrbsRewardBackground ===
+// === Module 12940: OrbsRewardBackground ===
 
-// Module 11171 (OrbsRewardBackground)
-import FastImageDefault from "FastImage" /* 6164 */;
-import _modDef11172 from "module_11172" /* 11172 */;
-import _modDef11173 from "module_11173" /* 11173 */;
+// Module 12940 (OrbsRewardBackground)
+import FastImageDefault from "FastImage" /* 6163 */;
+import _modDef12941 from "module_12941" /* 12941 */;
+import _modDef12942 from "module_12942" /* 12942 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 const require = fn;
 const jsxProd = fn(21);
@@ -86,7 +86,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
     const effect = obj4.useEffect(tmp18, tmp19);
     const _Symbol = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef11172 };
+      const obj2 = { uri: _modDef12941 };
       cResult[10] = obj2;
       let tmp21 = obj2;
     } else {
@@ -129,11 +129,11 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
     }
     if (tmp29) {
       const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-      const obj7 = { uri: _modDef11173 };
+      const obj7 = { uri: _modDef12942 };
       obj6.source = obj7;
       obj6.style = style;
       obj6.onLoad = tmp16;
-      tmp29 = closure_7(onReady(8401).VideoComponent, obj6);
+      tmp29 = closure_7(onReady(8409).VideoComponent, obj6);
     }
     cResult[13] = tmp27;
     cResult[14] = stateFromStores;
@@ -202,7 +202,7 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   const obj4 = { source: null, style: null, resizeMode: "cover", onLoad: null };
   const obj5 = { uri: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  obj5.uri = _modDef11172;
+  obj5.uri = _modDef12941;
   obj4.source = obj5;
   obj4.style = style;
   obj4.onLoad = callback;
@@ -213,11 +213,11 @@ export const OrbsRewardBackground = ReactCompilerGating.isReactCompilerEnabled()
   }
   if (tmp14Result) {
     const obj6 = { source: null, style: null, resizeMode: "cover", onLoad: null, disableFocus: true, playInBackground: true, preventsDisplaySleepDuringVideoPlayback: false };
-    const obj7 = { uri: _modDef11173 };
+    const obj7 = { uri: _modDef12942 };
     obj6.source = obj7;
     obj6.style = style;
     obj6.onLoad = callback1;
-    tmp14Result = closure_7(onReady(8401).VideoComponent, obj6);
+    tmp14Result = closure_7(onReady(8409).VideoComponent, obj6);
   }
   children[1] = tmp14Result;
   return closure_8(noop.Fragment, { children });

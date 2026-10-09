@@ -1,7 +1,7 @@
-// === Module 16861: ConjureRemix ===
+// === Module 16985: ConjureRemix ===
 
-// Module 16861 (ConjureRemix)
-import ConjureActionCreators from "ConjureActionCreators" /* 12364 */;
+// Module 16985 (ConjureRemix)
+import ConjureActionCreators from "ConjureActionCreators" /* 11369 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -132,7 +132,7 @@ let closure_9 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({ ConjureRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = ConjureConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

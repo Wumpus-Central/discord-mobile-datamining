@@ -1,11 +1,11 @@
-// === Module 5405: NicknameUtils ===
+// === Module 5406: NicknameUtils ===
 
-// Module 5405 (NicknameUtils)
+// Module 5406 (NicknameUtils)
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
 
 require = fn;
 function getName(guildId, arg1, id) {

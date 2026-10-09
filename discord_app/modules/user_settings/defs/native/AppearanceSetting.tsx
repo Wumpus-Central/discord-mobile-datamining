@@ -1,14 +1,14 @@
-// === Module 15356: AppearanceSetting ===
+// === Module 15469: AppearanceSetting ===
 
-// Module 15356 (AppearanceSetting)
+// Module 15469 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
 import _modDef2795 from "module_2795" /* 2795 */;
-import useThemeDefault from "useTheme" /* 4991 */;
-import useActiveTheme from "useActiveTheme" /* 9243 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4897 */;
+import useThemeDefault from "useTheme" /* 4992 */;
+import useActiveTheme from "useActiveTheme" /* 9281 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4898 */;
 
 require = fn;
 const ActiveThemeType = fn(1208).ActiveThemeType;
@@ -115,14 +115,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 });
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(15357).PaintPaletteIcon,
+  IconComponent: fn(15470).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE,

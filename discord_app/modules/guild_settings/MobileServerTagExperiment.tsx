@@ -1,7 +1,7 @@
-// === Module 8617: MobileServerTagExperiment ===
+// === Module 8625: MobileServerTagExperiment ===
 
-// Module 8617 (MobileServerTagExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 8625 (MobileServerTagExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-mobile-server-tag", kind: "user", defaultConfig: { enabled: false }, variations: null };

@@ -1,27 +1,27 @@
-// === Module 13697: UserSettingsGiftingBadgeProgress ===
+// === Module 13789: UserSettingsGiftingBadgeProgress ===
 
-// Module 13697 (UserSettingsGiftingBadgeProgress)
+// Module 13789 (UserSettingsGiftingBadgeProgress)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef2661 from "module_2661" /* 2661 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10002 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10085 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10091 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10021 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10070 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10076 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8300 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(8292).getSingleRequirementThreshold;
+let closure_8 = fn(8300).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 const UserSettingsGiftingBadgeProgress = "UserSettingsGiftingBadgeProgress";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, progressContainer: null, progressRow: null, progressTitleText: null, progressBarContainer: null, progressBarTrack: null, progressBarFill: null, progressLabels: null, divider: null, dropdownRow: null, badgesRow: null, badgeItem: null, badgeItemActive: null, badgeCopy: null, footerText: null, introContent: null, introGrid: null, introGridItem: null };
   const obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.md, padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -231,8 +231,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
   analyticsLocation = analyticsLocation.analyticsLocation;
   const tmp = closure_13();
   importDefault = tmp;
-  dependencyMap = analyticsLocation(10085).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
-  let obj = analyticsLocation(10085);
+  dependencyMap = analyticsLocation(10070).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
+  let obj = analyticsLocation(10070);
   const analyticsLocations = useAnalyticsLocationsDefault(AnalyticsLocationDefault.USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
   let items = [BadgeDirectoryStore];
   const stateFromStores = analyticsLocation(504).useStateFromStores(items, () => {
@@ -250,7 +250,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
     let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
     let intl = tmp2(1126).intl;
     obj5.children = intl.string(tmp4(2661)["4Yp0mI"]);
-    obj4.children = closure_9(tmp2(5086).Text, obj5);
+    obj4.children = closure_9(tmp2(5087).Text, obj5);
     let items1 = [closure_9(closure_6, obj4), , ];
     const obj6 = {
       style: tmp.introGrid,
@@ -284,13 +284,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Giftin
     items1[1] = closure_9(closure_6, obj6);
     const obj7 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj8 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-    obj7.icon = closure_9(tmp2(11561).GiftIcon, obj8);
+    obj7.icon = closure_9(tmp2(11490).GiftIcon, obj8);
     const intl2 = tmp2(1126).intl;
     obj7.text = intl2.string(tmp4(2661).DZnomS);
     obj7.onPress = function onPress() {
       utils_openGiftModal.openGiftModal({ analyticsLocation, analyticsLocations });
     };
-    items1[2] = closure_9(tmp2(5375).Button, obj7);
+    items1[2] = closure_9(tmp2(5376).Button, obj7);
     obj3.children = items1;
     tmp6 = closure_10(closure_6, obj3);
   }
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [BadgeDirectoryStore];
     const fn = function h() {
-      singleRequirementProgress = singleRequirementProgress.getSingleRequirementProgress(analyticsLocation(8284).BadgeId.GIFTING);
+      singleRequirementProgress = singleRequirementProgress.getSingleRequirementProgress(analyticsLocation(8292).BadgeId.GIFTING);
       let num;
       if (singleRequirementProgress != null) {
         num = singleRequirementProgress.current;
@@ -320,8 +320,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       if (num == null) {
         num = 0;
       }
-      const obj2 = { badgeProgress: num, currentTier: singleRequirementProgress.getCurrentTier(analyticsLocation(8284).BadgeId.GIFTING), nextTier: singleRequirementProgress.getNextTier(analyticsLocation(8284).BadgeId.GIFTING), giftsRemaining: singleRequirementProgress.getRemainingToNextTier(analyticsLocation(8284).BadgeId.GIFTING), tiers: null };
-      const badgeById = obj.getBadgeById(analyticsLocation(8284).BadgeId.GIFTING);
+      const obj2 = { badgeProgress: num, currentTier: singleRequirementProgress.getCurrentTier(analyticsLocation(8292).BadgeId.GIFTING), nextTier: singleRequirementProgress.getNextTier(analyticsLocation(8292).BadgeId.GIFTING), giftsRemaining: singleRequirementProgress.getRemainingToNextTier(analyticsLocation(8292).BadgeId.GIFTING), tiers: null };
+      const badgeById = obj.getBadgeById(analyticsLocation(8292).BadgeId.GIFTING);
       let tiers;
       if (badgeById != null) {
         tiers = badgeById.tiers;
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   ({ badgeProgress, currentTier } = stateFromStoresObject);
   ({ nextTier, giftsRemaining, tiers } = stateFromStoresObject);
   let tmpResult = analyticsLocation(504);
-  const isGiftingBadgeComplexArtEnabled = analyticsLocation(10085).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
+  const isGiftingBadgeComplexArtEnabled = analyticsLocation(10070).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
   if (0 === badgeProgress) {
     if (cResult[2] !== analyticsLocation) {
       let obj2 = { analyticsLocation };
@@ -391,7 +391,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                   const _Symbol = Symbol;
                                                   if (cResult[87] === Symbol.for("react.memo_cache_sentinel")) {
                                                     let obj3 = { size: "sm", color: tmp7(587).unsafe_rawColors.WHITE };
-                                                    const tmp49 = closure_9(tmp(11561).GiftIcon, obj3);
+                                                    const tmp49 = closure_9(tmp(11490).GiftIcon, obj3);
                                                     let intl = tmp(1126).intl;
                                                     const stringResult = intl.string(tmp7(2661).DZnomS);
                                                     cResult[87] = tmp49;
@@ -434,7 +434,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                       let obj5 = { variant: "text-sm/medium", color: "text-strong", children: null };
                                                       const intl2 = tmp(1126).intl;
                                                       obj5.children = intl2.string(tmp7(2661).WZ4cXA);
-                                                      const tmp60 = closure_9(tmp(5086).Text, obj5);
+                                                      const tmp60 = closure_9(tmp(5087).Text, obj5);
                                                       cResult[95] = tmp60;
                                                       const tmp59 = tmp60;
                                                     } else {
@@ -541,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                           const obj9 = { style: tmp4.footerText, variant: "text-xs/normal", color: "text-muted", children: null };
                                                           const intl3 = tmp(1126).intl;
                                                           obj9.children = intl3.string(tmp7(2661)["4Yp0mI"]);
-                                                          items1[1] = closure_9(tmp(5086).Text, obj9);
+                                                          items1[1] = closure_9(tmp(5087).Text, obj9);
                                                           obj7.children = items1;
                                                           tmp73 = closure_10(closure_11, obj7);
                                                         }
@@ -581,7 +581,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                                                                                                     },
                                                     grow: true
                                                   };
-                                                  const tmp53 = closure_9(tmp(5375).Button, obj11);
+                                                  const tmp53 = closure_9(tmp(5376).Button, obj11);
                                                   cResult[89] = analyticsLocation;
                                                   cResult[90] = analyticsLocations;
                                                   cResult[91] = tmp53;
@@ -665,14 +665,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
     }
-    const giftingBadgeProgressPercent = tmp(10085).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const giftingBadgeProgressPercent = tmp(10070).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
     cResult[33] = badgeProgress;
     cResult[34] = currentTier;
     cResult[35] = nextTier;
     cResult[36] = giftingBadgeProgressPercent;
-    const tmpResult4 = tmp(10085);
+    const tmpResult4 = tmp(10070);
   }
-  const tmpResult3 = analyticsLocation(10085);
+  const tmpResult3 = analyticsLocation(10070);
 }) : (function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   analyticsLocation = analyticsLocation.analyticsLocation;
   dependencyMap = undefined;
@@ -708,18 +708,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   ({ badgeProgress, currentTier } = stateFromStoresObject);
   ({ nextTier, tiers, giftsRemaining } = stateFromStoresObject);
   let obj = analyticsLocation(504);
-  const isGiftingBadgeComplexArtEnabled = analyticsLocation(10085).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
+  const isGiftingBadgeComplexArtEnabled = analyticsLocation(10070).useIsGiftingBadgeComplexArtEnabled(UserSettingsGiftingBadgeProgress);
   if (0 === badgeProgress) {
     let obj3 = { analyticsLocation };
     return closure_9(closure_14, obj3);
   } else {
     let tmp19 = closure_8(currentTier);
     const tmp25 = closure_8(nextTier);
-    const giftingBadgeProgressPercent = tmp7(10085).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
-    const tmp7Result = tmp7(10085);
-    let giftingBadgeTierIconUrl = tmp7(10085).getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
-    const tmp7Result3 = tmp7(10085);
-    const giftingBadgeTierIconUrl1 = tmp7(10085).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
+    const giftingBadgeProgressPercent = tmp7(10070).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const tmp7Result = tmp7(10070);
+    let giftingBadgeTierIconUrl = tmp7(10070).getGiftingBadgeTierIconUrl(currentTier, isGiftingBadgeComplexArtEnabled);
+    const tmp7Result3 = tmp7(10070);
+    const giftingBadgeTierIconUrl1 = tmp7(10070).getGiftingBadgeTierIconUrl(nextTier, isGiftingBadgeComplexArtEnabled);
     if (null != nextTier) {
       const intl2 = tmp7(1126).intl;
       let obj4 = { count: giftsRemaining, nextTier: null };
@@ -750,15 +750,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     let tmp13 = null != giftingBadgeTierIconUrl;
     if (tmp13) {
       const obj9 = { icon: giftingBadgeTierIconUrl, size: 36, style: { margin: 4 } };
-      tmp13 = closure_9(tmp4(10091), obj9);
+      tmp13 = closure_9(tmp4(10076), obj9);
     }
     let items1 = [tmp13, , ];
     const obj10 = { style: tmp.progressTitleText, variant: "text-md/medium", color: "text-strong", children: formatToPlainStringResult };
-    items1[1] = closure_9(tmp7(5086).Text, obj10);
+    items1[1] = closure_9(tmp7(5087).Text, obj10);
     let tmp15Result = null != giftingBadgeTierIconUrl1;
     if (tmp15Result) {
       const obj11 = { icon: giftingBadgeTierIconUrl1, size: 36, style: { margin: 4 } };
-      tmp15Result = closure_9(tmp4(10091), obj11);
+      tmp15Result = closure_9(tmp4(10076), obj11);
     }
     items1[2] = tmp15Result;
     obj8.children = items1;
@@ -787,7 +787,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj18 = { variant: "text-xs/normal", color: "text-subtle", children: null };
     obj17.count = tmp19;
     obj18.children = intl3.format(tmp4(2661).iIpfQe, obj17);
-    obj16.children = closure_9(tmp7(5086).Text, obj18);
+    obj16.children = closure_9(tmp7(5087).Text, obj18);
     items4[1] = closure_9(closure_6, obj16);
     obj12.children = items4;
     items2[1] = closure_10(closure_6, obj12);
@@ -795,13 +795,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const items5 = [closure_10(closure_6, obj7), , , , ];
     const obj19 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj20 = { size: "sm", color: tmp4(587).unsafe_rawColors.WHITE };
-    obj19.icon = closure_9(tmp7(11561).GiftIcon, obj20);
+    obj19.icon = closure_9(tmp7(11490).GiftIcon, obj20);
     const intl4 = tmp7(1126).intl;
     obj19.text = intl4.string(tmp4(2661).DZnomS);
     obj19.onPress = function onPress() {
       utils_openGiftModal.openGiftModal({ analyticsLocation, analyticsLocations });
     };
-    items5[1] = closure_9(tmp7(5375).Button, obj19);
+    items5[1] = closure_9(tmp7(5376).Button, obj19);
     const obj21 = { style: tmp.divider };
     items5[2] = closure_9(closure_6, obj21);
     const obj22 = {
@@ -814,11 +814,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj23 = { variant: "text-sm/medium", color: "text-strong", children: null };
     const intl5 = tmp7(1126).intl;
     obj23.children = intl5.string(tmp4(2661).WZ4cXA);
-    const items6 = [closure_9(tmp7(5086).Text, obj23), ];
+    const items6 = [closure_9(tmp7(5087).Text, obj23), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13698).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13790).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(10508).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(10498).ChevronSmallDownIcon;
     }
     const obj24 = { color: tmp4(587).colors.INTERACTIVE_ICON_DEFAULT };
     items6[1] = closure_9(ChevronSmallDownIcon, obj24);
@@ -866,7 +866,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       const obj27 = { style: tmp.footerText, variant: "text-xs/normal", color: "text-muted", children: null };
       const intl6 = tmp7(1126).intl;
       obj27.children = intl6.string(tmp4(2661)["4Yp0mI"]);
-      items7[1] = closure_9(tmp7(5086).Text, obj27);
+      items7[1] = closure_9(tmp7(5087).Text, obj27);
       obj25.children = items7;
       tmp11Result = closure_10(closure_11, obj25);
     }
@@ -874,5 +874,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj6.children = items5;
     return closure_10(closure_6, obj6);
   }
-  let obj2 = analyticsLocation(10085);
+  let obj2 = analyticsLocation(10070);
 });

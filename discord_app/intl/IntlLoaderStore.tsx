@@ -4,11 +4,11 @@
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef2130 from "module_2130" /* 2130 */;
-import bg from "bg" /* 4151 */;
-import formatjs from "formatjs" /* 4626 */;
-import moment from "moment" /* 4657 */;
+import bg from "bg" /* 4153 */;
+import formatjs from "formatjs" /* 4628 */;
+import moment from "moment" /* 4659 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import module_1901 from "module_1901" /* 1901 */;
+import module_1902 from "module_1902" /* 1902 */;
 
 require = fn;
 let closure_6 = async function _setAppLocale(arg0) {
@@ -343,21 +343,21 @@ let closure_9 = async function _setMomentLocale(arg0) {
     }
   }
 };
-const identity = fn(1266);
+const identity = fn(1267);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  return {
+  let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "end",
+    error: "backgroundColor",
     localeData: _modDef2130,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "end" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "backgroundColor" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -370,6 +370,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
+  return obj;
 });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

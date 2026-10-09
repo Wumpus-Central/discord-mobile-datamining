@@ -1,16 +1,16 @@
-// === Module 9587: ModalStackNavigator ===
+// === Module 9606: ModalStackNavigator ===
 
-// Module 9587 (ModalStackNavigator)
-import Navigator from "Navigator" /* 6679 */;
-import HeaderShared from "HeaderShared" /* 9232 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9588 */;
+// Module 9606 (ModalStackNavigator)
+import Navigator from "Navigator" /* 6686 */;
+import HeaderShared from "HeaderShared" /* 9270 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 9607 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["children"];
 const jsx = fn(21).jsx;
-const NativeStackNavigator = fn(9279);
+const NativeStackNavigator = fn(9317);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);

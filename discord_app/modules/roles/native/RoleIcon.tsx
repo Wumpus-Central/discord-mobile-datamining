@@ -1,14 +1,14 @@
-// === Module 6888: RoleIcon ===
+// === Module 6895: RoleIcon ===
 
-// Module 6888 (RoleIcon)
+// Module 6895 (RoleIcon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6164 */;
+import FastImageDefault from "FastImage" /* 6163 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5086);
+const Text_Text = Text(5087);
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     cResult[7] = obj5;
     roleIcon = obj5;
   }
-  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "code", textAlign: "STORAGE_SECURE_KEYS", width: num, marginBottom: "buildSkippedNetworkRequestOrResponse" };
+  const obj6 = { fontFamily: "System", fontSize: result, lineHeight: "code", textAlign: null, width: num, marginBottom: null };
   cResult[2] = num;
   cResult[3] = result;
   cResult[4] = obj6;
@@ -98,7 +98,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RoleIcon
     size = 20;
   }
   const size1 = { height: size, width: size };
-  const obj = { fontFamily: "System", fontSize: size * num, lineHeight: "code", textAlign: "STORAGE_SECURE_KEYS", width: size, marginBottom: "buildSkippedNetworkRequestOrResponse" };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

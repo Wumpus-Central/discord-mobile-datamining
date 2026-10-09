@@ -1,32 +1,32 @@
-// === Module 17128: GuildChannelRow ===
+// === Module 17278: GuildChannelRow ===
 
-// Module 17128 (GuildChannelRow)
+// Module 17278 (GuildChannelRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useChannelNameDefault from "useChannelName" /* 5417 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
-import SearchListRow from "SearchListRow" /* 17107 */;
-import ChannelContent from "ChannelContent" /* 17129 */;
-import renderChannelItem from "renderChannelItem" /* 17131 */;
+import useChannelNameDefault from "useChannelName" /* 5418 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8142 */;
+import SearchListRow from "SearchListRow" /* 17257 */;
+import ChannelContent from "ChannelContent" /* 17279 */;
+import renderChannelItem from "renderChannelItem" /* 17281 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["channel", "subtitle", "trailing", "extras", "onPress", "voiceStates"];
-get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const layout = fn(9247).CHANNEL_LIST_SEARCH_LAYOUT;
+const View = fn(17).View;
+const layout = fn(9285).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
 let size = { width: 20, height: 20, marginRight: 8, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj.simpleIcon = size;
-let closure_9 = createStyles.createStyles(obj);
+let closure_8 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildChannelLabel(channel) {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildChannelLabel(channel) {
   const cResult = c.c(6);
   channel = channel.channel;
-  const tmp4 = closure_9();
+  const tmp4 = closure_8();
   const tmp5 = useChannelNameDefault(channel);
   if (cResult[0] === channel) {
     if (cResult[1] === tmp5) {
@@ -39,7 +39,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       return tmp9;
     }
     const obj2 = { style: tmp6, children: tmp7 };
-    const tmp12 = <timestampProducer style={tmp6}>{tmp7}</timestampProducer>;
+    const tmp12 = <View style={tmp6}>{tmp7}</View>;
     cResult[3] = tmp4.content;
     cResult[4] = tmp7;
     cResult[5] = tmp12;
@@ -54,11 +54,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
   const tmpResult = ChannelContent;
 }) : (function GuildChannelLabel(channel) {
   channel = channel.channel;
-  const obj = { style: closure_9().content, children: null };
-  const tmp = closure_9();
+  const obj = { style: closure_8().content, children: null };
+  const tmp = closure_8();
   const tmp2 = useChannelNameDefault(channel);
   obj.children = ChannelContent.renderChannelContent({ channel, layout, name: tmp2 });
-  return <timestampProducer style={closure_9().content}>{null}</timestampProducer>;
+  return <View style={closure_8().content}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
 size = fn(2);
@@ -93,7 +93,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp9 = cResult[6];
     tmp10 = cResult[7];
   }
-  const tmp14 = closure_9();
+  const tmp14 = closure_8();
   if (cResult[8] === tmp4) {
     if (cResult[9] === tmp10) {
       let tmp15 = cResult[10];
@@ -105,12 +105,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ({ icon, iconWidth } = tmp17);
       if (cResult[14] !== tmp4) {
         const obj2 = { channel: tmp4 };
-        const tmp23 = <closure_10 channel={tmp4} />;
+        const tmp24 = <closure_9 channel={tmp4} />;
         cResult[14] = tmp4;
-        cResult[15] = tmp23;
-        let tmp20 = tmp23;
+        cResult[15] = tmp24;
+        let tmp21 = tmp24;
       } else {
-        tmp20 = cResult[15];
+        tmp21 = cResult[15];
       }
       if (cResult[16] === tmp15) {
         if (cResult[17] === tmp5) {
@@ -121,11 +121,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   if (cResult[22] === tmp14.container) {
                     if (cResult[23] === tmp14.iconContainer) {
                       if (cResult[24] === tmp8) {
-                        if (cResult[25] === tmp20) {
+                        if (cResult[25] === tmp21) {
                           if (cResult[26] === tmp9) {
-                            let tmp24 = cResult[27];
+                            let tmp25 = cResult[27];
                           }
-                          return tmp24;
+                          return tmp25;
                         }
                       }
                     }
@@ -142,12 +142,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ({ container: obj7.containerStyle, iconContainer: obj7.iconContainerStyle } = tmp14);
       obj3.icon = icon;
       obj3.iconWidth = iconWidth;
-      obj3.label = tmp20;
+      obj3.label = tmp21;
       obj3.subLabel = tmp8;
       obj3.onPress = tmp6;
       obj3.trailing = tmp9;
       obj3.extras = tmp5;
-      const tmp32 = jsx(SearchListRow.SearchListRow, {});
+      const tmp33 = jsx(SearchListRow.SearchListRow, {});
       cResult[16] = tmp15;
       cResult[17] = tmp5;
       cResult[18] = icon;
@@ -157,14 +157,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[22] = tmp14.container;
       cResult[23] = tmp14.iconContainer;
       cResult[24] = tmp8;
-      cResult[25] = tmp20;
+      cResult[25] = tmp21;
       cResult[26] = tmp9;
-      cResult[27] = tmp32;
-      tmp24 = tmp32;
+      cResult[27] = tmp33;
+      tmp25 = tmp33;
     }
     const obj4 = { icon: null, iconWidth: 32 };
-    const obj5 = { style: tmp14.simpleIcon, source: utils_ChannelUtils.getSimpleChannelIcon(tmp4) };
-    obj4.icon = <hasOwnProperty style={tmp14.simpleIcon} source={utils_ChannelUtils.getSimpleChannelIcon(tmp4)} />;
+    const obj5 = { style: tmp14.simpleIcon, source: null };
+    obj5.source = utils_ChannelUtils.getSimpleChannelIcon(tmp4);
+    obj4.icon = <tmp20 style={tmp14.simpleIcon} source={null} />;
     cResult[11] = tmp4;
     cResult[12] = tmp14;
     cResult[13] = obj4;
@@ -181,7 +182,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   channel = channel.channel;
   ({ subtitle, trailing, extras, onPress, voiceStates } = channel);
   const merged = Object.assign(channel, Object.assign({ channel: 0, subtitle: 0, trailing: 0, extras: 0, onPress: 0, voiceStates: 0 }));
-  const tmp2 = closure_9();
+  const tmp2 = closure_8();
   const channelAccessibilityProps = renderChannelItem.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
   const obj2 = { style: tmp2.simpleIcon, source: null };
   obj2.source = utils_ChannelUtils.getSimpleChannelIcon(channel);
@@ -189,9 +190,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const merged1 = Object.assign(channelAccessibilityProps);
   const merged2 = Object.assign(merged);
   ({ container: obj4.containerStyle, iconContainer: obj4.iconContainerStyle } = tmp2);
-  obj6.icon = <hasOwnProperty style={tmp2.simpleIcon} source={null} />;
+  obj6.icon = <tmp4 style={tmp2.simpleIcon} source={null} />;
   obj6.iconWidth = 32;
-  obj6.label = <closure_10 channel={channel} />;
+  obj6.label = <closure_9 channel={channel} />;
   obj6.subLabel = subtitle;
   obj6.onPress = onPress;
   obj6.trailing = trailing;

@@ -1,6 +1,6 @@
-// === Module 8960: StorefrontPromotionOverrideStore ===
+// === Module 8971: StorefrontPromotionOverrideStore ===
 
-// Module 8960 (StorefrontPromotionOverrideStore)
+// Module 8971 (StorefrontPromotionOverrideStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

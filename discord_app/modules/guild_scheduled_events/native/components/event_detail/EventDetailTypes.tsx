@@ -1,6 +1,6 @@
-// === Module 8757: EventDetailTypes ===
+// === Module 8766: EventDetailTypes ===
 
-// Module 8757 (EventDetailTypes)
+// Module 8766 (EventDetailTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailTypes.tsx");

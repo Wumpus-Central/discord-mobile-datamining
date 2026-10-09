@@ -1,11 +1,11 @@
-// === Module 15069: PremiumSettingScreen ===
+// === Module 15181: PremiumSettingScreen ===
 
-// Module 15069 (PremiumSettingScreen)
+// Module 15181 (PremiumSettingScreen)
 import c from "c" /* 576 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6671 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6674 */;
-import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7119 */;
+import useNavigation from "useNavigation" /* 1503 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6678 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6681 */;
+import UserSettingsPremiumDefault from "UserSettingsPremium" /* 7124 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

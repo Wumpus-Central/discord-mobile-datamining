@@ -1,21 +1,21 @@
-// === Module 9442: PremiumUpsellSectionDivider ===
+// === Module 9480: PremiumUpsellSectionDivider ===
 
-// Module 9442 (PremiumUpsellSectionDivider)
+// Module 9480 (PremiumUpsellSectionDivider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
 import noop from "module_19" /* 19 */;
 
 const ConstantsIOS = LockIcon(1105);
-const LockIcon2 = LockIcon(8198);
-const PremiumUpsellGradientBackground = LockIcon(9443);
+const LockIcon2 = LockIcon(8206);
+const PremiumUpsellGradientBackground = LockIcon(9481);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7140).Gradients;
+const Gradients = fn(7145).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles((arg0) => {
   let num;
   if (arg0 === obj2.START) {

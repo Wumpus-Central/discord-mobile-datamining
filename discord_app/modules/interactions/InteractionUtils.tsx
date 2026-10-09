@@ -1,15 +1,15 @@
-// === Module 8229: InteractionUtils ===
+// === Module 8237: InteractionUtils ===
 
-// Module 8229 (InteractionUtils)
+// Module 8237 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Server from "Server" /* 1997 */;
-import InteractionTypes from "InteractionTypes" /* 5438 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8230 */;
-import SkemaUtils from "SkemaUtils" /* 8231 */;
+import Server from "Server" /* 1998 */;
+import InteractionTypes from "InteractionTypes" /* 5439 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8238 */;
+import SkemaUtils from "SkemaUtils" /* 8239 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 7856 */;
+import InteractionStore from "InteractionStore" /* 7865 */;
 
 require = fn;
 let closure_10 = async function _executeMessageComponentInteraction(arg0) {
@@ -90,7 +90,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   await "IconComponent";
   closure_2 = tmp3;
   ({ componentType: closure_129_0, messageId: closure_129_1, messageFlags: closure_129_2, customId: closure_129_3, componentId: closure_129_4, applicationId: closure_129_5, channelId: closure_129_6, guildId: closure_129_7, localState: closure_129_8 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 function mapMessageComponentLocalStateForAPI(type) {
   if (null == type) {
@@ -350,4 +350,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(5435).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(5436).interactionCallbackErrorReason;

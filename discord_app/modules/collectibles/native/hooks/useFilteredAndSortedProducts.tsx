@@ -1,13 +1,13 @@
-// === Module 15154: useFilteredAndSortedProducts ===
+// === Module 15266: useFilteredAndSortedProducts ===
 
-// Module 15154 (useFilteredAndSortedProducts)
+// Module 15266 (useFilteredAndSortedProducts)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import useBadBundleFilter from "useBadBundleFilter" /* 15155 */;
-import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 15156 */;
-import usePurchasedProductsSort from "usePurchasedProductsSort" /* 15157 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import useBadBundleFilter from "useBadBundleFilter" /* 15267 */;
+import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 15268 */;
+import usePurchasedProductsSort from "usePurchasedProductsSort" /* 15269 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const constants = fn(1087).CollectiblesMobileShopScreen;

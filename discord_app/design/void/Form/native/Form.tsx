@@ -1,15 +1,15 @@
-// === Module 6818: Form/Form ===
+// === Module 6825: Form/Form ===
 
-// Module 6818 (Form/Form)
+// Module 6825 (Form/Form)
 import c from "c" /* 576 */;
-import RedesignCompat from "RedesignCompat" /* 6266 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
+import RedesignCompat from "RedesignCompat" /* 6268 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 let context = noop.createContext({ isForm: false });
 const ReactCompilerGating = fn(558);

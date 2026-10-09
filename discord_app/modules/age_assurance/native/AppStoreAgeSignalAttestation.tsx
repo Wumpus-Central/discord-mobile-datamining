@@ -1,14 +1,14 @@
-// === Module 7666: AppStoreAgeSignalAttestation ===
+// === Module 7675: AppStoreAgeSignalAttestation ===
 
-// Module 7666 (AppStoreAgeSignalAttestation)
+// Module 7675 (AppStoreAgeSignalAttestation)
 import Storage3 from "Storage" /* 510 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import TimeUtils from "TimeUtils" /* 5119 */;
-import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 7667 */;
-import NativeAppAttestModuleDefault from "NativeAppAttestModule" /* 7668 */;
-import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 7669 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import TimeUtils from "TimeUtils" /* 5120 */;
+import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 7676 */;
+import NativeAppAttestModuleDefault from "NativeAppAttestModule" /* 7677 */;
+import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 7678 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function getPlayIntegrityCloudProjectNumber() {

@@ -1,9 +1,9 @@
-// === Module 14067: NotificationsTabLottie ===
+// === Module 14164: NotificationsTabLottie ===
 
-// Module 14067 (NotificationsTabLottie)
+// Module 14164 (NotificationsTabLottie)
 import c from "c" /* 576 */;
-import LottieIcon from "LottieIcon" /* 10837 */;
-import _mod14068 from "module_14068" /* 14068 */;
+import LottieIcon from "LottieIcon" /* 11010 */;
+import _mod14165 from "module_14165" /* 14165 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,7 +30,7 @@ export const NotificationsTabLottie = ReactCompilerGating.isReactCompilerEnabled
     tmp5 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14068;
+    const tmpResult = _mod14165;
     cResult[3] = tmpResult;
     let tmp9 = tmpResult;
   } else {
@@ -52,5 +52,5 @@ export const NotificationsTabLottie = ReactCompilerGating.isReactCompilerEnabled
 }) : (function NotificationsTabLottie(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14068, animation: "all", ref: ref.ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14165, animation: "all", ref: ref.ref, layers, markers: items });
 });

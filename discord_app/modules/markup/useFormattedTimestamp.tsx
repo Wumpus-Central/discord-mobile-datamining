@@ -1,6 +1,6 @@
-// === Module 11786: useFormattedTimestamp ===
+// === Module 11723: useFormattedTimestamp ===
 
-// Module 11786 (useFormattedTimestamp)
+// Module 11723 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
       const effect = noop.useEffect(tmp4, tmp5);
       if ("R" === parsed.format) {
         if (cResult[5] !== parsed.parsed) {
-          const TIMESTAMP_FORMATS = R(8131).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = R(8139).TIMESTAMP_FORMATS;
           R = TIMESTAMP_FORMATS.R;
           RResult = R(parsed.parsed);
           parsed = parsed.parsed;

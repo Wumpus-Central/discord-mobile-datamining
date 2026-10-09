@@ -1,25 +1,25 @@
-// === Module 6152: MemberVerificationModal ===
+// === Module 6154: MemberVerificationModal ===
 
-// Module 6152 (MemberVerificationModal)
+// Module 6154 (MemberVerificationModal)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4810 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6107 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4811 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4903 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6109 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6153 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6155 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 let View = fn(17).View;
-const MemberVerificationFormConstants = fn(6154);
+const MemberVerificationFormConstants = fn(6156);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

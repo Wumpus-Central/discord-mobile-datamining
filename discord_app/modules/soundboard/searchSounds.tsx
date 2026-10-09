@@ -1,11 +1,11 @@
-// === Module 7045: searchSounds ===
+// === Module 7048: searchSounds ===
 
-// Module 7045 (searchSounds)
+// Module 7048 (searchSounds)
 import debounceDefault from "debounce" /* 551 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
-import SoundboardUtils from "SoundboardUtils" /* 7046 */;
-import EmojiStore from "EmojiStore" /* 5992 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
+import SoundboardUtils from "SoundboardUtils" /* 7049 */;
+import EmojiStore from "EmojiStore" /* 5994 */;
 
 require = fn;
 function trackSearchStart(location_stack, channel_id) {

@@ -1,24 +1,24 @@
-// === Module 11969: PortalKeyboardPlaceholder ===
+// === Module 11906: PortalKeyboardPlaceholder ===
 
-// Module 11969 (PortalKeyboardPlaceholder)
+// Module 11906 (PortalKeyboardPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1896 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4947 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6618 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6659 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9241 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useSystemKeyboardHeightDefault from "useSystemKeyboardHeight" /* 1897 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4948 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6625 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6666 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9279 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles((arg0, arg1, arg2, arg3) => {
   let absoluteFillObject = null;
   if (obj.isIOS()) {

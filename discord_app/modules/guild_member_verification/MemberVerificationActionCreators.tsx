@@ -1,15 +1,15 @@
-// === Module 6127: MemberVerificationActionCreators ===
+// === Module 6129: MemberVerificationActionCreators ===
 
-// Module 6127 (MemberVerificationActionCreators)
+// Module 6129 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5072 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5073 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2117 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import InviteStore from "InviteStore" /* 5071 */;
-import UserStore from "UserStore" /* 1389 */;
+import InviteStore from "InviteStore" /* 5072 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 let closure_10 = async function _fetchVerificationForm() {
@@ -282,7 +282,7 @@ let closure_14 = async function _submitVerificationForm(arg0) {
           let body;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

@@ -1,22 +1,22 @@
-// === Module 6173: MemberVerificationForm ===
+// === Module 6175: MemberVerificationForm ===
 
-// Module 6173 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4902 */;
-import useInitialValueDefault from "useInitialValue" /* 6174 */;
+// Module 6175 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4903 */;
+import useInitialValueDefault from "useInitialValue" /* 6176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6153 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6155 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6153).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6155).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1085).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredVerificationFields(id) {
@@ -32,7 +32,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReq
     if (cResult[1] === phone) {
       let tmp6 = cResult[2];
     }
-    return initialVerification(6174)(tmp6);
+    return initialVerification(6176)(tmp6);
   }
   cResult[0] = id.verificationLevel;
   let phone1;
@@ -379,8 +379,8 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1126).intl;
                   obj2.content = intl.string(closure_1_0(1126).t.StC497);
-                  obj2.icon = closure_1_1(5007);
-                  closure_1_1(4766).open(obj2);
+                  obj2.icon = closure_1_1(5008);
+                  closure_1_1(4768).open(obj2);
                 })();
                 c6 = 3;
                 return { value: "IconComponent", done: null };

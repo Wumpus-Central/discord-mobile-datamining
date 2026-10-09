@@ -1,21 +1,21 @@
-// === Module 15197: useQuestForPlacement ===
+// === Module 15310: useQuestForPlacement ===
 
-// Module 15197 (useQuestForPlacement)
+// Module 15310 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1102 */;
-import AdCreativeType from "AdCreativeType" /* 5984 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6076 */;
-import QuestActionCreators from "QuestActionCreators" /* 9537 */;
-import QuestsEligibility from "QuestsEligibility" /* 10576 */;
+import AdCreativeType from "AdCreativeType" /* 5986 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6078 */;
+import QuestsEligibility from "QuestsEligibility" /* 9144 */;
+import QuestActionCreators from "QuestActionCreators" /* 9150 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7376 */;
-import QuestStore from "QuestStore" /* 7379 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7381 */;
+import QuestStore from "QuestStore" /* 7384 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {
+function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP, arg2) {
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
@@ -28,16 +28,16 @@ function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {
   }
   if (isEligibleForQuests) {
     if ("active" === obj2.getState()) {
-      if (!AdDeliveryStore.isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA)) {
-        if (AdDeliveryStore.canRefreshAd(MOBILE_HOME_DOCK_AREA)) {
+      if (!AdDeliveryStore.isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
+        if (AdDeliveryStore.canRefreshAd(QUEST_HOME_BANNER_DESKTOP)) {
           const currentQuests = QuestActionCreators.fetchCurrentQuests();
           const tmpResult = QuestActionCreators;
-          const questToDeliver = QuestActionCreators.fetchQuestToDeliver(MOBILE_HOME_DOCK_AREA, arg2);
+          const questToDeliver = QuestActionCreators.fetchQuestToDeliver(QUEST_HOME_BANNER_DESKTOP, arg2);
           const tmpResult3 = QuestActionCreators;
         }
       }
     } else if (null != fetchedAt) {
-      QuestActionCreators.clearQuestAdDecision(MOBILE_HOME_DOCK_AREA, fetchedAt.ttlMillis);
+      QuestActionCreators.clearQuestAdDecision(QUEST_HOME_BANNER_DESKTOP, fetchedAt.ttlMillis);
       const tmpResult4 = QuestActionCreators;
     }
     obj2 = DiscordAppStateDefault;
@@ -198,11 +198,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDelivered
     creative = tmp9.creative;
   }
   if (cResult[4] !== creative) {
-    const deliveredQuestId = tmp(7377).getDeliveredQuestId(creative);
+    const deliveredQuestId = tmp(7382).getDeliveredQuestId(creative);
     cResult[4] = creative;
     cResult[5] = deliveredQuestId;
     let tmp11 = deliveredQuestId;
-    const tmpResult3 = tmp(7377);
+    const tmpResult3 = tmp(7382);
   } else {
     tmp11 = cResult[5];
   }
@@ -497,11 +497,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     creative = tmp5.creative;
   }
   if (cResult[0] !== creative) {
-    const deliveredQuestId = tmp(7377).getDeliveredQuestId(creative);
+    const deliveredQuestId = tmp(7382).getDeliveredQuestId(creative);
     cResult[0] = creative;
     cResult[1] = deliveredQuestId;
     let tmp7 = deliveredQuestId;
-    const tmpResult = tmp(7377);
+    const tmpResult = tmp(7382);
   } else {
     tmp7 = cResult[1];
   }
@@ -540,7 +540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     if (!tmpResult4.isQuestExpired(stateFromStores)) {
       tmp13 = stateFromStores;
     }
-    tmpResult4 = tmp(7385);
+    tmpResult4 = tmp(7390);
   }
   return tmp13;
 }) : (function useFetchQuestForAdPlacement(arg0) {
@@ -571,7 +571,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFetch
     if (!tmp3Result2.isQuestExpired(stateFromStores)) {
       tmp7 = stateFromStores;
     }
-    tmp3Result2 = tmp3(7385);
+    tmp3Result2 = tmp3(7390);
   }
   return tmp7;
 });

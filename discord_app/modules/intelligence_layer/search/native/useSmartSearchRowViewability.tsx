@@ -1,10 +1,10 @@
-// === Module 17157: useSmartSearchRowViewability ===
+// === Module 17307: useSmartSearchRowViewability ===
 
-// Module 17157 (useSmartSearchRowViewability)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12075 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12077 */;
+// Module 17307 (useSmartSearchRowViewability)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12012 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 12014 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -87,6 +87,6 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
     SmartSearchAnalyticsManagerDefault.setIsAppActive(stateFromStores, SearchSessionAnalyticsManagerDefault);
   }, items1);
   const effect1 = noop.useEffect(() => () => {
-    closure_1_1(12077).setIsRowViewable(false, closure_1_1(12075));
+    closure_1_1(12014).setIsRowViewable(false, closure_1_1(12012));
   }, []);
 });

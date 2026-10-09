@@ -1,54 +1,54 @@
-// === Module 17278: YouScreenUserProfileContent ===
+// === Module 17423: YouScreenUserProfileContent ===
 
-// Module 17278 (YouScreenUserProfileContent)
+// Module 17423 (YouScreenUserProfileContent)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7090 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8343 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8357 */;
-import FormDividerDefault from "FormDivider" /* 8559 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10495 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10507 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10547 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11223 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11657 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 12983 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 13040 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 13053 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 13056 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 13057 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13068 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 13069 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 13084 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13213 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13228 */;
-import UserProfileConnections from "UserProfileConnections" /* 13231 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13236 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13241 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 14685 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15869 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16610 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 17264 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 17283 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17285 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17287 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7093 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8351 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8365 */;
+import FormDividerDefault from "FormDivider" /* 8567 */;
+import tracking_Tracking from "tracking/Tracking" /* 9145 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10485 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10497 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10537 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10578 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11593 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 13065 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 13122 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 13135 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 13138 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 13139 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13160 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 13161 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 13177 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13306 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13321 */;
+import UserProfileConnections from "UserProfileConnections" /* 13324 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13329 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13334 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 14791 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15984 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16735 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 17430 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17432 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17434 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5756 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const useIsContentShown = fn(2055).useIsContentShown;
-let UserProfileSections = fn(8283).UserProfileSections;
-let UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
-let closure_13 = fn(14656).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(2056).useIsContentShown;
+let UserProfileSections = fn(8291).UserProfileSections;
+let UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
+let closure_13 = fn(14761).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -56,8 +56,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAva
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      const result = require("you/tracking/Tracking").trackYouTabAvatarPress();
-      const obj = require("you/tracking/Tracking");
+      const result = require("tracking/Tracking").trackYouTabAvatarPress();
+      const obj = require("tracking/Tracking");
       const result1 = require("showYouAccountActionSheet").showYouAccountActionSheet();
     };
     cResult[0] = fn;
@@ -91,8 +91,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAva
   return tmp7;
 }) : (function YouAvatar(arg0) {
   const callback = noop.useCallback(() => {
-    const result = require("you/tracking/Tracking").trackYouTabAvatarPress();
-    const obj = require("you/tracking/Tracking");
+    const result = require("tracking/Tracking").trackYouTabAvatarPress();
+    const obj = require("tracking/Tracking");
     const result1 = require("showYouAccountActionSheet").showYouAccountActionSheet();
   }, []);
   const isAndroidResult = PlatformUtils.isAndroid();
@@ -398,7 +398,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
   }
   const fn = function o() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
-    const result = you_tracking_Tracking.trackYouTabEditProfilePress();
+    const result = tracking_Tracking.trackYouTabEditProfilePress();
     navigateToProfileCustomization();
     let tmp4 = closure_3;
     if (!closure_3) {
@@ -440,7 +440,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
   const items1 = [navigateToProfileCustomization];
   const callback = noop.useCallback(() => {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
-    const result = you_tracking_Tracking.trackYouTabEditProfilePress();
+    const result = tracking_Tracking.trackYouTabEditProfilePress();
     navigateToProfileCustomization();
     let tmp4 = closure_3;
     if (!closure_3) {

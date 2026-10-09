@@ -1,15 +1,15 @@
-// === Module 12277: useGuildPowerupLevelPerks ===
+// === Module 12216: useGuildPowerupLevelPerks ===
 
-// Module 12277 (useGuildPowerupLevelPerks)
+// Module 12216 (useGuildPowerupLevelPerks)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef2597 from "module_2597" /* 2597 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PerkIcons = fn(1391).PerkIcons;
-const GUILD_FEATURE_TO_PERK = fn(4968).GUILD_FEATURE_TO_PERK;
+const PerkIcons = fn(1392).PerkIcons;
+const GUILD_FEATURE_TO_PERK = fn(4969).GUILD_FEATURE_TO_PERK;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");

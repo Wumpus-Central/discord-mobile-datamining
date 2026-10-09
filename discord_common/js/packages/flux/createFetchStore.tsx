@@ -179,7 +179,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
               closure_130_8 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else {
             if (1 === tmp7) {
@@ -488,7 +488,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
       await "IconComponent";
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      return "Reflect";
+      return "Set";
     })();
     iter.next();
     return iter;
@@ -518,7 +518,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
       await "IconComponent";
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      return "Reflect";
+      return "Set";
     })();
     iter.next();
     return iter;
@@ -549,7 +549,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
       await "IconComponent";
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      return "Reflect";
+      return "Set";
     })();
     iter.next();
     return iter;

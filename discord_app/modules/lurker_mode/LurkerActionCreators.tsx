@@ -1,10 +1,10 @@
-// === Module 7029: LurkerActionCreators ===
+// === Module 7032: LurkerActionCreators ===
 
-// Module 7029 (LurkerActionCreators)
+// Module 7032 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
-import LurkingStore from "LurkingStore" /* 4708 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import LurkingStore from "LurkingStore" /* 4710 */;
 
 const require = fn;
 function stopLurkingAll() {
@@ -68,7 +68,7 @@ let closure_8 = async function _stopLurkingAll() {
                                 _null = null;
                               }
                               closure_130_1 = _null;
-                              const HTTP = closure_0(1294).HTTP;
+                              const HTTP = closure_0(1295).HTTP;
                               const request = { url: closure_2_6.GUILD_LEAVE(closure_0), body: { lurking: true }, oldFormErrors: true, rejectWithError: true };
                               yield HTTP.del(request);
                               if (1 === tmp8) {
@@ -149,7 +149,7 @@ let closure_9 = async function _stopLurking() {
     tmp19 = null;
   }
   closure_129_0 = tmp19;
-  return "Reflect";
+  return "Set";
 };
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);

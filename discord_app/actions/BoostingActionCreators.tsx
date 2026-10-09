@@ -1,12 +1,12 @@
-// === Module 8000: actions/BoostingActionCreators ===
+// === Module 8008: actions/BoostingActionCreators ===
 
-// Module 8000 (actions/BoostingActionCreators)
+// Module 8008 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8001 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8002 */;
-import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8009 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8010 */;
+import SubscriptionStore from "SubscriptionStore" /* 4734 */;
 
 require = fn;
 let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
@@ -50,7 +50,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
           closure_130_2 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -131,7 +131,7 @@ let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
           closure_129_1 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -311,7 +311,7 @@ let closure_13 = async function _applyToGuild(arg0) {
           closure_131_5 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

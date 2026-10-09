@@ -1,16 +1,16 @@
-// === Module 17608: GameTagChiplet ===
+// === Module 17760: GameTagChiplet ===
 
-// Module 17608 (GameTagChiplet)
+// Module 17760 (GameTagChiplet)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import GuildTag from "GuildTag" /* 8830 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8851 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import GuildTag from "GuildTag" /* 8839 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8859 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8860 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_4 = createStyles.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

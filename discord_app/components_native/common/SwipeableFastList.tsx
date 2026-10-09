@@ -1,7 +1,7 @@
-// === Module 9524: SwipeableFastList ===
+// === Module 9562: SwipeableFastList ===
 
-// Module 9524 (SwipeableFastList)
-import FastListDefault from "FastList" /* 6752 */;
+// Module 9562 (SwipeableFastList)
+import FastListDefault from "FastList" /* 6759 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
@@ -109,8 +109,8 @@ prototype["bounceSwipeable"] = function bounceSwipeable(arg0) {
 prototype["closeOpenRow"] = function closeOpenRow() {
   const self = this;
   if (null != this._openRowKey) {
-    if (null != self._refs[self._openRowKey]) {
-      self._refs[self._openRowKey].close();
+    if (self._refs[self._openRowKey] != null) {
+      obj.close();
     }
     self._openRowKey = null;
   }

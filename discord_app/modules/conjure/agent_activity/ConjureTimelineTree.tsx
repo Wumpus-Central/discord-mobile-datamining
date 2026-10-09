@@ -1,6 +1,6 @@
-// === Module 16965: ConjureTimelineTree ===
+// === Module 17097: ConjureTimelineTree ===
 
-// Module 16965 (ConjureTimelineTree)
+// Module 17097 (ConjureTimelineTree)
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -404,6 +404,26 @@ function segmentDurations(steps) {
   }
   return map;
 }
+function sharedTimelineTree(steps, flag) {
+  value = weakMap1.get(steps);
+  if (null == value) {
+    const obj2 = {};
+    const result = weakMap1.set(steps, obj2);
+    value = obj2;
+  }
+  let str = "settled";
+  if (flag) {
+    str = "active";
+  }
+  let tmp3 = value[str];
+  if (tmp3 == null) {
+    const obj3 = { turnActive: flag };
+    const tmp5 = buildTimelineTree(steps, obj3);
+    value[str] = tmp5;
+    tmp3 = tmp5;
+  }
+  return tmp3;
+}
 function isTurnWorkFrame(task_id) {
   let tmp = null == task_id.task_id;
   if (!tmp) {
@@ -439,6 +459,8 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = { healthcheck_failed: _modDef3827.iwOTgo, preview_ready: _modDef3827.okkgSB, working: _modDef3827.t8skVB, error: _modDef3827.avt0ax };
+const weakMap = new WeakMap();
+const weakMap1 = new WeakMap();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTimelineTree.tsx");
 
@@ -497,6 +519,7 @@ export const streamedContent = function streamedContent(steps) {
   return scanTurnColumn(steps).items;
 };
 export { segmentDurations };
+export { sharedTimelineTree };
 export const turnSegments = function turnSegments(steps, arg1) {
   let hasItem;
   let tmp19;
@@ -508,8 +531,16 @@ export const turnSegments = function turnSegments(steps, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  const items = scanTurnColumn(steps).items;
-  buildTimelineTree(steps, { turnActive: flag });
+  const items = (function sharedScan(steps) {
+    value = weakMap.get(steps);
+    if (null == value) {
+      const tmp3 = scanTurnColumn(steps);
+      const result = weakMap.set(steps, tmp3);
+      value = tmp3;
+    }
+    return value;
+  })(steps).items;
+  sharedTimelineTree(steps, flag);
   const obj2 = segmentDurations(steps);
   const map = new Map();
   const iter = items[Symbol.iterator]();
@@ -522,12 +553,12 @@ export const turnSegments = function turnSegments(steps, arg1) {
     continue;
   }
   const set = new Set();
-  for (const item10042 of tmp6) {
-    let addResult = set.add(item10042.segment);
+  for (const item10041 of tmp6) {
+    let addResult = set.add(item10041.segment);
     continue;
   }
-  for (const item10052 of tmp8) {
-    let addResult1 = set.add(item10052.task.segment);
+  for (const item10051 of tmp8) {
+    let addResult1 = set.add(item10051.task.segment);
     continue;
   }
   const found = items.find((type) => "todos" === type.type);

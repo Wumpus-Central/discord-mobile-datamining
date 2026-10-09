@@ -1,6 +1,6 @@
-// === Module 5478: ? ===
+// === Module 5479: ? ===
 
-// Module 5478
+// Module 5479
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/shoes/socks.png.js");

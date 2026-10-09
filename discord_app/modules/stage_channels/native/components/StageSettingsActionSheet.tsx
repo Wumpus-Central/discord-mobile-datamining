@@ -1,26 +1,26 @@
-// === Module 7694: StageSettingsActionSheet ===
+// === Module 7703: StageSettingsActionSheet ===
 
-// Module 7694 (StageSettingsActionSheet)
+// Module 7703 (StageSettingsActionSheet)
 import nativeDefault from "native" /* 587 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2072 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7478 */;
-import ReportModals from "ReportModals" /* 7695 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9648 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 7483 */;
+import ReportModals from "ReportModals" /* 7704 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 9667 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import StageInstanceStore from "StageInstanceStore" /* 2069 */;
 
 require = fn;
 const View = fn(17).View;
-const STAGE_SETTINGS_SHEET_KEY = fn(5888).STAGE_SETTINGS_SHEET_KEY;
+const STAGE_SETTINGS_SHEET_KEY = fn(5889).STAGE_SETTINGS_SHEET_KEY;
 const Constants = fn(1085);
 ({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginTop: 8 }, icon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, warning: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };

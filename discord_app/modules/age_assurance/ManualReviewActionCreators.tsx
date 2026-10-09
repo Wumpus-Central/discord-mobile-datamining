@@ -1,10 +1,10 @@
-// === Module 7690: ManualReviewActionCreators ===
+// === Module 7699: ManualReviewActionCreators ===
 
-// Module 7690 (ManualReviewActionCreators)
+// Module 7699 (ManualReviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 5927 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 5928 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -153,7 +153,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1085).Endpoints;
-const SafetyToastType = fn(7015).SafetyToastType;
+const SafetyToastType = fn(7018).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

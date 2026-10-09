@@ -1,10 +1,10 @@
-// === Module 2019: GameStore ===
+// === Module 2020: GameStore ===
 
-// Module 2019 (GameStore)
+// Module 2020 (GameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import GameRecord from "GameRecord" /* 2020 */;
+import URLUtilsDefault from "URLUtils" /* 1384 */;
+import GameRecord from "GameRecord" /* 2021 */;
 
 function createGamesFromMessage(referenced_message) {
   closure_0 = false;

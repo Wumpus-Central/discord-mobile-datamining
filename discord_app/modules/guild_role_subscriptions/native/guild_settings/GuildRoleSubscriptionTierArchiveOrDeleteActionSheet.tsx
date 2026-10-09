@@ -1,18 +1,18 @@
-// === Module 18264: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 18426: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 18264 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 18426 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import BottomSheetModal from "BottomSheetModal" /* 6298 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 18265 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import BottomSheetModal from "BottomSheetModal" /* 6305 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 18427 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 }, cancel: { alignSelf: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

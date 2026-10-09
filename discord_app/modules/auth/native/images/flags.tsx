@@ -1,39 +1,39 @@
-// === Module 15523: flags ===
+// === Module 15636: flags ===
 
-// Module 15523 (flags)
-import _mod15524 from "module_15524" /* 15524 */;
-import _mod15525 from "module_15525" /* 15525 */;
-import _mod15526 from "module_15526" /* 15526 */;
-import _mod15527 from "module_15527" /* 15527 */;
-import _mod15528 from "module_15528" /* 15528 */;
-import _mod15529 from "module_15529" /* 15529 */;
-import _mod15530 from "module_15530" /* 15530 */;
-import _mod15531 from "module_15531" /* 15531 */;
-import _mod15532 from "module_15532" /* 15532 */;
-import _mod15533 from "module_15533" /* 15533 */;
-import _mod15534 from "module_15534" /* 15534 */;
-import _mod15535 from "module_15535" /* 15535 */;
-import _mod15536 from "module_15536" /* 15536 */;
-import _mod15537 from "module_15537" /* 15537 */;
-import _mod15538 from "module_15538" /* 15538 */;
-import _mod15539 from "module_15539" /* 15539 */;
-import _mod15540 from "module_15540" /* 15540 */;
-import _mod15541 from "module_15541" /* 15541 */;
-import _mod15542 from "module_15542" /* 15542 */;
-import _mod15543 from "module_15543" /* 15543 */;
-import _mod15544 from "module_15544" /* 15544 */;
-import _mod15545 from "module_15545" /* 15545 */;
-import _mod15546 from "module_15546" /* 15546 */;
-import _mod15547 from "module_15547" /* 15547 */;
-import _mod15548 from "module_15548" /* 15548 */;
-import _mod15549 from "module_15549" /* 15549 */;
-import _mod15550 from "module_15550" /* 15550 */;
-import _mod15551 from "module_15551" /* 15551 */;
-import _mod15552 from "module_15552" /* 15552 */;
-import _mod15553 from "module_15553" /* 15553 */;
-import _mod15554 from "module_15554" /* 15554 */;
+// Module 15636 (flags)
+import _mod15637 from "module_15637" /* 15637 */;
+import _mod15638 from "module_15638" /* 15638 */;
+import _mod15639 from "module_15639" /* 15639 */;
+import _mod15640 from "module_15640" /* 15640 */;
+import _mod15641 from "module_15641" /* 15641 */;
+import _mod15642 from "module_15642" /* 15642 */;
+import _mod15643 from "module_15643" /* 15643 */;
+import _mod15644 from "module_15644" /* 15644 */;
+import _mod15645 from "module_15645" /* 15645 */;
+import _mod15646 from "module_15646" /* 15646 */;
+import _mod15647 from "module_15647" /* 15647 */;
+import _mod15648 from "module_15648" /* 15648 */;
+import _mod15649 from "module_15649" /* 15649 */;
+import _mod15650 from "module_15650" /* 15650 */;
+import _mod15651 from "module_15651" /* 15651 */;
+import _mod15652 from "module_15652" /* 15652 */;
+import _mod15653 from "module_15653" /* 15653 */;
+import _mod15654 from "module_15654" /* 15654 */;
+import _mod15655 from "module_15655" /* 15655 */;
+import _mod15656 from "module_15656" /* 15656 */;
+import _mod15657 from "module_15657" /* 15657 */;
+import _mod15658 from "module_15658" /* 15658 */;
+import _mod15659 from "module_15659" /* 15659 */;
+import _mod15660 from "module_15660" /* 15660 */;
+import _mod15661 from "module_15661" /* 15661 */;
+import _mod15662 from "module_15662" /* 15662 */;
+import _mod15663 from "module_15663" /* 15663 */;
+import _mod15664 from "module_15664" /* 15664 */;
+import _mod15665 from "module_15665" /* 15665 */;
+import _mod15666 from "module_15666" /* 15666 */;
+import _mod15667 from "module_15667" /* 15667 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod15524, cs: _mod15525, da: _mod15526, de: _mod15527, el: _mod15528, "en-GB": _mod15529, "en-US": _mod15530, "es-ES": _mod15531, "es-419": _mod15532, fi: _mod15533, fr: _mod15534, hi: _mod15535, hr: _mod15536, hu: _mod15537, it: _mod15538, ja: _mod15539, ko: _mod15540, lt: _mod15541, nl: _mod15542, no: _mod15543, pl: _mod15544, "pt-BR": _mod15545, ro: _mod15546, ru: _mod15547, "sv-SE": _mod15548, th: _mod15549, tr: _mod15550, uk: _mod15551, vi: _mod15552, "zh-CN": _mod15553, "zh-TW": _mod15554 };
+export const flags = { bg: _mod15637, cs: _mod15638, da: _mod15639, de: _mod15640, el: _mod15641, "en-GB": _mod15642, "en-US": _mod15643, "es-ES": _mod15644, "es-419": _mod15645, fi: _mod15646, fr: _mod15647, hi: _mod15648, hr: _mod15649, hu: _mod15650, it: _mod15651, ja: _mod15652, ko: _mod15653, lt: _mod15654, nl: _mod15655, no: _mod15656, pl: _mod15657, "pt-BR": _mod15658, ro: _mod15659, ru: _mod15660, "sv-SE": _mod15661, th: _mod15662, tr: _mod15663, uk: _mod15664, vi: _mod15665, "zh-CN": _mod15666, "zh-TW": _mod15667 };

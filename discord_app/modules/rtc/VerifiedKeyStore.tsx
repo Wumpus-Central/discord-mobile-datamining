@@ -1,10 +1,10 @@
-// === Module 8784: VerifiedKeyStore ===
+// === Module 8793: VerifiedKeyStore ===
 
-// Module 8784 (VerifiedKeyStore)
+// Module 8793 (VerifiedKeyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _mod8785 from "module_8785" /* 8785 */;
+import _mod8794 from "module_8794" /* 8794 */;
 
 require = fn;
 let users = {};
@@ -25,7 +25,7 @@ prototype["getState"] = function getState() {
   return { users };
 };
 prototype["getKeyTrustedAt"] = function getKeyTrustedAt(arg0, uint8Array) {
-  const obj = _mod8785;
+  const obj = _mod8794;
   let tmp2;
   if (users[arg0] != null) {
     tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
@@ -52,7 +52,7 @@ const verifiedKeyStore = new VerifiedKeyStore(DispatcherDefault, {
     }
     users[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    obj[_mod8785.serializeKey(uint8Array)] = Date.now();
+    obj[_mod8794.serializeKey(uint8Array)] = Date.now();
   },
   SECURE_FRAMES_VERIFIED_KEY_DELETE: function handleSecureFramesVerifiedKeyDelete(arg0) {
     let tmp6 = null;

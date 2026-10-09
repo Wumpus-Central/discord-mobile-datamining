@@ -1,13 +1,13 @@
-// === Module 10404: useShouldShowSafetyToolsButtonTooltipForChannel ===
+// === Module 10393: useShouldShowSafetyToolsButtonTooltipForChannel ===
 
-// Module 10404 (useShouldShowSafetyToolsButtonTooltipForChannel)
+// Module 10393 (useShouldShowSafetyToolsButtonTooltipForChannel)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10366 */;
-import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10405 */;
-import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 10406 */;
-import InappropriateConversationUtils from "InappropriateConversationUtils" /* 10407 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10251 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10353 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10394 */;
+import useShouldShowInitialSafetyToolsButtonTooltip from "useShouldShowInitialSafetyToolsButtonTooltip" /* 10395 */;
+import InappropriateConversationUtils from "InappropriateConversationUtils" /* 10396 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

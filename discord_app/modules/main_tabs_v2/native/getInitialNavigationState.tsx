@@ -1,15 +1,15 @@
-// === Module 4938: getInitialNavigationState ===
+// === Module 4939: getInitialNavigationState ===
 
-// Module 4938 (getInitialNavigationState)
+// Module 4939 (getInitialNavigationState)
 import LoggerDefault from "Logger" /* 3 */;
 import router_utils from "router_utils" /* 1112 */;
-import matchPathCompat from "matchPathCompat" /* 4904 */;
-import RouteUtils from "RouteUtils" /* 4917 */;
-import useChatLayout from "useChatLayout" /* 4939 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4942 */;
+import matchPathCompat from "matchPathCompat" /* 4905 */;
+import RouteUtils from "RouteUtils" /* 4918 */;
+import useChatLayout from "useChatLayout" /* 4940 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4943 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4903 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4904 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;

@@ -1,22 +1,22 @@
-// === Module 17508: FramePanelHeader ===
+// === Module 17660: FramePanelHeader ===
 
-// Module 17508 (FramePanelHeader)
+// Module 17660 (FramePanelHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
-import ActivityPanelHeader from "ActivityPanelHeader" /* 17487 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17489 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17493 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17494 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17504 */;
-import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 17509 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6854 */;
+import ActivityPanelHeader from "ActivityPanelHeader" /* 17639 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17641 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17645 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17646 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17656 */;
+import panel_LeaveActivityButtonDefault from "panel/LeaveActivityButton" /* 17661 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 10612 */;
+import FramesStore from "FramesStore" /* 10772 */;
 
 require = fn;
 const View = fn(17).View;
-const asLaunched = fn(10613).asLaunched;
+const asLaunched = fn(10767).asLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);

@@ -1,8 +1,7 @@
-// === Module 1417: utils/AvatarUtils ===
+// === Module 1418: utils/AvatarUtils ===
 
-// Module 1417 (utils/AvatarUtils)
+// Module 1418 (utils/AvatarUtils)
 import _mod17 from "module_17" /* 17 */;
-import _modDef1418 from "module_1418" /* 1418 */;
 import _modDef1419 from "module_1419" /* 1419 */;
 import _modDef1420 from "module_1420" /* 1420 */;
 import _modDef1421 from "module_1421" /* 1421 */;
@@ -28,10 +27,11 @@ import _modDef1440 from "module_1440" /* 1440 */;
 import _modDef1441 from "module_1441" /* 1441 */;
 import _modDef1442 from "module_1442" /* 1442 */;
 import _modDef1443 from "module_1443" /* 1443 */;
-import _modDef1445 from "module_1445" /* 1445 */;
+import _modDef1444 from "module_1444" /* 1444 */;
 import _modDef1446 from "module_1446" /* 1446 */;
-import _modDef1448 from "module_1448" /* 1448 */;
-import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1444 */;
+import _modDef1447 from "module_1447" /* 1447 */;
+import _modDef1449 from "module_1449" /* 1449 */;
+import NativeMediaManagerModule from "NativeMediaManagerModule" /* 1445 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -46,10 +46,10 @@ function ensureAvatarSource(avatarSource) {
   return assetSource;
 }
 const Image = _mod17.Image;
-const items = [_modDef1418, _modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423];
-const items1 = [_modDef1424, _modDef1425, _modDef1426, _modDef1427, _modDef1428, _modDef1429];
-const items2 = [_modDef1430, _modDef1431, _modDef1432, _modDef1433, _modDef1434, _modDef1435];
-const items3 = [_modDef1436, _modDef1437, _modDef1438, _modDef1439, _modDef1440, _modDef1441, _modDef1442, _modDef1443];
+const items = [_modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424];
+const items1 = [_modDef1425, _modDef1426, _modDef1427, _modDef1428, _modDef1429, _modDef1430];
+const items2 = [_modDef1431, _modDef1432, _modDef1433, _modDef1434, _modDef1435, _modDef1436];
+const items3 = [_modDef1437, _modDef1438, _modDef1439, _modDef1440, _modDef1441, _modDef1442, _modDef1443, _modDef1444];
 const set = new Set(NativeMediaManagerModule.getConstants().supportedExtensions);
 const obj = {
   DEFAULT_AVATARS: items,
@@ -57,8 +57,8 @@ const obj = {
   DEFAULT_AVATARS_SMALL_MAX_SIZE: 24,
   DEFAULT_PROVISIONAL_AVATARS: items2,
   DEFAULT_GROUP_DM_AVATARS: items3,
-  BOT_AVATARS: { clyde: _modDef1445, nitro_wumpus: _modDef1446 },
-  DEFAULT_CHANNEL_ICON: _modDef1448,
+  BOT_AVATARS: { clyde: _modDef1446, nitro_wumpus: _modDef1447 },
+  DEFAULT_CHANNEL_ICON: _modDef1449,
   ensureAvatarSource,
   canUseWebp() {
     return set.has("webp");
@@ -73,5 +73,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return require("module_1447");
+  return require("module_1448");
 };

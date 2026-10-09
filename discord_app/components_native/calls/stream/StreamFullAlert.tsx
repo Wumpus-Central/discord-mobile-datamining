@@ -1,19 +1,19 @@
-// === Module 18382: StreamFullAlert ===
+// === Module 18544: StreamFullAlert ===
 
-// Module 18382 (StreamFullAlert)
+// Module 18544 (StreamFullAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import AVError from "AVError" /* 5287 */;
-import common_AlertDefault from "common/Alert" /* 5394 */;
-import _modDef18383 from "module_18383" /* 18383 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import AVError from "AVError" /* 5288 */;
+import common_AlertDefault from "common/Alert" /* 5395 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import _modDef18545 from "module_18545" /* 18545 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Image = fn(17).Image;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let closure_6 = { image: { alignSelf: "center", marginTop: 32 }, body: { marginTop: 16 } };
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let closure_5 = { image: { alignSelf: "center", marginTop: 32 }, body: { marginTop: 16 } };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
@@ -44,14 +44,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StreamFu
     tmp9 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "text-md/normal", style: closure_6.body, children: null };
+    const obj3 = { variant: "text-md/normal", style: closure_5.body, children: null };
     const intl3 = util.intl;
     obj3.children = intl3.string(util.t.VVZDBL);
-    const tmp16 = React4(Text_Text.Text, obj3);
-    const obj4 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: first };
-    const tmp17 = React4(Text_Text.Text, obj4);
-    const obj5 = { source: _modDef18383, style: closure_6.image };
-    const tmp20 = React4(Image, obj5);
+    const tmp16 = React3(Text_Text.Text, obj3);
+    const obj4 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_5.body, children: first };
+    const tmp17 = React3(Text_Text.Text, obj4);
+    const obj5 = { source: _modDef18545, style: closure_5.image };
+    const tmp20 = React3(FastImageDefault, obj5);
     cResult[2] = tmp16;
     cResult[3] = tmp17;
     cResult[4] = tmp20;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StreamFu
     obj6.title = tmp9;
     const items = [tmp11, tmp12, tmp13];
     obj6.children = items;
-    const tmp28 = hasOwnProperty(common_AlertDefault, obj6);
+    const tmp28 = React4(common_AlertDefault, obj6);
     cResult[5] = arg0;
     cResult[6] = tmp28;
     let tmp21 = tmp28;
@@ -89,13 +89,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StreamFu
   const merged = Object.assign(arg0);
   const intl2 = util.intl;
   obj2.title = intl2.string(util.t.GzjdO5);
-  const obj3 = { variant: "text-md/normal", style: closure_6.body, children: null };
+  const obj3 = { variant: "text-md/normal", style: closure_5.body, children: null };
   const intl3 = util.intl;
   obj3.children = intl3.string(util.t.VVZDBL);
-  const items = [React4(Text_Text.Text, obj3), React4(Text_Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
-  const obj4 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
+  const items = [React3(Text_Text.Text, obj3), React3(Text_Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_5.body, children: formatToPlainStringResult }), ];
+  const obj5 = { source: null, style: null };
+  const obj4 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_5.body, children: formatToPlainStringResult };
   const tmp6 = common_AlertDefault;
-  items[2] = React4(Image, { source: _modDef18383, style: closure_6.image });
+  obj5.source = _modDef18545;
+  obj5.style = closure_5.image;
+  items[2] = React3(FastImageDefault, obj5);
   obj2.children = items;
-  return hasOwnProperty(tmp6, obj2);
+  return React4(tmp6, obj2);
 });

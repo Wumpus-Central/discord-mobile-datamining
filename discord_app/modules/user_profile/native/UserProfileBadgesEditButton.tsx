@@ -1,23 +1,23 @@
-// === Module 14690: UserProfileBadgesEditButton ===
+// === Module 14796: UserProfileBadgesEditButton ===
 
-// Module 14690 (UserProfileBadgesEditButton)
+// Module 14796 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10545 */;
-import BadgeUtils from "BadgeUtils" /* 10553 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 14691 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10535 */;
+import BadgeUtils from "BadgeUtils" /* 10544 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 14797 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9095 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10543 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { content: { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, badge: { width: 32, height: 32 }, overflowCount: { marginLeft: 2 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -26,7 +26,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileBadgesEditButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProfileBadgesEditButton(arg0) {
-  const cResult = require("c").c(70);
+  const cResult = require("c").c(71);
   ({ badges, catalogBadges, ownsAnyBadge, autoOpen } = arg0);
   _require = undefined !== autoOpen && autoOpen;
   let obj = require("c");
@@ -72,28 +72,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     cResult[2] = tmp11;
     cResult[3] = items1;
   } else {
-    const tmp15 = analyticsLocations(tmp(tmp2[14]).useSelectedDismissibleContent(cResult[3], undefined, true), 2);
-    noop = tmp16;
-    const tmp17 = tmp15[0] === tmp(tmp2[13]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE;
-    closure_5 = tmp17;
-    if (cResult[4] === analyticsLocations) {
-      if (cResult[5] === tmp17) {
-        if (cResult[6] === tmp16) {
-          let tmp18 = cResult[7];
+    const _Symbol = Symbol;
+    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj4 = { bypassAutoDismiss: true };
+      cResult[4] = obj4;
+      let tmp14 = obj4;
+    } else {
+      tmp14 = cResult[4];
+    }
+    const tmp16 = analyticsLocations(tmp(tmp2[14]).useSelectedDismissibleContent(cResult[3], tmp14), 2);
+    noop = tmp17;
+    const tmp18 = tmp16[0] === tmp(tmp2[13]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE;
+    closure_5 = tmp18;
+    if (cResult[5] === analyticsLocations) {
+      if (cResult[6] === tmp18) {
+        if (cResult[7] === tmp17) {
+          let tmp19 = cResult[8];
         }
-        ProfileCustomizationNavigationStore = tmp18;
-        const _Symbol = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
+        ProfileCustomizationNavigationStore = tmp19;
+        const _Symbol2 = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          class M {
             constructor() {
               obj = autoOpen(closure_2[16]);
               result = obj.openBadgeDirectoryScreen();
               return;
             }
           }
-          cResult[8] = G;
+          cResult[9] = M;
         } else {
-          class G {
+          class M {
             constructor() {
               obj = autoOpen(closure_2[16]);
               result = obj.openBadgeDirectoryScreen();
@@ -102,10 +110,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
           }
         }
         const field = ProfileCustomizationNavigationStore.useField("pendingCustomizeBadgesSheet");
-        const tmp22 = tmp9(tmp2[17])();
-        closure_8 = tmp22;
-        if (cResult[9] === tmp18) {
-          class G {
+        const tmp23 = tmp9(tmp2[17])();
+        closure_8 = tmp23;
+        if (cResult[10] === tmp19) {
+          class M {
             constructor() {
               obj = autoOpen(closure_2[16]);
               result = obj.openBadgeDirectoryScreen();
@@ -113,31 +121,46 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
             }
           }
         }
-        class N {
+        const fn = function j() {
+          if (field) {
+            if (closure_8) {
+              const _setTimeout = setTimeout;
+              const timeout = setTimeout(() => {
+                state.setState({ pendingCustomizeBadgesSheet: false });
+                if (isBadgeManagementEnabled) {
+                  state();
+                }
+              }, 300);
+              return () => clearTimeout(closure_0);
+            }
+          }
+        };
+        const items2 = [, , , ];
+        class C {
           constructor() {
-            if (closure_7) {
-              tmp = closure_8;
-              if (closure_8) {
-                tmp2 = globalThis;
-                _setTimeout = setTimeout;
-                num = 300;
-                closure_0 = setTimeout(() => { ... }, 300);
-                return () => { ... };
-              }
+            obj = closure_0(closure_2[15]);
+            obj1 = { analyticsLocations };
+            result = obj.openCustomizeBadgesSheet(obj1);
+            if (closure_5) {
+              tmp2 = closure_4;
+              tmp3 = ContentDismissActionType;
+              tmp4 = closure_4(ContentDismissActionType.TAKE_ACTION);
             }
             return;
           }
         }
-        const items2 = [field, tmp22, isBadgeManagementEnabled, tmp18];
-        cResult[9] = tmp18;
-        cResult[10] = tmp22;
-        cResult[11] = isBadgeManagementEnabled;
-        cResult[12] = field;
-        cResult[13] = N;
-        cResult[14] = items2;
+        items2[1] = tmp23;
+        items2[2] = isBadgeManagementEnabled;
+        items2[3] = tmp19;
+        cResult[10] = tmp19;
+        cResult[11] = tmp23;
+        cResult[12] = isBadgeManagementEnabled;
+        cResult[13] = field;
+        cResult[14] = fn;
+        cResult[15] = items2;
       }
     }
-    class U {
+    class C {
       constructor() {
         obj = closure_0(closure_2[15]);
         obj1 = { analyticsLocations };
@@ -150,11 +173,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         return;
       }
     }
-    cResult[4] = analyticsLocations;
-    cResult[5] = tmp17;
-    cResult[6] = tmp15[1];
-    cResult[7] = U;
-    tmp18 = U;
+    cResult[5] = analyticsLocations;
+    cResult[6] = tmp18;
+    cResult[7] = tmp16[1];
+    cResult[8] = C;
+    tmp19 = C;
     const tmpResult4 = tmp(tmp2[14]);
   }
   tmp9 = importDefault;
@@ -193,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     const items1 = [tmp2(tmp3[13]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE];
     items = items1;
   }
-  const tmp8 = analyticsLocations(autoOpen(isBadgeManagementEnabled[14]).useSelectedDismissibleContent(items, undefined, true), 2);
+  const tmp8 = analyticsLocations(autoOpen(isBadgeManagementEnabled[14]).useSelectedDismissibleContent(items, { bypassAutoDismiss: true }), 2);
   noop = tmp9;
   const tmp10 = tmp8[0] === autoOpen(isBadgeManagementEnabled[13]).DismissibleContent.BADGES_USER_PROFILE_NEW_BADGE;
   closure_5 = tmp10;

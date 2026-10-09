@@ -1,7 +1,7 @@
-// === Module 17780: AppInfoUtils ===
+// === Module 17934: AppInfoUtils ===
 
-// Module 17780 (AppInfoUtils)
-import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
+// Module 17934 (AppInfoUtils)
+import ClientInfoUtils from "ClientInfoUtils" /* 1381 */;
 import size from "module_2" /* 2 */;
 
 const constants = ClientInfoUtils.getConstants();

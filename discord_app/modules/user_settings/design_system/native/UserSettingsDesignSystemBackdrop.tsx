@@ -1,13 +1,13 @@
-// === Module 15971: UserSettingsDesignSystemBackdrop ===
+// === Module 16087: UserSettingsDesignSystemBackdrop ===
 
-// Module 15971 (UserSettingsDesignSystemBackdrop)
+// Module 16087 (UserSettingsDesignSystemBackdrop)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import spring from "spring" /* 5374 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import springPresets from "springPresets" /* 5378 */;
-import Card from "Card" /* 6186 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import spring from "spring" /* 5375 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import springPresets from "springPresets" /* 5379 */;
+import Card from "Card" /* 6188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { padding: 16 }, backdropContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -136,8 +136,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
   };
-  const obj2 = showBackdrop(4810);
-  fn.__closure = { withSpring: showBackdrop(5374).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5378).SUBTLE_SPRING };
+  const obj2 = showBackdrop(4811);
+  fn.__closure = { withSpring: showBackdrop(5375).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5379).SUBTLE_SPRING };
   fn.__workletHash = 7978288613287;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj7 = { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp7, setBlurAmount: tmp10 };
     items[2] = closure_6(closure_9, obj7);
     obj4.children = items;
-    const tmp17 = closure_7(tmp(5373).Stack, obj4);
+    const tmp17 = closure_7(tmp(5374).Stack, obj4);
     cResult[1] = tmp17;
     let tmp13 = tmp17;
   } else {
@@ -192,17 +192,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   if (showBackdrop) {
     const obj9 = { onDismiss: first1, children: null };
     const obj10 = { style: animatedStyle, blur: tmp9, onDismiss: first1 };
-    const items2 = [closure_6(tmp(5361).Backdrop, obj10), ];
+    const items2 = [closure_6(tmp(5362).Backdrop, obj10), ];
     const obj11 = { style: tmp4.backdropContent, pointerEvents: "box-none", children: null };
     const obj12 = { children: null };
     const obj13 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp9];
     obj13.children = items3;
-    obj12.children = closure_7(tmp(5086).Text, obj13);
-    obj11.children = closure_6(tmp(6186).Card, obj12);
+    obj12.children = closure_7(tmp(5087).Text, obj13);
+    obj11.children = closure_6(tmp(6188).Card, obj12);
     items2[1] = closure_6(closure_5, obj11);
     obj9.children = items2;
-    tmp19 = closure_7(tmp(5356).Dialog, obj9);
+    tmp19 = closure_7(tmp(5357).Dialog, obj9);
   }
   cResult[2] = animatedStyle;
   cResult[3] = tmp9;
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   cResult[5] = tmp4.backdropContent;
   cResult[6] = tmp19;
   tmp18 = tmp19;
-  const obj3 = { withSpring: showBackdrop(5374).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5378).SUBTLE_SPRING };
+  const obj3 = { withSpring: showBackdrop(5375).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5379).SUBTLE_SPRING };
 }) : (function UserSettingsDesignSystemBackdrop() {
   const tmp = closure_8();
   const tmp2 = _slicedToArray(noop.useState(false), 2);
@@ -225,8 +225,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     return { opacity: spring.withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
   };
-  let obj = showBackdrop(4810);
-  fn.__closure = { withSpring: showBackdrop(5374).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5378).SUBTLE_SPRING };
+  let obj = showBackdrop(4811);
+  fn.__closure = { withSpring: showBackdrop(5375).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5379).SUBTLE_SPRING };
   fn.__workletHash = 5659195678596;
   fn.__initData = __initData2;
   const obj3 = { contentContainerStyle: tmp.container, children: null };
@@ -234,24 +234,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const obj4 = { spacing: 24, children: null };
   const items = [closure_6(closure_9, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(closure_9, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(closure_9, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
   obj4.children = items;
-  const items1 = [closure_7(showBackdrop(5373).Stack, obj4), ];
+  const items1 = [closure_7(showBackdrop(5374).Stack, obj4), ];
   if (showBackdrop) {
     function handleClose() {
       closure_1(false);
     }
     const obj5 = { onDismiss: handleClose, children: null };
     const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    const items2 = [closure_6(tmp8(5361).Backdrop, obj6), ];
+    const items2 = [closure_6(tmp8(5362).Backdrop, obj6), ];
     const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: null };
     const obj8 = { children: null };
     const obj9 = { variant: "text-md/normal", children: null };
     const items3 = ["blur style: ", tmp6];
     obj9.children = items3;
-    obj8.children = closure_7(tmp8(5086).Text, obj9);
-    obj7.children = closure_6(tmp8(6186).Card, obj8);
+    obj8.children = closure_7(tmp8(5087).Text, obj9);
+    obj7.children = closure_6(tmp8(6188).Card, obj8);
     items2[1] = closure_6(closure_5, obj7);
     obj5.children = items2;
-    showBackdrop = closure_7(tmp8(5356).Dialog, obj5);
+    showBackdrop = closure_7(tmp8(5357).Dialog, obj5);
   }
   items1[1] = showBackdrop;
   obj3.children = items1;

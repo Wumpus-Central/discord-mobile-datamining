@@ -1,15 +1,15 @@
-// === Module 17501: ActivityPanelSystemUIManager ===
+// === Module 17653: ActivityPanelSystemUIManager ===
 
-// Module 17501 (ActivityPanelSystemUIManager)
+// Module 17653 (ActivityPanelSystemUIManager)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import StatusBarDefault from "StatusBar" /* 10340 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 10673 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17478 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import StatusBarDefault from "StatusBar" /* 10327 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 10819 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(558);

@@ -1,9 +1,9 @@
-// === Module 4921: DcfNewUserCooldownExperiment ===
+// === Module 4922: DcfNewUserCooldownExperiment ===
 
-// Module 4921 (DcfNewUserCooldownExperiment)
+// Module 4922 (DcfNewUserCooldownExperiment)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

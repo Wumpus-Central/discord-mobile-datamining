@@ -1,12 +1,12 @@
-// === Module 15301: useUserRoleSubscriptionRelationship ===
+// === Module 15414: useUserRoleSubscriptionRelationship ===
 
-// Module 15301 (useUserRoleSubscriptionRelationship)
+// Module 15414 (useUserRoleSubscriptionRelationship)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5993 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5995 */;
 
 require = fn;
-const constants = fn(15300).UserGuildRoleSubscriptionRelationship;
+const constants = fn(15413).UserGuildRoleSubscriptionRelationship;
 const ReactCompilerGating = fn(558);
 function getUserRoleSubscriptionRelationship() {
   let tmp = arg0;

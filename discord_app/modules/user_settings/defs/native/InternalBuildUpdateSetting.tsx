@@ -1,14 +1,14 @@
-// === Module 15917: InternalBuildUpdateSetting ===
+// === Module 16034: InternalBuildUpdateSetting ===
 
-// Module 15917 (InternalBuildUpdateSetting)
+// Module 16034 (InternalBuildUpdateSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import _modDef4659 from "module_4659" /* 4659 */;
-import DownloadIcon from "DownloadIcon" /* 5045 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13959 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14927 */;
-import RefreshIcon2 from "RefreshIcon" /* 15055 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14475 */;
+import _modDef4661 from "module_4661" /* 4661 */;
+import DownloadIcon from "DownloadIcon" /* 5046 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 14056 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15039 */;
+import RefreshIcon2 from "RefreshIcon" /* 15167 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14571 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -56,11 +56,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInterna
     str2 = "Never refreshed";
     if (null != stateFromStores1) {
       if (concat[4] !== stateFromStores1) {
-        const fromNowResult = _modDef4659(stateFromStores1).fromNow();
+        const fromNowResult = _modDef4661(stateFromStores1).fromNow();
         concat[4] = stateFromStores1;
         concat[5] = fromNowResult;
         let tmp10 = fromNowResult;
-        const obj4 = _modDef4659(stateFromStores1);
+        const obj4 = _modDef4661(stateFromStores1);
       } else {
         tmp10 = concat[5];
       }
@@ -89,8 +89,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInterna
     str = "Never refreshed";
     if (null != stateFromStores1) {
       const _HermesInternal = HermesInternal;
-      str = "Last refreshed " + _modDef4659(stateFromStores1).fromNow();
-      const obj3 = _modDef4659(stateFromStores1);
+      str = "Last refreshed " + _modDef4661(stateFromStores1).fromNow();
+      const obj3 = _modDef4661(stateFromStores1);
     }
   }
   return str;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasInte
 }) : (function useHasInternalBuildUpdateSetting() {
   return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
 });
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function InstallNativeUpdateIcon() {
   let tmp8Result = dependencyMap;
   const cResult = c.c(4);

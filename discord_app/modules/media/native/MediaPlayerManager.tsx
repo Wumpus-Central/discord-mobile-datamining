@@ -1,26 +1,26 @@
-// === Module 14622: MediaPlayerManager ===
+// === Module 14727: MediaPlayerManager ===
 
-// Module 14622 (MediaPlayerManager)
+// Module 14727 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import RootNavigationRef from "RootNavigationRef" /* 4937 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 6072 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import RootNavigationRef from "RootNavigationRef" /* 4938 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 6074 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7172 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
-import VoicePanelStore from "VoicePanelStore" /* 6079 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import MessageStore from "MessageStore" /* 5428 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14623 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import VoicePanelStore from "VoicePanelStore" /* 6081 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import MessageStore from "MessageStore" /* 5429 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14728 */;
 import module_570 from "module_570" /* 570 */;
-import LifecycleManager from "LifecycleManager" /* 2001 */;
+import LifecycleManager from "LifecycleManager" /* 2002 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -35,18 +35,18 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
   closure_0 = arg0;
   const obj = {
     activeMediaPlayerSource: "IconComponent",
-    mediaSourceMessage: "Set",
+    mediaSourceMessage: "Symbol",
     canAccessMedia: "emoji",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "Reflect",
-    showPip: "MakerNoteSafety",
+    rate: "Set",
+    showPip: 2422,
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: true
+    currentlyDisplayedChannelId: 2425
   };
   return obj;
 });
@@ -117,7 +117,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(1271).batchUpdates(() => {
+  self(1272).batchUpdates(() => {
     const activeMediaPlayerSource = obj.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -173,7 +173,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(1271).batchUpdates(() => {
+  self(1272).batchUpdates(() => {
     self.pauseCurrentPlayer();
     obj.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -277,7 +277,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(1271).batchUpdates(() => {
+  source(1272).batchUpdates(() => {
     let id;
     state = obj.getState();
     if (source != null) {

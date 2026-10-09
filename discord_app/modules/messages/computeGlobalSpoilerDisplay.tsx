@@ -1,7 +1,7 @@
-// === Module 8374: computeGlobalSpoilerDisplay ===
+// === Module 8382: computeGlobalSpoilerDisplay ===
 
-// Module 8374 (computeGlobalSpoilerDisplay)
-import PermissionStore from "PermissionStore" /* 4707 */;
+// Module 8382 (computeGlobalSpoilerDisplay)
+import PermissionStore from "PermissionStore" /* 4709 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompi
   }
   const obj = require("c");
   const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-  const RenderSpoilers = tmp(2040).RenderSpoilers;
+  const RenderSpoilers = tmp(2041).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === setting) {

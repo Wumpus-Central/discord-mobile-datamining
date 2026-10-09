@@ -1,17 +1,17 @@
-// === Module 16140: VEVOOPropBlurAmount ===
+// === Module 16256: VEVOOPropBlurAmount ===
 
-// Module 16140 (VEVOOPropBlurAmount)
+// Module 16256 (VEVOOPropBlurAmount)
 import c from "c" /* 576 */;
-import FormSwitch from "FormSwitch" /* 6883 */;
-import Form from "Form" /* 8555 */;
+import FormSwitch from "FormSwitch" /* 6890 */;
+import Form from "Form" /* 8563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VEVOOStore = fn(5364);
+const VEVOOStore = fn(5365);
 ({ getVisualEffectViewOverrides: hasOwnProperty, setVisualEffectViewOverides: metroRequire } = VEVOOStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles({ enabledSwitchStyle: { alignSelf: "flex-start" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -143,7 +143,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       cResult[17] = tmp29;
     }
     const obj4 = { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 };
-    const tmp25 = jsx(first1(16141), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
+    const tmp25 = jsx(first1(16257), { disabled: !tmp7, disabledOpacity: !tmp7, initialValue: ref, onValueChange: tmp13 });
     cResult[9] = !tmp7;
     cResult[10] = !tmp7;
     cResult[11] = tmp25;
@@ -205,7 +205,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   };
   const ref = noop.useRef(first);
-  obj.subLabel = jsx(first(16141), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
+  obj.subLabel = jsx(first(16257), { disabled: !tmp3, disabledOpacity: !tmp3, initialValue: noop.useRef(first), onValueChange });
   return jsx(Form.FormRow, {
     label: "Blur Amount " + str,
     leadingStyle: tmp.enabledSwitchStyle,

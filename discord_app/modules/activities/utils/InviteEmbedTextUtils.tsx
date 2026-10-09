@@ -1,10 +1,10 @@
-// === Module 13370: InviteEmbedTextUtils ===
+// === Module 13465: InviteEmbedTextUtils ===
 
-// Module 13370 (InviteEmbedTextUtils)
+// Module 13465 (InviteEmbedTextUtils)
 import util from "util" /* 1126 */;
 import _modDef3051 from "module_3051" /* 3051 */;
-import NicknameUtils from "NicknameUtils" /* 5405 */;
-import UserStore from "UserStore" /* 1389 */;
+import NicknameUtils from "NicknameUtils" /* 5406 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function getAskToJoinText(author, appName, isPrivate, id2, arg4) {

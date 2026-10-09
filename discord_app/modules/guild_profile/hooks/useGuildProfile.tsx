@@ -1,9 +1,9 @@
-// === Module 8593: useGuildProfile ===
+// === Module 8601: useGuildProfile ===
 
-// Module 8593 (useGuildProfile)
+// Module 8601 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 8592 */;
+import GuildProfileStore from "GuildProfileStore" /* 8600 */;
 
 const require = globalThis.__r;
 
@@ -136,7 +136,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled() ? (f
             closure_129_0 = flag;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

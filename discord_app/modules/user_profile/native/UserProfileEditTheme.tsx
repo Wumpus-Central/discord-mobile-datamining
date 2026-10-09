@@ -1,10 +1,10 @@
-// === Module 14696: UserProfileEditTheme ===
+// === Module 14802: UserProfileEditTheme ===
 
-// Module 14696 (UserProfileEditTheme)
+// Module 14802 (UserProfileEditTheme)
 import nativeDefault from "native" /* 587 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import _modDef5200 from "module_5200" /* 5200 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import _modDef5201 from "module_5201" /* 5201 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, labelRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, overflowMenu: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.overflowMenu = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
@@ -57,7 +57,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = arg0;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef5200;
+    tmp = _modDef5201;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;
@@ -75,7 +75,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14698, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14804, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             }

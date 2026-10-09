@@ -1,18 +1,18 @@
-// === Module 17282: BadgeCustomizationProfileCoachmark ===
+// === Module 17429: BadgeCustomizationProfileCoachmark ===
 
-// Module 17282 (BadgeCustomizationProfileCoachmark)
+// Module 17429 (BadgeCustomizationProfileCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4803 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import BadgesCoachmarkRive from "BadgesCoachmarkRive" /* 4804 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCoachmarkPosition(arg0, arg1) {
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
   }
   const obj = markAsDismissed(576);
   const stateFromStores = markAsDismissed(504).useStateFromStores(tmp4, tmp5);
-  const reducedMotion = noop.useContext(markAsDismissed(4794).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = noop.useContext(markAsDismissed(4795).AccessibilityPreferencesContext).reducedMotion;
   const tmp8 = closure_8(targetRef, visible);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = markAsDismissed(1126).intl;
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
                   if (cResult[19] === visible) {
                     let tmp19 = cResult[20];
                   }
-                  const coachmark = markAsDismissed(9375).useCoachmark(targetRef, tmp19);
+                  const coachmark = markAsDismissed(9413).useCoachmark(targetRef, tmp19);
                   return null;
                 }
               }
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeCus
       cResult[13] = I;
       tmp18 = I;
     }
-    const obj3 = { type: "rive", rive: markAsDismissed(4803).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
+    const obj3 = { type: "rive", rive: markAsDismissed(4804).BadgesCoachmarkRive, aspectRatio: "16/9", riveProps: null };
     const obj4 = { dataBinding: null };
     const obj5 = { on: null, reducedMotion: reducedMotion.enabled };
     obj4.dataBinding = obj5;

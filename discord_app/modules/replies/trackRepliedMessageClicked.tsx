@@ -1,10 +1,10 @@
-// === Module 11367: trackRepliedMessageClicked ===
+// === Module 10740: trackRepliedMessageClicked ===
 
-// Module 11367 (trackRepliedMessageClicked)
+// Module 10740 (trackRepliedMessageClicked)
 import Constants from "Constants" /* 1085 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7301 */;
-import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8926 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7306 */;
+import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8937 */;
 import size from "module_2" /* 2 */;
 
 const ReferencedMessageState = ReferencedMessageStore.ReferencedMessageState;

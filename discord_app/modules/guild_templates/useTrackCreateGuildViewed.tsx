@@ -1,13 +1,13 @@
-// === Module 11400: useTrackCreateGuildViewed ===
+// === Module 11307: useTrackCreateGuildViewed ===
 
-// Module 11400 (useTrackCreateGuildViewed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+// Module 11307 (useTrackCreateGuildViewed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildTemplateStates = fn(7021).GuildTemplateStates;
+const GuildTemplateStates = fn(7024).GuildTemplateStates;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,17 +1,17 @@
-// === Module 13432: JoinVoiceChannelButton ===
+// === Module 13524: JoinVoiceChannelButton ===
 
-// Module 13432 (JoinVoiceChannelButton)
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10806 */;
+// Module 13524 (JoinVoiceChannelButton)
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5886 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 10976 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 
 const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1085).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoic
         }
       }
       const obj2 = { disabled: flag, text: tmp10, onPress: N };
-      const tmp21 = jsx(tmp(5375).Button, { disabled: flag, text: tmp10, onPress: N });
+      const tmp21 = jsx(tmp(5376).Button, { disabled: flag, text: tmp10, onPress: N });
       cResult[11] = tmp10;
       cResult[12] = flag;
       cResult[13] = N;
@@ -157,6 +157,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JoinVoic
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
   }, items1);
-  obj2.children = jsx(channel(5375).Button, { disabled: flag, text: stringResult, onPress: callback });
+  obj2.children = jsx(channel(5376).Button, { disabled: flag, text: stringResult, onPress: callback });
   return <View style={null}>{null}</View>;
 });

@@ -1,21 +1,21 @@
-// === Module 14700: UserProfileAvatarDecorationEditButton ===
+// === Module 14806: UserProfileAvatarDecorationEditButton ===
 
-// Module 14700 (UserProfileAvatarDecorationEditButton)
+// Module 14806 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8257 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8985 */;
-import _modDef13308 from "module_13308" /* 13308 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8265 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8996 */;
+import _modDef13403 from "module_13403" /* 13403 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const COLLECTIBLES_PREVIEW_SIZE = fn(6891).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(6898).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1096).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = { position: "relative", height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 obj2.previewContainer = size;
@@ -250,8 +250,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                         obj2.children = jsx(CutoutableAvatarDecorationDefault, { avatarDecoration, size: COLLECTIBLES_PREVIEW_SIZE - 2 * nativeDefault.space.PX_4, animate: false });
                         let tmp7 = <hasOwnProperty style={closure_3.previewContainer}>{null}</hasOwnProperty>;
                       } else {
-                        const obj = { source: _modDef13308, style: closure_3.noneIcon };
-                        tmp7 = jsx(native.Icon, { source: _modDef13308, style: closure_3.noneIcon });
+                        const obj = { source: _modDef13403, style: closure_3.noneIcon };
+                        tmp7 = jsx(native.Icon, { source: _modDef13403, style: closure_3.noneIcon });
                       }
                       return tmp7;
                     }

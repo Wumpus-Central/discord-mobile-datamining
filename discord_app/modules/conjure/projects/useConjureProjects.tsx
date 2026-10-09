@@ -1,22 +1,22 @@
-// === Module 17266: useConjureProjects ===
+// === Module 12947: useConjureProjects ===
 
-// Module 17266 (useConjureProjects)
+// Module 12947 (useConjureProjects)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6934 */;
-import ConjureActivity from "ConjureActivity" /* 12359 */;
-import conjureAppInServer from "conjureAppInServer" /* 12378 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6941 */;
+import conjureAppInServer from "conjureAppInServer" /* 11367 */;
+import ConjureActivity from "ConjureActivity" /* 12296 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
-import ConjureChatStore from "ConjureChatStore" /* 13073 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import ConjureChatStore from "ConjureChatStore" /* 12948 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
 
 const require = globalThis.__r;
 
@@ -194,7 +194,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePr
   const tmp4 = _slicedToArray(noop.useState(0), 2);
   const first = tmp4[0];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ConjureProjectStore, ConjureChatStore, GuildStore, GuildChannelStore, UserProfileStore, ApplicationStore, tmp(1452).ApexExperimentStore];
+    const items = [ConjureProjectStore, ConjureChatStore, GuildStore, GuildChannelStore, UserProfileStore, ApplicationStore, tmp(1453).ApexExperimentStore];
     cResult[0] = items;
     let first1 = items;
   } else {
@@ -240,7 +240,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureEl
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1452).ApexExperimentStore, PermissionStore];
+    const items = [GuildStore, tmp(1453).ApexExperimentStore, PermissionStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -315,7 +315,7 @@ export const useConjureForMeGuildId = ReactCompilerGating.isReactCompilerEnabled
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, SelectedGuildStore, tmp(1452).ApexExperimentStore];
+    const items = [GuildStore, SelectedGuildStore, tmp(1453).ApexExperimentStore];
     cResult[0] = items;
     let first = items;
   } else {

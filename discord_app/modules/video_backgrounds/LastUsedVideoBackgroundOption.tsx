@@ -1,15 +1,15 @@
-// === Module 5256: LastUsedVideoBackgroundOption ===
+// === Module 5257: LastUsedVideoBackgroundOption ===
 
-// Module 5256 (LastUsedVideoBackgroundOption)
+// Module 5257 (LastUsedVideoBackgroundOption)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const initialize = obj(504);
-const VideoBackgroundUtils = obj(5257);
+const VideoBackgroundUtils = obj(5258);
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

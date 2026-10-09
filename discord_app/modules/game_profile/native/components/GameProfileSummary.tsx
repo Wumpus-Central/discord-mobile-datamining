@@ -1,7 +1,7 @@
-// === Module 8914: GameProfileSummary ===
+// === Module 8925: GameProfileSummary ===
 
-// Module 8914 (GameProfileSummary)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+// Module 8925 (GameProfileSummary)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles({ container: { flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

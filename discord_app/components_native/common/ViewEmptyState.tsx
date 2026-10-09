@@ -1,19 +1,19 @@
-// === Module 6733: ViewEmptyState ===
+// === Module 6740: ViewEmptyState ===
 
-// Module 6733 (ViewEmptyState)
+// Module 6740 (ViewEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
+import FastImageDefault from "FastImage" /* 6163 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5902 */;
+import TextStyles from "TextStyles" /* 5903 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c2, Image: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 }, emptyImage: { width: 170, height: 130 }, fixOpticalIllusion: { marginTop: -50, alignItems: "center" }, emptyLabel: null, emptyText: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEmpt
                     return tmp20;
                   }
                   const obj2 = { style: tmp5, children: tmp16 };
-                  const tmp23 = React4(React2, obj2);
+                  const tmp23 = React4(View, obj2);
                   cResult[18] = tmp5;
                   cResult[19] = tmp16;
                   cResult[20] = tmp23;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEmpt
             const obj3 = { style: tmp4.fixOpticalIllusion, children: null };
             const items = [tmp6, tmp10, tmp13];
             obj3.children = items;
-            const tmp19 = hasOwnProperty(React2, obj3);
+            const tmp19 = hasOwnProperty(View, obj3);
             cResult[13] = tmp4.fixOpticalIllusion;
             cResult[14] = tmp6;
             cResult[15] = tmp10;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEmpt
       tmp10 = tmp11;
     }
     const obj6 = { resizeMode: "contain", source, style: tmp4.emptyImage };
-    const tmp9 = React4(React3, obj6);
+    const tmp9 = React4(FastImageDefault, obj6);
     cResult[3] = source;
     cResult[4] = tmp4.emptyImage;
     cResult[5] = tmp9;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEmpt
   const items = [tmp.emptyContainer, style];
   obj.style = items;
   const obj2 = { style: tmp.fixOpticalIllusion, children: null };
-  const items1 = [React4(React3, { resizeMode: "contain", source, style: tmp.emptyImage }), , ];
+  const items1 = [React4(FastImageDefault, { resizeMode: "contain", source, style: tmp.emptyImage }), , ];
   let tmp2Result = null;
   if (null != label) {
     const obj4 = { style: tmp.emptyLabel, children: label.toUpperCase() };
@@ -144,6 +144,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ViewEmpt
   }
   items1[2] = tmp2Result2;
   obj2.children = items1;
-  obj.children = hasOwnProperty(React2, obj2);
-  return React4(React2, obj);
+  obj.children = hasOwnProperty(View, obj2);
+  return React4(View, obj);
 });

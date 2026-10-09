@@ -1,19 +1,19 @@
-// === Module 17958: StageBoostUpsellManager ===
+// === Module 18118: StageBoostUpsellManager ===
 
-// Module 17958 (StageBoostUpsellManager)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+// Module 18118 (StageBoostUpsellManager)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2072 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import StageMediaHooks from "StageMediaHooks" /* 5891 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 8762 */;
-import ActionSheetStore from "ActionSheetStore" /* 4759 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import StageMediaHooks from "StageMediaHooks" /* 5892 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 8771 */;
+import ActionSheetStore from "ActionSheetStore" /* 4761 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5888).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5889).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -47,7 +47,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5960, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5962, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }

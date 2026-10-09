@@ -1,21 +1,22 @@
-// === Module 11223: UserProfileAboutMeCard ===
+// === Module 10578: UserProfileAboutMeCard ===
 
-// Module 11223 (UserProfileAboutMeCard)
+// Module 10578 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import useToken from "useToken" /* 4778 */;
-import ChatInputUtils from "ChatInputUtils" /* 4945 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import GuildIconDefault from "GuildIcon" /* 6161 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6890 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8466 */;
-import BioTextDefault from "BioText" /* 11224 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 11226 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11228 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import useToken from "useToken" /* 4779 */;
+import ChatInputUtils from "ChatInputUtils" /* 4946 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import GuildIconDefault from "GuildIcon" /* 6165 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6897 */;
+import UserProfileAnalyticsContext from "UserProfileAnalyticsContext" /* 8298 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8474 */;
+import BioTextDefault from "BioText" /* 10579 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 10581 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 10583 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
@@ -23,15 +24,15 @@ import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6891);
+const Constants = fn(6898);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1085).Routes;
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = { headingVariant: "text-sm/semibold", textVariant: "text-md/normal", headingSpacing: 8, rowGap: 24, columnGap: 6 };
 const dependencyMap2 = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "text-xs/semibold", textVariant: "text-sm/normal", headingSpacing: 4, rowGap: 12, columnGap: 3 } };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_16 = createStyles.createStyles({ card: { flexDirection: "column" }, textWithIcon: { flexDirection: "row", alignItems: "center" }, memberJoinDates: { flexDirection: "row", flexWrap: "wrap" }, slashCommands: { flex: 1, flexDirection: "row", flexWrap: "wrap", marginBottom: 12 }, policyLinks: { rowGap: 8 } });
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Heading(arg0) {
@@ -183,7 +184,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextWi
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bio(arg0) {
-  const cResult = c.c(16);
+  const cResult = c.c(17);
   ({ userId, displayProfile, pendingBio, themeType, lineClamp } = arg0);
   if (cResult[0] !== themeType) {
     let tmp6;
@@ -200,61 +201,72 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bio(ar
     tmp4 = cResult[1];
   }
   const textVariant = tmp4.textVariant;
+  const context = UserProfileAnalyticsContext.useUserProfileAnalyticsContext().context;
   if (cResult[2] === displayProfile) {
     if (cResult[3] === pendingBio) {
       let tmp8 = cResult[4];
     }
-    let tmp11 = null;
     if (null != tmp8) {
-      tmp11 = null;
       if ("" !== tmp8) {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
           const stringResult = intl.string(util.t.ZzAR2Y);
           cResult[5] = stringResult;
-          let tmp12 = stringResult;
+          let tmp11 = stringResult;
         } else {
-          tmp12 = cResult[5];
+          tmp11 = cResult[5];
         }
         if (cResult[6] !== themeType) {
-          const obj2 = { themeType, children: tmp12 };
-          const tmp17 = closure_1_11(closure_17, obj2);
+          const obj2 = { themeType, children: tmp11 };
+          const tmp16 = closure_1_11(closure_17, obj2);
           cResult[6] = themeType;
-          cResult[7] = tmp17;
-          let tmp14 = tmp17;
+          cResult[7] = tmp16;
+          let tmp13 = tmp16;
         } else {
-          tmp14 = cResult[7];
+          tmp13 = cResult[7];
+        }
+        let guildId;
+        if (context != null) {
+          guildId = context.guildId;
         }
         if (cResult[8] === tmp8) {
           if (cResult[9] === lineClamp) {
-            if (cResult[10] === textVariant) {
-              if (cResult[11] === userId) {
-                let tmp18 = cResult[12];
+            if (cResult[10] === guildId) {
+              if (cResult[11] === textVariant) {
+                if (cResult[12] === userId) {
+                  let tmp18 = cResult[13];
+                }
+                if (cResult[14] === tmp13) {
+                  if (cResult[15] === tmp18) {
+                    let tmp22 = cResult[16];
+                  }
+                  return tmp22;
+                }
+                const obj3 = { children: null };
+                const items = [tmp13, tmp18];
+                obj3.children = items;
+                const tmp25 = __initData(View, obj3);
+                cResult[14] = tmp13;
+                cResult[15] = tmp18;
+                cResult[16] = tmp25;
+                tmp22 = tmp25;
               }
-              if (cResult[13] === tmp14) {
-              }
-              const obj3 = { children: null };
-              const items = [tmp14, tmp18];
-              obj3.children = items;
-              const tmp25 = __initData(View, obj3);
-              cResult[13] = tmp14;
-              cResult[14] = tmp18;
-              cResult[15] = tmp25;
             }
           }
         }
-        const obj4 = { bio: tmp8, userId, textVariant, lineClamp };
+        const obj4 = { bio: tmp8, userId, guildId, textVariant, lineClamp };
         const tmp21 = closure_1_11(BioTextDefault, obj4);
         cResult[8] = tmp8;
         cResult[9] = lineClamp;
-        cResult[10] = textVariant;
-        cResult[11] = userId;
-        cResult[12] = tmp21;
+        cResult[10] = guildId;
+        cResult[11] = textVariant;
+        cResult[12] = userId;
+        cResult[13] = tmp21;
         tmp18 = tmp21;
       }
     }
-    return tmp11;
+    return null;
   }
   let previewBio;
   if (displayProfile != null) {
@@ -264,6 +276,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bio(ar
   cResult[3] = pendingBio;
   cResult[4] = previewBio;
   tmp8 = previewBio;
+  const tmpResult = UserProfileAnalyticsContext;
 }) : (function Bio(arg0) {
   ({ displayProfile, themeType } = arg0);
   let tmp;
@@ -274,26 +287,34 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bio(ar
   if (tmp == null) {
     tmp = closure_14;
   }
+  const context = UserProfileAnalyticsContext.useUserProfileAnalyticsContext().context;
   let previewBio;
   if (displayProfile != null) {
     previewBio = displayProfile.getPreviewBio(pendingBio);
   }
-  let tmp4 = null;
+  let tmp8Result = null;
   if (null != previewBio) {
-    tmp4 = null;
+    tmp8Result = null;
     if ("" !== previewBio) {
-      const obj = { children: null };
       const obj2 = { themeType, children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.ZzAR2Y);
       const items = [closure_1_11(closure_17, obj2), ];
-      const obj3 = { bio: previewBio, userId, textVariant: tmp.textVariant, lineClamp };
+      const obj3 = { bio: previewBio, userId, guildId: null, textVariant: null, lineClamp: null };
+      let guildId;
+      if (context != null) {
+        guildId = context.guildId;
+      }
+      const obj4 = { children: null };
+      obj3.guildId = guildId;
+      obj3.textVariant = tmp.textVariant;
+      obj3.lineClamp = lineClamp;
       items[1] = closure_1_11(BioTextDefault, obj3);
-      obj.children = items;
-      tmp4 = __initData(View, obj);
+      obj4.children = items;
+      tmp8Result = __initData(View, obj4);
     }
   }
-  return tmp4;
+  return tmp8Result;
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function MemberJoinDates(userId) {
@@ -420,14 +441,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         return guild;
       }
     }
-    const stateFromStores2 = tmp(504).useStateFromStores(tmp17, B);
+    const stateFromStores2 = tmp(504).useStateFromStores(tmp17, U);
     class P {
       constructor() {
         return closure_1_5.locale;
       }
     }
     const tmpResult6 = tmp(504);
-    const tmpResult7 = tmp(6862);
+    const tmpResult7 = tmp(6869);
     const createdAtDate = tmpResult7.getCreatedAtDate(guildId(11).extractTimestamp(userId), stateFromStores);
     const obj6 = guildId(11);
     if (stateFromStores2 != null) {
@@ -442,7 +463,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         }
       }
     }
-    const createdAtDate1 = tmp(6862).getCreatedAtDate(tmp22, stateFromStores);
+    const createdAtDate1 = tmp(6869).getCreatedAtDate(tmp22, stateFromStores);
     const _Symbol = Symbol;
     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
       class R {
@@ -581,9 +602,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     cResult[30] = tmp4.memberJoinDates;
     cResult[31] = tmp31;
     cResult[32] = items3;
-    const tmpResult8 = tmp(6862);
+    const tmpResult8 = tmp(6869);
   }
-  class B {
+  class U {
     constructor() {
       member = null;
       if (null != guildId) {
@@ -596,7 +617,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   }
   cResult[8] = guildId;
   cResult[9] = userId;
-  cResult[10] = B;
+  cResult[10] = U;
   const tmpResult5 = userId(504);
 }) : (function MemberJoinDates(userId) {
   userId = userId.userId;
@@ -631,13 +652,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
     return member;
   });
   const obj3 = userId(504);
-  const obj4 = userId(6862);
+  const obj4 = userId(6869);
   const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
-  const createdAtDate1 = userId(6862).getCreatedAtDate(joinedAt, stateFromStores);
+  const createdAtDate1 = userId(6869).getCreatedAtDate(joinedAt, stateFromStores);
   const obj7 = { themeType, children: null };
   const intl = tmp4(1126).intl;
   obj7.children = intl.string(userId(1126).t.a6XYD9);
@@ -645,7 +666,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   const obj8 = { style: null, children: null };
   const items4 = [tmp.memberJoinDates, { columnGap }];
   obj8.style = items4;
-  const obj9 = { themeType, icon: closure_11(userId(10157).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  const obj9 = { themeType, icon: closure_11(userId(10142).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1126).intl;
   obj9.accessibilityLabel = intl2.formatToPlainString(userId(1126).t["9t7w53"], { date: createdAtDate });
   obj9.children = createdAtDate;
@@ -654,9 +675,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
   if (tmp13Result) {
     const obj10 = { children: null };
     const obj11 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-    const items6 = [closure_11(tmp4(5086).Text, obj11), ];
+    const items6 = [closure_11(tmp4(5087).Text, obj11), ];
     const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    const obj13 = { guild: stateFromStores1, size: tmp4(6161).GuildIconSizes.XXSMALL };
+    const obj13 = { guild: stateFromStores1, size: tmp4(6165).GuildIconSizes.XXSMALL };
     obj12.icon = closure_11(GuildIconDefault, obj13);
     const intl3 = tmp4(1126).intl;
     const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -930,7 +951,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Policy
     cResult[9] = tmp13;
     tmp11 = tmp13;
   }
-  const tmp10 = closure_11(url(5086).Text, { variant: textVariant, color: "text-link", children: label });
+  const tmp10 = closure_11(url(5087).Text, { variant: textVariant, color: "text-link", children: label });
   cResult[4] = label;
   cResult[5] = textVariant;
   cResult[6] = tmp10;
@@ -960,10 +981,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotSla
   const themeType = channel.themeType;
   ({ applicationId, commandIds } = channel);
   const tmp4 = closure_16();
-  analyticsLocations = analyticsLocations(context[25])().analyticsLocations;
+  analyticsLocations = analyticsLocations(context[26])().analyticsLocations;
   let obj = channel(context[11]);
-  context = channel(context[26]).useUserProfileAnalyticsContext().context;
-  let obj2 = channel(context[26]);
+  context = channel(context[15]).useUserProfileAnalyticsContext().context;
+  let obj2 = channel(context[15]);
   ({ commands, application } = analyticsLocations(context[27])(channel, applicationId, commandIds));
   if (cResult[0] === analyticsLocations) {
     if (cResult[1] === application) {
@@ -976,8 +997,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotSla
             if (0 !== commands.length) {
               const _Symbol = Symbol;
               if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = tmp(tmp2[15]).intl;
-                const stringResult = intl.string(tmp(tmp2[15]).t["0hKkS+"]);
+                const intl = tmp(tmp2[16]).intl;
+                const stringResult = intl.string(tmp(tmp2[16]).t["0hKkS+"]);
                 cResult[6] = stringResult;
                 let tmp8 = stringResult;
               } else {
@@ -1036,8 +1057,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotSla
                       let tmp24 = null != application && null != application.bot;
                       if (tmp24) {
                         const obj5 = { size: "sm", variant: "tertiary", text: null, onPress: null };
-                        const intl2 = tmp(tmp2[15]).intl;
-                        obj5.text = intl2.string(tmp(tmp2[15]).t.VEfKyb);
+                        const intl2 = tmp(tmp2[16]).intl;
+                        obj5.text = intl2.string(tmp(tmp2[16]).t.VEfKyb);
                         obj5.onPress = tmp6;
                         tmp24 = closure_11(tmp(tmp2[36]).Button, obj5);
                       }
@@ -1176,10 +1197,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotSla
   let context;
   application = undefined;
   ({ applicationId, commandIds, themeType } = channel);
-  analyticsLocations = analyticsLocations(context[25])().analyticsLocations;
+  analyticsLocations = analyticsLocations(context[26])().analyticsLocations;
   const tmp = closure_16();
-  context = channel(context[26]).useUserProfileAnalyticsContext().context;
-  let obj = channel(context[26]);
+  context = channel(context[15]).useUserProfileAnalyticsContext().context;
+  let obj = channel(context[15]);
   ({ commands, application } = analyticsLocations(context[27])(channel, applicationId, commandIds));
   const items = [application, , , , ];
   ({ id: arr[1], guild_id: arr[2] } = channel);
@@ -1190,16 +1211,16 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotSla
     tmp8Result = null;
     if (0 !== commands.length) {
       let obj2 = { themeType, children: null };
-      const intl2 = tmp3(tmp2[15]).intl;
-      obj2.children = intl2.string(tmp3(tmp2[15]).t["0hKkS+"]);
+      const intl2 = tmp3(tmp2[16]).intl;
+      obj2.children = intl2.string(tmp3(tmp2[16]).t["0hKkS+"]);
       const items1 = [closure_11(closure_17, obj2), , ];
       let obj3 = { style: tmp.slashCommands, children: commands.map((command) => closure_2_11(UserProfileAboutMeCardCommandDefault, { application, channel, command }, command.id)) };
       items1[1] = closure_11(View, obj3);
       let tmp10Result = null != application && null != application.bot;
       if (tmp10Result) {
         let obj4 = { size: "sm", variant: "tertiary", text: null, onPress: null };
-        const intl = tmp3(tmp2[15]).intl;
-        obj4.text = intl.string(tmp3(tmp2[15]).t.VEfKyb);
+        const intl = tmp3(tmp2[16]).intl;
+        obj4.text = intl.string(tmp3(tmp2[16]).t.VEfKyb);
         obj4.onPress = tmp5;
         tmp10Result = closure_11(tmp3(tmp2[36]).Button, obj4);
       }

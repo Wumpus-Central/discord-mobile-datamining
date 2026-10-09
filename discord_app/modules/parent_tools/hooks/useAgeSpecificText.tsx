@@ -1,7 +1,7 @@
-// === Module 11558: useAgeSpecificText ===
+// === Module 11487: useAgeSpecificText ===
 
-// Module 11558 (useAgeSpecificText)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7712 */;
+// Module 11487 (useAgeSpecificText)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7721 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

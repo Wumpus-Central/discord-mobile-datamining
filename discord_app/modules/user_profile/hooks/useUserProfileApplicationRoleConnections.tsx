@@ -1,8 +1,8 @@
-// === Module 13235: useUserProfileApplicationRoleConnections ===
+// === Module 13328: useUserProfileApplicationRoleConnections ===
 
-// Module 13235 (useUserProfileApplicationRoleConnections)
+// Module 13328 (useUserProfileApplicationRoleConnections)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

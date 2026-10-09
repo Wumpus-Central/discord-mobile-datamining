@@ -1,7 +1,7 @@
-// === Module 5225: DesktopGeneralPerfExperiment ===
+// === Module 5226: DesktopGeneralPerfExperiment ===
 
-// Module 5225 (DesktopGeneralPerfExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5226 (DesktopGeneralPerfExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2026-10-desktop-general-perf", kind: "user", defaultConfig: { skipSilentDelayEstimatorFfts: false, basicProcessEnumeration: false }, variations: { 0: { skipSilentDelayEstimatorFfts: false, basicProcessEnumeration: false }, 1: { skipSilentDelayEstimatorFfts: true, basicProcessEnumeration: true } } });

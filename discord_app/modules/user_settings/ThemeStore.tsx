@@ -3,13 +3,13 @@
 // Module 1205 (ThemeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1242 */;
-import resolveThemeDefault from "resolveTheme" /* 1249 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2045 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14219 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1243 */;
+import resolveThemeDefault from "resolveTheme" /* 1250 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14315 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 
 require = fn;
 function handleThemeChange() {

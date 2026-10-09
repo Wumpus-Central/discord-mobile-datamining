@@ -1,14 +1,14 @@
-// === Module 14899: FamilyCenterSettingsNotice ===
+// === Module 15011: FamilyCenterSettingsNotice ===
 
-// Module 14899 (FamilyCenterSettingsNotice)
+// Module 15011 (FamilyCenterSettingsNotice)
 import _modDef2565 from "module_2565" /* 2565 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
-import LayerActionCreators from "LayerActionCreators" /* 7295 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14773 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
+import LayerActionCreators from "LayerActionCreators" /* 7300 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(7015).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7018).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_settings/family_center/n
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCenterSettingsParentalControlsNotice() {
   const cResult = activeLinkUserIds(576).c(5);
   let obj = activeLinkUserIds(576);
-  activeLinkUserIds = activeLinkUserIds(7711).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(7720).useActiveLinkUserIds();
   if (cResult[0] !== activeLinkUserIds) {
     function handleMessageParentClick() {
       LayerActionCreators.popLayer();
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
     return tmp4;
   }
   const obj3 = { label: null, noticeType: null, labelHook: null, count: null };
-  const obj2 = activeLinkUserIds(7711);
+  const obj2 = activeLinkUserIds(7720);
   obj3.label = _modDef2565.i284fU;
   obj3.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj3.labelHook = tmp3;
@@ -47,9 +47,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
   cResult[4] = tmp6;
   tmp4 = tmp6;
 }) : (function FamilyCenterSettingsParentalControlsNotice() {
-  activeLinkUserIds = activeLinkUserIds(7711).useActiveLinkUserIds();
+  activeLinkUserIds = activeLinkUserIds(7720).useActiveLinkUserIds();
   const obj2 = { label: null, noticeType: null, labelHook: null, count: null };
-  let obj = activeLinkUserIds(7711);
+  let obj = activeLinkUserIds(7720);
   obj2.label = _modDef2565.i284fU;
   obj2.noticeType = SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE;
   obj2.labelHook = function handleMessageParentClick() {

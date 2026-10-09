@@ -1,25 +1,25 @@
-// === Module 7309: UserProfileStore ===
+// === Module 7314: UserProfileStore ===
 
-// Module 7309 (UserProfileStore)
+// Module 7314 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import Timers from "Timers" /* 2058 */;
-import WidgetType from "WidgetType" /* 7310 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7311 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7314 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7315 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7317 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7318 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7319 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import Timers from "Timers" /* 2059 */;
+import WidgetType from "WidgetType" /* 7315 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7316 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7319 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7320 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7322 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7323 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7324 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
-import UserRecord from "UserRecord" /* 1403 */;
+import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2086 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import SortedGuildStore from "SortedGuildStore" /* 5970 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {

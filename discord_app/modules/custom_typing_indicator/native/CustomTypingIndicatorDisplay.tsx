@@ -1,20 +1,20 @@
-// === Module 11671: CustomTypingIndicatorDisplay ===
+// === Module 11607: CustomTypingIndicatorDisplay ===
 
-// Module 11671 (CustomTypingIndicatorDisplay)
+// Module 11607 (CustomTypingIndicatorDisplay)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11672 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11608 */;
 import noop from "module_19" /* 19 */;
 
 const util = PressableOpacity(1126);
-const Text_Text = PressableOpacity(5086);
-const Stack_Stack = PressableOpacity(5373);
-const Pressables = PressableOpacity(6189);
-const CustomTypingIndicatorUtils = PressableOpacity(11659);
+const Text_Text = PressableOpacity(5087);
+const Stack_Stack = PressableOpacity(5374);
+const Pressables = PressableOpacity(6191);
+const CustomTypingIndicatorUtils = PressableOpacity(11595);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles(() => ({ text: { flexShrink: 1 }, pressable: { flex: 1 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

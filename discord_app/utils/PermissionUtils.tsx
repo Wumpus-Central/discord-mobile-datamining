@@ -1,21 +1,21 @@
-// === Module 4712: PermissionUtils ===
+// === Module 4714: PermissionUtils ===
 
-// Module 4712 (PermissionUtils)
+// Module 4714 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import Server from "Server" /* 1997 */;
+import Server from "Server" /* 1998 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2122 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4694 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4713 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4714 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4696 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4715 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4716 */;
 import ImpersonateStore from "ImpersonateStore" /* 2117 */;
-import LurkingStore from "LurkingStore" /* 4708 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
+import LurkingStore from "LurkingStore" /* 4710 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 import BigFlagUtils_mod from "BigFlagUtils" /* 1097 */;
 import apply from "module_12" /* 12 */;
 
@@ -351,7 +351,7 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
 const GuildRecord = fn(2082);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
@@ -458,7 +458,7 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
           const tmp12 = getSyncedPermissionOverwrites(guild_id, appChannelBotUserId);
           closure_1 = tmp12;
           if (null == obj2[guild_id]) {
-            let obj = { id: guild_id, type: obj2(1997).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
+            let obj = { id: guild_id, type: obj2(1998).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
             obj2[guild_id] = obj;
           }
           const _Object = Object;

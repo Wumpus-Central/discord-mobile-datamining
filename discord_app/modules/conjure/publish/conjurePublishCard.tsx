@@ -1,10 +1,11 @@
-// === Module 16997: conjurePublishCard ===
+// === Module 17153: conjurePublishCard ===
 
-// Module 16997 (conjurePublishCard)
+// Module 17153 (conjurePublishCard)
 import _modDef3827 from "module_3827" /* 3827 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishCard.tsx");
+const weakMap = new WeakMap();
+let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishCard.tsx");
 
 export const isConjurePublishCtaVisible = function isConjurePublishCtaVisible(publish) {
   let tmp = null != publish;
@@ -50,7 +51,7 @@ export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
   }
   return tmp;
 };
-export const publishNoticeMessage = function publishNoticeMessage(notice) {
+export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
   if (notice.update) {
     const surface = notice.surface;
     if ("bot" === surface) {
@@ -63,7 +64,12 @@ export const publishNoticeMessage = function publishNoticeMessage(notice) {
       return _modDef3827.WSmpBT;
     }
   } else {
-    return _modDef3827.MOrR29;
+    if (null == arg1) {
+      let MOrR29 = _modDef3827.MOrR29;
+    } else {
+      MOrR29 = _modDef3827["/npn7F"];
+    }
+    return MOrR29;
   }
 };
 export const withLivePublishCard = function withLivePublishCard(stateFromStores1, stateFromStores2) {
@@ -88,17 +94,20 @@ export const withLivePublishCard = function withLivePublishCard(stateFromStores1
     return tmp;
   })) {
     mapped = stateFromStores1.map((publishCta) => {
-      let tmp = publishCta;
       if (null != publishCta.publishCta) {
-        tmp = publishCta;
         if (publishCta.id !== id) {
-          const obj = {};
-          const merged = Object.assign(publishCta);
-          obj.publishCta = null;
-          tmp = obj;
+          value = weakMap.get(publishCta);
+          if (null == value) {
+            const obj2 = {};
+            const merged = Object.assign(publishCta);
+            obj2.publishCta = null;
+            const result = weakMap.set(publishCta, obj2);
+            value = obj2;
+          }
+          return value;
         }
       }
-      return tmp;
+      return publishCta;
     });
   }
   return mapped;

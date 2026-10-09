@@ -1,7 +1,7 @@
-// === Module 17738: useCaptchaModalEffects ===
+// === Module 17890: useCaptchaModalEffects ===
 
-// Module 17738 (useCaptchaModalEffects)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+// Module 17890 (useCaptchaModalEffects)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCaptc
   } else {
     tmp3 = cResult[1];
   }
-  str(5392)(tmp3);
+  str(5393)(tmp3);
   if (cResult[2] !== str) {
     const fn2 = function o() {
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type: str });
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCaptc
     analyticsType = "Guild Join Captcha";
   }
   dependencyMap = noop.useRef(true);
-  analyticsType(5392)(() => () => {
+  analyticsType(5393)(() => () => {
     if (ref.current) {
       if (closure_1_0 != null) {
         tmp(require("SharedCaptchaUtils").CaptchaError.CANCEL);

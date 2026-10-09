@@ -1,12 +1,12 @@
-// === Module 17163: MessageSearchResultParser ===
+// === Module 17313: MessageSearchResultParser ===
 
-// Module 17163 (MessageSearchResultParser)
+// Module 17313 (MessageSearchResultParser)
 import _mod12 from "module_12" /* 12 */;
-import MessageRecord from "MessageRecord" /* 4718 */;
+import MessageRecord from "MessageRecord" /* 4720 */;
 
 require = fn;
-let closure_3 = fn(9247).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(17164).CachedSearchResultParser;
+let closure_3 = fn(9285).EMBED_TYPES_WITHOUT_DESCRIPTION;
+fn(17314).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -21,9 +21,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(17165).analyze(tokenizedQueryContent));
+      set = new Set(set(17315).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(17165).shouldHighlight(item, set));
+      const found = parts.find((item) => set(17315).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -43,7 +43,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(17165);
+      const obj = set(17315);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {

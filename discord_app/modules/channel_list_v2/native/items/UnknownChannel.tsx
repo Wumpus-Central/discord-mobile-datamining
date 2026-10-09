@@ -1,13 +1,13 @@
-// === Module 16468: UnknownChannel ===
+// === Module 16587: UnknownChannel ===
 
-// Module 16468 (UnknownChannel)
+// Module 16587 (UnknownChannel)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
-import useChannelNameDefault from "useChannelName" /* 5417 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
-import ChannelItemDefault from "ChannelItem" /* 16353 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
+import useChannelNameDefault from "useChannelName" /* 5418 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10249 */;
+import ChannelItemDefault from "ChannelItem" /* 16472 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,13 +18,13 @@ function handlePress() {
   obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open(obj2);
 }
-const UnreadSetting = fn(5972).UnreadSetting;
+const UnreadSetting = fn(5974).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
-let obj = { container: { marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(5091);
+let obj = { container: { marginVertical: fn(11713).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11713).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 

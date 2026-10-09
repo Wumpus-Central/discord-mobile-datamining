@@ -1,6 +1,6 @@
-// === Module 8307: FileManagerUtils ===
+// === Module 8315: FileManagerUtils ===
 
-// Module 8307 (FileManagerUtils)
+// Module 8315 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1162 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -41,7 +41,7 @@ let closure_5 = async function _readFile(arg0) {
               if (!obj.isAndroid()) {
                 return closure_1_1(1162).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1381);
+              obj = closure_1_0(1382);
             }
             if ("cache" === arg0) {
               let DocumentsDirPath = closure_1_1(1162).getConstants().CacheDirPath;
@@ -136,8 +136,8 @@ export const moveFile = function moveFile(arg0, arg1, arg2) {
 export const removeFile = function removeFile(cache, combined) {
   return NativeFileModuleDefault.removeFile(cache, combined);
 };
-export const clearFolder = function clearFolder(cache, combined1) {
-  return NativeFileModuleDefault.clearFolder(cache, combined1);
+export const clearFolder = function clearFolder(cache, c4) {
+  return NativeFileModuleDefault.clearFolder(cache, c4);
 };
 export const readFile = function readFile() {
   const self = this;

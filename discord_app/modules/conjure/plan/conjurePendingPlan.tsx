@@ -1,7 +1,7 @@
-// === Module 17029: conjurePendingPlan ===
+// === Module 17185: conjurePendingPlan ===
 
-// Module 17029 (conjurePendingPlan)
-import ConjureChatStore from "ConjureChatStore" /* 13073 */;
+// Module 17185 (conjurePendingPlan)
+import ConjureChatStore from "ConjureChatStore" /* 12948 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = ConjureChatStore.turnSettled;

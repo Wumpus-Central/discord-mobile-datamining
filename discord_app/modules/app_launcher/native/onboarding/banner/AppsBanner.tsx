@@ -1,16 +1,16 @@
-// === Module 11756: AppsBanner ===
+// === Module 11693: AppsBanner ===
 
-// Module 11756 (AppsBanner)
+// Module 11693 (AppsBanner)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import BannerBaseDefault from "BannerBase" /* 11754 */;
-import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 11757 */;
+import BannerBaseDefault from "BannerBase" /* 11691 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 11694 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

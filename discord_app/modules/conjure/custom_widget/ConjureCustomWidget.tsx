@@ -1,6 +1,6 @@
-// === Module 13070: ConjureCustomWidget ===
+// === Module 13162: ConjureCustomWidget ===
 
-// Module 13070 (ConjureCustomWidget)
+// Module 13162 (ConjureCustomWidget)
 import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
   const cResult = require("c").c(5);
   dependencyMap = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1452).ApexExperimentStore];
+    const items = [GuildStore, tmp(1453).ApexExperimentStore];
     cResult[0] = items;
     let first = items;
   } else {

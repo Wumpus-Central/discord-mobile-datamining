@@ -1,15 +1,15 @@
-// === Module 12454: ContactSyncError ===
+// === Module 12373: ContactSyncError ===
 
-// Module 12454 (ContactSyncError)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
-import timing from "timing" /* 5091 */;
+// Module 12373 (ContactSyncError)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
+import timing from "timing" /* 5092 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_4 = createStyles.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
 const __initData = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
 const __initData2 = { code: "function ContactSyncErrorTsx2(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
         tmp11 = tmp14;
       }
       const obj4 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp4.error, children: error };
-      const tmp10 = jsx(tmp(5086).Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp4.error, children: error });
+      const tmp10 = jsx(tmp(5087).Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp4.error, children: error });
       cResult[4] = error;
       cResult[5] = tmp4.error;
       cResult[6] = tmp10;

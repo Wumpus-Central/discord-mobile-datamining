@@ -1,17 +1,17 @@
-// === Module 10255: LeaderboardWinnerBadge ===
+// === Module 10240: LeaderboardWinnerBadge ===
 
-// Module 10255 (LeaderboardWinnerBadge)
+// Module 10240 (LeaderboardWinnerBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TrophyIcon from "TrophyIcon" /* 8895 */;
-import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 10256 */;
-import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10257 */;
+import TrophyIcon from "TrophyIcon" /* 8906 */;
+import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 10241 */;
+import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10242 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

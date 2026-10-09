@@ -1,20 +1,20 @@
-// === Module 12199: ChannelFollowSuccessAlert ===
+// === Module 12138: ChannelFollowSuccessAlert ===
 
-// Module 12199 (ChannelFollowSuccessAlert)
+// Module 12138 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import useThemeDefault from "useTheme" /* 4991 */;
-import common_AlertDefault from "common/Alert" /* 5394 */;
+import useThemeDefault from "useTheme" /* 4992 */;
+import common_AlertDefault from "common/Alert" /* 5395 */;
+import FastImageDefault from "FastImage" /* 6163 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Image = fn(17).Image;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(12200), fn(12201), fn(12202)];
-let items1 = [fn(12203), fn(12204), fn(12205)];
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+let items = [fn(12139), fn(12140), fn(12141)];
+let items1 = [fn(12142), fn(12143), fn(12144)];
 let items2 = [
   () => {
     const intl = util.intl;
@@ -57,21 +57,21 @@ let items2 = [
     return intl.string(util.t.jgC65t);
   }
 ];
-const createStyles = fn(5090);
-let closure_9 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
+const createStyles = fn(5091);
+let closure_8 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelFollowSuccessAlert(arg0) {
   const cResult = require("c").c(22);
-  const tmp4 = closure_9();
+  const tmp4 = closure_8();
   const obj = require("c");
   const tmp6 = useThemeDefault();
   const tmp7 = require("shared").isThemeDark(tmp6) ? items1 : items;
   _require = tmp7;
   if (cResult[0] !== tmp7) {
-    const fn = function u() {
+    const fn = function x() {
       return _modDef12.sample(closure_0);
     };
     items = [tmp7];
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
   const obj2 = require("shared");
   const stableMemo = require("areHookInputsEqual").useStableMemo(tmp8, tmp9);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn2 = function p() {
+    const fn2 = function y() {
       return _modDef12.sample(items2);
     };
     items1 = [];
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       }
       if (cResult[15] !== tmp4.text) {
         const obj3 = { style: tmp4.text, variant: "text-md/medium", color: "text-muted", children: tmp23 };
-        const tmp27 = closure_4(tmp(5086).Text, obj3);
+        const tmp27 = closure_3(tmp(5087).Text, obj3);
         cResult[15] = tmp4.text;
         cResult[16] = tmp27;
         let tmp25 = tmp27;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       obj4.confirmText = tmp14;
       items2 = [tmp16, tmp20, tmp25];
       obj4.children = items2;
-      const tmp35 = closure_5(common_AlertDefault, obj4);
+      const tmp35 = closure_4(common_AlertDefault, obj4);
       cResult[17] = arg0;
       cResult[18] = tmp25;
       cResult[19] = tmp16;
@@ -168,13 +168,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       const tmp5Result = common_AlertDefault;
     }
     const obj5 = { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp18 };
-    const tmp22 = closure_4(tmp(5086).Text, obj5);
+    const tmp22 = closure_3(tmp(5087).Text, obj5);
     cResult[11] = tmp4.header;
     cResult[12] = tmp18;
     cResult[13] = tmp22;
     tmp20 = tmp22;
   }
-  const tmp17 = closure_4(Image, { source: stableMemo, style: tmp4.image });
+  const tmp17 = closure_3(FastImageDefault, { source: stableMemo, style: tmp4.image });
   cResult[6] = tmp4.image;
   cResult[7] = stableMemo;
   cResult[8] = tmp17;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
   const obj6 = { source: stableMemo, style: tmp4.image };
   const tmpResult2 = require("areHookInputsEqual");
 }) : (function ChannelFollowSuccessAlert(arg0) {
-  const tmp = closure_9();
+  const tmp = closure_8();
   const tmp4 = useThemeDefault();
   const tmp6 = require("shared").isThemeDark(tmp4) ? items1 : items;
   _require = tmp6;
@@ -196,14 +196,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
   const merged = Object.assign(arg0);
   const intl = tmp5(1126).intl;
   obj2.confirmText = intl.string(require("util").t["+IrDzN"]);
-  items1 = [closure_4(Image, { source: stableMemo, style: tmp.image }), , ];
+  items1 = [closure_3(FastImageDefault, { source: stableMemo, style: tmp.image }), , ];
   const obj3 = { source: stableMemo, style: tmp.image };
   const tmp2Result = common_AlertDefault;
-  items1[1] = closure_4(require("Text/Text").Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
+  items1[1] = closure_3(require("Text/Text").Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
   const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1126).intl;
   obj5.children = intl2.string(require("util").t["2QbSea"]);
-  items1[2] = closure_4(require("Text/Text").Text, obj5);
+  items1[2] = closure_3(require("Text/Text").Text, obj5);
   obj2.children = items1;
-  return closure_5(tmp2Result, obj2);
+  return closure_4(tmp2Result, obj2);
 });

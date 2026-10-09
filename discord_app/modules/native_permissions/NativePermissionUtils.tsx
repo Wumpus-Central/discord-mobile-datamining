@@ -1,10 +1,10 @@
-// === Module 7494: NativePermissionUtils ===
+// === Module 7499: NativePermissionUtils ===
 
-// Module 7494 (NativePermissionUtils)
-import ProcessArgs2 from "ProcessArgs" /* 6897 */;
-import requestPermissionCore from "requestPermissionCore" /* 7495 */;
-import NativePermissionBaseUtils from "NativePermissionBaseUtils" /* 7496 */;
-import mobile_NativePermissionUtils from "mobile/NativePermissionUtils" /* 7499 */;
+// Module 7499 (NativePermissionUtils)
+import ProcessArgs2 from "ProcessArgs" /* 6904 */;
+import requestPermissionCore from "requestPermissionCore" /* 7500 */;
+import NativePermissionBaseUtils from "NativePermissionBaseUtils" /* 7501 */;
+import mobile_NativePermissionUtils from "mobile/NativePermissionUtils" /* 7504 */;
 import size from "module_2" /* 2 */;
 
 const ProcessArgs = ProcessArgs2.ProcessArgs;

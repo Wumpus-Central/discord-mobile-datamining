@@ -1,12 +1,12 @@
-// === Module 16836: usePaginatedMemberApplications ===
+// === Module 16960: usePaginatedMemberApplications ===
 
-// Module 16836 (usePaginatedMemberApplications)
+// Module 16960 (usePaginatedMemberApplications)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const result = fn(4902).MAX_RESULTS_PER_PAGE * fn(4902).MAX_VISIBLE_PAGES;
+const result = fn(4903).MAX_RESULTS_PER_PAGE * fn(4903).MAX_VISIBLE_PAGES;
 const metroRequire = result;
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePaginatedMemberApplications.tsx");
@@ -70,8 +70,8 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   ref2 = 2;
                   ref.current = true;
                   const tmp51 = (function getRequestPaginationParams(after, status, guildId2, status2, flag) {
-                    const tmp2 = status2 === guildId(4902).GuildJoinRequestApplicationStatuses.SUBMITTED;
-                    if (guildId2 === guildId(4902).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
+                    const tmp2 = status2 === guildId(4903).GuildJoinRequestApplicationStatuses.SUBMITTED;
+                    if (guildId2 === guildId(4903).GuildJoinRequestSortOrders.TIMESTAMP_DESC) {
                       if (!flag) {
                         if (0 !== status.length) {
                           const obj2 = { before: tmp2 ? status[status.length - 1].joinRequestId : status[status.length - 1].actionedAt };

@@ -1,14 +1,14 @@
-// === Module 10939: StageChannelCallView ===
+// === Module 11114: StageChannelCallView ===
 
-// Module 10939 (StageChannelCallView)
+// Module 11114 (StageChannelCallView)
 import c from "c" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
-import StatusBarDefault from "StatusBar" /* 10340 */;
-import FocusedControls from "FocusedControls" /* 10811 */;
-import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 10940 */;
-import StageChannelBackgroundDefault from "StageChannelBackground" /* 10941 */;
-import StageChannelCallListDefault from "StageChannelCallList" /* 10942 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
+import StatusBarDefault from "StatusBar" /* 10327 */;
+import FocusedControls from "FocusedControls" /* 10981 */;
+import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 11115 */;
+import StageChannelBackgroundDefault from "StageChannelBackground" /* 11116 */;
+import StageChannelCallListDefault from "StageChannelCallList" /* 11117 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 function CONTROL_PADDING_PX(arg0) {
 
 }
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageChannelCallBackground(children) {

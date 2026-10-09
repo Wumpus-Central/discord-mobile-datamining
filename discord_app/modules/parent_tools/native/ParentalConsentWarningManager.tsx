@@ -1,14 +1,14 @@
-// === Module 17927: ParentalConsentWarningManager ===
+// === Module 18085: ParentalConsentWarningManager ===
 
-// Module 17927 (ParentalConsentWarningManager)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14953 */;
-import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 17932 */;
-import ActionSheetStore from "ActionSheetStore" /* 4759 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
-import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14952 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
+// Module 18085 (ParentalConsentWarningManager)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 15065 */;
+import ParentalConsentWarningActionCreators from "ParentalConsentWarningActionCreators" /* 18092 */;
+import ActionSheetStore from "ActionSheetStore" /* 4761 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7252 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 15064 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
 
 require = fn;
 function maybePresentModal(daysRemaining) {
@@ -46,10 +46,10 @@ function maybePresentModal(daysRemaining) {
   }
   if (tmp5) {
     const obj = { daysRemaining };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17928, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18086, dependencyMap.paths), "ParentalConsentWarningModal", obj);
   }
 }
-const FamilyCenterConstants = fn(7248);
+const FamilyCenterConstants = fn(7253);
 ({ UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const AppStates = fn(1085).AppStates;
 const prototype = function ParentalConsentWarningManager() {

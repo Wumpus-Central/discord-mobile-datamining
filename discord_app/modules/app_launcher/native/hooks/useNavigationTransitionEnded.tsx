@@ -1,13 +1,13 @@
-// === Module 11833: useNavigationTransitionEnded ===
+// === Module 11770: useNavigationTransitionEnded ===
 
-// Module 11833 (useNavigationTransitionEnded)
+// Module 11770 (useNavigationTransitionEnded)
 import c from "c" /* 576 */;
-import Link from "Link" /* 1503 */;
+import Link from "Link" /* 1504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useAppLauncherNavigation = fn(1501).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1502).useAppLauncherNavigation;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");

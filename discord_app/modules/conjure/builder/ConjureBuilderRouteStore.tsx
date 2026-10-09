@@ -1,9 +1,9 @@
-// === Module 6908: ConjureBuilderRouteStore ===
+// === Module 6915: ConjureBuilderRouteStore ===
 
-// Module 6908 (ConjureBuilderRouteStore)
+// Module 6915 (ConjureBuilderRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelConstants from "ChannelConstants" /* 2070 */;
+import ChannelConstants from "ChannelConstants" /* 2071 */;
 import size from "module_2" /* 2 */;
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;

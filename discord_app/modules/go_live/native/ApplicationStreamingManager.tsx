@@ -1,16 +1,16 @@
-// === Module 18380: ApplicationStreamingManager ===
+// === Module 18542: ApplicationStreamingManager ===
 
-// Module 18380 (ApplicationStreamingManager)
+// Module 18542 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 10845 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5299 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 11018 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5269 */;
-import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 18381 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5270 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 18543 */;
 
 const require = fn;
-const ApplicationStreamPresets = fn(5210).ApplicationStreamPresets;
-const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
+const ApplicationStreamPresets = fn(5211).ApplicationStreamPresets;
+const MediaEngineContextTypes = fn(5116).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 let obj = new LoggerDefault("ApplicationStreamingManager");
 obj.enableNativeLogger(true);
@@ -42,7 +42,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(5241).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(5242).setGoLiveSource;
     const obj2 = { desktopSettings: null, qualityOptions: null, context: null };
     const obj3 = { sourceId, sound: soundshareEnabled };
     obj2.desktopSettings = obj3;
@@ -50,7 +50,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     obj2.qualityOptions = obj4;
     obj2.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(obj2);
-    const setGoLiveSourceResult = setGoLiveSource(5241);
+    const setGoLiveSourceResult = setGoLiveSource(5242);
   } else {
     const _HermesInternal = HermesInternal;
     obj.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

@@ -1,6 +1,6 @@
-// === Module 16442: VibegrationsReadStateFlags ===
+// === Module 16561: VibegrationsReadStateFlags ===
 
-// Module 16442 (VibegrationsReadStateFlags)
+// Module 16561 (VibegrationsReadStateFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/VibegrationsReadStateFlags.tsx");

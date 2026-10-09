@@ -1,11 +1,11 @@
-// === Module 4717: RelationshipStore ===
+// === Module 4719: RelationshipStore ===
 
-// Module 4717 (RelationshipStore)
+// Module 4719 (RelationshipStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4718 */;
-import UserStore from "UserStore" /* 1389 */;
+import MessageRecord from "MessageRecord" /* 4720 */;
+import UserStore from "UserStore" /* 1390 */;
 
 function markAllUserIdListsStale() {
   set3.add("friends");
@@ -94,7 +94,7 @@ let closure_14 = 0;
 const dependencyMap = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = { friends: "code", blocked: "max", ignored: "shapes", blockedOrIgnored: "Array" };
+let closure_19 = { friends: "color", blocked: "l", ignored: "ks", blockedOrIgnored: "find" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

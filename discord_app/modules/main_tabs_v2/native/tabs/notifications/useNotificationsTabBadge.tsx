@@ -1,11 +1,11 @@
-// === Module 16636: useNotificationsTabBadge ===
+// === Module 16761: useNotificationsTabBadge ===
 
-// Module 16636 (useNotificationsTabBadge)
+// Module 16761 (useNotificationsTabBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6063 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6065 */;
 import noop from "module_19" /* 19 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6062 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6064 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

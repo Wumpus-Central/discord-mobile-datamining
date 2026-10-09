@@ -1,18 +1,18 @@
-// === Module 13427: NUFTemplate ===
+// === Module 13519: NUFTemplate ===
 
-// Module 13427 (NUFTemplate)
+// Module 13519 (NUFTemplate)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FastImageDefault from "FastImage" /* 6163 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c2, Image: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", lineHeight: 18, marginBottom: 24 }, image: { marginBottom: 24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFActio
           const obj2 = { style: tmp4.container, children: null };
           const items = [tmp5, tmp7, tmp10, tmp14];
           obj2.children = items;
-          const tmp20 = hasOwnProperty(React2, obj2);
+          const tmp20 = hasOwnProperty(View, obj2);
           cResult[12] = tmp4.container;
           cResult[13] = tmp5;
           cResult[14] = tmp7;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFActio
         tmp14 = tmp16;
       }
       const obj4 = { source: imageSrc, style: tmp4.image };
-      const tmp13 = React4(React3, obj4);
+      const tmp13 = React4(FastImageDefault, obj4);
       cResult[6] = imageSrc;
       cResult[7] = tmp4.image;
       cResult[8] = tmp13;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFActio
   ({ title, description, imageSrc, onCTAPress, CTALabel } = arg0);
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const items = [React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), React4(Text_Text.Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description }), React4(React3, { source: imageSrc, style: tmp.image }), React4(components_Button_Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true })];
+  const items = [React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title }), React4(Text_Text.Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: description }), React4(FastImageDefault, { source: imageSrc, style: tmp.image }), React4(components_Button_Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true })];
   obj.children = items;
-  return hasOwnProperty(React2, obj);
+  return hasOwnProperty(View, obj);
 });

@@ -1,10 +1,10 @@
-// === Module 16365: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 16484: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 16365 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
+// Module 16484 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10278 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
-import FavoriteStore from "FavoriteStore" /* 2066 */;
+import UserStore from "UserStore" /* 1390 */;
+import FavoriteStore from "FavoriteStore" /* 2067 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -14,7 +14,7 @@ let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGui
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildAutoAddedThreadsAction() {
   const cResult = hasAccess(576).c(13);
   let obj = hasAccess(576);
-  hasAccess = hasAccess(10294).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  hasAccess = hasAccess(10279).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function u() {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   } else {
     [tmp4, tmp5] = cResult;
   }
-  const obj2 = hasAccess(10294);
+  const obj2 = hasAccess(10279);
   if (hasAccess) {
     hasAccess = tmpResult.useStateFromStores(tmp4, tmp5);
   }
@@ -92,8 +92,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   tmp11 = fn2;
   const tmpResult2 = hasAccess(504);
 }) : (function useFavoritesGuildAutoAddedThreadsAction() {
-  hasAccess = hasAccess(10294).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-  let obj = hasAccess(10294);
+  hasAccess = hasAccess(10279).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  let obj = hasAccess(10279);
   const items = [UserStore];
   if (hasAccess) {
     hasAccess = obj2.useStateFromStores(items, () => {

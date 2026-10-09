@@ -1,6 +1,6 @@
-// === Module 15443: useColorPresetsWithA11yLabels ===
+// === Module 15556: useColorPresetsWithA11yLabels ===
 
-// Module 15443 (useColorPresetsWithA11yLabels)
+// Module 15556 (useColorPresetsWithA11yLabels)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import _modDef2955 from "module_2955" /* 2955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const getColorPresetsForEffect = fn(1407).getColorPresetsForEffect;
+const getColorPresetsForEffect = fn(1408).getColorPresetsForEffect;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");

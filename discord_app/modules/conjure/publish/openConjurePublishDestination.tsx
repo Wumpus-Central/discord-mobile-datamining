@@ -1,18 +1,18 @@
-// === Module 16915: openConjurePublishDestination ===
+// === Module 17043: openConjurePublishDestination ===
 
-// Module 16915 (openConjurePublishDestination)
+// Module 17043 (openConjurePublishDestination)
 import router_utils from "router_utils" /* 1112 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
-import transitionToGuild from "transitionToGuild" /* 7043 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10617 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10618 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
+import transitionToGuild from "transitionToGuild" /* 7046 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10768 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10769 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
-const MAIN_SURFACE = fn(10613).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10767).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/openConjurePublishDestination.tsx");
 function openConjurePublishDestination(channel, arg1) {

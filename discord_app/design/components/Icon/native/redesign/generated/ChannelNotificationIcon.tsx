@@ -1,10 +1,10 @@
-// === Module 10327: ChannelNotificationIcon ===
+// === Module 10314: ChannelNotificationIcon ===
 
-// Module 10327 (ChannelNotificationIcon)
+// Module 10314 (ChannelNotificationIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod10328 from "module_10328" /* 10328 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod10315 from "module_10315" /* 10315 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChannelNotificationIcon = ReactCompilerGating.isReactCompilerEnable
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10328;
+    const tmpResult = _mod10315;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChannelNotificationIcon = ReactCompilerGating.isReactCompilerEnable
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10328, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10315, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

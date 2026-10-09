@@ -1,9 +1,9 @@
-// === Module 4941: useBaseAppContainerDimensions ===
+// === Module 4942: useBaseAppContainerDimensions ===
 
-// Module 4941 (useBaseAppContainerDimensions)
+// Module 4942 (useBaseAppContainerDimensions)
 import c from "c" /* 576 */;
-import useWindowDimensions from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1630 */;
+import useWindowDimensions from "useWindowDimensions" /* 1497 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1631 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = useWindowDimensions;

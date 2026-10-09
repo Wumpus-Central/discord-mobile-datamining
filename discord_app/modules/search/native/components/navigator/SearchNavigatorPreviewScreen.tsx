@@ -1,14 +1,14 @@
-// === Module 17347: SearchNavigatorPreviewScreen ===
+// === Module 17495: SearchNavigatorPreviewScreen ===
 
-// Module 17347 (SearchNavigatorPreviewScreen)
-import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+// Module 17495 (SearchNavigatorPreviewScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12011 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchNa
     }
   }
   const fn = function n() {
-    const result = tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
+    const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();
     }
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SearchNa
   const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
   const items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
   const callback = onBeforeJumpToMessage.useCallback(() => {
-    const result = tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
+    const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
     if (onBeforeJumpToMessage != null) {
       onBeforeJumpToMessage();
     }

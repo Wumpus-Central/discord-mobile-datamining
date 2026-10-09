@@ -1,6 +1,6 @@
-// === Module 1373: utils/GlobalUtils ===
+// === Module 1374: utils/GlobalUtils ===
 
-// Module 1373 (utils/GlobalUtils)
+// Module 1374 (utils/GlobalUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");

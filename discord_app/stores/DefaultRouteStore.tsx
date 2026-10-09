@@ -1,6 +1,6 @@
-// === Module 4903: DefaultRouteStore ===
+// === Module 4904: DefaultRouteStore ===
 
-// Module 4903 (DefaultRouteStore)
+// Module 4904 (DefaultRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

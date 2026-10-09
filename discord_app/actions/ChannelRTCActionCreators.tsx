@@ -1,10 +1,10 @@
-// === Module 5104: ChannelRTCActionCreators ===
+// === Module 5105: ChannelRTCActionCreators ===
 
-// Module 5104 (ChannelRTCActionCreators)
+// Module 5105 (ChannelRTCActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -64,6 +64,9 @@ export default {
       ComponentDispatch.dispatch(constants3.FOCUS_CHAT_BUTTON);
     }
     const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
+  },
+  updateStageAudienceSidebarOpen(channelId, open) {
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_AUDIENCE_SIDEBAR_OPEN", channelId, open });
   },
   jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType) {
     DispatcherDefault.dispatch({ type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE", guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType });

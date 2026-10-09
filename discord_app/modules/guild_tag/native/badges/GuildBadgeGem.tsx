@@ -1,9 +1,9 @@
-// === Module 13984: GuildBadgeGem ===
+// === Module 14081: GuildBadgeGem ===
 
-// Module 13984 (GuildBadgeGem)
+// Module 14081 (GuildBadgeGem)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7550 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13970 */;
+import inlineStyles from "inlineStyles" /* 7559 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 14067 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

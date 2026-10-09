@@ -1,8 +1,8 @@
-// === Module 7115: ProductIds ===
+// === Module 7120: ProductIds ===
 
-// Module 7115 (ProductIds)
-import PremiumConstants from "PremiumConstants" /* 1391 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+// Module 7120 (ProductIds)
+import PremiumConstants from "PremiumConstants" /* 1392 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = PremiumConstants);

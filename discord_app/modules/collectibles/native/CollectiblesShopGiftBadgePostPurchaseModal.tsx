@@ -1,18 +1,18 @@
-// === Module 12730: CollectiblesShopGiftBadgePostPurchaseModal ===
+// === Module 12675: CollectiblesShopGiftBadgePostPurchaseModal ===
 
-// Module 12730 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 12675 (CollectiblesShopGiftBadgePostPurchaseModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import _modDef2661 from "module_2661" /* 2661 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import XSmallIcon from "XSmallIcon" /* 6210 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7251 */;
-import ModalScreen from "ModalScreen" /* 7506 */;
-import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 12731 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import XSmallIcon from "XSmallIcon" /* 6212 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7256 */;
+import ModalScreen from "ModalScreen" /* 7511 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 12676 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, height: paddingTop + 56, paddingTop, zIndex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center" };

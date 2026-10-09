@@ -1,41 +1,41 @@
-// === Module 9230: ScheduledMessagesModal ===
+// === Module 9268: ScheduledMessagesModal ===
 
-// Module 9230 (ScheduledMessagesModal)
+// Module 9268 (ScheduledMessagesModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import PremiumUtils from "PremiumUtils" /* 4726 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import spring from "spring" /* 5374 */;
-import _mod6212 from "module_6212" /* 6212 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9208 */;
-import HeaderShared from "HeaderShared" /* 9232 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9451 */;
-import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 12859 */;
-import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12860 */;
-import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12863 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import PremiumUtils from "PremiumUtils" /* 4728 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import spring from "spring" /* 5375 */;
+import _mod6214 from "module_6214" /* 6214 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 9242 */;
+import HeaderShared from "HeaderShared" /* 9270 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9489 */;
+import ScheduledMessageActionCreators from "ScheduledMessageActionCreators" /* 12826 */;
+import ScheduledMessageCardDefault from "ScheduledMessageCard" /* 12827 */;
+import NitroLimitUpsellBarDefault from "NitroLimitUpsellBar" /* 12830 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ScheduledMessageStore from "ScheduledMessageStore" /* 9231 */;
+import ScheduledMessageStore from "ScheduledMessageStore" /* 9269 */;
 
-const NavigatorHeader = tmp4(6203);
+const NavigatorHeader = tmp4(6205);
 require = fn;
 function keyExtractor(scheduledMessageId) {
   return scheduledMessageId.scheduledMessageId;
 }
 const View = fn(17).View;
 const AnalyticsPages = fn(1085).AnalyticsPages;
-const PremiumTypes = fn(1391).PremiumTypes;
-const premiumMax = fn(9218).MAX_SCHEDULED_MESSAGES_PER_USER;
+const PremiumTypes = fn(1392).PremiumTypes;
+const premiumMax = fn(9252).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const ScheduledMessagesMobileModal = "ScheduledMessagesMobileModal";
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" }, headerLeftContainer: null, headerRightContainer: null, headerBorder: null, cardContainer: null, listContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
 obj2.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
@@ -198,7 +198,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
         return closure_1_6.getMessagesPendingRemoval();
       }
     }
-    const scheduledMessagesLimit = tmp(9228).useScheduledMessagesLimit(ScheduledMessagesMobileModal);
+    const scheduledMessagesLimit = tmp(9266).useScheduledMessagesLimit(ScheduledMessagesMobileModal);
     ({ limit, isUpgradable } = scheduledMessagesLimit);
     if (!tmp5[0]) {
       class H {
@@ -238,7 +238,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
       obj3.contentContainerStyle = tmp4.cardContainer;
       obj3.keyExtractor = keyExtractor;
       obj3.onScroll = handleScroll;
-      const tmp31 = closure_10(tmp(8600).FlashList, obj3);
+      const tmp31 = closure_10(tmp(8608).FlashList, obj3);
       cResult[17] = handleScroll;
       cResult[18] = tmp25;
       cResult[19] = arr5;
@@ -255,7 +255,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
           return valueOfResult - date1.valueOf();
         }
       }
-      tmp2 = closure_10(stateFromStores2(12862), {});
+      tmp2 = closure_10(stateFromStores2(12829), {});
       class O {
         constructor() {
           return closure_1_6.getMessagesPendingRemoval();
@@ -272,7 +272,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Schedu
         }
       }
     }
-    const tmpResult6 = tmp(9228);
+    const tmpResult6 = tmp(9266);
   }
   const tmpResult5 = require("initialize");
 }) : (function ScheduledMessagesPage(handleScroll) {
@@ -429,7 +429,7 @@ let result = size.fileFinishedImporting("modules/scheduled_messages/native/Sched
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduledMessagesModal() {
   const cResult = title(576).c(21);
   const tmp4 = closure_15();
-  const top = sharedValue(1630)().top;
+  const top = sharedValue(1631)().top;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.SZVs3K);
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
     title = cResult[0];
   }
   let obj = title(576);
-  sharedValue = title(4810).useSharedValue(0);
+  sharedValue = title(4811).useSharedValue(0);
   if (cResult[1] !== sharedValue) {
     const fn = function o(nativeEvent) {
       let num = 0;
@@ -454,14 +454,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
   } else {
     tmp9 = cResult[2];
   }
-  const tmpResult = title(4810);
+  const tmpResult = title(4811);
   const fn2 = function _() {
     return { opacity: sharedValue.get() };
   };
   fn2.__closure = { borderOpacity: sharedValue };
   fn2.__workletHash = 2142182513871;
   fn2.__initData = __initData;
-  const animatedStyle = title(4810).useAnimatedStyle(fn2);
+  const animatedStyle = title(4811).useAnimatedStyle(fn2);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const fn3 = function f() {
       return collapsed(HeaderShared.GenericHeaderTitle, { title });
@@ -479,16 +479,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
     cResult[4] = top;
     cResult[5] = num5;
     let tmp12 = num5;
-    tmpResult5 = tmp(1381);
+    tmpResult5 = tmp(1382);
   } else {
     tmp12 = cResult[5];
   }
   const sum = tmp12 + tmp5(587).space.PX_8;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const headerCloseButton = tmp(6203).getHeaderCloseButton(tmp5(5940).pop);
+    const headerCloseButton = tmp(6205).getHeaderCloseButton(tmp5(5941).pop);
     cResult[6] = headerCloseButton;
     let tmp14 = headerCloseButton;
-    const tmpResult6 = tmp(6203);
+    const tmpResult6 = tmp(6205);
   } else {
     tmp14 = cResult[6];
   }
@@ -534,21 +534,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
       const obj4 = { style: null };
       const items1 = [tmp4.headerBorder, animatedStyle];
       obj4.style = items1;
-      const tmp20 = closure_10(tmp5(4810).View, obj4);
+      const tmp20 = closure_10(tmp5(4811).View, obj4);
       cResult[11] = animatedStyle;
       cResult[12] = tmp4.headerBorder;
       cResult[13] = tmp20;
       tmp18 = tmp20;
     }
   }
-  const tmp17 = closure_10(title(6212).Header, { title, headerTitle: tmp11, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp14, headerLeftContainerStyle: tmp4.headerLeftContainer, headerRightContainerStyle: tmp4.headerRightContainer });
+  const tmp17 = closure_10(title(6214).Header, { title, headerTitle: tmp11, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp14, headerLeftContainerStyle: tmp4.headerLeftContainer, headerRightContainerStyle: tmp4.headerRightContainer });
   cResult[7] = tmp4.headerLeftContainer;
   cResult[8] = tmp4.headerRightContainer;
   cResult[9] = sum;
   cResult[10] = tmp17;
   tmp16 = tmp17;
   const obj5 = { title, headerTitle: tmp11, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp14, headerLeftContainerStyle: tmp4.headerLeftContainer, headerRightContainerStyle: tmp4.headerRightContainer };
-  const tmpResult4 = title(4810);
+  const tmpResult4 = title(4811);
 }) : (function ScheduledMessagesModal() {
   const tmp = closure_15();
   const intl = util.intl;
@@ -584,17 +584,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Schedule
   };
   let num = 0;
   if (!obj5.isIOS()) {
-    num = sharedValue(1630)().top;
+    num = sharedValue(1631)().top;
   }
   obj6.headerStatusBarHeight = num + sharedValue(587).space.PX_8;
   obj5 = PlatformUtils;
-  obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(5940).pop);
+  obj6.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(5941).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod6212.Header, obj6), , ];
+  const items1 = [closure_10(_mod6214.Header, obj6), , ];
   const obj7 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
   obj7.style = items2;
-  items1[1] = closure_10(sharedValue(4810).View, obj7);
+  items1[1] = closure_10(sharedValue(4811).View, obj7);
   items1[2] = closure_10(closure_19, { handleScroll: callback });
   obj3.children = items1;
   return closure_11(View, obj3);

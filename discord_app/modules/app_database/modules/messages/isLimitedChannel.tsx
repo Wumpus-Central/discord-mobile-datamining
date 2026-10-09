@@ -1,8 +1,8 @@
-// === Module 7195: isLimitedChannel ===
+// === Module 7200: isLimitedChannel ===
 
-// Module 7195 (isLimitedChannel)
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4980 */;
+// Module 7200 (isLimitedChannel)
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4981 */;
 
 const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);

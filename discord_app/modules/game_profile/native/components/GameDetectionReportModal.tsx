@@ -1,18 +1,18 @@
-// === Module 9080: GameDetectionReportModal ===
+// === Module 9095: GameDetectionReportModal ===
 
-// Module 9080 (GameDetectionReportModal)
+// Module 9095 (GameDetectionReportModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import NavigatorHeader from "NavigatorHeader" /* 6203 */;
-import TableRadioRow from "TableRadioRow" /* 6264 */;
-import TableRadioGroup from "TableRadioGroup" /* 6265 */;
-import TextInput from "TextInput" /* 6283 */;
-import Navigator from "Navigator" /* 6679 */;
-import TextArea from "TextArea" /* 6763 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8850 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import TableRadioRow from "TableRadioRow" /* 6266 */;
+import TableRadioGroup from "TableRadioGroup" /* 6267 */;
+import TextInput from "TextInput" /* 6290 */;
+import Navigator from "Navigator" /* 6686 */;
+import TextArea from "TextArea" /* 6770 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "game-detection-report";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, submitContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };

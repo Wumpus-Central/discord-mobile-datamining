@@ -1,20 +1,20 @@
-// === Module 17183: ChannelsScreen ===
+// === Module 17333: ChannelsScreen ===
 
-// Module 17183 (ChannelsScreen)
+// Module 17333 (ChannelsScreen)
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
-import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12011 */;
 import noop from "module_19" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12080 */;
-import SearchQueryStore from "SearchQueryStore" /* 12067 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5115 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12017 */;
+import SearchQueryStore from "SearchQueryStore" /* 12004 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ EMPTY_VOICE_STATES: closure_7, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: closure_9 } = SearchConstants);
-let closure_10 = fn(9246).SearchResultContentEntityTypes;
+let closure_10 = fn(9284).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -259,12 +259,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items8 = [onPressGuildTextChannel, searchContext];
   const callback = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildTextChannel(channelId);
-    const result = tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items8);
   const items9 = [onPressGuildVoiceChannel, searchContext];
   const callback1 = stateFromStores1.useCallback((channelId, index) => {
     onPressGuildVoiceChannel(channelId);
-    const result = tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked({ searchContext, channelId, index, entityType: constants.CHANNEL });
   }, items9);
   const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
   const memo = stateFromStores1.useMemo(() => {

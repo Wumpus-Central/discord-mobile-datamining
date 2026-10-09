@@ -1,21 +1,21 @@
-// === Module 11714: ForumPostList ===
+// === Module 11650: ForumPostList ===
 
-// Module 11714 (ForumPostList)
+// Module 11650 (ForumPostList)
 import c from "c" /* 576 */;
-import ForumTagHooks from "ForumTagHooks" /* 6963 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11695 */;
-import ForumPostAppliedTags from "ForumPostAppliedTags" /* 11706 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 11715 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 11718 */;
+import ForumTagHooks from "ForumTagHooks" /* 6970 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11631 */;
+import ForumPostAppliedTags from "ForumPostAppliedTags" /* 11642 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 11651 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 11654 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ChannelFlags = fn(2070).ChannelFlags;
+const ChannelFlags = fn(2071).ChannelFlags;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({ header: { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 8 }, content: { flex: 1, marginBottom: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

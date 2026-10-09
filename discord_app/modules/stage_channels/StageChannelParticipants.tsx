@@ -1,21 +1,21 @@
-// === Module 5955: StageChannelParticipants ===
+// === Module 5957: StageChannelParticipants ===
 
-// Module 5955 (StageChannelParticipants)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4702 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5412 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 5896 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5958 */;
-import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5959 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5956 */;
+// Module 5957 (StageChannelParticipants)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4704 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5413 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 5897 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5960 */;
+import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5961 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5958 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5111 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5953 */;
-import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
+import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5955 */;
+import StageInstanceStore from "StageInstanceStore" /* 2069 */;
 
 require = fn;
 function sortKey(speaker) {
@@ -91,7 +91,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(5114).getComparator;
+const getComparator = fn(5115).getComparator;
 const StageChannelParticipantNamedIndex = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
 let obj2 = { VOICE: "VOICE", STREAM: "STREAM" };
 const size = fn(2);
@@ -194,7 +194,11 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, 
 prototype["updateParticipant"] = function updateParticipant(arg0) {
   const self = this;
   closure_0 = arg0;
-  let result = this._getParticipantsForUser(arg0, arr);
+  let arr = arg1;
+  if (arg1 === undefined) {
+    arr = self.participants[arg0];
+  }
+  let result = self._getParticipantsForUser(arg0, arr);
   let flag = null != arr;
   if (!flag) {
     flag = 0 !== result.length;
@@ -222,7 +226,7 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
       const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.delete(closure_0);
     });
-    this.participants[arg0] = result;
+    self.participants[arg0] = result;
     flag = true;
   }
   return flag;
@@ -235,12 +239,12 @@ prototype["rebuild"] = function rebuild() {
       const _Set = Set;
       const _Object = Object;
       const set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
-      const _participantsIndex = self._participantsIndex;
+      ({ participants: require, _participantsIndex } = self);
       _participantsIndex.clear();
       const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.clear();
       self.participants = {};
-      const item = set.forEach((item) => self.updateParticipant(item));
+      const item = set.forEach((item) => self.updateParticipant(item, require[item]));
       return true;
     }
   }

@@ -1,17 +1,17 @@
-// === Module 10817: GlobalStatusIndicator ===
+// === Module 10988: GlobalStatusIndicator ===
 
-// Module 10817 (GlobalStatusIndicator)
+// Module 10988 (GlobalStatusIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7476 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10813 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10983 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4759 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
-import NativeMenuStore from "NativeMenuStore" /* 9645 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import ActionSheetStore from "ActionSheetStore" /* 4761 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import NativeMenuStore from "NativeMenuStore" /* 9664 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

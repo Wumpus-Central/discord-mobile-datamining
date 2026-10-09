@@ -1,10 +1,11 @@
-// === Module 14746: UserProfileEditingAccessibilityUtils ===
+// === Module 14853: UserProfileEditingAccessibilityUtils ===
 
-// Module 14746 (UserProfileEditingAccessibilityUtils)
+// Module 14853 (UserProfileEditingAccessibilityUtils)
 import util from "util" /* 1126 */;
 import _modDef2955 from "module_2955" /* 2955 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10249 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14686 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6677 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10234 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14792 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileEditingAccessibilityUtils.tsx");
@@ -43,4 +44,27 @@ export const getBannerAccessibleValue = function getBannerAccessibleValue(banner
   }
   const intl2 = util.intl;
   description = intl2.string(util.t["3Xph0/"]);
+};
+export const getAvatarAccessibleValue = function getAvatarAccessibleValue(avatarChange, avatar) {
+  if (null !== avatarChange) {
+    if (undefined === avatarChange) {
+      return description;
+    }
+    if (undefined === avatarChange) {
+      const intl2 = util.intl;
+      description = intl2.string(util.t["16GpW/"]);
+    } else {
+      if (avatarChange.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+        description = avatarChange.originalAsset.description;
+      } else {
+        description = avatarChange.description;
+      }
+      if (description == null) {
+        const intl = util.intl;
+        description = intl.string(util.t.cqdtrR);
+      }
+    }
+  }
+  const intl3 = util.intl;
+  description = intl3.string(util.t["3Xph0/"]);
 };

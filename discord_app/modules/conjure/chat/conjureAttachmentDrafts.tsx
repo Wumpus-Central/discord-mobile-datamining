@@ -1,9 +1,9 @@
-// === Module 17019: conjureAttachmentDrafts ===
+// === Module 17175: conjureAttachmentDrafts ===
 
-// Module 17019 (conjureAttachmentDrafts)
+// Module 17175 (conjureAttachmentDrafts)
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import ConjureTypes from "ConjureTypes" /* 6933 */;
+import ConjureTypes from "ConjureTypes" /* 6940 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
@@ -130,11 +130,11 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({ deleteStagedAttachment: hasOwnProperty, sendUserMessage: metroRequire, uploadAttachmentBytes: closure_7 } = ConjureConnectionStore);
 let closure_9 = [];
 let c10 = 1;
-const zustandStore = fn(4949).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4950).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;

@@ -1,18 +1,18 @@
-// === Module 10489: UserProfileCustomStatusBubble ===
+// === Module 10479: UserProfileCustomStatusBubble ===
 
-// Module 10489 (UserProfileCustomStatusBubble)
+// Module 10479 (UserProfileCustomStatusBubble)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import EmojiDefault from "Emoji" /* 6809 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import inlineStyles from "inlineStyles" /* 7550 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 10492 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import EmojiDefault from "Emoji" /* 6816 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import inlineStyles from "inlineStyles" /* 7559 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 10482 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -24,11 +24,11 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_7, View: closure_8 } = get_ActivityIndicator);
-const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 let Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
   const colors = nativeDefault.colors;
@@ -103,7 +103,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status
   return __initData(inlineStylesDefault, size);
 });
 let closure_16 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-const dependencyMap = { [fn(6891).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+const dependencyMap = { [fn(6898).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiImage(arg0) {
   const cResult = c.c(14);
@@ -204,7 +204,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       } else {
         let obj3 = { fontStyle: "italic" };
       }
-      tmpResult = emoji(1381);
+      tmpResult = emoji(1382);
     }
   } else {
     tmp6 = cResult[1];
@@ -242,7 +242,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       let obj4 = { variant: textVariant, color: "text-default", lineClamp, onTextLayout, style: tmp10, children: null };
       let items = [tmp13, text];
       obj4.children = items;
-      const tmp17 = closure_12(emoji(5086).Text, obj4);
+      const tmp17 = closure_12(emoji(5087).Text, obj4);
       cResult[10] = lineClamp;
       cResult[11] = onTextLayout;
       cResult[12] = tmp13;
@@ -359,7 +359,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
     obj2 = PlatformUtils;
   }
 });
-createStyles = fn(5090);
+createStyles = fn(5091);
 let closure_20 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOnlyStatusContent(arg0) {

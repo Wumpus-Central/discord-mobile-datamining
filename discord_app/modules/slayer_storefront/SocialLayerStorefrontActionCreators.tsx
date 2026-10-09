@@ -1,12 +1,12 @@
-// === Module 10142: SocialLayerStorefrontActionCreators ===
+// === Module 10127: SocialLayerStorefrontActionCreators ===
 
-// Module 10142 (SocialLayerStorefrontActionCreators)
+// Module 10127 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8960 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6919 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8971 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6926 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
           closure_132_17 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -303,7 +303,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
           let storefront_metadata;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

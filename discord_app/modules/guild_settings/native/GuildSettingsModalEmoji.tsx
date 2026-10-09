@@ -1,18 +1,18 @@
-// === Module 18066: GuildSettingsModalEmoji ===
+// === Module 18226: GuildSettingsModalEmoji ===
 
-// Module 18066 (GuildSettingsModalEmoji)
+// Module 18226 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5997 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18069 */;
-import HeaderRow from "HeaderRow" /* 18073 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18074 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5999 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 18229 */;
+import HeaderRow from "HeaderRow" /* 18233 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 18234 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18067 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 18227 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -26,8 +26,8 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let apply = apply_mod;
-let closure_12 = apply.throttle(fn(9479).fetchEmoji, 1000);
-const createStyles = fn(5090);
+let closure_12 = apply.throttle(fn(9517).fetchEmoji, 1000);
+const createStyles = fn(5091);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.section = { paddingVertical: nativeDefault.space.PX_16 };

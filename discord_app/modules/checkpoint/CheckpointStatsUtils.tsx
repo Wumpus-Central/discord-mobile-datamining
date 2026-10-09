@@ -1,8 +1,8 @@
-// === Module 15799: CheckpointStatsUtils ===
+// === Module 15912: CheckpointStatsUtils ===
 
-// Module 15799 (CheckpointStatsUtils)
+// Module 15912 (CheckpointStatsUtils)
 import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
-import UserRecord from "UserRecord" /* 1403 */;
+import UserRecord from "UserRecord" /* 1404 */;
 
 require = fn;
 const size = fn(2);

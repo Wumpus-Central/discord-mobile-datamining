@@ -1,10 +1,10 @@
-// === Module 9706: AnalyticsIcon ===
+// === Module 9725: AnalyticsIcon ===
 
-// Module 9706 (AnalyticsIcon)
+// Module 9725 (AnalyticsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod9707 from "module_9707" /* 9707 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod9726 from "module_9726" /* 9726 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const AnalyticsIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9707;
+    const tmpResult = _mod9726;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const AnalyticsIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9707, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9726, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

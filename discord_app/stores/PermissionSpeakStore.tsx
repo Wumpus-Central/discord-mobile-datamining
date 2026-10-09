@@ -1,10 +1,10 @@
-// === Module 13871: PermissionSpeakStore ===
+// === Module 13964: PermissionSpeakStore ===
 
-// Module 13871 (PermissionSpeakStore)
+// Module 13964 (PermissionSpeakStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;

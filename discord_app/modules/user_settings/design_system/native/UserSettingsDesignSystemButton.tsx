@@ -1,38 +1,38 @@
-// === Module 15932: UserSettingsDesignSystemButton ===
+// === Module 16049: UserSettingsDesignSystemButton ===
 
-// Module 15932 (UserSettingsDesignSystemButton)
+// Module 16049 (UserSettingsDesignSystemButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef5021 from "module_5021" /* 5021 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import _modDef7083 from "module_7083" /* 7083 */;
-import _modDef7866 from "module_7866" /* 7866 */;
-import IconButton from "IconButton" /* 8106 */;
-import _modDef8725 from "module_8725" /* 8725 */;
-import _modDef8728 from "module_8728" /* 8728 */;
-import _modDef8729 from "module_8729" /* 8729 */;
-import _modDef8730 from "module_8730" /* 8730 */;
-import _modDef8731 from "module_8731" /* 8731 */;
-import _modDef8732 from "module_8732" /* 8732 */;
-import _modDef9993 from "module_9993" /* 9993 */;
-import _modDef10326 from "module_10326" /* 10326 */;
-import ToggleButton from "ToggleButton" /* 14091 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 14092 */;
-import ToggleIconButton from "ToggleIconButton" /* 14093 */;
-import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 15933 */;
-import _modDef15934 from "module_15934" /* 15934 */;
+import _modDef5022 from "module_5022" /* 5022 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import _modDef7086 from "module_7086" /* 7086 */;
+import _modDef7875 from "module_7875" /* 7875 */;
+import IconButton from "IconButton" /* 8114 */;
+import _modDef8734 from "module_8734" /* 8734 */;
+import _modDef8737 from "module_8737" /* 8737 */;
+import _modDef8738 from "module_8738" /* 8738 */;
+import _modDef8739 from "module_8739" /* 8739 */;
+import _modDef8740 from "module_8740" /* 8740 */;
+import _modDef8741 from "module_8741" /* 8741 */;
+import _modDef10012 from "module_10012" /* 10012 */;
+import _modDef10313 from "module_10313" /* 10313 */;
+import ToggleButton from "ToggleButton" /* 14188 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 14189 */;
+import ToggleIconButton from "ToggleIconButton" /* 14190 */;
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 16050 */;
+import _modDef16051 from "module_16051" /* 16051 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const ImageButton2 = ImageButton(8734);
+const ImageButton2 = ImageButton(8743);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const ThemeTypes = fn(1085).ThemeTypes;
-const ClientThemesConstants = fn(1252);
+const ClientThemesConstants = fn(1253);
 ({ LIGHT_BACKGROUND_GRADIENT_PRESETS: closure_8, DARK_BACKGROUND_GRADIENT_PRESETS: closure_9 } = ClientThemesConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
@@ -203,7 +203,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj.size = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = _modDef15934;
+    tmpResult = _modDef16051;
   }
   obj.icon = tmpResult;
   obj.iconPosition = iconPosition;
@@ -271,7 +271,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
         }
       }
     }
-    const obj2 = { disabled: showDisabled, onPress: I, label: variant, grow: true, loading: tmp8, variant, icon: _modDef7083 };
+    const obj2 = { disabled: showDisabled, onPress: I, label: variant, grow: true, loading: tmp8, variant, icon: _modDef7086 };
     const tmp19 = collapsed(IconButton.IconButton, obj2);
     cResult[4] = tmp8;
     cResult[5] = showDisabled;
@@ -299,7 +299,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
         }
       }
     }
-    const obj3 = { disabled: showDisabled, onPress: tmp10, accessibilityLabel: variant, loading: tmp8, variant, size: buttonSize, icon: _modDef7083 };
+    const obj3 = { disabled: showDisabled, onPress: tmp10, accessibilityLabel: variant, loading: tmp8, variant, size: buttonSize, icon: _modDef7086 };
     const tmp14 = collapsed(IconButton.IconButton, obj3);
     cResult[12] = tmp8;
     cResult[13] = buttonSize;
@@ -354,7 +354,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
     obj2.label = str2;
     obj2.loading = tmp5;
     obj2.variant = variant;
-    obj2.icon = _modDef7083;
+    obj2.icon = _modDef7086;
     let obj = obj2;
   } else {
     obj = {
@@ -376,7 +376,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
     obj.loading = tmp5;
     obj.variant = variant;
     obj.size = tmp3.buttonSize;
-    obj.icon = _modDef7083;
+    obj.icon = _modDef7086;
   }
   return collapsed(IconButton.IconButton, obj);
 });
@@ -546,17 +546,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
     }
     return tmp7;
   }
-  const tmp8 = collapsed(ToggleButton.ToggleButton, { text: "Notifications", icon: _modDef7866, pressed, onPress: tmp6, size: "md" });
+  const tmp8 = collapsed(ToggleButton.ToggleButton, { text: "Notifications", icon: _modDef7875, pressed, onPress: tmp6, size: "md" });
   cResult[2] = pressed;
   cResult[3] = tmp6;
   cResult[4] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { text: "Notifications", icon: _modDef7866, pressed, onPress: tmp6, size: "md" };
+  const obj2 = { text: "Notifications", icon: _modDef7875, pressed, onPress: tmp6, size: "md" };
 }) : (function ExampleToggleButton() {
   [pressed, closure_1] = noop.useState(false);
   return collapsed(ToggleButton.ToggleButton, {
     text: "Notifications",
-    icon: _modDef7866,
+    icon: _modDef7875,
     pressed,
     onPress() {
       return closure_1(!first);
@@ -590,14 +590,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
       }
     }
   }
-  const tmp9 = collapsed(ToggleIconButton.ToggleIconButton, { accessibilityLabel: combined, icon: _modDef7866, selectedIcon: _modDef10326, pressed, onPress: tmp7, variant, size: "md" });
+  const tmp9 = collapsed(ToggleIconButton.ToggleIconButton, { accessibilityLabel: combined, icon: _modDef7875, selectedIcon: _modDef10313, pressed, onPress: tmp7, variant, size: "md" });
   cResult[2] = pressed;
   cResult[3] = combined;
   cResult[4] = tmp7;
   cResult[5] = variant;
   cResult[6] = tmp9;
   tmp8 = tmp9;
-  const obj2 = { accessibilityLabel: combined, icon: _modDef7866, selectedIcon: _modDef10326, pressed, onPress: tmp7, variant, size: "md" };
+  const obj2 = { accessibilityLabel: combined, icon: _modDef7875, selectedIcon: _modDef10313, pressed, onPress: tmp7, variant, size: "md" };
 }) : (function ExampleToggleIconButton(variant) {
   variant = variant.variant;
   pressed = undefined;
@@ -605,8 +605,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   [pressed, closure_1] = noop.useState(false);
   return collapsed(ToggleIconButton.ToggleIconButton, {
     accessibilityLabel: "" + variant + " notifications",
-    icon: _modDef7866,
-    selectedIcon: _modDef10326,
+    icon: _modDef7875,
+    selectedIcon: _modDef10313,
     pressed,
     onPress() {
       return closure_1(!first);
@@ -621,9 +621,9 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   [first, closure_1] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { on: null, off: null };
-    const obj3 = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef5021 };
+    const obj3 = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef5022 };
     obj2.on = obj3;
-    const obj4 = { variant: "secondary", accessibilityLabel: "Mute", icon: _modDef5021 };
+    const obj4 = { variant: "secondary", accessibilityLabel: "Mute", icon: _modDef5022 };
     obj2.off = obj4;
     cResult[0] = obj2;
     let first1 = obj2;
@@ -661,9 +661,9 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   [first, closure_1] = noop.useState(false);
   const obj2 = { on: null, off: null };
   const obj = useToggleButtonProps;
-  obj2.on = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef5021 };
-  const obj3 = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef5021 };
-  obj2.off = { variant: "secondary", accessibilityLabel: "Mute", icon: _modDef5021 };
+  obj2.on = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef5022 };
+  const obj3 = { variant: "destructive", accessibilityLabel: "Mute", icon: _modDef5022 };
+  obj2.off = { variant: "secondary", accessibilityLabel: "Mute", icon: _modDef5022 };
   const toggleIconButtonProps = obj.useToggleIconButtonProps(obj2, first);
   const obj5 = {};
   const merged = Object.assign(toggleIconButtonProps);
@@ -673,7 +673,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Exampl
   obj5.size = "md";
   return collapsed(IconButton.IconButton, obj5);
 });
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj8 = { container: { paddingHorizontal: nativeDefault.space.PX_16 }, buttonContainer: null, toggleIconButtonRow: null, overlayButtonContainer: null };
 let obj9 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj8.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_8 };
@@ -694,7 +694,7 @@ export default function UserSettingsDesignSystemButton() {
   }, []);
   navigation.setOptions({
     headerRight() {
-      return collapsed(IconButton.IconButton, { onPress, icon: _modDef7083, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
+      return collapsed(IconButton.IconButton, { onPress, icon: _modDef7086, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
     }
   });
   const obj3 = { children: null };
@@ -704,7 +704,7 @@ export default function UserSettingsDesignSystemButton() {
   let obj = require("useNavigation");
   const obj2 = {
     headerRight() {
-      return collapsed(IconButton.IconButton, { onPress, icon: _modDef7083, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
+      return collapsed(IconButton.IconButton, { onPress, icon: _modDef7086, size: "sm", variant: "secondary", accessibilityLabel: "Settings" });
     }
   };
   let items = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/bold", children: "Hierarchical buttons" }) }), ];
@@ -815,7 +815,7 @@ export default function UserSettingsDesignSystemButton() {
       return collapsed(hasOwnProperty, obj, variant);
     })
   };
-  obj25.icon = closure_10(require("components/Button/Button").Button.Icon, { source: _modDef9993 });
+  obj25.icon = closure_10(require("components/Button/Button").Button.Icon, { source: _modDef10012 });
   obj24.children = closure_10(require("components/Button/Button").Button, obj25);
   const items9 = [closure_10(closure_5, obj24), ];
   const obj27 = { style: tmp.buttonContainer, children: null };
@@ -828,8 +828,8 @@ export default function UserSettingsDesignSystemButton() {
     size: "md",
     icon: null
   };
-  const obj26 = { source: _modDef9993 };
-  obj28.icon = closure_10(require("components/Button/Button").Button.Icon, { variant: "entity", source: _modDef8725 });
+  const obj26 = { source: _modDef10012 };
+  obj28.icon = closure_10(require("components/Button/Button").Button.Icon, { variant: "entity", source: _modDef8734 });
   obj27.children = closure_10(require("components/Button/Button").Button, obj28);
   items9[1] = closure_10(closure_5, obj27);
   obj23.children = items9;
@@ -837,7 +837,7 @@ export default function UserSettingsDesignSystemButton() {
   obj21.children = items8;
   items1[5] = closure_11(require("Stack/Stack").Stack, obj21);
   const obj30 = { children: null };
-  const obj29 = { variant: "entity", source: _modDef8725 };
+  const obj29 = { variant: "entity", source: _modDef8734 };
   const items10 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/bold", children: "Buttons with various text lengths" }) }), ];
   const obj32 = { children: null };
   const obj33 = { style: tmp.buttonContainer, children: null };
@@ -849,7 +849,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef9993
+    icon: _modDef10012
   });
   const items11 = [closure_10(closure_5, obj33), , , ];
   const obj35 = { style: tmp.buttonContainer, children: null };
@@ -860,7 +860,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef9993
+    icon: _modDef10012
   };
   obj35.children = closure_10(require("components/Button/Button").Button, {
     onPress() {
@@ -869,7 +869,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef9993,
+    icon: _modDef10012,
     iconPosition: "end"
   });
   items11[1] = closure_10(closure_5, obj35);
@@ -914,7 +914,7 @@ export default function UserSettingsDesignSystemButton() {
     variant: "secondary",
     text: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur",
     size: "md",
-    icon: _modDef9993,
+    icon: _modDef10012,
     iconPosition: "end"
   };
   const obj38 = {
@@ -1014,15 +1014,15 @@ export default function UserSettingsDesignSystemButton() {
       return collapsed(hasOwnProperty, obj, variant);
     })
   };
-  obj59.children = closure_10(closure_20, { image: _modDef8730, label: "Telegram" });
+  obj59.children = closure_10(closure_20, { image: _modDef8739, label: "Telegram" });
   const items23 = [closure_10(closure_5, obj59), , ];
   const obj61 = { style: tmp.buttonContainer, children: null };
-  const obj60 = { image: _modDef8730, label: "Telegram" };
-  obj61.children = closure_10(closure_20, { image: _modDef8732, label: "WhatsApp" });
+  const obj60 = { image: _modDef8739, label: "Telegram" };
+  obj61.children = closure_10(closure_20, { image: _modDef8741, label: "WhatsApp" });
   items23[1] = closure_10(closure_5, obj61);
   const obj63 = { style: tmp.buttonContainer, children: null };
-  const obj62 = { image: _modDef8732, label: "WhatsApp" };
-  obj63.children = closure_10(closure_20, { image: _modDef8731, label: "Twitter" });
+  const obj62 = { image: _modDef8741, label: "WhatsApp" };
+  obj63.children = closure_10(closure_20, { image: _modDef8740, label: "Twitter" });
   items23[2] = closure_10(closure_5, obj63);
   obj58.children = items23;
   items22[1] = closure_11(closure_5, obj58);
@@ -1034,7 +1034,7 @@ export default function UserSettingsDesignSystemButton() {
   obj66.children = items24;
   const items25 = [closure_11(require("Stack/Stack").Stack, obj66), , ];
   const obj67 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
-  const obj64 = { image: _modDef8731, label: "Twitter" };
+  const obj64 = { image: _modDef8740, label: "Twitter" };
   obj67.children = closure_10(require("Stack/Stack").Stack, { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: closure_13.map((variant) => closure_1_10(closure_1_19, { variant, showLabel: true }, variant)) });
   items25[1] = closure_10(closure_6, obj67);
   const obj69 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
@@ -1043,7 +1043,7 @@ export default function UserSettingsDesignSystemButton() {
   const items26 = [
     closure_10(require("IconButton").IconButton, {
       variant: "secondary",
-      icon: _modDef7083,
+      icon: _modDef7086,
       label: "Supercalifragilisticexpialidocious",
       grow: true,
       onPress() {
@@ -1055,7 +1055,7 @@ export default function UserSettingsDesignSystemButton() {
   ];
   const obj71 = {
     variant: "secondary",
-    icon: _modDef7083,
+    icon: _modDef7086,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -1064,7 +1064,7 @@ export default function UserSettingsDesignSystemButton() {
   };
   items26[1] = closure_10(require("IconButton").IconButton, {
     variant: "secondary",
-    icon: _modDef7083,
+    icon: _modDef7086,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -1073,7 +1073,7 @@ export default function UserSettingsDesignSystemButton() {
   });
   const obj72 = {
     variant: "secondary",
-    icon: _modDef7083,
+    icon: _modDef7086,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -1082,7 +1082,7 @@ export default function UserSettingsDesignSystemButton() {
   };
   items26[2] = closure_10(require("IconButton").IconButton, {
     variant: "secondary",
-    icon: _modDef7083,
+    icon: _modDef7086,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -1097,7 +1097,7 @@ export default function UserSettingsDesignSystemButton() {
   const obj74 = { spacing: 24, children: null };
   const obj73 = {
     variant: "secondary",
-    icon: _modDef7083,
+    icon: _modDef7086,
     label: "Supercalifragilisticexpialidocious",
     grow: true,
     onPress() {
@@ -1108,29 +1108,29 @@ export default function UserSettingsDesignSystemButton() {
   const obj76 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj77 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
   const obj75 = { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/bold", children: "ImageButton with a label" }) };
-  const items28 = [closure_10(closure_20, { image: _modDef8729, label: "Label", showLabel: true }), , ];
-  const obj78 = { image: _modDef8729, label: "Label", showLabel: true };
-  items28[1] = closure_10(closure_20, { image: _modDef8725, label: "Label", showLabel: true });
-  const obj79 = { image: _modDef8725, label: "Label", showLabel: true };
-  items28[2] = closure_10(closure_20, { image: _modDef8728, label: "Label", showLabel: true });
+  const items28 = [closure_10(closure_20, { image: _modDef8738, label: "Label", showLabel: true }), , ];
+  const obj78 = { image: _modDef8738, label: "Label", showLabel: true };
+  items28[1] = closure_10(closure_20, { image: _modDef8734, label: "Label", showLabel: true });
+  const obj79 = { image: _modDef8734, label: "Label", showLabel: true };
+  items28[2] = closure_10(closure_20, { image: _modDef8737, label: "Label", showLabel: true });
   obj77.children = items28;
   obj76.children = closure_11(require("Stack/Stack").Stack, obj77);
   items27[1] = closure_10(closure_6, obj76);
   const obj81 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj82 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
-  const obj80 = { image: _modDef8728, label: "Label", showLabel: true };
-  const items29 = [closure_10(closure_20, { image: _modDef8730, label: "Supercalifragilisticexpialidocious", showLabel: true }), , ];
-  const obj83 = { image: _modDef8730, label: "Supercalifragilisticexpialidocious", showLabel: true };
-  items29[1] = closure_10(closure_20, { image: _modDef8732, label: "Supercalifragilisticexpialidocious", showLabel: true });
-  const obj84 = { image: _modDef8732, label: "Supercalifragilisticexpialidocious", showLabel: true };
-  items29[2] = closure_10(closure_20, { image: _modDef8731, label: "Supercalifragilisticexpialidocious", showLabel: true });
+  const obj80 = { image: _modDef8737, label: "Label", showLabel: true };
+  const items29 = [closure_10(closure_20, { image: _modDef8739, label: "Supercalifragilisticexpialidocious", showLabel: true }), , ];
+  const obj83 = { image: _modDef8739, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  items29[1] = closure_10(closure_20, { image: _modDef8741, label: "Supercalifragilisticexpialidocious", showLabel: true });
+  const obj84 = { image: _modDef8741, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  items29[2] = closure_10(closure_20, { image: _modDef8740, label: "Supercalifragilisticexpialidocious", showLabel: true });
   obj82.children = items29;
   obj81.children = closure_11(require("Stack/Stack").Stack, obj82);
   items27[2] = closure_10(closure_6, obj81);
   obj74.children = items27;
   items1[13] = closure_11(require("Stack/Stack").Stack, obj74);
   const obj86 = { spacing: 24, children: null };
-  const obj85 = { image: _modDef8731, label: "Supercalifragilisticexpialidocious", showLabel: true };
+  const obj85 = { image: _modDef8740, label: "Supercalifragilisticexpialidocious", showLabel: true };
   const items30 = [closure_10(require("Stack/Stack").Stack, { style: tmp.container, children: closure_10(require("Text/Text").Text, { variant: "heading-lg/bold", children: "Mixing buttons" }) }), ];
   const obj88 = { direction: "horizontal", style: tmp.container, children: null };
   const items31 = [closure_10(closure_18, { variant: "secondary", text: "Search", grow: true }), closure_10(closure_19, { variant: "secondary" })];
@@ -1244,7 +1244,7 @@ export default function UserSettingsDesignSystemButton() {
   const items48 = [closure_10(closure_6, obj4), ];
   const obj124 = require("native");
   items48[1] = closure_10(require("FloatingActionButton").FloatingActionButton, {
-    icon: _modDef7083,
+    icon: _modDef7086,
     onPress() {
 
     },

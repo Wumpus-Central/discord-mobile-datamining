@@ -1,18 +1,18 @@
-// === Module 7872: ReactionActionCreators ===
+// === Module 7881: ReactionActionCreators ===
 
-// Module 7872 (ReactionActionCreators)
+// Module 7881 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import util from "util" /* 1126 */;
-import EmojiUtils from "EmojiUtils" /* 4725 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7873 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7874 */;
+import EmojiUtils from "EmojiUtils" /* 4727 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7882 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7883 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import MessageStore from "MessageStore" /* 5428 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import MessageStore from "MessageStore" /* 5429 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -136,7 +136,7 @@ let closure_15 = async function _getReactors(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -250,7 +250,7 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -651,7 +651,7 @@ let closure_23 = async function _removeReaction(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -786,7 +786,7 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4929).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = channelId(4930).AccessibilityAnnouncer;
                   intl = channelId(1126).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };

@@ -1,26 +1,26 @@
-// === Module 17061: ConjureTimeFormat ===
+// === Module 17215: ConjureTimeFormat ===
 
-// Module 17061 (ConjureTimeFormat)
+// Module 17215 (ConjureTimeFormat)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureTimeFormat.tsx");
 
-export const formatClockTime = function formatClockTime(startedAt) {
+export const formatClockTime = function formatClockTime(date) {
   let str = arg1;
   if (arg1 === undefined) {
     str = "seconds";
   }
-  if (startedAt.length > 64) {
+  if (date.length > 64) {
     return null;
   } else {
     const _Date2 = Date;
-    const parsed = Date.parse(startedAt);
+    const parsed = Date.parse(date);
     const _Number = Number;
     if (Number.isNaN(parsed)) {
       return null;
     } else {
       const _Date = Date;
-      const date = new Date(parsed);
+      date = new Date(parsed);
       const _String = String;
       const padStartResult = String(date.getHours()).padStart(2, "0");
       const _String2 = String;

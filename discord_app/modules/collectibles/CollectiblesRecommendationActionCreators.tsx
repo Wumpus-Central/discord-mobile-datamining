@@ -1,8 +1,8 @@
-// === Module 14765: CollectiblesRecommendationActionCreators ===
+// === Module 14873: CollectiblesRecommendationActionCreators ===
 
-// Module 14765 (CollectiblesRecommendationActionCreators)
+// Module 14873 (CollectiblesRecommendationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

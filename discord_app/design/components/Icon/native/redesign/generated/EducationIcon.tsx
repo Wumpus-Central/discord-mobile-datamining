@@ -1,10 +1,10 @@
-// === Module 10417: EducationIcon ===
+// === Module 10406: EducationIcon ===
 
-// Module 10417 (EducationIcon)
+// Module 10406 (EducationIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod10416 from "module_10416" /* 10416 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod10405 from "module_10405" /* 10405 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EducationIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10416;
+    const tmpResult = _mod10405;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EducationIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10416, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10405, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

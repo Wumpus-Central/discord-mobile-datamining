@@ -1,10 +1,10 @@
-// === Module 7106: GuildBoostingSubscribeButton ===
+// === Module 7111: GuildBoostingSubscribeButton ===
 
-// Module 7106 (GuildBoostingSubscribeButton)
-import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7108 */;
+// Module 7111 (GuildBoostingSubscribeButton)
+import GuildBoostPurchasingUtils from "GuildBoostPurchasingUtils" /* 7113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7107 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7112 */;
 
 require = fn;
 function handleBoostPress() {
@@ -81,8 +81,8 @@ let closure_15 = async function _handleBoostPress() {
 let View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_7, AnalyticsObjectTypes: closure_8, AnalyticsPages: closure_9, NOOP: c10 } = Constants);
-let closure_11 = fn(5966).PremiumGuildSubscribeModalScenes;
-const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
+let closure_11 = fn(5968).PremiumGuildSubscribeModalScenes;
+const FractionalPremiumStates = fn(1392).FractionalPremiumStates;
 let jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

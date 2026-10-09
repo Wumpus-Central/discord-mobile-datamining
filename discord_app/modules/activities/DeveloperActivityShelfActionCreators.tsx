@@ -1,6 +1,6 @@
-// === Module 11126: DeveloperActivityShelfActionCreators ===
+// === Module 11568: DeveloperActivityShelfActionCreators ===
 
-// Module 11126 (DeveloperActivityShelfActionCreators)
+// Module 11568 (DeveloperActivityShelfActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

@@ -1,21 +1,21 @@
-// === Module 11764: ApplicationDirectoryActionCreators ===
+// === Module 11701: ApplicationDirectoryActionCreators ===
 
-// Module 11764 (ApplicationDirectoryActionCreators)
+// Module 11701 (ApplicationDirectoryActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 11770 */;
-import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 11771 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 11707 */;
+import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 11708 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5089 */;
+import DevSettingsStore from "DevSettingsStore" /* 5090 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6843 */;
-import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 11765 */;
-import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 11766 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11761 */;
-import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 11767 */;
-import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 11768 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6850 */;
+import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 11702 */;
+import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 11703 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11698 */;
+import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 11704 */;
+import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 11705 */;
 
 require = fn;
 let closure_20 = async function _getEmbedApplication() {
@@ -172,7 +172,7 @@ let closure_21 = async function _getApplication(arg0) {
           closure_131_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -346,7 +346,7 @@ let closure_23 = async function _getSimilarApplications(arg0) {
           closure_131_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -471,7 +471,7 @@ let closure_24 = async function _search(arg0) {
           closure_131_18 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -623,7 +623,7 @@ let closure_25 = async function _fetchCollections() {
           closure_129_7 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -812,11 +812,11 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
     }
   }
 };
-fn(6843).FetchState;
-fn(11766).FetchState;
-fn(11761).FetchState;
-fn(11767).FetchState;
-const FetchState = fn(11768).FetchState;
+fn(6850).FetchState;
+fn(11703).FetchState;
+fn(11698).FetchState;
+fn(11704).FetchState;
+const FetchState = fn(11705).FetchState;
 const Endpoints = fn(1085).Endpoints;
 let c18 = 600000;
 const map = new Map();

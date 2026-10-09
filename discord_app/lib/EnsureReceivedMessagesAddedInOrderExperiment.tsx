@@ -1,7 +1,7 @@
-// === Module 5749: EnsureReceivedMessagesAddedInOrderExperiment ===
+// === Module 5750: EnsureReceivedMessagesAddedInOrderExperiment ===
 
-// Module 5749 (EnsureReceivedMessagesAddedInOrderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5750 (EnsureReceivedMessagesAddedInOrderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-ensure-received-messages-added-in-order", kind: "user", defaultConfig: { enabled: false }, variations: null };

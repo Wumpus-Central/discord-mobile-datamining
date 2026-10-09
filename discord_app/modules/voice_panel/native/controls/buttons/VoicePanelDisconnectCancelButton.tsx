@@ -1,26 +1,26 @@
-// === Module 17646: VoicePanelDisconnectCancelButton ===
+// === Module 17798: VoicePanelDisconnectCancelButton ===
 
-// Module 17646 (VoicePanelDisconnectCancelButton)
+// Module 17798 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6043 */;
-import StreamActionCreators from "StreamActionCreators" /* 7438 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 10623 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5105 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5886 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6045 */;
+import StreamActionCreators from "StreamActionCreators" /* 7443 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
-import VoicePanelStore from "VoicePanelStore" /* 6079 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import VoicePanelStore from "VoicePanelStore" /* 6081 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11989).VoicePanelModes;
+const VoicePanelModes = fn(11926).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT }, icon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.icon = { tintColor: nativeDefault.colors.WHITE };
@@ -177,25 +177,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Disconne
       }
       if (closure_3 !== closure_10.ACTIVITY) {
         if (tmp2 === closure_10.STREAM) {
-          tmp17 = closure_1;
-          tmp18 = closure_2;
+          tmp16 = closure_1;
+          tmp17 = closure_2;
           obj6 = closure_1(closure_2[15]);
-          tmp19 = channelId;
+          tmp18 = channelId;
           participant = obj6.selectParticipant(channelId, null);
           if (null != id) {
-            tmp21 = closure_0;
-            obj7 = closure_0(tmp18[16]);
+            tmp20 = closure_0;
+            obj7 = closure_0(tmp17[16]);
             stopStreamResult = obj7.stopStream(id);
           }
           return;
         } else {
-          tmp11 = closure_1;
-          tmp12 = closure_2;
+          tmp10 = closure_1;
+          tmp11 = closure_2;
           obj4 = closure_1(closure_2[17]);
           disconnectResult = obj4.disconnect();
-          tmp14 = closure_7;
+          tmp13 = closure_7;
           state = closure_7.getState();
-          tmp15 = channelId;
+          tmp14 = channelId;
           closeChannelResult = state.closeChannel(channelId);
         }
       } else {
@@ -204,9 +204,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Disconne
         tmp5 = closure_0;
         tmp6 = closure_2;
         obj = closure_0(closure_2[12]);
-        tmp8 = closure_1;
         result = obj.activityParticipantIdToApplicationId(id);
-        obj2 = closure_1(closure_2[14]);
+        obj2 = closure_0(closure_2[14]);
         _location = undefined;
         if (currentEmbeddedActivity != null) {
           _location = currentEmbeddedActivity.location;
@@ -214,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Disconne
         obj1 = { location: null, applicationId: null };
         obj1.location = _location;
         obj1.applicationId = result;
-        leaveActivityResult = obj2.leaveActivity(obj1);
+        result1 = obj2.leaveEmbeddedActivity(obj1);
       }
       return;
     }
@@ -327,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Disconne
         _location = currentEmbeddedActivity.location;
       }
       const obj3 = { location: _location, applicationId: result };
-      EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj3);
+      const result1 = leaveEmbeddedActivity.leaveEmbeddedActivity(obj3);
     }
   }, items);
   if (first === constants.ACTIVITY) {

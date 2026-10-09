@@ -1,15 +1,15 @@
-// === Module 15344: AutoVoiceSensitivitySetting ===
+// === Module 15457: AutoVoiceSensitivitySetting ===
 
-// Module 15344 (AutoVoiceSensitivitySetting)
+// Module 15457 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5242 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoVoiceSensitivitySettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(7966).MobileUserSettings.VOICE,
+  parent: fn(7974).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useAutoVoiceSensitivitySettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

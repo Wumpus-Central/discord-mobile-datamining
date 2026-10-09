@@ -1,6 +1,6 @@
-// === Module 12343: ? ===
+// === Module 12282: ? ===
 
-// Module 12343
+// Module 12282
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PencilIllocon-2x.png.js");

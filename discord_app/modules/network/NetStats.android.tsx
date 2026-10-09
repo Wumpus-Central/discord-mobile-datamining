@@ -1,16 +1,16 @@
-// === Module 7170: NetStats ===
+// === Module 7175: NetStats ===
 
-// Module 7170 (NetStats)
+// Module 7175 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import configure from "configure" /* 1482 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4943 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5288 */;
+import configure from "configure" /* 1483 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4944 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5289 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7171 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7176 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import NetworkUtils_mod from "utils/NetworkUtils" /* 1481 */;
+import NetworkUtils_mod from "utils/NetworkUtils" /* 1482 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1482).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1483).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;

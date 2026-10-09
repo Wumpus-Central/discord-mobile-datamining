@@ -1,9 +1,9 @@
-// === Module 10546: BadgeArtImage ===
+// === Module 10536: BadgeArtImage ===
 
-// Module 10546 (BadgeArtImage)
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import APNGPlayer2 from "APNGPlayer" /* 8981 */;
+// Module 10536 (BadgeArtImage)
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import APNGPlayer2 from "APNGPlayer" /* 8992 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeArt
         }
         const formatted = url.split(/[?#]/)[0].toLowerCase();
         if (formatted.endsWith(".svg")) {
-          SvgUri = SvgUri(7550).SvgUri;
+          SvgUri = SvgUri(7559).SvgUri;
           size = { uri: url, width, height, onError: ignoreSvgError, fallback: null };
           let tmp4Result;
           if (null != fallbackUrl) {
@@ -140,9 +140,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeArt
         obj2.enableAnimation = animated;
         let tmpResult2 = jsx(FastImageDefault, { source: null, style: null, resizeMode: "contain", enableAnimation: null });
       } else {
-        APNGPlayer(1381);
+        APNGPlayer(1382);
       }
-      APNGPlayer = APNGPlayer(8981).APNGPlayer;
+      APNGPlayer = APNGPlayer(8992).APNGPlayer;
       const obj5 = { url: fallbackUrl, style: size, autoplay: true };
       tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
     }

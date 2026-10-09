@@ -1,16 +1,16 @@
-// === Module 17936: GiftIntentReconcilingManager ===
+// === Module 18096: GiftIntentReconcilingManager ===
 
-// Module 17936 (GiftIntentReconcilingManager)
+// Module 18096 (GiftIntentReconcilingManager)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10082 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 5429 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8080 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7172 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10067 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 5430 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8088 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
 
 require = fn;
 const MessageTypes = fn(1085).MessageTypes;

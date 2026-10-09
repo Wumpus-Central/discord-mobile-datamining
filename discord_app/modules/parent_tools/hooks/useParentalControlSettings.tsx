@@ -1,20 +1,20 @@
-// === Module 14902: useParentalControlSettings ===
+// === Module 15014: useParentalControlSettings ===
 
-// Module 14902 (useParentalControlSettings)
+// Module 15014 (useParentalControlSettings)
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6986 */;
-import useUserLinks from "useUserLinks" /* 7711 */;
-import useSelectedTeen from "useSelectedTeen" /* 7713 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14903 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14906 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6682 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6993 */;
+import useUserLinks from "useUserLinks" /* 7720 */;
+import useSelectedTeen from "useSelectedTeen" /* 7722 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15015 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 15018 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7250 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7255 */;
 
 require = fn;
-const SafetyToastType = fn(7015).SafetyToastType;
+const SafetyToastType = fn(7018).SafetyToastType;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useParentalControlledExplicitContentSettings() {
@@ -342,17 +342,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpda
                 items2 = [closure_0];
               }
               c4 = 1;
-              selectedTeenId(7249).updateTeenConsents(tmp28, items1, items2);
+              selectedTeenId(7254).updateTeenConsents(tmp28, items1, items2);
               c2 = 2;
               c5 = 1;
-              const obj3 = selectedTeenId(7249);
+              const obj3 = selectedTeenId(7254);
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            selectedTeenId(7014).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = selectedTeenId(7014);
+            selectedTeenId(7017).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = selectedTeenId(7017);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -432,17 +432,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUpda
                 items2 = [closure_0];
               }
               c4 = 1;
-              selectedTeenId(7249).updateTeenConsents(tmp28, items1, items2);
+              selectedTeenId(7254).updateTeenConsents(tmp28, items1, items2);
               c2 = 2;
               c5 = 1;
-              const obj3 = selectedTeenId(7249);
+              const obj3 = selectedTeenId(7254);
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            selectedTeenId(7014).showFailedToast(constants.GENERIC_ERROR);
-            const obj2 = selectedTeenId(7014);
+            selectedTeenId(7017).showFailedToast(constants.GENERIC_ERROR);
+            const obj2 = selectedTeenId(7017);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -499,8 +499,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllowFr
   }
   return tmp7.mutualGuilds && !tmp7.all;
 }) : (function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-  const selectedTeen = controlledSetting(7713).useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14903).ParentalControlledFriendSourceFlags;
+  const selectedTeen = controlledSetting(7722).useSelectedTeen();
+  const ParentalControlledFriendSourceFlags = controlledSetting(15015).ParentalControlledFriendSourceFlags;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;

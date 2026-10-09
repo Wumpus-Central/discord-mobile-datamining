@@ -1,9 +1,9 @@
-// === Module 18399: EnterEmailScreen ===
+// === Module 18561: EnterEmailScreen ===
 
-// Module 18399 (EnterEmailScreen)
+// Module 18561 (EnterEmailScreen)
 import _modDef2859 from "module_2859" /* 2859 */;
-import types from "types" /* 18391 */;
-import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 18400 */;
+import types from "types" /* 18553 */;
+import SafetyFlowTaskScreenDefault from "SafetyFlowTaskScreen" /* 18562 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const result = size.fileFinishedImporting("modules/safety_flows/native/tasks/Ent
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEmailScreen() {
   const cResult = navigation(576).c(9);
   const obj = navigation(576);
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   const tmp5 = _slicedToArray(noop.useState(""), 2);
   const first = tmp5[0];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -46,8 +46,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEma
   if (cResult[4] !== first) {
     const obj3 = { children: null };
     const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-    obj3.children = jsx(tmp(6283).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-    const tmp15 = jsx(tmp(5373).Stack, { children: null });
+    obj3.children = jsx(tmp(6290).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
+    const tmp15 = jsx(tmp(5374).Stack, { children: null });
     cResult[4] = first;
     cResult[5] = tmp15;
     let tmp13 = tmp15;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EnterEma
   cResult[7] = tmp13;
   cResult[8] = tmp17;
   tmp16 = tmp17;
-  const obj2 = navigation(1502);
+  const obj2 = navigation(1503);
 }) : (function EnterEmailScreen() {
   _require = require("useNavigation").useNavigation();
   const obj = require("useNavigation");

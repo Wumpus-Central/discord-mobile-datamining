@@ -1,11 +1,11 @@
-// === Module 17694: LaunchPadPullTabCache ===
+// === Module 17846: LaunchPadPullTabCache ===
 
-// Module 17694 (LaunchPadPullTabCache)
+// Module 17846 (LaunchPadPullTabCache)
 import Storage2 from "Storage" /* 510 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useWindowDimensions from "useWindowDimensions" /* 1496 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6616 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11258 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import useWindowDimensions from "useWindowDimensions" /* 1497 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6623 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 10625 */;
 import size from "module_2" /* 2 */;
 
 function setLaunchPadPullTabExclusionRect(arg0) {

@@ -1,30 +1,30 @@
-// === Module 9450: EmojiPickerPremiumSearchUpsell ===
+// === Module 9488: EmojiPickerPremiumSearchUpsell ===
 
-// Module 9450 (EmojiPickerPremiumSearchUpsell)
+// Module 9488 (EmojiPickerPremiumSearchUpsell)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9220 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9328 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9329 */;
-import _modDef9452 from "module_9452" /* 9452 */;
-import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 9453 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import MobileEmojiPickerUpsellRestyleExperiment from "MobileEmojiPickerUpsellRestyleExperiment" /* 9254 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9366 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
+import _modDef9490 from "module_9490" /* 9490 */;
+import PremiumExpressionPickerSearchUpsellDefault from "PremiumExpressionPickerSearchUpsell" /* 9491 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const util = NitroWheelIcon(1126);
 const native = NitroWheelIcon(1200);
-const PremiumUtils = NitroWheelIcon(4726);
-const NitroWheelIcon2 = NitroWheelIcon(9005);
+const PremiumUtils = NitroWheelIcon(4728);
+const NitroWheelIcon2 = NitroWheelIcon(9016);
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiPickerPremiumSearchUpsellViewed(guildId) {
@@ -270,8 +270,8 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
       const obj5 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: nitroIcon.nitroIcon };
       let tmp15Result = <NitroWheelIcon size="sm" color={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} style={nitroIcon.nitroIcon} />;
     } else {
-      const obj6 = { style: nitroIcon.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM };
-      tmp15Result = jsx(native.Icon, { style: nitroIcon.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM });
+      const obj6 = { style: nitroIcon.nitroIcon, source: _modDef9490, disableColor: true, size: native.Icon.Sizes.MEDIUM };
+      tmp15Result = jsx(native.Icon, { style: nitroIcon.nitroIcon, source: _modDef9490, disableColor: true, size: native.Icon.Sizes.MEDIUM });
     }
     nitroIcon = nitroIcon.nitroIcon;
     cResult[4] = nitroIcon;
@@ -306,8 +306,8 @@ export const PremiumSearchUpsell = noop.memo(ReactCompilerGating.isReactCompiler
     const obj4 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon };
     let tmp7Result = jsx(NitroWheelIcon2.NitroWheelIcon, { size: "sm", color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, style: tmp.nitroIcon });
   } else {
-    const obj5 = { style: tmp.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM };
-    tmp7Result = jsx(native.Icon, { style: tmp.nitroIcon, source: _modDef9452, disableColor: true, size: native.Icon.Sizes.MEDIUM });
+    const obj5 = { style: tmp.nitroIcon, source: _modDef9490, disableColor: true, size: native.Icon.Sizes.MEDIUM };
+    tmp7Result = jsx(native.Icon, { style: tmp.nitroIcon, source: _modDef9490, disableColor: true, size: native.Icon.Sizes.MEDIUM });
   }
   obj3.icon = tmp7Result;
   obj3.loading = loading;

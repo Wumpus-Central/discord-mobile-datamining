@@ -1,22 +1,22 @@
-// === Module 16519: NsfwGateGuildSidebar ===
+// === Module 16642: NsfwGateGuildSidebar ===
 
-// Module 16519 (NsfwGateGuildSidebar)
+// Module 16642 (NsfwGateGuildSidebar)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6903 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6910 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const NsfwGateSource = fn(6902).NsfwGateSource;
+const NsfwGateSource = fn(6909).NsfwGateSource;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10, Fonts: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, emptyStateContainer: { flex: 1 } };
 let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         if (cResult[11] !== stateFromStores) {
           let obj2 = { guild: stateFromStores, showExtraButtons: false };
-          const tmp21 = closure_12(stateFromStores(16360), obj2);
+          const tmp21 = closure_12(stateFromStores(16479), obj2);
           cResult[11] = stateFromStores;
           cResult[12] = tmp21;
           let tmp18 = tmp21;
@@ -79,8 +79,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NsfwGate
         }
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp26 = stateFromStores(5902)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
-          const tmp27 = stateFromStores(5902)(constants3.PRIMARY_NORMAL, undefined, 14);
+          const tmp26 = stateFromStores(5903)(constants3.DISPLAY_SEMIBOLD, undefined, 20);
+          const tmp27 = stateFromStores(5903)(constants3.PRIMARY_NORMAL, undefined, 14);
           cResult[13] = tmp26;
           cResult[14] = tmp27;
           let tmp23 = tmp27;

@@ -1,12 +1,12 @@
-// === Module 7002: ChangelogStore ===
+// === Module 7009: ChangelogStore ===
 
-// Module 7002 (ChangelogStore)
+// Module 7009 (ChangelogStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserSettings from "UserSettings" /* 2040 */;
+import UserSettings from "UserSettings" /* 2041 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 
 require = fn;
 function handleUserSettingsProtoStoreChange() {

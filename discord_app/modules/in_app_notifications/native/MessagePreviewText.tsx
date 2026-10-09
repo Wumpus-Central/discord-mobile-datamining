@@ -1,36 +1,36 @@
-// === Module 12597: MessagePreviewText ===
+// === Module 12537: MessagePreviewText ===
 
-// Module 12597 (MessagePreviewText)
+// Module 12537 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useMessageAuthor from "useMessageAuthor" /* 5623 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9248 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12588 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12598 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12599 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12600 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 12603 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12604 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useMessageAuthor from "useMessageAuthor" /* 5624 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6995 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9286 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12528 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12538 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12539 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12540 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 12543 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12544 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12589);
+const InAppNotificationConstants = fn(12529);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5090);
-const PlatformUtils = fn(1382);
+let createStyles = fn(5091);
+const PlatformUtils = fn(1383);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
@@ -38,7 +38,7 @@ let obj7 = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.spa
 obj6.embedAccentBar = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 let obj8 = { width: 4, marginTop: -nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_8, alignSelf: "stretch" };
 obj6.embedTextContainer = { flex: 1, gap: nativeDefault.space.PX_4, paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8 };
-let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "code" };
+let size = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", height: 60, width: "IconComponent" };
 obj6.embedMediaContainer = size;
 obj6.embedMedia = { width: "100%", height: "100%" };
 let closure_11 = createStyles.createStyles(obj6);

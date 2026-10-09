@@ -1,6 +1,6 @@
-// === Module 8968: useSlayerStorefrontDevOverrideStore ===
+// === Module 8979: useSlayerStorefrontDevOverrideStore ===
 
-// Module 8968 (useSlayerStorefrontDevOverrideStore)
+// Module 8979 (useSlayerStorefrontDevOverrideStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

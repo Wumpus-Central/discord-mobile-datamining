@@ -1,21 +1,21 @@
-// === Module 1389: UserStore ===
+// === Module 1390: UserStore ===
 
-// Module 1389 (UserStore)
+// Module 1390 (UserStore)
 import _mod12 from "module_12" /* 12 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import UserStoreUtils from "UserStoreUtils" /* 1400 */;
-import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1405 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1410 */;
-import PremiumStateUtils from "PremiumStateUtils" /* 1411 */;
-import FamilyCenterModels from "FamilyCenterModels" /* 1412 */;
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
-import mappers from "mappers" /* 1985 */;
-import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1996 */;
-import Server from "Server" /* 1997 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1390 */;
-import UserRecord from "UserRecord" /* 1403 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import UserStoreUtils from "UserStoreUtils" /* 1401 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import PrimaryGuildUtils from "PrimaryGuildUtils" /* 1406 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1407 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1411 */;
+import PremiumStateUtils from "PremiumStateUtils" /* 1412 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1413 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1985 */;
+import mappers from "mappers" /* 1986 */;
+import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1997 */;
+import Server from "Server" /* 1998 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1391 */;
+import UserRecord from "UserRecord" /* 1404 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
 
@@ -321,11 +321,11 @@ function mergeUsersFromMessage(message, arg1) {
   }
   if (null != users) {
     for (const key10045 in resolved.users) {
-      let tmp23 = resolved.users[key10045];
-      if (tmp23.id === AuthenticationStore.getId()) {
+      let tmp27 = resolved.users[key10045];
+      if (tmp27.id === AuthenticationStore.getId()) {
         continue;
       } else {
-        let tmp15 = mergeUser(tmp23, arg1);
+        let tmp15 = mergeUser(tmp27, arg1);
         continue;
       }
       continue;
@@ -342,6 +342,13 @@ function mergeUsersFromMessage(message, arg1) {
   }
   if (tmp17) {
     mergeUser(message.interaction_metadata.user, arg1);
+  }
+  let tmp21 = null != message.actor;
+  if (tmp21) {
+    tmp21 = message.actor.id !== AuthenticationStore.getId();
+  }
+  if (tmp21) {
+    mergeUser(message.actor, arg1);
   }
   if (null != message.message_snapshots) {
     const message_snapshots = message.message_snapshots;
@@ -676,18 +683,25 @@ function handleFetchUsersForGuildEventSuccess(arg0) {
     }
   });
 }
+function mergeUsersFromNotificationCenterItem(other_user) {
+  if (null != other_user.other_user) {
+    mergeUser(other_user.other_user);
+  }
+  if (null != other_user.message) {
+    mergeUsersFromMessage(other_user.message, true);
+  }
+}
 function handleLoadNotificationCenterItems(items) {
   items = items.items;
-  const item = items.forEach((other_user) => {
-    if (null != other_user.other_user) {
-      mergeUser(other_user.other_user);
-    }
-  });
+  const item = items.forEach(mergeUsersFromNotificationCenterItem);
 }
 function handleNotificationCenterItemCreate(item) {
   item = item.item;
   if (null != item.other_user) {
     mergeUser(item.other_user);
+  }
+  if (null != item.message) {
+    mergeUsersFromMessage(item.message, true);
   }
 }
 function handleIncomingMessage(message) {
@@ -735,7 +749,7 @@ function handlePresenceUpdates(updates) {
     if (null == closure_11[item.user.id]) {
       return false;
     } else {
-      const reduced = closure_44.reduce((acc, item) => {
+      const reduced = closure_45.reduce((acc, item) => {
         const user = item.user;
         let tmp2 = acc;
         if (user.hasOwnProperty(item)) {
@@ -1142,11 +1156,11 @@ function handleGuildStickersFetchSuccess(stickers) {
 }
 const Constants = fn(1085);
 ({ UserFlags: closure_7, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
-let closure_10 = fn(1391).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+let closure_10 = fn(1392).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";
-let closure_44 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
+let closure_45 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
 let UserStore;
 class UserStore extends tmp2 {
   constructor() {

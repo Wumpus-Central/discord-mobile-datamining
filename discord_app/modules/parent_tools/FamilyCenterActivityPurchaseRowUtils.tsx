@@ -1,13 +1,13 @@
-// === Module 14987: FamilyCenterActivityPurchaseRowUtils ===
+// === Module 15099: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 14987 (FamilyCenterActivityPurchaseRowUtils)
+// Module 15099 (FamilyCenterActivityPurchaseRowUtils)
 import util from "util" /* 1126 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7257 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7258 */;
-import PremiumConstants from "PremiumConstants" /* 1391 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7262 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7263 */;
+import PremiumConstants from "PremiumConstants" /* 1392 */;
 import size from "module_2" /* 2 */;
 
 function getCollectibleTypeName(type) {

@@ -1,11 +1,11 @@
-// === Module 17210: useAutoTrackSearchTabCountsViewedAnalytics ===
+// === Module 17360: useAutoTrackSearchTabCountsViewedAnalytics ===
 
-// Module 17210 (useAutoTrackSearchTabCountsViewedAnalytics)
-import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
+// Module 17360 (useAutoTrackSearchTabCountsViewedAnalytics)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12011 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const SearchTabs = fn(9247).SearchTabs;
+const SearchTabs = fn(9285).SearchTabs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
@@ -264,7 +264,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
           tmp20 = tmp22;
         }
         obj2.numLinkTabReturnedResults = tmp20;
-        const result = tracking_TrackingDefault.trackSearchResultReturned(obj2);
+        const result = search_tracking_TrackingDefault.trackSearchResultReturned(obj2);
       }
     }
   }, items1);

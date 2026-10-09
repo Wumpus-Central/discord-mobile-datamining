@@ -1,10 +1,10 @@
-// === Module 7479: useIsOnStartStageScreenStore ===
+// === Module 7484: useIsOnStartStageScreenStore ===
 
-// Module 7479 (useIsOnStartStageScreenStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+// Module 7484 (useIsOnStartStageScreenStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2072 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
@@ -115,7 +115,7 @@ export const useUpdateIsOnStartStageScreenEffect = ReactCompilerGating.isReactCo
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
-    tmp3 = !stateFromStores(7480)(id.id);
+    tmp3 = !stateFromStores(7485)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];

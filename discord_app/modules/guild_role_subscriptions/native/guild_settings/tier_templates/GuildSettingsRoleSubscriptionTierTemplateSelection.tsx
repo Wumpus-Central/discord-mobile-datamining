@@ -1,28 +1,28 @@
-// === Module 18310: GuildSettingsRoleSubscriptionTierTemplateSelection ===
+// === Module 18472: GuildSettingsRoleSubscriptionTierTemplateSelection ===
 
-// Module 18310 (GuildSettingsRoleSubscriptionTierTemplateSelection)
+// Module 18472 (GuildSettingsRoleSubscriptionTierTemplateSelection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import NavigatorHeader from "NavigatorHeader" /* 6203 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15308 */;
-import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 18267 */;
-import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard" /* 18311 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15421 */;
+import GuildRoleSubscriptionsActionCreatorExtrasAll from "GuildRoleSubscriptionsActionCreatorExtras" /* 18429 */;
+import GuildRoleSubscriptionTierTemplatePreviewCardDefault from "GuildRoleSubscriptionTierTemplatePreviewCard" /* 18473 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 15329 */;
+import GuildRoleSubscriptionTierTemplatesStore from "GuildRoleSubscriptionTierTemplatesStore" /* 15442 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, TouchableOpacity: closure_7, View: closure_8, FlatList: closure_9 } = get_ActivityIndicator);
-const usePriceTiers = fn(18259).usePriceTiers;
+const usePriceTiers = fn(18421).usePriceTiers;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 16;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginTop: 16 }, title: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, text: { marginLeft: 16, marginRight: 16 }, activityIndicator: null, editIcon: null, startFromScratch: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.activityIndicator = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -49,7 +49,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
     }
   } else if (null != error) {
     if (cResult[2] !== error.message) {
-      Text = Text(5086).Text;
+      Text = Text(5087).Text;
       const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
       const items = ["Error: ", error.message];
       obj3.children = items;
@@ -115,7 +115,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
     const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const items = ["Error: ", error.message];
     obj3.children = items;
-    tmp3 = closure_15(guildId(5086).Text, obj3);
+    tmp3 = closure_15(guildId(5087).Text, obj3);
   } else {
     tmp3 = null;
     if (null != templates) {
@@ -133,7 +133,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierTe
           obj.style = size;
           return closure_1_14(closure_1_8, obj);
         };
-        obj.snapToInterval = guildId(18311).CARD_WIDTH + v16;
+        obj.snapToInterval = guildId(18473).CARD_WIDTH + v16;
         obj.renderItem = function renderItem(template) {
           return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, { template: template.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };

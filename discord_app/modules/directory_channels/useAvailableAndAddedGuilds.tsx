@@ -1,13 +1,13 @@
-// === Module 12033: useAvailableAndAddedGuilds ===
+// === Module 11970: useAvailableAndAddedGuilds ===
 
-// Module 12033 (useAvailableAndAddedGuilds)
+// Module 11970 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import SortedGuildStore from "SortedGuildStore" /* 5968 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12027 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import SortedGuildStore from "SortedGuildStore" /* 5970 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 11964 */;
 
 const require = globalThis.__r;
 

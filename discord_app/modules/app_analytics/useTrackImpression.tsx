@@ -1,17 +1,17 @@
-// === Module 8941: useTrackImpression ===
+// === Module 8952: useTrackImpression ===
 
-// Module 8941 (useTrackImpression)
+// Module 8952 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtils2 from "AnalyticsUtils" /* 1264 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import useMountEffectDefault from "useMountEffect" /* 5392 */;
-import uniqueIdDefault from "uniqueId" /* 5941 */;
+import AnalyticsUtils2 from "AnalyticsUtils" /* 1265 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
+import _modDef1355 from "module_1355" /* 1355 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import useMountEffectDefault from "useMountEffect" /* 5393 */;
+import uniqueIdDefault from "uniqueId" /* 5942 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
 
 const require = globalThis.__r;
 
@@ -68,12 +68,12 @@ function trackImpression(type) {
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
-const ImpressionStore = fn(1265);
+const ImpressionStore = fn(1266);
 ({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: c10, getImpressionStack: closure_11 } = ImpressionStore);
-const AnalyticsUtils = fn(1272);
-let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1264).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
+const AnalyticsUtils = fn(1273);
+let closure_12 = AnalyticsUtils.trackMaker({ analyticEventConfigs: fn(1265).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const ReactCompilerGating = fn(558);
-let obj2 = { analyticEventConfigs: fn(1264).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+let obj2 = { analyticEventConfigs: fn(1265).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
     if (!tmp5) {
       ref.current = current;
     }
-    tmp5 = _modDef1354(ref.current, current);
+    tmp5 = _modDef1355(ref.current, current);
     if (!tmp8) {
       ref2.current = current2;
     }
@@ -170,13 +170,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5392)(() => {
+  obj(5393)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1354(ref.current, current);
+      const tmp6 = _modDef1355(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1354(ref2.current, current2);
+      const tmp10 = _modDef1355(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }
@@ -196,11 +196,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   });
   const effect = noop.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = _modDef1354(ref.current, current);
+      const tmp6 = _modDef1355(ref.current, current);
       if (!tmp6) {
         ref.current = current;
       }
-      const tmp10 = _modDef1354(ref2.current, current2);
+      const tmp10 = _modDef1355(ref2.current, current2);
       if (!tmp10) {
         ref2.current = current2;
       }

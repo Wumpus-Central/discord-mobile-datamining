@@ -1,20 +1,20 @@
-// === Module 17199: ThreadListEmpty ===
+// === Module 17349: ThreadListEmpty ===
 
-// Module 17199 (ThreadListEmpty)
+// Module 17349 (ThreadListEmpty)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import _modDef11953 from "module_11953" /* 11953 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import _modDef11890 from "module_11890" /* 11890 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 16 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp4 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef11953, size: native.Icon.Sizes.MEDIUM };
+    const obj2 = { source: _modDef11890, size: native.Icon.Sizes.MEDIUM };
     const tmp8 = React4(native.Icon, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -118,7 +118,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = closure_6();
   const obj = { style: tmp.container, children: null };
-  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef11953, size: native.Icon.Sizes.MEDIUM }) };
+  const obj2 = { style: tmp.iconWrapper, children: React4(native.Icon, { source: _modDef11890, size: native.Icon.Sizes.MEDIUM }) };
   const items = [React4(View, obj2), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

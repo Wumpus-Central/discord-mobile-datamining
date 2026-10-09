@@ -1,11 +1,11 @@
-// === Module 16819: StandaloneMembersView ===
+// === Module 16943: StandaloneMembersView ===
 
-// Module 16819 (StandaloneMembersView)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11444 */;
-import KickConfirmDefault from "KickConfirm" /* 11458 */;
-import BanConfirmDefault from "BanConfirm" /* 11460 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16820 */;
+// Module 16943 (StandaloneMembersView)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8621 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11351 */;
+import KickConfirmDefault from "KickConfirm" /* 11365 */;
+import BanConfirmDefault from "BanConfirm" /* 11390 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16944 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   const cResult = guildId(576).c(30);
   guildId = guildId.guildId;
   let obj = guildId(576);
-  const navigation = guildId(1502).useNavigation();
+  const navigation = guildId(1503).useNavigation();
   if (cResult[0] !== guildId) {
     class M {
       constructor() {
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
     tmp4 = cResult[2];
   }
   const effect = noop.useEffect(M, tmp4);
-  const sum = 16 + navigation(1630)().bottom;
+  const sum = 16 + navigation(1631)().bottom;
   if (cResult[3] !== sum) {
     class M {
       constructor() {
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   cResult[8] = guildId;
   cResult[9] = tmp9;
   cResult[10] = obj9;
-  const obj2 = guildId(1502);
+  const obj2 = guildId(1503);
 }) : (function StandaloneMembersView(guildId) {
   guildId = guildId.guildId;
   let obj2;

@@ -1,11 +1,11 @@
-// === Module 10369: useSafetyAlertsSettingOrDefault ===
+// === Module 10356: useSafetyAlertsSettingOrDefault ===
 
-// Module 10369 (useSafetyAlertsSettingOrDefault)
+// Module 10356 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useUserIsTeen from "useUserIsTeen" /* 7710 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import UserStore from "UserStore" /* 1389 */;
+import useUserIsTeen from "useUserIsTeen" /* 7719 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

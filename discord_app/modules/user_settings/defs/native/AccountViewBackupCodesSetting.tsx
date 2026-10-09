@@ -1,11 +1,11 @@
-// === Module 14858: AccountViewBackupCodesSetting ===
+// === Module 14966: AccountViewBackupCodesSetting ===
 
-// Module 14858 (AccountViewBackupCodesSetting)
+// Module 14966 (AccountViewBackupCodesSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14852 */;
-import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14859 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14960 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ function onConfirmBackups(onSuccess) {
 const Constants = fn(1085);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewBackups() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -67,7 +67,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewB
       const intl3 = closure_0(1126).intl;
       obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
       obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-      closure_1(14859)(obj);
+      closure_1(14967)(obj);
       return false;
     };
     cResult[0] = fn;
@@ -101,7 +101,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewB
     const intl3 = closure_0(1126).intl;
     obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
     obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-    closure_1(14859)(obj);
+    closure_1(14967)(obj);
     return false;
   }, []);
 });
@@ -110,8 +110,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(7966).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14770).useIs2FAEnabled,
+  parent: fn(7974).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14878).useIs2FAEnabled,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (function useOnViewBackups() {
     const cResult = c.c(1);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -139,7 +139,7 @@ const route = SettingBuilders.createRoute({
         const intl3 = closure_0(1126).intl;
         obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
         obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-        closure_1(14859)(obj);
+        closure_1(14967)(obj);
         return false;
       };
       cResult[0] = fn;
@@ -173,7 +173,7 @@ const route = SettingBuilders.createRoute({
       const intl3 = closure_0(1126).intl;
       obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
       obj.confirmColor = closure_0(1200).ButtonColors.BRAND;
-      closure_1(14859)(obj);
+      closure_1(14967)(obj);
       return false;
     }, []);
   }),

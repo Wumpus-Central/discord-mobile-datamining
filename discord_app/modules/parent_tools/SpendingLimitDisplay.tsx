@@ -1,15 +1,15 @@
-// === Module 14994: SpendingLimitDisplay ===
+// === Module 15106: SpendingLimitDisplay ===
 
-// Module 14994 (SpendingLimitDisplay)
+// Module 15106 (SpendingLimitDisplay)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import PriceUtils from "PriceUtils" /* 6926 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 6927 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14905 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
+import PriceUtils from "PriceUtils" /* 6933 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 6934 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 15017 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7252 */;
 
 require = fn;
 function getSpendingLimitDisplayState(amount, arg1) {
@@ -44,7 +44,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
     }
   }
 }
-const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpendingLimitFromUserSettings() {

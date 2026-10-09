@@ -1,19 +1,19 @@
-// === Module 13681: PromotionsHooks ===
+// === Module 9100: PromotionsHooks ===
 
-// Module 13681 (PromotionsHooks)
+// Module 9100 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import PromotionUtils from "PromotionUtils" /* 13547 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import PromotionUtils from "PromotionUtils" /* 9135 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
-import PromotionsStore from "PromotionsStore" /* 10006 */;
+import UserStore from "UserStore" /* 1390 */;
+import PromotionsStore from "PromotionsStore" /* 9101 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEligibleActiveOutboundPromotions(arg0) {
   const cResult = stateFromStores(576).c(13);

@@ -1,19 +1,19 @@
-// === Module 15661: CopyClientInfoSetting ===
+// === Module 15774: CopyClientInfoSetting ===
 
-// Module 15661 (CopyClientInfoSetting)
+// Module 15774 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4765 */;
-import CopyIcon from "CopyIcon" /* 5043 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import DeviceUtils from "DeviceUtils" /* 5066 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
-import ClipboardUtils from "ClipboardUtils" /* 6872 */;
-import ActionSheetRow from "ActionSheetRow" /* 6881 */;
-import ActionSheet from "ActionSheet" /* 6885 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11395 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
+import ToastUtils from "ToastUtils" /* 4767 */;
+import CopyIcon from "CopyIcon" /* 5044 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import DeviceUtils from "DeviceUtils" /* 5067 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
+import ClipboardUtils from "ClipboardUtils" /* 6879 */;
+import ActionSheetRow from "ActionSheetRow" /* 6888 */;
+import ActionSheet from "ActionSheet" /* 6892 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11300 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10450 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1381 */;
 
 require = fn;
 function getClientInfo() {
@@ -328,18 +328,18 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6118).ClipboardListIcon,
+  IconComponent: fn(6120).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(2040).DeveloperMode.useSetting,
+  usePredicate: fn(2041).DeveloperMode.useSetting,
   withArrow: true
 });
 const size = fn(2);

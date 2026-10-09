@@ -1,29 +1,29 @@
-// === Module 8770: FormComponents ===
+// === Module 8779: FormComponents ===
 
-// Module 8770 (FormComponents)
+// Module 8779 (FormComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import UserUtils from "UserUtils" /* 4922 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import NativeViewDefault from "NativeView" /* 6166 */;
-import TableRowGroup from "TableRowGroup" /* 6267 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7003 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7420 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 8771 */;
-import GuildTagDefault from "GuildTag" /* 8830 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 9105 */;
+import UserUtils from "UserUtils" /* 4923 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import NativeViewDefault from "NativeView" /* 6168 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7010 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7425 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 8780 */;
+import GuildTagDefault from "GuildTag" /* 8839 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 12971 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
 
 require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;

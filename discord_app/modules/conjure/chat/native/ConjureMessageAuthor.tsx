@@ -1,26 +1,26 @@
-// === Module 16936: ConjureMessageAuthor ===
+// === Module 17066: ConjureMessageAuthor ===
 
-// Module 16936 (ConjureMessageAuthor)
+// Module 17066 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Pressables from "Pressables" /* 6189 */;
-import AppsIcon from "AppsIcon" /* 8209 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 16937 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 16938 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 16939 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Pressables from "Pressables" /* 6191 */;
+import AppsIcon from "AppsIcon" /* 8217 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 17067 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 17068 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 17069 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(16933).MESSAGE_AVATAR_SIZE, height: fn(16933).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(17063).MESSAGE_AVATAR_SIZE, height: fn(17063).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -318,7 +318,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       }
       if (cResult[6] === tmp4) {
       }
-      PressableOpacity = PressableOpacity(6189).PressableOpacity;
+      PressableOpacity = PressableOpacity(6191).PressableOpacity;
       const obj2 = { onPress: tmp4, onLongPress: tmp4, accessibilityRole: "button", accessibilityLabel: tmp6, children: tmp8 };
       tmp = closure_6(PressableOpacity, obj2);
       cResult[6] = tmp4;

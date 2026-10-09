@@ -1,12 +1,12 @@
-// === Module 7443: GuildRoomStore ===
+// === Module 7448: GuildRoomStore ===
 
-// Module 7443 (GuildRoomStore)
+// Module 7448 (GuildRoomStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7444 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 7449 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;

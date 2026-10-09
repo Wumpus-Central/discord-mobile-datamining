@@ -1,7 +1,7 @@
-// === Module 12701: useTrackFavoritesGuildAddModalOpened ===
+// === Module 12646: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 12701 (useTrackFavoritesGuildAddModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+// Module 12646 (useTrackFavoritesGuildAddModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

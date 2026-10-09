@@ -1,17 +1,17 @@
-// === Module 13452: ClipsExperiment ===
+// === Module 13544: ClipsExperiment ===
 
-// Module 13452 (ClipsExperiment)
+// Module 13544 (ClipsExperiment)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PlatformUtilsAll from "PlatformUtils" /* 1381 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import UserStore from "UserStore" /* 1389 */;
+import PlatformUtilsAll from "PlatformUtils" /* 1382 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const PremiumTypes = fn(1391).PremiumTypes;
-const Features = fn(5115).Features;
-const ApexExperiment = fn(1452);
+const PremiumTypes = fn(1392).PremiumTypes;
+const Features = fn(5116).Features;
+const ApexExperiment = fn(1453);
 let obj2 = { kind: "user", name: "2026-03-clips-experiment", defaultConfig: { enableClips: false, ignorePlatformRestriction: false }, variations: null };
 let obj3 = { 1: null, 2: { enableClips: true, ignorePlatformRestriction: false } };
 obj3[2] = { enableClips: true, ignorePlatformRestriction: true };

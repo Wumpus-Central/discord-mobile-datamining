@@ -1,10 +1,10 @@
-// === Module 10157: ClydeIcon ===
+// === Module 10142: ClydeIcon ===
 
-// Module 10157 (ClydeIcon)
+// Module 10142 (ClydeIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod10158 from "module_10158" /* 10158 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod10143 from "module_10143" /* 10143 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ClydeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10158;
+    const tmpResult = _mod10143;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ClydeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10158, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10143, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

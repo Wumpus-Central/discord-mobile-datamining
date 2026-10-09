@@ -1,19 +1,19 @@
-// === Module 16946: useConjurePlanBotPreviewItems ===
+// === Module 17078: useConjurePlanBotPreviewItems ===
 
-// Module 16946 (useConjurePlanBotPreviewItems)
+// Module 17078 (useConjurePlanBotPreviewItems)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5430 */;
-import InteractionTypes from "InteractionTypes" /* 5438 */;
-import UserActionCreators from "UserActionCreators" /* 8281 */;
-import createMessage from "createMessage" /* 9763 */;
-import conjurePlanBot from "conjurePlanBot" /* 16947 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5431 */;
+import InteractionTypes from "InteractionTypes" /* 5439 */;
+import UserActionCreators from "UserActionCreators" /* 8289 */;
+import createMessage from "createMessage" /* 9782 */;
+import conjurePlanBot from "conjurePlanBot" /* 17079 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import UserRecord from "UserRecord" /* 1403 */;
-import UserStore from "UserStore" /* 1389 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import UserRecord from "UserRecord" /* 1404 */;
+import UserStore from "UserStore" /* 1390 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
 
 const require = globalThis.__r;
 const createMessageDefault = createMessage;
@@ -122,7 +122,7 @@ const Constants = fn(1085);
 let c10 = "31337";
 let c11 = "31338";
 let c12 = "31339";
-const guildTextChannelRecord = new fn(2067).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
+const guildTextChannelRecord = new fn(2068).GuildTextChannelRecord({ id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSampleUser(id, username, arg2) {
   const _require = id;

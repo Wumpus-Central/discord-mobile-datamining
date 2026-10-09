@@ -1,21 +1,21 @@
-// === Module 15819: CheckpointWelcomeScreen ===
+// === Module 15932: CheckpointWelcomeScreen ===
 
-// Module 15819 (CheckpointWelcomeScreen)
+// Module 15932 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import _modDef3083 from "module_3083" /* 3083 */;
 import _modDef3115 from "module_3115" /* 3115 */;
-import UserUtils from "UserUtils" /* 4922 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 15820 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15822 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15823 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserUtils from "UserUtils" /* 4923 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 15933 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15935 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 15936 */;
+import UserStore from "UserStore" /* 1390 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5090 */;
+import createStyles from "createStyles" /* 5091 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

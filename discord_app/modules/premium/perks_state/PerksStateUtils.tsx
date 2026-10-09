@@ -1,9 +1,9 @@
-// === Module 1395: PerksStateUtils ===
+// === Module 1396: PerksStateUtils ===
 
-// Module 1395 (PerksStateUtils)
+// Module 1396 (PerksStateUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import types from "types" /* 1396 */;
-import user from "user" /* 1397 */;
+import types from "types" /* 1397 */;
+import user from "user" /* 1398 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,24 +1,24 @@
-// === Module 13712: GuildBoostingMarketingTierCards ===
+// === Module 13804: GuildBoostingMarketingTierCards ===
 
-// Module 13712 (GuildBoostingMarketingTierCards)
+// Module 13804 (GuildBoostingMarketingTierCards)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import ColorUtils from "ColorUtils" /* 4927 */;
-import shared from "shared" /* 4929 */;
-import useThemeDefault from "useTheme" /* 4991 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import timing from "timing" /* 5091 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import Pressables from "Pressables" /* 6189 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6658 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7998 */;
-import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13715 */;
-import ChevronLargeUpIcon from "ChevronLargeUpIcon" /* 13716 */;
-import ChevronLargeDownIcon2 from "ChevronLargeDownIcon" /* 13718 */;
-import _modDef13720 from "module_13720" /* 13720 */;
-import _modDef13721 from "module_13721" /* 13721 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ColorUtils from "ColorUtils" /* 4928 */;
+import shared from "shared" /* 4930 */;
+import useThemeDefault from "useTheme" /* 4992 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import timing from "timing" /* 5092 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import Pressables from "Pressables" /* 6191 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6665 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 8006 */;
+import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13807 */;
+import ChevronLargeUpIcon from "ChevronLargeUpIcon" /* 13808 */;
+import ChevronLargeDownIcon2 from "ChevronLargeDownIcon" /* 13810 */;
+import _modDef13812 from "module_13812" /* 13812 */;
+import _modDef13813 from "module_13813" /* 13813 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -149,22 +149,22 @@ function GuildBoostingMarketingTierCard(ref) {
       ({ gradientHighlight: arr13[0], gradientHighlightBottom: arr13[1] } = tmp2);
       obj16.style = items11;
       items9[1] = options(tmp3Result5, obj16);
-      const obj17 = { source: _modDef13720, style: null };
+      const obj17 = { source: _modDef13812, style: null };
       const items12 = [, , ];
       ({ sparkleStar: arr14[0], sparkleStarPointed: arr14[1], sparkleStarPointed1: arr14[2] } = tmp2);
       obj17.style = items12;
       items9[2] = options(native.Icon, obj17);
-      const obj18 = { source: _modDef13720, style: null };
+      const obj18 = { source: _modDef13812, style: null };
       const items13 = [, , ];
       ({ sparkleStar: arr15[0], sparkleStarPointed: arr15[1], sparkleStarPointed2: arr15[2] } = tmp2);
       obj18.style = items13;
       items9[3] = options(native.Icon, obj18);
-      const obj19 = { source: _modDef13720, style: null };
+      const obj19 = { source: _modDef13812, style: null };
       const items14 = [, , ];
       ({ sparkleStar: arr16[0], sparkleStarPointed: arr16[1], sparkleStarPointed3: arr16[2] } = tmp2);
       obj19.style = items14;
       items9[4] = options(native.Icon, obj19);
-      const obj20 = { source: _modDef13721, style: null };
+      const obj20 = { source: _modDef13813, style: null };
       const items15 = [, , ];
       ({ sparkleStar: arr17[0], sparkleStarElongated: arr17[1], sparkleStarElongated1: arr17[2] } = tmp2);
       obj20.style = items15;
@@ -203,7 +203,7 @@ function GuildBoostingMarketingTierCard(ref) {
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: metroRequire, BoostedGuildTiers } = Constants);
-const BoostedGuildFeatures = fn(1391).BoostedGuildFeatures;
+const BoostedGuildFeatures = fn(1392).BoostedGuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let obj = { tier: BoostedGuildTiers.TIER_1, features: null };
@@ -211,7 +211,7 @@ let items = [
   {
     orderCollapsed: 0,
     isIncluded: true,
-    IconComponent: fn(8930).ReactionIcon,
+    IconComponent: fn(8941).ReactionIcon,
     getCopy() {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
@@ -231,7 +231,7 @@ let items = [
 let obj2 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.emoji });
@@ -239,7 +239,7 @@ let obj2 = {
 };
 items[1] = {
   isIncluded: true,
-  IconComponent: fn(12284).StickerIcon,
+  IconComponent: fn(12223).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
@@ -247,7 +247,7 @@ items[1] = {
 };
 let obj3 = {
   isIncluded: true,
-  IconComponent: fn(12284).StickerIcon,
+  IconComponent: fn(12223).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stickers });
@@ -255,7 +255,7 @@ let obj3 = {
 };
 items[2] = {
   isIncluded: true,
-  IconComponent: fn(12283).ScreenArrowIcon,
+  IconComponent: fn(12222).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
@@ -263,7 +263,7 @@ items[2] = {
 };
 let obj4 = {
   isIncluded: true,
-  IconComponent: fn(12283).ScreenArrowIcon,
+  IconComponent: fn(12222).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Jbg8oY, { resolution: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.screenShareQualityResolution });
@@ -272,7 +272,7 @@ let obj4 = {
 items[3] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8204).VoiceNormalIcon,
+  IconComponent: fn(8212).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { bitrate: null };
@@ -284,7 +284,7 @@ items[3] = {
 let obj5 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8204).VoiceNormalIcon,
+  IconComponent: fn(8212).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { bitrate: null };
@@ -295,7 +295,7 @@ let obj5 = {
 };
 items[4] = {
   isIncluded: true,
-  IconComponent: fn(8200).StageIcon,
+  IconComponent: fn(8208).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
@@ -303,7 +303,7 @@ items[4] = {
 };
 let obj6 = {
   isIncluded: true,
-  IconComponent: fn(8200).StageIcon,
+  IconComponent: fn(8208).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.stageVideoUsers });
@@ -312,7 +312,7 @@ let obj6 = {
 items[5] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9703).GifIcon,
+  IconComponent: fn(9722).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -321,7 +321,7 @@ items[5] = {
 let obj7 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9703).GifIcon,
+  IconComponent: fn(9722).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -329,7 +329,7 @@ let obj7 = {
 };
 items[6] = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -337,7 +337,7 @@ items[6] = {
 };
 let obj8 = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -345,7 +345,7 @@ let obj8 = {
 };
 items[7] = {
   isIncluded: false,
-  IconComponent: fn(9340).UploadIcon,
+  IconComponent: fn(9378).UploadIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { uploadSizeLimit: null };
@@ -356,7 +356,7 @@ items[7] = {
 };
 let obj9 = {
   isIncluded: false,
-  IconComponent: fn(9340).UploadIcon,
+  IconComponent: fn(9378).UploadIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { uploadSizeLimit: null };
@@ -367,7 +367,7 @@ let obj9 = {
 };
 items[8] = {
   isIncluded: false,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -375,7 +375,7 @@ items[8] = {
 };
 let obj10 = {
   isIncluded: false,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -383,7 +383,7 @@ let obj10 = {
 };
 items[9] = {
   isIncluded: false,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -391,7 +391,7 @@ items[9] = {
 };
 let obj11 = {
   isIncluded: false,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -399,7 +399,7 @@ let obj11 = {
 };
 items[10] = {
   isIncluded: false,
-  IconComponent: fn(5039).LinkIcon,
+  IconComponent: fn(5040).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -410,7 +410,7 @@ let items1 = [obj, , ];
 let obj13 = { tier: BoostedGuildTiers.TIER_2, features: null };
 let obj12 = {
   isIncluded: false,
-  IconComponent: fn(5039).LinkIcon,
+  IconComponent: fn(5040).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -419,7 +419,7 @@ let obj12 = {
 let items2 = [
   {
     isIncluded: true,
-    IconComponent: fn(8930).ReactionIcon,
+    IconComponent: fn(8941).ReactionIcon,
     getCopy() {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
@@ -438,7 +438,7 @@ let items2 = [
 ];
 let obj14 = {
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.emoji });
@@ -446,7 +446,7 @@ let obj14 = {
 };
 items2[1] = {
   isIncluded: true,
-  IconComponent: fn(12284).StickerIcon,
+  IconComponent: fn(12223).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
@@ -454,7 +454,7 @@ items2[1] = {
 };
 let obj15 = {
   isIncluded: true,
-  IconComponent: fn(12284).StickerIcon,
+  IconComponent: fn(12223).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stickers });
@@ -463,7 +463,7 @@ let obj15 = {
 items2[2] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(12283).ScreenArrowIcon,
+  IconComponent: fn(12222).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -473,7 +473,7 @@ items2[2] = {
 let obj16 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(12283).ScreenArrowIcon,
+  IconComponent: fn(12222).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -482,7 +482,7 @@ let obj16 = {
 };
 items2[3] = {
   isIncluded: true,
-  IconComponent: fn(8204).VoiceNormalIcon,
+  IconComponent: fn(8212).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { bitrate: null };
@@ -493,7 +493,7 @@ items2[3] = {
 };
 let obj17 = {
   isIncluded: true,
-  IconComponent: fn(8204).VoiceNormalIcon,
+  IconComponent: fn(8212).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { bitrate: null };
@@ -504,7 +504,7 @@ let obj17 = {
 };
 items2[4] = {
   isIncluded: true,
-  IconComponent: fn(8200).StageIcon,
+  IconComponent: fn(8208).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
@@ -512,7 +512,7 @@ items2[4] = {
 };
 let obj18 = {
   isIncluded: true,
-  IconComponent: fn(8200).StageIcon,
+  IconComponent: fn(8208).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.stageVideoUsers });
@@ -520,7 +520,7 @@ let obj18 = {
 };
 items2[5] = {
   isIncluded: true,
-  IconComponent: fn(9703).GifIcon,
+  IconComponent: fn(9722).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -528,7 +528,7 @@ items2[5] = {
 };
 let obj19 = {
   isIncluded: true,
-  IconComponent: fn(9703).GifIcon,
+  IconComponent: fn(9722).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -536,7 +536,7 @@ let obj19 = {
 };
 items2[6] = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -544,7 +544,7 @@ items2[6] = {
 };
 let obj20 = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -553,7 +553,7 @@ let obj20 = {
 items2[7] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9340).UploadIcon,
+  IconComponent: fn(9378).UploadIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { uploadSizeLimit: null };
@@ -565,7 +565,7 @@ items2[7] = {
 let obj21 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9340).UploadIcon,
+  IconComponent: fn(9378).UploadIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { uploadSizeLimit: null };
@@ -577,7 +577,7 @@ let obj21 = {
 items2[8] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -586,7 +586,7 @@ items2[8] = {
 let obj22 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -595,7 +595,7 @@ let obj22 = {
 items2[9] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -604,7 +604,7 @@ items2[9] = {
 const obj23 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -612,7 +612,7 @@ const obj23 = {
 };
 items2[10] = {
   isIncluded: false,
-  IconComponent: fn(5039).LinkIcon,
+  IconComponent: fn(5040).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -623,7 +623,7 @@ items1[1] = obj13;
 const obj25 = { tier: BoostedGuildTiers.TIER_3, features: null };
 const obj24 = {
   isIncluded: false,
-  IconComponent: fn(5039).LinkIcon,
+  IconComponent: fn(5040).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -632,7 +632,7 @@ const obj24 = {
 let items3 = [
   {
     isIncluded: true,
-    IconComponent: fn(8930).ReactionIcon,
+    IconComponent: fn(8941).ReactionIcon,
     getCopy() {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
@@ -651,7 +651,7 @@ let items3 = [
 ];
 const obj26 = {
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Tlz0x1, { numEmojiSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.emoji });
@@ -659,7 +659,7 @@ const obj26 = {
 };
 items3[1] = {
   isIncluded: true,
-  IconComponent: fn(12284).StickerIcon,
+  IconComponent: fn(12223).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
@@ -667,7 +667,7 @@ items3[1] = {
 };
 const obj27 = {
   isIncluded: true,
-  IconComponent: fn(12284).StickerIcon,
+  IconComponent: fn(12223).StickerIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.WgHNGI, { numStickerSlots: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stickers });
@@ -675,7 +675,7 @@ const obj27 = {
 };
 items3[2] = {
   isIncluded: true,
-  IconComponent: fn(12283).ScreenArrowIcon,
+  IconComponent: fn(12222).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -684,7 +684,7 @@ items3[2] = {
 };
 const obj28 = {
   isIncluded: true,
-  IconComponent: fn(12283).ScreenArrowIcon,
+  IconComponent: fn(12222).ScreenArrowIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { resolution: ServerBoostStreamQualityMarketingExperiment.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
@@ -694,7 +694,7 @@ const obj28 = {
 items3[3] = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8204).VoiceNormalIcon,
+  IconComponent: fn(8212).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { bitrate: null };
@@ -706,7 +706,7 @@ items3[3] = {
 const obj29 = {
   orderCollapsed: 2,
   isIncluded: true,
-  IconComponent: fn(8204).VoiceNormalIcon,
+  IconComponent: fn(8212).VoiceNormalIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { bitrate: null };
@@ -718,7 +718,7 @@ const obj29 = {
 items3[4] = {
   orderCollapsed: 4,
   isIncluded: true,
-  IconComponent: fn(8200).StageIcon,
+  IconComponent: fn(8208).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
@@ -727,7 +727,7 @@ items3[4] = {
 const obj30 = {
   orderCollapsed: 4,
   isIncluded: true,
-  IconComponent: fn(8200).StageIcon,
+  IconComponent: fn(8208).StageIcon,
   getCopy() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.Mrvzjg, { numStageSeats: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.stageVideoUsers });
@@ -736,7 +736,7 @@ const obj30 = {
 items3[5] = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(9703).GifIcon,
+  IconComponent: fn(9722).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -745,7 +745,7 @@ items3[5] = {
 const obj31 = {
   orderCollapsed: 3,
   isIncluded: true,
-  IconComponent: fn(9703).GifIcon,
+  IconComponent: fn(9722).GifIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.PbAyub);
@@ -753,7 +753,7 @@ const obj31 = {
 };
 items3[6] = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -761,7 +761,7 @@ items3[6] = {
 };
 const obj32 = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.tzGY0q);
@@ -770,7 +770,7 @@ const obj32 = {
 items3[7] = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9340).UploadIcon,
+  IconComponent: fn(9378).UploadIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { uploadSizeLimit: null };
@@ -782,7 +782,7 @@ items3[7] = {
 const obj33 = {
   orderCollapsed: 1,
   isIncluded: true,
-  IconComponent: fn(9340).UploadIcon,
+  IconComponent: fn(9378).UploadIcon,
   getCopy() {
     const intl = util.intl;
     const obj = { uploadSizeLimit: null };
@@ -793,7 +793,7 @@ const obj33 = {
 };
 items3[8] = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -801,7 +801,7 @@ items3[8] = {
 };
 const obj34 = {
   isIncluded: true,
-  IconComponent: fn(13713).ServerGridIcon,
+  IconComponent: fn(13805).ServerGridIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["1a5rjl"]);
@@ -809,7 +809,7 @@ const obj34 = {
 };
 items3[9] = {
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -817,7 +817,7 @@ items3[9] = {
 };
 const obj35 = {
   isIncluded: true,
-  IconComponent: fn(8930).ReactionIcon,
+  IconComponent: fn(8941).ReactionIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t["6PV6Qc"]);
@@ -826,7 +826,7 @@ const obj35 = {
 items3[10] = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(5039).LinkIcon,
+  IconComponent: fn(5040).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -835,12 +835,12 @@ items3[10] = {
 obj25.features = items3;
 items1[2] = obj25;
 let c13 = 150;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const obj38 = { cardWrapper: { marginRight: 10, width: 290 }, card: null, cardContent: null, pressableWrapper: null, cardHeading: null, cardTierName: null, cardTierBoostcount: null, cardFeatures: null, cardFeaturesInvisible: null, cardFeaturesWrapper: null, cardFeature: null, cardFeatureExcluded: null, cardFeatureExcludedCopy: null, cardFeatureLast: null, cardsScroller: null, cardsScrollerContent: null, cardFeatureIcon: null, cardFooter: null, cardFooterIcon: null, cardTierBadge: null, cardTierBadgeCopy: null, sparkleStar: null, sparkleStarPointed: null, sparkleStarElongated: null, sparkleStarPointed1: null, sparkleStarPointed2: null, sparkleStarPointed3: null, sparkleStarElongated1: null, gradientHighlight: null, gradientHighlightTop: null, gradientHighlightBottom: null };
 const obj36 = {
   orderCollapsed: 0,
   isIncluded: true,
-  IconComponent: fn(5039).LinkIcon,
+  IconComponent: fn(5040).LinkIcon,
   getCopy() {
     const intl = util.intl;
     return intl.string(util.t.adNGjW);
@@ -861,7 +861,7 @@ obj38.cardFeatureExcluded = { opacity: 0.5 };
 obj38.cardFeatureExcludedCopy = { textDecorationLine: "line-through" };
 obj38.cardFeatureLast = { marginBottom: 0 };
 const obj40 = { borderRadius: nativeDefault.radii.lg, overflow: "hidden", height: "100%" };
-obj38.cardsScroller = { flex: 1, marginTop: fn(13707).PROGRESS_BAR_SPACING };
+obj38.cardsScroller = { flex: 1, marginTop: fn(13799).PROGRESS_BAR_SPACING };
 obj38.cardsScrollerContent = { alignItems: "flex-start", display: "flex", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 8, paddingTop: 16, paddingBottom: 20 };
 obj38.cardFeatureIcon = { height: 24, marginRight: 6, width: 24 };
 obj38.cardFooter = { display: "flex", flexDirection: "row", marginTop: 24 };
@@ -869,8 +869,8 @@ obj38.cardFooterIcon = { flexGrow: 0, flexShrink: 0, height: 24, marginLeft: 8, 
 const rect = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
 obj38.cardTierBadge = rect;
 obj38.cardTierBadgeCopy = { textTransform: "uppercase" };
-const obj41 = { flex: 1, marginTop: fn(13707).PROGRESS_BAR_SPACING };
-obj38.sparkleStar = { position: "absolute", tintColor: fn(5974).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
+const obj41 = { flex: 1, marginTop: fn(13799).PROGRESS_BAR_SPACING };
+obj38.sparkleStar = { position: "absolute", tintColor: fn(5976).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
 obj38.sparkleStarPointed = { height: 15, width: 18 };
 obj38.sparkleStarElongated = { height: 45, width: 23 };
 obj38.sparkleStarPointed1 = { top: -7, right: 35 };
@@ -1070,7 +1070,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function TierFe
   return closure_9(features(isVisible[23]).View, obj3);
 });
 ReactCompilerGating = fn(558);
-const obj42 = { position: "absolute", tintColor: fn(5974).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
+const obj42 = { position: "absolute", tintColor: fn(5976).DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx");
 

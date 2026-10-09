@@ -1,19 +1,19 @@
-// === Module 8677: ThreadMemberListStore ===
+// === Module 8686: ThreadMemberListStore ===
 
-// Module 8677 (ThreadMemberListStore)
+// Module 8686 (ThreadMemberListStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6966 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
-import UserStore from "UserStore" /* 1389 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6973 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5756 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function handleUserUpdate(user) {

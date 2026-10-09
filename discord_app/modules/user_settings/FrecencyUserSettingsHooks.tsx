@@ -1,9 +1,9 @@
-// === Module 9692: FrecencyUserSettingsHooks ===
+// === Module 9711: FrecencyUserSettingsHooks ===
 
-// Module 9692 (FrecencyUserSettingsHooks)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2045 */;
+// Module 9711 (FrecencyUserSettingsHooks)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 
 const require = globalThis.__r;
 

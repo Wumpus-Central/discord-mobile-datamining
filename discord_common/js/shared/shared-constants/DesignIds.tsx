@@ -1,6 +1,6 @@
-// === Module 1367: DesignIds ===
+// === Module 1368: DesignIds ===
 
-// Module 1367 (DesignIds)
+// Module 1368 (DesignIds)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/DesignIds.tsx");

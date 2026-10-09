@@ -1,21 +1,21 @@
-// === Module 15721: DevToolsDataStorageScreen ===
+// === Module 15834: DevToolsDataStorageScreen ===
 
-// Module 15721 (DevToolsDataStorageScreen)
+// Module 15834 (DevToolsDataStorageScreen)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Link from "Link" /* 1503 */;
+import Link from "Link" /* 1504 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2107 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import TableRow from "TableRow" /* 6184 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 6729 */;
-import FastestListDefault from "FastestList" /* 6735 */;
-import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10210 */;
-import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10212 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import TableRow from "TableRow" /* 6186 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6663 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 6736 */;
+import FastestListDefault from "FastestList" /* 6742 */;
+import useFastestListTableRowPlaceholderConfigDefault from "useFastestListTableRowPlaceholderConfig" /* 10195 */;
+import useScaledSectionHeightDefault from "useScaledSectionHeight" /* 10197 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -26,7 +26,7 @@ require = fn;
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, sectionHeader: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj.sectionHeader = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
   }
   if (cResult[2] !== tmp4) {
     const obj2 = { title: tmp4 };
-    const tmp8 = jsx(tmp(6828).BottomSheetTitleHeader, { title: tmp4 });
+    const tmp8 = jsx(tmp(6835).BottomSheetTitleHeader, { title: tmp4 });
     cResult[2] = tmp4;
     cResult[3] = tmp8;
     let tmp6 = tmp8;
@@ -237,7 +237,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       return tmp11;
     }
     const obj3 = { header: tmp6, children: tmp9 };
-    const tmp13 = jsx(tmp(6885).ActionSheet, { header: tmp6, children: tmp9 });
+    const tmp13 = jsx(tmp(6892).ActionSheet, { header: tmp6, children: tmp9 });
     cResult[7] = tmp6;
     cResult[8] = tmp9;
     cResult[9] = tmp13;
@@ -245,7 +245,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
   }
   const obj4 = {
     hasIcons: false,
-    children: jsx(store(6881).ActionSheetRow, {
+    children: jsx(store(6888).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -256,9 +256,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   };
-  const tmp10 = jsx(store(6881).ActionSheetRow.Group, {
+  const tmp10 = jsx(store(6888).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(6881).ActionSheetRow, {
+    children: jsx(store(6888).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -287,10 +287,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
 }) : (function DevToolsPersistedStoresActionSheet(store) {
   store = store.store;
   const close = store.close;
-  const obj = { header: jsx(store(6828).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+  const obj = { header: jsx(store(6835).BottomSheetTitleHeader, { title: store.getName() }), children: null };
   const obj3 = {
     hasIcons: false,
-    children: jsx(store(6881).ActionSheetRow, {
+    children: jsx(store(6888).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -301,9 +301,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   };
-  obj.children = jsx(store(6881).ActionSheetRow.Group, {
+  obj.children = jsx(store(6888).ActionSheetRow.Group, {
     hasIcons: false,
-    children: jsx(store(6881).ActionSheetRow, {
+    children: jsx(store(6888).ActionSheetRow, {
       variant: "danger",
       label: "Clear persisted store",
       subLabel: "App restart required to re-init the cleared store",
@@ -314,7 +314,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function DevToo
       }
     })
   });
-  return jsx(store(6885).ActionSheet, { header: jsx(store(6828).BottomSheetTitleHeader, { title: store.getName() }), children: null });
+  return jsx(store(6892).ActionSheet, { header: jsx(store(6835).BottomSheetTitleHeader, { title: store.getName() }), children: null });
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsDataStorageScreen.tsx");

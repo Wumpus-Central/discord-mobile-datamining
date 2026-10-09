@@ -1,16 +1,16 @@
-// === Module 8653: usePrivacyLevelHelpText ===
+// === Module 8662: usePrivacyLevelHelpText ===
 
-// Module 8653 (usePrivacyLevelHelpText)
+// Module 8662 (usePrivacyLevelHelpText)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const constants = fn(2069).GuildScheduledEventPrivacyLevel;
+const constants = fn(2070).GuildScheduledEventPrivacyLevel;
 const Permissions = fn(1096).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

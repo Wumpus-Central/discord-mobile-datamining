@@ -1,14 +1,14 @@
-// === Module 7098: EntitlementStore ===
+// === Module 7103: EntitlementStore ===
 
-// Module 7098 (EntitlementStore)
+// Module 7103 (EntitlementStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeAll from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1088 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7103 */;
-import EntitlementRecord from "EntitlementRecord" /* 7099 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7101 */;
-import SKUStore from "SKUStore" /* 6092 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7108 */;
+import EntitlementRecord from "EntitlementRecord" /* 7104 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7106 */;
+import SKUStore from "SKUStore" /* 6094 */;
 
 require = fn;
 function addEntitlement(entitlement) {
@@ -49,7 +49,7 @@ function handleEntitlementUpdate(entitlement) {
 }
 const Constants = fn(1085);
 ({ EntitlementSourceTypes: metroRequire, EntitlementTypes: closure_7 } = Constants);
-let closure_8 = fn(1391).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_8 = fn(1392).PREMIUM_SUBSCRIPTION_APPLICATION;
 const dependencyMap = {};
 let closure_10 = {};
 const dependencyMap2 = {};

@@ -1,17 +1,17 @@
-// === Module 16862: conjureProjectActions ===
+// === Module 16986: conjureProjectActions ===
 
-// Module 16862 (conjureProjectActions)
+// Module 16986 (conjureProjectActions)
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import ToastUtils from "ToastUtils" /* 4765 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import CopyIcon from "CopyIcon" /* 5043 */;
-import AlertModal from "AlertModal" /* 5303 */;
-import ChannelUtils from "ChannelUtils" /* 5410 */;
-import ClipboardUtils from "ClipboardUtils" /* 6872 */;
-import conjureProjectMute from "conjureProjectMute" /* 13074 */;
-import ConjureArchivePicker from "ConjureArchivePicker" /* 16849 */;
-import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 16867 */;
+import ToastUtils from "ToastUtils" /* 4767 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import CopyIcon from "CopyIcon" /* 5044 */;
+import AlertModal from "AlertModal" /* 5304 */;
+import ChannelUtils from "ChannelUtils" /* 5411 */;
+import ClipboardUtils from "ClipboardUtils" /* 6879 */;
+import conjureProjectMute from "conjureProjectMute" /* 12949 */;
+import ConjureArchivePicker from "ConjureArchivePicker" /* 16973 */;
+import openConjureRemoveAppAlertDefault from "openConjureRemoveAppAlert" /* 16991 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -86,13 +86,13 @@ let closure_9 = async function _importIntoProject(arg0) {
             closure_2_1();
           }
           const intl2 = tmp3(1126).intl;
-          await tmp3(16849).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3827).Owerd3));
+          await tmp3(16973).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3827).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
             const intl = tmp3(1126).intl;
-            tmp3(4765).presentError(intl.string(v2(3827)["Q+l4Hv"]));
+            tmp3(4767).presentError(intl.string(v2(3827)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(4765);
+            tmp3(4767);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -120,11 +120,11 @@ let closure_9 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(11251);
+const ConjureProjectStore = fn(10617);
 ({ canRemixProject: metroRequire, isProjectOwner: closure_7 } = ConjureProjectStore);
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/conjureProjectActions.tsx");
 
@@ -231,7 +231,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
         const intl = project(1126).intl;
-        project(4765).presentError(intl.string(closure_1_1(3827)["Q+l4Hv"]));
+        project(4767).presentError(intl.string(closure_1_1(3827)["Q+l4Hv"]));
       });
     };
     items1.push(obj6);
@@ -287,7 +287,11 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     obj11.action = onOpenSettings;
     items1.push(obj11);
   }
-  if (null != removeTarget) {
+  let canRemoveBot;
+  if (removeTarget != null) {
+    canRemoveBot = removeTarget.canRemoveBot;
+  }
+  if (true === canRemoveBot) {
     const obj12 = { label: null, IconComponent: null, destructive: true, action: null };
     const intl12 = tmp14(muted[7]).intl;
     const obj13 = { server: removeTarget.guildName };
@@ -316,7 +320,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         obj3.onConfirm = function onConfirm() {
           const result = project(muted[30]).deleteProjectInBackground(id.id, () => {
             const intl = id(1126).intl;
-            return id(4765).presentError(intl.string(closure_1_1(3827)["0XDHob"]));
+            return id(4767).presentError(intl.string(closure_1_1(3827)["0XDHob"]));
           });
         };
         AlertModal.showConfirmModal(obj3);

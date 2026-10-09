@@ -1,10 +1,10 @@
-// === Module 17747: useFormattedEndTime ===
+// === Module 17901: useFormattedEndTime ===
 
-// Module 17747 (useFormattedEndTime)
+// Module 17901 (useFormattedEndTime)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

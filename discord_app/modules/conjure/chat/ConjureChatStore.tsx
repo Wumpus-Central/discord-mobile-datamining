@@ -1,25 +1,25 @@
-// === Module 13073: ConjureChatStore ===
+// === Module 12948: ConjureChatStore ===
 
-// Module 13073 (ConjureChatStore)
+// Module 12948 (ConjureChatStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2040 */;
+import UserSettings from "UserSettings" /* 2041 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import ConjureUtils from "ConjureUtils" /* 6932 */;
-import SoundUtils from "SoundUtils" /* 10770 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 12366 */;
-import conjureProjectMute from "conjureProjectMute" /* 13074 */;
-import _slicedToArray from "module_32" /* 32 */;
+import ConjureUtils from "ConjureUtils" /* 6939 */;
+import SoundUtils from "SoundUtils" /* 10940 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 11371 */;
+import conjureProjectMute from "conjureProjectMute" /* 12949 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12577 */;
+import _slicedToArray from "module_32" /* 32 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7252 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12517 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5755 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5756 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -220,12 +220,18 @@ function resolveTurnIndex(arr3, activeTurnId) {
       while (true) {
         let tmp7 = arr3[diff1];
         if ("assistant" === tmp7.role) {
-          let someResult = true === tmp7.finished || true === tmp7.continued || "" !== tmp7.content || null != tmp7.proposal || null != tmp7.clarification || null != tmp7.intake;
-          if (!someResult) {
+          let tmp9 = true === tmp7.finished || true === tmp7.continued || "" !== tmp7.content || null != tmp7.proposal || null != tmp7.clarification || null != tmp7.intake;
+          if (!tmp9) {
             let steps = tmp7.steps;
-            someResult = steps.some((kind) => set.has(kind.kind));
+            value = weakMap.get(steps);
+            if (null == value) {
+              let someResult = steps.some((kind) => set.has(kind.kind));
+              let result = weakMap.set(steps, someResult);
+              value = someResult;
+            }
+            tmp9 = value;
           }
-          if (!someResult) {
+          if (!tmp9) {
             if (null == tmp7.turn_id) {
               break;
             }
@@ -241,8 +247,8 @@ function resolveTurnIndex(arr3, activeTurnId) {
 function patchTurn(projectId, turnId, fn) {
   value = map.get(projectId);
   if (null != value) {
-    const tmp22 = resolveTurnIndex(value, turnId);
-    if (-1 !== tmp22) {
+    const tmp20 = resolveTurnIndex(value, turnId);
+    if (-1 !== tmp20) {
       let tmp7 = tmp6;
       if (null != turnId) {
         tmp7 = tmp6;
@@ -261,22 +267,23 @@ function patchTurn(projectId, turnId, fn) {
           }
         }
       }
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, tmp22), 0);
-      items[arraySpreadResult] = fn(tmp7);
-      HermesBuiltin.arraySpread(value.slice(tmp22 + 1), arraySpreadResult + 1);
-      const result = map.set(projectId, items);
+      const tmp14 = fn(tmp7);
+      if (tmp14 !== value[tmp20]) {
+        const substr = value.slice();
+        substr[tmp20] = tmp14;
+        const result = map.set(projectId, substr);
+      }
     } else {
-      const items1 = [];
+      const items = [];
       if (null != turnId) {
         const obj3 = { turnId };
         let obj4 = obj3;
       } else {
         obj4 = {};
       }
-      items1[HermesBuiltin.arraySpread(value, 0)] = fn(newMessage("assistant", "", obj4));
-      const result1 = map.set(projectId, items1);
-      const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
+      items[HermesBuiltin.arraySpread(value, 0)] = fn(newMessage("assistant", "", obj4));
+      const result1 = map.set(projectId, items);
+      const arraySpreadResult = HermesBuiltin.arraySpread(value, 0);
     }
   }
 }
@@ -296,25 +303,37 @@ function hasOpenTurn(map) {
           if (!tmp5) {
             let flag = flag2;
             if (!flag2) {
-              let someResult = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
-              if (!someResult) {
+              let tmp6 = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
+              if (!tmp6) {
                 let steps = tmp.steps;
-                someResult = steps.some((kind) => set.has(kind.kind));
+                value = weakMap.get(steps);
+                if (null == value) {
+                  let someResult = steps.some((kind) => set.has(kind.kind));
+                  let result = weakMap.set(steps, someResult);
+                  value = someResult;
+                }
+                tmp6 = value;
               }
               flag = true;
-              if (!someResult) {
+              if (!tmp6) {
                 break;
               }
             }
             tmp4 = flag;
             if (null != tmp.turn_id) {
-              let someResult1 = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
-              if (!someResult1) {
+              let tmp10 = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
+              if (!tmp10) {
                 let steps2 = tmp.steps;
-                someResult1 = steps2.some((kind) => set.has(kind.kind));
+                value2 = weakMap.get(steps2);
+                if (null == value2) {
+                  let someResult1 = steps2.some((kind) => set.has(kind.kind));
+                  let result1 = weakMap.set(steps2, someResult1);
+                  value2 = someResult1;
+                }
+                tmp10 = value2;
               }
               tmp4 = flag;
-              if (!someResult1) {
+              if (!tmp10) {
                 return true;
               }
             }
@@ -374,7 +393,7 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
       const obj4 = { projectId, guildId: conjureWorkspaceGuildId, title, body, route: null, sound: null, volume: 0.4 };
       let CHANNELResult = null;
       if (null != conjureWorkspaceGuildId) {
-        CHANNELResult = closure_1_15.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
+        CHANNELResult = state.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
       }
       obj4.route = CHANNELResult;
       let tmp24;
@@ -445,41 +464,47 @@ function recordThinkingTransition(projectId) {
       } else {
         map1.delete(projectId);
       }
-      value2 = map.get(projectId);
-      if (null != value2) {
-        let diff1 = value2.length - 1;
+      value3 = map.get(projectId);
+      if (null != value3) {
+        let diff1 = value3.length - 1;
         if (0 <= diff1) {
-          while ("assistant" !== value2[diff1].role) {
+          while ("assistant" !== value3[diff1].role) {
             diff1 = diff1 - 1;
           }
-          if (null == value2[diff1].finished_at) {
-            let someResult1 = true === tmp15.finished || true === tmp15.continued;
-            if (!someResult1) {
-              someResult1 = "" !== tmp15.content;
+          if (null == value3[diff1].finished_at) {
+            let tmp18 = true === tmp15.finished || true === tmp15.continued;
+            if (!tmp18) {
+              tmp18 = "" !== tmp15.content;
             }
-            if (!someResult1) {
-              someResult1 = null != tmp15.proposal;
+            if (!tmp18) {
+              tmp18 = null != tmp15.proposal;
             }
-            if (!someResult1) {
-              someResult1 = null != tmp15.clarification;
+            if (!tmp18) {
+              tmp18 = null != tmp15.clarification;
             }
-            if (!someResult1) {
-              someResult1 = null != tmp15.intake;
+            if (!tmp18) {
+              tmp18 = null != tmp15.intake;
             }
-            if (!someResult1) {
+            if (!tmp18) {
               const steps2 = tmp15.steps;
-              someResult1 = steps2.some((kind) => set.has(kind.kind));
+              let value4 = weakMap.get(steps2);
+              if (null == value4) {
+                const someResult1 = steps2.some((kind) => set.has(kind.kind));
+                const result2 = weakMap.set(steps2, someResult1);
+                value4 = someResult1;
+              }
+              tmp18 = value4;
             }
-            if (someResult1) {
+            if (tmp18) {
               const items = [];
-              const arraySpreadResult = HermesBuiltin.arraySpread(value2.slice(0, diff1), 0);
-              const obj4 = {};
+              const arraySpreadResult = HermesBuiltin.arraySpread(value3.slice(0, diff1), 0);
+              const obj5 = {};
               const merged = Object.assign(tmp15);
               const _Date2 = Date;
-              obj4.finished_at = Date.now();
-              items[arraySpreadResult] = obj4;
-              HermesBuiltin.arraySpread(value2.slice(diff1 + 1), arraySpreadResult + 1);
-              const result2 = map.set(projectId, items);
+              obj5.finished_at = Date.now();
+              items[arraySpreadResult] = obj5;
+              HermesBuiltin.arraySpread(value3.slice(diff1 + 1), arraySpreadResult + 1);
+              const result3 = map.set(projectId, items);
             }
           }
         }
@@ -579,56 +604,23 @@ function applyAgentReactions(items) {
   }
   return mapped;
 }
-function openTimeline() {
-  let items = steps;
-  if (steps === undefined) {
-    items = [];
-  }
-  set = new Set();
-  let num = -1;
-  const entries = items.entries();
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    let tmp6 = tmp5[1];
-    let tmp7 = tmp6;
-    if (null != tmp6.turn_seq) {
-      let addResult = set.add(tmp7.turn_seq);
-    }
-    let tmp11 = -1 === num;
-    if (tmp11) {
-      tmp11 = "todos" === tmp7.kind;
-    }
-    if (tmp11) {
-      tmp11 = null == tmp7.task_id;
-    }
-    if (tmp11) {
-      num = tmp5[0];
-    }
-    continue;
-  }
-  const obj = { steps: null, seenSeq: set, todosAt: num };
-  const items1 = [...items];
-  obj.steps = items1;
-  return obj;
-}
-function pushStep(todosAt, step) {
+function pushStep(substr, todosAt, step) {
   if (null == step.turn_seq) {
     if ("todos" === step.kind) {
       if (null == step.task_id) {
         if (-1 === todosAt.todosAt) {
-          todosAt.todosAt = todosAt.steps.length;
-          const steps = todosAt.steps;
-          steps.push(step);
+          todosAt.todosAt = substr.length;
+          substr.push(step);
           if (null != step.turn_seq) {
             const seenSeq4 = todosAt.seenSeq;
             seenSeq4.add(step.turn_seq);
           }
         } else {
-          if (null != todosAt.steps[todosAt.todosAt].turn_seq) {
+          if (null != substr[todosAt.todosAt].turn_seq) {
             const seenSeq2 = todosAt.seenSeq;
-            seenSeq2.delete(tmp.turn_seq);
+            seenSeq2.delete(tmp2.turn_seq);
           }
-          todosAt.steps[todosAt.todosAt] = step;
+          substr[todosAt.todosAt] = step;
           if (null != step.turn_seq) {
             const seenSeq3 = todosAt.seenSeq;
             seenSeq3.add(step.turn_seq);
@@ -636,8 +628,7 @@ function pushStep(todosAt, step) {
         }
       }
     }
-    const steps1 = todosAt.steps;
-    steps1.push(step);
+    substr.push(step);
     if (null != step.turn_seq) {
       const seenSeq5 = todosAt.seenSeq;
       seenSeq5.add(step.turn_seq);
@@ -647,12 +638,15 @@ function pushStep(todosAt, step) {
   }
 }
 function replayTimeline(steps) {
-  const tmp = openTimeline();
+  const items = [];
+  const obj = { seenSeq: new Set(), todosAt: -1 };
+  set = new Set();
   while (tmp2 !== undefined) {
-    let tmp5 = pushStep(tmp, tmp3);
+    let tmp5 = pushStep(items, obj, tmp3);
     continue;
   }
-  return tmp.steps;
+  const result = weakMap1.set(items, obj);
+  return items;
 }
 function stoppable(role) {
   let tmp = "assistant" === role.role;
@@ -667,24 +661,30 @@ function stoppable(role) {
     tmp = !tmp2;
   }
   if (tmp) {
-    let someResult = true === role.finished || true === role.continued;
-    if (!someResult) {
-      someResult = "" !== role.content;
+    let tmp3 = true === role.finished || true === role.continued;
+    if (!tmp3) {
+      tmp3 = "" !== role.content;
     }
-    if (!someResult) {
-      someResult = null != role.proposal;
+    if (!tmp3) {
+      tmp3 = null != role.proposal;
     }
-    if (!someResult) {
-      someResult = null != role.clarification;
+    if (!tmp3) {
+      tmp3 = null != role.clarification;
     }
-    if (!someResult) {
-      someResult = null != role.intake;
+    if (!tmp3) {
+      tmp3 = null != role.intake;
     }
-    if (!someResult) {
+    if (!tmp3) {
       const steps = role.steps;
-      someResult = steps.some((kind) => set.has(kind.kind));
+      value = weakMap.get(steps);
+      if (null == value) {
+        const someResult = steps.some((kind) => set.has(kind.kind));
+        const result = weakMap.set(steps, someResult);
+        value = someResult;
+      }
+      tmp3 = value;
     }
-    tmp = !someResult;
+    tmp = !tmp3;
   }
   if (tmp) {
     tmp = true !== role.stopRequested;
@@ -693,12 +693,12 @@ function stoppable(role) {
 }
 let closure_3 = ["disposition"];
 let closure_4 = ["disposition"];
-let closure_5 = ["disposition"];
 const Constants = fn(1085);
-({ Routes: closure_15, StatusTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
+({ Routes: closure_14, StatusTypes: closure_15 } = Constants);
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
 const bit_message1 = "bit_message1";
 let set = new Set(["reply", "plan_proposed", "terminal_error"]);
+const weakMap = new WeakMap();
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
@@ -797,6 +797,7 @@ prototype["isAnyThinking"] = function isAnyThinking() {
 };
 const map6 = new Map();
 const set3 = new Set();
+const weakMap1 = new WeakMap();
 const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     map5.clear();
@@ -972,23 +973,38 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
   },
   CONJURE_CHAT_MESSAGE_DISPOSITION: function handleChatMessageDisposition(arg0) {
     ({ projectId, id: require, activeTurnId, disposition } = arg0);
+    c1 = undefined;
     value = map.get(projectId);
     if (null == value) {
       return false;
     } else {
       const findIndexResult = value.findIndex((id) => id.id === require);
+      c1 = findIndexResult;
       if (-1 === findIndexResult) {
         return false;
       } else {
-        let arr3 = value;
-        if (value[findIndexResult].disposition !== disposition) {
+        let found = value;
+        if ("steered" === disposition) {
+          found = value.filter((in_reply_to, index) => {
+            let tmp = index <= c1;
+            if (!tmp) {
+              tmp = in_reply_to.in_reply_to !== require;
+            }
+            if (!tmp) {
+              tmp = "queued" !== in_reply_to.acknowledges;
+            }
+            return tmp;
+          });
+        }
+        let arr3 = found;
+        if (found[findIndexResult].disposition !== disposition) {
           const items = [];
-          const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, findIndexResult), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(found.slice(0, findIndexResult), 0);
           const obj2 = {};
-          const merged = Object.assign(value[findIndexResult]);
+          const merged = Object.assign(found[findIndexResult]);
           obj2.disposition = disposition;
           items[arraySpreadResult] = obj2;
-          HermesBuiltin.arraySpread(value.slice(findIndexResult + 1), arraySpreadResult + 1);
+          HermesBuiltin.arraySpread(found.slice(findIndexResult + 1), arraySpreadResult + 1);
           arr3 = items;
         }
         let num4 = -1;
@@ -999,14 +1015,14 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             num5 = -1;
             if (0 <= diff) {
               while (true) {
-                let tmp10 = arr3[diff];
-                let tmp11 = tmp10.turn_id === activeTurnId;
-                if (!tmp11) {
+                let tmp9 = arr3[diff];
+                let tmp10 = tmp9.turn_id === activeTurnId;
+                if (!tmp10) {
                   let _HermesInternal = HermesInternal;
-                  tmp11 = tmp10.id === "" + c33 + activeTurnId;
+                  tmp10 = tmp9.id === "" + c33 + activeTurnId;
                 }
                 num5 = diff;
-                if (tmp11) {
+                if (tmp10) {
                   break;
                 } else {
                   diff = diff - 1;
@@ -1020,21 +1036,21 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
           }
           num4 = num5;
         }
-        let tmp14 = num4;
-        let arr4 = arr3;
+        let tmp13 = num4;
+        let arr5 = arr3;
         if ("steered" === disposition) {
-          tmp14 = num4;
-          arr4 = arr3;
+          tmp13 = num4;
+          arr5 = arr3;
           if (-1 === num4) {
-            tmp14 = num4;
-            arr4 = arr3;
+            tmp13 = num4;
+            arr5 = arr3;
             if (null != activeTurnId) {
               const tmp39 = resolveTurnIndex(arr3, activeTurnId);
-              tmp14 = num4;
-              arr4 = arr3;
+              tmp13 = num4;
+              arr5 = arr3;
               if (-1 !== tmp39) {
-                tmp14 = num4;
-                arr4 = arr3;
+                tmp13 = num4;
+                arr5 = arr3;
                 if (tmp39 < findIndexResult) {
                   const obj3 = {};
                   const merged1 = Object.assign(arr3[tmp39]);
@@ -1052,40 +1068,54 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                     const arraySpreadResult14 = HermesBuiltin.arraySpread(arr3.slice(0, tmp39), 0);
                     items2[arraySpreadResult14] = obj3;
                     HermesBuiltin.arraySpread(arr3.slice(tmp39 + 1), arraySpreadResult14 + 1);
-                    tmp14 = tmp39;
-                    arr4 = items2;
+                    tmp13 = tmp39;
+                    arr5 = items2;
                   }
                 }
               }
             }
           }
         }
-        if (-1 !== tmp14) {
-          if (tmp14 <= findIndexResult) {
+        if (-1 !== tmp13) {
+          if (tmp13 <= findIndexResult) {
             const items3 = [, ];
-            const arraySpreadResult16 = HermesBuiltin.arraySpread(arr4.slice(0, tmp14), 0);
+            const arraySpreadResult16 = HermesBuiltin.arraySpread(arr5.slice(0, tmp13), 0);
             const obj4 = {};
-            const merged2 = Object.assign(arr4[tmp14]);
+            const merged2 = Object.assign(arr5[tmp13]);
             obj4.continued = true;
-            let finished_at = arr4[tmp14].finished_at;
+            let finished_at = arr5[tmp13].finished_at;
             if (finished_at == null) {
               const _Date = Date;
               finished_at = Date.now();
             }
             obj4.finished_at = finished_at;
             items3[arraySpreadResult16] = obj4;
-            const arraySpreadResult17 = HermesBuiltin.arraySpread(arr4.slice(tmp14 + 1, findIndexResult + 1), arraySpreadResult16 + 1);
+            const arraySpreadResult17 = HermesBuiltin.arraySpread(arr5.slice(tmp13 + 1, findIndexResult + 1), arraySpreadResult16 + 1);
             const obj5 = { turnId: activeTurnId };
             items3[arraySpreadResult17] = newMessage("assistant", "", obj5);
-            HermesBuiltin.arraySpread(arr4.slice(findIndexResult + 1), arraySpreadResult17 + 1);
+            HermesBuiltin.arraySpread(arr5.slice(findIndexResult + 1), arraySpreadResult17 + 1);
             const result1 = map.set(projectId, items3);
             recordThinkingTransition(projectId);
           }
         }
-        if (arr4 !== value) {
-          const result2 = map.set(projectId, arr4);
+        if (arr5 !== value) {
+          const result2 = map.set(projectId, arr5);
         }
-        return arr4 !== value;
+        return arr5 !== value;
+      }
+    }
+  },
+  CONJURE_CHAT_MESSAGE_CANCELLED: function handleChatMessageCancelled(arg0) {
+    ({ projectId, id: require } = arg0);
+    value = map.get(projectId);
+    if (null == value) {
+      return false;
+    } else {
+      const found = value.filter((id) => id.id !== require && id.in_reply_to !== tmp);
+      if (found.length === value.length) {
+        return false;
+      } else {
+        const result = map.set(projectId, found);
       }
     }
   },
@@ -1133,18 +1163,15 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       tmp2.in_reply_to = inReplyTo;
       const findIndexResult = value.findIndex((id) => id.id === inReplyTo);
       if (-1 !== findIndexResult) {
-        const disposition = tmp7.disposition;
+        const disposition = value[findIndexResult].disposition;
         if (null != disposition) {
           tmp2.acknowledges = disposition;
         }
-        const items = [, ];
-        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, findIndexResult), 0);
-        items[arraySpreadResult] = _objectWithoutProperties(value[findIndexResult], closure_3);
-        const sum = arraySpreadResult + 1;
-        items[sum] = tmp2;
-        HermesBuiltin.arraySpread(value.slice(findIndexResult + 1), sum + 1);
+        const items = [];
+        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, findIndexResult + 1), 0);
+        items[arraySpreadResult] = tmp2;
+        HermesBuiltin.arraySpread(value.slice(findIndexResult + 1), arraySpreadResult + 1);
         const result = map.set(projectId, items);
-        const tmp10 = _objectWithoutProperties(value[findIndexResult], closure_3);
       } else {
         const items1 = [];
         items1[HermesBuiltin.arraySpread(value, 0)] = tmp2;
@@ -1200,15 +1227,77 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         }
       }
     }
+    value = map.get(projectId);
     patchTurn(projectId, turnId, (steps) => {
-      const obj = {};
-      const merged = Object.assign(steps);
-      const tmp2 = openTimeline(steps.steps);
-      pushStep(tmp2, step);
-      obj.steps = tmp2.steps;
-      return obj;
+      steps = steps.steps;
+      const tmp2 = (function indexTimeline(steps) {
+        value = closure_1_44.get(steps);
+        if (null != value) {
+          return value;
+        } else {
+          const _Set = Set;
+          set = new Set();
+          let num = -1;
+          const entries = steps.entries();
+          const tmp23 = entries[Symbol.iterator]();
+          while (tmp23 !== undefined) {
+            let tmp6 = closure_1_6(tmp3, 2);
+            let tmp7 = tmp6[1];
+            let tmp8 = tmp7;
+            if (null != tmp7.turn_seq) {
+              let addResult = set.add(tmp8.turn_seq);
+            }
+            let tmp12 = -1 === num;
+            if (tmp12) {
+              tmp12 = "todos" === tmp8.kind;
+            }
+            if (tmp12) {
+              tmp12 = null == tmp8.task_id;
+            }
+            if (tmp12) {
+              num = tmp6[0];
+            }
+            continue;
+          }
+          const obj = { seenSeq: set, todosAt: num };
+          const result = closure_1_44.set(steps, obj);
+          return obj;
+        }
+      })(steps);
+      if (null == step.turn_seq) {
+        const substr = steps.slice();
+        weakMap1.delete(steps);
+        pushStep(substr, tmp2, step);
+        let result = weakMap1.set(substr, tmp2);
+        let hasItem = weakMap.get(steps);
+        if (null == hasItem) {
+          const someResult = steps.some((kind) => set.has(kind.kind));
+          const result1 = weakMap.set(steps, someResult);
+          hasItem = someResult;
+        }
+        if (!hasItem) {
+          hasItem = set.has(step.kind);
+        }
+        const result2 = weakMap.set(substr, hasItem);
+        let tmp3 = substr;
+      } else {
+        const seenSeq = tmp2.seenSeq;
+        tmp3 = steps;
+      }
+      let tmp15 = steps;
+      if (tmp3 !== steps.steps) {
+        const obj2 = {};
+        const merged = Object.assign(steps);
+        obj2.steps = tmp3;
+        tmp15 = obj2;
+      }
+      return tmp15;
     });
-    recordThinkingTransition(projectId);
+    if (map.get(projectId) === value) {
+      return false;
+    } else {
+      recordThinkingTransition(projectId);
+    }
   },
   CONJURE_CHAT_TURN_FINISHED: function handleChatTurnFinished(turnId) {
     ({ projectId, summary: require } = turnId);
@@ -1223,7 +1312,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
           return disposition;
         } else {
           disposition = disposition.disposition;
-          return _objectWithoutProperties(disposition, closure_1_4);
+          return _objectWithoutProperties(disposition, closure_1_3);
         }
       }));
     }
@@ -1321,14 +1410,12 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       }
       let flag2 = -1 !== num2;
       if (-1 !== num2) {
-        const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, num2), 0);
         const obj = {};
         const merged = Object.assign(value[num2]);
         obj.provisionalTodo = text.text;
-        items[arraySpreadResult] = obj;
-        HermesBuiltin.arraySpread(value.slice(num2 + 1), arraySpreadResult + 1);
-        const result = map.set(projectId, items);
+        const substr = value.slice();
+        substr[num2] = obj;
+        const result = map.set(projectId, substr);
         flag2 = true;
       }
       flag = flag2;
@@ -1443,67 +1530,79 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       if (value.some((role) => {
         let tmp = "assistant" === role.role;
         if (tmp) {
-          let someResult = true === role.finished || true === role.continued;
-          if (!someResult) {
-            someResult = "" !== role.content;
+          let tmp2 = true === role.finished || true === role.continued;
+          if (!tmp2) {
+            tmp2 = "" !== role.content;
           }
-          if (!someResult) {
-            someResult = null != role.proposal;
+          if (!tmp2) {
+            tmp2 = null != role.proposal;
           }
-          if (!someResult) {
-            someResult = null != role.clarification;
+          if (!tmp2) {
+            tmp2 = null != role.clarification;
           }
-          if (!someResult) {
-            someResult = null != role.intake;
+          if (!tmp2) {
+            tmp2 = null != role.intake;
           }
-          if (!someResult) {
+          if (!tmp2) {
             const steps = role.steps;
-            someResult = steps.some((kind) => set.has(kind.kind));
+            value = weakMap.get(steps);
+            if (null == value) {
+              const someResult = steps.some((kind) => set.has(kind.kind));
+              const result = weakMap.set(steps, someResult);
+              value = someResult;
+            }
+            tmp2 = value;
           }
-          tmp = !someResult;
+          tmp = !tmp2;
         }
         return tmp;
       })) {
-        const result = map.set(projectId, value.map((disposition) => {
+        let result = map.set(projectId, value.map((disposition) => {
           if (null != disposition.disposition) {
             disposition = disposition.disposition;
-            return _objectWithoutProperties(disposition, closure_1_5);
+            return _objectWithoutProperties(disposition, closure_1_4);
           } else {
-            let tmp2 = disposition;
+            let tmp5 = disposition;
             if ("assistant" === disposition.role) {
-              let someResult = true === disposition.finished || true === disposition.continued;
-              if (!someResult) {
-                someResult = "" !== disposition.content;
+              let tmp = true === disposition.finished || true === disposition.continued;
+              if (!tmp) {
+                tmp = "" !== disposition.content;
               }
-              if (!someResult) {
-                someResult = null != disposition.proposal;
+              if (!tmp) {
+                tmp = null != disposition.proposal;
               }
-              if (!someResult) {
-                someResult = null != disposition.clarification;
+              if (!tmp) {
+                tmp = null != disposition.clarification;
               }
-              if (!someResult) {
-                someResult = null != disposition.intake;
+              if (!tmp) {
+                tmp = null != disposition.intake;
               }
-              if (!someResult) {
+              if (!tmp) {
                 const steps = disposition.steps;
-                someResult = steps.some((kind) => set.has(kind.kind));
+                value = weakMap.get(steps);
+                if (null == value) {
+                  const someResult = steps.some((kind) => set.has(kind.kind));
+                  const result = weakMap.set(steps, someResult);
+                  value = someResult;
+                }
+                tmp = value;
               }
-              tmp2 = disposition;
-              if (!someResult) {
-                const obj = {};
+              tmp5 = disposition;
+              if (!tmp) {
+                const obj2 = {};
                 const merged = Object.assign(disposition);
-                obj.provisionalTodo = undefined;
+                obj2.provisionalTodo = undefined;
                 const items = [];
-                const obj2 = { type: "step", kind: "terminal_error", message: null };
+                const obj3 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef3827.lmiuFX);
-                items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
-                obj.steps = items;
-                tmp2 = obj;
+                obj3.message = intl.string(_modDef3827.lmiuFX);
+                items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj3;
+                obj2.steps = items;
+                tmp5 = obj2;
                 const arraySpreadResult = HermesBuiltin.arraySpread(disposition.steps, 0);
               }
             }
-            return tmp2;
+            return tmp5;
           }
         }));
         recordThinkingTransition(projectId);
@@ -1573,24 +1672,30 @@ let result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatStore.t
 
 export default conjureChatStore;
 export const turnSettled = function turnSettled(message) {
-  let someResult = true === message.finished || true === message.continued;
-  if (!someResult) {
-    someResult = "" !== message.content;
+  let tmp = true === message.finished || true === message.continued;
+  if (!tmp) {
+    tmp = "" !== message.content;
   }
-  if (!someResult) {
-    someResult = null != message.proposal;
+  if (!tmp) {
+    tmp = null != message.proposal;
   }
-  if (!someResult) {
-    someResult = null != message.clarification;
+  if (!tmp) {
+    tmp = null != message.clarification;
   }
-  if (!someResult) {
-    someResult = null != message.intake;
+  if (!tmp) {
+    tmp = null != message.intake;
   }
-  if (!someResult) {
+  if (!tmp) {
     const steps = message.steps;
-    someResult = steps.some((kind) => set.has(kind.kind));
+    value = weakMap.get(steps);
+    if (null == value) {
+      const someResult = steps.some((kind) => set.has(kind.kind));
+      const result = weakMap.set(steps, someResult);
+      value = someResult;
+    }
+    tmp = value;
   }
-  return someResult;
+  return tmp;
 };
 export const isStrandedSegment = function isStrandedSegment(arg0, arg1) {
   if (arg0[arg1] != null) {
@@ -1600,27 +1705,39 @@ export const isStrandedSegment = function isStrandedSegment(arg0, arg1) {
     if ("assistant" === tmp.role) {
       if (null != turn_id) {
         if ("" === tmp.content) {
-          let someResult = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
-          if (!someResult) {
+          let tmp2 = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
+          if (!tmp2) {
             const steps = tmp.steps;
-            someResult = steps.some((kind) => set.has(kind.kind));
+            value = weakMap.get(steps);
+            if (null == value) {
+              const someResult = steps.some((kind) => set.has(kind.kind));
+              const result = weakMap.set(steps, someResult);
+              value = someResult;
+            }
+            tmp2 = value;
           }
-          if (!someResult) {
+          if (!tmp2) {
             let diff = arg1 - 1;
             if (0 <= diff) {
               while ("user" !== arg0[diff].role) {
-                let tmp8 = tmp5.turn_id === turn_id;
-                if (!tmp8) {
+                let tmp11 = tmp8.turn_id === turn_id;
+                if (!tmp11) {
                   let _HermesInternal = HermesInternal;
-                  tmp8 = tmp5.id === "" + c33 + turn_id;
+                  tmp11 = tmp8.id === "" + c33 + turn_id;
                 }
-                if (tmp8) {
-                  let someResult1 = true === tmp5.finished || true === tmp5.continued || "" !== tmp5.content || null != tmp5.proposal || null != tmp5.clarification || null != tmp5.intake;
-                  if (!someResult1) {
-                    let steps2 = tmp5.steps;
-                    someResult1 = steps2.some((kind) => set.has(kind.kind));
+                if (tmp11) {
+                  let tmp12 = true === tmp8.finished || true === tmp8.continued || "" !== tmp8.content || null != tmp8.proposal || null != tmp8.clarification || null != tmp8.intake;
+                  if (!tmp12) {
+                    let steps2 = tmp8.steps;
+                    value2 = weakMap.get(steps2);
+                    if (null == value2) {
+                      let someResult1 = steps2.some((kind) => set.has(kind.kind));
+                      let result1 = weakMap.set(steps2, someResult1);
+                      value2 = someResult1;
+                    }
+                    tmp12 = value2;
                   }
-                  return someResult1;
+                  return tmp12;
                 } else {
                   diff = diff - 1;
                 }
@@ -1641,5 +1758,62 @@ export const getOlderHistoryCursor = function getOlderHistoryCursor(arg0) {
     value = null;
   }
   return value;
+};
+export const recordStep = function recordStep(arr, turn_seq) {
+  const tmp = (function indexTimeline(steps) {
+    value = closure_1_44.get(steps);
+    if (null != value) {
+      return value;
+    } else {
+      const _Set = Set;
+      set = new Set();
+      let num = -1;
+      const entries = steps.entries();
+      const tmp23 = entries[Symbol.iterator]();
+      while (tmp23 !== undefined) {
+        let tmp6 = closure_1_6(tmp3, 2);
+        let tmp7 = tmp6[1];
+        let tmp8 = tmp7;
+        if (null != tmp7.turn_seq) {
+          let addResult = set.add(tmp8.turn_seq);
+        }
+        let tmp12 = -1 === num;
+        if (tmp12) {
+          tmp12 = "todos" === tmp8.kind;
+        }
+        if (tmp12) {
+          tmp12 = null == tmp8.task_id;
+        }
+        if (tmp12) {
+          num = tmp6[0];
+        }
+        continue;
+      }
+      const obj = { seenSeq: set, todosAt: num };
+      const result = closure_1_44.set(steps, obj);
+      return obj;
+    }
+  })(arr);
+  if (null != turn_seq.turn_seq) {
+    const seenSeq = tmp.seenSeq;
+    if (seenSeq.has(turn_seq.turn_seq)) {
+      return arr;
+    }
+  }
+  const substr = arr.slice();
+  weakMap1.delete(arr);
+  pushStep(substr, tmp, turn_seq);
+  const result = weakMap1.set(substr, tmp);
+  let hasItem = weakMap.get(arr);
+  if (null == hasItem) {
+    const someResult = arr.some((kind) => set.has(kind.kind));
+    const result1 = weakMap.set(arr, someResult);
+    hasItem = someResult;
+  }
+  if (!hasItem) {
+    hasItem = set.has(turn_seq.kind);
+  }
+  const result2 = weakMap.set(substr, hasItem);
+  return substr;
 };
 export { replayTimeline };

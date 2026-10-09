@@ -1,10 +1,10 @@
-// === Module 6933: ConjureTypes ===
+// === Module 6940: ConjureTypes ===
 
-// Module 6933 (ConjureTypes)
+// Module 6940 (ConjureTypes)
 import size from "module_2" /* 2 */;
 
-const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7 });
-const frozen1 = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
+const frozen = Object.freeze({ APP_CHANNEL: 1, VOICE_CHANNEL: 2, PROFILE_WIDGET: 3, AUTOMOD: 4, BOT: 5, APPLICATION_COMMANDS: 6, OVERLAY: 7, ACTIVITY: 8 });
+const frozen1 = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c3 = 5242880;
 let c4 = 52428800;
@@ -26,6 +26,9 @@ export const isProjectPublic = function isProjectPublic(flags) {
   }
   return num & frozen1.PUBLIC;
 };
+export const isPreviewlessProject = function isPreviewlessProject(project) {
+  return null != project.preview_application_id && project.preview_application_id === project.application_id;
+};
 export const isProjectShared = function isProjectShared(flags) {
   let num = flags.flags;
   if (num == null) {
@@ -33,21 +36,20 @@ export const isProjectShared = function isProjectShared(flags) {
   }
   return num & frozen1.SHAREABLE;
 };
-export const projectUsesNativeAppChannels = function projectUsesNativeAppChannels(project) {
-  const supported_surfaces = project.supported_surfaces;
-  let hasItem;
-  if (supported_surfaces != null) {
-    hasItem = supported_surfaces.includes(frozen.APP_CHANNEL);
+export const projectUsesAppChannels = function projectUsesAppChannels(project) {
+  let supported_surfaces = project.supported_surfaces;
+  if (supported_surfaces == null) {
+    supported_surfaces = [];
   }
-  let tmp3 = true === hasItem;
-  if (!tmp3) {
-    let num = project.flags;
-    if (num == null) {
-      num = 0;
+  let hasItem = supported_surfaces.includes(frozen.APP_CHANNEL);
+  if (!hasItem) {
+    let tmp2 = "guild" === project.install_scope;
+    if (tmp2) {
+      tmp2 = 0 === supported_surfaces.length;
     }
-    tmp3 = num & frozen1.NATIVE_APP_CHANNELS;
+    hasItem = tmp2;
   }
-  return tmp3;
+  return hasItem;
 };
 export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;

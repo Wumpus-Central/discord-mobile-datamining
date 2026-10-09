@@ -1,13 +1,13 @@
-// === Module 1257: telemetry_ring/TelemetryRingLifecycle ===
+// === Module 1258: telemetry_ring/TelemetryRingLifecycle ===
 
-// Module 1257 (telemetry_ring/TelemetryRingLifecycle)
+// Module 1258 (telemetry_ring/TelemetryRingLifecycle)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1375 */;
-import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 2002 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
-import UserStore from "UserStore" /* 1389 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
-import LifecycleManager from "LifecycleManager" /* 2001 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1376 */;
+import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 2003 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
+import UserStore from "UserStore" /* 1390 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
+import LifecycleManager from "LifecycleManager" /* 2002 */;
 
 const AppStates = fn(1085).AppStates;
 class TelemetryRingLifecycleImpl extends tmp2 {
@@ -20,9 +20,9 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(2006).clear();
-      const obj = applyArgumentsResult(2006);
-      applyArgumentsResult(2002).reset();
+      applyArgumentsResult(2007).clear();
+      const obj = applyArgumentsResult(2007);
+      applyArgumentsResult(2003).reset();
     };
     return applyArgumentsResult;
   }
@@ -55,9 +55,9 @@ prototype["_initialize"] = function _initialize() {
       ApexExperimentStore.removeChangeListener(self._handleEligibilityChange);
     };
     const obj = self(584);
-    self(2002).initialize();
+    self(2003).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(2002);
+    const obj2 = self(2003);
   }
 };
 prototype["_terminate"] = function _terminate() {

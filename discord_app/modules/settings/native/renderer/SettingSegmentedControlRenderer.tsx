@@ -1,23 +1,23 @@
-// === Module 14790: SettingSegmentedControlRenderer ===
+// === Module 14898: SettingSegmentedControlRenderer ===
 
-// Module 14790 (SettingSegmentedControlRenderer)
+// Module 14898 (SettingSegmentedControlRenderer)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
-import SettingsRendererConfig from "SettingsRendererConfig" /* 14651 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14779 */;
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14780 */;
+import SettingsRendererConfig from "SettingsRendererConfig" /* 14756 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14887 */;
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14888 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14777 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14885 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NodeType = fn(11263).NodeType;
+const NodeType = fn(10630).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { controlContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 }, pageContainer: { flex: 1 } };
 let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SettingS
   const memo = noop.useMemo(() => {
     const items = [];
     const item = settings.forEach((id) => {
-      const tmp = items(14651).SETTING_RENDERER_CONFIG[id];
+      const tmp = items(14756).SETTING_RENDERER_CONFIG[id];
       settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
       const screen = tmp.screen;
       const obj = { label: null, id: null, page: null };
       const component = screen.getComponent();
       const tmp2 = settings(38);
-      obj.label = items(14779).getSettingTitle(id);
+      obj.label = items(14887).getSettingTitle(id);
       obj.id = id;
       obj.page = closure_2_8(component, {});
       items.push(obj);

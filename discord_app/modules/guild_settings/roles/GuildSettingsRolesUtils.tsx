@@ -1,20 +1,20 @@
-// === Module 18118: GuildSettingsRolesUtils ===
+// === Module 18278: GuildSettingsRolesUtils ===
 
-// Module 18118 (GuildSettingsRolesUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6099 */;
-import GuildUtilsDefault from "GuildUtils" /* 6101 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 6808 */;
+// Module 18278 (GuildSettingsRolesUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
+import GuildUtilsDefault from "GuildUtils" /* 6103 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 6815 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(18109).GuildSettingsRoleEditSections;
+const constants = fn(18269).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMembers(arg0, arg1) {

@@ -1,21 +1,21 @@
-// === Module 13938: ActivateDeviceError ===
+// === Module 14035: ActivateDeviceError ===
 
-// Module 13938 (ActivateDeviceError)
+// Module 14035 (ActivateDeviceError)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import _modDef9163 from "module_9163" /* 9163 */;
-import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13936 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import _modDef12867 from "module_12867" /* 12867 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 14033 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5090);
-let closure_8 = createStyles.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const createStyles = fn(5091);
+let closure_7 = createStyles.createStyles({ image: { width: 254, height: 127, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceError.tsx");
@@ -23,10 +23,10 @@ const result = size.fileFinishedImporting("modules/activate_device/native/Activa
 export const ActivateDeviceError = ReactCompilerGating.isReactCompilerEnabled() ? (function ActivateDeviceError(onRetry) {
   const cResult = c.c(10);
   onRetry = onRetry.onRetry;
-  const tmp4 = closure_8();
+  const tmp4 = closure_7();
   if (cResult[0] !== tmp4.image) {
-    const obj2 = { source: _modDef9163, style: tmp4.image };
-    const tmp9 = hasOwnProperty(React3, obj2);
+    const obj2 = { source: _modDef12867, style: tmp4.image };
+    const tmp9 = React4(FastImageDefault, obj2);
     cResult[0] = tmp4.image;
     cResult[1] = tmp9;
     let tmp5 = tmp9;
@@ -37,7 +37,7 @@ export const ActivateDeviceError = ReactCompilerGating.isReactCompilerEnabled() 
     const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
     const intl = util.intl;
     obj3.children = intl.string(util.t["3dgwPD"]);
-    const tmp13 = hasOwnProperty(Text_Text.Text, obj3);
+    const tmp13 = React4(Text_Text.Text, obj3);
     cResult[2] = tmp13;
     let tmp10 = tmp13;
   } else {
@@ -49,9 +49,9 @@ export const ActivateDeviceError = ReactCompilerGating.isReactCompilerEnabled() 
     const obj5 = { variant: "text-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
     const intl2 = util.intl;
     obj5.children = intl2.string(util.t["/GAO1P"]);
-    items[1] = hasOwnProperty(Text_Text.Text, obj5);
+    items[1] = React4(Text_Text.Text, obj5);
     obj4.children = items;
-    const tmp19 = timestampProducer(React4, obj4);
+    const tmp19 = hasOwnProperty(View, obj4);
     cResult[3] = tmp19;
     let tmp14 = tmp19;
   } else {
@@ -67,7 +67,7 @@ export const ActivateDeviceError = ReactCompilerGating.isReactCompilerEnabled() 
   }
   if (cResult[5] !== onRetry) {
     const obj6 = { size: "lg", text: tmp20, onPress: onRetry, grow: true };
-    const tmp24 = hasOwnProperty(components_Button_Button.Button, obj6);
+    const tmp24 = React4(components_Button_Button.Button, obj6);
     cResult[5] = onRetry;
     cResult[6] = tmp24;
     let tmp22 = tmp24;
@@ -83,31 +83,34 @@ export const ActivateDeviceError = ReactCompilerGating.isReactCompilerEnabled() 
   const obj7 = { children: null };
   const items1 = [tmp5, tmp14, tmp22];
   obj7.children = items1;
-  const tmp26 = timestampProducer(React5, obj7);
+  const tmp26 = hasOwnProperty(timestampProducer, obj7);
   cResult[7] = tmp5;
   cResult[8] = tmp22;
   cResult[9] = tmp26;
   tmp25 = tmp26;
 }) : (function ActivateDeviceError(onRetry) {
   const obj = { children: null };
-  const obj2 = { source: _modDef9163, style: closure_8().image };
-  const items = [hasOwnProperty(React3, obj2), , ];
+  const obj2 = { source: null, style: null };
+  const tmp = closure_7();
+  obj2.source = _modDef12867;
+  obj2.style = tmp.image;
+  const items = [React4(FastImageDefault, obj2), , ];
   const obj3 = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
   const obj4 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t["3dgwPD"]);
-  const items1 = [hasOwnProperty(Text_Text.Text, obj4), ];
+  const items1 = [React4(Text_Text.Text, obj4), ];
   const obj5 = { variant: "text-md/medium", color: "text-default", style: ActivateDeviceSharedStylesDefault.centerText, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t["/GAO1P"]);
-  items1[1] = hasOwnProperty(Text_Text.Text, obj5);
+  items1[1] = React4(Text_Text.Text, obj5);
   obj3.children = items1;
-  items[1] = timestampProducer(React4, obj3);
+  items[1] = hasOwnProperty(View, obj3);
   const obj6 = { size: "lg", text: null, onPress: null, grow: true };
   const intl3 = util.intl;
   obj6.text = intl3.string(util.t["5911Lb"]);
   obj6.onPress = onRetry.onRetry;
-  items[2] = hasOwnProperty(components_Button_Button.Button, obj6);
+  items[2] = React4(components_Button_Button.Button, obj6);
   obj.children = items;
-  return timestampProducer(React5, obj);
+  return hasOwnProperty(timestampProducer, obj);
 });

@@ -1,6 +1,6 @@
-// === Module 9045: useIsVariantColorLight ===
+// === Module 9060: useIsVariantColorLight ===
 
-// Module 9045 (useIsVariantColorLight)
+// Module 9060 (useIsVariantColorLight)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import noop from "module_19" /* 19 */;

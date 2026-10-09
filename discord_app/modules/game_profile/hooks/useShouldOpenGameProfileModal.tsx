@@ -1,13 +1,13 @@
-// === Module 8852: useShouldOpenGameProfileModal ===
+// === Module 8861: useShouldOpenGameProfileModal ===
 
-// Module 8852 (useShouldOpenGameProfileModal)
+// Module 8861 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import utils from "utils" /* 6047 */;
-import GameFlags from "GameFlags" /* 8853 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import utils from "utils" /* 6049 */;
+import GameFlags from "GameFlags" /* 8862 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2019 */;
+import GameStore from "GameStore" /* 2020 */;
 
 const require = globalThis.__r;
 
@@ -20,6 +20,9 @@ function trackEntryPoint(game_profile_available, id) {
     items = [];
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, { game_profile_available, application_id: id, rejection_reason: items, source: CallTile });
+}
+function isGameDisabled(gameFlags) {
+  return FlagUtilsAll.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
 }
 function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {
@@ -298,19 +301,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShoul
         }
         tmp19Result = utils;
       }
-      track = track(1264).track;
+      track = track(1265).track;
       GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
       obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const trackResult = track(1264);
+      const trackResult = track(1265);
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId2.gameId };
 });
 export { RejectionReason };
 export { trackEntryPoint };
+export { isGameDisabled };
 export { gameIsAcceptable };
 export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
   const game = GameStore.getGame(gameId);

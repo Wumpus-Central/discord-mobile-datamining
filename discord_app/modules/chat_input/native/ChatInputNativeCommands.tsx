@@ -1,8 +1,8 @@
-// === Module 11680: ChatInputNativeCommands ===
+// === Module 11616: ChatInputNativeCommands ===
 
-// Module 11680 (ChatInputNativeCommands)
-import createNonce from "createNonce" /* 9758 */;
-import ChatInputNativeComponent from "ChatInputNativeComponent" /* 11681 */;
+// Module 11616 (ChatInputNativeCommands)
+import createNonce from "createNonce" /* 9777 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 11617 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");

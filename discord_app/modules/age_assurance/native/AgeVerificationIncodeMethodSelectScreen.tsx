@@ -1,6 +1,6 @@
-// === Module 7504: AgeVerificationIncodeMethodSelectScreen ===
+// === Module 7509: AgeVerificationIncodeMethodSelectScreen ===
 
-// Module 7504 (AgeVerificationIncodeMethodSelectScreen)
+// Module 7509 (AgeVerificationIncodeMethodSelectScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,11 +9,11 @@ import ThemeStore from "ThemeStore" /* 1205 */;
 const require = globalThis.__r;
 
 const require = fn;
-const VerificationMethod = fn(5914).VerificationMethod;
-let closure_8 = fn(7493).buildIncodeParamsInjection;
+const VerificationMethod = fn(5915).VerificationMethod;
+let closure_8 = fn(7498).buildIncodeParamsInjection;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_11 = createStyles.createStyles({ container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: { flex: 1, alignSelf: "stretch" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx");
@@ -128,32 +128,32 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   const ModalContent = require("ModalContent").ModalContent;
   let obj2 = { children: null };
   if (tmp2) {
-    const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(6158).ActivityIndicator, { size: "large" }) };
-    obj2.children = closure_9(tmp7(5373).Stack, obj3);
+    const obj3 = { align: "center", justify: "center", spacing: 16, style: tmp5.loadingContainer, children: closure_9(tmp7(6160).ActivityIndicator, { size: "large" }) };
+    obj2.children = closure_9(tmp7(5374).Stack, obj3);
     obj.children = closure_9(ModalContent, obj2);
     let tmp11 = obj;
   } else {
     let obj4 = { align: "stretch", spacing: 24, style: tmp5.container, children: null };
     let obj5 = { align: "center", justify: "center", spacing: 16, children: null };
-    const items1 = [closure_9(tmp7(7508).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+    const items1 = [closure_9(tmp7(7513).ShieldSpotIllustration, { height: 100, width: 177 }), ];
     let obj6 = { align: "center", justify: "center", spacing: 8, children: null };
     let obj7 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.header, children: null };
     const intl = tmp7(1126).intl;
     obj7.children = intl.string(trustedOrigin(3117).eZvwAe);
-    const items2 = [closure_9(tmp7(5086).Text, obj7), ];
+    const items2 = [closure_9(tmp7(5087).Text, obj7), ];
     const obj8 = { variant: "text-md/medium", color: "text-strong", style: tmp5.header, children: null };
     const intl2 = tmp7(1126).intl;
     obj8.children = intl2.string(trustedOrigin(3117)["5yWXmT"]);
-    items2[1] = closure_9(tmp7(5086).Text, obj8);
+    items2[1] = closure_9(tmp7(5087).Text, obj8);
     obj6.children = items2;
-    items1[1] = closure_10(tmp7(5373).Stack, obj6);
+    items1[1] = closure_10(tmp7(5374).Stack, obj6);
     obj5.children = items1;
-    const items3 = [closure_10(tmp7(5373).Stack, obj5), , ];
+    const items3 = [closure_10(tmp7(5374).Stack, obj5), , ];
     if (tmp6Result) {
       const obj9 = { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp5.header, children: null };
       const intl3 = tmp7(1126).intl;
       obj9.children = intl3.string(tmp7(1126).t.c6kn6F);
-      tmp6Result = closure_9(tmp7(5086).Text, obj9);
+      tmp6Result = closure_9(tmp7(5087).Text, obj9);
     }
     items3[1] = tmp6Result;
     const obj10 = { hasIcons: false, children: null };
@@ -165,7 +165,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj11.onPress = function onPress() {
       closure_4(VerificationMethod.FACIAL_AGE_ESTIMATION);
     };
-    const items4 = [closure_9(tmp7(6184).TableRow, obj11), ];
+    const items4 = [closure_9(tmp7(6186).TableRow, obj11), ];
     const obj12 = { arrow: true, label: null, subLabel: null, onPress: null };
     const intl6 = tmp7(1126).intl;
     obj12.label = intl6.string(trustedOrigin(3117)["NeVlw/"]);
@@ -174,11 +174,11 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj12.onPress = function onPress() {
       closure_4(VerificationMethod.ID_VERIFICATION);
     };
-    items4[1] = closure_9(tmp7(6184).TableRow, obj12);
+    items4[1] = closure_9(tmp7(6186).TableRow, obj12);
     obj10.children = items4;
-    items3[2] = closure_10(tmp7(6267).TableRowGroup, obj10);
+    items3[2] = closure_10(tmp7(6269).TableRowGroup, obj10);
     obj4.children = items3;
-    obj2.children = closure_10(tmp7(5373).Stack, obj4);
+    obj2.children = closure_10(tmp7(5374).Stack, obj4);
     obj.children = closure_9(ModalContent, obj2);
     tmp11 = obj;
   }

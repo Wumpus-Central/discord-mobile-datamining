@@ -1,14 +1,14 @@
-// === Module 16191: RegisterUsernameInput ===
+// === Module 16307: RegisterUsernameInput ===
 
-// Module 16191 (RegisterUsernameInput)
+// Module 16307 (RegisterUsernameInput)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14113 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14793 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5001 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14210 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14901 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,21 +16,21 @@ import noop from "module_19" /* 19 */;
 require = fn;
 let closure_3 = ["username"];
 let closure_4 = ["username"];
-const RegistrationUIStore = fn(16165);
+const RegistrationUIStore = fn(16281);
 ({ setRegistrationErrors: closure_8, useRegistrationUIStore: closure_9 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_13 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(4810).FadeIn;
+const FadeIn = fn(4811).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(4810).FadeOut;
+const FadeOut = fn(4811).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(4810).LinearTransition;
-const Easing = fn(4810).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(4810).Easing.quad)).duration(300);
+const LinearTransition = fn(4811).LinearTransition;
+const Easing = fn(4811).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(4811).Easing.quad)).duration(300);
 let ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UsernameStatusMessage(arg0) {
   const cResult = c.c(12);
@@ -191,7 +191,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Userna
   return tmp6;
 });
 ReactCompilerGating = fn(558);
-const easingResult = LinearTransition.easing(Easing.inOut(fn(4810).Easing.quad));
+const easingResult = LinearTransition.easing(Easing.inOut(fn(4811).Easing.quad));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -321,7 +321,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
         }
       }
     }
-    if (undefined === setUsername(14793).NameValidationState.ERROR) {
+    if (undefined === setUsername(14901).NameValidationState.ERROR) {
       class H {
         constructor() {
           tmp = closure_1(true);
@@ -338,7 +338,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
       }
     }
     const obj6 = { ref, label: tmp14, accessibilityHint: tmp15, onChange: L, autoCorrect: false, secureTextEntry: tmp18, keyboardType: null, value: null, onSubmitEditing: null, returnKeyType: "next", autoComplete: "username", textContentType: "username", autoCapitalize: "none", onFocus: null, onBlur: null, clearable: true, status: null, submitBehavior: null };
-    const TextInput = setUsername(6283).TextInput;
+    const TextInput = setUsername(6290).TextInput;
     if (tmpResult.isAndroid()) {
       class H {
         constructor() {
@@ -374,7 +374,7 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
     cResult[14] = undefined;
     cResult[15] = username;
     cResult[16] = tmp24;
-    tmpResult = setUsername(1381);
+    tmpResult = setUsername(1382);
   }
   class L {
     constructor(arg0) {
@@ -434,8 +434,8 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
   obj3.accessibilityHint = intl2.string(setUsername(1126).t["47dcUZ"]);
   obj3.onChange = callback;
   const tmp14 = setUsername;
-  obj3.secureTextEntry = setUsername(1381).isAndroid();
-  const obj4 = setUsername(1381);
+  obj3.secureTextEntry = setUsername(1382).isAndroid();
+  const obj4 = setUsername(1382);
   let str = "default";
   if (obj5.isAndroid()) {
     str = "visible-password";
@@ -450,13 +450,13 @@ export const RegisterUsernameInput = ReactCompilerGating.isReactCompilerEnabled(
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14793).NameValidationState.ERROR) {
+  if (type === tmp14(14901).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
-  const items3 = [closure_10(setUsername(6283).TextInput, obj3), closure_10(closure_16, { usernameStatus, isUsernameFocused: tmp5[0] })];
+  const items3 = [closure_10(setUsername(6290).TextInput, obj3), closure_10(closure_16, { usernameStatus, isUsernameFocused: tmp5[0] })];
   obj6.children = items3;
   return closure_11(closure_12, obj6);
 });

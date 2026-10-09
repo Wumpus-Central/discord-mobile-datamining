@@ -1,6 +1,6 @@
-// === Module 9523: TabBar ===
+// === Module 9561: TabBar ===
 
-// Module 9523 (TabBar)
+// Module 9561 (TabBar)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { innerContainer: { flexDirection: "row", alignItems: "stretch" }, tab: { flexGrow: 1, flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: { borderBottomColor: nativeDefault.unsafe_rawColors.BRAND_600 }, container: { flex: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

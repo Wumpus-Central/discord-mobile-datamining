@@ -1,23 +1,23 @@
-// === Module 12606: InAppNotificationSettingsModal ===
+// === Module 12546: InAppNotificationSettingsModal ===
 
-// Module 12606 (InAppNotificationSettingsModal)
+// Module 12546 (InAppNotificationSettingsModal)
 import util from "util" /* 1126 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import NavigatorHeader from "NavigatorHeader" /* 6203 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6793 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
-import Form from "Form" /* 8555 */;
-import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 12607 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6800 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6805 */;
+import Form from "Form" /* 8563 */;
+import ChannelSettingsNotificationsDefault from "ChannelSettingsNotifications" /* 12547 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5973 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isMultiUserDM = fn(2067).isMultiUserDM;
+const isMultiUserDM = fn(2068).isMultiUserDM;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
@@ -183,7 +183,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[3] !== tmp4) {
       const obj2 = { screens: tmp4, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" };
-      const tmp7 = closure_11(tmp(6679).Navigator, obj2);
+      const tmp7 = closure_11(tmp(6686).Navigator, obj2);
       cResult[3] = tmp4;
       cResult[4] = tmp7;
       let tmp5 = tmp7;
@@ -201,11 +201,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj.title = intl.string(channelId(1126).t.h850Ss);
       let channelName = null;
       if (null != closure_0) {
-        const tmp3Result = channelId(5417);
+        const tmp3Result = channelId(5418);
         channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
       }
       obj.subtitle = channelName;
-      return closure_2_11(channelId(6203).NavigatorHeader, obj);
+      return closure_2_11(channelId(6205).NavigatorHeader, obj);
     },
     headerLeft: null,
     render: null
@@ -235,11 +235,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         obj.title = intl.string(channelId(1126).t.h850Ss);
         let channelName = null;
         if (null != closure_0) {
-          const tmp3Result = channelId(5417);
+          const tmp3Result = channelId(5418);
           channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
         }
         obj.subtitle = channelName;
-        return closure_2_11(channelId(6203).NavigatorHeader, obj);
+        return closure_2_11(channelId(6205).NavigatorHeader, obj);
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
       render() {
@@ -249,5 +249,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
     return obj;
   }, items);
-  return closure_11(channelId(6679).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+  return closure_11(channelId(6686).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 }));

@@ -1,15 +1,15 @@
-// === Module 11706: ForumPostAppliedTags ===
+// === Module 11642: ForumPostAppliedTags ===
 
-// Module 11706 (ForumPostAppliedTags)
+// Module 11642 (ForumPostAppliedTags)
 import nativeDefault from "native" /* 587 */;
-import AppliedForumTag from "AppliedForumTag" /* 9966 */;
+import AppliedForumTag from "AppliedForumTag" /* 9985 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, tag: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, tagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, dot: null };
 let size = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 4, width: 4, borderRadius: 10, marginHorizontal: 8 };
 obj2.dot = size;
@@ -67,7 +67,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostApp
             obj3.tag = obj4;
             obj3.containerStyle = tmp4.tag;
             obj3.hasUnreads = hasUnreads;
-            tmp11 = closure_3(hasUnreads(9966).AppliedForumTagPill, obj3);
+            tmp11 = closure_3(hasUnreads(9985).AppliedForumTagPill, obj3);
           }
           cResult[10] = num;
           cResult[11] = hasUnreads;
@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPostApp
     obj2.tag = obj3;
     obj2.containerStyle = tmp.tag;
     obj2.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(9966).AppliedForumTagPill, obj2);
+    tmp4 = closure_3(hasUnreads(9985).AppliedForumTagPill, obj2);
   }
   items1[1] = tmp4;
   obj.children = items1;

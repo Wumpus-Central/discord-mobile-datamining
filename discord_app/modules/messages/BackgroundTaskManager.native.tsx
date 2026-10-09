@@ -1,9 +1,9 @@
-// === Module 9653: BackgroundTaskManager ===
+// === Module 9672: BackgroundTaskManager ===
 
-// Module 9653 (BackgroundTaskManager)
-import PlatformUtils2 from "PlatformUtils" /* 1381 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9654 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 9656 */;
+// Module 9672 (BackgroundTaskManager)
+import PlatformUtils2 from "PlatformUtils" /* 1382 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 9673 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 9675 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -24,7 +24,7 @@ function startBackgroundTask(arg0) {
   obj = PlatformUtils2;
 }
 const NativeModules = fn(17).NativeModules;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num = -1;
 if (!PlatformUtils.isAndroid()) {
   num = NativeModules.DCDBackgroundTaskManager.backgroundTaskIdentifierInvalid;

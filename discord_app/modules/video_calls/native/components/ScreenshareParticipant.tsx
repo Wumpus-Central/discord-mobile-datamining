@@ -1,25 +1,25 @@
-// === Module 10926: ScreenshareParticipant ===
+// === Module 11101: ScreenshareParticipant ===
 
-// Module 10926 (ScreenshareParticipant)
+// Module 11101 (ScreenshareParticipant)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10698 */;
-import _modDef10699 from "module_10699" /* 10699 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 10839 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10844 */;
+import _modDef10845 from "module_10845" /* 10845 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 11012 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
@@ -40,231 +40,130 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Screensh
         let tmp5 = cResult[5];
       }
       if (cResult[6] === tmp5) {
-        class S {
-          constructor() {
-            tmpResult = undefined;
-            if (onDoubleTap != null) {
-              tmp3 = participant;
-              tmpResult = tmp(participant);
-            }
-            return tmpResult;
-          }
+        if (cResult[7] === tmp4) {
+          let tmp6 = cResult[8];
         }
-        const tmp11 = closure_8();
+        const tmp8 = useParticipantTileTapGestureDefault(tmp6);
+        const tmp10 = closure_7();
         if (cResult[9] === containerStyle) {
-          if (cResult[10] === tmp11.container) {
-            let tmp12 = cResult[11];
+          if (cResult[10] === tmp10.container) {
+            let tmp11 = cResult[11];
           }
-          if (cResult[12] !== tmp11.image) {
-            class S {
-              constructor() {
-                tmpResult = undefined;
-                if (onDoubleTap != null) {
-                  tmp3 = participant;
-                  tmpResult = tmp(participant);
-                }
-                return tmpResult;
-              }
-            }
-            tmp16[0] = _modDef10699;
-            tmp16[1] = tmp11.image;
-            const tmp17 = timestampProducer(hasOwnProperty, tmp16);
-            cResult[12] = tmp11.image;
-            cResult[13] = tmp17;
-            let tmp13 = tmp17;
+          if (cResult[12] !== tmp10.image) {
+            const obj2 = { source: _modDef10845, style: tmp10.image };
+            const tmp15 = hasOwnProperty(FastImageDefault, obj2);
+            cResult[12] = tmp10.image;
+            cResult[13] = tmp15;
+            let tmp12 = tmp15;
+            const tmp7Result = FastImageDefault;
           } else {
-            tmp13 = cResult[13];
-          }
-          class S {
-            constructor() {
-              tmpResult = undefined;
-              if (onDoubleTap != null) {
-                tmp3 = participant;
-                tmpResult = tmp(participant);
-              }
-              return tmpResult;
-            }
+            tmp12 = cResult[13];
           }
           const _Symbol = Symbol;
-          const title = tmp11.title;
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            const string = util.intl.string;
-            class S {
-              constructor() {
-                tmpResult = undefined;
-                if (onDoubleTap != null) {
-                  tmp3 = participant;
-                  tmpResult = tmp(participant);
-                }
-                return tmpResult;
-              }
-            }
-            cResult[14] = tmp19;
-            let tmp18 = tmp19;
+            const intl = util.intl;
+            const stringResult = intl.string(util.t.gMOwov);
+            cResult[14] = stringResult;
+            let tmp17 = stringResult;
           } else {
-            tmp18 = cResult[14];
+            tmp17 = cResult[14];
           }
-          if (cResult[15] !== tmp11.title) {
-            const obj2 = { style: null, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-            class S {
-              constructor() {
-                tmpResult = undefined;
-                if (onDoubleTap != null) {
-                  tmp3 = participant;
-                  tmpResult = tmp(participant);
-                }
-                return tmpResult;
-              }
-            }
-            obj2.children = tmp18;
-            const tmp22 = timestampProducer(Text_Text.Text, obj2);
-            cResult[15] = tmp11.title;
-            cResult[16] = tmp22;
-            let tmp20 = tmp22;
+          if (cResult[15] !== tmp10.title) {
+            const obj3 = { style: tmp10.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp17 };
+            const tmp21 = hasOwnProperty(Text_Text.Text, obj3);
+            cResult[15] = tmp10.title;
+            cResult[16] = tmp21;
+            let tmp19 = tmp21;
           } else {
-            tmp20 = cResult[16];
+            tmp19 = cResult[16];
           }
           const _Symbol2 = Symbol;
-          const description = tmp11.description;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const string2 = util.intl.string;
-            class S {
-              constructor() {
-                tmpResult = undefined;
-                if (onDoubleTap != null) {
-                  tmp3 = participant;
-                  tmpResult = tmp(participant);
-                }
-                return tmpResult;
-              }
-            }
-            cResult[17] = tmp24;
-            let tmp23 = tmp24;
+            const intl2 = util.intl;
+            const stringResult1 = intl2.string(util.t.dKeLGt);
+            cResult[17] = stringResult1;
+            let tmp22 = stringResult1;
           } else {
-            tmp23 = cResult[17];
+            tmp22 = cResult[17];
           }
-          if (cResult[18] !== tmp11.description) {
-            const obj3 = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-            class S {
-              constructor() {
-                tmpResult = undefined;
-                if (onDoubleTap != null) {
-                  tmp3 = participant;
-                  tmpResult = tmp(participant);
-                }
-                return tmpResult;
-              }
-            }
-            obj3.children = tmp23;
-            const tmp27 = timestampProducer(Text_Text.Text, obj3);
-            cResult[18] = tmp11.description;
-            cResult[19] = tmp27;
-            let tmp25 = tmp27;
+          if (cResult[18] !== tmp10.description) {
+            const obj4 = { style: tmp10.description, variant: "text-sm/medium", color: "interactive-text-default", children: tmp22 };
+            const tmp26 = hasOwnProperty(Text_Text.Text, obj4);
+            cResult[18] = tmp10.description;
+            cResult[19] = tmp26;
+            let tmp24 = tmp26;
           } else {
-            tmp25 = cResult[19];
+            tmp24 = cResult[19];
           }
           const _Symbol3 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj4 = { variant: "primary-overlay", text: null, onPress: null };
-            class S {
-              constructor() {
-                tmpResult = undefined;
-                if (onDoubleTap != null) {
-                  tmp3 = participant;
-                  tmpResult = tmp(participant);
-                }
-                return tmpResult;
-              }
-            }
-            const intl = util.intl;
-            obj4.text = intl.string(util.t.CpkXwZ);
-            obj4.onPress = useScreenshareUtils.stopScreenshare;
-            const tmp31 = timestampProducer(tmp30, obj4);
-            cResult[20] = tmp31;
-            let tmp28 = tmp31;
+            const obj5 = { variant: "primary-overlay", text: null, onPress: null };
+            const intl3 = util.intl;
+            obj5.text = intl3.string(util.t.CpkXwZ);
+            obj5.onPress = useScreenshareUtils.stopScreenshare;
+            const tmp29 = hasOwnProperty(components_Button_Button.Button, obj5);
+            cResult[20] = tmp29;
+            let tmp27 = tmp29;
           } else {
-            tmp28 = cResult[20];
+            tmp27 = cResult[20];
           }
-          if (cResult[21] === tmp25) {
-            if (cResult[22] === tmp12) {
-              if (cResult[23] === tmp13) {
-                if (cResult[24] === tmp20) {
-                  let tmp32 = cResult[25];
+          if (cResult[21] === tmp24) {
+            if (cResult[22] === tmp11) {
+              if (cResult[23] === tmp12) {
+                if (cResult[24] === tmp19) {
+                  let tmp30 = cResult[25];
                 }
-                if (cResult[26] === tmp9) {
-                  if (cResult[27] === tmp32) {
-                    let tmp36 = cResult[28];
+                if (cResult[26] === tmp8) {
+                  if (cResult[27] === tmp30) {
+                    let tmp34 = cResult[28];
                   }
-                  return tmp36;
+                  return tmp34;
                 }
-                class S {
-                  constructor() {
-                    tmpResult = undefined;
-                    if (onDoubleTap != null) {
-                      tmp3 = participant;
-                      tmpResult = tmp(participant);
-                    }
-                    return tmpResult;
-                  }
-                }
-                const obj5 = { gesture: tmp9, children: tmp32 };
-                const tmp37 = timestampProducer(LegacyBaseButton.GestureDetector, obj5);
-                cResult[26] = tmp9;
-                cResult[27] = tmp32;
-                cResult[28] = tmp37;
-                tmp36 = tmp37;
+                const obj6 = { gesture: tmp8, children: tmp30 };
+                const tmp36 = hasOwnProperty(LegacyBaseButton.GestureDetector, obj6);
+                cResult[26] = tmp8;
+                cResult[27] = tmp30;
+                cResult[28] = tmp36;
+                tmp34 = tmp36;
               }
             }
           }
-          const obj6 = { style: tmp12, children: null };
-          const items = [tmp13, tmp20, tmp25, tmp28];
-          obj6.children = items;
-          const tmp35 = React5(React4, obj6);
-          cResult[21] = tmp25;
-          cResult[22] = tmp12;
-          cResult[23] = tmp13;
-          cResult[24] = tmp20;
-          cResult[25] = tmp35;
-          tmp32 = tmp35;
+          const obj7 = { style: tmp11, children: null };
+          const items = [tmp12, tmp19, tmp24, tmp27];
+          obj7.children = items;
+          const tmp33 = timestampProducer(View, obj7);
+          cResult[21] = tmp24;
+          cResult[22] = tmp11;
+          cResult[23] = tmp12;
+          cResult[24] = tmp19;
+          cResult[25] = tmp33;
+          tmp30 = tmp33;
         }
-        const items1 = [tmp11.container, containerStyle];
+        const items1 = [tmp10.container, containerStyle];
         cResult[9] = containerStyle;
-        cResult[10] = tmp11.container;
+        cResult[10] = tmp10.container;
         cResult[11] = items1;
-        tmp12 = items1;
+        tmp11 = items1;
       }
-      class S {
-        constructor() {
-          tmpResult = undefined;
-          if (onDoubleTap != null) {
-            tmp3 = participant;
-            tmpResult = tmp(participant);
-          }
-          return tmpResult;
-        }
-      }
-      tmp7[0] = tmp4;
-      tmp7[1] = tmp5;
+      const obj8 = { onSingleTapStart: tmp4, onDoubleTapStart: tmp5 };
       cResult[6] = tmp5;
       cResult[7] = tmp4;
-      cResult[8] = tmp7;
+      cResult[8] = obj8;
+      tmp6 = obj8;
     }
-    class S {
-      constructor() {
-        tmpResult = undefined;
-        if (onDoubleTap != null) {
-          tmp3 = participant;
-          tmpResult = tmp(participant);
-        }
-        return tmpResult;
+    const fn2 = function x() {
+      let tmpResult;
+      if (onDoubleTap != null) {
+        tmpResult = tmp(participant);
       }
-    }
+      return tmpResult;
+    };
     cResult[3] = onDoubleTap;
     cResult[4] = participant;
-    cResult[5] = S;
-    tmp5 = S;
+    cResult[5] = fn2;
+    tmp5 = fn2;
   }
-  const fn = function n() {
+  const fn = function o() {
     let tmpResult;
     if (onSingleTap != null) {
       tmpResult = tmp(participant);
@@ -295,27 +194,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Screensh
     }
     return tmpResult;
   }, items1);
-  const tmp4 = closure_8();
+  const tmp4 = closure_7();
   const obj = { gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 }), children: null };
   const obj2 = { style: null, children: null };
   const items2 = [tmp4.container, participant.containerStyle];
   obj2.style = items2;
+  const obj3 = { source: null, style: null };
   const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-  const items3 = [timestampProducer(hasOwnProperty, { source: _modDef10699, style: tmp4.image }), , , ];
+  obj3.source = _modDef10845;
+  obj3.style = tmp4.image;
+  const items3 = [hasOwnProperty(FastImageDefault, obj3), , , ];
   const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj4.children = intl.string(util.t.gMOwov);
-  items3[1] = timestampProducer(Text_Text.Text, obj4);
+  items3[1] = hasOwnProperty(Text_Text.Text, obj4);
   const obj5 = { style: tmp4.description, variant: "text-sm/medium", color: "interactive-text-default", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t.dKeLGt);
-  items3[2] = timestampProducer(Text_Text.Text, obj5);
+  items3[2] = hasOwnProperty(Text_Text.Text, obj5);
   const obj6 = { variant: "primary-overlay", text: null, onPress: null };
   const intl3 = util.intl;
   obj6.text = intl3.string(util.t.CpkXwZ);
   obj6.onPress = useScreenshareUtils.stopScreenshare;
-  items3[3] = timestampProducer(components_Button_Button.Button, obj6);
+  items3[3] = hasOwnProperty(components_Button_Button.Button, obj6);
   obj2.children = items3;
-  obj.children = React5(React4, obj2);
-  return timestampProducer(LegacyBaseButton.GestureDetector, obj);
+  obj.children = timestampProducer(View, obj2);
+  return hasOwnProperty(LegacyBaseButton.GestureDetector, obj);
 });

@@ -1,12 +1,12 @@
-// === Module 12241: GuildPowerupsActionCreators ===
+// === Module 12180: GuildPowerupsActionCreators ===
 
-// Module 12241 (GuildPowerupsActionCreators)
+// Module 12180 (GuildPowerupsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 12243 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4968 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import storeListingToGuildPowerupDefault from "storeListingToGuildPowerup" /* 12182 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4969 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

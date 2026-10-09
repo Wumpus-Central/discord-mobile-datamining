@@ -1,23 +1,23 @@
-// === Module 8944: WishlistNUXAddedItemActionSheet ===
+// === Module 8955: WishlistNUXAddedItemActionSheet ===
 
-// Module 8944 (WishlistNUXAddedItemActionSheet)
+// Module 8955 (WishlistNUXAddedItemActionSheet)
 import nativeDefault from "native" /* 587 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
-import SKUPreview from "SKUPreview" /* 8945 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8946 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
+import SKUPreview from "SKUPreview" /* 8956 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8957 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const UserProfileSections = fn(8283).UserProfileSections;
+const UserProfileSections = fn(8291).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 }, textContainer: null, subtitle: null };
 let obj3 = { alignItems: "center", padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj2.textContainer = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
   }
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp5, tmp6, tmp7);
-  if (product.type !== stateFromStores(1992).CollectiblesItemType.BUNDLE) {
+  if (product.type !== stateFromStores(1993).CollectiblesItemType.BUNDLE) {
     const first = _slicedToArray(product.items, 1)[0];
     if (cResult[6] !== first) {
       let tmp15;
@@ -217,7 +217,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
         const obj5 = { variant: "heading-lg/extrabold", color: "text-strong", accessibilityRole: "header", children: null };
         const intl = tmp(1126).intl;
         obj5.children = intl.string(tmp(1126).t["3T2jbf"]);
-        const tmp24 = closure_8(tmp(5086).Text, obj5);
+        const tmp24 = closure_8(tmp(5087).Text, obj5);
         cResult[15] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -287,7 +287,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
           }
         }
         const obj6 = { variant: "text-md/normal", color: "text-default", style: tmp4.subtitle, children: tmp25 };
-        const tmp28 = closure_8(tmp(5086).Text, obj6);
+        const tmp28 = closure_8(tmp(5087).Text, obj6);
         cResult[17] = tmp4.subtitle;
         cResult[18] = tmp28;
       } else {
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
           const intl2 = tmp(1126).intl;
           obj8.text = intl2.string(tmp(1126).t.tM4PUv);
           obj8.onPress = P;
-          const tmp34 = closure_8(tmp(5375).Button, obj8);
+          const tmp34 = closure_8(tmp(5376).Button, obj8);
           cResult[22] = tmp34;
           const tmp33 = tmp34;
         } else {
@@ -413,9 +413,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
           const obj9 = { direction: "horizontal", children: null };
           const items2 = [tmp33, ];
           const obj10 = { text: tmp35, onPress: B, variant: "secondary", size: "lg", grow: true };
-          items2[1] = closure_8(tmp(5375).Button, obj10);
+          items2[1] = closure_8(tmp(5376).Button, obj10);
           obj9.children = items2;
-          const tmp39 = closure_9(tmp(5963).ButtonGroup, obj9);
+          const tmp39 = closure_9(tmp(5965).ButtonGroup, obj9);
           cResult[24] = B;
           cResult[25] = tmp39;
         } else {
@@ -455,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
         const items3 = [tmp20, tmp29, tmp37];
         obj13.children = items3;
         obj12.children = closure_9(View, obj13);
-        const tmp44 = closure_8(tmp(6829).BottomSheet, obj12);
+        const tmp44 = closure_8(tmp(6836).BottomSheet, obj12);
         cResult[26] = tmp4.container;
         cResult[27] = tmp29;
         cResult[28] = tmp37;

@@ -1,19 +1,19 @@
-// === Module 8454: ForumPostMediaUtils ===
+// === Module 8462: ForumPostMediaUtils ===
 
-// Module 8454 (ForumPostMediaUtils)
+// Module 8462 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5415 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5432 */;
+import URLUtilsDefault from "URLUtils" /* 1384 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5416 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5433 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6992 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import MessageStore from "MessageStore" /* 5428 */;
-import UserStore from "UserStore" /* 1389 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6999 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import MessageStore from "MessageStore" /* 5429 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -251,7 +251,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFor
             tmp9 = cResult[6];
           }
           const mapped = embeds1.map(tmp9);
-          found = mapped.filter(tmp(1387).isNotNullish);
+          found = mapped.filter(tmp(1388).isNotNullish);
           cResult[2] = embeds1;
           cResult[3] = spoiler;
           cResult[4] = found;
@@ -337,7 +337,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFor
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1387).isNotNullish);
+          let found = mapped.filter(tmp(1388).isNotNullish);
         }
         return found;
       }

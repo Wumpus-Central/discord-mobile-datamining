@@ -1,7 +1,7 @@
-// === Module 18347: NotificationLoadMessagesExperiment ===
+// === Module 18509: NotificationLoadMessagesExperiment ===
 
-// Module 18347 (NotificationLoadMessagesExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 18509 (NotificationLoadMessagesExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-notification-load-messages", kind: "user", defaultConfig: { enabled: false, limit: 1, cooldownMs: 0, debounceMs: 0 }, variations: null };

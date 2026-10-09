@@ -1,14 +1,14 @@
-// === Module 17223: FavoritesEmptyState ===
+// === Module 17373: FavoritesEmptyState ===
 
-// Module 17223 (FavoritesEmptyState)
+// Module 17373 (FavoritesEmptyState)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10300 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 11215 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10285 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 10570 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 }, text: { textAlign: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

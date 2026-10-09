@@ -1,14 +1,14 @@
-// === Module 16426: FavoritesGuildSuggestionsStore ===
+// === Module 16545: FavoritesGuildSuggestionsStore ===
 
-// Module 16426 (FavoritesGuildSuggestionsStore)
+// Module 16545 (FavoritesGuildSuggestionsStore)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2055 */;
+import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2056 */;
 
 require = fn;
 const NOOP = fn(1085).NOOP;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 let items = [];
 const module_570 = fn(570);
 let closure_8 = module_570.create(() => ({ suggestions: items, dismiss: NOOP }));
@@ -85,7 +85,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorites
   }
   if (cResult[1] !== isFreemium) {
     if (isFreemium) {
-      items = [tmp(2048).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+      items = [tmp(2049).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
       let items1 = items;
     } else {
       items1 = [];
@@ -93,7 +93,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorites
     cResult[1] = isFreemium;
     cResult[2] = items1;
   } else {
-    const tmp9 = _slicedToArray(tmp(7090).useSelectedDismissibleContent(cResult[2]), 2);
+    const tmp9 = _slicedToArray(tmp(7093).useSelectedDismissibleContent(cResult[2]), 2);
     _require = tmp10;
     if (cResult[3] !== tmp9[1]) {
       class I {
@@ -148,7 +148,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorites
       }
       tmp15 = cResult[7];
     }
-    const tmp16 = tmp9[0] === tmp(2048).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
+    const tmp16 = tmp9[0] === tmp(2049).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS;
     const layoutEffect1 = noop.useLayoutEffect(D, tmp15);
     if (cResult[8] === isFreemium) {
       class D {
@@ -163,7 +163,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorites
     cResult[9] = tmp16;
     cResult[10] = obj3;
     tmp18 = obj3;
-    const tmpResult = tmp(7090);
+    const tmpResult = tmp(7093);
   }
   tmp6 = DismissibleContentShownStateStore(first);
 }) : (function useFavoritesGuildSuggestionsVisibility() {
@@ -178,7 +178,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavorites
   }
   tmp4 = DismissibleContentShownStateStore((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
   if (isFreemium) {
-    items = [tmp(2048).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+    items = [tmp(2049).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
     let items1 = items;
   } else {
     items1 = [];

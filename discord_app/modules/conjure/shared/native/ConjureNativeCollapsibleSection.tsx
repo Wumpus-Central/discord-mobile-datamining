@@ -1,19 +1,19 @@
-// === Module 16949: ConjureNativeCollapsibleSection ===
+// === Module 17081: ConjureNativeCollapsibleSection ===
 
-// Module 16949 (ConjureNativeCollapsibleSection)
+// Module 17081 (ConjureNativeCollapsibleSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6892 */;
-import native from "native" /* 8517 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10508 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6899 */;
+import native from "native" /* 8525 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10498 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { root: { gap: nativeDefault.space.PX_8 }, header: null, headerTrailing: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   if (flag) {
     const obj2 = { style: tmp.header, children: null };
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: title };
-    const items = [React4(tmp4(5086).Text, obj3), ];
+    const items = [React4(tmp4(5087).Text, obj3), ];
     const obj4 = { style: tmp.headerTrailing, children: null };
     const items1 = [meta, ];
     let tmp9Result = null;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         obj5.onPress = onToggleExpanded;
         const obj7 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
         obj5.children = React4(ChevronSmallRightIcon, obj7);
-        tmp9Result = React4(tmp4(8517).PressableScale, obj5);
+        tmp9Result = React4(tmp4(8525).PressableScale, obj5);
       }
     }
     items1[1] = tmp9Result;

@@ -1,26 +1,26 @@
-// === Module 10643: ? ===
+// === Module 10791: ? ===
 
-// Module 10643
+// Module 10791
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import transitionToGuild from "transitionToGuild" /* 7043 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import transitionToGuild from "transitionToGuild" /* 7046 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
-({ AnalyticEvents: c10, Permissions: closure_11 } = Constants);
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
+({ AnalyticEvents: closure_9, Permissions: c10 } = Constants);
+const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollView: { flex: 1 }, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollViewContentContainer = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
@@ -29,7 +29,7 @@ obj2.text = { marginTop: 24, paddingHorizontal: 40, textAlign: "center" };
 obj2.footer = { flexDirection: "column", justifyContent: "space-between", padding: 16, gap: 16 };
 obj2.footerLandscape = { flexDirection: "row-reverse", padding: 16 };
 obj2.footerPortrait = { flexDirection: "column", padding: 16 };
-let closure_16 = createStyles.createStyles(obj2);
+let closure_15 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 const size = fn(2);
@@ -39,8 +39,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   const cResult = guild(576).c(66);
   guild = guild.guild;
   const application = guild.application;
-  const tmp4 = closure_16();
-  guild(8426);
+  const tmp4 = closure_15();
+  guild(8434);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
         name4 = application.name;
       }
       let obj2 = { installedApplicationName: name4, guildName: null };
-      class L {
+      class D {
         constructor() {
           tmp = guild;
           id = undefined;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
         if (application != null) {
           const name = application.name;
         }
-        class L {
+        class D {
           constructor() {
             tmp = guild;
             id = undefined;
@@ -183,33 +183,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
         tmp7 = cResult[4];
       }
     }
-    let id1;
+    let id;
     if (application != null) {
-      id1 = application.id;
+      id = application.id;
     }
-    if (cResult[6] === id1) {
-      let id2;
+    if (cResult[6] === id) {
+      let id1;
       if (guild != null) {
-        id2 = guild.id;
+        id1 = guild.id;
       }
       const _Symbol2 = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedChannelStore];
-        class H {
-          constructor() {
-            return closure_1_9.getChannelId();
-          }
-        }
+        const fn = function b() {
+          return channelId.getChannelId();
+        };
         cResult[9] = items;
-        cResult[10] = H;
-        let tmp28 = H;
+        cResult[10] = fn;
+        let tmp28 = fn;
         let tmp27 = items;
       } else {
         tmp27 = cResult[9];
         tmp28 = cResult[10];
       }
       const stateFromStores = tmp(504).useStateFromStores(tmp27, tmp28);
-      class L {
+      class D {
         constructor() {
           tmp = guild;
           id = undefined;
@@ -249,45 +247,55 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
       const _Symbol3 = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelStore];
-        class H {
-          constructor() {
-            return closure_1_9.getChannelId();
-          }
-        }
         cResult[11] = items1;
         let tmp31 = items1;
       } else {
         tmp31 = cResult[11];
       }
       if (cResult[12] !== stateFromStores) {
-        const fn = function w() {
-          return ChannelStore.getChannel(dependencyMap);
-        };
-        cResult[12] = stateFromStores;
-        class H {
+        class V {
           constructor() {
-            return closure_1_9.getChannelId();
+            return closure_6.getChannel(closure_2);
           }
         }
-        cResult[13] = fn;
-        let tmp33 = fn;
+        cResult[12] = stateFromStores;
+        cResult[13] = V;
       } else {
-        tmp33 = cResult[13];
+        class V {
+          constructor() {
+            return closure_6.getChannel(closure_2);
+          }
+        }
       }
       let tmpResult = tmp(504);
-      const stateFromStores1 = tmp(504).useStateFromStores(tmp31, tmp33);
+      const stateFromStores1 = tmp(504).useStateFromStores(tmp31, V);
       if (cResult[14] === application) {
-        class H {
+        class V {
           constructor() {
-            return closure_1_9.getChannelId();
+            return closure_6.getChannel(closure_2);
+          }
+        }
+        if (application != null) {
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
           }
         }
         if (cResult[17] !== undefined) {
-          let id3;
-          if (application != null) {
-            id3 = application.id;
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
           }
-          class F {
+          if (application != null) {
+            class V {
+              constructor() {
+                return closure_6.getChannel(closure_2);
+              }
+            }
+          }
+          class B {
             constructor() {
               arr = closure_1(closure_2[14]);
               arr1 = arr.pop();
@@ -300,51 +308,63 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          cResult[17] = id3;
-          cResult[18] = F;
-        }
-        let id4;
-        if (application != null) {
-          id4 = application.id;
-        }
-        if (cResult[19] !== id4) {
-          let id5;
-          if (application != null) {
-            id5 = application.id;
-          }
-          class F {
-            constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
-              obj = closure_1(closure_2[16]);
-              id = undefined;
-              if (application != null) {
-                id = application.id;
-              }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
-              return;
-            }
-          }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          cResult[19] = id5;
-          cResult[20] = tmp42;
-          let tmp40 = tmp42;
+          cResult[17] = tmp38;
+          cResult[18] = B;
         } else {
-          tmp40 = cResult[20];
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
         }
         if (application != null) {
-          let id = application.id;
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
         }
-        class L {
+        if (cResult[19] !== undefined) {
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
+          if (application != null) {
+            class V {
+              constructor() {
+                return closure_6.getChannel(closure_2);
+              }
+            }
+          }
+          class G {
+            constructor() {
+              obj = closure_1(closure_2[16]);
+              id = undefined;
+              if (application != null) {
+                id = application.id;
+              }
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
+              return;
+            }
+          }
+          cResult[19] = tmp41;
+          cResult[20] = G;
+        } else {
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
+        }
+        if (application != null) {
+          class V {
+            constructor() {
+              return closure_6.getChannel(closure_2);
+            }
+          }
+        }
+        class D {
           constructor() {
             tmp = guild;
             id = undefined;
@@ -381,241 +401,177 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             return;
           }
         }
-        const effect = stateFromStores1.useEffect(tmp40, tmp43);
+        const effect = stateFromStores1.useEffect(G, tmp42);
         const _Symbol4 = Symbol;
         if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-          const items2 = [];
-          class F {
+          class V {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
+              return closure_6.getChannel(closure_2);
+            }
+          }
+          const items2 = [];
+          class G {
+            constructor() {
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
-            }
-          }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
             }
           }
           cResult[23] = items2;
-        }
-        if (cResult[24] !== stateFromStores1) {
-          class W {
+          const tmp45 = items2;
+        } else {
+          class V {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_6.getChannel(closure_2);
             }
           }
-          class F {
+        }
+        if (cResult[24] !== stateFromStores1) {
+          class M {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
+            }
+          }
+          class G {
+            constructor() {
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          cResult[25] = W;
+          cResult[25] = M;
         } else {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
         }
-        tmp(504);
-        class K {
-          constructor() {
-            tmp = closure_1;
-            tmp2 = closure_2;
-            arr = closure_1(closure_2[14]);
-            arr1 = arr.pop();
-            obj = closure_1(closure_2[18]);
-            hideActionSheetResult = obj.hideActionSheet();
-            tmp5 = null != closure_2;
-            if (tmp5) {
-              tmp6 = application;
-              tmp5 = null != application;
-            }
-            if (tmp5) {
-              tmpResult = tmp(tmp2[16]);
-              tmp7 = AnalyticEvents;
-              obj1 = { application_id: null };
-              tmp8 = application;
-              obj1.application_id = application.id;
-              trackResult = tmpResult.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj1);
-              tmp10 = globalThis;
-              _setImmediate = setImmediate;
-              setImmediateResult = setImmediate(() => {
-                const bestActiveInput = guild(dependencyMap[19]).getBestActiveInput();
-                if (bestActiveInput != null) {
-                  const obj2 = { type: guild(dependencyMap[20]).KeyboardTypes.APP_LAUNCHER, context: null };
-                  const obj3 = { initialRouteName: constants.APPLICATION_VIEW, application };
-                  obj2.context = obj3;
-                  bestActiveInput.openCustomKeyboard(obj2);
-                }
-                const obj = guild(dependencyMap[19]);
-              });
-            }
-            return;
-          }
-        }
+        null != stateFromStores && tmp(504).useStateFromStores(tmp45, M);
         const _Symbol5 = Symbol;
         ({ container, scrollView, scrollViewContentContainer, inner } = tmp4);
         if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
-          class F {
+          class G {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          tmp53[0] = application(10644);
-          const tmp54 = closure_13(closure_4, tmp53);
-          cResult[26] = tmp54;
-          const tmp51 = tmp54;
+          tmp52[0] = application(10792);
+          const tmp53 = closure_12(application(6163), tmp52);
+          cResult[26] = tmp53;
+          const tmp49 = tmp53;
+          const tmp51 = application(6163);
         } else {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
         }
         const _Symbol6 = Symbol;
         const text = tmp4.text;
         if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
-          const string = tmp56.string;
-          class F {
+          const string = tmp55.string;
+          class G {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          cResult[27] = tmp57;
+          cResult[27] = tmp56;
         } else {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
         }
         if (cResult[28] !== tmp4.text) {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
-          class F {
+          const obj4 = { style: null, variant: "text-lg/medium", children: null };
+          class G {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          const tmp59 = closure_13(tmp(5086).Text, { style: null, variant: "text-lg/medium", children: null });
+          obj4.children = tmp56;
+          const tmp58 = closure_12(tmp(5087).Text, obj4);
           cResult[28] = tmp4.text;
-          cResult[29] = tmp59;
-          const obj4 = { style: null, variant: "text-lg/medium", children: null };
+          cResult[29] = tmp58;
         } else {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
         }
         if (cResult[30] === tmp4.text) {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
           if (cResult[33] === tmp4.inner) {
-            class W {
+            class M {
               constructor() {
-                return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+                return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
               }
             }
           }
-          class F {
+          class G {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
           const obj5 = { style: inner, children: null };
-          const items3 = [tmp51, tmp58, tmp60];
+          const items3 = [tmp49, tmp57, tmp59];
           obj5.children = items3;
-          class L {
+          class D {
             constructor() {
               tmp = guild;
               id = undefined;
@@ -653,135 +609,82 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           cResult[33] = tmp4.inner;
-          cResult[34] = tmp58;
-          cResult[35] = tmp60;
-          cResult[36] = tmp62;
-          class K {
-            constructor() {
-              tmp = closure_1;
-              tmp2 = closure_2;
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
-              obj = closure_1(closure_2[18]);
-              hideActionSheetResult = obj.hideActionSheet();
-              tmp5 = null != closure_2;
-              if (tmp5) {
-                tmp6 = application;
-                tmp5 = null != application;
-              }
-              if (tmp5) {
-                tmpResult = tmp(tmp2[16]);
-                tmp7 = AnalyticEvents;
-                obj1 = { application_id: null };
-                tmp8 = application;
-                obj1.application_id = application.id;
-                trackResult = tmpResult.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj1);
-                tmp10 = globalThis;
-                _setImmediate = setImmediate;
-                setImmediateResult = setImmediate(() => {
-                  const bestActiveInput = guild(dependencyMap[19]).getBestActiveInput();
-                  if (bestActiveInput != null) {
-                    const obj2 = { type: guild(dependencyMap[20]).KeyboardTypes.APP_LAUNCHER, context: null };
-                    const obj3 = { initialRouteName: constants.APPLICATION_VIEW, application };
-                    obj2.context = obj3;
-                    bestActiveInput.openCustomKeyboard(obj2);
-                  }
-                  const obj = guild(dependencyMap[19]);
-                });
-              }
-              return;
-            }
-          }
+          cResult[34] = tmp57;
+          cResult[35] = tmp59;
+          cResult[36] = tmp63;
         }
-        let tmp61 = null;
+        let tmp60 = null;
         if (null != tmp7) {
-          class W {
+          class M {
             constructor() {
-              return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+              return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
             }
           }
-          class F {
+          const obj6 = { style: null, variant: "text-sm/normal", children: null };
+          class G {
             constructor() {
-              arr = closure_1(closure_2[14]);
-              arr1 = arr.pop();
               obj = closure_1(closure_2[16]);
               id = undefined;
               if (application != null) {
                 id = application.id;
               }
-              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+              trackResult = obj.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
               return;
             }
           }
-          class H {
-            constructor() {
-              return closure_1_9.getChannelId();
-            }
-          }
-          tmp61 = closure_13(tmp(5086).Text, { style: null, variant: "text-sm/normal", children: null });
-          const obj6 = { style: null, variant: "text-sm/normal", children: null };
+          obj6.children = tmp7;
+          tmp60 = closure_12(tmp(5087).Text, obj6);
         }
         cResult[30] = tmp4.text;
         cResult[31] = tmp7;
-        cResult[32] = tmp61;
+        cResult[32] = tmp60;
+        const tmpResult4 = tmp(504);
       }
-      class K {
-        constructor() {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          arr = closure_1(closure_2[14]);
-          arr1 = arr.pop();
-          obj = closure_1(closure_2[18]);
-          hideActionSheetResult = obj.hideActionSheet();
-          tmp5 = null != closure_2;
-          if (tmp5) {
-            tmp6 = application;
-            tmp5 = null != application;
-          }
-          if (tmp5) {
-            tmpResult = tmp(tmp2[16]);
-            tmp7 = AnalyticEvents;
-            obj1 = { application_id: null };
-            tmp8 = application;
-            obj1.application_id = application.id;
-            trackResult = tmpResult.track(AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj1);
-            tmp10 = globalThis;
-            _setImmediate = setImmediate;
-            setImmediateResult = setImmediate(() => {
-              const bestActiveInput = guild(dependencyMap[19]).getBestActiveInput();
-              if (bestActiveInput != null) {
-                const obj2 = { type: guild(dependencyMap[20]).KeyboardTypes.APP_LAUNCHER, context: null };
-                const obj3 = { initialRouteName: constants.APPLICATION_VIEW, application };
-                obj2.context = obj3;
-                bestActiveInput.openCustomKeyboard(obj2);
-              }
-              const obj = guild(dependencyMap[19]);
-            });
-          }
-          return;
+      const fn2 = function k() {
+        ModalActionCreatorsDefault.pop();
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        let tmp5 = null != dependencyMap;
+        if (tmp5) {
+          tmp5 = null != application;
         }
-      }
+        if (tmp5) {
+          let obj2 = { application_id: application.id };
+          AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
+          const _setImmediate = setImmediate;
+          setImmediate(() => {
+            const bestActiveInput = guild(dependencyMap[19]).getBestActiveInput();
+            if (bestActiveInput != null) {
+              const obj2 = { type: guild(dependencyMap[20]).KeyboardTypes.APP_LAUNCHER, context: null };
+              const obj3 = { initialRouteName: constants.APPLICATION_VIEW, application };
+              obj2.context = obj3;
+              bestActiveInput.openCustomKeyboard(obj2);
+            }
+            const obj = guild(dependencyMap[19]);
+          });
+          const tmpResult = AnalyticsUtilsDefault;
+        }
+      };
       cResult[14] = application;
       cResult[15] = stateFromStores;
-      cResult[16] = K;
+      cResult[16] = fn2;
       const tmpResult3 = tmp(504);
     }
     if (application != null) {
-      class W {
+      class M {
         constructor() {
-          return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+          return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
         }
       }
     }
     cResult[6] = undefined;
     if (guild != null) {
-      class W {
+      class M {
         constructor() {
-          return closure_8.can(Permissions.SEND_MESSAGES, closure_3);
+          return closure_7.can(Permissions.SEND_MESSAGES, closure_3);
         }
       }
     }
-    class L {
+    class D {
       constructor() {
         tmp = guild;
         id = undefined;
@@ -819,7 +722,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
       }
     }
     cResult[7] = undefined;
-    cResult[8] = L;
+    cResult[8] = D;
   }
   let obj = guild(576);
 }) : (function SuccessResultModal(guild) {
@@ -827,7 +730,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   const application = guild.application;
   let stateFromStores;
   noop = undefined;
-  let tmp = closure_16();
+  let tmp = closure_15();
   const items = [application, guild];
   const memo = noop.useMemo(() => {
     let obj = application;
@@ -889,7 +792,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
         id3 = guild.id;
       }
       obj.guild_id = id3;
-      AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
+      AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
       const tmp9Result = AnalyticsUtilsDefault;
     }
   }, items1);
@@ -910,7 +813,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     }
     if (tmp5) {
       let obj2 = { application_id: application.id };
-      AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
+      AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj2);
       const _setImmediate = setImmediate;
       setImmediate(() => {
         const bestActiveInput = guild(stateFromStores[19]).getBestActiveInput();
@@ -936,7 +839,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+    AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
   }, items5);
   if (application != null) {
     id2 = application.id;
@@ -947,7 +850,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     if (application != null) {
       id = application.id;
     }
-    AnalyticsUtilsDefault.track(collapsed.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
+    AnalyticsUtilsDefault.track(options.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
   }, items6);
   const tmp2Result3 = guild(stateFromStores[17]);
   const items7 = [PermissionStore];
@@ -955,21 +858,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   let obj3 = { bottom: true, style: tmp.container, children: null };
   const obj4 = { style: tmp.scrollView, contentContainerStyle: tmp.scrollViewContentContainer, children: null };
   const obj5 = { style: tmp.inner, children: null };
+  const obj6 = { source: null };
   const tmp2Result4 = guild(stateFromStores[17]);
-  const items8 = [closure_13(closure_4, { source: application(stateFromStores[21]) }), , ];
+  obj6.source = application(stateFromStores[22]);
+  const items8 = [closure_12(application(stateFromStores[21]), obj6), , ];
   const obj7 = { style: tmp.text, variant: "text-lg/medium", children: null };
   let intl = tmp2(tmp3[13]).intl;
   obj7.children = intl.string(guild(stateFromStores[13]).t.se5gLj);
-  items8[1] = closure_13(guild(stateFromStores[22]).Text, obj7);
+  items8[1] = closure_12(guild(stateFromStores[23]).Text, obj7);
   let tmp15Result = null;
   if (null != memo) {
     const obj8 = { style: tmp.text, variant: "text-sm/normal", children: memo };
-    tmp15Result = closure_13(tmp2(tmp3[22]).Text, obj8);
+    tmp15Result = closure_12(tmp2(tmp3[23]).Text, obj8);
   }
   items8[2] = tmp15Result;
   obj5.children = items8;
-  obj4.children = closure_14(closure_5, obj5);
-  const items9 = [closure_13(closure_6, obj4), ];
+  obj4.children = closure_13(closure_4, obj5);
+  const items9 = [closure_12(closure_5, obj4), ];
   const items10 = [tmp.footer, ];
   const obj9 = { style: null, children: null };
   items10[1] = obj.useStore().orientation === guild(stateFromStores[12]).OrientationType.LANDSCAPE ? tmp.footerLandscape : tmp.footerPortrait;
@@ -985,7 +890,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
     const obj11 = { guildName: name };
     obj10.text = intl2.formatToPlainString(tmp2(tmp3[13]).t.UdYYP3, obj11);
     obj10.onPress = callback;
-    tmp15Result3 = closure_13(tmp2(tmp3[23]).Button, obj10);
+    tmp15Result3 = closure_12(tmp2(tmp3[24]).Button, obj10);
   }
   const items11 = [tmp15Result3, , ];
   let tmp15Result4 = null;
@@ -996,7 +901,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
       let intl3 = tmp2(tmp3[13]).intl;
       obj12.text = intl3.string(tmp2(tmp3[13]).t["0cCDKP"]);
       obj12.onPress = callback1;
-      tmp15Result4 = closure_13(tmp2(tmp3[23]).Button, obj12);
+      tmp15Result4 = closure_12(tmp2(tmp3[24]).Button, obj12);
     }
   }
   items11[1] = tmp15Result4;
@@ -1009,10 +914,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   const intl4 = tmp2(tmp3[13]).intl;
   obj14.text = intl4.string(guild(stateFromStores[13]).t.cpT0Cq);
   obj14.onPress = callback2;
-  items11[2] = closure_13(guild(stateFromStores[23]).Button, obj14);
+  items11[2] = closure_12(guild(stateFromStores[24]).Button, obj14);
   obj13.children = items11;
-  obj9.children = closure_14(closure_15, obj13);
-  items9[1] = closure_13(closure_5, obj9);
+  obj9.children = closure_13(closure_14, obj13);
+  items9[1] = closure_12(closure_4, obj9);
   obj3.children = items9;
-  return closure_14(guild(stateFromStores[24]).SafeAreaPaddingView, obj3);
+  return closure_13(guild(stateFromStores[25]).SafeAreaPaddingView, obj3);
 });

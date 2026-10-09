@@ -1,9 +1,9 @@
-// === Module 11658: useTypingText ===
+// === Module 11594: useTypingText ===
 
-// Module 11658 (useTypingText)
-import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+// Module 11594 (useTypingText)
+import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

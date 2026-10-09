@@ -1,8 +1,8 @@
-// === Module 7330: GuildVersions ===
+// === Module 7335: GuildVersions ===
 
-// Module 7330 (GuildVersions)
+// Module 7335 (GuildVersions)
 import LoggerDefault from "Logger" /* 3 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

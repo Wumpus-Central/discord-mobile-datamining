@@ -1,30 +1,30 @@
-// === Module 9023: CollectiblesShopCardCardDetailsV2 ===
+// === Module 9038: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 9023 (CollectiblesShopCardCardDetailsV2)
+// Module 9038 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import useToken from "useToken" /* 4778 */;
-import ColorUtils from "ColorUtils" /* 4927 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7264 */;
-import useCurrentUser from "useCurrentUser" /* 8278 */;
-import useDefaultVariantIndex from "useDefaultVariantIndex" /* 8938 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
-import OrbsIcon from "OrbsIcon" /* 9009 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9024 */;
-import _mod9026 from "module_9026" /* 9026 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9040 */;
-import TagIcon from "TagIcon" /* 9041 */;
-import getProductName from "getProductName" /* 9043 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9044 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import useToken from "useToken" /* 4779 */;
+import ColorUtils from "ColorUtils" /* 4928 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7268 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
+import useCurrentUser from "useCurrentUser" /* 8286 */;
+import useDefaultVariantIndex from "useDefaultVariantIndex" /* 8949 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9016 */;
+import OrbsIcon from "OrbsIcon" /* 9020 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9039 */;
+import _mod9041 from "module_9041" /* 9041 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 9055 */;
+import TagIcon from "TagIcon" /* 9056 */;
+import getProductName from "getProductName" /* 9058 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 9059 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7120 */;
+import IAPStore from "IAPStore" /* 7125 */;
 
 require = fn;
 const View = fn(17).View;
@@ -32,7 +32,7 @@ const Constants = fn(1085);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { regularMetadataContainer: null, assetName: null, priceVariantsContainer: null, priceDescription: null, text: null, discountPercentage: null, wheelIcon: null, androidTextPadding: null };
 let size = { position: "absolute", height: "45%", width: "100%", padding: 10, flex: 1, bottom: 0, overflow: "hidden", borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, display: "flex", flexDirection: "column", justifyContent: "flex-end" };
 obj.regularMetadataContainer = size;
@@ -69,7 +69,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ar
               let tmp13 = cResult[13];
             }
             const discountPercentage2 = tmp13.discountPercentage;
-            const balance = _mod9026.useFetchVirtualCurrencyBalance().balance;
+            const balance = _mod9041.useFetchVirtualCurrencyBalance().balance;
             let tmp17 = null;
             if (null != tmp9) {
               tmp17 = null;
@@ -482,7 +482,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ar
                 tmp21 = closure_1_8(NitroWheelIcon.NitroWheelIcon, obj23);
               }
             }
-            const tmpResult = _mod9026;
+            const tmpResult = _mod9041;
           }
           const productDiscount = CollectiblesUtils.getProductDiscount(tmp5, hasShopDiscount, constants.DISCORD_ORB);
           cResult[11] = hasShopDiscount;

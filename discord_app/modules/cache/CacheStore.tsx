@@ -1,6 +1,6 @@
-// === Module 7186: CacheStore ===
+// === Module 7191: CacheStore ===
 
-// Module 7186 (CacheStore)
+// Module 7191 (CacheStore)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
@@ -8,16 +8,16 @@ import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TryLoad from "TryLoad" /* 2110 */;
-import modules_MessagesDefault from "modules/Messages" /* 7187 */;
-import timeRequireDefault from "timeRequire" /* 7202 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7333 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7345 */;
+import modules_MessagesDefault from "modules/Messages" /* 7192 */;
+import timeRequireDefault from "timeRequire" /* 7207 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7338 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7350 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
 
 require = fn;
 function handleClearCaches(type) {
@@ -214,21 +214,21 @@ let closure_21 = async function _loadEarlyCache(arg0) {
           if (null == closure_0) {
             let resolved = Promise.resolve({});
           } else {
-            resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () => closure_1(7199).getAll(closure_1_0));
+            resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () => closure_1(7204).getAll(closure_1_0));
           }
           if (null == closure_0) {
             let resolved1 = Promise.resolve([]);
           } else {
-            resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () => closure_1(7200).getAll(closure_1_0));
+            resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () => closure_1(7205).getAll(closure_1_0));
           }
           if (null == closure_0) {
             let resolveResult = allResult.Promise.resolve([]);
             const _Promise5 = allResult.Promise;
           } else {
-            resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () => closure_1(7201).getAll(closure_1_0));
+            resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () => closure_1(7206).getAll(closure_1_0));
           }
-          timeRequireDefault("AllCacheStores", () => closure_1_0(7203));
-          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7321));
+          timeRequireDefault("AllCacheStores", () => closure_1_0(7208));
+          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7326));
           let items = [
             result,
             measureAsyncResult,
@@ -449,7 +449,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
               if (c22) {
                 c6 = 1;
                 c7 = 1;
-                const obj6 = { value: TryLoad.tryLoadAsync(async () => closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () => closure_2_1(7327).getAsync(closure_1_0))), done: false };
+                const obj6 = { value: TryLoad.tryLoadAsync(async () => closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () => closure_2_1(7332).getAsync(closure_1_0))), done: false };
                 return obj6;
               } else {
                 c6 = 2;
@@ -496,7 +496,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
             if ("@me" !== closure_132_2) {
               c6 = 3;
               c7 = 1;
-              const obj13 = { value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () => closure_1(7327).getOneAsync(closure_1_0, dependencyMap)), done: false };
+              const obj13 = { value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () => closure_1(7332).getOneAsync(closure_1_0, dependencyMap)), done: false };
               return obj13;
             }
           }
@@ -668,7 +668,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       const items = [
                         closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                           if (null != closure_1_0) {
-                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: cache_version", async () => closure_2_1(7331).okAsync(closure_1_0));
+                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: cache_version", async () => closure_2_1(7336).okAsync(closure_1_0));
                             const obj = closure_2_1(initialGuildId[13]);
                           } else {
                             timeAsyncResult = Promise.resolve(true);
@@ -682,7 +682,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       items[1] = closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                         if (null != closure_1_0) {
                           if (!closure_2_22) {
-                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: lazy guilds", async () => closure_2_1(7327).getAsync(closure_1_0));
+                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: lazy guilds", async () => closure_2_1(7332).getAsync(closure_1_0));
                             const obj = closure_2_1(initialGuildId[13]);
                           }
                           return timeAsyncResult;
@@ -692,7 +692,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       let obj2 = closure_0(initialGuildId[24]);
                       items[2] = closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                         if (null != closure_1_0) {
-                          let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: basic_channels", async () => closure_2_1(7325).getAsync(closure_1_0));
+                          let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: basic_channels", async () => closure_2_1(7330).getAsync(closure_1_0));
                           const obj2 = closure_2_1(initialGuildId[13]);
                         } else {
                           const obj = { all: [], stale: [], channels: [] };
@@ -899,7 +899,7 @@ function resumeFluxAndSocket(arg0) {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     try {
-      f156251();
+      f156586();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         c2 = true;
@@ -1130,13 +1130,13 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                 c5 = 1;
                 const obj11 = {
                   value: (function dontLoadLateLazyCache() {
-                                const f156251 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                                const f156586 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
                                 const socket = closure_5.getSocket();
                                 dependencyMap = false;
                                 const Emitter = socket(504).Emitter;
                                 Emitter.batched(() => {
                                   try {
-                                    f156251();
+                                    f156586();
                                     dispatcher = dispatcher.dispatcher;
                                     if (dispatcher.hasStuffToDispatchNow()) {
                                       c2 = true;

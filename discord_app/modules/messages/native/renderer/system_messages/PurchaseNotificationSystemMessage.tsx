@@ -1,8 +1,8 @@
-// === Module 8026: PurchaseNotificationSystemMessage ===
+// === Module 8034: PurchaseNotificationSystemMessage ===
 
-// Module 8026 (PurchaseNotificationSystemMessage)
-import Server from "Server" /* 1997 */;
-import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8027 */;
+// Module 8034 (PurchaseNotificationSystemMessage)
+import Server from "Server" /* 1998 */;
+import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8035 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");

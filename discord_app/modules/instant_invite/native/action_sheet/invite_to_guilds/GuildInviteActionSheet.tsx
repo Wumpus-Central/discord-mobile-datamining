@@ -1,18 +1,18 @@
-// === Module 12958: GuildInviteActionSheet ===
+// === Module 13038: GuildInviteActionSheet ===
 
-// Module 12958 (GuildInviteActionSheet)
+// Module 13038 (GuildInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import SearchField from "SearchField" /* 6730 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6829 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8660 */;
-import _modDef12959 from "module_12959" /* 12959 */;
-import _modDef12960 from "module_12960" /* 12960 */;
-import GuildInviteRowDefault from "GuildInviteRow" /* 12961 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import SearchField from "SearchField" /* 6737 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 8669 */;
+import _modDef13039 from "module_13039" /* 13039 */;
+import _modDef13040 from "module_13040" /* 13040 */;
+import GuildInviteRowDefault from "GuildInviteRow" /* 13041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 }, searchbarWrapper: null, sectionTitle: null, emptyStateContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.searchbarWrapper = { rowGap: 8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -47,7 +47,7 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     [tmp5, tmp6] = cResult;
   }
   if (cResult[2] !== tmp4.emptyStateContainer) {
-    const obj2 = { containerStyle: tmp4.emptyStateContainer, title: tmp5, body: tmp6, darkSource: _modDef12959, lightSource: _modDef12960 };
+    const obj2 = { containerStyle: tmp4.emptyStateContainer, title: tmp5, body: tmp6, darkSource: _modDef13039, lightSource: _modDef13040 };
     const tmp12 = timestampProducer(native.ThemedEmptyState, obj2);
     cResult[2] = tmp4.emptyStateContainer;
     cResult[3] = tmp12;
@@ -62,8 +62,8 @@ const ListEmptyComponent = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj.title = intl.string(util.t["2bfiLk"]);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  obj.darkSource = _modDef12959;
-  obj.lightSource = _modDef12960;
+  obj.darkSource = _modDef13039;
+  obj.lightSource = _modDef13040;
   return timestampProducer(native.ThemedEmptyState, obj);
 });
 ReactCompilerGating = fn(558);
@@ -75,8 +75,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
   dependencyMap = tmp4;
   let obj = recipientId(576);
   let num = 2;
-  const obj2 = recipientId(12956);
-  [arr, arr2] = recipientId(12956).useServerInviteRows(recipientId, recipientId.query);
+  const obj2 = recipientId(13036);
+  [arr, arr2] = recipientId(13036).useServerInviteRows(recipientId, recipientId.query);
   if (cResult[0] === (0 === arr.length && 0 === arr2.length)) {
     if (cResult[1] === arr) {
       if (cResult[2] === arr2) {
@@ -109,7 +109,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
           if (tmp13) {
             num7 = 24;
           }
-          const sum = source(6656)().insets.bottom + source(587).space.PX_16;
+          const sum = source(6663)().insets.bottom + source(587).space.PX_16;
           if (cResult[9] === num7) {
             if (cResult[10] === sum) {
               let tmp15 = cResult[11];
@@ -157,7 +157,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
                 }
               }
               const obj3 = { renderItem: tmp9, contentContainerStyle: tmp15, sections: tmp7, renderSectionHeader: tmp16, stickySectionHeadersEnabled: true, keyExtractor: tmp18, ListEmptyComponent };
-              const tmp22 = closure_6(tmp(10505).UserProfileStackedActionSheetSectionList, obj3);
+              const tmp22 = closure_6(tmp(10495).UserProfileStackedActionSheetSectionList, obj3);
               cResult[16] = tmp9;
               cResult[17] = tmp7;
               cResult[18] = tmp15;
@@ -221,14 +221,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
   cResult[num] = arr2;
   num = 3;
   cResult[3] = items;
-  const tmp5 = _slicedToArray(recipientId(12956).useServerInviteRows(recipientId, recipientId.query), 2);
+  const tmp5 = _slicedToArray(recipientId(13036).useServerInviteRows(recipientId, recipientId.query), 2);
 }) : (function GuildList(recipientId) {
   recipientId = recipientId.recipientId;
   const source = recipientId.source;
   _slicedToArray = undefined;
   dependencyMap = closure_8();
-  let obj = recipientId(12956);
-  [arr, arr2] = recipientId(12956).useServerInviteRows(recipientId, recipientId.query);
+  let obj = recipientId(13036);
+  [arr, arr2] = recipientId(13036).useServerInviteRows(recipientId, recipientId.query);
   if (0 === arr.length) {
     if (0 === arr2.length) {
       let items = [];
@@ -254,7 +254,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
     if (tmp5) {
       num = 24;
     }
-    const obj3 = { paddingTop: num, paddingBottom: source(6656)().insets.bottom + source(587).space.PX_16 };
+    const obj3 = { paddingTop: num, paddingBottom: source(6663)().insets.bottom + source(587).space.PX_16 };
     obj2.contentContainerStyle = obj3;
     obj2.sections = items;
     obj2.renderSectionHeader = function renderSectionHeader(section) {
@@ -274,7 +274,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
       return guild.guild.id;
     };
     obj2.ListEmptyComponent = ListEmptyComponent;
-    return closure_6(tmp(10505).UserProfileStackedActionSheetSectionList, obj2);
+    return closure_6(tmp(10495).UserProfileStackedActionSheetSectionList, obj2);
   }
   const obj4 = { title: null, data: null };
   const intl = tmp(1126).intl;
@@ -286,7 +286,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildL
   obj5.title = intl2.string(recipientId(1126).t["c5T+X/"]);
   obj5.data = arr2;
   items[1] = obj5;
-  const tmp3 = _slicedToArray(recipientId(12956).useServerInviteRows(recipientId, recipientId.query), 2);
+  const tmp3 = _slicedToArray(recipientId(13036).useServerInviteRows(recipientId, recipientId.query), 2);
 });
 ReactCompilerGating = fn(558);
 let obj5 = { paddingBottom: 6, paddingTop: 24, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

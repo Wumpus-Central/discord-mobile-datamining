@@ -1,10 +1,10 @@
-// === Module 7988: GuildLeaderboardSystemMessageCopy ===
+// === Module 7996: GuildLeaderboardSystemMessageCopy ===
 
-// Module 7988 (GuildLeaderboardSystemMessageCopy)
+// Module 7996 (GuildLeaderboardSystemMessageCopy)
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
 import _modDef2469 from "module_2469" /* 2469 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4695 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4697 */;
 
 require = fn;
 function getLeaderboardSystemMessageValues(value, arg1) {
@@ -29,36 +29,36 @@ function getLeaderboardSystemMessageValues(value, arg1) {
 }
 let obj = {};
 let obj2 = {};
-obj2[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.unVTUQ;
-obj2[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469["/JyaTi"];
-obj2[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469["5D7LjH"];
-obj[fn(4695).GuildSpaceLeaderboardEvent.COMPETITION_ENDED] = obj2;
+obj2[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.unVTUQ;
+obj2[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469["/JyaTi"];
+obj2[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469["5D7LjH"];
+obj[fn(4697).GuildSpaceLeaderboardEvent.COMPETITION_ENDED] = obj2;
 const obj3 = {};
-obj3[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.ptD18B;
-obj3[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469["2IbyWO"];
-obj3[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.Y6K3qc;
-obj[fn(4695).GuildSpaceLeaderboardEvent.COMPETITION_STARTED] = obj3;
+obj3[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.ptD18B;
+obj3[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469["2IbyWO"];
+obj3[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.Y6K3qc;
+obj[fn(4697).GuildSpaceLeaderboardEvent.COMPETITION_STARTED] = obj3;
 const obj4 = {};
-obj4[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469["8MO3bp"];
-obj4[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469["+aHNgn"];
-obj4[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.CHYFwK;
-obj[fn(4695).GuildSpaceLeaderboardEvent.LEADER_CHANGED] = obj4;
+obj4[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469["8MO3bp"];
+obj4[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469["+aHNgn"];
+obj4[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.CHYFwK;
+obj[fn(4697).GuildSpaceLeaderboardEvent.LEADER_CHANGED] = obj4;
 const obj5 = {};
 const obj6 = {};
-obj6[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.Wwu6IA;
-obj6[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469.f6TxHV;
-obj6[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.mhO0Bz;
-obj5[fn(4695).GuildSpaceLeaderboardEvent.COMPETITION_ENDED] = obj6;
+obj6[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.Wwu6IA;
+obj6[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469.f6TxHV;
+obj6[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.mhO0Bz;
+obj5[fn(4697).GuildSpaceLeaderboardEvent.COMPETITION_ENDED] = obj6;
 const obj7 = {};
-obj7[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.T7CcFq;
-obj7[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469.jUJ7IO;
-obj7[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.PLdF3A;
-obj5[fn(4695).GuildSpaceLeaderboardEvent.COMPETITION_STARTED] = obj7;
+obj7[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.T7CcFq;
+obj7[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469.jUJ7IO;
+obj7[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.PLdF3A;
+obj5[fn(4697).GuildSpaceLeaderboardEvent.COMPETITION_STARTED] = obj7;
 const obj8 = {};
-obj8[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.fVm1Zn;
-obj8[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469.exTWBN;
-obj8[fn(4695).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.dX9B32;
-obj5[fn(4695).GuildSpaceLeaderboardEvent.LEADER_CHANGED] = obj8;
+obj8[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_HOURS_PLAYED] = _modDef2469.fVm1Zn;
+obj8[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_DAYS_PLAYED] = _modDef2469.exTWBN;
+obj8[fn(4697).GamingLeaderboardStat.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED] = _modDef2469.dX9B32;
+obj5[fn(4697).GuildSpaceLeaderboardEvent.LEADER_CHANGED] = obj8;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_space/gaming_leaderboard/GuildLeaderboardSystemMessageCopy.tsx");
 

@@ -1,21 +1,21 @@
-// === Module 13617: Footer ===
+// === Module 13708: Footer ===
 
-// Module 13617 (Footer)
+// Module 13708 (Footer)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13618 */;
-import _modDef13619 from "module_13619" /* 13619 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13709 */;
+import _modDef13710 from "module_13710" /* 13710 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Footer(a
               easterEggSpacing = tmp4.easterEggSpacing;
             }
             if (cResult[9] !== easterEggSpacing) {
-              const obj2 = { style: easterEggSpacing, source: _modDef13619 };
+              const obj2 = { style: easterEggSpacing, source: _modDef13710 };
               const tmp19 = React4(FastImageDefault, obj2);
               cResult[9] = easterEggSpacing;
               cResult[10] = tmp19;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Footer(a
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13619 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13710 });
   obj.children = items2;
   return timestampProducer(View, obj);
 });

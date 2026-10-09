@@ -1,24 +1,24 @@
-// === Module 17434: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 17584: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 17434 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 17584 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
 import _modDef3341 from "module_3341" /* 3341 */;
-import LinkingDefault from "Linking" /* 4763 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8982 */;
-import PromoSheet from "PromoSheet" /* 10303 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12855 */;
-import _modDef16035 from "module_16035" /* 16035 */;
-import _modDef16036 from "module_16036" /* 16036 */;
+import LinkingDefault from "Linking" /* 4765 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8993 */;
+import PromoSheet from "PromoSheet" /* 10290 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12822 */;
+import _modDef16151 from "module_16151" /* 16151 */;
+import _modDef16152 from "module_16152" /* 16152 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
@@ -66,21 +66,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   if (cResult[4] !== stateFromStores) {
     if (stateFromStores) {
       let obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef16035 };
+      const obj3 = { uri: _modDef16151 };
       obj2.source = obj3;
       const size = { width: v150, height: v150 };
       obj2.style = size;
       let tmp11Result = jsx(FastImageDefault, { source: null, style: null });
     } else {
       if (tmpResult2.isAndroid()) {
-        const obj4 = { url: _modDef16036, style: null };
+        const obj4 = { url: _modDef16152, style: null };
         const size1 = { width: v150, height: v150 };
         obj4.style = size1;
-        tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16036, style: null });
+        tmp11Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16152, style: null });
         const tmp12Result = APNGDecorationNativeComponentDefault;
       } else {
         const obj5 = { source: null, resizeMode: "contain", style: null };
-        const obj6 = { uri: _modDef16036 };
+        const obj6 = { uri: _modDef16152 };
         obj5.source = obj6;
         const size2 = { width: v150, height: v150 };
         obj5.style = size2;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     let obj2 = { source: null, style: null };
-    const obj3 = { uri: _modDef16035 };
+    const obj3 = { uri: _modDef16151 };
     obj2.source = obj3;
     const size = { width: v150, height: v150 };
     obj2.style = size;
@@ -145,16 +145,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Incentiv
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
-      const obj4 = { url: _modDef16036, style: null };
+      const obj4 = { url: _modDef16152, style: null };
       const size1 = { width: v150, height: v150 };
       obj4.style = size1;
-      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16036, style: null });
+      tmp3Result = jsx(APNGDecorationNativeComponentDefault, { url: _modDef16152, style: null });
       tmp8 = importDefault;
       tmp9 = jsx;
       const tmp4Result = APNGDecorationNativeComponentDefault;
     } else {
       const obj5 = { source: null, resizeMode: "contain", style: null };
-      const obj6 = { uri: _modDef16036 };
+      const obj6 = { uri: _modDef16152 };
       obj5.source = obj6;
       const size2 = { width: v150, height: v150 };
       obj5.style = size2;

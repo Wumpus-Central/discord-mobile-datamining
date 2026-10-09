@@ -1,22 +1,22 @@
-// === Module 11282: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 10649: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11282 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 10649 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
 import _modDef3697 from "module_3697" /* 3697 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6847 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6917 */;
-import StorefrontUtils from "StorefrontUtils" /* 6922 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7861 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11283 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6854 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6924 */;
+import StorefrontUtils from "StorefrontUtils" /* 6929 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7870 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 10650 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import SKUStore from "SKUStore" /* 6092 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import SKUStore from "SKUStore" /* 6094 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7418).InviteTypes;
+const InviteTypes = fn(7423).InviteTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
@@ -201,5 +201,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(6847)(stateFromStoresArray);
+  memo(6854)(stateFromStoresArray);
 });

@@ -1,15 +1,15 @@
-// === Module 16441: conjureUnread ===
+// === Module 16560: conjureUnread ===
 
-// Module 16441 (conjureUnread)
+// Module 16560 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectMute from "conjureProjectMute" /* 13074 */;
-import VibegrationsReadStateFlags2 from "VibegrationsReadStateFlags" /* 16442 */;
+import conjureProjectMute from "conjureProjectMute" /* 12949 */;
+import VibegrationsReadStateFlags2 from "VibegrationsReadStateFlags" /* 16561 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import ReadStateStore from "ReadStateStore" /* 6042 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ function unreadStatus(mentionCount, ackMessageIdResult, arg2) {
   }
   return tmp2;
 }
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(5974).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectUnreadStatus(arg0) {
@@ -207,7 +207,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
   }
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-  const tmp9 = stateFromStores(16443)();
+  const tmp9 = stateFromStores(16562)();
   dependencyMap = tmp9;
   if (cResult[4] === tmp9) {
     if (cResult[5] === projectId) {
@@ -251,7 +251,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
     }
     return tmp2;
   }, items1);
-  let tmp2 = stateFromStores(16443)();
+  let tmp2 = stateFromStores(16562)();
   dependencyMap = tmp2;
   const items2 = [projectId, stateFromStores, tmp2];
   const effect = noop.useEffect(() => {

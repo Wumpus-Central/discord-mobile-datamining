@@ -1,17 +1,17 @@
-// === Module 7074: trackSoundPlayed ===
+// === Module 7077: trackSoundPlayed ===
 
-// Module 7074 (trackSoundPlayed)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import SoundboardTypes from "SoundboardTypes" /* 7039 */;
-import RunningGameStore from "RunningGameStore" /* 2018 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
+// Module 7077 (trackSoundPlayed)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import SoundboardTypes from "SoundboardTypes" /* 7042 */;
+import RunningGameStore from "RunningGameStore" /* 2019 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5426).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5427).DEFAULT_SOUND_GUILD_ID;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ AnalyticsPremiumFeatureNames: closure_9, AnalyticsPremiumFeatureTiers: c10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");

@@ -1,20 +1,20 @@
-// === Module 13284: ProductDetailsActionSheetVariants ===
+// === Module 13379: ProductDetailsActionSheetVariants ===
 
-// Module 13284 (ProductDetailsActionSheetVariants)
+// Module 13379 (ProductDetailsActionSheetVariants)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Pressables from "Pressables" /* 6189 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6812 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9014 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9045 */;
+import Pressables from "Pressables" /* 6191 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 6819 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9025 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 9060 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj2 = { container: { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 }, headerRow: null, variantsContainer: null, text: null };
 let obj3 = { flex: 1, display: "flex", flexDirection: "column", marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 obj2.headerRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
@@ -22,7 +22,7 @@ let obj4 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.spac
 obj2.variantsContainer = { display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 obj2.text = { flexGrow: 1, flexShrink: 1, minWidth: 28 };
 let closure_6 = createStyles.createStyles(obj2);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let closure_7 = createStyles.createStyles((arg0) => {
   const size = { width: 28, height: 28, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", borderWidth: 1, borderColor: null };
   const colors = nativeDefault.colors;
@@ -34,113 +34,108 @@ let closure_7 = createStyles.createStyles((arg0) => {
 });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function VariantOption(arg0) {
-  const cResult = c.c(24);
+  const cResult = c.c(21);
   ({ variant, isSelected, disabled, onSelect } = arg0);
   const tmp4 = closure_7(isSelected);
   const isPurchased = useProductPurchaseState.useProductPurchaseState(variant).isPurchased;
   if (cResult[0] === isPurchased) {
     if (cResult[1] === variant.name) {
-      if (cResult[3] === disabled) {
-        if (cResult[4] === isSelected) {
-          let tmp6 = cResult[5];
+      if (cResult[3] !== variant.variantValue) {
+        const obj3 = { backgroundColor: variant.variantValue };
+        cResult[3] = variant.variantValue;
+        cResult[4] = obj3;
+        let tmp6 = obj3;
+      } else {
+        tmp6 = cResult[4];
+      }
+      if (cResult[5] === tmp4.variantOptionInner) {
+        if (cResult[6] === tmp6) {
+          let tmp7 = cResult[7];
         }
-        if (cResult[6] !== variant.variantValue) {
-          const obj3 = { backgroundColor: variant.variantValue };
-          cResult[6] = variant.variantValue;
-          cResult[7] = obj3;
-          let tmp7 = obj3;
-        } else {
-          tmp7 = cResult[7];
-        }
-        if (cResult[8] === tmp4.variantOptionInner) {
-          if (cResult[9] === tmp7) {
+        if (cResult[8] === isPurchased) {
+          if (cResult[9] === variant) {
             let tmp8 = cResult[10];
           }
-          if (cResult[11] === isPurchased) {
-            if (cResult[12] === variant) {
-              let tmp9 = cResult[13];
+          if (cResult[11] === tmp7) {
+            if (cResult[12] === tmp8) {
+              let tmp12 = cResult[13];
             }
-            if (cResult[14] === tmp8) {
-              if (cResult[15] === tmp9) {
-                let tmp13 = cResult[16];
-              }
-              if (cResult[17] === disabled) {
-                if (cResult[18] === onSelect) {
-                  if (cResult[19] === tmp4.variantOption) {
-                    if (cResult[20] === tmp5) {
-                      if (cResult[21] === tmp6) {
-                        if (cResult[22] === tmp13) {
-                          let tmp17 = cResult[23];
-                        }
-                        return tmp17;
+            if (cResult[14] === disabled) {
+              if (cResult[15] === isSelected) {
+                if (cResult[16] === onSelect) {
+                  if (cResult[17] === tmp4.variantOption) {
+                    if (cResult[18] === tmp5) {
+                      if (cResult[19] === tmp12) {
+                        let tmp16 = cResult[20];
                       }
+                      return tmp16;
                     }
                   }
                 }
               }
-              const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp5, accessibilityState: tmp6, disabled, onPress: onSelect, style: tmp4.variantOption, children: tmp13 };
-              const tmp19 = React4(Pressables.PressableOpacity, obj4);
-              cResult[17] = disabled;
-              cResult[18] = onSelect;
-              cResult[19] = tmp4.variantOption;
-              cResult[20] = tmp5;
-              cResult[21] = tmp6;
-              cResult[22] = tmp13;
-              cResult[23] = tmp19;
-              tmp17 = tmp19;
             }
-            const obj5 = { style: tmp8, children: tmp9 };
-            const tmp16 = React4(View, obj5);
-            cResult[14] = tmp8;
-            cResult[15] = tmp9;
-            cResult[16] = tmp16;
-            tmp13 = tmp16;
+            const obj4 = { role: "radio", "aria-checked": isSelected, accessibilityLabel: tmp5, disabled, onPress: onSelect, style: tmp4.variantOption, children: tmp12 };
+            const tmp18 = React4(Pressables.PressableOpacity, obj4);
+            cResult[14] = disabled;
+            cResult[15] = isSelected;
+            cResult[16] = onSelect;
+            cResult[17] = tmp4.variantOption;
+            cResult[18] = tmp5;
+            cResult[19] = tmp12;
+            cResult[20] = tmp18;
+            tmp16 = tmp18;
           }
-          let tmp10 = isPurchased;
-          if (isPurchased) {
-            const obj6 = { variant };
-            tmp10 = React4(closure_9, obj6);
-          }
-          cResult[11] = isPurchased;
-          cResult[12] = variant;
-          cResult[13] = tmp10;
-          tmp9 = tmp10;
+          const obj5 = { style: tmp7, children: tmp8 };
+          const tmp15 = React4(View, obj5);
+          cResult[11] = tmp7;
+          cResult[12] = tmp8;
+          cResult[13] = tmp15;
+          tmp12 = tmp15;
         }
-        const items = [tmp4.variantOptionInner, tmp7];
-        cResult[8] = tmp4.variantOptionInner;
-        cResult[9] = tmp7;
-        cResult[10] = items;
-        tmp8 = items;
+        let tmp9 = isPurchased;
+        if (isPurchased) {
+          const obj6 = { variant };
+          tmp9 = React4(closure_9, obj6);
+        }
+        cResult[8] = isPurchased;
+        cResult[9] = variant;
+        cResult[10] = tmp9;
+        tmp8 = tmp9;
       }
-      const obj7 = { selected: isSelected, disabled };
-      cResult[3] = disabled;
-      cResult[4] = isSelected;
-      cResult[5] = obj7;
-      tmp6 = obj7;
+      const items = [tmp4.variantOptionInner, tmp6];
+      cResult[5] = tmp4.variantOptionInner;
+      cResult[6] = tmp6;
+      cResult[7] = items;
+      tmp7 = items;
     }
   }
   if (isPurchased) {
     const intl = util.intl;
-    const obj8 = { variantLabel: variant.name };
-    let name = intl.formatToPlainString(util.t["SfQB4+"], obj8);
+    const obj7 = { variantLabel: variant.name };
+    let name = intl.formatToPlainString(util.t["SfQB4+"], obj7);
   } else {
     name = variant.name;
   }
   cResult[0] = isPurchased;
   cResult[1] = variant.name;
   cResult[2] = name;
-}) : (function VariantOption(onPress) {
-  ({ variant, isSelected, disabled } = onPress);
+}) : (function VariantOption(arg0) {
+  ({ variant, isSelected } = arg0);
+  ({ disabled, onSelect } = arg0);
   const tmp = closure_7(isSelected);
   let isPurchased = useProductPurchaseState.useProductPurchaseState(variant).isPurchased;
+  const obj2 = { role: "radio", "aria-checked": isSelected, accessibilityLabel: null, disabled: null, onPress: null, style: null, children: null };
   if (isPurchased) {
     const intl = util.intl;
-    const obj2 = { variantLabel: variant.name };
-    let name = intl.formatToPlainString(util.t["SfQB4+"], obj2);
+    const obj3 = { variantLabel: variant.name };
+    let name = intl.formatToPlainString(util.t["SfQB4+"], obj3);
   } else {
     name = variant.name;
   }
-  const obj3 = { accessibilityRole: "button", accessibilityLabel: name, accessibilityState: { selected: isSelected, disabled }, disabled, onPress: onPress.onSelect, style: tmp.variantOption, children: null };
+  obj2.accessibilityLabel = name;
+  obj2.disabled = disabled;
+  obj2.onPress = onSelect;
+  obj2.style = tmp.variantOption;
   const obj4 = { style: null, children: null };
   const items = [tmp.variantOptionInner, { backgroundColor: variant.variantValue }];
   obj4.style = items;
@@ -149,8 +144,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Variant
     isPurchased = React4(closure_9, obj5);
   }
   obj4.children = isPurchased;
-  obj3.children = React4(View, obj4);
-  return React4(Pressables.PressableOpacity, obj3);
+  obj2.children = React4(View, obj4);
+  return React4(Pressables.PressableOpacity, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VariantCheckmark(variant) {
@@ -178,7 +173,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetVariants.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductDetailsActionSheetVariants(arg0) {
-  const cResult = selectedVariantIndex(576).c(24);
+  const cResult = selectedVariantIndex(576).c(25);
   ({ product, selectedVariantIndex } = arg0);
   ({ disabled, onVariantSelect } = arg0);
   dependencyMap = tmp4;
@@ -190,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductD
       const obj2 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
       const intl = selectedVariantIndex(1126).intl;
       obj2.children = intl.string(selectedVariantIndex(1126).t.wbgaj6);
-      const tmp10 = closure_4(selectedVariantIndex(5086).Text, obj2);
+      const tmp10 = closure_4(selectedVariantIndex(5087).Text, obj2);
       cResult[0] = tmp10;
       let first = tmp10;
     } else {
@@ -205,112 +200,113 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductD
           if (cResult[6] === tmp11) {
             let tmp14 = cResult[7];
           }
-          if (cResult[8] === tmp4) {
-            if (cResult[9] === onVariantSelect) {
-              if (cResult[10] === product.variants) {
-                if (cResult[11] === selectedVariantIndex) {
-                  if (cResult[17] === tmp5.variantsContainer) {
-                    if (cResult[18] === tmp18) {
-                      let tmp22 = cResult[19];
+          const _Symbol2 = Symbol;
+          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl2 = selectedVariantIndex(1126).intl;
+            const stringResult = intl2.string(selectedVariantIndex(1126).t.lLFi5U);
+            cResult[8] = stringResult;
+            let tmp18 = stringResult;
+          } else {
+            tmp18 = cResult[8];
+          }
+          if (cResult[9] === tmp4) {
+            if (cResult[10] === onVariantSelect) {
+              if (cResult[11] === product.variants) {
+                if (cResult[12] === selectedVariantIndex) {
+                  if (cResult[18] === tmp5.variantsContainer) {
+                    if (cResult[19] === tmp20) {
+                      let tmp24 = cResult[20];
                     }
-                    if (cResult[20] === tmp5.container) {
-                      if (cResult[21] === tmp14) {
-                        if (cResult[22] === tmp22) {
-                          let tmp25 = cResult[23];
+                    if (cResult[21] === tmp5.container) {
+                      if (cResult[22] === tmp14) {
+                        if (cResult[23] === tmp24) {
+                          let tmp28 = cResult[24];
                         }
-                        return tmp25;
+                        return tmp28;
                       }
                     }
-                    class I {
+                    const obj3 = { style: tmp5.container, children: null };
+                    const items = [, ];
+                    class V {
                       constructor(arg0, arg1) {
                         closure_0 = arg1;
                         obj = { variant: arg0, isSelected: closure_0 === arg1, disabled, onSelect() { ... } };
                         return closure_1_4(closure_1_8, obj, arg0.variantValue);
                       }
                     }
-                    const obj3 = { style: tmp5.container, children: null };
-                    const items = [tmp14, tmp22];
+                    items[1] = tmp24;
                     obj3.children = items;
-                    const tmp27 = closure_5(View, obj3);
-                    cResult[20] = tmp5.container;
-                    cResult[21] = tmp14;
-                    cResult[22] = tmp22;
-                    cResult[23] = tmp27;
-                    tmp25 = tmp27;
+                    const tmp31 = closure_5(View, obj3);
+                    cResult[21] = tmp5.container;
+                    cResult[22] = tmp14;
+                    cResult[23] = tmp24;
+                    cResult[24] = tmp31;
+                    tmp28 = tmp31;
                   }
-                  class I {
+                  const obj4 = { style: tmp5.variantsContainer, role: "radiogroup", "aria-label": tmp18, children: null };
+                  class V {
                     constructor(arg0, arg1) {
                       closure_0 = arg1;
                       obj = { variant: arg0, isSelected: closure_0 === arg1, disabled, onSelect() { ... } };
                       return closure_1_4(closure_1_8, obj, arg0.variantValue);
                     }
                   }
-                  const obj4 = { style: tmp17, children: cResult[12] };
-                  const tmp24 = closure_4(View, obj4);
-                  cResult[17] = tmp5.variantsContainer;
-                  cResult[18] = cResult[12];
-                  cResult[19] = tmp24;
-                  tmp22 = tmp24;
+                  const tmp27 = closure_4(View, obj4);
+                  cResult[18] = tmp5.variantsContainer;
+                  cResult[19] = cResult[13];
+                  cResult[20] = tmp27;
+                  tmp24 = tmp27;
                 }
               }
             }
           }
-          if (cResult[13] === tmp4) {
-            if (cResult[14] === onVariantSelect) {
-              if (cResult[15] === selectedVariantIndex) {
-                let tmp19 = cResult[16];
+          if (cResult[14] === tmp4) {
+            if (cResult[15] === onVariantSelect) {
+              if (cResult[16] === selectedVariantIndex) {
+                let tmp21 = cResult[17];
               }
               const variants = product.variants;
-              const mapped = variants.map(tmp19);
-              class I {
+              const mapped = variants.map(tmp21);
+              cResult[9] = tmp4;
+              cResult[10] = onVariantSelect;
+              class V {
                 constructor(arg0, arg1) {
                   closure_0 = arg1;
                   obj = { variant: arg0, isSelected: closure_0 === arg1, disabled, onSelect() { ... } };
                   return closure_1_4(closure_1_8, obj, arg0.variantValue);
                 }
               }
-              cResult[8] = tmp4;
-              cResult[9] = onVariantSelect;
-              product = product.variants;
-              cResult[10] = product;
-              cResult[11] = selectedVariantIndex;
-              cResult[12] = mapped;
+              cResult[11] = product;
+              cResult[12] = selectedVariantIndex;
+              cResult[13] = mapped;
             }
           }
-          class I {
+          class V {
             constructor(arg0, arg1) {
               closure_0 = arg1;
               obj = { variant: arg0, isSelected: closure_0 === arg1, disabled, onSelect() { ... } };
               return closure_1_4(closure_1_8, obj, arg0.variantValue);
             }
           }
-          cResult[13] = tmp4;
-          cResult[14] = onVariantSelect;
-          cResult[15] = selectedVariantIndex;
-          cResult[16] = I;
-          tmp19 = I;
+          cResult[14] = tmp4;
+          cResult[15] = onVariantSelect;
+          cResult[16] = selectedVariantIndex;
+          cResult[17] = V;
+          tmp21 = V;
         }
         const obj5 = { style: tmp5.headerRow, children: null };
-        const items1 = [first, tmp11];
+        const items1 = [, tmp11];
         obj5.children = items1;
-        const tmp16 = closure_5(View, obj5);
+        const tmp17 = closure_5(View, obj5);
         cResult[5] = tmp5.headerRow;
         cResult[6] = tmp11;
-        cResult[7] = tmp16;
-        tmp14 = tmp16;
+        cResult[7] = tmp17;
+        tmp14 = tmp17;
       }
     }
-    let tmp12 = product.variants.length > selectedVariantIndex;
     if (tmp12) {
-      const obj6 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp5.text, children: null };
-      class I {
-        constructor(arg0, arg1) {
-          closure_0 = arg1;
-          obj = { variant: arg0, isSelected: closure_0 === arg1, disabled, onSelect() { ... } };
-          return closure_1_4(closure_1_8, obj, arg0.variantValue);
-        }
-      }
-      tmp12 = closure_4(selectedVariantIndex(5086).Text, obj6);
+      const obj6 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: tmp5.text, children: product.variants[selectedVariantIndex].variantLabel };
+      tmp12 = closure_4(selectedVariantIndex(5087).Text, obj6);
     }
     cResult[1] = product.variants;
     cResult[2] = selectedVariantIndex;
@@ -320,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductD
   } else {
     return null;
   }
-  tmpResult = selectedVariantIndex(7263);
+  tmpResult = selectedVariantIndex(7268);
 }) : (function ProductDetailsActionSheetVariants(disabled) {
   ({ product, selectedVariantIndex } = disabled);
   let flag = disabled.disabled;
@@ -345,7 +341,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ProductD
     items[1] = tmp7Result;
     obj3.children = items;
     const items1 = [closure_5(View, obj3), ];
-    const obj6 = { style: tmp.variantsContainer, children: null };
+    const obj6 = { style: tmp.variantsContainer, role: "radiogroup", "aria-label": null, children: null };
+    const intl2 = selectedVariantIndex(tmp3[8]).intl;
+    obj6["aria-label"] = intl2.string(selectedVariantIndex(tmp3[8]).t.lLFi5U);
     const variants = product.variants;
     obj6.children = variants.map((variant, index) => {
       closure_0 = index;

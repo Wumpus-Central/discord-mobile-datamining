@@ -1,10 +1,10 @@
-// === Module 7324: Channels ===
+// === Module 7329: Channels ===
 
-// Module 7324 (Channels)
-import ChannelRecord from "ChannelRecord" /* 2067 */;
+// Module 7329 (Channels)
+import ChannelRecord from "ChannelRecord" /* 2068 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ChannelRecord.createChannelRecordFromServer;

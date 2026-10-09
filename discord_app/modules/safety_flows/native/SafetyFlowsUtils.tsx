@@ -1,16 +1,16 @@
-// === Module 18397: SafetyFlowsUtils ===
+// === Module 18559: SafetyFlowsUtils ===
 
-// Module 18397 (SafetyFlowsUtils)
+// Module 18559 (SafetyFlowsUtils)
 import util from "util" /* 1126 */;
 import _modDef2859 from "module_2859" /* 2859 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import _modDef5005 from "module_5005" /* 5005 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import types from "types" /* 18391 */;
-import constants from "constants" /* 18392 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import _modDef5006 from "module_5006" /* 5006 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import types from "types" /* 18553 */;
+import constants from "constants" /* 18554 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef5005, content: null };
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef5006, content: null };
     const intl = util.intl;
     obj3.content = intl.string(_modDef2859["/fHz9S"]);
     ToastActionCreatorsDefault.open(obj3);

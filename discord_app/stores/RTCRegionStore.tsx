@@ -1,6 +1,6 @@
-// === Module 5209: RTCRegionStore ===
+// === Module 5210: RTCRegionStore ===
 
-// Module 5209 (RTCRegionStore)
+// Module 5210 (RTCRegionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

@@ -1,15 +1,15 @@
-// === Module 17715: ChannelSubtitle ===
+// === Module 17867: ChannelSubtitle ===
 
-// Module 17715 (ChannelSubtitle)
+// Module 17867 (ChannelSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11774 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16455 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17132 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11711 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16574 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17282 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SUBTITLE_OPACITY_NORMAL = fn(11776).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(11713).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelSubtitle(arg0) {

@@ -1,36 +1,36 @@
-// === Module 17046: ConjureNativeComposer ===
+// === Module 17202: ConjureNativeComposer ===
 
-// Module 17046 (ConjureNativeComposer)
+// Module 17202 (ConjureNativeComposer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import useToken from "useToken" /* 4778 */;
-import WarningIcon from "WarningIcon" /* 5003 */;
-import SendMessageIcon from "SendMessageIcon" /* 5041 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
-import ConjureTypes from "ConjureTypes" /* 6933 */;
-import ImageCarousel from "ImageCarousel" /* 9970 */;
-import MusicIcon from "MusicIcon" /* 10233 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10290 */;
-import ImagesIcon from "ImagesIcon" /* 11604 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11680 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11954 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11962 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 12364 */;
-import keepLocalCopy from "keepLocalCopy" /* 12780 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15085 */;
-import FileUpIcon from "FileUpIcon" /* 15642 */;
-import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 16877 */;
-import StopIcon from "StopIcon" /* 17005 */;
-import conjurePickedFiles from "conjurePickedFiles" /* 17018 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17019 */;
+import useToken from "useToken" /* 4779 */;
+import WarningIcon from "WarningIcon" /* 5004 */;
+import SendMessageIcon from "SendMessageIcon" /* 5042 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5055 */;
+import ConjureTypes from "ConjureTypes" /* 6940 */;
+import ImageCarousel from "ImageCarousel" /* 9989 */;
+import MusicIcon from "MusicIcon" /* 10218 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10275 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11369 */;
+import ImagesIcon from "ImagesIcon" /* 11537 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11616 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11891 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11899 */;
+import keepLocalCopy from "keepLocalCopy" /* 12749 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15195 */;
+import FileUpIcon from "FileUpIcon" /* 15755 */;
+import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 17005 */;
+import StopIcon from "StopIcon" /* 17161 */;
+import conjurePickedFiles from "conjurePickedFiles" /* 17174 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17175 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13072 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 17032 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13164 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 17188 */;
 
 const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, draftCarousel: null, draftOverlay: null, trailingButton: null, trailingSlot: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -2184,7 +2184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
       const diff = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1126).intl;
-        let obj = { count: obj2(6933).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        let obj = { count: obj2(6940).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
         _undefined3(intl.formatToPlainString(_modDef3827.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
@@ -2216,7 +2216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         };
         obj3 = obj5;
       });
-      obj2 = obj2(17019);
+      obj2 = obj2(17175);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items5);
@@ -2251,7 +2251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
             projectId = callback3;
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: projectId(17018).pickConjurePhotos("any", projectId(6933).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
+            const obj5 = { value: projectId(17174).pickConjurePhotos("any", projectId(6940).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {

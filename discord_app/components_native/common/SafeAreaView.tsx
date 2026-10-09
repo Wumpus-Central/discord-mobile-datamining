@@ -1,10 +1,10 @@
-// === Module 6803: common/SafeAreaView ===
+// === Module 6810: common/SafeAreaView ===
 
-// Module 6803 (common/SafeAreaView)
+// Module 6810 (common/SafeAreaView)
 import c from "c" /* 576 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useRefValueDefault from "useRefValue" /* 6163 */;
+import _modDef1355 from "module_1355" /* 1355 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useRefValueDefault from "useRefValue" /* 6167 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -77,7 +77,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled() 
   items[4] = tmp24;
   importDefault = items;
   const tmp25 = useRefValueDefault(noop.useRef(null));
-  const tmp26 = _modDef1354(items, tmp25);
+  const tmp26 = _modDef1355(items, tmp25);
   closure_2 = tmp26;
   if (tmp26) {
     importDefault = tmp25;
@@ -174,7 +174,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled() 
   items[4] = tmp12;
   current = items;
   const tmp13 = useRefValueDefault(ref);
-  const tmp14 = _modDef1354(items, tmp13);
+  const tmp14 = _modDef1355(items, tmp13);
   closure_2 = tmp14;
   if (tmp14) {
     current = tmp13;

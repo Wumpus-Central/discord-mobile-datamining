@@ -1,25 +1,25 @@
-// === Module 10635: EmbeddedActivitiesActionCreators ===
+// === Module 10778: EmbeddedActivitiesActionCreators ===
 
-// Module 10635 (EmbeddedActivitiesActionCreators)
+// Module 10778 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2049 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4696 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6043 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2050 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4698 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5105 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 7439 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 7444 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5111 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import UserStore from "UserStore" /* 1390 */;
+import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
 
 require = fn;
 let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0) {
@@ -64,21 +64,20 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           closure_140_12 = undefined;
           closure_140_13 = undefined;
           closure_140_14 = undefined;
-          closure_140_15 = undefined;
-          ({ channelId: closure_140_0, applicationId: closure_140_1, isStart: closure_140_2, analyticsLocations: closure_140_3, locationObject: closure_140_4, embeddedActivitiesManager: closure_140_5, componentId: closure_140_6, commandOrigin: closure_140_7, sectionName: closure_140_8, source: closure_140_9, onExecutedCallback: closure_140_10, referrerId: closure_140_11, customId: closure_140_12, inviterUserId: closure_140_13, renderInFramePool: closure_140_14, onConfirmActivityLaunchChecksAlertOpen: closure_140_15 } = closure_0);
+          ({ channelId: closure_140_0, applicationId: closure_140_1, isStart: closure_140_2, analyticsLocations: closure_140_3, locationObject: closure_140_4, componentId: closure_140_5, commandOrigin: closure_140_6, sectionName: closure_140_7, source: closure_140_8, onExecutedCallback: closure_140_9, referrerId: closure_140_10, customId: closure_140_11, inviterUserId: closure_140_12, renderInFramePool: closure_140_13, onConfirmActivityLaunchChecksAlertOpen: closure_140_14 } = closure_0);
           let channel;
-          closure_140_17 = undefined;
+          closure_140_16 = undefined;
           let application;
+          closure_140_18 = undefined;
           closure_140_19 = undefined;
           closure_140_20 = undefined;
-          closure_140_21 = undefined;
           let currentUser;
+          closure_140_22 = undefined;
           closure_140_23 = undefined;
           closure_140_24 = undefined;
-          closure_140_25 = undefined;
           c16 = 1;
           c17 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -98,8 +97,8 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           if (guildId == null) {
             c1 = undefined;
           }
-          closure_140_17 = c1;
-          if (null == closure_140_17) {
+          closure_140_16 = c1;
+          if (null == closure_140_16) {
             let isPrivateResult;
             if (channel != null) {
               isPrivateResult = obj15.isPrivate();
@@ -116,56 +115,59 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
             result = closure_141_0(closure_141_2[19]).canLaunchContextlessFrame(application);
             const obj16 = closure_141_0(closure_141_2[19]);
           }
-          closure_140_19 = result;
-          closure_140_20 = closure_141_0(closure_141_2[20]).createNonce();
+          closure_140_18 = result;
+          closure_140_19 = closure_141_0(closure_141_2[20]).createNonce();
           c15 = 1;
           const windowOpen = closure_141_7.getWindowOpen(closure_141_22.ACTIVITY_POPOUT);
-          if (true !== closure_140_14) {
+          if (true !== closure_140_13) {
             closure_141_1(closure_141_2[21]).clearMainFrameSlot();
             const obj18 = closure_141_1(closure_141_2[21]);
+          }
+          if (closure_140_18) {
+            closure_141_1(closure_141_2[22])(closure_140_0);
           }
           const obj17 = closure_141_0(closure_141_2[20]);
           obj33 = channel;
           const obj6 = { applicationId: closure_140_1, launch: null };
-          const obj7 = { customId: closure_140_12, referrerId: closure_140_11 };
+          const obj7 = { customId: closure_140_11, referrerId: closure_140_10 };
           obj6.launch = obj7;
           if (obj19.tryLaunchAsFrame(obj6)) {
-            let obj8 = { isStart: closure_140_2, inviterUserId: closure_140_13, channelId: null, guildId: null, locationKind: null };
+            let obj8 = { isStart: closure_140_2, inviterUserId: closure_140_12, channelId: null, guildId: null, locationKind: null };
             let channelId = closure_140_0;
             if (closure_140_0 == null) {
               channelId = null;
             }
             obj8.channelId = channelId;
-            guildId = closure_140_17;
-            if (closure_140_17 == null) {
+            guildId = closure_140_16;
+            if (closure_140_16 == null) {
               guildId = null;
             }
             obj8.guildId = guildId;
-            if (null != closure_140_17) {
-              let PRIVATE_CHANNEL2 = closure_141_0(closure_141_2[24]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+            if (null != closure_140_16) {
+              let PRIVATE_CHANNEL2 = closure_141_0(closure_141_2[25]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
             } else {
-              PRIVATE_CHANNEL2 = closure_141_0(closure_141_2[24]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+              PRIVATE_CHANNEL2 = closure_141_0(closure_141_2[25]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
             }
             obj8.locationKind = PRIVATE_CHANNEL2;
-            obj8 = closure_141_0(closure_141_2[23]).stashPendingFrameLaunch(closure_140_1, obj8);
+            obj8 = closure_141_0(closure_141_2[24]).stashPendingFrameLaunch(closure_140_1, obj8);
             c15 = 0;
             c17 = 3;
-            const obj26 = closure_141_0(closure_141_2[23]);
+            const obj26 = closure_141_0(closure_141_2[24]);
           } else {
-            const obj9 = { type: "EMBEDDED_ACTIVITY_LAUNCH_START", nonce: closure_140_20, applicationId: closure_140_1, channelId: null, componentId: null, analyticsLocations: null, source: null, commandOrigin: null, inviterUserId: null, launchParams: null };
+            const obj9 = { type: "EMBEDDED_ACTIVITY_LAUNCH_START", nonce: closure_140_19, applicationId: closure_140_1, channelId: null, componentId: null, analyticsLocations: null, source: null, commandOrigin: null, inviterUserId: null, launchParams: null };
             let channelId2 = closure_140_0;
             if (closure_140_0 == null) {
               channelId2 = null;
             }
             obj9.channelId = channelId2;
-            obj9.componentId = closure_140_6;
+            obj9.componentId = closure_140_5;
             obj9.analyticsLocations = closure_140_3;
-            obj9.source = closure_140_9;
-            obj9.commandOrigin = closure_140_7;
-            obj9.inviterUserId = closure_140_13;
-            const obj10 = { customId: closure_140_12, referrerId: closure_140_11, renderInFramePool: closure_140_14 };
+            obj9.source = closure_140_8;
+            obj9.commandOrigin = closure_140_6;
+            obj9.inviterUserId = closure_140_12;
+            const obj10 = { customId: closure_140_11, referrerId: closure_140_10, renderInFramePool: closure_140_13 };
             obj9.launchParams = obj10;
-            closure_141_1(closure_141_2[25]).dispatch(obj9);
+            closure_141_1(closure_141_2[26]).dispatch(obj9);
             c5 = closure_140_0;
             if (closure_140_0 == null) {
               c5 = undefined;
@@ -175,46 +177,46 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
             const obj11 = { value: closure_141_39(closure_140_1, c5), done: false };
             return obj11;
           }
-          obj19 = closure_141_0(closure_141_2[22]);
+          obj19 = closure_141_0(closure_141_2[23]);
         }
       } else if (2 === tmp7) {
         c15 = 0;
-        closure_140_26 = closure_14;
-        if (closure_140_19) {
+        closure_140_25 = closure_14;
+        if (closure_140_18) {
           c17 = 3;
           return { value: false, done: true };
         } else {
-          if (null != closure_140_17) {
-            let PRIVATE_CHANNEL = closure_141_0(closure_141_2[24]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+          if (null != closure_140_16) {
+            let PRIVATE_CHANNEL = closure_141_0(closure_141_2[25]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
           } else {
-            PRIVATE_CHANNEL = closure_141_0(closure_141_2[24]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+            PRIVATE_CHANNEL = closure_141_0(closure_141_2[25]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
           }
-          closure_140_25 = PRIVATE_CHANNEL;
-          let obj12 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: closure_140_20, applicationId: closure_140_1, channelId: null, guildId: null, isStart: null, error: null, locationKind: null };
+          closure_140_24 = PRIVATE_CHANNEL;
+          let obj12 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: closure_140_19, applicationId: closure_140_1, channelId: null, guildId: null, isStart: null, error: null, locationKind: null };
           let channelId6 = closure_140_0;
           if (closure_140_0 == null) {
             channelId6 = null;
           }
           obj12.channelId = channelId6;
-          let guildId2 = closure_140_17;
-          if (closure_140_17 == null) {
+          let guildId2 = closure_140_16;
+          if (closure_140_16 == null) {
             guildId2 = null;
           }
           obj12.guildId = guildId2;
           obj12.isStart = closure_140_2;
-          if (!(closure_140_26 instanceof closure_141_1(closure_141_2[27]))) {
-            if (!(closure_140_26 instanceof closure_141_1(closure_141_2[28]))) {
-              if (!(closure_140_26 instanceof closure_141_1(closure_141_2[29]))) {
-                let tmp148 = new closure_141_1(closure_141_2[28])(closure_140_26);
+          if (!(closure_140_25 instanceof closure_141_1(closure_141_2[28]))) {
+            if (!(closure_140_25 instanceof closure_141_1(closure_141_2[29]))) {
+              if (!(closure_140_25 instanceof closure_141_1(closure_141_2[30]))) {
+                let tmp146 = new closure_141_1(closure_141_2[29])(closure_140_25);
               }
-              obj12.error = tmp148;
-              obj12.locationKind = closure_140_25;
+              obj12.error = tmp146;
+              obj12.locationKind = closure_140_24;
               obj12 = obj13.dispatch(obj12);
               c17 = 3;
             }
           }
-          tmp148 = closure_140_26;
-          obj13 = closure_141_1(closure_141_2[25]);
+          tmp146 = closure_140_25;
+          obj13 = closure_141_1(closure_141_2[26]);
         }
       } else if (3 === tmp7) {
         if (arg0 === 1) {
@@ -226,15 +228,15 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           const obj14 = { value, done: true };
           return obj14;
         } else {
-          closure_140_21 = value;
+          closure_140_20 = value;
           const obj20 = { type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET", applicationId: closure_140_1, channelId: null, proxyTicket: null };
           let channelId3 = closure_140_0;
           if (closure_140_0 == null) {
             channelId3 = null;
           }
           obj20.channelId = channelId3;
-          obj20.proxyTicket = closure_140_21;
-          closure_141_1(closure_141_2[25]).dispatch(obj20);
+          obj20.proxyTicket = closure_140_20;
+          closure_141_1(closure_141_2[26]).dispatch(obj20);
           currentUser = closure_141_13.getCurrentUser();
           if (null != currentUser) {
             if (closure_140_2) {
@@ -248,7 +250,7 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
               id = currentUser.id;
             }
             obj21.userId = id;
-            obj21.guildId = closure_140_17;
+            obj21.guildId = closure_140_16;
             obj21.channelId = closure_140_0;
             let type;
             if (channel != null) {
@@ -262,11 +264,11 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
               analyticsLocations = [];
             }
             obj21.analyticsLocations = analyticsLocations;
-            obj21.source = closure_140_9;
-            obj21.referrerId = closure_140_11;
-            obj21.inviterUserId = closure_140_13;
-            closure_141_1(closure_141_2[26])(obj21);
-            const tmp256 = closure_141_1(closure_141_2[26]);
+            obj21.source = closure_140_8;
+            obj21.referrerId = closure_140_10;
+            obj21.inviterUserId = closure_140_12;
+            closure_141_1(closure_141_2[27])(obj21);
+            const tmp261 = closure_141_1(closure_141_2[27]);
           }
           if (closure_140_2) {
             if (null != closure_140_0) {
@@ -277,9 +279,9 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2028).supportsEmbeddedSurface(application, closure_1_0(8586).EmbeddedSurfaceType.MAIN);
-                const obj = closure_1_0(2028);
-                const result1 = closure_1_0(8488).isActivityInTextSupportedForChannel(type);
+                const result = closure_1_0(2029).supportsEmbeddedSurface(application, closure_1_0(8594).EmbeddedSurfaceType.MAIN);
+                const obj = closure_1_0(2029);
+                const result1 = closure_1_0(8496).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -288,7 +290,7 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 return tmp2;
               })(closure_140_1, channel)) {
-                const obj23 = { applicationId: closure_140_1, nonce: closure_140_20, channelId: closure_140_0, guildId: closure_140_17, commandOrigin: closure_140_7, sectionName: closure_140_8, source: closure_140_9, onExecutedCallback: closure_140_10, onConfirmActivityLaunchChecksAlertOpen: closure_140_15, embeddedActivitiesManager: closure_140_5 };
+                const obj23 = { applicationId: closure_140_1, nonce: closure_140_19, channelId: closure_140_0, guildId: closure_140_16, commandOrigin: closure_140_6, sectionName: closure_140_7, source: closure_140_8, onExecutedCallback: closure_140_9, onConfirmActivityLaunchChecksAlertOpen: closure_140_14 };
                 c16 = 5;
                 c17 = 1;
                 const obj24 = {
@@ -307,10 +309,10 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 return obj24;
               }
             }
-            const tmp962 = new closure_141_1(closure_141_2[27])(closure_141_1(closure_141_2[27]).Reasons.INVALID_CHANNEL);
-            throw tmp962;
+            const tmp942 = new closure_141_1(closure_141_2[28])(closure_141_1(closure_141_2[28]).Reasons.INVALID_CHANNEL);
+            throw tmp942;
           } else {
-            const obj25 = { applicationId: closure_140_1, channelId: closure_140_0, embeddedActivitiesManager: closure_140_5, isStart: closure_140_2, guildId: closure_140_17 };
+            const obj25 = { applicationId: closure_140_1, channelId: closure_140_0, isStart: closure_140_2, guildId: closure_140_16 };
             c16 = 4;
             c17 = 1;
             const obj27 = {
@@ -328,7 +330,7 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
             };
             return obj27;
           }
-          const obj31 = closure_141_1(closure_141_2[25]);
+          const obj31 = closure_141_1(closure_141_2[26]);
         }
       } else {
         if (4 === tmp7) {
@@ -341,12 +343,12 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
             const obj28 = { value, done: true };
             return obj28;
           } else {
-            closure_140_24 = value;
-            if (closure_140_10 != null) {
-              closure_140_10();
+            closure_140_23 = value;
+            if (closure_140_9 != null) {
+              closure_140_9();
             }
-            if ("failure" === closure_140_24.result) {
-              const tmp432 = new closure_141_1(closure_141_2[27])(closure_141_1(closure_141_2[27]).Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, closure_140_24.reason);
+            if ("failure" === closure_140_23.result) {
+              const tmp432 = new closure_141_1(closure_141_2[28])(closure_141_1(closure_141_2[28]).Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, closure_140_23.reason);
               throw tmp432;
             }
           }
@@ -359,41 +361,41 @@ let closure_26 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
           const obj29 = { value, done: true };
           return obj29;
         } else {
-          closure_140_23 = value;
-          if ("failure" === closure_140_23.result) {
-            if (closure_140_23.reason === closure_141_27.FAILED_ACTIVITY_LAUNCH_CHECKS) {
-              const obj30 = { type: "EMBEDDED_ACTIVITY_LAUNCH_CANCEL", nonce: closure_140_20, applicationId: closure_140_1, channelId: null };
+          closure_140_22 = value;
+          if ("failure" === closure_140_22.result) {
+            if (closure_140_22.reason === closure_141_27.FAILED_ACTIVITY_LAUNCH_CHECKS) {
+              const obj30 = { type: "EMBEDDED_ACTIVITY_LAUNCH_CANCEL", nonce: closure_140_19, applicationId: closure_140_1, channelId: null };
               let channelId5 = closure_140_0;
               if (closure_140_0 == null) {
                 channelId5 = null;
               }
               obj30.channelId = channelId5;
-              closure_141_1(closure_141_2[25]).dispatch(obj30);
+              closure_141_1(closure_141_2[26]).dispatch(obj30);
               c15 = 0;
               c17 = 3;
               return { value: false, done: true };
             } else {
-              const tmp1111 = new closure_141_1(closure_141_2[27])(closure_141_1(closure_141_2[27]).Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+              const tmp1111 = new closure_141_1(closure_141_2[28])(closure_141_1(closure_141_2[28]).Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
               throw tmp1111;
             }
           }
         }
-        const obj32 = { type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: closure_140_20, applicationId: closure_140_1, channelId: null };
+        const obj32 = { type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: closure_140_19, applicationId: closure_140_1, channelId: null };
         let channelId4 = closure_140_0;
         if (closure_140_0 == null) {
           channelId4 = null;
         }
         obj32.channelId = channelId4;
-        closure_141_1(closure_141_2[25]).dispatch(obj32);
+        closure_141_1(closure_141_2[26]).dispatch(obj32);
         c15 = 0;
         c17 = 3;
         return { value: true, done: true };
       }
-    } catch (tmp231) {
-      closure_14 = tmp231;
+    } catch (tmp236) {
+      closure_14 = tmp236;
       if (tmp4 === c15) {
         c17 = tmp2;
-        throw tmp231;
+        throw tmp236;
       } else {
         c16 = tmp;
       }
@@ -436,20 +438,19 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
           closure_129_6 = undefined;
           closure_129_7 = undefined;
           closure_129_8 = undefined;
+          ({ applicationId: closure_129_0, nonce: closure_129_1, channelId: closure_129_2, guildId: closure_129_3, commandOrigin: closure_129_4, sectionName: closure_129_5, source: closure_129_6, onExecutedCallback: closure_129_7, onConfirmActivityLaunchChecksAlertOpen: closure_129_8 } = closure_0);
           closure_129_9 = undefined;
-          ({ applicationId: closure_129_0, nonce: closure_129_1, channelId: closure_129_2, guildId: closure_129_3, commandOrigin: closure_129_4, sectionName: closure_129_5, source: closure_129_6, onExecutedCallback: closure_129_7, onConfirmActivityLaunchChecksAlertOpen: closure_129_8, embeddedActivitiesManager: closure_129_9 } = closure_0);
           closure_129_10 = undefined;
-          closure_129_11 = undefined;
           let channel2;
           let channel;
-          closure_129_14 = undefined;
+          closure_129_13 = undefined;
           let application;
           let currentEmbeddedActivity;
           let application2;
           let currentUser;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -460,23 +461,23 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
           let obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_129_10 = null;
+          closure_129_9 = null;
           c4 = 1;
           c5 = 3;
           c6 = 1;
-          const obj5 = { value: closure_130_1(closure_130_2[33])(closure_129_2, closure_129_0), done: false };
+          const obj5 = { value: closure_130_1(closure_130_2[34])(closure_129_2, closure_129_0), done: false };
           return obj5;
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_19 = closure_3;
-        if (closure_129_19.message === closure_130_0(closure_130_2[33]).NO_PRIMARY_APP_COMMAND_ERROR) {
+        closure_129_18 = closure_3;
+        if (closure_129_18.message === closure_130_0(closure_130_2[34]).NO_PRIMARY_APP_COMMAND_ERROR) {
           const obj6 = { result: "failure", reason: closure_130_27.NO_PRIMARY_APP_COMMAND };
           c6 = 3;
           const obj7 = { value: obj6, done: true };
           return obj7;
         } else {
-          throw closure_129_19;
+          throw closure_129_18;
         }
       } else {
         if (3 === tmp7) {
@@ -489,10 +490,10 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            closure_129_10 = value;
+            closure_129_9 = value;
             c4 = 0;
-            closure_129_11 = closure_129_10.handler !== closure_130_0(closure_130_2[34]).ApplicationCommandHandler.APP_HANDLER;
-            if (!closure_129_11) {
+            closure_129_10 = closure_129_9.handler !== closure_130_0(closure_130_2[35]).ApplicationCommandHandler.APP_HANDLER;
+            if (!closure_129_10) {
               if (!closure_130_23.includes(closure_129_0)) {
                 if (null != closure_129_2) {
                   const obj9 = { type: "channel", channelId: closure_129_2 };
@@ -508,14 +509,14 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
             if (null != closure_129_3) {
               guild = closure_130_11.getGuild(closure_129_3);
             }
-            closure_129_14 = guild;
+            closure_129_13 = guild;
             if (null == channel) {
               const obj11 = { result: "failure", reason: closure_130_27.NO_CHANNEL };
               c6 = 3;
               const obj12 = { value: obj11, done: true };
               return obj12;
             } else {
-              if (closure_129_11) {
+              if (closure_129_10) {
                 application = closure_130_5.getApplication(closure_129_0);
                 currentEmbeddedActivity = closure_130_15.getCurrentEmbeddedActivity();
                 application2 = undefined;
@@ -532,10 +533,10 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
                 }
                 currentUser = closure_130_13.getCurrentUser();
                 if (null != currentUser) {
-                  const obj13 = { applicationId: closure_129_0, application, channel, currentEmbeddedApplication: application2, embeddedActivitiesManager: closure_129_9, user: currentUser, onConfirmActivityLaunchChecksAlertOpen: closure_129_8, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: false };
+                  const obj13 = { applicationId: closure_129_0, application, channel, currentEmbeddedApplication: application2, user: currentUser, onConfirmActivityLaunchChecksAlertOpen: closure_129_8, shouldClosePopoutOnLeaveCurrentEmbeddedApplication: false };
                   c5 = 8;
                   c6 = 1;
-                  const obj14 = { value: closure_130_0(closure_130_2[36]).confirmActivityLaunchChecks(obj13), done: false };
+                  const obj14 = { value: closure_130_0(closure_130_2[37]).confirmActivityLaunchChecks(obj13), done: false };
                   return obj14;
                 }
               }
@@ -573,33 +574,33 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
                         obj2.error_status = error_status;
                         obj2.error_reason_code = error_reason_code;
                         obj2.source = source;
-                        nonce(1264).track(constants.ACTIVITY_INTERACTION_CALLBACK_ERROR, obj2);
+                        nonce(1265).track(constants.ACTIVITY_INTERACTION_CALLBACK_ERROR, obj2);
                         if (null != error_code) {
                           if (null != error_message) {
                             if (null != error_status) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(5632)(obj3);
+                              const tmp21 = new nonce(5633)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(5437).ReasonCodes) {
-                            const tmp14 = new nonce(5437)(error_reason_code);
+                          if (error_reason_code in nonce(5438).ReasonCodes) {
+                            const tmp14 = new nonce(5438)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
-                        const obj = nonce(1264);
-                        const tmp3Result = nonce(5437);
-                        closure_1_1(new nonce(5437)(nonce(5437).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(5437)(nonce(5437).ReasonCodes.UNKNOWN);
+                        const obj = nonce(1265);
+                        const tmp3Result = nonce(5438);
+                        closure_1_1(new nonce(5438)(nonce(5438).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(5438)(nonce(5438).ReasonCodes.UNKNOWN);
                       }
                     };
                   }
                 };
-                nonce(9753)(obj);
+                nonce(9772)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -626,10 +627,10 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
             return obj18;
           } else {
             channel2 = closure_130_10.getChannel(closure_129_2);
-            const obj19 = { applicationId: closure_129_0, channel: channel2, commandIntegrationTypes: closure_129_10.integration_types };
+            const obj19 = { applicationId: closure_129_0, channel: channel2, commandIntegrationTypes: closure_129_9.integration_types };
             c5 = 6;
             c6 = 1;
-            const obj20 = { value: closure_130_0(closure_130_2[35]).installApplicationOnDemandIfNeeded(obj19), done: false };
+            const obj20 = { value: closure_130_0(closure_130_2[36]).installApplicationOnDemandIfNeeded(obj19), done: false };
             return obj20;
           }
         } else if (6 === tmp7) {
@@ -677,11 +678,11 @@ let closure_28 = async function _maybeSendPrimaryAppCommand(arg0) {
         const obj29 = { value: closure_130_4({ type: "user" }), done: false };
         return obj29;
       }
-    } catch (tmp85) {
-      closure_3 = tmp85;
+    } catch (tmp84) {
+      closure_3 = tmp84;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp85;
+        throw tmp84;
       } else {
         c5 = tmp;
       }
@@ -719,23 +720,22 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
           closure_130_1 = undefined;
           closure_130_2 = undefined;
           closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          ({ applicationId: closure_130_0, channelId: closure_130_1, embeddedActivitiesManager: closure_130_2, isStart: closure_130_3, guildId: closure_130_4 } = closure_0);
+          ({ applicationId: closure_130_0, channelId: closure_130_1, isStart: closure_130_2, guildId: closure_130_3 } = closure_0);
           let sessionId;
           let currentUser;
+          closure_130_6 = undefined;
           closure_130_7 = undefined;
-          closure_130_8 = undefined;
           let channel;
           let embeddedActivityLaunchability;
-          closure_130_11 = undefined;
+          closure_130_10 = undefined;
           let currentEmbeddedActivity;
           let application;
+          closure_130_13 = undefined;
           closure_130_14 = undefined;
           closure_130_15 = undefined;
-          closure_130_16 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -748,8 +748,8 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
         } else {
           sessionId = closure_131_9.getSessionId();
           currentUser = closure_131_13.getCurrentUser();
-          closure_130_7 = closure_130_0;
-          if (null == closure_130_7) {
+          closure_130_6 = closure_130_0;
+          if (null == closure_130_6) {
             const obj5 = { result: "failure", reason: closure_131_29.NO_APPLICATION_ID };
             c5 = 3;
             const obj6 = { value: obj5, done: true };
@@ -757,7 +757,7 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
           } else {
             c4 = 2;
             c5 = 1;
-            const obj7 = { value: closure_131_1(closure_131_2[39])(closure_130_7, closure_130_1), done: false };
+            const obj7 = { value: closure_131_1(closure_131_2[40])(closure_130_6, closure_130_1), done: false };
             return obj7;
           }
         }
@@ -771,9 +771,9 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            closure_130_8 = value;
+            closure_130_7 = value;
             if (null != currentUser) {
-              if (null != closure_130_8) {
+              if (null != closure_130_7) {
                 if (null == closure_130_1) {
                   const obj10 = { result: "failure", reason: closure_131_29.INVALID_CHANNEL };
                   c5 = 3;
@@ -788,24 +788,24 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
                     return obj13;
                   } else {
                     const obj14 = { channelId: closure_130_1, ChannelStore: closure_131_10, GuildStore: closure_131_11, PermissionStore: closure_131_12, VoiceStateStore: closure_131_14 };
-                    embeddedActivityLaunchability = closure_131_0(closure_131_2[40]).getEmbeddedActivityLaunchability(obj14);
-                    if (embeddedActivityLaunchability !== closure_131_0(closure_131_2[40]).EmbeddedActivityLaunchability.CAN_LAUNCH) {
-                      closure_130_11 = closure_131_29.LAUNCHABILITY_CHECK_FAILED_OTHER;
-                      if (embeddedActivityLaunchability === closure_131_0(closure_131_2[40]).EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION) {
-                        closure_130_11 = closure_131_29.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION;
-                        const result = closure_131_0(closure_131_2[41]).showActivitiesInvalidPermissionsAlert();
-                        const obj25 = closure_131_0(closure_131_2[41]);
-                      } else if (embeddedActivityLaunchability === closure_131_0(closure_131_2[40]).EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS) {
-                        closure_130_11 = closure_131_29.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
+                    embeddedActivityLaunchability = closure_131_0(closure_131_2[41]).getEmbeddedActivityLaunchability(obj14);
+                    if (embeddedActivityLaunchability !== closure_131_0(closure_131_2[41]).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+                      closure_130_10 = closure_131_29.LAUNCHABILITY_CHECK_FAILED_OTHER;
+                      if (embeddedActivityLaunchability === closure_131_0(closure_131_2[41]).EmbeddedActivityLaunchability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION) {
+                        closure_130_10 = closure_131_29.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION;
+                        const result = closure_131_0(closure_131_2[42]).showActivitiesInvalidPermissionsAlert();
+                        const obj25 = closure_131_0(closure_131_2[42]);
+                      } else if (embeddedActivityLaunchability === closure_131_0(closure_131_2[41]).EmbeddedActivityLaunchability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS) {
+                        closure_130_10 = closure_131_29.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
                         const obj15 = { title: null, body: null, hideActionSheet: false };
-                        const intl = closure_131_0(closure_131_2[43]).intl;
-                        obj15.title = intl.string(closure_131_0(closure_131_2[43]).t["IOy+I5"]);
-                        const intl2 = closure_131_0(closure_131_2[43]).intl;
-                        obj15.body = intl2.string(closure_131_0(closure_131_2[43]).t.UXoQTp);
-                        closure_131_1(closure_131_2[42]).show(obj15);
-                        const obj41 = closure_131_1(closure_131_2[42]);
+                        const intl = closure_131_0(closure_131_2[44]).intl;
+                        obj15.title = intl.string(closure_131_0(closure_131_2[44]).t["IOy+I5"]);
+                        const intl2 = closure_131_0(closure_131_2[44]).intl;
+                        obj15.body = intl2.string(closure_131_0(closure_131_2[44]).t.UXoQTp);
+                        closure_131_1(closure_131_2[43]).show(obj15);
+                        const obj41 = closure_131_1(closure_131_2[43]);
                       }
-                      { result: "failure", reason: null }[1] = closure_130_11;
+                      { result: "failure", reason: null }[1] = closure_130_10;
                       c5 = 3;
                     } else {
                       currentEmbeddedActivity = closure_131_15.getCurrentEmbeddedActivity();
@@ -821,15 +821,15 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
                         }
                         application = closure_131_5.getApplication(applicationId1);
                       }
-                      if (closure_130_3) {
-                        const obj17 = { applicationId: closure_130_0, application: closure_130_8, channel, currentEmbeddedApplication: application, embeddedActivitiesManager: closure_130_2, user: currentUser };
+                      if (closure_130_2) {
+                        const obj17 = { applicationId: closure_130_0, application: closure_130_7, channel, currentEmbeddedApplication: application, user: currentUser };
                         c4 = 3;
                         c5 = 1;
-                        const obj18 = { value: closure_131_0(closure_131_2[36]).confirmActivityLaunchChecks(obj17), done: false };
+                        const obj18 = { value: closure_131_0(closure_131_2[37]).confirmActivityLaunchChecks(obj17), done: false };
                         return obj18;
                       }
                     }
-                    const obj39 = closure_131_0(closure_131_2[40]);
+                    const obj39 = closure_131_0(closure_131_2[41]);
                   }
                 }
               }
@@ -864,24 +864,24 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
               return obj26;
             } else if (value) {
               const obj27 = { trackedActionData: null, retries: 3, oldFormErrors: true, rejectWithError: true };
-              const obj28 = { event: closure_131_0(closure_131_2[46]).NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH, properties: null };
-              const obj29 = { guild_id: closure_130_4, channel_id: closure_130_1, application_id: closure_130_0, session_id: sessionId };
+              const obj28 = { event: closure_131_0(closure_131_2[47]).NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH, properties: null };
+              const obj29 = { guild_id: closure_130_3, channel_id: closure_130_1, application_id: closure_130_0, session_id: sessionId };
               obj28.properties = obj29;
               obj27.trackedActionData = obj28;
-              closure_130_16 = obj27;
+              closure_130_15 = obj27;
               if (null != closure_130_1) {
                 const request = { url: closure_131_21.ACTIVITY_CHANNEL_LAUNCH(closure_130_1, closure_130_0), body: null };
                 const obj30 = { session_id: sessionId, guild_id: null };
-                let guild_id = closure_130_4;
-                if (closure_130_4 == null) {
+                let guild_id = closure_130_3;
+                if (closure_130_3 == null) {
                   guild_id = undefined;
                 }
                 obj30.guild_id = guild_id;
                 request.body = obj30;
-                const merged = Object.assign(closure_130_16);
+                const merged = Object.assign(closure_130_15);
                 c4 = 5;
                 c5 = 1;
-                const obj31 = { value: closure_131_1(closure_131_2[47]).post(request), done: false };
+                const obj31 = { value: closure_131_1(closure_131_2[48]).post(request), done: false };
                 return obj31;
               } else {
                 const obj32 = { result: "failure", reason: closure_131_29.OTHER };
@@ -902,13 +902,13 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
           return obj35;
         }
         if (null != channel) {
-          closure_130_14 = closure_131_1(closure_131_2[44])(channel.id);
-          closure_130_15 = closure_131_16.includes(channel.type);
-          if (closure_130_14) {
+          closure_130_13 = closure_131_1(closure_131_2[45])(channel.id);
+          closure_130_14 = closure_131_16.includes(channel.type);
+          if (closure_130_13) {
             const obj36 = { channelId: channel.id, bypassChangeModal: null != application };
             c4 = 4;
             c5 = 1;
-            const obj37 = { value: closure_131_1(closure_131_2[45])(obj36), done: false };
+            const obj37 = { value: closure_131_1(closure_131_2[46])(obj36), done: false };
             return obj37;
           } else {
             const obj38 = { result: "failure", reason: closure_131_29.AIT_NOT_ENABLED_FOR_USER };
@@ -918,9 +918,9 @@ let closure_30 = async function _joinEmbeddedActivity(arg0) {
           }
         }
       }
-    } catch (tmp96) {
+    } catch (tmp95) {
       c5 = tmp;
-      throw tmp96;
+      throw tmp95;
     }
   }
 };
@@ -975,9 +975,9 @@ let closure_32 = async function _fetchDeveloperApplications() {
   await HTTP.get(request);
   if (1 === tmp7) {
     c3 = 0;
-    closure_129_1(closure_129_2[25]).dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL" });
+    closure_129_1(closure_129_2[26]).dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL" });
     c5 = 3;
-    closure_129_1(closure_129_2[25]);
+    closure_129_1(closure_129_2[26]);
   } else if (arg0 === 1) {
     c5 = 3;
     throw value;
@@ -985,11 +985,11 @@ let closure_32 = async function _fetchDeveloperApplications() {
     closure_128_0 = value;
     const applications = closure_128_0.body.applications;
     closure_128_2 = applications.map((item) => closure_1_8.createFromServer(item));
-    closure_129_1(closure_129_2[25]).dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS", applications: closure_128_2, assets: closure_128_0.body.assets });
-    closure_129_1(closure_129_2[25]);
-    closure_129_1(closure_129_2[25]).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications });
+    closure_129_1(closure_129_2[26]).dispatch({ type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS", applications: closure_128_2, assets: closure_128_0.body.assets });
+    closure_129_1(closure_129_2[26]);
+    closure_129_1(closure_129_2[26]).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications });
     c3 = 0;
-    closure_129_1(closure_129_2[25]);
+    closure_129_1(closure_129_2[26]);
   }
   return value;
 };
@@ -1046,8 +1046,8 @@ let closure_33 = async function _uploadImageAttachment(arg0) {
         } else if (1 === tmp7) {
           c6 = 0;
           closure_131_1 = closure_5;
-          closure_132_1(closure_132_2[25]).dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" });
-          const tmp27 = new closure_132_1(closure_132_2[28])(closure_131_1);
+          closure_132_1(closure_132_2[26]).dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" });
+          const tmp27 = new closure_132_1(closure_132_2[29])(closure_131_1);
           c8 = 3;
           const obj8 = { value: tmp27, done: true };
           return obj8;
@@ -1062,7 +1062,7 @@ let closure_33 = async function _uploadImageAttachment(arg0) {
         } else {
           closure_131_0 = value;
           const obj10 = { type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS", attachment: closure_131_0.body.attachment };
-          closure_132_1(closure_132_2[25]).dispatch(obj10);
+          closure_132_1(closure_132_2[26]).dispatch(obj10);
           c6 = 0;
           c8 = 3;
           const obj11 = { value: closure_131_0.body.attachment, done: true };
@@ -1138,7 +1138,7 @@ let closure_35 = async function _fetchShelf(arg0) {
           closure_132_12 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -1152,7 +1152,7 @@ let closure_35 = async function _fetchShelf(arg0) {
           } else {
             shelfActivities = closure_133_15.getShelfActivities(closure_132_0);
             const mapped = shelfActivities.map((application_id) => application.getApplication(application_id.application_id));
-            closure_132_3 = mapped.filter(closure_133_0(closure_133_2[52]).isNotNullish);
+            closure_132_3 = mapped.filter(closure_133_0(closure_133_2[53]).isNotNullish);
             if (!closure_132_1) {
               if (!closure_133_15.shouldFetchShelf(closure_132_0)) {
                 const shelfFetchStatus = closure_133_15.getShelfFetchStatus(closure_132_0);
@@ -1184,7 +1184,7 @@ let closure_35 = async function _fetchShelf(arg0) {
             }
             c7 = 1;
             const obj9 = { type: "EMBEDDED_ACTIVITY_FETCH_SHELF", guildId: closure_132_0 };
-            closure_133_1(closure_133_2[25]).dispatch(obj9);
+            closure_133_1(closure_133_2[26]).dispatch(obj9);
             let tmp82;
             if (undefined !== closure_132_0) {
               if ("" !== closure_132_0) {
@@ -1193,21 +1193,21 @@ let closure_35 = async function _fetchShelf(arg0) {
               }
             }
             closure_132_8 = tmp82;
-            const obj16 = closure_133_1(closure_133_2[25]);
+            const obj16 = closure_133_1(closure_133_2[26]);
             const request = { url: closure_133_21.ACTIVITY_SHELF, query: closure_132_8, trackedActionData: null, retries: 0, oldFormErrors: true, rejectWithError: true };
-            const obj12 = { event: closure_133_0(closure_133_2[46]).NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF, properties: null };
+            const obj12 = { event: closure_133_0(closure_133_2[47]).NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF, properties: null };
             const obj13 = { guild_id: closure_132_0 };
             obj12.properties = obj13;
             request.trackedActionData = obj12;
             c8 = 4;
             c9 = 1;
-            const obj14 = { value: closure_133_1(closure_133_2[47]).get(request), done: false };
+            const obj14 = { value: closure_133_1(closure_133_2[48]).get(request), done: false };
             return obj14;
           }
         } else if (2 === tmp7) {
           c7 = 0;
           const obj15 = { type: "EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", guildId: closure_132_0 };
-          closure_133_1(closure_133_2[25]).dispatch(obj15);
+          closure_133_1(closure_133_2[26]).dispatch(obj15);
           const obj17 = { activityConfigs: shelfActivities, applications: closure_132_3 };
           c9 = 3;
           const obj18 = { value: obj17, done: true };
@@ -1218,14 +1218,14 @@ let closure_35 = async function _fetchShelf(arg0) {
             throw value;
           } else if (arg0 !== 2) {
             if (null != closure_132_4) {
-              closure_133_1(closure_133_2[25]).unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", closure_132_4);
+              closure_133_1(closure_133_2[26]).unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", closure_132_4);
               closure_132_4 = undefined;
-              const obj8 = closure_133_1(closure_133_2[25]);
+              const obj8 = closure_133_1(closure_133_2[26]);
             }
             if (null != closure_132_5) {
-              closure_133_1(closure_133_2[25]).unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", closure_132_5);
+              closure_133_1(closure_133_2[26]).unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", closure_132_5);
               closure_132_5 = undefined;
-              const obj27 = closure_133_1(closure_133_2[25]);
+              const obj27 = closure_133_1(closure_133_2[26]);
             }
           }
         } else if (arg0 === 1) {
@@ -1257,11 +1257,11 @@ let closure_35 = async function _fetchShelf(arg0) {
           }
           closure_132_12 = closure_3;
           const obj21 = { type: "EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", guildId: closure_132_0, activities: closure_132_10, applications: closure_132_11, assets: closure_132_12 };
-          closure_133_1(closure_133_2[25]).dispatch(obj21);
+          closure_133_1(closure_133_2[26]).dispatch(obj21);
           if (closure_132_11.length > 0) {
             const obj22 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: closure_132_11 };
-            closure_133_1(closure_133_2[25]).dispatch(obj22);
-            const obj3 = closure_133_1(closure_133_2[25]);
+            closure_133_1(closure_133_2[26]).dispatch(obj22);
+            const obj3 = closure_133_1(closure_133_2[26]);
           }
           const obj23 = { activityConfigs: closure_132_10, applications: closure_132_11.map((item) => closure_1_8.createFromServer(item)) };
           c7 = 0;
@@ -1285,22 +1285,22 @@ let closure_35 = async function _fetchShelf(arg0) {
   }
 };
 let closure_36 = async function _sendEmbeddedActivityInvite() {
-  await closure_130_1(closure_130_2[53]).createInvite(closure_129_0, { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_2 }, closure_129_3);
+  await closure_130_1(closure_130_2[54]).createInvite(closure_129_0, { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_2 }, closure_129_3);
   closure_129_5 = value;
   if (null != closure_130_10.getChannel(closure_129_1)) {
-    closure_130_1(closure_130_2[54]).sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
-    closure_130_1(closure_130_2[54]);
+    closure_130_1(closure_130_2[55]).sendInvite(closure_129_1, closure_129_5.code, closure_129_3, closure_129_4);
+    closure_130_1(closure_130_2[55]);
   }
   await "IconComponent";
   closure_1 = tmp2;
   ({ activityChannelId: closure_129_0, invitedChannelId: closure_129_1, applicationId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 let closure_37 = async function _sendEmbeddedActivityInviteUser() {
-  await closure_130_1(closure_130_2[53]).createInvite(closure_129_0, { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
+  await closure_130_1(closure_130_2[54]).createInvite(closure_129_0, { target_type: closure_130_25.EMBEDDED_APPLICATION, target_application_id: closure_129_1 }, closure_129_3);
   closure_129_6 = value;
-  closure_130_1(closure_130_2[55]);
-  await closure_130_1(closure_130_2[55]).ensurePrivateChannel(closure_129_2).then((result) => {
+  closure_130_1(closure_130_2[56]);
+  await closure_130_1(closure_130_2[56]).ensurePrivateChannel(closure_129_2).then((result) => {
     channel = channel.getChannel(result);
     if (null == channel) {
       const _Error = Error;
@@ -1309,17 +1309,17 @@ let closure_37 = async function _sendEmbeddedActivityInviteUser() {
     } else {
       let content;
       if (null != closure_1_5) {
-        content = closure_1(7358).parse(channel, tmp2).content;
-        const obj = closure_1(7358);
+        content = closure_1(7363).parse(channel, tmp2).content;
+        const obj = closure_1(7363);
       }
-      const obj2 = closure_1(7167);
+      const obj2 = closure_1(7172);
       obj2.sendInvite(result, code.code, closure_1_3, closure_1_4, content);
     }
   });
   await "IconComponent";
   closure_1 = tmp2;
   ({ channelId: closure_129_0, applicationId: closure_129_1, userId: closure_129_2, location: closure_129_3, inviteAnalyticsMetadata: closure_129_4, prefixedContent: closure_129_5 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 let closure_38 = async function _validateTestMode(arg0) {
   if (c1 === 2) {
@@ -1463,7 +1463,7 @@ let closure_41 = async function _refreshProxyTicket() {
         } else if (1 === tmp9) {
           c7 = 0;
           const obj8 = { type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: closure_132_0, refreshing: false };
-          closure_133_1(closure_133_2[25]).dispatch(obj8);
+          closure_133_1(closure_133_2[26]).dispatch(obj8);
           throw closure_6;
         } else if (2 === tmp9) {
           c7 = 1;
@@ -1479,23 +1479,23 @@ let closure_41 = async function _refreshProxyTicket() {
           }
           closure_132_4 = c2;
           if (null != closure_132_4) {
-            let PRIVATE_CHANNEL = closure_133_0(closure_133_2[24]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
+            let PRIVATE_CHANNEL = closure_133_0(closure_133_2[25]).EmbeddedActivityLocationKind.GUILD_CHANNEL;
           } else {
-            PRIVATE_CHANNEL = closure_133_0(closure_133_2[24]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
+            PRIVATE_CHANNEL = closure_133_0(closure_133_2[25]).EmbeddedActivityLocationKind.PRIVATE_CHANNEL;
           }
           closure_132_5 = PRIVATE_CHANNEL;
-          let tmp36 = closure_133_1(closure_133_2[25]);
+          let tmp36 = closure_133_1(closure_133_2[26]);
           let dispatch = tmp36.dispatch;
           let obj9 = { type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL", nonce: closure_133_0(closure_133_2[20]).createNonce(), applicationId: closure_132_0, channelId: closure_132_1, guildId: closure_132_4, locationKind: closure_132_5, error: null };
-          if (!(closure_132_6 instanceof closure_133_1(closure_133_2[27]))) {
-            if (!(closure_132_6 instanceof closure_133_1(closure_133_2[28]))) {
-              if (!(closure_132_6 instanceof closure_133_1(closure_133_2[29]))) {
-                let tmp63 = new closure_133_1(closure_133_2[28])(closure_132_6);
+          if (!(closure_132_6 instanceof closure_133_1(closure_133_2[28]))) {
+            if (!(closure_132_6 instanceof closure_133_1(closure_133_2[29]))) {
+              if (!(closure_132_6 instanceof closure_133_1(closure_133_2[30]))) {
+                let tmp63 = new closure_133_1(closure_133_2[29])(closure_132_6);
               }
               obj9.error = tmp63;
               dispatch(obj9);
               c7 = 0;
-              tmp36 = closure_133_1(closure_133_2[25]);
+              tmp36 = closure_133_1(closure_133_2[26]);
               dispatch = tmp36.dispatch;
               const obj10 = { type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: closure_132_0, refreshing: false };
               obj9 = dispatch(obj10);
@@ -1510,21 +1510,21 @@ let closure_41 = async function _refreshProxyTicket() {
         } else if (arg0 === 2) {
           c7 = 0;
           const obj11 = { type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: closure_132_0, refreshing: false };
-          closure_133_1(closure_133_2[25]).dispatch(obj11);
+          closure_133_1(closure_133_2[26]).dispatch(obj11);
           c9 = 3;
           const obj13 = { value, done: true };
           return obj13;
         } else {
           closure_132_2 = value;
           const obj15 = { type: "EMBEDDED_ACTIVITY_LAUNCH_SET_PROXY_TICKET", applicationId: closure_132_0, channelId: closure_132_1, proxyTicket: closure_132_2 };
-          closure_133_1(closure_133_2[25]).dispatch(obj15);
-          const obj12 = closure_133_1(closure_133_2[25]);
+          closure_133_1(closure_133_2[26]).dispatch(obj15);
+          const obj12 = closure_133_1(closure_133_2[26]);
           const obj17 = { type: "EMBEDDED_ACTIVITY_UPDATE_CONNECTED_PROXY_TICKET", applicationId: closure_132_0, proxyTicket: closure_132_2 };
-          closure_133_1(closure_133_2[25]).dispatch(obj17);
+          closure_133_1(closure_133_2[26]).dispatch(obj17);
           c7 = 0;
-          const obj14 = closure_133_1(closure_133_2[25]);
+          const obj14 = closure_133_1(closure_133_2[26]);
           const obj19 = { type: "EMBEDDED_ACTIVITY_SET_PROXY_TICKET_REFRESHING", applicationId: closure_132_0, refreshing: false };
-          closure_133_1(closure_133_2[25]).dispatch(obj19);
+          closure_133_1(closure_133_2[26]).dispatch(obj19);
           c9 = 3;
           return { value: true, done: true };
         }
@@ -1542,14 +1542,14 @@ let closure_41 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_4 = fn(9186).getOrFetchApplicationCommandIndexForTarget;
-let closure_16 = fn(2023).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+let closure_4 = fn(9220).getOrFetchApplicationCommandIndexForTarget;
+let closure_16 = fn(2024).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_18, AnalyticsGameOpenTypes: closure_19, ChannelTypes: closure_20, Endpoints: closure_21, PopoutWindowKeys: closure_22 } = Constants);
-const INSTALL_LESS_APP_IDS = fn(1372).INSTALL_LESS_APP_IDS;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
-const InviteTargetTypes = fn(7418).InviteTargetTypes;
+const INSTALL_LESS_APP_IDS = fn(1373).INSTALL_LESS_APP_IDS;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const InviteTargetTypes = fn(7423).InviteTargetTypes;
 let closure_27 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_29 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER" };
 const size = fn(2);

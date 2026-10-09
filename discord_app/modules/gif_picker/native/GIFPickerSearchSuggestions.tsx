@@ -1,15 +1,15 @@
-// === Module 9695: GIFPickerSearchSuggestions ===
+// === Module 9714: GIFPickerSearchSuggestions ===
 
-// Module 9695 (GIFPickerSearchSuggestions)
+// Module 9714 (GIFPickerSearchSuggestions)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 9686 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 9705 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { suggestionsContainer: { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 }, footerSuggestionsContainer: null, footerSuggestionsTitle: null };
 let obj3 = { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 };
 obj.footerSuggestionsContainer = { justifyContent: "flex-start", paddingVertical: nativeDefault.space.PX_16 };
@@ -67,7 +67,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return closure_1_4.getSuggestions();
         }
       }
-      const tmp12 = closure_5(tmp(5086).Text, obj2);
+      const tmp12 = closure_5(tmp(5087).Text, obj2);
       cResult[3] = tmp4.footerSuggestionsTitle;
       cResult[4] = tmp12;
       let tmp10 = tmp12;
@@ -157,12 +157,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj3 = { style: tmp.footerSuggestionsTitle, variant: "text-md/medium", color: "text-default", children: null };
     const intl = tmp2(1126).intl;
     obj3.children = intl.string(tmp2(1126).t["3JGJo2"]);
-    const items1 = [closure_5(tmp2(5086).Text, obj3), ];
+    const items1 = [closure_5(tmp2(5087).Text, obj3), ];
     const obj4 = {
       style: tmp.suggestionsContainer,
       children: stateFromStoresArray.map((text) => {
           closure_0 = text;
-          return closure_1_5(onClickSuggestion(5375).Button, {
+          return closure_1_5(onClickSuggestion(5376).Button, {
             size: "sm",
             variant: "secondary",
             hitSlop: nativeDefault.space.PX_8,

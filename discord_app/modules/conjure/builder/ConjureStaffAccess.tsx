@@ -1,12 +1,12 @@
-// === Module 16879: ConjureStaffAccess ===
+// === Module 17007: ConjureStaffAccess ===
 
-// Module 16879 (ConjureStaffAccess)
+// Module 17007 (ConjureStaffAccess)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const GuildFeatures = fn(1085).GuildFeatures;

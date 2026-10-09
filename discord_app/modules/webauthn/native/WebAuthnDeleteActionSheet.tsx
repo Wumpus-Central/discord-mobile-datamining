@@ -1,16 +1,16 @@
-// === Module 14867: WebAuthnDeleteActionSheet ===
+// === Module 14977: WebAuthnDeleteActionSheet ===
 
-// Module 14867 (WebAuthnDeleteActionSheet)
+// Module 14977 (WebAuthnDeleteActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import WebAuthnActionCreators from "WebAuthnActionCreators" /* 5945 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 5946 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { content: { alignItems: "center" }, subtitle: { textAlign: "center", marginTop: nativeDefault.space.PX_16 }, sheetContent: null, sheetBody: null };
 let obj3 = { textAlign: "center", marginTop: nativeDefault.space.PX_16 };
 obj2.sheetContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -167,20 +167,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
       const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
       const intl = credential(1126).intl;
       obj2.content = intl.string(credential(1126).t.ZnkeXs);
-      obj2.icon = setDeleting(9993);
-      obj2.IconComponent = credential(4992).CircleCheckIcon;
-      setDeleting(4766).open(obj2);
+      obj2.icon = setDeleting(10012);
+      obj2.IconComponent = credential(4993).CircleCheckIcon;
+      setDeleting(4768).open(obj2);
     });
     result.then(() => {
       const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
       const intl = credential(1126).intl;
       obj2.content = intl.string(credential(1126).t.ZnkeXs);
-      obj2.icon = setDeleting(9993);
-      obj2.IconComponent = credential(4992).CircleCheckIcon;
-      setDeleting(4766).open(obj2);
+      obj2.icon = setDeleting(10012);
+      obj2.IconComponent = credential(4993).CircleCheckIcon;
+      setDeleting(4768).open(obj2);
     }).catch((error) => {
-      const obj = setDeleting(4766);
-      obj.open({ key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: error.message, icon: setDeleting(5008), IconComponent: credential(5003).WarningIcon, iconColor: "icon-feedback-critical" });
+      const obj = setDeleting(4768);
+      obj.open({ key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: error.message, icon: setDeleting(5009), IconComponent: credential(5004).WarningIcon, iconColor: "icon-feedback-critical" });
     }).finally(() => {
       setDeleting(false);
     });
@@ -201,20 +201,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   let obj2 = { title: null, trailing: null };
   let intl = credential(1126).intl;
   obj2.title = intl.formatToPlainString(credential(1126).t.mI3CoL, { keyName: credential.name });
-  obj2.trailing = closure_4(credential(6880).ActionSheetCloseButton, { onPress: handleClose });
-  const items = [closure_4(credential(6828).BottomSheetTitleHeader, obj2), , , ];
+  obj2.trailing = closure_4(credential(6887).ActionSheetCloseButton, { onPress: handleClose });
+  const items = [closure_4(credential(6835).BottomSheetTitleHeader, obj2), , , ];
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1126).intl;
   obj5.children = intl2.string(credential(1126).t.IfTbc1);
-  obj4.children = closure_4(credential(5086).Text, obj5);
+  obj4.children = closure_4(credential(5087).Text, obj5);
   items[1] = closure_4(View, obj4);
   const obj6 = { children: null };
   const obj7 = { text: null, onPress: null, variant: "primary", grow: true };
   const intl3 = credential(1126).intl;
   obj7.text = intl3.string(credential(1126).t["lqK//z"]);
   obj7.onPress = handleClose;
-  obj6.children = closure_4(credential(5375).Button, obj7);
+  obj6.children = closure_4(credential(5376).Button, obj7);
   items[2] = closure_4(View, obj6);
   const obj8 = { children: null };
   const obj9 = { text: null, onPress: null, variant: "destructive", disabled: null, loading: null, grow: true };
@@ -228,28 +228,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
       const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
       const intl = credential(1126).intl;
       obj2.content = intl.string(credential(1126).t.ZnkeXs);
-      obj2.icon = closure_1_1(9993);
-      obj2.IconComponent = credential(4992).CircleCheckIcon;
-      closure_1_1(4766).open(obj2);
+      obj2.icon = closure_1_1(10012);
+      obj2.IconComponent = credential(4993).CircleCheckIcon;
+      closure_1_1(4768).open(obj2);
     });
     result.then(() => {
       const obj2 = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
       const intl = credential(1126).intl;
       obj2.content = intl.string(credential(1126).t.ZnkeXs);
-      obj2.icon = closure_1_1(9993);
-      obj2.IconComponent = credential(4992).CircleCheckIcon;
-      closure_1_1(4766).open(obj2);
+      obj2.icon = closure_1_1(10012);
+      obj2.IconComponent = credential(4993).CircleCheckIcon;
+      closure_1_1(4768).open(obj2);
     }).catch((error) => {
-      const obj = closure_1_1(4766);
-      obj.open({ key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: error.message, icon: closure_1_1(5008), IconComponent: credential(5003).WarningIcon, iconColor: "icon-feedback-critical" });
+      const obj = closure_1_1(4768);
+      obj.open({ key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY", content: error.message, icon: closure_1_1(5009), IconComponent: credential(5004).WarningIcon, iconColor: "icon-feedback-critical" });
     }).finally(() => {
       closure_1_1(false);
     });
   };
   obj9.disabled = deleting;
   obj9.loading = deleting;
-  obj8.children = closure_4(credential(5375).Button, obj9);
+  obj8.children = closure_4(credential(5376).Button, obj9);
   items[3] = closure_4(View, obj8);
   obj.children = items;
-  return closure_5(credential(6829).BottomSheet, obj);
+  return closure_5(credential(6836).BottomSheet, obj);
 });

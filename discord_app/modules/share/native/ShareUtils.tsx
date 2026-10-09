@@ -1,8 +1,8 @@
-// === Module 13955: ShareUtils ===
+// === Module 14052: ShareUtils ===
 
-// Module 13955 (ShareUtils)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import _modDef5011 from "module_5011" /* 5011 */;
+// Module 14052 (ShareUtils)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import _modDef5012 from "module_5012" /* 5012 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -43,7 +43,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
           closure_130_6 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -56,8 +56,8 @@ let closure_6 = async function _sendShareMessage(arg0) {
         } else {
           id = closure_130_1.id;
           closure_130_4 = closure_130_0.map((uri) => {
-            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(7731).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
-            const cloudUpload = new closure_0(7729).CloudUpload(size, guildId.id);
+            const size = { uri: uri.uri, originalUri: uri.uri, mimeType: uri.mimeType, filename: uri.name, platform: closure_0(7740).UploadPlatform.REACT_NATIVE, width: uri.width, height: uri.height, preTranscodeSourceSize: uri.originalSize };
+            const cloudUpload = new closure_0(7738).CloudUpload(size, guildId.id);
             return cloudUpload;
           });
           c1 = closure_130_2;
@@ -80,10 +80,10 @@ let closure_6 = async function _sendShareMessage(arg0) {
                       const obj = { uploadError: { file, guildId: guildId.getGuildId(), code, reason } };
                       closure_1_6.reject(obj);
                       const obj2 = { file, guildId: guildId.getGuildId(), code, reason };
-                      guildId(9201).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
-                      const obj3 = guildId(9201);
+                      guildId(9235).setUploads({ channelId, uploads, draftType: uploads.ChannelMessage, resetState: true });
+                      const obj3 = guildId(9235);
                       const obj4 = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
-                      guildId(7891).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
+                      guildId(7900).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
                     }
           };
           c4 = 2;
@@ -110,14 +110,14 @@ let closure_6 = async function _sendShareMessage(arg0) {
     }
   }
 };
-const DraftType = fn(7232).DraftType;
-const MessageSendLocation = fn(5083).MessageSendLocation;
+const DraftType = fn(7237).DraftType;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef5011 });
+  obj.open({ key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef5012 });
 };
 export const sendShareMessage = function sendShareMessage() {
   const self = this;

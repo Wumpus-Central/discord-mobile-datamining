@@ -1,21 +1,21 @@
-// === Module 14755: useGuildProfileEditForm ===
+// === Module 14863: useGuildProfileEditForm ===
 
-// Module 14755 (useGuildProfileEditForm)
+// Module 14863 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import SortedGuildStore from "SortedGuildStore" /* 5968 */;
-import UserStore from "UserStore" /* 1389 */;
+import SortedGuildStore from "SortedGuildStore" /* 5970 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8260).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8268).IGNORE_GUILD_IDS;
 let FormStates = fn(1085).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -513,7 +513,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   const merged1 = Object.assign(stateFromStoresObject.errors);
   memo = selectedGuild.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[13]).DelayedCall(200, () => {
-      pendingAvatar(584).wait(stateFromStores(9097).resetAllPending);
+      pendingAvatar(584).wait(stateFromStores(10608).resetAllPending);
     });
     return delayedCall;
   }, []);

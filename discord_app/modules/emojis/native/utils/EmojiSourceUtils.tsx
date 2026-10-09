@@ -1,6 +1,6 @@
-// === Module 16301: EmojiSourceUtils ===
+// === Module 16420: EmojiSourceUtils ===
 
-// Module 16301 (EmojiSourceUtils)
+// Module 16420 (EmojiSourceUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -42,7 +42,7 @@ let closure_4 = async function _getEmojiSource(arg0) {
           closure_133_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

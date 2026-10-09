@@ -1,19 +1,19 @@
-// === Module 16877: ConjureModelSettingsSheet ===
+// === Module 17005: ConjureModelSettingsSheet ===
 
-// Module 16877 (ConjureModelSettingsSheet)
+// Module 17005 (ConjureModelSettingsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
-import ActionSheet from "ActionSheet" /* 6885 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 16851 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
+import ActionSheet from "ActionSheet" /* 6892 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 16975 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13072 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13164 */;
 
 require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(13072).sendModelSettings;
+const sendModelSettings = fn(13164).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -229,9 +229,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureMod
       stringResult = string(tmp12["/rJzr6"]);
     }
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-    items7[1] = closure_7(tmp(5086).Text, obj6);
+    items7[1] = closure_7(tmp(5087).Text, obj6);
     obj4.children = items7;
-    return closure_8(tmp(5373).Stack, obj4);
+    return closure_8(tmp(5374).Stack, obj4);
   }
   const obj3 = projectId(504);
 });

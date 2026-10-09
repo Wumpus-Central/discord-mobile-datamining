@@ -1,19 +1,19 @@
-// === Module 12115: GamePlatformBadgeRow ===
+// === Module 12052: GamePlatformBadgeRow ===
 
-// Module 12115 (GamePlatformBadgeRow)
+// Module 12052 (GamePlatformBadgeRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 12117 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 12054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12116).GamePlatformAvailability.DESKTOP] = fn(9061).ScreenIcon;
-obj[fn(12116).GamePlatformAvailability.MOBILE] = fn(6633).MobilePhoneIcon;
-obj[fn(12116).GamePlatformAvailability.CONSOLE] = fn(9117).GameControllerIcon;
-const createStyles = fn(5090);
+obj[fn(12053).GamePlatformAvailability.DESKTOP] = fn(9076).ScreenIcon;
+obj[fn(12053).GamePlatformAvailability.MOBILE] = fn(6640).MobilePhoneIcon;
+obj[fn(12053).GamePlatformAvailability.CONSOLE] = fn(9184).GameControllerIcon;
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -66,7 +66,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [platforms];
   const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
   const tmp = closure_6();
-  return jsx(platforms(5373).Stack, {
+  return jsx(platforms(5374).Stack, {
     direction: "horizontal",
     align: "center",
     spacing: nativeDefault.space.PX_4,

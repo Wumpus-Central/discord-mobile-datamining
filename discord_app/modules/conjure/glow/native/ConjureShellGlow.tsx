@@ -1,13 +1,13 @@
-// === Module 17037: ConjureShellGlow ===
+// === Module 17193: ConjureShellGlow ===
 
-// Module 17037 (ConjureShellGlow)
+// Module 17193 (ConjureShellGlow)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import timing from "timing" /* 5091 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import timing from "timing" /* 5092 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 const ANDROID = PlatformUtils.isAndroid();
 let c13 = 500;
 let c14 = 0.504;
@@ -52,7 +52,7 @@ const start = { x: 0.5, y: 0 };
 const end = { x: 0.5, y: 1 };
 const start2 = { x: 0, y: 0.5 };
 const end2 = { x: 1, y: 0.5 };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_27 = createStyles.createStyles({ root: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", zIndex: 0 }, band: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 }, sweep: { position: "absolute", top: 0, bottom: 0, left: 0, width: "200%" }, fill: { flex: 1 }, ditherClip: { position: "absolute", left: 0, right: 0, bottom: 0, overflow: "hidden" }, ditherField: { position: "absolute", left: 0, right: 0, bottom: 0, height: 500 } });
 const __initData = { code: "function ConjureShellGlowTsx2(){const{lift,pulseAt,pulse,BAND_HEIGHT}=this.__closure;const scale=lift.get()*pulseAt(pulse.get());return{transform:[{translateY:BAND_HEIGHT*(1-scale)/2},{scaleY:scale}]};}" };
 const __initData2 = { code: "function ConjureShellGlowTsx3(){const{chromaMix,layerAlpha,driftBase,width}=this.__closure;return{opacity:(1-chromaMix.get())*layerAlpha,transform:[{translateX:-driftBase.get()*width}]};}" };
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   let tmpResult = thinking(504);
   const stateFromStores1 = thinking(504).useStateFromStores(tmp9, tmp10);
   if (cResult[4] !== stateFromStores1) {
-    const isThemeDarkResult = tmp(4930).isThemeDark(stateFromStores1);
+    const isThemeDarkResult = tmp(4931).isThemeDark(stateFromStores1);
     class Y {
       constructor() {
         return closure_8.theme;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     }
     cResult[5] = isThemeDarkResult;
     let tmp13 = isThemeDarkResult;
-    const tmpResult14 = tmp(4930);
+    const tmpResult14 = tmp(4931);
   } else {
     tmp13 = cResult[5];
   }
@@ -227,21 +227,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         if (!thinking) {
           num18 = c14;
         }
-        const sharedValue = tmp(4810).useSharedValue(num18);
-        const tmpResult15 = tmp(4810);
+        const sharedValue = tmp(4811).useSharedValue(num18);
+        const tmpResult15 = tmp(4811);
         let num19 = 0;
         if (thinking) {
           num19 = 1;
         }
-        const sharedValue1 = tmp(4810).useSharedValue(num19);
-        const tmpResult16 = tmp(4810);
-        sharedValue2 = tmp(4810).useSharedValue(thinking ? v500 : c15);
-        const tmpResult17 = tmp(4810);
-        sharedValue3 = tmp(4810).useSharedValue(0);
-        const tmpResult18 = tmp(4810);
-        const sharedValue4 = tmp(4810).useSharedValue(0);
-        const tmpResult19 = tmp(4810);
-        const sharedValue5 = tmp(4810).useSharedValue(0);
+        const sharedValue1 = tmp(4811).useSharedValue(num19);
+        const tmpResult16 = tmp(4811);
+        sharedValue2 = tmp(4811).useSharedValue(thinking ? v500 : c15);
+        const tmpResult17 = tmp(4811);
+        sharedValue3 = tmp(4811).useSharedValue(0);
+        const tmpResult18 = tmp(4811);
+        const sharedValue4 = tmp(4811).useSharedValue(0);
+        const tmpResult19 = tmp(4811);
+        const sharedValue5 = tmp(4811).useSharedValue(0);
         if (cResult[17] === sharedValue1) {
           if (cResult[18] === sharedValue2) {
             if (cResult[19] === sharedValue) {
@@ -318,8 +318,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                       Ee.__closure = obj3;
                       Ee.__workletHash = 14122773184727;
                       Ee.__initData = __initData;
-                      const animatedStyle = tmp(4810).useAnimatedStyle(Ee);
-                      const tmpResult21 = tmp(4810);
+                      const animatedStyle = tmp(4811).useAnimatedStyle(Ee);
+                      const tmpResult21 = tmp(4811);
                       class Se {
                         constructor() {
                           obj = { opacity: (1 - closure_6.get()) * c2, transform: null };
@@ -334,8 +334,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                       Se.__closure = obj4;
                       Se.__workletHash = 11778214036579;
                       Se.__initData = __initData2;
-                      const animatedStyle1 = tmp(4810).useAnimatedStyle(Se);
-                      const tmpResult22 = tmp(4810);
+                      const animatedStyle1 = tmp(4811).useAnimatedStyle(Se);
+                      const tmpResult22 = tmp(4811);
                       function be() {
                         const obj = { opacity: sharedValue1.get() * dependencyMap, transform: null };
                         items = [{ translateX: -sharedValue5.get() * first }];
@@ -346,8 +346,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                       be.__closure = obj6;
                       be.__workletHash = 12832282995257;
                       be.__initData = __initData3;
-                      const animatedStyle2 = tmp(4810).useAnimatedStyle(be);
-                      const tmpResult23 = tmp(4810);
+                      const animatedStyle2 = tmp(4811).useAnimatedStyle(be);
+                      const tmpResult23 = tmp(4811);
                       function ve() {
                         if (closure_12) {
                           arr = sharedValue3;
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                       ve.__closure = obj7;
                       ve.__workletHash = 9289670122768;
                       ve.__initData = __initData4;
-                      const animatedStyle3 = tmp(4810).useAnimatedStyle(ve);
+                      const animatedStyle3 = tmp(4811).useAnimatedStyle(ve);
                       if (cResult[33] !== tmp4.fill) {
                         let obj8 = { style: null, colors: null, locations: null, start: null, end: null };
                         class Ee {
@@ -454,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                         obj8.locations = locations;
                         obj8.start = start;
                         obj8.end = end;
-                        const tmp66 = sharedValue4(stateFromStores(5387), obj8);
+                        const tmp66 = sharedValue4(stateFromStores(5388), obj8);
                         cResult[33] = tmp4.fill;
                         cResult[34] = tmp66;
                         let tmp59 = tmp66;
@@ -883,7 +883,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                                                       }
                                                     }
                                                     const obj12 = { style: tmp100, children: cResult[74] };
-                                                    const tmp107 = sharedValue4(stateFromStores(4810).View, obj12);
+                                                    const tmp107 = sharedValue4(stateFromStores(4811).View, obj12);
                                                     cResult[75] = tmp100;
                                                     cResult[76] = cResult[74];
                                                     cResult[77] = tmp107;
@@ -1118,7 +1118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                                       }
                                     }
                                     const size = { width, height: v500, thinking, fill: tmp88, fillOpacity: 0.16 };
-                                    const tmp92 = sharedValue4(stateFromStores(17038), size);
+                                    const tmp92 = sharedValue4(stateFromStores(17194), size);
                                     cResult[56] = tmp88;
                                     cResult[57] = 0.16;
                                     class Se {
@@ -1246,7 +1246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                                   }
                                 }
                                 const obj15 = { style: tmp76, children: tmp77 };
-                                const tmp84 = sharedValue4(stateFromStores(4810).View, obj15);
+                                const tmp84 = sharedValue4(stateFromStores(4811).View, obj15);
                                 cResult[50] = tmp76;
                                 cResult[51] = tmp77;
                                 cResult[52] = tmp84;
@@ -1305,7 +1305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                               const obj16 = { style: tmp4.fill, colors: tmp22.chroma, start: start2, end: end2 };
                               cResult[47] = tmp22.chroma;
                               cResult[48] = tmp4.fill;
-                              cResult[49] = sharedValue4(stateFromStores(5387), obj16);
+                              cResult[49] = sharedValue4(stateFromStores(5388), obj16);
                               class Se {
                                 constructor() {
                                   obj = { opacity: (1 - closure_6.get()) * c2, transform: null };
@@ -1316,7 +1316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                                   return obj;
                                 }
                               }
-                              const tmp81 = sharedValue4(stateFromStores(5387), obj16);
+                              const tmp81 = sharedValue4(stateFromStores(5388), obj16);
                             }
                             const items9 = [, ];
                             class Ee {
@@ -1426,7 +1426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                             }
                           }
                           const obj17 = { style: tmp67, children: tmp68 };
-                          const tmp75 = sharedValue4(stateFromStores(4810).View, obj17);
+                          const tmp75 = sharedValue4(stateFromStores(4811).View, obj17);
                           cResult[41] = tmp67;
                           cResult[42] = tmp68;
                           cResult[43] = tmp75;
@@ -1485,7 +1485,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                         const obj18 = { style: tmp4.fill, colors: tmp22.base, start: start2, end: end2 };
                         cResult[38] = tmp22.base;
                         cResult[39] = tmp4.fill;
-                        cResult[40] = sharedValue4(stateFromStores(5387), obj18);
+                        cResult[40] = sharedValue4(stateFromStores(5388), obj18);
                         class Se {
                           constructor() {
                             obj = { opacity: (1 - closure_6.get()) * c2, transform: null };
@@ -1496,14 +1496,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
                             return obj;
                           }
                         }
-                        const tmp72 = sharedValue4(stateFromStores(5387), obj18);
+                        const tmp72 = sharedValue4(stateFromStores(5388), obj18);
                       }
                       const items10 = [tmp4.sweep, animatedStyle1];
                       cResult[35] = animatedStyle1;
                       cResult[36] = tmp4.sweep;
                       cResult[37] = items10;
                       tmp67 = items10;
-                      const tmpResult24 = tmp(4810);
+                      const tmpResult24 = tmp(4811);
                     }
                   }
                   class Y {
@@ -1562,7 +1562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         cResult[22] = items13;
         tmp38 = items13;
         tmp37 = oe;
-        const tmpResult20 = tmp(4810);
+        const tmpResult20 = tmp(4811);
       }
     }
   }

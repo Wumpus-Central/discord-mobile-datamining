@@ -1,24 +1,24 @@
-// === Module 10957: StreamPreview ===
+// === Module 11131: StreamPreview ===
 
-// Module 10957 (StreamPreview)
+// Module 11131 (StreamPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import Pressables from "Pressables" /* 6189 */;
-import _modDef10958 from "module_10958" /* 10958 */;
-import _modDef10959 from "module_10959" /* 10959 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10960 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import Pressables from "Pressables" /* 6191 */;
+import _modDef11132 from "module_11132" /* 11132 */;
+import _modDef11133 from "module_11133" /* 11133 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11134 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
+({ View: c3, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let createStyles = fn(5091);
 let obj2 = { wrapper: null, text: null, fallbackImage: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -29,32 +29,33 @@ obj3.paddingRight = 20;
 obj2.wrapper = obj3;
 obj2.text = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: nativeDefault.colors.TEXT_MUTED };
 obj2.fallbackImage = { width: "100%" };
-let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
+let closure_7 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class DefaultFallback extends PureComponent {
 }
 DefaultFallback.prototype["render"] = function render() {
-  const tmp = closure_8(this.context);
+  const tmp = closure_7(this.context);
   const obj = { style: tmp.wrapper, children: null };
   const obj2 = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
+  const tmp6 = FastImageDefault;
   if (obj3.isThemeDark(this.props.theme)) {
-    let tmp6Result = _modDef10958;
+    let tmp4Result = _modDef11132;
   } else {
-    tmp6Result = _modDef10959;
+    tmp4Result = _modDef11133;
   }
-  obj2.source = tmp6Result;
-  obj.children = timestampProducer(React3, obj2);
-  return timestampProducer(React4, obj);
+  obj2.source = tmp4Result;
+  obj.children = hasOwnProperty(tmp6, obj2);
+  return hasOwnProperty(React3, obj);
 };
-DefaultFallback.contextType = fn(4787).ThemeContext;
-createStyles = fn(5090);
+DefaultFallback.contextType = fn(4788).ThemeContext;
+createStyles = fn(5091);
 const obj6 = { touchable: null, imageContainer: null, image: null };
-let size = { flex: 1, width: "100%", height: "__packager_asset", aspectRatio: true, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let size = { flex: 1, width: "100%", height: "k", aspectRatio: true, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj6.touchable = size;
 let obj4 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: nativeDefault.colors.TEXT_MUTED };
 obj6.imageContainer = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
 obj6.image = { flex: 1 };
-let closure_10 = createStyles.createLegacyClassComponentStyles(obj6);
+let closure_9 = createStyles.createLegacyClassComponentStyles(obj6);
 const PureComponent2 = noop.PureComponent;
 class StreamPreview extends PureComponent2 {
   constructor() {
@@ -74,7 +75,7 @@ class StreamPreview extends PureComponent2 {
   }
 }
 StreamPreview.prototype["render"] = function render() {
-  const tmp = closure_10(this.context);
+  const tmp = closure_9(this.context);
   ({ url, isFetching, renderFallback, theme } = this.props);
   if (null != url) {
     if (!isFetching) {
@@ -90,7 +91,7 @@ StreamPreview.prototype["render"] = function render() {
         const obj2 = { uri: url, cache: "force-cache" };
         obj.source = obj2;
         ({ handleLoadStart: obj.onLoadStart, handleLoad: obj.onLoad, handleError: obj.onError } = this);
-        const tmp13 = timestampProducer(FastImageDefault, obj);
+        const tmp13 = hasOwnProperty(FastImageDefault, obj);
       }
       const obj3 = { accessibilityRole: "button", accessibilityLabel: tmp2, activeOpacity: 0.6, style: null, disabled: null, onPress: null, children: null };
       const items = [tmp.touchable, tmp3];
@@ -100,9 +101,9 @@ StreamPreview.prototype["render"] = function render() {
       const obj4 = { style: tmp.imageContainer, children: null };
       const items1 = [tmp8, tmp13];
       obj4.children = items1;
-      const items2 = [React5(React4, obj4), tmp4];
+      const items2 = [timestampProducer(React3, obj4), tmp4];
       obj3.children = items2;
-      return React5(Pressables.PressableOpacity, obj3);
+      return timestampProducer(Pressables.PressableOpacity, obj3);
     }
   }
   let renderFallbackResult1;
@@ -111,7 +112,7 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = fn(4787).ThemeContext;
+StreamPreview.contextType = fn(4788).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };
@@ -124,7 +125,7 @@ StreamPreview.defaultProps = {
       stringResult = string(t.uQZTBV);
     }
     obj.caption = stringResult;
-    return timestampProducer(DefaultFallback, obj);
+    return hasOwnProperty(DefaultFallback, obj);
   }
 };
 const ReactCompilerGating = fn(558);
@@ -165,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   obj2.url = previewUrl;
   obj2.isFetching = isLoading;
   obj2.theme = stateFromStores;
-  const tmp11 = timestampProducer(StreamPreview, obj2);
+  const tmp11 = hasOwnProperty(StreamPreview, obj2);
   cResult[2] = isLoading;
   cResult[3] = stream;
   cResult[4] = stateFromStores;
@@ -184,5 +185,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   obj2.url = previewUrl;
   obj2.isFetching = isLoading;
   obj2.theme = stateFromStores;
-  return timestampProducer(StreamPreview, obj2);
+  return hasOwnProperty(StreamPreview, obj2);
 });

@@ -1,6 +1,6 @@
-// === Module 16319: MessagesItemSeparator ===
+// === Module 16438: MessagesItemSeparator ===
 
-// Module 16319 (MessagesItemSeparator)
+// Module 16438 (MessagesItemSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c2 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { height: PX_12 }, separator: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: StyleSheet.hairlineWidth };
 const merged = Object.assign(StyleSheet.absoluteFillObject);

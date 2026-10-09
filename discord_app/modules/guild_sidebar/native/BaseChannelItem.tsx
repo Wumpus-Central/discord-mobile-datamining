@@ -1,26 +1,26 @@
-// === Module 12104: BaseChannelItem ===
+// === Module 12041: BaseChannelItem ===
 
-// Module 12104 (BaseChannelItem)
+// Module 12041 (BaseChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import native2 from "native" /* 8517 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12105 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 12106 */;
+import native2 from "native" /* 8525 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12042 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 12043 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const utils_PlatformUtils = Text(1382);
-const Text_Text = Text(5086);
+const utils_PlatformUtils = Text(1383);
+const Text_Text = Text(5087);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11776);
+const RedesignChannelListConstants = fn(11713);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(5972).UnreadSetting;
+const UnreadSetting = fn(5974).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -575,9 +575,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12106);
+      let AnimatedPressableHighlight = hideIcon(12043);
     } else {
-      AnimatedPressableHighlight = mode(8517).AnimatedPressableHighlight;
+      AnimatedPressableHighlight = mode(8525).AnimatedPressableHighlight;
     }
     obj2 = {};
     const merged1 = Object.assign(merged);
@@ -592,8 +592,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_10(hideIcon(12105), obj3);
-    const tmp9 = hideIcon(12105);
+    closure_10(hideIcon(12042), obj3);
+    const tmp9 = hideIcon(12042);
   }
 });
 export const ChannelModes = obj2;

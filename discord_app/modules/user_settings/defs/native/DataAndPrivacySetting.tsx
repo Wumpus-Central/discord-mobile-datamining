@@ -1,15 +1,15 @@
-// === Module 16069: DataAndPrivacySetting ===
+// === Module 16185: DataAndPrivacySetting ===
 
-// Module 16069 (DataAndPrivacySetting)
+// Module 16185 (DataAndPrivacySetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14940 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 14943 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 15052 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 15055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePreNavigationAction() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: fn(9105).ShieldLockIcon,
+  IconComponent: fn(12971).ShieldLockIcon,
   screen: {
     route: fn(1085).UserSettingsSections.DATA_AND_PRIVACY,
     getComponent() {

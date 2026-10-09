@@ -1,88 +1,104 @@
-// === Module 13064: GameDiversityTier9LargeBadge ===
+// === Module 13152: GameDiversityTier9LargeBadge ===
 
-// Module 13064 (GameDiversityTier9LargeBadge)
-import jsxProd from "jsxProd" /* 21 */;
+// Module 13152 (GameDiversityTier9LargeBadge)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import _modDef13065 from "module_13065" /* 13065 */;
-import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import size from "module_2" /* 2 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import assetHelpers from "assetHelpers" /* 6277 */;
+import _modDef13153 from "module_13153" /* 13153 */;
+import _modDef13154 from "module_13154" /* 13154 */;
+import _modDef13155 from "module_13155" /* 13155 */;
+import noop from "module_19" /* 19 */;
 
-const jsx = jsxProd.jsx;
-let result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier9LargeBadge.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let obj = { 1: null, 2: { uri: _modDef13153 }, 3: null };
+let obj2 = { uri: _modDef13153 };
+obj[2] = { uri: _modDef13154 };
+const obj3 = { uri: _modDef13154 };
+obj[3] = { uri: _modDef13155 };
+const ReactCompilerGating = fn(558);
+const obj4 = { uri: _modDef13155 };
+let size = fn(2);
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GameDiversityTier9LargeBadge.native.tsx");
 
 export const GameDiversityTier9LargeBadge = ReactCompilerGating.isReactCompilerEnabled() ? (function GameDiversityTier9LargeBadge(arg0) {
-  const cResult = c.c(9);
+  obj = c;
+  const cResult = obj.c(12);
   ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
-  let num = 100;
-  let num2 = 100;
-  if (undefined !== width) {
-    num2 = width;
-  }
-  if (undefined !== height) {
-    num = height;
-  }
-  let num3 = 1;
+  let num = 1;
   if (undefined !== scale) {
-    num3 = scale;
+    num = scale;
   }
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13065 };
-    cResult[0] = obj2;
-    let first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  const result = num2 * num3;
-  const result1 = num * num3;
-  if (cResult[1] === result) {
-    if (cResult[2] === result1) {
-      let tmp7 = cResult[3];
-    }
-    if (cResult[4] === accessibilityLabel) {
-      if (cResult[5] === accessible) {
-        if (cResult[6] === resizeMode) {
-          if (cResult[7] === tmp7) {
-            let tmp8 = cResult[8];
+  if (cResult[0] === height) {
+    if (cResult[1] === num) {
+      if (cResult[2] === width) {
+        let tmp4 = cResult[3];
+      }
+      const _Symbol = Symbol;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const assetSource = assetHelpers.getAssetSource(obj);
+        cResult[4] = assetSource;
+        let tmp7 = assetSource;
+        const tmpResult = assetHelpers;
+      } else {
+        tmp7 = cResult[4];
+      }
+      if (cResult[5] !== resizeMode) {
+        const assetResizeMode = assetHelpers.getAssetResizeMode(resizeMode);
+        cResult[5] = resizeMode;
+        cResult[6] = assetResizeMode;
+        let tmp10 = assetResizeMode;
+        const tmpResult3 = assetHelpers;
+      } else {
+        tmp10 = cResult[6];
+      }
+      if (cResult[7] === accessibilityLabel) {
+        if (cResult[8] === accessible) {
+          if (cResult[9] === tmp4) {
+            if (cResult[10] === tmp10) {
+              let tmp12 = cResult[11];
+            }
+            return tmp12;
           }
-          return tmp8;
         }
       }
+      const obj2 = { fadeDuration: 0, source: tmp7, style: tmp4, accessible, accessibilityLabel, resizeMode: tmp10 };
+      const tmp15 = jsx(FastImageDefault, { fadeDuration: 0, source: tmp7, style: tmp4, accessible, accessibilityLabel, resizeMode: tmp10 });
+      cResult[7] = accessibilityLabel;
+      cResult[8] = accessible;
+      cResult[9] = tmp4;
+      cResult[10] = tmp10;
+      cResult[11] = tmp15;
+      tmp12 = tmp15;
     }
-    const obj3 = { fadeDuration: 0, source: first, style: tmp7, accessible, accessibilityLabel, resizeMode };
-    const tmp11 = jsx(FastImageDefault, { fadeDuration: 0, source: first, style: tmp7, accessible, accessibilityLabel, resizeMode });
-    cResult[4] = accessibilityLabel;
-    cResult[5] = accessible;
-    cResult[6] = resizeMode;
-    cResult[7] = tmp7;
-    cResult[8] = tmp11;
-    tmp8 = tmp11;
   }
-  const size = { width: result, height: result1 };
-  cResult[1] = result;
-  cResult[2] = result1;
-  cResult[3] = size;
-  tmp7 = size;
+  const assetSizeStyle = assetHelpers.getAssetSizeStyle({ width, height, scale: num, intrinsicWidth: 100, intrinsicHeight: 100 });
+  cResult[0] = height;
+  cResult[1] = num;
+  cResult[2] = width;
+  cResult[3] = assetSizeStyle;
+  tmp4 = assetSizeStyle;
+  const tmpResult4 = assetHelpers;
 }) : (function GameDiversityTier9LargeBadge(width) {
-  let num = width.width;
+  width = width.width;
+  const height = width.height;
+  let num = width.scale;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
-    num = 100;
+    num = 1;
   }
-  let num2 = width.height;
-  if (num2 === undefined) {
-    num2 = 100;
-  }
-  let num3 = width.scale;
-  if (num3 === undefined) {
-    num3 = 1;
-  }
-  const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef13065 };
-  obj.source = obj2;
-  obj.style = { width: num * num3, height: num2 * num3 };
+  const items = [width, height, num];
+  const memo = noop.useMemo(() => {
+    const size = { width, height, scale: num, intrinsicWidth: 100, intrinsicHeight: 100 };
+    return assetHelpers.getAssetSizeStyle(size);
+  }, items);
+  obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
+  const tmp2 = height(num[8]);
+  obj.source = width(num[7]).getAssetSource(obj);
+  obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
-  obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
+  const obj2 = width(num[7]);
+  obj.resizeMode = width(num[7]).getAssetResizeMode(resizeMode);
+  return <tmp2 fadeDuration={0} source={null} style={null} accessible={null} accessibilityLabel={null} resizeMode={null} />;
 });

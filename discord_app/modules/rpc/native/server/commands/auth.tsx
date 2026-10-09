@@ -1,11 +1,11 @@
-// === Module 14601: auth ===
+// === Module 14700: auth ===
 
-// Module 14601 (auth)
+// Module 14700 (auth)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
-import RPCErrorDefault from "RPCError" /* 11134 */;
-import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 14602 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
+import RPCErrorDefault from "RPCError" /* 10896 */;
+import AuthCommandsFactoryDefault from "AuthCommandsFactory" /* 14701 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
 
 require = fn;
 const Constants = fn(1085);

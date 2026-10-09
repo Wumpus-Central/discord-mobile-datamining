@@ -1,22 +1,22 @@
-// === Module 10913: LabeledActionBarButton ===
+// === Module 11088: LabeledActionBarButton ===
 
-// Module 10913 (LabeledActionBarButton)
+// Module 11088 (LabeledActionBarButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import Pressables from "Pressables" /* 6189 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import Pressables from "Pressables" /* 6191 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_2 = ["backgroundColor", "imageStyle", "children", "source", "disabled", "label", "iconPosition"];
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+let closure_3 = ["backgroundColor", "imageStyle", "children", "source", "disabled", "label", "iconPosition"];
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
-let obj2 = { buttonContainer: { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5974).ACTION_BAR_BUTTON_BACKGROUND }, container: { marginHorizontal: 12 }, containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 }, pressable: { marginHorizontal: 12, borderRadius: 28 }, buttonContent: { display: "flex", flexDirection: "row", alignItems: "center" }, buttonText: null, rightTextMargin: null };
-let obj3 = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5974).ACTION_BAR_BUTTON_BACKGROUND };
+const createStyles = fn(5091);
+let obj2 = { buttonContainer: { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5976).ACTION_BAR_BUTTON_BACKGROUND }, container: { marginHorizontal: 12 }, containerWithLabel: { minWidth: "50%", maxWidth: "70%", flexShrink: 1 }, pressable: { marginHorizontal: 12, borderRadius: 28 }, buttonContent: { display: "flex", flexDirection: "row", alignItems: "center" }, buttonText: null, rightTextMargin: null };
+let obj3 = { minHeight: 56, minWidth: 56, alignItems: "center", justifyContent: "center", borderRadius: 28, backgroundColor: fn(5976).ACTION_BAR_BUTTON_BACKGROUND };
 obj2.buttonText = { marginStart: 8, fontSize: 14, color: nativeDefault.colors.WHITE, fontFamily: fn(1096).Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
 obj2.rightTextMargin = { marginStart: 0, marginEnd: 8 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -31,7 +31,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
   const cResult = c.c(55);
   if (cResult[0] !== arg0) {
     ({ backgroundColor, imageStyle, children, source, disabled, label, iconPosition } = arg0);
-    const tmp13 = _objectWithoutProperties(arg0, closure_2);
+    const tmp13 = _objectWithoutProperties(arg0, closure_3);
     cResult[0] = arg0;
     cResult[1] = backgroundColor;
     cResult[2] = children;
@@ -155,7 +155,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
                                           return tmp52;
                                         }
                                         obj5 = { style: tmp17, children: tmp46 };
-                                        const tmp55 = timestampProducer(hasOwnProperty, obj5);
+                                        const tmp55 = timestampProducer(View, obj5);
                                         cResult[52] = tmp46;
                                         cResult[53] = tmp17;
                                         cResult[54] = tmp55;
@@ -178,7 +178,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
                               const obj7 = { style: tmp21, children: null };
                               const items = [tmp38, tmp5];
                               obj7.children = items;
-                              const tmp45 = React5(hasOwnProperty, obj7);
+                              const tmp45 = React5(View, obj7);
                               cResult[43] = tmp5;
                               cResult[44] = tmp38;
                               cResult[45] = tmp21;
@@ -190,7 +190,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
                         const obj8 = { style: tmp23, children: null };
                         const items1 = [tmp24, tmp29, tmp33];
                         obj8.children = items1;
-                        const tmp41 = React5(hasOwnProperty, obj8);
+                        const tmp41 = React5(View, obj8);
                         cResult[38] = tmp24;
                         cResult[39] = tmp29;
                         cResult[40] = tmp33;
@@ -202,7 +202,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
                     let tmp35 = LEFT === obj5.RIGHT;
                     if (tmp35) {
                       const obj9 = { source: tmp10, style: tmp7 };
-                      tmp35 = timestampProducer(React4, obj9);
+                      tmp35 = timestampProducer(FastImageDefault, obj9);
                     }
                     cResult[34] = LEFT;
                     cResult[35] = tmp7;
@@ -236,7 +236,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
           let tmp26 = LEFT === obj5.LEFT;
           if (tmp26) {
             const obj11 = { source: tmp10, style: tmp7 };
-            tmp26 = timestampProducer(React4, obj11);
+            tmp26 = timestampProducer(FastImageDefault, obj11);
           }
           cResult[25] = LEFT;
           cResult[26] = tmp7;
@@ -302,7 +302,7 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
   let tmp4Result = iconPosition === obj5.LEFT;
   if (tmp4Result) {
     const obj7 = { source, style: imageStyle };
-    tmp4Result = timestampProducer(React4, obj7);
+    tmp4Result = timestampProducer(FastImageDefault, obj7);
   }
   const items3 = [tmp4Result, , ];
   let tmp4Result3 = null;
@@ -322,13 +322,13 @@ export const LabeledActionButton = ReactCompilerGating.isReactCompilerEnabled() 
   let tmp4Result4 = iconPosition === tmp12.RIGHT;
   if (tmp4Result4) {
     const obj9 = { source, style: imageStyle };
-    tmp4Result4 = timestampProducer(React4, obj9);
+    tmp4Result4 = timestampProducer(FastImageDefault, obj9);
   }
   items3[2] = tmp4Result4;
   obj6.children = items3;
-  const items5 = [React5(hasOwnProperty, obj6), children.children];
+  const items5 = [React5(View, obj6), children.children];
   obj4.children = items5;
-  obj2.children = React5(hasOwnProperty, obj4);
+  obj2.children = React5(View, obj4);
   obj.children = timestampProducer(Pressables.PressableOpacity, obj2);
-  return timestampProducer(hasOwnProperty, obj);
+  return timestampProducer(View, obj);
 });

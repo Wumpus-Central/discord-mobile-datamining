@@ -1,10 +1,10 @@
-// === Module 15302: TicketIcon ===
+// === Module 15415: TicketIcon ===
 
-// Module 15302 (TicketIcon)
+// Module 15415 (TicketIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod15303 from "module_15303" /* 15303 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod15416 from "module_15416" /* 15416 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const TicketIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15303;
+    const tmpResult = _mod15416;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const TicketIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15303, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15416, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,25 +1,24 @@
-// === Module 9481: CustomEmojiContent ===
+// === Module 9519: CustomEmojiContent ===
 
-// Module 9481 (CustomEmojiContent)
+// Module 9519 (CustomEmojiContent)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4772 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5997 */;
-import openUserSettings from "openUserSettings" /* 7084 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9328 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9479 */;
-import StarIcon from "StarIcon" /* 9483 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9485 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9488 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5999 */;
+import openUserSettings from "openUserSettings" /* 7087 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9366 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9517 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9521 */;
+import StarIcon from "StarIcon" /* 9523 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9526 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5993 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
-import UserStore from "UserStore" /* 1389 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5995 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -28,7 +27,7 @@ const Constants = fn(1085);
 ({ UserSettingsSections: c10, AnalyticEvents: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { nitroWheel: { height: 32, width: 32 }, nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW }, emojiDescriptionWrapperOuter: { flexDirection: "row", flex: 1, alignItems: "center", gap: 8 }, starIcon: { height: 32, width: 32, margin: 0, padding: 0, flex: 0 }, starIconSelected: null, starIconUnselected: null, moreMenuIcon: null, bottomCtaButton: null, ctaDescriptionWrapper: null, betaTag: null, betaTagTextAddPack: null, betaTagTextRemovePack: null, favoriteButtonContainer: null };
 let obj3 = { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW };
 obj2.starIconSelected = { tintColor: nativeDefault.colors.ICON_FEEDBACK_WARNING };
@@ -60,16 +59,16 @@ export default function CustomEmojiContent(emojiNode) {
   let obj6;
   let obj = {};
   ({ sourceType, expressionSourceApplication } = emojiNode);
-  let merged = Object.assign(closure_17());
-  let merged1 = Object.assign(emojiNode(nonce[13]).useSharedMessageEmojiStyles());
+  const merged = Object.assign(closure_17());
+  const merged1 = Object.assign(emojiNode(nonce[13]).useSharedMessageEmojiStyles());
   let obj2 = emojiNode(nonce[13]);
-  const items = [obj6];
-  const stateFromStores = emojiNode(nonce[14]).useStateFromStores(items, () => obj6.getCurrentUser());
+  const items = [UserStore];
+  const stateFromStores = emojiNode(nonce[14]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = emojiNode(nonce[14]);
   let obj4 = expressionSourceGuild(nonce[9]);
   const isPremiumResult = expressionSourceGuild(nonce[9]).isPremium(stateFromStores);
-  const items1 = [isFavoriteEmoji];
-  const stateFromStores1 = emojiNode(nonce[14]).useStateFromStores(items1, () => isFavoriteEmoji.getGuildId());
+  const items1 = [obj6];
+  const stateFromStores1 = emojiNode(nonce[14]).useStateFromStores(items1, () => obj6.getGuildId());
   let tmp9 = null != stateFromStores1;
   if (tmp9) {
     let id;
@@ -80,9 +79,9 @@ export default function CustomEmojiContent(emojiNode) {
   }
   analyticsLocations = tmp6(nonce[15])().analyticsLocations;
   const items2 = [customEmojiFromJoinedGuild, stateFromStores1];
-  const memo = obj.useMemo(() => {
+  const memo = stateFromStores.useMemo(() => {
     if (null == customEmojiFromJoinedGuild) {
-      obj = { isRoleSubscriptionEmoji: false, isUnusableRoleSubscriptionEmoji: false, userIsRoleSubscriber: false };
+      let obj = { isRoleSubscriptionEmoji: false, isUnusableRoleSubscriptionEmoji: false, userIsRoleSubscriber: false };
     } else {
       obj = { isRoleSubscriptionEmoji: RoleSubscriptionEmojiUtilsAll.isPurchasableRoleSubscriptionEmoji(customEmojiFromJoinedGuild), isUnusableRoleSubscriptionEmoji: null, userIsRoleSubscriber: null };
       obj.isUnusableRoleSubscriptionEmoji = RoleSubscriptionEmojiUtilsAll.isUnusableRoleSubscriptionEmoji(customEmojiFromJoinedGuild, stateFromStores1);
@@ -170,7 +169,7 @@ export default function CustomEmojiContent(emojiNode) {
     }
   };
   const tmp2Result5 = emojiNode(nonce[22]);
-  let obj8 = { emojiId: emojiNode.id, currentGuildId: stateFromStores1, popoutData: text, emojiSourceGuildId: null, nonce: null };
+  const obj8 = { emojiId: emojiNode.id, currentGuildId: stateFromStores1, popoutData: text, emojiSourceGuildId: null, nonce: null };
   let id1;
   if (expressionSourceGuild != null) {
     id1 = expressionSourceGuild.id;
@@ -183,9 +182,9 @@ export default function CustomEmojiContent(emojiNode) {
   if (!isUnusableRoleSubscriptionEmoji) {
     tmp22 = hasJoinedEmojiSourceGuild;
   }
-  let intl = tmp2(nonce[28]).intl;
-  let string = intl.string;
-  let t = tmp2(nonce[28]).t;
+  let intl = tmp2(nonce[27]).intl;
+  const string = intl.string;
+  const t = tmp2(nonce[27]).t;
   if (hasJoinedEmojiSourceGuild) {
     let stringResult = string(t.ohTzZH);
   } else {
@@ -193,7 +192,7 @@ export default function CustomEmojiContent(emojiNode) {
   }
   const items3 = [emojiNode(nonce[22]).EmojiPopoutType.GET_PREMIUM, emojiNode(nonce[22]).EmojiPopoutType.JOIN_GUILD];
   const tmp2Result6 = emojiNode(nonce[24]);
-  let obj9 = {};
+  const obj9 = {};
   const merged2 = Object.assign(items3.includes(type) ? obj.ctaButton : obj.bottomCtaButton);
   obj9.borderRadius = expressionSourceGuild(nonce[8]).radii.xl;
   let obj10 = { style: null, children: null };
@@ -201,93 +200,51 @@ export default function CustomEmojiContent(emojiNode) {
   const merged3 = Object.assign(obj.emojiContainer);
   obj11.marginTop = 8;
   obj10.style = obj11;
-  const items4 = [closure_14(expressionSourceGuild(nonce[37]), { style: obj.emojiIcon, source: { uri: emojiNode.src } }), ];
+  const items4 = [closure_14(expressionSourceGuild(nonce[35]), { style: obj.emojiIcon, source: { uri: emojiNode.src } }), ];
   const obj13 = { style: obj.emojiDescriptionWrapperOuter, children: null };
   const obj14 = { style: obj.emojiDescriptionWrapper, children: null };
   const obj12 = { style: obj.emojiIcon, source: { uri: emojiNode.src } };
   const tmp24 = items3.includes(type) ? obj.ctaButton : obj.bottomCtaButton;
-  const items5 = [closure_14(emojiNode(nonce[27]).Text, { variant: "text-md/bold", color: "mobile-text-heading-primary", children: ":" + emojiNode.alt + ":" }), ];
+  const items5 = [closure_14(emojiNode(nonce[36]).Text, { variant: "text-md/bold", color: "mobile-text-heading-primary", children: ":" + emojiNode.alt + ":" }), ];
   let tmp30Result = null != emojiDescription;
   if (tmp30Result) {
     const obj16 = { variant: "text-sm/medium", children: emojiDescription };
-    tmp30Result = closure_14(tmp2(nonce[27]).Text, obj16);
+    tmp30Result = closure_14(tmp2(nonce[36]).Text, obj16);
   }
   function handleAddRemoveFavorite() {
-    function content() {
-      obj = { style: { marginLeft: 8, marginTop: 2 }, variant: "text-md/bold", children: null };
-      const intl = emojiNode(nonce[28]).intl;
-      const string = intl.string;
-      const t = emojiNode(nonce[28]).t;
-      if (isFavoriteEmoji) {
-        let stringResult = string(t.in1rga);
-      } else {
-        stringResult = string(t.mE2e8A);
-      }
-      obj.children = stringResult;
-      return closure_2_14(emojiNode(nonce[27]).Text, obj);
-    }
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     AnalyticsUtilsDefault.track(constants2.CLOSE_POPOUT, { nonce });
-    const obj3 = { nonce };
-    const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("CustomEmojiContent");
-    const obj5 = EmojiActionCreators;
+    const obj4 = EmojiActionCreators;
     if (isFavoriteEmoji) {
-      obj5.unfavoriteEmoji(customEmojiFromJoinedGuild);
+      obj4.unfavoriteEmoji(customEmojiFromJoinedGuild);
+      const obj5 = { text: null, icon: null };
+      const intl2 = util.intl;
+      obj5.text = intl2.string(util.t.in1rga);
+      obj5.icon = StarOutlineIcon.StarOutlineIcon;
+      ToastActionCreatorsDefault.openMana("EMOJI_UNFAVORITED", obj5);
       const tmpResult = ToastActionCreatorsDefault;
-      if (designSystemsNotificationComponents) {
-        obj6 = { text: null, icon: null };
-        const intl2 = util.intl;
-        obj6.text = intl2.string(util.t.in1rga);
-        obj6.icon = StarOutlineIcon.StarOutlineIcon;
-        tmpResult.openMana("EMOJI_UNFAVORITED", obj6);
-      } else {
-        const obj7 = {
-          key: "EMOJI_UNFAVORITED",
-          icon() {
-                const style = {};
-                const merged = Object.assign(obj.starIcon);
-                const merged1 = Object.assign(obj.starIconUnselected);
-                return closure_2_14(emojiNode(nonce[26]).StarOutlineIcon, { style });
-              },
-          content
-        };
-        tmpResult.open(obj7);
-      }
     } else {
-      obj5.favoriteEmoji(customEmojiFromJoinedGuild);
+      obj4.favoriteEmoji(customEmojiFromJoinedGuild);
+      obj6 = { text: null, icon: null, iconColor: null };
+      const intl = util.intl;
+      obj6.text = intl.string(util.t.mE2e8A);
+      obj6.icon = StarIcon.StarIcon;
+      obj6.iconColor = nativeDefault.colors.ICON_FEEDBACK_WARNING;
+      ToastActionCreatorsDefault.openMana("EMOJI_FAVORITED", obj6);
       const tmpResult2 = ToastActionCreatorsDefault;
-      if (designSystemsNotificationComponents) {
-        const obj8 = { text: null, icon: null, iconColor: null };
-        let intl = util.intl;
-        obj8.text = intl.string(util.t.mE2e8A);
-        obj8.icon = StarIcon.StarIcon;
-        obj8.iconColor = nativeDefault.colors.ICON_FEEDBACK_WARNING;
-        tmpResult2.openMana("EMOJI_FAVORITED", obj8);
-      } else {
-        const obj9 = {
-          key: "EMOJI_FAVORITED",
-          icon() {
-                const style = {};
-                const merged = Object.assign(obj.starIcon);
-                const merged1 = Object.assign(obj.starIconSelected);
-                return closure_2_14(emojiNode(nonce[25]).StarIcon, { style });
-              },
-          content
-        };
-        tmpResult2.open(obj9);
-      }
     }
+    const obj3 = { nonce };
   }
   items5[1] = tmp30Result;
   obj14.children = items5;
-  const items6 = [closure_15(stateFromStores1, obj14), , ];
+  const items6 = [closure_15(analyticsLocations, obj14), , ];
   let tmp32 = null;
   if (tmp22) {
     tmp32 = null;
     if (!tidaWebformEnabled) {
-      let intl2 = tmp2(nonce[28]).intl;
+      let intl2 = tmp2(nonce[27]).intl;
       const string2 = intl2.string;
-      const t2 = tmp2(nonce[28]).t;
+      const t2 = tmp2(nonce[27]).t;
       if (isFavoriteEmoji) {
         let string2Result = string2(t2.aBUcp3);
       } else {
@@ -300,17 +257,17 @@ export default function CustomEmojiContent(emojiNode) {
         const merged4 = Object.assign(obj.starIcon);
         const merged5 = Object.assign(obj.starIconSelected);
         obj18.style = obj19;
-        let tmp30Result7 = closure_14(tmp2(nonce[25]).StarIcon, obj18);
+        let tmp30Result7 = closure_14(tmp2(nonce[29]).StarIcon, obj18);
       } else {
         const obj20 = { style: null };
         const obj21 = {};
         const merged6 = Object.assign(obj.starIcon);
         const merged7 = Object.assign(obj.starIconUnselected);
         obj20.style = obj21;
-        tmp30Result7 = closure_14(tmp2(nonce[26]).StarOutlineIcon, obj20);
+        tmp30Result7 = closure_14(tmp2(nonce[28]).StarOutlineIcon, obj20);
       }
       obj17.children = tmp30Result7;
-      closure_14(stateFromStores, obj17);
+      closure_14(stateFromStores1, obj17);
     }
   }
   items6[1] = tmp32;
@@ -320,23 +277,23 @@ export default function CustomEmojiContent(emojiNode) {
     if (setting) {
       const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9487, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9525, dependencyMap.paths), "EmojiOptionsActionSheet", { emojiSrc: emojiNode.src }, "stack");
       }
-      const intl3 = tmp2(nonce[28]).intl;
-      obj22.accessibilityLabel = intl3.string(tmp2(nonce[28]).t.PdRCRg);
+      const intl3 = tmp2(nonce[27]).intl;
+      obj22.accessibilityLabel = intl3.string(tmp2(nonce[27]).t.PdRCRg);
       obj22.style = obj.moreMenuIcon;
       obj22.onPress = handleOpenEmojiOptionsMenu;
       const obj23 = { color: tmp6(nonce[8]).colors.INTERACTIVE_TEXT_DEFAULT };
-      obj22.children = closure_14(tmp2(nonce[34]).MoreHorizontalIcon, obj23);
-      tmp30Result9 = closure_14(stateFromStores, obj22);
+      obj22.children = closure_14(tmp2(nonce[32]).MoreHorizontalIcon, obj23);
+      tmp30Result9 = closure_14(stateFromStores1, obj22);
     }
   }
   const tmp47 = type === emojiNode(nonce[22]).EmojiPopoutType.JOIN_GUILD;
   items6[2] = tmp30Result9;
   obj13.children = items6;
-  items4[1] = closure_15(stateFromStores1, obj13);
+  items4[1] = closure_15(analyticsLocations, obj13);
   obj10.children = items4;
-  const children = [closure_15(stateFromStores1, obj10), , , ];
+  const children = [closure_15(analyticsLocations, obj10), , , ];
   if (type === emojiNode(nonce[22]).EmojiPopoutType.GET_PREMIUM) {
     if (type !== tmp2(nonce[22]).EmojiPopoutType.GET_PREMIUM) {
       let tmp30Result11 = null;
@@ -357,7 +314,7 @@ export default function CustomEmojiContent(emojiNode) {
       }
       const obj26 = { icon: null, text: null, variant: "active", size: "md", grow: true, onPress: null };
       const obj27 = { style: tmp50 };
-      nitroWheel = closure_14(tmp2(nonce[35]).NitroWheel, obj27);
+      nitroWheel = closure_14(tmp2(nonce[33]).NitroWheel, obj27);
       obj26.icon = nitroWheel;
       text = text.text;
       obj26.text = text;
@@ -377,7 +334,7 @@ export default function CustomEmojiContent(emojiNode) {
           const obj7 = { location_page: null, location_section: null };
         }
       };
-      obj24.children = closure_14(tmp2(nonce[36]).Button, obj26);
+      obj24.children = closure_14(tmp2(nonce[34]).Button, obj26);
       closure_14(tmp28, obj24);
     }
   } else {
@@ -385,8 +342,8 @@ export default function CustomEmojiContent(emojiNode) {
     if (tmp47) {
       const obj28 = { style: obj9, children: null };
       const obj29 = { text: null, size: "md", grow: true, onPress: null };
-      const intl4 = tmp2(nonce[28]).intl;
-      obj29.text = intl4.string(tmp2(nonce[28]).t.riu2R5);
+      const intl4 = tmp2(nonce[27]).intl;
+      obj29.text = intl4.string(tmp2(nonce[27]).t.riu2R5);
       obj29.onPress = function onPress() {
         let id;
         if (expressionSourceGuild != null) {
@@ -394,7 +351,7 @@ export default function CustomEmojiContent(emojiNode) {
         }
         guild_GuildUtils.handleJoinGuild(id);
       };
-      obj28.children = closure_14(tmp2(nonce[36]).Button, obj29);
+      obj28.children = closure_14(tmp2(nonce[34]).Button, obj29);
       tmp30Result11 = closure_14(tmp28, obj28);
     }
   }
@@ -403,15 +360,15 @@ export default function CustomEmojiContent(emojiNode) {
     let tmp26Result = null;
     if (null != expressionSourceGuild) {
       const obj30 = { style: obj.divider };
-      const items8 = [closure_14(tmp2(nonce[39]).FormDivider, obj30), , ];
+      const items8 = [closure_14(tmp2(nonce[38]).FormDivider, obj30), , ];
       const obj31 = { guild: expressionSourceGuild, hasJoinedGuild: hasJoinedEmojiSourceGuild, title: stringResult, showingJoinGuildCta: tmp47 };
-      items8[1] = closure_14(tmp6(nonce[40]), obj31);
+      items8[1] = closure_14(tmp6(nonce[39]), obj31);
       let tmp30Result12 = !hasJoinedEmojiSourceGuild;
       if (!hasJoinedEmojiSourceGuild) {
         const obj32 = { expressionSourceGuild, doNotDisplayEmojiIds: null };
         const items9 = [emojiNode.id];
         obj32.doNotDisplayEmojiIds = items9;
-        tmp30Result12 = closure_14(tmp2(nonce[41]).EmojiGrid, obj32);
+        tmp30Result12 = closure_14(tmp2(nonce[40]).EmojiGrid, obj32);
       }
       const obj33 = { children: null };
       items8[2] = tmp30Result12;
@@ -427,11 +384,11 @@ export default function CustomEmojiContent(emojiNode) {
     tmp26Result2 = null;
     if (tidaWebformEnabled) {
       const obj34 = { style: obj.divider };
-      const items10 = [closure_14(tmp2(nonce[39]).FormDivider, obj34), ];
+      const items10 = [closure_14(tmp2(nonce[38]).FormDivider, obj34), ];
       const obj35 = { style: obj.favoriteButtonContainer, children: null };
-      const intl5 = tmp2(nonce[28]).intl;
+      const intl5 = tmp2(nonce[27]).intl;
       const string3 = intl5.string;
-      const t3 = tmp2(nonce[28]).t;
+      const t3 = tmp2(nonce[27]).t;
       if (isFavoriteEmoji) {
         let string3Result = string3(t3.Ay49KA);
       } else {
@@ -445,7 +402,7 @@ export default function CustomEmojiContent(emojiNode) {
       const obj37 = { children: null };
       obj36.variant = str;
       obj36.onPress = handleAddRemoveFavorite;
-      obj35.children = closure_14(tmp2(nonce[36]).Button, obj36);
+      obj35.children = closure_14(tmp2(nonce[34]).Button, obj36);
       items10[1] = closure_14(tmp28, obj35);
       obj37.children = items10;
       tmp26Result2 = closure_15(closure_16, obj37);

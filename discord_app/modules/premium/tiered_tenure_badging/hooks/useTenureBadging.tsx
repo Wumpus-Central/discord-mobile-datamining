@@ -1,18 +1,18 @@
-// === Module 10539: useTenureBadging ===
+// === Module 10529: useTenureBadging ===
 
-// Module 10539 (useTenureBadging)
+// Module 10529 (useTenureBadging)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7318 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 10540 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10541 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
-import UserStore from "UserStore" /* 1389 */;
-import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7323 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 10530 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10531 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
+import UserStore from "UserStore" /* 1390 */;
+import SubscriptionStore from "SubscriptionStore" /* 4734 */;
 
 require = fn;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PremiumTypes: hasOwnProperty, TENURE_BADGES: metroRequire } = PremiumConstants);
 const TieredTenureBadgeStatus = { UPCOMING: "upcoming", WITHHELD: "withheld", EARNED: "earned" };
 let ReactCompilerGating = fn(558);
@@ -122,11 +122,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremium
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isPremiumExactlyResult = tmp(1988).isPremiumExactly(stateFromStores, closure_5.TIER_2);
+    const isPremiumExactlyResult = tmp(1989).isPremiumExactly(stateFromStores, closure_5.TIER_2);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumExactlyResult;
     let tmp8 = isPremiumExactlyResult;
-    const tmpResult3 = tmp(1988);
+    const tmpResult3 = tmp(1989);
   } else {
     tmp8 = cResult[3];
   }

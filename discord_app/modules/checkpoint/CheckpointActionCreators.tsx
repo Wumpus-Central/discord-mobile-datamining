@@ -1,8 +1,8 @@
-// === Module 15797: CheckpointActionCreators ===
+// === Module 15910: CheckpointActionCreators ===
 
-// Module 15797 (CheckpointActionCreators)
+// Module 15910 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -42,7 +42,7 @@ let closure_5 = async function _fetchCheckpointData() {
           let body;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

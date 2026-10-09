@@ -1,8 +1,8 @@
-// === Module 12260: ExpiringPowerupCoachmarkExperiment ===
+// === Module 12199: ExpiringPowerupCoachmarkExperiment ===
 
-// Module 12260 (ExpiringPowerupCoachmarkExperiment)
+// Module 12199 (ExpiringPowerupCoachmarkExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-02-expiring-powerup-coachmark", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

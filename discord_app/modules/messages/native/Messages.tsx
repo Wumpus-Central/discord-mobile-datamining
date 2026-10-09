@@ -1,75 +1,75 @@
-// === Module 10459: Messages ===
+// === Module 10449: Messages ===
 
-// Module 10459 (Messages)
+// Module 10449 (Messages)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9317 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 11276 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6849 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9355 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8251 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
-import CacheStore from "CacheStore" /* 7186 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9566 */;
-import EmojiStore from "EmojiStore" /* 5992 */;
-import ExperimentStore from "ExperimentStore" /* 4976 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 6977 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10461 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6843 */;
-import BasicGuildStore from "BasicGuildStore" /* 7946 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7725 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7168 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8226 */;
-import InteractionStore from "InteractionStore" /* 7856 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 10463 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 7857 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6786 */;
-import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 5906 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7163 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 10465 */;
-import PendingReplyStore from "PendingReplyStore" /* 7356 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7301 */;
-import SummaryStore from "SummaryStore" /* 9572 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6992 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8259 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10450 */;
+import CacheStore from "CacheStore" /* 7191 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 9579 */;
+import EmojiStore from "EmojiStore" /* 5994 */;
+import ExperimentStore from "ExperimentStore" /* 4977 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 6984 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 10451 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6850 */;
+import BasicGuildStore from "BasicGuildStore" /* 7955 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7734 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6061 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7173 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8234 */;
+import InteractionStore from "InteractionStore" /* 7865 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 10453 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 7866 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6793 */;
+import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 5907 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7168 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 10455 */;
+import PendingReplyStore from "PendingReplyStore" /* 7361 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7306 */;
+import SummaryStore from "SummaryStore" /* 9585 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6999 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import EditMessageStore from "EditMessageStore" /* 7357 */;
-import GiftCodeStore from "GiftCodeStore" /* 10466 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import EditMessageStore from "EditMessageStore" /* 7362 */;
+import GiftCodeStore from "GiftCodeStore" /* 10456 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5887 */;
-import InviteStore from "InviteStore" /* 5071 */;
-import MessageStore from "MessageStore" /* 5428 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5108 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
-import SessionsStore from "SessionsStore" /* 5110 */;
-import UploadStore from "UploadStore" /* 7859 */;
-import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5111 */;
-import SKUStore from "SKUStore" /* 6092 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11247 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5888 */;
+import InviteStore from "InviteStore" /* 5072 */;
+import MessageStore from "MessageStore" /* 5429 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import ReadStateStore from "ReadStateStore" /* 6042 */;
+import SessionsStore from "SessionsStore" /* 5111 */;
+import UploadStore from "UploadStore" /* 7868 */;
+import UserStore from "UserStore" /* 1390 */;
+import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import SKUStore from "SKUStore" /* 6094 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 10612 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5115 */;
 
 require = fn;
 let closure_3 = ["ref"];
-const PollsInteractionStore = fn(10464);
+const PollsInteractionStore = fn(10454);
 ({ useChannelPollInteractions: closure_30, useMessagePollInteractions: items } = PollsInteractionStore);
 const Constants = fn(1085);
 ({ ActivityActionTypes: closure_61, ChannelTypesSets: closure_62, ME: closure_63, MessageTypes: closure_64, Permissions: closure_65 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_66, PremiumTypes: closure_67 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_68, jsxs: closure_69 } = jsxProd);
@@ -227,7 +227,7 @@ let closure_71 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFet
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConnected(ref) {
   const cResult = channel(id[60]).c(334);
   if (cResult[0] !== ref) {
     let tmp8 = stateFromStores2(ref.ref, closure_3);
@@ -578,7 +578,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     }
   }
   if (cResult[31] !== id) {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -592,11 +592,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
       }
     }
     cResult[31] = id;
-    cResult[32] = At;
+    cResult[32] = Ct;
     cResult[33] = items15;
     let tmp67 = items15;
   } else {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -606,9 +606,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     tmp67 = cResult[33];
   }
   const tmpResult40 = channel(id[62]);
-  const stateFromStoresArray3 = channel(id[62]).useStateFromStoresArray(tmp65, At, tmp67);
+  const stateFromStoresArray3 = channel(id[62]).useStateFromStoresArray(tmp65, Ct, tmp67);
   if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -625,7 +625,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     cResult[34] = items16;
     const tmp69 = items16;
   } else {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -642,7 +642,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -676,7 +680,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -706,7 +714,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -750,7 +762,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -781,7 +797,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -825,7 +845,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -856,7 +880,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -900,7 +928,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -931,7 +963,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -971,7 +1007,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1003,7 +1043,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1043,7 +1087,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1075,7 +1123,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1115,7 +1167,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1149,7 +1205,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1182,7 +1242,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1213,7 +1277,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1240,7 +1308,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1273,7 +1345,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1306,7 +1382,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1339,7 +1419,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1373,7 +1457,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1407,7 +1495,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1442,7 +1534,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1470,7 +1566,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1504,7 +1604,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1536,7 +1640,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1573,7 +1681,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1605,7 +1717,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1640,7 +1756,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1668,7 +1788,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1705,7 +1829,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1737,7 +1865,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1772,7 +1904,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1800,7 +1936,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1837,7 +1977,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1869,7 +2013,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1904,7 +2052,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -2194,7 +2346,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     const tmpResult60 = tmp(tmp2[62]);
   }
   const tmpResult50 = channel(id[71]);
-}) : ((ref) => {
+}) : (function MessagesConnected(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   let id;
   let stateFromStores2;
@@ -2287,7 +2439,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     function _loop2(iter) {
       const userIds = iter.userIds;
       iter = userIds.values();
-      const findActivityResult = PresenceStore.findActivity(iter.next().value, (application_id) => application_id.application_id === iter.applicationId);
+      value = iter.next().value;
+      let findActivityResult;
+      if (null != value) {
+        findActivityResult = PresenceStore.findActivity(value, (application_id) => application_id.application_id === iter.applicationId);
+      }
       let details;
       if (findActivityResult != null) {
         details = findActivityResult.details;

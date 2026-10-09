@@ -1,8 +1,8 @@
-// === Module 8865: useSteamWebsiteUrl ===
+// === Module 8874: useSteamWebsiteUrl ===
 
-// Module 8865 (useSteamWebsiteUrl)
-import SteamReleaseStatus from "SteamReleaseStatus" /* 8866 */;
-import GameStore from "GameStore" /* 2019 */;
+// Module 8874 (useSteamWebsiteUrl)
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8875 */;
+import GameStore from "GameStore" /* 2020 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled() ?
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === closure_1_0(8864).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === closure_1_0(8873).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }
@@ -46,8 +46,8 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled() ?
           const found1 = thirdPartySkus.filter((distributor) => {
             let tmp = distributor.distributor === constants.STEAM;
             if (tmp) {
-              tmp = !closure_1_0(2030).isNullOrEmpty(distributor.id);
-              const obj = closure_1_0(2030);
+              tmp = !closure_1_0(2031).isNullOrEmpty(distributor.id);
+              const obj = closure_1_0(2031);
             }
             return tmp;
           });
@@ -105,7 +105,7 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled() ?
         return null;
       } else {
         const websites = game.websites;
-        const found = websites.find((category) => category.category === closure_1_0(8864).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+        const found = websites.find((category) => category.category === closure_1_0(8873).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         if (found != null) {
           const url = found.url;
         }
@@ -113,8 +113,8 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled() ?
         const found1 = thirdPartySkus.filter((distributor) => {
           let tmp = distributor.distributor === constants.STEAM;
           if (tmp) {
-            tmp = !closure_1_0(2030).isNullOrEmpty(distributor.id);
-            const obj = closure_1_0(2030);
+            tmp = !closure_1_0(2031).isNullOrEmpty(distributor.id);
+            const obj = closure_1_0(2031);
           }
           return tmp;
         });

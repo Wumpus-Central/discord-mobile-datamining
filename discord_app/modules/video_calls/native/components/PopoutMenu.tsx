@@ -1,16 +1,16 @@
-// === Module 10754: PopoutMenu ===
+// === Module 10924: PopoutMenu ===
 
-// Module 10754 (PopoutMenu)
+// Module 10924 (PopoutMenu)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import Patterns from "Patterns" /* 5057 */;
-import timing from "timing" /* 5091 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
-import FormRowDefault from "FormRow" /* 6817 */;
-import Form from "Form" /* 8555 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import Patterns from "Patterns" /* 5058 */;
+import timing from "timing" /* 5092 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
+import FormRowDefault from "FormRow" /* 6824 */;
+import Form from "Form" /* 8563 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = 250;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm }, popoutMenuRow: { flex: 1 }, popoutMenuRowLabel: { width: "100%" } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
   onClose = onClose.onClose;
   let obj = onOpen(576);
   const tmp4 = closure_10();
-  ({ width, height } = onClose(1496)());
+  ({ width, height } = onClose(1497)());
   const tmp7 = first(noop.useState(0), 2);
   dependencyMap = tmp7[1];
   const tmp8 = first(noop.useState(false), 2);
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
   const tmp11 = first(noop.useState(false), 2);
   const first1 = tmp11[0];
   closure_6 = tmp11[1];
-  const tmp5 = onClose(1496)();
+  const tmp5 = onClose(1497)();
   const ref = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const size1 = { top: 0, left: 0, width: 0, height: 0 };
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
   }
   const effect = obj2.useEffect(tmp20, tmp21);
   let sum = -size2.height;
-  if (size.top + size.height + size2.height + 8 + onClose(1630)().bottom < height) {
+  if (size.top + size.height + size2.height + 8 + onClose(1631)().bottom < height) {
     sum = size.height + 16;
   }
   let num6 = 0;
@@ -331,11 +331,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
           return obj1;
         }
       }
-      let obj3 = { withTiming: onOpen(5091).withTiming, animateIn: tmp7[0] > 0 && !first, STANDARD_EASING: onOpen(1200).STANDARD_EASING, ANIMATION_DURATION: v250, runOnJS: onOpen(4810).runOnJS, handleClose, EXTRA_PADDING: 8 };
+      let obj3 = { withTiming: onOpen(5092).withTiming, animateIn: tmp7[0] > 0 && !first, STANDARD_EASING: onOpen(1200).STANDARD_EASING, ANIMATION_DURATION: v250, runOnJS: onOpen(4811).runOnJS, handleClose, EXTRA_PADDING: 8 };
       De.__closure = obj3;
       De.__workletHash = 4709130936628;
       De.__initData = debounceResult;
-      const animatedStyle = onOpen(4810).useAnimatedStyle(De);
+      const animatedStyle = onOpen(4811).useAnimatedStyle(De);
       const _Symbol3 = Symbol;
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
         class Ie {
@@ -398,7 +398,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
               return;
             }
           }
-          let obj4 = { runOnJS: onOpen(4810).runOnJS, _setClose: tmp10 };
+          let obj4 = { runOnJS: onOpen(4811).runOnJS, _setClose: tmp10 };
           PopoutMenuTsx4.__closure = obj4;
           PopoutMenuTsx4.__workletHash = 15929711498886;
           PopoutMenuTsx4.__initData = Ie;
@@ -412,12 +412,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
             }
           }
         }
-        const Gesture = onOpen(6326).Gesture;
+        const Gesture = onOpen(6333).Gesture;
         const LongPressResult = Gesture.LongPress();
         function be() {
           ReanimatedRexport.runOnJS(Oe)();
         }
-        let obj5 = { runOnJS: onOpen(4810).runOnJS, handleLongPress: tmp36 };
+        let obj5 = { runOnJS: onOpen(4811).runOnJS, handleLongPress: tmp36 };
         be.__closure = obj5;
         be.__workletHash = 1649917173815;
         class De {
@@ -492,7 +492,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
           const obj6 = { gesture: tmp37, children: null };
           const obj8 = { ref, children: trigger };
           obj6.children = closure_6(first1, obj8);
-          const items2 = [closure_6(onOpen(6326).GestureDetector, obj6), ];
+          const items2 = [closure_6(onOpen(6333).GestureDetector, obj6), ];
           class De {
             constructor() {
               tmp = closure_0;
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PopoutMe
         cResult[30] = trigger;
         cResult[31] = tmp44Result;
       }
-      let tmpResult = onOpen(4810);
+      let tmpResult = onOpen(4811);
     }
     const rect = { left, top };
     cResult[9] = left;

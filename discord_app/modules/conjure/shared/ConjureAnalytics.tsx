@@ -1,10 +1,10 @@
-// === Module 12365: ConjureAnalytics ===
+// === Module 11370: ConjureAnalytics ===
 
-// Module 12365 (ConjureAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ConjureUtils from "ConjureUtils" /* 6932 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 11251 */;
+// Module 11370 (ConjureAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import ConjureUtils from "ConjureUtils" /* 6939 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
 
 require = fn;
 function conjureLocation(project_id, isPreview) {

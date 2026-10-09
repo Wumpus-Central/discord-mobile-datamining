@@ -1,12 +1,12 @@
-// === Module 10367: useInappropriateConversationBannerForChannel ===
+// === Module 10354: useInappropriateConversationBannerForChannel ===
 
-// Module 10367 (useInappropriateConversationBannerForChannel)
+// Module 10354 (useInappropriateConversationBannerForChannel)
 import c from "c" /* 576 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
-import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10365 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10366 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10368 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10369 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10251 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10352 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10353 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10355 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10356 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

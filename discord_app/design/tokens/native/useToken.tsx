@@ -1,11 +1,11 @@
-// === Module 4778: useToken ===
+// === Module 4779: useToken ===
 
-// Module 4778 (useToken)
+// Module 4779 (useToken)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import SemanticColorContext from "SemanticColorContext" /* 4779 */;
-import native from "native" /* 4787 */;
+import SemanticColorContext from "SemanticColorContext" /* 4780 */;
+import native from "native" /* 4788 */;
 
 require = fn;
 function getCachedTokenColor(BACKGROUND_BASE_LOW, themeContext, theme) {

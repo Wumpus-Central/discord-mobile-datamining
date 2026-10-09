@@ -1,11 +1,11 @@
-// === Module 10008: MarketingComponentRecord ===
+// === Module 9103: MarketingComponentRecord ===
 
-// Module 10008 (MarketingComponentRecord)
+// Module 9103 (MarketingComponentRecord)
 import DurationsDefault from "Durations" /* 1102 */;
-import ProtoUtils from "ProtoUtils" /* 1246 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1263 */;
-import premium_marketing_component_properties from "premium_marketing_component_properties" /* 10009 */;
-import Record from "Record" /* 1404 */;
+import ProtoUtils from "ProtoUtils" /* 1247 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1264 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 9104 */;
+import Record from "Record" /* 1405 */;
 
 require = fn;
 let closure_3 = { month: "long", day: "numeric", year: "numeric" };

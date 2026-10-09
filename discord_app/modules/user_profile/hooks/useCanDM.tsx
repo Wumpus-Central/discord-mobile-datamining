@@ -1,12 +1,12 @@
-// === Module 12962: useCanDM ===
+// === Module 13042: useCanDM ===
 
-// Module 12962 (useCanDM)
-import UserSettings from "UserSettings" /* 2040 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7335 */;
-import LurkingStore from "LurkingStore" /* 4708 */;
+// Module 13042 (useCanDM)
+import UserSettings from "UserSettings" /* 2041 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7340 */;
+import LurkingStore from "LurkingStore" /* 4710 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
 
 const require = globalThis.__r;
 
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanDM
   }
   const tmpResult = require("initialize");
   stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
-  const RestrictedGuildIds = tmp(2040).RestrictedGuildIds;
+  const RestrictedGuildIds = tmp(2041).RestrictedGuildIds;
   setting = RestrictedGuildIds.useSetting();
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class F {

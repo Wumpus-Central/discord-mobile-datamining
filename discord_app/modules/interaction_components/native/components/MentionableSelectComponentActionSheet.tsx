@@ -1,21 +1,21 @@
-// === Module 11429: MentionableSelectComponentActionSheet ===
+// === Module 11336: MentionableSelectComponentActionSheet ===
 
-// Module 11429 (MentionableSelectComponentActionSheet)
+// Module 11336 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5441 */;
-import RoleIconUtils from "RoleIconUtils" /* 6870 */;
-import RoleIconDefault from "RoleIcon" /* 6888 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8233 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 8597 */;
-import DiscordTagDefault from "DiscordTag" /* 8740 */;
-import UserIcon from "UserIcon" /* 11431 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5442 */;
+import RoleIconUtils from "RoleIconUtils" /* 6877 */;
+import RoleIconDefault from "RoleIcon" /* 6895 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8241 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8605 */;
+import DiscordTagDefault from "DiscordTag" /* 8749 */;
+import UserIcon from "UserIcon" /* 11338 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import UserStore from "UserStore" /* 1389 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
@@ -23,7 +23,7 @@ const Constants = fn(1085);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { name: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 }, discriminator: null, roleCountContainer: null, roleCountText: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 obj2.discriminator = { color: nativeDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };

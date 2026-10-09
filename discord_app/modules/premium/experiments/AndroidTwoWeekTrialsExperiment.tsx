@@ -1,7 +1,7 @@
-// === Module 13461: AndroidTwoWeekTrialsExperiment ===
+// === Module 13553: AndroidTwoWeekTrialsExperiment ===
 
-// Module 13461 (AndroidTwoWeekTrialsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 13553 (AndroidTwoWeekTrialsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-android-two-week-trials", kind: "user", defaultConfig: { enabled: false, trialCTAEnabled: false }, variations: null };

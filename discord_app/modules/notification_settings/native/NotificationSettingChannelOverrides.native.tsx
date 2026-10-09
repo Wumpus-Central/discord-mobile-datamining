@@ -1,28 +1,28 @@
-// === Module 18321: NotificationSettingChannelOverrides ===
+// === Module 18483: NotificationSettingChannelOverrides ===
 
-// Module 18321 (NotificationSettingChannelOverrides)
+// Module 18483 (NotificationSettingChannelOverrides)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6099 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6791 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6798 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildCategoryStore from "GuildCategoryStore" /* 6790 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 6797 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const isGuildReadableType = fn(2067).isGuildReadableType;
+const isGuildReadableType = fn(2068).isGuildReadableType;
 const Constants = fn(1085);
 ({ ChannelTypes: c10, NotificationSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { marginHorizontal: nativeDefault.space.PX_8, flex: 1 }, searchContainer: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, flex: 1 };
 obj.searchContainer = { paddingVertical: nativeDefault.space.PX_16 };

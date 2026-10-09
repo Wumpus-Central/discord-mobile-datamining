@@ -1,24 +1,24 @@
-// === Module 16144: ErrorBoundary ===
+// === Module 16260: ErrorBoundary ===
 
-// Module 16144 (ErrorBoundary)
+// Module 16260 (ErrorBoundary)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import AppCrash from "AppCrash" /* 8693 */;
+import SentryUtilsDefault from "SentryUtils" /* 1255 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import AppCrash from "AppCrash" /* 8702 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10450 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_11 = createStyles.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeClearBuildOverride() {
@@ -31,7 +31,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
-        const tmp4 = overrides[closure_0(undefined, 11395).DEVICE_FIELD];
+        const tmp4 = overrides[closure_0(undefined, 11300).DEVICE_FIELD];
         if (tmp4 != null) {
           id = tmp4.id;
         }
@@ -53,7 +53,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       _require = asyncGeneratorStep(async () => {
         tmp3(true);
-        await tmp3(11395).clearBuildOverride();
+        await tmp3(11300).clearBuildOverride();
         if (1 === tmp7) {
           c3 = 0;
           tmp3(false);
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
     }
     if (cResult[4] !== tmp5) {
       const obj2 = { variant: "secondary", loading: tmp5, text: tmp11, onPress: tmp9 };
-      const tmp15 = closure_9(tmp(5375).Button, obj2);
+      const tmp15 = closure_9(tmp(5376).Button, obj2);
       cResult[4] = tmp5;
       cResult[5] = tmp15;
       let tmp13 = tmp15;
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function MaybeC
       }
       return applyArgumentsResult;
     };
-    return closure_9(tmp2(5375).Button, obj2);
+    return closure_9(tmp2(5376).Button, obj2);
   }
   obj = require("initialize");
 });
@@ -240,7 +240,7 @@ prototype["render"] = function render() {
   }
   return children;
 };
-ErrorBoundary.contextType = fn(4787).ThemeContext;
+ErrorBoundary.contextType = fn(4788).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 

@@ -1,29 +1,29 @@
-// === Module 14985: FamilyCenterActivityRow ===
+// === Module 15097: FamilyCenterActivityRow ===
 
-// Module 14985 (FamilyCenterActivityRow)
+// Module 15097 (FamilyCenterActivityRow)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import GuildIconDefault from "GuildIcon" /* 6161 */;
-import GuildBadgeDefault from "GuildBadge" /* 6167 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7714 */;
-import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14986 */;
-import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 14989 */;
-import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14990 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import GuildIconDefault from "GuildIcon" /* 6165 */;
+import GuildBadgeDefault from "GuildBadge" /* 6169 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7723 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 15098 */;
+import FamilyCenterActivityGiftRowUtils from "FamilyCenterActivityGiftRowUtils" /* 15101 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 15102 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7247 */;
+import UserStore from "UserStore" /* 1390 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7252 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_TO_TEXT = fn(7248).ACTION_TO_TEXT;
+const ACTION_TO_TEXT = fn(7253).ACTION_TO_TEXT;
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj = { container: { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarContainer: null, textContainer: null, text: null };
 let obj3 = { display: "flex", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 obj.avatar = { borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -83,10 +83,10 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
           if (cResult[12] === tmp4.text) {
             let tmp20 = cResult[13];
           }
-          const Text = tmp(5086).Text;
+          const Text = tmp(5087).Text;
           const _Date = Date;
           const date = new Date(extractTimestampResult);
-          const result = tmp(7714).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+          const result = tmp(7723).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
           if (cResult[14] === Text) {
             if (cResult[15] === result) {
               let tmp28 = cResult[16];
@@ -137,10 +137,10 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
           cResult[15] = result;
           cResult[16] = tmp30;
           tmp28 = tmp30;
-          const tmpResult2 = tmp(7714);
+          const tmpResult2 = tmp(7723);
         }
         const obj5 = { style: text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: tmp18 };
-        const tmp22 = closure_8(tmp(5086).Text, obj5);
+        const tmp22 = closure_8(tmp(5087).Text, obj5);
         cResult[11] = tmp18;
         cResult[12] = tmp4.text;
         cResult[13] = tmp22;
@@ -182,13 +182,13 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
     const obj6 = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     const tmp3Result = SnowflakeUtilsDefault;
     obj6.children = UserUtilsDefault.getName(stateFromStores);
-    const items2 = [closure_8(tmp6(5086).Text, obj6), ];
+    const items2 = [closure_8(tmp6(5087).Text, obj6), ];
     const obj7 = { variant: "text-xs/medium", color: "channels-default", children: null };
     const tmp3Result2 = UserUtilsDefault;
     const _Date = Date;
     const date = new Date(extractTimestampResult);
-    obj7.children = tmp6(7714).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
-    items2[1] = closure_8(tmp6(5086).Text, obj7);
+    obj7.children = tmp6(7723).formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
+    items2[1] = closure_8(tmp6(5087).Text, obj7);
     obj5.children = items2;
     items1[1] = closure_9(View, obj5);
     obj2.children = items1;
@@ -197,7 +197,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((ac
   const obj = action(573);
 }));
 memoResult.displayName = "FamilyCenterActivityRowUser";
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj5 = { container: null, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
 let obj4 = { borderRadius: fn(1200).AVATAR_SIZE_MAP[fn(undefined, 1200).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj5.container = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
@@ -284,7 +284,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                         const intl = tmp(1126).intl;
                         const obj4 = { members: stateFromStores.approximateMemberCount };
                         obj2.children = intl.format(_modDef2565["5JmNgg"], obj4);
-                        tmp35 = closure_8(tmp(5086).Text, obj2);
+                        tmp35 = closure_8(tmp(5087).Text, obj2);
                       }
                       cResult[23] = stateFromStores.approximateMemberCount;
                       cResult[24] = tmp35;
@@ -345,7 +345,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
               tmp26 = tmp29;
             }
             const obj9 = { style: tmp4.header, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: name };
-            const tmp25 = closure_8(tmp(5086).Text, obj9);
+            const tmp25 = closure_8(tmp(5087).Text, obj9);
             cResult[13] = tmp4.header;
             cResult[14] = name;
             cResult[15] = tmp25;
@@ -368,7 +368,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     const obj11 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp4);
     obj11.guild = stateFromStores;
-    obj11.size = tmp(6161).GuildIconSizes.NORMAL;
+    obj11.size = tmp(6165).GuildIconSizes.NORMAL;
     const tmp18 = closure_8(GuildIconDefault, obj11);
     cResult[5] = stateFromStores;
     cResult[6] = tmp4.avatar;
@@ -398,7 +398,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     const obj4 = { style: null, textStyle: null, guild: null, size: null, animate: true };
     ({ avatar: obj3.style, avatarText: obj3.textStyle } = tmp);
     obj4.guild = stateFromStores;
-    obj4.size = tmp2(6161).GuildIconSizes.NORMAL;
+    obj4.size = tmp2(6165).GuildIconSizes.NORMAL;
     const items1 = [closure_8(GuildIconDefault, obj4), ];
     const obj5 = { style: tmp.text, children: null };
     const obj6 = { style: tmp.headerContainer, children: null };
@@ -411,7 +411,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
     const items2 = [tmp11Result, ];
     const obj9 = { style: tmp.header, variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: stateFromStores.name };
-    items2[1] = closure_8(tmp2(5086).Text, obj9);
+    items2[1] = closure_8(tmp2(5087).Text, obj9);
     obj7.children = items2;
     obj6.children = closure_9(View, obj7);
     const items3 = [closure_8(View, obj6), ];
@@ -421,7 +421,7 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
       const intl = tmp2(1126).intl;
       const obj19 = { members: stateFromStores.approximateMemberCount };
       obj10.children = intl.format(_modDef2565["5JmNgg"], obj19);
-      tmp11Result2 = closure_8(tmp2(5086).Text, obj10);
+      tmp11Result2 = closure_8(tmp2(5087).Text, obj10);
     }
     items3[1] = tmp11Result2;
     obj5.children = items3;

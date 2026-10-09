@@ -1,18 +1,18 @@
-// === Module 1264: AnalyticsUtils ===
+// === Module 1265: AnalyticsUtils ===
 
-// Module 1264 (AnalyticsUtils)
+// Module 1265 (AnalyticsUtils)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
-import v1 from "v1" /* 1278 */;
-import CommonSentryInitUtils from "CommonSentryInitUtils" /* 1374 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1375 */;
-import utils_AnalyticsSchemaAll from "utils/AnalyticsSchema" /* 1377 */;
+import SentryUtilsDefault from "SentryUtils" /* 1255 */;
+import v1 from "v1" /* 1279 */;
+import CommonSentryInitUtils from "CommonSentryInitUtils" /* 1375 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1376 */;
+import utils_AnalyticsSchemaAll from "utils/AnalyticsSchema" /* 1378 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
-import AnalyticsUtils_mod from "discord_common/AnalyticsUtils" /* 1272 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
+import AnalyticsUtils_mod from "discord_common/AnalyticsUtils" /* 1273 */;
 
 require = fn;
 function expandEventProperties(arg0) {
@@ -88,12 +88,12 @@ function expandEventProperties(arg0) {
 }
 let closure_4 = ["location"];
 let closure_5 = ["source"];
-const ImpressionStore = fn(1265);
+const ImpressionStore = fn(1266);
 ({ setDebugTrackedData: closure_7, getLocation: closure_8 } = ImpressionStore);
 const Constants = fn(1085);
 ({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: closure_11 } = Constants);
-const AccessibilityFeatureFlags = fn(1371).AccessibilityFeatureFlags;
-const ApplicationTypes = fn(1372).ApplicationTypes;
+const AccessibilityFeatureFlags = fn(1372).AccessibilityFeatureFlags;
+const ApplicationTypes = fn(1373).ApplicationTypes;
 let global = {};
 let c15 = 1000;
 let c16 = 60000;
@@ -104,8 +104,8 @@ const shim = fn(562);
 let launchSignature = null;
 if (shim.isLibdiscoreInitialized()) {
   let obj3 = fn(562);
-  launchSignature = obj3.generateLaunchSignature(fn(1373).getGlobalObject());
-  let obj4 = fn(1373);
+  launchSignature = obj3.generateLaunchSignature(fn(1374).getGlobalObject());
+  let obj4 = fn(1374);
 }
 function addBreadcrumb(message) {
   const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = CommonSentryInitUtils.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
@@ -182,8 +182,8 @@ let obj = {
   [AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: obj29,
   [AnalyticEvents.ACTIVITY_HANDSHAKE]: obj30,
   [AnalyticEvents.CHANNEL_BANNER_VIEWED]: obj31,
-  [fn(1272).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj32,
-  [fn(1272).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj33,
+  [fn(1273).ImpressionNames.GUILD_HANGOUT_WINDOW]: obj32,
+  [fn(1273).ImpressionNames.GUILD_HANGOUT_WINDOW_ENTRY_POINT]: obj33,
   [AnalyticEvents.PREMIUM_UPSELL_VIEWED]: obj34,
   [AnalyticEvents.FORUM_CHANNEL_SEARCHED]: obj35,
   [AnalyticEvents.FORUM_CHANNEL_SCROLLED]: obj36,
@@ -231,11 +231,11 @@ let obj = {
 global = function getAccessibilityFeatures() {
   return AccessibilityFeatureFlags.NONE;
 };
-AnalyticsUtils = fn(1272);
+AnalyticsUtils = fn(1273);
 let closure_22 = AnalyticsUtils.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 let c24 = false;
 const dependencyMap = {};
-AnalyticsUtils = fn(1272);
+AnalyticsUtils = fn(1273);
 obj10 = {
   throttlePeriod: 900000,
   throttleKeys(server) {
@@ -661,7 +661,7 @@ obj9 = {
 let closure_26 = AnalyticsUtils.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const obj66 = {};
 AnalyticsUtils = Object.assign(AnalyticsUtils);
-obj66.getCampaignParams = fn(1272).getCampaignParams;
+obj66.getCampaignParams = fn(1273).getCampaignParams;
 obj66.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
   global = getActiveFeatures;
 };

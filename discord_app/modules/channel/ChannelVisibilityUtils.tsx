@@ -1,9 +1,9 @@
-// === Module 12583: ChannelVisibilityUtils ===
+// === Module 12523: ChannelVisibilityUtils ===
 
-// Module 12583 (ChannelVisibilityUtils)
-import ChannelSectionStore from "ChannelSectionStore" /* 6066 */;
+// Module 12523 (ChannelVisibilityUtils)
+import ChannelSectionStore from "ChannelSectionStore" /* 6068 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/ChannelVisibilityUtils.tsx");

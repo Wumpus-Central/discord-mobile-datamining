@@ -1,26 +1,26 @@
-// === Module 12807: EditAttachmentActionSheet ===
+// === Module 12776: EditAttachmentActionSheet ===
 
-// Module 12807 (EditAttachmentActionSheet)
+// Module 12776 (EditAttachmentActionSheet)
 import util from "util" /* 1126 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6181 */;
-import TextArea from "TextArea" /* 6763 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6828 */;
-import ActionSheet from "ActionSheet" /* 6885 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8270 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6183 */;
+import TextArea from "TextArea" /* 6770 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6835 */;
+import ActionSheet from "ActionSheet" /* 6892 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8278 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 5428 */;
+import MessageStore from "MessageStore" /* 5429 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(5083).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5084).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 let MessageAttachmentFlags = fn(1085).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -486,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditAtta
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8369)(attachment);
+  const tmp5 = attachment(8377)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

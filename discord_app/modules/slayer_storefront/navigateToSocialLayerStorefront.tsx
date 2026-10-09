@@ -1,12 +1,12 @@
-// === Module 13552: navigateToSocialLayerStorefront ===
+// === Module 13641: navigateToSocialLayerStorefront ===
 
-// Module 13552 (navigateToSocialLayerStorefront)
+// Module 13641 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1112 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6917 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10142 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6924 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10127 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6919 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6926 */;
 
 require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview() {
@@ -56,7 +56,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {

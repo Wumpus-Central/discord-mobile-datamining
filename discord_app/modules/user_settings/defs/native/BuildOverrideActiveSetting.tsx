@@ -1,13 +1,13 @@
-// === Module 15925: BuildOverrideActiveSetting ===
+// === Module 16042: BuildOverrideActiveSetting ===
 
-// Module 15925 (BuildOverrideActiveSetting)
+// Module 16042 (BuildOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11395 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14648 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14927 */;
-import DevToolsContent from "DevToolsContent" /* 15919 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10460 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11300 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14753 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 15039 */;
+import DevToolsContent from "DevToolsContent" /* 16036 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10450 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -58,7 +58,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasBuildO
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return null != closure_4() && staffOrDeveloperSettingPredicate;
 });
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
   const cResult = c.c(2);
   const tmp4 = closure_4();
@@ -89,7 +89,7 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(15055).RefreshIcon,
+  IconComponent: fn(15167).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useBuildOverrideActiveDescription() {
     const cResult = c.c(2);
     const tmp4 = closure_4();

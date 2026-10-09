@@ -1,13 +1,13 @@
-// === Module 6980: HarmTypeConfiguration ===
+// === Module 6987: HarmTypeConfiguration ===
 
-// Module 6980 (HarmTypeConfiguration)
+// Module 6987 (HarmTypeConfiguration)
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import MediaTypes from "MediaTypes" /* 5440 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 6981 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6982 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6983 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6986 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import MediaTypes from "MediaTypes" /* 5441 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 6988 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6989 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6990 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6993 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 5082: GameModeExperiment ===
+// === Module 5083: GameModeExperiment ===
 
-// Module 5082 (GameModeExperiment)
+// Module 5083 (GameModeExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

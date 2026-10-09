@@ -1,12 +1,12 @@
-// === Module 17799: TopEmojisDataManager ===
+// === Module 17953: TopEmojisDataManager ===
 
-// Module 17799 (TopEmojisDataManager)
-import TopEmojisUtils from "TopEmojisUtils" /* 9365 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
+// Module 17953 (TopEmojisDataManager)
+import TopEmojisUtils from "TopEmojisUtils" /* 9403 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
 
 require = fn;
-const EmojiInteractionPoint = fn(1392).EmojiInteractionPoint;
+const EmojiInteractionPoint = fn(1393).EmojiInteractionPoint;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

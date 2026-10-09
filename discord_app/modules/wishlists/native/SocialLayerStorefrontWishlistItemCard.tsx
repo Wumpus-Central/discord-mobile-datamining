@@ -1,14 +1,14 @@
-// === Module 12739: SocialLayerStorefrontWishlistItemCard ===
+// === Module 12684: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 12739 (SocialLayerStorefrontWishlistItemCard)
+// Module 12684 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8946 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8998 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8957 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9009 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import SentGiftsStore from "SentGiftsStore" /* 12737 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import SentGiftsStore from "SentGiftsStore" /* 12682 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { applicationIcon: null, nestedCard: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, width: 24, height: 24, borderRadius: nativeDefault.radii.sm, zIndex: 1 };
 obj2.applicationIcon = size;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLa
               cResult[30] = tmp36;
               tmp29 = tmp36;
             }
-            OWNED = tmp(8946).WishlistItemCardOverlay.OWNED;
+            OWNED = tmp(8957).WishlistItemCardOverlay.OWNED;
           }
         }
       }

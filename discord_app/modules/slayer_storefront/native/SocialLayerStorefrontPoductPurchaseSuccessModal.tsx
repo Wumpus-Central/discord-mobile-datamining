@@ -1,36 +1,36 @@
-// === Module 12709: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 12654: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 12709 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 12654 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import _modDef3697 from "module_3697" /* 3697 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import HapticUtils from "HapticUtils" /* 5055 */;
-import timing from "timing" /* 5091 */;
-import spring from "spring" /* 5374 */;
-import XSmallIcon from "XSmallIcon" /* 6210 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6865 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6917 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10141 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import HapticUtils from "HapticUtils" /* 5056 */;
+import timing from "timing" /* 5092 */;
+import spring from "spring" /* 5375 */;
+import XSmallIcon from "XSmallIcon" /* 6212 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6924 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import SKUStore from "SKUStore" /* 6092 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import SKUStore from "SKUStore" /* 6094 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(6920).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(6927).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -65,7 +65,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 const obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -233,7 +233,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Purcha
   ({ sku, title, body, finePrint, ctaLabel, ctaIcon, ctaLoading, onCtaPress, onClose } = arg0);
   const tmp4 = closure_16();
   _require = tmp4;
-  const width = isScreenLandscape(1496)().width;
+  const width = isScreenLandscape(1497)().width;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
     const fn = function p() {

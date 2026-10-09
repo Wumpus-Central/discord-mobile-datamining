@@ -1,21 +1,21 @@
-// === Module 15456: CustomTypingIndicatorEditScreen ===
+// === Module 15569: CustomTypingIndicatorEditScreen ===
 
-// Module 15456 (CustomTypingIndicatorEditScreen)
+// Module 15569 (CustomTypingIndicatorEditScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import user from "user" /* 1397 */;
-import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1410 */;
-import Link from "Link" /* 1503 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6841 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9328 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11659 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import user from "user" /* 1398 */;
+import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1411 */;
+import Link from "Link" /* 1504 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6848 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9366 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11595 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function CustomTypingIndicatorEditScreenContent(mode) {
@@ -96,10 +96,10 @@ function CustomTypingIndicatorEditScreenContent(mode) {
   }, []);
   const items5 = [memo, first3];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15457, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15570, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", { initialValue: first2, onChange });
   }, items4);
   const callback2 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15458, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15571, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", { emojis: memo, initialAnimation: first3, onChange: onChange2 });
   }, items5);
   ref = noop.useRef(null);
   const items6 = [analyticsLocations];
@@ -359,7 +359,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { screen: { flex: 1 }, container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 }, previewContainer: null, section: null, description: null };
 let obj3 = { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 };
 obj2.previewContainer = { height: 140, display: "flex", alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_8 };

@@ -1,11 +1,11 @@
-// === Module 13620: PremiumMarketingFloatingSubscribeButton ===
+// === Module 13711: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 13620 (PremiumMarketingFloatingSubscribeButton)
+// Module 13711 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import timing from "timing" /* 5091 */;
+import timing from "timing" /* 5092 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 
 require = fn;
 const View = fn(17).View;
@@ -13,7 +13,7 @@ const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 150;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 1 }, gradient: { position: "absolute", left: 0, right: 0, bottom: 0, top: -64 }, buttonContainer: { marginLeft: "auto", marginRight: "auto", width: "100%", paddingHorizontal: 12, paddingTop: nativeDefault.space.PX_12 } };
 let closure_10 = createStyles.createStyles(obj2);
 const __initData = { code: "function PremiumMarketingFloatingSubscribeButtonTsx1(){const{withTiming,isVisible,useReducedMotion,FADE_DURATION_MS,ENTER_TRANSLATE_PX}=this.__closure;return{opacity:withTiming(isVisible.get()?1:0,{duration:useReducedMotion?0:FADE_DURATION_MS}),transform:[{translateY:withTiming(isVisible.get()?0:ENTER_TRANSLATE_PX,{duration:useReducedMotion?0:FADE_DURATION_MS})}]};}" };
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
   let obj = isVisible(576);
   const stateFromStores = isVisible(504).useStateFromStores(tmp6, tmp7);
   let tmpResult = isVisible(504);
-  const tmp5Result = stateFromStores(13618);
-  ({ openPayment, buttonText } = stateFromStores(13618)(stateFromStores(6865).PREMIUM_MARKETING_FLOATING_CTA));
+  const tmp5Result = stateFromStores(13709);
+  ({ openPayment, buttonText } = stateFromStores(13709)(stateFromStores(6872).PREMIUM_MARKETING_FLOATING_CTA));
   if (cResult[2] !== backgroundColor) {
     let obj3 = tmp5(683)(backgroundColor);
     const hexResult = tmp5(683)(backgroundColor).alpha(0).hex();
@@ -93,12 +93,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
         return obj1;
       }
     }
-    let obj2 = { withTiming: isVisible(5091).withTiming, isVisible, useReducedMotion: stateFromStores, FADE_DURATION_MS, ENTER_TRANSLATE_PX: 12 };
+    let obj2 = { withTiming: isVisible(5092).withTiming, isVisible, useReducedMotion: stateFromStores, FADE_DURATION_MS, ENTER_TRANSLATE_PX: 12 };
     D.__closure = obj2;
     D.__workletHash = 4035217753570;
     D.__initData = __initData;
-    const animatedStyle = isVisible(4810).useAnimatedStyle(D);
-    const tmpResult3 = isVisible(4810);
+    const animatedStyle = isVisible(4811).useAnimatedStyle(D);
+    const tmpResult3 = isVisible(4811);
     const fn2 = function x() {
       let str = "none";
       if (isVisible.get()) {
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     fn2.__closure = obj4;
     fn2.__workletHash = 3205490118921;
     fn2.__initData = __initData2;
-    const animatedProps = isVisible(4810).useAnimatedProps(fn2);
+    const animatedProps = isVisible(4811).useAnimatedProps(fn2);
     if (cResult[7] === animatedStyle) {
       if (cResult[8] === tmp4.container) {
         let tmp20 = cResult[9];
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
             return obj1;
           }
         }
-        const bound = Math.max(stateFromStores(1630)().bottom, tmp5(587).space.PX_16);
+        const bound = Math.max(stateFromStores(1631)().bottom, tmp5(587).space.PX_16);
         if (cResult[14] !== bound) {
           const obj5 = { paddingBottom: bound };
           class D {
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
                 const obj6 = { animatedProps, style: tmp20, children: null };
                 const items2 = [tmp23, tmp33];
                 obj6.children = items2;
-                const tmp37 = closure_8(tmp5(4810).View, obj6);
+                const tmp37 = closure_8(tmp5(4811).View, obj6);
                 cResult[26] = animatedProps;
                 cResult[27] = tmp33;
                 cResult[28] = tmp20;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
               }
             }
             const obj8 = { onPress: openPayment, text: buttonText };
-            const tmp32 = closure_7(tmp5(9733), obj8);
+            const tmp32 = closure_7(tmp5(9752), obj8);
             cResult[20] = buttonText;
             cResult[21] = openPayment;
             cResult[22] = tmp32;
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
       }
       const obj10 = { pointerEvents: "none", style: tmp4.gradient, colors: tmp14, locations: tmp22, start: null, end: null };
       ({ START: obj9.start, END: obj9.end } = VerticalGradient);
-      const tmp26 = closure_7(tmp5(5387), obj10);
+      const tmp26 = closure_7(tmp5(5388), obj10);
       cResult[11] = tmp14;
       cResult[12] = tmp4.gradient;
       cResult[13] = tmp26;
@@ -435,14 +435,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumM
     cResult[8] = tmp4.container;
     cResult[9] = items4;
     tmp20 = items4;
-    const tmpResult4 = isVisible(4810);
+    const tmpResult4 = isVisible(4811);
   }
   const items5 = [tmp12, backgroundColor, backgroundColor];
   cResult[4] = backgroundColor;
   cResult[5] = tmp12;
   cResult[6] = items5;
   tmp14 = items5;
-  const tmp5ResultResult = stateFromStores(13618)(stateFromStores(6865).PREMIUM_MARKETING_FLOATING_CTA);
+  const tmp5ResultResult = stateFromStores(13709)(stateFromStores(6872).PREMIUM_MARKETING_FLOATING_CTA);
 }) : (function PremiumMarketingFloatingSubscribeButton(isVisible) {
   isVisible = isVisible.isVisible;
   const backgroundColor = isVisible.backgroundColor;

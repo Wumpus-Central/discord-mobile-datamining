@@ -1,14 +1,14 @@
-// === Module 10331: ChannelVoiceChatModal ===
+// === Module 10318: ChannelVoiceChatModal ===
 
-// Module 10331 (ChannelVoiceChatModal)
+// Module 10318 (ChannelVoiceChatModal)
 import c from "c" /* 576 */;
-import native from "native" /* 4787 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4932 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4962 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5104 */;
-import useChannelNameDefault from "useChannelName" /* 5417 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9587 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10332 */;
+import native from "native" /* 4788 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4933 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4963 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5105 */;
+import useChannelNameDefault from "useChannelName" /* 5418 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9606 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10319 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelV
     str = "";
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = jsx(tmp(8200).StageIcon, { size: "sm" });
+    const tmp11 = jsx(tmp(8208).StageIcon, { size: "sm" });
     cResult[3] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelV
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(8200).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(8208).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

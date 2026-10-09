@@ -1,6 +1,6 @@
-// === Module 1376: ProcessUtilsBase ===
+// === Module 1377: ProcessUtilsBase ===
 
-// Module 1376 (ProcessUtilsBase)
+// Module 1377 (ProcessUtilsBase)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/ProcessUtilsBase.tsx");

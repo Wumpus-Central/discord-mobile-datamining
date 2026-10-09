@@ -1,24 +1,24 @@
-// === Module 18284: GuildRoleSubscriptionBenefitModalHeader ===
+// === Module 18446: GuildRoleSubscriptionBenefitModalHeader ===
 
-// Module 18284 (GuildRoleSubscriptionBenefitModalHeader)
+// Module 18446 (GuildRoleSubscriptionBenefitModalHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 7013 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6810 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8660 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15435 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5902 */;
+import TextStyles_mod from "TextStyles" /* 5903 */;
 
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { headerContainer: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flexDirection: "row", justifyContent: "space-between", paddingBottom: 8, paddingHorizontal: 16 }, headerButtonContainer: { flexDirection: "row", alignSelf: "center", minWidth: 60 }, headerButtonStart: { alignItems: "flex-start" }, headerButtonEnd: { alignItems: "flex-end" }, headerButton: null, disabledButton: null, titleContainer: null, title: null, subtitle: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));

@@ -1,11 +1,11 @@
-// === Module 16695: ICYMIContext ===
+// === Module 16821: ICYMIContext ===
 
-// Module 16695 (ICYMIContext)
+// Module 16821 (ICYMIContext)
 import _mod19 from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

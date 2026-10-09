@@ -1,7 +1,7 @@
-// === Module 10285: InviteRolesDisplay ===
+// === Module 10270: InviteRolesDisplay ===
 
-// Module 10285 (InviteRolesDisplay)
-import RolePillDefault from "RolePill" /* 10286 */;
+// Module 10270 (InviteRolesDisplay)
+import RolePillDefault from "RolePill" /* 10271 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ container: { marginTop: 8 }, label: { marginBottom: 4 }, rolesRow: { flexDirection: "row", flexWrap: "wrap" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
       }
       if (cResult[6] !== tmp4.label) {
         const obj2 = { variant: "text-xs/semibold", color: "text-muted", style: label, children: tmp9 };
-        const tmp13 = closure_5(tmp(5086).Text, obj2);
+        const tmp13 = closure_5(tmp(5087).Text, obj2);
         cResult[6] = tmp4.label;
         cResult[7] = tmp13;
         let tmp11 = tmp13;
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InviteRo
     const obj3 = { variant: "text-xs/semibold", color: "text-muted", style: tmp.label, children: null };
     const intl = tmp2(1126).intl;
     obj3.children = intl.string(tmp2(1126).t.stcSfI);
-    const items2 = [closure_5(tmp2(5086).Text, obj3), ];
+    const items2 = [closure_5(tmp2(5087).Text, obj3), ];
     const obj4 = { style: tmp.rolesRow, children: stateFromStoresArray.map((role) => hasOwnProperty(RolePillDefault, { role, guildId }, role.id)) };
     items2[1] = closure_5(View, obj4);
     obj2.children = items2;

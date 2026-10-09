@@ -1,17 +1,17 @@
-// === Module 18453: AppShare ===
+// === Module 18617: AppShare ===
 
-// Module 18453 (AppShare)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useMountEffectDefault from "useMountEffect" /* 5392 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7185 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7500 */;
-import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8458 */;
-import ShareScreenDefault from "ShareScreen" /* 13952 */;
-import AccessibilityManagerDefault from "AccessibilityManager" /* 14517 */;
-import _modDef14638 from "module_14638" /* 14638 */;
-import AppToastContainerDefault from "AppToastContainer" /* 17449 */;
+// Module 18617 (AppShare)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import useMountEffectDefault from "useMountEffect" /* 5393 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5937 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7190 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7505 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8466 */;
+import ShareScreenDefault from "ShareScreen" /* 14049 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14613 */;
+import _modDef14743 from "module_14743" /* 14743 */;
+import AppToastContainerDefault from "AppToastContainer" /* 17603 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -20,10 +20,10 @@ const require = globalThis.__r;
 
 require = fn;
 fn(17).BackHandler;
-const AnalyticsTrackingStore = fn(7171);
-const ShareStore = fn(14477);
+const AnalyticsTrackingStore = fn(7176);
+const ShareStore = fn(14573);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_8 = fn(12145).MultiAccountSwitchLocation;
+let closure_8 = fn(12082).MultiAccountSwitchLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -272,9 +272,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { appEntryKey: share };
-          const tmp27 = closure_9(tmp(17396).ActionSheetContainer, obj2);
+          const tmp27 = closure_9(tmp(17544).ActionSheetContainer, obj2);
           const tmp28 = closure_9(AppToastContainerDefault, { appChrome: false });
-          const tmp29 = closure_9(tmp(5303).AlertModalContainer, {});
+          const tmp29 = closure_9(tmp(5304).AlertModalContainer, {});
           cResult[9] = tmp27;
           cResult[10] = tmp28;
           cResult[11] = tmp29;
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
           const obj3 = { appEntryKey: share, children: null };
           const items = [tmp13, tmp22, tmp23, tmp24];
           obj3.children = items;
-          const tmp33 = closure_10(_modDef14638, obj3);
+          const tmp33 = closure_10(_modDef14743, obj3);
           cResult[12] = tmp13;
           cResult[13] = tmp33;
           let tmp30 = tmp33;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
       }
     }
     if (!tmp4) {
-      const tmp14Result = closure_9(tmp(6718).SceneLoadingIndicator, {});
+      const tmp14Result = closure_9(tmp(6725).SceneLoadingIndicator, {});
       cResult[6] = tmp4;
       cResult[7] = attachments;
       cResult[8] = tmp14Result;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppShare
     }
     obj4.onClose = exitApp;
     closure_9(tmp11Result, obj4);
-    tmpResult = tmp(1627);
+    tmpResult = tmp(1628);
   }
   const fn = function c() {
     let tmp2 = null != attachments.text;

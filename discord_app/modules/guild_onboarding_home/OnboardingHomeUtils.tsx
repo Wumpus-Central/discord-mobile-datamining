@@ -1,21 +1,21 @@
-// === Module 6911: OnboardingHomeUtils ===
+// === Module 6918: OnboardingHomeUtils ===
 
-// Module 6911 (OnboardingHomeUtils)
+// Module 6918 (OnboardingHomeUtils)
 import FavoritesUtils from "FavoritesUtils" /* 2089 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6784 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6913 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 6914 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6791 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6920 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 6921 */;
 import ImpersonateStore from "ImpersonateStore" /* 2117 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6912 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6919 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(2070).ChannelFlags;
+const ChannelFlags = fn(2071).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");

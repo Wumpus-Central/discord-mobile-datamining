@@ -1,17 +1,17 @@
-// === Module 5629: GiftCodeUtils ===
+// === Module 5630: GiftCodeUtils ===
 
-// Module 5629 (GiftCodeUtils)
+// Module 5630 (GiftCodeUtils)
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import PremiumUtils from "PremiumUtils" /* 4726 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5292 */;
-import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 5740 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import PremiumUtils from "PremiumUtils" /* 4728 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5293 */;
+import getAnalyticsDataForSKUDefault from "getAnalyticsDataForSKU" /* 5741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 5630 */;
-import UserStore from "UserStore" /* 1389 */;
-import RegexUtils from "RegexUtils" /* 5074 */;
+import PremiumPaymentModalStore from "PremiumPaymentModalStore" /* 5631 */;
+import UserStore from "UserStore" /* 1390 */;
+import RegexUtils from "RegexUtils" /* 5075 */;
 
 const require = globalThis.__r;
 
@@ -59,7 +59,7 @@ let closure_18 = async function _resolveGiftCode(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -159,7 +159,7 @@ function getGiftCodeRedeemError(error, currentUser) {
 }
 const Constants = fn(1085);
 ({ Endpoints: closure_7, AnalyticEvents: closure_8, AbortCodes: closure_9, GiftCodeModalStates: c10, MessageEmbedTypes: closure_11, MessageTypes: closure_12 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PremiumTypes: map1, SubscriptionIntervalTypes: closure_14 } = PremiumConstants);
 let items = [RegexUtils.escape(window.GLOBAL_ENV.GIFT_CODE_HOST), ...items1.map((item) => RegexUtils.escape(item))];
 items1 = ["discordapp.com/gifts", "discord.com/gifts"];
@@ -205,9 +205,9 @@ function cleanCode(str) {
 }
 function getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) {
   _require = getOrFetchSubscriptionPlan;
-  const match = require("module_5741").match(getOrFetchSubscriptionPlan);
+  const match = require("module_5742").match(getOrFetchSubscriptionPlan);
   const obj = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-  const str = require("module_5741");
+  const str = require("module_5742");
   const obj2 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
   const withResult = match.with({ interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 }, () => {
     const intl = util.intl;
@@ -509,9 +509,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
   } else {
     intervalCount = subscriptionPlan.intervalCount;
     if (null != sender) {
-      const match = require("module_5741").match(subscriptionPlan);
+      const match = require("module_5742").match(subscriptionPlan);
       const obj2 = { interval: constants6.MONTH };
-      const str = require("module_5741");
+      const str = require("module_5742");
       const obj3 = { interval: constants6.YEAR };
       const withResult = match.with(obj2, () => {
         const intl = util.intl;
@@ -535,9 +535,9 @@ export const getSubscriptionGiftStartHeaderText = function getSubscriptionGiftSt
         return intl.formatToPlainString(util.t["3CX6Ev"], { username: sender, skuName, intervalCount });
       });
     } else {
-      const match1 = require("module_5741").match(subscriptionPlan);
+      const match1 = require("module_5742").match(subscriptionPlan);
       const obj4 = { interval: constants6.MONTH };
-      const str2 = require("module_5741");
+      const str2 = require("module_5742");
       const obj5 = { interval: constants6.YEAR };
       const withResult2 = match1.with(obj4, () => {
         const intl = util.intl;
@@ -590,9 +590,9 @@ export const getBodyText = function getBodyText(arg0) {
     return formatResult;
   } else if (constants3.SUCCESS === step) {
     if (null != subscriptionPlan) {
-      const match = subscriptionPlan(5741).match(subscriptionPlan);
+      const match = subscriptionPlan(5742).match(subscriptionPlan);
       const obj3 = { interval: constants6.MONTH, premiumSubscriptionType: closure_13.TIER_2 };
-      const str = subscriptionPlan(5741);
+      const str = subscriptionPlan(5742);
       const obj4 = { interval: constants6.YEAR, premiumSubscriptionType: closure_13.TIER_2 };
       const withResult = match.with(obj3, () => {
         const intl = util.intl;

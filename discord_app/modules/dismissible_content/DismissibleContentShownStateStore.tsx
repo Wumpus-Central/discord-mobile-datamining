@@ -1,13 +1,13 @@
-// === Module 2055: DismissibleContentShownStateStore ===
+// === Module 2056: DismissibleContentShownStateStore ===
 
-// Module 2055 (DismissibleContentShownStateStore)
+// Module 2056 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import isActionRequiredDefault from "isActionRequired" /* 2059 */;
+import isActionRequiredDefault from "isActionRequired" /* 2060 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2056 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2057 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2057 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2058 */;
 
 function withContent(currentlyShown, content) {
   let tmp = found;
@@ -28,7 +28,7 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = content(2052).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = content(2053).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
@@ -336,7 +336,7 @@ const Constants = fn(1085);
 let closure_8 = new BackoffDefault(1000, 60000);
 let closure_9 = {};
 let c10 = null;
-const identity = fn(1266);
+const identity = fn(1267);
 let closure_11 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
@@ -560,7 +560,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(2058).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(2059).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -604,7 +604,7 @@ function isStateInCooldown(shownFatigableCandidate) {
   return tmp3;
 }
 function reset() {
-  closure_0(1271).batchUpdates(() => {
+  closure_0(1272).batchUpdates(() => {
     state.setState(() => {
       const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       const map = new Map();
@@ -636,7 +636,7 @@ prototype["setHasRequiredAction"] = function setHasRequiredAction() {
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
 const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(DispatcherDefault, {
   CONNECTION_OPEN() {
-    closure_0(1271).batchUpdates(() => {
+    closure_0(1272).batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
@@ -653,7 +653,7 @@ const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(
     batchInvocationManager.reset();
   },
   LOGOUT() {
-    closure_0(1271).batchUpdates(() => {
+    closure_0(1272).batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
@@ -682,10 +682,10 @@ export { isInCooldown };
 export { isStateInCooldown };
 export const addCandidateContent = function addCandidateContent(content) {
   closure_0 = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = closure_0(2052).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = closure_0(2053).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
   dependencyMap = null;
-  closure_0(1271).batchUpdates(() => {
+  closure_0(1272).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -712,7 +712,7 @@ export const addCandidateContent = function addCandidateContent(content) {
   if (null != dependencyMap) {
     applyWinnerUpdateResult(dependencyMap);
   }
-  let obj = closure_0(1271);
+  let obj = closure_0(1272);
 };
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   closure_0 = arg0;
@@ -720,7 +720,7 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
   dependencyMap = null;
   c3 = false;
   c4 = false;
-  closure_0(1271).batchUpdates(() => {
+  closure_0(1272).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -798,7 +798,7 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
     closure_8.succeed();
     batchInvocationManager.reset();
   }
-  let obj = closure_0(1271);
+  let obj = closure_0(1272);
 };
 export const getLastShownDismissibleContent = function getLastShownDismissibleContent() {
   let first = closure_11.getState().recentlyShown[0];
@@ -868,7 +868,7 @@ export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
 };
 export { reset };
 export const resetFatigueCooldown = function resetFatigueCooldown() {
-  closure_0(1271).batchUpdates(() => {
+  closure_0(1272).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);

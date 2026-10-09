@@ -1,10 +1,10 @@
-// === Module 11156: QuestRewardTile ===
+// === Module 12925: QuestRewardTile ===
 
-// Module 11156 (QuestRewardTile)
+// Module 12925 (QuestRewardTile)
 import c from "c" /* 576 */;
-import AssetUtils from "AssetUtils" /* 9544 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9549 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 11157 */;
+import AssetUtils from "AssetUtils" /* 9157 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9162 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 12926 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

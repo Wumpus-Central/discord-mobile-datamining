@@ -1,6 +1,6 @@
-// === Module 1262: ExperimentsConstants ===
+// === Module 1263: ExperimentsConstants ===
 
-// Module 1262 (ExperimentsConstants)
+// Module 1263 (ExperimentsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ExperimentsConstants.tsx");

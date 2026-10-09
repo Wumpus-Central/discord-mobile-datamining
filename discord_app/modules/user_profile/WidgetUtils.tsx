@@ -1,22 +1,22 @@
-// === Module 13093: WidgetUtils ===
+// === Module 13186: WidgetUtils ===
 
-// Module 13093 (WidgetUtils)
+// Module 13186 (WidgetUtils)
 import util from "util" /* 1126 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
-import utils from "utils" /* 6047 */;
-import useGame2 from "useGame" /* 6995 */;
-import WidgetType from "WidgetType" /* 7310 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7311 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 7313 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7315 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7317 */;
-import WidgetGameTag from "WidgetGameTag" /* 13087 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 13096 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4899 */;
+import utils from "utils" /* 6049 */;
+import useGame2 from "useGame" /* 7002 */;
+import WidgetType from "WidgetType" /* 7315 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7316 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 7318 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7320 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7322 */;
+import WidgetGameTag from "WidgetGameTag" /* 13180 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 13189 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1389 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
-import WidgetStore from "WidgetStore" /* 13094 */;
+import UserStore from "UserStore" /* 1390 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
+import WidgetStore from "WidgetStore" /* 13187 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,9 +85,9 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const WIDGET_TITLES_BY_TYPE = fn(7312).WIDGET_TITLES_BY_TYPE;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
-let closure_9 = fn(13095).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const WIDGET_TITLES_BY_TYPE = fn(7317).WIDGET_TITLES_BY_TYPE;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
+let closure_9 = fn(13188).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
@@ -166,12 +166,12 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     return uniqueKey === type.getUniqueKey();
   })) {
     if (type.type === WidgetType.WidgetType.PERSONAL) {
-      const obj2 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj2);
-      const tmp16Result = DismissibleContentUnsafeUtils;
       const obj3 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
-      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj3);
-      const tmp16Result2 = DismissibleContentUnsafeUtils;
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, obj3);
+      const tmp13Result = DismissibleContentUnsafeUtils;
+      const obj4 = { dismissAction: ContentDismissActionType.INDIRECT_ACTION };
+      const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, obj4);
+      const tmp13Result2 = DismissibleContentUnsafeUtils;
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);

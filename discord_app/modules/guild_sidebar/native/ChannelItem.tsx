@@ -1,20 +1,20 @@
-// === Module 16353: ChannelItem ===
+// === Module 16472: ChannelItem ===
 
-// Module 16353 (ChannelItem)
+// Module 16472 (ChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 8178 */;
-import BaseChannelItem from "BaseChannelItem" /* 12104 */;
-import _modDef16354 from "module_16354" /* 16354 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8142 */;
+import BookCheckIcon2 from "BookCheckIcon" /* 8186 */;
+import BaseChannelItem from "BaseChannelItem" /* 12041 */;
+import _modDef16473 from "module_16473" /* 16473 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -50,21 +50,21 @@ const View = fn(17).View;
 const Constants = fn(1085);
 const ChannelTypes = Constants.ChannelTypes;
 const Routes = Constants.Routes;
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
-const UnreadSetting = fn(5972).UnreadSetting;
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
+const UnreadSetting = fn(5974).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let items = [, ];
 ({ GUILD_VOICE: arr[0], GUILD_STAGE_VOICE: arr[1] } = ChannelTypes);
 const set = new Set(items);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { channelIconLive: { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 }, dmAvatar: { marginRight: 8 }, avatarStatus: null, groupDmAvatar: null, channelInfoContainer: null, avatarStatusSelected: null };
 let obj3 = { tintColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 obj.avatarStatus = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.groupDmAvatar = { width: 20, height: 20, borderRadius: 10, marginRight: 8 };
 obj.channelInfoContainer = { paddingStart: 4 };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-obj.avatarStatusSelected = { backgroundColor: fn(5974).DARK_393C42_LIGHT_DEE0E4 };
+obj.avatarStatusSelected = { backgroundColor: fn(5976).DARK_393C42_LIGHT_DEE0E4 };
 let closure_17 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelIcon(arg0) {
@@ -124,7 +124,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (tmp5) {
-      let tmp11 = _modDef16354;
+      let tmp11 = _modDef16473;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
     } else {
       if (cResult[10] === channel) {
@@ -211,7 +211,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16354;
+      let tmp12 = _modDef16473;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -235,7 +235,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       obj19 = {};
     }
     const merged = Object.assign(obj19);
-    return state(tmp9(12104).BaseChannelIcon, obj10);
+    return state(tmp9(12041).BaseChannelIcon, obj10);
   }
 });
 ReactCompilerGating = fn(558);
@@ -351,7 +351,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function DMChan
   return closure_14(userId(1200).Avatar, obj3);
 });
 ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: fn(5974).DARK_393C42_LIGHT_DEE0E4 };
+let obj5 = { backgroundColor: fn(5976).DARK_393C42_LIGHT_DEE0E4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/ChannelItem.tsx");
 

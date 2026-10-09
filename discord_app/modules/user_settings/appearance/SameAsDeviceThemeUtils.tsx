@@ -1,11 +1,11 @@
-// === Module 15258: SameAsDeviceThemeUtils ===
+// === Module 15371: SameAsDeviceThemeUtils ===
 
-// Module 15258 (SameAsDeviceThemeUtils)
-import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4926 */;
-import shared from "shared" /* 4929 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5258 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4897 */;
+// Module 15371 (SameAsDeviceThemeUtils)
+import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4927 */;
+import shared from "shared" /* 4930 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5259 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4898 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;

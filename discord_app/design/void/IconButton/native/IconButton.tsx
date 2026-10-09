@@ -1,10 +1,10 @@
-// === Module 13434: IconButton/IconButton ===
+// === Module 13526: IconButton/IconButton ===
 
-// Module 13434 (IconButton/IconButton)
+// Module 13526 (IconButton/IconButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import Pressables from "Pressables" /* 6189 */;
+import Pressables from "Pressables" /* 6191 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,11 +12,11 @@ require = fn;
 let closure_2 = ["style", "size", "disableColor"];
 const jsx = fn(21).jsx;
 const Sizes = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
-const createStyles = fn(5090);
-let obj3 = { container: { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5974).DARK_PRIMARY_700_LIGHT_PRIMARY_230 }, small: { height: Sizes.SMALL_24, width: Sizes.SMALL_24 }, medium: { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 }, large: { height: Sizes.LARGE_40, width: Sizes.LARGE_40 }, smallCircular: { borderRadius: Sizes.SMALL_24 / 2 }, mediumCircular: { borderRadius: Sizes.MEDIUM_32 / 2 }, largeCircular: { borderRadius: Sizes.LARGE_40 / 2 }, icon: null };
-const obj4 = { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5974).DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
+const createStyles = fn(5091);
+let obj3 = { container: { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5976).DARK_PRIMARY_700_LIGHT_PRIMARY_230 }, small: { height: Sizes.SMALL_24, width: Sizes.SMALL_24 }, medium: { height: Sizes.MEDIUM_32, width: Sizes.MEDIUM_32 }, large: { height: Sizes.LARGE_40, width: Sizes.LARGE_40 }, smallCircular: { borderRadius: Sizes.SMALL_24 / 2 }, mediumCircular: { borderRadius: Sizes.MEDIUM_32 / 2 }, largeCircular: { borderRadius: Sizes.LARGE_40 / 2 }, icon: null };
+const obj4 = { borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(5976).DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
 const obj5 = { borderRadius: Sizes.SMALL_24 / 2 };
-obj3.icon = { tintColor: fn(5974).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
+obj3.icon = { tintColor: fn(5976).DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
 let closure_7 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SquareIconButton(accessibilityLabel) {
@@ -147,7 +147,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function SquareIconBu
   obj2.disableColor = disableColor;
   obj2.source = source;
   obj.children = jsx(size(1200).Icon, { size: REFRESH_SMALL_16, style: null, disableColor: null, source: null });
-  return jsx(size(6189).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: tmp6, accessibilityElementsHidden: accessibilityHidden, onPress, disabled, style: null, children: null });
+  return jsx(size(6191).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: tmp6, accessibilityElementsHidden: accessibilityHidden, onPress, disabled, style: null, children: null });
 });
 let closure_8 = tmp2;
 tmp2.Sizes = Sizes;

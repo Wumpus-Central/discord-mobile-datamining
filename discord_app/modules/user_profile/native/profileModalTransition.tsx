@@ -1,6 +1,6 @@
-// === Module 17261: profileModalTransition ===
+// === Module 17415: profileModalTransition ===
 
-// Module 17261 (profileModalTransition)
+// Module 17415 (profileModalTransition)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReportProfileModalTransition() {
   const cResult = navigation(576).c(3);
   const obj = navigation(576);
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function o() {
       c0 = false;
@@ -64,7 +64,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReportPro
   }
   const effect = noop.useEffect(tmp3, tmp4);
 }) : (function useReportProfileModalTransition() {
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   let items = [navigation];
   const effect = noop.useEffect(() => {
     function leave() {

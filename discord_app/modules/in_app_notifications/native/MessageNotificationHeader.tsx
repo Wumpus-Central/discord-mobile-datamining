@@ -1,19 +1,19 @@
-// === Module 12629: MessageNotificationHeader ===
+// === Module 12569: MessageNotificationHeader ===
 
-// Module 12629 (MessageNotificationHeader)
+// Module 12569 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
-import ChatIcon2 from "ChatIcon" /* 8174 */;
-import ThreadIcon2 from "ThreadIcon" /* 8176 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8142 */;
+import ChatIcon2 from "ChatIcon" /* 8182 */;
+import ThreadIcon2 from "ThreadIcon" /* 8184 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function getLocationLabel(arg0) {
@@ -84,7 +84,7 @@ function getLocationLabel(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, headerContent: { flex: 1, flexDirection: "row", alignItems: "center" }, primaryText: { flexShrink: 1, marginRight: 2 }, secondaryTextContainer: { flexDirection: "row", alignItems: "center", gap: 2, flex: 1, overflow: "hidden" }, separator: { marginHorizontal: 2 }, icon: { width: 16, height: 16 }, secondaryText: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 fn(558);

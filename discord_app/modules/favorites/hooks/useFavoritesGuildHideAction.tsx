@@ -1,12 +1,12 @@
-// === Module 16363: useFavoritesGuildHideAction ===
+// === Module 16482: useFavoritesGuildHideAction ===
 
-// Module 16363 (useFavoritesGuildHideAction)
+// Module 16482 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1112 */;
 import FavoritesUtils from "FavoritesUtils" /* 2089 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10293 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10278 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGui
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesGuildHideAction() {
   const cResult = hasAccess(576).c(11);
   let obj = hasAccess(576);
-  hasAccess = hasAccess(10294).useFavoritesAccess().hasAccess;
+  hasAccess = hasAccess(10279).useFavoritesAccess().hasAccess;
   if (cResult[0] !== hasAccess) {
     const fn = function s() {
       if (hasAccess) {
@@ -75,9 +75,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     cResult[10] = obj3;
     tmp13 = obj3;
   }
-  let obj2 = hasAccess(10294);
+  let obj2 = hasAccess(10279);
 }) : (function useFavoritesGuildHideAction() {
-  hasAccess = hasAccess(10294).useFavoritesAccess().hasAccess;
+  hasAccess = hasAccess(10279).useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   let obj2 = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = noop.useCallback(() => {

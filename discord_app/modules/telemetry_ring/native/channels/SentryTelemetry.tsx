@@ -1,8 +1,8 @@
-// === Module 14215: SentryTelemetry ===
+// === Module 14311: SentryTelemetry ===
 
-// Module 14215 (SentryTelemetry)
-import TelemetryRingNative2 from "TelemetryRingNative" /* 2006 */;
-import BaseTelemetryChannel from "BaseTelemetryChannel" /* 2005 */;
+// Module 14311 (SentryTelemetry)
+import TelemetryRingNative2 from "TelemetryRingNative" /* 2007 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 2006 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
@@ -21,7 +21,7 @@ const prototype = SentryTelemetryImpl.prototype;
 prototype["snapshotForBreadcrumbs"] = function snapshotForBreadcrumbs() {
   return this.snapshot(-1, closure_3);
 };
-let items = [fn(2006).TelemetryChannel.SENTRY];
+let items = [fn(2007).TelemetryChannel.SENTRY];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/SentryTelemetry.tsx");
 

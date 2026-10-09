@@ -1,14 +1,14 @@
-// === Module 14882: AccountBlockedUsersSetting ===
+// === Module 14994: AccountBlockedUsersSetting ===
 
-// Module 14882 (AccountBlockedUsersSetting)
+// Module 14994 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountBlockedUsersSettingDescription() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -78,8 +78,8 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
   }),
-  IconComponent: fn(9306).DenyIcon,
-  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  IconComponent: fn(9344).DenyIcon,
+  parent: fn(7974).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1085).UserSettingsSections.BLOCKED_USERS_V2,
     getComponent() {

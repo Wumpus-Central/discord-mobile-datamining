@@ -1,6 +1,6 @@
-// === Module 14846: TwoFASetupModalHeader ===
+// === Module 14954: TwoFASetupModalHeader ===
 
-// Module 14846 (TwoFASetupModalHeader)
+// Module 14954 (TwoFASetupModalHeader)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" }, circleIcon: null, horizontalLine: null, filledCircle: null };
 let size = { width: 14, height: 14, borderRadius: 7, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.circleIcon = size;

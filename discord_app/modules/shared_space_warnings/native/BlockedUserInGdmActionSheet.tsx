@@ -1,21 +1,21 @@
-// === Module 17956: BlockedUserInGdmActionSheet ===
+// === Module 18116: BlockedUserInGdmActionSheet ===
 
-// Module 17956 (BlockedUserInGdmActionSheet)
+// Module 18116 (BlockedUserInGdmActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4992 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
-import TableRow from "TableRow" /* 6184 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 17957 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4993 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
+import TableRow from "TableRow" /* 6186 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18117 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function getUserCalloutRowText(arg0) {
@@ -26,12 +26,12 @@ function getUserCalloutRowText(arg0) {
     const intl4 = util.intl;
     const obj2 = {
       usernameHook1() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
+          return collapsed(Text_Text.Text, obj);
         },
       usernameHook2() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 17) };
+          return collapsed(Text_Text.Text, obj);
         },
       numberOfOtherUsers: totalUsers - calledOutUserIds.length
     };
@@ -40,12 +40,12 @@ function getUserCalloutRowText(arg0) {
     const intl3 = util.intl;
     const obj3 = {
       usernameHook1() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
+          return collapsed(Text_Text.Text, obj);
         },
       usernameHook2() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 17) };
+          return collapsed(Text_Text.Text, obj);
         }
     };
     formatResult = intl3.format(util.t["67ZE+9"], obj3);
@@ -53,12 +53,12 @@ function getUserCalloutRowText(arg0) {
     const intl2 = util.intl;
     const obj4 = {
       usernameHook1() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
+          return collapsed(Text_Text.Text, obj);
         },
       usernameHook2() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 17) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 17) };
+          return collapsed(Text_Text.Text, obj);
         }
     };
     formatResult = intl2.format(util.t.veV4IN, obj4);
@@ -66,8 +66,8 @@ function getUserCalloutRowText(arg0) {
     const intl = util.intl;
     let obj = {
       usernameHook() {
-          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(closure_1_0, closure_1_1, 19) };
-          return closure_2_11(Text_Text.Text, obj);
+          const obj = { variant: "text-md/semibold", children: NicknameUtilsDefault.getName(_require, closure_1_1, 19) };
+          return collapsed(Text_Text.Text, obj);
         }
     };
     formatResult = intl.format(util.t["4WHCtq"], obj);
@@ -77,11 +77,11 @@ function getUserCalloutRowText(arg0) {
 function getBlockedUserInGDMTableRows(arg0) {
   ({ channelId, blockedUserIds, ignoredUserIds } = arg0);
   const channel = ChannelStore.getChannel(channelId);
-  const obj = { icon: closure_1_11(CircleCheckIcon.CircleCheckIcon, {}), label: null };
+  const obj = { icon: collapsed(CircleCheckIcon.CircleCheckIcon, {}), label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.RIMw54);
   const items = [obj, ];
-  const obj2 = { icon: closure_1_11(CircleInformationIcon.CircleInformationIcon, {}), label: null };
+  const obj2 = { icon: collapsed(CircleInformationIcon.CircleInformationIcon, {}), label: null };
   const intl2 = util.intl;
   obj2.label = intl2.string(util.t.bejNWN);
   items[1] = obj2;
@@ -97,7 +97,7 @@ function getBlockedUserInGDMTableRows(arg0) {
       }
       const obj4 = { icon: null, label: null };
       obj3.guildId = guild_id;
-      obj4.icon = closure_1_11(closure_16, obj3);
+      obj4.icon = collapsed(closure_15, obj3);
       const obj5 = { calledOutUserIds: substr, totalUsers: items1.length, channelId, guildId: null };
       let guild_id1;
       if (channel != null) {
@@ -122,7 +122,7 @@ function getBlockedUserInGDMTableRows(arg0) {
   if (channel != null) {
     guild_id2 = channel.guild_id;
   }
-  const obj7 = { icon: closure_1_11(closure_16, obj6), label: null };
+  const obj7 = { icon: collapsed(closure_15, obj6), label: null };
   obj6.guildId = guild_id2;
   const obj8 = { calledOutUserIds: substr1, totalUsers: blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length, channelId, guildId: null };
   let guild_id3;
@@ -135,22 +135,21 @@ function getBlockedUserInGDMTableRows(arg0) {
   const tmp12 = blockedUserIds.length > 0 ? blockedUserIds.length : ignoredUserIds.length;
   tmp3 = ignoredUserIds.length > 0;
 }
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(13859);
-({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
+const View = fn(17).View;
+const SharedSpaceWarningConstants = fn(13952);
+({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };
 obj2.buttons = { gap: 8 };
 obj2.icon = { display: "flex", justifyContent: "center", alignItems: "center", minWidth: 32 };
-let closure_14 = createStyles.createStyles(obj2);
+let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCalloutAvatars(userIds) {
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCalloutAvatars(userIds) {
   let REFRESH_MEDIUM_32 = dependencyMap;
   const cResult = userIds(576).c(14);
   userIds = userIds.userIds;
@@ -179,7 +178,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   const obj = userIds(576);
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(first, tmp5, tmp6);
   if (cResult[4] !== stateFromStoresArray) {
-    const found = stateFromStoresArray.filter(tmp(1387).isNotNullish);
+    const found = stateFromStoresArray.filter(tmp(1388).isNotNullish);
     cResult[4] = stateFromStoresArray;
     cResult[5] = found;
     let tmp7 = found;
@@ -206,9 +205,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       const obj2 = { user: tmp7[0], guildId, size: null, "aria-hidden": true };
       REFRESH_MEDIUM_32 = tmp(1200).AvatarSizes.REFRESH_MEDIUM_32;
       obj2.size = REFRESH_MEDIUM_32;
-      let tmp17 = closure_11(tmp(1200).Avatar, obj2);
+      let tmp17 = closure_10(tmp(1200).Avatar, obj2);
     } else {
-      tmp17 = closure_11(tmp(11431).UserIcon, {});
+      tmp17 = closure_10(tmp(11338).UserIcon, {});
     }
     cResult[8] = guildId;
     cResult[9] = tmp12;
@@ -217,7 +216,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   } else {
     if (cResult[12] !== tmp7) {
       const obj3 = { users: tmp7, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-      const tmp11 = closure_11(tmp(10261).FacepileGroupDMAvatar, obj3);
+      const tmp11 = closure_10(tmp(10246).FacepileGroupDMAvatar, obj3);
       cResult[12] = tmp7;
       cResult[13] = tmp11;
       let tmp9 = tmp11;
@@ -233,7 +232,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   const items = [UserStore];
   const items1 = [userIds];
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(items, () => userIds.map((item) => user.getUser(item)), items1);
-  let found = stateFromStoresArray.filter(userIds(1387).isNotNullish);
+  let found = stateFromStoresArray.filter(userIds(1388).isNotNullish);
   if (1 === userIds.length) {
     if (null != UserStore.getUser(userIds[0])) {
       const obj3 = { user: null, guildId: null, size: null, "aria-hidden": true };
@@ -242,18 +241,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
       obj3.guildId = userIds.guildId;
       REFRESH_MEDIUM_32 = tmp(1200).AvatarSizes.REFRESH_MEDIUM_32;
       obj3.size = REFRESH_MEDIUM_32;
-      let tmp6 = closure_11(tmp(1200).Avatar, obj3);
+      let tmp6 = closure_10(tmp(1200).Avatar, obj3);
     } else {
-      tmp6 = closure_11(tmp(11431).UserIcon, {});
+      tmp6 = closure_10(tmp(11338).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(10261).FacepileGroupDMAvatar, obj4);
+    return closure_10(tmp(10246).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 });
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedUserInGDMDescription(arg0) {
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedUserInGDMDescription(arg0) {
   let stringResult1 = dependencyMap;
   const cResult = c.c(12);
   ({ numOfBlockedUsers, numOfIgnoredUsers } = arg0);
@@ -277,7 +276,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocke
         stringResult1 = string(util.t["Bp2/ni"]);
         items[2] = stringResult1;
         obj2.children = items;
-        const tmp32 = __initData2(__initData, obj2);
+        const tmp32 = __initData(closure_1_11, obj2);
         cResult[1] = tmp32;
       }
     }
@@ -306,7 +305,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocke
       const obj4 = { children: null };
       const items1 = [tmp17, "\n", tmp20];
       obj4.children = items1;
-      const tmp25 = __initData2(__initData, obj4);
+      const tmp25 = __initData(closure_1_11, obj4);
       cResult[5] = tmp17;
       cResult[6] = tmp25;
     }
@@ -336,7 +335,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocke
       const obj6 = { children: null };
       const items2 = [tmp7, "\n", tmp10];
       obj6.children = items2;
-      const tmp15 = __initData2(__initData, obj6);
+      const tmp15 = __initData(closure_1_11, obj6);
       cResult[10] = tmp7;
       cResult[11] = tmp15;
     }
@@ -351,7 +350,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocke
       const intl6 = util.intl;
       items[2] = intl6.string(util.t["Bp2/ni"]);
       obj2.children = items;
-      let tmp3 = __initData2(__initData, obj2);
+      let tmp3 = __initData(closure_1_11, obj2);
     }
     return tmp3;
   }
@@ -363,7 +362,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocke
     const intl4 = util.intl;
     items1[2] = intl4.string(util.t.SN1hrl);
     obj3.children = items1;
-    tmp3 = __initData2(__initData, obj3);
+    tmp3 = __initData(closure_1_11, obj3);
   } else {
     tmp3 = null;
     if (tmp2) {
@@ -374,7 +373,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Blocke
       const intl2 = util.intl;
       items2[2] = intl2.string(util.t["6AKLRt"]);
       obj.children = items2;
-      tmp3 = __initData2(__initData, obj);
+      tmp3 = __initData(closure_1_11, obj);
     }
   }
 });
@@ -388,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
   channelId = channelId.channelId;
   const blockedUserIds = channelId.blockedUserIds;
   title = channelId.ignoredUserIds;
-  const tmp4 = closure_14();
+  const tmp4 = closure_13();
   noop = tmp4;
   if (cResult[0] === blockedUserIds) {
     if (cResult[1] === channelId) {
@@ -437,7 +436,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                         }
                                         if (cResult[58] !== tmp10) {
                                           let obj2 = { size: "lg", onPress: tmp10, text: tmp63 };
-                                          const tmp67 = closure_11(tmp(tmp2[29]).Button, obj2);
+                                          const tmp67 = closure_10(tmp(tmp2[30]).Button, obj2);
                                           cResult[58] = tmp10;
                                           cResult[59] = tmp67;
                                           let tmp65 = tmp67;
@@ -455,7 +454,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                         }
                                         if (cResult[61] !== tmp9) {
                                           let obj3 = { size: "lg", variant: "secondary", onPress: tmp9, text: tmp68 };
-                                          const tmp72 = closure_11(tmp(tmp2[29]).Button, obj3);
+                                          const tmp72 = closure_10(tmp(tmp2[30]).Button, obj3);
                                           cResult[61] = tmp9;
                                           cResult[62] = tmp72;
                                           let tmp70 = tmp72;
@@ -484,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                                         }
                                                       }
                                                       const obj4 = { startExpanded: tmp16, children: tmp77 };
-                                                      const tmp82 = closure_11(tmp14, obj4);
+                                                      const tmp82 = closure_10(tmp14, obj4);
                                                       cResult[74] = tmp14;
                                                       cResult[75] = tmp16;
                                                       cResult[76] = tmp77;
@@ -498,7 +497,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                             const obj5 = { style: tmp20, children: null };
                                             const items = [tmp21, tmp15, tmp59, tmp73];
                                             obj5.children = items;
-                                            const tmp79 = closure_13(tmp13, obj5);
+                                            const tmp79 = closure_12(tmp13, obj5);
                                             cResult[67] = tmp13;
                                             cResult[68] = tmp15;
                                             cResult[69] = tmp59;
@@ -512,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                         const obj6 = { style: tmp4.buttons, children: null };
                                         const items1 = [tmp65, tmp70];
                                         obj6.children = items1;
-                                        const tmp76 = closure_13(closure_5, obj6);
+                                        const tmp76 = closure_12(View, obj6);
                                         cResult[63] = tmp4.buttons;
                                         cResult[64] = tmp65;
                                         cResult[65] = tmp70;
@@ -521,7 +520,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                       }
                                     }
                                     const obj7 = { style: tmp19, children: tmp56 };
-                                    const tmp61 = closure_11(tmp12, obj7);
+                                    const tmp61 = closure_10(tmp12, obj7);
                                     cResult[53] = tmp12;
                                     cResult[54] = tmp56;
                                     cResult[55] = tmp19;
@@ -530,7 +529,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                                   }
                                 }
                                 const obj8 = { hasIcons: cResult[28], children: cResult[29] };
-                                const tmp58 = closure_11(cResult[22], obj8);
+                                const tmp58 = closure_10(cResult[22], obj8);
                                 cResult[49] = cResult[22];
                                 cResult[50] = cResult[28];
                                 cResult[51] = cResult[29];
@@ -549,11 +548,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
               const ActionSheet = tmp(tmp2[25]).ActionSheet;
               const container = tmp4.container;
               if (cResult[33] !== tmp4.headerImage) {
-                const obj10 = { source: blockedUserIds(tmp2[26]), style: tmp4.headerImage };
-                const tmp28 = closure_11(closure_4, obj10);
+                const obj10 = { source: blockedUserIds(tmp2[27]), style: tmp4.headerImage };
+                const tmp28 = closure_10(blockedUserIds(tmp2[26]), obj10);
                 cResult[33] = tmp4.headerImage;
                 cResult[34] = tmp28;
                 let tmp24 = tmp28;
+                const tmp27 = blockedUserIds(tmp2[26]);
               } else {
                 tmp24 = cResult[34];
               }
@@ -568,7 +568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
               }
               if (cResult[36] !== tmp4.title) {
                 const obj11 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.title, children: tmp30 };
-                const tmp34 = closure_11(tmp(tmp2[9]).Text, obj11);
+                const tmp34 = closure_10(tmp(tmp2[9]).Text, obj11);
                 cResult[36] = tmp4.title;
                 cResult[37] = tmp34;
                 let tmp32 = tmp34;
@@ -588,20 +588,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                       let tmp42 = cResult[46];
                     }
                     const tableGroup = tmp4.tableGroup;
-                    const TableRowGroup = tmp(tmp2[27]).TableRowGroup;
+                    const TableRowGroup = tmp(tmp2[28]).TableRowGroup;
                     if (cResult[47] !== tmp4.icon) {
-                      const fn2 = function j(arg0, arg1) {
-                        ({ icon, label } = arg0);
-                        const obj = { icon: closure_2_11(hasOwnProperty, { style: icon.icon, children: icon }), label };
-                        return closure_2_11(TableRow.TableRow, obj, arg1);
-                      };
+                      class J {
+                        constructor(arg0, arg1) {
+                          ({ icon, label } = channelId);
+                          obj = { icon: null, label };
+                          obj1 = { style: closure_3.icon, children: icon };
+                          obj.icon = jsx(View, obj1);
+                          return jsx(closure_0(closure_2[29]).TableRow, obj, arg1);
+                        }
+                      }
                       cResult[47] = tmp4.icon;
-                      cResult[48] = fn2;
-                      let tmp45 = fn2;
+                      cResult[48] = J;
                     } else {
-                      tmp45 = cResult[48];
+                      class J {
+                        constructor(arg0, arg1) {
+                          ({ icon, label } = channelId);
+                          obj = { icon: null, label };
+                          obj1 = { style: closure_3.icon, children: icon };
+                          obj.icon = jsx(View, obj1);
+                          return jsx(closure_0(closure_2[29]).TableRow, obj, arg1);
+                        }
+                      }
                     }
-                    const mapped = arr3.map(tmp45);
+                    const mapped = arr3.map(J);
                     cResult[13] = blockedUserIds;
                     cResult[14] = channelId;
                     cResult[15] = title;
@@ -612,8 +623,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                     ({ tableGroup: tmp3[20], title } = tmp4);
                     cResult[21] = title;
                     cResult[22] = TableRowGroup;
-                    cResult[23] = closure_5;
-                    cResult[24] = closure_5;
+                    cResult[23] = View;
+                    cResult[24] = View;
                     cResult[25] = ActionSheet;
                     cResult[26] = tmp42;
                     cResult[27] = true;
@@ -626,21 +637,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
                   const obj12 = { children: null };
                   const items2 = [tmp32, tmp39];
                   obj12.children = items2;
-                  const tmp44 = closure_13(closure_5, obj12);
+                  const tmp44 = closure_12(View, obj12);
                   cResult[44] = tmp32;
                   cResult[45] = tmp39;
                   cResult[46] = tmp44;
                   tmp42 = tmp44;
                 }
                 const obj13 = { variant: "text-md/medium", color: "text-default", style: tmp4.description, children: tmp35 };
-                const tmp41 = closure_11(tmp(tmp2[9]).Text, obj13);
+                const tmp41 = closure_10(tmp(tmp2[9]).Text, obj13);
                 cResult[41] = tmp4.description;
                 cResult[42] = tmp35;
                 cResult[43] = tmp41;
                 tmp39 = tmp41;
               }
               const obj14 = { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: title.length };
-              const tmp38 = closure_11(closure_17, obj14);
+              const tmp38 = closure_10(closure_16, obj14);
               cResult[38] = blockedUserIds.length;
               cResult[39] = title.length;
               cResult[40] = tmp38;
@@ -673,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
       tmp9 = handleDismissAndStay;
     }
   }
-  const fn = function o() {
+  const fn = function s() {
     AnalyticsUtilsDefault.track(AnalyticEvents.GDM_BLOCKED_USER_WARNING_VIEWED, { channel_id: channelId, warning_medium: constants2.ACTION_SHEET, ignored_user_ids: title, blocked_user_ids: blockedUserIds });
   };
   const items3 = [channelId, blockedUserIds, title];
@@ -689,7 +700,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
   channelId = channelId.channelId;
   const blockedUserIds = channelId.blockedUserIds;
   const ignoredUserIds = channelId.ignoredUserIds;
-  const tmp = closure_14();
+  const tmp = closure_13();
   noop = tmp;
   const items = [channelId, blockedUserIds, ignoredUserIds];
   const effect = noop.useEffect(() => {
@@ -697,29 +708,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
   }, items);
   let obj = { startExpanded: true, children: null };
   let obj2 = { style: tmp.container, children: null };
+  let obj3 = { source: null, style: null };
   const arr4 = getBlockedUserInGDMTableRows({ channelId, blockedUserIds, ignoredUserIds });
-  const items1 = [closure_11(closure_4, { source: blockedUserIds(ignoredUserIds[26]), style: tmp.headerImage }), , , ];
+  obj3.source = blockedUserIds(ignoredUserIds[27]);
+  obj3.style = tmp.headerImage;
+  const items1 = [closure_10(blockedUserIds(ignoredUserIds[26]), obj3), , , ];
   const obj4 = { children: null };
   const obj5 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = channelId(ignoredUserIds[11]).intl;
   obj5.children = intl.string(channelId(ignoredUserIds[11]).t["mwJJ+f"]);
-  const items2 = [closure_11(channelId(ignoredUserIds[9]).Text, obj5), ];
-  const obj6 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: closure_11(closure_17, { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length }) };
-  items2[1] = closure_11(channelId(ignoredUserIds[9]).Text, obj6);
+  const items2 = [closure_10(channelId(ignoredUserIds[9]).Text, obj5), ];
+  const obj6 = { variant: "text-md/medium", color: "text-default", style: tmp.description, children: closure_10(closure_16, { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length }) };
+  items2[1] = closure_10(channelId(ignoredUserIds[9]).Text, obj6);
   obj4.children = items2;
-  items1[1] = closure_13(closure_5, obj4);
+  items1[1] = closure_12(View, obj4);
   const obj8 = { style: tmp.tableGroup, children: null };
-  let obj3 = { source: blockedUserIds(ignoredUserIds[26]), style: tmp.headerImage };
   const obj7 = { numOfBlockedUsers: blockedUserIds.length, numOfIgnoredUsers: ignoredUserIds.length };
-  obj8.children = closure_11(channelId(ignoredUserIds[27]).TableRowGroup, {
+  const tmp3 = blockedUserIds(ignoredUserIds[26]);
+  obj8.children = closure_10(channelId(ignoredUserIds[28]).TableRowGroup, {
     hasIcons: true,
     children: arr4.map((item, index) => {
       ({ icon, label } = item);
-      const obj = { icon: closure_2_11(hasOwnProperty, { style: icon.icon, children: icon }), label };
-      return closure_2_11(TableRow.TableRow, obj, index);
+      const obj = { icon: collapsed(View, { style: icon.icon, children: icon }), label };
+      return collapsed(TableRow.TableRow, obj, index);
     })
   });
-  items1[2] = closure_11(closure_5, obj8);
+  items1[2] = closure_10(View, obj8);
   const obj10 = { style: tmp.buttons, children: null };
   const obj11 = {
     size: "lg",
@@ -733,7 +747,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
   };
   const intl2 = channelId(ignoredUserIds[11]).intl;
   obj11.text = intl2.string(channelId(ignoredUserIds[11]).t.I4q1kA);
-  const items3 = [closure_11(channelId(ignoredUserIds[29]).Button, obj11), ];
+  const items3 = [closure_10(channelId(ignoredUserIds[30]).Button, obj11), ];
   const obj12 = {
     size: "lg",
     variant: "secondary",
@@ -746,11 +760,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockedU
   };
   const intl3 = channelId(ignoredUserIds[11]).intl;
   obj12.text = intl3.string(channelId(ignoredUserIds[11]).t.DRJhmT);
-  items3[1] = closure_11(channelId(ignoredUserIds[29]).Button, obj12);
+  items3[1] = closure_10(channelId(ignoredUserIds[30]).Button, obj12);
   obj10.children = items3;
-  items1[3] = closure_13(closure_5, obj10);
+  items1[3] = closure_12(View, obj10);
   obj2.children = items1;
-  obj.children = closure_13(closure_5, obj2);
-  return closure_11(channelId(ignoredUserIds[25]).ActionSheet, obj);
+  obj.children = closure_12(View, obj2);
+  return closure_10(channelId(ignoredUserIds[25]).ActionSheet, obj);
 });
 export { getUserCalloutRowText };

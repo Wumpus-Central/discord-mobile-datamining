@@ -1,6 +1,6 @@
-// === Module 17074: useFrameLifecycle ===
+// === Module 17224: useFrameLifecycle ===
 
-// Module 17074 (useFrameLifecycle)
+// Module 17224 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -45,7 +45,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "Array" };
+        const obj8 = { state: obj.Loading, frame: "r" };
         obj10 = obj8;
       } else {
         if (null != data) {
@@ -67,7 +67,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(10613);
+const FramesConstants = fn(10767);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const ReactCompilerGating = fn(558);

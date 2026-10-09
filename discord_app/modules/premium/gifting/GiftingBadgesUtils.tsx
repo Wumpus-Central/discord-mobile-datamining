@@ -1,20 +1,20 @@
-// === Module 10085: GiftingBadgesUtils ===
+// === Module 10070: GiftingBadgesUtils ===
 
-// Module 10085 (GiftingBadgesUtils)
+// Module 10070 (GiftingBadgesUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef2661 from "module_2661" /* 2661 */;
-import BadgeId from "BadgeId" /* 8284 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
-import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10081 */;
-import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10086 */;
-import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10087 */;
+import BadgeId from "BadgeId" /* 8292 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8305 */;
+import GiftingBadgeExperiment2 from "GiftingBadgeExperiment" /* 10066 */;
+import GiftingBadgeDesktopExperiment2 from "GiftingBadgeDesktopExperiment" /* 10071 */;
+import GiftingBadgeComplexArtExperiment2 from "GiftingBadgeComplexArtExperiment" /* 10072 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
-import UserStore from "UserStore" /* 1389 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8300 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-let closure_5 = fn(8292).getSingleRequirementThreshold;
+let closure_5 = fn(8300).getSingleRequirementThreshold;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGiftingBadgesDesktopEnabled(location) {
@@ -152,7 +152,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   } else {
     tmp5 = cResult[1];
   }
-  const GiftingBadgeExperiment = tmp(10081).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp(10066).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig(tmp5).enabled;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
@@ -168,7 +168,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   } else {
     tmp8 = cResult[3];
   }
-  const GiftingBadgeDesktopExperiment = tmp(10086).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = tmp(10071).GiftingBadgeDesktopExperiment;
   let enabled3 = GiftingBadgeDesktopExperiment.useConfig(tmp8).enabled;
   let tmp9 = enabled2;
   if ("web" === platform.platform) {
@@ -189,7 +189,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   } else {
     tmp11 = cResult[5];
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10088).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10073).GiftingBadgeCoachmarkAudienceExperiment;
   const enabled4 = GiftingBadgeCoachmarkAudienceExperiment.useConfig(tmp11).enabled;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -217,7 +217,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   let obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp12, tmp13);
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(4898).useIsDismissibleContentDismissed_UNSAFE(tmp(2048).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const result = stateFromStores(4899).useIsDismissibleContentDismissed_UNSAFE(tmp(2049).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [BadgeDirectoryStore];
     class A {
@@ -241,7 +241,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
     tmp17 = cResult[8];
     tmp18 = cResult[9];
   }
-  const tmpResult3 = stateFromStores(4898);
+  const tmpResult3 = stateFromStores(4899);
   const stateFromStores1 = stateFromStores(504).useStateFromStores(tmp18, tmp17);
   if (tmp9) {
     tmp9 = !result;
@@ -336,9 +336,9 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
   }
   let stateFromStores;
   closure_1 = undefined;
-  const GiftingBadgeExperiment = stateFromStores(10081).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = stateFromStores(10066).GiftingBadgeExperiment;
   const enabled2 = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = stateFromStores(10086).GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = stateFromStores(10071).GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   let str2 = "-DISABLED";
   if ("web" === platform.platform) {
@@ -352,7 +352,7 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
     }
     tmp4 = enabled3;
   }
-  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10088).GiftingBadgeCoachmarkAudienceExperiment;
+  const GiftingBadgeCoachmarkAudienceExperiment = tmp(10073).GiftingBadgeCoachmarkAudienceExperiment;
   if (tmp4) {
     str = "";
   }
@@ -372,8 +372,8 @@ export const useGiftingBadgeCoachmarkVariant = ReactCompilerGating.isReactCompil
     return flag;
   });
   const tmpResult = stateFromStores(504);
-  const result = stateFromStores(4898).useIsDismissibleContentDismissed_UNSAFE(tmp(2048).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
-  const tmpResult3 = stateFromStores(4898);
+  const result = stateFromStores(4899).useIsDismissibleContentDismissed_UNSAFE(tmp(2049).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK);
+  const tmpResult3 = stateFromStores(4899);
   const items1 = [BadgeDirectoryStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => badgeById.getBadgeById(stateFromStores(dependencyMap[14]).BadgeId.GIFTING));
   if (tmp4) {

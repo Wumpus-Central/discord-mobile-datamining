@@ -1,26 +1,26 @@
-// === Module 6277: ConfirmEmailChangeStart ===
+// === Module 6284: ConfirmEmailChangeStart ===
 
-// Module 6277 (ConfirmEmailChangeStart)
-import Text_Text from "Text/Text" /* 5086 */;
+// Module 6284 (ConfirmEmailChangeStart)
+import Text_Text from "Text/Text" /* 5087 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
-let closure_12 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(5091);
+let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
 
 export default function ConfirmEmailChangeStart() {
-  const tmp = closure_12();
+  const tmp = closure_11();
   _require = tmp;
   const navigation = require("useNavigation").useNavigation();
   let obj = require("useNavigation");
@@ -36,24 +36,26 @@ export default function ConfirmEmailChangeStart() {
     let obj3 = { oldEmail: stateFromStores.email };
     let obj4 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj5 = { style: tmp.container, children: null };
-    let obj6 = { style: tmp.image, source: navigation(6279) };
-    const items1 = [closure_10(closure_7, obj6), , , ];
+    let obj6 = { style: tmp.image, source: null };
+    const formatResult = intl.format(tmp2(1126).t.oMFSgi, obj3);
+    obj6.source = navigation(6286);
+    const items1 = [closure_9(navigation(6163), obj6), , , ];
     let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1126).intl;
     obj7.children = intl2.string(tmp2(1126).t.dQ71Wa);
-    items1[1] = closure_10(tmp2(5086).Text, obj7);
-    items1[2] = intl.format(tmp2(1126).t.oMFSgi, obj3).map((children, index) => collapsed(Text_Text.Text, { style: body.body, variant: "text-sm/medium", color: "text-default", children }, index));
+    items1[1] = closure_9(tmp2(5087).Text, obj7);
+    items1[2] = formatResult.map((children, index) => options(Text_Text.Text, { style: body.body, variant: "text-sm/medium", color: "text-default", children }, index));
     let obj8 = { style: tmp.button, children: null };
     const obj9 = { text: null, onPress: null, loading: null, grow: true };
     const intl3 = tmp2(1126).intl;
     obj9.text = intl3.string(tmp2(1126).t.rXV81H);
     obj9.onPress = tmp7;
     obj9.loading = tmp6[0];
-    obj8.children = closure_10(tmp2(5375).Button, obj9);
-    items1[3] = closure_10(closure_6, obj8);
+    obj8.children = closure_9(tmp2(5376).Button, obj9);
+    items1[3] = closure_9(closure_6, obj8);
     obj5.children = items1;
-    obj4.children = closure_11(closure_6, obj5);
-    return closure_10(closure_8, obj4);
+    obj4.children = closure_10(closure_6, obj5);
+    return closure_9(closure_7, obj4);
   }
   let obj2 = require("initialize");
 };

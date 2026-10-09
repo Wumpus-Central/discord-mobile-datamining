@@ -1,10 +1,10 @@
-// === Module 8815: SecureFramesStreamVerificationBottomSheet ===
+// === Module 8824: SecureFramesStreamVerificationBottomSheet ===
 
-// Module 8815 (SecureFramesStreamVerificationBottomSheet)
-import showShareActionSheet from "showShareActionSheet" /* 8457 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 8803 */;
+// Module 8824 (SecureFramesStreamVerificationBottomSheet)
+import showShareActionSheet from "showShareActionSheet" /* 8465 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 8812 */;
 import noop from "module_19" /* 19 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7423 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
 
 require = fn;
 const AnalyticsSections = fn(1085).AnalyticsSections;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     const intl = tmp(1126).intl;
     const stringResult1 = intl.string(tmp(1126).t.qODBkW);
     const intl2 = tmp(1126).intl;
-    let obj2 = { helpArticle: tmp(8800).getSecureFramesHelpdeskArticle() };
+    let obj2 = { helpArticle: tmp(8809).getSecureFramesHelpdeskArticle() };
     const formatResult = intl2.format(tmp(1126).t["H3+ktv"], obj2);
     cResult[5] = stringResult;
     cResult[6] = stringResult1;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     let tmp11 = formatResult;
     let tmp10 = stringResult1;
     const tmp9 = stringResult;
-    const tmpResult2 = tmp(8800);
+    const tmpResult2 = tmp(8809);
   } else {
     class E {
       constructor(arg0) {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     }
     return tmp15;
   }
-  tmp15 = jsx(streamKey(8816), { title: tmp9, subtitle: tmp10, footer: tmp11, epochAuthenticator: stateFromStores, onShareClick: E });
+  tmp15 = jsx(streamKey(8825), { title: tmp9, subtitle: tmp10, footer: tmp11, epochAuthenticator: stateFromStores, onShareClick: E });
   cResult[8] = stateFromStores;
   cResult[9] = E;
   cResult[10] = tmp15;
@@ -153,8 +153,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   obj2.subtitle = intl2.string(channelId(1126).t.qODBkW);
   const intl3 = channelId(1126).intl;
   const obj3 = { helpArticle: null };
-  const tmp3 = streamKey(8816);
-  obj3.helpArticle = channelId(8800).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(8825);
+  obj3.helpArticle = channelId(8809).getSecureFramesHelpdeskArticle();
   obj2.footer = intl3.format(channelId(1126).t["H3+ktv"], obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;

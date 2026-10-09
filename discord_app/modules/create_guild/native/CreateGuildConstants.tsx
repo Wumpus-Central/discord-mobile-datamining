@@ -1,6 +1,6 @@
-// === Module 6653: CreateGuildConstants ===
+// === Module 6660: CreateGuildConstants ===
 
-// Module 6653 (CreateGuildConstants)
+// Module 6660 (CreateGuildConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildConstants.tsx");

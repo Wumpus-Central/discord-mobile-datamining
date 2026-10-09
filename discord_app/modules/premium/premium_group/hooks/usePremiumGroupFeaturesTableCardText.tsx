@@ -1,17 +1,17 @@
-// === Module 13610: usePremiumGroupFeaturesTableCardText ===
+// === Module 13701: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13610 (usePremiumGroupFeaturesTableCardText)
+// Module 13701 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import user from "user" /* 1397 */;
+import user from "user" /* 1398 */;
 import _modDef3277 from "module_3277" /* 3277 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8052 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13611 */;
-import SubscriptionStore from "SubscriptionStore" /* 4732 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8060 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13702 */;
+import SubscriptionStore from "SubscriptionStore" /* 4734 */;
 
 require = fn;
-const PremiumGroupConstants = fn(4740);
+const PremiumGroupConstants = fn(4742);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

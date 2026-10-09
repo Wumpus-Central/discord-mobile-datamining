@@ -1,10 +1,10 @@
-// === Module 12965: useShopThisLookMarketing ===
+// === Module 13045: useShopThisLookMarketing ===
 
-// Module 12965 (useShopThisLookMarketing)
+// Module 13045 (useShopThisLookMarketing)
 import c from "c" /* 576 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7090 */;
-import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8317 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7093 */;
+import useMaybeFetchEquippedCollectibleProducts from "useMaybeFetchEquippedCollectibleProducts" /* 8325 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -13,23 +13,31 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = ReactCompilerGating.isReactCompilerEnabled() ? (function useShopThisLookMarketing(arg0, arg1, arg2) {
-  const cResult = c.c(6);
+  const cResult = c.c(7);
   let num = 0;
   const tmp4 = useMaybeFetchEquippedCollectibleProducts.useEquippedCollectibleSkuIds(arg0, arg1).length > 0;
   if (cResult[0] === tmp4) {
     if (cResult[1] === arg2) {
-      const tmp7 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(cResult[2], undefined, true), 2);
-      if (cResult[3] === tmp7[1]) {
-        if (cResult[4] === tmp10) {
-          let tmp11 = cResult[5];
-        }
-        return tmp11;
+      const _Symbol = Symbol;
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj3 = { bypassAutoDismiss: true };
+        cResult[3] = obj3;
+        let tmp7 = obj3;
+      } else {
+        tmp7 = cResult[3];
       }
-      const obj3 = { isVisible: null != tmp7[0], markAsDismissed: tmp7[1] };
-      cResult[3] = tmp7[1];
-      cResult[4] = null != tmp7[0];
-      cResult[5] = obj3;
-      tmp11 = obj3;
+      const tmp9 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(cResult[2], tmp7), 2);
+      if (cResult[4] === tmp9[1]) {
+        if (cResult[5] === tmp12) {
+          let tmp13 = cResult[6];
+        }
+        return tmp13;
+      }
+      const obj4 = { isVisible: null != tmp9[0], markAsDismissed: tmp9[1] };
+      cResult[4] = tmp9[1];
+      cResult[5] = null != tmp9[0];
+      cResult[6] = obj4;
+      tmp13 = obj4;
       const tmpResult = useSelectedDismissibleContent;
     }
   }
@@ -48,7 +56,7 @@ export const useShopThisLookMarketing = ReactCompilerGating.isReactCompilerEnabl
     if (tmp3) {
       const items = [dismissible_content.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
     }
-    const tmp8 = _slicedToArray(tmp5([], undefined, true), 2);
+    const tmp8 = _slicedToArray(tmp5([], { bypassAutoDismiss: true }), 2);
     const obj2 = { isVisible: null != tmp8[0], markAsDismissed: tmp8[1] };
     return obj2;
   }

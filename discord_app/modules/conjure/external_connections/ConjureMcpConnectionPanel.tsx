@@ -1,6 +1,6 @@
-// === Module 16919: ConjureMcpConnectionPanel ===
+// === Module 17047: ConjureMcpConnectionPanel ===
 
-// Module 16919 (ConjureMcpConnectionPanel)
+// Module 17047 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const fetchProjectMcpConnection = fn(13072).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(13164).fetchProjectMcpConnection;
 let closure_6 = {
   setTimeout(arg0, arg1) {
     return setTimeout(arg0, arg1);

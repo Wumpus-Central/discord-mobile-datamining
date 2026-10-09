@@ -1,23 +1,23 @@
-// === Module 9162: TwoWayLinkError ===
+// === Module 12866: TwoWayLinkError ===
 
-// Module 9162 (TwoWayLinkError)
+// Module 12866 (TwoWayLinkError)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9120 */;
-import _modDef9163 from "module_9163" /* 9163 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6810 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9187 */;
+import _modDef12867 from "module_12867" /* 12867 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
-let closure_7 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5091);
+let closure_6 = createStyles.createStyles({ image: { width: 254, height: 127, marginBottom: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkError.tsx");
@@ -25,11 +25,11 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (function TwoWayLinkError(arg0) {
   const cResult = c.c(30);
   ({ onClose, title, body, onRetry } = arg0);
-  const tmp4 = closure_7();
+  const tmp4 = closure_6();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   if (cResult[0] !== tmp4.image) {
-    const obj3 = { source: _modDef9163, style: tmp4.image };
-    const tmp10 = hasOwnProperty(React3, obj3);
+    const obj3 = { source: _modDef12867, style: tmp4.image };
+    const tmp10 = React4(FastImageDefault, obj3);
     cResult[0] = tmp4.image;
     cResult[1] = tmp10;
     let tmp6 = tmp10;
@@ -62,7 +62,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
             }
             if (cResult[14] !== onRetry) {
               const obj4 = { size: "lg", variant: "primary", text: tmp21, onPress: onRetry };
-              const tmp25 = hasOwnProperty(components_Button_Button.Button, obj4);
+              const tmp25 = React4(components_Button_Button.Button, obj4);
               cResult[14] = onRetry;
               cResult[15] = tmp25;
               let tmp23 = tmp25;
@@ -80,7 +80,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
             }
             if (cResult[17] !== onClose) {
               const obj5 = { size: "lg", variant: "secondary", text: tmp26, onPress: onClose };
-              const tmp30 = hasOwnProperty(components_Button_Button.Button, obj5);
+              const tmp30 = React4(components_Button_Button.Button, obj5);
               cResult[17] = onClose;
               cResult[18] = tmp30;
               let tmp28 = tmp30;
@@ -107,7 +107,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
                   const obj6 = { style: twoWayLinkStyles.container, children: null };
                   const items = [tmp16, tmp34];
                   obj6.children = items;
-                  const tmp40 = timestampProducer(React4, obj6);
+                  const tmp40 = hasOwnProperty(View, obj6);
                   cResult[26] = twoWayLinkStyles.container;
                   cResult[27] = tmp34;
                   cResult[28] = tmp16;
@@ -115,7 +115,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
                   tmp37 = tmp40;
                 }
                 const obj7 = { bottom: true, style: footerContainer, children: tmp31 };
-                const tmp36 = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj7);
+                const tmp36 = React4(common_SafeAreaView.SafeAreaPaddingView, obj7);
                 cResult[23] = twoWayLinkStyles.footerContainer;
                 cResult[24] = tmp31;
                 cResult[25] = tmp36;
@@ -125,7 +125,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
             const obj8 = { spacing: 8, direction: "vertical", style: footerButton, children: null };
             const items1 = [tmp23, tmp28];
             obj8.children = items1;
-            const tmp33 = timestampProducer(Stack_Stack.Stack, obj8);
+            const tmp33 = hasOwnProperty(Stack_Stack.Stack, obj8);
             cResult[19] = twoWayLinkStyles.footerButton;
             cResult[20] = tmp28;
             cResult[21] = tmp23;
@@ -137,7 +137,7 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
       const obj9 = { style: twoWayLinkStyles.content, children: null };
       const items2 = [tmp6, tmp11, tmp13];
       obj9.children = items2;
-      const tmp19 = timestampProducer(React4, obj9);
+      const tmp19 = hasOwnProperty(View, obj9);
       cResult[8] = twoWayLinkStyles.content;
       cResult[9] = tmp6;
       cResult[10] = tmp11;
@@ -146,13 +146,13 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
       tmp16 = tmp19;
     }
     const obj10 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body };
-    const tmp15 = hasOwnProperty(Text_Text.Text, obj10);
+    const tmp15 = React4(Text_Text.Text, obj10);
     cResult[5] = body;
     cResult[6] = twoWayLinkStyles.body;
     cResult[7] = tmp15;
     tmp13 = tmp15;
   }
-  const tmp12 = hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title });
+  const tmp12 = React4(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title });
   cResult[2] = twoWayLinkStyles.title;
   cResult[3] = title;
   cResult[4] = tmp12;
@@ -160,28 +160,31 @@ export const TwoWayLinkError = ReactCompilerGating.isReactCompilerEnabled() ? (f
   const obj11 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title };
 }) : (function TwoWayLinkError(arg0) {
   ({ onClose, title, body, onRetry } = arg0);
-  const tmp = closure_7();
+  const tmp = closure_6();
   const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
   const obj2 = { style: twoWayLinkStyles.container, children: null };
   const obj3 = { style: twoWayLinkStyles.content, children: null };
-  const items = [hasOwnProperty(React3, { source: _modDef9163, style: tmp.image }), hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
+  const obj4 = { source: null, style: null };
+  obj4.source = _modDef12867;
+  obj4.style = tmp.image;
+  const items = [React4(FastImageDefault, obj4), React4(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), React4(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj3.children = items;
-  const items1 = [timestampProducer(React4, obj3), ];
+  const items1 = [hasOwnProperty(View, obj3), ];
   const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj8 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
   const obj9 = { size: "lg", variant: "primary", text: null, onPress: null };
   const intl = util.intl;
   obj9.text = intl.string(util.t["5911Lb"]);
   obj9.onPress = onRetry;
-  const items2 = [hasOwnProperty(components_Button_Button.Button, obj9), ];
+  const items2 = [React4(components_Button_Button.Button, obj9), ];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
   const intl2 = util.intl;
   obj10.text = intl2.string(util.t["ETE/oC"]);
   obj10.onPress = onClose;
-  items2[1] = hasOwnProperty(components_Button_Button.Button, obj10);
+  items2[1] = React4(components_Button_Button.Button, obj10);
   obj8.children = items2;
-  obj7.children = timestampProducer(Stack_Stack.Stack, obj8);
-  items1[1] = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj7);
+  obj7.children = hasOwnProperty(Stack_Stack.Stack, obj8);
+  items1[1] = React4(common_SafeAreaView.SafeAreaPaddingView, obj7);
   obj2.children = items1;
-  return timestampProducer(React4, obj2);
+  return hasOwnProperty(View, obj2);
 });

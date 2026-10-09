@@ -1,10 +1,10 @@
-// === Module 6296: useKeyboardIsOpen ===
+// === Module 6303: useKeyboardIsOpen ===
 
-// Module 6296 (useKeyboardIsOpen)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1500 */;
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
+// Module 6303 (useKeyboardIsOpen)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1500 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1501 */;
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;
 
 const require = globalThis.__r;
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeybo
     if (cResult[1] === tmp5) {
       let tmp7 = cResult[2];
     }
-    return appEntryKey(1500)(tmp7);
+    return appEntryKey(1501)(tmp7);
   }
   const fn = function o(arg0) {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useKeybo
   if (flag === undefined) {
     flag = false;
   }
-  importDefault = flag(1499).useAppEntryKey();
+  importDefault = flag(1500).useAppEntryKey();
   return KeyboardUIStoreDefault((arg0) => {
     const systemKeyboardOpen = tmp.systemKeyboardOpen;
     if (flag) {

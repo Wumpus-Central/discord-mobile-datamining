@@ -1,19 +1,19 @@
-// === Module 10739: BaseEmbeddedAppWebView ===
+// === Module 10912: BaseEmbeddedAppWebView ===
 
-// Module 10739 (BaseEmbeddedAppWebView)
+// Module 10912 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import URLUtilsDefault from "URLUtils" /* 1383 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
-import usePreviousDefault from "usePrevious" /* 5928 */;
-import WebView from "WebView" /* 7511 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 10746 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import URLUtilsDefault from "URLUtils" /* 1384 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
+import usePreviousDefault from "usePrevious" /* 5929 */;
+import WebView from "WebView" /* 7518 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 10891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9031 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9046 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -38,12 +38,12 @@ function getSafeArea(arg0, arg1) {
 }
 const Linking = fn(17).Linking;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_10 = fn(2023).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+let closure_10 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_13 = new LoggerDefault("BaseEmbeddedAppWebView");
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let closure_14 = PlatformUtils.isIOS();
 let c15 = "discord-webview-shell";
 fn(558);
@@ -652,7 +652,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                     c7 = 1;
                                                                     c8 = 2;
                                                                     c9 = 1;
-                                                                    const obj6 = { value: closure_1_15.injectJavaScript(applicationId(10746)(obj4)), done: false };
+                                                                    const obj6 = { value: closure_1_15.injectJavaScript(applicationId(10891)(obj4)), done: false };
                                                                     return obj6;
                                                                   }
                                                                 }
@@ -660,7 +660,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                 if (1 === tmp8) {
                                                                   c7 = 0;
                                                                   if (null != ref.current) {
-                                                                    closure_1_28(applicationId(10746)(closure_132_0));
+                                                                    closure_1_28(applicationId(10891)(closure_132_0));
                                                                   }
                                                                 } else if (arg0 === 1) {
                                                                   c9 = 3;
@@ -1606,7 +1606,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                       c7 = 1;
                       c8 = 2;
                       c9 = 1;
-                      const obj6 = { value: memo.injectJavaScript(applicationId(10746)(obj4)), done: false };
+                      const obj6 = { value: memo.injectJavaScript(applicationId(10891)(obj4)), done: false };
                       return obj6;
                     }
                   }
@@ -1614,7 +1614,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                   if (1 === tmp8) {
                     c7 = 0;
                     if (null != ref.current) {
-                      callback4(applicationId(10746)(closure_132_0));
+                      callback4(applicationId(10891)(closure_132_0));
                     }
                   } else if (arg0 === 1) {
                     c9 = 3;

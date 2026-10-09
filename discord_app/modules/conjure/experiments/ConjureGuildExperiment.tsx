@@ -1,6 +1,6 @@
-// === Module 6934: ConjureGuildExperiment ===
+// === Module 6941: ConjureGuildExperiment ===
 
-// Module 6934 (ConjureGuildExperiment)
+// Module 6941 (ConjureGuildExperiment)
 import c from "c" /* 576 */;
 import GuildStore from "GuildStore" /* 2086 */;
 
@@ -29,7 +29,7 @@ function hasConjureGuild(arg0, location) {
   return false;
 }
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -68,7 +68,7 @@ export const useHasConjureGuild = ReactCompilerGating.isReactCompilerEnabled() ?
   _require = arg0;
   const cResult = require("c").c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [GuildStore, tmp(1452).ApexExperimentStore];
+    const items = [GuildStore, tmp(1453).ApexExperimentStore];
     cResult[0] = items;
     let first = items;
   } else {

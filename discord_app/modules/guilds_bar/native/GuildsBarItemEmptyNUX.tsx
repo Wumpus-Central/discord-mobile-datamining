@@ -1,26 +1,26 @@
-// === Module 16592: GuildsBarItemEmptyNUX ===
+// === Module 16715: GuildsBarItemEmptyNUX ===
 
-// Module 16592 (GuildsBarItemEmptyNUX)
+// Module 16715 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5374 */;
-import transitionToGuild from "transitionToGuild" /* 7043 */;
+import spring from "spring" /* 5375 */;
+import transitionToGuild from "transitionToGuild" /* 7046 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
 
 require = fn;
 function handlePress() {
   transitionToGuild.transitionToGuild(EMPTY_NUX_SERVER);
 }
 get_ActivityIndicator = fn(17);
-({ Pressable: closure_4, Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16522);
-({ GUILD_ITEM_HIT_SLOP: closure_8, useGuildWrapperSize: closure_9 } = GuildsBarConstants);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const GuildsBarConstants = fn(16645);
+({ GUILD_ITEM_HIT_SLOP: closure_7, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1085).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11182).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(10602).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
-let closure_14 = createStyles.createStyles((width, arg1) => {
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5091);
+let closure_13 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = { root: { alignSelf: "stretch", paddingLeft: hitSlop.left, marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING }, container: { position: "relative", flexDirection: "row", alignItems: "center", height: 55, width }, guildIndicator: null, icon: null, backdrop: null, expandedChildren: null };
   const rect = { position: "absolute", left: -hitSlop.left, top: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN };
@@ -42,10 +42,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = stateFromStores(token1[11]).c(36);
   let obj = stateFromStores(token1[11]);
   const token = stateFromStores(token1[12]).useToken(sharedValue(token1[8]).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmp6 = closure_14(token, closure_9());
+  const tmp6 = closure_13(token, closure_8());
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [SelectedGuildStore];
-    const fn = function u() {
+    const fn = function c() {
       return guildId.getGuildId() === EMPTY_NUX_SERVER;
     };
     cResult[0] = items;
@@ -60,7 +60,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmpResult = stateFromStores(token1[13]);
   sharedValue = stateFromStores(token1[14]).useSharedValue(false);
   if (cResult[2] !== sharedValue) {
-    const fn2 = function w() {
+    const fn2 = function v() {
       const result = sharedValue.set(true);
     };
     cResult[2] = sharedValue;
@@ -70,21 +70,28 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp12 = cResult[3];
   }
   if (cResult[4] !== sharedValue) {
-    const fn3 = function f() {
-      const result = sharedValue.set(false);
-    };
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
     cResult[4] = sharedValue;
-    cResult[5] = fn3;
-    let tmp13 = fn3;
+    cResult[5] = H;
   } else {
-    tmp13 = cResult[5];
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
   }
   const tmpResult5 = stateFromStores(token1[14]);
   token1 = stateFromStores(token1[12]).useToken(tmp4(tmp2[8]).colors.BACKGROUND_SURFACE_HIGH);
   const tmpResult6 = stateFromStores(token1[12]);
   const token2 = stateFromStores(token1[12]).useToken(tmp4(tmp2[8]).colors.BACKGROUND_BRAND);
   const tmpResult7 = stateFromStores(token1[12]);
-  class A {
+  class P {
     constructor() {
       obj = closure_0(closure_2[15]);
       obj1 = { backgroundColor: obj.withSpring(closure_0 ? closure_3 : closure_2, MODE_CHANGE_PHYSICS, "animate-always") };
@@ -92,156 +99,163 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const tmpResult8 = stateFromStores(token1[14]);
-  A.__closure = { withSpring: stateFromStores(token1[15]).withSpring, selected: stateFromStores, activeColor: token2, inactiveColor: token1, MODE_CHANGE_PHYSICS };
-  A.__workletHash = 13334573793151;
-  A.__initData = __initData;
-  const animatedStyle = tmpResult8.useAnimatedStyle(A);
+  P.__closure = { withSpring: stateFromStores(token1[15]).withSpring, selected: stateFromStores, activeColor: token2, inactiveColor: token1, MODE_CHANGE_PHYSICS };
+  P.__workletHash = 13334573793151;
+  P.__initData = __initData;
+  const animatedStyle = tmpResult8.useAnimatedStyle(P);
   const enableHome = token2.useContext(tmp(tmp2[16]).HomeDrawerStateContext).enableHome;
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { onPress: handlePress };
-    cResult[6] = obj4;
-    let tmp17 = obj4;
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
+    tmp18[0] = handlePress;
+    cResult[6] = tmp18;
   } else {
-    tmp17 = cResult[6];
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
   }
-  const tmp19 = sharedValue(token1[17])(tmp17);
+  sharedValue(token1[17])(tmp18);
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(tmp2[18]).intl;
-    const stringResult = intl.string(tmp(tmp2[18]).t["3S2xmm"]);
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
+    const stringResult = obj9.string(tmp(tmp2[18]).t["3S2xmm"]);
     cResult[7] = stringResult;
-    let tmp20 = stringResult;
+    const tmp21 = stringResult;
   } else {
-    tmp20 = cResult[7];
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
   }
   if (cResult[8] !== stateFromStores) {
-    const obj5 = { selected: stateFromStores };
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
+    tmp24[0] = stateFromStores;
     cResult[8] = stateFromStores;
-    cResult[9] = obj5;
-    let tmp22 = obj5;
+    cResult[9] = tmp24;
   } else {
-    tmp22 = cResult[9];
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
+    }
   }
   if (cResult[10] === animatedStyle) {
-    if (cResult[11] === tmp6.backdrop) {
-      let tmp23 = cResult[12];
+    class H {
+      constructor() {
+        result = closure_1.set(false);
+        return;
+      }
     }
     if (cResult[13] !== tmp6.icon) {
-      const obj6 = { style: tmp6.icon, source: tmp4(tmp2[19]), resizeMode: "contain" };
-      const tmp28 = closure_12(closure_5, obj6);
+      class H {
+        constructor() {
+          result = closure_1.set(false);
+          return;
+        }
+      }
+      const obj4 = { style: tmp6.icon, source: tmp4(tmp2[20]), resizeMode: "contain" };
+      const tmp29 = closure_11(tmp4(tmp2[19]), obj4);
       cResult[13] = tmp6.icon;
-      cResult[14] = tmp28;
-      let tmp25 = tmp28;
+      cResult[14] = tmp29;
+      const tmp4Result = tmp4(tmp2[19]);
     } else {
-      tmp25 = cResult[14];
+      class H {
+        constructor() {
+          result = closure_1.set(false);
+          return;
+        }
+      }
     }
     if (cResult[15] !== (true === stateFromStores)) {
-      const obj7 = { selected: tmp29 };
-      const tmp32 = closure_12(tmp(tmp2[20]).UnreadIndicator, obj7);
-      cResult[15] = tmp29;
+      class H {
+        constructor() {
+          result = closure_1.set(false);
+          return;
+        }
+      }
+      const obj5 = { selected: tmp30 };
+      const tmp32 = closure_11(tmp(tmp2[21]).UnreadIndicator, obj5);
+      cResult[15] = tmp30;
       cResult[16] = tmp32;
-      let tmp30 = tmp32;
     } else {
-      tmp30 = cResult[16];
+      class H {
+        constructor() {
+          result = closure_1.set(false);
+          return;
+        }
+      }
     }
     if (cResult[17] === tmp6.guildIndicator) {
-      if (cResult[18] === tmp30) {
-        let tmp33 = cResult[19];
+      class H {
+        constructor() {
+          result = closure_1.set(false);
+          return;
+        }
       }
       if (cResult[20] === tmp12) {
-        if (cResult[21] === tmp13) {
-          if (cResult[22] === tmp6.container) {
-            if (cResult[23] === tmp33) {
-              if (cResult[24] === tmp22) {
-                if (cResult[25] === tmp23) {
-                  if (cResult[28] === enableHome) {
-                    if (cResult[29] === tmp19) {
-                      if (cResult[30] === tmp6.expandedChildren) {
-                        let tmp43 = cResult[31];
-                      }
-                      if (cResult[32] === tmp37) {
-                        if (cResult[33] === tmp6.root) {
-                          if (cResult[34] === tmp43) {
-                            let tmp50 = cResult[35];
-                          }
-                          return tmp50;
-                        }
-                      }
-                      const obj8 = { style: tmp6.root, children: null };
-                      const items1 = [tmp37, tmp43];
-                      obj8.children = items1;
-                      const tmp52 = closure_13(tmp4(tmp2[21]), obj8);
-                      cResult[32] = tmp37;
-                      cResult[33] = tmp6.root;
-                      cResult[34] = tmp43;
-                      cResult[35] = tmp52;
-                      tmp50 = tmp52;
-                    }
-                  }
-                  let tmp44 = null;
-                  if (enableHome) {
-                    const obj9 = {};
-                    const merged = Object.assign(tmp19);
-                    obj9.style = tmp6.expandedChildren;
-                    obj9.collapsable = false;
-                    const obj10 = { title: null };
-                    const obj11 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-                    const intl2 = tmp(tmp2[18]).intl;
-                    obj11.children = intl2.string(tmp(tmp2[18]).t["3S2xmm"]);
-                    obj10.title = closure_12(tmp(tmp2[23]).Text, obj11);
-                    obj9.children = closure_12(tmp(tmp2[22]).HomeDrawerSharedItem, obj10);
-                    tmp44 = closure_12(tmp4(tmp2[21]), obj9);
-                    const tmp4Result = tmp4(tmp2[21]);
-                  }
-                  cResult[28] = enableHome;
-                  cResult[29] = tmp19;
-                  cResult[30] = tmp6.expandedChildren;
-                  cResult[31] = tmp44;
-                  tmp43 = tmp44;
-                }
-              }
-            }
+        class H {
+          constructor() {
+            result = closure_1.set(false);
+            return;
           }
         }
       }
-      const obj12 = { style: tmp6.container, onPressIn: tmp12, onPressOut: tmp13, onPress: handlePress, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp20, accessibilityState: tmp22, hitSlop, children: null };
-      const items2 = [tmp23, tmp25, tmp33];
-      obj12.children = items2;
+      const obj6 = { style: tmp6.container, onPressIn: tmp12, onPressOut: H, onPress: handlePress, accessible: true, accessibilityRole: "button", accessibilityLabel: tmp21, accessibilityState: tmp24, hitSlop, children: null };
+      const items1 = [tmp25, tmp27, tmp33];
+      obj6.children = items1;
       cResult[20] = tmp12;
-      cResult[21] = tmp13;
+      cResult[21] = H;
       cResult[22] = tmp6.container;
       cResult[23] = tmp33;
-      cResult[24] = tmp22;
-      cResult[25] = tmp23;
-      cResult[26] = tmp25;
-      cResult[27] = closure_13(closure_4, obj12);
-      class A {
+      cResult[24] = tmp24;
+      cResult[25] = tmp25;
+      cResult[26] = tmp27;
+      cResult[27] = closure_12(closure_4, obj6);
+      class P {
         constructor() {
           obj = closure_0(closure_2[15]);
           obj1 = { backgroundColor: obj.withSpring(closure_0 ? closure_3 : closure_2, MODE_CHANGE_PHYSICS, "animate-always") };
           return obj1;
         }
       }
-      const tmp42 = closure_13(closure_4, obj12);
+      const tmp41 = closure_12(closure_4, obj6);
     }
-    const obj13 = { style: tmp6.guildIndicator, children: tmp30 };
-    const tmp36 = closure_12(closure_6, obj13);
+    const obj7 = { style: tmp6.guildIndicator, children: tmp31 };
+    const tmp36 = closure_11(closure_5, obj7);
     cResult[17] = tmp6.guildIndicator;
-    cResult[18] = tmp30;
+    cResult[18] = tmp31;
     cResult[19] = tmp36;
-    tmp33 = tmp36;
   }
-  const obj14 = { style: null };
-  const items3 = [tmp6.backdrop, animatedStyle];
-  obj14.style = items3;
-  const tmp24 = closure_12(sharedValue(token1[14]).View, obj14);
+  const obj8 = { style: null };
+  const items2 = [tmp6.backdrop, animatedStyle];
+  obj8.style = items2;
+  const tmp26 = closure_11(sharedValue(token1[14]).View, obj8);
   cResult[10] = animatedStyle;
   cResult[11] = tmp6.backdrop;
-  cResult[12] = tmp24;
-  tmp23 = tmp24;
+  cResult[12] = tmp26;
   const obj3 = { withSpring: stateFromStores(token1[15]).withSpring, selected: stateFromStores, activeColor: token2, inactiveColor: token1, MODE_CHANGE_PHYSICS };
 }) : (function GuildsBarEmptyNUX() {
   const token = stateFromStores(token1[12]).useToken(sharedValue(token1[8]).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  const tmp5 = closure_14(token, closure_9());
+  const tmp5 = closure_13(token, closure_8());
   let obj = stateFromStores(token1[12]);
   const tmp3 = sharedValue;
   const items = [SelectedGuildStore];
@@ -278,19 +292,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj10 = { style: null };
   const items3 = [tmp5.backdrop, animatedStyle];
   obj10.style = items3;
-  const items4 = [closure_12(sharedValue(token1[14]).View, obj10), , ];
+  const items4 = [closure_11(sharedValue(token1[14]).View, obj10), , ];
+  const obj11 = { style: tmp5.icon, source: null, resizeMode: "contain" };
   const obj7 = { withSpring: stateFromStores(token1[15]).withSpring, selected: stateFromStores, activeColor: token2, inactiveColor: token1, MODE_CHANGE_PHYSICS };
   const obj8 = { onPress: handlePress };
-  items4[1] = closure_12(closure_5, { style: tmp5.icon, source: sharedValue(token1[19]), resizeMode: "contain" });
-  const obj12 = { style: tmp5.guildIndicator, children: closure_12(stateFromStores(token1[20]).UnreadIndicator, { selected: true === stateFromStores }) };
-  items4[2] = closure_12(closure_6, obj12);
+  obj11.source = sharedValue(token1[20]);
+  items4[1] = closure_11(sharedValue(token1[19]), obj11);
+  const obj12 = { style: tmp5.guildIndicator, children: closure_11(stateFromStores(token1[21]).UnreadIndicator, { selected: true === stateFromStores }) };
+  items4[2] = closure_11(closure_5, obj12);
   obj9.children = items4;
-  const obj11 = { style: tmp5.icon, source: sharedValue(token1[19]), resizeMode: "contain" };
   const obj13 = { selected: true === stateFromStores };
+  const tmp16 = sharedValue(token1[19]);
   const obj14 = { style: tmp5.root, children: null };
-  const items5 = [closure_13(closure_4, obj9), ];
+  const items5 = [closure_12(closure_4, obj9), ];
   let tmp15Result = null;
-  const tmp16 = closure_13(closure_4, obj9);
+  const tmp17 = closure_12(closure_4, obj9);
   if (token2.useContext(stateFromStores(token1[16]).HomeDrawerStateContext).enableHome) {
     const obj15 = {};
     const merged = Object.assign(tmp13);
@@ -300,12 +316,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj17 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
     const intl2 = tmp(tmp2[18]).intl;
     obj17.children = intl2.string(tmp(tmp2[18]).t["3S2xmm"]);
-    obj16.title = closure_12(tmp(tmp2[23]).Text, obj17);
-    obj15.children = closure_12(tmp(tmp2[22]).HomeDrawerSharedItem, obj16);
-    tmp15Result = closure_12(tmp3(tmp2[21]), obj15);
-    const tmp3Result = tmp3(tmp2[21]);
+    obj16.title = closure_11(tmp(tmp2[24]).Text, obj17);
+    obj15.children = closure_11(tmp(tmp2[23]).HomeDrawerSharedItem, obj16);
+    tmp15Result = closure_11(tmp3(tmp2[22]), obj15);
+    const tmp3Result = tmp3(tmp2[22]);
   }
   items5[1] = tmp15Result;
   obj14.children = items5;
-  return closure_13(sharedValue(token1[21]), obj14);
+  return closure_12(sharedValue(token1[22]), obj14);
 }));

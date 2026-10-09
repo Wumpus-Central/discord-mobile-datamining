@@ -1,11 +1,11 @@
-// === Module 18260: FormImagePicker ===
+// === Module 18422: FormImagePicker ===
 
-// Module 18260 (FormImagePicker)
+// Module 18422 (FormImagePicker)
 import nativeDefault from "native" /* 587 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 7013 */;
-import utils_UploadUtilsDefault from "utils/UploadUtils" /* 7741 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1450 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import utils_UploadUtilsDefault from "utils/UploadUtils" /* 7750 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8660 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -188,7 +188,7 @@ let closure_3 = ["description", "imageUploadSize", "image", "setImage", "disable
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: { borderRadius: nativeDefault.radii.sm }, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
 let obj3 = { borderRadius: nativeDefault.radii.sm };
 obj2.imageContainerEmpty = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormImag
           }
         }
         obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-        const tmp24 = closure_8(tmp(5375).Button, obj5);
+        const tmp24 = closure_8(tmp(5376).Button, obj5);
         cResult[15] = tmp15;
         cResult[16] = tmp5;
         cResult[17] = tmp14;
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormImag
         tmp22 = tmp24;
       }
       const obj6 = { style: tmp13.imageDescription, variant: "text-sm/medium", color: "text-default", children: tmp4 };
-      const tmp21 = closure_8(tmp(5086).Text, obj6);
+      const tmp21 = closure_8(tmp(5087).Text, obj6);
       cResult[12] = tmp4;
       cResult[13] = tmp13.imageDescription;
       cResult[14] = tmp21;
@@ -358,8 +358,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormImag
   const obj = { style: tmp2.imageSelectionRow, children: null };
   const obj2 = { style: tmp2.buttonColumn, children: null };
   const items = [
-    closure_8(tmp6(5086).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
-    closure_8(tmp6(5375).Button, {
+    closure_8(tmp6(5087).Text, { style: tmp2.imageDescription, variant: "text-sm/medium", color: "text-default", children: children.description }),
+    closure_8(tmp6(5376).Button, {
       text: stringResult,
       variant: "secondary",
       onPress: function handleSelectImage() {

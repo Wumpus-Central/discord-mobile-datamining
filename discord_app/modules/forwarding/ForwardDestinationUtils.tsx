@@ -1,22 +1,22 @@
-// === Module 11579: ForwardDestinationUtils ===
+// === Module 11512: ForwardDestinationUtils ===
 
-// Module 11579 (ForwardDestinationUtils)
+// Module 11512 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import StickersUtils from "StickersUtils" /* 5745 */;
-import SlowmodeUtils from "SlowmodeUtils" /* 7364 */;
-import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11580 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import StickersUtils from "StickersUtils" /* 5746 */;
+import SlowmodeUtils from "SlowmodeUtils" /* 7369 */;
+import ForwardAgeRestrictedDestinationsExperimentDefault from "ForwardAgeRestrictedDestinationsExperiment" /* 11513 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6035 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import StickersStore from "StickersStore" /* 6037 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ ChannelRecordBase: hasOwnProperty, isGuildChannelType: metroRequire, createChannelRecord: closure_7 } = ChannelRecord);
 const Constants = fn(1085);
 ({ MessageFlags: closure_12, Permissions: map1 } = Constants);
@@ -25,8 +25,8 @@ let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedDestinationChannel(arr) {
   const cResult = require("c").c(8);
   if (cResult[0] !== arr) {
-    const mapped = arr.map(tmp(11577).getChannelIdFromDestinationId);
-    const found = mapped.find(tmp(1387).isNotNullish);
+    const mapped = arr.map(tmp(11510).getChannelIdFromDestinationId);
+    const found = mapped.find(tmp(1388).isNotNullish);
     cResult[0] = arr;
     cResult[1] = found;
     let tmp4 = found;
@@ -71,8 +71,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedD
   }
   return tmp11;
 }) : (function useSelectedDestinationChannel(arr) {
-  const mapped = arr.map(found(11577).getChannelIdFromDestinationId);
-  found = mapped.find(found(1387).isNotNullish);
+  const mapped = arr.map(found(11510).getChannelIdFromDestinationId);
+  found = mapped.find(found(1388).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
   const stateFromStores = found(504).useStateFromStores(items, () => ChannelStore.getChannel(found), items1);
@@ -107,8 +107,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
           if (null != user) {
             nickname = nickname.getNickname(user.id);
             if (nickname == null) {
-              nickname = closure_1_1(4922).getName(user);
-              const obj2 = closure_1_1(4922);
+              nickname = closure_1_1(4923).getName(user);
+              const obj2 = closure_1_1(4923);
             }
             tmp13 = nickname;
           }
@@ -117,7 +117,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
           channel = channel.getChannel(id);
           let channelName = null;
           if (null != channel) {
-            const obj = closure_1_0(5417);
+            const obj = closure_1_0(5418);
             channelName = obj.computeChannelName(channel, user, nickname, true);
           }
           return channelName;
@@ -150,8 +150,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
         if (null != user) {
           nickname = nickname.getNickname(user.id);
           if (nickname == null) {
-            nickname = closure_1_1(4922).getName(user);
-            const obj2 = closure_1_1(4922);
+            nickname = closure_1_1(4923).getName(user);
+            const obj2 = closure_1_1(4923);
           }
           tmp13 = nickname;
         }
@@ -160,7 +160,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelecte
         channel = channel.getChannel(id);
         let channelName = null;
         if (null != channel) {
-          const obj = closure_1_0(5417);
+          const obj = closure_1_0(5418);
           channelName = obj.computeChannelName(channel, user, nickname, true);
         }
         return channelName;
@@ -208,7 +208,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
     if (null != channel) {
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp2) {
-          tmp12(5930);
+          tmp12(5931);
         }
         const obj2 = { label: null, lineClamp: 2 };
         const intl = tmp12(1126).intl;
@@ -224,10 +224,10 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           if (currentUser != null) {
             nsfwAllowed = currentUser.nsfwAllowed;
           }
-          let result = tmp12(5905).shouldShowTiggerPawtect();
+          let result = tmp12(5906).shouldShowTiggerPawtect();
           if (result) {
-            result = tmp12(5918).isFeatureAgeGated(tmp12(5917).AgeGatedFeature.AGE_GATED_SPACES);
-            const tmp12Result10 = tmp12(5918);
+            result = tmp12(5919).isFeatureAgeGated(tmp12(5918).AgeGatedFeature.AGE_GATED_SPACES);
+            const tmp12Result10 = tmp12(5919);
           }
           let tmp19 = !tmp18;
           if (false !== nsfwAllowed) {
@@ -238,9 +238,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
             disableAgeRestrictedDestinations = ForwardAgeRestrictedDestinationsExperimentDefault.getConfig({ location: "getDestinationIsUnavailable" }).disableAgeRestrictedDestinations;
           }
           flag2 = disableAgeRestrictedDestinations;
-          const tmp12Result9 = tmp12(5905);
+          const tmp12Result9 = tmp12(5906);
         }
-        tmp12Result8 = tmp12(5930);
+        tmp12Result8 = tmp12(5931);
       }
       if (flag2) {
         const obj3 = { label: null, lineClamp: 2 };
@@ -267,9 +267,9 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj5.label = intl3.string(tmp12(1126).t.Wr4RIX);
                 return obj5;
               }
-              tmp12Result12 = tmp12(5743);
+              tmp12Result12 = tmp12(5744);
             }
-            tmp12Result11 = tmp12(5743);
+            tmp12Result11 = tmp12(5744);
           } else {
             const messageSnapshots2 = components.messageSnapshots;
           }
@@ -280,12 +280,12 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj6.label = intl4.string(tmp12(1126).t.Wr4RIX);
               return obj6;
             }
-            tmp12Result13 = tmp12(5743);
+            tmp12Result13 = tmp12(5744);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          const tmp12Result14 = tmp12(5745);
-          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[14]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(5745).getMessageStickers(components), 0));
+          const tmp12Result14 = tmp12(5746);
+          HermesBuiltin.arraySpread(messageSnapshots3.flatMap((message) => type(dependencyMap[14]).getMessageStickers(message.message)), HermesBuiltin.arraySpread(tmp12(5746).getMessageStickers(components), 0));
           if (items.length > 0) {
             if (!PermissionStore.can(constants2.USE_EXTERNAL_STICKERS, type)) {
               if (items.some((id) => {
@@ -317,7 +317,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5745).getMessageStickers(components), 0);
+          const arraySpreadResult = HermesBuiltin.arraySpread(tmp12(5746).getMessageStickers(components), 0);
         }
       }
       obj = require("AgeGateUtils");

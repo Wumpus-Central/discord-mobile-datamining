@@ -1,13 +1,13 @@
-// === Module 9391: trackOnEmojiPickerOpened ===
+// === Module 9429: trackOnEmojiPickerOpened ===
 
-// Module 9391 (trackOnEmojiPickerOpened)
-import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9367 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9368 */;
+// Module 9429 (trackOnEmojiPickerOpened)
+import EmojiUtilsDefault from "EmojiUtils" /* 4727 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9405 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9406 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5992 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import EmojiStore from "EmojiStore" /* 5994 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
@@ -143,7 +143,7 @@ function trackOnEmojiPickerOpened(current) {
   };
 }
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1393).EmojiIntention;
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

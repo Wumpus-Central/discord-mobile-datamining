@@ -1,19 +1,19 @@
-// === Module 17746: RestrictedHoursModal ===
+// === Module 17900: RestrictedHoursModal ===
 
-// Module 17746 (RestrictedHoursModal)
+// Module 17900 (RestrictedHoursModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import timing from "timing" /* 5091 */;
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5370 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5936 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6158 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17745 */;
-import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17749 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import timing from "timing" /* 5092 */;
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5371 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5937 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6160 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17899 */;
+import useIsInRestrictedHoursDefault from "useIsInRestrictedHours" /* 17903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "rgb(0, 3, 40)";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_24 }, backgroundFill: null, assetLayers: null, sunbeamGradient: null, riveContainer: null, content: null, description: null, footer: null, logoutBlockingLayer: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -245,14 +245,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
                       }
                       const _Symbol2 = Symbol;
                       if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
-                        cResult[31] = closure_7(tmp(tmp2[18]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" });
+                        cResult[31] = closure_7(tmp(tmp2[19]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" });
                         class F {
                           constructor() {
                             obj = { opacity: closure_1.get() };
                             return obj;
                           }
                         }
-                        const tmp46 = closure_7(tmp(tmp2[18]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" });
+                        const tmp46 = closure_7(tmp(tmp2[19]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" });
                       }
                       class F {
                         constructor() {
@@ -310,7 +310,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
                                             tmp77[0] = c9;
                                             const items1 = [tmp68, tmp71];
                                             tmp77[1] = items1;
-                                            const tmp79 = closure_8(tmp(tmp2[20]).ModalScreen, tmp77);
+                                            const tmp79 = closure_8(tmp(tmp2[21]).ModalScreen, tmp77);
                                             cResult[60] = tmp68;
                                             class A {
                                               constructor() {
@@ -385,7 +385,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
                                   }
                                 }
                                 obj9.children = cResult[43];
-                                const tmp62 = closure_7(tmp(tmp2[19]).Text, obj9);
+                                const tmp62 = closure_7(tmp(tmp2[20]).Text, obj9);
                                 cResult[46] = tmp4.description;
                                 cResult[47] = cResult[43];
                                 cResult[48] = tmp62;
@@ -448,7 +448,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
                         tmp51 = tmp53;
                       }
                       const obj12 = { variant: "text-lg/medium", color: "text-overlay-light", style: tmp4.description, children: tmp26 };
-                      const tmp50 = closure_7(tmp(tmp2[19]).Text, obj12);
+                      const tmp50 = closure_7(tmp(tmp2[20]).Text, obj12);
                       cResult[34] = tmp26;
                       class A {
                         constructor() {
@@ -621,27 +621,27 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
     const result3 = sharedValue3.set(obj9.withDelay(2000, timing.withTiming(1, obj11)));
   }, items1);
   let obj5 = onLogin(sharedValue1[13]);
-  class I {
+  class O {
     constructor() {
       obj = { opacity: closure_1.get() };
       return obj;
     }
   }
-  I.__closure = { backgroundOpacity: sharedValue };
-  I.__workletHash = 6882190830685;
-  I.__initData = __initData4;
-  const animatedStyle = onLogin(sharedValue1[13]).useAnimatedStyle(I);
+  O.__closure = { backgroundOpacity: sharedValue };
+  O.__workletHash = 6882190830685;
+  O.__initData = __initData4;
+  const animatedStyle = onLogin(sharedValue1[13]).useAnimatedStyle(O);
   let obj6 = onLogin(sharedValue1[13]);
-  class O {
+  class I {
     constructor() {
       obj = { opacity: closure_2.get() };
       return obj;
     }
   }
-  O.__closure = { gradientOpacity: sharedValue1 };
-  O.__workletHash = 16557434501916;
-  O.__initData = __initData5;
-  const animatedStyle1 = onLogin(sharedValue1[13]).useAnimatedStyle(O);
+  I.__closure = { gradientOpacity: sharedValue1 };
+  I.__workletHash = 16557434501916;
+  I.__initData = __initData5;
+  const animatedStyle1 = onLogin(sharedValue1[13]).useAnimatedStyle(I);
   let obj7 = onLogin(sharedValue1[13]);
   const fn = function z() {
     const obj = { opacity: sharedValue2.get(), transform: null };
@@ -669,15 +669,18 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
   const obj13 = { style: null, pointerEvents: "none", children: null };
   const items4 = [tmp.assetLayers, animatedStyle1];
   obj13.style = items4;
+  const obj14 = { source: null, resizeMode: "cover", style: null };
   const obj12 = { style: tmp.backgroundFill, pointerEvents: "none" };
   let obj8 = onLogin(sharedValue1[13]);
-  obj13.children = closure_7(sharedValue(sharedValue1[13]).Image, { source: onLogin(sharedValue1[17]), resizeMode: "cover", style: tmp.sunbeamGradient });
+  obj14.source = onLogin(sharedValue1[17]);
+  obj14.style = tmp.sunbeamGradient;
+  obj13.children = closure_7(sharedValue(sharedValue1[18]), obj14);
   items3[1] = closure_7(sharedValue(sharedValue1[13]).View, obj13);
   const obj15 = { style: null, children: null };
   const items5 = [tmp.content, animatedStyle2];
   obj15.style = items5;
-  const obj14 = { source: onLogin(sharedValue1[17]), resizeMode: "cover", style: tmp.sunbeamGradient };
-  const items6 = [closure_7(closure_5, { style: tmp.riveContainer, children: closure_7(onLogin(sharedValue1[18]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" }) }), closure_7(onLogin(sharedValue1[19]).Text, { variant: "text-lg/medium", color: "text-overlay-light", style: tmp.description, children: formatResult })];
+  const tmp2Result = sharedValue(sharedValue1[18]);
+  const items6 = [closure_7(closure_5, { style: tmp.riveContainer, children: closure_7(onLogin(sharedValue1[19]).TeenScreenTimeRive, { artboard: "Teen Screen Time Illo", stateMachine: "State Machine 1" }) }), closure_7(onLogin(sharedValue1[20]).Text, { variant: "text-lg/medium", color: "text-overlay-light", style: tmp.description, children: formatResult })];
   obj15.children = items6;
   items3[2] = closure_8(sharedValue(sharedValue1[13]).View, obj15);
   const obj18 = { style: tmp.footer, children: null };
@@ -689,12 +692,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
       return React5(Text_Text.Text, { variant: "text-sm/normal", color: "text-link", onPress: onLogin, children }, arg1);
     }
   });
-  obj18.children = closure_7(onLogin(sharedValue1[19]).Text, obj19);
+  obj18.children = closure_7(onLogin(sharedValue1[20]).Text, obj19);
   items3[3] = closure_7(closure_5, obj18);
   obj11.children = items3;
   const items7 = [closure_8(sharedValue(sharedValue1[13]).View, obj11), closure_7(closure_12, { visible: visible.logoutRequestInFlight })];
   obj10.children = items7;
-  return closure_8(onLogin(sharedValue1[20]).ModalScreen, obj10);
+  return closure_8(onLogin(sharedValue1[21]).ModalScreen, obj10);
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScreens(arg0, arg1) {
@@ -706,7 +709,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useScr
       let tmp4 = cResult[2];
       let tmp5 = cResult[3];
     }
-    return tmp(6679).useNavigatorScreens(tmp4, tmp5);
+    return tmp(6686).useNavigatorScreens(tmp4, tmp5);
   }
   const fn = function o() {
     return {

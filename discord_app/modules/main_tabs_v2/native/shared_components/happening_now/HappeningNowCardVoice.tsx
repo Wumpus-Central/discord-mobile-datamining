@@ -1,16 +1,16 @@
-// === Module 16310: HappeningNowCardVoice ===
+// === Module 16429: HappeningNowCardVoice ===
 
-// Module 16310 (HappeningNowCardVoice)
+// Module 16429 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7336 */;
-import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5111 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7341 */;
+import UserStore from "UserStore" /* 1390 */;
+import VoiceStateStore from "VoiceStateStore" /* 5112 */;
 
 require = fn;
 function formatVoiceActivityTitle(arr, guildId) {
@@ -32,11 +32,11 @@ function formatVoiceActivityTitle(arr, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(15391).HappeningNowCardTrackingType;
+let closure_8 = fn(15504).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceChannelUsers(channelId) {

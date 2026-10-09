@@ -1,14 +1,14 @@
-// === Module 4924: OverlayV3Experiment ===
+// === Module 4925: OverlayV3Experiment ===
 
-// Module 4924 (OverlayV3Experiment)
+// Module 4925 (OverlayV3Experiment)
 import c from "c" /* 576 */;
-import ApexExperiment_mod from "ApexExperiment" /* 1452 */;
+import ApexExperiment_mod from "ApexExperiment" /* 1453 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let ApexExperiment = ApexExperiment_mod;
-const obj = { name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "create" }, variations: null };
+const obj = { name: "2026-03-overlay-default-keybind", kind: "user", defaultConfig: { keybindOverride: "r" }, variations: null };
 let obj2 = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };
 obj2[3] = { keybindOverride: "ctrl+l" };
 obj.variations = obj2;

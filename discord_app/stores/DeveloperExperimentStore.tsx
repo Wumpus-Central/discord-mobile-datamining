@@ -1,15 +1,15 @@
-// === Module 7397: DeveloperExperimentStore ===
+// === Module 7402: DeveloperExperimentStore ===
 
-// Module 7397 (DeveloperExperimentStore)
+// Module 7402 (DeveloperExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserStoreUtils from "UserStoreUtils" /* 1400 */;
+import UserStoreUtils from "UserStoreUtils" /* 1401 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const ExperimentBuckets = fn(4977).ExperimentBuckets;
-const Environments = fn(1401).Environments;
+const ExperimentBuckets = fn(4978).ExperimentBuckets;
+const Environments = fn(1402).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {
   const _window = window;
@@ -38,7 +38,7 @@ prototype["initialize"] = function initialize() {
     }
   };
   Object.defineProperties(this, obj);
-  closure_5 = self(1400).isStaffEnv(UserStore.getCurrentUser());
+  closure_5 = self(1401).isStaffEnv(UserStore.getCurrentUser());
   const timerId = setTimeout(() => Object.freeze(self));
 };
 prototype["getExperimentDescriptor"] = function getExperimentDescriptor() {

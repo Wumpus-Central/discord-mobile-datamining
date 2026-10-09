@@ -1,11 +1,11 @@
-// === Module 15208: QuestModalContentCloudBackground ===
+// === Module 15321: QuestModalContentCloudBackground ===
 
-// Module 15208 (QuestModalContentCloudBackground)
+// Module 15321 (QuestModalContentCloudBackground)
 import c from "c" /* 576 */;
-import themes from "themes" /* 4785 */;
-import useTheme from "useTheme" /* 4991 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import FastImageDefault from "FastImage" /* 6164 */;
+import themes from "themes" /* 4786 */;
+import useTheme from "useTheme" /* 4992 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import FastImageDefault from "FastImage" /* 6163 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,18 +13,18 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   const obj2 = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "create" } : { bottom: "create" });
+  const merged1 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   obj.height = 380;
   obj.zIndex = 1;
   obj2.wrapper = obj;
   const obj3 = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "create" } : { bottom: "create" });
+  const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   if (arg0) {
     let obj4 = {};
   } else {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
               if (cResult[11] === tmp16) {
                 let tmp17 = cResult[12];
               }
-              const tmp18Result = importDefault(tmp6 ? 15209 : 15210);
+              const tmp18Result = importDefault(tmp6 ? 15322 : 15323);
               if (cResult[13] === str) {
                 if (cResult[14] === tmp17) {
                   if (cResult[15] === tmp18Result) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestMod
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 15209 : 15210);
+    obj6.source = importDefault(isThemeDarkResult ? 15322 : 15323);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;

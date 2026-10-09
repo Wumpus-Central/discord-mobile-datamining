@@ -1,27 +1,27 @@
-// === Module 13433: VoiceMemberList ===
+// === Module 13525: VoiceMemberList ===
 
-// Module 13433 (VoiceMemberList)
+// Module 13525 (VoiceMemberList)
 import c from "c" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6841 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
-import Form from "Form" /* 8555 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
-import _modDef10311 from "module_10311" /* 10311 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11340 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13429 */;
-import VoiceMemberUser from "VoiceMemberUser" /* 13436 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
+import Form from "Form" /* 8563 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8667 */;
+import _modDef10298 from "module_10298" /* 10298 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 10713 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13521 */;
+import VoiceMemberUser from "VoiceMemberUser" /* 13528 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
-import UserRecord from "UserRecord" /* 1403 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5893 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import UserStore from "UserStore" /* 1389 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import UserRecord from "UserRecord" /* 1404 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import UserStore from "UserStore" /* 1390 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5115 */;
 
 const require = globalThis.__r;
 const VoiceMemberUserDefault = VoiceMemberUser;
@@ -55,11 +55,11 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1085);
 ({ AnalyticsPages: closure_17, InstantInviteSources: closure_18, Permissions: closure_19 } = Constants);
 const FORM_ROW_VERTICAL_PADDING = fn(1204).FORM_ROW_VERTICAL_PADDING;
-const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6837).ACTION_SHEET_MAX_WIDTH;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24, Fragment: closure_25 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_26 = createStyles.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_27 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function Header(channel) {
@@ -119,9 +119,9 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         let obj2 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
         const intl = FormRow(1126).intl;
         obj2.accessibilityLabel = intl.string(FormRow(1126).t["6Qgrev"]);
-        obj2.source = _modDef10311;
-        obj2.size = FormRow(13434).CircularIconButton.Sizes.MEDIUM_32;
-        const tmp19 = closure_23(FormRow(13434).CircularIconButton, obj2);
+        obj2.source = _modDef10298;
+        obj2.size = FormRow(13526).CircularIconButton.Sizes.MEDIUM_32;
+        const tmp19 = closure_23(FormRow(13526).CircularIconButton, obj2);
         const intl2 = FormRow(1126).intl;
         const stringResult = intl2.string(FormRow(1126).t["6Qgrev"]);
         cResult[5] = tmp19;
@@ -135,7 +135,7 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (cResult[7] !== channel) {
         const obj3 = { children: null };
         const items2 = [tmp12, ];
-        FormRow = FormRow(8555).FormRow;
+        FormRow = FormRow(8563).FormRow;
         const obj4 = {
           leading: tmp16,
           label: tmp17,
@@ -172,9 +172,9 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj3 = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1126).intl;
       obj3.accessibilityLabel = intl.string(tmp4(1126).t["6Qgrev"]);
-      obj3.source = _modDef10311;
-      obj3.size = tmp4(13434).CircularIconButton.Sizes.MEDIUM_32;
-      obj2.leading = closure_23(tmp4(13434).CircularIconButton, obj3);
+      obj3.source = _modDef10298;
+      obj3.size = tmp4(13526).CircularIconButton.Sizes.MEDIUM_32;
+      obj2.leading = closure_23(tmp4(13526).CircularIconButton, obj3);
       const intl2 = tmp4(1126).intl;
       obj2.label = intl2.string(tmp4(1126).t["6Qgrev"]);
       obj2.onPress = function onPress() {
@@ -185,7 +185,7 @@ let closure_28 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           const result = instant_invite_InstantInviteUtils.showInstantInviteActionSheet(channel, obj2);
         }
       };
-      items[1] = closure_23(tmp4(8555).FormRow, obj2);
+      items[1] = closure_23(tmp4(8563).FormRow, obj2);
       obj.children = items;
       tmp7 = closure_24(noop.Fragment, obj);
     }
@@ -258,7 +258,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
   _require = isActionSheet;
   let obj = require("c");
   const analyticsContext = require("analytics").useAnalyticsContext();
-  let analyticsLocations = analyticsContext(6841)().analyticsLocations;
+  let analyticsLocations = analyticsContext(6848)().analyticsLocations;
   if (tmp5) {
     if (cResult[0] === analyticsContext) {
       if (cResult[1] === analyticsLocations) {
@@ -276,7 +276,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
           }
         }
         let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-        const tmp17 = closure_23(tmp4(13435), obj3);
+        const tmp17 = closure_23(tmp4(13527), obj3);
         cResult[4] = channelId;
         cResult[5] = isActionSheet;
         cResult[6] = tmp13;
@@ -326,13 +326,13 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
                   tmp13 = null != analyticsLocations;
                 }
                 if (tmp13) {
-                  const result = analyticsLocations(1893).dismissGlobalKeyboard();
-                  const obj3 = analyticsLocations(1893);
-                  const voiceChannel = analyticsContext(5885).selectVoiceChannel(closure_0.id);
+                  const result = analyticsLocations(1894).dismissGlobalKeyboard();
+                  const obj3 = analyticsLocations(1894);
+                  const voiceChannel = analyticsContext(5886).selectVoiceChannel(closure_0.id);
                   const obj6 = { applicationId: analyticsLocations.applicationId, activityChannelId: closure_0.id, locationObject: _location.location, analyticsLocations };
                   c5 = 1;
                   c6 = 1;
-                  const obj7 = { value: analyticsContext(10666)(obj6), done: false };
+                  const obj7 = { value: analyticsContext(10812)(obj6), done: false };
                   return obj7;
                 } else {
                   c6 = 3;
@@ -343,8 +343,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
               throw value;
             } else if (arg0 !== 2) {
               if (closure_0) {
-                const result1 = closure_0(7476).hideVoiceChannelActionSheet(closure_131_0);
-                const obj = closure_0(7476);
+                const result1 = closure_0(7481).hideVoiceChannelActionSheet(closure_131_0);
+                const obj = closure_0(7481);
               }
             }
             c6 = 3;
@@ -385,20 +385,20 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
     const merged = Object.assign(item);
     obj4.onPress = onPressUser;
     obj4.isActionSheet = isActionSheet;
-    const tmp12 = closure_23(tmp4(13436), obj4);
+    const tmp12 = closure_23(tmp4(13528), obj4);
     cResult[9] = isActionSheet;
     cResult[10] = onPressUser;
     cResult[11] = item;
     cResult[12] = tmp12;
     tmp6 = tmp12;
-    const tmp4Result = tmp4(13436);
+    const tmp4Result = tmp4(13528);
   }
   let obj2 = require("analytics");
   tmp5 = undefined !== item.url && undefined !== item.applicationId;
 }) : (function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  importDefault = isActionSheet(9471).useAnalyticsContext();
+  importDefault = isActionSheet(9509).useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
     dependencyMap = async function _onItemPress2(arg0) {
@@ -481,15 +481,15 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceS
         },
       isActionSheet
     };
-    return closure_23(tmp2(13435), obj2);
+    return closure_23(tmp2(13527), obj2);
   } else {
     let obj3 = {};
     const merged = Object.assign(item);
     obj3.onPress = onPressUser;
     obj3.isActionSheet = isActionSheet;
-    return closure_23(tmp2(13436), obj3);
+    return closure_23(tmp2(13528), obj3);
   }
-  let obj = isActionSheet(9471);
+  let obj = isActionSheet(9509);
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 });
 ReactCompilerGating = fn(558);
@@ -863,7 +863,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceMem
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13435);
+                tmp4 = tmp4(13527);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

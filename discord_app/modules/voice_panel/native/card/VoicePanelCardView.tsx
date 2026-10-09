@@ -1,22 +1,22 @@
-// === Module 17580: VoicePanelCardView ===
+// === Module 17732: VoicePanelCardView ===
 
-// Module 17580 (VoicePanelCardView)
+// Module 17732 (VoicePanelCardView)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 4787 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import Suspender from "Suspender" /* 5328 */;
-import spring from "spring" /* 5374 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6753 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9512 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11596 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11993 */;
-import VoicePanelCardDefault from "VoicePanelCard" /* 17581 */;
+import native from "native" /* 4788 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import Suspender from "Suspender" /* 5329 */;
+import spring from "spring" /* 5375 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6760 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9550 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11529 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 11930 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 17733 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6041 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
 
 require = fn;
 function getCardKey(type) {
@@ -27,12 +27,12 @@ function renderCard(key, item, transitionState, cleanUp) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11989);
+const VoicePanelConstants = fn(11926);
 ({ LAYOUT_PHYSICS: closure_8, VoicePanelModes: closure_9, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(11992).EDGE_GUTTER;
-const isUserParticipant = fn(5113).isUserParticipant;
+const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17668).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(11929).EDGE_GUTTER;
+const isUserParticipant = fn(5114).isUserParticipant;
 const jsx = fn(21).jsx;
 let SCALE_PHYSICS = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
@@ -305,7 +305,7 @@ ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLazyContentFreeze() {
   const cResult = mode(576).c(6);
   const obj = mode(576);
-  mode = mode(17517).usePIPState().mode;
+  mode = mode(17669).usePIPState().mode;
   const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = {};
@@ -329,7 +329,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLaz
       tmp8 = cResult[5];
     }
     const effect = noop.useEffect(tmp7, tmp8);
-    return mode === VoicePanelPIPModes.IN_APP && ref(6163)(ref);
+    return mode === VoicePanelPIPModes.IN_APP && ref(6167)(ref);
   }
   const fn = function l() {
     if (timeout === constants.IN_APP) {
@@ -351,9 +351,9 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLaz
   cResult[2] = mode;
   cResult[3] = fn;
   tmp7 = fn;
-  const obj2 = mode(17517);
+  const obj2 = mode(17669);
 }) : (function useLazyContentFreeze() {
-  mode = mode(17517).usePIPState().mode;
+  mode = mode(17669).usePIPState().mode;
   const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
   dependencyMap = _slicedToArray(noop.useState({}), 2)[1];
   const items = [mode];
@@ -373,8 +373,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLaz
       ref.current = false;
     }
   }, items);
-  const obj = mode(17517);
-  return mode === VoicePanelPIPModes.IN_APP && ref(6163)(ref);
+  const obj = mode(17669);
+  return mode === VoicePanelPIPModes.IN_APP && ref(6167)(ref);
 });
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function CardContentFreezer(children) {
@@ -433,10 +433,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePa
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelCardView(viewableChunks) {
   const cResult = channelId(576).c(11);
-  channelId = noop.useContext(stateFromStoresArray(11988)).channelId;
+  channelId = noop.useContext(stateFromStoresArray(11925)).channelId;
   let obj = channelId(576);
   const tmp4 = closure_23(viewableChunks.viewableChunks);
-  const chunkedParticipants = channelId(17610).useChunkedParticipants(channelId, tmp4);
+  const chunkedParticipants = channelId(17762).useChunkedParticipants(channelId, tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore];
     cResult[0] = items;
@@ -459,7 +459,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj3 = channelId(17610);
+  const obj3 = channelId(17762);
   stateFromStoresArray = channelId(504).useStateFromStoresArray(first, tmp8, tmp9);
   dependencyMap = noop.useRef(stateFromStoresArray);
   if (cResult[4] !== stateFromStoresArray) {
@@ -588,7 +588,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       const obj4 = { children: null };
       const obj5 = { items: chunkedParticipants, renderItem: renderCard, getItemKey: getCardKey, lazyCleanUpDelay: 1000 };
-      obj4.children = jsx(tmp(4787).TransitionGroup, { items: chunkedParticipants, renderItem: renderCard, getItemKey: getCardKey, lazyCleanUpDelay: 1000 });
+      obj4.children = jsx(tmp(4788).TransitionGroup, { items: chunkedParticipants, renderItem: renderCard, getItemKey: getCardKey, lazyCleanUpDelay: 1000 });
       const tmp17 = <closure_28>{null}</closure_28>;
       cResult[9] = chunkedParticipants;
       cResult[10] = tmp17;

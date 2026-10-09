@@ -1,7 +1,7 @@
-// === Module 14144: VideoHookDX12Experiment ===
+// === Module 14240: VideoHookDX12Experiment ===
 
-// Module 14144 (VideoHookDX12Experiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 14240 (VideoHookDX12Experiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-04-video-hook-dx12", kind: "user", defaultConfig: { enabled: false }, variations: null };

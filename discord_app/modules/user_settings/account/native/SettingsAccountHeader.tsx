@@ -1,27 +1,27 @@
-// === Module 14772: SettingsAccountHeader ===
+// === Module 14880: SettingsAccountHeader ===
 
-// Module 14772 (SettingsAccountHeader)
+// Module 14880 (SettingsAccountHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import TableRow from "TableRow" /* 6184 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6200 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6677 */;
-import openUserSettings from "openUserSettings" /* 7084 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14773 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import TableRow from "TableRow" /* 6186 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6202 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6684 */;
+import openUserSettings from "openUserSettings" /* 7087 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14881 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
 const AnalyticsSections = fn(1085).AnalyticsSections;
-const SafetySettingsNoticeType = fn(7015).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(7018).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { header: { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 } };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

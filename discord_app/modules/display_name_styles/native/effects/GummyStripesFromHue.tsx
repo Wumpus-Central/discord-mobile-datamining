@@ -1,14 +1,14 @@
-// === Module 15446: GummyStripesFromHue ===
+// === Module 15559: GummyStripesFromHue ===
 
-// Module 15446 (GummyStripesFromHue)
-import ColorPickerUtils from "ColorPickerUtils" /* 14665 */;
+// Module 15559 (GummyStripesFromHue)
+import ColorPickerUtils from "ColorPickerUtils" /* 14770 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 fn(558);
 const __initData = { code: "function GummyStripesFromHueTsx1(){const{hue,shift,hslToRgbWorklet,saturation,lightness}=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:\"rgb(\"+r+\", \"+g+\", \"+b+\")\"};}" };
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GummyStr
   const cResult = hue(576).c(4);
   hue = hue.hue;
   if (cResult[0] !== hue) {
-    const GUMMY_STRIPES = hue(1406).GUMMY_STRIPES;
+    const GUMMY_STRIPES = hue(1407).GUMMY_STRIPES;
     const mapped = GUMMY_STRIPES.map((hueShift, index) => React4(closure_9, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: index > 0 }, index));
     cResult[0] = hue;
     cResult[1] = mapped;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GummyStr
 }) : (function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
-  const GUMMY_STRIPES = hue(1406).GUMMY_STRIPES;
+  const GUMMY_STRIPES = hue(1407).GUMMY_STRIPES;
   obj.children = GUMMY_STRIPES.map((hueShift, index) => React4(closure_9, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: index > 0 }, index));
   return closure_4(closure_5, obj);
 });

@@ -1,9 +1,9 @@
-// === Module 8004: GameServerStore ===
+// === Module 8012: GameServerStore ===
 
-// Module 8004 (GameServerStore)
+// Module 8012 (GameServerStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8006 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 8014 */;
 
 function handleGameServerInstanceCreated(arg0) {
   ({ guildId, gameServer } = arg0);

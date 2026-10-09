@@ -1,6 +1,6 @@
-// === Module 8908: OpenCriticTier ===
+// === Module 8919: OpenCriticTier ===
 
-// Module 8908 (OpenCriticTier)
+// Module 8919 (OpenCriticTier)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/OpenCriticTier.tsx");

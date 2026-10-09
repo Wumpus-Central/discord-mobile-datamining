@@ -1,7 +1,7 @@
-// === Module 8851: useOpenGameProfileModal ===
+// === Module 8860: useOpenGameProfileModal ===
 
-// Module 8851 (useOpenGameProfileModal)
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8856 */;
+// Module 8860 (useOpenGameProfileModal)
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8865 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenG
     tmp3 = cResult[1];
   }
   const onOpened = tmp3.onOpened;
-  const tmp4 = onOpened(8852)(arg0);
+  const tmp4 = onOpened(8861)(arg0);
   dependencyMap = tmp4;
   const gameId = tmp4.gameId;
   if (tmp4.shouldOpenGameProfile) {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenG
     obj = {};
   }
   const onOpened = obj.onOpened;
-  const tmp = onOpened(8852)(arg0);
+  const tmp = onOpened(8861)(arg0);
   dependencyMap = tmp;
   const gameId = tmp.gameId;
   let fn;

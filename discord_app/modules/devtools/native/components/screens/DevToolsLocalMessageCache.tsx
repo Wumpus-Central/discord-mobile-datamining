@@ -1,17 +1,17 @@
-// === Module 15694: DevToolsLocalMessageCache ===
+// === Module 15807: DevToolsLocalMessageCache ===
 
-// Module 15694 (DevToolsLocalMessageCache)
+// Module 15807 (DevToolsLocalMessageCache)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import TableRow from "TableRow" /* 6184 */;
-import TableRowGroup from "TableRowGroup" /* 6267 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 7198 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import TableRow from "TableRow" /* 6186 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7203 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5090 */;
+import createStyles from "createStyles" /* 5091 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

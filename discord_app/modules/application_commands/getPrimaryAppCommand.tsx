@@ -1,15 +1,15 @@
-// === Module 10637: getPrimaryAppCommand ===
+// === Module 10785: getPrimaryAppCommand ===
 
-// Module 10637 (getPrimaryAppCommand)
+// Module 10785 (getPrimaryAppCommand)
 import c from "c" /* 576 */;
-import Server from "Server" /* 1997 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9140 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9190 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9192 */;
+import Server from "Server" /* 1998 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9207 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 9224 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9186 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9220 */;
 
 require = fn;
 let closure_10 = async function _getPrimaryAppCommand(arg0) {
@@ -97,11 +97,11 @@ function queryForPrimaryAppCommand(context, id) {
   obj.commandTypes = items;
   return ApplicationCommandIndexStore.query(context, obj, { placeholderCount: 1, scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_ONLY, applicationId: id, allowFetch: false, allowApplicationState: true }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9186);
+let ApplicationCommandIndexStore = fn(9220);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1998).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetPrimaryAppCommand(arg0, applicationId) {
   _require = applicationId;

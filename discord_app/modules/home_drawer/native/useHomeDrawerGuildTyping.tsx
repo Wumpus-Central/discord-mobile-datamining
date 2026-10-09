@@ -1,11 +1,11 @@
-// === Module 16561: useHomeDrawerGuildTyping ===
+// === Module 16684: useHomeDrawerGuildTyping ===
 
-// Module 16561 (useHomeDrawerGuildTyping)
+// Module 16684 (useHomeDrawerGuildTyping)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4709 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import TypingStore from "TypingStore" /* 11655 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import TypingStore from "TypingStore" /* 11591 */;
 
 const require = globalThis.__r;
 
@@ -17,8 +17,8 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-const isThread = fn(2067).isThread;
-let closure_7 = { typingChannelId: "Array", typingChannelName: "Reflect", typingUserIds: [] };
+const isThread = fn(2068).isThread;
+let closure_7 = { typingChannelId: "Array", typingChannelName: "Set", typingUserIds: [] };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");

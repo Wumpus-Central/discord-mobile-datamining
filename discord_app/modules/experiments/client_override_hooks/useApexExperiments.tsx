@@ -1,13 +1,13 @@
-// === Module 11273: useApexExperiments ===
+// === Module 10640: useApexExperiments ===
 
-// Module 11273 (useApexExperiments)
+// Module 10640 (useApexExperiments)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import apex_ApexTypes from "apex/ApexTypes" /* 1455 */;
-import ExperimentManager from "ExperimentManager" /* 4981 */;
-import experiment from "experiment" /* 8120 */;
+import apex_ApexTypes from "apex/ApexTypes" /* 1456 */;
+import ExperimentManager from "ExperimentManager" /* 4982 */;
+import experiment from "experiment" /* 8128 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
 
 const require = globalThis.__r;
 

@@ -1,13 +1,13 @@
-// === Module 7376: AdDeliveryStore ===
+// === Module 7381: AdDeliveryStore ===
 
-// Module 7376 (AdDeliveryStore)
+// Module 7381 (AdDeliveryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import AdPlacement from "AdPlacement" /* 5983 */;
-import AdCreativeType from "AdCreativeType" /* 5984 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7377 */;
+import AdPlacement from "AdPlacement" /* 5985 */;
+import AdCreativeType from "AdCreativeType" /* 5986 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7382 */;
 
 require = fn;
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
@@ -30,20 +30,20 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined
 });
-prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA) {
+prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
   let flag;
   if (map != null) {
-    flag = map.get(MOBILE_HOME_DOCK_AREA);
+    flag = map.get(QUEST_HOME_BANNER_DESKTOP);
   }
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["canRefreshAd"] = function canRefreshAd(MOBILE_HOME_DOCK_AREA) {
+prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
   value = undefined;
   if (map4 != null) {
-    value = map4.get(MOBILE_HOME_DOCK_AREA);
+    value = map4.get(QUEST_HOME_BANNER_DESKTOP);
   }
   let tmp3 = null == value;
   if (!tmp3) {

@@ -1,7 +1,7 @@
-// === Module 12720: PremiumGiftingConstants ===
+// === Module 12665: PremiumGiftingConstants ===
 
-// Module 12720 (PremiumGiftingConstants)
-import PremiumConstants from "PremiumConstants" /* 1391 */;
+// Module 12665 (PremiumGiftingConstants)
+import PremiumConstants from "PremiumConstants" /* 1392 */;
 import _modDef2629 from "module_2629" /* 2629 */;
 import size from "module_2" /* 2 */;
 

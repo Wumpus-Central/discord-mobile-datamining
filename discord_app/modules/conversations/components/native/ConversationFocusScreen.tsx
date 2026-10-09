@@ -1,8 +1,8 @@
-// === Module 9312: ConversationFocusScreen ===
+// === Module 9350: ConversationFocusScreen ===
 
-// Module 9312 (ConversationFocusScreen)
+// Module 9350 (ConversationFocusScreen)
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7302 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7307 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationFocusScreen() {
   const cResult = channelId(576).c(17);
   const obj = channelId(576);
-  const params = channelId(1505).useRoute().params;
+  const params = channelId(1506).useRoute().params;
   channelId = params.channelId;
   const conversationId = params.conversationId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
         }
       }
       const obj3 = { channelId, conversationId, messages: stateFromStores, fullyHydrated, isFullFetchPending, startMessageId };
-      const tmp16 = jsx(conversationId(9313), { channelId, conversationId, messages: stateFromStores, fullyHydrated, isFullFetchPending, startMessageId });
+      const tmp16 = jsx(conversationId(9351), { channelId, conversationId, messages: stateFromStores, fullyHydrated, isFullFetchPending, startMessageId });
       cResult[10] = channelId;
       cResult[11] = conversationId;
       cResult[12] = fullyHydrated;
@@ -137,12 +137,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
   cResult[4] = items3;
   tmp7 = items3;
   tmp6 = fn;
-  let obj2 = channelId(1505);
+  let obj2 = channelId(1506);
 }) : (function ConversationFocusScreen() {
-  const params = channelId(1505).useRoute().params;
+  const params = channelId(1506).useRoute().params;
   channelId = params.channelId;
   const conversationId = params.conversationId;
-  const obj = channelId(1505);
+  const obj = channelId(1506);
   const items = [ChannelConversationsStore];
   const items1 = [channelId, conversationId];
   const messages = channelId(504).useStateFromStores(items, () => ChannelConversationsStore.getHydratedMessages(channelId, conversationId), items1);
@@ -170,5 +170,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
     return obj2;
   }, items3);
   ({ fullyHydrated, isFullFetchPending, startMessageId } = stateFromStoresObject);
-  return jsx(conversationId(9313), { channelId, conversationId, messages, fullyHydrated, isFullFetchPending, startMessageId });
+  return jsx(conversationId(9351), { channelId, conversationId, messages, fullyHydrated, isFullFetchPending, startMessageId });
 });

@@ -1,13 +1,13 @@
-// === Module 17296: ThreadAutoArchiveBottomSheet ===
+// === Module 17444: ThreadAutoArchiveBottomSheet ===
 
-// Module 17296 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 6264 */;
+// Module 17444 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 6266 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(2070).ChannelFlags;
+const ChannelFlags = fn(2071).ChannelFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

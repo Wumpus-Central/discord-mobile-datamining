@@ -1,10 +1,11 @@
-// === Module 15522: UserSettingsLocale ===
+// === Module 15635: UserSettingsLocale ===
 
-// Module 15522 (UserSettingsLocale)
+// Module 15635 (UserSettingsLocale)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import TableRadioRow from "TableRadioRow" /* 6264 */;
-import flags from "flags" /* 15523 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import TableRadioRow from "TableRadioRow" /* 6266 */;
+import flags from "flags" /* 15636 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
@@ -14,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 function handleLanguageChange() {
   const self = this;
-  const apply = closure_11.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -22,7 +23,7 @@ function handleLanguageChange() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _handleLanguageChange(arg0) {
+let closure_10 = async function _handleLanguageChange(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -73,13 +74,12 @@ let closure_11 = async function _handleLanguageChange(arg0) {
     }
   }
 };
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const ScrollView = fn(17).ScrollView;
 const setAppLocale = fn(2129).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
-let closure_9 = createStyles.createStyles(obj);
+let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
@@ -87,7 +87,7 @@ const result = size.fileFinishedImporting("modules/user_settings/language_and_ti
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function UserSettingsLocale() {
   const cResult = require("c").c(10);
-  const tmp4 = closure_9();
+  const tmp4 = closure_8();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [LocaleStore];
@@ -110,7 +110,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj = { value, label: name, subLabel: null, icon: null };
       const intl = util.intl;
       obj.subLabel = intl.string(localizedName.localizedName);
-      obj.icon = <React4 style={flagImage.flagImage} source={flags.flags[value]} />;
+      const obj2 = { style: flagImage.flagImage, source: flags.flags[value] };
+      obj.icon = jsx(FastImageDefault, { style: flagImage.flagImage, source: flags.flags[value] });
       return jsx(TableRadioRow.TableRadioRow, { value, label: name, subLabel: null, icon: null }, name);
     });
     cResult[2] = tmp4.flagImage;
@@ -130,8 +131,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
       return tmp13;
     }
-    const obj2 = { contentContainerStyle: tmp4.content, children: tmp11 };
-    const tmp16 = <closure_5 contentContainerStyle={tmp4.content}>{tmp11}</closure_5>;
+    let obj2 = { contentContainerStyle: tmp4.content, children: tmp11 };
+    const tmp16 = <ScrollView contentContainerStyle={tmp4.content}>{tmp11}</ScrollView>;
     cResult[7] = tmp4.content;
     cResult[8] = tmp11;
     cResult[9] = tmp16;
@@ -146,10 +147,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj4 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: tmp9 };
   const tmpResult = require("initialize");
 }) : (function UserSettingsLocale() {
-  const tmp = closure_9();
+  const tmp = closure_8();
   _require = tmp;
   const items = [LocaleStore];
-  const obj2 = { contentContainerStyle: tmp.content, children: null };
+  let obj2 = { contentContainerStyle: tmp.content, children: null };
   const stateFromStores = require("initialize").useStateFromStores(items, () => locale.locale);
   const obj3 = { bottom: true, children: null };
   const obj4 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null };
@@ -160,10 +161,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj = { value, label: name, subLabel: null, icon: null };
     const intl = util.intl;
     obj.subLabel = intl.string(localizedName.localizedName);
-    obj.icon = <React4 style={flagImage.flagImage} source={flags.flags[value]} />;
+    const obj2 = { style: flagImage.flagImage, source: flags.flags[value] };
+    obj.icon = jsx(FastImageDefault, { style: flagImage.flagImage, source: flags.flags[value] });
     return jsx(TableRadioRow.TableRadioRow, { value, label: name, subLabel: null, icon: null }, name);
   });
   obj3.children = jsx(require("TableRadioGroup").TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
   obj2.children = jsx(require("common/SafeAreaView").SafeAreaPaddingView, { bottom: true, children: null });
-  return <closure_5 contentContainerStyle={tmp.content}>{null}</closure_5>;
+  return <ScrollView contentContainerStyle={tmp.content}>{null}</ScrollView>;
 }));

@@ -1,29 +1,29 @@
-// === Module 12217: ChatInputGuardReadonly ===
+// === Module 12156: ChatInputGuardReadonly ===
 
-// Module 12217 (ChatInputGuardReadonly)
+// Module 12156 (ChatInputGuardReadonly)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12183 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12122 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import ReadStateStore from "ReadStateStore" /* 6042 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function sortChannelsByLastMessageId(id, id2) {
   const obj = SnowflakeUtilsDefault;
   return obj.compare(ReadStateStore.lastMessageId(id2.id), ReadStateStore.lastMessageId(id.id));
 }
-const isTextChannel = fn(2067).isTextChannel;
-let closure_6 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(11652).TextAreaCta;
+const isTextChannel = fn(2068).isTextChannel;
+let closure_6 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+const TextAreaCta = fn(11588).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;

@@ -1,13 +1,13 @@
-// === Module 16499: useShouldRenderChannelList ===
+// === Module 16618: useShouldRenderChannelList ===
 
-// Module 16499 (useShouldRenderChannelList)
+// Module 16618 (useShouldRenderChannelList)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
-import RootNavigationRef from "RootNavigationRef" /* 4937 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
+import RootNavigationRef from "RootNavigationRef" /* 4938 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import CacheStore from "CacheStore" /* 7186 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import CacheStore from "CacheStore" /* 7191 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
@@ -66,7 +66,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         let result1 = CacheStore.addReactChangeListener(handleCacheChange);
         let ComponentDispatch = first(1121).ComponentDispatch;
         const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-        let rootNavigationRef = first(4937).getRootNavigationRef();
+        let rootNavigationRef = first(4938).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.addListener("state", handleNavigationChange);
         }
@@ -132,7 +132,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       let result1 = CacheStore.addReactChangeListener(handleCacheChange);
       let ComponentDispatch = first(1121).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(4937).getRootNavigationRef();
+      let rootNavigationRef = first(4938).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }

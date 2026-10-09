@@ -1,9 +1,9 @@
-// === Module 9370: useEmojiPickerSearchState ===
+// === Module 9408: useEmojiPickerSearchState ===
 
-// Module 9370 (useEmojiPickerSearchState)
+// Module 9408 (useEmojiPickerSearchState)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5992 */;
+import EmojiStore from "EmojiStore" /* 5994 */;
 
 const require = globalThis.__r;
 
@@ -48,22 +48,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(2045).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(2046).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-      channel(1271).batchUpdates(() => {
+      channel(1272).batchUpdates(() => {
         ref.current = current;
         closure_2_5(closure_1);
       });
-      const obj3 = channel(1271);
+      const obj3 = channel(1272);
     } else {
-      channel(1271).batchUpdates(() => {
+      channel(1272).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
-      const obj = channel(1271);
+      const obj = channel(1272);
     }
   };
   cResult[0] = bypassPremiumEmojiEntitlement;
@@ -88,22 +88,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmoji
       if (":" === arr[0]) {
         substr = arr.slice(1);
       }
-      const FrecencyUserSettingsActionCreators = channel(2045).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = channel(2046).FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
       const obj2 = { channel, query: substr, count: 0, intention, bypassPremiumEmojiEntitlement };
       dependencyMap = ref.searchWithoutFetchingLatest(obj2);
-      channel(1271).batchUpdates(() => {
+      channel(1272).batchUpdates(() => {
         ref.current = current;
         closure_5(closure_1);
       });
-      const obj3 = channel(1271);
+      const obj3 = channel(1272);
     } else {
-      channel(1271).batchUpdates(() => {
+      channel(1272).batchUpdates(() => {
         ref.current = "";
         closure_1_5(null);
         const result = closure_1.set(0);
       });
-      const obj = channel(1271);
+      const obj = channel(1272);
     }
   }, items);
   return obj;

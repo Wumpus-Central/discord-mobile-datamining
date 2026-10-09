@@ -1,25 +1,25 @@
-// === Module 9303: ConversationListItem ===
+// === Module 9341: ConversationListItem ===
 
-// Module 9303 (ConversationListItem)
+// Module 9341 (ConversationListItem)
 import nativeDefault from "native" /* 587 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9272 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9275 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9290 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 9305 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 9307 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9310 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9313 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 9328 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 9343 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 9345 */;
 import noop from "module_19" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7302 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7307 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(7304).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7309).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { card: { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 }, title: { flexShrink: 1, minWidth: 0 }, timestamp: { flexShrink: 0 }, headerContainer: null, previewsMask: null, previews: null, maskColumn: null, maskOpaque: null, maskFade: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, height: 232, overflow: "hidden", paddingBottom: 0 };
 obj.headerContainer = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -40,7 +40,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
   conversation = conversation.conversation;
   const tmp4 = closure_12();
   let obj = conversation(576);
-  const navigation = conversation(1502).useNavigation();
+  const navigation = conversation(1503).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelConversationsStore];
     cResult[0] = items;
@@ -100,7 +100,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
                     }
                     if (cResult[25] !== tmp4.maskOpaque) {
                       const obj4 = { colors, style: tmp4.maskOpaque };
-                      const tmp33 = closure_8(navigation(5387), obj4);
+                      const tmp33 = closure_8(navigation(5388), obj4);
                       cResult[25] = tmp4.maskOpaque;
                       cResult[26] = tmp33;
                       let tmp29 = tmp33;
@@ -111,7 +111,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
                       const obj5 = { colors: colors2, start: null, end: null, style: null };
                       ({ START: obj9.start, END: obj9.end } = VerticalGradient);
                       obj5.style = tmp4.maskFade;
-                      const tmp39 = closure_8(navigation(5387), obj5);
+                      const tmp39 = closure_8(navigation(5388), obj5);
                       cResult[27] = tmp4.maskFade;
                       cResult[28] = tmp39;
                       let tmp34 = tmp39;
@@ -150,7 +150,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
                                     const obj6 = { style: tmp14, onPress: tmp13, accessibilityLabel: tmp15, children: null };
                                     const items1 = [tmp25, tmp54];
                                     obj6.children = items1;
-                                    const tmp60 = closure_9(tmp(6186).Card, obj6);
+                                    const tmp60 = closure_9(tmp(6188).Card, obj6);
                                     cResult[44] = conversation.title;
                                     cResult[45] = tmp13;
                                     cResult[46] = tmp4.card;
@@ -161,7 +161,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
                                   }
                                 }
                                 const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp50 };
-                                const tmp57 = closure_8(navigation(6245), obj7);
+                                const tmp57 = closure_8(navigation(6247), obj7);
                                 cResult[40] = tmp4.previewsMask;
                                 cResult[41] = tmp40;
                                 cResult[42] = tmp50;
@@ -178,7 +178,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
                           }
                         }
                         if (null == arr4) {
-                          let mapped = closure_8(navigation(9304), {});
+                          let mapped = closure_8(navigation(9342), {});
                         } else {
                           mapped = arr4.map((blocked) => {
                             if (!blocked.blocked) {
@@ -224,14 +224,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
                 tmp25 = tmp28;
               }
               const obj12 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: tmp4.timestamp, children: tmp20 };
-              const tmp24 = closure_8(tmp(5086).Text, obj12);
+              const tmp24 = closure_8(tmp(5087).Text, obj12);
               cResult[18] = tmp4.timestamp;
               cResult[19] = tmp20;
               cResult[20] = tmp24;
               tmp22 = tmp24;
             }
             const obj13 = { variant: "text-md/semibold", color: "text-default", lineClamp: 1, style: tmp4.title, children: conversation.title };
-            const tmp19 = closure_8(tmp(5086).Text, obj13);
+            const tmp19 = closure_8(tmp(5087).Text, obj13);
             cResult[13] = conversation.title;
             cResult[14] = tmp4.title;
             cResult[15] = tmp19;
@@ -266,7 +266,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conver
   cResult[4] = items4;
   tmp9 = items4;
   tmp8 = fn;
-  const obj2 = conversation(1502);
+  const obj2 = conversation(1503);
 }) : (function ConversationListItemBase(conversation) {
   conversation = conversation.conversation;
   let stateFromStores;

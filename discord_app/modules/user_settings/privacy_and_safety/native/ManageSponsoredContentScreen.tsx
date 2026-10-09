@@ -1,13 +1,13 @@
-// === Module 16067: ManageSponsoredContentScreen ===
+// === Module 16183: ManageSponsoredContentScreen ===
 
-// Module 16067 (ManageSponsoredContentScreen)
+// Module 16183 (ManageSponsoredContentScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2040 */;
+import UserSettings from "UserSettings" /* 2041 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
 import _modDef2173 from "module_2173" /* 2173 */;
-import TableRowGroup from "TableRowGroup" /* 6267 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -24,7 +24,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdTopic
   obj = adTopic(576);
   const cResult = obj.c(14);
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(2040).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(2041).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   if (cResult[0] === adTopic) {
     if (cResult[1] === setting) {
@@ -76,7 +76,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdTopic
         }
       }
       const obj2 = { label: tmp9, subLabel: cResult[8], value: !tmp4, onValueChange: tmp8 };
-      const tmp19 = closure_5(tmp(6882).TableSwitchRow, obj2);
+      const tmp19 = closure_5(tmp(6889).TableSwitchRow, obj2);
       cResult[9] = tmp8;
       cResult[10] = tmp9;
       cResult[11] = cResult[8];
@@ -92,7 +92,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdTopic
   tmp4 = hasItem;
 }) : (function AdTopicRow(adTopic) {
   adTopic = adTopic.adTopic;
-  let AdTopicOptOuts = adTopic(2040).AdTopicOptOuts;
+  let AdTopicOptOuts = adTopic(2041).AdTopicOptOuts;
   const setting = AdTopicOptOuts.useSetting();
   const hasItem = setting.includes(adTopic);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
@@ -114,9 +114,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdTopic
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(6882).TableSwitchRow, obj);
+  return closure_5(adTopic(6889).TableSwitchRow, obj);
 });
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj4 = { content: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj4);
 ReactCompilerGating = fn(558);

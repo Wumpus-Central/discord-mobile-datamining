@@ -1,14 +1,14 @@
-// === Module 13887: MarkupHeadingRule ===
+// === Module 13980: MarkupHeadingRule ===
 
-// Module 13887 (MarkupHeadingRule)
-import _mod1948 from "module_1948" /* 1948 */;
+// Module 13980 (MarkupHeadingRule)
+import _mod1949 from "module_1949" /* 1949 */;
 
-const _modDef1948 = _mod1948;
+const _modDef1949 = _mod1949;
 
 require = fn;
 const re2 = /\n$/;
 let obj = {};
-const merged = Object.assign(_modDef1948.defaultRules.heading);
+const merged = Object.assign(_modDef1949.defaultRules.heading);
 obj.requiredFirstCharacters = [" ", "#"];
 obj.match = function match(arg0, allowHeading, str) {
   let tmp = null;
@@ -18,7 +18,7 @@ obj.match = function match(arg0, allowHeading, str) {
         tmp = null;
       }
     }
-    tmp = _mod1948.anyScopeRegex(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
+    tmp = _mod1949.anyScopeRegex(/^ *(#{1,3})(?:\s+)((?!\s*#{1,3}\s)[^\n]+?)#*\s*(?:\n|$)/)(arg0, allowHeading, str);
   }
   return tmp;
 };

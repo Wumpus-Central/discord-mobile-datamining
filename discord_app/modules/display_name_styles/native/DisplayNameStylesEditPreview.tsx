@@ -1,30 +1,30 @@
-// === Module 15452: DisplayNameStylesEditPreview ===
+// === Module 15565: DisplayNameStylesEditPreview ===
 
-// Module 15452 (DisplayNameStylesEditPreview)
+// Module 15565 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import utils from "utils" /* 1989 */;
+import utils from "utils" /* 1990 */;
 import _modDef2955 from "module_2955" /* 2955 */;
-import DateUtils from "DateUtils" /* 4750 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6058 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8259 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8266 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10246 */;
-import types from "types" /* 10247 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10487 */;
-import NameplatePreview from "NameplatePreview" /* 11187 */;
+import DateUtils from "DateUtils" /* 4752 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6060 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8267 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8274 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10231 */;
+import types from "types" /* 10232 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10477 */;
+import NameplatePreview from "NameplatePreview" /* 10593 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, chatPreviewWrapper: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
 obj2.chatPreviewWrapper = { marginTop: -18, alignSelf: "flex-end", width: 260, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

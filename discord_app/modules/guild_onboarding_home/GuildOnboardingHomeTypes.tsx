@@ -1,9 +1,9 @@
-// === Module 9255: GuildOnboardingHomeTypes ===
+// === Module 9293: GuildOnboardingHomeTypes ===
 
-// Module 9255 (GuildOnboardingHomeTypes)
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+// Module 9293 (GuildOnboardingHomeTypes)
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 require = fn;
 function newMemberActionFromServer(channelId) {

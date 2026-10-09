@@ -1,10 +1,10 @@
-// === Module 8086: EphemeralIndication ===
+// === Module 8094: EphemeralIndication ===
 
-// Module 8086 (EphemeralIndication)
+// Module 8094 (EphemeralIndication)
 import util from "util" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8087 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7725 */;
+import ApplicationCommandUserAppUtils from "ApplicationCommandUserAppUtils" /* 8095 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7734 */;
 
 require = fn;
 const Constants = fn(1085);

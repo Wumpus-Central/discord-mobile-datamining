@@ -1,32 +1,32 @@
-// === Module 18069: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 18229: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 18069 (GuildSettingsModalEmoji/EmojiRow)
+// Module 18229 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4725 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5405 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import Pressables from "Pressables" /* 6189 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9479 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18070 */;
-import _modDef18072 from "module_18072" /* 18072 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4727 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5361 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import Pressables from "Pressables" /* 6191 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9517 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 18230 */;
+import _modDef18232 from "module_18232" /* 18232 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" }, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1382);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -34,7 +34,7 @@ if (PlatformUtils.isAndroid()) {
 let obj3 = { paddingVertical: 4, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 obj2.activeNameContainer = { padding: num, borderRadius: nativeDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 obj2.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1382);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

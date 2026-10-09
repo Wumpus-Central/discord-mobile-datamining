@@ -1,6 +1,6 @@
-// === Module 7015: Constants ===
+// === Module 7018: Constants ===
 
-// Module 7015 (Constants)
+// Module 7018 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_common/Constants.tsx");

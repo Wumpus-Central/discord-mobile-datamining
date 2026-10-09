@@ -1,25 +1,25 @@
-// === Module 8651: StartStageChannelModal ===
+// === Module 8659: StartStageChannelModal ===
 
-// Module 8651 (StartStageChannelModal)
+// Module 8659 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import GuildIcon from "GuildIcon" /* 6161 */;
-import Pressables from "Pressables" /* 6189 */;
-import _modDef6767 from "module_6767" /* 6767 */;
-import HotspotStore2 from "HotspotStore" /* 6895 */;
-import Form from "Form" /* 8555 */;
-import StageSparkleDefault from "StageSparkle" /* 8635 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import GuildIcon from "GuildIcon" /* 6165 */;
+import Pressables from "Pressables" /* 6191 */;
+import _modDef6774 from "module_6774" /* 6774 */;
+import HotspotStore2 from "HotspotStore" /* 6902 */;
+import Form from "Form" /* 8563 */;
+import StageSparkleDefault from "StageSparkle" /* 8643 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2068 */;
+import StageInstanceStore from "StageInstanceStore" /* 2069 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -30,13 +30,13 @@ function closeModal() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(5888);
+const StageChannelsConstants = fn(5889);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let constants = fn(2069).GuildScheduledEventPrivacyLevel;
+let constants = fn(2070).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { paddingHorizontal: 16 }, contentTopSpacing: { paddingTop: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.textInput = { padding: 12, width: "100%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
@@ -77,7 +77,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
       const _Symbol2 = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { accessibilityRole: "button", accessibilityLabel: tmp7, onPress: closeModal, children: null };
-        const obj3 = { source: _modDef6767 };
+        const obj3 = { source: _modDef6774 };
         obj2.children = state(native.Icon, obj3);
         const tmp13 = state(Pressables.PressableOpacity, obj2);
         cResult[4] = tmp13;
@@ -110,7 +110,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef6767 };
+    const obj3 = { source: _modDef6774 };
     obj2.children = state(native.Icon, obj3);
     obj.children = state(Pressables.PressableOpacity, obj2);
     tmp2 = state(React5, obj);
@@ -329,21 +329,21 @@ export default function StartStageChannelModal(arg0) {
               if (null != first2) {
                 closure_2_8(true);
                 StageInstanceStore(null);
-                const result = tmp66(1893).dismissGlobalKeyboard();
+                const result = tmp66(1894).dismissGlobalKeyboard();
                 dependencyMap = 1;
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(7482).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(7487).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(7482);
+                  obj5 = tmp66(7487);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
                   return obj9;
                 }
-                const obj4 = tmp66(1893);
+                const obj4 = tmp66(1894);
               }
             }
           }
@@ -351,7 +351,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(5631).APIError(closure_128_1);
+            const aPIError = new closure_0(5632).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -366,8 +366,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(6899).hideHotspot(closure_0(6895).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(6899);
+                  tmp66(6906).hideHotspot(closure_0(6902).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(6906);
                 }
               }
             } else if (arg0 === 1) {
@@ -415,7 +415,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_6767");
+      obj.source = require("module_6774");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }

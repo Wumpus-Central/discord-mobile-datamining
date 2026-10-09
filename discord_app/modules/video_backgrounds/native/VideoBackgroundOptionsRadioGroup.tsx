@@ -1,9 +1,9 @@
-// === Module 10882: VideoBackgroundOptionsRadioGroup ===
+// === Module 11055: VideoBackgroundOptionsRadioGroup ===
 
-// Module 10882 (VideoBackgroundOptionsRadioGroup)
-import applyBackgroundOption from "applyBackgroundOption" /* 5251 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5254 */;
-import VideoBackgroundOptions from "VideoBackgroundOptions" /* 10883 */;
+// Module 11055 (VideoBackgroundOptionsRadioGroup)
+import applyBackgroundOption from "applyBackgroundOption" /* 5252 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5255 */;
+import VideoBackgroundOptions from "VideoBackgroundOptions" /* 11056 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,11 +19,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBac
   const cResult = analyticsContext(576).c(13);
   title = title.title;
   let obj = analyticsContext(576);
-  analyticsContext = analyticsContext(9471).useAnalyticsContext();
-  let obj2 = analyticsContext(9471);
-  const lastUsedVideoBackgroundOption = analyticsContext(5256).useLastUsedVideoBackgroundOption();
-  let obj3 = analyticsContext(5256);
-  const videoBackgroundRadioOptions = analyticsContext(10883).useVideoBackgroundRadioOptions();
+  analyticsContext = analyticsContext(9509).useAnalyticsContext();
+  let obj2 = analyticsContext(9509);
+  const lastUsedVideoBackgroundOption = analyticsContext(5257).useLastUsedVideoBackgroundOption();
+  let obj3 = analyticsContext(5257);
+  const videoBackgroundRadioOptions = analyticsContext(11056).useVideoBackgroundRadioOptions();
   if (cResult[0] !== analyticsContext.location) {
     function handleChange(arg0) {
       const result = VideoBackgroundOptions.fromVideoBackgroundRadioValue(arg0);
@@ -40,11 +40,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBac
     tmp6 = cResult[1];
   }
   if (cResult[2] !== lastUsedVideoBackgroundOption) {
-    let result = tmp(10883).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+    let result = tmp(11056).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
     cResult[2] = lastUsedVideoBackgroundOption;
     cResult[3] = result;
     let tmp7 = result;
-    const tmpResult = tmp(10883);
+    const tmpResult = tmp(11056);
   } else {
     tmp7 = cResult[3];
   }
@@ -93,14 +93,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBac
       }
     }
     const obj5 = { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 };
-    const tmp17 = jsx(tmp(6265).TableRadioGroup, { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 });
+    const tmp17 = jsx(tmp(6267).TableRadioGroup, { hasIcons: true, title, value: tmp7, onChange: tmp6, accessibilityLabel: tmp9, children: tmp11 });
     cResult[8] = tmp6;
     cResult[9] = tmp7;
     cResult[10] = tmp11;
     cResult[11] = title;
     cResult[12] = tmp17;
   }
-  const obj4 = analyticsContext(10883);
+  const obj4 = analyticsContext(11056);
 }) : (function VideoBackgroundOptionsRadioGroup(title) {
   _require = undefined;
   _require = require("analytics").useAnalyticsContext();

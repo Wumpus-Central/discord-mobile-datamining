@@ -1,7 +1,7 @@
-// === Module 11254: SocialSdkGameResolver ===
+// === Module 10621: SocialSdkGameResolver ===
 
-// Module 11254 (SocialSdkGameResolver)
-import DetectableGameStore from "DetectableGameStore" /* 2036 */;
+// Module 10621 (SocialSdkGameResolver)
+import DetectableGameStore from "DetectableGameStore" /* 2037 */;
 
 const SdkCanonicalGameResolutionType = { UNRESOLVED: 0, [0]: "UNRESOLVED", MATCHES_DETECTED: 1, [1]: "MATCHES_DETECTED", DIFFERS: 2, [2]: "DIFFERS" };
 let closure_2 = { type: SdkCanonicalGameResolutionType.UNRESOLVED };

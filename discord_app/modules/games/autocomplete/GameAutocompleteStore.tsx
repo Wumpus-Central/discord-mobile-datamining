@@ -1,19 +1,23 @@
-// === Module 8211: GameAutocompleteStore ===
+// === Module 8219: GameAutocompleteStore ===
 
-// Module 8211 (GameAutocompleteStore)
+// Module 8219 (GameAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1456 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8212 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import privDefault from "priv" /* 1457 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8220 */;
 
 require = fn;
 function getCacheKey(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
 }
-const navigation = new privDefault({ max: 100 });
+const HOUR = DurationsDefault.Millis.HOUR;
+const navigation = new privDefault({ max: 100, maxAge: HOUR });
 let set = new Set();
-const tmp2 = new privDefault({ max: 100 });
-const navigation2 = new privDefault({ max: 500 });
+let obj = { max: 100, maxAge: HOUR };
+let obj2 = { max: 500, maxAge: HOUR };
+const tmp2 = new privDefault({ max: 100, maxAge: HOUR });
+const navigation2 = new privDefault({ max: 500, maxAge: HOUR });
 const Store = initializeDefault.Store;
 class GameAutocompleteStore extends Store {
 }
@@ -57,8 +61,8 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_g
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp(8212).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + closure_0 + ":" + arg0));
-      const tmpResult = tmp(8212);
+      result1 = tmp(8220).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + closure_0 + ":" + arg0));
+      const tmpResult = tmp(8220);
     }
     return result1;
   }

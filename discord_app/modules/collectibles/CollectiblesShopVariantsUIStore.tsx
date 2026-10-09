@@ -1,9 +1,9 @@
-// === Module 9001: CollectiblesShopVariantsUIStore ===
+// === Module 9012: CollectiblesShopVariantsUIStore ===
 
-// Module 9001 (CollectiblesShopVariantsUIStore)
-import _mod4690 from "module_4690" /* 4690 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7263 */;
-import identity from "module_1266" /* 1266 */;
+// Module 9012 (CollectiblesShopVariantsUIStore)
+import _mod4692 from "module_4692" /* 4692 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7268 */;
+import identity from "module_1267" /* 1267 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4690.shallow);
+}, _mod4692.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? (function useSelectedVariantIndex(arg0) {

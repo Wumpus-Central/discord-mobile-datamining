@@ -1,20 +1,20 @@
-// === Module 16082: SafetyGuildSettingDirectMessages ===
+// === Module 16198: SafetyGuildSettingDirectMessages ===
 
-// Module 16082 (SafetyGuildSettingDirectMessages)
+// Module 16198 (SafetyGuildSettingDirectMessages)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
-import common_AlertDefault from "common/Alert" /* 5394 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16077 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 16083 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
+import common_AlertDefault from "common/Alert" /* 5395 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15014 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 16193 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 16199 */;
 import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16074);
+const UserSettingsSafetySelectedGuildStore = fn(16190);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11263).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+let closure_6 = fn(10630).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsDisabled() {
@@ -116,7 +116,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDescrip
     return stringResult;
   }
 });
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTitle() {
   const cResult = c.c(2);
   const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
@@ -179,7 +179,7 @@ const toggle = SettingBuilders.createToggle({
     return stringResult;
   }),
   useDescription: tmp5,
-  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7974).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: tmp4,
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const tmp = closure_4();

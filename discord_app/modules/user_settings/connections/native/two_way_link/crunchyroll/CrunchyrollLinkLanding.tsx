@@ -1,16 +1,16 @@
-// === Module 9168: CrunchyrollLinkLanding ===
+// === Module 12883: CrunchyrollLinkLanding ===
 
-// Module 9168 (CrunchyrollLinkLanding)
+// Module 12883 (CrunchyrollLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import _modDef9169 from "module_9169" /* 9169 */;
+import _modDef12884 from "module_12884" /* 12884 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(9167).CrunchyrollLinkModalScenes;
+let closure_4 = fn(12882).CrunchyrollLinkModalScenes;
 const Constants = fn(1085);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,12 +20,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const cResult = navigation(576).c(9);
   const tmp4 = closure_8();
   const obj = navigation(576);
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { label: null, icon: null };
     const intl = tmp(1126).intl;
     obj3.label = intl.string(tmp(1126).t["2TXHQd"]);
-    obj3.icon = tmp(8376).PlayIcon;
+    obj3.icon = tmp(8384).PlayIcon;
     const items = [obj3];
     cResult[0] = items;
     let first = items;
@@ -65,36 +65,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
     }
     return tmp16;
   }
-  const obj2 = navigation(1502);
-  const tmp17 = jsx(navigation(9119).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9169, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first });
+  const obj2 = navigation(1503);
+  const tmp17 = jsx(navigation(9186).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef12884, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first });
   cResult[6] = tmp7;
   cResult[7] = tmp4.image;
   cResult[8] = tmp17;
   tmp16 = tmp17;
-  const obj5 = { platformType: constants2.CRUNCHYROLL, img: _modDef9169, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first };
+  const obj5 = { platformType: constants2.CRUNCHYROLL, img: _modDef12884, imgStyle: tmp4.image, headerConnect: tmp8, body: tmp9, learnMoreLink: tmp10, onNext: tmp7, valueProps: first };
 }) : (function CrunchyrollLinkLanding() {
   const tmp = closure_8();
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   let items = [navigation];
   const memo = noop.useMemo(() => {
     const obj = { label: null, icon: null };
     const intl = navigation(1126).intl;
     obj.label = intl.string(navigation(1126).t["2TXHQd"]);
-    obj.icon = navigation(8376).PlayIcon;
+    obj.icon = navigation(8384).PlayIcon;
     const items = [obj];
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef9169, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  const obj2 = { platformType: constants2.CRUNCHYROLL, img: _modDef12884, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1126).intl;
   obj2.headerConnect = intl.string(navigation(1126).t["Da+3NJ"]);
   const intl2 = navigation(1126).intl;
   obj2.body = intl2.string(navigation(1126).t.MaPpPL);
-  let obj = navigation(1502);
+  let obj = navigation(1503);
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(9119).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9169, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  return jsx(navigation(9186).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef12884, imgStyle: tmp.image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 });

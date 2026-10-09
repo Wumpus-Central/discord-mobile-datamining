@@ -1,20 +1,20 @@
-// === Module 10910: XboxInstallAlert ===
+// === Module 11085: XboxInstallAlert ===
 
-// Module 10910 (XboxInstallAlert)
+// Module 11085 (XboxInstallAlert)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import LinkingDefault from "Linking" /* 4763 */;
-import common_AlertDefault from "common/Alert" /* 5394 */;
-import _modDef10911 from "module_10911" /* 10911 */;
+import LinkingDefault from "Linking" /* 4765 */;
+import common_AlertDefault from "common/Alert" /* 5395 */;
+import _modDef11086 from "module_11086" /* 11086 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9127);
+const GameConsoleConstants = fn(9194);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 obj2.externalLinkIcon = size;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   }
   if (cResult[4] !== tmp4.externalLinkIcon) {
     const fn = function _() {
-      return jsx(native.Icon, { source: _modDef10911, style: closure_0.externalLinkIcon });
+      return jsx(native.Icon, { source: _modDef11086, style: closure_0.externalLinkIcon });
     };
     cResult[4] = tmp4.externalLinkIcon;
     cResult[5] = fn;
@@ -59,8 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function u() {
-      const obj = closure_0(1381);
-      const isAndroidResult = closure_0(1381).isAndroid();
+      const obj = closure_0(1382);
+      const isAndroidResult = closure_0(1382).isAndroid();
       const openURL = LinkingDefault.openURL;
       if (isAndroidResult) {
         openURL(closure_1_3);
@@ -108,11 +108,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef10911, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef11086, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = closure_0(1381);
-    const isAndroidResult = closure_0(1381).isAndroid();
+    const obj = closure_0(1382);
+    const isAndroidResult = closure_0(1382).isAndroid();
     const openURL = LinkingDefault.openURL;
     if (isAndroidResult) {
       openURL(closure_1_3);

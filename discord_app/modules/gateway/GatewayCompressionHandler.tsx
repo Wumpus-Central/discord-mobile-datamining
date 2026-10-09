@@ -1,13 +1,13 @@
-// === Module 13774: GatewayCompressionHandler ===
+// === Module 13868: GatewayCompressionHandler ===
 
-// Module 13774 (GatewayCompressionHandler)
+// Module 13868 (GatewayCompressionHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ProcessArgs2 from "ProcessArgs" /* 6897 */;
-import GatewayZstdUtils from "GatewayZstdUtils" /* 13775 */;
-import NativeCompressionModule from "NativeCompressionModule" /* 13776 */;
-import _mod13777 from "module_13777" /* 13777 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import ProcessArgs2 from "ProcessArgs" /* 6904 */;
+import GatewayZstdUtils from "GatewayZstdUtils" /* 13869 */;
+import NativeCompressionModule from "NativeCompressionModule" /* 13870 */;
+import _mod13871 from "module_13871" /* 13871 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;
@@ -91,7 +91,7 @@ prototype2["close"] = function close() {
 items.push(fn);
 const fn2 = (arg0) => {
   const tmp2 = new tmp(arg0, new.target, tmp, new.target);
-  tmp2._pako = _mod13777;
+  tmp2._pako = _mod13871;
   tmp2._usesZstd = false;
   tmp2._zstdDecoder = null;
   tmp2._zstdStream = null;
@@ -219,7 +219,7 @@ prototype3["handleFlushEnd"] = function handleFlushEnd(arg0) {
 items.push(fn2);
 const fn3 = () => {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult._pako = _mod13777;
+  applyArgumentsResult._pako = _mod13871;
   return applyArgumentsResult;
 };
 const prototype4 = fn3.prototype;

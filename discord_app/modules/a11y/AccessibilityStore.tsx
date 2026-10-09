@@ -1,16 +1,16 @@
-// === Module 5079: AccessibilityStore ===
+// === Module 5080: AccessibilityStore ===
 
-// Module 5079 (AccessibilityStore)
+// Module 5080 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage7 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import shared from "shared" /* 4929 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5084 */;
+import shared from "shared" /* 4930 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5085 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import GameModeStore from "GameModeStore" /* 5080 */;
+import GameModeStore from "GameModeStore" /* 5081 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 
 require = fn;
 function maybeApplyNoTextColorForLightCustomTheme() {
@@ -94,7 +94,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1085);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(5083);
+const MessageConstants = fn(5084);
 ({ MESSAGE_GROUP_SPACING: closure_11, DEFAULT_COMPACT_SPACING: closure_12, DEFAULT_COZY_SPACING: map1 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };

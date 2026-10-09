@@ -1,6 +1,6 @@
-// === Module 13083: conjureExternalConnections ===
+// === Module 13176: conjureExternalConnections ===
 
-// Module 13083 (conjureExternalConnections)
+// Module 13176 (conjureExternalConnections)
 import size from "module_2" /* 2 */;
 
 function externalConnectionOffer(nextResult) {

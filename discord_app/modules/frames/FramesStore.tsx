@@ -1,14 +1,14 @@
-// === Module 10612: FramesStore ===
+// === Module 10772: FramesStore ===
 
-// Module 10612 (FramesStore)
+// Module 10772 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1096 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 6072 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 10614 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10615 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10616 */;
-import FramesConstants from "FramesConstants" /* 10613 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 6074 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 10773 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 10774 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 10775 */;
+import FramesConstants from "FramesConstants" /* 10767 */;
 import size from "module_2" /* 2 */;
 
 ({ asLaunched: c3, FrameIntent: closure_4, FrameLayoutModes: hasOwnProperty, getFrameIntentForSurface: metroRequire, isLaunched: closure_7, makeFrameId: closure_8 } = FramesConstants);

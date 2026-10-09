@@ -1,23 +1,23 @@
-// === Module 9606: RatingSelector ===
+// === Module 9625: RatingSelector ===
 
-// Module 9606 (RatingSelector)
-import _modDef9607 from "module_9607" /* 9607 */;
-import _modDef9612 from "module_9612" /* 9612 */;
-import _modDef9617 from "module_9617" /* 9617 */;
+// Module 9625 (RatingSelector)
+import FastImageDefault from "FastImage" /* 6163 */;
+import _modDef9626 from "module_9626" /* 9626 */;
+import _modDef9631 from "module_9631" /* 9631 */;
+import _modDef9636 from "module_9636" /* 9636 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const Constants = fn(9602);
-({ DEFAULT_RATINGS: hasOwnProperty, FeedbackRating: metroRequire } = Constants);
+const View = fn(17).View;
+const Constants = fn(9621);
+({ DEFAULT_RATINGS: closure_4, FeedbackRating: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(5090);
-let closure_8 = createStyles.createStyles({ ratings: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, rating: {}, emoji: { width: 64, height: 64, marginVertical: 24, marginHorizontal: 12 } });
-createStyles = fn(5090);
-let closure_9 = createStyles.createStyles({ ratings: { flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start", gap: 16, marginBottom: 12 }, rating: { width: "100%" }, emoji: { width: 32, height: 32 } });
+let createStyles = fn(5091);
+let closure_7 = createStyles.createStyles({ ratings: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, rating: {}, emoji: { width: 64, height: 64, marginVertical: 24, marginHorizontal: 12 } });
+createStyles = fn(5091);
+let closure_8 = createStyles.createStyles({ ratings: { flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start", gap: 16, marginBottom: 12 }, rating: { width: "100%" }, emoji: { width: 32, height: 32 } });
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiConfigs(arr) {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmojiConfigs(arr) {
   const cResult = obj2(576).c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
@@ -40,7 +40,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmo
     tmp5 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn3 = function s() {
+    const fn3 = function c() {
       const intl = obj2(1126).intl;
       return intl.string(obj2(1126).t["1Vyb5J"]);
     };
@@ -51,25 +51,25 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmo
   }
   obj2 = {};
   const obj3 = { source: null, getLabel: null, rating: null };
-  const obj4 = { selected: _modDef9607, normal: null };
+  const obj4 = { selected: _modDef9626, normal: null };
   const obj = obj2(576);
-  obj4.normal = obj2(9608).useFeedbackModalSadDesaturatedSource();
+  obj4.normal = obj2(9627).useFeedbackModalSadDesaturatedSource();
   obj3.source = obj4;
   obj3.getLabel = first;
   obj3.rating = constants.BAD;
   obj2[constants.BAD] = obj3;
   const obj5 = { source: null, getLabel: null, rating: null };
-  const obj6 = { selected: _modDef9612, normal: null };
-  const tmpResult = obj2(9608);
-  obj6.normal = obj2(9613).useFeedbackModalNeutralDesaturatedSource();
+  const obj6 = { selected: _modDef9631, normal: null };
+  const tmpResult = obj2(9627);
+  obj6.normal = obj2(9632).useFeedbackModalNeutralDesaturatedSource();
   obj5.source = obj6;
   obj5.getLabel = tmp5;
   obj5.rating = constants.NEUTRAL;
   obj2[constants.NEUTRAL] = obj5;
   const obj7 = { source: null, getLabel: null, rating: null };
-  const obj8 = { selected: _modDef9617, normal: null };
-  const tmpResult3 = obj2(9613);
-  obj8.normal = obj2(9618).useFeedbackModalHappyDesaturatedSource();
+  const obj8 = { selected: _modDef9636, normal: null };
+  const tmpResult3 = obj2(9632);
+  obj8.normal = obj2(9637).useFeedbackModalHappyDesaturatedSource();
   obj7.source = obj8;
   obj7.getLabel = tmp6;
   obj7.rating = constants.GOOD;
@@ -78,7 +78,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmo
 }) : (function useEmojiConfigs(arr) {
   const obj = {};
   const obj2 = { source: null, getLabel: null, rating: null };
-  const obj3 = { selected: _modDef9607, normal: obj(9608).useFeedbackModalSadDesaturatedSource() };
+  const obj3 = { selected: _modDef9626, normal: obj(9627).useFeedbackModalSadDesaturatedSource() };
   obj2.source = obj3;
   obj2.getLabel = function getLabel() {
     const intl = obj(1126).intl;
@@ -87,9 +87,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmo
   obj2.rating = constants.BAD;
   obj[constants.BAD] = obj2;
   const obj5 = { source: null, getLabel: null, rating: null };
-  const obj6 = { selected: _modDef9612, normal: null };
-  const obj4 = obj(9608);
-  obj6.normal = obj(9613).useFeedbackModalNeutralDesaturatedSource();
+  const obj6 = { selected: _modDef9631, normal: null };
+  const obj4 = obj(9627);
+  obj6.normal = obj(9632).useFeedbackModalNeutralDesaturatedSource();
   obj5.source = obj6;
   obj5.getLabel = function getLabel() {
     const intl = obj(1126).intl;
@@ -98,9 +98,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmo
   obj5.rating = constants.NEUTRAL;
   obj[constants.NEUTRAL] = obj5;
   const obj8 = { source: null, getLabel: null, rating: null };
-  const obj9 = { selected: _modDef9617, normal: null };
-  const obj7 = obj(9613);
-  obj9.normal = obj(9618).useFeedbackModalHappyDesaturatedSource();
+  const obj9 = { selected: _modDef9636, normal: null };
+  const obj7 = obj(9632);
+  obj9.normal = obj(9637).useFeedbackModalHappyDesaturatedSource();
   obj8.source = obj9;
   obj8.getLabel = function getLabel() {
     const intl = obj(1126).intl;
@@ -120,15 +120,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
   rating = selectedRating.selectedRating;
   onChangeRating = selectedRating.onChangeRating;
   if (undefined === ratingOptions) {
-    ratingOptions = closure_5;
+    ratingOptions = closure_4;
   }
   let obj = textLabels(onChangeRating[6]);
-  let tmp3 = closure_8();
+  let tmp3 = closure_7();
   if (null != textLabels) {
     tmp3 = tmp2;
   }
   closure_3 = tmp3;
-  const arr = closure_10(ratingOptions);
+  const arr = closure_9(ratingOptions);
   if (cResult[0] === arr) {
     if (cResult[1] === onChangeRating) {
       if (cResult[2] === rating) {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
       }
     }
   }
-  const fn = function o(rating) {
+  const fn = function y(rating) {
     rating = rating.rating;
     ({ source, getLabel } = rating);
     ({ selected, normal } = source);
@@ -189,10 +189,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
         normal = selected;
       }
       obj4.source = normal;
-      obj2.icon = <closure_1_4 style={closure_3.emoji} source={null} />;
+      obj2.icon = jsx(rating(onChangeRating[15]), { style: closure_3.emoji, source: null });
       obj2.label = tmp[rating];
       obj.children = jsx(textLabels(onChangeRating[14]).RowButton, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, icon: null, label: null });
-      let tmp14Result = <closure_3 key={rating} style={closure_3.rating}>{null}</closure_3>;
+      let tmp16Result = <closure_3 key={rating} style={closure_3.rating}>{null}</closure_3>;
+      const tmp15 = rating(onChangeRating[15]);
     } else {
       const obj5 = { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, children: null };
       const obj6 = { selected: rating === rating };
@@ -206,10 +207,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
         tmp2 = selected;
       }
       obj7.source = tmp2;
-      obj5.children = <closure_1_4 style={closure_3.emoji} source={null} />;
-      tmp14Result = jsx(textLabels(onChangeRating[15]).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, children: null }, rating);
+      obj5.children = jsx(rating(onChangeRating[15]), { style: closure_3.emoji, source: null });
+      tmp16Result = jsx(textLabels(onChangeRating[16]).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, children: null }, rating);
+      const tmp24 = rating(onChangeRating[15]);
     }
-    return tmp14Result;
+    return tmp16Result;
   };
   cResult[7] = onChangeRating;
   cResult[8] = rating;
@@ -218,23 +220,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
   cResult[11] = textLabels;
   cResult[12] = fn;
   tmp6 = fn;
-  tmp2 = closure_9();
+  tmp2 = closure_8();
 }) : (function RatingSelector(ratingOptions) {
   ratingOptions = ratingOptions.ratingOptions;
   if (ratingOptions === undefined) {
-    ratingOptions = closure_5;
+    ratingOptions = closure_4;
   }
   const textLabels = ratingOptions.textLabels;
   ({ selectedRating: importDefault, onChangeRating: dependencyMap } = ratingOptions);
   closure_3 = undefined;
-  let tmp2 = closure_8();
+  let tmp2 = closure_7();
   if (null != textLabels) {
     tmp2 = tmp;
   }
   closure_3 = tmp2;
-  tmp = closure_9();
-  const arr = closure_10(ratingOptions);
-  return <closure_3 style={tmp2.ratings}>{closure_10(ratingOptions).map((rating) => {
+  tmp = closure_8();
+  const arr = closure_9(ratingOptions);
+  return <closure_3 style={tmp2.ratings}>{closure_9(ratingOptions).map((rating) => {
     rating = rating.rating;
     ({ selected, normal } = rating.source);
     const getLabel = rating.getLabel;
@@ -251,10 +253,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
         normal = selected;
       }
       obj4.source = normal;
-      obj2.icon = <closure_1_4 style={closure_3.emoji} source={null} />;
+      obj2.icon = jsx(FastImageDefault, { style: closure_3.emoji, source: null });
       obj2.label = tmp[rating];
-      obj.children = jsx(textLabels(8557).RowButton, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, icon: null, label: null });
-      let tmp14Result = <closure_3 key={rating} style={closure_3.rating}>{null}</closure_3>;
+      obj.children = jsx(textLabels(8565).RowButton, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, icon: null, label: null });
+      let tmp16Result = <closure_3 key={rating} style={closure_3.rating}>{null}</closure_3>;
     } else {
       const obj5 = { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, children: null };
       const obj6 = { selected: closure_1 === rating };
@@ -268,9 +270,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function RatingSe
         tmp2 = selected;
       }
       obj7.source = tmp2;
-      obj5.children = <closure_1_4 style={closure_3.emoji} source={null} />;
-      tmp14Result = jsx(textLabels(6189).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, children: null }, rating);
+      obj5.children = jsx(FastImageDefault, { style: closure_3.emoji, source: null });
+      tmp16Result = jsx(textLabels(6191).PressableOpacity, { accessibilityRole: "button", accessibilityLabel: getLabel(), accessibilityState: null, onPress: null, children: null }, rating);
     }
-    return tmp14Result;
+    return tmp16Result;
   })}</closure_3>;
 });

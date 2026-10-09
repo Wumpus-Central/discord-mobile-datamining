@@ -1,16 +1,16 @@
-// === Module 8656: DeleteEventAlert ===
+// === Module 8665: DeleteEventAlert ===
 
-// Module 8656 (DeleteEventAlert)
+// Module 8665 (DeleteEventAlert)
 import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6061 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             return obj4;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(8494);
+            const obj8 = v1(8502);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DeleteEv
             const obj = { value, done: true };
             return obj;
           }
-          v1(5054).hideActionSheet();
+          v1(5055).hideActionSheet();
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }

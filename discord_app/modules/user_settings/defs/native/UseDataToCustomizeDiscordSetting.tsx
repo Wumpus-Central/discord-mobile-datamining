@@ -1,15 +1,15 @@
-// === Module 14942: UseDataToCustomizeDiscordSetting ===
+// === Module 15054: UseDataToCustomizeDiscordSetting ===
 
-// Module 14942 (UseDataToCustomizeDiscordSetting)
+// Module 15054 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
-import common_AlertDefault from "common/Alert" /* 5394 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14940 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14941 */;
-import ConsentStore from "ConsentStore" /* 5938 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
+import common_AlertDefault from "common/Alert" /* 5395 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15014 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 15052 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 15053 */;
+import ConsentStore from "ConsentStore" /* 5939 */;
 
 require = fn;
 const Consents = fn(1085).Consents;
@@ -19,7 +19,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7966).MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7974).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToCustomizeDiscordSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

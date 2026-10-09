@@ -1,6 +1,6 @@
-// === Module 5056: haptics/HapticFeedbackTypes ===
+// === Module 5057: haptics/HapticFeedbackTypes ===
 
-// Module 5056 (haptics/HapticFeedbackTypes)
+// Module 5057 (haptics/HapticFeedbackTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/haptics/HapticFeedbackTypes.tsx");

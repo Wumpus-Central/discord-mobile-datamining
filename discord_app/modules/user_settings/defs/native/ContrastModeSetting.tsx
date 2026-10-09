@@ -1,19 +1,19 @@
-// === Module 15510: ContrastModeSetting ===
+// === Module 15623: ContrastModeSetting ===
 
-// Module 15510 (ContrastModeSetting)
+// Module 15623 (ContrastModeSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11220 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14520 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15409 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 10575 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14616 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15522 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useContrastSettingProps() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -32,7 +32,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7974).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

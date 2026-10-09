@@ -1,15 +1,15 @@
-// === Module 10309: buildFavoritesSectionButtons ===
+// === Module 10296: buildFavoritesSectionButtons ===
 
-// Module 10309 (buildFavoritesSectionButtons)
+// Module 10296 (buildFavoritesSectionButtons)
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
-import StarIcon from "StarIcon" /* 9483 */;
-import StarOutlineIcon from "StarOutlineIcon" /* 9485 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10297 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9016 */;
+import StarOutlineIcon from "StarOutlineIcon" /* 9521 */;
+import StarIcon from "StarIcon" /* 9523 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -118,7 +118,7 @@ let closure_6 = async function _removeChannelFromFavorites(arg0) {
 };
 function openNoAccessUpsell() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(10298, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
+  obj.openLazy(asyncRequireImpl(10283, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

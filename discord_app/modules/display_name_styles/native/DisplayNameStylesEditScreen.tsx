@@ -1,31 +1,31 @@
-// === Module 15431: DisplayNameStylesEditScreen ===
+// === Module 15544: DisplayNameStylesEditScreen ===
 
-// Module 15431 (DisplayNameStylesEditScreen)
+// Module 15544 (DisplayNameStylesEditScreen)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import HapticUtils from "HapticUtils" /* 5055 */;
-import spring from "spring" /* 5374 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8264 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 8267 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1407 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1409 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import HapticUtils from "HapticUtils" /* 5056 */;
+import spring from "spring" /* 5375 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8272 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 8275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import UserStore from "UserStore" /* 1389 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1627).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let items = [fn(1408).DisplayNameEffect.GRADIENT, fn(1408).DisplayNameEffect.GUMMY, fn(1408).DisplayNameEffect.PRISM];
-const createStyles = fn(5090);
+let items = [fn(1409).DisplayNameEffect.GRADIENT, fn(1409).DisplayNameEffect.GUMMY, fn(1409).DisplayNameEffect.PRISM];
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -255,6 +255,7 @@ let result = size.fileFinishedImporting("modules/display_name_styles/native/Disp
 
 export default function DisplayNameStylesEditScreen() {
   let tmp = onSelectColor();
+  const tmp2 = navigation;
   let tmp3 = isTryItOut;
   const route = navigation(isTryItOut[11]).useRoute();
   let obj = navigation(isTryItOut[11]);
@@ -267,15 +268,15 @@ export default function DisplayNameStylesEditScreen() {
   isTryItOut = params.isTryItOut;
   let obj2 = navigation(isTryItOut[11]);
   items = [onSelectEffect];
-  const stateFromStores = navigation(tmp3[12]).useStateFromStores(items, () => onSelectEffect.getCurrentUser());
-  let tmp2Result = navigation(tmp3[12]);
-  const displayNameStylesPendingName = navigation(tmp3[13]).useDisplayNameStylesPendingName(stateFromStores, guildId);
-  const tmp2Result11 = navigation(tmp3[13]);
-  const guildMemberOrUserPendingDisplayNameStyles = navigation(tmp3[14]).useGuildMemberOrUserPendingDisplayNameStyles(stateFromStores, guildId);
+  const stateFromStores = tmp2(tmp3[12]).useStateFromStores(items, () => onSelectEffect.getCurrentUser());
+  let tmp2Result = tmp2(tmp3[12]);
+  const displayNameStylesPendingName = tmp2(tmp3[13]).useDisplayNameStylesPendingName(stateFromStores, guildId);
+  const tmp2Result11 = tmp2(tmp3[13]);
+  const guildMemberOrUserPendingDisplayNameStyles = tmp2(tmp3[14]).useGuildMemberOrUserPendingDisplayNameStyles(stateFromStores, guildId);
   const pendingDisplayNameStyles = guildMemberOrUserPendingDisplayNameStyles.pendingDisplayNameStyles;
   ({ guildDisplayNameStyles, tryItOutDisplayNameStyles } = guildMemberOrUserPendingDisplayNameStyles);
   let id;
-  const tmp2Result12 = navigation(tmp3[14]);
+  const tmp2Result12 = tmp2(tmp3[14]);
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
@@ -309,12 +310,12 @@ export default function DisplayNameStylesEditScreen() {
   const first1 = tmp16Result[0];
   onSelectEffect = tmp16Result[1];
   let tmp14 = guildId(tmp3[16])();
-  const tmp22 = navigation(tmp3[18]).getEffectColorCount(first1) > 1;
+  const tmp22 = tmp2(tmp3[18]).getEffectColorCount(first1) > 1;
   closure_10 = tmp22;
-  const tmp2Result13 = navigation(tmp3[18]);
-  const isDisplayNameStylesFlywheelSettersEnabled = navigation(tmp3[19]).useIsDisplayNameStylesFlywheelSettersEnabled("DisplayNameStylesEditScreen");
-  const tmp2Result14 = navigation(tmp3[19]);
-  const displayNameStylesEffectConfig = navigation(tmp3[20]).useDisplayNameStylesEffectConfig(first1);
+  const tmp2Result13 = tmp2(tmp3[18]);
+  const isDisplayNameStylesFlywheelSettersEnabled = tmp2(tmp3[19]).useIsDisplayNameStylesFlywheelSettersEnabled("DisplayNameStylesEditScreen");
+  const tmp2Result14 = tmp2(tmp3[19]);
+  const displayNameStylesEffectConfig = tmp2(tmp3[20]).useDisplayNameStylesEffectConfig(first1);
   closure_12 = tmp9(tmp3[21])();
   let colors;
   if (tmp10Result != null) {
@@ -392,6 +393,7 @@ export default function DisplayNameStylesEditScreen() {
     }, items2);
     let obj4 = {
       hasChanges: memo1,
+      location: tmp2(tmp3[23]).DisplayNameStylesApplyLocations.PROFILE_EDITOR,
       selectedFontId,
       selectedEffectId: first1,
       selectedColors: memo,
@@ -455,7 +457,7 @@ export default function DisplayNameStylesEditScreen() {
       if (showFontsBadge) {
         dismissFontsBadge();
       }
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15439, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15552, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName });
       const obj2 = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName };
     }, items6);
     if (stateFromStores != null) {
@@ -474,9 +476,9 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj.openLazy(asyncRequireImpl(15441, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
+      obj.openLazy(asyncRequireImpl(15554, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
       const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-      const tmp3 = asyncRequireImpl(15441, dependencyMap.paths);
+      const tmp3 = asyncRequireImpl(15554, dependencyMap.paths);
     }, items7);
     const callback6 = obj8.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -486,7 +488,7 @@ export default function DisplayNameStylesEditScreen() {
               return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15442, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15555, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         const tmp2Result = asyncRequireImpl;
@@ -498,10 +500,10 @@ export default function DisplayNameStylesEditScreen() {
                   return callback(first1, arg0);
                 }
           };
-          openLazy(tmp2Result(15447, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+          openLazy(tmp2Result(15560, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
           const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(15451, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(15564, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);

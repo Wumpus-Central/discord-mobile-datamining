@@ -1,27 +1,25 @@
-// === Module 11744: AppLauncherNativeUtils ===
+// === Module 11681: AppLauncherNativeUtils ===
 
-// Module 11744 (AppLauncherNativeUtils)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import _modDef1987 from "module_1987" /* 1987 */;
-import Server from "Server" /* 1997 */;
-import HapticUtils from "HapticUtils" /* 5055 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7231 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7235 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7892 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9185 */;
-import FrecencySection from "FrecencySection" /* 11745 */;
+// Module 11681 (AppLauncherNativeUtils)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import _modDef1988 from "module_1988" /* 1988 */;
+import Server from "Server" /* 1998 */;
+import HapticUtils from "HapticUtils" /* 5056 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7236 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7240 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7901 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9219 */;
+import FrecencySection from "FrecencySection" /* 11682 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import UserStore from "UserStore" /* 1389 */;
-
-const require = globalThis.__r;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const BuiltInSectionId = fn(5399).BuiltInSectionId;
+const BuiltInSectionId = fn(5400).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLogAppLauncherEmptyStateView(arg0, arg1) {
@@ -259,7 +257,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1987;
+    let applicationIconSource = _modDef1988;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
@@ -330,11 +328,11 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
                                   };
                                   cResult[21] = onActivityItemSelected1;
                                   cResult[22] = obj2;
-                                  let tmp16 = obj2;
+                                  let tmp15 = obj2;
                                 } else {
-                                  tmp16 = cResult[22];
+                                  tmp15 = cResult[22];
                                 }
-                                return tmp16;
+                                return tmp15;
                               }
                             }
                           }
@@ -344,7 +342,7 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
                   }
                 }
               }
-              const obj3 = { application: getOrFetchApplication, context, embeddedActivitiesManager: onActivityItemSelected(tmp2[21]), locationObject: analyticsContext.location, onActivityItemSelectedProp: tmp9, launchingComponentId, commandOrigin: tmp(tmp2[7]).CommandOrigin.APPLICATION_LAUNCHER, sectionName, source: entrypoint, fetchesApplication: tmp4, customId, referrerId };
+              const obj3 = { application: getOrFetchApplication, context, locationObject: analyticsContext.location, onActivityItemSelectedProp: tmp9, launchingComponentId, commandOrigin: tmp(tmp2[7]).CommandOrigin.APPLICATION_LAUNCHER, sectionName, source: entrypoint, fetchesApplication: tmp4, customId, referrerId };
               cResult[10] = analyticsContext.location;
               cResult[11] = getOrFetchApplication;
               cResult[12] = context;
@@ -404,7 +402,6 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
   const obj6 = {
     application: getOrFetchApplication,
     context,
-    embeddedActivitiesManager: require("EmbeddedActivitiesNativeManager"),
     locationObject: analyticsContext.location,
     onActivityItemSelectedProp(applicationId) {
       applicationId = applicationId.applicationId;

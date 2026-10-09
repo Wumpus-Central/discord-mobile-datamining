@@ -1,10 +1,10 @@
-// === Module 6780: DefaultChannelUtils ===
+// === Module 6787: DefaultChannelUtils ===
 
-// Module 6780 (DefaultChannelUtils)
+// Module 6787 (DefaultChannelUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
 import GatedChannelStore from "GatedChannelStore" /* 2116 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 const require = globalThis.__r;
 

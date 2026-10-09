@@ -1,8 +1,8 @@
-// === Module 12408: useProvisionalAccountExplanationText ===
+// === Module 12326: useProvisionalAccountExplanationText ===
 
-// Module 12408 (useProvisionalAccountExplanationText)
+// Module 12326 (useProvisionalAccountExplanationText)
 import c from "c" /* 576 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12409 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12327 */;
 import noop from "module_19" /* 19 */;
 
 const util = rSUACb(1126);

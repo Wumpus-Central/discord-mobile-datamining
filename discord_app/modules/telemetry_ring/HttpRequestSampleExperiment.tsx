@@ -1,7 +1,7 @@
-// === Module 17734: HttpRequestSampleExperiment ===
+// === Module 17886: HttpRequestSampleExperiment ===
 
-// Module 17734 (HttpRequestSampleExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 17886 (HttpRequestSampleExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-04-http-request-sample", defaultConfig: { sampleRate: 0 }, variations: null };

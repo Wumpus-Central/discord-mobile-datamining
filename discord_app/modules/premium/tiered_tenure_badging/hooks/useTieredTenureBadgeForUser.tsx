@@ -1,9 +1,9 @@
-// === Module 10540: useTieredTenureBadgeForUser ===
+// === Module 10530: useTieredTenureBadgeForUser ===
 
-// Module 10540 (useTieredTenureBadgeForUser)
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7318 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 10530 (useTieredTenureBadgeForUser)
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7323 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 

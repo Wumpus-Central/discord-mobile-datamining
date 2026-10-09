@@ -1,6 +1,6 @@
-// === Module 16488: useForwardedRef ===
+// === Module 16607: useForwardedRef ===
 
-// Module 16488 (useForwardedRef)
+// Module 16607 (useForwardedRef)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

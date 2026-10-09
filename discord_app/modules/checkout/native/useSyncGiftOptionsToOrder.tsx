@@ -1,16 +1,16 @@
-// === Module 10167: useSyncGiftOptionsToOrder ===
+// === Module 10152: useSyncGiftOptionsToOrder ===
 
-// Module 10167 (useSyncGiftOptionsToOrder)
+// Module 10152 (useSyncGiftOptionsToOrder)
 import LoggerDefault from "Logger" /* 3 */;
-import BillingUtils from "BillingUtils" /* 4741 */;
-import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10042 */;
+import BillingUtils from "BillingUtils" /* 4743 */;
+import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-fn(7132).useNativeCheckoutStoreOrNull;
+fn(7137).useNativeCheckoutStoreOrNull;
 const ReactCompilerGating = fn(558);
 const tmp2 = new LoggerDefault("useSyncGiftOptionsToOrder");
 const size = fn(2);

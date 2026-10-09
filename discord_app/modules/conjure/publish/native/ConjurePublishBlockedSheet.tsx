@@ -1,16 +1,8 @@
-// === Module 16842: ConjurePublishBlockedSheet ===
+// === Module 16966: ConjurePublishBlockedSheet ===
 
-// Module 16842 (ConjurePublishBlockedSheet)
-import c from "c" /* 576 */;
+// Module 16966 (ConjurePublishBlockedSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
-import ActionSheet from "ActionSheet" /* 6885 */;
-import conjurePublishBlockedReason from "conjurePublishBlockedReason" /* 16843 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
@@ -20,149 +12,162 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ConjurePublishBlockedSheet = "ConjurePublishBlockedSheet";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePublishBlockedSheet(reason) {
-  const cResult = c.c(20);
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePublishBlockedSheet(arg0) {
+  const cResult = onConfirm(576).c(23);
+  ({ reason, message, onConfirm } = arg0);
   const tmp4 = closure_7();
-  const tmp5 = reason.reason === conjurePublishBlockedReason.ConjurePublishBlockedReason.PERMISSIONS;
-  if (cResult[0] !== tmp5) {
-    const intl = util.intl;
-    const tmp8 = _modDef3827;
-    const stringResult = intl.string(tmp5 ? tmp8.wQ4UyJ : tmp8.ZNGLFE);
-    cResult[0] = tmp5;
-    cResult[1] = stringResult;
-  } else {
-    if (cResult[2] !== cResult[1]) {
-      const obj2 = { title: tmp6 };
-      const tmp13 = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-      cResult[2] = tmp6;
-      cResult[3] = tmp13;
-      let tmp11 = tmp13;
-    } else {
-      tmp11 = cResult[3];
+  if (cResult[0] === message) {
+    if (cResult[1] === reason) {
+      let tmp5 = cResult[2];
     }
-    if (cResult[4] !== tmp5) {
-      const intl2 = util.intl;
-      const tmp17 = _modDef3827;
-      const stringResult1 = intl2.string(tmp5 ? tmp17.Agqmbt : tmp17.ffxKGK);
-      cResult[4] = tmp5;
-      cResult[5] = stringResult1;
-    } else {
-      if (cResult[6] !== cResult[5]) {
-        const obj3 = { variant: "text-md/normal", color: "text-muted", children: tmp15 };
-        const tmp22 = React4(Text_Text.Text, obj3);
-        cResult[6] = tmp15;
-        cResult[7] = tmp22;
-        let tmp20 = tmp22;
-      } else {
-        tmp20 = cResult[7];
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      function close() {
+        closure_1(dependencyMap[8]).hideActionSheet(ConjurePublishBlockedSheet);
       }
-      if (cResult[8] !== tmp5) {
-        const intl3 = util.intl;
-        if (tmp5) {
-          let BddRzS = util.t.BddRzS;
-        } else {
-          BddRzS = _modDef3827["/omTNx"];
+      cResult[3] = close;
+      let tmp8 = close;
+    } else {
+      tmp8 = cResult[3];
+    }
+    closure_1 = tmp8;
+    if (cResult[4] !== tmp5.title) {
+      const obj2 = { title: tmp5.title };
+      const tmp11 = closure_4(onConfirm(6835).BottomSheetTitleHeader, obj2);
+      cResult[4] = tmp5.title;
+      cResult[5] = tmp11;
+      let tmp9 = tmp11;
+    } else {
+      tmp9 = cResult[5];
+    }
+    if (cResult[6] !== tmp5.body) {
+      const obj3 = { variant: "text-md/normal", color: "text-muted", children: tmp5.body };
+      const tmp14 = closure_4(onConfirm(5087).Text, obj3);
+      cResult[6] = tmp5.body;
+      cResult[7] = tmp14;
+      let tmp12 = tmp14;
+    } else {
+      tmp12 = cResult[7];
+    }
+    if (cResult[8] !== onConfirm) {
+      const fn = function x() {
+        closure_1();
+        if (onConfirm != null) {
+          onConfirm();
         }
-        const stringResult2 = intl3.string(BddRzS);
-        cResult[8] = tmp5;
-        cResult[9] = stringResult2;
+      };
+      cResult[8] = onConfirm;
+      cResult[9] = fn;
+      let tmp15 = fn;
+    } else {
+      tmp15 = cResult[9];
+    }
+    if (cResult[10] === tmp5.action) {
+      if (cResult[11] === tmp15) {
+        let tmp16 = cResult[12];
+      }
+      if (cResult[13] !== tmp5.cancel) {
+        let tmp20 = null;
+        if (null != tmp5.cancel) {
+          const obj4 = { variant: "secondary", text: tmp5.cancel, onPress: tmp8 };
+          tmp20 = closure_4(onConfirm(5376).Button, obj4);
+        }
+        cResult[13] = tmp5.cancel;
+        cResult[14] = tmp20;
+        let tmp19 = tmp20;
       } else {
-        const _Symbol = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function _() {
-            return ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
-          };
-          cResult[10] = fn;
-          let tmp29 = fn;
-        } else {
-          tmp29 = cResult[10];
-        }
-        if (cResult[11] !== cResult[9]) {
-          const obj4 = { variant: "primary", text: tmp23, onPress: tmp29 };
-          const tmp32 = React4(components_Button_Button.Button, obj4);
-          cResult[11] = tmp23;
-          cResult[12] = tmp32;
-          let tmp30 = tmp32;
-        } else {
-          tmp30 = cResult[12];
-        }
-        if (cResult[13] === tmp4.content) {
-          if (cResult[14] === tmp20) {
-            if (cResult[15] === tmp30) {
-              let tmp33 = cResult[16];
+        tmp19 = cResult[14];
+      }
+      if (cResult[15] === tmp4.content) {
+        if (cResult[16] === tmp12) {
+          if (cResult[17] === tmp16) {
+            if (cResult[18] === tmp19) {
+              let tmp22 = cResult[19];
             }
-            if (cResult[17] === tmp11) {
-              if (cResult[18] === tmp33) {
-                let tmp37 = cResult[19];
+            if (cResult[20] === tmp9) {
+              if (cResult[21] === tmp22) {
+                let tmp26 = cResult[22];
               }
-              return tmp37;
+              return tmp26;
             }
-            const obj5 = { header: tmp11, children: tmp33 };
-            const tmp39 = React4(ActionSheet.ActionSheet, obj5);
-            cResult[17] = tmp11;
-            cResult[18] = tmp33;
-            cResult[19] = tmp39;
-            tmp37 = tmp39;
+            const obj5 = { header: tmp9, children: tmp22 };
+            const tmp28 = closure_4(onConfirm(6892).ActionSheet, obj5);
+            cResult[20] = tmp9;
+            cResult[21] = tmp22;
+            cResult[22] = tmp28;
+            tmp26 = tmp28;
           }
         }
-        const obj6 = { style: tmp14, children: null };
-        const items = [tmp20, tmp30];
-        obj6.children = items;
-        const tmp36 = hasOwnProperty(View, obj6);
-        cResult[13] = tmp4.content;
-        cResult[14] = tmp20;
-        cResult[15] = tmp30;
-        cResult[16] = tmp36;
-        tmp33 = tmp36;
       }
+      const obj6 = { style: tmp4.content, children: null };
+      const items = [tmp12, tmp16, tmp19];
+      obj6.children = items;
+      const tmp25 = closure_5(View, obj6);
+      cResult[15] = tmp4.content;
+      cResult[16] = tmp12;
+      cResult[17] = tmp16;
+      cResult[18] = tmp19;
+      cResult[19] = tmp25;
+      tmp22 = tmp25;
     }
+    const obj7 = { variant: "primary", text: tmp5.action, onPress: tmp15 };
+    const tmp18 = closure_4(onConfirm(5376).Button, obj7);
+    cResult[10] = tmp5.action;
+    cResult[11] = tmp15;
+    cResult[12] = tmp18;
+    tmp16 = tmp18;
   }
-}) : (function ConjurePublishBlockedSheet(reason) {
-  const tmp4 = reason.reason === conjurePublishBlockedReason.ConjurePublishBlockedReason.PERMISSIONS;
-  const intl = util.intl;
-  const tmp7 = _modDef3827;
-  if (tmp4) {
-    let ZNGLFE = tmp7.wQ4UyJ;
-    let tmp8 = importDefault;
-  } else {
-    ZNGLFE = tmp7.ZNGLFE;
-    tmp8 = importDefault;
-  }
-  const obj = { header: null, children: null };
+  const obj = onConfirm(576);
+  const conjurePublishBlockedCopy = onConfirm(16967).getConjurePublishBlockedCopy(reason, message);
+  cResult[0] = message;
+  cResult[1] = reason;
+  cResult[2] = conjurePublishBlockedCopy;
+  tmp5 = conjurePublishBlockedCopy;
+  const tmpResult = onConfirm(16967);
+}) : (function ConjurePublishBlockedSheet(onConfirm) {
+  onConfirm = onConfirm.onConfirm;
+  ({ reason, message } = onConfirm);
   const tmp = closure_7();
-  obj.header = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, { title: intl.string(ZNGLFE) });
-  const obj3 = { style: tmp.content, children: null };
-  const intl2 = util.intl;
-  const tmp8Result = tmp8(3827);
-  const obj2 = { title: intl.string(ZNGLFE) };
-  const items = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: intl2.string(tmp4 ? tmp8Result.Agqmbt : tmp8Result.ffxKGK) }), ];
-  const intl3 = util.intl;
-  if (tmp4) {
-    let BddRzS = util.t.BddRzS;
-  } else {
-    BddRzS = tmp8(3827)["/omTNx"];
-  }
-  const obj4 = { variant: "text-md/normal", color: "text-muted", children: intl2.string(tmp4 ? tmp8Result.Agqmbt : tmp8Result.ffxKGK) };
-  items[1] = React4(components_Button_Button.Button, {
-    variant: "primary",
-    text: intl3.string(BddRzS),
-    onPress() {
-      return ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
+  const tmp2 = onConfirm;
+  const conjurePublishBlockedCopy = onConfirm(16967).getConjurePublishBlockedCopy(reason, message);
+  const obj2 = { header: closure_4(onConfirm(6835).BottomSheetTitleHeader, { title: conjurePublishBlockedCopy.title }), children: null };
+  const obj4 = { style: tmp.content, children: null };
+  const items = [
+    closure_4(onConfirm(5087).Text, { variant: "text-md/normal", color: "text-muted", children: conjurePublishBlockedCopy.body }),
+    closure_4(onConfirm(5376).Button, {
+      variant: "primary",
+      text: conjurePublishBlockedCopy.action,
+      onPress() {
+        ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
+        if (onConfirm != null) {
+          onConfirm();
+        }
+      }
+    }),
+
+  ];
+  let tmp5Result = null;
+  if (null != conjurePublishBlockedCopy.cancel) {
+    function close() {
+      ActionSheetActionCreatorsDefault.hideActionSheet(ConjurePublishBlockedSheet);
     }
-  });
-  obj3.children = items;
-  obj.children = hasOwnProperty(View, obj3);
-  return React4(ActionSheet.ActionSheet, obj);
+    const obj7 = { variant: "secondary", text: conjurePublishBlockedCopy.cancel, onPress: close };
+    tmp5Result = closure_4(tmp2(5376).Button, obj7);
+  }
+  items[2] = tmp5Result;
+  obj4.children = items;
+  obj2.children = closure_5(View, obj4);
+  return closure_4(onConfirm(6892).ActionSheet, obj2);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/native/ConjurePublishBlockedSheet.tsx");
 
-export default function showConjurePublishBlockedSheet(reason) {
-  const obj2 = { key: ConjurePublishBlockedSheet, content: React4(closure_8, { reason }) };
+export default function showConjurePublishBlockedSheet(reason, message, onConfirm) {
+  const obj2 = { key: ConjurePublishBlockedSheet, content: React4(closure_8, { reason, message, onConfirm }) };
   ActionSheetActionCreators.showActionSheet(obj2);
 };
 export const CONJURE_PUBLISH_BLOCKED_SHEET_KEY = "ConjurePublishBlockedSheet";

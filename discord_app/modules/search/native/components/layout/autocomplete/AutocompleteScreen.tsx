@@ -1,24 +1,24 @@
-// === Module 17211: AutocompleteScreen ===
+// === Module 17361: AutocompleteScreen ===
 
-// Module 17211 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12053 */;
-import tracking_TrackingDefault from "tracking/Tracking" /* 12074 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12078 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 17213 */;
+// Module 17361 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11990 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12011 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12015 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 17363 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 17212 */;
-import SearchQueryStore from "SearchQueryStore" /* 12067 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 17362 */;
+import SearchQueryStore from "SearchQueryStore" /* 12004 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1085);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp16 = cResult[8];
   }
   const tmpResult5 = searchContext(504);
-  const fullscreenPlaceholderCount = searchContext(17116).useFullscreenPlaceholderCount(tmp16);
+  const fullscreenPlaceholderCount = searchContext(17266).useFullscreenPlaceholderCount(tmp16);
   if (cResult[9] !== searchContext) {
     class P {
       constructor() {
@@ -671,10 +671,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return;
             }
           }
-          const tmpResult7 = tmp(17213);
+          const tmpResult7 = tmp(17363);
           const _Set = Set;
-          const set = new Set(tmp(17213).getSearchQueryUserIds(searchContext));
-          set1 = new Set(tmp(17213).getSearchQueryChannelIds(searchContext));
+          const set = new Set(tmp(17363).getSearchQueryUserIds(searchContext));
+          set1 = new Set(tmp(17363).getSearchQueryChannelIds(searchContext));
           maybeAddUserItem = function maybeAddUserItem(arg0, arg1) {
 
           };
@@ -879,7 +879,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmpResult8 = tmp(17213);
+          const tmpResult8 = tmp(17363);
         }
         cResult[26] = stateFromStores;
         cResult[27] = tmp23;
@@ -986,7 +986,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = searchContext;
   cResult[12] = P;
   cResult[13] = Q;
-  const tmpResult6 = searchContext(17116);
+  const tmpResult6 = searchContext(17266);
 }) : (function AutocompleteScreen(searchContext) {
   searchContext = searchContext.searchContext;
   first = undefined;
@@ -1019,7 +1019,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       });
       const obj4 = { searchContext, searchTokenType: null, location: null };
       ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-      tracking_TrackingDefault.trackSearchFilterAdd(obj4);
+      search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
       callback();
     }
   }, items5);
@@ -1037,7 +1037,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         });
         const obj4 = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-        tracking_TrackingDefault.trackSearchFilterAdd(obj4);
+        search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
         callback();
       }
     }
@@ -1063,7 +1063,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         });
         let obj = { searchContext, searchTokenType: null, location: null };
         ({ searchTokenType: obj4.searchTokenType, location: obj4.location } = prefixTag);
-        tracking_TrackingDefault.trackSearchFilterAdd(obj);
+        search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
         callback();
       }
     }

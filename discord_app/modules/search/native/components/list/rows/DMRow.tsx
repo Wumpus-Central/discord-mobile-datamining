@@ -1,23 +1,23 @@
-// === Module 17121: DMRow ===
+// === Module 17271: DMRow ===
 
-// Module 17121 (DMRow)
+// Module 17271 (DMRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import _modDef8598 from "module_8598" /* 8598 */;
-import BotTagDefault from "BotTag" /* 8741 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10220 */;
-import _modDef13626 from "module_13626" /* 13626 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import _modDef8606 from "module_8606" /* 8606 */;
+import BotTagDefault from "BotTag" /* 8750 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10205 */;
+import _modDef13717 from "module_13717" /* 13717 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
 
-const UserUtils = Text(4922);
-const Text_Text = Text(5086);
+const UserUtils = Text(4923);
+const Text_Text = Text(5087);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
@@ -25,7 +25,7 @@ const Constants = fn(1085);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" }, tag: { marginLeft: 4 }, title: { flexDirection: "row" } };
 let closure_15 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -212,7 +212,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8598, disableColor: true };
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8606, disableColor: true };
         obj4.children = __initData2(native.Icon, obj5);
         tmp4Result = __initData2(timestampProducer, obj4);
       }
@@ -220,7 +220,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13626, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13717, disableColor: true };
         obj6.children = __initData2(native.Icon, obj7);
         tmp4Result3 = __initData2(timestampProducer, obj6);
       }

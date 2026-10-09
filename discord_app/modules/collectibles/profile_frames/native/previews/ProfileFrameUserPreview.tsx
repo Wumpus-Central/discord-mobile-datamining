@@ -1,8 +1,8 @@
-// === Module 11186: ProfileFrameUserPreview ===
+// === Module 10592: ProfileFrameUserPreview ===
 
-// Module 11186 (ProfileFrameUserPreview)
+// Module 10592 (ProfileFrameUserPreview)
 import c from "c" /* 576 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10487 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10477 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

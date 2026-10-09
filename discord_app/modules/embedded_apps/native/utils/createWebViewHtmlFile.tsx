@@ -1,8 +1,8 @@
-// === Module 10744: createWebViewHtmlFile ===
+// === Module 10911: createWebViewHtmlFile ===
 
-// Module 10744 (createWebViewHtmlFile)
+// Module 10911 (createWebViewHtmlFile)
 import NativeFileModuleDefault from "NativeFileModule" /* 1162 */;
-import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -47,7 +47,7 @@ let closure_7 = async function _createWebViewHtmlFile(arg0) {
           closure_129_7 = undefined;
           c5 = 1;
           closure_6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {

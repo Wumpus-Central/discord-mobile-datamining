@@ -1,11 +1,11 @@
-// === Module 5363: VisualEffectView ===
+// === Module 5364: VisualEffectView ===
 
-// Module 5363 (VisualEffectView)
+// Module 5364 (VisualEffectView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken2 from "useToken" /* 4778 */;
-import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5365 */;
-import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5368 */;
+import useToken2 from "useToken" /* 4779 */;
+import VisualEffectViewIOS from "VisualEffectViewIOS" /* 5366 */;
+import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 5369 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,10 +45,10 @@ function getIOSBlurEffect(blurTheme, blurStyle) {
 }
 let closure_3 = ["blurTheme", "blurStyle", "blurAmount", "tintColor", "android_fallbackColor", "android_blurTargetViewNativeId", "android_softwareBlurDisabled", "ref"];
 const View = fn(17).View;
-let closure_6 = fn(5364).useVisualEffectViewOverrides;
+let closure_6 = fn(5365).useVisualEffectViewOverrides;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let closure_9 = PlatformUtils.isAndroid();
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidDefaultFallbackStyle(arg0) {

@@ -1,19 +1,19 @@
-// === Module 16772: ThemedHeaderBackgroundGradient ===
+// === Module 16896: ThemedHeaderBackgroundGradient ===
 
-// Module 16772 (ThemedHeaderBackgroundGradient)
+// Module 16896 (ThemedHeaderBackgroundGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useToken from "useToken" /* 4778 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useToken from "useToken" /* 4779 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 16941: useConjureAttachmentImage ===
+// === Module 17073: useConjureAttachmentImage ===
 
-// Module 16941 (useConjureAttachmentImage)
+// Module 17073 (useConjureAttachmentImage)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({ getAttachmentUrl: closure_4, isAttachmentAvailable: hasOwnProperty } = ConjureConnectionStore);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

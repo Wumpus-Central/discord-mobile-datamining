@@ -1,16 +1,16 @@
-// === Module 6614: Login ===
+// === Module 6621: Login ===
 
-// Module 6614 (Login)
+// Module 6621 (Login)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
-import Pressables from "Pressables" /* 6189 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6616 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5299 */;
+import Pressables from "Pressables" /* 6191 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 6623 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 6615 */;
+import PhoneStore from "PhoneStore" /* 6622 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ const View = fn(17).View;
 const AuthStates = fn(1085).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;
@@ -301,7 +301,7 @@ export default function Login(isMultiAccount) {
             let authenticationErrorsFromV6OrEarlierAPIError;
             c7 = 1;
             c8 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp7) {
           if (isMultiAccount === 1) {

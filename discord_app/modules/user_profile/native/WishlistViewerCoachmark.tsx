@@ -1,24 +1,24 @@
-// === Module 13259: WishlistViewerCoachmark ===
+// === Module 13352: WishlistViewerCoachmark ===
 
-// Module 13259 (WishlistViewerCoachmark)
+// Module 13352 (WishlistViewerCoachmark)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import _modDef13260 from "module_13260" /* 13260 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import _modDef13353 from "module_13353" /* 13353 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoachmarkImage() {
   const cResult = c.c(6);
   const tmp3 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13260 };
+    const obj2 = { uri: _modDef13353 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef13260 };
+  const obj3 = { uri: _modDef13353 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
       if (cResult[10] === tmp9) {
         let tmp13 = cResult[11];
       }
-      const coachmark = markAsDismissed(9375).useCoachmark(onViewWishlist.anchorRef, tmp13);
+      const coachmark = markAsDismissed(9413).useCoachmark(onViewWishlist.anchorRef, tmp13);
       return null;
     }
   }

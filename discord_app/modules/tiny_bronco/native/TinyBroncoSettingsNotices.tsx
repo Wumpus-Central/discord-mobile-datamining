@@ -1,29 +1,29 @@
-// === Module 14901: TinyBroncoSettingsNotices ===
+// === Module 15013: TinyBroncoSettingsNotices ===
 
-// Module 14901 (TinyBroncoSettingsNotices)
+// Module 15013 (TinyBroncoSettingsNotices)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3149 from "module_3149" /* 3149 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5918 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 5934 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
-import useUserIsTeen from "useUserIsTeen" /* 7710 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9102 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14774 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14814 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14902 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5906 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5919 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 5935 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
+import useUserIsTeen from "useUserIsTeen" /* 7719 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9595 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14882 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14922 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15014 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(5933).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7015);
+let closure_6 = fn(5934).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7018);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -80,7 +80,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenNo
   }
   if (cResult[8] !== tmp8) {
     let obj2 = { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 };
-    const tmp14 = jsx(noticeType(5375).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
+    const tmp14 = jsx(noticeType(5376).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
     cResult[8] = tmp8;
     cResult[9] = tmp14;
     let tmp12 = tmp14;
@@ -146,7 +146,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenNo
   const intl = noticeType(1126).intl;
   obj3.text = intl.string(noticeType(1126).t.hvVgAZ);
   obj3.onPress = callback;
-  obj2.button = jsx(noticeType(5375).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj2.button = jsx(noticeType(5376).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = noticeType(1126).intl;
   obj2.children = intl2.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
   obj.children = jsx(noticeType(1200).HelpMessage, { messageType: noticeType(1200).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: null });
@@ -238,7 +238,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unconf
     const intl = tmp(1126).intl;
     obj2.text = intl.string(tmp(1126).t.FDSSia);
     obj2.onPress = A;
-    const tmp11 = jsx(tmp(5375).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+    const tmp11 = jsx(tmp(5376).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
     cResult[4] = tmp11;
     const tmp10 = tmp11;
   } else {
@@ -349,7 +349,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unconf
   const intl = AGE_CONFIRMATION_NOTICE(1126).intl;
   obj3.text = intl.string(AGE_CONFIRMATION_NOTICE(1126).t.FDSSia);
   obj3.onPress = callback1;
-  obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5375).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+  obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5376).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
   const intl2 = AGE_CONFIRMATION_NOTICE(1126).intl;
   obj2.children = intl2.format(message.message, { handleOnAgeGatedContentHook: callback });
   obj.children = jsx(AGE_CONFIRMATION_NOTICE(1200).HelpMessage, { messageType: AGE_CONFIRMATION_NOTICE(1200).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: null });

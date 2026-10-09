@@ -1,9 +1,9 @@
-// === Module 11825: ApplicationFrecencyHooks ===
+// === Module 11762: ApplicationFrecencyHooks ===
 
-// Module 11825 (ApplicationFrecencyHooks)
+// Module 11762 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import noop from "module_19" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9187 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 9221 */;
 
 const require = globalThis.__r;
 

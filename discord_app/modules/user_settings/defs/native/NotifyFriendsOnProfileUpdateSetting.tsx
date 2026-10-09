@@ -1,12 +1,12 @@
-// === Module 16117: NotifyFriendsOnProfileUpdateSetting ===
+// === Module 16233: NotifyFriendsOnProfileUpdateSetting ===
 
-// Module 16117 (NotifyFriendsOnProfileUpdateSetting)
+// Module 16233 (NotifyFriendsOnProfileUpdateSetting)
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2040 */;
+import UserSettings from "UserSettings" /* 2041 */;
 import _modDef2763 from "module_2763" /* 2763 */;
-import SettingsConstants from "SettingsConstants" /* 7966 */;
-import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 16118 */;
-import SettingBuilders from "SettingBuilders" /* 11262 */;
+import SettingsConstants from "SettingsConstants" /* 7974 */;
+import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 16234 */;
+import SettingBuilders from "SettingBuilders" /* 10629 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

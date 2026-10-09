@@ -1,7 +1,7 @@
-// === Module 2025: UserApplicationIdentityConstants ===
+// === Module 2026: UserApplicationIdentityConstants ===
 
-// Module 2025 (UserApplicationIdentityConstants)
-import socialSDKMigration from "socialSDKMigration" /* 2026 */;
+// Module 2026 (UserApplicationIdentityConstants)
+import socialSDKMigration from "socialSDKMigration" /* 2027 */;
 import size from "module_2" /* 2 */;
 
 const obj = { RIOT_GAMES: "1443033465766281327", LEAGUE_OF_LEGENDS: "1443349464290168976", VALORANT: "1443350165678198935", BATTLENET: "1356665549089800303", WORLD_OF_WARCRAFT: "1384671873593512078" };

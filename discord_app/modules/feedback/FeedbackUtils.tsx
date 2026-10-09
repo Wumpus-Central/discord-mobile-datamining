@@ -1,12 +1,12 @@
-// === Module 9605: FeedbackUtils ===
+// === Module 9624: FeedbackUtils ===
 
-// Module 9605 (FeedbackUtils)
+// Module 9624 (FeedbackUtils)
 import _modDef12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import _modDef2827 from "module_2827" /* 2827 */;
-import Constants from "Constants" /* 9602 */;
+import Constants from "Constants" /* 9621 */;
 import size from "module_2" /* 2 */;
 
 ({ ConnectionFeedbackOption: c3, AudioFeedbackOption: closure_4, VideoFeedbackOption: hasOwnProperty, VideoBackgroundFeedbackOption: metroRequire, StreamFeedbackOption: closure_7, FeedbackOptionVariant: closure_8, FeedbackType: closure_9, MAX_REPRESENTABLE_DATE: c10, PeopleFeedbackOption: closure_11 } = Constants);
@@ -26,7 +26,7 @@ export const shuffleProblems = function shuffleProblems(reasons, otherKey) {
 export const processOptOut = function processOptOut(feedbackType) {
   feedbackType = feedbackType.feedbackType;
   AnalyticsUtilsDefault.track(AnalyticEvents.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, { feedback_type: closure_9[feedbackType], opted_out_until });
-  const InAppFeedbackStates = feedbackType(2040).InAppFeedbackStates;
+  const InAppFeedbackStates = feedbackType(2041).InAppFeedbackStates;
   InAppFeedbackStates.updateSetting((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);

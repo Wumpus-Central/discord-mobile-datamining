@@ -1,15 +1,15 @@
-// === Module 11271: useCodedLinksExperimentEmbeds ===
+// === Module 10638: useCodedLinksExperimentEmbeds ===
 
-// Module 11271 (useCodedLinksExperimentEmbeds)
+// Module 10638 (useCodedLinksExperimentEmbeds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useLegacyExperiments from "useLegacyExperiments" /* 11272 */;
-import useApexExperiments from "useApexExperiments" /* 11273 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 10639 */;
+import useApexExperiments from "useApexExperiments" /* 10640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
-import ExperimentStore from "ExperimentStore" /* 4976 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
+import UserStore from "UserStore" /* 1390 */;
+import ExperimentStore from "ExperimentStore" /* 4977 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
 
 const require = globalThis.__r;
 
@@ -363,15 +363,15 @@ export const useCodedLinksExperimentEmbeds = ReactCompilerGating.isReactCompiler
         return clientOverrides;
       }
     }
-    tmp23[0] = obj(11272).parseRegisteredExperiments(stateFromStoresObject);
-    const objResult12 = obj(11272);
-    tmp23[1] = obj(11272).getLegacyOverridesInfo(stateFromStoresObject1);
-    const objResult13 = obj(11272);
-    tmp23[2] = obj(11273).mergeApexExperiments(stateFromStores, stateFromStores1);
-    obj = obj(11273);
+    tmp23[0] = obj(10639).parseRegisteredExperiments(stateFromStoresObject);
+    const objResult12 = obj(10639);
+    tmp23[1] = obj(10639).getLegacyOverridesInfo(stateFromStoresObject1);
+    const objResult13 = obj(10639);
+    tmp23[2] = obj(10640).mergeApexExperiments(stateFromStores, stateFromStores1);
+    obj = obj(10640);
     apexExperimentOverridesInfo = obj.getApexExperimentOverridesInfo(stateFromStores2);
     tmp23[3] = apexExperimentOverridesInfo;
-    const objResult14 = obj(11273);
+    const objResult14 = obj(10640);
   } else {
     class L {
       constructor() {

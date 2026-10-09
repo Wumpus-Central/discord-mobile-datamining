@@ -1,7 +1,7 @@
-// === Module 16165: RegistrationUIStore ===
+// === Module 16281: RegistrationUIStore ===
 
-// Module 16165 (RegistrationUIStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+// Module 16281 (RegistrationUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ export const clearRegistrationErrorMessage = function clearRegistrationErrorMess
   let errors = {};
   const merged = Object.assign(errors.getState().errors);
   delete tmp2[tmp];
-  errors(1271).batchUpdates(() => {
+  errors(1272).batchUpdates(() => {
     errors = { errors };
     errors.setState(errors);
   });

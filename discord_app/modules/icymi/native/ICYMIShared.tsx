@@ -1,30 +1,30 @@
-// === Module 16735: ICYMIShared ===
+// === Module 16861: ICYMIShared ===
 
-// Module 16735 (ICYMIShared)
+// Module 16861 (ICYMIShared)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import Client from "Client" /* 4987 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5077 */;
-import timing from "timing" /* 5091 */;
-import GuildIcon from "GuildIcon" /* 6161 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6789 */;
-import safeTransitionToDefault from "safeTransitionTo" /* 6936 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7167 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8279 */;
-import ICYMIUtils from "ICYMIUtils" /* 8446 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8447 */;
-import ClipView from "ClipView" /* 8986 */;
-import openDetailsActionSheet from "openDetailsActionSheet" /* 16736 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import Client from "Client" /* 4988 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5078 */;
+import timing from "timing" /* 5092 */;
+import GuildIcon from "GuildIcon" /* 6165 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6796 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 6943 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7172 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
+import ICYMIUtils from "ICYMIUtils" /* 8454 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8455 */;
+import ClipView from "ClipView" /* 8997 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16862 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6992 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6999 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import UserStore from "UserStore" /* 1389 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -37,7 +37,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let c21 = 225;
-const createICYMIStyles = fn(16694);
+const createICYMIStyles = fn(16820);
 let closure_22 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -405,7 +405,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildContent
   ({ channel: importDefault, hideTimestamp, id: dependencyMap, type: noop } = guild);
   ({ timestamp, children, avatar, title, subtitle, onHeaderPress, onHeaderLongPress, disableInteractions } = guild);
   const tmp = closure_22();
-  const fontScale = guild(5382).useFontScale();
+  const fontScale = guild(5383).useFontScale();
   let obj2 = { onPress: onHeaderPress, onLongPress: onHeaderLongPress, style: tmp.content, children: null };
   const obj3 = { style: fontScale > 1.8 ? tmp.channelNameAndAccessoryLarge : tmp.channelNameAndAccessory, children: null };
   const obj4 = { style: tmp.header, children: null };
@@ -416,9 +416,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildContent
   const items1 = [title, ];
   let tmp7Result = !hideTimestamp;
   if (!hideTimestamp) {
-    const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp2(6064).getRelativeTimestamp(timestamp) };
-    tmp7Result = closure_18(tmp2(5086).Text, obj8);
-    const tmp2Result = tmp2(6064);
+    const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp2(6066).getRelativeTimestamp(timestamp) };
+    tmp7Result = closure_18(tmp2(5087).Text, obj8);
+    const tmp2Result = tmp2(6066);
   }
   items1[1] = tmp7Result;
   obj7.children = items1;
@@ -444,8 +444,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildContent
         children: null
       };
       const obj10 = { color: nativeDefault.colors.ICON_MUTED, size: "sm" };
-      obj9.children = closure_18(tmp2(9180).MoreHorizontalIcon, obj10);
-      tmp7Result2 = closure_18(tmp2(6189).PressableOpacity, obj9);
+      obj9.children = closure_18(tmp2(9214).MoreHorizontalIcon, obj10);
+      tmp7Result2 = closure_18(tmp2(6191).PressableOpacity, obj9);
     }
   }
   const obj11 = { children: null };
@@ -459,7 +459,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildContent
   obj4.children = items;
   obj3.children = closure_19(View, obj4);
   obj2.children = closure_18(View, obj3);
-  const items4 = [closure_18(guild(6189).PressableHighlight, obj2), children];
+  const items4 = [closure_18(guild(6191).PressableHighlight, obj2), children];
   obj11.children = items4;
   return closure_19(closure_20, obj11);
 });
@@ -1982,22 +1982,22 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SimplePost(
   let token;
   const tmp = closure_22();
   const tmp2 = token;
-  const tmp4 = token(4991)();
-  token = highlight(4778).useToken(token(587).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
-  let obj = highlight(4778);
-  const hexWithOpacityResult = highlight(4927).hexWithOpacity(token(587).unsafe_rawColors.BRAND_360, 0.25);
+  const tmp4 = token(4992)();
+  token = highlight(4779).useToken(token(587).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
+  let obj = highlight(4779);
+  const hexWithOpacityResult = highlight(4928).hexWithOpacity(token(587).unsafe_rawColors.BRAND_360, 0.25);
   dependencyMap = hexWithOpacityResult;
-  let obj2 = highlight(4927);
-  const sharedValue = highlight(4810).useSharedValue(0);
-  let obj3 = highlight(4810);
+  let obj2 = highlight(4928);
+  const sharedValue = highlight(4811).useSharedValue(0);
+  let obj3 = highlight(4811);
   const fn = function c() {
     const obj = { backgroundColor: null };
     const items = [token, c2];
     obj.backgroundColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
     return obj;
   };
-  let obj4 = highlight(4810);
-  fn.__closure = { interpolateColor: highlight(4810).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
+  let obj4 = highlight(4811);
+  fn.__closure = { interpolateColor: highlight(4811).interpolateColor, progress: sharedValue, bgColor: token, bgColorHighlighted: hexWithOpacityResult };
   fn.__workletHash = 11803325452646;
   fn.__initData = __initData2;
   let items = [highlight, sharedValue];
@@ -2016,7 +2016,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function SimplePost(
     const items1 = [tmp.simplePostContent, animatedStyle];
     obj7.style = items1;
     obj7.children = children;
-    const items2 = [closure_18(tmp2(4810).View, obj7), ];
+    const items2 = [closure_18(tmp2(4811).View, obj7), ];
     let tmp12Result = null;
     if (!hideDivider) {
       tmp12Result = closure_18(closure_23, {});
@@ -2137,7 +2137,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 }
                 if (cResult[33] !== tmp4.commentsIcon) {
                   const obj2 = { style: tmp4.commentsIcon };
-                  const tmp24 = closure_18(tmp(8174).ChatIcon, obj2);
+                  const tmp24 = closure_18(tmp(8182).ChatIcon, obj2);
                   cResult[33] = tmp4.commentsIcon;
                   cResult[34] = tmp24;
                   let tmp22 = tmp24;
@@ -2146,7 +2146,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 }
                 if (cResult[35] !== str) {
                   const obj3 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-                  const tmp27 = closure_18(tmp(5086).Text, obj3);
+                  const tmp27 = closure_18(tmp(5087).Text, obj3);
                   cResult[35] = str;
                   cResult[36] = tmp27;
                   let tmp25 = tmp27;
@@ -2155,7 +2155,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 }
                 if (cResult[37] !== tmp4.chevron) {
                   const obj5 = { style: tmp4.chevron, size: "xxs" };
-                  const tmp30 = closure_18(tmp(6892).ChevronSmallRightIcon, obj5);
+                  const tmp30 = closure_18(tmp(6899).ChevronSmallRightIcon, obj5);
                   cResult[37] = tmp4.chevron;
                   cResult[38] = tmp30;
                   let tmp28 = tmp30;
@@ -2183,7 +2183,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                       const obj6 = { style: tmp10, onPress, children: null };
                       const items1 = [tmp12, tmp19, tmp31];
                       obj6.children = items1;
-                      const tmp37 = closure_19(tmp(6189).PressableHighlight, obj6);
+                      const tmp37 = closure_19(tmp(6191).PressableHighlight, obj6);
                       cResult[44] = onPress;
                       cResult[45] = tmp31;
                       cResult[46] = tmp10;
@@ -2206,7 +2206,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
                 tmp31 = tmp34;
               }
               const obj8 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp4.recentCommentText, children: cResult[29] };
-              const tmp21 = closure_18(tmp(5086).Text, obj8);
+              const tmp21 = closure_18(tmp(5087).Text, obj8);
               cResult[30] = tmp4.recentCommentText;
               cResult[31] = cResult[29];
               cResult[32] = tmp21;
@@ -2242,7 +2242,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       if (cResult[7] !== tmp4.recentCommentText) {
         const obj10 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp4.recentCommentText, children: tmp39 };
-        const tmp43 = closure_18(tmp(5086).Text, obj10);
+        const tmp43 = closure_18(tmp(5087).Text, obj10);
         cResult[7] = tmp4.recentCommentText;
         cResult[8] = tmp43;
         let tmp41 = tmp43;
@@ -2251,7 +2251,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       if (cResult[9] !== tmp4.commentsIcon) {
         const obj11 = { style: tmp4.commentsIcon };
-        const tmp46 = closure_18(tmp(8174).ChatIcon, obj11);
+        const tmp46 = closure_18(tmp(8182).ChatIcon, obj11);
         cResult[9] = tmp4.commentsIcon;
         cResult[10] = tmp46;
         let tmp44 = tmp46;
@@ -2260,7 +2260,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
       if (cResult[11] !== tmp4.chevron) {
         const obj12 = { style: tmp4.chevron, size: "xxs" };
-        const tmp49 = closure_18(tmp(6892).ChevronSmallRightIcon, obj12);
+        const tmp49 = closure_18(tmp(6899).ChevronSmallRightIcon, obj12);
         cResult[11] = tmp4.chevron;
         cResult[12] = tmp49;
         let tmp47 = tmp49;
@@ -2285,7 +2285,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
           const obj13 = { style: tmp38, onPress, children: null };
           const items4 = [tmp41, tmp50];
           obj13.children = items4;
-          const tmp56 = closure_19(tmp(6189).PressableHighlight, obj13);
+          const tmp56 = closure_19(tmp(6191).PressableHighlight, obj13);
           cResult[17] = onPress;
           cResult[18] = tmp38;
           cResult[19] = tmp41;
@@ -2348,18 +2348,18 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
           parseInlineReplyResult = intl.string(tmp4(1126).t["6kp9H2"]);
         }
         obj4.children = parseInlineReplyResult;
-        items2[1] = closure_18(tmp4(5086).Text, obj4);
+        items2[1] = closure_18(tmp4(5087).Text, obj4);
         const obj6 = { style: tmp.commentCount, children: null };
         const obj7 = { style: tmp.commentsIcon };
-        const items3 = [closure_18(tmp4(8174).ChatIcon, obj7), , ];
+        const items3 = [closure_18(tmp4(8182).ChatIcon, obj7), , ];
         const obj8 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-        items3[1] = closure_18(tmp4(5086).Text, obj8);
+        items3[1] = closure_18(tmp4(5087).Text, obj8);
         const obj9 = { style: tmp.chevron, size: "xxs" };
-        items3[2] = closure_18(tmp4(6892).ChevronSmallRightIcon, obj9);
+        items3[2] = closure_18(tmp4(6899).ChevronSmallRightIcon, obj9);
         obj6.children = items3;
         items2[2] = closure_19(View, obj6);
         obj2.children = items2;
-        return closure_19(tmp4(6189).PressableHighlight, obj2);
+        return closure_19(tmp4(6191).PressableHighlight, obj2);
       }
     }
     const obj10 = { style: null, onPress: null, children: null };
@@ -2369,16 +2369,16 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled() ? (
     const obj11 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: tmp.recentCommentText, children: null };
     const intl2 = tmp4(1126).intl;
     obj11.children = intl2.string(tmp4(1126).t.VMWjXW);
-    const items5 = [closure_18(tmp4(5086).Text, obj11), ];
+    const items5 = [closure_18(tmp4(5087).Text, obj11), ];
     const obj12 = { style: tmp.commentCount, children: null };
     const obj13 = { style: tmp.commentsIcon };
-    const items6 = [closure_18(tmp4(8174).ChatIcon, obj13), ];
+    const items6 = [closure_18(tmp4(8182).ChatIcon, obj13), ];
     const obj14 = { style: tmp.chevron, size: "xxs" };
-    items6[1] = closure_18(tmp4(6892).ChevronSmallRightIcon, obj14);
+    items6[1] = closure_18(tmp4(6899).ChevronSmallRightIcon, obj14);
     obj12.children = items6;
     items5[1] = closure_19(View, obj12);
     obj10.children = items5;
-    return closure_19(tmp4(6189).PressableHighlight, obj10);
+    return closure_19(tmp4(6191).PressableHighlight, obj10);
   } else {
     return null;
   }

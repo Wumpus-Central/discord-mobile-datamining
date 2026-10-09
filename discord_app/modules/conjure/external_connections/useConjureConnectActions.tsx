@@ -1,7 +1,7 @@
-// === Module 16929: useConjureConnectActions ===
+// === Module 17058: useConjureConnectActions ===
 
-// Module 16929 (useConjureConnectActions)
-import conjureExternalConnections from "conjureExternalConnections" /* 13083 */;
+// Module 17058 (useConjureConnectActions)
+import conjureExternalConnections from "conjureExternalConnections" /* 13176 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(13072).requestExternalAuthorizeUrl;
+let closure_6 = fn(13164).requestExternalAuthorizeUrl;
 const set = new Set();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -50,7 +50,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
   }
   const fn2 = function x(type) {
     if (null != type) {
-      const result = type(13083).beginExternalAuthorization(ref.current, type.type);
+      const result = type(13176).beginExternalAuthorization(ref.current, type.type);
       if (null != result) {
         ref.current = result;
         dependencyMap(result);
@@ -97,9 +97,9 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 first(tmp2.type);
                 if ("url" === closure_128_0.type) {
                   const obj7 = { href: closure_128_0.url, trusted: false };
-                  tmp2(8466).handleClick(obj7);
+                  tmp2(8474).handleClick(obj7);
                   c3 = 3;
-                  const obj = tmp2(8466);
+                  const obj = tmp2(8474);
                 }
                 if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                   const intl2 = tmp2(1126).intl;
@@ -109,7 +109,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                   stringResult = intl.string(tmp5(3827).POxkSh);
                 }
                 closure_2_1(stringResult);
-                obj3 = tmp2(13083);
+                obj3 = tmp2(13176);
               }
             } catch (tmp33) {
               c3 = tmp;
@@ -138,7 +138,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
           return applyArgumentsResult;
         })();
       }
-      let obj = type(13083);
+      let obj = type(13176);
     }
   };
   cResult[1] = arg1;
@@ -204,9 +204,9 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
               callback(closure_129_0.type);
               if ("url" === closure_128_0.type) {
                 const obj7 = { href: closure_128_0.url, trusted: false };
-                type(8466).handleClick(obj7);
+                type(8474).handleClick(obj7);
                 c3 = 3;
-                const obj = type(8466);
+                const obj = type(8474);
               }
               if ("setup" === obj3.externalAuthErrorCopy(closure_128_0.error)) {
                 const intl2 = type(1126).intl;
@@ -216,7 +216,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
                 stringResult = intl.string(closure_2_1(3827).POxkSh);
               }
               closure_1(stringResult);
-              obj3 = type(13083);
+              obj3 = type(13176);
             }
           } catch (tmp33) {
             c3 = tmp;
@@ -225,7 +225,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
         }
       };
       if (null != type) {
-        const result = type(13083).beginExternalAuthorization(ref.current, type.type);
+        const result = type(13176).beginExternalAuthorization(ref.current, type.type);
         if (null != result) {
           ref.current = result;
           dependencyMap(result);
@@ -250,7 +250,7 @@ export const useConjureConnectActions = ReactCompilerGating.isReactCompilerEnabl
             return applyArgumentsResult;
           })();
         }
-        let obj = type(13083);
+        let obj = type(13176);
       }
     }, items)
   };

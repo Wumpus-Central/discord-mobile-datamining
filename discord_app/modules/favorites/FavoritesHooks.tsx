@@ -1,23 +1,23 @@
-// === Module 10294: FavoritesHooks ===
+// === Module 10279: FavoritesHooks ===
 
-// Module 10294 (FavoritesHooks)
+// Module 10279 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1988 */;
+import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1989 */;
 import FavoritesUtils from "FavoritesUtils" /* 2089 */;
-import FavoritesLimits from "FavoritesLimits" /* 10295 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10296 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
-import UserStore from "UserStore" /* 1389 */;
-import FavoriteStore from "FavoriteStore" /* 2066 */;
+import FavoritesLimits from "FavoritesLimits" /* 10280 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10281 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import UserStore from "UserStore" /* 1390 */;
+import FavoriteStore from "FavoriteStore" /* 2067 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const MAX_FAVORITE_CHANNELS = fn(2077).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFavoritesAccess(arg0) {
   const cResult = c.c(8);

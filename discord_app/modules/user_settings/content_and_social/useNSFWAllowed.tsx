@@ -1,9 +1,9 @@
-// === Module 6904: useNSFWAllowed ===
+// === Module 6911: useNSFWAllowed ===
 
-// Module 6904 (useNSFWAllowed)
+// Module 6911 (useNSFWAllowed)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

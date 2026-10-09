@@ -1,6 +1,6 @@
-// === Module 9167: CrunchyrollLinkConstants ===
+// === Module 12882: CrunchyrollLinkConstants ===
 
-// Module 9167 (CrunchyrollLinkConstants)
+// Module 12882 (CrunchyrollLinkConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkConstants.tsx");

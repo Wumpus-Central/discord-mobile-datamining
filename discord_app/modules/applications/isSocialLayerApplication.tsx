@@ -1,9 +1,9 @@
-// === Module 11283: isSocialLayerApplication ===
+// === Module 10650: isSocialLayerApplication ===
 
-// Module 11283 (isSocialLayerApplication)
+// Module 10650 (isSocialLayerApplication)
 import Constants from "Constants" /* 1085 */;
-import scopes2 from "scopes" /* 9132 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9138 */;
+import scopes2 from "scopes" /* 9199 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9205 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;

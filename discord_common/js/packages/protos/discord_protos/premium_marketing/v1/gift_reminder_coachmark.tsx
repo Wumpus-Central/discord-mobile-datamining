@@ -1,9 +1,9 @@
-// === Module 10026: gift_reminder_coachmark ===
+// === Module 9121: gift_reminder_coachmark ===
 
-// Module 10026 (gift_reminder_coachmark)
+// Module 9121 (gift_reminder_coachmark)
 import _mod1210 from "module_1210" /* 1210 */;
-import localized_string from "localized_string" /* 10011 */;
-import theme_aware_asset from "theme_aware_asset" /* 10021 */;
+import localized_string from "localized_string" /* 9106 */;
+import theme_aware_asset from "theme_aware_asset" /* 9116 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

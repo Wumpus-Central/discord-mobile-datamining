@@ -1,18 +1,18 @@
-// === Module 17431: ConnectionDeprecationBottomSheet ===
+// === Module 17581: ConnectionDeprecationBottomSheet ===
 
-// Module 17431 (ConnectionDeprecationBottomSheet)
+// Module 17581 (ConnectionDeprecationBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import themes from "themes" /* 4785 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Icon from "Icon" /* 5377 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 6844 */;
-import GameIcon from "GameIcon" /* 6851 */;
-import AccountLinkManager from "AccountLinkManager" /* 17432 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import themes from "themes" /* 4786 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Icon from "Icon" /* 5378 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 6851 */;
+import GameIcon from "GameIcon" /* 6858 */;
+import AccountLinkManager from "AccountLinkManager" /* 17582 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
 
 const require = globalThis.__r;
 const IconDefault = Icon;
@@ -20,10 +20,10 @@ const GameIconDefault = GameIcon;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: { paddingHorizontal: nativeDefault.space.PX_16 }, text: { textAlign: "center" }, connectionIcon: { height: 48, width: 48 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -287,7 +287,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(6847).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(6854).useGetOrFetchApplication(replacedBy);
   const tmp10 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp10);
   if (!fetchingConnections) {
@@ -333,7 +333,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = ReactCompilerGating
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(6847).useGetOrFetchApplication(replacedBy);
+  const getOrFetchApplication = deprecatedPlatformTypes(6854).useGetOrFetchApplication(replacedBy);
   const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {

@@ -1,6 +1,6 @@
-// === Module 8839: GuildTraits ===
+// === Module 8848: GuildTraits ===
 
-// Module 8839 (GuildTraits)
+// Module 8848 (GuildTraits)
 import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

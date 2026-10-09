@@ -1,6 +1,6 @@
-// === Module 15362: AppearanceThemePickerSetting ===
+// === Module 15475: AppearanceThemePickerSetting ===
 
-// Module 15362 (AppearanceThemePickerSetting)
+// Module 15475 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -8,7 +8,7 @@ import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSingleThemePickerVisible() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.Ksh3ik);
   },
-  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  parent: fn(7974).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useIsSingleThemePickerVisible() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ const route = SettingBuilders.createRoute({
     const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   }),
-  useTrailing: fn(15356).useAppearanceSettingTrailing,
+  useTrailing: fn(15469).useAppearanceSettingTrailing,
   screen: {
     route: fn(1085).UserSettingsSections.APPEARANCE_THEME_PICKER,
     getComponent() {

@@ -1,8 +1,8 @@
-// === Module 14216: NormalTelemetry ===
+// === Module 14312: NormalTelemetry ===
 
-// Module 14216 (NormalTelemetry)
-import TelemetryRingNative2 from "TelemetryRingNative" /* 2006 */;
-import BaseTelemetryChannel from "BaseTelemetryChannel" /* 2005 */;
+// Module 14312 (NormalTelemetry)
+import TelemetryRingNative2 from "TelemetryRingNative" /* 2007 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 2006 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
@@ -16,7 +16,7 @@ class NormalTelemetryImpl extends tmp3 {
     return tmp1;
   }
 }
-let items = [fn(2006).TelemetryChannel.NORMAL];
+let items = [fn(2007).TelemetryChannel.NORMAL];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/NormalTelemetry.tsx");
 

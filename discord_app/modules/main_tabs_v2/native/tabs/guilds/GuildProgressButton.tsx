@@ -1,11 +1,11 @@
-// === Module 16421: GuildProgressButton ===
+// === Module 16540: GuildProgressButton ===
 
-// Module 16421 (GuildProgressButton)
+// Module 16540 (GuildProgressButton)
 import nativeDefault from "native" /* 587 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10490 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11912 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12224 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12227 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10480 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11849 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12163 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12166 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   const cResult = guild(576).c(15);
   guild = guild.guild;
   let obj = guild(576);
-  const guildProgressStep = guild(12224).useGuildProgressStep(guild);
+  const guildProgressStep = guild(12163).useGuildProgressStep(guild);
   ({ percentComplete, subtitle, completed } = guildProgressStep);
   if (cResult[0] === completed) {
     if (cResult[1] === guild.id) {
@@ -32,8 +32,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
       }
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { source: completed(16422) };
-        const tmp15 = jsx(tmp(8557).RowButton.Icon, { source: completed(16422) });
+        const obj3 = { source: completed(16541) };
+        const tmp15 = jsx(tmp(8565).RowButton.Icon, { source: completed(16541) });
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.o3HK3d);
         cResult[7] = tmp15;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
       }
       if (cResult[9] !== percentComplete) {
         const obj4 = { percent: percentComplete };
-        const tmp20 = jsx(completed(12344), { percent: percentComplete });
+        const tmp20 = jsx(completed(12283), { percent: percentComplete });
         cResult[9] = percentComplete;
         cResult[10] = tmp20;
         let tmp17 = tmp20;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
         }
       }
       const obj5 = { icon: tmp11, label: tmp12, subLabel: subtitle, onPress: tmp9, trailing: tmp17 };
-      const tmp23 = jsx(tmp(8557).RowButton, { icon: tmp11, label: tmp12, subLabel: subtitle, onPress: tmp9, trailing: tmp17 });
+      const tmp23 = jsx(tmp(8565).RowButton, { icon: tmp11, label: tmp12, subLabel: subtitle, onPress: tmp9, trailing: tmp17 });
       cResult[11] = tmp9;
       cResult[12] = subtitle;
       cResult[13] = tmp17;
@@ -92,10 +92,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   cResult[3] = items;
   tmp6 = items;
   tmp5 = fn;
-  let obj2 = guild(12224);
+  let obj2 = guild(12163);
 }) : (function GuildProgressButton(guild) {
   guild = guild.guild;
-  const guildProgressStep = guild(12224).useGuildProgressStep(guild);
+  const guildProgressStep = guild(12163).useGuildProgressStep(guild);
   const completed = guildProgressStep.completed;
   const items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
@@ -112,14 +112,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
     GuildProgressUtils.openActionSheet(guild);
   }, items1);
   let obj2 = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
-  let obj = guild(12224);
-  obj2.icon = jsx(guild(8557).RowButton.Icon, { source: completed(16422) });
+  let obj = guild(12163);
+  obj2.icon = jsx(guild(8565).RowButton.Icon, { source: completed(16541) });
   const intl = guild(1126).intl;
   obj2.label = intl.string(guild(1126).t.o3HK3d);
   obj2.subLabel = subtitle;
   obj2.onPress = callback;
-  obj2.trailing = jsx(completed(12344), { percent: percentComplete });
-  return jsx(guild(8557).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
+  obj2.trailing = jsx(completed(12283), { percent: percentComplete });
+  return jsx(guild(8565).RowButton, { icon: null, label: null, subLabel: null, onPress: null, trailing: null });
 });
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
   const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);

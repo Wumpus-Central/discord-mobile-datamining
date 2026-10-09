@@ -1,7 +1,7 @@
-// === Module 16428: handleFavoritesGuildAddSuggestedChannel ===
+// === Module 16547: handleFavoritesGuildAddSuggestedChannel ===
 
-// Module 16428 (handleFavoritesGuildAddSuggestedChannel)
-import formatResults from "formatResults" /* 11577 */;
+// Module 16547 (handleFavoritesGuildAddSuggestedChannel)
+import formatResults from "formatResults" /* 11510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

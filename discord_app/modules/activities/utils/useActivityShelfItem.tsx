@@ -1,33 +1,34 @@
-// === Module 11750: useActivityShelfItem ===
+// === Module 11687: useActivityShelfItem ===
 
-// Module 11750 (useActivityShelfItem)
+// Module 11687 (useActivityShelfItem)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Server from "Server" /* 1997 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4696 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6847 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9138 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10617 */;
-import getPlatformDefault from "getPlatform" /* 10627 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10732 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10733 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10752 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11751 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11752 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import Server from "Server" /* 1998 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4698 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6854 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9205 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10768 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10777 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10878 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10879 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10922 */;
+import getPlatformDefault from "getPlatform" /* 11670 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11688 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11689 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
 
 require = fn;
 function useOnActivityItemSelected(arg0) {
   ({ application, botUserIdForAppDM: require, context } = arg0);
-  ({ locationObject: dependencyMap, embeddedActivitiesManager: asyncGeneratorStep, onActivityItemSelectedProp: EmbeddedActivitiesStore, launchingComponentId: STAFF_RELEASE_PHASES, commandOrigin: ApplicationFlags, sectionName: MAIN_SURFACE, source: obj, fetchesApplication } = arg0);
+  ({ locationObject: dependencyMap, onActivityItemSelectedProp: asyncGeneratorStep, launchingComponentId: EmbeddedActivitiesStore, commandOrigin: STAFF_RELEASE_PHASES, sectionName: ApplicationFlags, source: MAIN_SURFACE, fetchesApplication } = arg0);
   if (fetchesApplication === undefined) {
     fetchesApplication = true;
   }
-  ({ customId: closure_9, referrerId: useOnActivityItemSelected, onConfirmActivityLaunchChecksAlertOpen: closure_11 } = arg0);
+  ({ customId: obj, referrerId: closure_9, onConfirmActivityLaunchChecksAlertOpen: useOnActivityItemSelected } = arg0);
   let analyticsLocations;
+  closure_13 = undefined;
   closure_14 = undefined;
-  closure_15 = undefined;
   let str;
   if (application != null) {
     str = application.id;
@@ -35,14 +36,14 @@ function useOnActivityItemSelected(arg0) {
   if (str == null) {
     str = "";
   }
-  let tmp = customId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6841)().analyticsLocations;
-  closure_14 = context(10733)();
+  let tmp = referrerId({ context, applicationId: str, fetchesApplication });
+  analyticsLocations = context(6848)().analyticsLocations;
+  closure_13 = context(10879)();
   obj = canLaunchContextlessFrame;
-  closure_15 = obj.canLaunchContextlessFrame(application);
+  closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
     return () => {
-      if (EmbeddedActivitiesStore != null) {
+      if (asyncGeneratorStep != null) {
         tmp({ applicationId: "" });
       }
     };
@@ -74,40 +75,46 @@ function useOnActivityItemSelected(arg0) {
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
-              if (closure_15) {
-                c3 = 1;
-                const obj4 = { applicationId: str, surface, analyticsContext: null };
-                const obj5 = { isStart: true, analyticsLocations, source, channelId: null };
+              if (closure_14) {
                 let id;
                 if ("channel" === context.type) {
                   id = context.channel.id;
                 }
-                obj5.channelId = id;
-                obj4.analyticsContext = obj5;
-                c4 = 2;
-                c5 = 1;
-                const obj7 = { value: tmp3(tmp44[20]).launchFrame(obj4), done: false };
-                return obj7;
-              } else {
+                tmp3(tmp50[20])(id);
+                c3 = 1;
+                const tmp39 = tmp3(tmp50[20]);
+                const obj4 = { applicationId: str, surface, analyticsContext: null };
+                const obj5 = { isStart: true, analyticsLocations, source, channelId: null };
                 let id1;
                 if ("channel" === context.type) {
                   id1 = context.channel.id;
                 }
-                closure_128_0 = id1;
+                obj5.channelId = id1;
+                obj4.analyticsContext = obj5;
+                c4 = 2;
+                c5 = 1;
+                const obj7 = { value: tmp3(tmp50[21]).launchFrame(obj4), done: false };
+                return obj7;
+              } else {
+                let id2;
+                if ("channel" === context.type) {
+                  id2 = context.channel.id;
+                }
+                closure_128_0 = id2;
                 if (null != require) {
                   c3 = 2;
                   const obj8 = { recipientIds: tmp18, navigateToChannel: true };
                   c4 = 5;
                   c5 = 1;
-                  const obj10 = { value: tmp3(tmp44[21]).openPrivateChannel(obj8), done: false };
+                  const obj10 = { value: tmp3(tmp50[22]).openPrivateChannel(obj8), done: false };
                   return obj10;
                 } else {
-                  const obj11 = { targetApplicationId: closure_129_12, locationObject: closure_129_2, channelId: closure_128_0, analyticsLocations: closure_129_13, componentId: closure_129_5, commandOrigin: closure_129_6, sectionName: closure_129_7, source: closure_129_8, customId: closure_129_9, referrerId: closure_129_10, onConfirmActivityLaunchChecksAlertOpen: closure_129_11 };
-                  tmp3(tmp44[22])(obj11).then((result) => {
+                  const obj11 = { targetApplicationId: closure_129_11, locationObject: closure_129_2, channelId: closure_128_0, analyticsLocations: closure_129_12, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, source: closure_129_7, customId: closure_129_8, referrerId: closure_129_9, onConfirmActivityLaunchChecksAlertOpen: closure_129_10 };
+                  tmp3(tmp50[23])(obj11).then((result) => {
                     let tmp = result;
                     if (result) {
                       let tmp2Result;
-                      if (closure_1_4 != null) {
+                      if (closure_1_3 != null) {
                         const obj = { applicationId };
                         tmp2Result = tmp2(obj);
                       }
@@ -117,7 +124,7 @@ function useOnActivityItemSelected(arg0) {
                   });
                   c4 = 4;
                   c5 = 1;
-                  const promise = tmp3(tmp44[22])(obj11);
+                  const promise = tmp3(tmp50[23])(obj11);
                 }
               }
             }
@@ -136,8 +143,8 @@ function useOnActivityItemSelected(arg0) {
                 const obj12 = { value, done: true };
                 return obj12;
               } else {
-                if (closure_129_4 != null) {
-                  const obj13 = { applicationId: closure_129_12 };
+                if (closure_129_3 != null) {
+                  const obj13 = { applicationId: closure_129_11 };
                   tmp12(obj13);
                 }
                 c3 = 0;
@@ -169,11 +176,11 @@ function useOnActivityItemSelected(arg0) {
           c5 = 3;
           let obj = { value, done: true };
           return obj;
-        } catch (tmp44) {
+        } catch (tmp50) {
           if (tmp4 === c3) {
             c5 = tmp2;
-            throw tmp44;
-          } else if (tmp === tmp46) {
+            throw tmp50;
+          } else if (tmp === tmp52) {
             c4 = tmp;
           } else {
             c4 = tmp2;
@@ -220,15 +227,15 @@ function useOnActivityItemSelected(arg0) {
               obj4.source = source;
               obj4.customId = customId;
               obj4.referrerId = referrerId;
-              const tmp7 = v1(locationObject[23]);
+              const tmp7 = v1(locationObject[24]);
               v1 = 1;
               c0 = 1;
               const obj5 = {
-                value: v1(locationObject[23])(obj4).then((result) => {
+                value: v1(locationObject[24])(obj4).then((result) => {
                           let tmp = result;
                           if (result) {
                             let tmp2Result;
-                            if (launchingActivity != null) {
+                            if (closure_1_3 != null) {
                               const obj = { applicationId };
                               tmp2Result = tmp2(obj);
                             }
@@ -259,21 +266,21 @@ function useOnActivityItemSelected(arg0) {
   } else {
     return tmp2.LEAVE === tmp ? (() => {
       if (!EmbeddedActivitiesStore.isLaunchingActivity()) {
-        if (null != closure_14) {
-          const obj = { location: tmp.location, applicationId: str };
-          asyncGeneratorStep.leaveActivity(obj);
+        if (null != closure_13) {
+          const obj2 = { location: tmp.location, applicationId: str };
+          const result = leaveEmbeddedActivity.leaveEmbeddedActivity(obj2);
         }
-        if (closure_1_4 != null) {
-          const obj2 = { applicationId: str };
-          tmp6(obj2);
+        if (asyncGeneratorStep != null) {
+          const obj3 = { applicationId: str };
+          tmp7(obj3);
         }
       }
     }) : undefined;
   }
 }
-const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;
+const STAFF_RELEASE_PHASES = fn(2024).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(10613).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10767).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -386,11 +393,11 @@ function getStaffReleasePhase(application, arg1) {
   return replaced;
 }
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");
+let result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityShelfItem(arg0) {
-  const cResult = c.c(37);
-  ({ activityItem, context, locationObject, onActivityItemSelected, embeddedActivitiesManager, assetNames, backgroundResolution, launchingComponentId, commandOrigin, source } = arg0);
+  const cResult = c.c(36);
+  ({ activityItem, context, locationObject, onActivityItemSelected, assetNames, backgroundResolution, launchingComponentId, commandOrigin, source } = arg0);
   if (cResult[0] !== assetNames) {
     let items = assetNames;
     if (undefined === assetNames) {
@@ -448,84 +455,81 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
               if (cResult[17] === activityItem.application) {
                 if (cResult[18] === commandOrigin) {
                   if (cResult[19] === context) {
-                    if (cResult[20] === embeddedActivitiesManager) {
-                      if (cResult[21] === launchingComponentId) {
-                        if (cResult[22] === locationObject) {
-                          if (cResult[23] === onActivityItemSelected) {
-                            if (cResult[24] === source) {
-                              let tmp23 = cResult[25];
+                    if (cResult[20] === launchingComponentId) {
+                      if (cResult[21] === locationObject) {
+                        if (cResult[22] === onActivityItemSelected) {
+                          if (cResult[23] === source) {
+                            let tmp23 = cResult[24];
+                          }
+                          const tmp25 = useOnActivityItemSelected(tmp23);
+                          if (cResult[25] === activityItem.activity) {
+                            if (cResult[26] === application) {
+                              let tmp26 = cResult[27];
                             }
-                            const tmp25 = useOnActivityItemSelected(tmp23);
-                            if (cResult[26] === activityItem.activity) {
-                              if (cResult[27] === application) {
-                                let tmp26 = cResult[28];
-                              }
-                              if (tmp9) {
-                                let NONE = tmp7.label_type;
-                              } else {
-                                NONE = Server.EmbeddedActivityLabelTypes.NONE;
-                              }
-                              if (cResult[29] === tmp22) {
-                                if (cResult[30] === tmp11) {
-                                  if (cResult[31] === tmp16) {
-                                    if (cResult[32] === tmp25) {
-                                      if (cResult[33] === tmp26) {
-                                        if (cResult[34] === NONE) {
-                                          if (cResult[35] === tmp12) {
-                                            let tmp32 = cResult[36];
-                                          }
-                                          return tmp32;
+                            if (tmp9) {
+                              let NONE = tmp7.label_type;
+                            } else {
+                              NONE = Server.EmbeddedActivityLabelTypes.NONE;
+                            }
+                            if (cResult[28] === tmp22) {
+                              if (cResult[29] === tmp11) {
+                                if (cResult[30] === tmp16) {
+                                  if (cResult[31] === tmp25) {
+                                    if (cResult[32] === tmp26) {
+                                      if (cResult[33] === NONE) {
+                                        if (cResult[34] === tmp12) {
+                                          let tmp32 = cResult[35];
                                         }
+                                        return tmp32;
                                       }
                                     }
                                   }
                                 }
                               }
-                              const obj2 = { imageBackground: tmp11, videoUrl: tmp12, joinableEmbeddedApp: tmp16, activityAction: tmp22, onActivityItemSelected: tmp25, labelType: NONE, staffReleasePhase: tmp26 };
-                              cResult[29] = tmp22;
-                              cResult[30] = tmp11;
-                              cResult[31] = tmp16;
-                              cResult[32] = tmp25;
-                              cResult[33] = tmp26;
-                              cResult[34] = NONE;
-                              cResult[35] = tmp12;
-                              cResult[36] = obj2;
-                              tmp32 = obj2;
                             }
-                            if (tmpResult4.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
-                              const tmpResult5 = PlatformUtils;
-                              const str2 = activityItem.activity.client_platform_config[getPlatformDefault(undefined, tmpResult5.getOS(tmpResult5))].release_phase;
-                              let replaced;
-                              if (STAFF_RELEASE_PHASES.includes(str2)) {
-                                replaced = str2.replace("_", " ").replace(/(^\w|\s\w)/g, (str) => str.toUpperCase());
-                                const str5 = str2.replace("_", " ");
-                              }
-                              const tmp5Result2 = getPlatformDefault;
-                            } else {
-                              ApplicationFlagUtils;
-                            }
-                            cResult[26] = activityItem.activity;
-                            cResult[27] = application;
-                            cResult[28] = tmp28;
-                            tmp26 = tmp28;
-                            tmpResult4 = ApplicationFlagUtils;
+                            const obj2 = { imageBackground: tmp11, videoUrl: tmp12, joinableEmbeddedApp: tmp16, activityAction: tmp22, onActivityItemSelected: tmp25, labelType: NONE, staffReleasePhase: tmp26 };
+                            cResult[28] = tmp22;
+                            cResult[29] = tmp11;
+                            cResult[30] = tmp16;
+                            cResult[31] = tmp25;
+                            cResult[32] = tmp26;
+                            cResult[33] = NONE;
+                            cResult[34] = tmp12;
+                            cResult[35] = obj2;
+                            tmp32 = obj2;
                           }
+                          if (tmpResult4.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
+                            const tmpResult5 = PlatformUtils;
+                            const str2 = activityItem.activity.client_platform_config[getPlatformDefault(undefined, tmpResult5.getOS(tmpResult5))].release_phase;
+                            let replaced;
+                            if (STAFF_RELEASE_PHASES.includes(str2)) {
+                              replaced = str2.replace("_", " ").replace(/(^\w|\s\w)/g, (str) => str.toUpperCase());
+                              const str5 = str2.replace("_", " ");
+                            }
+                            const tmp5Result2 = getPlatformDefault;
+                          } else {
+                            ApplicationFlagUtils;
+                          }
+                          cResult[25] = activityItem.activity;
+                          cResult[26] = application;
+                          cResult[27] = tmp28;
+                          tmp26 = tmp28;
+                          tmpResult4 = ApplicationFlagUtils;
                         }
                       }
                     }
                   }
                 }
               }
-              const obj3 = { application: activityItem.application, context, locationObject, embeddedActivitiesManager, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
+              const obj3 = { application: activityItem.application, context, locationObject, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
               cResult[17] = activityItem.application;
               cResult[18] = commandOrigin;
               cResult[19] = context;
-              cResult[20] = embeddedActivitiesManager;
-              cResult[21] = launchingComponentId;
-              cResult[22] = locationObject;
-              cResult[23] = onActivityItemSelected;
-              cResult[24] = source;
-              cResult[25] = obj3;
+              cResult[20] = launchingComponentId;
+              cResult[21] = locationObject;
+              cResult[22] = onActivityItemSelected;
+              cResult[23] = source;
+              cResult[24] = obj3;
               tmp23 = obj3;
             }
             const obj4 = { context, applicationId: application.id };
@@ -536,28 +540,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
           }
         }
         if (cResult[12] !== application.id) {
-          class N {
+          class T {
             constructor(arg0) {
               return application.id === arg0.embeddedActivity.applicationId;
             }
           }
           cResult[12] = application.id;
-          cResult[13] = N;
+          cResult[13] = T;
         } else {
-          class N {
+          class T {
             constructor(arg0) {
               return application.id === arg0.embeddedActivity.applicationId;
             }
           }
         }
-        const found = tmp5ResultResult.find(N);
+        const found = tmp5ResultResult.find(T);
         cResult[9] = application.id;
         cResult[10] = tmp5ResultResult;
         cResult[11] = found;
         const tmp5Result = useEmbeddedAppsForChannelDefault;
       }
       if (null != activity.activity_preview_video_asset_id) {
-        class N {
+        class T {
           constructor(arg0) {
             return application.id === arg0.embeddedActivity.applicationId;
           }
@@ -577,7 +581,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   tmp10 = obj5;
 }) : (function useActivityShelfItem(backgroundResolution) {
   ({ activityItem, context, assetNames } = backgroundResolution);
-  ({ locationObject, onActivityItemSelected, embeddedActivitiesManager } = backgroundResolution);
+  ({ locationObject, onActivityItemSelected } = backgroundResolution);
   if (assetNames === undefined) {
     assetNames = ["embedded_cover"];
   }
@@ -616,7 +620,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   const tmpResult = useEmbeddedAppsForChannelDefault;
   const found = useEmbeddedAppsForChannelDefault(channel).find((embeddedActivity) => application.id === embeddedActivity.embeddedActivity.applicationId);
   const obj3 = { context, applicationId: application.id };
-  const obj4 = { application: activityItem.application, context, locationObject, embeddedActivitiesManager, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
+  const obj4 = { application: activityItem.application, context, locationObject, onActivityItemSelectedProp: onActivityItemSelected, launchingComponentId, commandOrigin, source };
   const tmpResultResult = useEmbeddedAppsForChannelDefault(channel);
   const tmp13 = closure_9({ context, applicationId: application.id });
   const tmp14 = useOnActivityItemSelected(obj4);

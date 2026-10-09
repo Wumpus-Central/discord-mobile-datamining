@@ -1,24 +1,23 @@
-// === Module 18106: GuildSettingsModalSecurity ===
+// === Module 18266: GuildSettingsModalSecurity ===
 
-// Module 18106 (GuildSettingsModalSecurity)
+// Module 18266 (GuildSettingsModalSecurity)
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8613 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8621 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8614 */;
+import UserStore from "UserStore" /* 1390 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8622 */;
 
 const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(2082).isGuildOwnerWithRequiredMfaLevel;
+const View = fn(17).View;
+let closure_5 = fn(2082).isGuildOwnerWithRequiredMfaLevel;
 const Constants = fn(1085);
-({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
+({ GuildFeatures: closure_9, MFALevels: c10 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING }, label: { textAlign: "center", marginBottom: 8 }, image: { width: 295, height: 142, marginHorizontal: 35 }, infoWrapper: { marginBottom: 40 }, button: { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 } };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
@@ -28,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const cResult = guildId(576).c(51);
   guildId = guildId.guildId;
   const contentContainerStyle = guildId.contentContainerStyle;
-  const tmp4 = closure_15();
+  const tmp4 = closure_14();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
@@ -37,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     first = cResult[0];
   }
   if (cResult[1] !== guildId) {
-    const fn = function p() {
+    const fn = function h() {
       return GuildStore.getGuild(guildId);
     };
     cResult[1] = guildId;
@@ -50,14 +49,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const stateFromStores = guildId(504).useStateFromStores(first, tmp7);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [GuildSettingsStore];
-    class V {
+    class T {
       constructor() {
-        return closure_1_9.getProps().mfaLevel;
+        return closure_1_8.getProps().mfaLevel;
       }
     }
     cResult[3] = items1;
-    cResult[4] = V;
-    let tmp10 = V;
+    cResult[4] = T;
+    let tmp10 = T;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[3];
@@ -114,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             return;
           }
         }
-        class V {
+        class T {
           constructor() {
-            return closure_1_9.getProps().mfaLevel;
+            return closure_1_8.getProps().mfaLevel;
           }
         }
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
@@ -139,9 +138,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               return;
             }
           }
-          class V {
+          class T {
             constructor() {
-              return closure_1_9.getProps().mfaLevel;
+              return closure_1_8.getProps().mfaLevel;
             }
           }
           cResult[15] = tmp27;
@@ -165,12 +164,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               return;
             }
           }
-          class V {
+          class T {
             constructor() {
-              return closure_1_9.getProps().mfaLevel;
+              return closure_1_8.getProps().mfaLevel;
             }
           }
-          const tmp30 = closure_12(tmp(5086).Text, { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null });
+          const tmp30 = closure_11(tmp(5087).Text, { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null });
           cResult[16] = tmp4.label;
           cResult[17] = tmp30;
           let tmp28 = tmp30;
@@ -198,9 +197,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               return;
             }
           }
-          class V {
+          class T {
             constructor() {
-              return closure_1_9.getProps().mfaLevel;
+              return closure_1_8.getProps().mfaLevel;
             }
           }
           cResult[18] = tmp13;
@@ -224,9 +223,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
               return;
             }
           }
-          class V {
+          class T {
             constructor() {
-              return closure_1_9.getProps().mfaLevel;
+              return closure_1_8.getProps().mfaLevel;
             }
           }
           if (cResult[20] === tmp22) {
@@ -257,9 +256,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                       return;
                     }
                   }
-                  class V {
+                  class T {
                     constructor() {
-                      return closure_1_9.getProps().mfaLevel;
+                      return closure_1_8.getProps().mfaLevel;
                     }
                   }
                   if (stateFromStores != null) {
@@ -305,9 +304,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                         return;
                       }
                     }
-                    class V {
+                    class T {
                       constructor() {
-                        return closure_1_9.getProps().mfaLevel;
+                        return closure_1_8.getProps().mfaLevel;
                       }
                     }
                     let features1;
@@ -345,17 +344,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          class V {
+                          class T {
                             constructor() {
-                              return closure_1_9.getProps().mfaLevel;
+                              return closure_1_8.getProps().mfaLevel;
                             }
                           }
-                          tmp54[0] = stateFromStores(14855);
-                          tmp54[1] = tmp4.image;
-                          const tmp55 = closure_12(closure_5, tmp54);
+                          tmp55[0] = stateFromStores(14963);
+                          tmp55[1] = tmp4.image;
+                          const tmp56 = closure_11(tmp54, tmp55);
                           cResult[35] = tmp4.image;
-                          cResult[36] = tmp55;
-                          let tmp51 = tmp55;
+                          cResult[36] = tmp56;
+                          let tmp51 = tmp56;
                         } else {
                           tmp51 = cResult[36];
                         }
@@ -377,12 +376,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                             return;
                           }
                         }
-                        class V {
+                        class T {
                           constructor() {
-                            return closure_1_9.getProps().mfaLevel;
+                            return closure_1_8.getProps().mfaLevel;
                           }
                         }
-                        if (tmp56 === Symbol.for("react.memo_cache_sentinel")) {
+                        if (tmp57 === Symbol.for("react.memo_cache_sentinel")) {
                           const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
                           class D {
                             constructor() {
@@ -402,17 +401,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          class V {
+                          class T {
                             constructor() {
-                              return closure_1_9.getProps().mfaLevel;
+                              return closure_1_8.getProps().mfaLevel;
                             }
                           }
                           obj3.children = obj9.format(tmp(1126).t["FK0+iX"], {});
-                          const tmp60 = closure_12(tmp59, obj3);
-                          cResult[37] = tmp60;
-                          let tmp57 = tmp60;
+                          const tmp61 = closure_11(tmp60, obj3);
+                          cResult[37] = tmp61;
+                          let tmp58 = tmp61;
                         } else {
-                          tmp57 = cResult[37];
+                          tmp58 = cResult[37];
                         }
                         if (cResult[38] !== tmp4.infoWrapper) {
                           class D {
@@ -433,28 +432,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                               return;
                             }
                           }
-                          class V {
+                          class T {
                             constructor() {
-                              return closure_1_9.getProps().mfaLevel;
+                              return closure_1_8.getProps().mfaLevel;
                             }
                           }
-                          tmp64[1] = tmp57;
-                          const tmp65 = closure_12(closure_4, tmp64);
+                          tmp65[1] = tmp58;
+                          const tmp66 = closure_11(View, tmp65);
                           cResult[38] = tmp4.infoWrapper;
-                          cResult[39] = tmp65;
-                          let tmp61 = tmp65;
+                          cResult[39] = tmp66;
+                          let tmp62 = tmp66;
                         } else {
-                          tmp61 = cResult[39];
+                          tmp62 = cResult[39];
                         }
                         if (cResult[40] === tmp4.center) {
                           if (cResult[41] === tmp51) {
-                            if (cResult[42] === tmp61) {
-                              let tmp66 = cResult[43];
+                            if (cResult[42] === tmp62) {
+                              let tmp67 = cResult[43];
                             }
                             if (cResult[44] === tmp47) {
-                              if (cResult[45] === tmp66) {
+                              if (cResult[45] === tmp67) {
                                 if (cResult[46] === tmp23) {
-                                  let tmp70 = cResult[47];
+                                  let tmp71 = cResult[47];
                                 }
                                 const _Symbol2 = Symbol;
                                 class D {
@@ -475,12 +474,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                                     return;
                                   }
                                 }
-                                class V {
+                                class T {
                                   constructor() {
-                                    return closure_1_9.getProps().mfaLevel;
+                                    return closure_1_8.getProps().mfaLevel;
                                   }
                                 }
-                                if (cResult[49] !== tmp70) {
+                                if (cResult[49] !== tmp71) {
                                   class D {
                                     constructor() {
                                       if (null == closure_1) {
@@ -499,22 +498,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                                       return;
                                     }
                                   }
-                                  class V {
+                                  class T {
                                     constructor() {
-                                      return closure_1_9.getProps().mfaLevel;
+                                      return closure_1_8.getProps().mfaLevel;
                                     }
                                   }
-                                  tmp77[0] = tmp70;
-                                  tmp77[1] = tmp72;
-                                  tmp76[0] = tmp77;
-                                  const tmp78 = closure_13(closure_14, tmp76);
-                                  cResult[49] = tmp70;
-                                  cResult[50] = tmp78;
-                                  let tmp73 = tmp78;
+                                  tmp78[0] = tmp71;
+                                  tmp78[1] = tmp73;
+                                  tmp77[0] = tmp78;
+                                  const tmp79 = closure_12(closure_13, tmp77);
+                                  cResult[49] = tmp71;
+                                  cResult[50] = tmp79;
+                                  let tmp74 = tmp79;
                                 } else {
-                                  tmp73 = cResult[50];
+                                  tmp74 = cResult[50];
                                 }
-                                return tmp73;
+                                return tmp74;
                               }
                             }
                             class D {
@@ -535,38 +534,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                                 return;
                               }
                             }
-                            class V {
+                            class T {
                               constructor() {
-                                return closure_1_9.getProps().mfaLevel;
+                                return closure_1_8.getProps().mfaLevel;
                               }
                             }
                             const obj4 = { style: tmp23, children: null };
-                            const items2 = [tmp47, tmp66];
+                            const items2 = [tmp47, tmp67];
                             obj4.children = items2;
-                            const tmp71 = closure_13(closure_4, obj4);
+                            const tmp72 = closure_12(View, obj4);
                             cResult[44] = tmp47;
-                            cResult[45] = tmp66;
+                            cResult[45] = tmp67;
                             cResult[46] = tmp23;
-                            cResult[47] = tmp71;
-                            tmp70 = tmp71;
+                            cResult[47] = tmp72;
+                            tmp71 = tmp72;
                           }
                         }
                         const obj5 = { style: tmp4.center, children: null };
-                        const items3 = [tmp51, tmp61];
+                        const items3 = [tmp51, tmp62];
                         obj5.children = items3;
-                        const tmp69 = closure_13(closure_4, obj5);
+                        const tmp70 = closure_12(View, obj5);
                         cResult[40] = tmp4.center;
                         cResult[41] = tmp51;
-                        cResult[42] = tmp61;
-                        cResult[43] = tmp69;
-                        tmp66 = tmp69;
+                        cResult[42] = tmp62;
+                        cResult[43] = tmp70;
+                        tmp67 = tmp70;
                       }
                     }
                   }
                   const obj6 = { style: tmp25, children: null };
                   const items4 = [tmp28, tmp39, tmp43];
                   obj6.children = items4;
-                  const tmp50 = closure_13(closure_4, obj6);
+                  const tmp50 = closure_12(View, obj6);
                   cResult[30] = tmp4.center;
                   cResult[31] = tmp28;
                   cResult[32] = tmp39;
@@ -592,13 +591,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
                     return;
                   }
                 }
-                class V {
+                class T {
                   constructor() {
-                    return closure_1_9.getProps().mfaLevel;
+                    return closure_1_8.getProps().mfaLevel;
                   }
                 }
                 const obj7 = { style: tmp4.button, children: tmp36 };
-                const tmp40 = closure_12(closure_4, obj7);
+                const tmp40 = closure_11(View, obj7);
                 cResult[25] = tmp4.button;
                 cResult[26] = tmp36;
                 cResult[27] = tmp40;
@@ -607,7 +606,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
             }
           }
           const obj8 = { text: cResult[19], disabled: !tmp14, variant: tmp35, onPress: tmp22, shrink: true };
-          const tmp38 = closure_12(tmp(5375).Button, obj8);
+          const tmp38 = closure_11(tmp(5376).Button, obj8);
           cResult[20] = tmp22;
           cResult[21] = cResult[19];
           cResult[22] = !tmp14;
@@ -634,9 +633,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           return;
         }
       }
-      class V {
+      class T {
         constructor() {
-          return closure_1_9.getProps().mfaLevel;
+          return closure_1_8.getProps().mfaLevel;
         }
       }
       tmp24[1] = contentContainerStyle;
@@ -663,9 +662,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         return;
       }
     }
-    class V {
+    class T {
       constructor() {
-        return closure_1_9.getProps().mfaLevel;
+        return closure_1_8.getProps().mfaLevel;
       }
     }
     cResult[9] = stateFromStores;
@@ -681,7 +680,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   }
   let tmp18 = true === mfaEnabled && null != stateFromStores;
   if (tmp18) {
-    tmp18 = closure_6(stateFromStores, currentUser);
+    tmp18 = closure_5(stateFromStores, currentUser);
   }
   if (tmp18) {
     if (tmp16) {
@@ -732,7 +731,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const tmpResult2 = guildId(504);
 }) : (function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
-  const tmp = closure_15();
+  const tmp = closure_14();
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
   let obj = guildId(504);
@@ -746,7 +745,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   }
   let tmp9 = true === mfaEnabled && null != stateFromStores;
   if (tmp9) {
-    tmp9 = closure_6(stateFromStores, currentUser);
+    tmp9 = closure_5(stateFromStores, currentUser);
   }
   if (tmp9) {
     let tmp11 = !tmp7;
@@ -770,7 +769,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj5 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1126).intl;
   obj5.children = intl.string(guildId(1126).t.Wi9LEV);
-  const items4 = [closure_12(guildId(5086).Text, obj5), , ];
+  const items4 = [closure_11(guildId(5087).Text, obj5), , ];
   const obj6 = { style: tmp.button, children: null };
   const intl2 = tmp2(1126).intl;
   const string = intl2.string;
@@ -787,8 +786,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   }
   obj7.variant = str;
   obj7.onPress = callback;
-  obj6.children = closure_12(guildId(5375).Button, obj7);
-  items4[1] = closure_12(closure_4, obj6);
+  obj6.children = closure_11(guildId(5376).Button, obj7);
+  items4[1] = closure_11(View, obj6);
   let hasItem;
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -799,25 +798,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
     const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1126).intl;
     obj8.children = intl3.string(tmp2(1126).t["KG1V/E"]);
-    tmp17Result = closure_12(tmp2(5086).Text, obj8);
+    tmp17Result = closure_11(tmp2(5087).Text, obj8);
   }
   const obj9 = { children: null };
   items4[2] = tmp17Result;
   obj4.children = items4;
-  const items5 = [closure_13(closure_4, obj4), ];
+  const items5 = [closure_12(View, obj4), ];
   const obj10 = { style: tmp.center, children: null };
+  const obj11 = { source: null, style: null, resizeMode: "contain" };
   let obj2 = guildId(504);
-  const items6 = [closure_12(closure_5, { source: stateFromStores(14855), style: tmp.image, resizeMode: "contain" }), ];
+  obj11.source = stateFromStores(14963);
+  obj11.style = tmp.image;
+  const items6 = [closure_11(stateFromStores(6163), obj11), ];
   const obj12 = { style: tmp.infoWrapper, children: null };
   const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1126).intl;
   obj13.children = intl4.format(guildId(1126).t["FK0+iX"], {});
-  obj12.children = closure_12(guildId(5086).Text, obj13);
-  items6[1] = closure_12(closure_4, obj12);
+  obj12.children = closure_11(guildId(5087).Text, obj13);
+  items6[1] = closure_11(View, obj12);
   obj10.children = items6;
-  items5[1] = closure_13(closure_4, obj10);
+  items5[1] = closure_12(View, obj10);
   obj3.children = items5;
-  const items7 = [closure_13(closure_4, obj3), closure_12(guildId(6719).NavScrim, {})];
+  const items7 = [closure_12(View, obj3), closure_11(guildId(6726).NavScrim, {})];
   obj9.children = items7;
-  return closure_13(closure_14, obj9);
+  return closure_12(closure_13, obj9);
 });

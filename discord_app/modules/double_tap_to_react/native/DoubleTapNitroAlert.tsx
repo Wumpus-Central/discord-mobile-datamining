@@ -1,21 +1,21 @@
-// === Module 7965: DoubleTapNitroAlert ===
+// === Module 7973: DoubleTapNitroAlert ===
 
-// Module 7965 (DoubleTapNitroAlert)
+// Module 7973 (DoubleTapNitroAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 5000 */;
-import AlertModal from "AlertModal" /* 5303 */;
-import openUserSettings from "openUserSettings" /* 7084 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 5001 */;
+import AlertModal from "AlertModal" /* 5304 */;
+import openUserSettings from "openUserSettings" /* 7087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NITRO_UPSELL_ALERT_KEY = fn(7960).NITRO_UPSELL_ALERT_KEY;
+const NITRO_UPSELL_ALERT_KEY = fn(7969).NITRO_UPSELL_ALERT_KEY;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const MobileUserSettings = fn(7966).MobileUserSettings;
+const MobileUserSettings = fn(7974).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,27 +1,27 @@
-// === Module 8658: instant_invite/InstantInviteUtils ===
+// === Module 8667: instant_invite/InstantInviteUtils ===
 
-// Module 8658 (instant_invite/InstantInviteUtils)
+// Module 8667 (instant_invite/InstantInviteUtils)
 import _modDef38 from "module_38" /* 38 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ToastUtils from "ToastUtils" /* 4765 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5072 */;
-import ClipboardUtils from "ClipboardUtils" /* 6872 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7420 */;
-import DCDSendUtils from "DCDSendUtils" /* 7433 */;
-import showShareActionSheet from "showShareActionSheet" /* 8457 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 8661 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8665 */;
-import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 8666 */;
-import getInviteURLDefault from "getInviteURL" /* 8669 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7168 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8659 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
-import InviteStore from "InviteStore" /* 5071 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import UserStore from "UserStore" /* 1389 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8663 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import ToastUtils from "ToastUtils" /* 4767 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5073 */;
+import ClipboardUtils from "ClipboardUtils" /* 6879 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7425 */;
+import DCDSendUtils from "DCDSendUtils" /* 7438 */;
+import showShareActionSheet from "showShareActionSheet" /* 8465 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 8670 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 8674 */;
+import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 8675 */;
+import getInviteURLDefault from "getInviteURL" /* 8678 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7173 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8668 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+import InviteStore from "InviteStore" /* 5072 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import UserStore from "UserStore" /* 1390 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8672 */;
 
 require = fn;
 function showInstantInviteActionSheet(channel, source) {
@@ -159,9 +159,9 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj3);
   const tmpResult = InviteCodeUtils;
 }
-const ChannelRecordBase = fn(2067).ChannelRecordBase;
-const InviteTargetTypes = fn(7418).InviteTargetTypes;
-const IOS_COPY_TO_PASTEBOARD = fn(8664).IOS_COPY_TO_PASTEBOARD;
+const ChannelRecordBase = fn(2068).ChannelRecordBase;
+const InviteTargetTypes = fn(7423).InviteTargetTypes;
+const IOS_COPY_TO_PASTEBOARD = fn(8673).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, InviteOptionsType: closure_15, Permissions: closure_16 } = Constants);
 const size = fn(2);
@@ -192,8 +192,8 @@ export const showVanityUrlInviteActionSheet = function showVanityUrlInviteAction
   openInstantInviteActionSheetDefault(obj4);
 };
 export { trackOptionClicked };
-export function getShareMessage(CreateInviteModalStore) {
-  return CreateInviteModalStore;
+export function getShareMessage(defaultChannel) {
+  return defaultChannel;
 }
 export const handleOpenShareSheet = function handleOpenShareSheet(code, channel, shareMessage, source) {
   let flag = arg4;

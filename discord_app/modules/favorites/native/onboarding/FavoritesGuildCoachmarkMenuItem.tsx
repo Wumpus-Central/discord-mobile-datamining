@@ -1,16 +1,16 @@
-// === Module 16461: FavoritesGuildCoachmarkMenuItem ===
+// === Module 16580: FavoritesGuildCoachmarkMenuItem ===
 
-// Module 16461 (FavoritesGuildCoachmarkMenuItem)
+// Module 16580 (FavoritesGuildCoachmarkMenuItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3439 from "module_3439" /* 3439 */;
-import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10308 */;
+import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10295 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 2066 */;
+import FavoriteStore from "FavoriteStore" /* 2067 */;
 
-const LayerScope2 = LayerScope(6835);
+const LayerScope2 = LayerScope(6842);
 require = fn;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [, , ];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], GUILD_FORUM: arr[2] } = fn(1085).ChannelTypes);
@@ -43,7 +43,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     tmp8 = cResult[3];
   }
   const tmpResult = markPopoverAsDismissed(504);
-  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10308).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
+  const favoritesMenuItemPopoverDismissibleContent = markPopoverAsDismissed(10295).useFavoritesMenuItemPopoverDismissibleContent(tmp8);
   ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
   if (cResult[4] !== markPopoverAsDismissed) {
     class S {
@@ -150,7 +150,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
     cResult[15] = tmp14;
     cResult[16] = obj2;
   }
-  const tmpResult2 = markPopoverAsDismissed(10308);
+  const tmpResult2 = markPopoverAsDismissed(10295);
 }) : (function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   let stateFromStores;
   let markPopoverAsDismissed;
@@ -173,7 +173,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Favorit
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, onDismiss, callback1];
   const memo = onDismiss.useMemo(() => {
-    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "Symbol", onButtonPress: null };
+    const obj = { visible: shouldShowPopover, position: "bottom", title: null, description: null, onDismiss: null, renderImgComponent: "r", buttonLabel: "T", onButtonPress: null };
     const intl = util.intl;
     const tmp4 = _modDef3439;
     if (stateFromStores) {

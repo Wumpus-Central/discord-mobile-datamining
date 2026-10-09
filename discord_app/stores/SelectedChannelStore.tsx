@@ -7,17 +7,17 @@ import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import router_utils from "router_utils" /* 1112 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4936 */;
-import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7022 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
+import isAccessibleNonStaticChannelPathDefault from "isAccessibleNonStaticChannelPath" /* 7025 */;
 import GatedChannelStore from "GatedChannelStore" /* 2116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4899 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
 
 require = fn;
 function handleConnectionOpen(sessionId) {
@@ -311,11 +311,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1085);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(2070).isGuildHomeChannel;
+const isGuildHomeChannel = fn(2071).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -878,7 +878,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1387).isNotNullish);
+            const found = combined.filter(closure_1_0(1388).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found.uniq().filter((item) => {

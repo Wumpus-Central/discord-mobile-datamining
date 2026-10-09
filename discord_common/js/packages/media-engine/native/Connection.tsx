@@ -1,23 +1,23 @@
-// === Module 5147: Connection ===
+// === Module 5148: Connection ===
 
-// Module 5147 (Connection)
-import inject from "inject" /* 2013 */;
-import VideoQualityManager from "VideoQualityManager" /* 5149 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5152 */;
-import _modDef5153 from "module_5153" /* 5153 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 5196 */;
-import transformStatsDefault from "transformStats" /* 5198 */;
-import _modDef5200 from "module_5200" /* 5200 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5201 */;
-import reduceDefault from "reduce" /* 5202 */;
-import _modDef5205 from "module_5205" /* 5205 */;
+// Module 5148 (Connection)
+import inject from "inject" /* 2014 */;
+import VideoQualityManager from "VideoQualityManager" /* 5150 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 5153 */;
+import _modDef5154 from "module_5154" /* 5154 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 5197 */;
+import transformStatsDefault from "transformStats" /* 5199 */;
+import _modDef5201 from "module_5201" /* 5201 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5202 */;
+import reduceDefault from "reduce" /* 5203 */;
+import _modDef5206 from "module_5206" /* 5206 */;
 import _slicedToArray from "module_32" /* 32 */;
-import BaseConnection from "BaseConnection" /* 5148 */;
+import BaseConnection from "BaseConnection" /* 5149 */;
 
 require = fn;
-let Constants = fn(5115);
+let Constants = fn(5116);
 ({ StatsFilter: closure_4, ExperimentFlags: hasOwnProperty, DESKTOP_BITRATE_ENHANCED: metroRequire, DESKTOP_BITRATE: closure_7, MEDIA_SINK_WANTS_PROPERTIES: closure_8, MediaTypes: closure_9, SIMULCAST_HQ_QUALITY: c10 } = Constants);
-Constants = fn(5137);
+Constants = fn(5138);
 ({ NATIVE_MODE_VALUES: closure_11, InputModes: closure_12, ConnectionStates: map1, Codecs: closure_14, MediaEngineContextTypes: closure_15, SpeakingFlags: closure_16, ResolutionTypes: closure_17, NativeFeatures: closure_18, NoiseCancellerError: closure_19, DEFAULT_VOLUME: closure_20, DEFAULT_STREAM_VOLUME: closure_21, DEFAULT_SOUNDSHARE_VOICE_BITRATE: closure_22, DEFAULT_CALL_BITRATE: closure_23, DEFAULT_CALL_MIN_BITRATE: closure_24, DEFAULT_CALL_MAX_BITRATE: closure_25, DEFAULT_PRIORITY_SPEAKER_DUCKING: closure_26, PING_INTERVAL: closure_27 } = Constants);
 let c28 = 0;
 let Connection;
@@ -216,7 +216,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5153(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5154(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -364,8 +364,8 @@ class Connection extends tmp4 {
               closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
-                closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef5205(diff1 / (diff + diff1), 0, 1));
-                const tmp6 = _modDef5205(diff1 / (diff + diff1), 0, 1);
+                closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 100 * _modDef5206(diff1 / (diff + diff1), 0, 1));
+                const tmp6 = _modDef5206(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -510,7 +510,7 @@ prototype["initialize"] = function initialize(address) {
   let items = [{ type: constants2.AUDIO, ssrc: this.audioSSRC, rid: "", maxBitrate: 64000, soundshare: this.context === constants5.STREAM }, ...this.videoStreamParameters];
   address.streamParameters = items;
   address.context = this.context;
-  const voiceEngine = createVoiceConnection(2013).getVoiceEngine();
+  const voiceEngine = createVoiceConnection(2014).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
     if (self.context !== constants5.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
@@ -747,7 +747,7 @@ prototype["initialize"] = function initialize(address) {
     self.on("newListener", self.handleNewListenerNative);
   }
   let obj = { type: constants2.AUDIO, ssrc: this.audioSSRC, rid: "", maxBitrate: 64000, soundshare: this.context === constants5.STREAM };
-  let obj2 = createVoiceConnection(2013);
+  let obj2 = createVoiceConnection(2014);
 };
 prototype["setCodecs"] = function setCodecs(OPUS, H264, context) {
   const self = this;
@@ -778,18 +778,18 @@ prototype["getStats"] = function getStats() {
         const conn = tmp.conn;
         const stats = conn.getStats((arg0) => closure_0(transformStatsDefault(self.mediaEngineConnectionId, arg0, self.remoteVideoSinkWants, self.localVideoSinkWants)));
       } else {
-        const voiceEngine = self(2013).getVoiceEngine();
+        const voiceEngine = self(2014).getVoiceEngine();
         const stats1 = voiceEngine.getStats((arg0) => closure_0(transformStatsDefault(self.mediaEngineConnectionId, arg0, self.remoteVideoSinkWants, self.localVideoSinkWants)));
-        const obj = self(2013);
+        const obj = self(2014);
       }
     });
-    let obj = self(5197);
-    resolved = self(5197).timeout(promise, self(5146).STATS_INTERVAL).catch((error) => {
-      if (!(error instanceof self(5197).TimeoutError)) {
+    let obj = self(5198);
+    resolved = self(5198).timeout(promise, self(5147).STATS_INTERVAL).catch((error) => {
+      if (!(error instanceof self(5198).TimeoutError)) {
         throw error;
       }
     });
-    const timeoutResult = self(5197).timeout(promise, self(5146).STATS_INTERVAL);
+    const timeoutResult = self(5198).timeout(promise, self(5147).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -820,7 +820,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5200(sorted, sorted1);
+  _modDef5201(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1604,10 +1604,10 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         const _Error = Error;
         const error = new Error("Invalid rid");
         iter(error);
-        return { v: "create" };
+        return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef5200(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5201(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

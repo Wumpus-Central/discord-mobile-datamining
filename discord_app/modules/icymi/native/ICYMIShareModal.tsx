@@ -1,35 +1,35 @@
-// === Module 16746: ICYMIShareModal ===
+// === Module 16872: ICYMIShareModal ===
 
-// Module 16746 (ICYMIShareModal)
+// Module 16872 (ICYMIShareModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
-import ShareEventUtils from "ShareEventUtils" /* 8509 */;
-import HeaderShared from "HeaderShared" /* 9232 */;
-import SearchableDestinationListDefault from "SearchableDestinationList" /* 11588 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11599 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11610 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6663 */;
+import ShareEventUtils from "ShareEventUtils" /* 8517 */;
+import HeaderShared from "HeaderShared" /* 9270 */;
+import SearchableDestinationListDefault from "SearchableDestinationList" /* 11521 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11532 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11543 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
 const AbortCodes = fn(1085).AbortCodes;
-const UserRowModes = fn(10202).UserRowModes;
-const MessageSendLocation = fn(5083).MessageSendLocation;
+const UserRowModes = fn(10187).UserRowModes;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, footer: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -630,12 +630,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIShareMo
     num = rect.top;
   }
   obj4.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  obj3 = title(1381);
-  obj4.headerLeft = tmp11(6203).getHeaderCloseButton(callback);
+  obj3 = title(1382);
+  obj4.headerLeft = tmp11(6205).getHeaderCloseButton(callback);
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp5);
-  const items1 = [closure_11(title(6212).Header, obj4), , ];
+  const items1 = [closure_11(title(6214).Header, obj4), , ];
   let obj5 = { rowMode: UserRowModes.TOGGLE, onSelectedDestinationChange: tmp[1], originDestination: originDestination.originDestinationId, insetEnd: null, disableGradient: true, disableStickySections: true };
-  const tmp11Result = tmp11(6203);
+  const tmp11Result = tmp11(6205);
   const sum = rect.bottom + nativeDefault.space.PX_8;
   obj5.insetEnd = sum + nativeDefault.space.PX_96;
   items1[1] = closure_11(SearchableDestinationListDefault, obj5);
@@ -709,7 +709,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
               const obj5 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
               c5 = 2;
               c6 = 1;
-              const obj6 = { value: entry(16747).sendMessageWithEmbed(obj5), done: false };
+              const obj6 = { value: entry(16873).sendMessageWithEmbed(obj5), done: false };
               return obj6;
             }
           } else if (1 === tmp7) {
@@ -809,7 +809,7 @@ export const GameShareModal = ReactCompilerGating.isReactCompilerEnabled() ? (fu
             const obj6 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;
-            const obj7 = { value: entry(16747).sendMessageWithEmbed(obj6), done: false };
+            const obj7 = { value: entry(16873).sendMessageWithEmbed(obj6), done: false };
             return obj7;
           }
         } else if (1 === tmp7) {

@@ -1,9 +1,9 @@
-// === Module 18265: useArchiveOrDelete ===
+// === Module 18427: useArchiveOrDelete ===
 
-// Module 18265 (useArchiveOrDelete)
+// Module 18427 (useArchiveOrDelete)
 import util from "util" /* 1126 */;
-import ToastUtilsAll from "ToastUtils" /* 4765 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
+import ToastUtilsAll from "ToastUtils" /* 4767 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15435 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
             const obj4 = { title, body, confirmText, confirmColor: tmp2(1200).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(5298).confirm(obj4), done: false };
+            const obj5 = { value: v2(5299).confirm(obj4), done: false };
             return obj5;
           }
         } else {

@@ -1,16 +1,16 @@
-// === Module 8371: MediaModalPortal ===
+// === Module 8379: MediaModalPortal ===
 
-// Module 8371 (MediaModalPortal)
-import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8372 */;
+// Module 8379 (MediaModalPortal)
+import PortalViewNativeComponentDefault from "PortalViewNativeComponent" /* 8380 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ requireNativeComponent, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = PortalViewNativeComponentDefault;
 } else {
@@ -369,7 +369,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const muted = paused.muted;
   ({ onLoad: dependencyMap, portal } = paused);
   ({ style, pointerEvents } = paused);
-  const tmp2 = muted(6638)(() => {
+  const tmp2 = muted(6645)(() => {
     let tmp;
     if (dependencyMap != null) {
       tmp = dependencyMap();
@@ -398,7 +398,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       MediaPlayerManager.setLoopPlayback(tmp, true);
       return () => {
         loopPlayback.setLoopPlayback(portal, false);
-        muted(8373).unregisterView(portal);
+        muted(8381).unregisterView(portal);
         set.add(portal);
       };
     }

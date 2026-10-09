@@ -1,19 +1,19 @@
-// === Module 11339: useMemberListAction ===
+// === Module 10712: useMemberListAction ===
 
-// Module 11339 (useMemberListAction)
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
-import openGroupDMAddMembers from "openGroupDMAddMembers" /* 11340 */;
-import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 11352 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11358 */;
+// Module 10712 (useMemberListAction)
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4899 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8667 */;
+import openGroupDMAddMembers from "openGroupDMAddMembers" /* 10713 */;
+import showChatGDMUpsellActionSheetDefault from "showChatGDMUpsellActionSheet" /* 10725 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 10731 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 const openGroupDMAddMembersDefault = openGroupDMAddMembers;
@@ -23,11 +23,11 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "Reflect" };
-const createStyles = fn(5090);
-let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10209).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "Set" };
+const createStyles = fn(5091);
+let closure_15 = createStyles.createStyles({ wrapper: { paddingTop: fn(10194).USERS_LIST_PADDING_BETWEEN_SECTIONS } });
 const ReactCompilerGating = fn(558);
-let obj2 = { wrapper: { paddingTop: fn(10209).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let obj2 = { wrapper: { paddingTop: fn(10194).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useMemberListAction.tsx");
 
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMembe
     if (channel != null) {
       id = channel.id;
     }
-    id(6729)();
+    id(6736)();
     [r10096, dependencyMap] = noop.useState(undefined);
     const _Symbol = Symbol;
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {

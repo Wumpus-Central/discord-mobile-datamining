@@ -1,27 +1,27 @@
-// === Module 17615: VoicePanelPIP ===
+// === Module 17767: VoicePanelPIP ===
 
-// Module 17615 (VoicePanelPIP)
+// Module 17767 (VoicePanelPIP)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4696 */;
-import native from "native" /* 4787 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import ExternalPipDefault from "ExternalPip" /* 5219 */;
-import spring from "spring" /* 5374 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10352 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10618 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10635 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11988 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11995 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17514 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17515 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17517 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17616 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4698 */;
+import native from "native" /* 4788 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ExternalPipDefault from "ExternalPip" /* 5220 */;
+import spring from "spring" /* 5375 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10339 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10769 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 10778 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11925 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11932 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17666 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17667 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17669 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17768 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
-import FramesStore from "FramesStore" /* 10612 */;
-import VoicePanelStore from "VoicePanelStore" /* 6079 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import FramesStore from "FramesStore" /* 10772 */;
+import VoicePanelStore from "VoicePanelStore" /* 6081 */;
 
 require = fn;
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
@@ -29,15 +29,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11989);
+const VoicePanelConstants = fn(11926);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
-const isLaunched = fn(10613).isLaunched;
+const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17668).VoicePanelPIPModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
+const isLaunched = fn(10767).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,7 +1,7 @@
-// === Module 12993: UserProfileActivityCardBadges ===
+// === Module 13075: UserProfileActivityCardBadges ===
 
-// Module 12993 (UserProfileActivityCardBadges)
-import UserProfileActivityBadges from "UserProfileActivityBadges" /* 12994 */;
+// Module 13075 (UserProfileActivityCardBadges)
+import UserProfileActivityBadges from "UserProfileActivityBadges" /* 13076 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

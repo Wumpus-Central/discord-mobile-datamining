@@ -1,25 +1,25 @@
-// === Module 14745: UserProfileDisplayNameStyleTileButton ===
+// === Module 14852: UserProfileDisplayNameStyleTileButton ===
 
-// Module 14745 (UserProfileDisplayNameStyleTileButton)
+// Module 14852 (UserProfileDisplayNameStyleTileButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import Pressables from "Pressables" /* 6189 */;
-import TableRowArrow from "TableRowArrow" /* 6193 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10246 */;
-import types from "types" /* 10247 */;
-import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 14746 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import Pressables from "Pressables" /* 6191 */;
+import TableRowArrow from "TableRowArrow" /* 6195 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10231 */;
+import types from "types" /* 10232 */;
+import UserProfileEditingAccessibilityUtils from "UserProfileEditingAccessibilityUtils" /* 14853 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { button: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderRadius: nativeDefault.radii.md }, previewContainer: { flex: 1, minWidth: 0 } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

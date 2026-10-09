@@ -1,8 +1,8 @@
-// === Module 16937: conjureMessageAuthors ===
+// === Module 17067: conjureMessageAuthors ===
 
-// Module 16937 (conjureMessageAuthors)
-import UserActionCreatorsAll from "UserActionCreators" /* 8281 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 17067 (conjureMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8289 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const set = new Set();
 const map = new Map();

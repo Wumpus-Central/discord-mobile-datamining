@@ -1,11 +1,11 @@
-// === Module 9686: GIFPickerViewStore ===
+// === Module 9705: GIFPickerViewStore ===
 
-// Module 9686 (GIFPickerViewStore)
+// Module 9705 (GIFPickerViewStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import frecency_user_settings from "frecency_user_settings" /* 1244 */;
+import frecency_user_settings from "frecency_user_settings" /* 1245 */;
 import size from "module_2" /* 2 */;
 
 function getFormatFromUrl(src) {

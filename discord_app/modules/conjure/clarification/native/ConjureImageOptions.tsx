@@ -1,23 +1,23 @@
-// === Module 17016: clarification/ConjureImageOptions ===
+// === Module 17172: clarification/ConjureImageOptions ===
 
-// Module 17016 (clarification/ConjureImageOptions)
+// Module 17172 (clarification/ConjureImageOptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4792 */;
-import TrashIcon from "TrashIcon" /* 5047 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import FormCheckbox from "FormCheckbox" /* 6182 */;
-import Card from "Card" /* 6186 */;
-import FormRadio from "FormRadio" /* 6268 */;
-import IconButton from "IconButton" /* 8106 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8184 */;
-import openMediaModal from "openMediaModal" /* 8362 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 16941 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 17013 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 17017 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4793 */;
+import TrashIcon from "TrashIcon" /* 5048 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import FormCheckbox from "FormCheckbox" /* 6184 */;
+import Card from "Card" /* 6188 */;
+import FormRadio from "FormRadio" /* 6270 */;
+import IconButton from "IconButton" /* 8114 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8192 */;
+import openMediaModal from "openMediaModal" /* 8370 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 17073 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 17169 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 17173 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,12 +27,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const getAttachmentUrl = fn(13072).getAttachmentUrl;
+const getAttachmentUrl = fn(13164).getAttachmentUrl;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 1024;
 let c12 = 104;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -1288,7 +1288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(17018).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(17174).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -1302,8 +1302,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(17018).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(17018);
+            closure_129_4.onUpload(tmp2(17174).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(17174);
           }
           c3 = 3;
           return { value: "IconComponent", done: null };

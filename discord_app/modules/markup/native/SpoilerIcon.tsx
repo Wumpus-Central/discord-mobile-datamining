@@ -1,8 +1,8 @@
-// === Module 11703: SpoilerIcon ===
+// === Module 11639: SpoilerIcon ===
 
-// Module 11703 (SpoilerIcon)
+// Module 11639 (SpoilerIcon)
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7550 */;
+import inlineStyles from "inlineStyles" /* 7559 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

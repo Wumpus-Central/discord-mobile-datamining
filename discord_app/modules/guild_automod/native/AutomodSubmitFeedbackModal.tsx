@@ -1,20 +1,20 @@
-// === Module 11477: AutomodSubmitFeedbackModal ===
+// === Module 11407: AutomodSubmitFeedbackModal ===
 
-// Module 11477 (AutomodSubmitFeedbackModal)
+// Module 11407 (AutomodSubmitFeedbackModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ToastUtils from "ToastUtils" /* 4765 */;
-import _modDef5009 from "module_5009" /* 5009 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6803 */;
-import HeaderActionButton from "HeaderActionButton" /* 7079 */;
-import AutomodAlert from "AutomodAlert" /* 7227 */;
-import AutomodFeedback from "AutomodFeedback" /* 7228 */;
-import GuildAutomodActionCreators from "GuildAutomodActionCreators" /* 11478 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import ToastUtils from "ToastUtils" /* 4767 */;
+import _modDef5010 from "module_5010" /* 5010 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6810 */;
+import HeaderActionButton from "HeaderActionButton" /* 7082 */;
+import AutomodAlert from "AutomodAlert" /* 7232 */;
+import AutomodFeedback from "AutomodFeedback" /* 7233 */;
+import GuildAutomodActionCreators from "GuildAutomodActionCreators" /* 11408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
 let c10 = 16;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, header: null, headerTitle: null, headerSubtitle: null, closeButtonContainer: null, formBody: null, formRow: null, radioIndicator: null, submitButtonContainer: null };
 let obj3 = { flex: 1, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 };
 obj2.header = { flexDirection: "row", justifyContent: "flex-end", paddingHorizontal: 16, paddingVertical: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -54,7 +54,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Navbar
     first = cResult[0];
   }
   if (cResult[1] !== onClose) {
-    const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef5009 };
+    const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef5010 };
     const tmp10 = React5(HeaderActionButton.HeaderActionButton, obj2);
     cResult[1] = onClose;
     cResult[2] = tmp10;
@@ -92,7 +92,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Navbar
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
   obj2.onPress = onClose.onClose;
-  obj2.source = _modDef5009;
+  obj2.source = _modDef5010;
   obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
   rect.children = React5(View, obj);
   return React5(common_SafeAreaView.SafeAreaPaddingView, rect);

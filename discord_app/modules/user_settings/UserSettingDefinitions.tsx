@@ -1,11 +1,11 @@
-// === Module 2044: UserSettingDefinitions ===
+// === Module 2045: UserSettingDefinitions ===
 
-// Module 2044 (UserSettingDefinitions)
+// Module 2045 (UserSettingDefinitions)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 
 require = fn;
 const UserSettingsDelay = fn(1095).UserSettingsDelay;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/user_settings/UserSettingDefi
 
 export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, arg4) {
   let getSetting = textAndImages;
-  let f86653 = activityRestrictedGuildIds;
+  let f86864 = activityRestrictedGuildIds;
   dependencyMap = explicitContentFromProto;
   closure_3 = explicitContentToProto;
   let obj = arg4;
@@ -34,16 +34,16 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
   getSetting = function getSetting() {
     let tmp3;
     if (UserSettingsProtoStore.settings[getSetting] != null) {
-      tmp3 = tmp2[f86653];
+      tmp3 = tmp2[f86864];
     }
     return explicitContentFromProto(tmp3);
   };
   const obj2 = getSetting(558);
-  f86653 = (favorites) => {
+  f86864 = (favorites) => {
     closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[6]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, async (arg0) => {
-      arg0[f86653] = closure_3(closure_0, arg0[f86653]);
+      arg0[f86864] = closure_3(closure_0, arg0[f86864]);
     }, INFREQUENT_USER_ACTION);
   };
   return {
@@ -53,7 +53,7 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86659(tmp2);
+      return f86870(tmp2);
     },
     useSetting: getSetting(558).isReactCompilerEnabled() ? (() => {
       const cResult = c.c(1);
@@ -124,7 +124,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, an
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86659(tmp2);
+      return f86870(tmp2);
     }
   };
 }
@@ -138,9 +138,9 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
     }
     return setting;
   }
-  const f86659 = (arg0) => {
+  const f86870 = (arg0) => {
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: null };
-    const items = [f86659];
+    const items = [f86870];
     obj2.settings = items;
     DispatcherDefault.dispatch(obj2);
     return getSetting.updateSetting(arg0);
@@ -160,7 +160,7 @@ export function wrapSettingWithOverride(UserSettingDefinitions, animateEmoji, ar
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f86659(tmp2);
+      return f86870(tmp2);
     }
   };
 }

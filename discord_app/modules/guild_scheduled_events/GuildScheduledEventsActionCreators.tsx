@@ -1,17 +1,17 @@
-// === Module 8494: GuildScheduledEventsActionCreators ===
+// === Module 8502: GuildScheduledEventsActionCreators ===
 
-// Module 8494 (GuildScheduledEventsActionCreators)
+// Module 8502 (GuildScheduledEventsActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import router_utils from "router_utils" /* 1112 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5885 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8495 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5886 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8503 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6059 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6061 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(2069);
+const GuildScheduledEventsConstants = fn(2070);
 ({ ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire, ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7, GuildScheduledEventStatus: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: closure_9 } = GuildScheduledEventsConstants);
 const Constants = fn(1085);
 ({ Endpoints: c10, Routes: closure_11 } = Constants);
@@ -64,7 +64,7 @@ export default {
     closure_0 = arg0;
     closure_1 = arg1;
     return (async () => {
-      await tmp5(5640).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(tmp5, tmp2), rejectWithError: tmp5(1294).rejectWithMigratedError() });
+      await tmp5(5641).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENT(tmp5, tmp2), rejectWithError: tmp5(1295).rejectWithMigratedError() });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENT", guildScheduledEvent: body });
       return body;
@@ -73,7 +73,7 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(5640).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1294).rejectWithMigratedError() });
+      await tmp5(5641).httpGetWithCountryCodeQuery({ url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5), rejectWithError: tmp5(1295).rejectWithMigratedError() });
       const body = value.body;
       tmp2(584).dispatch({ type: "FETCH_GUILD_EVENTS_FOR_GUILD", guildId: closure_129_0, guildScheduledEvents: body });
       return body;
@@ -131,13 +131,13 @@ export default {
               return obj3;
             } else {
               let body;
-              const HTTP = tmp5(1294).HTTP;
+              const HTTP = tmp5(1295).HTTP;
               const request = { url: constants.USER_GUILD_EVENTS, query: null, rejectWithError: null };
               const obj4 = { guild_ids: null };
               const items = [tmp5];
               obj4.guild_ids = items;
               request.query = obj4;
-              request.rejectWithError = tmp5(1294).rejectWithMigratedError();
+              request.rejectWithError = tmp5(1295).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj5 = { value: HTTP.get(request), done: false };
@@ -475,11 +475,11 @@ export default {
               closure_128_0 = undefined;
               if (null != tmp5) {
                 if (null != closure_2) {
-                  const HTTP = tmp5(1294).HTTP;
+                  const HTTP = tmp5(1295).HTTP;
                   const request = { url: closure_1_10.GUILD_EVENT_USERS(closure_2, tmp5, tmp2), query: null, rejectWithError: null };
                   const obj4 = { limit, with_member: true };
                   request.query = obj4;
-                  request.rejectWithError = tmp5(1294).rejectWithMigratedError();
+                  request.rejectWithError = tmp5(1295).rejectWithMigratedError();
                   dependencyMap = 1;
                   c3 = 1;
                   const obj5 = { value: HTTP.get(request), done: false };

@@ -1,10 +1,10 @@
-// === Module 11125: handleUsePrimaryEntryPointAppCommand ===
+// === Module 11567: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 11125 (handleUsePrimaryEntryPointAppCommand)
-import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 10650 */;
+// Module 11567 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 10794 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import UserStore from "UserStore" /* 1389 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
 let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
@@ -145,11 +145,10 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
           closure_129_11 = undefined;
           closure_129_12 = undefined;
           ({ targetApplication: closure_129_0, locationObject: closure_129_1, channelId: closure_129_2, analyticsLocations: closure_129_3, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, source: closure_129_7, onExecutedCallback: closure_129_8, referrerId: closure_129_9, customId: closure_129_10, inviterUserId: closure_129_11, onConfirmActivityLaunchChecksAlertOpen: closure_129_12 } = closure_0);
-          closure_129_13 = undefined;
           let currentUser;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -161,7 +160,6 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            closure_129_13 = closure_130_1(closure_130_3[5])();
             currentUser = closure_130_6.getCurrentUser();
             let tmp17 = null != closure_129_2;
             if (tmp17) {
@@ -173,12 +171,12 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
                 }
                 let tmp6 = tmp14;
                 if (tmp14) {
-                  closure_130_2(closure_130_3[6]).markActivityUsed(closure_129_0.id);
-                  const obj3 = closure_130_2(closure_130_3[6]);
-                  const obj7 = { channelId: closure_129_2, applicationId: closure_129_0.id, isStart: true, embeddedActivitiesManager: closure_129_13, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, locationObject: closure_129_1, analyticsLocations: closure_129_3, source: closure_129_7, onExecutedCallback: closure_129_8, referrerId: closure_129_9, customId: closure_129_10, inviterUserId: closure_129_11, onConfirmActivityLaunchChecksAlertOpen: closure_129_12 };
+                  closure_130_2(closure_130_3[5]).markActivityUsed(closure_129_0.id);
+                  const obj3 = closure_130_2(closure_130_3[5]);
+                  const obj7 = { channelId: closure_129_2, applicationId: closure_129_0.id, isStart: true, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, locationObject: closure_129_1, analyticsLocations: closure_129_3, source: closure_129_7, onExecutedCallback: closure_129_8, referrerId: closure_129_9, customId: closure_129_10, inviterUserId: closure_129_11, onConfirmActivityLaunchChecksAlertOpen: closure_129_12 };
                   c3 = 2;
                   c4 = 1;
-                  const obj8 = { value: closure_130_0(closure_130_3[7]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj7), done: false };
+                  const obj8 = { value: closure_130_0(closure_130_3[6]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj7), done: false };
                   return obj8;
                 }
               }
@@ -201,9 +199,9 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
         }
         tmp11 = tmp6;
       }
-    } catch (tmp40) {
+    } catch (tmp38) {
       c4 = tmp;
-      throw tmp40;
+      throw tmp38;
     }
   }
 };

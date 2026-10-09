@@ -1,16 +1,16 @@
-// === Module 13952: ShareScreen ===
+// === Module 14049: ShareScreen ===
 
-// Module 13952 (ShareScreen)
+// Module 14049 (ShareScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import HeaderShared from "HeaderShared" /* 9232 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 13956 */;
-import ShareEmbedDefault from "ShareEmbed" /* 13957 */;
+import HeaderShared from "HeaderShared" /* 9270 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 14053 */;
+import ShareEmbedDefault from "ShareEmbed" /* 14054 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -28,23 +28,23 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11576).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10202).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11509).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10187).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, headerLeftContainer: null, headerRightContainer: null };
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
 obj2.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1382);
 let num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;
@@ -232,7 +232,7 @@ export default function ShareScreen(appEntryKey) {
                                       let channel2;
                                       c5 = 1;
                                       c6 = 1;
-                                      return { value: "Reflect", done: true };
+                                      return { value: "Set", done: true };
                                     }
                                   } else if (1 === tmp7) {
                                     if (arg0 === 1) {

@@ -1,13 +1,13 @@
-// === Module 16252: useMessagesSpecs ===
+// === Module 16371: useMessagesSpecs ===
 
-// Module 16252 (useMessagesSpecs)
+// Module 16371 (useMessagesSpecs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useFontScale from "useFontScale" /* 5382 */;
-import MessagesHeader from "MessagesHeader" /* 16253 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 16256 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16268 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useFontScale from "useFontScale" /* 5383 */;
+import MessagesHeader from "MessagesHeader" /* 16372 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 16375 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16387 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,8 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessa
   cResult[12] = obj4;
   tmp17 = obj4;
 }) : (function useMessagesSpecs() {
-  fontScale = fontScale(5382).useFontScale();
-  top = top(1630)().top;
+  fontScale = fontScale(5383).useFontScale();
+  top = top(1631)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {
     const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);

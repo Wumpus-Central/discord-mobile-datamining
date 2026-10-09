@@ -1,9 +1,9 @@
-// === Module 10390: LikelyAtoMoreTipsModalActionItems ===
+// === Module 10379: LikelyAtoMoreTipsModalActionItems ===
 
-// Module 10390 (LikelyAtoMoreTipsModalActionItems)
-import UserUtilsDefault from "UserUtils" /* 4922 */;
+// Module 10379 (LikelyAtoMoreTipsModalActionItems)
+import UserUtilsDefault from "UserUtils" /* 4923 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LikelyAt
     tmp14 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp18 = jsx(tmp(10325).BellSlashIcon, {});
+    const tmp18 = jsx(tmp(10312).BellSlashIcon, {});
     cResult[9] = tmp18;
     let tmp16 = tmp18;
   } else {
@@ -78,12 +78,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LikelyAt
     return tmp19;
   }
   const tmpResult = senderId(504);
-  const tmp20 = jsx(senderId(6267).TableRowGroup, { hasIcons: true, children: jsx(senderId(6184).TableRow, { label: tmp12, subLabel: tmp14, onPress: handleMutePressed, icon: tmp16 }) });
+  const tmp20 = jsx(senderId(6269).TableRowGroup, { hasIcons: true, children: jsx(senderId(6186).TableRow, { label: tmp12, subLabel: tmp14, onPress: handleMutePressed, icon: tmp16 }) });
   cResult[10] = handleMutePressed;
   cResult[11] = tmp12;
   cResult[12] = tmp20;
   tmp19 = tmp20;
-  const obj4 = { hasIcons: true, children: jsx(senderId(6184).TableRow, { label: tmp12, subLabel: tmp14, onPress: handleMutePressed, icon: tmp16 }) };
+  const obj4 = { hasIcons: true, children: jsx(senderId(6186).TableRow, { label: tmp12, subLabel: tmp14, onPress: handleMutePressed, icon: tmp16 }) };
 }) : (function LikelyAtoMoreTipsModalActionItems(senderId) {
   senderId = senderId.senderId;
   const items = [UserStore];
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LikelyAt
   const intl2 = senderId(1126).intl;
   obj3.subLabel = intl2.string(senderId(1126).t.w2ve0t);
   obj3.onPress = senderId.handleMutePressed;
-  obj3.icon = jsx(senderId(10325).BellSlashIcon, {});
-  obj2.children = jsx(senderId(6184).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
-  return jsx(senderId(6267).TableRowGroup, { hasIcons: true, children: null });
+  obj3.icon = jsx(senderId(10312).BellSlashIcon, {});
+  obj2.children = jsx(senderId(6186).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
+  return jsx(senderId(6269).TableRowGroup, { hasIcons: true, children: null });
 });

@@ -1,18 +1,18 @@
-// === Module 11266: ActivitiesActionCreators ===
+// === Module 10633: ActivitiesActionCreators ===
 
-// Module 11266 (ActivitiesActionCreators)
+// Module 10633 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7001 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(5083).MessageSendLocation;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -117,8 +117,8 @@ export default {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1294).HTTP;
-      const request = { url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2), retries: 3, query: obj4, rejectWithError: tmp4(1294).rejectWithMigratedError() };
+      const HTTP = tmp4(1295).HTTP;
+      const request = { url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2), retries: 3, query: obj4, rejectWithError: tmp4(1295).rejectWithMigratedError() };
       await HTTP.get(request);
       closure_128_0 = value;
       return { secret: closure_128_0.body.secret, joinUrl: closure_128_0.body.join_url };
@@ -128,8 +128,8 @@ export default {
     closure_0 = items;
     return (async () => {
       const mapped = v3.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
-      const HTTP = v3(1294).HTTP;
-      const request = { url: constants.USER_ACTIVITY_SUBSCRIBE, body: { subscriptions: mapped }, retries: 1, rejectWithError: v3(1294).rejectWithMigratedError() };
+      const HTTP = v3(1295).HTTP;
+      const request = { url: constants.USER_ACTIVITY_SUBSCRIBE, body: { subscriptions: mapped }, retries: 1, rejectWithError: v3(1295).rejectWithMigratedError() };
       await HTTP.post(request);
       return value.body;
     })();

@@ -1,15 +1,15 @@
-// === Module 12464: NUFActionCreators ===
+// === Module 12383: NUFActionCreators ===
 
-// Module 12464 (NUFActionCreators)
+// Module 12383 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12440 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12444 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12523 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12526 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12358 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12362 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12462 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12465 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
-import UserStore from "UserStore" /* 1389 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -95,11 +95,11 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(12437);
+const ContactSyncModalStore = fn(12355);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(12465).NUF_DISCOVERABILITY_MODAL_KEY;
+let closure_10 = fn(12384).NUF_DISCOVERABILITY_MODAL_KEY;
 const PlatformTypes = fn(1085).PlatformTypes;
-let closure_12 = fn(6653).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_12 = fn(6660).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 

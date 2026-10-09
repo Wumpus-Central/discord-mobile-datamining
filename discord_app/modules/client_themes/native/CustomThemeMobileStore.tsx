@@ -1,15 +1,15 @@
-// === Module 1250: CustomThemeMobileStore ===
+// === Module 1251: CustomThemeMobileStore ===
 
-// Module 1250 (CustomThemeMobileStore)
+// Module 1251 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4925 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4926 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 
 require = fn;
 function reset() {
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "Reflect" };
+    obj = { theme: "Array", customTheme: "Set" };
   }
   return obj;
 };

@@ -1,20 +1,20 @@
-// === Module 11941: useRenderPollAnswerImage ===
+// === Module 11878: useRenderPollAnswerImage ===
 
-// Module 11941 (useRenderPollAnswerImage)
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import EmojiTypes from "EmojiTypes" /* 4724 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import EmojiDefault from "Emoji" /* 6809 */;
+// Module 11878 (useRenderPollAnswerImage)
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import EmojiTypes from "EmojiTypes" /* 4726 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import EmojiDefault from "Emoji" /* 6816 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7889 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(7232).DraftType;
-const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const DraftType = fn(7237).DraftType;
+const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRende
         status = mediaAttachmentState.status;
       }
     }
-    if (status === tmp(11933).PollMediaUploadAttachmentStatus.PREPARING) {
+    if (status === tmp(11870).PollMediaUploadAttachmentStatus.PREPARING) {
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp38 = <ActivityIndicator />;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRende
             tmp25 = cResult[13];
             tmp26 = cResult[14];
           }
-          let str = emoji.type === tmp(4724).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+          let str = emoji.type === tmp(4726).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
           if (str == null) {
             str = "";
           }

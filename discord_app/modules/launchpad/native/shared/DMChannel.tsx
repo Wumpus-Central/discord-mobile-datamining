@@ -1,26 +1,26 @@
-// === Module 17717: shared/DMChannel ===
+// === Module 17869: shared/DMChannel ===
 
-// Module 17717 (shared/DMChannel)
+// Module 17869 (shared/DMChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5101 */;
-import useFontScale from "useFontScale" /* 5382 */;
-import useChannelNameDefault from "useChannelName" /* 5417 */;
-import Pressables from "Pressables" /* 6189 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9248 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10264 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12599 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15414 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16585 */;
-import renderChannelItemDefault from "renderChannelItem" /* 17131 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17132 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17709 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17711 */;
+import transitionToChannel from "transitionToChannel" /* 5102 */;
+import useFontScale from "useFontScale" /* 5383 */;
+import useChannelNameDefault from "useChannelName" /* 5418 */;
+import Pressables from "Pressables" /* 6191 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9286 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10249 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12539 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15527 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16708 */;
+import renderChannelItemDefault from "renderChannelItem" /* 17281 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17282 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17861 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17863 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(5972).UnreadSetting;
+const UnreadSetting = fn(5974).UnreadSetting;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePrivateChannelPressEvents(id, navigationReplace) {
@@ -70,7 +70,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePriv
   obj.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(user.id), items1);
   return obj;
 });
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
 let closure_7 = createStyles.createStyles(obj);
 ReactCompilerGating = fn(558);

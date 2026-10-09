@@ -1,10 +1,10 @@
-// === Module 15715: PawPrintIcon ===
+// === Module 15828: PawPrintIcon ===
 
-// Module 15715 (PawPrintIcon)
+// Module 15828 (PawPrintIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod15716 from "module_15716" /* 15716 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod15829 from "module_15829" /* 15829 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const PawPrintIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15716;
+    const tmpResult = _mod15829;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const PawPrintIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15716, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15829, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

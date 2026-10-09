@@ -1,9 +1,9 @@
-// === Module 12698: openFavoritesGuildAddChannelModal ===
+// === Module 12643: openFavoritesGuildAddChannelModal ===
 
-// Module 12698 (openFavoritesGuildAddChannelModal)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
-import showSearchableDestinationListModalDefault from "showSearchableDestinationListModal" /* 11574 */;
+// Module 12643 (openFavoritesGuildAddChannelModal)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+import showSearchableDestinationListModalDefault from "showSearchableDestinationListModal" /* 11507 */;
 import size from "module_2" /* 2 */;
 
 const FavoritesGuildAddChannelModal = "FavoritesGuildAddChannelModal";
@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/favorites/utils/openFavorites
 
 export default function openFavoritesGuildAddChannelModal(arg0) {
   ({ parentId, source } = arg0);
-  showSearchableDestinationListModalDefault(asyncRequireImpl(12699, dependencyMap.paths), { parentId, source }, FavoritesGuildAddChannelModal);
+  showSearchableDestinationListModalDefault(asyncRequireImpl(12644, dependencyMap.paths), { parentId, source }, FavoritesGuildAddChannelModal);
 };
 export const FAVORITES_GUILD_ADD_CHANNEL_MODAL_KEY = "FavoritesGuildAddChannelModal";
 export const closeFavoritesGuildAddChannelModal = function closeFavoritesGuildAddChannelModal() {

@@ -1,13 +1,13 @@
-// === Module 17666: useHideSelfVideo ===
+// === Module 17818: useHideSelfVideo ===
 
-// Module 17666 (useHideSelfVideo)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5241 */;
+// Module 17818 (useHideSelfVideo)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5242 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 const require = fn;
 const VideoToggleState = fn(1085).VideoToggleState;
-const Constants = fn(5115);
+const Constants = fn(5116);
 ({ MediaEngineContextTypes: metroRequire, Features: closure_7 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

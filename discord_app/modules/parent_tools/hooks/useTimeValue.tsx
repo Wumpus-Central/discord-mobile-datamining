@@ -1,6 +1,6 @@
-// === Module 15020: useTimeValue ===
+// === Module 15132: useTimeValue ===
 
-// Module 15020 (useTimeValue)
+// Module 15132 (useTimeValue)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,4 +46,4 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTimeV
     return tmp2;
   });
 });
-export const timeToMinutes = fn(12579).timeToMinutes;
+export const timeToMinutes = fn(12519).timeToMinutes;

@@ -1,12 +1,12 @@
-// === Module 8585: useGuildEmbeddedApplications ===
+// === Module 8593: useGuildEmbeddedApplications ===
 
-// Module 8585 (useGuildEmbeddedApplications)
+// Module 8593 (useGuildEmbeddedApplications)
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6842 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6849 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
 
 require = fn;
 const initialize = fn(504);

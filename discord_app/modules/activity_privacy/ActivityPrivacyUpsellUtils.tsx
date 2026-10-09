@@ -1,14 +1,14 @@
-// === Module 14936: ActivityPrivacyUpsellUtils ===
+// === Module 15048: ActivityPrivacyUpsellUtils ===
 
-// Module 14936 (ActivityPrivacyUpsellUtils)
+// Module 15048 (ActivityPrivacyUpsellUtils)
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6675 */;
-import FrecencyStore from "FrecencyStore" /* 6091 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4980 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6682 */;
+import FrecencyStore from "FrecencyStore" /* 6093 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4981 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import SortedGuildStore from "SortedGuildStore" /* 5968 */;
+import SortedGuildStore from "SortedGuildStore" /* 5970 */;
 
 require = fn;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
@@ -42,7 +42,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        dependencyMap = tmp8(6675).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(6682).getSanitizedActivityRestrictedGuilds();
         const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
         if (setting !== tmp8(1209).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
           if (setting !== tmp8(1209).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {

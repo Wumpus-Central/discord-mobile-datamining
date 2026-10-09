@@ -1,21 +1,21 @@
-// === Module 14597: quests ===
+// === Module 14696: quests ===
 
-// Module 14597 (quests)
+// Module 14696 (quests)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7401 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 10607 */;
-import RPCErrorDefault from "RPCError" /* 11134 */;
-import RPCHelpers from "RPCHelpers" /* 11142 */;
-import QuestStore from "QuestStore" /* 7379 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7406 */;
+import RPCErrorDefault from "RPCError" /* 10896 */;
+import RPCHelpers from "RPCHelpers" /* 10905 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 12919 */;
+import QuestStore from "QuestStore" /* 7384 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(14560);
+let CONTEXT_MENU_ICON_NAMES = fn(14659);
 obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_QUEST_ENROLLMENT_STATUS, {
-  scope: fn(8433).OAuth2Scopes.IDENTIFY,
+  scope: fn(8441).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -50,9 +50,9 @@ obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPC
     throw new RPCErrorDefault(obj5, "Quest not found: " + quest_id);
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(14560);
+CONTEXT_MENU_ICON_NAMES = fn(14659);
 let obj3 = {
-  scope: fn(8433).OAuth2Scopes.IDENTIFY,
+  scope: fn(8441).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -88,7 +88,7 @@ let obj3 = {
   }
 };
 obj[RPCCommands.QUEST_START_TIMER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.QUEST_START_TIMER, {
-  scope: fn(8433).OAuth2Scopes.IDENTIFY,
+  scope: fn(8441).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -122,9 +122,9 @@ obj[RPCCommands.QUEST_START_TIMER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RP
     throw new RPCErrorDefault(obj9, "Quest not found: " + quest_id);
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(14560);
+CONTEXT_MENU_ICON_NAMES = fn(14659);
 let obj5 = {
-  scope: fn(8433).OAuth2Scopes.IDENTIFY,
+  scope: fn(8441).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const quest_id = socket.args.quest_id;
@@ -159,7 +159,7 @@ let obj5 = {
   }
 };
 obj[RPCCommands.GET_QUEST] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_QUEST, {
-  scope: fn(8433).OAuth2Scopes.IDENTIFY,
+  scope: fn(8441).OAuth2Scopes.IDENTIFY,
   handler(socket) {
     socket = socket.socket;
     const result = RPCHelpers.validatePostMessageTransport(socket.transport);

@@ -1,21 +1,21 @@
-// === Module 17923: NotificationReactivationActionSheet ===
+// === Module 18081: NotificationReactivationActionSheet ===
 
-// Module 17923 (NotificationReactivationActionSheet)
+// Module 18081 (NotificationReactivationActionSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12142 */;
-import _modDef17924 from "module_17924" /* 17924 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12079 */;
+import _modDef18082 from "module_18082" /* 18082 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const EventActionType = fn(12141).EventActionType;
+const View = fn(17).View;
+const EventActionType = fn(12078).EventActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" }, image: null, title: null, subtitle: null, buttons: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.image = { marginVertical: nativeDefault.space.PX_24, height: 120 };
@@ -24,7 +24,7 @@ let obj4 = { marginVertical: nativeDefault.space.PX_24, height: 120 };
 obj2.subtitle = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
 let obj5 = { textAlign: "center", marginTop: nativeDefault.space.PX_8 };
 obj2.buttons = { marginTop: nativeDefault.space.PX_8 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj6 = { marginTop: nativeDefault.space.PX_8 };
 const size = fn(2);
@@ -33,9 +33,9 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/notific
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function NotificationReactivationActionSheet(location) {
   const cResult = _location(576).c(28);
   _location = location.location;
-  const tmp4 = closure_10();
+  const tmp4 = closure_9();
   if (cResult[0] !== _location) {
-    const fn = function n() {
+    const fn = function c() {
       const pushNotificationPermission = NotificationPermissionUtil.requestPushNotificationPermission(EventActionType.ALLOW_TO_REQUEST, _location, () => {
         closure_1_1(closure_1_2[11]).hideActionSheet();
       });
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     tmp5 = cResult[1];
   }
   if (cResult[2] !== _location) {
-    const fn2 = function y() {
+    const fn2 = function v() {
       AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" });
       const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
       ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -59,8 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     tmp6 = cResult[3];
   }
   if (cResult[4] !== tmp4.image) {
-    let obj2 = { style: tmp4.image, source: _modDef17924, resizeMode: "contain" };
-    const tmp11 = closure_8(closure_5, obj2);
+    let obj2 = { style: tmp4.image, source: _modDef18082, resizeMode: "contain" };
+    const tmp11 = closure_7(FastImageDefault, obj2);
     cResult[4] = tmp4.image;
     cResult[5] = tmp11;
     let tmp7 = tmp11;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   }
   if (cResult[7] !== tmp4.title) {
     const obj3 = { style: tmp4.title, variant: "heading-xl/bold", accessibilityRole: "header", children: tmp12 };
-    const tmp16 = closure_8(tmp(5086).Text, obj3);
+    const tmp16 = closure_7(tmp(5087).Text, obj3);
     cResult[7] = tmp4.title;
     cResult[8] = tmp16;
     let tmp14 = tmp16;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   }
   if (cResult[10] !== tmp4.subtitle) {
     const obj4 = { style: tmp4.subtitle, variant: "text-sm/medium", color: "text-default", children: tmp17 };
-    const tmp21 = closure_8(tmp(5086).Text, obj4);
+    const tmp21 = closure_7(tmp(5087).Text, obj4);
     cResult[10] = tmp4.subtitle;
     cResult[11] = tmp21;
     let tmp19 = tmp21;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   }
   if (cResult[13] !== tmp5) {
     const obj5 = { text: tmp22, onPress: tmp5 };
-    const tmp26 = closure_8(tmp(5375).Button, obj5);
+    const tmp26 = closure_7(tmp(5376).Button, obj5);
     cResult[13] = tmp5;
     cResult[14] = tmp26;
     let tmp24 = tmp26;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   }
   if (cResult[16] !== tmp6) {
     const obj6 = { text: tmp27, onPress: tmp6, variant: "secondary" };
-    const tmp31 = closure_8(tmp(5375).Button, obj6);
+    const tmp31 = closure_7(tmp(5376).Button, obj6);
     cResult[16] = tmp6;
     cResult[17] = tmp31;
     let tmp29 = tmp31;
@@ -156,8 +156,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
       const obj8 = { style: tmp4.container, children: null };
       const items = [tmp7, tmp14, tmp19, tmp32];
       obj8.children = items;
-      obj7.children = closure_9(closure_4, obj8);
-      const tmp38 = closure_8(tmp(6829).BottomSheet, obj7);
+      obj7.children = closure_8(View, obj8);
+      const tmp38 = closure_7(tmp(6836).BottomSheet, obj7);
       cResult[22] = tmp4.container;
       cResult[23] = tmp19;
       cResult[24] = tmp32;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const obj9 = { style: tmp4.buttons, children: null };
   const items1 = [tmp24, tmp29];
   obj9.children = items1;
-  const tmp33 = closure_9(_location(5963).ButtonGroup, obj9);
+  const tmp33 = closure_8(_location(5965).ButtonGroup, obj9);
   cResult[18] = tmp4.buttons;
   cResult[19] = tmp24;
   cResult[20] = tmp29;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   let obj = _location(576);
 }) : (function NotificationReactivationActionSheet(location) {
   const _location = location.location;
-  const tmp = closure_10();
+  const tmp = closure_9();
   const items = [_location];
   const items1 = [_location];
   const callback = noop.useCallback(() => {
@@ -194,29 +194,30 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   }, items1);
   let obj = { children: null };
   let obj2 = { style: tmp.container, children: null };
-  const items2 = [closure_8(closure_5, { style: tmp.image, source: _modDef17924, resizeMode: "contain" }), , , ];
+  const obj3 = { style: tmp.image, source: _modDef18082, resizeMode: "contain" };
+  const items2 = [closure_7(FastImageDefault, obj3), , , ];
   const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1126).intl;
   obj4.children = intl.string(_location(1126).t.a4bgO0);
-  items2[1] = closure_8(_location(5086).Text, obj4);
+  items2[1] = closure_7(_location(5087).Text, obj4);
   const obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _location(1126).intl;
   obj5.children = intl2.string(_location(1126).t["rW5gw/"]);
-  items2[2] = closure_8(_location(5086).Text, obj5);
+  items2[2] = closure_7(_location(5087).Text, obj5);
   const obj6 = { style: tmp.buttons, children: null };
   const obj7 = { text: null, onPress: null };
   const intl3 = _location(1126).intl;
   obj7.text = intl3.string(_location(1126).t.a4bgO0);
   obj7.onPress = callback;
-  const items3 = [closure_8(_location(5375).Button, obj7), ];
+  const items3 = [closure_7(_location(5376).Button, obj7), ];
   const obj8 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = _location(1126).intl;
   obj8.text = intl4.string(_location(1126).t["/L3kom"]);
   obj8.onPress = callback1;
-  items3[1] = closure_8(_location(5375).Button, obj8);
+  items3[1] = closure_7(_location(5376).Button, obj8);
   obj6.children = items3;
-  items2[3] = closure_9(_location(5963).ButtonGroup, obj6);
+  items2[3] = closure_8(_location(5965).ButtonGroup, obj6);
   obj2.children = items2;
-  obj.children = closure_9(closure_4, obj2);
-  return closure_8(_location(6829).BottomSheet, obj);
+  obj.children = closure_8(View, obj2);
+  return closure_7(_location(6836).BottomSheet, obj);
 });

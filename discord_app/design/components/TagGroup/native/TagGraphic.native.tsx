@@ -1,16 +1,16 @@
-// === Module 14098: TagGraphic ===
+// === Module 14195: TagGraphic ===
 
-// Module 14098 (TagGraphic)
+// Module 14195 (TagGraphic)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TagGroupTypes from "TagGroupTypes" /* 14095 */;
+import TagGroupTypes from "TagGroupTypes" /* 14192 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles((width, backgroundColor) => {
   const obj = { image: { width, height: width }, avatar: null, roleDot: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };

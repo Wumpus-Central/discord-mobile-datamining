@@ -1,8 +1,8 @@
-// === Module 15440: DisplayNameStylesSheetHeader ===
+// === Module 15553: DisplayNameStylesSheetHeader ===
 
-// Module 15440 (DisplayNameStylesSheetHeader)
+// Module 15553 (DisplayNameStylesSheetHeader)
 import nativeDefault from "native" /* 587 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6828 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 let closure_2 = ["leading", "trailing"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { trailingButtonClearance: { paddingTop: nativeDefault.space.PX_8 }, centeredAccessory: { justifyContent: "center", alignItems: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       const merged = Object.assign(tmp5);
       obj3.leading = tmp13;
       obj3.trailing = tmp15;
-      const tmp22 = jsx(tmp(6828).BottomSheetTitleHeader, {});
+      const tmp22 = jsx(tmp(6835).BottomSheetTitleHeader, {});
       cResult[12] = tmp5;
       cResult[13] = tmp13;
       cResult[14] = tmp15;

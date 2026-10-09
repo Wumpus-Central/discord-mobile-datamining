@@ -2,12 +2,12 @@
 
 // Module 1204 (FormConstants)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils2 from "PlatformUtils" /* 1381 */;
-import shared from "shared" /* 4929 */;
+import PlatformUtils2 from "PlatformUtils" /* 1382 */;
+import shared from "shared" /* 4930 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num = 24;
 if (PlatformUtils.isAndroid()) {
   num = 32;
@@ -16,7 +16,7 @@ const internal = nativeDefault.internal;
 const semanticColor = internal.resolveSemanticColor(nativeDefault.themes.DARK, nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
 const internal2 = nativeDefault.internal;
 const semanticColor1 = internal2.resolveSemanticColor(nativeDefault.themes.LIGHT, nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE);
-const DeviceUtils = fn(5066);
+const DeviceUtils = fn(5067);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});

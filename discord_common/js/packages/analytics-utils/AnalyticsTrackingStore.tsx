@@ -1,11 +1,11 @@
-// === Module 1273: AnalyticsTrackingStore ===
+// === Module 1274: AnalyticsTrackingStore ===
 
-// Module 1273 (AnalyticsTrackingStore)
+// Module 1274 (AnalyticsTrackingStore)
 import logger_Logger from "logger/Logger" /* 4 */;
-import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1274 */;
-import FingerprintUtils from "FingerprintUtils" /* 1277 */;
-import v1 from "v1" /* 1278 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import discord_common_IdGenerator from "discord_common/IdGenerator" /* 1275 */;
+import FingerprintUtils from "FingerprintUtils" /* 1278 */;
+import v1 from "v1" /* 1279 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
 import Constants from "Constants" /* 1096 */;
 import size from "module_2" /* 2 */;
 
@@ -61,7 +61,7 @@ let closure_31 = [];
 let c32 = null;
 let c33 = false;
 function defaultGetSessionId() {
-  return Promise.resolve({ sessionId: "create" });
+  return Promise.resolve({ sessionId: "r" });
 }
 let result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsTrackingStore.tsx");
 

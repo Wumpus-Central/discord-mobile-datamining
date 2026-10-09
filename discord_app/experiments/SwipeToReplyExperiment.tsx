@@ -1,8 +1,8 @@
-// === Module 11257: SwipeToReplyExperiment ===
+// === Module 10624: SwipeToReplyExperiment ===
 
-// Module 11257 (SwipeToReplyExperiment)
-import LaunchPadConstants from "LaunchPadConstants" /* 11258 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11259 */;
+// Module 10624 (SwipeToReplyExperiment)
+import LaunchPadConstants from "LaunchPadConstants" /* 10625 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 10626 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

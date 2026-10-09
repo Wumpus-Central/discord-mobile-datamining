@@ -1,25 +1,24 @@
-// === Module 10412: VibingWumpusModal ===
+// === Module 10401: VibingWumpusModal ===
 
-// Module 10412 (VibingWumpusModal)
+// Module 10401 (VibingWumpusModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import Navigator from "Navigator" /* 6679 */;
-import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10315 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import Navigator from "Navigator" /* 6686 */;
+import InappropriateConversationsActionCreators from "InappropriateConversationsActionCreators" /* 10302 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VIBING_WUMPUS_MODAL_KEY = fn(10361).VIBING_WUMPUS_MODAL_KEY;
-const InappropriateConversationsConstants = fn(10413);
-({ VibingWumpusAction: closure_9, VibingWumpusSource: c10 } = InappropriateConversationsConstants);
+const View = fn(17).View;
+const VIBING_WUMPUS_MODAL_KEY = fn(10348).VIBING_WUMPUS_MODAL_KEY;
+const InappropriateConversationsConstants = fn(10402);
+({ VibingWumpusAction: closure_8, VibingWumpusSource: closure_9 } = InappropriateConversationsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { container: { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" }, warningText: null, ctaContainer: null, takeoverHeader: null, takeoverDescription: null, wumpus: null, rings: null };
 let obj3 = { display: "flex", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16, height: "100%" };
 obj2.warningText = { marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_4 };
@@ -29,39 +28,40 @@ obj2.takeoverHeader = { textAlign: "center" };
 obj2.takeoverDescription = { textAlign: "center" };
 obj2.wumpus = { height: 187 };
 obj2.rings = { position: "absolute", width: "100%", height: 440, top: 120 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpusScreen() {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpusScreen() {
   const cResult = first(ref[11]).c(45);
-  const tmp4 = closure_15();
+  const tmp4 = closure_14();
   const tmp5 = stateFromStores(noop.useState(false), 2);
   first = tmp5[0];
   importDefault = tmp5[1];
   ref = noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function _() {
-      return useReducedMotion.useReducedMotion;
-    };
+    class I {
+      constructor() {
+        return closure_1_6.useReducedMotion;
+      }
+    }
     cResult[0] = items;
-    cResult[1] = fn;
+    cResult[1] = I;
     tmp8 = items;
-    tmp9 = fn;
   } else {
     [tmp8, tmp9] = cResult;
   }
   let obj = first(ref[11]);
-  stateFromStores = first(ref[12]).useStateFromStores(tmp8, tmp9);
+  stateFromStores = first(ref[12]).useStateFromStores(tmp8, I);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class A {
+    class W {
       constructor() {
         date = new Date();
         closure_0 = date;
         obj = closure_0(closure_2[13]);
         result = obj.playVibingWumpusMusic();
         obj2 = closure_1(closure_2[14]);
-        obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-        trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+        obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+        trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
         return () => {
           const obj2 = { duration_open_ms: null, source: null };
           date = new Date();
@@ -75,19 +75,24 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
       }
     }
     const items1 = [];
-    cResult[2] = A;
+    cResult[2] = W;
+    class I {
+      constructor() {
+        return closure_1_6.useReducedMotion;
+      }
+    }
     cResult[3] = items1;
     let tmp13 = items1;
   } else {
-    class A {
+    class W {
       constructor() {
         date = new Date();
         closure_0 = date;
         obj = closure_0(closure_2[13]);
         result = obj.playVibingWumpusMusic();
         obj2 = closure_1(closure_2[14]);
-        obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-        trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+        obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+        trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
         return () => {
           const obj2 = { duration_open_ms: null, source: null };
           date = new Date();
@@ -102,17 +107,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
     }
     tmp13 = cResult[3];
   }
-  const effect = noop.useEffect(A, tmp13);
+  const effect = noop.useEffect(W, tmp13);
   if (cResult[4] === first) {
-    class A {
+    class W {
       constructor() {
         date = new Date();
         closure_0 = date;
         obj = closure_0(closure_2[13]);
         result = obj.playVibingWumpusMusic();
         obj2 = closure_1(closure_2[14]);
-        obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-        trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+        obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+        trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
         return () => {
           const obj2 = { duration_open_ms: null, source: null };
           date = new Date();
@@ -126,62 +131,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
       }
     }
     const _Symbol = Symbol;
-    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      class A {
-        constructor() {
-          date = new Date();
-          closure_0 = date;
-          obj = closure_0(closure_2[13]);
-          result = obj.playVibingWumpusMusic();
-          obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
-          return () => {
-            const obj2 = { duration_open_ms: null, source: null };
-            date = new Date();
-            const time = date.getTime();
-            obj2.duration_open_ms = time - date.getTime();
-            obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-            closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-            const obj = closure_1(ref[14]);
-            const result = first(ref[13]).stopVibingWumpusMusic();
-          };
-        }
-      }
-      cResult[7] = tmp16;
-    } else {
-      class A {
-        constructor() {
-          date = new Date();
-          closure_0 = date;
-          obj = closure_0(closure_2[13]);
-          result = obj.playVibingWumpusMusic();
-          obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
-          return () => {
-            const obj2 = { duration_open_ms: null, source: null };
-            date = new Date();
-            const time = date.getTime();
-            obj2.duration_open_ms = time - date.getTime();
-            obj2.source = constants2.INAPPROPRIATE_CONVERSATION;
-            closure_1(ref[14]).track(constants3.VIBING_WUMPUS_CLOSED, obj2);
-            const obj = closure_1(ref[14]);
-            const result = first(ref[13]).stopVibingWumpusMusic();
-          };
-        }
+    class I {
+      constructor() {
+        return closure_1_6.useReducedMotion;
       }
     }
     if (cResult[8] !== tmp4.rings) {
-      class A {
+      class W {
         constructor() {
           date = new Date();
           closure_0 = date;
           obj = closure_0(closure_2[13]);
           result = obj.playVibingWumpusMusic();
           obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+          obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+          trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
           return () => {
             const obj2 = { duration_open_ms: null, source: null };
             date = new Date();
@@ -194,20 +158,27 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
           };
         }
       }
-      let obj3 = { source: require("module_10414"), style: tmp4.rings };
-      const tmp20 = closure_12(closure_5, obj3);
+      let obj3 = { source: null, style: null };
+      class I {
+        constructor() {
+          return closure_1_6.useReducedMotion;
+        }
+      }
+      obj3.source = require("module_10403");
+      obj3.style = tmp4.rings;
+      const tmp19 = closure_11(tmp18, obj3);
       cResult[8] = tmp4.rings;
-      cResult[9] = tmp20;
+      cResult[9] = tmp19;
     } else {
-      class A {
+      class W {
         constructor() {
           date = new Date();
           closure_0 = date;
           obj = closure_0(closure_2[13]);
           result = obj.playVibingWumpusMusic();
           obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+          obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+          trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
           return () => {
             const obj2 = { duration_open_ms: null, source: null };
             date = new Date();
@@ -224,15 +195,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
     const _Symbol2 = Symbol;
     const container = tmp4.container;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-      class A {
+      class W {
         constructor() {
           date = new Date();
           closure_0 = date;
           obj = closure_0(closure_2[13]);
           result = obj.playVibingWumpusMusic();
           obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+          obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+          trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
           return () => {
             const obj2 = { duration_open_ms: null, source: null };
             date = new Date();
@@ -245,17 +216,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
           };
         }
       }
-      cResult[10] = tmp22;
+      cResult[10] = tmp21;
+      class I {
+        constructor() {
+          return closure_1_6.useReducedMotion;
+        }
+      }
     } else {
-      class A {
+      class W {
         constructor() {
           date = new Date();
           closure_0 = date;
           obj = closure_0(closure_2[13]);
           result = obj.playVibingWumpusMusic();
           obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+          obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+          trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
           return () => {
             const obj2 = { duration_open_ms: null, source: null };
             date = new Date();
@@ -270,15 +246,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
       }
     }
     if (stateFromStores) {
-      class A {
+      class W {
         constructor() {
           date = new Date();
           closure_0 = date;
           obj = closure_0(closure_2[13]);
           result = obj.playVibingWumpusMusic();
           obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+          obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+          trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
           return () => {
             const obj2 = { duration_open_ms: null, source: null };
             date = new Date();
@@ -293,15 +269,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
       }
     }
     if (cResult[11] === tmp4.wumpus) {
-      class A {
+      class W {
         constructor() {
           date = new Date();
           closure_0 = date;
           obj = closure_0(closure_2[13]);
           result = obj.playVibingWumpusMusic();
           obj2 = closure_1(closure_2[14]);
-          obj1 = { source: closure_10.INAPPROPRIATE_CONVERSATION };
-          trackResult = obj2.track(closure_11.VIBING_WUMPUS_VIEWED, obj1);
+          obj1 = { source: closure_9.INAPPROPRIATE_CONVERSATION };
+          trackResult = obj2.track(closure_10.VIBING_WUMPUS_VIEWED, obj1);
           return () => {
             const obj2 = { duration_open_ms: null, source: null };
             date = new Date();
@@ -315,12 +291,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
         }
       }
     }
-    let obj4 = { source: tmp22, ref, autoPlay: !stateFromStores, loop: true, style: tmp4.wumpus, progress: undefined };
-    const tmp28 = closure_12(require("LottieAnimationView"), obj4);
+    let obj4 = { source: tmp20, ref, autoPlay: !stateFromStores, loop: true, style: tmp4.wumpus, progress: undefined };
+    const tmp27 = closure_11(require("LottieAnimationView"), obj4);
     cResult[11] = tmp4.wumpus;
     cResult[12] = undefined;
     cResult[13] = !stateFromStores;
-    cResult[14] = tmp28;
+    cResult[14] = tmp27;
   }
   function handlePauseTogglePress() {
     const obj = InappropriateConversationsActionCreators;
@@ -358,7 +334,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
   cResult[6] = handlePauseTogglePress;
   const tmpResult = first(ref[12]);
 }) : (function VibingWumpusScreen() {
-  const tmp = closure_15();
+  const tmp = closure_14();
   const tmp2 = stateFromStores(noop.useState(false), 2);
   const first = tmp2[0];
   importDefault = tmp2[1];
@@ -381,13 +357,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
       const result = first(ref[13]).stopVibingWumpusMusic();
     };
   }, []);
+  let obj2 = { source: null, style: null };
   let obj = first(ref[12]);
-  const items1 = [closure_12(closure_5, { source: require("module_10414"), style: tmp.rings }), ];
+  const tmp12 = importDefault;
+  obj2.source = require("module_10403");
+  obj2.style = tmp.rings;
+  const items1 = [closure_11(require("FastImage"), obj2), ];
   let obj3 = { style: tmp.container, children: null };
   let obj4 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
-  let obj2 = { source: require("module_10414"), style: tmp.rings };
-  const tmp12 = importDefault;
-  obj4.source = first(ref[17]);
+  const tmp13 = require("FastImage");
+  obj4.source = first(ref[18]);
   obj4.ref = ref;
   obj4.autoPlay = !stateFromStores;
   obj4.style = tmp.wumpus;
@@ -396,32 +375,32 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
     num = 0.8;
   }
   obj4.progress = num;
-  const items2 = [closure_12(require("LottieAnimationView"), obj4), , ];
+  const items2 = [closure_11(require("LottieAnimationView"), obj4), , ];
   let obj5 = { style: tmp.warningText, children: null };
   const obj6 = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
-  const intl = tmp5(tmp6[19]).intl;
-  obj6.children = intl.string(first(ref[19]).t.L4ifkZ);
-  const items3 = [closure_12(first(ref[20]).Text, obj6), ];
+  const intl = tmp5(tmp6[20]).intl;
+  obj6.children = intl.string(first(ref[20]).t.L4ifkZ);
+  const items3 = [closure_11(first(ref[21]).Text, obj6), ];
   const obj7 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
-  const intl2 = tmp5(tmp6[19]).intl;
-  obj7.children = intl2.string(first(ref[19]).t.R8LCMZ);
-  items3[1] = closure_12(first(ref[20]).Text, obj7);
+  const intl2 = tmp5(tmp6[20]).intl;
+  obj7.children = intl2.string(first(ref[20]).t.R8LCMZ);
+  items3[1] = closure_11(first(ref[21]).Text, obj7);
   obj5.children = items3;
-  items2[1] = closure_13(closure_6, obj5);
+  items2[1] = closure_12(View, obj5);
   const obj8 = { style: tmp.ctaContainer, children: null };
   const obj9 = { variant: "primary", size: "lg", text: null, grow: true, onPress: null };
-  const intl3 = tmp5(tmp6[19]).intl;
-  obj9.text = intl3.string(first(ref[19]).t["8eKkaf"]);
+  const intl3 = tmp5(tmp6[20]).intl;
+  obj9.text = intl3.string(first(ref[20]).t["8eKkaf"]);
   obj9.onPress = function handleBackToConversation() {
     closure_1(ref[14]).track(constants3.VIBING_WUMPUS_ACTION, { action: constants.BACK_TO_CONVERSATION });
     const obj = closure_1(ref[14]);
     const obj2 = { action: constants.BACK_TO_CONVERSATION };
     closure_1(ref[15]).popWithKey(VIBING_WUMPUS_MODAL_KEY);
   };
-  const items4 = [closure_12(first(ref[21]).Button, obj9), ];
-  const intl4 = tmp5(tmp6[19]).intl;
+  const items4 = [closure_11(first(ref[22]).Button, obj9), ];
+  const intl4 = tmp5(tmp6[20]).intl;
   const string = intl4.string;
-  const t = tmp5(tmp6[19]).t;
+  const t = tmp5(tmp6[20]).t;
   if (first) {
     let stringResult = string(t.RscU7I);
   } else {
@@ -466,22 +445,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWumpus
     icon: null
   };
   if (first) {
-    let PauseIcon = tmp5(tmp6[22]).PlayIcon;
+    let PauseIcon = tmp5(tmp6[23]).PlayIcon;
   } else {
-    PauseIcon = tmp5(tmp6[23]).PauseIcon;
+    PauseIcon = tmp5(tmp6[24]).PauseIcon;
   }
   const obj11 = { children: null };
-  let tmp14 = require("LottieAnimationView");
-  obj10.icon = closure_12(PauseIcon, { size: "md", color: tmp12(ref[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT });
-  items4[1] = closure_12(first(ref[21]).Button, obj10);
+  const tmp15 = require("LottieAnimationView");
+  obj10.icon = closure_11(PauseIcon, { size: "md", color: tmp12(ref[9]).colors.REDESIGN_BUTTON_TERTIARY_TEXT });
+  items4[1] = closure_11(first(ref[22]).Button, obj10);
   obj8.children = items4;
-  items2[2] = closure_13(closure_6, obj8);
+  items2[2] = closure_12(View, obj8);
   obj3.children = items2;
-  items1[1] = closure_13(closure_6, obj3);
+  items1[1] = closure_12(View, obj3);
   obj11.children = items1;
-  return closure_13(closure_14, obj11);
+  return closure_12(closure_13, obj11);
 });
-let closure_16 = tmp5;
+let closure_15 = tmp4;
 ReactCompilerGating = fn(558);
 let obj5 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
 const size = fn(2);
@@ -497,12 +476,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWu
       fullscreen: true,
       headerShown: false,
       render() {
-          return closure_1_12(closure_1_16, {});
+          return closure_1_11(closure_1_15, {});
         }
     };
     obj3.VIBING_WUMPUS = obj4;
     obj2.screens = obj3;
-    const tmp6 = __initData(Navigator.Navigator, obj2);
+    const tmp6 = closure_1_11(Navigator.Navigator, obj2);
     cResult[0] = tmp6;
     let first = tmp6;
   } else {
@@ -517,12 +496,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VibingWu
         fullscreen: true,
         headerShown: false,
         render() {
-          return closure_1_12(closure_1_16, {});
+          return closure_1_11(closure_1_15, {});
         }
       }
     },
     initialRouteName: "VIBING_WUMPUS"
   };
-  return __initData(Navigator.Navigator, obj);
+  return closure_1_11(Navigator.Navigator, obj);
 });
-export const VibingWumpusScreen = tmp5;
+export const VibingWumpusScreen = tmp4;

@@ -1,9 +1,9 @@
-// === Module 12626: NotificationSettingsChannelPost ===
+// === Module 12566: NotificationSettingsChannelPost ===
 
-// Module 12626 (NotificationSettingsChannelPost)
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6798 */;
+// Module 12566 (NotificationSettingsChannelPost)
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6805 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5973 */;
 
 const require = globalThis.__r;
 

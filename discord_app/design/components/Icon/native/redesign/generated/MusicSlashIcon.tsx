@@ -1,10 +1,10 @@
-// === Module 10777: MusicSlashIcon ===
+// === Module 10947: MusicSlashIcon ===
 
-// Module 10777 (MusicSlashIcon)
+// Module 10947 (MusicSlashIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod10778 from "module_10778" /* 10778 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod10948 from "module_10948" /* 10948 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const MusicSlashIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10778;
+    const tmpResult = _mod10948;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const MusicSlashIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10778, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10948, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

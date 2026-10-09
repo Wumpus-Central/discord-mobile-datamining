@@ -1,9 +1,9 @@
-// === Module 11931: PollUploadAttachmentActionCreators ===
+// === Module 11868: PollUploadAttachmentActionCreators ===
 
-// Module 11931 (PollUploadAttachmentActionCreators)
-import FileManagerUtils from "FileManagerUtils" /* 8307 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9201 */;
-import PollAttachmentUtils from "PollAttachmentUtils" /* 11932 */;
+// Module 11868 (PollUploadAttachmentActionCreators)
+import FileManagerUtils from "FileManagerUtils" /* 8315 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9235 */;
+import PollAttachmentUtils from "PollAttachmentUtils" /* 11869 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -168,8 +168,8 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   }
   return value;
 };
-const DraftType = fn(7232).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(7943).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(7237).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(7952).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 8688: createAutocompleterResultForChannelId ===
+// === Module 8697: createAutocompleterResultForChannelId ===
 
-// Module 8688 (createAutocompleterResultForChannelId)
-import useChannelName from "useChannelName" /* 5417 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 8697 (createAutocompleterResultForChannelId)
+import useChannelName from "useChannelName" /* 5418 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-fn(6097).AutocompleterResultTypes;
+fn(6099).AutocompleterResultTypes;
 const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");

@@ -1,7 +1,7 @@
-// === Module 13840: GameCommunityUpsellExperiment ===
+// === Module 13933: GameCommunityUpsellExperiment ===
 
-// Module 13840 (GameCommunityUpsellExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 13933 (GameCommunityUpsellExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-game-community-add-server-entry", kind: "user", defaultConfig: { enabled: false, cardAction: "join" }, variations: null };

@@ -1,14 +1,14 @@
-// === Module 8292: BadgeDirectoryStore ===
+// === Module 8300: BadgeDirectoryStore ===
 
-// Module 8292 (BadgeDirectoryStore)
+// Module 8300 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import privDefault from "priv" /* 1456 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8293 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
-import UserStore from "UserStore" /* 1389 */;
+import privDefault from "priv" /* 1457 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8301 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8305 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const HOUR = DurationsDefault.Millis.HOUR;

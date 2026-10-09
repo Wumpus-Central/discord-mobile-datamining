@@ -1,10 +1,10 @@
-// === Module 12906: CustomActivityLinkUtils ===
+// === Module 12986: CustomActivityLinkUtils ===
 
-// Module 12906 (CustomActivityLinkUtils)
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12909 */;
+// Module 12986 (CustomActivityLinkUtils)
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12989 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 12907 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 12987 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -158,7 +158,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "create" }, done: true };
+        const obj9 = { value: { customId: "r" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;

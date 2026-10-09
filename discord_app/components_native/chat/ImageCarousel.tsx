@@ -1,35 +1,35 @@
-// === Module 9970: ImageCarousel ===
+// === Module 9989: ImageCarousel ===
 
-// Module 9970 (ImageCarousel)
+// Module 9989 (ImageCarousel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import useWindowDimensions from "useWindowDimensions" /* 1496 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4810 */;
-import timing from "timing" /* 5091 */;
-import spring from "spring" /* 5374 */;
-import Pressables from "Pressables" /* 6189 */;
-import _modDef6612 from "module_6612" /* 6612 */;
-import Upload from "Upload" /* 7730 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9201 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 9972 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 9974 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11884 */;
+import useWindowDimensions from "useWindowDimensions" /* 1497 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
+import timing from "timing" /* 5092 */;
+import spring from "spring" /* 5375 */;
+import Pressables from "Pressables" /* 6191 */;
+import _modDef6619 from "module_6619" /* 6619 */;
+import Upload from "Upload" /* 7739 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9235 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 9991 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 9993 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11821 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7880 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7889 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(7232).DraftType;
-const ImageCarouselConstants = fn(9971);
+const DraftType = fn(7237).DraftType;
+const ImageCarouselConstants = fn(9990);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: { position: "relative", minWidth: 60, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: nativeDefault.radii.md - 1 }, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -63,7 +63,7 @@ let ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTileEntranceAnimatedStyle(arg0) {
   const cResult = sharedValue(576).c(5);
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4810).useSharedValue(0);
+  sharedValue = sharedValue(4811).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function l() {
       const result = sharedValue.set(1);
@@ -91,25 +91,25 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTileEntra
       obj.transform = items;
       return obj;
     };
-    let obj3 = { withTiming: tmp(5091).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: tmp(1200).STANDARD_EASING, withSpring: tmp(5374).withSpring };
+    let obj3 = { withTiming: tmp(5092).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: tmp(1200).STANDARD_EASING, withSpring: tmp(5375).withSpring };
     fn2.__closure = obj3;
     fn2.__workletHash = 14689938623095;
     fn2.__initData = __initData;
-    return tmp(4810).useAnimatedStyle(fn2);
+    return tmp(4811).useAnimatedStyle(fn2);
   }
   let items = [sharedValue, arg0];
   cResult[2] = sharedValue;
   cResult[3] = arg0;
   cResult[4] = items;
   tmp6 = items;
-  let obj2 = sharedValue(4810);
+  let obj2 = sharedValue(4811);
 }) : (function useTileEntranceAnimatedStyle(arg0) {
-  sharedValue = sharedValue(4810).useSharedValue(0);
+  sharedValue = sharedValue(4811).useSharedValue(0);
   let items = [sharedValue, arg0];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4810);
+  let obj = sharedValue(4811);
   const fn = function l() {
     const obj = { opacity: null, transform: null };
     const obj3 = { duration: 300, easing: null };
@@ -122,8 +122,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTileEntra
     obj.transform = items;
     return obj;
   };
-  let obj2 = sharedValue(4810);
-  fn.__closure = { withTiming: sharedValue(5091).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1200).STANDARD_EASING, withSpring: sharedValue(5374).withSpring };
+  let obj2 = sharedValue(4811);
+  fn.__closure = { withTiming: sharedValue(5092).withTiming, animatedStylePropValue: sharedValue, STANDARD_EASING: sharedValue(1200).STANDARD_EASING, withSpring: sharedValue(5375).withSpring };
   fn.__workletHash = 1893609222612;
   fn.__initData = __initData2;
   return obj2.useAnimatedStyle(fn);
@@ -1072,7 +1072,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageCarouse
                                           let tmp30 = cResult[36];
                                         }
                                         if (cResult[37] !== tmp4.closeButtonIcon) {
-                                          const obj3 = { source: _modDef6612, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp4.closeButtonIcon };
+                                          const obj3 = { source: _modDef6619, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp4.closeButtonIcon };
                                           const tmp34 = closure_1_11(native.Icon, obj3);
                                           cResult[37] = tmp4.closeButtonIcon;
                                           cResult[38] = tmp34;
@@ -1248,7 +1248,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageCarouse
   const obj6 = { style: null, children: null };
   const items6 = [tmp.closeContainer, tmp8];
   obj6.style = items6;
-  obj6.children = closure_1_11(native.Icon, { source: _modDef6612, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
+  obj6.children = closure_1_11(native.Icon, { source: _modDef6619, size: native.Icon.Sizes.MEDIUM, color: nativeDefault.unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
   obj5.children = closure_1_11(ReanimatedRexportDefault.View, obj6);
   items5[1] = closure_1_11(Pressables.PressableOpacity, obj5);
   obj3.children = items5;

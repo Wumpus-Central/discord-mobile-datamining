@@ -1,12 +1,12 @@
-// === Module 10484: SlayerStorefrontGiftPreview ===
+// === Module 10474: SlayerStorefrontGiftPreview ===
 
-// Module 10484 (SlayerStorefrontGiftPreview)
+// Module 10474 (SlayerStorefrontGiftPreview)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import _modDef3697 from "module_3697" /* 3697 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8998 */;
-import InfoBox from "InfoBox" /* 10485 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9009 */;
+import InfoBox from "InfoBox" /* 10475 */;
 import noop from "module_19" /* 19 */;
 
 const InfoBoxDefault = InfoBox;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
 fn(558);
 const ReactCompilerGating = fn(558);

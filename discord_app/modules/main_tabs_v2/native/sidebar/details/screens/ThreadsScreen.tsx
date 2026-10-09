@@ -1,19 +1,19 @@
-// === Module 17195: ThreadsScreen ===
+// === Module 17345: ThreadsScreen ===
 
-// Module 17195 (ThreadsScreen)
+// Module 17345 (ThreadsScreen)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6656 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 12174 */;
-import ThreadListDefault from "ThreadList" /* 17196 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6663 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 12113 */;
+import ThreadListDefault from "ThreadList" /* 17346 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 require = fn;
 const View = fn(17).View;
 const SearchTypes = fn(1085).SearchTypes;
 let closure_7 = fn(1125).OpenThreadAnalyticsLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { flex: 1 }, screen: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   ({ style, channel } = arg0);
   const tmp3 = closure_9();
   let obj = channel(576);
-  const canStartThread = channel(6958).useCanStartThread(channel);
+  const canStartThread = channel(6965).useCanStartThread(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { includeKeyboardHeight: true };
     cResult[0] = obj3;
@@ -103,11 +103,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   cResult[5] = tmp3.container;
   cResult[6] = items;
   tmp9 = items;
-  let obj2 = channel(6958);
+  let obj2 = channel(6965);
 }) : (function ThreadsScreen(channel) {
   channel = channel.channel;
   const tmp = closure_9();
-  const canStartThread = channel(6958).useCanStartThread(channel);
+  const canStartThread = channel(6965).useCanStartThread(channel);
   const items = [channel];
   const callback = noop.useCallback(() => {
     const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Empty State");
@@ -125,7 +125,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Thread
   }, []);
   const obj3 = { channel, onCreateThreadPress: null, onThreadPress: null, contentContainerStyle: null };
   let tmp10;
-  let obj = channel(6958);
+  let obj = channel(6965);
   if (canStartThread) {
     tmp10 = callback;
   }
@@ -198,7 +198,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = channelId(576).c(6);
   const obj = channelId(576);
   const tmp = channelId;
-  channelId = channelId(1503).useRoute().params.channelId;
+  channelId = channelId(1504).useRoute().params.channelId;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelStore];
     cResult[0] = items;
@@ -216,7 +216,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     tmp6 = cResult[2];
   }
-  const obj2 = channelId(1503);
+  const obj2 = channelId(1504);
   const stateFromStores = tmp(573).useStateFromStores(first, tmp6);
   let screen = closure_9();
   if (null == stateFromStores) {
@@ -233,8 +233,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const tmpResult = tmp(573);
 }) : (function ConnectedThreadsScreen() {
-  channelId = channelId(1503).useRoute().params.channelId;
-  const obj = channelId(1503);
+  channelId = channelId(1504).useRoute().params.channelId;
+  const obj = channelId(1504);
   const items = [ChannelStore];
   const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   let tmp3 = null;

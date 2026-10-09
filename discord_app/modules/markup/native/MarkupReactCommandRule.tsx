@@ -1,14 +1,14 @@
-// === Module 11229: MarkupReactCommandRule ===
+// === Module 10584: MarkupReactCommandRule ===
 
-// Module 11229 (MarkupReactCommandRule)
-import KeyboardTypes from "KeyboardTypes" /* 1628 */;
-import ToastUtils from "ToastUtils" /* 4765 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import ClipboardUtils from "ClipboardUtils" /* 6872 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7235 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11235 */;
+// Module 10584 (MarkupReactCommandRule)
+import KeyboardTypes from "KeyboardTypes" /* 1629 */;
+import ToastUtils from "ToastUtils" /* 4767 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import ClipboardUtils from "ClipboardUtils" /* 6879 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7240 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 10590 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 require = fn;
 function handleTapCommandMention(channelId) {
@@ -114,7 +114,7 @@ function handleLongPressCommandMention(arg0, arg1) {
     const obj2 = { label: null, IconComponent: null, onPress: null };
     const intl2 = tmp(1126).intl;
     obj2.label = intl2.string(tmp(1126).t.oJ1Muw);
-    obj2.IconComponent = tmp(9968).IdIcon;
+    obj2.IconComponent = tmp(9987).IdIcon;
     obj2.onPress = function onPress() {
       ToastUtils.presentIdCopied();
       ClipboardUtils.copy(closure_1);
@@ -124,10 +124,10 @@ function handleLongPressCommandMention(arg0, arg1) {
   const result = require("showSimpleActionSheet").showSimpleActionSheet({ key: "LongPressCommandMention", options: items, hasIcons: true });
   const tmpResult = require("showSimpleActionSheet");
 }
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 ({ AppLauncherRouteName: hasOwnProperty, useAppLauncherNavigation: metroRequire } = AppLauncherNativeConstants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5399).SUB_COMMAND_KEY_SEPARATOR;
-const COMMAND_SENTINEL = fn(5400).COMMAND_SENTINEL;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5400).SUB_COMMAND_KEY_SEPARATOR;
+const COMMAND_SENTINEL = fn(5401).COMMAND_SENTINEL;
 const jsxs = fn(21).jsxs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
   const cResult = node(576).c(18);
   node = node.node;
   ({ output, state, style } = node);
-  const tmp4 = null != noop.useContext(node(11232).AppLauncherContext);
+  const tmp4 = null != noop.useContext(node(10587).AppLauncherContext);
   closure_1 = tmp4;
   const tmp5 = closure_6();
   dependencyMap = tmp5;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
                 let obj2 = { style, variant: "text-md/bold", onPress: tmp6, onLongPress: tmp7, children: null };
                 const items = ["/", tmp8];
                 obj2.children = items;
-                const tmp12 = jsxs(tmp(5086).Text, { style, variant: "text-md/bold", onPress: tmp6, onLongPress: tmp7, children: null });
+                const tmp12 = jsxs(tmp(5087).Text, { style, variant: "text-md/bold", onPress: tmp6, onLongPress: tmp7, children: null });
                 cResult[13] = style;
                 cResult[14] = tmp6;
                 cResult[15] = tmp7;
@@ -179,13 +179,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
                 tmp10 = tmp12;
               }
             }
-            const smartOutputResult = tmp(8101).smartOutput(node, output, state);
+            const smartOutputResult = tmp(8109).smartOutput(node, output, state);
             cResult[9] = node;
             cResult[10] = output;
             cResult[11] = state;
             cResult[12] = smartOutputResult;
             tmp8 = smartOutputResult;
-            const tmpResult = tmp(8101);
+            const tmpResult = tmp(8109);
           }
           const fn2 = function i() {
             handleLongPressCommandMention(node.commandName, node.commandId);
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
 }) : (function MarkupReactCommandRule(node) {
   node = node.node;
   ({ output, state, style } = node);
-  closure_1 = null != noop.useContext(node(11232).AppLauncherContext);
+  closure_1 = null != noop.useContext(node(10587).AppLauncherContext);
   dependencyMap = closure_6();
   let obj = {
     style,
@@ -297,9 +297,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MarkupRe
     },
     children: null
   };
-  const items = ["/", node(8101).smartOutput(node, output, state)];
+  const items = ["/", node(8109).smartOutput(node, output, state)];
   obj.children = items;
-  return jsxs(node(5086).Text, {
+  return jsxs(node(5087).Text, {
     style,
     variant: "text-md/bold",
     onPress() {

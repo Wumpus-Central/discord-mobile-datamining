@@ -1,9 +1,9 @@
-// === Module 9100: NsfwServerInviteWarningAlert ===
+// === Module 9593: NsfwServerInviteWarningAlert ===
 
-// Module 9100 (NsfwServerInviteWarningAlert)
-import useAlertStore from "useAlertStore" /* 5299 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5915 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7492 */;
+// Module 9593 (NsfwServerInviteWarningAlert)
+import useAlertStore from "useAlertStore" /* 5300 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

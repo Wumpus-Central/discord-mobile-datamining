@@ -1,11 +1,11 @@
-// === Module 12356: UserSettingsAuthedAppDeleteWarningModal ===
+// === Module 12292: UserSettingsAuthedAppDeleteWarningModal ===
 
-// Module 12356 (UserSettingsAuthedAppDeleteWarningModal)
+// Module 12292 (UserSettingsAuthedAppDeleteWarningModal)
 import util from "util" /* 1126 */;
-import AlertModal from "AlertModal" /* 5303 */;
-import InfoBox from "InfoBox" /* 10485 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11283 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12357 */;
+import AlertModal from "AlertModal" /* 5304 */;
+import InfoBox from "InfoBox" /* 10475 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 10650 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12293 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               }
               if (cResult[15] !== onDelete) {
                 let obj2 = { variant: "destructive", text: tmp16, onPress: onDelete };
-                const tmp20 = closure_3(tmp(5303).AlertActionButton, obj2, "confirm");
+                const tmp20 = closure_3(tmp(5304).AlertActionButton, obj2, "confirm");
                 cResult[15] = onDelete;
                 cResult[16] = tmp20;
                 let tmp18 = tmp20;
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 let obj3 = { variant: "secondary", text: null };
                 const intl4 = tmp(1126).intl;
                 obj3.text = intl4.string(tmp(1126).t["ETE/oC"]);
-                const tmp23 = closure_3(tmp(5303).AlertActionButton, obj3, "cancel");
+                const tmp23 = closure_3(tmp(5304).AlertActionButton, obj3, "cancel");
                 cResult[17] = tmp23;
                 let tmp21 = tmp23;
               } else {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               const obj5 = { title: tmp6, content: tmp9, extraContent: tmp13, actions: tmp24 };
-              const tmp30 = closure_3(tmp(5303).AlertModal, obj5);
+              const tmp30 = closure_3(tmp(5304).AlertModal, obj5);
               cResult[20] = tmp9;
               cResult[21] = tmp13;
               cResult[22] = tmp24;

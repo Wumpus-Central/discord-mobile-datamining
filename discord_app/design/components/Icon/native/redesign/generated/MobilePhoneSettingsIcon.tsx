@@ -1,10 +1,10 @@
-// === Module 15663: MobilePhoneSettingsIcon ===
+// === Module 15776: MobilePhoneSettingsIcon ===
 
-// Module 15663 (MobilePhoneSettingsIcon)
+// Module 15776 (MobilePhoneSettingsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4777 */;
-import _mod15664 from "module_15664" /* 15664 */;
+import BaseIconImage from "BaseIconImage" /* 4778 */;
+import _mod15777 from "module_15777" /* 15777 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const MobilePhoneSettingsIcon = ReactCompilerGating.isReactCompilerEnable
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15664;
+    const tmpResult = _mod15777;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const MobilePhoneSettingsIcon = ReactCompilerGating.isReactCompilerEnable
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15664, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15777, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

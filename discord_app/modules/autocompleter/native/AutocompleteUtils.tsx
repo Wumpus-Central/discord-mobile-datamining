@@ -1,28 +1,28 @@
-// === Module 9667: autocompleter/AutocompleteUtils ===
+// === Module 9686: autocompleter/AutocompleteUtils ===
 
-// Module 9667 (autocompleter/AutocompleteUtils)
+// Module 9686 (autocompleter/AutocompleteUtils)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import TimestampUtils from "TimestampUtils" /* 8131 */;
-import FormDividerDefault from "FormDivider" /* 8559 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import TimestampUtils from "TimestampUtils" /* 8139 */;
+import FormDividerDefault from "FormDivider" /* 8567 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-let closure_3 = fn(2067).isGuildSelectableChannelType;
+let closure_3 = fn(2068).isGuildSelectableChannelType;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9668);
+const ApplicationCommandsConstants = fn(9687);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5400);
+const ChannelAutocompleteConstants = fn(5401);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

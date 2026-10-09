@@ -1,16 +1,16 @@
-// === Module 14551: application ===
+// === Module 14648: application ===
 
-// Module 14551 (application)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import TestModeUtils from "TestModeUtils" /* 9030 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9138 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 10625 */;
-import RPCErrorDefault from "RPCError" /* 11134 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11137 */;
-import RPCHelpers from "RPCHelpers" /* 11142 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14552 */;
-import ApplicationStore from "ApplicationStore" /* 5436 */;
+// Module 14648 (application)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import TestModeUtils from "TestModeUtils" /* 9045 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9205 */;
+import RPCErrorDefault from "RPCError" /* 10896 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10899 */;
+import RPCHelpers from "RPCHelpers" /* 10905 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14649 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 14650 */;
+import ApplicationStore from "ApplicationStore" /* 5437 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -41,7 +41,7 @@ export default {
       }
       const application = ApplicationStore.getApplication(id);
       if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-        const activeAnalyticsSessionIDs = EmbeddedActivitiesManager.getActiveAnalyticsSessionIDs(id);
+        const activeAnalyticsSessionIDs = ActivitySessionAnalytics.getActiveAnalyticsSessionIDs(id);
         const obj4 = { activity_application_id: id, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
         let type;
         if (obj3 != null) {
@@ -54,7 +54,7 @@ export default {
           prop = activeAnalyticsSessionIDs.activityUserSessionId;
         }
         obj4.activity_user_session_id = prop;
-        const tmpResult2 = EmbeddedActivitiesManager;
+        const tmpResult2 = ActivitySessionAnalytics;
         const obj5 = {};
         const merged = Object.assign(obj4);
         const merged1 = Object.assign(event_properties);
@@ -69,7 +69,7 @@ export default {
     }
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(5635).RPC_LOCAL_SCOPE,
+    scope: fn(5636).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

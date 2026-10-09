@@ -1,10 +1,10 @@
-// === Module 12316: GuildPowerupsLevelsSection ===
+// === Module 12255: GuildPowerupsLevelsSection ===
 
-// Module 12316 (GuildPowerupsLevelsSection)
+// Module 12255 (GuildPowerupsLevelsSection)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12317 */;
-import MarketingCardsScroller from "MarketingCardsScroller" /* 12321 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12256 */;
+import MarketingCardsScroller from "MarketingCardsScroller" /* 12260 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -14,12 +14,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1383);
 let num = 325;
 if (PlatformUtils.isIOS()) {
   num = 300;
 }
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const obj3 = { cardContainer: { width: 250, marginEnd: PX_16, flex: 1 }, scroller: { height: num, paddingBottom: nativeDefault.space.PX_8 }, scrollerContent: null };
 const obj4 = { height: num, paddingBottom: nativeDefault.space.PX_8 };
 obj3.scrollerContent = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   obj2.title = intl.string(listings(2597)["TXY/b0"]);
   const intl2 = util.intl;
   obj2.description = intl2.string(listings(2597).aJv4PB);
-  const items1 = [closure_5(listings(12305), obj2), ];
-  const tmp3 = listings(12305);
+  const items1 = [closure_5(listings(12244), obj2), ];
+  const tmp3 = listings(12244);
   items1[1] = closure_5(MarketingCardsScroller.MarketingCardsScroller, {
     cardMarginRight: PX_16,
     cardWidth: 250,

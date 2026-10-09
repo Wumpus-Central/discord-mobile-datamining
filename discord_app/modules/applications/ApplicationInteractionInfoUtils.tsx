@@ -1,8 +1,8 @@
-// === Module 9595: ApplicationInteractionInfoUtils ===
+// === Module 9614: ApplicationInteractionInfoUtils ===
 
-// Module 9595 (ApplicationInteractionInfoUtils)
-import Server from "Server" /* 1997 */;
-import InteractionTypes from "InteractionTypes" /* 5438 */;
+// Module 9614 (ApplicationInteractionInfoUtils)
+import Server from "Server" /* 1998 */;
+import InteractionTypes from "InteractionTypes" /* 5439 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");

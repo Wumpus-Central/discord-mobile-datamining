@@ -1,14 +1,14 @@
-// === Module 18312: GuildRoleSubscriptionTierTemplateFullCard ===
+// === Module 18474: GuildRoleSubscriptionTierTemplateFullCard ===
 
-// Module 18312 (GuildRoleSubscriptionTierTemplateFullCard)
+// Module 18474 (GuildRoleSubscriptionTierTemplateFullCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15332 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16355 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 18315 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15445 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16474 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 18477 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 }, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, content: null, separator: null, benefitRowContainer: null, benefitTextContainer: null, benefitDescription: null, channelTitle: null, channelIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
 obj2.subscriptionPlanTextStyle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -260,7 +260,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
         }
         if (cResult[13] !== tmp18) {
           const obj6 = { variant: "text-sm/bold", color: "text-default", style: tmp18, children: tmp19 };
-          const tmp23 = closure_4(tmp(5086).Text, obj6);
+          const tmp23 = closure_4(tmp(5087).Text, obj6);
           cResult[13] = tmp18;
           cResult[14] = tmp23;
           let tmp21 = tmp23;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl2 = tmp(1126).intl;
           obj7.children = intl2.string(tmp(1126).t.bCb3c8);
-          const tmp30 = closure_4(tmp(5086).Text, obj7);
+          const tmp30 = closure_4(tmp(5087).Text, obj7);
           const tmp31 = closure_4(tmp(1200).Spacer, { size: 24 });
           cResult[16] = tmp30;
           cResult[17] = tmp31;
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                       if (cResult[40] !== cResult[36]) {
                         const obj9 = { sectionTitle: tmp49, children: null };
                         const obj10 = { gap: 14, children: tmp51 };
-                        obj9.children = closure_4(tmp(9493).GappedList, obj10);
+                        obj9.children = closure_4(tmp(9531).GappedList, obj10);
                         const tmp58 = closure_4(closure_10, obj9);
                         cResult[40] = tmp51;
                         cResult[41] = tmp58;
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                         if (cResult[47] !== cResult[45]) {
                           const obj11 = { sectionTitle: tmp63, children: null };
                           const obj12 = { gap: 14, children: tmp65 };
-                          obj11.children = closure_4(tmp(9493).GappedList, obj12);
+                          obj11.children = closure_4(tmp(9531).GappedList, obj12);
                           const tmp72 = closure_4(closure_10, obj11);
                           cResult[47] = tmp65;
                           cResult[48] = tmp72;
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                                     const items2 = [tmp8, tmp10, tmp73];
                                     obj14.children = items2;
                                     obj13.children = closure_6(View, obj14);
-                                    const tmp80 = closure_4(tmp(6829).BottomSheet, obj13);
+                                    const tmp80 = closure_4(tmp(6836).BottomSheet, obj13);
                                     cResult[57] = tmp4.container;
                                     cResult[58] = tmp8;
                                     cResult[59] = tmp73;
@@ -447,7 +447,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
                         const obj15 = { scrollsToTop: false, style: tmp4.content, contentContainerStyle: tmp15, children: null };
                         const items3 = [tmp21, tmp24, tmp27, tmp28, tmp36, tmp39, tmp42, tmp45, tmp55, tmp59, tmp69];
                         obj15.children = items3;
-                        const tmp75 = closure_6(tmp(6298).BottomSheetScrollView, obj15);
+                        const tmp75 = closure_6(tmp(6305).BottomSheetScrollView, obj15);
                         cResult[49] = tmp4.content;
                         cResult[50] = tmp21;
                         cResult[51] = tmp36;
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
             }
           }
           const obj16 = { roleColor: role_color, roleImage: image, roleName: name, guildId };
-          const tmp44 = closure_4(tmp(18314).GuildRoleSubscriptionRolePreview, obj16);
+          const tmp44 = closure_4(tmp(18476).GuildRoleSubscriptionRolePreview, obj16);
           cResult[26] = guildId;
           cResult[27] = image;
           cResult[28] = name;
@@ -496,7 +496,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
           tmp42 = tmp44;
         }
         const obj17 = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: tmp33, children: tmp34 };
-        const tmp38 = closure_4(tmp(5086).Text, obj17);
+        const tmp38 = closure_4(tmp(5087).Text, obj17);
         cResult[22] = typeConsolidationEyebrow.variant;
         cResult[23] = tmp33;
         cResult[24] = tmp38;

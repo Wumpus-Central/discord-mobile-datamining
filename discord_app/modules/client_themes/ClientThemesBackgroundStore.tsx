@@ -1,21 +1,21 @@
-// === Module 4897: ClientThemesBackgroundStore ===
+// === Module 4898: ClientThemesBackgroundStore ===
 
-// Module 4897 (ClientThemesBackgroundStore)
+// Module 4898 (ClientThemesBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4726 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
-import UserUtils from "UserUtils" /* 4922 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4926 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4899 */;
+import UserUtils from "UserUtils" /* 4923 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4927 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function reset() {
@@ -90,8 +90,8 @@ function handleUserSettingsProtoStoreUpdate() {
     _undefined = undefined;
   }
 }
-const isGuildTextChannelType = fn(2067).isGuildTextChannelType;
-const dependencyMap = fn(1252).BACKGROUND_GRADIENT_PRESETS_MAP;
+const isGuildTextChannelType = fn(2068).isGuildTextChannelType;
+const dependencyMap = fn(1253).BACKGROUND_GRADIENT_PRESETS_MAP;
 const SystemThemeState = fn(1208).SystemThemeState;
 let closure_14 = true;
 let c15 = false;

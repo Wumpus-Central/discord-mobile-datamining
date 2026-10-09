@@ -1,10 +1,10 @@
-// === Module 10216: GameRelationshipActionCreators ===
+// === Module 10201: GameRelationshipActionCreators ===
 
-// Module 10216 (GameRelationshipActionCreators)
+// Module 10201 (GameRelationshipActionCreators)
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4929 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5297 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5631 */;
+import shared from "shared" /* 4930 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5632 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -64,7 +64,7 @@ let closure_8 = async function _deleteGameRelationship(arg0) {
           ({ userId: closure_129_0, applicationId: closure_129_1, onSuccess: closure_129_2 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -116,7 +116,7 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4929).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(4930).AccessibilityAnnouncer;
       const intl = closure_1_0(1126).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t.zRf8cO));
     }
@@ -124,14 +124,14 @@ let closure_9 = async function _removeGameFriend() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 let closure_10 = async function _cancelGameFriendRequest() {
   await closure_130_7({
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4929).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(4930).AccessibilityAnnouncer;
       const intl = closure_1_0(1126).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t.XMf21q));
     }
@@ -139,7 +139,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ userId: closure_129_0, applicationId: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const Constants = fn(1085);
 ({ Endpoints: closure_4, RelationshipTypes: hasOwnProperty } = Constants);
@@ -162,7 +162,7 @@ export default {
 
     }
     ({ userId, applicationId } = arg0);
-    const HTTP = onSuccess(1294).HTTP;
+    const HTTP = onSuccess(1295).HTTP;
     const request = { url: closure_4.USER_GAME_RELATIONSHIP(userId, applicationId), body: { type: constants.FRIEND }, oldFormErrors: true, rejectWithError: false };
     const putResult = HTTP.put(request);
     return HTTP.put(request).then(() => {
@@ -170,7 +170,7 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(5631).APIError(error);
+      const aPIError = new onSuccess(5632).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1126).intl;

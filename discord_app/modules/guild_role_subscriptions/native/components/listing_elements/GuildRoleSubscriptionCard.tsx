@@ -1,13 +1,13 @@
-// === Module 15332: GuildRoleSubscriptionCard ===
+// === Module 15445: GuildRoleSubscriptionCard ===
 
-// Module 15332 (GuildRoleSubscriptionCard)
+// Module 15445 (GuildRoleSubscriptionCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6654 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15322 */;
-import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15334 */;
-import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15337 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6661 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15435 */;
+import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery" /* 15447 */;
+import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow" /* 15450 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 obj2.separator = size;
@@ -148,7 +148,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
                 const obj7 = { renderGap: first3, children: null };
                 const items = [tmp13, tmp15, tmp26, tmp32];
                 obj7.children = items;
-                const tmp40 = closure_8(guildId(9493).GappedList, obj7);
+                const tmp40 = closure_8(guildId(9531).GappedList, obj7);
                 cResult[18] = tmp13;
                 cResult[19] = tmp15;
                 cResult[20] = tmp26;
@@ -166,7 +166,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
               obj9.children = intl4.format(guildId(1126).t["4V/Mfi"], obj10);
               const items1 = [closure_6(closure_10, obj9), closure_6(guildId(1200).Spacer, { size: 14 }), ];
               const obj11 = { gap: 14, children: first2.map((benefit, index) => timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index)) };
-              items1[2] = closure_6(guildId(9493).GappedList, obj11);
+              items1[2] = closure_6(guildId(9531).GappedList, obj11);
               obj8.children = items1;
               tmp33 = closure_8(closure_7, obj8);
             }
@@ -186,7 +186,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
           obj13.children = intl3.format(guildId(1126).t.l40GUu, obj14);
           const items2 = [closure_6(closure_10, obj13), closure_6(guildId(1200).Spacer, { size: 14 }), ];
           const obj15 = { gap: 14, children: first1.map((benefit) => timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id)) };
-          items2[2] = closure_6(guildId(9493).GappedList, obj15);
+          items2[2] = closure_6(guildId(9531).GappedList, obj15);
           obj12.children = items2;
           tmp27 = closure_8(closure_7, obj12);
         }
@@ -221,7 +221,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
     tmp15 = tmp16;
   }
   const obj20 = { children: null };
-  const items5 = [tmp7, tmp8, closure_6(guildId(15333).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  const items5 = [tmp7, tmp8, closure_6(guildId(15446).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj20.children = items5;
   const tmp14 = closure_8(closure_7, obj20);
   cResult[3] = guildId;
@@ -244,7 +244,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
   const obj7 = { children: null };
   const intl = guildId(1126).intl;
   obj7.children = intl.string(guildId(1126).t["DJ+bGu"]);
-  const items = [closure_6(closure_10, obj7), closure_6(guildId(1200).Spacer, { size: 8 }), closure_6(guildId(15333).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+  const items = [closure_6(closure_10, obj7), closure_6(guildId(1200).Spacer, { size: 8 }), closure_6(guildId(15446).GuildRoleSubscriptionMemberPreview, { guildId, role })];
   obj6.children = items;
   const items1 = [closure_8(closure_7, obj6), , , ];
   let tmp4Result = null;
@@ -274,7 +274,7 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
     obj13.children = intl3.format(guildId(1126).t.l40GUu, obj14);
     const items4 = [closure_6(closure_10, obj13), closure_6(guildId(1200).Spacer, { size: 14 }), ];
     const obj15 = { gap: 14, children: first1.map((benefit) => timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id)) };
-    items4[2] = closure_6(guildId(9493).GappedList, obj15);
+    items4[2] = closure_6(guildId(9531).GappedList, obj15);
     obj12.children = items4;
     tmp4Result3 = closure_8(closure_7, obj12);
   }
@@ -288,11 +288,11 @@ export const Content = ReactCompilerGating.isReactCompilerEnabled() ? (function 
     obj17.children = intl4.format(guildId(1126).t["4V/Mfi"], obj18);
     const items5 = [closure_6(closure_10, obj17), closure_6(guildId(1200).Spacer, { size: 14 }), ];
     const obj19 = { gap: 14, children: first2.map((benefit, index) => timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index)) };
-    items5[2] = closure_6(guildId(9493).GappedList, obj19);
+    items5[2] = closure_6(guildId(9531).GappedList, obj19);
     obj16.children = items5;
     tmp4Result4 = closure_8(closure_7, obj16);
   }
   items1[3] = tmp4Result4;
   obj5.children = items1;
-  return closure_8(guildId(9493).GappedList, obj5);
+  return closure_8(guildId(9531).GappedList, obj5);
 });

@@ -1,8 +1,8 @@
-// === Module 18341: QuestFetchReconnectJitterExperiment ===
+// === Module 18503: QuestFetchReconnectJitterExperiment ===
 
-// Module 18341 (QuestFetchReconnectJitterExperiment)
+// Module 18503 (QuestFetchReconnectJitterExperiment)
 import DurationsDefault from "Durations" /* 1102 */;
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { questFetchJitterMs: 5 * DurationsDefault.Millis.SECOND, questHomeHeroJitterMs: 5 * DurationsDefault.Millis.SECOND };

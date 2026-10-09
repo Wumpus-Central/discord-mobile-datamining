@@ -1,12 +1,12 @@
-// === Module 6900: showNSFWGuildJoinGate ===
+// === Module 6907: showNSFWGuildJoinGate ===
 
-// Module 6900 (showNSFWGuildJoinGate)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+// Module 6907 (showNSFWGuildJoinGate)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/age_gate/showNSFWGuildJoinGate.native.tsx");
 
 export const showNSFWGuildJoinGate = function showNSFWGuildJoinGate(id) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6901, dependencyMap.paths), { guildId: id });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6908, dependencyMap.paths), { guildId: id });
 };

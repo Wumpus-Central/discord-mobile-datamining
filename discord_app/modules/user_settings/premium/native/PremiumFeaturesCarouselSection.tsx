@@ -1,22 +1,22 @@
-// === Module 13595: PremiumFeaturesCarouselSection ===
+// === Module 13686: PremiumFeaturesCarouselSection ===
 
-// Module 13595 (PremiumFeaturesCarouselSection)
+// Module 13686 (PremiumFeaturesCarouselSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5360 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import PaginationDefault from "Pagination" /* 10101 */;
-import _modDef13596 from "module_13596" /* 13596 */;
-import _modDef13597 from "module_13597" /* 13597 */;
-import _modDef13598 from "module_13598" /* 13598 */;
-import _modDef13599 from "module_13599" /* 13599 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5361 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import PaginationDefault from "Pagination" /* 10086 */;
+import _modDef13687 from "module_13687" /* 13687 */;
+import _modDef13688 from "module_13688" /* 13688 */;
+import _modDef13689 from "module_13689" /* 13689 */;
+import _modDef13690 from "module_13690" /* 13690 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,18 +24,18 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7140).Gradients;
-const PremiumTypes = fn(1391).PremiumTypes;
+const Gradients = fn(7145).Gradients;
+const PremiumTypes = fn(1392).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 0.85;
 const PX_12 = nativeDefault.space.PX_12;
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj2 = { container: { flex: 1 }, headerText: { textAlign: "center" }, carouselContainer: { flex: 1, marginTop: nativeDefault.space.PX_16 }, carousel: { flex: 1, minHeight: 262 }, indicators: null };
 let obj3 = { flex: 1, marginTop: nativeDefault.space.PX_16 };
 obj2.indicators = { marginBottom: -nativeDefault.space.PX_48 };
 let closure_14 = createStyles.createStyles(obj2);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj6 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
 let obj4 = { marginBottom: -nativeDefault.space.PX_48 };
 obj6.card = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
@@ -43,7 +43,7 @@ obj6.image = { alignSelf: "center" };
 let obj7 = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 obj6.cardTitle = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
 let closure_15 = createStyles.createStyles(obj6);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let closure_16 = createStyles.createStyles({ emojiImage: { alignSelf: "flex-end" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumFeaturesCardBackground(arg0) {
@@ -184,7 +184,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp7 = cResult[1];
   }
   if (cResult[2] !== tmp4.emojiImage) {
-    const obj2 = { title: first, imageSrc: _modDef13596, imageStyle: tmp4.emojiImage, premiumTypes: tmp7 };
+    const obj2 = { title: first, imageSrc: _modDef13687, imageStyle: tmp4.emojiImage, premiumTypes: tmp7 };
     cResult[2] = tmp4.emojiImage;
     cResult[3] = obj2;
     let tmp14 = obj2;
@@ -200,7 +200,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp16 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { title: tmp16, imageSrc: _modDef13597, premiumTypes: null };
+    const obj3 = { title: tmp16, imageSrc: _modDef13688, premiumTypes: null };
     const _Set2 = Set;
     const items1 = [, ];
     ({ TIER_0: arr2[0], TIER_2: arr2[1] } = PremiumTypes);
@@ -217,7 +217,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp19 = cResult[6];
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { title: tmp19, imageSrc: _modDef13598, premiumTypes: null };
+    const obj4 = { title: tmp19, imageSrc: _modDef13689, premiumTypes: null };
     const _Set3 = Set;
     const items2 = [PremiumTypes.TIER_2];
     const set2 = new Set(items2);
@@ -233,7 +233,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     tmp29 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { title: tmp29, imageSrc: _modDef13599, premiumTypes: null };
+    const obj5 = { title: tmp29, imageSrc: _modDef13690, premiumTypes: null };
     const _Set4 = Set;
     const items3 = [PremiumTypes.TIER_2];
     const set3 = new Set(items3);
@@ -276,7 +276,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
     const intl = util.intl;
     obj.title = intl.string(util.t["3cyhe3"]);
-    obj.imageSrc = _modDef13596;
+    obj.imageSrc = _modDef13687;
     obj.imageStyle = emojiImage.emojiImage;
     const items = [, ];
     ({ TIER_0: arr[0], TIER_2: arr[1] } = PremiumTypes);
@@ -285,7 +285,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj2 = { title: null, imageSrc: null, premiumTypes: null };
     const intl2 = util.intl;
     obj2.title = intl2.string(util.t["8AhJqy"]);
-    obj2.imageSrc = _modDef13597;
+    obj2.imageSrc = _modDef13688;
     const items2 = [, ];
     ({ TIER_0: arr3[0], TIER_2: arr3[1] } = PremiumTypes);
     const set = new Set(items);
@@ -294,7 +294,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj3 = { title: null, imageSrc: null, premiumTypes: null };
     const intl3 = util.intl;
     obj3.title = intl3.string(util.t["t/Mvdj"]);
-    obj3.imageSrc = _modDef13598;
+    obj3.imageSrc = _modDef13689;
     const items3 = [PremiumTypes.TIER_2];
     const set1 = new Set(items2);
     obj3.premiumTypes = new Set(items3);
@@ -302,7 +302,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePre
     const obj4 = { title: null, imageSrc: null, premiumTypes: null };
     const intl4 = util.intl;
     obj4.title = intl4.string(util.t["n+DGY/"]);
-    obj4.imageSrc = _modDef13599;
+    obj4.imageSrc = _modDef13690;
     const items4 = [PremiumTypes.TIER_2];
     const set2 = new Set(items3);
     obj4.premiumTypes = new Set(items4);
@@ -537,13 +537,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const cResult = analyticsLocations(576).c(18);
   style = style.style;
   const tmp4 = closure_14();
-  analyticsLocations = first(6841)().analyticsLocations;
+  analyticsLocations = first(6848)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const windowDimensions = tmp(1496).getWindowDimensions();
+    const windowDimensions = tmp(1497).getWindowDimensions();
     cResult[0] = windowDimensions;
     let first1 = windowDimensions;
-    const tmpResult = tmp(1496);
+    const tmpResult = tmp(1497);
   } else {
     first1 = cResult[0];
   }
@@ -578,7 +578,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
       }
       if (cResult[9] !== tmp4.headerText) {
         const obj3 = { style: tmp4.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: tmp15 };
-        const tmp19 = closure_10(tmp(5086).Text, obj3);
+        const tmp19 = closure_10(tmp(5087).Text, obj3);
         cResult[9] = tmp4.headerText;
         cResult[10] = tmp19;
         let tmp17 = tmp19;
@@ -648,9 +648,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   dependencyMap = undefined;
   _slicedToArray = undefined;
   const tmp = closure_14();
-  const analyticsLocations = first(6841)().analyticsLocations;
+  const analyticsLocations = first(6848)().analyticsLocations;
   [first, dependencyMap] = noop.useState(false);
-  const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1496).getWindowDimensions().width), 2);
+  const tmp4 = _slicedToArray(noop.useState(analyticsLocations(1497).getWindowDimensions().width), 2);
   _slicedToArray = tmp4[1];
   const items = [analyticsLocations, first];
   let obj2 = {
@@ -672,7 +672,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumF
   const obj3 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   const intl = analyticsLocations(1126).intl;
   obj3.children = intl.string(analyticsLocations(1126).t.RGadQR);
-  const items2 = [closure_10(analyticsLocations(5086).Text, obj3), closure_10(closure_20, { width: tmp4[0], onEndReached: callback })];
+  const items2 = [closure_10(analyticsLocations(5087).Text, obj3), closure_10(closure_20, { width: tmp4[0], onEndReached: callback })];
   obj2.children = items2;
   return closure_11(closure_6, obj2);
 });

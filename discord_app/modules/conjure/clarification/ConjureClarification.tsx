@@ -1,8 +1,12 @@
-// === Module 17015: ConjureClarification ===
+// === Module 17171: ConjureClarification ===
 
-// Module 17015 (ConjureClarification)
+// Module 17171 (ConjureClarification)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
+const ChannelTypes = Constants.ChannelTypes;
+let closure_0 = { [ChannelTypes.GUILD_TEXT]: "text", [ChannelTypes.GUILD_VOICE]: "voice", [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement", [ChannelTypes.GUILD_STAGE_VOICE]: "stage", [ChannelTypes.GUILD_FORUM]: "forum", [ChannelTypes.GUILD_MEDIA]: "media" };
+let closure_1 = { channel: "#", role: "@", user: "@" };
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
 
 export const isClarificationComplete = function isClarificationComplete(questions, arg1) {
@@ -124,6 +128,40 @@ export const multiSelectAnswer = function multiSelectAnswer(options, answeredOpt
   obj.text = items.join(", ");
   return obj;
 };
+export const clarificationChannelType = function clarificationChannelType(arg0) {
+  let tmp;
+  if (null != arg0) {
+    tmp = closure_0[arg0];
+  }
+  return tmp;
+};
+export const MAX_CLARIFICATION_ENTITY_PICKS = 10;
+export const entityAnswer = function entityAnswer(arg0, entities, str, guildId) {
+  closure_0 = arg0;
+  const trimmed = str.trim();
+  const obj = { kind: "entities", entities };
+  if (null == guildId) {
+    let obj2 = {};
+  } else {
+    obj2 = { guildId };
+  }
+  const merged = Object.assign(obj2);
+  if ("" === trimmed) {
+    let obj3 = {};
+  } else {
+    obj3 = { custom: trimmed };
+  }
+  const merged1 = Object.assign(obj3);
+  const items = [...entities.map((name) => "" + closure_1[closure_0] + name.name)];
+  if ("" === trimmed) {
+    let items1 = [];
+  } else {
+    items1 = [trimmed];
+  }
+  HermesBuiltin.arraySpread(items1, tmp5);
+  obj.text = items.join(", ");
+  return obj;
+};
 export const clarificationAnswerAttachments = function clarificationAnswerAttachments(clarification, arg1) {
   closure_0 = arg1;
   const questions = clarification.questions;
@@ -146,7 +184,7 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
   const questions = clarification.questions;
   const flatMapResult = questions.flatMap((id) => {
     if (null != closure_0[id.id]) {
-      if ("" !== str7.trim()) {
+      if ("" !== str9.trim()) {
         if ("option" === tmp.kind) {
           const items = [tmp.optionId];
           let tmp2 = items;
@@ -158,6 +196,12 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
         } else if ("multi" === tmp.kind) {
           custom = tmp.custom;
         }
+        const arr2 = "entities" === tmp.kind ? tmp.entities : [];
+        if ("entities" === tmp.kind) {
+          if (arr2.length > 0) {
+            const guildId = tmp.guildId;
+          }
+        }
         if ("image" === tmp.kind) {
           const attachment = tmp.attachment;
         }
@@ -165,9 +209,9 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
         if (null != custom) {
           if ("" !== custom) {
             const obj2 = { custom };
-            let obj5 = obj2;
+            let obj9 = obj2;
           }
-          const merged = Object.assign(obj5);
+          const merged = Object.assign(obj9);
           if (null != attachment) {
             const obj3 = { attachment_id: attachment.id };
             let obj4 = obj3;
@@ -175,12 +219,26 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
             obj4 = {};
           }
           const merged1 = Object.assign(obj4);
+          if (arr2.length > 0) {
+            const obj5 = { entities: arr2 };
+            let obj6 = obj5;
+          } else {
+            obj6 = {};
+          }
+          const merged2 = Object.assign(obj6);
+          if (null != guildId) {
+            const obj7 = { guild_id: guildId };
+            let obj8 = obj7;
+          } else {
+            obj8 = {};
+          }
+          const merged3 = Object.assign(obj8);
           const items1 = [obj];
           return items1;
         }
-        obj5 = {};
+        obj9 = {};
       }
-      str7 = tmp.text;
+      str9 = tmp.text;
     }
     return [];
   });

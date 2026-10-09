@@ -1,23 +1,23 @@
-// === Module 10249: useDisplayNameStylesEffectConfigs ===
+// === Module 10234: useDisplayNameStylesEffectConfigs ===
 
-// Module 10249 (useDisplayNameStylesEffectConfigs)
+// Module 10234 (useDisplayNameStylesEffectConfigs)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import DisplayNameFont from "DisplayNameFont" /* 1409 */;
+import DisplayNameFont from "DisplayNameFont" /* 1410 */;
 import _modDef2955 from "module_2955" /* 2955 */;
-import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 10250 */;
+import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors" /* 10235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DISPLAY_NAME_STYLES_EFFECT_NAMES = {};
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.SOLID] = _modDef2955.OpWJ3f;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.GRADIENT] = _modDef2955["i9e/u1"];
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.NEON] = _modDef2955.x68b1F;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.TOON] = _modDef2955.otpeeM;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.POP] = _modDef2955.cjQOKb;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.GUMMY] = _modDef2955.x9Gtie;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1408).DisplayNameEffect.PRISM] = _modDef2955["/M7psm"];
-let closure_5 = { [fn(1408).DisplayNameEffect.SOLID]: 3, [fn(1408).DisplayNameEffect.GRADIENT]: 2.5, [fn(1408).DisplayNameEffect.GLOW]: 2.5, [fn(1408).DisplayNameEffect.PRISM]: 2.5, [fn(1408).DisplayNameEffect.NEON]: 3, [fn(1408).DisplayNameEffect.TOON]: 3, [fn(1408).DisplayNameEffect.POP]: 3, [fn(1408).DisplayNameEffect.GUMMY]: 3 };
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.SOLID] = _modDef2955.OpWJ3f;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.GRADIENT] = _modDef2955["i9e/u1"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.NEON] = _modDef2955.x68b1F;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.TOON] = _modDef2955.otpeeM;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.POP] = _modDef2955.cjQOKb;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.GUMMY] = _modDef2955.x9Gtie;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.PRISM] = _modDef2955["/M7psm"];
+let closure_5 = { [fn(1409).DisplayNameEffect.SOLID]: 3, [fn(1409).DisplayNameEffect.GRADIENT]: 2.5, [fn(1409).DisplayNameEffect.GLOW]: 2.5, [fn(1409).DisplayNameEffect.PRISM]: 2.5, [fn(1409).DisplayNameEffect.NEON]: 3, [fn(1409).DisplayNameEffect.TOON]: 3, [fn(1409).DisplayNameEffect.POP]: 3, [fn(1409).DisplayNameEffect.GUMMY]: 3 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx");

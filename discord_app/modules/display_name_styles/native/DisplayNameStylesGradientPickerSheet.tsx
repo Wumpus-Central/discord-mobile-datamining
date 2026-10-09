@@ -1,10 +1,10 @@
-// === Module 15447: DisplayNameStylesGradientPickerSheet ===
+// === Module 15560: DisplayNameStylesGradientPickerSheet ===
 
-// Module 15447 (DisplayNameStylesGradientPickerSheet)
+// Module 15560 (DisplayNameStylesGradientPickerSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import HapticUtils from "HapticUtils" /* 5055 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import HapticUtils from "HapticUtils" /* 5056 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { body: { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 }, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, swatchWrapper: null, pressable: null, selectedRing: null, option: null, checkmarkOverlay: null, checkmark: null, resetButtonContainer: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: nativeDefault.space.PX_16 };
 obj2.gradientContainer = { flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_8 };
@@ -44,7 +44,7 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj10.alignItems = "center";
 obj10.justifyContent = "center";
 obj2.checkmarkOverlay = obj10;
-const size1 = { width: fn(15448).CHECKMARK_SIZE, height: fn(15448).CHECKMARK_SIZE };
+const size1 = { width: fn(15561).CHECKMARK_SIZE, height: fn(15561).CHECKMARK_SIZE };
 obj2.checkmark = size1;
 let obj8 = { height: 40, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.resetButtonContainer = { alignSelf: "stretch", flexDirection: "row", marginHorizontal: nativeDefault.space.PX_8 };
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F156778 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F157113 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               onSelect(arg0) {
                           closure_0 = arg0;
                           const result = onSelectColors(displayNameStylesEffectConfig[13]).triggerHapticFeedback(onSelectColors(displayNameStylesEffectConfig[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
-                          closure_1_5((arr) => arr.map(/* F156778 */ function() { ... }));
+                          closure_1_5((arr) => arr.map(/* F157113 */ function() { ... }));
                         },
               actionButtonVariant: "primary"
             };

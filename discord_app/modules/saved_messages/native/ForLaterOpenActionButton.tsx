@@ -1,27 +1,27 @@
-// === Module 16646: ForLaterOpenActionButton ===
+// === Module 16771: ForLaterOpenActionButton ===
 
-// Module 16646 (ForLaterOpenActionButton)
+// Module 16771 (ForLaterOpenActionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4778 */;
-import useThemeDefault from "useTheme" /* 4991 */;
-import ClockIcon from "ClockIcon" /* 5049 */;
-import ButtonHooks from "ButtonHooks" /* 5381 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 9633 */;
-import showForLaterModal from "showForLaterModal" /* 12656 */;
-import BookmarkIcon2 from "BookmarkIcon" /* 12666 */;
+import useToken from "useToken" /* 4779 */;
+import useThemeDefault from "useTheme" /* 4992 */;
+import ClockIcon from "ClockIcon" /* 5050 */;
+import ButtonHooks from "ButtonHooks" /* 5382 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 9652 */;
+import showForLaterModal from "showForLaterModal" /* 12596 */;
+import BookmarkIcon2 from "BookmarkIcon" /* 12607 */;
 import noop from "module_19" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 9632 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 9651 */;
 
-const ClipViewDefault = tmp3(8986);
+const ClipViewDefault = tmp3(8997);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const point = { shape: fn(8986).CutoutShape.Circle, x: fn(16647).ICON_SIZE.sm - 7, y: fn(16647).ICON_SIZE.sm - 8, size: 10 };
-const createStyles = fn(5090);
+const point = { shape: fn(8997).CutoutShape.Circle, x: fn(12953).ICON_SIZE.sm - 7, y: fn(12953).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(5091);
 let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
-let size = { width: fn(16647).ICON_SIZE.sm, height: fn(16647).ICON_SIZE.sm, position: "relative" };
+let size = { width: fn(12953).ICON_SIZE.sm, height: fn(12953).ICON_SIZE.sm, position: "relative" };
 obj.iconAnchor = size;
 const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
 obj.dot = size1;
@@ -158,14 +158,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
     if (cResult[4] === type) {
       let tmp10 = cResult[5];
     }
-    const tmp11 = type === tmp(9633).SavedMessageSortTypes.REMINDER && tmp9;
+    const tmp11 = type === tmp(9652).SavedMessageSortTypes.REMINDER && tmp9;
     if (cResult[6] === tmp11) {
       if (cResult[7] === type) {
         let tmp12 = cResult[8];
       }
       if (cResult[9] !== type) {
         const intl = tmp(1126).intl;
-        if (type === tmp(9633).SavedMessageSortTypes.REMINDER) {
+        if (type === tmp(9652).SavedMessageSortTypes.REMINDER) {
           let aUXxzT = tmp(1126).t.aUXxzT;
         } else {
           aUXxzT = tmp(1126).t["2pAkDA"];
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
           }
         }
         const obj3 = { variant: "tertiary", size: "sm", icon: tmp12, onPress: tmp10, accessibilityLabel: cResult[10], maxFontSizeMultiplier: 2 };
-        const tmp22 = closure_6(tmp(8106).IconButton, obj3);
+        const tmp22 = closure_6(tmp(8114).IconButton, obj3);
         cResult[11] = tmp10;
         cResult[12] = tmp12;
         cResult[13] = cResult[10];
@@ -236,14 +236,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForLater
   const obj3 = { type, showRedDot: null };
   const obj = type(504);
   const obj4 = { variant: "tertiary", size: "sm", icon: closure_6(closure_10, obj3), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj3.showRedDot = type === type(9633).SavedMessageSortTypes.REMINDER && stateFromStores;
+  obj3.showRedDot = type === type(9652).SavedMessageSortTypes.REMINDER && stateFromStores;
   const intl = tmp(1126).intl;
-  if (type === type(9633).SavedMessageSortTypes.REMINDER) {
+  if (type === type(9652).SavedMessageSortTypes.REMINDER) {
     let aUXxzT = tmp(1126).t.aUXxzT;
   } else {
     aUXxzT = tmp(1126).t["2pAkDA"];
   }
   obj4.accessibilityLabel = intl.string(aUXxzT);
-  obj2.children = closure_6(type(8106).IconButton, obj4);
+  obj2.children = closure_6(type(8114).IconButton, obj4);
   return closure_6(View, obj2);
 });

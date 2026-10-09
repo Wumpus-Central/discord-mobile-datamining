@@ -1,8 +1,8 @@
-// === Module 7549: MethodPathIcon ===
+// === Module 7558: MethodPathIcon ===
 
-// Module 7549 (MethodPathIcon)
+// Module 7558 (MethodPathIcon)
 import nativeDefault from "native" /* 587 */;
-import inlineStyles from "inlineStyles" /* 7550 */;
+import inlineStyles from "inlineStyles" /* 7559 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const inlineStylesDefault = inlineStyles;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg };
 obj2.container = size;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MethodPa
   let paths = icon.icon;
   const tmp3 = closure_5();
   const obj = token(576);
-  token = token(4778).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
+  token = token(4779).useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
   if (cResult[0] === paths.paths) {
     if (cResult[1] === token) {
       if (cResult[5] !== cResult[2]) {
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MethodPa
   cResult[0] = paths;
   cResult[1] = token;
   cResult[2] = mapped;
-  const obj2 = token(4778);
+  const obj2 = token(4779);
 }) : (function MethodPathIcon(icon) {
   _require = undefined;
   const tmp = closure_5();

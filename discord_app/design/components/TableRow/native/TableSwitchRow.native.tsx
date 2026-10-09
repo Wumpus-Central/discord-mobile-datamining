@@ -1,12 +1,12 @@
-// === Module 6882: TableSwitchRow ===
+// === Module 6889: TableSwitchRow ===
 
-// Module 6882 (TableSwitchRow)
+// Module 6889 (TableSwitchRow)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import native from "native" /* 4780 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import TableRow from "TableRow" /* 6184 */;
-import FormSwitch from "FormSwitch" /* 6883 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import native from "native" /* 4781 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import TableRow from "TableRow" /* 6186 */;
+import FormSwitch from "FormSwitch" /* 6890 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ let closure_2 = ["value", "onValueChange", "label", "subLabel", "trailing", "dis
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -273,7 +273,7 @@ export const TableSwitchRow = ReactCompilerGating.isReactCompilerEnabled() ? (fu
         str = "text-feedback-critical";
       }
       const obj7 = { variant: "text-md/semibold", color: str, includeFontPadding: true, children: label };
-      tmp10Result = React5(tmp3(5086).Text, obj7);
+      tmp10Result = React5(tmp3(5087).Text, obj7);
     }
     const items1 = [tmp10Result, trailing];
     obj6.children = items1;

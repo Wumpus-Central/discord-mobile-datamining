@@ -1,28 +1,28 @@
-// === Module 12060: SearchUtils ===
+// === Module 11997: SearchUtils ===
 
-// Module 12060 (SearchUtils)
+// Module 11997 (SearchUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import _modDef4659 from "module_4659" /* 4659 */;
-import UserUtilsDefault from "UserUtils" /* 4922 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import QueryTokenizerDefault from "QueryTokenizer" /* 12059 */;
-import SearchTokens from "SearchTokens" /* 12061 */;
+import _modDef4661 from "module_4661" /* 4661 */;
+import UserUtilsDefault from "UserUtils" /* 4923 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import QueryTokenizerDefault from "QueryTokenizer" /* 11996 */;
+import SearchTokens from "SearchTokens" /* 11998 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5931 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5932 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(9247).SearchTabs;
+const SearchTabs = fn(9285).SearchTabs;
 const Constants = fn(1085);
 ({ SearchTypes: closure_11, SearchTokenTypes } = Constants);
 ({ SearchPopoutModes: map1, IS_SEARCH_ANSWER_TOKEN: closure_14, IS_SEARCH_FILTER_TOKEN: closure_15, SearchModes: closure_16, ME, GuildFeatures: closure_17 } = Constants);
@@ -87,7 +87,7 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, t
   return "" + channelId + "-" + tab + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(cResult) {
-  const diffResult = _modDef4659().diff(_modDef4659(cResult), "s");
+  const diffResult = _modDef4661().diff(_modDef4661(cResult), "s");
   if (diffResult > c19) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -125,7 +125,7 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef4659();
+  const obj = _modDef4661();
 };
 export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
   const type = searchContext.type;

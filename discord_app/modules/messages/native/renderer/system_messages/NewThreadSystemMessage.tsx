@@ -1,14 +1,14 @@
-// === Module 8013: NewThreadSystemMessage ===
+// === Module 8021: NewThreadSystemMessage ===
 
-// Module 8013 (NewThreadSystemMessage)
+// Module 8021 (NewThreadSystemMessage)
 import util from "util" /* 1126 */;
-import useChannelName from "useChannelName" /* 5417 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7951 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7953 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7955 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import useChannelName from "useChannelName" /* 5418 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const size = fn(2);

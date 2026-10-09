@@ -1,18 +1,18 @@
-// === Module 8949: useWishlistHooks ===
+// === Module 8960: useWishlistHooks ===
 
-// Module 8949 (useWishlistHooks)
+// Module 8960 (useWishlistHooks)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8287 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8957 */;
-import useDisplayProfileSocialLayerStorefrontApplicationIdsDefault from "useDisplayProfileSocialLayerStorefrontApplicationIds" /* 8964 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8968 */;
+import useDisplayProfileSocialLayerStorefrontApplicationIdsDefault from "useDisplayProfileSocialLayerStorefrontApplicationIds" /* 8975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7309 */;
+import UserProfileStore from "UserProfileStore" /* 7314 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1389 */;
-import WishlistStore from "WishlistStore" /* 8950 */;
+import UserStore from "UserStore" /* 1390 */;
+import WishlistStore from "WishlistStore" /* 8961 */;
 
 require = fn;
 function getUserWishlistKey(userId, arg1) {
@@ -26,7 +26,7 @@ function getUserWishlistKey(userId, arg1) {
   return combined;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(8951).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8962).getWishlistSkuIds;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchWishlist(wishlistId) {
@@ -833,7 +833,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldSho
       let tmp17 = cResult[11];
     }
     const wishlist = closure_12(tmp17).wishlist;
-    giftRecipient(8969);
+    giftRecipient(8980);
     let flag2 = false;
     if (true === isGift) {
       flag2 = false;

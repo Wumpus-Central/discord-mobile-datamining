@@ -1,8 +1,8 @@
-// === Module 12966: openShopThisLookActionSheet ===
+// === Module 13046: openShopThisLookActionSheet ===
 
-// Module 12966 (openShopThisLookActionSheet)
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+// Module 13046 (openShopThisLookActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop This Look";
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting("modules/collectibles/shop_this_look/n
 
 export const SHOP_THIS_LOOK_ACTION_SHEET_KEY = "Shop This Look";
 export const openShopThisLookActionSheet = function openShopThisLookActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12967, dependencyMap.paths), c3, arg0, "stack");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13047, dependencyMap.paths), c3, arg0, "stack");
 };

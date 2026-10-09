@@ -1,19 +1,19 @@
-// === Module 15416: MessagePreviewManager ===
+// === Module 15529: MessagePreviewManager ===
 
-// Module 15416 (MessagePreviewManager)
+// Module 15529 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import RemoteFetchData from "RemoteFetchData" /* 15417 */;
+import RemoteFetchData from "RemoteFetchData" /* 15530 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13842 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6797 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13935 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
 
 require = fn;
-const isThread = fn(2067).isThread;
+const isThread = fn(2068).isThread;
 const Endpoints = fn(1085).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
@@ -103,7 +103,7 @@ class MessagePreviewManager extends tmp3 {
               closure_131_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else {
             if (1 === tmp4) {
@@ -361,7 +361,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               let body;
               const _HermesInternal = HermesInternal;
               closure_1_11.verbose("fetching dm previews (via: http, channel_ids: " + nextWantsResult.join(", ") + ")");
-              const HTTP = tmp2(1294).HTTP;
+              const HTTP = tmp2(1295).HTTP;
               const request = { url: constants.MESSAGE_PREVIEWS, body: null, rejectWithError: false };
               const obj4 = { channel_ids: nextWantsResult };
               request.body = obj4;

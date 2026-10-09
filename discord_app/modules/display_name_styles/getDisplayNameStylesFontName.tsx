@@ -1,21 +1,21 @@
-// === Module 14686: getDisplayNameStylesFontName ===
+// === Module 14792: getDisplayNameStylesFontName ===
 
-// Module 14686 (getDisplayNameStylesFontName)
+// Module 14792 (getDisplayNameStylesFontName)
 import _modDef2955 from "module_2955" /* 2955 */;
 
 const DISPLAY_NAME_STYLES_FONT_NAMES = {};
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.DEFAULT] = _modDef2955.ZEL6mz;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.CHERRY_BOMB] = _modDef2955.rN7cuX;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.CHICLE] = _modDef2955.CbHHnL;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.MUSEO_MODERNO] = _modDef2955.iEcEKO;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.NEO_CASTEL] = _modDef2955.DL7jLZ;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.PIXELIFY] = _modDef2955.jq4aRp;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.SINISTRE] = _modDef2955.jV9DN4;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.ZILLA_SLAB] = _modDef2955.KMR8rT;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.PLAYPEN_SANS] = _modDef2955.RP8HFf;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.ORBITRON] = _modDef2955.pwbAIk;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.NEW_ROCKER] = _modDef2955["Llo/Ia"];
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.KALAM] = _modDef2955.t9Les4;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.DEFAULT] = _modDef2955.ZEL6mz;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.CHERRY_BOMB] = _modDef2955.rN7cuX;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.CHICLE] = _modDef2955.CbHHnL;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.MUSEO_MODERNO] = _modDef2955.iEcEKO;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.NEO_CASTEL] = _modDef2955.DL7jLZ;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.PIXELIFY] = _modDef2955.jq4aRp;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.SINISTRE] = _modDef2955.jV9DN4;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.ZILLA_SLAB] = _modDef2955.KMR8rT;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.PLAYPEN_SANS] = _modDef2955.RP8HFf;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.ORBITRON] = _modDef2955.pwbAIk;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.NEW_ROCKER] = _modDef2955["Llo/Ia"];
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1410).DisplayNameFont.KALAM] = _modDef2955.t9Les4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/getDisplayNameStylesFontName.tsx");
 

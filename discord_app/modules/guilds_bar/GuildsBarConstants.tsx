@@ -1,6 +1,6 @@
-// === Module 16530: guilds_bar/GuildsBarConstants ===
+// === Module 16653: guilds_bar/GuildsBarConstants ===
 
-// Module 16530 (guilds_bar/GuildsBarConstants)
+// Module 16653 (guilds_bar/GuildsBarConstants)
 import ColorUtils from "utils/ColorUtils" /* 1103 */;
 import shims from "shims" /* 586 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 1244: frecency_user_settings ===
+// === Module 1245: frecency_user_settings ===
 
-// Module 1244 (frecency_user_settings)
+// Module 1245 (frecency_user_settings)
 import _mod1210 from "module_1210" /* 1210 */;
 import user_settings_shared from "user_settings_shared" /* 1238 */;
 import _slicedToArray from "module_32" /* 32 */;

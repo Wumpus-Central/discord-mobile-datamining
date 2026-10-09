@@ -1,11 +1,11 @@
-// === Module 8622: EditGuildEventDetails ===
+// === Module 8630: EditGuildEventDetails ===
 
-// Module 8622 (EditGuildEventDetails)
+// Module 8630 (EditGuildEventDetails)
 import util from "util" /* 1126 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import _modDef4659 from "module_4659" /* 4659 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8495 */;
-import ScheduleUtils from "ScheduleUtils" /* 8496 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
+import _modDef4661 from "module_4661" /* 4661 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8503 */;
+import ScheduleUtils from "ScheduleUtils" /* 8504 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -20,11 +20,11 @@ function assertGuildEventDetailsValid(guildEvent) {
     throw error;
   }
 }
-let closure_6 = fn(6059).isGuildScheduledEventActive;
-let constants = fn(2069).GuildScheduledEventEntityTypes;
+let closure_6 = fn(6061).isGuildScheduledEventActive;
+let constants = fn(2070).GuildScheduledEventEntityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_11 = createStyles.createStyles({ error: { paddingVertical: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -396,9 +396,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
                 isBeforeResult = before.isBefore(toISOString);
               }
               if (isBeforeResult) {
-                const obj2 = _modDef4659(toISOString);
-                obj.scheduledEndTime = _modDef4659(toISOString).add(1, "hour").toISOString();
-                const addResult = _modDef4659(toISOString).add(1, "hour");
+                const obj2 = _modDef4661(toISOString);
+                obj.scheduledEndTime = _modDef4661(toISOString).add(1, "hour").toISOString();
+                const addResult = _modDef4661(toISOString).add(1, "hour");
               }
               let tmp8 = null != toISOString;
               if (tmp8) {
@@ -437,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
         const tmpResult = tmp(tmp2[11]);
       }
       const fn = function x() {
-        return ScheduleUtils.recurrenceRuleToOption(_modDef4659(scheduledStartTime), recurrenceRule);
+        return ScheduleUtils.recurrenceRuleToOption(_modDef4661(scheduledStartTime), recurrenceRule);
       };
       cResult[5] = recurrenceRule;
       cResult[6] = scheduledStartTime;
@@ -480,28 +480,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
   const recurrenceRule = guildEvent.recurrenceRule;
   const items = [scheduledStartTime];
   ({ name, entityType } = guildEvent);
-  memo = memo.useMemo(() => _modDef4659(scheduledStartTime), items);
+  memo = memo.useMemo(() => _modDef4661(scheduledStartTime), items);
   const items1 = [scheduledEndTime, scheduledStartTime];
   const memo1 = memo.useMemo(() => {
     if (null != scheduledEndTime) {
-      let addResult = _modDef4659(tmp);
+      let addResult = _modDef4661(tmp);
     } else {
-      addResult = _modDef4659(scheduledStartTime).add(1, "hour");
-      const obj = _modDef4659(scheduledStartTime);
+      addResult = _modDef4661(scheduledStartTime).add(1, "hour");
+      const obj = _modDef4661(scheduledStartTime);
     }
     return addResult;
   }, items1);
   const tmp = c11();
-  [c7, c8] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4659(scheduledStartTime), recurrenceRule)), 2);
+  [c7, c8] = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4661(scheduledStartTime), recurrenceRule)), 2);
   const memo2 = memo.useMemo(() => onChange(scheduledEndTime[9])(), []);
   const items2 = [memo];
   const memo3 = memo.useMemo(() => onChange(scheduledEndTime[9])().add(guildEvent(scheduledEndTime[10]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"), []);
-  const memo4 = memo.useMemo(() => _modDef4659(memo).add(15, "minutes"), items2);
+  const memo4 = memo.useMemo(() => _modDef4661(memo).add(15, "minutes"), items2);
   const memo5 = memo.useMemo(() => onChange(scheduledEndTime[9])().add(guildEvent(scheduledEndTime[10]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
   const ref = memo.useRef(null);
   const tmp10 = memo1(guildEvent.initialGuildEvent);
   closure_10 = tmp10;
-  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4659(scheduledStartTime), recurrenceRule)), 2);
+  const tmp4 = recurrenceRule(memo.useState(() => ScheduleUtils.recurrenceRuleToOption(_modDef4661(scheduledStartTime), recurrenceRule)), 2);
   [tmp12, c11] = recurrenceRule(memo.useState(null), 2);
   const tmp11 = recurrenceRule(memo.useState(null), 2);
   const navigation = guildEvent(scheduledEndTime[11]).useNavigation();
@@ -566,9 +566,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
           isBeforeResult = memo1.isBefore(toISOString);
         }
         if (isBeforeResult) {
-          const obj2 = _modDef4659(toISOString);
-          obj.scheduledEndTime = _modDef4659(toISOString).add(1, "hour").toISOString();
-          const addResult = _modDef4659(toISOString).add(1, "hour");
+          const obj2 = _modDef4661(toISOString);
+          obj.scheduledEndTime = _modDef4661(toISOString).add(1, "hour").toISOString();
+          const addResult = _modDef4661(toISOString).add(1, "hour");
         }
         let tmp8 = null != toISOString;
         if (tmp8) {

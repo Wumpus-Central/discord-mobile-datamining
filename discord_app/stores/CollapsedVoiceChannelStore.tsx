@@ -1,10 +1,10 @@
-// === Module 7238: CollapsedVoiceChannelStore ===
+// === Module 7243: CollapsedVoiceChannelStore ===
 
-// Module 7238 (CollapsedVoiceChannelStore)
+// Module 7243 (CollapsedVoiceChannelStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 
 function handleConnectionOpen() {
   obj = SnowflakeUtilsDefault;

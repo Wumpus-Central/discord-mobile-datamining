@@ -1,12 +1,12 @@
-// === Module 4718: MessageRecord ===
+// === Module 4720: MessageRecord ===
 
-// Module 4718 (MessageRecord)
-import FlagUtils from "FlagUtils" /* 1402 */;
-import ReactionUtils from "ReactionUtils" /* 4719 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7873 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9140 */;
-import Record from "Record" /* 1404 */;
+// Module 4720 (MessageRecord)
+import FlagUtils from "FlagUtils" /* 1403 */;
+import ReactionUtils from "ReactionUtils" /* 4721 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6995 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7882 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9207 */;
+import Record from "Record" /* 1405 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -91,7 +91,12 @@ MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(IS_ANIMATED) {
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
     tmp2 = new MessageRecord(global, new.target, tmp, global, new.target);
-    ({ id: tmp2.id, channel_id: tmp2.channel_id, author: tmp2.author, customRenderedContent: tmp2.customRenderedContent } = global);
+    ({ id: tmp2.id, channel_id: tmp2.channel_id, author: tmp2.author, actor } = global);
+    if (actor == null) {
+      actor = null;
+    }
+    tmp2.actor = actor;
+    tmp2.customRenderedContent = global.customRenderedContent;
     tmp2.mentions = global.mentions || [];
     tmp2.mentionRoles = global.mentionRoles || [];
     tmp2.mentionChannels = global.mentionChannels || [];

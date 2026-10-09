@@ -1,8 +1,8 @@
-// === Module 8762: useChannelVideoLimit ===
+// === Module 8771: useChannelVideoLimit ===
 
-// Module 8762 (useChannelVideoLimit)
+// Module 8771 (useChannelVideoLimit)
 import GuildStore from "GuildStore" /* 2086 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5114 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5115 */;
 
 const require = globalThis.__r;
 

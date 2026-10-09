@@ -1,20 +1,20 @@
-// === Module 13090: useGameNameAndCoverImage ===
+// === Module 13183: useGameNameAndCoverImage ===
 
-// Module 13090 (useGameNameAndCoverImage)
+// Module 13183 (useGameNameAndCoverImage)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useGame from "useGame" /* 6995 */;
+import useGame from "useGame" /* 7002 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameNameAndCoverImage(arg0, arg1, c9) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameNameAndCoverImage(arg0, arg1, c8) {
   const cResult = c.c(10);
   const game = useGame.useGame(arg0);
   ({ data, isLoading } = game);
   if (cResult[0] === data) {
-    if (cResult[1] === c9) {
+    if (cResult[1] === c8) {
       let tmp5 = cResult[2];
     }
     let name;
@@ -62,18 +62,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameN
   }
   let coverURL;
   if (data != null) {
-    coverURL = data.getCoverURL(c9);
+    coverURL = data.getCoverURL(c8);
   }
   cResult[0] = data;
-  cResult[1] = c9;
+  cResult[1] = c8;
   cResult[2] = coverURL;
   tmp5 = coverURL;
-}) : (function useGameNameAndCoverImage(arg0, arg1, c9) {
+}) : (function useGameNameAndCoverImage(arg0, arg1, c8) {
   const game = useGame.useGame(arg0);
   const data = game.data;
   let coverURL;
   if (data != null) {
-    coverURL = data.getCoverURL(c9);
+    coverURL = data.getCoverURL(c8);
   }
   const obj2 = { coverImageUrl: coverURL, gameName: null, isLoading: null };
   let name;

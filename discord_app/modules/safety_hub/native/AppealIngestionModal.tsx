@@ -1,17 +1,17 @@
-// === Module 11503: AppealIngestionModal ===
+// === Module 11432: AppealIngestionModal ===
 
-// Module 11503 (AppealIngestionModal)
+// Module 11432 (AppealIngestionModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11502 */;
-import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 11504 */;
-import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 11524 */;
-import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 11526 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11431 */;
+import AppealIngestionSpeedBumpDefault from "AppealIngestionSpeedBump" /* 11433 */;
+import AppealIngestionCollectSignalDefault from "AppealIngestionCollectSignal" /* 11453 */;
+import AppealIngestionConfirmSubmissionDefault from "AppealIngestionConfirmSubmission" /* 11455 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 5920 */;
+import SafetyHubStore from "SafetyHubStore" /* 5921 */;
 
 const require = globalThis.__r;
 
@@ -96,12 +96,12 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(5921);
+const SafetyHubConstants = fn(5922);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 }, header: { marginBottom: 8, textAlign: "center" }, subheader: { lineHeight: 20, marginBottom: 8, textAlign: "center" }, separator: null, footerContainer: null, footerText: null, footerButton: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.separator = { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
@@ -571,7 +571,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngest
               v2("");
               v2 = 2;
               c5 = 1;
-              const obj6 = { value: tmp27(11498).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
+              const obj6 = { value: tmp27(11427).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1), done: false };
               return obj6;
             }
           }
@@ -584,8 +584,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngest
             if (body != null) {
               code = body.code;
             }
-            closure_129_4(safetyHubAppealSignal(5927).getRequestReviewErrorFromCode(code));
-            const obj2 = safetyHubAppealSignal(5927);
+            closure_129_4(safetyHubAppealSignal(5928).getRequestReviewErrorFromCode(code));
+            const obj2 = safetyHubAppealSignal(5928);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;

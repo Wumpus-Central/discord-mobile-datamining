@@ -1,10 +1,10 @@
-// === Module 12578: RestrictedScheduleNotificationUtils ===
+// === Module 12518: RestrictedScheduleNotificationUtils ===
 
-// Module 12578 (RestrictedScheduleNotificationUtils)
+// Module 12518 (RestrictedScheduleNotificationUtils)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
 import _modDef2565 from "module_2565" /* 2565 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 12579 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 12519 */;
 import size from "module_2" /* 2 */;
 
 function isOnlyDayLoss(label, label2) {

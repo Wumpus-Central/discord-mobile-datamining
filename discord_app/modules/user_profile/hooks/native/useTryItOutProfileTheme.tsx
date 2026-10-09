@@ -1,14 +1,14 @@
-// === Module 14743: useTryItOutProfileTheme ===
+// === Module 14849: useTryItOutProfileTheme ===
 
-// Module 14743 (useTryItOutProfileTheme)
+// Module 14849 (useTryItOutProfileTheme)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useAvatarColor from "useAvatarColor" /* 8244 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8269 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 8286 */;
-import useProfileThemeDefault from "useProfileTheme" /* 8329 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
+import useAvatarColor from "useAvatarColor" /* 8252 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8277 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 8294 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8337 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

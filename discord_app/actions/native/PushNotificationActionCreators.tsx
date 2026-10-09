@@ -1,16 +1,16 @@
-// === Module 12143: PushNotificationActionCreators ===
+// === Module 12080: PushNotificationActionCreators ===
 
-// Module 12143 (PushNotificationActionCreators)
+// Module 12080 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TokenManagerAll from "TokenManager" /* 1111 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5944 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5945 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12144 */;
+import MultiAccountStore from "MultiAccountStore" /* 12081 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -116,8 +116,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1085);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12145).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(5939);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12082).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(5940);
 ({ BUNDLE_ID: closure_11, DEVICE_PUSH_VOIP_PROVIDER: closure_12, getDevicePushProvider: map1, IS_QUEST_RELEASE: closure_14 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
 const size = fn(2);
@@ -190,15 +190,15 @@ export default {
           closure_128_1 = value;
           if (closure_128_1.length >= 1) {
             if (null != closure_128_1[0]) {
-              const HTTP = tmp2(1294).HTTP;
+              const HTTP = tmp2(1295).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
                 let tmp9 = closure_1_12;
               } else {
                 tmp9 = closure_1_13();
               }
-              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1387).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
-              let isAndroidResult = tmp2(1381).isAndroid();
+              const obj7 = { provider: tmp9, token: closure_129_0, push_sync_tokens: closure_128_1.filter(tmp2(1388).isNotNullish), bypass_server_throttling_supported: null, bundle_id: null };
+              let isAndroidResult = tmp2(1382).isAndroid();
               if (isAndroidResult) {
                 isAndroidResult = !closure_1_14;
               }
@@ -218,8 +218,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12148).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12148);
+          const result = v2(12085).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12085);
         }
       }
       return value;

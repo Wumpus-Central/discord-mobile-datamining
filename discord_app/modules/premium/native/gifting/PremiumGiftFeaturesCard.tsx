@@ -1,39 +1,39 @@
-// === Module 10092: PremiumGiftFeaturesCard ===
+// === Module 10077: PremiumGiftFeaturesCard ===
 
-// Module 10092 (PremiumGiftFeaturesCard)
+// Module 10077 (PremiumGiftFeaturesCard)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import StringUtils from "StringUtils" /* 2030 */;
-import native from "native" /* 4787 */;
-import ClockIcon from "ClockIcon" /* 5049 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import TextStylesDefault from "TextStyles" /* 5902 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9004 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9339 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9349 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9351 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9356 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10079 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10093 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10094 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10095 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10096 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10097 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10098 */;
+import StringUtils from "StringUtils" /* 2031 */;
+import native from "native" /* 4788 */;
+import ClockIcon from "ClockIcon" /* 5050 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import TextStylesDefault from "TextStyles" /* 5903 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 9015 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9377 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9387 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9389 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9394 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10064 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10078 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10079 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10080 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10081 */;
+import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10082 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10083 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10006 */;
+import PromotionsStore from "PromotionsStore" /* 9101 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["premiumType", "onPress", "style", "claimableRewards", "isSelected", "variant"];
 const View = fn(17).View;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PremiumTypes: closure_7, SubscriptionIntervalTypes: closure_8 } = PremiumConstants);
 const Constants = fn(1096);
 ({ Fonts: closure_9, ThemeTypes: c10 } = Constants);
@@ -64,7 +64,7 @@ const obj13 = { marginTop: nativeDefault.space.PX_24 };
 obj12.compact = { marginTop: nativeDefault.space.PX_12 };
 const obj14 = { marginTop: nativeDefault.space.PX_12 };
 obj12.smallCompact = { marginTop: nativeDefault.space.PX_8 };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_17 = createStyles.createStyles(() => {
   obj = { card: null, logo: null, pricing: null, featureTitle: null, features: null, button: null, featureIcon: null, featureText: null, promotionDetailsContainer: null, countdownBadge: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);

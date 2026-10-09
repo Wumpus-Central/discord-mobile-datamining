@@ -1,15 +1,15 @@
-// === Module 9160: PlayStationLinkError ===
+// === Module 12879: PlayStationLinkError ===
 
-// Module 9160 (PlayStationLinkError)
+// Module 12879 (PlayStationLinkError)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import useConnectRetry from "useConnectRetry" /* 9161 */;
-import TwoWayLinkError from "TwoWayLinkError" /* 9162 */;
+import useNavigation from "useNavigation" /* 1503 */;
+import useConnectRetry from "useConnectRetry" /* 12865 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 12866 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(9150).PlayStationLinkModalScenes;
+const constants = fn(12871).PlayStationLinkModalScenes;
 const AbortCodes = fn(1085).AbortCodes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

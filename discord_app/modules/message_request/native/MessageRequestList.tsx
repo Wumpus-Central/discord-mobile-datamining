@@ -1,10 +1,10 @@
-// === Module 17362: MessageRequestList ===
+// === Module 17510: MessageRequestList ===
 
-// Module 17362 (MessageRequestList)
+// Module 17510 (MessageRequestList)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import transitionToChannel from "transitionToChannel" /* 5101 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5940 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import transitionToChannel from "transitionToChannel" /* 5102 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "header-section";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { sectionContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 }, rowContainer: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 }, actionContainer: { flexDirection: "row", alignItems: "flex-start", height: "100%" }, actionButton: null, acceptButton: null, acceptButtonRestricted: null, pressableRow: null, activityIndicator: null, list: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 obj2.actionButton = size;

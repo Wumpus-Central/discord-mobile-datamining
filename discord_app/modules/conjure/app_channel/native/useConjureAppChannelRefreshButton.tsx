@@ -1,8 +1,8 @@
-// === Module 12827: useConjureAppChannelRefreshButton ===
+// === Module 12794: useConjureAppChannelRefreshButton ===
 
-// Module 12827 (useConjureAppChannelRefreshButton)
+// Module 12794 (useConjureAppChannelRefreshButton)
 import _modDef3827 from "module_3827" /* 3827 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 12376 */;
+import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 11381 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       }
       if (cResult[3] !== tmp7) {
         const obj3 = { source: null, IconComponent: null, onPress: null, accessibilityLabel: null };
-        RetryIcon = tmp(12633).RetryIcon;
+        RetryIcon = tmp(12573).RetryIcon;
         obj3.IconComponent = RetryIcon;
         obj3.onPress = tmp7;
         obj3.accessibilityLabel = tmp9;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (!tmp5) {
       const obj2 = {
         source: null,
-        IconComponent: tmp(12633).RetryIcon,
+        IconComponent: tmp(12573).RetryIcon,
         onPress() {
               application_id = application_id.application_id;
               if (application_id == null) {

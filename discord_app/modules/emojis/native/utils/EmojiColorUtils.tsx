@@ -1,7 +1,7 @@
-// === Module 16302: utils/EmojiColorUtils ===
+// === Module 16421: utils/EmojiColorUtils ===
 
-// Module 16302 (utils/EmojiColorUtils)
-import privDefault from "priv" /* 1456 */;
+// Module 16421 (utils/EmojiColorUtils)
+import privDefault from "priv" /* 1457 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _getEmojiCacheKey(name) {
@@ -42,7 +42,7 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
           closure_129_5 = undefined;
           c2 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -130,7 +130,7 @@ let closure_7 = async function _getEmojiDominantColors(arg0) {
           ({ emoji: closure_130_0, emojiSource: closure_130_1 } = closure_0);
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

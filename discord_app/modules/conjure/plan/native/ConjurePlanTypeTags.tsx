@@ -1,10 +1,10 @@
-// === Module 16950: ConjurePlanTypeTags ===
+// === Module 17082: ConjurePlanTypeTags ===
 
-// Module 16950 (ConjurePlanTypeTags)
+// Module 17082 (ConjurePlanTypeTags)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import conjurePlanTags from "conjurePlanTags" /* 16953 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import conjurePlanTags from "conjurePlanTags" /* 17085 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { automod: fn(10386).ShieldIcon, overlay: fn(9117).GameControllerIcon, widget: fn(16951).WidgetsIcon, activity: fn(8209).AppsIcon, commands: fn(11230).SlashBoxIcon, chat_bot: fn(8174).ChatIcon, bot: fn(12825).RobotIcon };
-const createStyles = fn(5090);
+let obj = { automod: fn(10375).ShieldIcon, overlay: fn(9184).GameControllerIcon, widget: fn(17083).WidgetsIcon, activity: fn(8217).AppsIcon, commands: fn(10585).SlashBoxIcon, chat_bot: fn(8182).ChatIcon, bot: fn(11388).RobotIcon };
+const createStyles = fn(5091);
 let obj3 = { tags: { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_4, columnGap: nativeDefault.space.PX_12 }, tag: null };
 const obj4 = { flexDirection: "row", flexWrap: "wrap", rowGap: nativeDefault.space.PX_4, columnGap: nativeDefault.space.PX_12 };
 obj3.tag = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

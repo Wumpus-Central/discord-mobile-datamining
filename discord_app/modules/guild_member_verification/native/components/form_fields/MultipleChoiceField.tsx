@@ -1,9 +1,9 @@
-// === Module 6766: MultipleChoiceField ===
+// === Module 6773: MultipleChoiceField ===
 
-// Module 6766 (MultipleChoiceField)
+// Module 6773 (MultipleChoiceField)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5902 */;
+import TextStyles from "TextStyles" /* 5903 */;
 
 const require = globalThis.__r;
 
@@ -11,7 +11,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1096).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Multiple
           }
         }
         const obj2 = { defaultValue: response, onChange: M, hasIcons, children: tmp14 };
-        const tmp20 = closure_4(onChange(6265).TableRadioGroup, obj2);
+        const tmp20 = closure_4(onChange(6267).TableRadioGroup, obj2);
         cResult[11] = hasIcons;
         cResult[12] = response;
         cResult[13] = M;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Multiple
       }
     }
     const obj3 = { style: tmp4.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: label };
-    const tmp11 = closure_4(onChange(5086).Text, obj3);
+    const tmp11 = closure_4(onChange(5087).Text, obj3);
     cResult[3] = label;
     cResult[4] = tmp4.formHeader;
     cResult[5] = tmp11;

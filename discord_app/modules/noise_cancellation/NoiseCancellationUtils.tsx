@@ -1,10 +1,10 @@
-// === Module 10876: NoiseCancellationUtils ===
+// === Module 11049: NoiseCancellationUtils ===
 
-// Module 10876 (NoiseCancellationUtils)
+// Module 11049 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 10877 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 11050 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

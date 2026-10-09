@@ -1,18 +1,18 @@
-// === Module 7094: GiftCardMobileConsumptionActionSheet ===
+// === Module 7097: GiftCardMobileConsumptionActionSheet ===
 
-// Module 7094 (GiftCardMobileConsumptionActionSheet)
+// Module 7097 (GiftCardMobileConsumptionActionSheet)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import _modDef2271 from "module_2271" /* 2271 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: null, illustration: null, body: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
           return closure_3(ContentDismissActionType.USER_DISMISS);
         }
       }
-      const tmp19 = closure_6(tmp(7095).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
+      const tmp19 = closure_6(tmp(7098).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 });
       cResult[14] = tmp19;
       const tmp18 = tmp19;
     } else {
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
         }
       }
       const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp4.body, children: tmp23 };
-      const tmp26 = closure_6(tmp(5086).Text, obj5);
+      const tmp26 = closure_6(tmp(5087).Text, obj5);
       cResult[18] = tmp4.body;
       cResult[19] = tmp26;
     } else {
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
               return tmp14(ContentDismissActionType.USER_DISMISS);
             }
       };
-      const tmp30 = closure_6(tmp(5375).Button, obj7);
+      const tmp30 = closure_6(tmp(5376).Button, obj7);
       cResult[21] = tmp14;
       cResult[22] = tmp30;
     } else {
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
     const obj8 = { spacing: tmp5(587).space.PX_16, children: null };
     const items2 = [tmp20, tmp25, tmp29];
     obj8.children = items2;
-    const tmp33 = closure_7(tmp(5373).Stack, obj8);
+    const tmp33 = closure_7(tmp(5374).Stack, obj8);
     cResult[23] = tmp20;
     cResult[24] = tmp25;
     cResult[25] = tmp29;
@@ -296,20 +296,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCard
   const items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj2.style = items2;
   const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
-  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(7095).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
+  const items3 = [closure_6(View, { style: tmp.illustration, children: closure_6(markAsDismissed(7098).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj5 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1126).intl;
   obj5.children = intl.string(_modDef2271.V3DI1E);
-  items3[1] = closure_6(markAsDismissed(5086).Text, obj5);
+  items3[1] = closure_6(markAsDismissed(5087).Text, obj5);
   const obj6 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
   const intl2 = markAsDismissed(1126).intl;
   obj6.text = intl2.string(_modDef2271.YZePWx);
   obj6.onPress = function onPress() {
     return closure_3(ContentDismissActionType.USER_DISMISS);
   };
-  items3[2] = closure_6(markAsDismissed(5375).Button, obj6);
+  items3[2] = closure_6(markAsDismissed(5376).Button, obj6);
   obj3.children = items3;
-  obj2.children = closure_7(markAsDismissed(5373).Stack, obj3);
+  obj2.children = closure_7(markAsDismissed(5374).Stack, obj3);
   obj.children = closure_6(View, obj2);
-  return closure_6(markAsDismissed(6829).BottomSheet, obj);
+  return closure_6(markAsDismissed(6836).BottomSheet, obj);
 });

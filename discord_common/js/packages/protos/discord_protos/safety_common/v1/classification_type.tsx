@@ -1,6 +1,6 @@
-// === Module 1399: classification_type ===
+// === Module 1400: classification_type ===
 
-// Module 1399 (classification_type)
+// Module 1400 (classification_type)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/safety_common/v1/classification_type.tsx");

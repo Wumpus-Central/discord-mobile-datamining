@@ -1,19 +1,19 @@
-// === Module 18211: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 18373: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 18211 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 18373 (GuildSettingsRoleSubscriptionWelcomeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5054 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import NavigatorConstants from "NavigatorConstants" /* 6261 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11938 */;
-import WarningNoticeDefault from "WarningNotice" /* 18213 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 18216 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 18224 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18228 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18237 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import NavigatorConstants from "NavigatorConstants" /* 6263 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11875 */;
+import WarningNoticeDefault from "WarningNotice" /* 18375 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 18378 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 18386 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 18390 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 18399 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(18216, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(18378, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -100,7 +100,7 @@ function StartEarningButton(isTermsAccepted) {
     const obj9 = { loading, text: null, icon: null, pillStyle: null, onPress: null };
     const intl = tmp5(tmp3[12]).intl;
     obj9.text = intl.string(tmp5(tmp3[12]).t.NL5ZNS);
-    const obj10 = { source: require("module_5008"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20 };
+    const obj10 = { source: require("module_5009"), color: require("native").unsafe_rawColors.WHITE, size: tmp5(tmp3[23]).Icon.Sizes.SMALL_20 };
     obj9.icon = closure_11(tmp5(tmp3[23]).Icon, obj10);
     obj9.pillStyle = { backgroundColor: "#EB5D30" };
     obj9.onPress = callback1;
@@ -113,12 +113,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(15300).CREATOR_REVENUE_PORTAL_URL;
+const creatorPortalUrl = fn(15413).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const constants = fn(18212).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(18374).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { resizeMode: "cover", width: "100%" }, subtitle: { marginTop: 8 }, tos: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, marginTop: 10 }, startEarningButton: { marginTop: 12 }, startEarningButtonContainer: { marginTop: 14 }, startEarningFabContainer: { marginHorizontal: 24 }, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
 let size = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.divider = size;

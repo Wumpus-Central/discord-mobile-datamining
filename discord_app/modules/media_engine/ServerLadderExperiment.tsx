@@ -1,7 +1,7 @@
-// === Module 5237: ServerLadderExperiment ===
+// === Module 5238: ServerLadderExperiment ===
 
-// Module 5237 (ServerLadderExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 5238 (ServerLadderExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-server-ladder", kind: "user", defaultConfig: { bitrate: 9000000, enabled: false }, variations: null };

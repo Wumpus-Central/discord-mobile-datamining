@@ -1,22 +1,22 @@
-// === Module 7876: Tracking ===
+// === Module 7885: Tracking ===
 
-// Module 7876 (Tracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import TrackingUtils from "TrackingUtils" /* 7878 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7884 */;
-import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 7885 */;
-import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7889 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import DraftStore from "DraftStore" /* 7232 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6965 */;
-import ForumSearchStore from "ForumSearchStore" /* 7877 */;
+// Module 7885 (Tracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import TrackingUtils from "TrackingUtils" /* 7887 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7893 */;
+import getChannelOpenedMetadata from "getChannelOpenedMetadata" /* 7894 */;
+import trackChannelOpenedClickstreamDefault from "trackChannelOpenedClickstream" /* 7898 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import DraftStore from "DraftStore" /* 7237 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6972 */;
+import ForumSearchStore from "ForumSearchStore" /* 7886 */;
 
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7232).DraftType;
+const DraftType = fn(7237).DraftType;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);

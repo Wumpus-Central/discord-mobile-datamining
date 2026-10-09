@@ -1,9 +1,10 @@
-// === Module 16896: FramePoolManager ===
+// === Module 17024: FramePoolManager ===
 
-// Module 16896 (FramePoolManager)
-import getFramesManagerDefault from "getFramesManager" /* 11149 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 16897 */;
+// Module 17024 (FramePoolManager)
+import leaveFrame from "leaveFrame" /* 10811 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 17025 */;
 
+require = fn;
 class FramePoolManager extends tmp4 {
   constructor() {
     tmp1 = new tmp({ maxBackgrounded: 1, timeoutMs: 90000 }, new.target, tmp);
@@ -29,9 +30,9 @@ prototype["unplace"] = function unplace() {
 
 };
 prototype["destroyFrame"] = function destroyFrame(id) {
-  getFramesManagerDefault().leaveFrame(id);
+  leaveFrame.leaveFrame(id);
 };
-const tmp5 = new "destroyFrame"({ maxBackgrounded: 1, timeoutMs: 90000 }, tmp2, tmp, Object, prototype, FramePoolManager);
+const tmp5 = new "destroyFrame"({ maxBackgrounded: 1, timeoutMs: 90000 }, tmp2, tmp, prototype, FramePoolManager, "destroyFrame", new.target);
 tmp5.poolNodeTag = 0;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePoolManager.tsx");

@@ -1,9 +1,9 @@
-// === Module 16197: WumpTrash ===
+// === Module 16313: WumpTrash ===
 
-// Module 16197 (WumpTrash)
+// Module 16313 (WumpTrash)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4929 */;
-import _mod8335 from "module_8335" /* 8335 */;
+import shared from "shared" /* 4930 */;
+import _mod8343 from "module_8343" /* 8343 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,41 +16,41 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWumpTrash
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_16198");
+          return require("module_16314");
         },
       darker() {
-          return require("module_16199");
+          return require("module_16315");
         }
     };
-    const illustrationSource = _mod8335.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8343.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8335;
+    const tmpResult = _mod8343;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useWumpTrashSource() {
   const obj = shared;
-  return _mod8335.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8343.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_16198");
+      return require("module_16314");
     },
     darker() {
-      return require("module_16199");
+      return require("module_16315");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getWumpTrashSource(theme) {
-  return _mod8335.getIllustrationSource(theme, {
+  return _mod8343.getIllustrationSource(theme, {
     dark() {
-      return require("module_16198");
+      return require("module_16314");
     },
     darker() {
-      return require("module_16199");
+      return require("module_16315");
     }
   });
 }

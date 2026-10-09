@@ -1,20 +1,21 @@
-// === Module 7243: NewChannelsStore ===
+// === Module 7248: NewChannelsStore ===
 
-// Module 7243 (NewChannelsStore)
+// Module 7248 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6068 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6789 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import NSFWContentGate from "NSFWContentGate" /* 5950 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6070 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6796 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
 import GuildMemberStore from "GuildMemberStore" /* 2124 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import ReadStateStore from "ReadStateStore" /* 6040 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5971 */;
+import ReadStateStore from "ReadStateStore" /* 6042 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5973 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
@@ -127,7 +128,7 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();
@@ -160,7 +161,16 @@ prototype["getNewChannelIds"] = function getNewChannelIds(id) {
   } else {
     tmp5 = set;
   }
-  return tmp5;
+  if (obj.currentUserCanSeeNSFW()) {
+    return tmp5;
+  } else {
+    const items = [];
+    HermesBuiltin.arraySpread(tmp5, 0);
+    const _Set = Set;
+    set = new Set(items.filter((item) => NSFWContentGate.isNSFWActivityVisible(channel.getChannel(item))));
+    return set;
+  }
+  obj = NSFWContentGate;
 };
 prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_id, id) {
   if (null == guild_id) {
@@ -185,10 +195,15 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
       if (dependencyMap[guild_id] != null) {
         hasItem = obj.has(id);
       }
-      if (hasItem) {
-        hasItem = null == ReadStateStore.getTrackedAckMessageId(id);
+      let tmp11 = hasItem;
+      if (tmp11) {
+        let result = NSFWContentGate.isNSFWActivityVisible(ChannelStore.getChannel(id));
+        if (result) {
+          result = null == ReadStateStore.getTrackedAckMessageId(id);
+        }
+        tmp11 = result;
       }
-      tmp3 = hasItem;
+      tmp3 = tmp11;
     }
     return tmp3;
   }
@@ -208,6 +223,9 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
     }
   },
   CHANNEL_ACK() {
+    return true;
+  },
+  CURRENT_USER_UPDATE() {
     return true;
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
@@ -322,6 +340,6 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
   }
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
+let result = size.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
 
 export default newChannelsStore;

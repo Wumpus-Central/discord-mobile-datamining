@@ -1,9 +1,9 @@
-// === Module 11632: joinOrStartActivityInChannel ===
+// === Module 11565: joinOrStartActivityInChannel ===
 
-// Module 11632 (joinOrStartActivityInChannel)
+// Module 11565 (joinOrStartActivityInChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2062 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = fn;
@@ -48,7 +48,7 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           closure_130_10 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -89,7 +89,7 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
             compositeInstanceId = closure_130_9[0].compositeInstanceId;
           }
           closure_130_10 = compositeInstanceId;
-          const obj6 = { channelId: closure_130_1, applicationId: closure_130_0, isStart: null == closure_130_10, embeddedActivitiesManager: closure_131_1(closure_131_2[6])(), analyticsLocations: closure_130_2, customId: closure_130_3, referrerId: closure_130_4 };
+          const obj6 = { channelId: closure_130_1, applicationId: closure_130_0, isStart: null == closure_130_10, analyticsLocations: closure_130_2, customId: closure_130_3, referrerId: closure_130_4 };
           c4 = 2;
           c5 = 1;
           const obj7 = { value: closure_131_0(closure_131_2[5]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj6), done: false };
@@ -107,9 +107,9 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp43) {
+    } catch (tmp41) {
       c5 = tmp;
-      throw tmp43;
+      throw tmp41;
     }
   }
 };

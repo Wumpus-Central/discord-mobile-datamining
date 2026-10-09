@@ -1,15 +1,15 @@
-// === Module 17010: ConjureTodoList ===
+// === Module 17166: ConjureTodoList ===
 
-// Module 17010 (ConjureTodoList)
+// Module 17166 (ConjureTodoList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import FormCheckbox from "FormCheckbox" /* 6182 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 16933 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 16993 */;
-import ConjureTodoState from "ConjureTodoState" /* 17011 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import FormCheckbox from "FormCheckbox" /* 6184 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 17063 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 17147 */;
+import ConjureTodoState from "ConjureTodoState" /* 17167 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -77,7 +77,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
                     obj2.accessibilityLabel = intl.formatToPlainString(items1(3827).SPGdDc, obj3);
                     const _HermesInternal = HermesInternal;
                     obj2.children = "+" + tmp6;
-                    tmp18 = closure_6(tmp(5086).Text, obj2);
+                    tmp18 = closure_6(tmp(5087).Text, obj2);
                   }
                   cResult[12] = tmp6;
                   cResult[13] = tmp18;
@@ -179,7 +179,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
       obj3.accessibilityLabel = intl.formatToPlainString(items(3827).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5086).Text, obj3);
+      tmp9 = closure_6(tmp2(5087).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -356,7 +356,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
     stringResult1 = intl6.string(_modDef3827.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6182).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6184).FormCheckbox, { checked: "completed" === status }) };
 });
 ReactCompilerGating = fn(558);
 const obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
@@ -542,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp31;
                                 obj2.hideLabel = tmp32;
                                 obj2.children = tmp49;
-                                const tmp56 = closure_6(textCompleted(16949), obj2);
+                                const tmp56 = closure_6(textCompleted(17081), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -660,7 +660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                             }
                             tmp48[2] = tmp7.text;
                             tmp48[3] = provisional;
-                            items1[1] = closure_6(tmp(5086).Text, tmp48);
+                            items1[1] = closure_6(tmp(5087).Text, tmp48);
                             obj4.children = items1;
                             tmp43 = closure_7(closure_5, obj4);
                           }
@@ -836,7 +836,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp29 = closure_6(tmp(16949).ConjureNativeCollapsibleMeta, obj5);
+        const tmp29 = closure_6(tmp(17081).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -860,11 +860,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp14) {
-    const groupAgentsByTodoResult = tmp(16993).groupAgentsByTodo(tmp14);
+    const groupAgentsByTodoResult = tmp(17147).groupAgentsByTodo(tmp14);
     cResult[10] = tmp14;
     cResult[11] = groupAgentsByTodoResult;
     let tmp16 = groupAgentsByTodoResult;
-    const tmpResult = tmp(16993);
+    const tmpResult = tmp(17147);
   } else {
     tmp16 = cResult[11];
   }
@@ -985,7 +985,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj.meta = closure_6(agents(16949).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj.meta = closure_6(agents(17081).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj.showHeader = todos.length > 0;
   obj.superseded = flag3;
   obj.expanded = flag4;
@@ -1032,7 +1032,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       let obj3 = { style: tmp.row, children: null };
       let items2 = [closure_6(closure_10, { status: "pending" }), ];
       let obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5086).Text, obj4);
+      items2[1] = closure_6(agents(5087).Text, obj4);
       obj3.children = items2;
       tmp10Result = closure_7(closure_5, obj3);
     }
@@ -1040,6 +1040,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp10Result;
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(flag2(16949), obj);
+  return closure_6(flag2(17081), obj);
 });
 export { todoProgress };

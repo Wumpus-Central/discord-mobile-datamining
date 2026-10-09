@@ -1,19 +1,19 @@
-// === Module 13253: UserProfileRemediatedNotice ===
+// === Module 13346: UserProfileRemediatedNotice ===
 
-// Module 13253 (UserProfileRemediatedNotice)
+// Module 13346 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7004 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8343 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7011 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8351 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
 
 require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
           const obj2 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
           const intl = tmp(1126).intl;
           obj2.children = intl.string(tmp(1126).t["oC/fU6"]);
-          tmp14 = closure_6(tmp(5086).Text, obj2);
+          tmp14 = closure_6(tmp(5087).Text, obj2);
         }
         cResult[7] = isBlocked;
         cResult[8] = tmp14;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
         const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
         const intl2 = tmp(1126).intl;
         obj5.children = intl2.string(tmp(1126).t.HXz5An);
-        const items2 = [closure_6(tmp(5086).Text, obj5), closure_6(tmp(5086).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+        const items2 = [closure_6(tmp(5087).Text, obj5), closure_6(tmp(5087).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
         const intl3 = tmp(1126).intl;
         const obj6 = {
           unignoreHook(children) {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
       const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl = tmp4(1126).intl;
       obj3.children = intl.string(tmp4(1126).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(5086).Text, obj3);
+      isBlocked = closure_6(tmp4(5087).Text, obj3);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
       const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl2 = tmp4(1126).intl;
       obj5.children = intl2.string(tmp4(1126).t.HXz5An);
-      const items3 = [closure_6(tmp4(5086).Text, obj5), closure_6(tmp4(5086).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      const items3 = [closure_6(tmp4(5087).Text, obj5), closure_6(tmp4(5087).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
       const intl3 = tmp4(1126).intl;
       const obj6 = {
         unignoreHook(children) {

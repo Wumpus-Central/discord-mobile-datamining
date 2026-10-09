@@ -1,13 +1,13 @@
-// === Module 14260: Badge/Badge ===
+// === Module 14356: Badge/Badge ===
 
-// Module 14260 (Badge/Badge)
+// Module 14356 (Badge/Badge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NumberUtils from "NumberUtils" /* 1900 */;
-import shared from "shared" /* 4929 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8572 */;
+import NumberUtils from "NumberUtils" /* 1901 */;
+import shared from "shared" /* 4930 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8580 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2128 */;
 
@@ -17,15 +17,15 @@ const BadgeConstants = fn(1202);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 }, badge: { paddingLeft: BADGE_PADDING, paddingRight: BADGE_PADDING, borderRadius: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center", overflow: "hidden" }, badgeText: null, experimentalBadgeText: null, noCount: null, unread: null, mention: null, lowImportanceMention: null, eventsMentionBadge: null };
 let obj4 = { minWidth: BADGE_SIZE - 2 * BADGE_PADDING, color: nativeDefault.colors.WHITE, fontSize: 12, lineHeight: null, fontFamily: null, textAlign: "center", textAlignVertical: null };
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1382);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
 obj4.fontFamily = fn(1085).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1382);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

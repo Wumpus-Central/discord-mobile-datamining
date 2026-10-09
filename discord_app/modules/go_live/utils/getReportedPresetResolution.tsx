@@ -1,10 +1,10 @@
-// === Module 5271: getReportedPresetResolution ===
+// === Module 5272: getReportedPresetResolution ===
 
-// Module 5271 (getReportedPresetResolution)
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5235 */;
-import UserStore from "UserStore" /* 1389 */;
+// Module 5272 (getReportedPresetResolution)
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5236 */;
+import UserStore from "UserStore" /* 1390 */;
 
-const StreamSettingsConstants = fn(5210);
+const StreamSettingsConstants = fn(5211);
 ({ ApplicationStreamFPS: c3, ApplicationStreamResolutions: closure_4 } = StreamSettingsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getReportedPresetResolution.tsx");

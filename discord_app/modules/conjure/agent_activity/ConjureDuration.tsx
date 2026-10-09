@@ -1,6 +1,6 @@
-// === Module 16966: ConjureDuration ===
+// === Module 17098: ConjureDuration ===
 
-// Module 16966 (ConjureDuration)
+// Module 17098 (ConjureDuration)
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
 import size from "module_2" /* 2 */;

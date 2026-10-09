@@ -1,22 +1,22 @@
-// === Module 5755: SelfPresenceStore ===
+// === Module 5756: SelfPresenceStore ===
 
-// Module 5755 (SelfPresenceStore)
+// Module 5756 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef1354 from "module_1354" /* 1354 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import UserSettings from "UserSettings" /* 2040 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7103 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10238 */;
-import SpotifyStore from "SpotifyStore" /* 5756 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import DetectableGameStore from "DetectableGameStore" /* 2036 */;
-import IdleStore from "IdleStore" /* 5884 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7101 */;
-import LocalActivityStore from "LocalActivityStore" /* 11248 */;
-import PresenceStore from "PresenceStore" /* 5106 */;
-import SessionsStore from "SessionsStore" /* 5110 */;
+import _modDef1355 from "module_1355" /* 1355 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
+import UserSettings from "UserSettings" /* 2041 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7108 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10223 */;
+import SpotifyStore from "SpotifyStore" /* 5757 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import DetectableGameStore from "DetectableGameStore" /* 2037 */;
+import IdleStore from "IdleStore" /* 5885 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7106 */;
+import LocalActivityStore from "LocalActivityStore" /* 10613 */;
+import PresenceStore from "PresenceStore" /* 5107 */;
+import SessionsStore from "SessionsStore" /* 5111 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -132,7 +132,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1354(found, found)) {
+    if (!_modDef1355(found, found)) {
       closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -160,7 +160,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5106).sortActivity;
+const sortActivity = fn(5107).sortActivity;
 const Constants = fn(1085);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityFlags: map1, ActivityTypes: closure_14, AppStates: closure_15 } = Constants);

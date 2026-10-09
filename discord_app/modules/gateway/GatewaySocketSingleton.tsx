@@ -1,18 +1,18 @@
-// === Module 13758: GatewaySocketSingleton ===
+// === Module 13852: GatewaySocketSingleton ===
 
-// Module 13758 (GatewaySocketSingleton)
+// Module 13852 (GatewaySocketSingleton)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DiscordNativeDefault from "DiscordNative" /* 4688 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6076 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9655 */;
-import GatewaySocketDefault from "GatewaySocket" /* 13760 */;
-import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13797 */;
-import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13800 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13759 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import DiscordNativeDefault from "DiscordNative" /* 4690 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6078 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 9674 */;
+import GatewaySocketDefault from "GatewaySocket" /* 13854 */;
+import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13891 */;
+import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13894 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13853 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkUtils_mod from "NetworkUtils" /* 1480 */;
+import NetworkUtils_mod from "NetworkUtils" /* 1481 */;
 
 let closure_5 = new LoggerDefault("ConnectionStore");
 const socket = new GatewaySocketDefault();
@@ -52,7 +52,7 @@ socket.handleIdentify = () => {
   }
   const obj2 = { hasToken: null != token };
 };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {

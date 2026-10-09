@@ -1,39 +1,39 @@
-// === Module 12490: GuildInvite ===
+// === Module 12427: GuildInvite ===
 
-// Module 12490 (GuildInvite)
+// Module 12427 (GuildInvite)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5105 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5369 */;
-import TableRow from "TableRow" /* 6184 */;
-import NavigatorHeader from "NavigatorHeader" /* 6203 */;
-import GroupIcon from "GroupIcon" /* 8192 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8658 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8691 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 8737 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12468 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5370 */;
+import TableRow from "TableRow" /* 6186 */;
+import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import GroupIcon from "GroupIcon" /* 8200 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8667 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8700 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 8746 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12387 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8659 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8673 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8668 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8682 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire, FlatList: closure_7, StyleSheet } = get_ActivityIndicator);
-let channel = fn(8738).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(6653).CreateGuildModalStates;
+({ View: hasOwnProperty, FlatList: metroRequire, StyleSheet } = get_ActivityIndicator);
+let closure_7 = fn(8747).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(6660).CreateGuildModalStates;
 const Constants = fn(1085);
-({ AnalyticEvents: closure_14, AnalyticsSections: closure_15, InstantInviteSources: closure_16, Permissions: closure_17, SearchTypes: closure_18 } = Constants);
+({ AnalyticEvents: map1, AnalyticsSections: closure_14, InstantInviteSources: closure_15, Permissions: closure_16, SearchTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5090);
-let obj2 = { container: { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerImage: { marginVertical: 16 }, linkContainer: { paddingHorizontal: 16, width: "100%" }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
-let obj3 = { marginTop: fn(6261).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
+const createStyles = fn(5091);
+let obj2 = { container: { marginTop: fn(6263).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerImage: { marginVertical: 16 }, linkContainer: { paddingHorizontal: 16, width: "100%" }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
+let obj3 = { marginTop: fn(6263).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
 obj2.linkButton = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 let obj4 = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 obj2.linkButtonIcon = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -45,14 +45,14 @@ obj2.friendIcon = size;
 obj2.suggestionRowsContainer = { marginHorizontal: 12 };
 let obj5 = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.separator = { height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginStart: nativeDefault.modules.mobile.TABLE_ROW_DIVIDER_PADDING };
-let closure_21 = createStyles.createStyles(obj2);
+let closure_20 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function SeeMoreFooter(openInviteSheet) {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function SeeMoreFooter(openInviteSheet) {
   const cResult = c.c(7);
   openInviteSheet = openInviteSheet.openInviteSheet;
-  const tmp4 = closure_21();
+  const tmp4 = closure_20();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = closure_1_19(GroupIcon.GroupIcon, { size: "sm" });
+    const tmp7 = collapsedCategories(GroupIcon.GroupIcon, { size: "sm" });
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -60,7 +60,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function SeeMor
   }
   if (cResult[1] !== tmp4.friendIcon) {
     const obj2 = { style: tmp4.friendIcon, children: first };
-    const tmp11 = closure_1_19(timestampProducer, obj2);
+    const tmp11 = collapsedCategories(hasOwnProperty, obj2);
     cResult[1] = tmp4.friendIcon;
     cResult[2] = tmp11;
     let tmp8 = tmp11;
@@ -81,26 +81,26 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function SeeMor
     }
     return tmp14;
   }
-  const tmp15 = closure_1_19(TableRow.TableRow, { icon: tmp8, onPress: openInviteSheet, label: tmp12, end: true });
+  const tmp15 = collapsedCategories(TableRow.TableRow, { icon: tmp8, onPress: openInviteSheet, label: tmp12, end: true });
   cResult[4] = openInviteSheet;
   cResult[5] = tmp8;
   cResult[6] = tmp15;
   tmp14 = tmp15;
 }) : (function SeeMoreFooter(openInviteSheet) {
   const obj = { icon: null, onPress: null, label: null, end: true };
-  const tmp = closure_21();
-  obj.icon = closure_1_19(timestampProducer, { style: closure_21().friendIcon, children: closure_1_19(GroupIcon.GroupIcon, { size: "sm" }) });
+  const tmp = closure_20();
+  obj.icon = collapsedCategories(hasOwnProperty, { style: closure_20().friendIcon, children: collapsedCategories(GroupIcon.GroupIcon, { size: "sm" }) });
   obj.onPress = openInviteSheet.openInviteSheet;
   const intl = util.intl;
   obj.label = intl.string(util.t.zrLIIz);
-  return closure_1_19(TableRow.TableRow, obj);
+  return collapsedCategories(TableRow.TableRow, obj);
 });
 ReactCompilerGating = fn(558);
-let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInviteSuggestionRows(invite) {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInviteSuggestionRows(invite) {
   const cResult = invite(576).c(19);
   invite = invite.invite;
   ({ suggestions, openInviteSheet } = invite);
-  const tmp2 = closure_21();
+  const tmp2 = closure_20();
   const separator = tmp2;
   if (cResult[0] !== suggestions) {
     const substr = suggestions.slice(0, 6);
@@ -116,7 +116,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
     if (cResult[2] !== invite.code) {
       function renderSuggestionRow(arg0) {
         ({ item, index } = arg0);
-        return closure_2_19(InstantInviteRowDefault, { row: item, code: invite.code, start: 0 === index });
+        return collapsedCategories(InstantInviteRowDefault, { row: item, code: invite.code, start: 0 === index });
       }
       cResult[2] = invite.code;
       cResult[3] = renderSuggestionRow;
@@ -130,7 +130,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
       }
       if (cResult[7] !== tmp2.separator) {
         const fn = function f() {
-          return closure_2_19(timestampProducer, { style: separator.separator });
+          return collapsedCategories(hasOwnProperty, { style: separator.separator });
         };
         cResult[7] = tmp2.separator;
         cResult[8] = fn;
@@ -161,7 +161,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
         }
       }
       const obj2 = { data: tmp3, renderItem: tmp5, contentContainerStyle: tmp2.suggestionRowsContainer, ListFooterComponent: tmp6, ItemSeparatorComponent: tmp9, keyExtractor: E };
-      const tmp15 = closure_19(closure_7, obj2);
+      const tmp15 = closure_18(closure_6, obj2);
       cResult[10] = tmp3;
       cResult[11] = tmp5;
       cResult[12] = tmp2.suggestionRowsContainer;
@@ -177,7 +177,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
         }
       }
       const obj3 = { openInviteSheet };
-      tmp7 = closure_19(closure_22, obj3);
+      tmp7 = closure_18(closure_21, obj3);
     }
     cResult[4] = openInviteSheet;
     cResult[5] = suggestions.length;
@@ -187,7 +187,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
   const obj = invite(576);
 }) : (function GuildInviteSuggestionRows(openInviteSheet) {
   ({ invite: require, suggestions } = openInviteSheet);
-  const tmp = closure_21();
+  const tmp = closure_20();
   const separator = tmp;
   [][0] = suggestions;
   let tmp6Result2 = null;
@@ -197,7 +197,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
       data: tmp2,
       renderItem: function renderSuggestionRow(arg0) {
           ({ item, index } = arg0);
-          return closure_2_19(InstantInviteRowDefault, { row: item, code: code.code, start: 0 === index });
+          return collapsedCategories(InstantInviteRowDefault, { row: item, code: code.code, start: 0 === index });
         },
       contentContainerStyle: tmp.suggestionRowsContainer,
       ListFooterComponent: null,
@@ -207,17 +207,17 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
     let tmp6Result = null;
     if (suggestions.length > 6) {
       const obj = { openInviteSheet: openInviteSheet.openInviteSheet };
-      tmp6Result = closure_19(closure_22, obj);
+      tmp6Result = closure_18(closure_21, obj);
     }
     obj3.ListFooterComponent = tmp6Result;
     obj3.ItemSeparatorComponent = function ItemSeparatorComponent() {
-      return closure_2_19(timestampProducer, { style: separator.separator });
+      return collapsedCategories(hasOwnProperty, { style: separator.separator });
     };
     obj3.keyExtractor = function keyExtractor(item) {
       return item.item.id;
     };
-    obj2.children = closure_19(closure_7, obj3);
-    tmp6Result2 = closure_19(closure_6, obj2);
+    obj2.children = closure_18(closure_6, obj3);
+    tmp6Result2 = closure_18(closure_5, obj2);
   }
   return tmp6Result2;
 });
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   const cResult = onClose(navigation[16]).c(88);
   ({ closeOnEditInviteLink, onClose } = arg0);
   importDefault = undefined === closeOnEditInviteLink || closeOnEditInviteLink;
-  closure_21();
+  closure_20();
   let obj = onClose(navigation[16]);
   navigation = onClose(navigation[21]).useNavigation();
   const tmpResult = onClose(navigation[21]);
@@ -241,8 +241,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   closure_6 = tmp9[1];
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [CreateInviteModalStore];
-    const fn = function u() {
-      return CreateInviteModalStore.getInvite();
+    const fn = function c() {
+      return closure_9.getInvite();
     };
     cResult[0] = items;
     cResult[1] = fn;
@@ -255,43 +255,43 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   const tmpResult4 = onClose(navigation[22]);
   const stateFromStores = onClose(navigation[23]).useStateFromStores(tmp11, tmp12);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const items1 = [CreateInviteModalStore, ChannelStore, GuildChannelStore];
-    class P {
+    const items1 = [CreateInviteModalStore, stateFromStores1, GuildChannelStore];
+    class V {
       constructor() {
-        obj = closure_10;
-        inviteSettings = closure_10.getInviteSettings();
+        obj = closure_9;
+        inviteSettings = closure_9.getInviteSettings();
         channelId = undefined;
         if (inviteSettings != null) {
           channelId = inviteSettings.channelId;
         }
         if (null != channelId) {
-          tmp7 = closure_9;
-          return closure_9.getChannel(channelId);
+          tmp7 = closure_8;
+          return closure_8.getChannel(channelId);
         } else {
           guildId = obj.getGuildId();
           defaultChannel = null;
           if (null != guildId) {
-            tmp5 = closure_1_11;
-            tmp6 = closure_1_17;
+            tmp5 = closure_10;
+            tmp6 = closure_1_16;
             flag = true;
-            defaultChannel = closure_1_11.getDefaultChannel(guildId, true, closure_1_17.CREATE_INSTANT_INVITE);
+            defaultChannel = closure_10.getDefaultChannel(guildId, true, closure_1_16.CREATE_INSTANT_INVITE);
           }
           return defaultChannel;
         }
       }
     }
     cResult[2] = items1;
-    cResult[3] = P;
-    let tmp16 = P;
+    cResult[3] = V;
+    let tmp16 = V;
     let tmp15 = items1;
   } else {
     tmp15 = cResult[2];
     tmp16 = cResult[3];
   }
   const tmpResult5 = onClose(navigation[23]);
-  const stateFromStores1 = onClose(navigation[23]).useStateFromStores(tmp15, tmp16);
+  stateFromStores1 = onClose(navigation[23]).useStateFromStores(tmp15, tmp16);
   if (cResult[4] !== isScreenReaderEnabled) {
-    class W {
+    class M {
       constructor() {
         tmp = closure_3;
         if (closure_3) {
@@ -312,9 +312,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       }
     }
     cResult[4] = isScreenReaderEnabled;
-    cResult[5] = W;
+    cResult[5] = M;
   } else {
-    class W {
+    class M {
       constructor() {
         tmp = closure_3;
         if (closure_3) {
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
     }
   }
   if (cResult[6] === stateFromStores) {
-    class W {
+    class M {
       constructor() {
         tmp = closure_3;
         if (closure_3) {
@@ -356,104 +356,170 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
         return;
       }
     }
-    const effect = obj4.useEffect(W, items4);
+    const effect = obj4.useEffect(M, items4);
     const _Symbol = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-      class H {
+      class M {
         constructor() {
-          return closure_1_12.getInviteSuggestionRows();
+          tmp = closure_3;
+          if (closure_3) {
+            tmp2 = closure_4;
+            tmp3 = null;
+            tmp = null != closure_4.current;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = closure_0(closure_2[24]);
+            obj1 = { ref: null, delay: 100 };
+            tmp6 = closure_4;
+            obj1.ref = closure_4;
+            result = obj.setAccessibilityFocus(obj1);
+          }
+          return;
         }
       }
-      cResult[9] = H;
+      cResult[9] = tmp24;
     } else {
-      class H {
+      class M {
         constructor() {
-          return closure_1_12.getInviteSuggestionRows();
+          tmp = closure_3;
+          if (closure_3) {
+            tmp2 = closure_4;
+            tmp3 = null;
+            tmp = null != closure_4.current;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = closure_0(closure_2[24]);
+            obj1 = { ref: null, delay: 100 };
+            tmp6 = closure_4;
+            obj1.ref = closure_4;
+            result = obj.setAccessibilityFocus(obj1);
+          }
+          return;
         }
       }
     }
-    const first1 = tmp8(obj4.useState(H), 1)[0];
-    class P {
+    const first1 = tmp8(obj4.useState(tmp24), 1)[0];
+    class V {
       constructor() {
-        obj = closure_10;
-        inviteSettings = closure_10.getInviteSettings();
+        obj = closure_9;
+        inviteSettings = closure_9.getInviteSettings();
         channelId = undefined;
         if (inviteSettings != null) {
           channelId = inviteSettings.channelId;
         }
         if (null != channelId) {
-          tmp7 = closure_9;
-          return closure_9.getChannel(channelId);
+          tmp7 = closure_8;
+          return closure_8.getChannel(channelId);
         } else {
           guildId = obj.getGuildId();
           defaultChannel = null;
           if (null != guildId) {
-            tmp5 = closure_1_11;
-            tmp6 = closure_1_17;
+            tmp5 = closure_10;
+            tmp6 = closure_1_16;
             flag = true;
-            defaultChannel = closure_1_11.getDefaultChannel(guildId, true, closure_1_17.CREATE_INSTANT_INVITE);
+            defaultChannel = closure_10.getDefaultChannel(guildId, true, closure_1_16.CREATE_INSTANT_INVITE);
           }
           return defaultChannel;
         }
       }
     }
-    const tmp25 = stateFromStores1();
-    ChannelStore = tmp25;
+    const tmp26 = stateFromStores();
+    CreateInviteModalStore = tmp26;
     if (cResult[10] !== stateFromStores1) {
-      class Y {
+      class M {
         constructor() {
-          obj = closure_0(closure_2[25]);
-          obj1 = { omitUserIds: null, channel: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.channel = closure_8;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
+          tmp = closure_3;
+          if (closure_3) {
+            tmp2 = closure_4;
+            tmp3 = null;
+            tmp = null != closure_4.current;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = closure_0(closure_2[24]);
+            obj1 = { ref: null, delay: 100 };
+            tmp6 = closure_4;
+            obj1.ref = closure_4;
+            result = obj.setAccessibilityFocus(obj1);
+          }
           return;
         }
       }
       cResult[10] = stateFromStores1;
-      cResult[11] = Y;
+      cResult[11] = tmp28;
     } else {
-      class Y {
+      class M {
         constructor() {
-          obj = closure_0(closure_2[25]);
-          obj1 = { omitUserIds: null, channel: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.channel = closure_8;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
+          tmp = closure_3;
+          if (closure_3) {
+            tmp2 = closure_4;
+            tmp3 = null;
+            tmp = null != closure_4.current;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = closure_0(closure_2[24]);
+            obj1 = { ref: null, delay: 100 };
+            tmp6 = closure_4;
+            obj1.ref = closure_4;
+            result = obj.setAccessibilityFocus(obj1);
+          }
           return;
         }
       }
     }
-    require("useMountEffect")(Y);
-    if (cResult[12] === tmp25) {
-      class Y {
+    require("useMountEffect")(tmp28);
+    if (cResult[12] === tmp26) {
+      class M {
         constructor() {
-          obj = closure_0(closure_2[25]);
-          obj1 = { omitUserIds: null, channel: null };
-          set = new Set();
-          obj1.omitUserIds = set;
-          obj1.channel = closure_8;
-          inviteSuggestions = obj.loadInviteSuggestions(obj1);
+          tmp = closure_3;
+          if (closure_3) {
+            tmp2 = closure_4;
+            tmp3 = null;
+            tmp = null != closure_4.current;
+          }
+          if (tmp) {
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj = closure_0(closure_2[24]);
+            obj1 = { ref: null, delay: 100 };
+            tmp6 = closure_4;
+            obj1.ref = closure_4;
+            result = obj.setAccessibilityFocus(obj1);
+          }
           return;
         }
       }
-      const effect1 = obj4.useEffect(K, tmp30);
+      const effect1 = obj4.useEffect(Y, tmp32);
       if (cResult[16] === first) {
-        class Y {
+        class M {
           constructor() {
-            obj = closure_0(closure_2[25]);
-            obj1 = { omitUserIds: null, channel: null };
-            set = new Set();
-            obj1.omitUserIds = set;
-            obj1.channel = closure_8;
-            inviteSuggestions = obj.loadInviteSuggestions(obj1);
+            tmp = closure_3;
+            if (closure_3) {
+              tmp2 = closure_4;
+              tmp3 = null;
+              tmp = null != closure_4.current;
+            }
+            if (tmp) {
+              tmp4 = closure_0;
+              tmp5 = closure_2;
+              obj = closure_0(closure_2[24]);
+              obj1 = { ref: null, delay: 100 };
+              tmp6 = closure_4;
+              obj1.ref = closure_4;
+              result = obj.setAccessibilityFocus(obj1);
+            }
             return;
           }
         }
       }
-      class X {
+      class Z {
         constructor() {
           tmp = closure_2;
           obj = closure_0(closure_2[27]);
@@ -482,25 +548,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
         }
       }
       const items2 = [navigation, onClose, ];
-      class P {
+      class V {
         constructor() {
-          obj = closure_10;
-          inviteSettings = closure_10.getInviteSettings();
+          obj = closure_9;
+          inviteSettings = closure_9.getInviteSettings();
           channelId = undefined;
           if (inviteSettings != null) {
             channelId = inviteSettings.channelId;
           }
           if (null != channelId) {
-            tmp7 = closure_9;
-            return closure_9.getChannel(channelId);
+            tmp7 = closure_8;
+            return closure_8.getChannel(channelId);
           } else {
             guildId = obj.getGuildId();
             defaultChannel = null;
             if (null != guildId) {
-              tmp5 = closure_1_11;
-              tmp6 = closure_1_17;
+              tmp5 = closure_10;
+              tmp6 = closure_1_16;
               flag = true;
-              defaultChannel = closure_1_11.getDefaultChannel(guildId, true, closure_1_17.CREATE_INSTANT_INVITE);
+              defaultChannel = closure_10.getDefaultChannel(guildId, true, closure_1_16.CREATE_INSTANT_INVITE);
             }
             return defaultChannel;
           }
@@ -509,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       cResult[16] = first;
       cResult[17] = navigation;
       cResult[18] = onClose;
-      class K {
+      class Y {
         constructor() {
           if (null != closure_7) {
             tmp2 = closure_9;
@@ -522,10 +588,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
           return;
         }
       }
-      cResult[19] = X;
+      cResult[19] = Z;
       cResult[20] = items2;
     }
-    class K {
+    class Y {
       constructor() {
         if (null != closure_7) {
           tmp2 = closure_9;
@@ -538,12 +604,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
         return;
       }
     }
-    const items3 = [tmp25, stateFromStores];
-    cResult[12] = tmp25;
+    const items3 = [tmp26, stateFromStores];
+    cResult[12] = tmp26;
     cResult[13] = stateFromStores;
-    cResult[14] = K;
+    cResult[14] = Y;
     cResult[15] = items3;
-    tmp30 = items3;
+    tmp32 = items3;
   }
   items4 = [isScreenReaderEnabled, stateFromStores];
   cResult[6] = stateFromStores;
@@ -558,9 +624,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   const onClose = closeOnEditInviteLink.onClose;
   let navigation;
   ref = undefined;
-  channel = undefined;
-  closure_10 = undefined;
-  let tmp = closure_21();
+  let stateFromStores1;
+  closure_9 = undefined;
+  let defaultChannel;
+  let tmp = closure_20();
   navigation = flag(navigation[21]).useNavigation();
   let obj = flag(navigation[21]);
   const isScreenReaderEnabled = flag(navigation[22]).useIsScreenReaderEnabled();
@@ -569,20 +636,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   const first = tmp7[0];
   closure_6 = tmp7[1];
   let obj2 = flag(navigation[22]);
-  const items = [closure_10];
-  const stateFromStores = flag(navigation[23]).useStateFromStores(items, () => closure_10.getInvite());
+  const items = [closure_9];
+  const stateFromStores = flag(navigation[23]).useStateFromStores(items, () => closure_9.getInvite());
   let obj4 = flag(navigation[23]);
-  const items1 = [closure_10, channel, GuildChannelStore];
-  const stateFromStores1 = flag(navigation[23]).useStateFromStores(items1, () => {
-    const inviteSettings = closure_10.getInviteSettings();
+  const items1 = [closure_9, stateFromStores1, defaultChannel];
+  stateFromStores1 = flag(navigation[23]).useStateFromStores(items1, () => {
+    const inviteSettings = closure_9.getInviteSettings();
     let channelId;
     if (inviteSettings != null) {
       channelId = inviteSettings.channelId;
     }
     if (null != channelId) {
-      return channel.getChannel(channelId);
+      return stateFromStores1.getChannel(channelId);
     } else {
-      const guildId = closure_10.getGuildId();
+      const guildId = closure_9.getGuildId();
       defaultChannel = null;
       if (null != guildId) {
         defaultChannel = defaultChannel.getDefaultChannel(guildId, true, constants4.CREATE_INSTANT_INVITE);
@@ -602,8 +669,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
     }
   }, items2);
   const first1 = isScreenReaderEnabled(ref.useState(() => inviteSuggestionRows.getInviteSuggestionRows()), 1)[0];
-  const tmp12 = stateFromStores1();
-  channel = tmp12;
+  const tmp12 = stateFromStores();
+  closure_9 = tmp12;
   onClose(navigation[26])(() => {
     const obj2 = { omitUserIds: null, channel: null };
     const obj = InviteSuggestionsActionCreators;
@@ -614,7 +681,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   const items3 = [tmp12, stateFromStores];
   const effect1 = ref.useEffect(() => {
     if (null != stateFromStores) {
-      if (null != channel[tmp.code]) {
+      if (null != closure_9[tmp.code]) {
         closure_6(true);
       }
     }
@@ -660,7 +727,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
     code = stateFromStores.code;
   }
   const tmp17Result = onClose(navigation[29])(code);
-  closure_10 = tmp17Result;
+  defaultChannel = tmp17Result;
   let tmp20 = null != first1;
   if (tmp20) {
     tmp20 = first1.length > 0;
@@ -696,21 +763,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       let tmp27 = tmp20;
       if (tmp20) {
         const obj6 = { invite: stateFromStores, suggestions: first1, openInviteSheet: tmp24 };
-        tmp27 = closure_19(closure_23, obj6);
+        tmp27 = closure_18(closure_22, obj6);
       }
       const rect = { top: true, left: true, right: true, style: tmp.container, children: null };
       const obj7 = { ref, style: tmp.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
       let intl = tmp2(tmp3[18]).intl;
       obj7.children = intl.string(tmp2(tmp3[18]).t.OZ1qhO);
-      const items8 = [closure_19(tmp2(tmp3[33]).Text, obj7), , , , ];
+      const items8 = [closure_18(tmp2(tmp3[33]).Text, obj7), , , , ];
       const obj8 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
       const intl2 = tmp2(tmp3[18]).intl;
       obj8.children = intl2.string(tmp2(tmp3[18]).t.eU2ZaK);
-      items8[1] = closure_19(tmp2(tmp3[33]).Text, obj8);
+      items8[1] = closure_18(tmp2(tmp3[33]).Text, obj8);
       let tmp29Result = !tmp20;
       if (!tmp20) {
-        const obj9 = { source: tmp13(tmp3[34]), resizeMode: "contain", style: tmp.headerImage };
-        tmp29Result = closure_19(first, obj9);
+        const obj9 = { source: tmp13(tmp3[35]), resizeMode: "contain", style: tmp.headerImage };
+        tmp29Result = closure_18(tmp13(tmp3[34]), obj9);
+        const tmp13Result = tmp13(tmp3[34]);
       }
       items8[2] = tmp29Result;
       const obj10 = { style: tmp.linkContainer, children: null };
@@ -722,11 +790,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
         closure_6(true);
       };
       const obj12 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: { flexShrink: 1 }, children: tmp17Result };
-      const items9 = [closure_19(tmp2(tmp3[33]).Text, obj12), ];
-      const obj13 = { source: tmp13(tmp3[36]), style: tmp.linkButtonIcon };
-      items9[1] = closure_19(tmp2(tmp3[35]).Icon, obj13);
+      const items9 = [closure_18(tmp2(tmp3[33]).Text, obj12), ];
+      const obj13 = { source: tmp13(tmp3[37]), style: tmp.linkButtonIcon };
+      items9[1] = closure_18(tmp2(tmp3[36]).Icon, obj13);
       obj11.children = items9;
-      const items10 = [closure_20(tmp2(tmp3[37]).PressableOpacity, obj11), , ];
+      const items10 = [closure_19(tmp2(tmp3[38]).PressableOpacity, obj11), , ];
       const obj14 = { style: tmp.inviteDetail, children: null };
       const obj15 = {
         channel: stateFromStores1,
@@ -739,20 +807,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
             },
         source: constants2.GUILD_CREATE
       };
-      obj14.children = closure_19(tmp13(tmp3[38]), obj15);
-      items10[1] = closure_19(closure_6, obj14);
+      obj14.children = closure_18(tmp13(tmp3[39]), obj15);
+      items10[1] = closure_18(first, obj14);
       const obj16 = { style: tmp.shareButton, children: null };
       const obj17 = { text: null, onPress: null };
       const intl4 = tmp2(tmp3[18]).intl;
       obj17.text = intl4.string(tmp2(tmp3[18]).t.Ej3B3Y);
       obj17.onPress = callback1;
-      obj16.children = closure_19(tmp2(tmp3[39]).Button, obj17);
-      items10[2] = closure_19(closure_6, obj16);
+      obj16.children = closure_18(tmp2(tmp3[40]).Button, obj17);
+      items10[2] = closure_18(first, obj16);
       obj10.children = items10;
-      items8[3] = closure_20(closure_6, obj10);
+      items8[3] = closure_19(first, obj10);
       items8[4] = tmp27;
       rect.children = items8;
-      return closure_20(tmp2(tmp3[40]).SafeAreaPaddingView, rect);
+      return closure_19(tmp2(tmp3[41]).SafeAreaPaddingView, rect);
     }
   }
   return null;

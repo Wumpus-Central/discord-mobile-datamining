@@ -1,7 +1,7 @@
-// === Module 10627: getPlatform ===
+// === Module 11670: getPlatform ===
 
-// Module 10627 (getPlatform)
-import Server from "Server" /* 1997 */;
+// Module 11670 (getPlatform)
+import Server from "Server" /* 1998 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");

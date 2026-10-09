@@ -1,30 +1,30 @@
-// === Module 6801: GuildOnboardingPrompts ===
+// === Module 6808: GuildOnboardingPrompts ===
 
-// Module 6801 (GuildOnboardingPrompts)
+// Module 6808 (GuildOnboardingPrompts)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import ColorUtils from "ColorUtils" /* 4927 */;
-import timing from "timing" /* 5091 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5105 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import FastImageDefault from "FastImage" /* 6164 */;
-import NavigatorHeader from "NavigatorHeader" /* 6203 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6783 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6784 */;
-import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 6802 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ColorUtils from "ColorUtils" /* 4928 */;
+import timing from "timing" /* 5092 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6790 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6791 */;
+import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 6809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6153 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6155 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2086 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6778 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6785 */;
 
 require = fn;
 function getBackgroundGradientColor() {
@@ -50,15 +50,15 @@ let closure_24 = async function _getBackgroundGradientColor() {
 };
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(6779).OnboardingPromptType;
-let closure_15 = fn(6775).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(6786).OnboardingPromptType;
+let closure_15 = fn(6782).GuildOnboardingModalStates;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5090);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6261).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6261).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5091);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6263).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6263).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.subtitle = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
 obj2.onboardingTitle = { textAlign: "center" };
 let obj4 = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };

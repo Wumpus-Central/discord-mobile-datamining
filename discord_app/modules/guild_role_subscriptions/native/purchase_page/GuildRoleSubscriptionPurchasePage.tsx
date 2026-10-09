@@ -1,18 +1,18 @@
-// === Module 16786: GuildRoleSubscriptionPurchasePage ===
+// === Module 16910: GuildRoleSubscriptionPurchasePage ===
 
-// Module 16786 (GuildRoleSubscriptionPurchasePage)
+// Module 16910 (GuildRoleSubscriptionPurchasePage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import LinkingDefault from "Linking" /* 4763 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8134 */;
-import _modDef10808 from "module_10808" /* 10808 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16796 */;
+import LinkingDefault from "Linking" /* 4765 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8142 */;
+import _modDef10978 from "module_10978" /* 10978 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16920 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2086 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ const Constants = fn(1085);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, heroImage: { aspectRatio: 4, width: "100%" }, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
 const rect = { borderWidth: 3, borderRadius: nativeDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
 obj2.guildIconContainer = rect;
@@ -140,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
     }
     let tmp12 = tmp5;
     if (tmp5) {
-      const obj4 = { source: _modDef10808, style: tmp4.socialBadgeArrow };
+      const obj4 = { source: _modDef10978, style: tmp4.socialBadgeArrow };
       tmp12 = state(native.Icon, obj4);
     }
     cResult[5] = tmp5;
@@ -168,7 +168,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Social
   obj.onPress = onPress;
   const items = [state(native.Icon, { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true }), state(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    const obj3 = { source: _modDef10808, style: tmp.socialBadgeArrow };
+    const obj3 = { source: _modDef10978, style: tmp.socialBadgeArrow };
     tmp5Result = state(native.Icon, obj3);
   }
   items[2] = tmp5Result;

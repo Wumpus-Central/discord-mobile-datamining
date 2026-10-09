@@ -1,6 +1,6 @@
-// === Module 2063: ChannelStore ===
+// === Module 2064: ChannelStore ===
 
-// Module 2063 (ChannelStore)
+// Module 2064 (ChannelStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -12,11 +12,11 @@ import deserializeChannels from "deserializeChannels" /* 2112 */;
 import isChangelogUserDefault from "isChangelogUser" /* 2113 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2064 */;
-import FavoriteStore from "FavoriteStore" /* 2066 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2065 */;
+import FavoriteStore from "FavoriteStore" /* 2067 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const deserializeChannelsDefault = deserializeChannels;
 
@@ -494,7 +494,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ createChannelRecordFromServer: closure_7, isPrivate: closure_8, GUILD_CHANNEL_TYPES: closure_9, THREAD_CHANNEL_TYPES: c10, ALL_CHANNEL_TYPES: closure_11, castChannelRecord: closure_12 } = ChannelRecord);
 const ChannelTypes = fn(1085).ChannelTypes;
 let closure_17 = new LoggerDefault("ChannelStore");
@@ -536,7 +536,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1387).isNotNullish);
+  found = items.filter(found(1388).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -595,7 +595,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                     return obj2;
                   }
                 });
-                found = mapped.filter(closure_0(1387).isNotNullish);
+                found = mapped.filter(closure_0(1388).isNotNullish);
                 closure_130_0 = found;
                 c5 = 1;
                 let _Promise = Promise;

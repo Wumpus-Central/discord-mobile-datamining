@@ -1,17 +1,17 @@
-// === Module 17996: GuildSettingsRoleSubscriptionsSection ===
+// === Module 18156: GuildSettingsRoleSubscriptionsSection ===
 
-// Module 17996 (GuildSettingsRoleSubscriptionsSection)
+// Module 18156 (GuildSettingsRoleSubscriptionsSection)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import TableRow from "TableRow" /* 6184 */;
-import TableRowGroup from "TableRowGroup" /* 6267 */;
-import _modDef17997 from "module_17997" /* 17997 */;
-import _modDef17998 from "module_17998" /* 17998 */;
-import _modDef17999 from "module_17999" /* 17999 */;
-import _modDef18000 from "module_18000" /* 18000 */;
+import TableRow from "TableRow" /* 6186 */;
+import TableRowGroup from "TableRowGroup" /* 6269 */;
+import _modDef18157 from "module_18157" /* 18157 */;
+import _modDef18158 from "module_18158" /* 18158 */;
+import _modDef18159 from "module_18159" /* 18159 */;
+import _modDef18160 from "module_18160" /* 18160 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const isGuildOwner = fn(2082).isGuildOwner;
@@ -60,8 +60,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     tmp10 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: pushScreen(17997) };
-    const tmp15 = closure_7(tmp(6184).TableRow.Icon, obj2);
+    const obj2 = { source: pushScreen(18157) };
+    const tmp15 = closure_7(tmp(6186).TableRow.Icon, obj2);
     cResult[5] = tmp15;
     let tmp12 = tmp15;
   } else {
@@ -76,7 +76,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
           return pushScreen(constants2.ROLE_SUBSCRIPTIONS_BASIC);
         }
     };
-    const tmp18 = closure_7(tmp(6184).TableRow, obj3, "guild-role-subscriptions-basic");
+    const tmp18 = closure_7(tmp(6186).TableRow, obj3, "guild-role-subscriptions-basic");
     cResult[6] = pushScreen;
     cResult[7] = tmp18;
     let tmp16 = tmp18;
@@ -92,8 +92,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     tmp19 = cResult[8];
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { source: pushScreen(17998) };
-    const tmp24 = closure_7(tmp(6184).TableRow.Icon, obj4);
+    const obj4 = { source: pushScreen(18158) };
+    const tmp24 = closure_7(tmp(6186).TableRow.Icon, obj4);
     cResult[9] = tmp24;
     let tmp21 = tmp24;
   } else {
@@ -108,7 +108,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
           return pushScreen(constants2.ROLE_SUBSCRIPTIONS_TIERS);
         }
     };
-    const tmp27 = closure_7(tmp(6184).TableRow, obj5, "guild-role-subscriptions-tiers");
+    const tmp27 = closure_7(tmp(6186).TableRow, obj5, "guild-role-subscriptions-tiers");
     cResult[10] = pushScreen;
     cResult[11] = tmp27;
     let tmp25 = tmp27;
@@ -131,8 +131,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
       }
       const _Symbol2 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj6 = { source: pushScreen(18000) };
-        const tmp37 = closure_7(tmp(6184).TableRow.Icon, obj6);
+        const obj6 = { source: pushScreen(18160) };
+        const tmp37 = closure_7(tmp(6186).TableRow.Icon, obj6);
         cResult[17] = tmp37;
         let tmp34 = tmp37;
       } else {
@@ -147,7 +147,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
                   return pushScreen(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
                 }
         };
-        const tmp40 = closure_7(tmp(6184).TableRow, obj7, "guild-role-subscriptions-emojis");
+        const tmp40 = closure_7(tmp(6186).TableRow, obj7, "guild-role-subscriptions-emojis");
         cResult[18] = pushScreen;
         cResult[19] = tmp40;
         let tmp38 = tmp40;
@@ -167,7 +167,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
       const obj8 = { title: tmp8, hasIcons: true, children: null };
       const items1 = [tmp16, tmp25, tmp28, tmp38];
       obj8.children = items1;
-      const tmp43 = closure_8(tmp(6267).TableRowGroup, obj8);
+      const tmp43 = closure_8(tmp(6269).TableRowGroup, obj8);
       cResult[20] = tmp28;
       cResult[21] = tmp38;
       cResult[22] = tmp16;
@@ -181,12 +181,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     const obj9 = { label: null, arrow: true, icon: null, onPress: null };
     const intl4 = tmp(1126).intl;
     obj9.label = intl4.string(tmp(1126).t.p2Rsdl);
-    const obj10 = { source: pushScreen(17999) };
-    obj9.icon = closure_7(tmp(6184).TableRow.Icon, obj10);
+    const obj10 = { source: pushScreen(18159) };
+    obj9.icon = closure_7(tmp(6186).TableRow.Icon, obj10);
     obj9.onPress = function onPress() {
       return pushScreen(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: guild.id });
     };
-    tmp29 = closure_7(tmp(6184).TableRow, obj9, "guild-role-subscriptions-payments");
+    tmp29 = closure_7(tmp(6186).TableRow, obj9, "guild-role-subscriptions-payments");
   }
   cResult[12] = guild;
   cResult[13] = pushScreen;
@@ -204,7 +204,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
   const obj3 = { label: null, arrow: true, icon: null, onPress: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t["/CfKoD"]);
-  obj3.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef17997 });
+  obj3.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18157 });
   obj3.onPress = function onPress() {
     return importDefault(constants2.ROLE_SUBSCRIPTIONS_BASIC);
   };
@@ -212,8 +212,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
   const obj5 = { label: null, arrow: true, icon: null, onPress: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.pXbGYc);
-  const obj4 = { source: _modDef17997 };
-  obj5.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef17998 });
+  const obj4 = { source: _modDef18157 };
+  obj5.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18158 });
   obj5.onPress = function onPress() {
     return importDefault(constants2.ROLE_SUBSCRIPTIONS_TIERS);
   };
@@ -222,7 +222,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
     const obj7 = { label: null, arrow: true, icon: null, onPress: null };
     const intl4 = util.intl;
     obj7.label = intl4.string(util.t.p2Rsdl);
-    const obj8 = { source: _modDef17999 };
+    const obj8 = { source: _modDef18159 };
     obj7.icon = closure_7(TableRow.TableRow.Icon, obj8);
     obj7.onPress = function onPress() {
       return importDefault(constants2.ROLE_SUBSCRIPTIONS_PAYMENTS, { guildId: id.id });
@@ -233,8 +233,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function HasCrea
   const obj9 = { label: null, arrow: true, icon: null, onPress: null };
   const intl5 = util.intl;
   obj9.label = intl5.string(util.t.C5Dbwn);
-  const obj6 = { source: _modDef17998 };
-  obj9.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18000 });
+  const obj6 = { source: _modDef18158 };
+  obj9.icon = closure_7(TableRow.TableRow.Icon, { source: _modDef18160 });
   obj9.onPress = function onPress() {
     return importDefault(constants2.ROLE_SUBSCRIPTIONS_EMOJIS);
   };

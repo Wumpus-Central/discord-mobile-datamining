@@ -1,12 +1,12 @@
-// === Module 7086: GuildBoostingMarketingOverview ===
+// === Module 7089: GuildBoostingMarketingOverview ===
 
-// Module 7086 (GuildBoostingMarketingOverview)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7105 */;
+// Module 7089 (GuildBoostingMarketingOverview)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7110 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -14,7 +14,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -236,9 +236,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
   }, items3);
   const effect1 = obj4.useEffect(() => {
     guildBoostSlots(stateFromStores[18]).wait(() => {
-      const premiumSubscriptionPlans = guildId(6946).fetchPremiumSubscriptionPlans();
-      const obj = guildId(6946);
-      const paymentSources = guildId(5720).fetchPaymentSources();
+      const premiumSubscriptionPlans = guildId(6953).fetchPremiumSubscriptionPlans();
+      const obj = guildId(6953);
+      const paymentSources = guildId(5721).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

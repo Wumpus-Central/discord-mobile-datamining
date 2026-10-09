@@ -1,27 +1,27 @@
-// === Module 9234: PressableNavigatorBackIcon ===
+// === Module 9272: PressableNavigatorBackIcon ===
 
-// Module 9234 (PressableNavigatorBackIcon)
+// Module 9272 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import _modDef9235 from "module_9235" /* 9235 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 9236 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9238 */;
+import FastImageDefault from "FastImage" /* 6163 */;
+import _modDef9273 from "module_9273" /* 9273 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 9274 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 9276 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6082 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6084 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["navigation", "onPress", "badgeCutoutColor", "ref"];
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
-let closure_13 = createStyles.createStyles(() => {
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5091);
+let closure_12 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = { position: "absolute", minWidth: native.BADGE_SIZE, height: native.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
   obj.maskWrapper = rect;
@@ -60,10 +60,10 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
     tmp7 = cResult[4];
     tmp8 = cResult[5];
   }
-  const tmp12 = closure_13();
+  const tmp12 = closure_12();
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildReadStateStore, SelectedChannelStore, ChannelStore];
-    const fn = function p() {
+    const fn = function f() {
       totalMentionCount = totalMentionCount.getTotalMentionCount();
       currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
       if (null == currentlySelectedChannelId) {
@@ -110,7 +110,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
   let backgroundColor = require("useToken").useToken(tmp4);
   const tmpResult3 = require("useToken");
   if (backgroundColor == null) {
-    backgroundColor = tmpResult4.useGradientValue(tmp(4896).GradientPercentage.START);
+    backgroundColor = tmpResult4.useGradientValue(tmp(4897).GradientPercentage.START);
   }
   if (backgroundColor == null) {
     backgroundColor = tmp12.maskStroke.backgroundColor;
@@ -132,10 +132,10 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       cResult[14] = formatToPlainStringResult;
     } else {
       if (cResult[15] !== tmp12.actionButtonIcon.tintColor) {
-        const obj5 = { source: _modDef9235, style: null };
+        const obj5 = { source: _modDef9273, style: null };
         const obj6 = { tintColor: tmp12.actionButtonIcon.tintColor };
         obj5.style = obj6;
-        const tmp31 = closure_11(closure_7, obj5);
+        const tmp31 = closure_10(FastImageDefault, obj5);
         cResult[15] = tmp12.actionButtonIcon.tintColor;
         cResult[16] = tmp31;
         let tmp27 = tmp31;
@@ -174,13 +174,13 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
               obj8.onPress = tmp23;
               obj8.style = tmp12.actionButtonPressable;
               obj8.children = tmp37;
-              obj7.children = closure_11(tmp(6189).PressableOpacity, obj8);
-              const tmp48 = closure_11(PressableNavigatorButtonWrapperDefault, obj7);
+              obj7.children = closure_10(tmp(6191).PressableOpacity, obj8);
+              const tmp48 = closure_10(PressableNavigatorButtonWrapperDefault, obj7);
               cResult[25] = tmp23;
               cResult[26] = tmp7;
               cResult[27] = tmp8;
               cResult[28] = tmp12.actionButtonPressable;
-              class W {
+              class T {
                 constructor() {
                   if (null == closure_1) {
                     obj = closure_0;
@@ -201,7 +201,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
             const obj9 = { children: null };
             const items1 = [tmp27, tmp32];
             obj9.children = items1;
-            const tmp40 = closure_12(closure_6, obj9);
+            const tmp40 = closure_11(View, obj9);
             cResult[22] = tmp27;
             cResult[23] = tmp32;
             cResult[24] = tmp40;
@@ -213,8 +213,8 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       if (stateFromStores > 0) {
         const obj10 = { style: tmp12.maskWrapper, children: null };
         const obj11 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: tmp19 };
-        obj10.children = closure_11(MaskedBadgeDefault, obj11);
-        tmp33 = closure_11(closure_6, obj10);
+        obj10.children = closure_10(MaskedBadgeDefault, obj11);
+        tmp33 = closure_10(View, obj10);
       }
       cResult[17] = stateFromStores;
       cResult[18] = backgroundColor;
@@ -224,7 +224,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       tmp32 = tmp33;
     }
   }
-  class W {
+  class T {
     constructor() {
       if (null == closure_1) {
         obj = closure_0;
@@ -239,8 +239,8 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
   }
   cResult[10] = tmp5;
   cResult[11] = tmp6;
-  cResult[12] = W;
-  tmp23 = W;
+  cResult[12] = T;
+  tmp23 = T;
   tmpResult4 = require("client_themes/ClientThemesUtils");
 }) : (function PressableNavigatorBackIcon(navigation) {
   navigation = navigation.navigation;
@@ -248,7 +248,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
   ({ badgeCutoutColor, ref } = navigation);
   const merged = Object.assign(navigation, Object.assign({ navigation: 0, onPress: 0, badgeCutoutColor: 0, ref: 0 }));
   let stateFromStores;
-  const tmp2 = closure_13();
+  const tmp2 = closure_12();
   const items = [GuildReadStateStore, SelectedChannelStore, ChannelStore];
   stateFromStores = navigation(stateFromStores[12]).useStateFromStores(items, () => {
     totalMentionCount = totalMentionCount.getTotalMentionCount();
@@ -315,18 +315,21 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
   obj5.accessibilityLabel = formatToPlainStringResult;
   obj5.onPress = callback;
   obj5.style = tmp2.actionButtonPressable;
-  const tmp11 = onPress(stateFromStores[18]);
-  const items3 = [closure_11(closure_7, { source: onPress(stateFromStores[16]), style: { tintColor: tmp2.actionButtonIcon.tintColor } }), ];
+  const obj7 = { source: null, style: null };
+  const tmp11 = onPress(stateFromStores[19]);
+  obj7.source = onPress(stateFromStores[17]);
+  obj7.style = { tintColor: tmp2.actionButtonIcon.tintColor };
+  const items3 = [closure_10(onPress(stateFromStores[16]), obj7), ];
   let tmp9Result = null;
   if (stateFromStores > 0) {
     const obj8 = { style: tmp2.maskWrapper, children: null };
     const obj9 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
-    obj8.children = closure_11(tmp10(tmp4[17]), obj9);
-    tmp9Result = closure_11(closure_6, obj8);
+    obj8.children = closure_10(tmp10(tmp4[18]), obj9);
+    tmp9Result = closure_10(View, obj8);
   }
   const obj10 = { children: null };
   items3[1] = tmp9Result;
-  obj5.children = closure_12(closure_6, { children: items3 });
-  obj10.children = closure_11(navigation(stateFromStores[19]).PressableOpacity, obj5);
-  return closure_11(tmp11, obj10);
+  obj5.children = closure_11(View, { children: items3 });
+  obj10.children = closure_10(navigation(stateFromStores[20]).PressableOpacity, obj5);
+  return closure_10(tmp11, obj10);
 });

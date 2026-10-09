@@ -1,8 +1,8 @@
-// === Module 5223: trackVoiceAndVideoSettingsUpdate ===
+// === Module 5224: trackVoiceAndVideoSettingsUpdate ===
 
-// Module 5223 (trackVoiceAndVideoSettingsUpdate)
+// Module 5224 (trackVoiceAndVideoSettingsUpdate)
 import Constants from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,6 +1,6 @@
-// === Module 9264: AnalyticsFeedItemSeenActionCreators ===
+// === Module 9302: AnalyticsFeedItemSeenActionCreators ===
 
-// Module 9264 (AnalyticsFeedItemSeenActionCreators)
+// Module 9302 (AnalyticsFeedItemSeenActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

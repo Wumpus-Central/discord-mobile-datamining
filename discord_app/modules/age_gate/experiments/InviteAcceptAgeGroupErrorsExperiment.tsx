@@ -1,7 +1,7 @@
-// === Module 9103: InviteAcceptAgeGroupErrorsExperiment ===
+// === Module 9596: InviteAcceptAgeGroupErrorsExperiment ===
 
-// Module 9103 (InviteAcceptAgeGroupErrorsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1452 */;
+// Module 9596 (InviteAcceptAgeGroupErrorsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2026-09-invite-accept-age-group-errors", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

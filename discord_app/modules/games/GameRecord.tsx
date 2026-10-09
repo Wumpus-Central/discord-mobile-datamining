@@ -1,15 +1,15 @@
-// === Module 2020: GameRecord ===
+// === Module 2021: GameRecord ===
 
-// Module 2020 (GameRecord)
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import AvatarUtils from "AvatarUtils" /* 1414 */;
-import Server from "Server" /* 1997 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2029 */;
-import Record from "Record" /* 1404 */;
-import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+// Module 2021 (GameRecord)
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import AvatarUtils from "AvatarUtils" /* 1415 */;
+import Server from "Server" /* 1998 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2030 */;
+import Record from "Record" /* 1405 */;
+import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 
 require = fn;
-const createExecutable = fn(2021).createExecutable;
+const createExecutable = fn(2022).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -149,7 +149,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(c9) {
+prototype["getCoverURL"] = function getCoverURL(c8) {
   const media = this.media;
   let cover;
   if (media != null) {

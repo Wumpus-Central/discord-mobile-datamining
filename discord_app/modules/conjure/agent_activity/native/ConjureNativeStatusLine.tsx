@@ -1,9 +1,9 @@
-// === Module 16933: ConjureNativeStatusLine ===
+// === Module 17063: ConjureNativeStatusLine ===
 
-// Module 16933 (ConjureNativeStatusLine)
+// Module 17063 (ConjureNativeStatusLine)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import MagicWandIcon from "MagicWandIcon" /* 12611 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import MagicWandIcon from "MagicWandIcon" /* 12551 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [nativeDefault.colors.TEXT_BRAND, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, nativeDefault.colors.TEXT_FEEDBACK_WARNING, nativeDefault.colors.TEXT_FEEDBACK_INFO];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 }, glyphGutter: { width: 40, marginRight: 12, alignItems: "center" }, label: { flex: 1 }, trailing: null, chevron: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 };
 obj2.trailing = { flexShrink: 0, marginLeft: nativeDefault.space.PX_8 };

@@ -1,6 +1,6 @@
-// === Module 6775: GuildOnboardingConstants ===
+// === Module 6782: GuildOnboardingConstants ===
 
-// Module 6775 (GuildOnboardingConstants)
+// Module 6782 (GuildOnboardingConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConstants.tsx");

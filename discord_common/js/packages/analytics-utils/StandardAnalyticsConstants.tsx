@@ -1,6 +1,6 @@
-// === Module 1352: StandardAnalyticsConstants ===
+// === Module 1353: StandardAnalyticsConstants ===
 
-// Module 1352 (StandardAnalyticsConstants)
+// Module 1353 (StandardAnalyticsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/StandardAnalyticsConstants.tsx");

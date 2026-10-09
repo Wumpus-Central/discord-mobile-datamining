@@ -1,6 +1,6 @@
-// === Module 5283: device/DeviceState ===
+// === Module 5284: device/DeviceState ===
 
-// Module 5283 (device/DeviceState)
+// Module 5284 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -40,7 +40,7 @@ let closure_5 = async function _getDeviceState() {
           fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

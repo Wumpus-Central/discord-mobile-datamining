@@ -1,8 +1,8 @@
-// === Module 8826: VoiceChannelGamesExperiment ===
+// === Module 8835: VoiceChannelGamesExperiment ===
 
-// Module 8826 (VoiceChannelGamesExperiment)
+// Module 8835 (VoiceChannelGamesExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ kind: "user", name: "2026-08-mobile-voice-channel-games", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

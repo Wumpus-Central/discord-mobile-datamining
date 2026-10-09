@@ -1,8 +1,8 @@
-// === Module 10774: sound_playback/SoundUtils ===
+// === Module 10944: sound_playback/SoundUtils ===
 
-// Module 10774 (sound_playback/SoundUtils)
+// Module 10944 (sound_playback/SoundUtils)
 import _mod17 from "module_17" /* 17 */;
-import MetaQuestUtils_mod from "MetaQuestUtils" /* 1627 */;
+import MetaQuestUtils_mod from "MetaQuestUtils" /* 1628 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

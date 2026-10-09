@@ -1,15 +1,15 @@
-// === Module 15115: BountiesModalEndedCtaButtons ===
+// === Module 15225: BountiesModalEndedCtaButtons ===
 
-// Module 15115 (BountiesModalEndedCtaButtons)
+// Module 15225 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 5091 */;
-import timingPresets from "timingPresets" /* 5094 */;
-import QuestContent from "QuestContent" /* 5982 */;
-import AdCreativeType from "AdCreativeType" /* 5984 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7404 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10582 */;
+import timing from "timing" /* 5092 */;
+import timingPresets from "timingPresets" /* 5095 */;
+import QuestContent from "QuestContent" /* 5984 */;
+import AdCreativeType from "AdCreativeType" /* 5986 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7409 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9176 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5090 */;
+import createStyles from "createStyles" /* 5091 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -131,8 +131,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Bounties
     flag = false;
   }
   const tmp = closure_5();
-  closure_3 = bounty(10580).useGetQuestImpressionId();
-  let obj = bounty(10580);
+  closure_3 = bounty(9174).useGetQuestImpressionId();
+  let obj = bounty(9174);
   const fn = function y() {
     let num = 0;
     if (visible) {
@@ -140,12 +140,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Bounties
     }
     return { opacity: timing.withTiming(num, timingPresets.timingStandard) };
   };
-  let obj2 = bounty(4810);
-  fn.__closure = { withTiming: bounty(5091).withTiming, visible, timingStandard: bounty(5094).timingStandard };
+  let obj2 = bounty(4811);
+  fn.__closure = { withTiming: bounty(5092).withTiming, visible, timingStandard: bounty(5095).timingStandard };
   fn.__workletHash = 5587342121093;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  bounty(15114);
+  bounty(15224);
   if (visible) {
     const obj4 = { style: null, children: null };
     const items = [tmp.container, animatedStyle];
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Bounties
           const result = obj.openAdGameLinkDirectly(obj2, { content: QuestContent.QuestContent.VIDEO_MODAL_END_CARD, ctaContent: AnalyticsTypes.QuestContentCTA.OPEN_GAME_LINK, impressionId: closure_3(), sourceQuestContent });
         }
     };
-    const items1 = [closure_3(tmp2(5375).Button, obj5), ];
+    const items1 = [closure_3(tmp2(5376).Button, obj5), ];
     let tmp9Result = null;
     if (showCloseButton) {
       const obj6 = { variant: "secondary-overlay", text: null, size: "lg", disabled: null, onPress: null };
@@ -169,11 +169,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Bounties
       obj6.text = intl.string(tmp2(1126).t.cpT0Cq);
       obj6.disabled = flag;
       obj6.onPress = bounty.onClose;
-      tmp9Result = tmp9(tmp2(5375).Button, obj6);
+      tmp9Result = tmp9(tmp2(5376).Button, obj6);
     }
     items1[1] = tmp9Result;
     obj4.children = items1;
-    visible = closure_4(visible(4810).View, obj4);
+    visible = closure_4(visible(4811).View, obj4);
     tmp9 = closure_3;
   }
   return visible;

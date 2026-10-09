@@ -1,22 +1,22 @@
-// === Module 9059: GameProfileDetails ===
+// === Module 9074: GameProfileDetails ===
 
-// Module 9059 (GameProfileDetails)
+// Module 9074 (GameProfileDetails)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Server from "Server" /* 1997 */;
-import DateUtilsAll from "DateUtils" /* 4750 */;
-import LinkingDefault from "Linking" /* 4763 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import SKUUtils from "SKUUtils" /* 8892 */;
+import Server from "Server" /* 1998 */;
+import DateUtilsAll from "DateUtils" /* 4752 */;
+import LinkingDefault from "Linking" /* 4765 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import SKUUtils from "SKUUtils" /* 8903 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8445).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8453).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { gap: nativeDefault.space.PX_8 }, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.headerText = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
       let joined;
       if (platformsContainer != null) {
         const genres1 = platformsContainer.genres;
-        const mapped = genres1.map(trackAction(8892).getGenreText);
+        const mapped = genres1.map(trackAction(8903).getGenreText);
         joined = mapped.join(", ");
       }
       let genres2;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     if (cResult[13] !== platformsContainer) {
       let companyByRole;
       if (platformsContainer != null) {
-        companyByRole = platformsContainer.getCompanyByRole(trackAction(1997).GameCompanyRole.PUBLISHER);
+        companyByRole = platformsContainer.getCompanyByRole(trackAction(1998).GameCompanyRole.PUBLISHER);
       }
       const _Symbol2 = Symbol;
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               return arg0.name;
             }
           }
-          const tmp24Result = tmp24(trackAction(1997).GameCompanyRole.DEVELOPER);
+          const tmp24Result = tmp24(trackAction(1998).GameCompanyRole.DEVELOPER);
         }
         const _Symbol3 = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
@@ -297,10 +297,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               }
               const _Date = Date;
               const date = new Date(tmp30);
-              const dateFormatResult = tmp5(4750).dateFormat(date, "LL");
+              const dateFormatResult = tmp5(4752).dateFormat(date, "LL");
               cResult[32] = tmp30;
               cResult[33] = dateFormatResult;
-              const obj7 = tmp5(4750);
+              const obj7 = tmp5(4752);
             } else {
               class S {
                 constructor(arg0) {
@@ -593,7 +593,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           }
         }
         const obj5 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp64 };
-        const tmp67 = closure_8(trackAction(5086).Text, obj5);
+        const tmp67 = closure_8(trackAction(5087).Text, obj5);
         cResult[57] = tmp4.headerText;
         cResult[58] = tmp67;
       } else {
@@ -721,7 +721,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               if (game != null) {
                 const websites = game.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(9067)(item, trackAction(587).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(9082)(item, trackAction(587).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -765,7 +765,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj7 = { label: stringResult, value: null };
-              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9060).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
+              const obj8 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(9075).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(587).colors.ICON_SUBTLE }, platform)) };
               obj7.value = closure_2_8(hasOwnProperty, obj8);
               items.push(obj7);
             }

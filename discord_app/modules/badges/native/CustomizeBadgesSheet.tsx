@@ -1,52 +1,52 @@
-// === Module 14692: CustomizeBadgesSheet ===
+// === Module 14798: CustomizeBadgesSheet ===
 
-// Module 14692 (CustomizeBadgesSheet)
+// Module 14798 (CustomizeBadgesSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4766 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4788 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5012 */;
-import HapticUtils from "HapticUtils" /* 5055 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import timing from "timing" /* 5091 */;
-import timingPresets from "timingPresets" /* 5094 */;
-import Card from "Card" /* 6186 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 6641 */;
-import EyeIcon from "EyeIcon" /* 6643 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8291 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8297 */;
-import native from "native" /* 8517 */;
-import ContextMenu from "ContextMenu" /* 9297 */;
-import ContextMenuState from "ContextMenuState" /* 9298 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9299 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9328 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9329 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10545 */;
-import BadgeUtils from "BadgeUtils" /* 10553 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11596 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13221 */;
-import BadgeGrid from "BadgeGrid" /* 14693 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
+import HapticUtils from "HapticUtils" /* 5056 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import timing from "timing" /* 5092 */;
+import timingPresets from "timingPresets" /* 5095 */;
+import Card from "Card" /* 6188 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6648 */;
+import EyeIcon from "EyeIcon" /* 6650 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8299 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8305 */;
+import native from "native" /* 8525 */;
+import ContextMenu from "ContextMenu" /* 9335 */;
+import ContextMenuState from "ContextMenuState" /* 9336 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9337 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9366 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10535 */;
+import BadgeUtils from "BadgeUtils" /* 10544 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11529 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13314 */;
+import BadgeGrid from "BadgeGrid" /* 14799 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8260 */;
-import UserStore from "UserStore" /* 1389 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8292 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
+import UserStore from "UserStore" /* 1390 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8300 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsObjects: closure_9, AnalyticsPages: c10, AnalyticsSections: closure_11 } = Constants);
-let closure_12 = fn(6830).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
-const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
+let closure_12 = fn(6837).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 1.05;
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj = { gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, grid: null, upsell: null, upsellCard: null, upsellContent: null, upsellCta: null, upsellText: null, message: null, messageText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj.grid = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
@@ -182,7 +182,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeV
   obj2.children = children;
   return state(ContextMenu.ContextMenu, obj2);
 });
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj10 = { position: { position: "absolute" }, fill: { flex: 1 }, card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 }, icon: null, name: null, indicator: null, iconHidden: null };
 let obj9 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
 obj10.icon = { marginBottom: nativeDefault.space.PX_12 };
@@ -201,7 +201,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj14 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14693).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14693).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14799).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14799).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 ReactCompilerGating = fn(558);

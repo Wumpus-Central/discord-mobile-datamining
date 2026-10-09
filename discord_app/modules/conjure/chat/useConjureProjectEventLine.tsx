@@ -1,10 +1,10 @@
-// === Module 17004: useConjureProjectEventLine ===
+// === Module 17160: useConjureProjectEventLine ===
 
-// Module 17004 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 16937 */;
+// Module 17160 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 17067 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 

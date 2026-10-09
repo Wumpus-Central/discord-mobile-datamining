@@ -1,13 +1,13 @@
-// === Module 5455: checkpoint/CheckpointMessageComponentUtils ===
+// === Module 5456: checkpoint/CheckpointMessageComponentUtils ===
 
-// Module 5455 (checkpoint/CheckpointMessageComponentUtils)
+// Module 5456 (checkpoint/CheckpointMessageComponentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1126 */;
-import Server from "Server" /* 1997 */;
+import Server from "Server" /* 1998 */;
 import _modDef3083 from "module_3083" /* 3083 */;
-import CheckpointTrait from "CheckpointTrait" /* 5457 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5458 */;
-import CheckpointConstants from "CheckpointConstants" /* 5433 */;
+import CheckpointTrait from "CheckpointTrait" /* 5458 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 5459 */;
+import CheckpointConstants from "CheckpointConstants" /* 5434 */;
 import size from "module_2" /* 2 */;
 
 ({ NATIVE_CHARACTER_LAYER_SIZE: c3, CheckpointVersions: closure_4 } = CheckpointConstants);

@@ -1,7 +1,7 @@
-// === Module 10904: game_console/GameConsoleActionCreators ===
+// === Module 11073: game_console/GameConsoleActionCreators ===
 
-// Module 10904 (game_console/GameConsoleActionCreators)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 10897 */;
+// Module 11073 (game_console/GameConsoleActionCreators)
+import transferToPlayStation from "transferToPlayStation" /* 11074 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_4 = async function _transferToPlaystationWithAlert(arg0, arg1, arg2)
     closure_4 = tmp3;
     closure_3 = tmp5;
     closure_131_0 = id;
-    await GameConsoleActionCreators.transferToPlayStation(closure_0, id.id, closure_2);
+    await transferToPlayStation.transferToPlayStation(closure_0, id.id, closure_2);
     if (1 === tmp8) {
       c6 = 0;
       const obj7 = { title: null, body: null };

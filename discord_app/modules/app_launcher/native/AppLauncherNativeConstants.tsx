@@ -1,9 +1,9 @@
-// === Module 1501: AppLauncherNativeConstants ===
+// === Module 1502: AppLauncherNativeConstants ===
 
-// Module 1501 (AppLauncherNativeConstants)
+// Module 1502 (AppLauncherNativeConstants)
 import nativeDefault from "native" /* 587 */;
-import useNavigation from "useNavigation" /* 1502 */;
-import _modDef1625 from "module_1625" /* 1625 */;
+import useNavigation from "useNavigation" /* 1503 */;
+import _modDef1626 from "module_1626" /* 1626 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -11,7 +11,7 @@ let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const result1 = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeConstants.tsx");
 
-export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1625;
+export const APP_LAUNCHER_BUILT_IN_SECTION_ICON = _modDef1626;
 export const AppLauncherRouteName = { HOME: "home", APPLICATION_VIEW: "application_view", COMMAND_VIEW: "command_view", APP_LIST_VIEW: "app_list_view" };
 export const useAppLauncherNavigation = function useAppLauncherNavigation() {
   return useNavigation.useNativeStackNavigation();

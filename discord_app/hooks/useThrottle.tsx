@@ -1,6 +1,6 @@
-// === Module 10971: useThrottle ===
+// === Module 11145: useThrottle ===
 
-// Module 10971 (useThrottle)
+// Module 11145 (useThrottle)
 import _mod12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
 

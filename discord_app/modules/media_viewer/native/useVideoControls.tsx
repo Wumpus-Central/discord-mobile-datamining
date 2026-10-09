@@ -1,20 +1,20 @@
-// === Module 8365: useVideoControls ===
+// === Module 8373: useVideoControls ===
 
-// Module 8365 (useVideoControls)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 8363 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8366 */;
+// Module 8373 (useVideoControls)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 8371 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8374 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5079 */;
+import AccessibilityStore from "AccessibilityStore" /* 5080 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
 const module_570 = fn(570);
-const obj5 = module_570.create(() => ({ controls: "Reflect", paused: true }));
-const createStyles = fn(5090);
+const obj5 = module_570.create(() => ({ controls: "Set", paused: true }));
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVideo
 export const useVideoStateStore = obj5;
 export const initVideoStateStore = function initVideoStateStore() {
   ReactBatchUpdates.batchUpdates(() => {
-    state.setState({ controls: "Reflect", paused: true });
+    state.setState({ controls: "Set", paused: true });
   });
 };
 export const setMuted = function setMuted(isMuted) {

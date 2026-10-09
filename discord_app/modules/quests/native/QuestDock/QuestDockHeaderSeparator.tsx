@@ -1,6 +1,6 @@
-// === Module 15276: QuestDockHeaderSeparator ===
+// === Module 15389: QuestDockHeaderSeparator ===
 
-// Module 15276 (QuestDockHeaderSeparator)
+// Module 15389 (QuestDockHeaderSeparator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const obj = { separator: null };
 let size = { backgroundColor: nativeDefault.colors.TEXT_DEFAULT, opacity: 0.2, height: 18, width: 1.5 };
 obj.separator = size;

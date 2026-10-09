@@ -1,8 +1,8 @@
-// === Module 12890: XboxLinkSuccess ===
+// === Module 12859: XboxLinkSuccess ===
 
-// Module 12890 (XboxLinkSuccess)
+// Module 12859 (XboxLinkSuccess)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,13 +10,13 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9113).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9127);
-({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
+({ View: hasOwnProperty, Linking: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
+const XboxLinkModalScenes = fn(9180).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9194);
+({ XBOX_ANDROID_APP_LINK: closure_9, XBOX_IOS_APP_LINK: c10, XBOX_URL_BASE: closure_11 } = GameConsoleConstants);
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { image: { width: 58, height: 85, marginBottom: 24 }, getApp: { alignItems: "center", alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: nativeDefault.radii.sm, flexDirection: "row" }, appLogoBox: null, appLogo: null, getAppTitle: null, icon: null, externalLinkIcon: null };
 let size = { marginRight: 12, width: 40, height: 40, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.unsafe_rawColors.PLATFORM_XBOX };
 obj2.appLogoBox = size;
@@ -25,7 +25,7 @@ obj2.getAppTitle = { flex: 1 };
 obj2.icon = { marginLeft: 8 };
 let obj3 = { alignItems: "center", alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginTop: 24, padding: 16, borderRadius: nativeDefault.radii.sm, flexDirection: "row" };
 obj2.externalLinkIcon = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 size = fn(2);
@@ -33,13 +33,13 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLinkDiscordSuccess() {
   const cResult = icon(navigation[9]).c(53);
-  const tmp4 = closure_15();
+  const tmp4 = closure_14();
   let obj = icon(navigation[9]);
   const twoWayLinkStyles = icon(navigation[10]).useTwoWayLinkStyles();
   [icon, importDefault] = noop.useState(true);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      React5.canOpenURL(__initData).then(closure_1);
+      timestampProducer.canOpenURL(closure_2_11).then(closure_1);
     };
     const items = [];
     cResult[0] = fn;
@@ -51,33 +51,61 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   }
   const effect = noop.useEffect(tmp7, tmp8);
   if (cResult[2] !== icon) {
-    const fn2 = function b() {
-      if (!icon) {
-        const openURL = React5.openURL;
-        if (obj.isAndroid()) {
-          openURL(collapsed);
-        } else {
-          openURL(closure_2_11);
+    class L {
+      constructor() {
+        if (!closure_0) {
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[11]);
+          tmp3 = Linking;
+          openURL = Linking.openURL;
+          if (obj.isAndroid()) {
+            tmp6 = XBOX_ANDROID_APP_LINK;
+            openURLResult = openURL(XBOX_ANDROID_APP_LINK);
+          } else {
+            tmp4 = XBOX_IOS_APP_LINK;
+            openURLResult1 = openURL(XBOX_IOS_APP_LINK);
+          }
         }
-        obj = PlatformUtils;
+        return;
       }
-    };
+    }
     cResult[2] = icon;
-    cResult[3] = fn2;
+    cResult[3] = L;
+  } else {
+    class L {
+      constructor() {
+        if (!closure_0) {
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[11]);
+          tmp3 = Linking;
+          openURL = Linking.openURL;
+          if (obj.isAndroid()) {
+            tmp6 = XBOX_ANDROID_APP_LINK;
+            openURLResult = openURL(XBOX_ANDROID_APP_LINK);
+          } else {
+            tmp4 = XBOX_IOS_APP_LINK;
+            openURLResult1 = openURL(XBOX_IOS_APP_LINK);
+          }
+        }
+        return;
+      }
+    }
   }
   const obj2 = icon(navigation[10]);
   navigation = icon(navigation[12]).useNavigation();
   if (cResult[4] !== navigation) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
     cResult[4] = navigation;
-    cResult[5] = R;
+    cResult[5] = P;
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -86,18 +114,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   }
   ({ container, content } = twoWayLinkStyles);
   if (cResult[6] !== tmp4.image) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
-    const obj4 = { source: require("module_12891"), style: tmp4.image };
-    const tmp16 = closure_13(closure_5, obj4);
+    const obj4 = { source: require("module_12860"), style: tmp4.image };
+    const tmp16 = closure_12(require("FastImage"), obj4);
     cResult[6] = tmp4.image;
     cResult[7] = tmp16;
+    const tmp15 = require("FastImage");
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -105,17 +134,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
-    const stringResult = obj6.string(tmp(tmp2[14]).t.aGRPVq);
+    const stringResult = obj6.string(tmp(tmp2[15]).t.aGRPVq);
     cResult[8] = stringResult;
     const tmp17 = stringResult;
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -123,18 +152,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   if (cResult[9] !== twoWayLinkStyles.title) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
     const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: tmp17 };
-    const tmp20 = closure_13(tmp(tmp2[15]).Text, obj5);
+    const tmp20 = closure_12(tmp(tmp2[16]).Text, obj5);
     cResult[9] = twoWayLinkStyles.title;
     cResult[10] = tmp20;
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -142,17 +171,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
-    const stringResult1 = obj8.string(tmp(tmp2[14]).t.m3mBYE);
+    const stringResult1 = obj8.string(tmp(tmp2[15]).t.m3mBYE);
     cResult[11] = stringResult1;
     const tmp21 = stringResult1;
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -160,18 +189,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   if (cResult[12] !== twoWayLinkStyles.body) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
     const obj7 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: tmp21 };
-    const tmp24 = closure_13(tmp(tmp2[15]).Text, obj7);
+    const tmp24 = closure_12(tmp(tmp2[16]).Text, obj7);
     cResult[12] = twoWayLinkStyles.body;
     cResult[13] = tmp24;
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -179,18 +208,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   if (cResult[14] !== tmp4.appLogo) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
-    const obj9 = { source: require("module_10963"), style: tmp4.appLogo };
-    const tmp28 = closure_13(closure_5, obj9);
+    const obj9 = { source: require("module_11137"), style: tmp4.appLogo };
+    const tmp28 = closure_12(require("FastImage"), obj9);
     cResult[14] = tmp4.appLogo;
     cResult[15] = tmp28;
+    const tmp27 = require("FastImage");
   } else {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
@@ -198,29 +228,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
   }
   if (cResult[16] === tmp4.appLogoBox) {
-    class R {
+    class P {
       constructor() {
         arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
         return;
       }
     }
     if (cResult[19] !== icon) {
-      class R {
+      class P {
         constructor() {
           arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
           return;
         }
       }
       if (icon) {
-        class R {
+        class P {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
           }
         }
-        const stringResult2 = obj12.string(tmp(tmp2[14]).t);
+        const stringResult2 = obj12.string(tmp(tmp2[15]).t);
       } else {
-        class R {
+        class P {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
@@ -230,21 +260,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
       cResult[19] = icon;
       cResult[20] = stringResult2;
     } else {
-      class R {
+      class P {
         constructor() {
           arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
           return;
         }
       }
       if (cResult[21] === tmp4.getAppTitle) {
-        class R {
+        class P {
           constructor() {
             arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
             return;
           }
         }
         if (cResult[24] === icon) {
-          class R {
+          class P {
             constructor() {
               arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
               return;
@@ -252,26 +282,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
           }
         }
         if (icon) {
-          class R {
+          class P {
             constructor() {
               arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
               return;
             }
           }
-          const obj10 = { source: require("module_12892"), style: tmp4.icon };
-          let tmp36Result = closure_13(closure_5, obj10);
+          const obj10 = { source: require("module_12861"), style: tmp4.icon };
+          let tmp36Result = closure_12(require("FastImage"), obj10);
+          const tmp40 = require("FastImage");
         } else {
-          class R {
+          class P {
             constructor() {
               arr = closure_2.push(XboxLinkModalScenes.EDUCATION);
               return;
             }
           }
-          tmp37[0] = require("module_10911");
-          tmp37[1] = tmp(tmp2[18]).Icon.Sizes.SMALL;
+          tmp37[0] = require("module_11086");
+          tmp37[1] = tmp(tmp2[19]).Icon.Sizes.SMALL;
           tmp37[2] = tmp4.externalLinkIcon.color;
           tmp37[3] = tmp4.icon;
-          tmp36Result = closure_13(tmp(tmp2[18]).Icon, tmp37);
+          tmp36Result = closure_12(tmp(tmp2[19]).Icon, tmp37);
         }
         cResult[24] = icon;
         ({ externalLinkIcon: tmp3[25], icon } = tmp4);
@@ -279,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
         cResult[27] = tmp36Result;
       }
       const obj11 = { style: tmp4.getAppTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp30 };
-      const tmp35 = closure_13(tmp(tmp2[15]).Text, obj11);
+      const tmp35 = closure_12(tmp(tmp2[16]).Text, obj11);
       cResult[21] = tmp4.getAppTitle;
       cResult[22] = tmp30;
       cResult[23] = tmp35;
@@ -289,23 +320,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const tmpResult = icon(navigation[12]);
   cResult[16] = tmp4.appLogoBox;
   cResult[17] = tmp25;
-  cResult[18] = closure_13(closure_6, { style: tmp4.appLogoBox, children: tmp25 });
-  const tmp29 = closure_13(closure_6, { style: tmp4.appLogoBox, children: tmp25 });
+  cResult[18] = closure_12(closure_5, { style: tmp4.appLogoBox, children: tmp25 });
+  const tmp29 = closure_12(closure_5, { style: tmp4.appLogoBox, children: tmp25 });
 }) : (function XboxLinkDiscordSuccess() {
-  const tmp = closure_15();
+  const tmp = closure_14();
   const twoWayLinkStyles = first(navigation[10]).useTwoWayLinkStyles();
   [first, importDefault] = noop.useState(true);
   const effect = noop.useEffect(() => {
-    React5.canOpenURL(__initData).then(closure_1);
+    timestampProducer.canOpenURL(closure_2_11).then(closure_1);
   }, []);
   const items = [first];
   const callback = noop.useCallback(() => {
     if (!first) {
-      const openURL = React5.openURL;
+      const openURL = timestampProducer.openURL;
       if (obj.isAndroid()) {
-        openURL(collapsed);
+        openURL(options);
       } else {
-        openURL(closure_2_11);
+        openURL(collapsed);
       }
       obj = PlatformUtils;
     }
@@ -315,58 +346,63 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const items1 = [navigation];
   const obj3 = { style: twoWayLinkStyles.container, children: null };
   const obj4 = { style: twoWayLinkStyles.content, children: null };
-  const obj5 = { source: null, style: null };
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj5.source = require("module_12891");
+  const obj5 = { source: null, style: null };
+  const obj2 = first(navigation[12]);
+  obj5.source = require("module_12860");
   obj5.style = tmp.image;
-  const items2 = [closure_13(closure_5, obj5), , , ];
+  const items2 = [closure_12(require("FastImage"), obj5), , , ];
   const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
-  const intl = first(navigation[14]).intl;
-  obj6.children = intl.string(first(navigation[14]).t.aGRPVq);
-  items2[1] = closure_13(first(navigation[15]).Text, obj6);
+  const intl = first(navigation[15]).intl;
+  obj6.children = intl.string(first(navigation[15]).t.aGRPVq);
+  items2[1] = closure_12(first(navigation[16]).Text, obj6);
   const obj7 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
-  const intl2 = first(navigation[14]).intl;
-  obj7.children = intl2.string(first(navigation[14]).t.m3mBYE);
-  items2[2] = closure_13(first(navigation[15]).Text, obj7);
+  const intl2 = first(navigation[15]).intl;
+  obj7.children = intl2.string(first(navigation[15]).t.m3mBYE);
+  items2[2] = closure_12(first(navigation[16]).Text, obj7);
   const obj8 = { onPress: callback, style: tmp.getApp, children: null };
   const obj9 = { style: tmp.appLogoBox, children: null };
-  const obj2 = first(navigation[12]);
-  obj9.children = closure_13(closure_5, { source: require("module_10963"), style: tmp.appLogo });
-  const items3 = [closure_13(closure_6, obj9), , ];
+  const obj10 = { source: null, style: null };
+  const tmp15 = require("FastImage");
+  obj10.source = require("module_11137");
+  obj10.style = tmp.appLogo;
+  obj9.children = closure_12(require("FastImage"), obj10);
+  const items3 = [closure_12(closure_5, obj9), , ];
   const obj11 = { style: tmp.getAppTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = first(navigation[14]).intl;
+  const intl3 = first(navigation[15]).intl;
   const string = intl3.string;
-  const t = first(navigation[14]).t;
+  const t = first(navigation[15]).t;
   if (first) {
     let stringResult = string(t.zcKE8W);
   } else {
     stringResult = string(t["12Kx2v"]);
   }
   obj11.children = stringResult;
-  items3[1] = closure_13(first(navigation[15]).Text, obj11);
+  items3[1] = closure_12(first(navigation[16]).Text, obj11);
   if (first) {
-    const obj12 = { source: tmp15(tmp3[17]), style: tmp.icon };
-    let tmp13Result = closure_13(closure_5, obj12);
+    const obj12 = { source: tmp14(tmp3[18]), style: tmp.icon };
+    let tmp13Result = closure_12(tmp14(tmp3[13]), obj12);
+    const tmp14Result = tmp14(tmp3[13]);
   } else {
-    const obj13 = { source: tmp15(tmp3[19]), size: tmp2(tmp3[18]).Icon.Sizes.SMALL, color: tmp.externalLinkIcon.color, style: tmp.icon };
-    tmp13Result = closure_13(tmp2(tmp3[18]).Icon, obj13);
+    const obj13 = { source: tmp14(tmp3[20]), size: tmp2(tmp3[19]).Icon.Sizes.SMALL, color: tmp.externalLinkIcon.color, style: tmp.icon };
+    tmp13Result = closure_12(tmp2(tmp3[19]).Icon, obj13);
   }
   items3[2] = tmp13Result;
   obj8.children = items3;
-  items2[3] = closure_14(closure_8, obj8);
+  items2[3] = closure_13(closure_7, obj8);
   obj4.children = items2;
-  const items4 = [closure_14(closure_6, obj4), ];
+  const items4 = [closure_13(closure_5, obj4), ];
   const obj14 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
   const obj15 = { style: twoWayLinkStyles.footerButton, children: null };
   const obj16 = { size: "lg", variant: "primary", text: null, onPress: null };
-  const intl4 = tmp2(tmp3[14]).intl;
-  obj16.text = intl4.string(first(navigation[14]).t["3PatSz"]);
+  const intl4 = tmp2(tmp3[15]).intl;
+  obj16.text = intl4.string(first(navigation[15]).t["3PatSz"]);
   obj16.onPress = callback1;
-  obj15.children = closure_13(first(navigation[20]).Button, obj16);
-  obj14.children = closure_13(closure_6, obj15);
-  items4[1] = closure_13(first(navigation[21]).SafeAreaPaddingView, obj14);
+  obj15.children = closure_12(first(navigation[21]).Button, obj16);
+  obj14.children = closure_12(closure_5, obj15);
+  items4[1] = closure_12(first(navigation[22]).SafeAreaPaddingView, obj14);
   obj3.children = items4;
-  return closure_14(closure_6, obj3);
+  return closure_13(closure_5, obj3);
 });

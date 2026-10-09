@@ -1,13 +1,13 @@
-// === Module 7254: CollectiblesProductRecord ===
+// === Module 7259: CollectiblesProductRecord ===
 
-// Module 7254 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6095 */;
+// Module 7259 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 6097 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7255 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7261 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7260 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7266 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7256);
+const CollectiblesItemRecord = fn(7261);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1085);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "apply", items: "<string:33554879>", categorySkuId: "IMAGE_ONLY_ANSWERS", isCategoryReward: "<string:2052129024>", prices: 553217, previewAssets: 34668544, googleSkuIds: 12288116, eligibleOffers: 245760, variants: 256, bundledProducts: 16384000, isFirstParty: -470855424 };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "code", items: false, categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
               let str;
               if (first != null) {
                 str = first.optionValue;

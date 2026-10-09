@@ -1,14 +1,14 @@
-// === Module 14264: RefreshEmptyState ===
+// === Module 14360: RefreshEmptyState ===
 
-// Module 14264 (RefreshEmptyState)
+// Module 14360 (RefreshEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4929 */;
-import components_Button_Button from "components/Button/Button" /* 5375 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8572 */;
+import shared from "shared" /* 4930 */;
+import components_Button_Button from "components/Button/Button" /* 5376 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8580 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5902 */;
+import TextStyles_mod from "TextStyles" /* 5903 */;
 
 require = fn;
 let closure_3 = ["lightSource", "darkSource"];
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", padding: 16 }, title: null, body: null, image: null, cta: null };
 let obj3 = {};
 let TextStyles = TextStyles_mod;

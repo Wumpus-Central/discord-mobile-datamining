@@ -1,12 +1,12 @@
-// === Module 7042: GuildDiscoveryUtils ===
+// === Module 7045: GuildDiscoveryUtils ===
 
-// Module 7042 (GuildDiscoveryUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
-import _modDef1490 from "module_1490" /* 1490 */;
+// Module 7045 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
+import _modDef1491 from "module_1491" /* 1491 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4708 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4980 */;
+import LurkingStore from "LurkingStore" /* 4710 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4981 */;
 import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;
@@ -132,7 +132,7 @@ let closure_11 = async function _startLurking(arg0) {
   }
   closure_133_2 = obj5;
   closure_133_3 = closure_3;
-  return "Reflect";
+  return "Set";
 };
 function makeDiscoverableGuild(body) {
   const obj = { id: body.id, name: body.name, description: body.description, splash: body.splash, banner: body.banner, icon: body.icon, features: new Set(body.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null, stickers: null, stickerCount: null, keywords: null };
@@ -176,7 +176,7 @@ let closure_13 = async function _getDiscoverableGuild() {
             const HTTP = HTTPUtils.HTTP;
             const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
             const obj4 = { guild_ids };
-            request.query = _modDef1490.stringify(obj4);
+            request.query = _modDef1491.stringify(obj4);
             c5 = 2;
             c6 = 1;
             const obj5 = { value: HTTP.get(request), done: false };

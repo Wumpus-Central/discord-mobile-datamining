@@ -1,8 +1,8 @@
-// === Module 9964: SelectedDismissibleContent ===
+// === Module 9983: SelectedDismissibleContent ===
 
-// Module 9964 (SelectedDismissibleContent)
+// Module 9983 (SelectedDismissibleContent)
 import c from "c" /* 576 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7090 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7093 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,36 +12,48 @@ const jsxProd = fn(21);
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function SelectedDismissibleContent(arg0) {
-  const cResult = c.c(6);
-  ({ children, contentTypes, groupName, bypassAutoDismiss } = arg0);
-  [tmp3, tmp4] = useSelectedDismissibleContent.useSelectedDismissibleContent(contentTypes, groupName, bypassAutoDismiss);
-  if (cResult[0] === children) {
-    if (cResult[1] === tmp4) {
-      if (cResult[2] === tmp3) {
-        let tmp5 = cResult[3];
-      }
-      if (cResult[4] !== tmp5) {
-        const obj3 = { children: tmp5 };
-        const tmp10 = React4(React3, obj3);
-        cResult[4] = tmp5;
-        cResult[5] = tmp10;
-        let tmp7 = tmp10;
-      } else {
-        tmp7 = cResult[5];
-      }
-      return tmp7;
+  const cResult = c.c(9);
+  ({ children, groupName, bypassAutoDismiss } = arg0);
+  if (cResult[0] === bypassAutoDismiss) {
+    if (cResult[1] === groupName) {
+      let tmp5 = cResult[2];
     }
+    const tmpResult = useSelectedDismissibleContent;
+    [tmp8, tmp9] = useSelectedDismissibleContent.useSelectedDismissibleContent(tmp4, tmp5);
+    if (cResult[3] === children) {
+      if (cResult[4] === tmp9) {
+        if (cResult[5] === tmp8) {
+          let tmp10 = cResult[6];
+        }
+        if (cResult[7] !== tmp10) {
+          const obj2 = { children: tmp10 };
+          const tmp15 = React4(React3, obj2);
+          cResult[7] = tmp10;
+          cResult[8] = tmp15;
+          let tmp12 = tmp15;
+        } else {
+          tmp12 = cResult[8];
+        }
+        return tmp12;
+      }
+    }
+    const obj3 = { visibleContent: tmp8, markAsDismissed: tmp9 };
+    const childrenResult = children(obj3);
+    cResult[3] = children;
+    cResult[4] = tmp9;
+    cResult[5] = tmp8;
+    cResult[6] = childrenResult;
+    tmp10 = childrenResult;
+    const tmp7 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(tmp4, tmp5), 2);
   }
-  const childrenResult = children({ visibleContent: tmp3, markAsDismissed: tmp4 });
-  cResult[0] = children;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = childrenResult;
-  tmp5 = childrenResult;
-  const tmp2 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(contentTypes, groupName, bypassAutoDismiss), 2);
+  const obj4 = { groupName, bypassAutoDismiss };
+  cResult[0] = bypassAutoDismiss;
+  cResult[1] = groupName;
+  cResult[2] = obj4;
+  tmp5 = obj4;
 }) : (function SelectedDismissibleContent(arg0) {
   ({ contentTypes, children, groupName, bypassAutoDismiss } = arg0);
-  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(contentTypes, groupName, bypassAutoDismiss), 2);
+  const tmp = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(contentTypes, { groupName, bypassAutoDismiss }), 2);
   const obj2 = { children: children({ visibleContent: tmp[0], markAsDismissed: tmp[1] }) };
   return React4(React3, obj2);
 });

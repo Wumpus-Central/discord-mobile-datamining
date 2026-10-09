@@ -1,9 +1,9 @@
-// === Module 17002: conjureAgentReaction ===
+// === Module 17158: conjureAgentReaction ===
 
-// Module 17002 (conjureAgentReaction)
+// Module 17158 (conjureAgentReaction)
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4721 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureAgentReaction.tsx");

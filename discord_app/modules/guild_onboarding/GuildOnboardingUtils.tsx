@@ -1,18 +1,18 @@
-// === Module 6784: GuildOnboardingUtils ===
+// === Module 6791: GuildOnboardingUtils ===
 
-// Module 6784 (GuildOnboardingUtils)
+// Module 6791 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import StringUtils from "StringUtils" /* 2030 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4712 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6780 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 6785 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5757 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
+import FlagUtilsAll from "FlagUtils" /* 1403 */;
+import StringUtils from "StringUtils" /* 2031 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6787 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 6792 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6779).OnboardingConnectionType;
+let closure_7 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(6786).OnboardingConnectionType;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4693).GuildMemberFlags;
+const GuildMemberFlags = fn(4695).GuildMemberFlags;
 let date = new Date(1682488800000);
 fn(558);
 let ReactCompilerGating = fn(558);

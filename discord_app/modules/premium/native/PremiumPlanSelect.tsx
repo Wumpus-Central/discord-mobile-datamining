@@ -1,41 +1,41 @@
-// === Module 13666: PremiumPlanSelect ===
+// === Module 13757: PremiumPlanSelect ===
 
-// Module 13666 (PremiumPlanSelect)
+// Module 13757 (PremiumPlanSelect)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import PremiumUtils from "PremiumUtils" /* 4726 */;
-import PremiumSubscription from "PremiumSubscription" /* 4738 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import Stack_Stack from "Stack/Stack" /* 5373 */;
-import LinearGradientDefault from "LinearGradient" /* 5387 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5720 */;
-import TextStylesDefault from "TextStyles" /* 5902 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6946 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7114 */;
-import ProductIds from "ProductIds" /* 7115 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9005 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10004 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10149 */;
-import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13500 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13501 */;
-import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 13668 */;
-import _modDef13670 from "module_13670" /* 13670 */;
-import _modDef13671 from "module_13671" /* 13671 */;
-import _modDef13672 from "module_13672" /* 13672 */;
-import _modDef13673 from "module_13673" /* 13673 */;
-import _modDef13674 from "module_13674" /* 13674 */;
-import _modDef13675 from "module_13675" /* 13675 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
+import PremiumUtils from "PremiumUtils" /* 4728 */;
+import PremiumSubscription from "PremiumSubscription" /* 4740 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import Stack_Stack from "Stack/Stack" /* 5374 */;
+import LinearGradientDefault from "LinearGradient" /* 5388 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5721 */;
+import TextStylesDefault from "TextStyles" /* 5903 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6953 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7119 */;
+import ProductIds from "ProductIds" /* 7120 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9016 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10023 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10134 */;
+import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet" /* 13592 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13593 */;
+import TreasureChestBannerSpotIllustration from "TreasureChestBannerSpotIllustration" /* 13759 */;
+import _modDef13763 from "module_13763" /* 13763 */;
+import _modDef13764 from "module_13764" /* 13764 */;
+import _modDef13765 from "module_13765" /* 13765 */;
+import _modDef13766 from "module_13766" /* 13766 */;
+import _modDef13767 from "module_13767" /* 13767 */;
+import _modDef13768 from "module_13768" /* 13768 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4731 */;
-import SubscriptionStore from "SubscriptionStore" /* 4732 */;
-import IAPStore from "IAPStore" /* 7120 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4733 */;
+import SubscriptionStore from "SubscriptionStore" /* 4734 */;
+import IAPStore from "IAPStore" /* 7125 */;
 
 const require = globalThis.__r;
 const PremiumUtilsDefault = PremiumUtils;
@@ -83,7 +83,7 @@ function PlanSection(showBoostOnlyLabels) {
   c12 = undefined;
   const tmp = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   closure_11 = tmp;
-  let isIOSResult = shouldShowModernBoostFlow(1382).isIOS();
+  let isIOSResult = shouldShowModernBoostFlow(1383).isIOS();
   if (isIOSResult) {
     isIOSResult = null != tmp;
   }
@@ -156,7 +156,7 @@ function PlanSection(showBoostOnlyLabels) {
   }, plan.productId));
   if (shouldShowModernBoostFlow) {
     let obj2 = { title: showBoostOnlyLabels.label, hasIcons: true, children: mapped };
-    let tmp7Result = closure_31(shouldShowModernBoostFlow(6267).TableRowGroup, obj2);
+    let tmp7Result = closure_31(shouldShowModernBoostFlow(6269).TableRowGroup, obj2);
   } else {
     let obj3 = { children: mapped };
     tmp7Result = closure_31(closure_7, obj3);
@@ -167,8 +167,8 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
   if (null != productIdFromSubscription) {
     if (obj3.isValidBundleProductId(productIdFromSubscription)) {
       if (null == productIdFromSubscription2) {
-        let toggledIntervalProduct = tmp7(7114).getToggledIntervalProduct(productIdFromSubscription);
-        let tmp7Result = tmp7(7114);
+        let toggledIntervalProduct = tmp7(7119).getToggledIntervalProduct(productIdFromSubscription);
+        let tmp7Result = tmp7(7119);
       } else {
         toggledIntervalProduct = productIdFromSubscription;
       }
@@ -193,39 +193,39 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
         })) {
           items = [];
           const arraySpreadResult = HermesBuiltin.arraySpread(plans, 0);
-          items[arraySpreadResult] = tmp7(7114).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
+          items[arraySpreadResult] = tmp7(7119).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
           tmp3 = items;
-          const tmp7Result2 = tmp7(7114);
+          const tmp7Result2 = tmp7(7119);
         }
       }
       return tmp3;
     }
-    obj3 = toggledIntervalProduct(7114);
+    obj3 = toggledIntervalProduct(7119);
   }
   return plans;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let useNativeCheckoutStore = fn(7132).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13667);
+let useNativeCheckoutStore = fn(7137).useNativeCheckoutStore;
+const PremiumPlanSelectStore = fn(13758);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, AnalyticsObjects: closure_24, AnalyticsObjectTypes: closure_25, Fonts, HorizontalGradient: closure_26, PaymentGateways: closure_27, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-const ColorConstants = fn(7140);
+const ColorConstants = fn(7145);
 ({ getPremiumGradientColor: closure_28, Gradients: closure_29 } = ColorConstants);
-const ItemPurchaseType = fn(5069).ItemPurchaseType;
+const ItemPurchaseType = fn(5070).ItemPurchaseType;
 const jsxProd = fn(21);
 ({ jsx: items, jsxs: closure_32, Fragment: closure_33 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { header: null, row: null, rowDisabled: null, imgWumpusNitro: null, imgBoost: null, imgWumpusNitroBoost: null, imgWumpusNitroClassic: null, imgWumpusNitroClassicBoost: null, imgWumpusNitroTier0: null, rowText: null, rowPlanDescription: null, rowPlanDescriptionSubtext: null, rowPrice: null, purchasingSpinner: null, container: null, currentPlanGradient: null, currentPlanRow: null, loadingSpinnerContainer: null, offPlatformSubscriptionMessage: null, premiumHeaderLabel: null, boostContainer: null, boostRowIcon: null, nitroBanner: null, nitroBannerText: null, recommendedText: null };
 let obj3 = {};
 let merged = Object.assign(TextStylesDefault(Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.marginTop = 16;
-obj3.color = fn(5974).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5976).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5976).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 obj2.rowDisabled = { opacity: 0.5 };
 obj2.imgWumpusNitro = { height: 40, width: 40 };
 obj2.imgBoost = { height: 40, width: 40 };
@@ -233,14 +233,14 @@ obj2.imgWumpusNitroBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroClassic = { width: 40, height: 40 };
 obj2.imgWumpusNitroClassicBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroTier0 = { width: 40, height: 40 };
-let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5974).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj2.rowText = { fontSize: 16, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5976).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.rowText = { fontSize: 16, color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.rowPlanDescription = { marginLeft: 12, fontFamily: Fonts.PRIMARY_SEMIBOLD, lineHeight: 20 };
 obj2.rowPlanDescriptionSubtext = { fontSize: 12, marginLeft: 5, fontFamily: Fonts.PRIMARY_MEDIUM, fontWeight: "400" };
 obj2.rowPrice = { marginLeft: "auto" };
 obj2.purchasingSpinner = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" };
 obj2.container = { marginHorizontal: 14.5, paddingBottom: 10 };
-let obj5 = { fontSize: 16, color: fn(5974).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj5 = { fontSize: 16, color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.currentPlanGradient = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
 obj2.currentPlanRow = { marginTop: 0.5, marginRight: 0.5, marginLeft: 0.5, marginBottom: 0.5 };
 obj2.loadingSpinnerContainer = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
@@ -357,7 +357,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   obj.children = items;
   return __initData5(Stack_Stack.Stack, obj);
 });
-let closure_37 = { [_modDef13673]: "imgWumpusNitro", [_modDef13675]: "imgWumpusNitroBoost", [_modDef13672]: "imgWumpusNitroClassic", [_modDef13674]: "imgWumpusNitroClassicBoost", [_modDef13671]: "imgWumpusNitroTier0", [_modDef13670]: "imgBoost" };
+let closure_37 = { [_modDef13766]: "imgWumpusNitro", [_modDef13768]: "imgWumpusNitroBoost", [_modDef13765]: "imgWumpusNitroClassic", [_modDef13767]: "imgWumpusNitroClassicBoost", [_modDef13764]: "imgWumpusNitroTier0", [_modDef13763]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostDeltaPriceTrailing(arg0) {
   const cResult = c.c(8);
@@ -723,21 +723,21 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRo
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("module_13670");
+    let tmp7Result = require("module_13763");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_20.TIER_1) {
-      tmp7Result = require("module_13674");
+      tmp7Result = require("module_13767");
     } else {
-      tmp7Result = require("module_13675");
+      tmp7Result = require("module_13768");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_20.TIER_0 === premiumTier) {
-      tmp7Result = require("module_13671");
+      tmp7Result = require("module_13764");
     } else if (closure_20.TIER_1 === premiumTier) {
-      tmp7Result = require("module_13672");
+      tmp7Result = require("module_13765");
     } else if (closure_20.TIER_2 === premiumTier) {
-      tmp7Result = require("module_13673");
+      tmp7Result = require("module_13766");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -1742,8 +1742,8 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                 const obj7 = {
                   value: v3(modifySubscriptionItemsForProduct.map((planId) => {
                               const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                              const obj2 = applicationId(4726);
-                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(4726).getSkuIdForPlan(planId.planId));
+                              const obj2 = applicationId(4728);
+                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(4728).getSkuIdForPlan(planId.planId));
                               ({ planId: obj.subscription_plan_id, quantity: obj.quantity } = planId);
                               obj.purchase_type = constants.SUBSCRIPTION;
                               return obj;
@@ -1811,20 +1811,20 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           }
           obj13.orderId = id;
           obj13.onPurchaseComplete = function onPurchaseComplete(paymentGateway) {
-            closure_1(5298).close();
+            closure_1(5299).close();
             if (paymentGateway.paymentGateway === constants.APPLE_ADVANCED_COMMERCE) {
               premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
               if (null == premiumTypeSubscription) {
                 const _Error = Error;
                 const error = new Error("PremiumActivatedAlert: no premium subscription in store post-activation");
                 const obj2 = { tags: { source: "showPremiumActivatedAlert.nullSubscription" } };
-                const result = premiumTypeSubscription(4741).captureBillingException(error, obj2);
-                const obj4 = premiumTypeSubscription(4741);
-                closure_1(5940).popWithKey(premiumTypeSubscription(7118).PREMIUM_KEY);
+                const result = premiumTypeSubscription(4743).captureBillingException(error, obj2);
+                const obj4 = premiumTypeSubscription(4743);
+                closure_1(5941).popWithKey(premiumTypeSubscription(7123).PREMIUM_KEY);
                 if (navigation.canGoBack()) {
                   navigation.goBack();
                 }
-                const tmpResult = closure_1(5940);
+                const tmpResult = closure_1(5941);
               } else {
                 const obj3 = {
                   importer() {
@@ -1832,11 +1832,11 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                       },
                   isDismissable: false
                 };
-                closure_1(5298).openLazy(obj3);
-                const tmpResult2 = closure_1(5298);
+                closure_1(5299).openLazy(obj3);
+                const tmpResult2 = closure_1(5299);
               }
             }
-            let obj = closure_1(5298);
+            let obj = closure_1(5299);
           };
           v3 = 3;
           c7 = 1;

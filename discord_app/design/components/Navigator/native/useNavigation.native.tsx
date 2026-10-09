@@ -1,7 +1,7 @@
-// === Module 1502: useNavigation ===
+// === Module 1503: useNavigation ===
 
-// Module 1502 (useNavigation)
-import Link from "Link" /* 1503 */;
+// Module 1503 (useNavigation)
+import Link from "Link" /* 1504 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

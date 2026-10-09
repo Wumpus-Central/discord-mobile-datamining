@@ -1,9 +1,9 @@
-// === Module 6076: DiscordAppState ===
+// === Module 6078: DiscordAppState ===
 
-// Module 6076 (DiscordAppState)
+// Module 6078 (DiscordAppState)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import AppStateStore from "AppStateStore" /* 1998 */;
+import AppStateStore from "AppStateStore" /* 1999 */;
 
 require = fn;
 let obj = {

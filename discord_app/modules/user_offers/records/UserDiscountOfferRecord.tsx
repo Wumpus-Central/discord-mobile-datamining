@@ -1,8 +1,8 @@
-// === Module 8066: UserDiscountOfferRecord ===
+// === Module 8074: UserDiscountOfferRecord ===
 
-// Module 8066 (UserDiscountOfferRecord)
-import Record from "Record" /* 1404 */;
-import DiscountRecord from "DiscountRecord" /* 7162 */;
+// Module 8074 (UserDiscountOfferRecord)
+import Record from "Record" /* 1405 */;
+import DiscountRecord from "DiscountRecord" /* 7167 */;
 
 let UserDiscountOfferRecord;
 class UserDiscountOfferRecord extends tmp2 {

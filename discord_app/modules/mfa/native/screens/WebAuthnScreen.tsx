@@ -1,20 +1,20 @@
-// === Module 15780: WebAuthnScreen ===
+// === Module 15893: WebAuthnScreen ===
 
-// Module 15780 (WebAuthnScreen)
+// Module 15893 (WebAuthnScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 5948 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6622 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15782 */;
+import NativeSecurityKeyManagerModuleDefault from "NativeSecurityKeyManagerModule" /* 5949 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6629 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 15895 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const buttonDefault = tmp15(15781);
+const buttonDefault = tmp15(15894);
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { radioItem: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj2);
 let obj4 = { AUTHENTICATE: 0, [0]: "AUTHENTICATE", ANDROID_PASSKEY: 1, [1]: "ANDROID_PASSKEY" };
@@ -112,9 +112,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   const tmp5 = _slicedToArray(challenge.useState(false), 2);
   [r10023, dependencyMap] = challenge.useState(undefined);
   const tmp7 = _slicedToArray(challenge.useState(undefined), 2);
-  const obj3 = finish(1381);
-  [tmp10, tmp11] = challenge.useState(finish(1381).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE);
-  const tmp4Result = _slicedToArray(challenge.useState(finish(1381).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE), num);
+  const obj3 = finish(1382);
+  [tmp10, tmp11] = challenge.useState(finish(1382).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE);
+  const tmp4Result = _slicedToArray(challenge.useState(finish(1382).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE), num);
   [tmp13, _slicedToArray] = obj2.useState(false);
   if (cResult[0] !== mfaChallenge.methods) {
     const _Symbol = Symbol;
@@ -151,20 +151,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
               nextPromise = promise.then((data) => finish({ mfaType: "webauthn", data }));
               nextPromise1 = nextPromise.then(() => closure_1_3(true));
               catchPromise = nextPromise1.catch((error) => {
-                if (error instanceof finish(1294).HTTPResponseError) {
+                if (error instanceof finish(1295).HTTPResponseError) {
                   const intl = finish(1126).intl;
                   dependencyMap(intl.string(finish(1126).t.xSCvBf));
                 } else {
-                  const result = finish(6624).captureWebAuthnException(error, {});
+                  const result = finish(6631).captureWebAuthnException(error, {});
                   dependencyMap(error.message);
-                  const tmpResult = finish(6624);
+                  const tmpResult = finish(6631);
                 }
               });
               cleanupPromise = catchPromise.finally(() => closure_1_1(false));
               return;
             }
           }
-          const tmp27 = jsx(finish(14873).KeyImage, {});
+          const tmp27 = jsx(finish(14983).KeyImage, {});
           cResult[7] = stringResult;
           cResult[8] = stringResult1;
           cResult[9] = tmp27;
@@ -177,13 +177,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
             nextPromise = promise.then((data) => finish({ mfaType: "webauthn", data }));
             nextPromise1 = nextPromise.then(() => closure_1_3(true));
             catchPromise = nextPromise1.catch((error) => {
-              if (error instanceof finish(1294).HTTPResponseError) {
+              if (error instanceof finish(1295).HTTPResponseError) {
                 const intl = finish(1126).intl;
                 dependencyMap(intl.string(finish(1126).t.xSCvBf));
               } else {
-                const result = finish(6624).captureWebAuthnException(error, {});
+                const result = finish(6631).captureWebAuthnException(error, {});
                 dependencyMap(error.message);
-                const tmpResult = finish(6624);
+                const tmpResult = finish(6631);
               }
             });
             cleanupPromise = catchPromise.finally(() => closure_1_1(false));
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
               nextPromise = promise.then((data) => finish({ mfaType: "webauthn", data }));
               nextPromise1 = nextPromise.then(() => closure_1_3(true));
               catchPromise = nextPromise1.catch((error) => {
-                if (error instanceof finish(1294).HTTPResponseError) {
+                if (error instanceof finish(1295).HTTPResponseError) {
                   const intl = finish(1126).intl;
                   dependencyMap(intl.string(finish(1126).t.xSCvBf));
                 } else {
-                  const result = finish(6624).captureWebAuthnException(error, {});
+                  const result = finish(6631).captureWebAuthnException(error, {});
                   dependencyMap(error.message);
-                  const tmpResult = finish(6624);
+                  const tmpResult = finish(6631);
                 }
               });
               cleanupPromise = catchPromise.finally(() => closure_1_1(false));
@@ -231,13 +231,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
         nextPromise = promise.then((data) => finish({ mfaType: "webauthn", data }));
         nextPromise1 = nextPromise.then(() => closure_1_3(true));
         catchPromise = nextPromise1.catch((error) => {
-          if (error instanceof finish(1294).HTTPResponseError) {
+          if (error instanceof finish(1295).HTTPResponseError) {
             const intl = finish(1126).intl;
             dependencyMap(intl.string(finish(1126).t.xSCvBf));
           } else {
-            const result = finish(6624).captureWebAuthnException(error, {});
+            const result = finish(6631).captureWebAuthnException(error, {});
             dependencyMap(error.message);
-            const tmpResult = finish(6624);
+            const tmpResult = finish(6631);
           }
         });
         cleanupPromise = catchPromise.finally(() => closure_1_1(false));
@@ -259,9 +259,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   const tmp4 = authenticatorSelection(noop.useState(undefined), 2);
   dependencyMap = tmp4[1];
   const tmp2 = authenticatorSelection(noop.useState(false), 2);
-  let tmpResult = authenticatorSelection(noop.useState(finish(1381).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE), 2);
+  let tmpResult = authenticatorSelection(noop.useState(finish(1382).isAndroid() ? obj4.ANDROID_PASSKEY : obj4.AUTHENTICATE), 2);
   authenticatorSelection = tmpResult[0];
-  const obj2 = finish(1381);
+  const obj2 = finish(1382);
   [tmp11, c4] = authenticatorSelection(noop.useState(false), 2);
   const methods = mfaChallenge.methods;
   const challenge = methods.find((type) => "webauthn" === type.type).challenge;
@@ -275,13 +275,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
     const nextPromise = memo(challenge).then((data) => finish({ mfaType: "webauthn", data }));
     const nextPromise1 = memo(challenge).then((data) => finish({ mfaType: "webauthn", data })).then(() => closure_1_4(true));
     memo(challenge).then((data) => finish({ mfaType: "webauthn", data })).then(() => closure_1_4(true)).catch((error) => {
-      if (error instanceof finish(1294).HTTPResponseError) {
+      if (error instanceof finish(1295).HTTPResponseError) {
         const intl = finish(1126).intl;
         dependencyMap(intl.string(finish(1126).t.xSCvBf));
       } else {
-        const result = finish(6624).captureWebAuthnException(error, {});
+        const result = finish(6631).captureWebAuthnException(error, {});
         dependencyMap(error.message);
-        const tmpResult = finish(6624);
+        const tmpResult = finish(6631);
       }
     }).finally(() => _undefined(false));
   }, items1);
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WebAuthn
   obj3.headerText = intl.string(finish(1126).t.saHocI);
   const intl2 = finish(1126).intl;
   obj3.subtitle = intl2.string(finish(1126).t.YpMrqM);
-  obj3.headerImage = challenge(finish(14873).KeyImage, {});
+  obj3.headerImage = challenge(finish(14983).KeyImage, {});
   let shouldDisplayAndroidFidoSelector = NativeCeremoniesDefault.shouldDisplayAndroidFidoSelector;
   if (shouldDisplayAndroidFidoSelector) {
     obj4 = { authenticatorSelection, setAuthenticator: tmpResult[1], inProgress: null };

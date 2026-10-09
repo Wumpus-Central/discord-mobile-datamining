@@ -1,28 +1,28 @@
-// === Module 17262: YouBannerDecorations ===
+// === Module 9099: YouBannerDecorations ===
 
-// Module 17262 (YouBannerDecorations)
+// Module 9099 (YouBannerDecorations)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4898 */;
-import QuestTypes from "QuestTypes" /* 5980 */;
-import useTrialOffer from "useTrialOffer" /* 7160 */;
-import QuestUtils from "QuestUtils" /* 10572 */;
-import PromotionsHooks from "PromotionsHooks" /* 13681 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 17264 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4899 */;
+import QuestTypes from "QuestTypes" /* 5982 */;
+import useTrialOffer from "useTrialOffer" /* 7165 */;
+import PromotionsHooks from "PromotionsHooks" /* 9100 */;
+import tracking_Tracking from "tracking/Tracking" /* 9145 */;
+import QuestUtils from "QuestUtils" /* 9146 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const useIntlLoaderStore = fn(2129).useIntlLoaderStore;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
-let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
+let closure_9 = fn(1392).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, containerFloatingContent: null, endcap: null, buttonsFloating: null };
   const obj2 = {};
@@ -171,7 +171,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   const items2 = [tmp14, navigateToSettings, tmp18];
   const items3 = [navigateToPremium];
   const callback = containerBackground.useCallback(() => {
-    const result = you_tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
+    const result = tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
     navigateToSettings();
     let tmp5 = closure_7;
     if (closure_7) {
@@ -186,7 +186,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   }, items2);
   const items4 = [showBadge, dismissBadge];
   const callback1 = containerBackground.useCallback(() => {
-    const result = you_tracking_Tracking.trackYouTabNitroIconPress();
+    const result = tracking_Tracking.trackYouTabNitroIconPress();
     navigateToPremium();
   }, items3);
   const callback2 = containerBackground.useCallback(() => {

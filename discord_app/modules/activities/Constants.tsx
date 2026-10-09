@@ -1,9 +1,9 @@
-// === Module 2023: Constants ===
+// === Module 2024: Constants ===
 
-// Module 2023 (Constants)
+// Module 2024 (Constants)
 import Constants from "Constants" /* 1085 */;
-import Server from "Server" /* 1997 */;
-import ActivityApplications from "ActivityApplications" /* 2024 */;
+import Server from "Server" /* 1998 */;
+import ActivityApplications from "ActivityApplications" /* 2025 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

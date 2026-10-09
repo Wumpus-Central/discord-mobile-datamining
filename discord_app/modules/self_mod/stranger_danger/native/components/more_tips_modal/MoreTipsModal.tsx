@@ -1,20 +1,20 @@
-// === Module 10381: MoreTipsModal ===
+// === Module 10368: MoreTipsModal ===
 
-// Module 10381 (MoreTipsModal)
+// Module 10368 (MoreTipsModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import _modDef5009 from "module_5009" /* 5009 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5725 */;
-import MetricEvents from "MetricEvents" /* 5730 */;
-import HeaderActionButton from "HeaderActionButton" /* 7079 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10382 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10385 */;
+import _modDef5010 from "module_5010" /* 5010 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5726 */;
+import MetricEvents from "MetricEvents" /* 5731 */;
+import HeaderActionButton from "HeaderActionButton" /* 7082 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10361 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10369 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 10374 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10266 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10251 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -385,7 +385,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MoreTips
             onPress() {
               return warningId(senderId[14]).popWithKey(channelId);
             },
-            source: _modDef5009,
+            source: _modDef5010,
             iconSize: native.IconSizes.MEDIUM,
             accessibilityLabel: null
           };

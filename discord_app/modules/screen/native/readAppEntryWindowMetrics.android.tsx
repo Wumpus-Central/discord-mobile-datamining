@@ -1,7 +1,7 @@
-// === Module 1895: readAppEntryWindowMetrics ===
+// === Module 1896: readAppEntryWindowMetrics ===
 
-// Module 1895 (readAppEntryWindowMetrics)
-import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1365 */;
+// Module 1896 (readAppEntryWindowMetrics)
+import NativeDeviceModuleDefault from "NativeDeviceModule" /* 1366 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");

@@ -1,11 +1,11 @@
-// === Module 12616: NotificationSettingsMockMessage ===
+// === Module 12556: NotificationSettingsMockMessage ===
 
-// Module 12616 (NotificationSettingsMockMessage)
+// Module 12556 (NotificationSettingsMockMessage)
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 5091 */;
-import timingPresets from "timingPresets" /* 5094 */;
+import timing from "timing" /* 5092 */;
+import timingPresets from "timingPresets" /* 5095 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1389 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, padding: 16 }, cardContent: { display: "flex", flexDirection: "row" }, cardMessage: { marginLeft: 12, maxWidth: 240 }, overlay: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.overlay = rect;
@@ -44,14 +44,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
   if (cResult[2] !== stateFromStores) {
-    let str = sharedValue(4922).getName(stateFromStores);
+    let str = sharedValue(4923).getName(stateFromStores);
     if (str == null) {
       str = "Roka";
     }
     cResult[2] = stateFromStores;
     cResult[3] = str;
     let tmp9 = str;
-    const obj3 = sharedValue(4922);
+    const obj3 = sharedValue(4923);
   } else {
     tmp9 = cResult[3];
   }
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
       const obj4 = { variant: "text-sm/normal", color: "text-link", children: null };
       const items1 = ["@", tmp9, " "];
       obj4.children = items1;
-      const tmp22 = closure_8(tmp(5086).Text, obj4);
+      const tmp22 = closure_8(tmp(5087).Text, obj4);
       cResult[5] = tmp9;
       cResult[6] = tmp22;
       let tmp20 = tmp22;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
       const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
       const items2 = [tmp20, tmp23];
       obj6.children = items2;
-      obj5.children = closure_8(tmp(5086).Text, obj6);
+      obj5.children = closure_8(tmp(5087).Text, obj6);
       const tmp29 = closure_7(View, obj5);
       cResult[8] = tmp20;
       cResult[9] = tmp29;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
         }
       }
       obj7.children = tmp18(tmp(1126).t.WYyzI5);
-      const tmp19 = closure_7(tmp(5086).Text, obj7);
+      const tmp19 = closure_7(tmp(5087).Text, obj7);
       cResult[4] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
             return;
           }
         }
-        obj9.source = sharedValue(12617);
+        obj9.source = sharedValue(12557);
         obj9.size = tmp(1200).AvatarSizes.LARGE_48;
         obj8.children = closure_7(tmp(1200).Avatar, obj9);
         const tmp39 = closure_7(View, obj8);
@@ -186,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
           }
         }
         obj10.children = tmp42(tmp(1126).t.qSq0tD);
-        const tmp43 = closure_7(tmp(5086).Text, obj10);
+        const tmp43 = closure_7(tmp(5087).Text, obj10);
         cResult[15] = tmp43;
         let tmp40 = tmp43;
       } else {
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
           }
           const items4 = [animatedStyle, tmp4.overlay];
           tmp56[0] = items4;
-          const tmp57 = closure_7(sharedValue(4810).View, tmp56);
+          const tmp57 = closure_7(sharedValue(4811).View, tmp56);
           cResult[22] = tmp4.overlay;
           cResult[23] = animatedStyle;
           cResult[24] = tmp57;
@@ -306,12 +306,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = require("initialize");
-  let str = sharedValue(4922).getName(stateFromStores);
+  let str = sharedValue(4923).getName(stateFromStores);
   if (str == null) {
     str = "Roka";
   }
   _require = tmp7;
-  const obj2 = sharedValue(4922);
+  const obj2 = sharedValue(4923);
   let num = 0;
   if (notificationSetting.notificationSetting === UserNotificationSettings.NO_MESSAGES) {
     num = 0.8;
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     const obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
     const intl = tmp2(1126).intl;
     obj4.children = intl.string(tmp2(1126).t.WYyzI5);
-    let tmp11 = closure_7(tmp2(5086).Text, obj4);
+    let tmp11 = closure_7(tmp2(5087).Text, obj4);
     let tmp12 = closure_7;
   } else {
     const obj5 = { children: null };
@@ -341,11 +341,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
     const obj7 = { variant: "text-sm/normal", color: "text-link", children: null };
     const items1 = ["@", str, " "];
     obj7.children = items1;
-    const items2 = [closure_8(tmp2(5086).Text, obj7), ];
+    const items2 = [closure_8(tmp2(5087).Text, obj7), ];
     const intl3 = tmp2(1126).intl;
     items2[1] = intl3.string(tmp2(1126).t.WYyzI5);
     obj6.children = items2;
-    obj5.children = closure_8(tmp2(5086).Text, obj6);
+    obj5.children = closure_8(tmp2(5087).Text, obj6);
     tmp11 = closure_7(View, obj5);
     tmp12 = closure_7;
   }
@@ -361,7 +361,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const obj9 = { style: tmp.cardContent, children: null };
   const obj10 = { children: null };
   const obj3 = { withTiming: require("timing").withTiming, opacity: sharedValue, timingStandard: require("timingPresets").timingStandard };
-  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(12617), size: require("native").AvatarSizes.LARGE_48 });
+  obj10.children = tmp12(require("native").Avatar, { source: sharedValue(12557), size: require("native").AvatarSizes.LARGE_48 });
   const items4 = [tmp12(View, obj10), ];
   const obj12 = { style: tmp.cardMessage, children: null };
   const obj13 = { variant: "text-sm/semibold", children: null };
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   const obj14 = { style: null };
   const items7 = [animatedStyle, tmp.overlay];
   obj14.style = items7;
-  items6[1] = tmp12(sharedValue(4810).View, obj14);
+  items6[1] = tmp12(sharedValue(4811).View, obj14);
   obj8.children = items6;
   return closure_8(View, obj8);
 });

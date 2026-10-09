@@ -1,11 +1,11 @@
-// === Module 9087: useGuildProfileGames ===
+// === Module 12965: useGuildProfileGames ===
 
-// Module 9087 (useGuildProfileGames)
+// Module 12965 (useGuildProfileGames)
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
+import GlobalUtils from "GlobalUtils" /* 1388 */;
 import noop from "module_19" /* 19 */;
-import GameRecord from "GameRecord" /* 2020 */;
-import GameStore from "GameStore" /* 2019 */;
+import GameRecord from "GameRecord" /* 2021 */;
+import GameStore from "GameStore" /* 2020 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -73,7 +73,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllGuildP
   const tmp7 = null != games && !require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] === games.gameApplicationIds) {
     if (cResult[3] === tmp7) {
-      const games1 = tmp(6995).useGames(cResult[4]);
+      const games1 = tmp(7002).useGames(cResult[4]);
       const tmp11 = closure_6(games);
       dependencyMap = tmp11;
       const _Symbol = Symbol;
@@ -107,7 +107,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAllGuildP
       cResult[7] = games.gameApplicationIds;
       cResult[8] = A;
       tmp14 = A;
-      const tmpResult3 = tmp(6995);
+      const tmpResult3 = tmp(7002);
     }
   }
   cResult[2] = games.gameApplicationIds;

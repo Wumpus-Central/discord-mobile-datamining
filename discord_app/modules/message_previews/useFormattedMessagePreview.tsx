@@ -1,17 +1,17 @@
-// === Module 12587: useFormattedMessagePreview ===
+// === Module 12527: useFormattedMessagePreview ===
 
-// Module 12587 (useFormattedMessagePreview)
+// Module 12527 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1101 */;
 import util from "util" /* 1126 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 5623 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6988 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 7972 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7977 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8073 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 5624 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6995 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 7980 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7985 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8081 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
@@ -425,7 +425,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
     }
     const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
     const tmpResult5 = tmp(504);
-    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5623).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
+    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5624).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
     return formatMessagePreview(author, obj2);
   }
   class I {

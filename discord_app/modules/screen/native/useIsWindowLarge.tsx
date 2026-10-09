@@ -1,7 +1,7 @@
-// === Module 6618: useIsWindowLarge ===
+// === Module 6625: useIsWindowLarge ===
 
-// Module 6618 (useIsWindowLarge)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4940 */;
+// Module 6625 (useIsWindowLarge)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4941 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

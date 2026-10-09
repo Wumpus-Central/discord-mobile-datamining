@@ -1,8 +1,8 @@
-// === Module 4926: ThemeActionCreators ===
+// === Module 4927: ThemeActionCreators ===
 
-// Module 4926 (ThemeActionCreators)
+// Module 4927 (ThemeActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1242 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1243 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 
 const SystemThemeState = fn(1208).SystemThemeState;

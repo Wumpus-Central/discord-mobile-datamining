@@ -1,23 +1,21 @@
-// === Module 11150: FramesNativeManager ===
+// === Module 14724: FramesNativeManager ===
 
-// Module 11150 (FramesNativeManager)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 14724 (FramesNativeManager)
 import util from "util" /* 1126 */;
-import GlobalUtils from "GlobalUtils" /* 1387 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5298 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 10624 */;
-import FramesStore from "FramesStore" /* 10612 */;
-import FramesManager from "FramesManager" /* 11151 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5299 */;
+import leaveFrame from "leaveFrame" /* 10811 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 14722 */;
+import FramesStore from "FramesStore" /* 10772 */;
+import FramesManager from "FramesManager" /* 14725 */;
 
 require = fn;
-const PlatformUtils = fn(1382);
+const PlatformUtils = fn(1383);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
 }
 class FramesNativeManager extends tmp5 {
   _initialize() {
-    self = this;
     _initializeResult = super._initialize();
     lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
@@ -28,9 +26,10 @@ class FramesNativeManager extends tmp5 {
     if (closure_4 != null) {
       str = "onHostDestroy";
       addListenerResult = obj.addListener("onHostDestroy", () => {
-        const allFrames = FramesStore.getAllFrames();
+        allFrames = allFrames.getAllFrames();
         for (const item10007 of allFrames) {
-          let leaveFrameResult = self.leaveFrame(item10007.id);
+          let obj = leaveFrame;
+          let leaveFrameResult = obj.leaveFrame(item10007.id);
           continue;
         }
       });
@@ -44,19 +43,6 @@ class FramesNativeManager extends tmp5 {
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    return;
-  }
-  leaveFrame(arg0) {
-    tmp = closure_2;
-    obj = closure_0(closure_2[7]);
-    if (obj.isNotNullish(global)) {
-      tmp2 = closure_1;
-      obj2 = closure_1(tmp[8]);
-      obj1 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null, pictureInPictureLockState: null };
-      obj1.frameId = global;
-      dispatchResult = obj2.dispatch(obj1);
-    }
-    leaveFrameResult = super.leaveFrame(global);
     return;
   }
 }

@@ -1,8 +1,8 @@
-// === Module 6944: GuildRoleSubscriptionsActionCreators ===
+// === Module 6951: GuildRoleSubscriptionsActionCreators ===
 
-// Module 6944 (GuildRoleSubscriptionsActionCreators)
+// Module 6951 (GuildRoleSubscriptionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 6945 */;
+import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 6952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -164,7 +164,7 @@ let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0) {
           closure_135_10 = undefined;
           c11 = 1;
           c12 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -608,7 +608,7 @@ let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -681,7 +681,7 @@ let closure_19 = async function _createSubscriptionListing(arg0) {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -774,7 +774,7 @@ let closure_20 = async function _updateSubscriptionListing(arg0) {
           closure_129_4 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -865,7 +865,7 @@ let closure_21 = async function _fetchMonetizationRestrictions(arg0) {
           let restrictions2;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {

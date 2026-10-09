@@ -1,16 +1,16 @@
-// === Module 13547: PromotionUtils ===
+// === Module 9135: PromotionUtils ===
 
-// Module 13547 (PromotionUtils)
+// Module 9135 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import FlagUtils from "FlagUtils" /* 1402 */;
-import dismissible_content from "dismissible_content" /* 2048 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2049 */;
-import constants from "constants" /* 10038 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import FlagUtils from "FlagUtils" /* 1403 */;
+import dismissible_content from "dismissible_content" /* 2049 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2050 */;
+import constants from "constants" /* 9133 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import PromotionRecord from "PromotionRecord" /* 10007 */;
-import PromotionsStore from "PromotionsStore" /* 10006 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
+import PromotionRecord from "PromotionRecord" /* 9102 */;
+import PromotionsStore from "PromotionsStore" /* 9101 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -53,7 +53,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
           closure_131_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -110,7 +110,7 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1391).PromotionFlags;
+const PromotionFlags = fn(1392).PromotionFlags;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
 const size = fn(2);

@@ -1,17 +1,17 @@
-// === Module 7897: EmojiUtilsPlatformed ===
+// === Module 7906: EmojiUtilsPlatformed ===
 
-// Module 7897 (EmojiUtilsPlatformed)
+// Module 7906 (EmojiUtilsPlatformed)
 import _modDef12 from "module_12" /* 12 */;
-import PlatformUtils from "PlatformUtils" /* 1381 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1898 */;
-import DeviceUtils from "DeviceUtils" /* 5066 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7898 */;
-import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7937 */;
+import PlatformUtils from "PlatformUtils" /* 1382 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
+import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1899 */;
+import DeviceUtils from "DeviceUtils" /* 5067 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7907 */;
+import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7946 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4722 */;
-import MemoizerUtils from "MemoizerUtils" /* 7942 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4724 */;
+import MemoizerUtils from "MemoizerUtils" /* 7951 */;
 
 require = fn;
 function getURL(name) {

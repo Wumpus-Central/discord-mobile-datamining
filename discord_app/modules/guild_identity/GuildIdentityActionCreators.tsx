@@ -1,6 +1,6 @@
-// === Module 9097: GuildIdentityActionCreators ===
+// === Module 10608: GuildIdentityActionCreators ===
 
-// Module 9097 (GuildIdentityActionCreators)
+// Module 10608 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -49,7 +49,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

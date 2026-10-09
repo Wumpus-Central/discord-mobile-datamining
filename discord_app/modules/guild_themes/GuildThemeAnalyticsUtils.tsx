@@ -1,6 +1,6 @@
-// === Module 17225: GuildThemeAnalyticsUtils ===
+// === Module 17375: GuildThemeAnalyticsUtils ===
 
-// Module 17225 (GuildThemeAnalyticsUtils)
+// Module 17375 (GuildThemeAnalyticsUtils)
 import GuildStore from "GuildStore" /* 2086 */;
 
 const size = fn(2);

@@ -1,16 +1,16 @@
-// === Module 10378: SafetyWarningBanner ===
+// === Module 10365: SafetyWarningBanner ===
 
-// Module 10378 (SafetyWarningBanner)
+// Module 10365 (SafetyWarningBanner)
 import nativeDefault from "native" /* 587 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10374 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10361 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = { container: null, contentContainer: null, safetyShieldIconContainer: null, safetyShieldIcon: null, textContainer: null, text: null, closeButton: null, closeButtonIcon: null, buttonsContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 };
@@ -27,7 +27,7 @@ let obj5 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.closeButtonIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let obj6 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.buttonsContainer = { flexDirection: "row", marginTop: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
-let closure_9 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarningBanner(channelId) {
   const cResult = channelId(senderId[6]).c(45);
@@ -37,9 +37,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
   const warningType = channelId.warningType;
   ({ header, description, onDismiss } = channelId);
   const buttons = channelId.buttons;
-  const tmp4 = closure_9();
+  const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
+    const fn = function c() {
       const obj = warningId(senderId[7]);
       obj.increment({ name: channelId(senderId[8]).MetricEvents.SAFETY_WARNING_VIEW });
     };
@@ -71,7 +71,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
           }
           if (cResult[9] !== tmp4.closeButtonIcon) {
             const obj2 = { style: tmp4.closeButtonIcon, source: warningId(tmp2[12]), size: tmp(tmp2[11]).IconSizes.MEDIUM };
-            const tmp14 = closure_7(tmp(tmp2[11]).Icon, obj2);
+            const tmp14 = closure_6(tmp(tmp2[11]).Icon, obj2);
             cResult[9] = tmp4.closeButtonIcon;
             cResult[10] = tmp14;
             let tmp11 = tmp14;
@@ -84,11 +84,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
                 let tmp15 = cResult[14];
               }
               if (cResult[15] !== tmp4.safetyShieldIcon) {
-                const obj3 = { style: tmp4.safetyShieldIcon, source: warningId(tmp2[13]), resizeMode: "contain" };
-                const tmp23 = closure_7(onDismiss, obj3);
+                const obj3 = { style: tmp4.safetyShieldIcon, source: warningId(tmp2[14]), resizeMode: "contain" };
+                const tmp23 = closure_6(warningId(tmp2[13]), obj3);
                 cResult[15] = tmp4.safetyShieldIcon;
                 cResult[16] = tmp23;
                 let tmp19 = tmp23;
+                const tmp22 = warningId(tmp2[13]);
               } else {
                 tmp19 = cResult[16];
               }
@@ -117,75 +118,75 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
                             if (cResult[34] !== buttons) {
                               const _Symbol2 = Symbol;
                               if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
-                                class G {
+                                class F {
                                   constructor(arg0, arg1) {
-                                    tmp = closure_1_7;
+                                    tmp = closure_1_6;
                                     str = channelId.variant;
                                     if (str == null) {
                                       str = "primary";
                                     }
                                     obj = { size: "md", variant: str, text: channelId.text, accessibilityLabel: channelId.text, onPress: channelId.onpress, grow: true };
-                                    return tmp(channelId(senderId[15]).Button, obj, arg1);
+                                    return tmp(channelId(senderId[16]).Button, obj, arg1);
                                   }
                                 }
-                                cResult[36] = G;
+                                cResult[36] = F;
                               } else {
-                                class G {
+                                class F {
                                   constructor(arg0, arg1) {
-                                    tmp = closure_1_7;
+                                    tmp = closure_1_6;
                                     str = channelId.variant;
                                     if (str == null) {
                                       str = "primary";
                                     }
                                     obj = { size: "md", variant: str, text: channelId.text, accessibilityLabel: channelId.text, onPress: channelId.onpress, grow: true };
-                                    return tmp(channelId(senderId[15]).Button, obj, arg1);
+                                    return tmp(channelId(senderId[16]).Button, obj, arg1);
                                   }
                                 }
                               }
-                              const mapped = buttons.map(G);
+                              const mapped = buttons.map(F);
                               cResult[34] = buttons;
                               cResult[35] = mapped;
                             } else {
-                              class G {
+                              class F {
                                 constructor(arg0, arg1) {
-                                  tmp = closure_1_7;
+                                  tmp = closure_1_6;
                                   str = channelId.variant;
                                   if (str == null) {
                                     str = "primary";
                                   }
                                   obj = { size: "md", variant: str, text: channelId.text, accessibilityLabel: channelId.text, onPress: channelId.onpress, grow: true };
-                                  return tmp(channelId(senderId[15]).Button, obj, arg1);
+                                  return tmp(channelId(senderId[16]).Button, obj, arg1);
                                 }
                               }
                               if (cResult[37] === tmp4.buttonsContainer) {
-                                class G {
+                                class F {
                                   constructor(arg0, arg1) {
-                                    tmp = closure_1_7;
+                                    tmp = closure_1_6;
                                     str = channelId.variant;
                                     if (str == null) {
                                       str = "primary";
                                     }
                                     obj = { size: "md", variant: str, text: channelId.text, accessibilityLabel: channelId.text, onPress: channelId.onpress, grow: true };
-                                    return tmp(channelId(senderId[15]).Button, obj, arg1);
+                                    return tmp(channelId(senderId[16]).Button, obj, arg1);
                                   }
                                 }
                                 if (cResult[40] === tmp4.container) {
-                                  class G {
+                                  class F {
                                     constructor(arg0, arg1) {
-                                      tmp = closure_1_7;
+                                      tmp = closure_1_6;
                                       str = channelId.variant;
                                       if (str == null) {
                                         str = "primary";
                                       }
                                       obj = { size: "md", variant: str, text: channelId.text, accessibilityLabel: channelId.text, onPress: channelId.onpress, grow: true };
-                                      return tmp(channelId(senderId[15]).Button, obj, arg1);
+                                      return tmp(channelId(senderId[16]).Button, obj, arg1);
                                     }
                                   }
                                 }
                                 const obj4 = { style: container, children: null };
                                 const items1 = [tmp15, tmp38, tmp47];
                                 obj4.children = items1;
-                                const tmp54 = closure_8(closure_6, obj4);
+                                const tmp54 = closure_7(closure_5, obj4);
                                 cResult[40] = tmp4.container;
                                 cResult[41] = tmp38;
                                 cResult[42] = tmp47;
@@ -193,7 +194,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
                                 cResult[44] = tmp54;
                               }
                               const obj5 = { style: tmp42, children: tmp43 };
-                              const tmp50 = closure_7(closure_6, obj5);
+                              const tmp50 = closure_6(closure_5, obj5);
                               cResult[37] = tmp4.buttonsContainer;
                               cResult[38] = tmp43;
                               cResult[39] = tmp50;
@@ -203,7 +204,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
                         const obj6 = { style: tmp4.contentContainer, children: null };
                         const items2 = [tmp24, tmp34];
                         obj6.children = items2;
-                        const tmp41 = closure_8(closure_6, obj6);
+                        const tmp41 = closure_7(closure_5, obj6);
                         cResult[30] = tmp4.contentContainer;
                         cResult[31] = tmp24;
                         cResult[32] = tmp34;
@@ -214,7 +215,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
                     const obj7 = { style: tmp4.textContainer, children: null };
                     const items3 = [tmp28, tmp31];
                     obj7.children = items3;
-                    const tmp37 = closure_8(closure_6, obj7);
+                    const tmp37 = closure_7(closure_5, obj7);
                     cResult[26] = tmp4.textContainer;
                     cResult[27] = tmp28;
                     cResult[28] = tmp31;
@@ -222,21 +223,21 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
                     tmp34 = tmp37;
                   }
                   const obj8 = { style: tmp4.text, variant: "heading-sm/normal", children: description };
-                  const tmp33 = closure_7(tmp(tmp2[14]).Text, obj8);
+                  const tmp33 = closure_6(tmp(tmp2[15]).Text, obj8);
                   cResult[23] = description;
                   cResult[24] = tmp4.text;
                   cResult[25] = tmp33;
                   tmp31 = tmp33;
                 }
                 const obj9 = { style: tmp4.text, variant: "heading-md/semibold", children: header };
-                const tmp30 = closure_7(tmp(tmp2[14]).Text, obj9);
+                const tmp30 = closure_6(tmp(tmp2[15]).Text, obj9);
                 cResult[20] = header;
                 cResult[21] = tmp4.text;
                 cResult[22] = tmp30;
                 tmp28 = tmp30;
               }
               const obj10 = { style: tmp4.safetyShieldIconContainer, children: tmp19 };
-              const tmp27 = closure_7(closure_6, obj10);
+              const tmp27 = closure_6(closure_5, obj10);
               cResult[17] = tmp4.safetyShieldIconContainer;
               cResult[18] = tmp19;
               cResult[19] = tmp27;
@@ -244,7 +245,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
             }
           }
           const obj11 = { style: closeButton, onPress: tmp8, accessibilityLabel: tmp9, children: tmp11 };
-          const tmp18 = closure_7(closure_5, obj11);
+          const tmp18 = closure_6(onDismiss, obj11);
           cResult[11] = tmp8;
           cResult[12] = tmp4.closeButton;
           cResult[13] = tmp11;
@@ -254,7 +255,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
       }
     }
   }
-  const fn2 = function _() {
+  const fn2 = function u() {
     if (onDismiss != null) {
       tmp();
     }
@@ -277,7 +278,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
   const onDismiss = channelId.onDismiss;
   const buttons = channelId.buttons;
   ({ header, description } = channelId);
-  const tmp = closure_9();
+  const tmp = closure_8();
   const effect = warningType.useEffect(() => {
     const obj = warningId(senderId[7]);
     obj.increment({ name: channelId(senderId[8]).MetricEvents.SAFETY_WARNING_VIEW });
@@ -298,34 +299,36 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SafetyWarn
   };
   const intl = channelId(senderId[10]).intl;
   obj2.accessibilityLabel = intl.string(channelId(senderId[10]).t["1UatJ0"]);
-  obj2.children = closure_7(channelId(senderId[11]).Icon, { style: tmp.closeButtonIcon, source: warningId(senderId[12]), size: channelId(senderId[11]).IconSizes.MEDIUM });
-  const items1 = [closure_7(closure_5, obj2), , ];
+  obj2.children = closure_6(channelId(senderId[11]).Icon, { style: tmp.closeButtonIcon, source: warningId(senderId[12]), size: channelId(senderId[11]).IconSizes.MEDIUM });
+  const items1 = [closure_6(onDismiss, obj2), , ];
   const obj4 = { style: tmp.contentContainer, children: null };
   const obj5 = { style: tmp.safetyShieldIconContainer, children: null };
+  const obj6 = { style: tmp.safetyShieldIcon, source: null, resizeMode: "contain" };
   const obj3 = { style: tmp.closeButtonIcon, source: warningId(senderId[12]), size: channelId(senderId[11]).IconSizes.MEDIUM };
-  obj5.children = closure_7(onDismiss, { style: tmp.safetyShieldIcon, source: warningId(senderId[13]), resizeMode: "contain" });
-  const items2 = [closure_7(closure_6, obj5), ];
+  obj6.source = warningId(senderId[14]);
+  obj5.children = closure_6(warningId(senderId[13]), obj6);
+  const items2 = [closure_6(closure_5, obj5), ];
   const obj7 = { style: tmp.textContainer, children: null };
-  const items3 = [closure_7(channelId(senderId[14]).Text, { style: tmp.text, variant: "heading-md/semibold", children: header }), closure_7(channelId(senderId[14]).Text, { style: tmp.text, variant: "heading-sm/normal", children: description })];
+  const items3 = [closure_6(channelId(senderId[15]).Text, { style: tmp.text, variant: "heading-md/semibold", children: header }), closure_6(channelId(senderId[15]).Text, { style: tmp.text, variant: "heading-sm/normal", children: description })];
   obj7.children = items3;
-  items2[1] = closure_8(closure_6, obj7);
+  items2[1] = closure_7(closure_5, obj7);
   obj4.children = items2;
-  items1[1] = closure_8(closure_6, obj4);
-  const obj6 = { style: tmp.safetyShieldIcon, source: warningId(senderId[13]), resizeMode: "contain" };
+  items1[1] = closure_7(closure_5, obj4);
   const obj8 = { style: tmp.text, variant: "heading-md/semibold", children: header };
   const obj9 = { style: tmp.text, variant: "heading-sm/normal", children: description };
-  items1[2] = closure_7(closure_6, {
+  const tmp3 = warningId(senderId[13]);
+  items1[2] = closure_6(closure_5, {
     style: tmp.buttonsContainer,
     children: buttons.map((text, index) => {
       let str = text.variant;
       if (str == null) {
         str = "primary";
       }
-      return closure_1_7(channelId(senderId[15]).Button, { size: "md", variant: str, text: text.text, accessibilityLabel: text.text, onPress: text.onpress, grow: true }, index);
+      return closure_1_6(channelId(senderId[16]).Button, { size: "md", variant: str, text: text.text, accessibilityLabel: text.text, onPress: text.onpress, grow: true }, index);
     })
   });
   obj.children = items1;
-  return closure_8(closure_6, obj);
+  return closure_7(closure_5, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/native/SafetyWarningBanner.tsx");

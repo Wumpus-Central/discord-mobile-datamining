@@ -1,21 +1,21 @@
-// === Module 11528: AppealIngestionRequestSent ===
+// === Module 11457: AppealIngestionRequestSent ===
 
-// Module 11528 (AppealIngestionRequestSent)
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11523 */;
-import _modDef11529 from "module_11529" /* 11529 */;
+// Module 11457 (AppealIngestionRequestSent)
+import FastImageDefault from "FastImage" /* 6163 */;
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11452 */;
+import _modDef11458 from "module_11458" /* 11458 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(5921);
-({ SafetyHubAnalyticsActions: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
+const View = fn(17).View;
+const SafetyHubConstants = fn(5922);
+({ SafetyHubAnalyticsActions: closure_4, SafetyHubLinks: hasOwnProperty } = SafetyHubConstants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
-let closure_9 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5091);
+let closure_8 = createStyles.createStyles({ container: { flex: 1, padding: 8 }, actionsHeader: { marginTop: 31, marginBottom: 16 }, checkboxPng: { width: 86, height: 78.33, marginLeft: -2, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/AppealIngestionRequestSent.tsx");
@@ -23,8 +23,8 @@ const result = size.fileFinishedImporting("modules/safety_hub/native/AppealInges
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIngestionRequestSent() {
   const cResult = emitAppealIngestionEvent(576).c(20);
   const obj = emitAppealIngestionEvent(576);
-  emitAppealIngestionEvent = emitAppealIngestionEvent(11505).useEmitAppealIngestionEvent();
-  const tmp5 = closure_9();
+  emitAppealIngestionEvent = emitAppealIngestionEvent(11434).useEmitAppealIngestionEvent();
+  const tmp5 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.QMbTSu);
@@ -42,8 +42,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
     tmp8 = cResult[1];
   }
   if (cResult[2] !== tmp5.checkboxPng) {
-    const obj3 = { source: _modDef11529, style: tmp5.checkboxPng };
-    const tmp14 = closure_7(closure_4, obj3);
+    const obj3 = { source: _modDef11458, style: tmp5.checkboxPng };
+    const tmp14 = closure_6(FastImageDefault, obj3);
     cResult[2] = tmp5.checkboxPng;
     cResult[3] = tmp14;
     let tmp10 = tmp14;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { headerText: first, subHeaderText: tmp8 };
-    const tmp17 = closure_7(tmp(11503).AppealIngestionModalHeader, obj4);
+    const tmp17 = closure_6(tmp(11432).AppealIngestionModalHeader, obj4);
     cResult[4] = tmp17;
     let tmp15 = tmp17;
   } else {
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   }
   if (cResult[6] !== tmp5.actionsHeader) {
     const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp5.actionsHeader, children: tmp18 };
-    const tmp22 = closure_7(tmp(5086).Text, obj5);
+    const tmp22 = closure_6(tmp(5087).Text, obj5);
     cResult[6] = tmp5.actionsHeader;
     cResult[7] = tmp22;
     let tmp20 = tmp22;
@@ -88,10 +88,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
       text: tmp23,
       url: constants.COMMUNITY_GUIDELINES,
       onPress() {
-          return emitAppealIngestionEvent(hasOwnProperty.ClickCommunityGuidelinesLink);
+          return emitAppealIngestionEvent(React4.ClickCommunityGuidelinesLink);
         }
     };
-    const tmp29 = closure_7(AppealIngestionExternalLinkDefault, obj6);
+    const tmp29 = closure_6(AppealIngestionExternalLinkDefault, obj6);
     cResult[9] = emitAppealIngestionEvent;
     cResult[10] = tmp29;
     let tmp25 = tmp29;
@@ -111,10 +111,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
       text: tmp30,
       url: constants.WARNING_SYSTEM_HELPCENTER_LINK,
       onPress() {
-          return emitAppealIngestionEvent(hasOwnProperty.ClickWarningSystemHelpcenterLink);
+          return emitAppealIngestionEvent(React4.ClickWarningSystemHelpcenterLink);
         }
     };
-    const tmp36 = closure_7(AppealIngestionExternalLinkDefault, obj7);
+    const tmp36 = closure_6(AppealIngestionExternalLinkDefault, obj7);
     cResult[12] = emitAppealIngestionEvent;
     cResult[13] = tmp36;
     let tmp32 = tmp36;
@@ -137,8 +137,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   const obj9 = { style: tmp5.container, children: null };
   const items = [tmp10, tmp15, tmp20, tmp25, tmp32];
   obj9.children = items;
-  obj8.children = closure_8(closure_3, obj9);
-  const tmp38 = closure_7(emitAppealIngestionEvent(11503).AppealIngestionModalScreen, obj8);
+  obj8.children = closure_7(View, obj9);
+  const tmp38 = closure_6(emitAppealIngestionEvent(11432).AppealIngestionModalScreen, obj8);
   cResult[14] = tmp5.container;
   cResult[15] = tmp32;
   cResult[16] = tmp10;
@@ -146,40 +146,42 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppealIn
   cResult[18] = tmp25;
   cResult[19] = tmp38;
   tmp37 = tmp38;
-  const obj2 = emitAppealIngestionEvent(11505);
+  const obj2 = emitAppealIngestionEvent(11434);
 }) : (function AppealIngestionRequestSent() {
   _require = require("useEmitAppealIngestionEvent").useEmitAppealIngestionEvent();
-  const tmp = closure_9();
+  const tmp = closure_8();
   const intl = require("util").intl;
   const obj = require("useEmitAppealIngestionEvent");
   const intl2 = require("util").intl;
   const stringResult = intl.string(require("util").t.QMbTSu);
   const obj2 = { children: null };
   const obj3 = { style: tmp.container, children: null };
+  const obj4 = { source: null, style: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  const items = [closure_7(closure_4, { source: _modDef11529, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  obj4.source = _modDef11458;
+  obj4.style = tmp.checkboxPng;
+  const items = [closure_6(FastImageDefault, obj4), closure_6(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = require("util").intl;
   obj5.children = intl3.string(require("util").t["9BRc1N"]);
-  items[2] = closure_7(require("Text/Text").Text, obj5);
+  items[2] = closure_6(require("Text/Text").Text, obj5);
   const obj6 = { text: null, url: null, onPress: null };
-  const obj4 = { source: _modDef11529, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj6.text = intl4.string(require("util").t.PxL38B);
   obj6.url = constants.COMMUNITY_GUIDELINES;
   obj6.onPress = function onPress() {
-    return closure_0(hasOwnProperty.ClickCommunityGuidelinesLink);
+    return closure_0(React4.ClickCommunityGuidelinesLink);
   };
-  items[3] = closure_7(AppealIngestionExternalLinkDefault, obj6);
+  items[3] = closure_6(AppealIngestionExternalLinkDefault, obj6);
   const obj7 = { text: null, url: null, onPress: null };
   const intl5 = require("util").intl;
   obj7.text = intl5.string(require("util").t.qC3XKa);
   obj7.url = constants.WARNING_SYSTEM_HELPCENTER_LINK;
   obj7.onPress = function onPress() {
-    return closure_0(hasOwnProperty.ClickWarningSystemHelpcenterLink);
+    return closure_0(React4.ClickWarningSystemHelpcenterLink);
   };
-  items[4] = closure_7(AppealIngestionExternalLinkDefault, obj7);
+  items[4] = closure_6(AppealIngestionExternalLinkDefault, obj7);
   obj3.children = items;
-  obj2.children = closure_8(closure_3, obj3);
-  return closure_7(require("AppealIngestionModal").AppealIngestionModalScreen, obj2);
+  obj2.children = closure_7(View, obj3);
+  return closure_6(require("AppealIngestionModal").AppealIngestionModalScreen, obj2);
 });

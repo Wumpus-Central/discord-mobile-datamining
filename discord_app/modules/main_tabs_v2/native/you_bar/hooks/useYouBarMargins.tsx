@@ -1,10 +1,10 @@
-// === Module 15176: useYouBarMargins ===
+// === Module 15287: useYouBarMargins ===
 
-// Module 15176 (useYouBarMargins)
+// Module 15287 (useYouBarMargins)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useToken from "useToken" /* 4778 */;
-import YouBarConstants from "YouBarConstants" /* 15177 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
+import useToken from "useToken" /* 4779 */;
+import YouBarConstants from "YouBarConstants" /* 15288 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

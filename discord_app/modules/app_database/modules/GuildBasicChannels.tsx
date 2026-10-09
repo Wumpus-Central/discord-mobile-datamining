@@ -1,31 +1,38 @@
-// === Module 7325: GuildBasicChannels ===
+// === Module 7330: GuildBasicChannels ===
 
-// Module 7325 (GuildBasicChannels)
+// Module 7330 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4716 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4718 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5753 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildRoleStore from "GuildRoleStore" /* 2118 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4707 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2064 */;
+import PermissionStore from "PermissionStore" /* 4709 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2065 */;
 
 const require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
   let tmp = null == basicChannel || basicChannel.type !== nextResult.type || basicChannel.parent_id !== nextResult.parent_id;
+  if (!tmp) {
+    let flag = basicChannel.nsfw;
+    if (flag == null) {
+      flag = false;
+    }
+    tmp = flag !== nextResult.nsfw;
+  }
   if (!tmp) {
     const basicPermissions = PermissionStore.computeBasicPermissions(basicChannel);
     tmp = basicPermissions !== PermissionStore.computeBasicPermissions(nextResult);
   }
   return tmp;
 }
-let closure_7 = fn(2067).createChannelRecordFromServer;
-const ChannelLoader = fn(2063).ChannelLoader;
+let closure_7 = fn(2068).createChannelRecordFromServer;
+const ChannelLoader = fn(2064).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -297,7 +304,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "create" }, done: true };
+                            const obj5 = { value: { v: "r" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {
@@ -528,6 +535,13 @@ prototype["onGuildUpdate"] = function onGuildUpdate(id, mapped, deleted_channel_
       basicChannel = basicChannel.getBasicChannel(id.id);
       let tmp2 = null == basicChannel || basicChannel.type !== id.type || basicChannel.parent_id !== id.parent_id;
       if (!tmp2) {
+        let flag = basicChannel.nsfw;
+        if (flag == null) {
+          flag = false;
+        }
+        tmp2 = flag !== id.nsfw;
+      }
+      if (!tmp2) {
         const basicPermissions = PermissionStore.computeBasicPermissions(basicChannel);
         tmp2 = basicPermissions !== PermissionStore.computeBasicPermissions(id);
       }
@@ -597,7 +611,7 @@ prototype["syncOne"] = function syncOne(id, database) {
     const _Object = Object;
     const values = Object.values(ChannelStore.getMutableGuildChannelsForGuild(id));
     result.put(id, values.map((id) => {
-      const obj = { id: id.id, type: id.type, guild_id: id.guild_id, parent_id: id.parent_id, basicPermissions: BasicPermissionUtilsDefault.asBasicFlag(PermissionStore.computePermissions(id)) };
+      const obj = { id: id.id, type: id.type, guild_id: id.guild_id, parent_id: id.parent_id, basicPermissions: BasicPermissionUtilsDefault.asBasicFlag(PermissionStore.computePermissions(id)), nsfw: id.nsfw || undefined };
       return obj;
     }));
     const result1 = DatabaseDaosDefault.syncedBasicChannelsTransaction(database);

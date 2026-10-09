@@ -1,8 +1,8 @@
-// === Module 5399: ApplicationCommandConstants ===
+// === Module 5400: ApplicationCommandConstants ===
 
-// Module 5399 (ApplicationCommandConstants)
+// Module 5400 (ApplicationCommandConstants)
 import util from "util" /* 1126 */;
-import Server from "Server" /* 1997 */;
+import Server from "Server" /* 1998 */;
 import size from "module_2" /* 2 */;
 
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];

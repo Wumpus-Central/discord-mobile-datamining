@@ -1,9 +1,9 @@
-// === Module 8010: GuildDiscoverySystemMessage ===
+// === Module 8018: GuildDiscoverySystemMessage ===
 
-// Module 8010 (GuildDiscoverySystemMessage)
+// Module 8018 (GuildDiscoverySystemMessage)
 import util from "util" /* 1126 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7955 */;
-import ChannelStore from "ChannelStore" /* 2063 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import ChannelStore from "ChannelStore" /* 2064 */;
 import GuildStore from "GuildStore" /* 2086 */;
 
 require = fn;

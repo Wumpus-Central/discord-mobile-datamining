@@ -1,9 +1,9 @@
-// === Module 15231: QuestGameLogotype ===
+// === Module 15344: QuestGameLogotype ===
 
-// Module 15231 (QuestGameLogotype)
+// Module 15344 (QuestGameLogotype)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5374 */;
-import FastImageDefault from "FastImage" /* 6164 */;
+import spring from "spring" /* 5375 */;
+import FastImageDefault from "FastImage" /* 6163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 let SPRING_CONFIG = {};
-const merged = Object.assign(fn(5378).springSlow);
+const merged = Object.assign(fn(5379).springSlow);
 SPRING_CONFIG.overshootClamping = true;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const obj2 = { logo: { marginBottom: nativeDefault.space.PX_4 } };
 let closure_9 = createStyles.createStyles(obj2);
 const __initData = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,\"animate-always\")};}" };
@@ -82,11 +82,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return obj1;
       }
     }
-    const obj3 = { withSpring: SvgUri(5374).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
+    const obj3 = { withSpring: SvgUri(5375).withSpring, logoDimensionStyles: undefined, SPRING_CONFIG };
     H.__closure = obj3;
     H.__workletHash = 13667917221894;
     H.__initData = __initData;
-    const animatedStyle = SvgUri(4810).useAnimatedStyle(H);
+    const animatedStyle = SvgUri(4811).useAnimatedStyle(H);
     if (cResult[9] !== assetUrl) {
       class R {
         constructor() {
@@ -152,7 +152,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
         }
         obj4.style = items1;
-        SvgUri = SvgUri(7550).SvgUri;
+        SvgUri = SvgUri(7559).SvgUri;
         let size = { height: "100%", width: "100%", uri: assetUrl, onError };
         obj4.children = <SvgUri height="100%" width="100%" uri={assetUrl} onError={onError} />;
         let tmp18Result = <closure_5 style={null}>{null}</closure_5>;
@@ -205,7 +205,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[11] = animatedStyle;
     cResult[12] = style;
     cResult[13] = items3;
-    const SvgUriResult = SvgUri(4810);
+    const SvgUriResult = SvgUri(4811);
   } else {
     class R {
       constructor() {

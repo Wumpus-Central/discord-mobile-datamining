@@ -1,15 +1,15 @@
-// === Module 1359: getSuperProperties ===
+// === Module 1360: getSuperProperties ===
 
-// Module 1359 (getSuperProperties)
+// Module 1360 (getSuperProperties)
 import Storage5 from "Storage" /* 510 */;
-import encodeProperties from "encodeProperties" /* 1357 */;
-import getSystemLocale2 from "getSystemLocale" /* 1360 */;
-import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1361 */;
-import clientLaunchId from "clientLaunchId" /* 1362 */;
-import formatDefault from "format" /* 1363 */;
-import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1364 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1365 */;
-import SessionStorage3 from "SessionStorage" /* 1368 */;
+import encodeProperties from "encodeProperties" /* 1358 */;
+import getSystemLocale2 from "getSystemLocale" /* 1361 */;
+import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1362 */;
+import clientLaunchId from "clientLaunchId" /* 1363 */;
+import formatDefault from "format" /* 1364 */;
+import NativeMetaQuestModule from "NativeMetaQuestModule" /* 1365 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1366 */;
+import SessionStorage3 from "SessionStorage" /* 1369 */;
 import size from "module_2" /* 2 */;
 
 function getOS() {
@@ -184,7 +184,7 @@ function extendSuperProperties(arg0) {
   closure_4 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  obj = { client_build_number: parseInt("35020200000000", 10) };
+  obj = { client_build_number: parseInt("35020300000000", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;

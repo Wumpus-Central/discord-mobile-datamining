@@ -1,6 +1,6 @@
-// === Module 1351: discord_common/V6OrEarlierAPIError ===
+// === Module 1352: discord_common/V6OrEarlierAPIError ===
 
-// Module 1351 (discord_common/V6OrEarlierAPIError)
+// Module 1352 (discord_common/V6OrEarlierAPIError)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");

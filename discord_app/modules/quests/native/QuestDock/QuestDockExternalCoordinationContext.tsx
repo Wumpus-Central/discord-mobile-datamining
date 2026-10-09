@@ -1,30 +1,30 @@
-// === Module 15178: QuestDockExternalCoordinationContext ===
+// === Module 15289: QuestDockExternalCoordinationContext ===
 
-// Module 15178 (QuestDockExternalCoordinationContext)
+// Module 15289 (QuestDockExternalCoordinationContext)
 import DurationsDefault from "Durations" /* 1102 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4810 */;
-import QuestActionCreators from "QuestActionCreators" /* 9537 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import QuestActionCreators from "QuestActionCreators" /* 9150 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15172 */;
+import QuestDockStore from "QuestDockStore" /* 15283 */;
 
 require = fn;
-let QuestDockMode = fn(5977).QuestDockMode;
-let closure_5 = fn(15174).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let QuestDockMode = fn(5979).QuestDockMode;
+let closure_5 = fn(15285).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };
-let ReanimatedHelperTypes = fn(6754);
+let ReanimatedHelperTypes = fn(6761);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {
 
 };
-ReanimatedHelperTypes = fn(6754);
+ReanimatedHelperTypes = fn(6761);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(6754);
+ReanimatedHelperTypes = fn(6761);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
 fn(558);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 const IS_ANDROID = PlatformUtils.isAndroid();
 const __initData = { code: "function QuestDockExternalCoordinationContextTsx1(){const{restingQuestDockMode}=this.__closure;return restingQuestDockMode.get();}" };
 const __initData2 = { code: "function QuestDockExternalCoordinationContextTsx2(nextMode,prevMode){const{runOnJS,cancelReopenQuestDock}=this.__closure;if(nextMode!==prevMode){runOnJS(cancelReopenQuestDock)();}}" };

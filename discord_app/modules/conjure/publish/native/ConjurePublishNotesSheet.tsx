@@ -1,30 +1,30 @@
-// === Module 16844: ConjurePublishNotesSheet ===
+// === Module 16968: ConjurePublishNotesSheet ===
 
-// Module 16844 (ConjurePublishNotesSheet)
+// Module 16968 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5054 */;
-import ConjureUtils from "ConjureUtils" /* 6932 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12196 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 16845 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5055 */;
+import ConjureUtils from "ConjureUtils" /* 6939 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12135 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 16969 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4705 */;
+import GuildChannelStore from "GuildChannelStore" /* 4707 */;
 import GuildStore from "GuildStore" /* 2086 */;
-import RelationshipStore from "RelationshipStore" /* 4717 */;
-import UserStore from "UserStore" /* 1389 */;
+import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5083).MessageSendLocation;
+let closure_9 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -255,8 +255,8 @@ export default function ConjurePublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp34;
                 }
-                const parsed = tmp3(7358).parse(found, combined);
-                const tmp31Result = tmp3(7167);
+                const parsed = tmp3(7363).parse(found, combined);
+                const tmp31Result = tmp3(7172);
                 const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -285,10 +285,10 @@ export default function ConjurePublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(16845).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+              const result = guildId(16969).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
               closure_129_21();
               dependencyMap = 0;
-              const obj = guildId(16845);
+              const obj = guildId(16969);
             }
           }
           const _Error = Error;

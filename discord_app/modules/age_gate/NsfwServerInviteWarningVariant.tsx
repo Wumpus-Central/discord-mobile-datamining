@@ -1,11 +1,11 @@
-// === Module 9101: NsfwServerInviteWarningVariant ===
+// === Module 9594: NsfwServerInviteWarningVariant ===
 
-// Module 9101 (NsfwServerInviteWarningVariant)
+// Module 9594 (NsfwServerInviteWarningVariant)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5905 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 5932 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9102 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5906 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 5933 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9595 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 1990: NameplateRecord ===
+// === Module 1991: NameplateRecord ===
 
-// Module 1990 (NameplateRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1991 */;
+// Module 1991 (NameplateRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
+import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1992 */;
 
 require = fn;
 const prototype = function NameplateRecord(arg0) {

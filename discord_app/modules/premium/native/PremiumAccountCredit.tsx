@@ -1,17 +1,17 @@
-// === Module 13518: PremiumAccountCredit ===
+// === Module 13610: PremiumAccountCredit ===
 
-// Module 13518 (PremiumAccountCredit)
+// Module 13610 (PremiumAccountCredit)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import _modDef3277 from "module_3277" /* 3277 */;
-import PremiumUtils from "PremiumUtils" /* 4726 */;
-import BoostGemIcon from "BoostGemIcon" /* 5026 */;
-import Text_Text from "Text/Text" /* 5086 */;
-import GameIcon from "GameIcon" /* 6851 */;
+import PremiumUtils from "PremiumUtils" /* 4728 */;
+import BoostGemIcon from "BoostGemIcon" /* 5027 */;
+import Text_Text from "Text/Text" /* 5087 */;
+import GameIcon from "GameIcon" /* 6858 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7098 */;
+import EntitlementStore from "EntitlementStore" /* 7103 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -21,9 +21,9 @@ let View = fn(17).View;
 const SubscriptionStatusTypes = fn(1085).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { title: { marginBottom: 12 }, creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, creditItem: { flexDirection: "row", alignItems: "center", padding: 16 }, boostIcon: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
-let size = { width: fn(6851).GameIconImageSize[fn(undefined, 6851).GameIconSizes.SMALL], height: fn(6851).GameIconImageSize[fn(undefined, 6851).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
+let size = { width: fn(6858).GameIconImageSize[fn(undefined, 6858).GameIconSizes.SMALL], height: fn(6858).GameIconImageSize[fn(undefined, 6858).GameIconSizes.SMALL], alignItems: "center", justifyContent: "center" };
 obj2.boostIcon = size;
 obj2.textContainer = { marginLeft: 16, marginRight: 16, flexDirection: "column", flex: 1 };
 obj2.headerText = { lineHeight: 20 };
@@ -288,8 +288,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Account
           let tmp46Result = timestampProducer(View, obj12);
         } else {
           const obj14 = { size: GameIcon.GameIconSizes.SMALL, skuId: str };
-          tmp46Result = timestampProducer(intl(6851), obj14);
-          const intlResult = intl(6851);
+          tmp46Result = timestampProducer(intl(6858), obj14);
+          const intlResult = intl(6858);
         }
         cResult[37] = tmp7;
         cResult[38] = str;
@@ -591,7 +591,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumA
       const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
       const intl = tmp2(1126).intl;
       obj3.children = intl.string(tmp2(1126).t.YugZY0);
-      const items1 = [closure_6(tmp2(5086).Text, obj3), , , ];
+      const items1 = [closure_6(tmp2(5087).Text, obj3), , , ];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj4.style = items2;
@@ -605,7 +605,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumA
       const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1126).intl;
       obj5.children = intl2.string(tmp2(1126).t.Z5b2Gf);
-      items1[2] = closure_6(tmp2(5086).Text, obj5);
+      items1[2] = closure_6(tmp2(5087).Text, obj5);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -613,7 +613,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumA
           const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1126).intl;
           obj6.children = intl3.string(tmp2(1126).t.azRP0E);
-          tmp9Result = closure_6(tmp2(5086).Text, obj6);
+          tmp9Result = closure_6(tmp2(5087).Text, obj6);
         }
       }
       items1[3] = tmp9Result;

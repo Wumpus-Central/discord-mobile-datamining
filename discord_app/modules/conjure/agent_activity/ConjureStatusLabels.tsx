@@ -1,9 +1,9 @@
-// === Module 17036: ConjureStatusLabels ===
+// === Module 17192: ConjureStatusLabels ===
 
-// Module 17036 (ConjureStatusLabels)
+// Module 17192 (ConjureStatusLabels)
 import util from "util" /* 1126 */;
 import _modDef3827 from "module_3827" /* 3827 */;
-import ConjureTypes from "ConjureTypes" /* 6933 */;
+import ConjureTypes from "ConjureTypes" /* 6940 */;
 
 require = fn;
 function thinkingLabel(saving) {

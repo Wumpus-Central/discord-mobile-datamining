@@ -1,7 +1,7 @@
-// === Module 15118: pickBountyVideoRendition ===
+// === Module 15228: pickBountyVideoRendition ===
 
-// Module 15118 (pickBountyVideoRendition)
-import BountyAspectRatio from "BountyAspectRatio" /* 9543 */;
+// Module 15228 (pickBountyVideoRendition)
+import BountyAspectRatio from "BountyAspectRatio" /* 9156 */;
 import size from "module_2" /* 2 */;
 
 function nonEmptyUrl(videoRenditions, preferred) {

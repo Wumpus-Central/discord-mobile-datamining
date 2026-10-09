@@ -1,10 +1,10 @@
-// === Module 10864: useIsVideoBackgroundSupported ===
+// === Module 11037: useIsVideoBackgroundSupported ===
 
-// Module 10864 (useIsVideoBackgroundSupported)
+// Module 11037 (useIsVideoBackgroundSupported)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 5266 */;
-import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 5267 */;
+import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

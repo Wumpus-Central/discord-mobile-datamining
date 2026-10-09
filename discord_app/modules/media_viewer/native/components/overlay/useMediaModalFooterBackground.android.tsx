@@ -1,10 +1,10 @@
-// === Module 12935: useMediaModalFooterBackground ===
+// === Module 13015: useMediaModalFooterBackground ===
 
-// Module 12935 (useMediaModalFooterBackground)
+// Module 13015 (useMediaModalFooterBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4778 */;
+import useToken from "useToken" /* 4779 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMedia
       }
     }
   }
-  const obj3 = { mediaModalFooterBackgroundColorRgba: { r: tmp4, g: tmp5, b: tmp6, a: tmp7 }, MediaModalFooterUnderlay: "Array" };
+  const obj3 = { mediaModalFooterBackgroundColorRgba: { r: tmp4, g: tmp5, b: tmp6, a: tmp7 }, MediaModalFooterUnderlay: "r" };
   cResult[0] = tmp7;
   cResult[1] = tmp6;
   cResult[2] = tmp5;
@@ -37,5 +37,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMedia
 }) : (function useMediaModalFooterBackground() {
   const tmp = _modDef683;
   const tmp2 = _slicedToArray(tmp(useToken.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
-  return { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "Array" };
+  return { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "r" };
 });

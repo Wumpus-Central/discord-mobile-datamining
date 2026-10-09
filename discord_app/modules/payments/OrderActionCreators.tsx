@@ -1,10 +1,10 @@
-// === Module 6931: OrderActionCreators ===
+// === Module 6938: OrderActionCreators ===
 
-// Module 6931 (OrderActionCreators)
+// Module 6938 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
-import HTTPUtils from "HTTPUtils" /* 1294 */;
+import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingError_mod from "BillingError" /* 4748 */;
+import BillingError_mod from "BillingError" /* 4750 */;
 
 require = fn;
 let closure_6 = async function _signOrder(arg0) {
@@ -44,7 +44,7 @@ let closure_6 = async function _signOrder(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

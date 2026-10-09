@@ -1,7 +1,7 @@
-// === Module 9242: useIsUsingClientTheme ===
+// === Module 9280: useIsUsingClientTheme ===
 
-// Module 9242 (useIsUsingClientTheme)
-import useActiveTheme from "useActiveTheme" /* 9243 */;
+// Module 9280 (useIsUsingClientTheme)
+import useActiveTheme from "useActiveTheme" /* 9281 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

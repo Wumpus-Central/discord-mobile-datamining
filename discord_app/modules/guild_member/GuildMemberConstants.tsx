@@ -1,6 +1,6 @@
-// === Module 4693: GuildMemberConstants ===
+// === Module 4695: GuildMemberConstants ===
 
-// Module 4693 (GuildMemberConstants)
+// Module 4695 (GuildMemberConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_member/GuildMemberConstants.tsx");

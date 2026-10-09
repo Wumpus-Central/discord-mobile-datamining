@@ -1,6 +1,6 @@
-// === Module 12745: useGiftingPromotionDefaultSelection ===
+// === Module 12690: useGiftingPromotionDefaultSelection ===
 
-// Module 12745 (useGiftingPromotionDefaultSelection)
+// Module 12690 (useGiftingPromotionDefaultSelection)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");
