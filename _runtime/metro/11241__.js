@@ -1,7 +1,33 @@
 // === Module 11241: ? ===
 
 // Module 11241
-import registerAsset from "module_1132" /* 1132 */;
+import setupIntegration from "module_11223" /* 11223 */;
 
+const weakMap = new WeakMap();
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 380, height: 242, scales: [1], hash: "20a937ca7af234a5d3bd2269cf0e9463", name: "confetti", type: "png" });
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        const items = [...arguments];
+        const originalFunction = closure_1_0(11173).getOriginalFunction(this);
+        const obj = closure_1_0(11173);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {
+    }
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
+  }
+}));

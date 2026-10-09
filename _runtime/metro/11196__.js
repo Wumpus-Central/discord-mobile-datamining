@@ -1,0 +1,19 @@
+// === Module 11196: ? ===
+
+// Module 11196
+import _mod11173 from "module_11173" /* 11173 */;
+
+require = arg1;
+const dependencyMap = arg6;
+const _sentryScope = "_sentryScope";
+const _sentryIsolationScope = "_sentryIsolationScope";
+
+export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
+  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+};
+export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+  if (sentrySpan) {
+    const result = _mod11173.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
+    const result1 = _mod11173.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
+  }
+};

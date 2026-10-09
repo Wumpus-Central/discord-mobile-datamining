@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "e831387e9387034c87c9b5bc784cf6eb", name: "partner_icon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 24, height: 24, scales: [2, 3], hash: "afec4e7bfe67c8da93450ca26af6a62e", name: "NotificationCenter", type: "png" });

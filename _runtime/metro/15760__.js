@@ -1,7 +1,13 @@
 // === Module 15760: ? ===
 
 // Module 15760
-import registerAsset from "module_1132" /* 1132 */;
+import _mod15765 from "module_15765" /* 15765 */;
+import module_8389 from "module_8389" /* 8389 */;
+
+const require = globalThis.__r;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "ec3c8a78a62dc6597350cc012dd1f3ca", name: "zh-CN.messages.ec3c8a78a62dc6597350cc012dd1f3ca.compiled.messages", type: "jsona" });
+export const getYoutubeMeta = require("module_15761").getYoutubeMeta;
+export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
+export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
+export default module_8389(_mod15765).default;

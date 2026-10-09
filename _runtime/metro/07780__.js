@@ -1,69 +1,106 @@
 // === Module 7780: ? ===
 
 // Module 7780
-import _mod7772 from "module_7772" /* 7772 */;
-import _mod7773 from "module_7773" /* 7773 */;
+import _mod7781 from "module_7781" /* 7781 */;
 
+const _mod7782 = tmp5(7782);
 require = arg1;
 const dependencyMap = arg6;
 
-export const isAVI = function isAVI(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "avi");
-};
-export const isFLV = function isFLV(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flv") && _mod7772.isFlvStringIncluded(fileChunk);
-};
-export const isM4V = function isM4V(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4v") && _mod7772.isftypStringIncluded(fileChunk);
-};
-export const isMKV = function isMKV(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === _mod7772.findMatroskaDocTypeElements(fileChunk);
-};
-export const isMOV = function isMOV(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mov");
-};
-export const isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
-  if (!checkByFileTypeResult) {
-    excludeSimilarTypes = undefined;
-    if (null != excludeSimilarTypes) {
-      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
+export const detectFile = function detectFile(uint8Array, chunkSize) {
+  if (chunkSize) {
+    const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    const call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty("chunkSize");
+    } else {
+      hasOwnPropertyResult = call(chunkSize, "chunkSize");
     }
-    let tmp8 = !excludeSimilarTypes;
-    if (!excludeSimilarTypes) {
-      const fileChunk1 = _mod7772.getFileChunk(fileChunk);
-      const FileTypes2 = _mod7773.FileTypes;
-      tmp8 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod7772.isftypStringIncluded(fileChunk1);
-      const tmp10 = FileTypes2.checkByFileType(fileChunk1, "m4v") && _mod7772.isftypStringIncluded(fileChunk1);
+    if (hasOwnPropertyResult) {
+      chunkSize = undefined;
+      if (null != chunkSize) {
+        chunkSize = chunkSize.chunkSize;
+      }
+      let num2 = 0;
+      if (null !== chunkSize) {
+        num2 = 0;
+        if (undefined !== chunkSize) {
+          num2 = chunkSize;
+        }
+      }
+      if (num2 <= 0) {
+        const _RangeError = RangeError;
+        const rangeError = new RangeError("chunkSize must be bigger than zero");
+        throw rangeError;
+      }
     }
-    checkByFileTypeResult = tmp8;
   }
-  return checkByFileTypeResult;
-};
-export const isOGG = function isOGG(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "ogg");
-};
-export const isSWF = function isSWF(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "swf");
-};
-export const isWEBM = function isWEBM(fileChunk) {
-  fileChunk = _mod7772.getFileChunk(fileChunk, 64);
-  const FileTypes = _mod7773.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === _mod7772.findMatroskaDocTypeElements(fileChunk);
+  let num3;
+  if (null != chunkSize) {
+    num3 = chunkSize.chunkSize;
+  }
+  if (!num3) {
+    num3 = 64;
+  }
+  const fileChunk = _mod7781.getFileChunk(uint8Array, num3);
+  if (0 !== fileChunk.length) {
+    const items = [];
+    const items1 = [];
+    for (const key10027 in _mod7782.FileTypes) {
+      let _Object4 = Object;
+      let call2 = hasOwnProperty2.call;
+      let tmp23 = require;
+      let FileTypes5 = _mod7782.FileTypes;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2(key10027);
+      } else {
+        hasOwnProperty2Result = call2(FileTypes5, key10027);
+      }
+      if (!hasOwnProperty2Result) {
+        continue;
+      } else {
+        let FileTypes = tmp23(7782).FileTypes;
+        let signaturesByName = FileTypes.getSignaturesByName(key10027);
+        let FileTypes2 = tmp23(7782).FileTypes;
+        let detectbBySignaturesResult = FileTypes2.detectbBySignatures(fileChunk, signaturesByName);
+        if (!detectbBySignaturesResult) {
+          continue;
+        } else {
+          let FileTypes3 = tmp23(7782).FileTypes;
+          let infoByName = FileTypes3.getInfoByName(key10027);
+          let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = tmp23(7782).FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+          if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(infoByName.extension)) {
+            let arr = items1.push(infoByName.extension);
+          }
+          let obj = { extension: null, mimeType: null, description: null, signature: null };
+          ({ extension: obj.extension, mimeType: obj.mimeType, description: obj.description } = infoByName);
+          let _Object2 = Object;
+          let _Object3 = Object;
+          let obj2 = { sequence: null };
+          let sequence = detectbBySignaturesResult.sequence;
+          let merged = Object.assign({}, detectbBySignaturesResult);
+          obj2.sequence = sequence.map((item) => item.toString(16));
+          obj.signature = Object.assign(merged, obj2);
+          let arr2 = items.push(obj);
+          continue;
+        }
+        continue;
+      }
+      continue;
+    }
+    if (0 !== items.length) {
+      if (1 === items.length) {
+        if (0 === items1.length) {
+          return items[0];
+        }
+      }
+      const FileTypes4 = _mod7782.FileTypes;
+      const result = FileTypes4.detectTypeByAdditionalCheck(fileChunk, items);
+      require = result;
+      if (result) {
+        return items.find((extension) => extension.extension === result);
+      }
+    }
+  }
 };

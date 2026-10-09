@@ -1,16 +1,7 @@
 // === Module 11065: ? ===
 
 // Module 11065
-import _mod11064 from "module_11064" /* 11064 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod11064.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
-  });
-  return mapped.join("\n");
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "06839429466f04b07ee5c7156e6fbf8c", name: "MicrophoneIcon", type: "png" });

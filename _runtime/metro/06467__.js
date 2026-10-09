@@ -1,101 +1,107 @@
 // === Module 6467: ? ===
 
 // Module 6467
-import value2 from "value2" /* 6299 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import _modDef6466 from "module_6466" /* 6466 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
-
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };
-let __initData2 = { code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}" };
-let __initData3 = { code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" };
-let __initData4 = { code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}" };
-
-export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize) => {
-  const _require = CONTENT;
-  dependencyMap = animatedContentGestureState;
-  __initData = sharedValue;
-  __initData2 = handleOnStart;
-  __initData3 = handleOnChange;
-  __initData4 = handleOnEnd;
-  const obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
-  class R {
-    constructor(arg0) {
-      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
-      closure_2.value = closure_0;
-      tmp = closure_3(closure_0, CONTENT);
-      return;
+const TouchableNativeFeedback = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const obj2 = require("cancelAnimation");
-  R.__closure = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
-  R.__workletHash = 16113572067379;
-  R.__initData = __initData;
-  const items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
-  obj.handleOnStart = obj2.useWorkletCallback(R, items);
-  const obj3 = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
-  class U {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp2 = CONTENT;
-        tmp3 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp4 = closure_4;
-        tmp5 = closure_4(tmp, CONTENT);
+}
+let closure_2 = ["style"];
+const Platform = fn(17).Platform;
+const jsx = fn(21).jsx;
+class TouchableNativeFeedback {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, TouchableNativeFeedback);
+    tmp2 = metroRequire;
+    obj = metroRequire(TouchableNativeFeedback);
+    tmp3 = hasOwnProperty;
+    if (closure_9()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(TouchableNativeFeedback, fn(19).Component);
+const entry = {
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = {};
+    let rippleRadius = this.props.background;
+    if (!rippleRadius) {
+      obj.foreground = this.props.useForeground;
+      return obj;
+    } else {
+      if ("RippleAndroid" === rippleRadius.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
+      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
       }
-      return;
+      rippleRadius = rippleRadius.rippleRadius;
+      obj.rippleRadius = rippleRadius;
     }
   }
-  U.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, onChange: handleOnChange };
-  U.__workletHash = 9050442757159;
-  U.__initData = __initData2;
-  const items1 = [animatedContentGestureState, sharedValue, CONTENT, handleOnChange];
-  obj.handleOnChange = require("cancelAnimation").useWorkletCallback(U, items1);
-  const obj4 = require("cancelAnimation");
-  class C {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp3 = CONTENT;
-        tmp4 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
-        tmp7 = closure_5;
-        tmp8 = closure_5(tmp2, CONTENT);
-      }
-      return;
-    }
-  }
-  const obj5 = require("cancelAnimation");
-  C.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("value2").GESTURE_SOURCE, onEnd: handleOnEnd };
-  C.__workletHash = 10682034812271;
-  C.__initData = __initData3;
-  const items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
-  obj.handleOnEnd = obj5.useWorkletCallback(C, items2);
-  const obj6 = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("value2").GESTURE_SOURCE, onEnd: handleOnEnd };
-  class T {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp3 = CONTENT;
-        tmp4 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
-        tmp7 = closure_6;
-        tmp8 = closure_6(tmp2, CONTENT);
-      }
-      return;
-    }
-  }
-  const obj7 = require("cancelAnimation");
-  T.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("value2").GESTURE_SOURCE, onFinalize: handleOnFinalize };
-  T.__workletHash = 9696716573416;
-  T.__initData = __initData4;
-  const items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
-  obj.handleOnFinalize = obj7.useWorkletCallback(T, items3);
-  return obj;
 };
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_2);
+      const merged = Object.assign(tmp);
+      obj.style = style;
+      obj.extraButtonProps = self.getExtraButtonProps();
+      return jsx(TouchableNativeFeedback(6466), {});
+    }
+  }
+];
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = {};
+let merged = Object.assign(_modDef6466.defaultProps);
+obj.useForeground = true;
+obj.extraButtonProps = { rippleColor: null };
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+
+export default importDefaultResultResult;

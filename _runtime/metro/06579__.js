@@ -3,27 +3,16 @@
 // Module 6579
 import noop from "module_19" /* 19 */;
 
+({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
 
-export const isComponentClass = (renderScrollComponent) => {
-  let BooleanResult = typeof renderScrollComponent === "function";
-  if (typeof renderScrollComponent === "function") {
-    const prototype = renderScrollComponent.prototype;
-    let isReactComponent;
-    if (prototype != null) {
-      isReactComponent = prototype.isReactComponent;
-    }
-    BooleanResult = Boolean(isReactComponent);
-  }
-  return BooleanResult;
-};
-export const getValidComponent = (backdropComponent1) => {
-  let tmp = backdropComponent1;
-  if (!noop.isValidElement(backdropComponent1)) {
-    let element = null;
-    if (null != backdropComponent1) {
-      element = <backdropComponent1 />;
-    }
-    tmp = element;
-  }
+export const useUnmountFlag = () => {
+  const tmp = React(false);
+  closure_0 = tmp;
+  framebus(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
+    };
+  }, []);
   return tmp;
 };

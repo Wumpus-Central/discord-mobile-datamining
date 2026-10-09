@@ -1,24 +1,20 @@
 // === Module 14515: ? ===
 
 // Module 14515
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod14481 from "module_14481" /* 14481 */;
+import _mod14502 from "module_14502" /* 14502 */;
+import f2 from "f" /* 14516 */;
+import _mod14526 from "module_14526" /* 14526 */;
+import _mod14527 from "module_14527" /* 14527 */;
 
+let closure_2 = _mod14481([].concat);
 
-export default function getReactNativePlatformConstants() {
-  const obj = { osRelease: "", model: "", serverHost: "", uiMode: "", serial: "", forceTouch: false, interfaceIdiom: "", systemName: "" };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
-    const obj5 = {};
-    const merged = Object.assign(obj);
-    ({ Release: obj3.osRelease, Model: obj3.model, ServerHost: obj3.serverHost, uiMode: obj3.uiMode, Serial: obj3.serial } = get_ActivityIndicator.Platform.constants);
-    return obj5;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    const obj6 = {};
-    const merged1 = Object.assign(obj);
-    obj6.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj6;
-  } else {
-    return obj;
+export default _mod14502("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod14526(arg0));
+  const f = _mod14527.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
   }
-};
+  return tmp2;
+});

@@ -1,71 +1,44 @@
 // === Module 14513: ? ===
 
 // Module 14513
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod14478 from "module_14478" /* 14478 */;
+import _mod14500 from "module_14500" /* 14500 */;
 
-function getDevMenu() {
-
-}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod14500(arg1)) {
+          tmp11Result = _mod14478;
+          let tmp11ResultResult = tmp11Result(arg1);
         } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
+          tmp11ResultResult = arg1;
         }
       }
     }
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-});
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
+};
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

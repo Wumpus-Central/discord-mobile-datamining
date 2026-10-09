@@ -1,12 +1,7 @@
 // === Module 7152: ? ===
 
 // Module 7152
-import _slicedToArray from "module_32" /* 32 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const noop = fn(19);
-({ useCallback: closure_1, useState: c2 } = noop);
 
-export default function useForceUpdate() {
-  closure_0 = _slicedToArray(React2({}), 2)[1];
-  return framebus(() => closure_0({}), []);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 397, height: 97, scales: [2, 3], hash: "a6c610e7cf3af335e6671966e6802c47", name: "img_clouds_header_tier_0", type: "png" });

@@ -1,109 +1,68 @@
 // === Module 7848: ? ===
 
 // Module 7848
-import _mod7800 from "module_7800" /* 7800 */;
-import PNG_CHUNK_TYPE_SIZE from "PNG_CHUNK_TYPE_SIZE" /* 7807 */;
-import _modDef7817 from "module_7817" /* 7817 */;
+import _mod7809 from "module_7809" /* 7809 */;
+import _modDef7826 from "module_7826" /* 7826 */;
+import _modDef7849 from "module_7849" /* 7849 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
+function getTagName(dataView, sum1) {
+  const tmp = _slicedToArray(_mod7809.getPascalStringFromDataView(dataView, sum1), 2);
+  const first = tmp[0];
+  const obj2 = { tagName: tmp[1], tagNameSize: null };
+  let num = 0;
+  const sum = 1 + first;
+  if (first % 2 === 0) {
+    num = 1;
+  }
+  obj2.tagNameSize = sum + num;
+  return obj2;
+}
+let c4 = "8BIM";
+let c5 = 2;
+let c6 = 4;
+({ length, length: closure_7 } = "8BIM");
 
 export default {
-  read(byteLength, arg1) {
-    const obj = {};
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let obj2 = _modDef7817;
-      let longAt = obj2.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
-      let obj3 = _mod7800;
-      let sum = arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj3.getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
-      if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_PHYS) {
-        let tmp22 = arg1[num];
-        let tmp23 = 4 <= longAt && tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
-        let tmp24;
-        if (tmp23) {
-          let tmpResult = _modDef7817;
-          let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let obj4 = { value: longAt1, description: "" + longAt1 };
-          tmp24 = obj4;
-        }
-        obj["Pixels Per Unit X"] = tmp24;
-        let tmp26 = arg1[num];
-        let tmp27 = 8 <= longAt && tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
-        let tmp28;
-        if (tmp27) {
-          let tmpResult9 = _modDef7817;
-          let longAt2 = tmpResult9.getLongAt(byteLength, tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let obj5 = { value: longAt2, description: "" + longAt2 };
-          tmp28 = obj5;
-        }
-        obj["Pixels Per Unit Y"] = tmp28;
-        let tmp30 = arg1[num];
-        let tmp31 = 9 <= longAt && tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
-        let tmp32;
-        if (tmp31) {
-          let tmpResult10 = _modDef7817;
-          let byteAt = tmpResult10.getByteAt(byteLength, tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8);
-          let obj6 = { value: byteAt, description: null };
-          let str7 = "Unknown";
-          if (1 === byteAt) {
-            str7 = "meters";
+  read(arg0, arg1) {
+    const uint8Array = new Uint8Array(arg0);
+    const dataView = _mod7809.getDataView(uint8Array.buffer);
+    const obj2 = {};
+    let num = 0;
+    if (0 < arg0.length) {
+      const sum = num + React5;
+      const stringFromDataView = _mod7809.getStringFromDataView(dataView, num, React5);
+      const shortAt = _modDef7826.getShortAt(dataView, sum);
+      const sum1 = sum + c5;
+      const tmp15 = getTagName(dataView, sum1);
+      let name = tmp15.tagName;
+      const sum2 = sum1 + tmp15.tagNameSize;
+      const longAt = _modDef7826.getLongAt(dataView, sum2);
+      const sum3 = sum2 + c6;
+      if (stringFromDataView === c4) {
+        const dataView1 = _mod7809.getDataView(dataView.buffer, sum3, longAt);
+        const obj7 = { id: shortAt, value: null };
+        const tmp5Result = _mod7809;
+        obj7.value = _mod7809.getStringFromDataView(dataView1, 0, longAt);
+        if (_modDef7849[shortAt]) {
+          try {
+            obj7.description = _modDef7849[shortAt].description(dataView1);
+            if (!name) {
+              name = _modDef7849[shortAt].name;
+            }
+            obj2[name] = obj7;
+          } catch (err) {
+            tmp.description = tmp2;
           }
-          obj6.description = str7;
-          tmp32 = obj6;
+        } else if (arg1) {
+          const _HermesInternal = HermesInternal;
+          obj2["undefined-" + shortAt] = obj7;
         }
-        obj["Pixel Units"] = tmp32;
-      } else if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_TIME) {
-        let tmp34 = arg1[num];
-        let tmp8 = 7 <= longAt && tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
-        let tmp9;
-        if (tmp8) {
-          let tmpResult11 = _modDef7817;
-          let shortAt = tmpResult11.getShortAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let tmpResult12 = _modDef7817;
-          let byteAt1 = tmpResult12.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult13 = _modDef7817;
-          let byteAt2 = tmpResult13.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult14 = _modDef7817;
-          let byteAt3 = tmpResult14.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult15 = _modDef7817;
-          let byteAt4 = tmpResult15.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult16 = _modDef7817;
-          let byteAt5 = tmpResult16.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 6);
-          let obj7 = { value: null, description: null };
-          let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj7.value = items;
-          let repeat = "0".repeat;
-          let _HermesInternal = HermesInternal;
-          let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
-          let repeat2 = "0".repeat;
-          let _HermesInternal2 = HermesInternal;
-          let repeat3 = "0".repeat;
-          let combined1 = "" + "0".repeat(2 - "" + byteAt1.length) + byteAt1;
-          let _HermesInternal3 = HermesInternal;
-          let repeat4 = "0".repeat;
-          let combined2 = "" + "0".repeat(2 - "" + byteAt2.length) + byteAt2;
-          let _HermesInternal4 = HermesInternal;
-          let repeat5 = "0".repeat;
-          let combined3 = "" + "0".repeat(2 - "" + byteAt3.length) + byteAt3;
-          let _HermesInternal5 = HermesInternal;
-          let repeat6 = "0".repeat;
-          let combined4 = "" + "0".repeat(2 - "" + byteAt4.length) + byteAt4;
-          let _HermesInternal6 = HermesInternal;
-          let _HermesInternal7 = HermesInternal;
-          let str = "";
-          let str2 = "-";
-          let str3 = "-";
-          let str4 = " ";
-          let str5 = ":";
-          let str6 = ":";
-          obj7.description = "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - "" + byteAt5.length) + byteAt5;
-          tmp9 = obj7;
-        }
-        obj["Modify Date"] = tmp9;
+        const tmp5Result2 = _mod7809;
       }
+      num = sum3 + (longAt + longAt % 2);
     }
-    return obj;
+    return obj2;
   }
 };

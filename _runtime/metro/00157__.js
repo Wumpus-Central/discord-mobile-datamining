@@ -53,9 +53,9 @@ class DOMException {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp7 = metroRequire;
-    definePropertyResult = Object.defineProperty(tmp3Result, metroRequire, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(tmp3Result, metroRequire, { writable: true, value: "Array" });
     tmp9 = closure_7;
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "Array" });
     if (undefined === fn) {
       tmp16 = closure_3;
       str = "Error";

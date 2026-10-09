@@ -1,25 +1,9 @@
 // === Module 1298: ? ===
 
 // Module 1298
-const re1 = /%20/g;
-const obj = {
-  default: "RFC3986",
-  formatters: {
-    RFC1738(arg0) {
-      const call = replace.call;
-      if (typeof call === "unknown") {
-        let callResult = replace(re1, "+");
-      } else {
-        callResult = call(arg0, re1, "+");
-      }
-      return callResult;
-    },
-    RFC3986(arg0) {
-      return String(arg0);
-    }
-  },
-  RFC1738: "RFC1738",
-  RFC3986: "RFC3986"
-};
+import _mod1299 from "module_1299" /* 1299 */;
+import interpretNumericEntities from "interpretNumericEntities" /* 1300 */;
+import pushToArray from "pushToArray" /* 1302 */;
 
-export default obj;
+
+export default { formats: _mod1299, parse: interpretNumericEntities, stringify: pushToArray };

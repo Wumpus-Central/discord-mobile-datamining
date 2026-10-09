@@ -1,21 +1,7 @@
 // === Module 12767: ? ===
 
 // Module 12767
-const require = globalThis.__r;
+import registerAsset from "module_1132" /* 1132 */;
 
-for (const key10013 in require("RNIapAmazonModule")) {
-  arg5[key10013] = require("RNIapAmazonModule")[key10013];
-  continue;
-}
-for (const key10017 in require("module_12760")) {
-  arg5[key10017] = require("module_12760")[key10017];
-  continue;
-}
-for (const key10021 in require("module_12761")) {
-  arg5[key10021] = require("module_12761")[key10021];
-  continue;
-}
-for (const key10025 in require("module_12768")) {
-  arg5[key10025] = require("module_12768")[key10025];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9d92aa1c45b82a477ca0857bf43b0863", name: "PencilSparkleIcon", type: "png" });

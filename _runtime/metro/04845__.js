@@ -2,17 +2,17 @@
 
 // Module 4845
 import c from "c" /* 576 */;
-import _mod4841 from "module_4841" /* 4841 */;
+import _mod4842 from "module_4842" /* 4842 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
 }
 
-export const useRiveEnum = function useRiveEnum(arg0, arg1) {
+export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4841.useRiveProperty(arg1, arg0, getEnumProperty);
+  [tmp3, tmp4, tmp5] = _mod4842.useRiveProperty(arg1, arg0, getBooleanProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "31757ea45ee4fb60779fd700caf7d93e", name: "ic_nitro_wheel_gradient_purple", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 261.5, height: 152, scales: [2, 3], hash: "2e477535efb98674ba22b5552594b6ab", name: "img_nitro_longer_message_upsell_dark", type: "png" });

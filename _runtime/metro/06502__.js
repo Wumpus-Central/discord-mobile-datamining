@@ -1,7 +1,8 @@
 // === Module 6502: ? ===
 
 // Module 6502
-import _modDef6503 from "module_6503" /* 6503 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default _modDef6503;
+export const styles = StyleSheet.create({ container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" } });

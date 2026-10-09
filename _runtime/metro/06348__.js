@@ -1,9 +1,7 @@
 // === Module 6348: ? ===
 
 // Module 6348
-let closure_0 = 1;
+import _modDef6349 from "module_6349" /* 6349 */;
 
-export const getNextHandlerTag = function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
-};
+
+export default _modDef6349;

@@ -1,21 +1,10 @@
 // === Module 5924: ? ===
 
 // Module 5924
-import _mod514 from "module_514" /* 514 */;
-import baseIteratee from "baseIteratee" /* 595 */;
-import arrayAggregator from "arrayAggregator" /* 5925 */;
-import baseAggregator from "baseAggregator" /* 5926 */;
+import baseAssignValue from "baseAssignValue" /* 679 */;
+import _mod5925 from "module_5925" /* 5925 */;
 
 
-export default function createAggregator(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  return (arg0, arg1) => {
-    if (_mod514(arg0)) {
-      let tmpResult = arrayAggregator;
-    } else {
-      tmpResult = baseAggregator;
-    }
-    return tmpResult(arg0, closure_0, baseIteratee(arg1, 2), closure_1 ? closure_1() : {});
-  };
-};
+export default _mod5925((arg0, arg1, arg2) => {
+  baseAssignValue(arg0, arg2, arg1);
+});

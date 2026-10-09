@@ -1,7 +1,18 @@
 // === Module 9323: ? ===
 
 // Module 9323
-import registerAsset from "module_1132" /* 1132 */;
+import noop from "module_19" /* 19 */;
 
+let context = noop.createContext(undefined);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "6186005757c9a6da5db2aeedc6cf425e", name: "wumpus-wizard", type: "png" });
+export const AnimatedHeaderHeightContext = context;
+export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
+  }
+};

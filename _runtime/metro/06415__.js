@@ -1,27 +1,21 @@
 // === Module 6415: ? ===
 
 // Module 6415
-import ComposedGestureName from "ComposedGestureName" /* 6385 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6394 */;
-import _mod6409 from "module_6409" /* 6409 */;
+import ComposedGestureName from "ComposedGestureName" /* 6392 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6401 */;
+import _mod6416 from "module_6416" /* 6416 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function transformLongPressProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
-  }
-  return shouldCancelWhenOutside;
-}
-const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
+const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
 const map = new Map(items);
-let closure_4 = {};
+let closure_3 = {};
 
-export const useLongPressGesture = function useLongPressGesture() {
+export const useTapGesture = function useTapGesture() {
   let tmp = cResult;
   if (cResult === undefined) {
-    tmp = closure_4;
+    tmp = closure_3;
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
-  return _mod6409.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod6416.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
 };

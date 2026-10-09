@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "087f40a4e6d31afa070d07d1130d4217", name: "screenshare", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 300, height: 120, scales: [2, 3], hash: "a5f6ed280bfa7452913e665fb649bb9c", name: "img_stream_ended_darker", type: "png" });

@@ -1,20 +1,17 @@
 // === Module 5715: ? ===
 
 // Module 5715
-import _mod5698 from "module_5698" /* 5698 */;
+import _mod5647 from "module_5647" /* 5647 */;
 
 
-export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
-  let tmp = _mod5698(arg1);
-  if (tmp) {
-    tmp = "[[Enumerable]]" in arg1;
+export default function Type(arg0) {
+  let str = "Symbol";
+  if (typeof arg0 !== "symbol") {
+    let str2 = "BigInt";
+    if (typeof arg0 !== "bigint") {
+      str2 = _mod5647(arg0);
+    }
+    str = str2;
   }
-  if (tmp) {
-    tmp = "[[Configurable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-  }
-  return tmp;
+  return str;
 };

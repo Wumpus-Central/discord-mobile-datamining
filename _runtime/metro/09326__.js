@@ -1,7 +1,43 @@
 // === Module 9326: ? ===
 
 // Module 9326
-import registerAsset from "module_1132" /* 1132 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "bb53327d21615c77cfbccb9f06aeb711", name: "wumpus-link", type: "png" });
+export const getModalRouteKeys = (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    options = undefined;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
+    }
+    if (options == null) {
+      options = {};
+    }
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedTransparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "fullScreenModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "formSheet" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "pageSheet" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
+};

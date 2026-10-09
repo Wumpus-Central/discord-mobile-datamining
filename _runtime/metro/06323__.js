@@ -1,43 +1,16 @@
 // === Module 6323: ? ===
 
 // Module 6323
-import normalizeSnapPoint from "normalizeSnapPoint" /* 6315 */;
-import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
-
-({ useCallback: c2, useEffect: c3 } = noop);
-
-export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
-  _require = scrollableRef;
-  dependencyMap = value;
-  let tmp = focusHook;
-  if (focusHook === undefined) {
-    tmp = value2;
+const fn = function n(item, value) {
+  let result = item;
+  if (typeof item === "string") {
+    const _Number = Number;
+    result = Number(item.split("%")[0]) * value / 100;
   }
-  const bottomSheetInternal = require("module_6306").useBottomSheetInternal();
-  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
-  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
-  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
-  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
-  const setScrollableRef = bottomSheetInternal.setScrollableRef;
-  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
-  const items = [scrollableRef, value, value2, animatedScrollableType, animatedScrollableContentOffsetY, scrollableContentOffsetY, isScrollableRefreshable, isContentHeightFixed, setScrollableRef, removeScrollableRef];
-  tmp(scrollableContentOffsetY(() => {
-    animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
-    animatedScrollableType.value = value;
-    isScrollableRefreshable.value = value2;
-    isContentHeightFixed.value = false;
-    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
-    if (findNodeHandleResult) {
-      const obj2 = { id: findNodeHandleResult, node: scrollableRef };
-      setScrollableRef(obj2);
-    } else {
-      const _console = console;
-      console.warn("Couldn't find the scrollable node handle id!");
-    }
-    return () => {
-      removeScrollableRef(scrollableRef);
-    };
-  }, items));
+  return Math.max(0, value - result);
 };
+fn.__closure = {};
+fn.__workletHash = 14612470006791;
+fn.__initData = { code: "function pnpm_normalizeSnapPointTs1(snapPoint,containerHeight){let normalizedSnapPoint=snapPoint;if(typeof normalizedSnapPoint==='string'){normalizedSnapPoint=Number(normalizedSnapPoint.split('%')[0])*containerHeight/100;}return Math.max(0,containerHeight-normalizedSnapPoint);}" };
+
+export const normalizeSnapPoint = fn;

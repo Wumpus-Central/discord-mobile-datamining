@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 375, height: 187, scales: [2, 3], hash: "a089de21c15f6e03808f87d787c28c08", name: "role_subscription_settings_hero", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6d9d454b0d30ca95b55c7977c96de9cb", name: "StickerPlusIcon", type: "png" });

@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf_channels/native/images", width: 275.5, height: 78, scales: [2, 3], hash: "b55be157bc31f9c933d8fe113de3e547", name: "voice_channels", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/seasonal", width: 144, height: 150, scales: [1], hash: "ccdfa582cc7b9c2866cdcd81d25dbd3c", name: "box_idle", type: "png" });

@@ -1,22 +1,21 @@
 // === Module 7814: ? ===
 
 // Module 7814
-import _mod7800 from "module_7800" /* 7800 */;
-
-require = arg1;
-const dependencyMap = arg6;
-let c2 = 6;
-let closure_3 = ["GIF87a", "GIF89a"];
+let c0 = 18761;
+let c1 = 19789;
 
 export default {
-  isGifFile(dataView) {
-    let hasItem = dataView;
-    if (hasItem) {
-      hasItem = closure_3.includes(_mod7800.getStringFromDataView(dataView, 0, c2));
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
+    } else {
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
     }
-    return hasItem;
-  },
-  findOffsets() {
-    return { gifHeaderOffset: 0 };
   }
 };

@@ -1,9 +1,22 @@
 // === Module 14376: ? ===
 
 // Module 14376
-import _mod14442 from "module_14442" /* 14442 */;
-import module_14377 from "module_14377" /* 14377 */;
+const weakMap = new WeakMap();
 
-const obj = { target: "Object", stat: true, arity: 2, forced: null };
-obj.forced = Object.assign !== _mod14442;
-module_14377(obj, { assign: _mod14442 });
+export default function getInternalSlots(arg0, arg1) {
+  let items = arg1;
+  if (undefined === arg1) {
+    items = [];
+  }
+  value = weakMap.get(arg0);
+  if (!value) {
+    const _Object = Object;
+    const obj2 = Object.create(null, items.reduce((acc, item) => {
+      acc[item] = { enumerable: false, writable: true, configurable: true };
+      return acc;
+    }, {}));
+    const result = weakMap.set(arg0, obj2);
+    value = obj2;
+  }
+  return value;
+};

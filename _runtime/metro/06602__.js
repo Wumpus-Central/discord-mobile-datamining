@@ -1,51 +1,21 @@
 // === Module 6602: ? ===
 
 // Module 6602
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6303 from "module_6303" /* 6303 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
-import noop_mod from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6554 from "module_6554" /* 6554 */;
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(forwardRef((onFocus, ref) => {
-  onFocus = onFocus.onFocus;
-  const onBlur = onFocus.onBlur;
-  const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-  const shouldHandleKeyboardEvents = _mod6303.useBottomSheetInternal().shouldHandleKeyboardEvents;
-  const items = [onFocus, shouldHandleKeyboardEvents];
-  const items1 = [onBlur, shouldHandleKeyboardEvents];
-  const items2 = [shouldHandleKeyboardEvents];
-  const tmp2 = React2((arg0) => {
-    shouldHandleKeyboardEvents.value = true;
-    if (onFocus) {
-      tmp(arg0);
+_mod19.useCallback;
+
+export const useMappingHelper = () => {
+  const recyclerViewContext = _mod6554.useRecyclerViewContext();
+  const obj2 = { getMappingKey: null };
+  const items = [recyclerViewContext];
+  obj2.getMappingKey = useCallback((arg0, arg1) => {
+    let tmp = arg0;
+    if (recyclerViewContext) {
+      tmp = arg1;
     }
+    return tmp;
   }, items);
-  React3(() => () => {
-    shouldHandleKeyboardEvents.value = false;
-  }, items2);
-  const tmp3 = React2((arg0) => {
-    shouldHandleKeyboardEvents.value = false;
-    if (onBlur) {
-      tmp(arg0);
-    }
-  }, items1);
-  const merged1 = Object.assign(merged);
-  return jsx(LegacyBaseButton.TextInput, {
-    ref,
-    onFocus: tmp2,
-    onBlur: React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1)
-  });
-}));
-memoResult.displayName = "BottomSheetTextInput";
-
-export default memoResult;
+  return obj2;
+};

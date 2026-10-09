@@ -1,51 +1,30 @@
 // === Module 6484: ? ===
 
 // Module 6484
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6485 from "module_6485" /* 6485 */;
-import noop_mod from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6328 from "module_6328" /* 6328 */;
 
-let noop = noop_mod;
-({ useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const Platform = _mod17.Platform;
-const jsx = jsxProd.jsx;
-const __initData = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
-const memoResult = memo(function BottomSheetBodyComponent(children) {
-  const style = children.style;
-  let View = children.BodyComponent;
-  if (View === undefined) {
-    View = animatedIndex(animatedPosition[3]).View;
+const useLayoutEffect = _mod19.useLayoutEffect;
+
+export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  if (obj.isFabricInstalled()) {
+    useLayoutEffect(() => {
+      if (closure_0) {
+        if (closure_0.current) {
+          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
+            if (typeof closure_0.current.getBoundingClientRect === "function") {
+              const current2 = closure_0.current;
+              closure_1(current2.getBoundingClientRect());
+            }
+          } else {
+            const current = closure_0.current;
+            closure_1(current.unstable_getBoundingClientRect());
+          }
+        }
+      }
+    });
   }
-  animatedPosition = undefined;
-  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
-  animatedIndex = bottomSheetInternal.animatedIndex;
-  animatedPosition = bottomSheetInternal.animatedPosition;
-  let obj = style(animatedPosition[4]);
-  const fn = function y() {
-    let num = 1;
-    if (-1 === animatedIndex.get()) {
-      num = 0;
-    }
-    const obj = { opacity: num, transform: null };
-    const items = [{ translateY: animatedPosition.get() }];
-    obj.transform = items;
-    return obj;
-  };
-  fn.__closure = { Platform, animatedIndex, animatedPosition };
-  fn.__workletHash = 5915282482182;
-  fn.__initData = __initData;
-  let items = [animatedPosition, animatedIndex];
-  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const obj2 = style(animatedPosition[3]);
-  const obj3 = { Platform, animatedIndex, animatedPosition };
-  return <View style={animatedStyle(() => {
-    const items = [style, _mod6485.styles.container, animatedStyle];
-    return items;
-  }, items1)} collapsable>{children.children}</View>;
-});
-memoResult.displayName = "BottomSheetBody";
-
-export const BottomSheetBody = memoResult;
+  obj = _mod6328;
+};

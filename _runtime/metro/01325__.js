@@ -2,4 +2,4 @@
 
 // Module 1325
 
-export default ReferenceError;
+export default RangeError;

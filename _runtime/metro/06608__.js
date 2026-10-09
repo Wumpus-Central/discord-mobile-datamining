@@ -1,9 +1,7 @@
 // === Module 6608: ? ===
 
 // Module 6608
-import LegacyBaseButton from "LegacyBaseButton" /* 6326 */;
+import _modDef6609 from "module_6609" /* 6609 */;
 
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+export default _modDef6609;

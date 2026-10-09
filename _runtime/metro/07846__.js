@@ -1,78 +1,69 @@
 // === Module 7846: ? ===
 
 // Module 7846
-import _modDef7817 from "module_7817" /* 7817 */;
+let closure_0 = { xmp: "http://ns.adobe.com/xap/1.0/", tiff: "http://ns.adobe.com/tiff/1.0/", exif: "http://ns.adobe.com/exif/1.0/", dc: "http://purl.org/dc/elements/1.1/", xmpMM: "http://ns.adobe.com/xap/1.0/mm/", stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#", stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#", photoshop: "http://ns.adobe.com/photoshop/1.0/" };
 
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  read(byteLength, sum) {
-    let tmp;
-    if (sum + 4 <= byteLength.byteLength) {
-      const longAt = _modDef7817.getLongAt(byteLength, sum);
-      const obj2 = { value: longAt, description: null };
-      const _HermesInternal = HermesInternal;
-      obj2.description = "" + longAt + "px";
-      tmp = obj2;
+export const isMissingNamespaceError = function isMissingNamespaceError(message) {
+  const items = ["prefix is non-null and namespace is null", "prefix not bound to a namespace", "prefix inte bundet till en namnrymd", /Namespace prefix .+ is not defined/];
+  let num = 0;
+  if (0 < items.length) {
+    const _RegExp = RegExp;
+    const regExp = new RegExp(items[num]);
+    while (!regExp.test(message.message)) {
+      num = num + 1;
     }
-    const obj3 = { "Image Width": tmp, "Image Height": null, "Bit Depth": null, "Color Type": null, Compression: null, Filter: null, Interlace: null };
-    let tmp6;
-    if (sum + 4 + 4 <= byteLength.byteLength) {
-      const longAt1 = _modDef7817.getLongAt(byteLength, sum + 4);
-      const obj5 = { value: longAt1, description: null };
-      const _HermesInternal2 = HermesInternal;
-      obj5.description = "" + longAt1 + "px";
-      tmp6 = obj5;
+    return true;
+  }
+  return false;
+};
+export const addMissingNamespaces = function addMissingNamespaces(str) {
+  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+  if (match) {
+    const items = [];
+    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
+    let match1 = obj.exec(str);
+    if (null !== match1) {
+      do {
+        if (-1 === items.indexOf(match1[1])) {
+          let arr = items.push(match1[1]);
+        }
+        match1 = obj.exec(str);
+      } while (null !== match1);
     }
-    obj3["Image Height"] = tmp6;
-    let tmp11;
-    if (sum + 8 + 1 <= byteLength.byteLength) {
-      const byteAt = _modDef7817.getByteAt(byteLength, sum + 8);
-      const obj7 = { value: byteAt, description: null };
-      const _HermesInternal3 = HermesInternal;
-      obj7.description = "" + byteAt;
-      tmp11 = obj7;
+    const items1 = [];
+    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+    let match2 = obj2.exec(str);
+    if (null !== match2) {
+      do {
+        let tmp8 = match2[1];
+        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
+        if (tmp9) {
+          if (-1 === items1.indexOf(tmp8)) {
+            let arr2 = items1.push(tmp8);
+          }
+        }
+        match2 = obj2.exec(str);
+      } while (null !== match2);
     }
-    obj3["Bit Depth"] = tmp11;
-    let tmp16;
-    if (sum + 9 + 1 <= byteLength.byteLength) {
-      const byteAt1 = _modDef7817.getByteAt(byteLength, sum + 9);
-      const obj9 = { value: byteAt1, description: { 0: "Grayscale", 2: "RGB", 3: "Palette", 4: "Grayscale with Alpha", 6: "RGB with Alpha" }[byteAt1] || "Unknown" };
-      tmp16 = obj9;
-    }
-    obj3["Color Type"] = tmp16;
-    let tmp20;
-    if (sum + 10 + 1 <= byteLength.byteLength) {
-      const byteAt2 = _modDef7817.getByteAt(byteLength, sum + 10);
-      const obj11 = { value: byteAt2, description: null };
-      let str6 = "Unknown";
-      if (0 === byteAt2) {
-        str6 = "Deflate/Inflate";
+    const found = items1.filter((item) => -1 === items.indexOf(item));
+    let replaced = str;
+    if (0 !== found.length) {
+      const items2 = [];
+      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
+        let tmp12 = found[num3];
+        let text = closure_0[tmp12];
+        if (!text) {
+          text = `http://fallback.namespace/${tmp12}`;
+        }
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
       }
-      obj11.description = str6;
-      tmp20 = obj11;
+      const _RegExp = RegExp;
+      const joined = items2.join("");
+      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
+      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
     }
-    obj3.Compression = tmp20;
-    let tmp24;
-    if (sum + 11 + 1 <= byteLength.byteLength) {
-      const byteAt3 = _modDef7817.getByteAt(byteLength, sum + 11);
-      const obj13 = { value: byteAt3, description: null };
-      let str7 = "Unknown";
-      if (0 === byteAt3) {
-        str7 = "Adaptive";
-      }
-      obj13.description = str7;
-      tmp24 = obj13;
-    }
-    obj3.Filter = tmp24;
-    let tmp28;
-    if (sum + 12 + 1 <= byteLength.byteLength) {
-      const byteAt4 = _modDef7817.getByteAt(byteLength, sum + 12);
-      const obj15 = { value: byteAt4, description: { 0: "Noninterlaced", 1: "Adam7 Interlace" }[byteAt4] || "Unknown" };
-      tmp28 = obj15;
-    }
-    obj3.Interlace = tmp28;
-    return obj3;
+    return replaced;
+  } else {
+    return str;
   }
 };

@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 64, scales: [2, 3], hash: "5f09a79d208de30c6568041c7b77048f", name: "img_search_empty_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon", width: 60, height: 60, scales: [2, 3], hash: "5ed4f057d69445a6e4a7fd8ca936d32a", name: "BeanieIcon", type: "png" });

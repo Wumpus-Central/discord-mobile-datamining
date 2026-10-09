@@ -1,7 +1,7 @@
 // === Module 8729: ? ===
 
 // Module 8729
-import registerAsset from "module_1132" /* 1132 */;
+import _mod8730 from "module_8730" /* 8730 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "032ba055130436392254ce3ba39e9456", name: "gmail", type: "png" });
+export default _mod8730();

@@ -1,178 +1,180 @@
 // === Module 7840: ? ===
 
 // Module 7840
-import _mod7800 from "module_7800" /* 7800 */;
-import _modDef7817 from "module_7817" /* 7817 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _modDef7841 from "module_7841" /* 7841 */;
+import _modDef7842 from "module_7842" /* 7842 */;
 
-require = arg1;
-function parseBezierKnot(dataView, arg1) {
-  const items = [];
-  let num = 0;
-  do {
-    let sum = arg1 + num;
-    let obj = _modDef7817;
-    let longAt = obj.getLongAt(dataView, sum);
-    let num2 = -1;
-    if (longAt >>> 31 === 0) {
-      num2 = 1;
-    }
-    let str = (2130706432 & longAt) >>> 24;
-    let _parseInt = parseInt;
-    let obj2 = _mod7800;
-    let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
-    let obj3 = _mod7800;
-    let text = `${str.toString(2)}.`;
-    let obj4 = _mod7800;
-    let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
-    let tmp2Result = _modDef7817;
-    let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
-    let num3 = -1;
-    if (longAt1 >>> 31 === 0) {
-      num3 = 1;
-    }
-    let str3 = (2130706432 & longAt1) >>> 24;
-    let _parseInt2 = parseInt;
-    let tmp6Result = _mod7800;
-    let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
-    let tmp6Result3 = _mod7800;
-    let text1 = `${str3.toString(2)}.`;
-    let tmp6Result4 = _mod7800;
-    let items1 = [num3 * tmp6Result3.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result4.padStart(str4.toString(2), 24, "0"), 2), result];
-    let arr = items.push(items1);
-    num = num + 8;
-  } while (num < 24);
-  return items;
-}
-let obj = { CLOSED_SUBPATH_LENGTH: 0, CLOSED_SUBPATH_BEZIER_LINKED: 1, CLOSED_SUBPATH_BEZIER_UNLINKED: 2, OPEN_SUBPATH_LENGTH: 3, OPEN_SUBPATH_BEZIER_LINKED: 4, OPEN_SUBPATH_BEZIER_UNLINKED: 5, FILL_RULE: 6, CLIPBOARD: 7, INITIAL_FILL_RULE: 8 };
-let obj2 = { 2000: null, 2999: null };
-obj2[2000] = {
-  name: "PathInformation",
-  description: function pathResource(byteLength) {
-    const types = {};
-    const paths = [];
-    for (let num = 0; num < byteLength.byteLength; num = num + 26) {
-      let obj2 = _modDef7817;
-      let shortAt = obj2.getShortAt(byteLength, num);
-      if (dependencyMap[shortAt]) {
-        if (!types[shortAt]) {
-          types[shortAt] = dependencyMap[shortAt].description;
+importDefault = arg2;
+const dependencyMap = arg6;
+function parseTags(byteLength, size, sum, arg3) {
+  let items;
+  let obj4;
+  let tmp = sum;
+  const obj = {};
+  sum = sum + size.size;
+  if (sum < sum) {
+    if (tmp < byteLength.byteLength) {
+      while (true) {
+        let encoding = tmp23;
+        if (byteLength.getUint8(tmp) !== 28) {
+          let obj2 = { tag: null, tagSize: 0 };
+        } else {
+          let uint16 = byteLength.getUint16(tmp + 1);
+          let uint161 = byteLength.getUint16(tmp + 3);
+          if (!arg3) {
+            if (!_modDef7841.iptc[uint16]) {
+              obj2 = { tag: "Array", tagSize: uint161 };
+            }
+          }
+          items = [];
+          for (let num = 0; num < uint161; num = num + 1) {
+            let arr = items.push(byteLength.getUint8(tmp6 + num));
+          }
+          let obj3 = { id: uint16, name: null, value: null, description: null };
+          obj4 = _modDef7841.iptc[uint16];
+          if (obj4) {
+            if (typeof obj4 !== "string") {
+              break;
+            } else {
+              let combined = obj4;
+            }
+          } else {
+            let _HermesInternal = HermesInternal;
+            combined = "undefined-" + uint16;
+          }
+          obj3.name = combined;
+          obj3.value = items;
+          obj3.description = getTagDescription(_modDef7841.iptc[uint16], items, obj, encoding);
+          let tmp17 = _modDef7841.iptc[uint16] && _modDef7841.iptc[uint16].repeatable;
+          if (tmp17) {
+            obj3.repeatable = true;
+          }
+          let tmp18 = _modDef7841.iptc[uint16] && undefined !== _modDef7841.iptc[uint16].encoding_name;
+          if (tmp18) {
+            let obj5 = _modDef7841.iptc[uint16];
+            obj3.encoding = obj5.encoding_name(items);
+          }
+          let obj6 = { tag: obj3, tagSize: uint161 };
+          obj2 = obj6;
         }
-        let obj = { type: shortAt, path: null };
-        let obj4 = dependencyMap[shortAt];
-        obj.path = obj4.path(byteLength, num + 2);
-        let arr = paths.push(obj);
+        let tag = obj2.tag;
+        if (null !== tag) {
+          let tmp21 = encoding;
+          if (tag) {
+            if ("encoding" in tag) {
+              encoding = tag.encoding;
+            }
+            if (undefined !== obj[tag.name]) {
+              if (undefined !== tag.repeatable) {
+                let _Array = Array;
+                if (!(obj[tag.name] instanceof Array)) {
+                  let obj7 = { id: obj[tag.name].id, value: obj[tag.name].value, description: obj[tag.name].description };
+                  let items1 = [obj7];
+                  obj[tag.name] = items1;
+                }
+                let arr3 = obj[tag.name];
+                let obj15 = { id: null, value: null, description: null };
+                ({ id: obj8.id, value: obj8.value, description: obj8.description } = tag);
+                let arr2 = arr3.push(obj15);
+                tmp21 = encoding;
+              }
+            }
+            let obj16 = { id: null, value: null, description: null };
+            ({ id: obj9.id, value: obj9.value, description: obj9.description } = tag);
+            obj[tag.name] = obj16;
+            tmp21 = encoding;
+          }
+          let sum1 = tmp + (5 + tmp19);
+          if (sum1 < sum) {
+            tmp23 = tmp21;
+            tmp = sum1;
+          }
+        }
       }
-    }
-    return JSON.stringify({ types, paths });
-  }
-};
-obj2[2999] = {
-  name: "ClippingPathName",
-  description(getUint8) {
-    return _slicedToArray(_mod7800.getPascalStringFromDataView(getUint8, 0), 2)[1];
-  }
-};
-const dependencyMap = {
-  [obj.CLOSED_SUBPATH_LENGTH]: {
-    description: "Closed subpath length",
-    path(dataView, sum) {
-      const items = [_modDef7817.getShortAt(dataView, sum)];
-      return items;
-    }
-  },
-  [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
-  [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
-  [obj.OPEN_SUBPATH_LENGTH]: {
-    description: "Open subpath length",
-    path(dataView, sum) {
-      const items = [_modDef7817.getShortAt(dataView, sum)];
-      return items;
-    }
-  },
-  [obj.OPEN_SUBPATH_BEZIER_LINKED]: { description: "Open subpath Bezier knot, linked", path: parseBezierKnot },
-  [obj.OPEN_SUBPATH_BEZIER_UNLINKED]: { description: "Open subpath Bezier knot, unlinked", path: parseBezierKnot },
-  [obj.FILL_RULE]: {
-    description: "Path fill rule",
-    path() {
-      return [];
-    }
-  },
-  [obj.INITIAL_FILL_RULE]: {
-    description: "Initial fill rule",
-    path(dataView, sum) {
-      const items = [_modDef7817.getShortAt(dataView, sum)];
-      return items;
-    }
-  },
-  [obj.CLIPBOARD]: {
-    description: "Clipboard",
-    path: function parseClipboard(dataView, sum) {
-      const longAt = _modDef7817.getLongAt(dataView, sum);
-      let num = -1;
-      let num2 = -1;
-      if (longAt >>> 31 === 0) {
-        num2 = 1;
+      if (typeof obj4.name === "function") {
+        let name = obj4.name(items);
+      } else {
+        name = obj4.name;
       }
-      const str2 = longAt & parseInt(_mod7800.strRepeat("1", 24), 2);
-      const text = `${str.toString(2)}.`;
-      const obj3 = _mod7800;
-      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod7800.padStart(str2.toString(2), 24, "0"), 2), , , ];
-      sum = sum + 4;
-      const longAt1 = _modDef7817.getLongAt(dataView, sum);
-      let num3 = num;
-      if (longAt1 >>> 31 === 0) {
-        num3 = 1;
-      }
-      const tmpResult = _modDef7817;
-      const tmp4Result = _mod7800;
-      const str4 = longAt1 & parseInt(_mod7800.strRepeat("1", 24), 2);
-      const text1 = `${str3.toString(2)}.`;
-      const tmp4Result12 = _mod7800;
-      items[1] = num3 * tmp4Result12.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod7800.padStart(str4.toString(2), 24, "0"), 2);
-      const sum1 = sum + 8;
-      const tmp4Result13 = _mod7800;
-      const longAt2 = _modDef7817.getLongAt(dataView, sum1);
-      let num4 = num;
-      if (longAt2 >>> 31 === 0) {
-        num4 = 1;
-      }
-      const tmpResult4 = _modDef7817;
-      const tmp4Result14 = _mod7800;
-      const str6 = longAt2 & parseInt(_mod7800.strRepeat("1", 24), 2);
-      const text2 = `${str5.toString(2)}.`;
-      const tmp4Result15 = _mod7800;
-      items[2] = num4 * tmp4Result15.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + _mod7800.padStart(str6.toString(2), 24, "0"), 2);
-      const sum2 = sum + 12;
-      const tmp4Result16 = _mod7800;
-      const longAt3 = _modDef7817.getLongAt(dataView, sum2);
-      let num5 = num;
-      if (longAt3 >>> 31 === 0) {
-        num5 = 1;
-      }
-      const tmpResult5 = _modDef7817;
-      const tmp4Result17 = _mod7800;
-      const str8 = longAt3 & parseInt(_mod7800.strRepeat("1", 24), 2);
-      const text3 = `${str7.toString(2)}.`;
-      const tmp4Result18 = _mod7800;
-      items[3] = num5 * tmp4Result18.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + _mod7800.padStart(str8.toString(2), 24, "0"), 2);
-      const items1 = [items, ];
-      const sum3 = sum + 16;
-      const tmp4Result19 = _mod7800;
-      const longAt4 = _modDef7817.getLongAt(dataView, sum3);
-      if (longAt4 >>> 31 === 0) {
-        num = 1;
-      }
-      const tmpResult6 = _modDef7817;
-      const tmp4Result20 = _mod7800;
-      const str10 = longAt4 & parseInt(_mod7800.strRepeat("1", 24), 2);
-      const text4 = `${str9.toString(2)}.`;
-      const tmp4Result21 = _mod7800;
-      items1[1] = num * tmp4Result21.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + _mod7800.padStart(str10.toString(2), 24, "0"), 2);
-      return items1;
     }
   }
-};
+  return obj;
+}
+function getTagDescription(description, items, arg2, encoding) {
+  if (!(function hasDescriptionProperty(description) {
+    let tmp = description;
+    if (description) {
+      tmp = undefined !== description.description;
+    }
+    return tmp;
+  })(description)) {
+    let decodeResult = items;
+    if ((function tagValueIsText(description, items) {
+      let tmp = description;
+      if (description) {
+        const _Array = Array;
+        tmp = items instanceof Array;
+      }
+      return tmp;
+    })(description, items)) {
+      const decoder = _modDef7842;
+      decodeResult = decoder.decode(encoding, items);
+    }
+    return decodeResult;
+  } else {
+    try {
+      return description.description(items, arg2);
+    } catch (err) {
+    }
+  }
+}
 
-export default obj2;
-export const PathRecordTypes = obj;
+export default {
+  read(byteLength, sum, arg2) {
+    try {
+      const _Array = Array;
+      if (Array.isArray(byteLength)) {
+        const _DataView = DataView;
+        const _Uint8Array = Uint8Array;
+        const dataView = new DataView(Uint8Array.from(byteLength).buffer);
+        let obj = { size: byteLength.length };
+        return parseTags(dataView, obj, 0, arg2);
+      } else {
+        const tmp5 = (function getNaaResourceBlock(byteLength, sum) {
+          let tmp = sum;
+          if (sum + 12 <= byteLength.byteLength) {
+            while (943868237 === byteLength.getUint32(tmp, false)) {
+              let uint8 = byteLength.getUint8(tmp + 4 + 2);
+              sum = uint8;
+              if (uint8 % 2 === 0) {
+                sum = uint8 + 1;
+              }
+              let sum1 = sum + 1;
+              let obj = { headerSize: 6 + sum1 + 4, type: byteLength.getUint16(tmp + 4), size: byteLength.getUint32(tmp + 4 + 2 + sum1) };
+              if (1028 === obj.type) {
+                let obj2 = { naaBlock: obj, dataOffset: tmp + obj.headerSize };
+                return obj2;
+              } else {
+                let num = 0;
+                let sum2 = obj.headerSize + obj.size;
+                if (obj.size % 2 !== 0) {
+                  num = 1;
+                }
+                let sum3 = tmp + (sum2 + num);
+                tmp = sum3;
+              }
+            }
+            const _Error = Error;
+            const error = new Error("Not an IPTC resource block.");
+            throw error;
+          }
+          const error1 = new Error("No IPTC NAA resource block.");
+          throw error1;
+        })(byteLength, sum);
+        return parseTags(byteLength, tmp5.naaBlock, tmp5.dataOffset, arg2);
+      }
+    } catch (err) {
+      return {};
+    }
+  }
+};

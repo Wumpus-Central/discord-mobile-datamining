@@ -1,19 +1,7 @@
 // === Module 11022: ? ===
 
 // Module 11022
-import _mod10999 from "module_10999" /* 10999 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
-};
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
-  if (sentrySpan) {
-    const result = _mod10999.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
-    const result1 = _mod10999.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4f5dc667b92ff05a99d9028260a9bf5b", name: "ImageSparkleIcon", type: "png" });

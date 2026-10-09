@@ -1,20 +1,17 @@
 // === Module 6705: ? ===
 
 // Module 6705
-import _mod17 from "module_17" /* 17 */;
+import _mod6706 from "module_6706" /* 6706 */;
 
-const constants = _mod17.Platform.constants;
-if (constants != null) {
-  const reactNativeVersion = constants.reactNativeVersion;
-}
-try {
-  let major;
-  if (reactNativeVersion != null) {
-    major = reactNativeVersion.major;
+require = arg1;
+const dependencyMap = arg6;
+
+export const getDistanceForDirection = function getDistanceForDirection(layout, gestureDirection, arg2) {
+  const invertedMultiplier = _mod6706.getInvertedMultiplier(gestureDirection, arg2);
+  if ("vertical" !== gestureDirection) {
+    if ("vertical-inverted" !== gestureDirection) {
+      return layout.width * invertedMultiplier;
+    }
   }
-  if (0 !== major) {
-    const InteractionManager = _mod17.InteractionManager;
-  }
-  exports.InteractionManager = InteractionManager;
-} catch (err) {
-}
+  return layout.height * invertedMultiplier;
+};

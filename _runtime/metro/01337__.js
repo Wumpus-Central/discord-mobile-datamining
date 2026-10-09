@@ -1,8 +1,10 @@
 // === Module 1337: ? ===
 
 // Module 1337
-import bind from "bind" /* 1318 */;
+if (!isNaN) {
+  isNaN = function isNaN(arg0) {
+    return arg0 != arg0;
+  };
+}
 
-const call2 = bind.call;
-
-export default typeof call2 === "unknown" ? bind(hasOwnProperty) : call2(call, hasOwnProperty);
+export default isNaN;

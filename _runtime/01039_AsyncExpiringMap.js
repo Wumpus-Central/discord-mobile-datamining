@@ -40,7 +40,7 @@ const entry = {
     if (typeof value === "object") {
       if (value) {
         if ("then" in value) {
-          const obj2 = { value: "r", expiresAt: "Symbol", promise: value };
+          const obj2 = { value: "r", expiresAt: "T", promise: value };
           const _map2 = self._map;
           const result = _map2.set(arg0, obj2);
           value.then((value) => {
