@@ -13,11 +13,11 @@ import apply from "../../../../_runtime/metro/00012__.js";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallConstants = fn(10334);
+const ChannelCallConstants = fn(10321);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
-const OrientationLockState = fn(2023).OrientationLockState;
-const ParticipantTypes = fn(5113).ParticipantTypes;
-const timeout = new fn(2058).Timeout();
+const OrientationLockState = fn(2024).OrientationLockState;
+const ParticipantTypes = fn(5114).ParticipantTypes;
+const timeout = new fn(2059).Timeout();
 let obj = {
   focus: true,
   pipFocus: false,
@@ -28,23 +28,23 @@ let obj = {
 let obj2 = {};
 let size = {
   x: "Array",
-  y: "Symbol",
+  y: "T",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8426).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
+  screenOrientation: fn(8434).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: false,
+  isInitialized: null,
   isVisible: null,
 };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
-  y: "Symbol",
+  y: "T",
   width: "y",
   height: "IconComponent",
-  screenOrientation: fn(8426).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
+  screenOrientation: fn(8434).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: false,
+  isInitialized: null,
   isVisible: null,
 };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
@@ -70,7 +70,7 @@ let closure_11 = tmp6;
 ReactCompilerGating = fn(558);
 const throttleResult = apply.throttle(() => {
   const pipFocus = obj3.getState().pipFocus;
-  pipFocus(1271).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
+  pipFocus(1272).batchUpdates(() => obj3.setState({ pipFocus: !pipFocus }));
 }, 300);
 function resetFocusTimer() {
   timeout.stop();
@@ -88,7 +88,7 @@ export const setFocus = function setFocus(focus) {
 };
 export const toggleFocus = function toggleFocus() {
   const focus = obj3.getState().focus;
-  focus(1271).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
+  focus(1272).batchUpdates(() => obj3.setState({ focus: !focus, pipFocus: false }));
 };
 export { resetFocusTimer };
 export const resetFocus = function resetFocus() {
@@ -175,7 +175,7 @@ export const useChannelCallOrientationHandlers = ReactCompilerGating.isReactComp
           tmp18 = cResult[5];
           tmp19 = cResult[6];
         }
-        tmpResult = tmp(10337);
+        tmpResult = tmp(10324);
         const stateFromStores = tmp(504).useStateFromStores(tmp17, tmp18, tmp19);
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {

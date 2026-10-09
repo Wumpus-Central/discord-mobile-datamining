@@ -9,7 +9,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NO_ACTIVITIES = fn(2062).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(2063).NO_ACTIVITIES;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -177,7 +177,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp13;
         });
-        const found = mapped1.filter(tmp26(1387).isNotNullish);
+        const found = mapped1.filter(tmp26(1388).isNotNullish);
         cResult[10] = tmp8;
         cResult[11] = stateFromStoresArray;
         cResult[12] = arr;
@@ -366,6 +366,19 @@ export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEn
               value = userIds.values().next().value;
               const iter = userIds.values();
             }
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, (application_id) => {
+                let id;
+                if (embeddedActivity != null) {
+                  const application = embeddedActivity.application;
+                  if (application != null) {
+                    id = application.id;
+                  }
+                }
+                return application_id.application_id === id;
+              });
+            }
             let id;
             if (embeddedActivity != null) {
               let application = embeddedActivity.application;
@@ -375,27 +388,8 @@ export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEn
             }
             const obj = {};
             const merged = Object.assign(embeddedActivity);
-            obj.presenceActivity = PresenceStore.findActivity(value, (application_id) => {
-              let id;
-              if (embeddedActivity != null) {
-                const application = embeddedActivity.application;
-                if (application != null) {
-                  id = application.id;
-                }
-              }
-              return application_id.application_id === id;
-            });
+            obj.presenceActivity = findActivityResult;
             const result = map.set(id, obj);
-            const findActivityResult = PresenceStore.findActivity(value, (application_id) => {
-              let id;
-              if (embeddedActivity != null) {
-                const application = embeddedActivity.application;
-                if (application != null) {
-                  id = application.id;
-                }
-              }
-              return application_id.application_id === id;
-            });
           });
           return map;
         };
@@ -427,6 +421,19 @@ export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEn
               value = userIds.values().next().value;
               const iter = userIds.values();
             }
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, (application_id) => {
+                let id;
+                if (embeddedActivity != null) {
+                  const application = embeddedActivity.application;
+                  if (application != null) {
+                    id = application.id;
+                  }
+                }
+                return application_id.application_id === id;
+              });
+            }
             let id;
             if (embeddedActivity != null) {
               let application = embeddedActivity.application;
@@ -436,27 +443,8 @@ export const useEmbeddedAppsWithPresence = ReactCompilerGating.isReactCompilerEn
             }
             const obj = {};
             const merged = Object.assign(embeddedActivity);
-            obj.presenceActivity = PresenceStore.findActivity(value, (application_id) => {
-              let id;
-              if (embeddedActivity != null) {
-                const application = embeddedActivity.application;
-                if (application != null) {
-                  id = application.id;
-                }
-              }
-              return application_id.application_id === id;
-            });
+            obj.presenceActivity = findActivityResult;
             const result = map.set(id, obj);
-            const findActivityResult = PresenceStore.findActivity(value, (application_id) => {
-              let id;
-              if (embeddedActivity != null) {
-                const application = embeddedActivity.application;
-                if (application != null) {
-                  id = application.id;
-                }
-              }
-              return application_id.application_id === id;
-            });
           });
           return map;
         },

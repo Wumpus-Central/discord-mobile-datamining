@@ -5,7 +5,7 @@ import WishlistUtils from "../WishlistUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1392).PremiumSubscriptionSKUs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");

@@ -15,7 +15,7 @@ export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = useIsActivityFocusedDefault(channelId);
       const obj = channelId(576);
       const tmp = channelId;
-      const isModalOpen = channelId(4936).useIsModalOpen(ChannelCallModalDefault);
+      const isModalOpen = channelId(4937).useIsModalOpen(ChannelCallModalDefault);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore];
         cResult[0] = items;
@@ -37,7 +37,7 @@ export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
-      const obj2 = channelId(4936);
+      const obj2 = channelId(4937);
       const stateFromStores = tmp(504).useStateFromStores(first, tmp8, tmp9);
       if (tmp4) {
         tmp4 = isModalOpen;
@@ -50,8 +50,8 @@ export const useIsViewingActivity = ReactCompilerGating.isReactCompilerEnabled()
   : function useIsViewingActivity(channelId) {
       channelId = channelId.channelId;
       let tmp = useIsActivityFocusedDefault(channelId);
-      const isModalOpen = channelId(4936).useIsModalOpen(ChannelCallModalDefault);
-      const obj = channelId(4936);
+      const isModalOpen = channelId(4937).useIsModalOpen(ChannelCallModalDefault);
+      const obj = channelId(4937);
       const items = [ChannelRTCStore];
       const items1 = [channelId];
       const stateFromStores = channelId(504).useStateFromStores(

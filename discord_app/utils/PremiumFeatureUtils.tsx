@@ -19,7 +19,7 @@ function getUserMaxFileSize(currentUser) {
       let obj = dependencyMap;
       if (obj2.isPremium(currentUser)) {
         if (currentUser.premiumType === TIER_2.TIER_2) {
-          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(7733);
+          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(7742);
           getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
           obj = { location: "getUserMaxFileSize" };
           let fileSize = getNitroFileUploadLimitBytes(obj);
@@ -34,7 +34,7 @@ function getUserMaxFileSize(currentUser) {
 }
 const Constants = fn(1085);
 ({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: closure_4 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({
   PremiumTypes: hasOwnProperty,
   PremiumUserLimits: metroRequire,

@@ -8,7 +8,7 @@ import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
-import _mod5741 from "module_5741" /* 5741 */;
+import _mod5742 from "module_5742" /* 5742 */;
 import GameIcon from "../../../game_detection/native/GameIcon.tsx";
 import SlayerStorefrontUtils from "../../../slayer_storefront/SlayerStorefrontUtils.tsx";
 import SoundboardActionCreators from "../../../soundboard/SoundboardActionCreators.tsx";
@@ -38,12 +38,12 @@ function getGiftCodeHeaderText(isSubscription) {
       if (sku != null) {
         name = sku.name;
       }
-      let subscriptionGiftStartHeaderText = sender(5629).getSubscriptionGiftStartHeaderText(
+      let subscriptionGiftStartHeaderText = sender(5630).getSubscriptionGiftStartHeaderText(
         subscriptionPlan,
         sender,
         name,
       );
-      const obj24 = sender(5629);
+      const obj24 = sender(5630);
     }
     return subscriptionGiftStartHeaderText;
   }
@@ -52,19 +52,19 @@ function getGiftCodeHeaderText(isSubscription) {
     subscriptionGiftStartHeaderText = intl.string(sender(1126).t["Bn1J+a"]);
   } else {
     const obj2 = { type: itemType, isBundle, sender };
-    const match = sender(5741).match(obj2);
+    const match = sender(5742).match(obj2);
     const obj3 = { isBundle: true, sender: null };
-    const P = sender(5741).P;
-    obj3.sender = P.not(sender(5741).P.nullish);
-    const str = sender(5741);
-    const obj4 = { isBundle: true, sender: sender(5741).P.nullish };
+    const P = sender(5742).P;
+    obj3.sender = P.not(sender(5742).P.nullish);
+    const str = sender(5742);
+    const obj4 = { isBundle: true, sender: sender(5742).P.nullish };
     const withResult = match.with(obj3, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.JUV1tL, { sender });
     });
-    const obj5 = { type: sender(1992).CollectiblesItemType.AVATAR_DECORATION, sender: null };
-    const P2 = sender(5741).P;
-    obj5.sender = P2.not(sender(5741).P.nullish);
+    const obj5 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: null };
+    const P2 = sender(5742).P;
+    obj5.sender = P2.not(sender(5742).P.nullish);
     const withResult1 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -74,9 +74,9 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = sender(1126).intl;
         return intl.string(sender(1126).t.iJ8823);
       });
-    const obj6 = { type: sender(1992).CollectiblesItemType.PROFILE_EFFECT, sender: null };
-    const P3 = sender(5741).P;
-    obj6.sender = P3.not(sender(5741).P.nullish);
+    const obj6 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: null };
+    const P3 = sender(5742).P;
+    obj6.sender = P3.not(sender(5742).P.nullish);
     const withResult2 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -90,9 +90,9 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.SKduyh, { sender });
       });
-    const obj7 = { type: sender(1992).CollectiblesItemType.NAMEPLATE, sender: null };
-    const P4 = sender(5741).P;
-    obj7.sender = P4.not(sender(5741).P.nullish);
+    const obj7 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: null };
+    const P4 = sender(5742).P;
+    obj7.sender = P4.not(sender(5742).P.nullish);
     const withResult3 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -110,9 +110,9 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["1w42T2"], { sender });
       });
-    const obj8 = { type: sender(1992).CollectiblesItemType.PROFILE_FRAME, sender: null };
-    const P5 = sender(5741).P;
-    obj8.sender = P5.not(sender(5741).P.nullish);
+    const obj8 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: null };
+    const P5 = sender(5742).P;
+    obj8.sender = P5.not(sender(5742).P.nullish);
     const withResult4 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -134,7 +134,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.vFiQlU, { sender });
       });
-    const obj9 = { type: sender(1992).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5741).P.nullish };
+    const obj9 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5742).P.nullish };
     const withResult5 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -160,7 +160,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       });
-    const obj10 = { type: sender(1992).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5741).P.nullish };
+    const obj10 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5742).P.nullish };
     const withResult6 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -190,7 +190,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = sender(1126).intl;
         return intl.string(sender(1126).t["2ZO6CC"]);
       });
-    const obj11 = { type: sender(1992).CollectiblesItemType.NAMEPLATE, sender: sender(5741).P.nullish };
+    const obj11 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: sender(5742).P.nullish };
     const withResult7 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -224,7 +224,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = sender(1126).intl;
         return intl.string(sender(1126).t["2NxdjX"]);
       });
-    const obj12 = { type: sender(1992).CollectiblesItemType.PROFILE_FRAME, sender: sender(5741).P.nullish };
+    const obj12 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: sender(5742).P.nullish };
     const withResult8 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -349,15 +349,15 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.string(sender(1126).t["1+tgC0"]);
       });
   }
-  obj = sender(6917);
+  obj = sender(6924);
 }
 get_ActivityIndicator = fn(17);
-({ Image: hasOwnProperty, View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
+({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1085);
-({ AnalyticEvents: closure_11, GiftCodeModalStates: closure_12 } = Constants);
+({ AnalyticEvents: c10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 },
@@ -401,7 +401,7 @@ obj2.collectiblesAssetBundle = {
 };
 obj2.giftCardAsset = { marginTop: 20, marginBottom: 40 };
 obj2.linkAccountIcon = { marginRight: 4 };
-let closure_16 = createStyles.createStyles(obj2);
+let closure_15 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let size = fn(2);
@@ -416,48 +416,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const emojiName = giftCode.emojiName;
       const user = giftCode.user;
       let obj = giftCode(soundId[16]);
-      closure_5 = firstProfileEffect();
-      const tmp4 = firstProfileEffect();
+      closure_5 = firstAvatarDecoration();
+      const tmp4 = firstAvatarDecoration();
       const navigation = giftCode(soundId[17]).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let items = [stateFromStores1];
+        let items = [stateFromStores];
         cResult[0] = items;
         let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== giftCode.code) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        const fn = function f() {
+          return GiftCodeStore.getIsAccepting(giftCode.code);
+        };
         cResult[1] = giftCode.code;
-        cResult[2] = S;
+        cResult[2] = fn;
+        let tmp8 = fn;
       } else {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        tmp8 = cResult[2];
       }
       let obj2 = giftCode(soundId[17]);
-      const stateFromStores = giftCode(soundId[18]).useStateFromStores(first, S);
+      stateFromStores = giftCode(soundId[18]).useStateFromStores(first, tmp8);
       let tmpResult = giftCode(soundId[18]);
-      const items1 = [closure_9];
-      stateFromStores1 = giftCode(soundId[18]).useStateFromStores(items1, () =>
+      const items1 = [str];
+      str = giftCode(soundId[18]).useStateFromStores(items1, () =>
         UserUtilsDefault.getName(UserStore.getUser(giftCode.userId)),
       );
-      if (stateFromStores1 == null) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+      if (str == null) {
+        str = "";
       }
       const tmpResult9 = giftCode(soundId[18]);
-      closure_9 = customMessage(soundId[20])(giftCode.code, user);
-      const tmp12 = customMessage(soundId[20])(giftCode.code, user);
+      SKUStore = customMessage(soundId[20])(giftCode.code, user);
+      const tmp11 = customMessage(soundId[20])(giftCode.code, user);
       const getOrFetchSubscriptionPlan = giftCode(soundId[21]).useGetOrFetchSubscriptionPlan(
         giftCode.subscriptionPlanId,
       );
@@ -465,117 +456,82 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const getOrFetchApplication = giftCode(soundId[22]).useGetOrFetchApplication(giftCode.applicationId);
       const tmpResult11 = giftCode(soundId[22]);
       const tmpResult12 = giftCode(soundId[23]);
+      let skuId = null;
       if (tmpResult13.isCollectiblesGiftCode(giftCode)) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        skuId = giftCode.skuId;
       }
-      const product = tmpResult12.useFetchCollectiblesProduct(null, true).product;
+      const product = tmpResult12.useFetchCollectiblesProduct(skuId, true).product;
+      let first1;
       if (product != null) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        first1 = product.items[0];
       }
-      c13 = undefined;
+      let type;
       if (product != null) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        type = product.type;
       }
       tmpResult13 = giftCode(soundId[24]);
-      const isBundle = undefined === giftCode(soundId[12]).CollectiblesItemType.BUNDLE;
+      const isBundle = type === giftCode(soundId[12]).CollectiblesItemType.BUNDLE;
       if (cResult[3] !== product) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        let tmp19 = product;
         if (product == null) {
-          class S {
-            constructor() {
-              return closure_8.getIsAccepting(giftCode.code);
-            }
-          }
-          tmp18[0] = [];
+          let obj3 = { items: [] };
+          tmp19 = obj3;
         }
         cResult[3] = product;
-        cResult[4] = tmp18;
+        cResult[4] = tmp19;
+        let tmp18 = tmp19;
       } else {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        tmp18 = cResult[4];
       }
-      let tmp15 = undefined === giftCode(soundId[12]).CollectiblesItemType.BUNDLE;
+      const tmp17 = type === giftCode(soundId[12]).CollectiblesItemType.BUNDLE;
       const shopProductItems = giftCode(soundId[25]).useShopProductItems(tmp18);
-      const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
-      firstProfileEffect = shopProductItems.firstProfileEffect;
+      firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
+      const firstProfileEffect = shopProductItems.firstProfileEffect;
       const firstNameplate = shopProductItems.firstNameplate;
-      let tmp20 = null != customMessage;
-      if (tmp20) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
-        tmp20 = customMessage.length > 0;
+      let tmp21 = null != customMessage;
+      if (tmp21) {
+        tmp21 = customMessage.length > 0;
       }
-      closure_18 = tmp20;
+      closure_18 = tmp21;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
-        const items2 = [getOrFetchSubscriptionPlan];
+        const items2 = [SKUStore];
         cResult[5] = items2;
-        const tmp21 = items2;
+        let tmp22 = items2;
       } else {
-        class S {
-          constructor() {
-            return closure_8.getIsAccepting(giftCode.code);
-          }
-        }
+        tmp22 = cResult[5];
       }
       if (cResult[6] !== giftCode.skuId) {
-        class U {
+        class M {
           constructor() {
-            return closure_10.get(giftCode.skuId);
+            return closure_9.get(giftCode.skuId);
           }
         }
         cResult[6] = giftCode.skuId;
-        cResult[7] = U;
+        cResult[7] = M;
       } else {
-        class U {
+        class M {
           constructor() {
-            return closure_10.get(giftCode.skuId);
+            return closure_9.get(giftCode.skuId);
           }
         }
       }
       const tmpResult14 = giftCode(soundId[25]);
-      const stateFromStores2 = giftCode(soundId[18]).useStateFromStores(tmp21, U);
-      const tmp24 = customMessage(soundId[26])(getOrFetchApplication);
-      const fetched = tmp24.fetched;
-      const hasAlreadyLinked = tmp24.hasAlreadyLinked;
-      const canStartAuthorization = tmp24.canStartAuthorization;
-      const startAuthorization = tmp24.startAuthorization;
+      const stateFromStores1 = giftCode(soundId[18]).useStateFromStores(tmp22, M);
+      let tmp26 = customMessage(soundId[26])(getOrFetchApplication);
+      const fetched = tmp26.fetched;
+      const hasAlreadyLinked = tmp26.hasAlreadyLinked;
+      const canStartAuthorization = tmp26.canStartAuthorization;
+      const startAuthorization = tmp26.startAuthorization;
       const tmpResult15 = giftCode(soundId[18]);
       const socialLayerStorefrontMobileAccountLinkingDisabled = giftCode(
         soundId[27],
       ).useSocialLayerStorefrontMobileAccountLinkingDisabled(giftCode.applicationId);
       const tmpResult16 = giftCode(soundId[27]);
-      const analyticsLocations = customMessage(soundId[28])(tmp11(tmp2[29]).GIFT_CODE_MODAL).analyticsLocations;
+      const analyticsLocations = customMessage(soundId[28])(tmp10(tmp2[29]).GIFT_CODE_MODAL).analyticsLocations;
       if (cResult[8] === analyticsLocations) {
-        class U {
+        class M {
           constructor() {
-            return closure_10.get(giftCode.skuId);
+            return closure_9.get(giftCode.skuId);
           }
         }
       }
@@ -589,13 +545,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         applicationId: giftCode.applicationId,
         canStartAuthorization,
       };
-      let obj3 = {
+      let obj4 = {
         analyticsLocations,
         skuId: giftCode.skuId,
         applicationId: giftCode.applicationId,
         canStartAuthorization,
       };
-      const tmp11Result = customMessage(soundId[28]);
+      const tmp10Result = customMessage(soundId[28]);
     }
   : function GiftCodeRedeemStart(giftCode) {
       giftCode = giftCode.giftCode;
@@ -613,16 +569,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       let ref;
       c16 = undefined;
-      let tmp = c16();
+      let tmp = ref();
       closure_5 = tmp;
       closure_6 = giftCode(soundId[17]).useNavigation();
       let obj = giftCode(soundId[17]);
-      let items = [closure_8];
+      let items = [message];
       const stateFromStores = giftCode(soundId[18]).useStateFromStores(items, () =>
         GiftCodeStore.getIsAccepting(giftCode.code),
       );
       let obj2 = giftCode(soundId[18]);
-      const items1 = [stateFromStores1];
+      const items1 = [closure_8];
       let str = giftCode(soundId[18]).useStateFromStores(items1, () =>
         UserUtilsDefault.getName(UserStore.getUser(giftCode.userId)),
       );
@@ -666,7 +622,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       closure_8 = tmp27Result2;
       const tmp2Result12 = giftCode(soundId[25]);
-      const items2 = [fetched];
+      const items2 = [stateFromStores1];
       stateFromStores1 = giftCode(soundId[18]).useStateFromStores(items2, () => SKUStore.get(giftCode.skuId));
       const tmp16 = customMessage(soundId[26])(getOrFetchApplication);
       fetched = tmp16.fetched;
@@ -780,23 +736,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj9.itemType = type1;
       obj9.isBundle = tmp33;
       obj9.sku = stateFromStores1;
-      obj8.children = ref(obj9);
-      const items9 = [startAuthorization(giftCode(soundId[33]).Text, obj8), , ,];
+      obj8.children = analyticsLocations(obj9);
+      const items9 = [canStartAuthorization(giftCode(soundId[33]).Text, obj8), , ,];
       const obj10 = { style: tmp.imageWrapper, children: null };
       let tmp27Result = null != emojiName;
       if (tmp27Result) {
         const obj11 = { style: tmp.confettiBackground, children: null };
-        const obj12 = { source: tmp2(tmp3[47]), style: tmp.confettiImage };
-        const items10 = [tmp30(closure_5, obj12)];
+        const obj12 = { source: tmp2(tmp3[48]), style: tmp.confettiImage };
+        const items10 = [tmp30(tmp5(tmp3[47]), obj12)];
         const obj13 = { style: tmp.emojiContainer, children: null };
         const obj14 = { emojiName, randomizeSizing: true };
-        obj13.children = tmp30(tmp5(tmp3[48]), obj14);
+        obj13.children = tmp30(tmp5(tmp3[49]), obj14);
         items10[1] = tmp30(tmp34, obj13);
         obj11.children = items10;
         tmp27Result = tmp27(tmp34, obj11);
+        const tmp5Result3 = tmp5(tmp3[47]);
       }
       obj10.children = tmp27Result;
-      items9[1] = startAuthorization(closure_6, obj10);
+      items9[1] = canStartAuthorization(closure_5, obj10);
       if (null == first) {
         if (null != getOrFetchApplication) {
           if (tmp2Result15.isGameItemSKU(stateFromStores1)) {
@@ -895,7 +852,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 code: giftCode.code,
                 onRedeemed() {
                   giftCode(soundId[8]).trackStep({
-                    step: canStartAuthorization.SUCCESS,
+                    step: hasAlreadyLinked.SUCCESS,
                     giftCode,
                     customMessage,
                     emojiName,
@@ -905,7 +862,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 },
                 onError(error) {
                   giftCode(soundId[8]).trackStep({
-                    step: canStartAuthorization.ERROR,
+                    step: hasAlreadyLinked.ERROR,
                     giftCode,
                     customMessage,
                     emojiName,
@@ -913,7 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   });
                   const obj3 = { message: null };
                   const obj = giftCode(soundId[8]);
-                  const obj2 = { step: canStartAuthorization.ERROR, giftCode, customMessage, emojiName, soundId };
+                  const obj2 = { step: hasAlreadyLinked.ERROR, giftCode, customMessage, emojiName, soundId };
                   obj3.message = giftCode(soundId[8]).getGiftCodeRedeemError(error, user);
                   closure_1_6.push(giftCode(soundId[43]).GiftCodeModalScreens.ERROR, obj3);
                 },
@@ -925,7 +882,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj20.children = tmp30Result4;
           items12[1] = tmp30(tmp34, obj20);
           obj6.children = items12;
-          return tmp27(tmp2(tmp3[49]).SafeAreaPaddingView, obj6);
+          return tmp27(tmp2(tmp3[50]).SafeAreaPaddingView, obj6);
         }
       }
       if (null == first) {
@@ -937,7 +894,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               skuId: giftCode.skuId,
             };
             tmp30Result = tmp30(tmp5(tmp3[35]), obj27);
-            const tmp5Result2 = tmp5(tmp3[35]);
+            const tmp5Result4 = tmp5(tmp3[35]);
           }
         }
       }
@@ -964,14 +921,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj30 = { style: giftCode.isSubscription ? tmp.giftCardAsset : tmp.collectiblesAsset, children: null };
       const tmp24 = emojiName(user.useState(), 2);
-      tmp28 = message;
+      tmp28 = closure_6;
       const match = giftCode(soundId[11]).match(first);
       const str2 = giftCode(soundId[11]);
       const obj31 = { type: giftCode(soundId[12]).CollectiblesItemType.AVATAR_DECORATION };
       const withResult = match.with(
         { type: giftCode(soundId[12]).CollectiblesItemType.AVATAR_DECORATION },
         (avatarDecoration) =>
-          __initData2(native.Avatar, {
+          __initData(native.Avatar, {
             source: user.getAvatarSource(null, true, native.AVATAR_SIZE_MAP[native.AvatarSizes.GIFT_START]),
             avatarDecoration,
             size: native.AvatarSizes.GIFT_START,
@@ -981,12 +938,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj32 = { type: giftCode(soundId[12]).CollectiblesItemType.PROFILE_EFFECT };
       const withResult1 = withResult.with(
         { type: giftCode(soundId[12]).CollectiblesItemType.PROFILE_EFFECT },
-        (profileEffect) => __initData2(ProfileEffectUserPreviewDefault, { user, profileEffect }),
+        (profileEffect) => __initData(ProfileEffectUserPreviewDefault, { user, profileEffect }),
       );
       const obj33 = { type: giftCode(soundId[12]).CollectiblesItemType.PROFILE_FRAME };
       const withResult2 = withResult1.with(
         { type: giftCode(soundId[12]).CollectiblesItemType.PROFILE_FRAME },
-        (profileFrame) => __initData2(ProfileFrameUserPreviewDefault, { user, profileFrame }),
+        (profileFrame) => __initData(ProfileFrameUserPreviewDefault, { user, profileFrame }),
       );
       const obj34 = { type: giftCode(soundId[12]).CollectiblesItemType.NAMEPLATE };
       obj30.children = withResult2
@@ -996,9 +953,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (!closure_8) {
             prop = closure_5.nameplateContainerOffCenter;
           }
-          const obj = { style: items, children: __initData2(NameplatePreview.NameplatePreview, { user, nameplate }) };
+          const obj = { style: items, children: __initData(NameplatePreview.NameplatePreview, { user, nameplate }) };
           items[1] = prop;
-          return __initData2(timestampProducer, obj);
+          return __initData(hasOwnProperty, obj);
         })
-        .otherwise(() => __initData2(GiftBoxAnimationDefault, { giftStyle: giftCode.giftStyle }));
+        .otherwise(() => __initData(GiftBoxAnimationDefault, { giftStyle: giftCode.giftStyle }));
     };

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/native/NewMemberActionsProgress.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";
@@ -9,11 +9,11 @@ import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStor
 
 require = fn;
 const View = fn(17).View;
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
-const GuildMemberFlags = fn(4693).GuildMemberFlags;
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
+const GuildMemberFlags = fn(4695).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", alignItems: "center" },

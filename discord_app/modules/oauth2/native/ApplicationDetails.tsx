@@ -13,8 +13,8 @@ import scopes from "../scopes.tsx";
 import disclosures from "../../applications/disclosures.tsx";
 import Utils from "../Utils.tsx";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
-import HammerIcon from "../../../design/components/Icon/native/redesign/generated/HammerIcon.tsx";
 import RobotIcon from "../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import HammerIcon from "../../../design/components/Icon/native/redesign/generated/HammerIcon.tsx";
 import EmbedIcon from "../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   applicationDetails: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 8 },

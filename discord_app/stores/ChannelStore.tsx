@@ -506,7 +506,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({
   createChannelRecordFromServer: closure_7,
   isPrivate: closure_8,
@@ -555,7 +555,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1387).isNotNullish);
+  found = items.filter(found(1388).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -616,7 +616,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                       return obj2;
                     }
                   });
-                  found = mapped.filter(closure_0(1387).isNotNullish);
+                  found = mapped.filter(closure_0(1388).isNotNullish);
                   closure_130_0 = found;
                   c5 = 1;
                   let _Promise = Promise;

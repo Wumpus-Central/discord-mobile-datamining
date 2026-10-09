@@ -63,11 +63,11 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 
 require = fn;
 let closure_3 = ["ref"];
-const PollsInteractionStore = fn(10464);
+const PollsInteractionStore = fn(10454);
 ({ useChannelPollInteractions: closure_30, useMessagePollInteractions: items } = PollsInteractionStore);
 const Constants = fn(1085);
 ({ ActivityActionTypes: closure_61, ChannelTypesSets: closure_62, ME: closure_63, MessageTypes: closure_64, Permissions: closure_65 } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_66, PremiumTypes: closure_67 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_68, jsxs: closure_69 } = jsxProd);
@@ -225,7 +225,7 @@ let closure_71 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFet
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesConnected(ref) {
   const cResult = channel(id[60]).c(334);
   if (cResult[0] !== ref) {
     let tmp8 = stateFromStores2(ref.ref, closure_3);
@@ -576,7 +576,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     }
   }
   if (cResult[31] !== id) {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -590,11 +590,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
       }
     }
     cResult[31] = id;
-    cResult[32] = At;
+    cResult[32] = Ct;
     cResult[33] = items15;
     let tmp67 = items15;
   } else {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -604,9 +604,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     tmp67 = cResult[33];
   }
   const tmpResult40 = channel(id[62]);
-  const stateFromStoresArray3 = channel(id[62]).useStateFromStoresArray(tmp65, At, tmp67);
+  const stateFromStoresArray3 = channel(id[62]).useStateFromStoresArray(tmp65, Ct, tmp67);
   if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -623,7 +623,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     cResult[34] = items16;
     const tmp69 = items16;
   } else {
-    class At {
+    class Ct {
       constructor() {
         embeddedActivitiesForChannel = closure_8.getEmbeddedActivitiesForChannel(id);
         mapped = embeddedActivitiesForChannel.map((launchId) => launchId.launchId);
@@ -640,7 +640,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -674,7 +678,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -704,7 +712,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -748,7 +760,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -779,7 +795,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -823,7 +843,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -854,7 +878,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -898,7 +926,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -929,7 +961,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -969,7 +1005,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1001,7 +1041,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1041,7 +1085,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1073,7 +1121,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1113,7 +1165,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1147,7 +1203,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1180,7 +1240,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1211,7 +1275,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1238,7 +1306,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1271,7 +1343,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1304,7 +1380,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1337,7 +1417,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1371,7 +1455,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
         _loop = function _loop(iter) {
           const userIds = iter.userIds;
           iter = userIds.values();
-          const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+          value = iter.next().value;
+          let findActivityResult;
+          if (null != value) {
+            findActivityResult = PresenceStore.findActivity(value, () => { ... });
+          }
           let details;
           if (findActivityResult != null) {
             details = findActivityResult.details;
@@ -1405,7 +1493,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1440,7 +1532,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1468,7 +1564,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1502,7 +1602,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1534,7 +1638,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1571,7 +1679,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1603,7 +1715,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1638,7 +1754,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1666,7 +1786,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1703,7 +1827,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1735,7 +1863,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1770,7 +1902,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1798,7 +1934,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1835,7 +1975,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1867,7 +2011,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -1902,7 +2050,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
           _loop = function _loop(iter) {
             const userIds = iter.userIds;
             iter = userIds.values();
-            const findActivityResult = PresenceStore.findActivity(iter.next().value, () => { ... });
+            value = iter.next().value;
+            let findActivityResult;
+            if (null != value) {
+              findActivityResult = PresenceStore.findActivity(value, () => { ... });
+            }
             let details;
             if (findActivityResult != null) {
               details = findActivityResult.details;
@@ -2192,7 +2344,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     const tmpResult60 = tmp(tmp2[62]);
   }
   const tmpResult50 = channel(id[71]);
-}) : ((ref) => {
+}) : (function MessagesConnected(ref) {
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   let id;
   let stateFromStores2;
@@ -2285,7 +2437,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((ref) => {
     function _loop2(iter) {
       const userIds = iter.userIds;
       iter = userIds.values();
-      const findActivityResult = PresenceStore.findActivity(iter.next().value, (application_id) => application_id.application_id === iter.applicationId);
+      value = iter.next().value;
+      let findActivityResult;
+      if (null != value) {
+        findActivityResult = PresenceStore.findActivity(value, (application_id) => application_id.application_id === iter.applicationId);
+      }
       let details;
       if (findActivityResult != null) {
         details = findActivityResult.details;

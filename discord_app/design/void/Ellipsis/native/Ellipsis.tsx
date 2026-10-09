@@ -15,7 +15,7 @@ let c8 = 233.33333333333334;
 let c9 = 116.66666666666667;
 let c10 = 0.4;
 let c11 = 0.75;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   typingIndicator: { justifyContent: "center", alignItems: "center", flexDirection: "row", marginRight: 4 },
   typingIndicatorDot: null,

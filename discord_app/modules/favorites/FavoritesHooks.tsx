@@ -15,7 +15,7 @@ const require = globalThis.__r;
 
 require = fn;
 const MAX_FAVORITE_CHANNELS = fn(2077).MAX_FAVORITE_CHANNELS;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesAccess(arg0) {

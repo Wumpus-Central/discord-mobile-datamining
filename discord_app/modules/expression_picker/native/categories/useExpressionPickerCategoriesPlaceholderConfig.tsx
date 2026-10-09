@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const CATEGORY_ICON_SIZE = fn(1085).CATEGORY_ICON_SIZE;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

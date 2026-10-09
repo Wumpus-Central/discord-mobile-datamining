@@ -4,13 +4,12 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5005 from "../../../../_runtime/metro/05005__.js";
+import _modDef5006 from "../../../../_runtime/metro/05006__.js";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
-import makeIframeIdDefault from "../../embedded_apps/utils/makeIframeId.tsx";
-import createWebViewControllerDefault from "../../embedded_apps/native/utils/createWebViewController.tsx";
+import activityWebViewController from "activityWebViewController.tsx";
+import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
@@ -18,7 +17,7 @@ import EmbeddedActivitiesManager from "../EmbeddedActivitiesManager.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -125,13 +124,6 @@ prototype["showErrorModal"] = function showErrorModal(reason) {
   obj2.body = message;
   actions_AlertActionCreatorsDefault.show(obj2);
 };
-prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
-  const obj2 = { title: null, body: null };
-  const intl = util.intl;
-  obj2.title = intl.string(util.t.PtobXW);
-  obj2.body = message;
-  actions_AlertActionCreatorsDefault.show(obj2);
-};
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
   const obj2 = {
     key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED",
@@ -141,7 +133,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef5005;
+  obj2.icon = _modDef5006;
   ToastActionCreatorsDefault.open(obj2);
 };
 prototype["leaveActivity"] = function leaveActivity(arg0) {
@@ -176,73 +168,8 @@ prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_l
     gridLockState: null,
   });
 };
-prototype["getOrCreateWebViewController"] = function getOrCreateWebViewController(applicationId) {
-  const self = this;
-  if (null != this.controller) {
-    return self.controller.iframeId;
-  } else {
-    const tmp4 = makeIframeIdDefault();
-    const obj = { contextSource: null, getOrigin: null, onDisallowedNavigation: null };
-    let obj2 = { type: self(10615).EmbeddedContextSourceType.ACTIVITY, applicationId };
-    obj.contextSource = obj2;
-    obj.getOrigin = function getOrigin() {
-      connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-      let tmp2;
-      if (null != connectedActivityLocation) {
-        const selfEmbeddedActivityForLocation =
-          connectedActivityLocation.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-        let url;
-        if (selfEmbeddedActivityForLocation != null) {
-          url = selfEmbeddedActivityForLocation.url;
-        }
-        tmp2 = url;
-      }
-      return tmp2;
-    };
-    obj.onDisallowedNavigation = function onDisallowedNavigation() {
-      connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-      let tmp2;
-      if (null != connectedActivityLocation) {
-        const selfEmbeddedActivityForLocation =
-          EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-        let applicationId;
-        if (selfEmbeddedActivityForLocation != null) {
-          applicationId = selfEmbeddedActivityForLocation.applicationId;
-        }
-        tmp2 = applicationId;
-      }
-      if (tmp5) {
-        const obj2 = { location: connectedActivityLocation, applicationId: tmp2, showFeedback: false };
-        self.leaveActivity(obj2);
-        const obj4 = { body: null, confirmText: null };
-        const intl = util.intl;
-        obj4.body = intl.string(util.t.tYBBWz);
-        const intl2 = util.intl;
-        obj4.confirmText = intl2.string(util.t.BddRzS);
-        actions_AlertActionCreatorsDefault.show(obj4);
-      }
-      tmp5 = null != connectedActivityLocation && null != tmp2;
-    };
-    self.controller = createWebViewControllerDefault(tmp4, obj);
-    return tmp4;
-  }
-};
-prototype["hasWebView"] = function hasWebView() {
-  return null != this.controller;
-};
 prototype["releaseWebView"] = function releaseWebView() {
-  const self = this;
-  const controller = this.controller;
-  let iframeId;
-  if (controller != null) {
-    iframeId = controller.iframeId;
-  }
-  const controller2 = self.controller;
-  if (controller2 != null) {
-    controller2.release();
-  }
-  self.controller = undefined;
-  return iframeId;
+  return activityWebViewController.releaseActivityWebView();
 };
 const embeddedActivitiesNativeManager = new EmbeddedActivitiesNativeManager();
 const size = fn(2);

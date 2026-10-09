@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guildId(576).c(30);
       guildId = guildId.guildId;
       let obj = guildId(576);
-      const navigation = guildId(1502).useNavigation();
+      const navigation = guildId(1503).useNavigation();
       if (cResult[0] !== guildId) {
         class M {
           constructor() {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[2];
       }
       const effect = noop.useEffect(M, tmp4);
-      const sum = 16 + navigation(1630)().bottom;
+      const sum = 16 + navigation(1631)().bottom;
       if (cResult[3] !== sum) {
         class M {
           constructor() {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = guildId;
       cResult[9] = tmp9;
       cResult[10] = obj9;
-      const obj2 = guildId(1502);
+      const obj2 = guildId(1503);
     }
   : function StandaloneMembersView(guildId) {
       guildId = guildId.guildId;

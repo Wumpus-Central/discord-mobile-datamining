@@ -7,13 +7,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(6154);
+const MemberVerificationFormConstants = fn(6156);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 1.20225424859375;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 },
   headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 },
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = require("AvatarUtils");
       } else {
         tmp5 = importDefault;
-        guildBannerSource = require("../../../../../_runtime/metro/06160__.js");
+        guildBannerSource = require("../../../../../_runtime/metro/06162__.js");
       }
       const tmp8 = useBannerHeight();
       importDefault = tmp8;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[8] !== tmp4.linearGradient) {
           const obj5 = { start: tmp16, end: tmp17, style: tmp4.linearGradient, colors: tmp18 };
-          const tmp21 = closure_6(tmp5(tmp2[12]), obj5);
+          const tmp21 = closure_6(tmp5(tmp2[13]), obj5);
           cResult[8] = tmp4.linearGradient;
           cResult[9] = tmp21;
           let tmp19 = tmp21;
@@ -239,9 +239,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               let tmp39 = cResult[32];
                             }
                             if (cResult[33] !== hasManualFormFields) {
-                              const intl2 = scrollTop(tmp2[15]).intl;
+                              const intl2 = scrollTop(tmp2[16]).intl;
                               const string = intl2.string;
-                              let t = scrollTop(tmp2[15]).t;
+                              let t = scrollTop(tmp2[16]).t;
                               if (hasManualFormFields) {
                                 t = t["3smSPP"];
                                 let stringResult = string(t);
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 color: "text-default",
                                 children: cResult[34],
                               };
-                              const tmp48 = closure_6(scrollTop(tmp2[16]).Text, obj8);
+                              const tmp48 = closure_6(scrollTop(tmp2[17]).Text, obj8);
                               cResult[35] = tmp4.headerDescription;
                               cResult[36] = cResult[34];
                               cResult[37] = tmp48;
@@ -311,16 +311,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             color: "mobile-text-heading-primary",
                             children: cResult[29],
                           };
-                          const tmp41 = closure_6(scrollTop(tmp2[16]).Heading, obj9);
+                          const tmp41 = closure_6(scrollTop(tmp2[17]).Heading, obj9);
                           cResult[30] = tmp4.headerTitle;
                           cResult[31] = cResult[29];
                           cResult[32] = tmp41;
                           tmp39 = tmp41;
                         }
                       }
-                      const intl = scrollTop(tmp2[15]).intl;
+                      const intl = scrollTop(tmp2[16]).intl;
                       const format = intl.format;
-                      let t1 = scrollTop(tmp2[15]).t;
+                      let t1 = scrollTop(tmp2[16]).t;
                       if (hasManualFormFields) {
                         t1 = { guildName: guild.name };
                         let formatResult = format(t1.cgX47Z, t1);
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp33 = tmp35;
                 }
                 const obj12 = { style: tmp4.featureIcon, guild, disableColor: true };
-                const tmp32 = closure_6(tmp5(tmp2[14]), obj12);
+                const tmp32 = closure_6(tmp5(tmp2[15]), obj12);
                 cResult[20] = guild;
                 cResult[21] = tmp4.featureIcon;
                 cResult[22] = tmp32;
@@ -354,15 +354,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj13 = {
                 style: tmp4.avatar,
                 guild,
-                size: scrollTop(tmp2[13]).GuildIconSizes.XLARGE,
+                size: scrollTop(tmp2[14]).GuildIconSizes.XLARGE,
                 animate: true,
               };
-              const tmp29 = closure_6(tmp5(tmp2[13]), obj13);
+              const tmp29 = closure_6(tmp5(tmp2[14]), obj13);
               cResult[17] = guild;
               cResult[18] = tmp4.avatar;
               cResult[19] = tmp29;
               tmp26 = tmp29;
-              const tmp5Result = tmp5(tmp2[13]);
+              const tmp5Result = tmp5(tmp2[14]);
             }
             let items4 = [tmp4.avatarContainer, animatedStyle1];
             cResult[14] = animatedStyle1;
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp24;
         tmp22 = tmp24;
       }
-      const tmp14 = closure_6(tmp5(top[11]).Image, { style: tmp12, resizeMode: "cover", source: guildBannerSource });
+      const tmp14 = closure_6(tmp5(top[12]), { style: tmp12, resizeMode: "cover", source: guildBannerSource });
       cResult[2] = guildBannerSource;
       cResult[3] = tmp12;
       cResult[4] = tmp14;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj = require("AvatarUtils");
       } else {
         tmp3 = top;
-        guildBannerSource = require("../../../../../_runtime/metro/06160__.js");
+        guildBannerSource = require("../../../../../_runtime/metro/06162__.js");
         tmp5 = importDefault;
       }
       const tmp8 = useBannerHeight();
@@ -497,12 +497,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle1 = obj5.useAnimatedStyle(fn);
       const obj8 = { style: animatedStyle, children: null };
       let items = [
-        closure_6(tmp5(tmp3[11]).Image, {
+        closure_6(tmp5(tmp3[12]), {
           style: { width: "100%", height: tmp8 },
           resizeMode: "cover",
           source: guildBannerSource,
         }),
-        closure_6(tmp5(tmp3[12]), {
+        closure_6(tmp5(tmp3[13]), {
           start: { x: 0, y: 0 },
           end: { x: 0, y: 1 },
           style: tmp.linearGradient,
@@ -530,10 +530,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AVATAR_SIZE,
       };
       const obj9 = { style: { width: "100%", height: tmp8 }, resizeMode: "cover", source: guildBannerSource };
-      obj13.size = scrollTop(tmp3[13]).GuildIconSizes.XLARGE;
+      obj13.size = scrollTop(tmp3[14]).GuildIconSizes.XLARGE;
       let items3 = [
-        closure_6(tmp5(tmp3[13]), obj13),
-        closure_6(tmp5(tmp3[14]), { style: tmp.featureIcon, guild, disableColor: true }),
+        closure_6(tmp5(tmp3[14]), obj13),
+        closure_6(tmp5(tmp3[15]), { style: tmp.featureIcon, guild, disableColor: true }),
       ];
       obj12.children = items3;
       let items4 = [closure_7(tmp5(tmp3[11]).View, obj12), ,];
@@ -543,9 +543,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl = scrollTop(tmp3[15]).intl;
+      const intl = scrollTop(tmp3[16]).intl;
       const format = intl.format;
-      const t = scrollTop(tmp3[15]).t;
+      const t = scrollTop(tmp3[16]).t;
       if (hasManualFormFields) {
         const obj16 = { guildName: guild.name };
         let formatResult = format(t.cgX47Z, obj16);
@@ -554,18 +554,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         formatResult = format(t.VnxBOA, obj17);
       }
       obj15.children = formatResult;
-      items4[1] = closure_6(scrollTop(tmp3[16]).Heading, obj15);
+      items4[1] = closure_6(scrollTop(tmp3[17]).Heading, obj15);
       const obj18 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-      const intl2 = scrollTop(tmp3[15]).intl;
+      const intl2 = scrollTop(tmp3[16]).intl;
       const string = intl2.string;
-      const t2 = scrollTop(tmp3[15]).t;
+      const t2 = scrollTop(tmp3[16]).t;
       if (hasManualFormFields) {
         let stringResult = string(t2["3smSPP"]);
       } else {
         stringResult = string(t2["7D3C5p"]);
       }
       obj18.children = stringResult;
-      items4[2] = closure_6(scrollTop(tmp3[16]).Text, obj18);
+      items4[2] = closure_6(scrollTop(tmp3[17]).Text, obj18);
       obj11.children = items4;
       items1[1] = closure_7(derivedValue, obj11);
       obj7.children = items1;

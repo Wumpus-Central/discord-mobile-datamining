@@ -1,5 +1,5 @@
 // discord_common/js/shared/lib/PlatformUtils.tsx
-import format_mod from "../../../../_runtime/01363_format.js";
+import format_mod from "../../../../_runtime/01364_format.js";
 
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);
 let platform;

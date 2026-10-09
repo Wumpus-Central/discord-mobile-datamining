@@ -3,18 +3,18 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef9174 from "../../../../../../../_runtime/metro/09174__.js";
+import _modDef12889 from "../../../../../../../_runtime/metro/12889__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
-let closure_7 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5091);
+let closure_6 = createStyles.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -25,12 +25,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function CrunchyrollLinkDiscordSuccess(onClose) {
       const cResult = c.c(26);
       onClose = onClose.onClose;
-      const tmp4 = closure_7();
+      const tmp4 = closure_6();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       ({ container, content } = twoWayLinkStyles);
       if (cResult[0] !== tmp4.image) {
-        const obj3 = { source: _modDef9174, style: tmp4.image };
-        const tmp10 = hasOwnProperty(React3, obj3);
+        const obj3 = { source: _modDef12889, style: tmp4.image };
+        const tmp10 = React4(FastImageDefault, obj3);
         cResult[0] = tmp4.image;
         cResult[1] = tmp10;
         let tmp6 = tmp10;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: twoWayLinkStyles.title,
           children: tmp11,
         };
-        const tmp15 = hasOwnProperty(Text_Text.Text, obj4);
+        const tmp15 = React4(Text_Text.Text, obj4);
         cResult[3] = twoWayLinkStyles.title;
         cResult[4] = tmp15;
         let tmp13 = tmp15;
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: twoWayLinkStyles.body,
           children: tmp16,
         };
-        const tmp20 = hasOwnProperty(Text_Text.Text, obj5);
+        const tmp20 = React4(Text_Text.Text, obj5);
         cResult[6] = twoWayLinkStyles.body;
         cResult[7] = tmp20;
         let tmp18 = tmp20;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[14] !== onClose) {
               const obj6 = { size: "md", text: tmp23, onPress: onClose };
-              const tmp27 = hasOwnProperty(components_Button_Button.Button, obj6);
+              const tmp27 = React4(components_Button_Button.Button, obj6);
               cResult[14] = onClose;
               cResult[15] = tmp27;
               let tmp25 = tmp27;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj7 = { style: container, children: null };
                 const items = [tmp21, tmp32];
                 obj7.children = items;
-                const tmp38 = timestampProducer(React4, obj7);
+                const tmp38 = hasOwnProperty(View, obj7);
                 cResult[22] = twoWayLinkStyles.container;
                 cResult[23] = tmp21;
                 cResult[24] = tmp32;
@@ -133,14 +133,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp35 = tmp38;
               }
               const obj8 = { bottom: true, style: footerContainer, children: tmp28 };
-              const tmp34 = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj8);
+              const tmp34 = React4(common_SafeAreaView.SafeAreaPaddingView, obj8);
               cResult[19] = twoWayLinkStyles.footerContainer;
               cResult[20] = tmp28;
               cResult[21] = tmp34;
               tmp32 = tmp34;
             }
             const obj9 = { style: footerButton, children: tmp25 };
-            const tmp31 = hasOwnProperty(React4, obj9);
+            const tmp31 = React4(View, obj9);
             cResult[16] = twoWayLinkStyles.footerButton;
             cResult[17] = tmp25;
             cResult[18] = tmp31;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: content, children: null };
       const items1 = [tmp6, tmp13, tmp18];
       obj10.children = items1;
-      const tmp22 = timestampProducer(React4, obj10);
+      const tmp22 = hasOwnProperty(View, obj10);
       cResult[8] = twoWayLinkStyles.content;
       cResult[9] = tmp6;
       cResult[10] = tmp13;
@@ -160,11 +160,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp21 = tmp22;
     }
   : function CrunchyrollLinkDiscordSuccess(onClose) {
-      const tmp = closure_7();
+      const tmp = closure_6();
       const twoWayLinkStyles = TwoWayLinkStyles.useTwoWayLinkStyles();
       const obj2 = { style: twoWayLinkStyles.container, children: null };
       const obj3 = { style: twoWayLinkStyles.content, children: null };
-      const items = [hasOwnProperty(React3, { source: _modDef9174, style: tmp.image }), ,];
+      const obj4 = { source: null, style: null };
+      obj4.source = _modDef12889;
+      obj4.style = tmp.image;
+      const items = [React4(FastImageDefault, obj4), ,];
       const obj5 = {
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
@@ -173,22 +176,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = util.intl;
       obj5.children = intl.string(util.t.Fnvxvk);
-      items[1] = hasOwnProperty(Text_Text.Text, obj5);
+      items[1] = React4(Text_Text.Text, obj5);
       const obj6 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
       const intl2 = util.intl;
       obj6.children = intl2.string(util.t.YwXceg);
-      items[2] = hasOwnProperty(Text_Text.Text, obj6);
+      items[2] = React4(Text_Text.Text, obj6);
       obj3.children = items;
-      const items1 = [timestampProducer(React4, obj3)];
+      const items1 = [hasOwnProperty(View, obj3)];
       const obj7 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };
       const obj8 = { style: twoWayLinkStyles.footerButton, children: null };
       const obj9 = { size: "md", text: null, onPress: null };
       const intl3 = util.intl;
       obj9.text = intl3.string(util.t.i4jeWR);
       obj9.onPress = onClose.onClose;
-      obj8.children = hasOwnProperty(components_Button_Button.Button, obj9);
-      obj7.children = hasOwnProperty(React4, obj8);
-      items1[1] = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj7);
+      obj8.children = React4(components_Button_Button.Button, obj9);
+      obj7.children = React4(View, obj8);
+      items1[1] = React4(common_SafeAreaView.SafeAreaPaddingView, obj7);
       obj2.children = items1;
-      return timestampProducer(React4, obj2);
+      return hasOwnProperty(View, obj2);
     };

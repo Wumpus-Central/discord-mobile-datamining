@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const UserNotificationSettings = fn(1085).UserNotificationSettings;
-const UnreadSetting = fn(5972).UnreadSetting;
+const UnreadSetting = fn(5974).UnreadSetting;
 const constants = fn(1095).ChannelNotificationSettingsFlags;
 fn(558);
 const ReactCompilerGating = fn(558);

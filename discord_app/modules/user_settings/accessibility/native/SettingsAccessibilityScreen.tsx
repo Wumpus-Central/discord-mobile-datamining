@@ -145,7 +145,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   items1[13] = obj20;
   return items1.filter((item) => null != item);
 }
-const MobileUserSettings = fn(7966).MobileUserSettings;
+const MobileUserSettings = fn(7974).MobileUserSettings;
 const Constants = fn(1085);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;

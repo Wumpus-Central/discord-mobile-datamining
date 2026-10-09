@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
@@ -24,8 +24,8 @@ let obj2 = {
   conjureTile: null,
 };
 let size = {
-  width: fn(16933).MESSAGE_AVATAR_SIZE,
-  height: fn(16933).MESSAGE_AVATAR_SIZE,
+  width: fn(17063).MESSAGE_AVATAR_SIZE,
+  height: fn(17063).MESSAGE_AVATAR_SIZE,
   borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
@@ -374,7 +374,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[6] === tmp4) {
           }
-          PressableOpacity = PressableOpacity(6189).PressableOpacity;
+          PressableOpacity = PressableOpacity(6191).PressableOpacity;
           const obj2 = {
             onPress: tmp4,
             onLongPress: tmp4,

@@ -13,10 +13,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = id(576).c(14);
       guild = guild.guild;
       id = guild.id;
-      let MessageRequestRestrictedGuildIds = id(2040).MessageRequestRestrictedGuildIds;
+      let MessageRequestRestrictedGuildIds = id(2041).MessageRequestRestrictedGuildIds;
       const setting = MessageRequestRestrictedGuildIds.useSetting();
       if (cResult[0] === id) {
-        const RestrictedGuildIds = tmp(2040).RestrictedGuildIds;
+        const RestrictedGuildIds = tmp(2041).RestrictedGuildIds;
         const setting1 = RestrictedGuildIds.useSetting();
         if (cResult[3] === guild.id) {
           if (cResult[4] === setting1) {
@@ -164,7 +164,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-          const tmp17 = jsx(tmp(6881).ActionSheetSwitchRow, {
+          const tmp17 = jsx(tmp(6888).ActionSheetSwitchRow, {
             label: tmp10,
             subLabel: tmp11,
             value: !tmp6,
@@ -191,10 +191,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   : function MessageRequestRestrictedGuildPrivacyOption(guild) {
       guild = guild.guild;
       const id = guild.id;
-      let MessageRequestRestrictedGuildIds = id(2040).MessageRequestRestrictedGuildIds;
+      let MessageRequestRestrictedGuildIds = id(2041).MessageRequestRestrictedGuildIds;
       const setting = MessageRequestRestrictedGuildIds.useSetting();
       const hasItem = setting.includes(id);
-      const RestrictedGuildIds = id(2040).RestrictedGuildIds;
+      const RestrictedGuildIds = id(2041).RestrictedGuildIds;
       const setting1 = RestrictedGuildIds.useSetting();
       const hasItem1 = setting1.includes(guild.id);
       const items = [id];
@@ -220,7 +220,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.value = tmp5;
       obj.onValueChange = callback;
       obj.disabled = hasItem1;
-      return jsx(id(6881).ActionSheetSwitchRow, {
+      return jsx(id(6888).ActionSheetSwitchRow, {
         label: null,
         subLabel: null,
         value: null,

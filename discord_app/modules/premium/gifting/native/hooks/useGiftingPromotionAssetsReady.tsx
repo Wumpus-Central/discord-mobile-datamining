@@ -11,8 +11,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = themeAndReducedMotionAwareAssetUrl(576).c(3);
       let obj = themeAndReducedMotionAwareAssetUrl(576);
       themeAndReducedMotionAwareAssetUrl =
-        themeAndReducedMotionAwareAssetUrl(10095).useThemeAndReducedMotionAwareAssetUrl(arg0);
-      let obj2 = themeAndReducedMotionAwareAssetUrl(10095);
+        themeAndReducedMotionAwareAssetUrl(10080).useThemeAndReducedMotionAwareAssetUrl(arg0);
+      let obj2 = themeAndReducedMotionAwareAssetUrl(10080);
       [tmp4, importDefault] = noop.useState(null);
       if (cResult[0] !== themeAndReducedMotionAwareAssetUrl) {
         const fn = function u() {
@@ -48,7 +48,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useCoachmarkAssetReady(arg0) {
       themeAndReducedMotionAwareAssetUrl =
-        themeAndReducedMotionAwareAssetUrl(10095).useThemeAndReducedMotionAwareAssetUrl(arg0);
+        themeAndReducedMotionAwareAssetUrl(10080).useThemeAndReducedMotionAwareAssetUrl(arg0);
       const tmp2 = _slicedToArray(noop.useState(null), 2);
       closure_1 = tmp2[1];
       const items = [themeAndReducedMotionAwareAssetUrl];

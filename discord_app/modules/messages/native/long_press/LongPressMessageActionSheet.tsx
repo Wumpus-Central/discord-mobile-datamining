@@ -19,8 +19,8 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let isMessageComponentsV2 = fn(4718).isMessageComponentsV2;
-const FileUploadErrorTypes = fn(5083).FileUploadErrorTypes;
+let isMessageComponentsV2 = fn(4720).isMessageComponentsV2;
+const FileUploadErrorTypes = fn(5084).FileUploadErrorTypes;
 const Constants = fn(1085);
 ({
   AnalyticEvents: map1,
@@ -648,11 +648,13 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
           isPrivateResult = obj7.can(constants8.READ_MESSAGE_HISTORY, channel);
         }
         if (isPrivateResult) {
-          let tmp167 = props16;
-          if (tmp14) {
-            tmp167 = props17;
+          if (!tmp13) {
+            let tmp167 = props16;
+            if (tmp14) {
+              tmp167 = props17;
+            }
+            items11.unshift(tmp167);
           }
-          items11.unshift(tmp167);
           let tmp169 = props18;
           if (tmp13) {
             tmp169 = props19;

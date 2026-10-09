@@ -1,6 +1,6 @@
 // discord_app/modules/toast/native/ToastActionCreators.tsx
-import DispatcherDefault from "../../../Dispatcher.tsx";
 import toastUtils from "../../../design/mana/components/Toast/toastUtils.native.tsx";
+import toastMapping from "toastMapping.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 require = null;
@@ -9,41 +9,27 @@ const result = size.fileFinishedImporting("modules/toast/native/ToastActionCreat
 
 export default {
   open(key) {
-    _require = key;
-    let flag = false;
-    if (obj.getDesignSystemsNotificationComponents("ToastActionCreators")) {
-      const toManaToastResult = tmp(4773).toManaToast(key);
-      let flag2 = null != toManaToastResult;
-      if (flag2) {
-        let tmp6 = key === key;
-        if (tmp6) {
-          tmp6 = null != require;
-        }
-        if (tmp6) {
-          const useToastStore = tmp(4767).useToastStore;
-          const currentToastMap = useToastStore.getState().currentToastMap;
-          value = currentToastMap.get("app");
-          let toast;
-          if (value != null) {
-            toast = value.toast;
-          }
-          tmp6 = toast === require;
-        }
-        flag2 = true;
-        if (!tmp6) {
-          require = toManaToastResult;
-          tmp(4767).showToast(toManaToastResult);
-          flag2 = true;
-          const tmpResult2 = tmp(4767);
-        }
+    const toManaToastResult = toastMapping.toManaToast(key.key);
+    let tmp4 = global === key;
+    if (tmp4) {
+      tmp4 = null != require;
+    }
+    if (tmp4) {
+      const useToastStore = tmp(4769).useToastStore;
+      const currentToastMap = useToastStore.getState().currentToastMap;
+      value = currentToastMap.get("app");
+      let toast;
+      if (value != null) {
+        toast = value.toast;
       }
-      flag = flag2;
-      const tmpResult = tmp(4773);
+      tmp4 = toast === require;
     }
-    if (!flag) {
-      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_OPEN", toastProps }));
+    if (!tmp4) {
+      require = toManaToastResult;
+      global = key;
+      tmp(4769).showToast(toManaToastResult);
+      const tmpResult = tmp(4769);
     }
-    obj = require("DesignSystemsNotificationComponentsExperiment");
   },
   openMana(DEV_IN_APP_NOTIF_TEST_ERROR, arg1) {
     let tmp = global === DEV_IN_APP_NOTIF_TEST_ERROR;
@@ -68,6 +54,5 @@ export default {
   },
   close() {
     toastUtils.popToast();
-    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "TOAST_CLOSE" }));
   },
 };

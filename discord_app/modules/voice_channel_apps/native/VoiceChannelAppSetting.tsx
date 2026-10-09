@@ -1,6 +1,6 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppSetting.tsx
 import c from "../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useVoiceChannelApp from "../useVoiceChannelApp.tsx";
 import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet.tsx";
@@ -46,7 +46,7 @@ function VoiceChannelAppRow(guildId) {
   obj3.onPress = function handlePress() {
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(17302, dependencyMap.paths),
+      asyncRequireImpl(17450, dependencyMap.paths),
       VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY,
       { guildId, selectedApplicationId: application_id, onChange },
     );

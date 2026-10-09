@@ -13,7 +13,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
@@ -84,7 +84,7 @@ let closure_5 = ["overlayOpacity", "gradientOverride"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles({
   softenGradient: { flex: 1 },
   linearGradient: { flex: 1 },
@@ -224,7 +224,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = cResult[1];
       }
       dependencyMap = tmp3;
-      const tmp4 = mixColorOverride(4991)();
+      const tmp4 = mixColorOverride(4992)();
       theme = tmp4;
       if (cResult[2] === gradient.colors) {
         if (cResult[3] === mix) {
@@ -396,7 +396,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       dependencyMap = tmp4;
-      const tmp5 = mixColorOverride(4991)();
+      const tmp5 = mixColorOverride(4992)();
       theme = tmp5;
       if (cResult[2] === mix) {
         if (cResult[3] === tmp4) {
@@ -470,7 +470,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let obj = mix(576);
-      const guildThemePresetAppearance = mix(4933).getGuildThemePresetAppearance(preset, tmp5);
+      const guildThemePresetAppearance = mix(4934).getGuildThemePresetAppearance(preset, tmp5);
       if (cResult[11] === mix) {
         if (cResult[12] === tmp4) {
           if (cResult[13] === mixColorOverride) {
@@ -549,7 +549,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = tmp5;
       cResult[15] = A;
       tmp10 = A;
-      const tmpResult = mix(4933);
+      const tmpResult = mix(4934);
     }
   : function GuildThemePresetGradient(mixColorOverride) {
       ({ angleOverride, mix: require, mixAmount } = mixColorOverride);
@@ -852,7 +852,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       closure_129_2 = undefined;
       closure_129_3 = undefined;
       closure_129_0 = baseMix;
-      ({ width, height } = reduced(1496)());
+      ({ width, height } = reduced(1497)());
       if (mixAmount === undefined) {
         mixAmount = {};
       }
@@ -980,8 +980,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         items2[3] = absolute;
         items2[4] = componentStyles;
         obj.style = items2;
-        tmp10Result = closure_10(reduced(5387), obj);
-        const tmp2Result = reduced(5387);
+        tmp10Result = closure_10(reduced(5388), obj);
+        const tmp2Result = reduced(5388);
       }
       return tmp10Result;
     };

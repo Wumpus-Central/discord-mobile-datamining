@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
 require = fn;
-let closure_6 = fn(5966).PremiumGuildSubscribeModalScenes;
+let closure_6 = fn(5968).PremiumGuildSubscribeModalScenes;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               headerShown: false,
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(5967), {});
+                return closure_1_8(guildBoostSlots(5969), {});
               },
             };
             obj5[constants.GUILD_SELECT] = obj6;
@@ -120,13 +120,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               headerLeft: NavigatorHeader.getHeaderCloseButton(BoostingActionCreators.closeApplyBoostModal),
               headerRight: function renderSettingsButton() {
                 if (obj.isThemeDark(theme.theme)) {
-                  let tmp4Result = guildBoostSlots(7080);
+                  let tmp4Result = guildBoostSlots(7083);
                 } else {
-                  tmp4Result = guildBoostSlots(7081);
+                  tmp4Result = guildBoostSlots(7084);
                 }
                 let obj2 = {
                   source: tmp4Result,
-                  IconComponent: guildId(7082).SettingsIcon,
+                  IconComponent: guildId(7085).SettingsIcon,
                   accessibilityLabel: null,
                   accessibilityHint: null,
                   onPress: null,
@@ -136,16 +136,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl2 = guildId(1126).intl;
                 obj2.accessibilityHint = intl2.string(guildId(1126).t["+CbP2v"]);
                 obj2.onPress = function onPress() {
-                  const result = closure_1_0(6675).trackUserSettingsPaneViewed({
+                  const result = closure_1_0(6682).trackUserSettingsPaneViewed({
                     destinationPane: constants.GUILD_BOOSTING,
                   });
-                  const obj = closure_1_0(6675);
+                  const obj = closure_1_0(6682);
                   const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-                  closure_1_0(5964).closeApplyBoostModal();
-                  const obj3 = closure_1_0(5964);
-                  closure_1_0(7084).openUserSettings({ screen: constants.GUILD_BOOSTING });
+                  closure_1_0(5966).closeApplyBoostModal();
+                  const obj3 = closure_1_0(5966);
+                  closure_1_0(7087).openUserSettings({ screen: constants.GUILD_BOOSTING });
                 };
-                return closure_1_8(guildId(7079).HeaderActionButton, obj2);
+                return closure_1_8(guildId(7082).HeaderActionButton, obj2);
               },
               headerTitle(children) {
                 children = children.children;
@@ -158,11 +158,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmpResult = closure_1_8(guildId(1200).LegacyText, obj2);
                 }
                 obj.subtitle = tmpResult;
-                return closure_1_8(guildId(6203).NavigatorHeader, obj);
+                return closure_1_8(guildId(6205).NavigatorHeader, obj);
               },
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(7086), {});
+                return closure_1_8(guildBoostSlots(7089), {});
               },
             };
             obj5[constants.OVERVIEW] = obj7;
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.headerTitle = intl.string(util.t.VJEVbu);
             obj8.render = function render(arg0) {
               const merged = Object.assign(arg0);
-              return closure_1_8(guildBoostSlots(13733), {});
+              return closure_1_8(guildBoostSlots(13825), {});
             };
             obj5[constants.CONFIRMATION] = obj8;
             obj4.screens = obj5;
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               headerShown: false,
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(5967), {});
+                return closure_1_8(guildBoostSlots(5969), {});
               },
             };
             obj5[constants.GUILD_SELECT] = obj6;
@@ -227,13 +227,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               headerLeft: NavigatorHeader.getHeaderCloseButton(BoostingActionCreators.closeApplyBoostModal),
               headerRight: function renderSettingsButton() {
                 if (obj.isThemeDark(theme.theme)) {
-                  let tmp4Result = guildBoostSlots(7080);
+                  let tmp4Result = guildBoostSlots(7083);
                 } else {
-                  tmp4Result = guildBoostSlots(7081);
+                  tmp4Result = guildBoostSlots(7084);
                 }
                 let obj2 = {
                   source: tmp4Result,
-                  IconComponent: guildId(7082).SettingsIcon,
+                  IconComponent: guildId(7085).SettingsIcon,
                   accessibilityLabel: null,
                   accessibilityHint: null,
                   onPress: null,
@@ -243,16 +243,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl2 = guildId(1126).intl;
                 obj2.accessibilityHint = intl2.string(guildId(1126).t["+CbP2v"]);
                 obj2.onPress = function onPress() {
-                  const result = closure_1_0(6675).trackUserSettingsPaneViewed({
+                  const result = closure_1_0(6682).trackUserSettingsPaneViewed({
                     destinationPane: constants.GUILD_BOOSTING,
                   });
-                  const obj = closure_1_0(6675);
+                  const obj = closure_1_0(6682);
                   const obj2 = { destinationPane: constants.GUILD_BOOSTING };
-                  closure_1_0(5964).closeApplyBoostModal();
-                  const obj3 = closure_1_0(5964);
-                  closure_1_0(7084).openUserSettings({ screen: constants.GUILD_BOOSTING });
+                  closure_1_0(5966).closeApplyBoostModal();
+                  const obj3 = closure_1_0(5966);
+                  closure_1_0(7087).openUserSettings({ screen: constants.GUILD_BOOSTING });
                 };
-                return closure_1_8(guildId(7079).HeaderActionButton, obj2);
+                return closure_1_8(guildId(7082).HeaderActionButton, obj2);
               },
               headerTitle(children) {
                 children = children.children;
@@ -265,11 +265,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmpResult = closure_1_8(guildId(1200).LegacyText, obj2);
                 }
                 obj.subtitle = tmpResult;
-                return closure_1_8(guildId(6203).NavigatorHeader, obj);
+                return closure_1_8(guildId(6205).NavigatorHeader, obj);
               },
               render(arg0) {
                 const merged = Object.assign(arg0);
-                return closure_1_8(guildBoostSlots(7086), {});
+                return closure_1_8(guildBoostSlots(7089), {});
               },
             };
             obj5[constants.OVERVIEW] = obj7;
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj8.headerTitle = intl.string(util.t.VJEVbu);
             obj8.render = function render(arg0) {
               const merged = Object.assign(arg0);
-              return closure_1_8(guildBoostSlots(13733), {});
+              return closure_1_8(guildBoostSlots(13825), {});
             };
             obj5[constants.CONFIRMATION] = obj8;
             obj4.screens = obj5;

@@ -38,7 +38,7 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({ deleteStagedAttachment: metroRequire, importAttachmentFromUrl: closure_7 } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/clarification/useConjureOwnImages.tsx");
@@ -233,7 +233,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               { attachment: null }.attachment = errorText;
               closure_1_4((arg0) => {
                 if (null != arg0[closure_0]) {
-                  closure_6(id, tmp2.attachment.id).catch(/* F156856 */ function() { ... });
+                  closure_6(id, tmp2.attachment.id).catch(/* F157192 */ function() { ... });
                   const promise = closure_6(id, tmp2.attachment.id);
                 }
                 obj = {};
@@ -295,7 +295,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
           return first2(id, arg0).then((attachment) => {
             closure_1_4((arg0) => {
               if (null != arg0[closure_0]) {
-                closure_6(id, tmp2.attachment.id).catch(/* F156856 */ function() { ... });
+                closure_6(id, tmp2.attachment.id).catch(/* F157192 */ function() { ... });
                 const promise = closure_6(id, tmp2.attachment.id);
               }
               obj = {};

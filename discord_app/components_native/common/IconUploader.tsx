@@ -1,10 +1,10 @@
 // discord_app/components_native/common/IconUploader.tsx
 import util from "../../intl/index.native.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
-import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
 import FastImageDefault from "FastImage.tsx";
+import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import _modDef9592 from "../../../_runtime/metro/09592__.js";
+import _modDef9611 from "../../../_runtime/metro/09611__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -12,13 +12,12 @@ const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const View = fn(17).View;
 const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
-let closure_11 = createStyles.createStyles({
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(5091);
+let closure_10 = createStyles.createStyles({
   uploadIcon: { position: "absolute", right: -7, top: -7 },
   avatar: { height: 64, width: 64, borderRadius: 32 },
 });
@@ -47,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== type) {
         str = type;
       }
-      const tmp6 = closure_11();
+      const tmp6 = closure_10();
       dependencyMap = noop.useRef(false);
       if (null != icon) {
         if (obj2.test(icon)) {
@@ -60,20 +59,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[9] === iconStyle) {
                 }
               }
-              let obj3 = { style: iconStyle, icon, value: name, size: tmp(6161).GuildIconSizes.XLARGE, animate: true };
-              const tmp24 = closure_8(onChangeIconPress(6161), obj3);
+              let obj3 = { style: iconStyle, icon, value: name, size: tmp(6165).GuildIconSizes.XLARGE, animate: true };
+              const tmp24 = closure_7(onChangeIconPress(6165), obj3);
               cResult[8] = icon;
               cResult[9] = iconStyle;
               cResult[10] = name;
               cResult[11] = tmp24;
-              const tmp23 = onChangeIconPress(6161);
+              const tmp23 = onChangeIconPress(6165);
             } else {
               if (cResult[12] !== icon) {
-                const source = tmp(1414).makeSource(icon);
+                const source = tmp(1415).makeSource(icon);
                 cResult[12] = icon;
                 cResult[13] = source;
                 let tmp13 = source;
-                const tmpResult = tmp(1414);
+                const tmpResult = tmp(1415);
               } else {
                 tmp13 = cResult[13];
               }
@@ -87,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 let obj4 = { style: tmp15, source: tmp13 };
-                const tmp19 = closure_8(onChangeIconPress(6164), obj4);
+                const tmp19 = closure_7(onChangeIconPress(6163), obj4);
                 cResult[17] = tmp13;
                 cResult[18] = tmp15;
                 cResult[19] = tmp19;
@@ -126,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[30] === style) {
                     }
                     let obj5 = { style, children: tmp39 };
-                    const tmp45 = closure_8(closure_5, obj5);
+                    const tmp45 = closure_7(View, obj5);
                     cResult[30] = style;
                     cResult[31] = tmp39;
                     cResult[32] = tmp45;
@@ -137,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress: tmp11,
                     children: tmp31,
                   };
-                  const tmp41 = closure_8(tmp(6189).PressableOpacity, obj6);
+                  const tmp41 = closure_7(tmp(6191).PressableOpacity, obj6);
                   cResult[27] = tmp11;
                   cResult[28] = tmp31;
                   cResult[29] = tmp41;
@@ -147,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { children: null };
               const items1 = [tmp16, tmp26];
               obj7.children = items1;
-              const tmp34 = closure_10(closure_9, obj7);
+              const tmp34 = closure_9(closure_8, obj7);
               cResult[23] = tmp16;
               cResult[24] = tmp26;
               cResult[25] = tmp34;
@@ -155,8 +154,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             let tmp27 = null;
             if (!tmp4) {
-              const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9592) };
-              tmp27 = closure_8(closure_6, obj8);
+              const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(9611) };
+              tmp27 = closure_7(onChangeIconPress(6163), obj8);
+              const tmp30 = onChangeIconPress(6163);
             }
             cResult[20] = tmp4;
             cResult[21] = tmp6;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let fn = disabled.makeURL;
       if (fn === undefined) {
-        fn = function u(icon) {};
+        fn = function h(icon) {};
       }
       let str = disabled.type;
       if (str === undefined) {
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       };
-      const tmp = closure_11();
+      const tmp = closure_10();
       dependencyMap = noop.useRef(false);
       if (null == icon) {
         let fnResult = fn(icon);
@@ -341,7 +341,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             size: GuildIcon.GuildIconSizes.XLARGE,
             animate: true,
           };
-          let tmp8 = closure_8(GuildIconDefault, obj3);
+          let tmp8 = closure_7(GuildIconDefault, obj3);
         }
         tmp9 = null == icon && null == name;
       } else {
@@ -350,16 +350,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp.avatar, iconStyle];
         obj4.style = items;
         obj4.source = source;
-        tmp8 = closure_8(FastImageDefault, obj4);
+        tmp8 = closure_7(FastImageDefault, obj4);
       }
       const items1 = [tmp8];
       let tmp17 = null;
       if (!flag) {
-        let obj5 = { style: tmp.uploadIcon, source: _modDef9592 };
-        tmp17 = closure_8(closure_6, obj5);
+        let obj5 = { style: tmp.uploadIcon, source: _modDef9611 };
+        tmp17 = closure_7(FastImageDefault, obj5);
       }
       items1[1] = tmp17;
-      const tmp15Result = closure_10(closure_9, { children: items1 });
+      const tmp15Result = closure_9(closure_8, { children: items1 });
       let tmp23 = tmp15Result;
       if (!flag) {
         let obj6 = { style: disabled.style, children: null };
@@ -377,8 +377,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return applyArgumentsResult;
         };
         obj7.children = tmp15Result;
-        obj6.children = closure_8(Pressables.PressableOpacity, obj7);
-        tmp23 = closure_8(closure_5, obj6);
+        obj6.children = closure_7(Pressables.PressableOpacity, obj7);
+        tmp23 = closure_7(View, obj6);
       }
       return tmp23;
     };

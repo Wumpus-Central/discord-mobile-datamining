@@ -3,13 +3,13 @@ import native from "../../../design/void/native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import ClientInfoUtilsAll from "../../../utils/native/ClientInfoUtils.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import _modDef8253 from "../../../../_runtime/metro/08253__.js";
+import _modDef8261 from "../../../../_runtime/metro/08261__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Linking: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SpotifyConstants = fn(8434);
+const SpotifyConstants = fn(8442);
 ({
   SPOTIFY_APP_PROTOCOL: metroRequire,
   SpotifyEndpoints: closure_7,
@@ -283,7 +283,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
                   .catch(() => {});
                 const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
               } else {
-                const HTTP = activity(1294).HTTP;
+                const HTTP = activity(1295).HTTP;
                 const obj2 = {
                   url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
                   rejectWithError: true,
@@ -302,8 +302,8 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: _modDef8253 };
-        const tmp8 = closure_9(tmp(5375).Button.Icon, obj2);
+        let obj2 = { source: _modDef8261 };
+        const tmp8 = closure_9(tmp(5376).Button.Icon, obj2);
         cResult[2] = tmp8;
         let tmp5 = tmp8;
       } else {
@@ -336,7 +336,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp16;
         tmp13 = tmp16;
       }
-      const tmp12 = closure_9(activity(5375).Button, { icon: tmp5, text: tmp9, size: "sm", onPress: tmp4, grow: true });
+      const tmp12 = closure_9(activity(5376).Button, { icon: tmp5, text: tmp9, size: "sm", onPress: tmp4, grow: true });
       cResult[5] = tmp4;
       cResult[6] = tmp9;
       cResult[7] = tmp12;
@@ -347,7 +347,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
       activity = activity.activity;
       let obj = { style: activity.style, children: null };
       let obj2 = {
-        icon: closure_9(activity(5375).Button.Icon, { source: _modDef8253 }),
+        icon: closure_9(activity(5376).Button.Icon, { source: _modDef8261 }),
         text: null,
         size: "sm",
         onPress: null,
@@ -364,7 +364,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
               let catchPromise = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id)).catch(() => {});
               const openURLResult = closure_2_4.openURL(closure_2_7.PLAYER_OPEN(constants.TRACK, sync_id));
             } else {
-              const HTTP = activity(1294).HTTP;
+              const HTTP = activity(1295).HTTP;
               const obj2 = {
                 url: closure_2_7.INSTALL_ATTRIBUTION(ClientInfoUtilsAll.getConstants().Identifier),
                 rejectWithError: true,
@@ -376,7 +376,7 @@ export const SpotifyPlayButton = ReactCompilerGating.isReactCompilerEnabled()
           })
           .catch(() => {});
       };
-      obj.children = closure_9(activity(5375).Button, obj2);
+      obj.children = closure_9(activity(5376).Button, obj2);
       return closure_9(closure_5, obj);
     };
 export { SpotifyTrack };

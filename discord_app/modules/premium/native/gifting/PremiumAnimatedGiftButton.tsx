@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = {
@@ -329,7 +329,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       }, items1);
       let FadeOut;
       if (!stateFromStores) {
-        FadeOut = tmp(4810).FadeOut;
+        FadeOut = tmp(4811).FadeOut;
       }
       const obj5 = { exiting: FadeOut, children: null };
       const items2 = [tmp7.containerRefresh, style];
@@ -349,7 +349,7 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
       const merged = Object.assign(accessibilityState);
       obj6.accessibilityState = { disabled };
       const merged1 = Object.assign(arg0);
-      obj6.children = jsx(tmp3(6110), {
+      obj6.children = jsx(tmp3(6112), {
         ref: tmp9,
         style: tmp7.animationRefresh,
         source: { uri: animationDataUrl },
@@ -363,5 +363,5 @@ export const PremiumAnimatedGiftButton = ReactCompilerGating.isReactCompilerEnab
         accessibilityRole: "button",
         accessibilityState: null,
       });
-      return jsx(stateFromStores(4810).View, { exiting: FadeOut, children: null });
+      return jsx(stateFromStores(4811).View, { exiting: FadeOut, children: null });
     };

@@ -6,9 +6,9 @@ import dismissible_content from "../../../../../../discord_common/js/packages/pr
 import DismissibleContentUnsafeUtils from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import QuestTypes from "../../../../quests/QuestTypes.tsx";
 import useTrialOffer from "../../../../premium/useTrialOffer.tsx";
-import QuestUtils from "../../../../quests/native/QuestUtils.native.tsx";
 import PromotionsHooks from "../../../../premium/promotions/PromotionsHooks.tsx";
-import you_tracking_Tracking from "tracking/Tracking.tsx";
+import tracking_Tracking from "tracking/Tracking.tsx";
+import QuestUtils from "../../../../quests/native/QuestUtils.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
@@ -16,11 +16,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const useIntlLoaderStore = fn(2129).useIntlLoaderStore;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
-let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
+let closure_9 = fn(1392).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -225,7 +225,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   const items2 = [tmp14, navigateToSettings, tmp18];
   const items3 = [navigateToPremium];
   const callback = containerBackground.useCallback(() => {
-    const result = you_tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
+    const result = tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
     navigateToSettings();
     let tmp5 = closure_7;
     if (closure_7) {
@@ -244,7 +244,7 @@ export default noop.memo(function YouBannerDecorations(navigateToSettings) {
   }, items2);
   const items4 = [showBadge, dismissBadge];
   const callback1 = containerBackground.useCallback(() => {
-    const result = you_tracking_Tracking.trackYouTabNitroIconPress();
+    const result = tracking_Tracking.trackYouTabNitroIconPress();
     navigateToPremium();
   }, items3);
   const callback2 = containerBackground.useCallback(() => {

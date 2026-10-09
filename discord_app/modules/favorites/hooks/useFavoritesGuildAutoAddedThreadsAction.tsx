@@ -13,7 +13,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesGuildAutoAddedThreadsAction() {
       const cResult = hasAccess(576).c(13);
       let obj = hasAccess(576);
-      hasAccess = hasAccess(10294).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+      hasAccess = hasAccess(10279).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function u() {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj2 = hasAccess(10294);
+      const obj2 = hasAccess(10279);
       if (hasAccess) {
         hasAccess = tmpResult.useStateFromStores(tmp4, tmp5);
       }
@@ -98,8 +98,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult2 = hasAccess(504);
     }
   : function useFavoritesGuildAutoAddedThreadsAction() {
-      hasAccess = hasAccess(10294).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-      let obj = hasAccess(10294);
+      hasAccess = hasAccess(10279).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+      let obj = hasAccess(10279);
       const items = [UserStore];
       if (hasAccess) {
         hasAccess = obj2.useStateFromStores(items, () => {

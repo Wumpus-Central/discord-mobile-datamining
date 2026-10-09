@@ -428,16 +428,16 @@ export default noop.memo(
             }
           }
         };
-        importDefault = channel(1502).useNavigation();
-        let obj = channel(1502);
-        const isMessageRequestRestrictedViewer = channel(12176).useIsMessageRequestRestrictedViewer();
-        let obj2 = channel(12176);
+        importDefault = channel(1503).useNavigation();
+        let obj = channel(1503);
+        const isMessageRequestRestrictedViewer = channel(12115).useIsMessageRequestRestrictedViewer();
+        let obj2 = channel(12115);
         const items = [closure_4];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj3 = channel(504);
-        const messageRequestActions = channel(12177).useMessageRequestActions({
+        const messageRequestActions = channel(12116).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
@@ -485,7 +485,7 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        let obj4 = channel(12177);
+        let obj4 = channel(12116);
         let obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {

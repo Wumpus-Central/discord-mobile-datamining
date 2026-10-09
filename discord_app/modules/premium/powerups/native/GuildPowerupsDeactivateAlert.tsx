@@ -38,10 +38,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, powerup } = arg0);
       const tmp4 = closure_6();
       _require = tmp4;
-      const tmp6 = onDeactivate(12294)(guildId, powerup);
+      const tmp6 = onDeactivate(12233)(guildId, powerup);
       onDeactivate = tmp6.onDeactivate;
       const error = tmp6.error;
-      const arr = onDeactivate(12295)(guildId, powerup);
+      const arr = onDeactivate(12234)(guildId, powerup);
       let obj = require("c");
       const logPowerupModalOpened = require("GuildPowerupAnalytics").useLogPowerupModalOpened(
         guildId,
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           size: "custom",
           style: { width: 40, height: 40 },
         };
-        const tmp10 = closure_4(tmp(5000).CircleErrorIcon, obj3);
+        const tmp10 = closure_4(tmp(5001).CircleErrorIcon, obj3);
         cResult[0] = tmp10;
         let first = tmp10;
       } else {
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp22) {
           const obj7 = { variant: "destructive", onPress: tmp22, text: tmp23 };
-          const tmp27 = closure_4(tmp(5303).AlertActionButton, obj7, "deactivate");
+          const tmp27 = closure_4(tmp(5304).AlertActionButton, obj7, "deactivate");
           cResult[13] = tmp22;
           cResult[14] = tmp27;
           let tmp25 = tmp27;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { onPress: tmp28, variant: "secondary", text: null };
           const intl4 = tmp(1126).intl;
           obj8.text = intl4.string(tmp(1126).t["ETE/oC"]);
-          const tmp31 = closure_4(tmp(5303).AlertActionButton, obj8, "cancel");
+          const tmp31 = closure_4(tmp(5304).AlertActionButton, obj8, "cancel");
           cResult[16] = tmp31;
           let tmp29 = tmp31;
         } else {
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj9 = { header: tmp11, title: tmp15, content: tmp17, actions: tmp32, extraContent: tmp40 };
-                const tmp46 = closure_4(tmp(5303).AlertModal, obj9);
+                const tmp46 = closure_4(tmp(5304).AlertModal, obj9);
                 cResult[28] = tmp32;
                 cResult[29] = tmp40;
                 cResult[30] = tmp11;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { children: null };
         const items = [tmp19, tmp25, tmp29];
         obj11.children = items;
-        const tmp34 = closure_5(tmp(5303).AlertActions, obj11);
+        const tmp34 = closure_5(tmp(5304).AlertActions, obj11);
         cResult[17] = tmp19;
         cResult[18] = tmp25;
         cResult[19] = tmp34;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: error,
         };
-        tmp20 = closure_4(tmp(5086).Text, obj12);
+        tmp20 = closure_4(tmp(5087).Text, obj12);
       }
       cResult[7] = error;
       cResult[8] = tmp4.warningText;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: error,
         };
-        tmp7Result = closure_4(tmp5(5086).Text, obj7);
+        tmp7Result = closure_4(tmp5(5087).Text, obj7);
       }
       const obj8 = { children: null };
       const items = [tmp7Result, ,];

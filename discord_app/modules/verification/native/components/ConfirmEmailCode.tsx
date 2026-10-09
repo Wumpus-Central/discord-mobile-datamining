@@ -8,11 +8,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6202);
+const ChangeEmailStore = fn(6204);
 ({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   background: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

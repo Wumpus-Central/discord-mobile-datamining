@@ -1,5 +1,5 @@
 // discord_app/modules/rewards/ProgramRewardsUtils.tsx
-import _modDef4500 from "../../../_runtime/metro/04500__.js";
+import _modDef4502 from "../../../_runtime/metro/04502__.js";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import useHasXboxMonthlyOrbsPerk from "hooks/useHasXboxMonthlyOrbsPerk.tsx";
 import ProgramRewardsTypes from "ProgramRewardsTypes.tsx";
@@ -13,10 +13,10 @@ function canFetchNitroProgramReward() {
 function canFetchXboxProgramReward() {
   return useHasXboxMonthlyOrbsPerk.hasCrepeMonthlyOrbsPerk(UserStore.getCurrentUser());
 }
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 const dependencyMap = {
-  [fn(13852).RewardProgram.NITRO]: canFetchNitroProgramReward,
-  [fn(13852).RewardProgram.XBOX]: canFetchXboxProgramReward,
+  [fn(13945).RewardProgram.NITRO]: canFetchNitroProgramReward,
+  [fn(13945).RewardProgram.XBOX]: canFetchXboxProgramReward,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
@@ -33,7 +33,7 @@ export const isProgramRewardStale = function isProgramRewardStale(next_reward_da
     if (tmp) {
       const _Date = Date;
       const date = new Date(next_reward_date);
-      tmp = _modDef4500(date);
+      tmp = _modDef4502(date);
     }
     return tmp;
   }

@@ -151,8 +151,8 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
                   if (supported_platforms == null) {
                     supported_platforms = [];
                   }
-                  const tmp = stateFromStores(10627);
-                  return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
+                  const tmp = stateFromStores(11670);
+                  return supported_platforms.includes(tmp(closure_1_0(1382).getOS()));
                 });
                 found1 = found.filter((activity) => {
                   const requires_age_gate = activity.activity.requires_age_gate;
@@ -375,8 +375,8 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
           if (supported_platforms == null) {
             supported_platforms = [];
           }
-          const tmp = stateFromStores(10627);
-          return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
+          const tmp = stateFromStores(11670);
+          return supported_platforms.includes(tmp(closure_1_0(1382).getOS()));
         });
         const found1 = found.filter((activity) => {
           const requires_age_gate = activity.activity.requires_age_gate;

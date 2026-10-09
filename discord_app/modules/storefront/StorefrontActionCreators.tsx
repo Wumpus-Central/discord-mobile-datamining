@@ -280,7 +280,7 @@ let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     applicationId2 = applicationId.applicationId;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -294,7 +294,7 @@ let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
     await "IconComponent";
     closure_1 = tmp2;
     skuIds2 = skuIds.skuIds;
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;

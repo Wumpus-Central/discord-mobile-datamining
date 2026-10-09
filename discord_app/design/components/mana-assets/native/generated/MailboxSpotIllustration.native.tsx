@@ -1,92 +1,120 @@
 // discord_app/design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef16690 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-2x.png.js";
-import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import assetHelpers from "../assetHelpers.native.tsx";
+import _modDef16814 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-1x.png.js";
+import _modDef16815 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-2x.png.js";
+import _modDef16816 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-3x.png.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const jsx = jsxProd.jsx;
-let result = size.fileFinishedImporting(
+require = fn;
+const jsx = fn(21).jsx;
+let obj = { 1: null, 2: { uri: _modDef16814 }, 3: null };
+let obj2 = { uri: _modDef16814 };
+obj[2] = { uri: _modDef16815 };
+const obj3 = { uri: _modDef16815 };
+obj[3] = { uri: _modDef16816 };
+const ReactCompilerGating = fn(558);
+const obj4 = { uri: _modDef16816 };
+let size = fn(2);
+const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx",
 );
 
 export const MailboxSpotIllustration = ReactCompilerGating.isReactCompilerEnabled()
   ? function MailboxSpotIllustration(arg0) {
-      const cResult = c.c(9);
+      obj = c;
+      const cResult = obj.c(12);
       ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
-      let num = 288;
-      if (undefined !== width) {
-        num = width;
-      }
-      let num2 = 192;
-      if (undefined !== height) {
-        num2 = height;
-      }
-      let num3 = 1;
+      let num = 1;
       if (undefined !== scale) {
-        num3 = scale;
+        num = scale;
       }
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef16690 };
-        cResult[0] = obj2;
-        let first = obj2;
-      } else {
-        first = cResult[0];
-      }
-      const result = num * num3;
-      const result1 = num2 * num3;
-      if (cResult[1] === result) {
-        if (cResult[2] === result1) {
-          let tmp7 = cResult[3];
-        }
-        if (cResult[4] === accessibilityLabel) {
-          if (cResult[5] === accessible) {
-            if (cResult[6] === resizeMode) {
-              if (cResult[7] === tmp7) {
-                let tmp8 = cResult[8];
+      if (cResult[0] === height) {
+        if (cResult[1] === num) {
+          if (cResult[2] === width) {
+            let tmp4 = cResult[3];
+          }
+          const _Symbol = Symbol;
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+            const assetSource = assetHelpers.getAssetSource(obj);
+            cResult[4] = assetSource;
+            let tmp7 = assetSource;
+            const tmpResult = assetHelpers;
+          } else {
+            tmp7 = cResult[4];
+          }
+          if (cResult[5] !== resizeMode) {
+            const assetResizeMode = assetHelpers.getAssetResizeMode(resizeMode);
+            cResult[5] = resizeMode;
+            cResult[6] = assetResizeMode;
+            let tmp10 = assetResizeMode;
+            const tmpResult3 = assetHelpers;
+          } else {
+            tmp10 = cResult[6];
+          }
+          if (cResult[7] === accessibilityLabel) {
+            if (cResult[8] === accessible) {
+              if (cResult[9] === tmp4) {
+                if (cResult[10] === tmp10) {
+                  let tmp12 = cResult[11];
+                }
+                return tmp12;
               }
-              return tmp8;
             }
           }
+          const obj2 = {
+            fadeDuration: 0,
+            source: tmp7,
+            style: tmp4,
+            accessible,
+            accessibilityLabel,
+            resizeMode: tmp10,
+          };
+          const tmp15 = jsx(FastImageDefault, {
+            fadeDuration: 0,
+            source: tmp7,
+            style: tmp4,
+            accessible,
+            accessibilityLabel,
+            resizeMode: tmp10,
+          });
+          cResult[7] = accessibilityLabel;
+          cResult[8] = accessible;
+          cResult[9] = tmp4;
+          cResult[10] = tmp10;
+          cResult[11] = tmp15;
+          tmp12 = tmp15;
         }
-        const obj3 = { fadeDuration: 0, source: first, style: tmp7, accessible, accessibilityLabel, resizeMode };
-        const tmp11 = jsx(FastImageDefault, {
-          fadeDuration: 0,
-          source: first,
-          style: tmp7,
-          accessible,
-          accessibilityLabel,
-          resizeMode,
-        });
-        cResult[4] = accessibilityLabel;
-        cResult[5] = accessible;
-        cResult[6] = resizeMode;
-        cResult[7] = tmp7;
-        cResult[8] = tmp11;
-        tmp8 = tmp11;
       }
-      const size = { width: result, height: result1 };
-      cResult[1] = result;
-      cResult[2] = result1;
-      cResult[3] = size;
-      tmp7 = size;
+      const assetSizeStyle = assetHelpers.getAssetSizeStyle({
+        width,
+        height,
+        scale: num,
+        intrinsicWidth: 288,
+        intrinsicHeight: 192,
+      });
+      cResult[0] = height;
+      cResult[1] = num;
+      cResult[2] = width;
+      cResult[3] = assetSizeStyle;
+      tmp4 = assetSizeStyle;
+      const tmpResult4 = assetHelpers;
     }
   : function MailboxSpotIllustration(width) {
-      let num = width.width;
+      width = width.width;
+      const height = width.height;
+      let num = width.scale;
       ({ accessible, accessibilityLabel, resizeMode } = width);
       if (num === undefined) {
-        num = 288;
+        num = 1;
       }
-      let num2 = width.height;
-      if (num2 === undefined) {
-        num2 = 192;
-      }
-      let num3 = width.scale;
-      if (num3 === undefined) {
-        num3 = 1;
-      }
-      const obj = {
+      const items = [width, height, num];
+      const memo = noop.useMemo(() => {
+        const size = { width, height, scale: num, intrinsicWidth: 288, intrinsicHeight: 192 };
+        return assetHelpers.getAssetSizeStyle(size);
+      }, items);
+      obj = {
         fadeDuration: 0,
         source: null,
         style: null,
@@ -94,18 +122,21 @@ export const MailboxSpotIllustration = ReactCompilerGating.isReactCompilerEnable
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef16690 };
-      obj.source = obj2;
-      obj.style = { width: num * num3, height: num2 * num3 };
+      const tmp2 = height(num[8]);
+      obj.source = width(num[7]).getAssetSource(obj);
+      obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;
-      obj.resizeMode = resizeMode;
-      return jsx(FastImageDefault, {
-        fadeDuration: 0,
-        source: null,
-        style: null,
-        accessible: null,
-        accessibilityLabel: null,
-        resizeMode: null,
-      });
+      const obj2 = width(num[7]);
+      obj.resizeMode = width(num[7]).getAssetResizeMode(resizeMode);
+      return (
+        <tmp2
+          fadeDuration={0}
+          source={null}
+          style={null}
+          accessible={null}
+          accessibilityLabel={null}
+          resizeMode={null}
+        />
+      );
     };

@@ -1,6 +1,6 @@
 // discord_app/design/components/Coachmark/native/useCoachmark.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import v1 from "../../../../../_runtime/01278_v1.js";
+import v1 from "../../../../../_runtime/01279_v1.js";
 import useTooltip from "../../Tooltip/native/useTooltip.native.tsx";
 import AnimatedCoachmark from "AnimatedCoachmark.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";

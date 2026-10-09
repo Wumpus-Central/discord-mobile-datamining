@@ -426,11 +426,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(5914).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(5915).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" },
   container: { alignSelf: "stretch" },
@@ -462,10 +462,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onClose, onComplete } = entryPoint);
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const v4Result = tmp(1278).v4();
+        const v4Result = tmp(1279).v4();
         cResult[0] = v4Result;
         let first = v4Result;
-        const tmpResult = tmp(1278);
+        const tmpResult = tmp(1279);
       } else {
         first = cResult[0];
       }
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj2 = { screens: tmp7, initialRouteName: constants.METHODS, headerBackTitle: tmp12 };
-              const tmp16 = closure_9(tmp(6679).Navigator, obj2);
+              const tmp16 = closure_9(tmp(6686).Navigator, obj2);
               cResult[10] = tmp7;
               cResult[11] = tmp16;
               const tmp14 = tmp16;
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         render: null,
       };
       const obj = entryPoint(576);
-      obj4.headerLeft = entryPoint(6203).getHeaderCloseButton(closeModal);
+      obj4.headerLeft = entryPoint(6205).getHeaderCloseButton(closeModal);
       obj4.render = function render(arg0, navigation) {
         return closure_2_9(MethodsScreen, { entryPoint, navigation, onClose: closeModal, onComplete, modalSessionId });
       };
@@ -602,8 +602,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerLeft: null,
         render: null,
       };
-      const tmpResult4 = entryPoint(6203);
-      obj5.headerLeft = entryPoint(6203).getHeaderBackButton();
+      const tmpResult4 = entryPoint(6205);
+      obj5.headerLeft = entryPoint(6205).getHeaderBackButton();
       obj5.render = function render() {
         return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, onComplete, modalSessionId });
       };
@@ -616,8 +616,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         headerLeft: null,
         render: null,
       };
-      const tmpResult5 = entryPoint(6203);
-      obj6.headerLeft = entryPoint(6203).getHeaderBackButton();
+      const tmpResult5 = entryPoint(6205);
+      obj6.headerLeft = entryPoint(6205).getHeaderBackButton();
       obj6.render = function render() {
         return closure_2_9(onClose(onComplete[45]), { onClose: closeModal, modalSessionId });
       };
@@ -628,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = tmp4;
       cResult[5] = obj3;
       tmp7 = obj3;
-      const tmpResult6 = entryPoint(6203);
+      const tmpResult6 = entryPoint(6205);
     }
   : function AgeVerificationExpressiveV2Modal(entryPoint) {
       entryPoint = entryPoint.entryPoint;

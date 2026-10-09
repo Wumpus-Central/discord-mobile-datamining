@@ -5,13 +5,13 @@ import AccessibilityPreferencesContext from "../../../../../discord_common/js/pa
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import _modDef6183 from "../../../../../_runtime/metro/06183__.js";
+import _modDef6185 from "../../../../../_runtime/metro/06185__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = {
   width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,
@@ -238,10 +238,10 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp15;
           tmp12 = tmp15;
         }
-        const obj3 = { source: _modDef6183, size: IconDefault.Sizes.SMALL_20, style: null };
+        const obj3 = { source: _modDef6185, size: IconDefault.Sizes.SMALL_20, style: null };
         const items = [tmp3.checkmark, tmp5];
         obj3.style = items;
-        const tmp11 = <Icon source={_modDef6183} size={IconDefault.Sizes.SMALL_20} style={null} />;
+        const tmp11 = <Icon source={_modDef6185} size={IconDefault.Sizes.SMALL_20} style={null} />;
         cResult[3] = tmp5;
         cResult[4] = tmp3.checkmark;
         cResult[5] = tmp11;
@@ -260,7 +260,7 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: null, children: null };
       const items = [tmp.checkbox, tmp2];
       obj.style = items;
-      const obj2 = { source: _modDef6183, size: IconDefault.Sizes.SMALL_20, style: null };
+      const obj2 = { source: _modDef6185, size: IconDefault.Sizes.SMALL_20, style: null };
       const items1 = [
         tmp.checkmark,
         closure_12(
@@ -269,6 +269,6 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled()
         ),
       ];
       obj2.style = items1;
-      obj.children = <Icon source={_modDef6183} size={IconDefault.Sizes.SMALL_20} style={null} />;
+      obj.children = <Icon source={_modDef6185} size={IconDefault.Sizes.SMALL_20} style={null} />;
       return jsx(ReanimatedRexport.View, { style: null, children: null });
     };

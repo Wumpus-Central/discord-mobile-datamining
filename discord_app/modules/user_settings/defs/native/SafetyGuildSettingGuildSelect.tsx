@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useDMPermissionsOverrideCount from "../../privacy_and_safety/useDMPermissionsOverrideCount.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,14 +9,14 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(16074);
+const UserSettingsSafetySelectedGuildStore = fn(16190);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(7966).MobileUserSettings;
+const MobileUserSettings = fn(7974).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
 fn(558);
@@ -70,7 +70,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       return closure_9().selectedGuildId;
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDescription() {
       const cResult = c.c(2);
@@ -137,7 +137,7 @@ const guildSelector = SettingBuilders.createGuildSelector({
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(16075, dependencyMap.paths),
+      asyncRequireImpl(16191, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(11652);
+const ChatInputConstants = fn(11588);
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: metroRequire, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: closure_7 } = ChatInputConstants);
 const __initData = { code: "function useChatInputFloatingBounceTsx1(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}" };
 const __initData2 = { code: "function useChatInputFloatingBounceTsx2(finished_0){const{runOnJS,handleExitFinished}=this.__closure;if(finished_0===true){runOnJS(handleExitFinished)();}}" };

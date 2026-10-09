@@ -11,9 +11,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Platform = fn(17).Platform;
-const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = {
@@ -28,7 +28,7 @@ let closure_6 = createStyles.createStyles((width) => {
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(5090);
+createStyles = fn(5091);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = {
@@ -271,7 +271,7 @@ export const EmojiReactionRowButton = ReactCompilerGating.isReactCompilerEnabled
           }
           obj11.name = str;
           if (null != emoji.id) {
-            const emojiURL = getEmojiURL(1414);
+            const emojiURL = getEmojiURL(1415);
             getEmojiURL = emojiURL.getEmojiURL;
             const obj12 = { id: null, animated: null, size: null };
             ({ id: obj5.id, animated: obj5.animated } = emoji);
@@ -330,7 +330,7 @@ export const EmojiReactionRowButton = ReactCompilerGating.isReactCompilerEnabled
         }
         obj5.name = str;
         if (null != animated.id) {
-          const emojiURL = getEmojiURL(1414);
+          const emojiURL = getEmojiURL(1415);
           getEmojiURL = emojiURL.getEmojiURL;
           obj = { id: null, animated: null, size: null };
           ({ id: obj.id, animated } = animated);

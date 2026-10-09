@@ -3,7 +3,7 @@ import _mod19 from "../../../_runtime/metro/00019__.js";
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import tinycolorDefault from "../../../_runtime/07262_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07267_tinycolor.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";

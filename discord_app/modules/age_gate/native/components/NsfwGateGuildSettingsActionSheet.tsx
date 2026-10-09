@@ -24,10 +24,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       let obj = guild(576);
-      const messageRequestPrivacyOption = guild(13962).useMessageRequestPrivacyOption(tmp4);
+      const messageRequestPrivacyOption = guild(14059).useMessageRequestPrivacyOption(tmp4);
       if (cResult[2] !== guild.name) {
         const obj3 = { title: guild.name };
-        const tmp8 = closure_3(tmp(6828).BottomSheetTitleHeader, obj3);
+        const tmp8 = closure_3(tmp(6835).BottomSheetTitleHeader, obj3);
         cResult[2] = guild.name;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             NotificationSettingsModalActionCreatorsDefault.open(guild.id);
           },
         };
-        const tmp13 = closure_3(tmp(6881).ActionSheetRow, obj4);
+        const tmp13 = closure_3(tmp(6888).ActionSheetRow, obj4);
         cResult[5] = guild.id;
         cResult[6] = tmp13;
         let tmp11 = tmp13;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== guild) {
         const obj5 = { guild };
-        const tmp16 = closure_3(tmp(13963).RestrictedGuildPrivacyOption, obj5);
+        const tmp16 = closure_3(tmp(14060).RestrictedGuildPrivacyOption, obj5);
         cResult[7] = guild;
         cResult[8] = tmp16;
         let tmp14 = tmp16;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return GuildActionSheetActions.handleLeaveServer(guild);
           },
         };
-        const tmp21 = closure_3(tmp(6881).ActionSheetRow, obj6);
+        const tmp21 = closure_3(tmp(6888).ActionSheetRow, obj6);
         cResult[10] = guild;
         cResult[11] = tmp21;
         let tmp19 = tmp21;
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp24;
             }
             const obj7 = { header: tmp6, children: tmp22 };
-            const tmp26 = closure_3(tmp(6885).ActionSheet, obj7);
+            const tmp26 = closure_3(tmp(6892).ActionSheet, obj7);
             cResult[17] = tmp6;
             cResult[18] = tmp22;
             cResult[19] = tmp26;
@@ -113,19 +113,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { hasIcons: false, children: null };
       const items = [tmp11, tmp14, messageRequestPrivacyOption, tmp19];
       obj8.children = items;
-      const tmp23 = closure_4(guild(6881).ActionSheetRow.Group, obj8);
+      const tmp23 = closure_4(guild(6888).ActionSheetRow.Group, obj8);
       cResult[12] = messageRequestPrivacyOption;
       cResult[13] = tmp11;
       cResult[14] = tmp14;
       cResult[15] = tmp19;
       cResult[16] = tmp23;
       tmp22 = tmp23;
-      const tmpResult = guild(13962);
+      const tmpResult = guild(14059);
     }
   : function NsfwGateGuildSettingsActionSheet(guild) {
       guild = guild.guild;
-      const messageRequestPrivacyOption = guild(13962).useMessageRequestPrivacyOption({ guild });
-      const obj2 = { header: closure_3(guild(6828).BottomSheetTitleHeader, { title: guild.name }), children: null };
+      const messageRequestPrivacyOption = guild(14059).useMessageRequestPrivacyOption({ guild });
+      const obj2 = { header: closure_3(guild(6835).BottomSheetTitleHeader, { title: guild.name }), children: null };
       const obj4 = { hasIcons: false, children: null };
       const obj5 = { label: null, onPress: null };
       const intl = guild(1126).intl;
@@ -135,8 +135,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         NotificationSettingsModalActionCreatorsDefault.open(guild.id);
       };
       const items = [
-        closure_3(guild(6881).ActionSheetRow, obj5),
-        closure_3(guild(13963).RestrictedGuildPrivacyOption, { guild }),
+        closure_3(guild(6888).ActionSheetRow, obj5),
+        closure_3(guild(14060).RestrictedGuildPrivacyOption, { guild }),
         messageRequestPrivacyOption,
       ];
       const obj6 = { variant: "danger", label: null, onPress: null };
@@ -145,8 +145,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.onPress = function onPress() {
         return GuildActionSheetActions.handleLeaveServer(guild);
       };
-      items[3] = closure_3(guild(6881).ActionSheetRow, obj6);
+      items[3] = closure_3(guild(6888).ActionSheetRow, obj6);
       obj4.children = items;
-      obj2.children = closure_4(guild(6881).ActionSheetRow.Group, obj4);
-      return closure_3(guild(6885).ActionSheet, obj2);
+      obj2.children = closure_4(guild(6888).ActionSheetRow.Group, obj4);
+      return closure_3(guild(6892).ActionSheet, obj2);
     };

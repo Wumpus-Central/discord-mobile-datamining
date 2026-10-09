@@ -231,7 +231,7 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { value: tmp5, children: children.children };
     }
   : function DisableCustomTheme(children) {
-      themeContext = themeContext(4787).useThemeContext();
+      themeContext = themeContext(4788).useThemeContext();
       const items = [themeContext];
       const memo = noop.useMemo(() => {
         const obj2 = {};
@@ -241,5 +241,5 @@ export const DisableCustomTheme = ReactCompilerGating.isReactCompilerEnabled()
         obj2.gradient = null;
         return native.createThemedContext(obj2);
       }, items);
-      return jsx(themeContext(4787).ThemeContext.Provider, { value: memo, children: children.children });
+      return jsx(themeContext(4788).ThemeContext.Provider, { value: memo, children: children.children });
     };

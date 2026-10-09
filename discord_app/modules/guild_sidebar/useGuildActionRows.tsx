@@ -10,7 +10,7 @@ import GuildOnboardingHomeSettingsStore from "../guild_onboarding_home/GuildOnbo
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7245).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7250).ChannelListGuildActionRow;
 const GuildFeatures = fn(1085).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -19,7 +19,7 @@ let result = size.fileFinishedImporting("modules/guild_sidebar/useGuildActionRow
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildActionRows(id) {
       _require = id;
-      const cResult = require("c").c(10);
+      const cResult = require("c").c(11);
       const obj = require("c");
       const tmp5 = useCanSeeEventsInChannelListDefault(id.id);
       let canReviewGuildMemberApplications =
@@ -100,6 +100,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === gameServerEnabled) {
         if (cResult[7] === tmp29) {
           if (cResult[8] === isGameServerTabAlwaysOnEnabled) {
+            const _Symbol = Symbol;
+            if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+              const obj7 = { bypassAutoDismiss: true };
+              cResult[10] = obj7;
+              let tmp33 = obj7;
+            } else {
+              tmp33 = cResult[10];
+            }
             const items2 = [];
             if (hasItem) {
               items2.push(ChannelListGuildActionRow.GUILD_HUB_HEADER_OPTIONS);
@@ -110,11 +118,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ) {
                 items2.push(ChannelListGuildActionRow.GUILD_ONBOARDING_SETUP_PROGRESS);
               }
-              let tmp43 = !hasItem;
+              let tmp44 = !hasItem;
               if (!hasItem) {
-                tmp43 = canSeeOnboardingHome;
+                tmp44 = canSeeOnboardingHome;
               }
-              if (tmp43) {
+              if (tmp44) {
                 items2.push(ChannelListGuildActionRow.GUILD_HOME);
               }
               if (canUseGuildSpace) {
@@ -123,11 +131,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tmp5) {
                 items2.push(ChannelListGuildActionRow.GUILD_SCHEDULED_EVENTS);
               }
-              let tmp50 = !hasItem;
+              let tmp51 = !hasItem;
               if (!hasItem) {
-                tmp50 = hasItem1;
+                tmp51 = hasItem1;
               }
-              if (tmp50) {
+              if (tmp51) {
                 items2.push(ChannelListGuildActionRow.CHANNELS_AND_ROLES);
               }
               if (showRoleSubscriptionsInChannelList) {
@@ -155,9 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (gameServerEnabled) {
                 if (tmp29) {
                   items2.push(ChannelListGuildActionRow.GAME_SERVERS);
-                } else if (
-                  null != _slicedToArray(tmpResult18.useSelectedDismissibleContent(cResult[9], undefined, true), 1)[0]
-                ) {
+                } else if (null != _slicedToArray(tmpResult18.useSelectedDismissibleContent(cResult[9], tmp33), 1)[0]) {
                   items2.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
                 }
               }
@@ -184,14 +190,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (premiumProgressBarEnabled) {
               items2.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
             }
-            tmpResult18 = tmp(7090);
+            tmpResult18 = tmp(7093);
           }
         }
       }
       if (gameServerEnabled) {
         if (isGameServerTabAlwaysOnEnabled) {
           if (!tmp29) {
-            let items3 = [tmp(2048).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+            let items3 = [tmp(2049).DismissibleContent.EMPTY_GAME_SERVER_TAB];
           }
           cResult[6] = gameServerEnabled;
           cResult[7] = tmp29;
@@ -262,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (gameServerEnabled) {
         if (isGameServerTabAlwaysOnEnabled) {
           if (!hasItem3) {
-            let items2 = [tmp4(2048).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+            let items2 = [tmp4(2049).DismissibleContent.EMPTY_GAME_SERVER_TAB];
           }
           const items3 = [];
           if (hasItem) {
@@ -317,7 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (gameServerEnabled) {
               if (hasItem3) {
                 items3.push(ChannelListGuildActionRow.GAME_SERVERS);
-              } else if (null != _slicedToArray(tmp27(items2, undefined, true), 1)[0]) {
+              } else if (null != _slicedToArray(tmp27(items2, { bypassAutoDismiss: true }), 1)[0]) {
                 items3.push(ChannelListGuildActionRow.GAME_SERVERS_EMPTY);
               }
             }

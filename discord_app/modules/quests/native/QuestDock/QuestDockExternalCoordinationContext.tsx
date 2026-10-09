@@ -6,8 +6,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestDockStore from "QuestDockStore.tsx";
 
 require = fn;
-let QuestDockMode = fn(5977).QuestDockMode;
-let closure_5 = fn(15174).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
+let QuestDockMode = fn(5979).QuestDockMode;
+let closure_5 = fn(15285).QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD;
 const jsx = fn(21).jsx;
 const SECOND = DurationsDefault.Millis.SECOND;
 let obj = {
@@ -16,16 +16,16 @@ let obj = {
   lastScrollEventSourceId: null,
   questDockOffset: null,
 };
-let ReanimatedHelperTypes = fn(6754);
+let ReanimatedHelperTypes = fn(6761);
 obj.restingQuestDockMode = ReanimatedHelperTypes.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj.setRestingQuestDockMode = function setRestingQuestDockMode() {};
-ReanimatedHelperTypes = fn(6754);
+ReanimatedHelperTypes = fn(6761);
 obj.lastScrollEventSourceId = ReanimatedHelperTypes.createFakeSharedValue(null);
-ReanimatedHelperTypes = fn(6754);
+ReanimatedHelperTypes = fn(6761);
 obj.questDockOffset = ReanimatedHelperTypes.createFakeSharedValue(0);
 let context = noop.createContext(obj);
 fn(558);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 const IS_ANDROID = PlatformUtils.isAndroid();
 const __initData = {
   code: "function QuestDockExternalCoordinationContextTsx1(){const{restingQuestDockMode}=this.__closure;return restingQuestDockMode.get();}",

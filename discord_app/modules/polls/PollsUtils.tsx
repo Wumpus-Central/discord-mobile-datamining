@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01278_v1.js";
+import v1 from "../../../_runtime/01279_v1.js";
 import utils_StringUtils from "../../../discord_common/js/shared/utils/StringUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(7873).ReactionTypes.VOTE,
+    channel(7882).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -104,7 +104,7 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(7943);
+const PollsConstants = fn(7952);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
 const Constants = fn(1085);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
@@ -131,7 +131,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "Reflect", localCreationAnswerId: v1.v4() };
+  const obj = { text: "Array", image: "Set", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export { generateLocalCreationAnswerId };

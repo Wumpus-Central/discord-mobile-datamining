@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "https://support.discord.com/hc/en-us/articles/42855178312087";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   content: { flexGrow: 1, width: "100%" },
   upperHalf: { flex: 1, justifyContent: "flex-end", alignItems: "center" },

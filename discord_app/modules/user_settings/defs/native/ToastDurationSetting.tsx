@@ -2,7 +2,6 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import DesignSystemsNotificationComponentsExperiment from "../../../design/DesignSystemsNotificationComponentsExperiment.tsx";
 import CirclePlusIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
 import CircleMinusIcon from "../../../../design/components/Icon/native/redesign/generated/CircleMinusIcon.tsx";
@@ -13,7 +12,7 @@ require = fn;
 const Accessibility = fn(1085).Accessibility;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useToastDurationSettingProps() {
       const cResult = c.c(15);
@@ -143,12 +142,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["3oxlia"]);
   },
-  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
-  usePredicate() {
-    return DesignSystemsNotificationComponentsExperiment.useDesignSystemsNotificationComponents(
-      "ToastDurationSettingNative",
-    );
-  },
+  parent: fn(7974).MobileUserSettings.ACCESSIBILITY,
   useProps: ReactCompilerGating.isReactCompilerEnabled()
     ? function useToastDurationSettingProps() {
         const cResult = c.c(15);

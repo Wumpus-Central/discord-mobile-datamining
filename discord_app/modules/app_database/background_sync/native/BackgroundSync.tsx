@@ -74,7 +74,7 @@ let closure_17 = async function _backgroundSync(arg0) {
             closure_130_7 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1093,13 +1093,13 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6035);
-const ChannelStore = fn(2063);
-const EmojiStore = fn(5992);
+const StickersStore = fn(6037);
+const ChannelStore = fn(2064);
+const EmojiStore = fn(5994);
 const GuildStore = fn(2086);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;

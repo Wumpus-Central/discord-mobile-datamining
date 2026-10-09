@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          AnalyticsLocationProvider = AnalyticsLocationProvider(6841).AnalyticsLocationProvider;
+          AnalyticsLocationProvider = AnalyticsLocationProvider(6848).AnalyticsLocationProvider;
           const obj2 = { value: analyticsLocations, children: tmp12 };
           tmp = <AnalyticsLocationProvider value={analyticsLocations}>{tmp12}</AnalyticsLocationProvider>;
           cResult[8] = analyticsLocations;
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { currentUser: stateFromStores };
         const merged = Object.assign(arg0);
         obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-        tmp7 = jsx(tmp4(6841).AnalyticsLocationProvider, {
+        tmp7 = jsx(tmp4(6848).AnalyticsLocationProvider, {
           value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations,
           children: null,
         });

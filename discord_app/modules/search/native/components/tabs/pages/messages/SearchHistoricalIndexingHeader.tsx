@@ -1,13 +1,13 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchHistoricalIndexingHeader.tsx
-import tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../../../user_settings/LocaleStore.tsx";
 
 const require = fn;
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({
   header: { marginBottom: 16 },
   headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING },
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== tmp14) {
             const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 };
-            const tmp18 = jsx(tmp(5086).Text, {
+            const tmp18 = jsx(tmp(5087).Text, {
               variant: "heading-sm/normal",
               color: "interactive-text-default",
               children: tmp14,
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp19;
           }
           const obj4 = { variant: "primary", border: "subtle", style: tmp13, children: tmp16 };
-          const tmp21 = jsx(tmp(6186).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
+          const tmp21 = jsx(tmp(6188).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
           cResult[13] = tmp13;
           cResult[14] = tmp16;
           cResult[15] = tmp21;
@@ -90,7 +90,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = items;
       }
       const fn = function b() {
-        tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
+        search_tracking_TrackingDefault.trackSearchIndexing({
+          searchContext,
+          isHistoricalIndexing: true,
+          documentsIndexed,
+        });
       };
       const items1 = [documentsIndexed, searchContext];
       cResult[2] = documentsIndexed;
@@ -118,7 +122,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return headerMessages;
       }, items1);
       const effect = noop.useEffect(() => {
-        tracking_TrackingDefault.trackSearchIndexing({ searchContext, isHistoricalIndexing: true, documentsIndexed });
+        search_tracking_TrackingDefault.trackSearchIndexing({
+          searchContext,
+          isHistoricalIndexing: true,
+          documentsIndexed,
+        });
       }, items2);
       const obj = { variant: "primary", border: "subtle", style: null, children: null };
       const items3 = [tmp.header, memo1];

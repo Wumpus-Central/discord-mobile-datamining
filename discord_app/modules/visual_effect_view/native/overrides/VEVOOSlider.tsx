@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import _modDef8380 from "../../../../../_runtime/metro/08380__.js";
+import _modDef8388 from "../../../../../_runtime/metro/08388__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
-const PlatformUtils = fn(1381);
+const createStyles = fn(5091);
+const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = nativeDefault.space.PX_8;
@@ -78,7 +78,7 @@ export default noop.memo(
             onValueChange,
             onResponderGrant: tmp10,
           };
-          const tmp15 = jsx(_modDef8380, {
+          const tmp15 = jsx(_modDef8388, {
             style: tmp7,
             disabled,
             value: current,

@@ -1,16 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import REAWorkaroundViewDefault from "../../../reanimated/native/REAWorkaroundView.tsx";
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
-import Suspender from "../../../../../_runtime/05328_Suspender.js";
+import Suspender from "../../../../../_runtime/05329_Suspender.js";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
 import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture.tsx";
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext.tsx";
@@ -30,13 +30,13 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9233).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9271).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
 let ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_14 = createStyles.createStyles({
   onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH },
 });

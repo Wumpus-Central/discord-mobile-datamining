@@ -4,16 +4,17 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import DeviceMediaDefault from "../../../device/native/DeviceMedia.tsx";
-import _modDef9997 from "../../../../../_runtime/metro/09997__.js";
+import _modDef10016 from "../../../../../_runtime/metro/10016__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
+({ View: c3, ActivityIndicator: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5091);
 let obj = {
   container: { padding: nativeDefault.space.PX_16, height: 280, alignItems: "center" },
   label: { textAlign: "center", marginBottom: 16 },
@@ -24,7 +25,7 @@ let obj3 = { padding: nativeDefault.space.PX_16, height: 280, alignItems: "cente
 obj.buttonWrapper = { marginBottom: nativeDefault.space.PX_32, height: nativeDefault.space.PX_48 };
 let obj4 = { marginBottom: nativeDefault.space.PX_32, height: nativeDefault.space.PX_48 };
 obj.loadingSpinner = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: nativeDefault.space.PX_16 };
-let closure_8 = createStyles.createStyles(obj);
+let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj5 = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, margin: nativeDefault.space.PX_16 };
 const size = fn(2);
@@ -35,7 +36,7 @@ export default noop.memo(
     ? function MediaKeyboardFooter(arg0) {
         const cResult = c.c(17);
         ({ disabled, onViewAll } = arg0);
-        const tmp4 = closure_8();
+        const tmp4 = closure_7();
         if (obj2.useHasReachedEnd()) {
           const _Symbol = Symbol;
           ({ container, label } = tmp4);
@@ -49,7 +50,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4.label) {
             const obj3 = { variant: "text-sm/normal", style: label, children: tmp11 };
-            const tmp15 = timestampProducer(Text_Text.Text, obj3);
+            const tmp15 = hasOwnProperty(Text_Text.Text, obj3);
             cResult[3] = tmp4.label;
             cResult[4] = tmp15;
             let tmp13 = tmp15;
@@ -75,10 +76,11 @@ export default noop.memo(
               }
               const _Symbol3 = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj4 = { source: _modDef9997 };
-                const tmp28 = timestampProducer(React4, obj4);
+                const obj4 = { source: _modDef10016 };
+                const tmp28 = hasOwnProperty(FastImageDefault, obj4);
                 cResult[12] = tmp28;
                 let tmp25 = tmp28;
+                const tmp5Result = FastImageDefault;
               } else {
                 tmp25 = cResult[12];
               }
@@ -93,7 +95,7 @@ export default noop.memo(
               const obj5 = { style: container, children: null };
               const items = [tmp13, tmp21, tmp25];
               obj5.children = items;
-              const tmp32 = React5(React3, obj5);
+              const tmp32 = timestampProducer(React3, obj5);
               cResult[13] = tmp4.container;
               cResult[14] = tmp13;
               cResult[15] = tmp21;
@@ -101,14 +103,14 @@ export default noop.memo(
               tmp29 = tmp32;
             }
             const obj6 = { style: tmp4.buttonWrapper, children: tmp18 };
-            const tmp24 = timestampProducer(React3, obj6);
+            const tmp24 = hasOwnProperty(React3, obj6);
             cResult[9] = tmp4.buttonWrapper;
             cResult[10] = tmp18;
             cResult[11] = tmp24;
             tmp21 = tmp24;
           }
           const obj7 = { variant: "primary", size: "sm", onPress: onViewAll, text: tmp16, disabled };
-          const tmp20 = timestampProducer(components_Button_Button.Button, obj7);
+          const tmp20 = hasOwnProperty(components_Button_Button.Button, obj7);
           cResult[6] = disabled;
           cResult[7] = onViewAll;
           cResult[8] = tmp20;
@@ -116,7 +118,7 @@ export default noop.memo(
         } else {
           if (cResult[0] !== tmp4.loadingSpinner) {
             const obj8 = { style: tmp4.loadingSpinner, size: "large", color: tmp4.loadingSpinner.color };
-            const tmp9 = timestampProducer(hasOwnProperty, obj8);
+            const tmp9 = hasOwnProperty(React4, obj8);
             cResult[0] = tmp4.loadingSpinner;
             cResult[1] = tmp9;
             let tmp6 = tmp9;
@@ -129,27 +131,28 @@ export default noop.memo(
       }
     : function MediaKeyboardFooter(arg0) {
         ({ disabled, onViewAll } = arg0);
-        const tmp = closure_8();
+        const tmp = closure_7();
         if (obj.useHasReachedEnd()) {
           const obj2 = { style: tmp.container, children: null };
           const obj3 = { variant: "text-sm/normal", style: tmp.label, children: null };
           const intl = util.intl;
           obj3.children = intl.string(util.t.mKSwAW);
-          const items = [timestampProducer(Text_Text.Text, obj3), ,];
+          const items = [hasOwnProperty(Text_Text.Text, obj3), ,];
           const obj4 = { style: tmp.buttonWrapper, children: null };
           const obj5 = { variant: "primary", size: "sm", onPress: onViewAll, text: null, disabled: null };
           const intl2 = util.intl;
           obj5.text = intl2.string(util.t.ZT24In);
           obj5.disabled = disabled;
-          obj4.children = timestampProducer(components_Button_Button.Button, obj5);
-          items[1] = timestampProducer(React3, obj4);
-          const obj6 = { source: _modDef9997 };
-          items[2] = timestampProducer(React4, obj6);
+          obj4.children = hasOwnProperty(components_Button_Button.Button, obj5);
+          items[1] = hasOwnProperty(React3, obj4);
+          const obj6 = { source: _modDef10016 };
+          items[2] = hasOwnProperty(FastImageDefault, obj6);
           obj2.children = items;
-          let tmp6 = React5(React3, obj2);
+          let tmp6 = timestampProducer(React3, obj2);
+          const tmp2Result = FastImageDefault;
         } else {
           const obj7 = { style: tmp.loadingSpinner, size: "large", color: tmp.loadingSpinner.color };
-          tmp6 = timestampProducer(hasOwnProperty, obj7);
+          tmp6 = hasOwnProperty(React4, obj7);
         }
         return tmp6;
       },

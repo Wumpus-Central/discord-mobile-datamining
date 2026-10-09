@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8292).getSingleRequirementThreshold;
+let closure_4 = fn(8300).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = hasOwnProperty(View, obj2);
       return hasOwnProperty(View, obj);
     };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj3 = {
   container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 },
   content: null,

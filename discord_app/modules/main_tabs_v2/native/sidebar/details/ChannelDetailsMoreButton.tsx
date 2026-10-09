@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
-import _modDef8646 from "../../../../../../_runtime/metro/08646__.js";
+import _modDef8654 from "../../../../../../_runtime/metro/08654__.js";
 import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -49,9 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== tmp3) {
           let obj2 = { children: null };
-          HeaderIconButton = HeaderIconButton(9232).HeaderIconButton;
+          HeaderIconButton = HeaderIconButton(9270).HeaderIconButton;
           const obj3 = { accessibilityLabel: tmp6, source: null, onPress: null };
-          tmp = _modDef8646;
+          tmp = _modDef8654;
           obj3.source = tmp;
           obj3.onPress = tmp3;
           obj2.children = <HeaderIconButton accessibilityLabel={tmp6} source={null} onPress={null} />;
@@ -72,9 +72,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { accessibilityLabel: null, source: null, onPress: null };
           const intl = channel(1126).intl;
           obj2.accessibilityLabel = intl.string(channel(1126).t["UKOtz+"]);
-          obj2.source = _modDef8646;
+          obj2.source = _modDef8654;
           obj2.onPress = tmp;
-          obj.children = jsx(channel(9232).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+          obj.children = jsx(channel(9270).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
           tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
         } else {
           tmp2 = null;

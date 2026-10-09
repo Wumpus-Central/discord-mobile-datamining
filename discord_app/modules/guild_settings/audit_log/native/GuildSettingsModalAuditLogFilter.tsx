@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../../_runtime/06099_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../_runtime/06101_fuzzysearch.js";
 import FormRadio from "../../../../design/components/Forms/native/FormRadio.native.tsx";
 import DetailedGuildIdentityUserRowDefault from "../../native/DetailedGuildIdentityUserRow.tsx";
 import AuditLogUtils from "../AuditLogUtils.tsx";
@@ -21,7 +21,7 @@ const View = fn(17).View;
 const AuditLogFilterTypes = fn(1085).AuditLogFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   searchBar: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_16 },
   allUsersIconContainer: { height: 30, width: 30, alignItems: "center" },
@@ -116,10 +116,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guildId = guildId.guildId;
       let tmp4 = closure_12();
       dependencyMap = tmp4;
-      const bottom = guildId(1630)().bottom;
+      const bottom = guildId(1631)().bottom;
       let obj = filterType(576);
-      const navigation = filterType(1502).useNavigation();
-      let obj2 = filterType(1502);
+      const navigation = filterType(1503).useNavigation();
+      let obj2 = filterType(1503);
       let obj3 = first;
       first = navigation(first.useState(""), 2)[0];
       if (cResult[0] === data) {
@@ -240,7 +240,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
-                              const tmp26 = closure_9(filterType(6730).SearchField, obj5);
+                              const tmp26 = closure_9(filterType(6737).SearchField, obj5);
                               cResult[25] = tmp20;
                               cResult[26] = tmp26;
                               let tmp24 = tmp26;

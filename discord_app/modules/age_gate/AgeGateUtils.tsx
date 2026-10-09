@@ -13,6 +13,7 @@ import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import getTinyBroncoWarningDescriptions2 from "../tiny_bronco/getTinyBroncoWarningDescriptions.tsx";
 import AgeGateModalActionCreators from "AgeGateModalActionCreators.tsx";
+import NSFWContentGate from "NSFWContentGate.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildNSFWAgreeStore from "../../stores/GuildNSFWAgreeStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -570,7 +571,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
       const tmpResult4 = require("initialize");
       let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-        tmp(5917).AgeGatedFeature.AGE_GATED_SPACES,
+        tmp(5918).AgeGatedFeature.AGE_GATED_SPACES,
       );
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];
@@ -1279,17 +1280,6 @@ function shouldShowAgeGateForVoiceChannel(channelId) {
   }
   return result;
 }
-function isChannelOrGuildNSFW(channel) {
-  let tmp = null != channel;
-  if (tmp) {
-    let isNSFWResult = channel.isNSFW();
-    if (!isNSFWResult) {
-      isNSFWResult = isGuildNSFW(GuildStore.getGuild(channel.guild_id));
-    }
-    tmp = isNSFWResult;
-  }
-  return tmp;
-}
 function isCurrentUserMissingDateOfBirth() {
   const currentUser = UserStore.getCurrentUser();
   return null != currentUser && null == currentUser.nsfwAllowed;
@@ -1400,46 +1390,14 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
     }
   }
 };
-export { isChannelOrGuildNSFW };
-export const isChannelAgeVerificationGated = function isChannelAgeVerificationGated(isNSFW) {
-  if (null == isNSFW) {
-    return false;
-  } else {
-    let tmp4 = null != isNSFW;
-    const result = AgeVerificationUtils.shouldShowTiggerPawtect();
-    if (tmp4) {
-      let isNSFWResult = isNSFW.isNSFW();
-      if (!isNSFWResult) {
-        isNSFWResult = isGuildNSFW(GuildStore.getGuild(isNSFW.guild_id));
-      }
-      tmp4 = isNSFWResult;
-    }
-    if (tmp4) {
-      tmp4 = result;
-    }
-    return tmp4;
-  }
-};
-export const userCannotSeeNSFWContent = function userCannotSeeNSFWContent(channel) {
+export const isChannelOrGuildNSFW = NSFWContentGate.isChannelOrGuildNSFW;
+export const userCannotSeeNSFWContent = NSFWContentGate.userCannotSeeNSFWContent;
+export const isChannelAgeVerificationGated = function isChannelAgeVerificationGated(channel) {
   if (null == channel) {
     return false;
   } else {
-    const currentUser = UserStore.getCurrentUser();
-    if (currentUser != null) {
-      const nsfwAllowed = currentUser.nsfwAllowed;
-    }
-    let tmp3 = null != channel;
-    if (tmp3) {
-      let isNSFWResult = channel.isNSFW();
-      if (!isNSFWResult) {
-        isNSFWResult = isGuildNSFW(GuildStore.getGuild(channel.guild_id));
-      }
-      tmp3 = isNSFWResult;
-    }
-    if (tmp3) {
-      tmp3 = true !== nsfwAllowed;
-    }
-    return tmp3;
+    const result = AgeVerificationUtils.shouldShowTiggerPawtect();
+    return NSFWContentGate.isChannelOrGuildNSFW(channel) && result;
   }
 };
 export { isChannelContentGated };

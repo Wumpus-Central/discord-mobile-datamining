@@ -1,12 +1,12 @@
 // discord_app/modules/badges/native/openCustomizeBadgesSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/badges/native/openCustomizeBadgesSheet.tsx");
 
 export const openCustomizeBadgesSheet = function openCustomizeBadgesSheet(analyticsLocations) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14692, dependencyMap.paths), "Customize Badges", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14798, dependencyMap.paths), "Customize Badges", {
     analyticsLocations: analyticsLocations.analyticsLocations,
   });
 };

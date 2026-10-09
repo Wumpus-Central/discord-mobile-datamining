@@ -10,11 +10,11 @@ import CodedLink from "../../coded_links/CodedLink.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../chat/native/ChatChangesetUpdateTracker.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import MessageDataSnowflakeUtils from "snowflake/MessageDataSnowflakeUtils.tsx";
 import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9318).updateShouldShowJumpToPresentButton;
+let closure_6 = fn(9356).updateShouldShowJumpToPresentButton;
 let closure_7 = fn(2124).getUserCommunicationDisabledVersion;
-const Changeset = fn(7720).Changeset;
+const Changeset = fn(7729).Changeset;
 const Constants = fn(1085);
 ({
   ActivityActionTypes: closure_12,

@@ -13,36 +13,36 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1393).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
 let c8 = 0.4;
 let c9 = 1.14;
 let items = [
-  fn(15460).EmojiAngryFaceWithHornsIcon,
-  fn(15462).EmojiColdFaceIcon,
-  fn(15464).EmojiCowboyHatFaceIcon,
-  fn(15466).EmojiCryingFaceIcon,
-  fn(15468).EmojiDisguisedFaceIcon,
-  fn(15470).EmojiFaceVomitingIcon,
-  fn(15472).EmojiFaceWithMonocleIcon,
-  fn(15474).EmojiFaceWithSpiralEyesIcon,
-  fn(15476).EmojiMeltingFaceIcon,
-  fn(15478).EmojiMoneyMouthFaceIcon,
-  fn(15480).EmojiNerdFaceIcon,
-  fn(15482).EmojiPartyingFaceIcon,
-  fn(15484).EmojiSalutingFaceIcon,
-  fn(15486).EmojiSkullIcon,
-  fn(15488).EmojiSmilingFaceWithHornsIcon,
-  fn(15490).EmojiSmilingFaceWithSunglassesIcon,
-  fn(15492).EmojiSquintingFaceWithTongueIcon,
-  fn(15494).EmojiUpsideDownFaceIcon,
-  fn(15496).EmojiWoozyFaceIcon,
-  fn(15498).EmojiZanyFaceIcon,
-  fn(15500).EmojiRollingOnTheFloorLaughingIcon,
-  fn(15502).EmojiSmilingFaceWithHeartsIcon,
+  fn(15573).EmojiAngryFaceWithHornsIcon,
+  fn(15575).EmojiColdFaceIcon,
+  fn(15577).EmojiCowboyHatFaceIcon,
+  fn(15579).EmojiCryingFaceIcon,
+  fn(15581).EmojiDisguisedFaceIcon,
+  fn(15583).EmojiFaceVomitingIcon,
+  fn(15585).EmojiFaceWithMonocleIcon,
+  fn(15587).EmojiFaceWithSpiralEyesIcon,
+  fn(15589).EmojiMeltingFaceIcon,
+  fn(15591).EmojiMoneyMouthFaceIcon,
+  fn(15593).EmojiNerdFaceIcon,
+  fn(15595).EmojiPartyingFaceIcon,
+  fn(15597).EmojiSalutingFaceIcon,
+  fn(15599).EmojiSkullIcon,
+  fn(15601).EmojiSmilingFaceWithHornsIcon,
+  fn(15603).EmojiSmilingFaceWithSunglassesIcon,
+  fn(15605).EmojiSquintingFaceWithTongueIcon,
+  fn(15607).EmojiUpsideDownFaceIcon,
+  fn(15609).EmojiWoozyFaceIcon,
+  fn(15611).EmojiZanyFaceIcon,
+  fn(15613).EmojiRollingOnTheFloorLaughingIcon,
+  fn(15615).EmojiSmilingFaceWithHeartsIcon,
 ];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_11 = createStyles.createStyles({
   slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" },
 });
@@ -162,13 +162,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         return obj;
       };
-      let obj2 = pressed(4810);
+      let obj2 = pressed(4811);
       fn.__closure = {
         pressed,
-        withSpring: pressed(5374).withSpring,
-        interpolate: pressed(4810).interpolate,
+        withSpring: pressed(5375).withSpring,
+        interpolate: pressed(4811).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5378).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5379).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__workletHash = 16574219123934;
@@ -203,10 +203,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmp9 = tmp10;
       let obj3 = {
         pressed,
-        withSpring: pressed(5374).withSpring,
-        interpolate: pressed(4810).interpolate,
+        withSpring: pressed(5375).withSpring,
+        interpolate: pressed(4811).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5378).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5379).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
     }
@@ -233,13 +233,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         return obj;
       };
-      let obj = pressed(4810);
+      let obj = pressed(4811);
       fn.__closure = {
         pressed,
-        withSpring: pressed(5374).withSpring,
-        interpolate: pressed(4810).interpolate,
+        withSpring: pressed(5375).withSpring,
+        interpolate: pressed(4811).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5378).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5379).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__workletHash = 4597331743997;
@@ -497,13 +497,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onChange = emojis.onChange;
       _slicedToArray = undefined;
       dependencyMap = _slicedToArray(
-        noop.useState(() => emojis(12).sampleSize(items, emojis(1410).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
+        noop.useState(() => emojis(12).sampleSize(items, emojis(1411).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)),
         1,
       )[0];
-      _slicedToArray = emojis(1410).getCustomTypingIndicatorEmojisKey(emojis);
+      _slicedToArray = emojis(1411).getCustomTypingIndicatorEmojisKey(emojis);
       const obj2 = { direction: "horizontal", spacing: 8, children: null };
-      let obj = emojis(1410);
-      obj2.children = Array.from({ length: emojis(1410).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
+      let obj = emojis(1411);
+      obj2.children = Array.from({ length: emojis(1411).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT }, (arg0, index) => {
         const obj = { index, emoji: null, emojisKey: null, placeholderIcon: null, onChange: null };
         let tmp3 = emojis[index];
         if (tmp3 == null) {
@@ -517,5 +517,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           <closure_16 key={index} index={index} emoji={null} emojisKey={null} placeholderIcon={null} onChange={null} />
         );
       });
-      return jsx(emojis(5373).Stack, { direction: "horizontal", spacing: 8, children: null });
+      return jsx(emojis(5374).Stack, { direction: "horizontal", spacing: 8, children: null });
     };

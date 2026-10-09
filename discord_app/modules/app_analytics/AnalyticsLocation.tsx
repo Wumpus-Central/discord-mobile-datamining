@@ -655,4 +655,5 @@ export default {
   CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK: "custom typing indicator profile coachmark",
   CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET: "custom typing indicator announcement sheet",
   CHAT_TYPING_INDICATOR: "chat typing indicator",
+  MACARON_PREMIUM_TAB_POPOVER: "",
 };

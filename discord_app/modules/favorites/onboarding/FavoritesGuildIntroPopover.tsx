@@ -10,7 +10,7 @@ import DismissibleContentShownStateStore_mod from "../../dismissible_content/Dis
 import FavoriteStore from "../FavoriteStore.tsx";
 
 require = fn;
-let DismissibleContentShownStateStore = fn(2055);
+let DismissibleContentShownStateStore = fn(2056);
 ({ isContentShown: hasOwnProperty, useIsContentShown: metroRequire } = DismissibleContentShownStateStore);
 let DismissibleContentShownStateStore = DismissibleContentShownStateStore_mod;
 const NOOP = fn(1085).NOOP;
@@ -80,7 +80,7 @@ const result = size.fileFinishedImporting("modules/favorites/onboarding/Favorite
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function FavoritesGuildIntroPopover() {
-        const cResult = c.c(20);
+        const cResult = c.c(21);
         const favoritesAccess = FavoritesHooks.useFavoritesAccess("FavoritesGuildIntroPopover");
         ({ hasAccess, isFreemium } = favoritesAccess);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -112,12 +112,12 @@ export default noop.memo(
             if (cResult[5] === isFreemium) {
               if (cResult[6] === stateFromStores) {
                 if (cResult[7] === tmp11) {
-                  const tmpResult3 = tmp(7090);
-                  [tmp14, tmp15] = tmp(7090).useSelectedDismissibleContent(cResult[8]);
+                  const tmpResult3 = tmp(7093);
+                  [tmp14, tmp15] = tmp(7093).useSelectedDismissibleContent(cResult[8]);
                   const require = tmp15;
                   if (cResult[9] !== tmp14) {
-                    if (tmp14 === tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-                      const items1 = [tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+                    if (tmp14 === tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+                      const items1 = [tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
                       let items2 = items1;
                     } else {
                       items2 = [];
@@ -125,40 +125,20 @@ export default noop.memo(
                     cResult[9] = tmp14;
                     cResult[10] = items2;
                   } else {
-                    const tmp17 =
-                      _slicedToArray(tmp(7090).useSelectedDismissibleContent(cResult[10], undefined, true), 1)[0] ===
-                      tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
-                    importDefault = tmp17;
-                    if (cResult[11] !== tmp17) {
-                      class V {
-                        constructor() {
-                          if (closure_1) {
-                            flag = true;
-                            c11 = true;
-                          }
-                          return;
-                        }
-                      }
-                      const items3 = [tmp17];
-                      cResult[11] = tmp17;
-                      cResult[12] = V;
-                      cResult[13] = items3;
-                      let tmp19 = items3;
+                    const _Symbol = Symbol;
+                    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+                      const obj3 = { bypassAutoDismiss: true };
+                      cResult[11] = obj3;
+                      let tmp17 = obj3;
                     } else {
-                      class V {
-                        constructor() {
-                          if (closure_1) {
-                            flag = true;
-                            c11 = true;
-                          }
-                          return;
-                        }
-                      }
-                      tmp19 = cResult[13];
+                      tmp17 = cResult[11];
                     }
-                    const effect = noop.useEffect(V, tmp19);
-                    if (cResult[14] === tmp15) {
-                      class V {
+                    const tmp18 =
+                      _slicedToArray(tmp(7093).useSelectedDismissibleContent(cResult[10], tmp17), 1)[0] ===
+                      tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+                    importDefault = tmp18;
+                    if (cResult[12] !== tmp18) {
+                      class T {
                         constructor() {
                           if (closure_1) {
                             flag = true;
@@ -167,46 +147,73 @@ export default noop.memo(
                           return;
                         }
                       }
-                      const layoutEffect = noop.useLayoutEffect(C, tmp22);
-                      const _Symbol = Symbol;
-                      if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
+                      const items3 = [tmp18];
+                      cResult[12] = tmp18;
+                      cResult[13] = T;
+                      cResult[14] = items3;
+                      let tmp20 = items3;
+                    } else {
+                      class T {
+                        constructor() {
+                          if (closure_1) {
+                            flag = true;
+                            c11 = true;
+                          }
+                          return;
+                        }
+                      }
+                      tmp20 = cResult[14];
+                    }
+                    const effect = noop.useEffect(T, tmp20);
+                    if (cResult[15] === tmp15) {
+                      class T {
+                        constructor() {
+                          if (closure_1) {
+                            flag = true;
+                            c11 = true;
+                          }
+                          return;
+                        }
+                      }
+                      const layoutEffect = noop.useLayoutEffect(G, tmp23);
+                      const _Symbol2 = Symbol;
+                      if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
                         class M {
                           constructor() {
                             return () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed });
                           }
                         }
                         const items4 = [];
-                        cResult[18] = items4;
                         cResult[19] = M;
-                        let tmp25 = M;
-                        const tmp24 = items4;
+                        cResult[20] = items4;
+                        let tmp26 = items4;
                       } else {
                         class M {
                           constructor() {
                             return () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed });
                           }
                         }
-                        tmp25 = cResult[19];
+                        tmp26 = cResult[20];
                       }
-                      const layoutEffect1 = noop.useLayoutEffect(tmp25, tmp24);
+                      const layoutEffect1 = noop.useLayoutEffect(M, tmp26);
                       return null;
                     }
-                    class C {
+                    class G {
                       constructor() {
                         obj = { shouldShowPopover: closure_1, markPopoverAsDismissed: closure_0 };
                         setStateResult = closure_10.setState(obj);
                         return;
                       }
                     }
-                    const items5 = [tmp17, tmp15];
-                    cResult[14] = tmp15;
-                    cResult[15] = tmp17;
-                    cResult[16] = C;
-                    cResult[17] = items5;
-                    tmp22 = items5;
-                    const tmpResult4 = tmp(7090);
+                    const items5 = [tmp18, tmp15];
+                    cResult[15] = tmp15;
+                    cResult[16] = tmp18;
+                    cResult[17] = G;
+                    cResult[18] = items5;
+                    tmp23 = items5;
+                    const tmpResult4 = tmp(7093);
                   }
-                  const tmp13 = _slicedToArray(tmp(7090).useSelectedDismissibleContent(cResult[8]), 2);
+                  const tmp13 = _slicedToArray(tmp(7093).useSelectedDismissibleContent(cResult[8]), 2);
                 }
               }
             }
@@ -238,19 +245,19 @@ export default noop.memo(
             if (!stateFromStores) {
               if (tmp5) {
                 if (tmp6) {
-                  let items1 = [tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
+                  let items1 = [tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
                 }
                 const tmp10 = _slicedToArray(tmp8(items1), 2);
                 _require = tmp11;
-                if (tmp10[0] === tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
-                  const items2 = [tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
+                if (tmp10[0] === tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
+                  const items2 = [tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
                   let items3 = items2;
                 } else {
                   items3 = [];
                 }
                 const tmp12 =
-                  _slicedToArray(tmp(7090).useSelectedDismissibleContent(items3, undefined, true), 1)[0] ===
-                  tmp(2048).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+                  _slicedToArray(tmp(7093).useSelectedDismissibleContent(items3, { bypassAutoDismiss: true }), 1)[0] ===
+                  tmp(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
                 importDefault = tmp12;
                 const items4 = [tmp12];
                 const effect = noop.useEffect(() => {

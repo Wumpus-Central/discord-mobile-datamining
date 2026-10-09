@@ -15,10 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(1501).AppLauncherOptionAutoFocusType;
+let closure_4 = fn(1502).AppLauncherOptionAutoFocusType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" },
   optionViewContainer: { flex: 1 },
@@ -1270,10 +1270,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onPressAttachmentOption, onFocus, command } = option);
       const tmp = closure_7();
       let type = name.type;
-      if (name(1997).ApplicationCommandOptionType.STRING !== type) {
-        if (tmp2(1997).ApplicationCommandOptionType.INTEGER !== type) {
-          if (tmp2(1997).ApplicationCommandOptionType.NUMBER !== type) {
-            if (tmp2(1997).ApplicationCommandOptionType.ATTACHMENT === type) {
+      if (name(1998).ApplicationCommandOptionType.STRING !== type) {
+        if (tmp2(1998).ApplicationCommandOptionType.INTEGER !== type) {
+          if (tmp2(1998).ApplicationCommandOptionType.NUMBER !== type) {
+            if (tmp2(1998).ApplicationCommandOptionType.ATTACHMENT === type) {
               let obj2 = {
                 style: tmp.option,
                 option: name,
@@ -1295,7 +1295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               let tmp28Result = onDismiss(AppLauncherAttachmentOptionDefault, obj2, name.name);
               let tmp13 = onDismiss;
-            } else if (tmp2(1997).ApplicationCommandOptionType.BOOLEAN === type) {
+            } else if (tmp2(1998).ApplicationCommandOptionType.BOOLEAN === type) {
               let obj3 = { style: tmp.option, option: name, initialValue: null, onPress: null, hasError: null };
               let first;
               if (optionValues.current[name.name] != null) {
@@ -1311,7 +1311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj3.hasError = hasError;
               tmp28Result = tmp35(AppLauncherBooleanOptionDefault, obj3, name.name);
               tmp13 = tmp35;
-            } else if (tmp2(1997).ApplicationCommandOptionType.MENTIONABLE === type) {
+            } else if (tmp2(1998).ApplicationCommandOptionType.MENTIONABLE === type) {
               let obj4 = {
                 option: name,
                 initialValue: null,
@@ -1364,7 +1364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj4.onPress = onPress;
               tmp28Result = tmp28(AppLauncherMentionableOptionDefault, obj4);
               tmp13 = tmp28;
-            } else if (tmp2(1997).ApplicationCommandOptionType.ROLE === type) {
+            } else if (tmp2(1998).ApplicationCommandOptionType.ROLE === type) {
               const obj5 = {
                 style: tmp.option,
                 option: name,
@@ -1400,7 +1400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj5.onPress = onPress;
               tmp28Result = tmp21(AppLauncherRoleOptionDefault, obj5, name.name);
               tmp13 = tmp21;
-            } else if (tmp2(1997).ApplicationCommandOptionType.USER === type) {
+            } else if (tmp2(1998).ApplicationCommandOptionType.USER === type) {
               const obj6 = {
                 style: tmp.option,
                 option: name,
@@ -1440,7 +1440,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj6.onPress = onPress;
               tmp28Result = tmp14(AppLauncherUserOptionDefault, obj6, name.name);
               tmp13 = tmp14;
-            } else if (tmp2(1997).ApplicationCommandOptionType.CHANNEL === type) {
+            } else if (tmp2(1998).ApplicationCommandOptionType.CHANNEL === type) {
               let obj = {
                 style: tmp.option,
                 option: name,
@@ -1490,9 +1490,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return onDismiss(name);
                 },
-                children: tmp13(tmp2(4997).CircleXIcon, { size: "md" }),
+                children: tmp13(tmp2(4998).CircleXIcon, { size: "md" }),
               };
-              items[1] = tmp13(tmp2(6189).PressableOpacity, obj9);
+              items[1] = tmp13(tmp2(6191).PressableOpacity, obj9);
               obj7.children = items;
               tmp62 = closure_6(View, obj7);
             }

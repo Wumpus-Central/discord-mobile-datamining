@@ -5,10 +5,10 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _mod5741 from "module_5741" /* 5741 */;
+import _mod5742 from "module_5742" /* 5742 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef11871 from "../../../../../../_runtime/metro/11871__.js";
+import _modDef11808 from "../../../../../../_runtime/metro/11808__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -20,11 +20,11 @@ const View = fn(17).View;
 fn(1085).AutoCompleteResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const executeCommand = apply.debounce(executeCommandDefault, fn(5399).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(5400).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
   commandChoiceLoadingItem: {
@@ -280,7 +280,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       _modDef38(tmp4, "Invalid autocomplete result type");
       closure_3 = closure_12();
       noop = noop.useMemo(() => 100 * Math.random() + 50, []);
-      const match = _mod5741.match(item);
+      const match = _mod5742.match(item);
       let obj = { type: AutoCompleteResultTypes.CHOICE };
       let obj2 = { type: AutoCompleteResultTypes.LABEL };
       const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
@@ -404,7 +404,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== tmp4.emptyState) {
-        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11871, darkSource: _modDef11871, title: first };
+        const obj2 = { style: tmp4.emptyState, lightSource: _modDef11808, darkSource: _modDef11808, title: first };
         const tmp10 = options(native.EmptyState, obj2);
         cResult[1] = tmp4.emptyState;
         cResult[2] = tmp10;
@@ -415,7 +415,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp7;
     }
   : function AutocompleteFailedEmptyState() {
-      const obj = { style: closure_12().emptyState, lightSource: _modDef11871, darkSource: _modDef11871, title: null };
+      const obj = { style: closure_12().emptyState, lightSource: _modDef11808, darkSource: _modDef11808, title: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.rTAbPn);
       return options(native.EmptyState, obj);

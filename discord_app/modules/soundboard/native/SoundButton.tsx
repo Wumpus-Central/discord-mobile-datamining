@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   button: null,
   buttonPressed: null,
@@ -33,7 +33,7 @@ let obj = {
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = {
   marginTop: 4,
-  height: fn(17539).SOUND_BUTTON_HEIGHT,
+  height: fn(17691).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -45,7 +45,7 @@ obj.button = {
 };
 let obj2 = {
   marginTop: 4,
-  height: fn(17539).SOUND_BUTTON_HEIGHT,
+  height: fn(17691).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",
@@ -69,7 +69,7 @@ const rect = {
   borderRadius: nativeDefault.radii.lg - 2,
 };
 obj.playingBackground = rect;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 24;
@@ -100,7 +100,7 @@ const size1 = {
 obj.lock = size1;
 let closure_9 = createStyles.createStyles(obj);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6189).PressableOpacity);
+let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(6191).PressableOpacity);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAnimationSharedValuesAndHandlers(arg0) {

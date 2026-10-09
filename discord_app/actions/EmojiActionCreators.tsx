@@ -50,7 +50,7 @@ let closure_10 = async function _updateEmoji(arg0) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -142,7 +142,7 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1294).HTTP;
+  const HTTP = guildId(1295).HTTP;
   const request = {
     url: Endpoints.GUILD_EMOJIS(guildId),
     body: { image, name, roles },
@@ -158,8 +158,8 @@ export const uploadEmoji = function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1294).rejectWithMigratedError();
-  const tmp3Result = tmp3(1294);
+  request.rejectWithError = tmp3(1295).rejectWithMigratedError();
+  const tmp3Result = tmp3(1295);
   return HTTP.post(request).then(
     (body) => {
       DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
@@ -219,7 +219,7 @@ export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2045).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2046).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -288,7 +288,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2045).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2046).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {

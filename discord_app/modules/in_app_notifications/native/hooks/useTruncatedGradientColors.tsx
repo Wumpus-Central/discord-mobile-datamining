@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useTruncatedGradientColors() {
       const tmp = closure_4();
-      token = token(4778).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+      token = token(4779).useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
       const obj2 = { gradientColors: null, gradientStyles: tmp.gradient };
       let items = [token];
       obj2.gradientColors = useMemo(() => {

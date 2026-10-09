@@ -11,7 +11,7 @@ import VoicePanelStore from "../voice_panel/VoicePanelStore.tsx";
 const require = globalThis.__r;
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(4936);
+const NavigationRouteUtils = params(4937);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -142,7 +142,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6078).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6080).CHANNEL_PREFIX;
 let c9 = null;
 const ReactCompilerGating = fn(558);
 function isChannelFocused() {

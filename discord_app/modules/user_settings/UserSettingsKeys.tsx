@@ -198,6 +198,7 @@ export const WebUserSettings = {
   BILLING_PANEL: "billing_panel",
   BILLING_PAYMENT_METHODS_CATEGORY: "billing_payment_methods_category",
   BILLING_PAYMENT_METHODS: "billing_payment_methods",
+  BILLING_GIFT_CARDS_MARKETING_BANNER: "billing_gift_cards_marketing_banner",
   BILLING_TRANSACTION_HISTORY_CATEGORY: "billing_transaction_history_category",
   BILLING_TRANSACTION_HISTORY: "billing_transaction_history",
   APP_SECTION: "app_section",

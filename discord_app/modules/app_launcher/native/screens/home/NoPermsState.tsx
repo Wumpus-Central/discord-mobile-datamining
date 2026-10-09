@@ -5,16 +5,16 @@ import util from "../../../../../intl/index.native.tsx";
 import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import AppLauncherTypes from "../../../AppLauncherTypes.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     paddingVertical: 16,
@@ -30,7 +30,7 @@ let obj2 = {
   textContainer: { flexShrink: 1 },
   image: { width: 64, height: 64 },
 };
-let closure_7 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
   paddingVertical: 16,
@@ -49,8 +49,8 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState() {
       const cResult = c.c(10);
-      const tmp4 = closure_7();
-      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11818 : 11819);
+      const tmp4 = closure_6();
+      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11755 : 11756);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== tmp4.textContainer) {
           const obj3 = { style: tmp4.textContainer, variant: "text-sm/medium", color: "text-muted", children: tmp12 };
-          const tmp16 = hasOwnProperty(Text_Text.Text, obj3);
+          const tmp16 = React4(Text_Text.Text, obj3);
           cResult[4] = tmp4.textContainer;
           cResult[5] = tmp16;
           let tmp14 = tmp16;
@@ -87,14 +87,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp8, children: null };
         const items = [tmp9, tmp14];
         obj4.children = items;
-        const tmp20 = timestampProducer(React3, obj4);
+        const tmp20 = hasOwnProperty(View, obj4);
         cResult[6] = tmp4.container;
         cResult[7] = tmp9;
         cResult[8] = tmp14;
         cResult[9] = tmp20;
         tmp17 = tmp20;
       }
-      const tmp10 = hasOwnProperty(React4, { style: tmp4.image, resizeMode: "contain", source: tmp5Result });
+      const tmp10 = React4(FastImageDefault, { style: tmp4.image, resizeMode: "contain", source: tmp5Result });
       cResult[0] = tmp5Result;
       cResult[1] = tmp4.image;
       cResult[2] = tmp10;
@@ -103,17 +103,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = AppLauncherNativeUtils;
     }
   : function EmptyState() {
-      const tmp = closure_7();
-      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11818 : 11819);
+      const tmp = closure_6();
+      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11755 : 11756);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );
       const obj2 = { style: tmp.container, children: null };
-      const items = [hasOwnProperty(React4, { style: tmp.image, resizeMode: "contain", source: tmp4Result })];
+      const items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result })];
       const obj4 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj4.children = intl.string(util.t.uDnXXj);
-      items[1] = hasOwnProperty(Text_Text.Text, obj4);
+      items[1] = React4(Text_Text.Text, obj4);
       obj2.children = items;
-      return timestampProducer(React3, obj2);
+      return hasOwnProperty(View, obj2);
     };

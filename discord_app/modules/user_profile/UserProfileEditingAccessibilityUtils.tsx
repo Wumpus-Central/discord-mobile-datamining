@@ -1,6 +1,7 @@
 // discord_app/modules/user_profile/UserProfileEditingAccessibilityUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef2955 from "../display_name_styles/intl/DisplayNameStyles.messages.js";
+import ProfilePendingImageTypes from "../profile_customization/ProfilePendingImageTypes.tsx";
 import useDisplayNameStylesEffectConfigs from "../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
 import getDisplayNameStylesFontNameDefault from "../display_name_styles/getDisplayNameStylesFontName.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -41,4 +42,27 @@ export const getBannerAccessibleValue = function getBannerAccessibleValue(banner
   }
   const intl2 = util.intl;
   description = intl2.string(util.t["3Xph0/"]);
+};
+export const getAvatarAccessibleValue = function getAvatarAccessibleValue(avatarChange, avatar) {
+  if (null !== avatarChange) {
+    if (undefined === avatarChange) {
+      return description;
+    }
+    if (undefined === avatarChange) {
+      const intl2 = util.intl;
+      description = intl2.string(util.t["16GpW/"]);
+    } else {
+      if (avatarChange.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+        description = avatarChange.originalAsset.description;
+      } else {
+        description = avatarChange.description;
+      }
+      if (description == null) {
+        const intl = util.intl;
+        description = intl.string(util.t.cqdtrR);
+      }
+    }
+  }
+  const intl3 = util.intl;
+  description = intl3.string(util.t["3Xph0/"]);
 };

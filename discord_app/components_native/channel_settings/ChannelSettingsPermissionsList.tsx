@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/06099_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06101_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -18,7 +18,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,

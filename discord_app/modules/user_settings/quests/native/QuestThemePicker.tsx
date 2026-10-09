@@ -10,11 +10,11 @@ import ThemeStore from "../../ThemeStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-let closure_8 = fn(1252).LEGACY_STANDARD_BACKGROUND_THEMES;
+let closure_8 = fn(1253).LEGACY_STANDARD_BACKGROUND_THEMES;
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   themeSection: { marginBottom: nativeDefault.space.PX_8 },
   themeSelector: null,

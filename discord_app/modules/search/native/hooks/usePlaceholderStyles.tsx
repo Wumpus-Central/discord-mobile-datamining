@@ -9,7 +9,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const FADE_LAYOUT_ANIMATION_DURATION = fn(9247).FADE_LAYOUT_ANIMATION_DURATION;
+const FADE_LAYOUT_ANIMATION_DURATION = fn(9285).FADE_LAYOUT_ANIMATION_DURATION;
 fn(558);
 const __initData = {
   code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}",

@@ -475,7 +475,7 @@ let closure_18 = async function _fetchSummariesBulk(arg0) {
     flag2 = true;
   }
   closure_131_2 = flag2;
-  return "Reflect";
+  return "Set";
 };
 let closure_20 = async function _deleteSummary(arg0) {
   if (c6 === 2) {

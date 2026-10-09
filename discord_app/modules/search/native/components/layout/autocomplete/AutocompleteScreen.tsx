@@ -2,7 +2,7 @@
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import useChannelName from "../../../../../channel/useChannelName.tsx";
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
-import tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../SearchPlatformActionCreators.tsx";
 import AutocompleteScreenUtils from "AutocompleteScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
 const Constants = fn(1085);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
@@ -93,7 +93,7 @@ export default noop.memo(
           tmp16 = cResult[8];
         }
         const tmpResult5 = searchContext(504);
-        const fullscreenPlaceholderCount = searchContext(17116).useFullscreenPlaceholderCount(tmp16);
+        const fullscreenPlaceholderCount = searchContext(17266).useFullscreenPlaceholderCount(tmp16);
         if (cResult[9] !== searchContext) {
           class P {
             constructor() {
@@ -786,10 +786,10 @@ export default noop.memo(
                     return;
                   }
                 }
-                const tmpResult7 = tmp(17213);
+                const tmpResult7 = tmp(17363);
                 const _Set = Set;
-                const set = new Set(tmp(17213).getSearchQueryUserIds(searchContext));
-                set1 = new Set(tmp(17213).getSearchQueryChannelIds(searchContext));
+                const set = new Set(tmp(17363).getSearchQueryUserIds(searchContext));
+                set1 = new Set(tmp(17363).getSearchQueryChannelIds(searchContext));
                 maybeAddUserItem = function maybeAddUserItem(arg0, arg1) {};
                 function maybeAddChannelItem(arg0, arg1) {}
                 ({ autocompletes, tokens, mode } = stateFromStores);
@@ -1033,7 +1033,7 @@ export default noop.memo(
                     }
                   }
                 }
-                const tmpResult8 = tmp(17213);
+                const tmpResult8 = tmp(17363);
               }
               cResult[26] = stateFromStores;
               cResult[27] = tmp23;
@@ -1140,7 +1140,7 @@ export default noop.memo(
         cResult[11] = searchContext;
         cResult[12] = P;
         cResult[13] = Q;
-        const tmpResult6 = searchContext(17116);
+        const tmpResult6 = searchContext(17266);
       }
     : function AutocompleteScreen(searchContext) {
         searchContext = searchContext.searchContext;
@@ -1186,7 +1186,7 @@ export default noop.memo(
             });
             const obj4 = { searchContext, searchTokenType: null, location: null };
             ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-            tracking_TrackingDefault.trackSearchFilterAdd(obj4);
+            search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
             callback();
           }
         }, items5);
@@ -1208,7 +1208,7 @@ export default noop.memo(
               });
               const obj4 = { searchContext, searchTokenType: null, location: null };
               ({ searchTokenType: obj3.searchTokenType, location: obj3.location } = prefixTag);
-              tracking_TrackingDefault.trackSearchFilterAdd(obj4);
+              search_tracking_TrackingDefault.trackSearchFilterAdd(obj4);
               callback();
             }
           }
@@ -1238,7 +1238,7 @@ export default noop.memo(
               });
               let obj = { searchContext, searchTokenType: null, location: null };
               ({ searchTokenType: obj4.searchTokenType, location: obj4.location } = prefixTag);
-              tracking_TrackingDefault.trackSearchFilterAdd(obj);
+              search_tracking_TrackingDefault.trackSearchFilterAdd(obj);
               callback();
             }
           }

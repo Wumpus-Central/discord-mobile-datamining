@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = jsx(tmp(8200).StageIcon, { size: "sm" });
+        const tmp11 = jsx(tmp(8208).StageIcon, { size: "sm" });
         cResult[3] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         <tmp5
           screenKey="StageVoiceChat"
           title={str}
-          titleIcon={jsx(channel(8200).StageIcon, { size: "sm" })}
+          titleIcon={jsx(channel(8208).StageIcon, { size: "sm" })}
           render={function render() {
             let guild_id = channel.guild_id;
             if (guild_id == null) {

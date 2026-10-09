@@ -237,12 +237,12 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
                   loadFailed: "error" === stateFromStores || tmp35,
                   fetchPhase: str,
                 };
-                const result = tmp(17301).voiceChannelAppListState(obj3);
+                const result = tmp(17449).voiceChannelAppListState(obj3);
                 cResult[31] = str;
                 cResult[32] = "error" === stateFromStores || tmp35;
                 cResult[33] = arr8.length > 0;
                 cResult[34] = result;
-                const tmpResult6 = tmp(17301);
+                const tmpResult6 = tmp(17449);
               }
               closure_130_0 = tmp21;
               let found = arr5.filter((item, index) =>

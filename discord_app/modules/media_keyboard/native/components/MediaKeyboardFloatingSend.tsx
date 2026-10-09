@@ -15,7 +15,7 @@ const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.7;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { sendContainer: null, gradient: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -146,7 +146,7 @@ export default noop.memo(
         const cResult = c.c(30);
         ({ animatedIndex, channelId, draftType, onSend } = ref);
         const tmp4 = closure_9();
-        const tmp6 = bottom(1630)();
+        const tmp6 = bottom(1631)();
         [bottom, require] = noop.useState(null);
         if (bottom == null) {
           bottom = tmp6.bottom;

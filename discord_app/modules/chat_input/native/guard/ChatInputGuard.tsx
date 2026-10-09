@@ -19,10 +19,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(9318).updateChatInputContainerHeight;
+let closure_6 = fn(9356).updateChatInputContainerHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { paddingHorizontal: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_8 },
@@ -96,7 +96,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channelId, onJumpToPresent, children } = screenIndex);
       const tmp5 = useIsUsingClientThemeDefault();
       const obj = screenIndex(576);
-      const chatInputFloatingOverlayStyle = screenIndex(11978).useChatInputFloatingOverlayStyle();
+      const chatInputFloatingOverlayStyle = screenIndex(11915).useChatInputFloatingOverlayStyle();
       const tmp7 = closure_9(tmp5);
       if (cResult[0] !== screenIndex) {
         const fn = function n(nativeEvent) {
@@ -124,7 +124,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp14 = closure_7(tmp(11978).ChatInputScrimGradient, {});
+        const tmp14 = closure_7(tmp(11915).ChatInputScrimGradient, {});
         cResult[5] = tmp14;
         let tmp12 = tmp14;
       } else {
@@ -206,7 +206,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[17] = screenIndex;
             cResult[18] = tmp28;
             tmp26 = tmp28;
-            tmpResult = tmp(1381);
+            tmpResult = tmp(1382);
           }
         }
         const obj6 = { style: tmp7.content, children: null };
@@ -228,14 +228,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp7.underlay;
       cResult[8] = tmp16;
       tmp15 = tmp16;
-      const obj2 = screenIndex(11978);
+      const obj2 = screenIndex(11915);
     }
   : function ChatInputGuardContainer(screenIndex) {
       screenIndex = screenIndex.screenIndex;
       const channelId = screenIndex.channelId;
       ({ onJumpToPresent, children } = screenIndex);
       const tmp3 = useIsUsingClientThemeDefault();
-      const chatInputFloatingOverlayStyle = screenIndex(11978).useChatInputFloatingOverlayStyle();
+      const chatInputFloatingOverlayStyle = screenIndex(11915).useChatInputFloatingOverlayStyle();
       const tmp6 = closure_9(tmp3);
       const items = [screenIndex];
       const obj2 = { style: null, onLayout: null, collapsable: false, children: null };
@@ -245,7 +245,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
       obj2.style = items1;
       obj2.onLayout = callback;
-      const items2 = [closure_7(screenIndex(11978).ChatInputScrimGradient, {})];
+      const items2 = [closure_7(screenIndex(11915).ChatInputScrimGradient, {})];
       const obj3 = { style: tmp6.container, children: null };
       let tmp10Result = null;
       if (!tmp3) {
@@ -261,7 +261,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [tmp10Result3, children];
       obj5.children = items4;
       items3[1] = closure_8(closure_5, obj5);
-      const obj = screenIndex(11978);
+      const obj = screenIndex(11915);
       let tmp10Result4 = null;
       if (tmp4Result.isIOS()) {
         tmp10Result4 = null;

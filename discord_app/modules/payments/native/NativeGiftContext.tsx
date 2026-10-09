@@ -24,8 +24,8 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-fn(7121).GPlayBillingResult;
-const PremiumConstants = fn(1391);
+fn(7126).GPlayBillingResult;
+const PremiumConstants = fn(1392);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 let PaymentGateways = fn(1096).PaymentGateways;
 let jsx = fn(21).jsx;
@@ -969,12 +969,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = externalGatewayFacet;
         let tmp6 = planId(externalGatewayFacet.useState(0), 2);
       }
-      let obj4 = {
-        orderId: "a",
-        planId: "twitch.tv",
-        planSelection: { premiumType, planInterval },
-        giftInfo: "youtube.com",
-      };
+      let obj4 = { orderId: "a", planId: "adam", planSelection: { premiumType, planInterval }, giftInfo: "erkek" };
       cResult[0] = planInterval;
       cResult[1] = premiumType;
       cResult[2] = obj4;
@@ -994,12 +989,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const setPremiumType = order.setPremiumType;
       const setPlanInterval = order.setPlanInterval;
       const setError = order.setError;
-      let obj = {
-        orderId: "a",
-        planId: "twitch.tv",
-        planSelection: { premiumType, planInterval },
-        giftInfo: "youtube.com",
-      };
+      let obj = { orderId: "a", planId: "adam", planSelection: { premiumType, planInterval }, giftInfo: "erkek" };
       closure_13 = externalGatewayFacet.useRef(obj);
       externalGatewayFacet.useRef(false);
       externalGatewayFacet.useRef(null);

@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
       return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDataToSupportQuests3PSettingIsDisabled() {
       const selectedTeenId = useSelectedTeen.useSelectedTeenId();
@@ -37,7 +37,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
   },
-  parent: fn(7966).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7974).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: tmp2,
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();

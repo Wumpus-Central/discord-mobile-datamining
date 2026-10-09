@@ -3,7 +3,7 @@ import _modDef12 from "../../../../../_runtime/metro/00012__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -155,20 +155,20 @@ function AddConnectionButton(locked) {
     obj2.onCompleteIdentityApplication = function onCompleteIdentityApplication(arg0) {
       return closure_1_0(closure_2_9, arg0);
     };
-    obj.openLazy(asyncRequireImpl(18142, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequireImpl(18304, dependencyMap.paths), combined, obj2);
   };
   return closure_10(components_Button_Button.Button, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const Constants = fn(6863);
+const Constants = fn(6870);
 ({
   GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8,
   GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_9,
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   formContent: { paddingTop: 16, paddingBottom: 0 },
   warningContainer: {
@@ -538,9 +538,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ locked, integrations } = guild);
       closure_13();
       let obj = guild(576);
-      const applicationIdentityLinkedRolesEnabled = guild(18143).useApplicationIdentityLinkedRolesEnabled(guild.id);
-      let obj2 = guild(18143);
-      const applicationIdentityLinkedRolesEnabled1 = guild(18145).useApplicationIdentityLinkedRolesEnabled(
+      const applicationIdentityLinkedRolesEnabled = guild(18305).useApplicationIdentityLinkedRolesEnabled(guild.id);
+      let obj2 = guild(18305);
+      const applicationIdentityLinkedRolesEnabled1 = guild(18307).useApplicationIdentityLinkedRolesEnabled(
         guild.id,
         "guild_settings_roles_edit_connections",
       );
@@ -616,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         dependencyMap = tmp15;
-        if (tmp15 === tmp(6862).ConnectionConfigurationRuleOperator.OR) {
+        if (tmp15 === tmp(6869).ConnectionConfigurationRuleOperator.OR) {
           class S {
             constructor() {
               editedRoleConnectionConfigurationsMap = closure_6.getEditedRoleConnectionConfigurationsMap();
@@ -656,7 +656,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = items2;
       tmp10 = items2;
       tmp9 = fn;
-      let obj3 = guild(18145);
+      let obj3 = guild(18307);
     }
   : function GuildSettingsRolesEditConnectionsControls(guild) {
       guild = guild.guild;
@@ -822,8 +822,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             connectionType,
             connectionMetadataField: "Array",
             applicationId,
-            operator: "height",
-            value: 1090584578,
+            operator: "hasDiversityParent",
+            value: "Array",
           };
           items.push(obj);
           if (AND === ConnectionsUtils.ConnectionConfigurationRuleOperator.AND) {

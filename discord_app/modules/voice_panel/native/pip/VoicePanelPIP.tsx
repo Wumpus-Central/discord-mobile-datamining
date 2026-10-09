@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import ExternalPipDefault from "../../../external_pip/ExternalPip.android.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
 import EmbeddedActivitiesActionCreatorsAll from "../../../activities/EmbeddedActivitiesActionCreators.tsx";
@@ -27,15 +27,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(11989);
+const VoicePanelConstants = fn(11926);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17516).VoicePanelPIPModes;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
-const isLaunched = fn(10613).isLaunched;
+const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17668).VoicePanelPIPModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
+const isLaunched = fn(10767).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

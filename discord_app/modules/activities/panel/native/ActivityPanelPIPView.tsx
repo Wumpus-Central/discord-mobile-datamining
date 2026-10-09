@@ -19,8 +19,8 @@ import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
-const ActivityPanelConstants = fn(6072);
+const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
+const ActivityPanelConstants = fn(6074);
 let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
 ({
   ActivityPanelModes: closure_11,
@@ -28,14 +28,14 @@ let ACTIVITY_PIP_SIZE = ActivityPanelConstants.ACTIVITY_PIP_SIZE;
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: map1,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_14,
 } = ActivityPanelConstants);
-const portraitSafeAreasConfig = fn(17481).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+const portraitSafeAreasConfig = fn(17633).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const ThemeTypes = fn(1085).ThemeTypes;
-const PIP_WINDOW_OFFSET = fn(11990).PIP_WINDOW_OFFSET;
+const PIP_WINDOW_OFFSET = fn(11927).PIP_WINDOW_OFFSET;
 const jsx = fn(21).jsx;
 const REDUCED_MOTION_TIMING = { duration: 300 };
 const native = fn(1200);
 const boxShadowStyle = native.generateBoxShadowStyle(fn(1200).EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { wrapper: null, mask: null };
 let merged = Object.assign(ACTIVITY_PIP_SIZE);
 const merged1 = Object.assign(boxShadowStyle);
@@ -928,7 +928,7 @@ export default noop.memo(
             transitionCleanUp,
             pipOrientationLockState: stateFromStores,
             hasActivity: tmp17,
-            context: applicationId(17478),
+            context: applicationId(17630),
             children: tmp18,
           };
           const tmp24 = (
@@ -937,7 +937,7 @@ export default noop.memo(
               transitionCleanUp={transitionCleanUp}
               pipOrientationLockState={stateFromStores}
               hasActivity={tmp17}
-              context={applicationId(17478)}
+              context={applicationId(17630)}
             >
               {tmp18}
             </closure_28>
@@ -949,7 +949,7 @@ export default noop.memo(
           cResult[15] = transitionState;
           cResult[16] = tmp24;
         }
-        const tmp19 = jsx(applicationId(10735), {
+        const tmp19 = jsx(applicationId(10884), {
           channel: stateFromStores1,
           layoutMode: ActivityLayoutMode.PIP,
           portraitSafeAreasConfig,

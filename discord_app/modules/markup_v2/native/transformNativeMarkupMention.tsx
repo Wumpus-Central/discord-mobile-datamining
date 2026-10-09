@@ -29,18 +29,13 @@ export const transformNativeMention = function transformNativeMention(value, all
       {
         fullMatch: "@everyone",
         id: "apply",
-        everyoneOrHere: 1758349695678963000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        everyoneOrHere: 1758350428918459000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
       },
       allowGameMentions,
     );
   } else if ("here" === type) {
     return MarkupRules.hydrateUserMention(
-      {
-        fullMatch: "@here",
-        id: "apply",
-        everyoneOrHere:
-          -40927943124201170000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-      },
+      { fullMatch: "@here", id: "apply", everyoneOrHere: false },
       allowGameMentions,
     );
   } else if ("role" === type) {

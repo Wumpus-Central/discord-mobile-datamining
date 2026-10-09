@@ -4,7 +4,7 @@ import StreamTileDefault from "StreamTile.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(10333);
+const ChannelCallStore = fn(10320);
 ({ toggleFocus: c3, resetFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         style: null,
       };
       const obj = channel(576);
-      obj3.resizeMode = channel(10710).ResizeMode.CONTAIN;
+      obj3.resizeMode = channel(10856).ResizeMode.CONTAIN;
       obj3.onSingleTap = first;
       obj3.onDoubleTap = tmp5;
       obj3.participant = participant;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const obj = {
         gestureEnabled: true,
-        resizeMode: channel(10710).ResizeMode.CONTAIN,
+        resizeMode: channel(10856).ResizeMode.CONTAIN,
         onSingleTap() {
           closure_1_3();
         },
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       return jsx(StreamTileDefault, {
         gestureEnabled: true,
-        resizeMode: channel(10710).ResizeMode.CONTAIN,
+        resizeMode: channel(10856).ResizeMode.CONTAIN,
         onSingleTap() {
           closure_1_3();
         },

@@ -16,10 +16,10 @@ const ExpressionPickerConstants = fn(1241);
   PADDING_HORIZONTAL,
 } = ExpressionPickerConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1393).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   expressionPickerContainer: {
     flex: 1,
@@ -75,7 +75,7 @@ export default noop.memo(
           if (cResult[1] === visibleTabs) {
             let tmp5 = cResult[2];
           }
-          const tmp7 = expressionPickerViewType(9682)(tmp5);
+          const tmp7 = expressionPickerViewType(9701)(tmp5);
           ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp7);
           const prop = tmp7.expressionPickerTabStrings;
           if (cResult[3] !== channel) {
@@ -183,7 +183,7 @@ export default noop.memo(
                   return obj;
                 }
               }
-              const segmentedControlState = tmp(8505).useSegmentedControlState(tmp19);
+              const segmentedControlState = tmp(8513).useSegmentedControlState(tmp19);
               if (cResult[15] !== expressionPickerViewType) {
                 class Z {
                   constructor() {
@@ -367,9 +367,9 @@ export default noop.memo(
                   }
                 }
               }
-              const tmp28 = expressionPickerViewType(9683)(tmp27);
-              const tmpResult = tmp(8505);
-              const isScreenReaderEnabled = tmp(5360).useIsScreenReaderEnabled();
+              const tmp28 = expressionPickerViewType(9702)(tmp27);
+              const tmpResult = tmp(8513);
+              const isScreenReaderEnabled = tmp(5361).useIsScreenReaderEnabled();
               if (cResult[20] === tmp28) {
                 class Z {
                   constructor() {
@@ -502,7 +502,7 @@ export default noop.memo(
               cResult[20] = tmp28;
               cResult[21] = isScreenReaderEnabled;
               cResult[22] = tmp31;
-              const tmpResult2 = tmp(5360);
+              const tmpResult2 = tmp(5361);
             }
             let obj3 = { pageWidth: 0, defaultIndex: expressionPickerSelectedIndex, onSetActiveIndex: L, items: tmp15 };
             cResult[12] = expressionPickerSelectedIndex;

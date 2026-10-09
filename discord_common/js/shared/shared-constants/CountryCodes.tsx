@@ -21,6 +21,7 @@ const obj = {
   COUNTRY_STATES: null,
   EMBARGOED_BILLING_ADDRESS_COUNTRIES: null,
   ALLOWED_BILLING_ADDRESS_COUNTRIES: null,
+  OPTIONAL_CITY_BILLING_ADDRESS_COUNTRIES: null,
   NON_AD_SERVING_COUNTRIES: null,
   TAX_EXCLUSIVE: null,
   TAX_ADDRESS_REQUIRE_POSTAL_CODE: null,
@@ -1912,22 +1913,24 @@ const set18 = new Set([
   "ZM",
   "ZW",
 ]);
+obj.OPTIONAL_CITY_BILLING_ADDRESS_COUNTRIES = new Set(["AE", "GI", "KY", "MO", "NR", "PR", "SG"]);
+const set19 = new Set(["AE", "GI", "KY", "MO", "NR", "PR", "SG"]);
 obj.NON_AD_SERVING_COUNTRIES = new Set(["RU", "TR"]);
-const set19 = new Set(["RU", "TR"]);
+const set20 = new Set(["RU", "TR"]);
 obj.TAX_EXCLUSIVE = new Set(["CA", "KR", "US"]);
-const set20 = new Set(["CA", "KR", "US"]);
+const set21 = new Set(["CA", "KR", "US"]);
 obj.TAX_ADDRESS_REQUIRE_POSTAL_CODE = new Set(["CA", "US"]);
-const set21 = new Set(["CA", "US"]);
+const set22 = new Set(["CA", "US"]);
 obj.QUESTS_1P_DATA_OPT_OUT_U18_REGIONS = new Set(["AR", "NY"]);
-const set22 = new Set(["AR", "NY"]);
+const set23 = new Set(["AR", "NY"]);
 obj.QUESTS_1P_DATA_OPT_OUT_COUNTRIES_U18 = new Set(["BR"]);
-const set23 = new Set(["BR"]);
+const set24 = new Set(["BR"]);
 obj.QUESTS_3P_DATA_OPT_OUT_U16_REGIONS = new Set(["CA", "MN", "NH", "OR"]);
-const set24 = new Set(["CA", "MN", "NH", "OR"]);
+const set25 = new Set(["CA", "MN", "NH", "OR"]);
 obj.QUESTS_3P_DATA_OPT_OUT_U18_REGIONS = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
-const set25 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
+const set26 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "SC", "TX"]);
 obj.QUESTS_3P_DATA_OPT_OUT_COUNTRIES = new Set(["BR", "KR"]);
-const set26 = new Set(["BR", "KR"]);
+const set27 = new Set(["BR", "KR"]);
 obj.STRIPE_CONNECT_SUPPORTED_COUNTRIES = new Set([
   "AT",
   "BE",

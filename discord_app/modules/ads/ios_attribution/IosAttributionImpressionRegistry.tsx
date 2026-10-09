@@ -62,7 +62,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
           closure_129_7 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -316,7 +316,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
             closure_129_2 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -379,9 +379,9 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   return iter;
 };
 let obj = {};
-let obj2 = { viewThroughSpec: { kind: fn(10601).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
-obj[fn(10601).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
-let obj3 = { kind: fn(10601).IosAttributionFramework.AD_ATTRIBUTION_KIT };
+let obj2 = { viewThroughSpec: { kind: fn(12913).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
+obj[fn(12913).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
+let obj3 = { kind: fn(12913).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);

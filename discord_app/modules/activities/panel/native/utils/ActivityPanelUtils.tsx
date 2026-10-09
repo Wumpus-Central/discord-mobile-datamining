@@ -9,7 +9,7 @@ import SelectedChannelStore from "../../../../../stores/SelectedChannelStore.tsx
 import EmbeddedActivitiesStore from "../../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()

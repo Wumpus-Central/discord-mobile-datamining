@@ -30,11 +30,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v() {
           let num = 1;
-          const obj = stateFromStores(10770);
+          const obj = stateFromStores(10940);
           if (CheckpointStore.isMuted) {
             num = 0;
           }
-          const sound = obj.createSound(ref(15810), "vibing_wumpus", num);
+          const sound = obj.createSound(ref(15923), "vibing_wumpus", num);
           ref.current = sound;
           sound.loop();
           ref = AppState.addEventListener("change", (event) => {
@@ -89,11 +89,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_4(null);
       closure_3(() => {
         let num = 1;
-        const obj = stateFromStores(10770);
+        const obj = stateFromStores(10940);
         if (CheckpointStore.isMuted) {
           num = 0;
         }
-        const sound = obj.createSound(ref(15810), "vibing_wumpus", num);
+        const sound = obj.createSound(ref(15923), "vibing_wumpus", num);
         ref.current = sound;
         sound.loop();
         ref = AppState.addEventListener("change", (event) => {

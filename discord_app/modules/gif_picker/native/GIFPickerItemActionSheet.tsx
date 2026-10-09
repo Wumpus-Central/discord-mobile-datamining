@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },
@@ -33,18 +33,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       const tmp4 = closure_7();
       if (cResult[0] !== item.url) {
-        const gifUrlKeyResult = tmp(9687).gifUrlKey(item.url);
+        const gifUrlKeyResult = tmp(9706).gifUrlKey(item.url);
         cResult[0] = item.url;
         cResult[1] = gifUrlKeyResult;
         let tmp5 = gifUrlKeyResult;
-        const tmpResult = tmp(9687);
+        const tmpResult = tmp(9706);
       } else {
         tmp5 = cResult[1];
       }
       let obj = item(576);
-      const isFavoriteGIF = item(9691).useIsFavoriteGIF(tmp5);
-      const tmpResult2 = item(9691);
-      ({ width, height } = isFavoriteGIF(1496)());
+      const isFavoriteGIF = item(9710).useIsFavoriteGIF(tmp5);
+      const tmpResult2 = item(9710);
+      ({ width, height } = isFavoriteGIF(1497)());
       const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, (0.5 * height) / item.height);
       const result = item.width * bound;
       const result1 = item.height * bound;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let obj3 = { children: null };
                 const items1 = [tmp27, tmp31];
                 obj3.children = items1;
-                const tmp33 = closure_6(tmp(5963).ButtonGroup, obj3);
+                const tmp33 = closure_6(tmp(5965).ButtonGroup, obj3);
                 cResult[27] = tmp27;
                 cResult[28] = tmp31;
                 cResult[29] = tmp33;
@@ -742,7 +742,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = result1;
       cResult[4] = size;
       tmp12 = size;
-      const tmp8 = isFavoriteGIF(1496)();
+      const tmp8 = isFavoriteGIF(1497)();
     }
   : function GIFPickerItemActionSheet(item) {
       item = item.item;

@@ -4,10 +4,10 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({
   emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
 });
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(onPressRow(11870).AppLauncherList, {
+      const tmp8 = jsx(onPressRow(11807).AppLauncherList, {
         contentContainerStyle: tmp4.emptyState,
         data: tmp5,
         renderItem: tmp6,
@@ -78,7 +78,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [onPressRow.query];
       obj.data = items;
-      return jsx(onPressRow(11870).AppLauncherList, {
+      return jsx(onPressRow(11807).AppLauncherList, {
         contentContainerStyle: closure_6().emptyState,
         data: null,
         renderItem(label) {
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11[1] = guild_id;
           tmp11[3] = U;
           tmp11[6] = tmp4;
-          tmp9Result = jsx(tmp10(11338), tmp11);
+          tmp9Result = jsx(tmp10(10711), tmp11);
         }
         cResult[8] = channel;
         cResult[9] = id;

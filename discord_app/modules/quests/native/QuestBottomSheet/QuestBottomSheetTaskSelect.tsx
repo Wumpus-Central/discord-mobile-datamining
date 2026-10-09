@@ -2,7 +2,7 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const QuestTaskPlatform = fn(5977).QuestTaskPlatform;
+const QuestTaskPlatform = fn(5979).QuestTaskPlatform;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -14,7 +14,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = onTaskSelect(576).c(11);
       onTaskSelect = onTaskSelect.onTaskSelect;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_3(tmp(9061).ScreenIcon, {});
+        const tmp7 = closure_3(tmp(9076).ScreenIcon, {});
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t["QXc01+"]);
         cResult[0] = tmp7;
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmpResult;
           },
         };
-        const tmp11 = closure_3(tmp(6184).TableRow, obj2);
+        const tmp11 = closure_3(tmp(6186).TableRow, obj2);
         cResult[2] = onTaskSelect;
         cResult[3] = tmp11;
         let tmp9 = tmp11;
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = closure_3(tmp(9117).GameControllerIcon, {});
+        const tmp15 = closure_3(tmp(9184).GameControllerIcon, {});
         const intl2 = tmp(1126).intl;
         const stringResult1 = intl2.string(tmp(1126).t["8lAfuB"]);
         cResult[4] = tmp15;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmpResult;
           },
         };
-        const tmp19 = closure_3(tmp(6184).TableRow, obj3);
+        const tmp19 = closure_3(tmp(6186).TableRow, obj3);
         cResult[6] = onTaskSelect;
         cResult[7] = tmp19;
         let tmp17 = tmp19;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { hasIcons: true, children: null };
       const items = [tmp9, tmp17];
       obj4.children = items;
-      const tmp21 = closure_4(onTaskSelect(6267).TableRowGroup, obj4);
+      const tmp21 = closure_4(onTaskSelect(6269).TableRowGroup, obj4);
       cResult[8] = tmp9;
       cResult[9] = tmp17;
       cResult[10] = tmp21;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function QuestBottomSheetTaskSelect(onTaskSelect) {
       onTaskSelect = onTaskSelect.onTaskSelect;
       const obj = { hasIcons: true, children: null };
-      const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9061).ScreenIcon, {}), label: null, onPress: null };
+      const obj2 = { arrow: true, icon: closure_3(onTaskSelect(9076).ScreenIcon, {}), label: null, onPress: null };
       const intl = onTaskSelect(1126).intl;
       obj2.label = intl.string(onTaskSelect(1126).t["QXc01+"]);
       obj2.onPress = function onPress() {
@@ -105,10 +105,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmpResult;
       };
-      const items = [closure_3(onTaskSelect(6184).TableRow, obj2)];
+      const items = [closure_3(onTaskSelect(6186).TableRow, obj2)];
       const obj3 = {
         arrow: true,
-        icon: closure_3(onTaskSelect(9117).GameControllerIcon, {}),
+        icon: closure_3(onTaskSelect(9184).GameControllerIcon, {}),
         label: null,
         onPress: null,
       };
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmpResult;
       };
-      items[1] = closure_3(onTaskSelect(6184).TableRow, obj3);
+      items[1] = closure_3(onTaskSelect(6186).TableRow, obj3);
       obj.children = items;
-      return closure_4(onTaskSelect(6267).TableRowGroup, obj);
+      return closure_4(onTaskSelect(6269).TableRowGroup, obj);
     };

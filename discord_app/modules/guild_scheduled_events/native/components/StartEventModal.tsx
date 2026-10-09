@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6767 from "../../../../../_runtime/metro/06767__.js";
+import _modDef6774 from "../../../../../_runtime/metro/06774__.js";
 import GuildEventCardDefault from "GuildEventCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -18,13 +18,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildScheduledEventsConstants = fn(2069);
+const GuildScheduledEventsConstants = fn(2070);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(8490).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(8498).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   mainContainer: {
     flex: 1,
@@ -93,7 +93,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef6767 };
+        const obj2 = { source: _modDef6774 };
         const tmp10 = __initData(native.Icon, obj2);
         cResult[3] = tmp10;
         let tmp7 = tmp10;
@@ -122,7 +122,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = function onPress() {
         return onClose();
       };
-      obj2.children = __initData(native.Icon, { source: _modDef6767 });
+      obj2.children = __initData(native.Icon, { source: _modDef6774 });
       obj.children = __initData(Pressables.PressableOpacity, obj2);
       return __initData(View, obj);
     };

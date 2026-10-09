@@ -6,10 +6,10 @@ import VoicePanelControlUtils from "utils/VoicePanelControlUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(14042).BACKDROP_OPAQUE_MAX_OPACITY;
-const VoicePanelConstants = fn(11989);
+let closure_4 = fn(14139).BACKDROP_OPAQUE_MAX_OPACITY;
+const VoicePanelConstants = fn(11926);
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(11987).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
 const jsx = fn(21).jsx;
 const __initData = {
   code: 'function VoicePanelControlsDimOverlayTsx1(){const{windowDimensions,getDrawerSpec,safeArea,controlsSpecs,VoicePanelControlsModes,mode,VoicePanelModes,interpolate,wrapperSpecs,BACKDROP_OPAQUE_MAX_OPACITY}=this.__closure;const{height:height}=windowDimensions.get();const{minHeight:minHeight,maxHeight:maxHeight}=getDrawerSpec(height,safeArea.get().top);if(controlsSpecs.get().mode!==VoicePanelControlsModes.DRAWER||mode.get()!==VoicePanelModes.PANEL){return 0;}return interpolate(wrapperSpecs.get().height,[minHeight,maxHeight],[0,BACKDROP_OPAQUE_MAX_OPACITY],"clamp");}',

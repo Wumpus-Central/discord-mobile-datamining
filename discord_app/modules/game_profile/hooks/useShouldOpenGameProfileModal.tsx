@@ -24,6 +24,9 @@ function trackEntryPoint(game_profile_available, id) {
     source: CallTile,
   });
 }
+function isGameDisabled(gameFlags) {
+  return FlagUtilsAll.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_DISABLED);
+}
 function gameIsAcceptable(gameFlags) {
   if (null == gameFlags) {
     const items = [obj.NoMatch];
@@ -324,19 +327,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp19Result = utils;
           }
-          track = track(1264).track;
+          track = track(1265).track;
           GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
           obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
           track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
           flag = true;
           ref.current = true;
-          const trackResult = track(1264);
+          const trackResult = track(1265);
         }
       }, items);
       return { shouldOpenGameProfile, gameId: gameId2.gameId };
     };
 export { RejectionReason };
 export { trackEntryPoint };
+export { isGameDisabled };
 export { gameIsAcceptable };
 export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
   const game = GameStore.getGame(gameId);

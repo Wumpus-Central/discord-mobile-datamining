@@ -28,10 +28,10 @@ function getBotLabel() {
   stringResult = intl3.string(util.t.lKQ7Wt);
 }
 const View = fn(17).View;
-const BotTagTypes = fn(1372).BotTagTypes;
+const BotTagTypes = fn(1373).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   tag: {
     paddingLeft: 4,
@@ -259,7 +259,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = items;
       const items1 = [
         tmp6,
-        hasOwnProperty(tmp17(5086).Text, {
+        hasOwnProperty(tmp17(5087).Text, {
           variant: "text-xs/semibold",
           lineClamp: 1,
           maxFontSizeMultiplier: 2,

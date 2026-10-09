@@ -7,6 +7,7 @@ import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSe
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles.tsx";
 import UserProfileAvatarDefault from "UserProfileAvatar.tsx";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
+import tracking_Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
 import getRandomCustomStatusPromptDefault from "../../custom_status/utils/getRandomCustomStatusPrompt.tsx";
 import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo.tsx";
 import BadgeManagementExperiment from "../../badges/BadgeManagementExperiment.tsx";
@@ -28,7 +29,6 @@ import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSugges
 import DisplayNameStylesFlywheelExperiment from "../../display_name_styles/DisplayNameStylesFlywheelExperiment.tsx";
 import BalanceWidgetMenuDefault from "../../virtual_currency/native/BalanceWidgetMenu.tsx";
 import showYouAccountActionSheet from "../../main_tabs_v2/native/tabs/you/utils/showYouAccountActionSheet.tsx";
-import you_tracking_Tracking from "../../main_tabs_v2/native/tabs/you/tracking/Tracking.tsx";
 import useOwnsAnyBadgeDefault from "../../badges/useOwnsAnyBadge.tsx";
 import YouExpiringTrialOfferCardDefault from "../../main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx";
 import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard.tsx";
@@ -42,11 +42,11 @@ const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const useIsContentShown = fn(2055).useIsContentShown;
-let UserProfileSections = fn(8283).UserProfileSections;
-let UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
-let closure_13 = fn(14656).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(2056).useIsContentShown;
+let UserProfileSections = fn(8291).UserProfileSections;
+let UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
+let closure_13 = fn(14761).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -55,8 +55,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
-          const result = require("you/tracking/Tracking").trackYouTabAvatarPress();
-          const obj = require("you/tracking/Tracking");
+          const result = require("tracking/Tracking").trackYouTabAvatarPress();
+          const obj = require("tracking/Tracking");
           const result1 = require("showYouAccountActionSheet").showYouAccountActionSheet();
         };
         cResult[0] = fn;
@@ -91,8 +91,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function YouAvatar(arg0) {
       const callback = noop.useCallback(() => {
-        const result = require("you/tracking/Tracking").trackYouTabAvatarPress();
-        const obj = require("you/tracking/Tracking");
+        const result = require("tracking/Tracking").trackYouTabAvatarPress();
+        const obj = require("tracking/Tracking");
         const result1 = require("showYouAccountActionSheet").showYouAccountActionSheet();
       }, []);
       const isAndroidResult = PlatformUtils.isAndroid();
@@ -440,7 +440,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function o() {
         trackUserProfileAction({ action: "EDIT_PROFILE" });
-        const result = you_tracking_Tracking.trackYouTabEditProfilePress();
+        const result = tracking_Tracking.trackYouTabEditProfilePress();
         navigateToProfileCustomization();
         let tmp4 = closure_3;
         if (!closure_3) {
@@ -495,7 +495,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [navigateToProfileCustomization];
       const callback = noop.useCallback(() => {
         trackUserProfileAction({ action: "EDIT_PROFILE" });
-        const result = you_tracking_Tracking.trackYouTabEditProfilePress();
+        const result = tracking_Tracking.trackYouTabEditProfilePress();
         navigateToProfileCustomization();
         let tmp4 = closure_3;
         if (!closure_3) {

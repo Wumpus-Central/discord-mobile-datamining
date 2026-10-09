@@ -3,10 +3,10 @@ import c from "../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5086);
+const Text_Text = Text(5087);
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
@@ -100,9 +100,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: result,
         lineHeight: "code",
-        textAlign: "STORAGE_SECURE_KEYS",
+        textAlign: null,
         width: num,
-        marginBottom: "buildSkippedNetworkRequestOrResponse",
+        marginBottom: null,
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -115,14 +115,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         size = 20;
       }
       const size1 = { height: size, width: size };
-      const obj = {
-        fontFamily: "System",
-        fontSize: size * num,
-        lineHeight: "code",
-        textAlign: "STORAGE_SECURE_KEYS",
-        width: size,
-        marginBottom: "buildSkippedNetworkRequestOrResponse",
-      };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };
         const obj3 = { uri: src };

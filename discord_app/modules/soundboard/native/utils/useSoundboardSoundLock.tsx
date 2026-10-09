@@ -2,7 +2,7 @@
 import util from "../../../../intl/index.native.tsx";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5025 from "../../../../../_runtime/metro/05025__.js";
+import _modDef5026 from "../../../../../_runtime/metro/05026__.js";
 import openPremiumUpsellActionSheetDefault from "../../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
 import SoundboardSoundPreviewMenuExperiment2 from "../../experiments/SoundboardSoundPreviewMenuExperiment.tsx";
@@ -12,7 +12,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5426).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5427).DEFAULT_SOUND_GUILD_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");

@@ -7,7 +7,7 @@ import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const CHURN_DISCOUNT_IDS = fn(1391).CHURN_DISCOUNT_IDS;
+const CHURN_DISCOUNT_IDS = fn(1392).CHURN_DISCOUNT_IDS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");

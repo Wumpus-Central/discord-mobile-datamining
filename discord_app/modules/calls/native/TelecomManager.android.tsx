@@ -5,10 +5,10 @@ import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import CallActionCreatorsDefault from "../../../actions/CallActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
-import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import useHasVideoPermission from "../../video_calls/useHasVideoPermission.tsx";
 import useScreenshareUtils from "../../video_calls/native/useScreenshareUtils.tsx";
+import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import NativeTelecomModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTelecomModule.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import SoundpackStore from "../../soundpacks/SoundpackStore.tsx";
@@ -28,7 +28,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ DeviceEventEmitter: closure_4, NativeEventEmitter } = get_ActivityIndicator);
 const ApplicationStreamStates = fn(1085).ApplicationStreamStates;
-const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5116).MediaEngineContextTypes;
 let c18 = "telecom-end-call-requested";
 let c19 = "telecom-set-foreground-requested";
 let c20 = "telecom-mic-mute-requested";
@@ -367,9 +367,9 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
       const obj3 = { guildId };
       tmp19 = obj3;
     }
-    const obj4 = self(17966);
-    const reportIncomingCallResult = self(17966).reportIncomingCall(channelId, channelName, tmp19);
-    self(17966)
+    const obj4 = self(18126);
+    const reportIncomingCallResult = self(18126).reportIncomingCall(channelId, channelName, tmp19);
+    self(18126)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -381,7 +381,7 @@ prototype["reportIncomingCall"] = function reportIncomingCall(channelId) {
         obj.warn("Failed to report incoming call:", error);
         self.clearCall(closure_0);
       });
-    const nextPromise = self(17966)
+    const nextPromise = self(18126)
       .reportIncomingCall(channelId, channelName, tmp19)
       .then((result) => {
         if (!result) {
@@ -397,7 +397,7 @@ prototype["cancelIncomingCall"] = function cancelIncomingCall(channelId) {
   const self = this;
   closure_0 = channelId;
   obj.info("Cancelling incoming call:", channelId);
-  obj = self(17966);
+  obj = self(18126);
   const cancelIncomingCallResult = obj.cancelIncomingCall(channelId);
   return obj
     .cancelIncomingCall(channelId)
@@ -736,7 +736,7 @@ prototype["handleIncomingCallStoreChange"] = function handleIncomingCallStoreCha
       }
     }
   }
-  obj = self(1627);
+  obj = self(1628);
 };
 prototype["startCall"] = function startCall(channelId) {
   closure_0 = channelId;
@@ -835,7 +835,7 @@ prototype["startCall"] = function startCall(channelId) {
 prototype["endCall"] = function endCall(currentCall) {
   const self = this;
   obj.info("Ending call:", currentCall.channelId);
-  obj = self(17966);
+  obj = self(18126);
   const endCallResult = obj.endCall(currentCall.channelId);
   return obj
     .endCall(currentCall.channelId)
@@ -991,7 +991,7 @@ prototype["handleScreenShareStoreChange"] = function handleScreenShareStoreChang
           const result = self.clearPendingScreenShareOffSync();
           if (tmp3) {
             obj.info("Syncing Discord -> Call Bar screen share state: true");
-            obj = self(17966);
+            obj = self(18126);
             obj.setScreenShareState(self.currentCall.channelId, true, true);
           } else {
             let channelId = self.currentCall.channelId;

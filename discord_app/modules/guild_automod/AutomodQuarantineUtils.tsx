@@ -14,7 +14,7 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 require = fn;
 const Constants = fn(1085);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4693).GuildMemberFlags;
+const GuildMemberFlags = fn(4695).GuildMemberFlags;
 const constants3 = fn(1095).ProfileCustomizationSubsection;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -86,7 +86,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0 == null) {
             guildId = SelectedGuildStore.getGuildId();
           }
-          const obj = { nick: "Array", bio: "Reflect" };
+          const obj = { nick: "Array", bio: "Set" };
           guild = GuildStore.getGuild(guildId);
           if (null != guild) {
             if (null != guildId) {
@@ -151,7 +151,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0 == null) {
             guildId = SelectedGuildStore.getGuildId();
           }
-          const obj = { nick: "Array", bio: "Reflect" };
+          const obj = { nick: "Array", bio: "Set" };
           guild = GuildStore.getGuild(guildId);
           if (null != guild) {
             if (null != guildId) {

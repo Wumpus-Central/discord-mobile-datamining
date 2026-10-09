@@ -1,6 +1,6 @@
 // discord_app/utils/native/NetworkUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import configure2 from "../../../_runtime/01482_configure.js";
+import configure2 from "../../../_runtime/01483_configure.js";
 
 const configure_mod = configure2;
 

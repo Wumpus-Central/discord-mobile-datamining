@@ -110,10 +110,10 @@ function handlePermissionsChange() {
   }
   return flag2;
 }
-const isChannelChatInSidebar = fn(2067).isChannelChatInSidebar;
+const isChannelChatInSidebar = fn(2068).isChannelChatInSidebar;
 const Constants = fn(1085);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(2070);
+const ChannelConstants = fn(2071);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
 const Permissions = fn(1096).Permissions;
 let c17 = false;

@@ -8,7 +8,7 @@ import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const setInitialVerification = fn(6156).setInitialVerification;
+const setInitialVerification = fn(6158).setInitialVerification;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()

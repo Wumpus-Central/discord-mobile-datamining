@@ -6,7 +6,7 @@ import _modDef2955 from "../intl/DisplayNameStyles.messages.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const getColorPresetsForEffect = fn(1407).getColorPresetsForEffect;
+const getColorPresetsForEffect = fn(1408).getColorPresetsForEffect;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useColorPresetsWithA11yLabels.tsx");

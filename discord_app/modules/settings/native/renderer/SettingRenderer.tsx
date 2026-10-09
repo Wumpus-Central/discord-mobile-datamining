@@ -126,11 +126,11 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11263);
+const SettingRendererConstants = fn(10630);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 },
   sliderTitle: { flexDirection: "row", justifyContent: "space-between" },
@@ -747,8 +747,8 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(14781).useHighlightSettingItem(setting);
-  let obj = trailing(14781);
+  let highlightSettingItem = trailing(14889).useHighlightSettingItem(setting);
+  let obj = trailing(14889);
   const items = [LocaleStore];
   const stateFromStores = trailing(504).useStateFromStores(items, () => _undefined.locale);
   trailing = undefined;
@@ -792,18 +792,18 @@ let closure_27 = noop.memo(function StaticSetting(arg0) {
   let tmp12Result = null;
   if (null != IconComponent) {
     const obj4 = { IconComponent, variant };
-    tmp12Result = closure_14(tmp(6184).TableRow.Icon, obj4);
+    tmp12Result = closure_14(tmp(6186).TableRow.Icon, obj4);
   }
   obj3.icon = tmp12Result;
   let tmp12Result2 = null;
   if (null != trailing) {
     const obj5 = { text: trailing };
-    tmp12Result2 = closure_14(tmp(6184).TableRow.TrailingText, obj5);
+    tmp12Result2 = closure_14(tmp(6186).TableRow.TrailingText, obj5);
   }
   obj3.trailing = tmp12Result2;
   obj3.start = start;
   obj3.end = end;
-  const children = [closure_14(trailing(6184).TableRow, obj3)];
+  const children = [closure_14(trailing(6186).TableRow, obj3)];
   if (highlightSettingItem) {
     const obj6 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj6);

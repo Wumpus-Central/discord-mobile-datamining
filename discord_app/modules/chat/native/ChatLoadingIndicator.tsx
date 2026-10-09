@@ -54,7 +54,7 @@ const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = {
   height: 8,
@@ -510,13 +510,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         }
         return tmp7;
       };
-      const PressableOpacityResult2 = PressableOpacity(4810);
+      const PressableOpacityResult2 = PressableOpacity(4811);
       fn3.__closure = {
         useReducedMotion: stateFromStores,
-        withRepeat: PressableOpacity(4810).withRepeat,
-        withSequence: PressableOpacity(4810).withSequence,
-        withTiming: PressableOpacity(5091).withTiming,
-        Easing: PressableOpacity(4810).Easing,
+        withRepeat: PressableOpacity(4811).withRepeat,
+        withSequence: PressableOpacity(4811).withSequence,
+        withTiming: PressableOpacity(5092).withTiming,
+        Easing: PressableOpacity(4811).Easing,
       };
       fn3.__workletHash = 17454673879926;
       fn3.__initData = __initData;
@@ -530,7 +530,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
           let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
           const intl = PressableOpacity(1126).intl;
           obj3.children = intl.string(PressableOpacity(1126).t.JwIJMV);
-          const tmp17 = closure_13(PressableOpacity(5086).Text, obj3);
+          const tmp17 = closure_13(PressableOpacity(5087).Text, obj3);
           cResult[7] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -543,7 +543,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
           if (!stateFromStores1) {
             return tmp18;
           } else if (cResult[11] !== tmp18) {
-            PressableOpacity = PressableOpacity(6189).PressableOpacity;
+            PressableOpacity = PressableOpacity(6191).PressableOpacity;
             let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
             tmp = closure_13(PressableOpacity, obj4);
             cResult[11] = tmp18;
@@ -569,10 +569,10 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       tmp13 = tmp14;
       let obj2 = {
         useReducedMotion: stateFromStores,
-        withRepeat: PressableOpacity(4810).withRepeat,
-        withSequence: PressableOpacity(4810).withSequence,
-        withTiming: PressableOpacity(5091).withTiming,
-        Easing: PressableOpacity(4810).Easing,
+        withRepeat: PressableOpacity(4811).withRepeat,
+        withSequence: PressableOpacity(4811).withSequence,
+        withTiming: PressableOpacity(5092).withTiming,
+        Easing: PressableOpacity(4811).Easing,
       };
     }
   : function ChannelHeaderLoadingIndicator() {
@@ -625,13 +625,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
         }
         return tmp7;
       };
-      let obj3 = stateFromStores(4810);
+      let obj3 = stateFromStores(4811);
       fn.__closure = {
         useReducedMotion: stateFromStores,
-        withRepeat: stateFromStores(4810).withRepeat,
-        withSequence: stateFromStores(4810).withSequence,
-        withTiming: stateFromStores(5091).withTiming,
-        Easing: stateFromStores(4810).Easing,
+        withRepeat: stateFromStores(4811).withRepeat,
+        withSequence: stateFromStores(4811).withSequence,
+        withTiming: stateFromStores(5092).withTiming,
+        Easing: stateFromStores(4811).Easing,
       };
       fn.__workletHash = 9356373946997;
       fn.__initData = __initData2;
@@ -644,13 +644,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = stateFromStores(1126).intl;
       obj7.children = intl.string(stateFromStores(1126).t.JwIJMV);
-      items3[1] = closure_13(stateFromStores(5086).Text, obj7);
+      items3[1] = closure_13(stateFromStores(5087).Text, obj7);
       obj5.children = items3;
       const tmp8 = closure_14(View, obj5);
       let tmp7Result = tmp8;
       if (stateFromStores1) {
         let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-        tmp7Result = closure_13(tmp2(6189).PressableOpacity, obj8);
+        tmp7Result = closure_13(tmp2(6191).PressableOpacity, obj8);
       }
       return tmp7Result;
     };

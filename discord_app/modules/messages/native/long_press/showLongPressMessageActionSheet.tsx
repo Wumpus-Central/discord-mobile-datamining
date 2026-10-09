@@ -1,5 +1,5 @@
 // discord_app/modules/messages/native/long_press/showLongPressMessageActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/messages/native/long_press/sh
 
 export const showLongPressMessageActionSheet = function showLongPressMessageActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9630, dependencyMap.paths),
+    asyncRequireImpl(9649, dependencyMap.paths),
     "MessageLongPressActionSheet",
     arg0,
   );

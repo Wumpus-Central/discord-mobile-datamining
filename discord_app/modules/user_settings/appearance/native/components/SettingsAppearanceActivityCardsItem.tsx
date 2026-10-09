@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const tmp9 = jsx(animatedStyles(8600).FlashList, {
+      const tmp9 = jsx(animatedStyles(8608).FlashList, {
         contentContainerStyle: first,
         data: cards,
         renderItem: tmp6,
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         showsHorizontalScrollIndicator: false,
         horizontal: true,
       };
-      return jsx(animatedStyles(8600).FlashList, {
+      return jsx(animatedStyles(8608).FlashList, {
         contentContainerStyle: {
           paddingVertical: nativeDefault.space.PX_16,
           paddingHorizontal: nativeDefault.space.PX_16,

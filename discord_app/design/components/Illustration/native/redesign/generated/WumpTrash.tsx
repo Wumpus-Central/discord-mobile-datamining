@@ -1,7 +1,7 @@
 // discord_app/design/components/Illustration/native/redesign/generated/WumpTrash.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../shared.tsx";
-import _mod8335 from "../../index.tsx";
+import _mod8343 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,17 +15,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== theme) {
         const obj3 = {
           dark() {
-            return require("../../../../../../../_runtime/metro/16198__.js");
+            return require("../../../../../../../_runtime/metro/16314__.js");
           },
           darker() {
-            return require("../../../../../../../_runtime/metro/16199__.js");
+            return require("../../../../../../../_runtime/metro/16315__.js");
           },
         };
-        const illustrationSource = _mod8335.getIllustrationSource(theme, obj3);
+        const illustrationSource = _mod8343.getIllustrationSource(theme, obj3);
         cResult[0] = theme;
         cResult[1] = illustrationSource;
         let tmp4 = illustrationSource;
-        const tmpResult = _mod8335;
+        const tmpResult = _mod8343;
       } else {
         tmp4 = cResult[1];
       }
@@ -33,24 +33,24 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useWumpTrashSource() {
       const obj = shared;
-      return _mod8335.getIllustrationSource(obj.useThemeContext().theme, {
+      return _mod8343.getIllustrationSource(obj.useThemeContext().theme, {
         dark() {
-          return require("../../../../../../../_runtime/metro/16198__.js");
+          return require("../../../../../../../_runtime/metro/16314__.js");
         },
         darker() {
-          return require("../../../../../../../_runtime/metro/16199__.js");
+          return require("../../../../../../../_runtime/metro/16315__.js");
         },
       });
     };
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getWumpTrashSource(theme) {
-  return _mod8335.getIllustrationSource(theme, {
+  return _mod8343.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/16198__.js");
+      return require("../../../../../../../_runtime/metro/16314__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/16199__.js");
+      return require("../../../../../../../_runtime/metro/16315__.js");
     },
   });
 }

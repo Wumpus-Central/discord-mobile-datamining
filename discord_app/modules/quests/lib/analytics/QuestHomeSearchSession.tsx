@@ -1,5 +1,5 @@
 // discord_app/modules/quests/lib/analytics/QuestHomeSearchSession.tsx
-import v1 from "../../../../../_runtime/01278_v1.js";
+import v1 from "../../../../../_runtime/01279_v1.js";
 import SessionUtils from "../../../analytics_sessions/SessionUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

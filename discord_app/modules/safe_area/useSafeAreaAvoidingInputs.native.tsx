@@ -415,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (null != current2) {
                       dependencyMap = 1;
                       c3 = 1;
-                      const obj4 = { value: tmp3(10501).measureViewRefInWindow(found.ref), done: false };
+                      const obj4 = { value: tmp3(10491).measureViewRefInWindow(found.ref), done: false };
                       return obj4;
                     }
                   }
@@ -433,7 +433,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap = 2;
                   c3 = 1;
                   const obj6 = {
-                    value: tmp3(10501).measureViewRefInView(closure_128_1.ref, closure_128_0),
+                    value: tmp3(10491).measureViewRefInView(closure_128_1.ref, closure_128_0),
                     done: false,
                   };
                   return obj6;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (null != closure_128_3) {
                         dependencyMap = 3;
                         c3 = 1;
-                        const obj9 = { value: tmp3(10501).measureViewInWindow(closure_128_0), done: false };
+                        const obj9 = { value: tmp3(10491).measureViewInWindow(closure_128_0), done: false };
                         return obj9;
                       }
                     }

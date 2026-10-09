@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import _modDef4996 from "../../../../../_runtime/metro/04996__.js";
+import _modDef4997 from "../../../../../_runtime/metro/04997__.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
@@ -14,12 +14,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Platform = fn(17).Platform;
-const CONTROLS_DRAWER_HEADER_SIZE = fn(11987).CONTROLS_DRAWER_HEADER_SIZE;
+const CONTROLS_DRAWER_HEADER_SIZE = fn(11924).CONTROLS_DRAWER_HEADER_SIZE;
 const Constants = fn(1085);
 ({ ComponentActions: closure_4, ME: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE },
   gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 },
@@ -113,7 +113,7 @@ const memoResult = noop.memo(
           const obj2 = { accessibilityLabel: null, icon: null, onPress: null };
           const intl = util.intl;
           obj2.accessibilityLabel = intl.string(util.t["5MstTl"]);
-          obj2.icon = _modDef4996;
+          obj2.icon = _modDef4997;
           obj2.onPress = first;
           const tmp9 = timestampProducer(ChatFloatingNavButtonDefault, obj2);
           cResult[1] = tmp9;
@@ -131,7 +131,7 @@ const memoResult = noop.memo(
         const obj = { accessibilityLabel: null, icon: null, onPress: null };
         const intl = util.intl;
         obj.accessibilityLabel = intl.string(util.t["5MstTl"]);
-        obj.icon = _modDef4996;
+        obj.icon = _modDef4997;
         obj.onPress = callback;
         return timestampProducer(ChatFloatingNavButtonDefault, obj);
       },

@@ -2,7 +2,7 @@
 import initialize from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
-import Link from "../../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../../_runtime/01504_Link.js";
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import useSelectedDismissibleContent from "../../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -14,7 +14,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import SelectedGuildStore from "../../../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 let closure_6 = [];
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -44,7 +44,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       const tmp9 =
-        markAsDismissed.visibleContent === markAsDismissed(2048).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
+        markAsDismissed.visibleContent === markAsDismissed(2049).DismissibleContent.YOU_BAR_DM_SWIPE_COACHMARK;
       if (cResult[4] === tmp9) {
         if (cResult[5] === tmp8) {
           let tmp10 = cResult[6];

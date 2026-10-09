@@ -4,17 +4,17 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef8256 from "../../../../../_runtime/metro/08256__.js";
+import _modDef8264 from "../../../../../_runtime/metro/08264__.js";
 import PremiumUpsellGradientBackground from "../../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerListConstants = fn(9362);
+const EmojiPickerListConstants = fn(9400);
 ({ LABEL_BOTTOM_PADDING, LABEL_TOP_PADDING, NSFW_ROW_HEIGHT } = EmojiPickerListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   section: {
     justifyContent: "center",
@@ -63,7 +63,7 @@ const memoResult = noop.memo(
         const cResult = c.c(7);
         const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef8256, size: native.Icon.Sizes.SMALL };
+          const obj2 = { source: _modDef8264, size: native.Icon.Sizes.SMALL };
           const tmp8 = React4(native.Icon, obj2);
           cResult[0] = tmp8;
           let first = tmp8;
@@ -110,7 +110,7 @@ const memoResult = noop.memo(
     : function EmojiPickerListNSFWRow() {
         const tmp = closure_6();
         const obj = { style: tmp.nsfwContainer, children: null };
-        const items = [React4(native.Icon, { source: _modDef8256, size: native.Icon.Sizes.SMALL })];
+        const items = [React4(native.Icon, { source: _modDef8264, size: native.Icon.Sizes.SMALL })];
         const obj3 = {
           style: tmp.nsfwText,
           variant: "text-sm/normal",

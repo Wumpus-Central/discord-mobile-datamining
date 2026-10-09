@@ -31,7 +31,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   form: { paddingTop: nativeDefault.space.PX_16 },
   trailingWrapper: { flexDirection: "row", alignItems: "center" },
@@ -206,11 +206,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ contentContainerStyle, platformType } = closeGuildSettings);
       closeGuildSettings = closeGuildSettings.closeGuildSettings;
       let obj = platformType(576);
-      const token = platformType(4778).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+      const token = platformType(4779).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp6 = closure_13();
       dependencyMap = tmp6;
-      let obj2 = platformType(4778);
-      const navigation = platformType(1502).useNavigation();
+      let obj2 = platformType(4779);
+      const navigation = platformType(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [hasChanges];
         const fn = function i() {
@@ -227,12 +227,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp7, tmp8] = cResult;
       }
-      const obj3 = platformType(1502);
+      const obj3 = platformType(1503);
       const stateFromStoresObject = platformType(504).useStateFromStoresObject(tmp7, tmp8);
       const submitting = stateFromStoresObject.submitting;
       hasChanges = stateFromStoresObject.hasChanges;
       guild = stateFromStoresObject.guild;
-      const tmp11 = closeGuildSettings(4991)();
+      const tmp11 = closeGuildSettings(4992)();
       constants2 = tmp11;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [hasChanges];
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-        value = tmp4(5759).get(platformType);
+        value = tmp4(5760).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -444,10 +444,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28 = tmp49;
           tmp29 = forResult;
           tmp30 = tmp43;
-          Form = tmp(8555).Form;
-          Stack = tmp(5373).Stack;
+          Form = tmp(8563).Form;
+          Stack = tmp(5374).Stack;
         }
-        const tmp4Result = tmp4(5759);
+        const tmp4Result = tmp4(5760);
       }
       cResult[4] = stateFromStores;
       cResult[5] = closeGuildSettings;
@@ -481,12 +481,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
         }
       }
-      const token = platformType(4778).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+      const token = platformType(4779).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp5 = closure_13();
       dependencyMap = tmp5;
-      let obj = platformType(4778);
-      const navigation = platformType(1502).useNavigation();
-      let obj2 = platformType(1502);
+      let obj = platformType(4779);
+      const navigation = platformType(1503).useNavigation();
+      let obj2 = platformType(1503);
       const items = [c5];
       const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({
         guild: _undefined.getGuild(),
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }));
       const submitting = stateFromStoresObject.submitting;
       ({ hasChanges: c5, guild } = stateFromStoresObject);
-      constants2 = closeGuildSettings(4991)();
+      constants2 = closeGuildSettings(4992)();
       const obj4 = platformType(504);
       const items1 = [c5];
       const stateFromStores = platformType(504).useStateFromStores(items1, () => _undefined.getProps().integrations);
@@ -510,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           fn = () => null;
         }
         const obj3 = { headerLeft: fn, title: null, headerRight: null };
-        value = tmp3(5759).get(platformType);
+        value = tmp3(5760).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -580,10 +580,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { children: null };
         const items2 = [mapped];
         const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-        items2[1] = closure_10(tmp(5086).Text, obj12);
+        items2[1] = closure_10(tmp(5087).Text, obj12);
         obj9.children = items2;
-        obj8.children = closure_11(tmp(5373).Stack, obj9);
-        const items3 = [closure_10(tmp(8555).Form, obj8), closure_10(tmp(6719).NavScrim, {})];
+        obj8.children = closure_11(tmp(5374).Stack, obj9);
+        const items3 = [closure_10(tmp(8563).Form, obj8), closure_10(tmp(6726).NavScrim, {})];
         obj11.children = items3;
         return closure_11(closure_12, obj11);
       }

@@ -3,11 +3,11 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6245 from "../../../../../../_runtime/metro/06245__.js";
+import _modDef6247 from "../../../../../../_runtime/metro/06247__.js";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
-import _modDef8996 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef9007 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,10 +16,10 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   profileFrameContainer: { flex: 1 },
   profileContainer: {
@@ -29,7 +29,7 @@ let obj2 = {
     borderColor: nativeDefault.colors.BORDER_NORMAL,
     borderRadius: nativeDefault.radii.xs,
   },
-  sampleProfile: { width: "100%", aspectRatio: fn(8971).SAMPLE_PROFILE_ASPECT_RATIO },
+  sampleProfile: { width: "100%", aspectRatio: fn(8982).SAMPLE_PROFILE_ASPECT_RATIO },
 };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                       cResult[69] ===
                                                                       Symbol.for("react.memo_cache_sentinel")
                                                                     ) {
-                                                                      const obj5 = { uri: _modDef8996 };
+                                                                      const obj5 = { uri: _modDef9007 };
                                                                       cResult[69] = obj5;
                                                                       let tmp83 = obj5;
                                                                     } else {
@@ -313,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         maskElement: tmp63,
                                                         children: tmp69,
                                                       };
-                                                      const tmp75 = timestampProducer(_modDef6245, obj11);
+                                                      const tmp75 = timestampProducer(_modDef6247, obj11);
                                                       cResult[52] = tmp63;
                                                       cResult[53] = tmp69;
                                                       cResult[54] = tmp22;
@@ -717,8 +717,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           backgroundColor: "black",
         },
       };
-      tmp13 = _modDef6245;
-      obj18.uri = _modDef8996;
+      tmp13 = _modDef6247;
+      obj18.uri = _modDef9007;
       obj17.source = obj18;
       obj17.style = tmp.sampleProfile;
       obj16.children = timestampProducer(FastImageDefault, obj17);

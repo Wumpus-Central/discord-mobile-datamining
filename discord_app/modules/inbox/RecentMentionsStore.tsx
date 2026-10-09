@@ -578,8 +578,8 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
     message = message.message;
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      const obj3 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
-      if (obj2.isRawMessageMentioned(obj3)) {
+      const obj2 = { rawMessage: message, userId: currentUser.id, suppressRoles: false, suppressEveryone: false };
+      if (obj.isRawMessageMentioned(obj2)) {
         const tmp3 = parseMessage(message, message.channelId);
         if (null == tmp3) {
           return false;
@@ -587,10 +587,10 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
           substr = substr.slice();
           substr.unshift(tmp3);
           closure_20[tmp3.id] = true;
-          const obj = { addedMessages: null };
+          const obj3 = { addedMessages: null };
           const items = [tmp3];
-          obj.addedMessages = items;
-          ({ addedMessages, deletedMessages } = obj);
+          obj3.addedMessages = items;
+          ({ addedMessages, deletedMessages } = obj3);
           if (null != addedMessages) {
             const item = addedMessages.forEach((getChannelId) => {
               if (null == dependencyMap[getChannelId.getChannelId(getChannelId)]) {
@@ -611,7 +611,7 @@ const recentMentionsStore = new RecentMentionsStore(DispatcherDefault, {
           }
         }
       }
-      obj2 = isMessageMentioned;
+      obj = isMessageMentioned;
     }
     return false;
   },

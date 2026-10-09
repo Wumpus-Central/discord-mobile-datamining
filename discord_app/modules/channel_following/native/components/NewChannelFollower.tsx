@@ -1,7 +1,7 @@
 // discord_app/modules/channel_following/native/components/NewChannelFollower.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openChannelPickerDefault from "../../../channel/native/openChannelPicker.tsx";
 import ChannelFollowerActionCreatorsDefault from "../../../../actions/ChannelFollowerActionCreators.tsx";
@@ -25,14 +25,14 @@ function canFollowIntoChannel(channel) {
   return hasItem;
 }
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire, StyleSheet } = get_ActivityIndicator);
-fn(2067).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-let closure_10 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+fn(2068).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_9 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
-({ AbortCodes: closure_14, Permissions: closure_15 } = Constants);
+({ AbortCodes: map1, Permissions: closure_14 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 },
   header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 },
@@ -74,7 +74,7 @@ obj2.headerChannelIcon = { height: 20, width: 20, marginRight: 8, opacity: 0.6 }
 obj2.ctaHeader = { flex: 1, textAlign: "center", marginBottom: 8 };
 obj2.ctaSubhead = { flex: 1, textAlign: "center", marginBottom: 8 };
 obj2.channelIcon = { height: 16, width: 16, opacity: 0.6 };
-let closure_18 = createStyles.createStyles(obj2);
+let closure_17 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_following/native/components/NewChannelFollower.tsx");
 
@@ -84,7 +84,8 @@ export default function NewChannelFollower(targetChannelId) {
   ({ reopenActionSheetWithTarget: noop, onSuccess: closure_5 } = targetChannelId);
   c7 = undefined;
   targetChannel = undefined;
-  let tmp = closure_18();
+  closure_10 = undefined;
+  let tmp = closure_17();
   const tmp2 = targetChannelId(noop.useState(false), 2);
   closure_6 = tmp2[1];
   [tmp4, c7] = targetChannelId(noop.useState(null), 2);
@@ -93,14 +94,14 @@ export default function NewChannelFollower(targetChannelId) {
   const bottomSheetRef = bottomSheetRef1.bottomSheetRef;
   let obj = require("useBottomSheetRef");
   const tmp9 = require("useTheme")();
-  const items = [GuildStore];
+  const items = [closure_10];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({
     sourceGuild: GuildStore.getGuild(require),
     targetGuild: GuildStore.getGuild(targetGuildId),
   }));
   ({ targetGuild, sourceGuild } = stateFromStoresObject);
   let obj2 = require("initialize");
-  const items1 = [bottomSheetRef];
+  const items1 = [c7];
   const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items1, () => ({
     sourceChannel: ChannelStore.getChannel(importDefault),
     targetChannel: ChannelStore.getChannel(targetChannelId),
@@ -108,7 +109,7 @@ export default function NewChannelFollower(targetChannelId) {
   ({ sourceChannel, targetChannel } = stateFromStoresObject1);
   const obj3 = require("initialize");
   const tmp13 = require("useChannelName")(targetChannel);
-  const channelType = tmp14;
+  closure_10 = tmp14;
   require("useMountEffect")(() => {
     if (closure_10) {
       const current = bottomSheetRef.current;
@@ -119,15 +120,15 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("../../../../../_runtime/metro/12193__.js");
+    let tmp8Result = require("../../../../../_runtime/metro/12132__.js");
   } else {
-    tmp8Result = require("../../../../../_runtime/metro/12194__.js");
+    tmp8Result = require("../../../../../_runtime/metro/12133__.js");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };
-  const items2 = [closure_16(closure_6, { source: tmp8Result, style: tmp.headerBackground })];
+  const items2 = [closure_15(require("FastImage"), { source: tmp8Result, style: tmp.headerBackground })];
   const obj7 = { style: tmp.header, children: null };
-  const items3 = [closure_16(require("GuildIcon"), { style: tmp.headerGuildIcon, guild: sourceGuild })];
+  const items3 = [closure_15(require("GuildIcon"), { style: tmp.headerGuildIcon, guild: sourceGuild })];
   const obj9 = { style: tmp.headerChannelContainer, children: null };
   const obj10 = { style: tmp.headerChannel, children: null };
   const obj11 = { size: require("native").Icon.Sizes.CUSTOM, source: null, style: null };
@@ -139,16 +140,16 @@ export default function NewChannelFollower(targetChannelId) {
   obj11.source = channelIcon;
   obj11.style = tmp.headerChannelIcon;
   const items4 = [
-    closure_16(require("native").Icon, obj11),
-    closure_16(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp12 }),
+    closure_15(require("native").Icon, obj11),
+    closure_15(require("Text/Text").Text, { lineClamp: 1, variant: "text-sm/medium", children: tmp12 }),
   ];
   obj10.children = items4;
-  obj9.children = closure_17(closure_5, obj10);
-  items3[1] = closure_16(closure_5, obj9);
+  obj9.children = closure_16(closure_5, obj10);
+  items3[1] = closure_15(closure_5, obj9);
   obj7.children = items3;
-  items2[1] = closure_17(closure_5, obj7);
+  items2[1] = closure_16(closure_5, obj7);
   obj5.children = items2;
-  const items5 = [closure_17(closure_5, obj5)];
+  const items5 = [closure_16(closure_5, obj5)];
   const obj12 = { style: tmp.container, children: null };
   const obj13 = {
     style: tmp.ctaHeader,
@@ -158,11 +159,11 @@ export default function NewChannelFollower(targetChannelId) {
   };
   let intl = require("util").intl;
   obj13.children = intl.string(require("util").t.mvPFbA);
-  const items6 = [closure_16(require("Text/Text").Text, obj13), , , , ,];
+  const items6 = [closure_15(require("Text/Text").Text, obj13), , , , ,];
   const obj14 = { style: tmp.ctaSubhead, variant: "text-sm/medium", color: "text-default", children: null };
   let intl2 = require("util").intl;
   obj14.children = intl2.string(require("util").t.kbpkxJ);
-  items6[1] = closure_16(require("Text/Text").Text, obj14);
+  items6[1] = closure_15(require("Text/Text").Text, obj14);
   const obj15 = { title: null, hasIcons: true, children: null };
   const intl3 = require("util").intl;
   obj15.title = intl3.string(require("util").t.xFn72s);
@@ -176,7 +177,7 @@ export default function NewChannelFollower(targetChannelId) {
   let tmp19Result = null;
   if (null != targetGuild) {
     const obj17 = { guild: targetGuild, size: require("GuildIcon").GuildIconSizes.XSMALL };
-    tmp19Result = closure_16(require("GuildIcon"), obj17);
+    tmp19Result = closure_15(require("GuildIcon"), obj17);
     const tmp8Result2 = require("GuildIcon");
   }
   obj16.icon = tmp19Result;
@@ -191,7 +192,7 @@ export default function NewChannelFollower(targetChannelId) {
       guild = guild.getGuild(item);
       let canResult = null != guild;
       if (canResult) {
-        canResult = closure_1_12.can(constants.MANAGE_WEBHOOKS, guild);
+        canResult = closure_1_11.can(constants.MANAGE_WEBHOOKS, guild);
       }
       if (canResult) {
         const obj = { label: null, value: null };
@@ -202,7 +203,7 @@ export default function NewChannelFollower(targetChannelId) {
     }, array);
     obj2.selectedItem = targetGuildId;
     obj2.onItemSelect = function onItemSelect(arg0) {
-      const firstChannelOfType = targetChannel.getFirstChannelOfType(arg0, canFollowIntoChannel, closure_10);
+      const firstChannelOfType = bottomSheetRef.getFirstChannelOfType(arg0, canFollowIntoChannel, targetChannel);
       let id;
       if (firstChannelOfType != null) {
         id = firstChannelOfType.id;
@@ -212,11 +213,11 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(8529, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(8537, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(8537, dependencyMap.paths);
   };
-  obj15.children = closure_16(require("TableRow").TableRow, obj16);
-  const items7 = [closure_16(require("TableRowGroup").TableRowGroup, obj15)];
+  obj15.children = closure_15(require("TableRow").TableRow, obj16);
+  const items7 = [closure_15(require("TableRowGroup").TableRowGroup, obj15)];
   const obj18 = { title: null, hasIcons: true, children: null };
   const intl5 = require("util").intl;
   obj18.title = intl5.string(require("util").t.PDn2fR);
@@ -233,7 +234,7 @@ export default function NewChannelFollower(targetChannelId) {
       source: require("utils/ChannelUtils").getChannelIcon(targetChannel),
       style: tmp.channelIcon,
     };
-    tmp19Result3 = closure_16(require("native").Icon, obj20);
+    tmp19Result3 = closure_15(require("native").Icon, obj20);
     const tmp5Result4 = require("utils/ChannelUtils");
   }
   const obj21 = { spacing: 16, children: null };
@@ -264,18 +265,18 @@ export default function NewChannelFollower(targetChannelId) {
       openChannelPickerDefault(obj);
     }
   };
-  obj18.children = closure_16(require("TableRow").TableRow, obj19);
-  items7[1] = closure_16(require("TableRowGroup").TableRowGroup, obj18);
+  obj18.children = closure_15(require("TableRow").TableRow, obj19);
+  items7[1] = closure_15(require("TableRowGroup").TableRowGroup, obj18);
   obj21.children = items7;
-  items6[2] = closure_17(require("Stack/Stack").Stack, obj21);
+  items6[2] = closure_16(require("Stack/Stack").Stack, obj21);
   const obj22 = { inset: true, children: null };
   const intl7 = require("util").intl;
   obj22.children = intl7.string(require("util").t.Z0quyN);
-  items6[3] = closure_16(require("Form").FormHint, obj22);
+  items6[3] = closure_15(require("Form").FormHint, obj22);
   let tmp19Result4 = null;
   if (null != tmp4) {
     const obj23 = { inset: true, children: tmp4 };
-    tmp19Result4 = closure_16(require("Form").FormHint, obj23);
+    tmp19Result4 = closure_15(require("Form").FormHint, obj23);
   }
   const obj24 = { children: null };
   items6[4] = tmp19Result4;
@@ -302,24 +303,24 @@ export default function NewChannelFollower(targetChannelId) {
       const nextPromise = channelFollower.then(closure_1_5);
     }
   };
-  const items8 = [closure_16(require("components/Button/Button").Button, obj26)];
+  const items8 = [closure_15(require("components/Button/Button").Button, obj26)];
   const obj27 = { text: null, variant: "secondary", onPress: null };
   const intl9 = require("util").intl;
   obj27.text = intl9.string(require("util").t["ETE/oC"]);
   obj27.onPress = targetChannelId.onCancel;
-  items8[1] = closure_16(require("components/Button/Button").Button, obj27);
+  items8[1] = closure_15(require("components/Button/Button").Button, obj27);
   obj25.children = items8;
-  items6[5] = closure_17(require("ButtonGroup").ButtonGroup, obj25);
+  items6[5] = closure_16(require("ButtonGroup").ButtonGroup, obj25);
   obj12.children = items6;
-  items5[1] = closure_17(closure_5, obj12);
+  items5[1] = closure_16(closure_5, obj12);
   obj24.children = items5;
   const items9 = [
-    closure_17(require("BottomSheetModal").BottomSheetScrollView, obj24),
-    closure_16(require("ActionSheetHeaderBar").ActionSheetHeaderBar, {
+    closure_16(require("BottomSheetModal").BottomSheetScrollView, obj24),
+    closure_15(require("ActionSheetHeaderBar").ActionSheetHeaderBar, {
       variant: "floating",
       onPress: bottomSheetRef1.bottomSheetClose,
     }),
   ];
   obj4.children = items9;
-  return closure_17(require("Sheet/BottomSheet").BottomSheet, obj4);
+  return closure_16(require("Sheet/BottomSheet").BottomSheet, obj4);
 }

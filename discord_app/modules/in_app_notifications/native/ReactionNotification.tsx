@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -87,7 +87,7 @@ function ReactorNotificationIcon(notification) {
   }
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12589);
+const InAppNotificationConstants = fn(12529);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1085);
@@ -95,7 +95,7 @@ const Constants = fn(1085);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -104,14 +104,14 @@ let obj2 = {
   italic: null,
   guildIcon: null,
 };
-let PlatformUtils = fn(1382);
+let PlatformUtils = fn(1383);
 let tmp5;
 if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
 obj2.imageEmoji = { height: 16, width: 16, transform: tmp5 };
-PlatformUtils = fn(1382);
+PlatformUtils = fn(1383);
 obj2.italic = {
   fontStyle: "italic",
   fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC,
@@ -1039,7 +1039,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(12606, dependencyMap.paths),
+        asyncRequireImpl(12546, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

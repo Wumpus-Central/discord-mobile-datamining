@@ -70,7 +70,7 @@ function reset() {
 }
 const Constants = fn(1085);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);

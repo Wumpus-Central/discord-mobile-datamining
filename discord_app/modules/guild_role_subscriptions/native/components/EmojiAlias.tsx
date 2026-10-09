@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({
   emojiAlias: { alignItems: "center", flexDirection: "row" },
   emojiColon: { width: 4 },

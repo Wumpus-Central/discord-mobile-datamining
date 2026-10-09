@@ -5,19 +5,18 @@ import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11406 from "../../../../_runtime/metro/11406__.js";
-import _modDef11407 from "../../../../_runtime/metro/11407__.js";
-import _modDef11408 from "../../../../_runtime/metro/11408__.js";
-import _modDef11409 from "../../../../_runtime/metro/11409__.js";
+import _modDef11313 from "../../../../_runtime/metro/11313__.js";
+import _modDef11314 from "../../../../_runtime/metro/11314__.js";
+import _modDef11315 from "../../../../_runtime/metro/11315__.js";
+import _modDef11316 from "../../../../_runtime/metro/11316__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { width: 82, height: 82, marginTop: 4 },
   guildPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -69,12 +68,12 @@ obj2.emptyGuildIcon = {
 };
 obj2.emptyGuildIconText = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
 obj2.uploadIcon = { height: 16, width: 16 };
-let closure_8 = createStyles.createLegacyClassComponentStyles(obj2);
+let closure_7 = createStyles.createLegacyClassComponentStyles(obj2);
 const PureComponent = noop.PureComponent;
 class GuildIconUploader extends PureComponent {}
 const prototype = GuildIconUploader.prototype;
 prototype["renderIcon"] = function renderIcon() {
-  const tmp = closure_8(this.context);
+  const tmp = closure_7(this.context);
   const icon = this.props.icon;
   if (null != icon) {
     const obj2 = { style: null, source: null };
@@ -83,32 +82,33 @@ prototype["renderIcon"] = function renderIcon() {
     obj2.style = items;
     const obj3 = { uri: icon };
     obj2.source = obj3;
-    let tmp7Result = timestampProducer(FastImageDefault, obj2);
+    let tmp7Result = hasOwnProperty(FastImageDefault, obj2);
   } else {
     const obj4 = { style: null, children: null };
     const items1 = [,];
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj4.style = items1;
+    const tmp12 = FastImageDefault;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp14Result = _modDef11406;
+      let tmp10Result = _modDef11313;
     } else {
-      tmp14Result = _modDef11407;
+      tmp10Result = _modDef11314;
     }
-    const obj = { source: tmp14Result };
-    const items2 = [timestampProducer(React4, obj)];
+    const obj = { source: tmp10Result };
+    const items2 = [hasOwnProperty(tmp12, obj)];
     const obj5 = { style: tmp.emptyGuildIconText, variant: "text-xs/bold", color: "text-default", children: null };
     const intl = util.intl;
     obj6 = shared;
     obj5.children = intl.string(util.t["3UB9ad"]).toUpperCase();
-    items2[1] = timestampProducer(Text_Text.Text, obj5);
+    items2[1] = hasOwnProperty(Text_Text.Text, obj5);
     obj4.children = items2;
-    tmp7Result = React5(React3, obj4);
+    tmp7Result = timestampProducer(View, obj4);
     const str = intl.string(util.t["3UB9ad"]);
   }
   return tmp7Result;
 };
 prototype["renderUpload"] = function renderUpload() {
-  const tmp = closure_8(this.context);
+  const tmp = closure_7(this.context);
   const props = this.props;
   const iconBackgroundColor = props.iconBackgroundColor;
   if (null != props.icon) {
@@ -123,20 +123,20 @@ prototype["renderUpload"] = function renderUpload() {
     const obj6 = { tintColor: iconBackgroundColor };
     items1[1] = obj6;
     obj5.style = items1;
-    obj5.source = _modDef11408;
-    obj4.children = timestampProducer(React4, obj5);
-    obj2.children = timestampProducer(React3, obj4);
+    obj5.source = _modDef11315;
+    obj4.children = hasOwnProperty(FastImageDefault, obj5);
+    obj2.children = hasOwnProperty(View, obj4);
     let obj = obj2;
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj7 = { source: _modDef11409 };
-    obj.children = timestampProducer(React4, obj7);
+    const obj7 = { source: _modDef11316 };
+    obj.children = hasOwnProperty(FastImageDefault, obj7);
   }
-  return timestampProducer(React3, obj);
+  return hasOwnProperty(View, obj);
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = closure_8(this.context);
+  const tmp = closure_7(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
     const intl2 = util.intl;
@@ -149,15 +149,12 @@ prototype["render"] = function render() {
   const obj2 = { style: null, children: null };
   const items = [tmp.container, style];
   obj2.style = items;
-  const items1 = [
-    timestampProducer(React3, { style: tmp.guildIcon, children: self.renderIcon() }),
-    self.renderUpload(),
-  ];
+  const items1 = [hasOwnProperty(View, { style: tmp.guildIcon, children: self.renderIcon() }), self.renderUpload()];
   obj2.children = items1;
-  obj.children = React5(React3, obj2);
-  return timestampProducer(Pressables.PressableOpacity, obj);
+  obj.children = timestampProducer(View, obj2);
+  return hasOwnProperty(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(4787).ThemeContext;
+GuildIconUploader.contextType = fn(4788).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

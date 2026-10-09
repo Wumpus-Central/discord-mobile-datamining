@@ -33,7 +33,7 @@ function hasOnlySelfParticipant(participants, meId) {
     return true;
   }
 }
-const CallConstants = fn(5113);
+const CallConstants = fn(5114);
 ({ isStreamParticipant: closure_8, ParticipantTypes: closure_9 } = CallConstants);
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSetHasActiveVideoOutputSink(selectedParticipantStreamId) {
@@ -291,7 +291,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "end" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "backgroundColor" };
   };
   cResult[1] = channelId;
   cResult[2] = focusedParticipantStreamId;
@@ -436,7 +436,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "end" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "backgroundColor" };
   }, items1);
   const items2 = [stateFromStoresObject.selectedParticipantSpeaking];
   const effect = noop.useEffect(() => {
@@ -504,7 +504,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFoc
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Set", focusedParticipantType: ref2.current };
       let obj = obj2;
     } else {
       let type1;
@@ -589,7 +589,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFoc
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Set", focusedParticipantType: ref2.current };
       let obj = obj2;
     } else {
       let type1;

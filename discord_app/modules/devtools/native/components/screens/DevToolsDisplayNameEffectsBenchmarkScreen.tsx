@@ -8,7 +8,7 @@ import Stack_Stack from "../../../../../design/components/Stack/native/Stack.nat
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import types from "../../../../display_name_styles/types.tsx";
 import useDisplayNameStylesEffectConfigs from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
-import _mod10253 from "../../../../../utils/native/StringUtils.tsx";
+import _mod10238 from "../../../../../utils/native/StringUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -28,14 +28,14 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(1407).EFFECT_ORDER, fn(1408).DisplayNameEffect.GUMMY];
+let items = [...fn(1408).EFFECT_ORDER, fn(1409).DisplayNameEffect.GUMMY];
 let closure_12 = [10, 50, 100, 200];
 let items1 = [
   { key: "short", label: "Short", name: "Pixel7" },
   { key: "medium", label: "Medium", name: "NebulaWanderer" },
   { key: "long", label: "Long", name: "GalacticOverlord2049" },
 ];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   container: null,
@@ -57,7 +57,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_14();
       if (cResult[0] !== caption) {
         const obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: caption };
-        const tmp7 = closure_8(tmp(5086).Text, obj2);
+        const tmp7 = closure_8(tmp(5087).Text, obj2);
         cResult[0] = caption;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -80,14 +80,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { spacing: 8, children: null };
               items = [tmp5, tmp13];
               obj3.children = items;
-              const tmp18 = closure_9(tmp(5373).Stack, obj3);
+              const tmp18 = closure_9(tmp(5374).Stack, obj3);
               cResult[12] = tmp5;
               cResult[13] = tmp13;
               cResult[14] = tmp18;
               tmp16 = tmp18;
             }
             const obj4 = { direction: "horizontal", spacing: 8, style: tmp8, children: cResult[5] };
-            const tmp15 = closure_8(tmp(5373).Stack, obj4);
+            const tmp15 = closure_8(tmp(5374).Stack, obj4);
             cResult[9] = tmp4.optionButtons;
             cResult[10] = cResult[5];
             cResult[11] = tmp15;
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
       const items3 = [memo];
-      const memo1 = first1.useMemo(() => _mod10253.splitGraphemes(memo).length, items3);
+      const memo1 = first1.useMemo(() => _mod10238.splitGraphemes(memo).length, items3);
       const items4 = [first];
       const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
       const items5 = [memo2];
@@ -609,7 +609,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const length = String(Math.max(run.params.rowCount - 1, 0)).length;
             const padStartResult = String(arg1).padStart(length, "0");
             const StringResult = String(arg1);
-            const splitGraphemesResult = _mod10253.splitGraphemes(run.params.name);
+            const splitGraphemesResult = _mod10238.splitGraphemes(run.params.name);
             let sum = padStartResult;
             if (splitGraphemesResult.length > length) {
               const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

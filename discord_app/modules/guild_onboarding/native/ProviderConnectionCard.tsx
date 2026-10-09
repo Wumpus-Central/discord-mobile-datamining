@@ -295,8 +295,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return obj3;
                   } else {
                     const obj4 = {};
-                    const obj5 = v3(1264);
-                    const merged = Object.assign(provider_id(5105).collectGuildAnalyticsMetadata(guildId));
+                    const obj5 = v3(1265);
+                    const merged = Object.assign(provider_id(5106).collectGuildAnalyticsMetadata(guildId));
                     obj4.connection_type = "provider";
                     provider_id = connection.provider_id;
                     if (provider_id == null) {

@@ -27,7 +27,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 56;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   forwardPreview: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   quote: null,
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = new tmp4(7719)();
+            const obj3 = new tmp4(7728)();
             obj3.setOptions({
               renderEmbeds: false,
               renderReactions: false,
@@ -141,7 +141,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               message: tmp15,
               rowGenerator: tmp10,
             };
-            const tmp19 = closure_5(tmp4(9308), obj2);
+            const tmp19 = closure_5(tmp4(9346), obj2);
             cResult[10] = tmp8;
             cResult[11] = tmp15;
             cResult[12] = tmp19;
@@ -174,12 +174,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = fn;
       }
       const obj = attachmentCount(576);
-      const tmp7 = attachmentCount(5090).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
+      const tmp7 = attachmentCount(5091).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
       cResult[0] = TEXT_SUBTLE;
       cResult[1] = tmp5;
       cResult[2] = tmp7;
       tmp6 = tmp7;
-      const tmpResult = attachmentCount(5090);
+      const tmpResult = attachmentCount(5091);
     }
   : function MessagePreview(content) {
       ({ message, attachmentCount } = content);
@@ -190,7 +190,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         TEXT_SUBTLE = tmp(587).colors.TEXT_SUBTLE;
       }
       const tmp3 = useThemeDefault();
-      const tmp4 = attachmentCount(5090).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
+      const tmp4 = attachmentCount(5091).createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
       importDefault = tmp4;
       const items = [tmp4.seeMoreLabelColor, attachmentCount];
       const callback = noop.useCallback((message) => {
@@ -245,7 +245,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         message: null,
         rowGenerator: null,
       };
-      let obj = attachmentCount(5090);
+      let obj = attachmentCount(5091);
       const obj3 = { messageSnapshots: [], content: content.contentMessage.content };
       obj2.message = message.merge(obj3);
       obj2.rowGenerator = memo;

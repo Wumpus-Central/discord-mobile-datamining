@@ -1,8 +1,9 @@
 // discord_app/modules/conjure/preview/native/restartConjureAppFrames.tsx
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
-import FramesNativeManagerDefault from "../../../frames/native/FramesNativeManager.tsx";
+import leaveFrame from "../../../frames/leaveFrame.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
+require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/native/restartConjureAppFrames.tsx");
 
@@ -19,7 +20,7 @@ export default function restartConjureAppFrames(applicationId) {
       if (mainFrame != null) {
         id = mainFrame.id;
       }
-      let obj = FramesNativeManagerDefault;
+      let obj = leaveFrame;
       let leaveFrameResult = obj.leaveFrame(item10006.id);
       let obj2 = FramesActionCreatorsDefault;
       let obj3 = { applicationId: arg0, surface: null };
@@ -27,8 +28,8 @@ export default function restartConjureAppFrames(applicationId) {
       let launchFrameResult = obj2.launchFrame(obj3);
       let catchPromise = launchFrameResult.catch(() => {});
       if (id !== item10006.id) {
-        let tmp7Result = FramesActionCreatorsDefault;
-        let demoteMainFrameResult = tmp7Result.demoteMainFrame(item10006.id);
+        let tmp10Result = FramesActionCreatorsDefault;
+        let demoteMainFrameResult = tmp10Result.demoteMainFrame(item10006.id);
       }
       continue;
     }

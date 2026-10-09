@@ -4,18 +4,18 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef10699 from "../../../../../_runtime/metro/10699__.js";
+import _modDef10845 from "../../../../../_runtime/metro/10845__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -28,7 +28,7 @@ let obj2 = {
   label: { lineHeight: 18, textAlign: "center" },
   liveContainer: { position: "absolute", top: 8, right: 8, zIndex: 2 },
 };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
   alignItems: "center",
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === onDoubleTap) {
         onDoubleTap = NOOP;
       }
-      const tmp4 = closure_8();
+      const tmp4 = closure_7();
       if (cResult[0] === onDoubleTap) {
         if (cResult[1] === onSingleTap) {
           let tmp5 = cResult[2];
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp7 = useParticipantTileTapGestureDefault(tmp5);
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp11 = timestampProducer(native.LiveTag, {});
+          const tmp11 = hasOwnProperty(native.LiveTag, {});
           cResult[3] = tmp11;
           let tmp9 = tmp11;
         } else {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== tmp4.liveContainer) {
           const obj2 = { style: tmp4.liveContainer, children: tmp9 };
-          const tmp15 = timestampProducer(React3, obj2);
+          const tmp15 = hasOwnProperty(View, obj2);
           cResult[4] = tmp4.liveContainer;
           cResult[5] = tmp15;
           let tmp12 = tmp15;
@@ -74,11 +74,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = cResult[5];
         }
         if (cResult[6] !== tmp4.image) {
-          const obj3 = { source: _modDef10699, style: tmp4.image, resizeMode: "contain" };
-          const tmp19 = timestampProducer(React4, obj3);
+          const obj3 = { source: _modDef10845, style: tmp4.image, resizeMode: "contain" };
+          const tmp19 = hasOwnProperty(FastImageDefault, obj3);
           cResult[6] = tmp4.image;
           cResult[7] = tmp19;
           let tmp16 = tmp19;
+          const tmp6Result = FastImageDefault;
         } else {
           tmp16 = cResult[7];
         }
@@ -93,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[9] !== tmp4.label) {
           const obj4 = { style: tmp4.label, variant: "text-xs/bold", color: "text-overlay-light", children: tmp20 };
-          const tmp24 = timestampProducer(Text_Text.Text, obj4);
+          const tmp24 = hasOwnProperty(Text_Text.Text, obj4);
           cResult[9] = tmp4.label;
           cResult[10] = tmp24;
           let tmp22 = tmp24;
@@ -113,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return tmp29;
               }
               const obj5 = { gesture: tmp7, children: tmp25 };
-              const tmp31 = timestampProducer(LegacyBaseButton.GestureDetector, obj5);
+              const tmp31 = hasOwnProperty(LegacyBaseButton.GestureDetector, obj5);
               cResult[16] = tmp7;
               cResult[17] = tmp25;
               cResult[18] = tmp31;
@@ -124,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: tmp4.container, children: null };
         const items = [tmp12, tmp16, tmp22];
         obj6.children = items;
-        const tmp28 = React5(React3, obj6);
+        const tmp28 = timestampProducer(View, obj6);
         cResult[11] = tmp4.container;
         cResult[12] = tmp22;
         cResult[13] = tmp12;
@@ -147,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (onDoubleTap === undefined) {
         onDoubleTap = NOOP;
       }
-      const tmp = closure_8();
+      const tmp = closure_7();
       const obj = {
         gesture: useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap }),
         children: null,
@@ -158,16 +159,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onDoubleTapStart: onDoubleTap,
       });
       const items = [
-        timestampProducer(React3, { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) }),
+        hasOwnProperty(View, { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) }),
         ,
       ];
-      const obj3 = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
-      items[1] = timestampProducer(React4, { source: _modDef10699, style: tmp.image, resizeMode: "contain" });
+      const obj4 = { source: null, style: null, resizeMode: "contain" };
+      const obj3 = { style: tmp.liveContainer, children: hasOwnProperty(native.LiveTag, {}) };
+      obj4.source = _modDef10845;
+      obj4.style = tmp.image;
+      items[1] = hasOwnProperty(FastImageDefault, obj4);
       const obj5 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
       const intl = util.intl;
       obj5.children = intl.string(util.t.G84gtR);
-      items[2] = timestampProducer(Text_Text.Text, obj5);
+      items[2] = hasOwnProperty(Text_Text.Text, obj5);
       obj2.children = items;
-      obj.children = React5(React3, obj2);
-      return timestampProducer(LegacyBaseButton.GestureDetector, obj);
+      obj.children = timestampProducer(View, obj2);
+      return hasOwnProperty(LegacyBaseButton.GestureDetector, obj);
     };

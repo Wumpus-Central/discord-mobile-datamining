@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDefaultGuildThemePreferenceOptions() {
       const cResult = c.c(1);
@@ -50,8 +50,8 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(7966).MobileUserSettings.APPEARANCE,
-  useValue: fn(2040).DefaultGuildThemePreference.useSetting,
+  parent: fn(7974).MobileUserSettings.APPEARANCE,
+  useValue: fn(2041).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));

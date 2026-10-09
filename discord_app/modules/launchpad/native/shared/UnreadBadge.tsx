@@ -9,10 +9,10 @@ const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11776).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5972).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11713).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(5974).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);

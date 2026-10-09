@@ -4,7 +4,7 @@ import useHandleBuyNowDefault from "../useHandleBuyNow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useNativeCheckoutStore = fn(7132).useNativeCheckoutStore;
+let useNativeCheckoutStore = fn(7137).useNativeCheckoutStore;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

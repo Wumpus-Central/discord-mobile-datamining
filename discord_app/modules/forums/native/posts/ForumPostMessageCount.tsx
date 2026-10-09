@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1381);
+let PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -22,7 +22,7 @@ if (PlatformUtils.isAndroid()) {
 let obj4 = { iconRead: obj2, iconUnread: null, messageUnreadCount: null, container: null };
 obj2.marginTop = num;
 let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1381);
+PlatformUtils = fn(1382);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

@@ -103,7 +103,7 @@ let closure_16 = async function _executeCommand(arg0) {
             closure_139_31 = undefined;
             c15 = 1;
             c16 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp4) {
@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(9758).createNonce();
-      let obj2 = onMessageSuccess(9758);
+      nonce = onMessageSuccess(9777).createNonce();
+      let obj2 = onMessageSuccess(9777);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(5438).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(5439).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(7726).MessageDataType.COMMAND, message };
-    message(7726).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(7735).MessageDataType.COMMAND, message };
+    message(7735).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[27]);
     });
-    const obj6 = message(7726);
+    const obj6 = message(7735);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1290,14 +1290,14 @@ let closure_24 = async function _stageAttachments(arg0) {
             }
             const intl = closure_0(1126).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(8230);
-            obj2.maxSize = closure_0(7737).sizeString(dependencyMap);
+            const obj = closure_2(8238);
+            obj2.maxSize = closure_0(7746).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1126).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(7737);
+            const obj3 = closure_0(7746);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
@@ -1402,7 +1402,7 @@ const Constants = fn(1085);
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(5083).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(5084).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

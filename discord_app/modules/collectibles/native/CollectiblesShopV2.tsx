@@ -45,10 +45,10 @@ const CollectiblesShopConstants = fn(1087);
 } = CollectiblesShopConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, PaymentGateways: closure_15 } = Constants);
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_19 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },
@@ -1013,7 +1013,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp14, tmp15);
       const tmp12 = _slicedToArray(noop.useState(false), 2);
-      const tmpResult3 = nativePaymentsConnected(1381);
+      const tmpResult3 = nativePaymentsConnected(1382);
       if (!nativePaymentsConnected) {
         if (!tmp17) {
           if (!tmp13) {
@@ -1031,10 +1031,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp13) {
-        tmp(1381);
+        tmp(1382);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`;
         SentryUtilsDefault.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`} isStable: ${tmp(5726).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj9.isIOS()}`} isStable: ${tmp(5727).isStable}`,
         );
         const tmp4Result = SentryUtilsDefault;
       }
@@ -1048,7 +1048,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = screen;
       cResult[8] = storeFront;
       cResult[9] = tmp26;
-      tmp17 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(5726).isStable && isStaffResult;
+      tmp17 = nativePaymentsConnected(1382).isIOS() && !nativePaymentsConnected(5727).isStable && isStaffResult;
     }
   : function CollectiblesShopV2(screen) {
       const nativeIAPPayments = NativePaymentHooksDefault.useNativeIAPPayments();
@@ -1082,7 +1082,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const tmp8 = _slicedToArray(noop.useState(false), 2);
-      const tmp5Result = nativePaymentsConnected(1381);
+      const tmp5Result = nativePaymentsConnected(1382);
       if (!nativePaymentsConnected) {
         if (!tmp11) {
           if (!tmp9) {
@@ -1093,10 +1093,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp9) {
-        tmp5(1381);
+        tmp5(1382);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
         SentryUtilsDefault.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(5726).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(5727).isStable}`,
         );
         const tmpResult = SentryUtilsDefault;
       }
@@ -1105,7 +1105,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.storeFront = nativeIAPPayments.storeFront;
       obj4.screen = screen.screen;
       tmp14 = closure_17(closure_22, obj4);
-      tmp11 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(5726).isStable && isStaffResult;
+      tmp11 = nativePaymentsConnected(1382).isIOS() && !nativePaymentsConnected(5727).isStable && isStaffResult;
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopV2.tsx");

@@ -15,7 +15,7 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const isMultiUserDM = fn(2067).isMultiUserDM;
+const isMultiUserDM = fn(2068).isMultiUserDM;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
@@ -185,7 +185,7 @@ export default noop.memo(
           }
           if (cResult[3] !== tmp4) {
             const obj2 = { screens: tmp4, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" };
-            const tmp7 = closure_11(tmp(6679).Navigator, obj2);
+            const tmp7 = closure_11(tmp(6686).Navigator, obj2);
             cResult[3] = tmp4;
             cResult[4] = tmp7;
             let tmp5 = tmp7;
@@ -203,11 +203,11 @@ export default noop.memo(
             obj.title = intl.string(channelId(1126).t.h850Ss);
             let channelName = null;
             if (null != closure_0) {
-              const tmp3Result = channelId(5417);
+              const tmp3Result = channelId(5418);
               channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
             }
             obj.subtitle = channelName;
-            return closure_2_11(channelId(6203).NavigatorHeader, obj);
+            return closure_2_11(channelId(6205).NavigatorHeader, obj);
           },
           headerLeft: null,
           render: null,
@@ -238,11 +238,11 @@ export default noop.memo(
               obj.title = intl.string(channelId(1126).t.h850Ss);
               let channelName = null;
               if (null != closure_0) {
-                const tmp3Result = channelId(5417);
+                const tmp3Result = channelId(5418);
                 channelName = tmp3Result.computeChannelName(closure_0, UserStore, RelationshipStore, true);
               }
               obj.subtitle = channelName;
-              return closure_2_11(channelId(6203).NavigatorHeader, obj);
+              return closure_2_11(channelId(6205).NavigatorHeader, obj);
             },
             headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
             render() {
@@ -252,6 +252,6 @@ export default noop.memo(
           obj.IN_APP_NOTIFICATION_SETTINGS = obj2;
           return obj;
         }, items);
-        return closure_11(channelId(6679).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+        return closure_11(channelId(6686).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
       },
 );

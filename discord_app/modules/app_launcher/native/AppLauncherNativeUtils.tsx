@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1987 from "../../../../_runtime/metro/01987__.js";
+import _modDef1988 from "../../../../_runtime/metro/01988__.js";
 import Server from "../../../flow/Server.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -13,13 +13,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
-const AppLauncherNativeConstants = fn(1501);
+const AppLauncherNativeConstants = fn(1502);
 ({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: closure_7, AppLauncherRouteName: closure_8 } = AppLauncherNativeConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const BuiltInSectionId = fn(5399).BuiltInSectionId;
+const BuiltInSectionId = fn(5400).BuiltInSectionId;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -298,7 +296,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = _modDef1987;
+    let applicationIconSource = _modDef1988;
   } else {
     const obj2 = AvatarUtilsDefault;
     if (isRealApplicationResult) {
@@ -372,11 +370,11 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
                                       };
                                       cResult[21] = onActivityItemSelected1;
                                       cResult[22] = obj2;
-                                      let tmp16 = obj2;
+                                      let tmp15 = obj2;
                                     } else {
-                                      tmp16 = cResult[22];
+                                      tmp15 = cResult[22];
                                     }
-                                    return tmp16;
+                                    return tmp15;
                                   }
                                 }
                               }
@@ -389,7 +387,6 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
                   const obj3 = {
                     application: getOrFetchApplication,
                     context,
-                    embeddedActivitiesManager: onActivityItemSelected(tmp2[21]),
                     locationObject: analyticsContext.location,
                     onActivityItemSelectedProp: tmp9,
                     launchingComponentId,
@@ -474,7 +471,6 @@ export const useHandleActivityItemSelected = ReactCompilerGating.isReactCompiler
       const obj6 = {
         application: getOrFetchApplication,
         context,
-        embeddedActivitiesManager: require("EmbeddedActivitiesNativeManager"),
         locationObject: analyticsContext.location,
         onActivityItemSelectedProp(applicationId) {
           applicationId = applicationId.applicationId;

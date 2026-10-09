@@ -37,7 +37,7 @@ export default {
       flag2 = true;
     }
     DispatcherDefault.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
-    const HTTP = before(1294).HTTP;
+    const HTTP = before(1295).HTTP;
     const request = {
       url: constants.MENTIONS,
       query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature },

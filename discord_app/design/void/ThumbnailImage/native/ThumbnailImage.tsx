@@ -5,9 +5,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let _default = fn(17).Image;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 if (PlatformUtils.isAndroid()) {
-  _default = fn(14236).default;
+  _default = fn(14332).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

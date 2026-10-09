@@ -5,7 +5,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4968).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4969).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 function shouldShowGuildThemeRollback(arg0, storeRemovalDate, arg2) {
   let tmp = arg0;
@@ -49,7 +49,7 @@ export const useShouldShowGuildThemeRollback = ReactCompilerGating.isReactCompil
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       let tmp8;
       if (stateFromStores != null) {
-        tmp8 = stateFromStores.allPowerups[tmp(undefined, 4971).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        tmp8 = stateFromStores.allPowerups[tmp(undefined, 4972).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const tmp9 = usePowerupActiveStatusDefault(arg0, tmp8);
       const tmpResult = require("initialize");
@@ -87,7 +87,7 @@ export const useShouldShowGuildThemeRollback = ReactCompilerGating.isReactCompil
       );
       let tmp4;
       if (stateFromStores != null) {
-        tmp4 = stateFromStores.allPowerups[tmp(undefined, 4971).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        tmp4 = stateFromStores.allPowerups[tmp(undefined, 4972).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const obj = require("initialize");
       const tmp5 = usePowerupActiveStatusDefault(arg0, tmp4);

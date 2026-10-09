@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 },
 };
@@ -28,7 +28,7 @@ export default noop.memo(
         const cResult = navigation(576).c(9);
         const tmp4 = closure_6();
         let obj = navigation(576);
-        navigation = navigation(1502).useNavigation();
+        navigation = navigation(1503).useNavigation();
         const sum = useSafeAreaInsetsDefault().bottom + nativeDefault.space.PX_16;
         if (cResult[0] !== sum) {
           const obj3 = { paddingBottom: sum };
@@ -40,7 +40,7 @@ export default noop.memo(
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const _Object = Object;
-          const entries = Object.entries(tmp(15686).PerformanceTestingScreens);
+          const entries = Object.entries(tmp(15799).PerformanceTestingScreens);
           cResult[2] = entries;
           let arr = entries;
         } else {
@@ -52,10 +52,10 @@ export default noop.memo(
             children: arr.map((item) => {
               [screenKey, { headerTitle, Icon }] = item;
               return jsx(
-                navigation(6184).TableRow,
+                navigation(6186).TableRow,
                 {
                   label: headerTitle,
-                  icon: jsx(navigation(6184).TableRow.Icon, { IconComponent: Icon }),
+                  icon: jsx(navigation(6186).TableRow.Icon, { IconComponent: Icon }),
                   arrow: true,
                   onPress() {
                     if (null != navigation.push) {
@@ -70,15 +70,15 @@ export default noop.memo(
               );
             }),
           };
-          const tmp11 = jsx(tmp(6267).TableRowGroup, {
+          const tmp11 = jsx(tmp(6269).TableRowGroup, {
             hasIcons: true,
             children: arr.map((item) => {
               [screenKey, { headerTitle, Icon }] = item;
               return jsx(
-                navigation(6184).TableRow,
+                navigation(6186).TableRow,
                 {
                   label: headerTitle,
-                  icon: jsx(navigation(6184).TableRow.Icon, { IconComponent: Icon }),
+                  icon: jsx(navigation(6186).TableRow.Icon, { IconComponent: Icon }),
                   arrow: true,
                   onPress() {
                     if (null != navigation.push) {
@@ -117,7 +117,7 @@ export default noop.memo(
         cResult[7] = tmp9;
         cResult[8] = tmp13;
         tmp12 = tmp13;
-        let obj2 = navigation(1502);
+        let obj2 = navigation(1503);
       }
     : function DevToolsPerformanceTestingScreen() {
         const tmp = closure_6();
@@ -130,10 +130,10 @@ export default noop.memo(
         obj4.children = entries.map((item) => {
           [tmp] = item;
           return jsx(
-            screenKey(6184).TableRow,
+            screenKey(6186).TableRow,
             {
               label: tmp2,
-              icon: jsx(screenKey(6184).TableRow.Icon, { IconComponent: tmp3 }),
+              icon: jsx(screenKey(6186).TableRow.Icon, { IconComponent: tmp3 }),
               arrow: true,
               onPress() {
                 if (null != screenKey.push) {

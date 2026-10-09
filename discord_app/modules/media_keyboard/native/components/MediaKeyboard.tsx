@@ -21,13 +21,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
 
 require = fn;
-const DraftType = fn(7232).DraftType;
-const MediaKeyboardConstants = fn(1626);
+const DraftType = fn(7237).DraftType;
+const MediaKeyboardConstants = fn(1627);
 ({ MediaKeyboardTarget: metroRequire, MediaPickerActionSheetEngagedActions: closure_7 } = MediaKeyboardConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: closure_9 } = Constants);
-const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
-const KEYBOARD_ANIMATION_CONFIG = fn(11729).KEYBOARD_ANIMATION_CONFIG;
+const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
+const KEYBOARD_ANIMATION_CONFIG = fn(11665).KEYBOARD_ANIMATION_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const ReactCompilerGating = fn(558);

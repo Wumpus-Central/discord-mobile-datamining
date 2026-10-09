@@ -7,12 +7,12 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
-const FramesConstants = fn(10613);
+const ActivityLayoutMode = fn(2024).ActivityLayoutMode;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
+const FramesConstants = fn(10767);
 ({ asLaunched: closure_9, FrameLayoutModes: c10, getPipOrientationLockStateForFrame: closure_11 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_13 = createStyles.createStyles({
   activityContainer: { flex: 1 },
   wrapper: { position: "absolute", left: "50%", top: "50%" },

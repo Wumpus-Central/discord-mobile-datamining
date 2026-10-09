@@ -6,7 +6,7 @@ import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = tmp(5086);
+const Text_Text = tmp(5087);
 require = fn;
 let noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: closure_7 } = noop);
@@ -113,14 +113,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj4 = {
                       isAnimating,
                       animatedValue: sharedValue,
-                      runOnJS: tmp(4810).runOnJS,
+                      runOnJS: tmp(4811).runOnJS,
                       setDisplayValue: tmp6,
                       setMaxDigits: tmp8,
                     };
                     L.__closure = obj4;
                     L.__workletHash = 4408542396979;
                     L.__initData = __initData;
-                    const animatedStyle = tmp(4810).useAnimatedStyle(L);
+                    const animatedStyle = tmp(4811).useAnimatedStyle(L);
                     if (null === value) {
                       return null;
                     } else {
@@ -216,7 +216,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                           tmp31[0] = tmp20;
                           tmp31[1] = tmp24;
-                          const tmp32 = jsx(onValueChange(4810).View, tmp31);
+                          const tmp32 = jsx(onValueChange(4811).View, tmp31);
                           cResult[23] = tmp20;
                           cResult[24] = tmp24;
                           cResult[25] = tmp32;
@@ -244,7 +244,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         tmp26[1] = style;
                         tmp26[3] = tmp22;
-                        const tmp27 = jsx(tmp(5086).Text, tmp26);
+                        const tmp27 = jsx(tmp(5087).Text, tmp26);
                         cResult[20] = style;
                         cResult[21] = tmp22;
                         cResult[22] = tmp27;
@@ -277,7 +277,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       cResult[17] = tmp21;
                       tmp20 = tmp21;
                     }
-                    const tmpResult = tmp(4810);
+                    const tmpResult = tmp(4811);
                   }
                 }
               }
@@ -458,7 +458,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           maxFontSizeMultiplier: 2,
           children: obj2.toFixed(0),
         });
-        tmp14 = jsx(onValueChange(4810).View, { style: null, children: null });
+        tmp14 = jsx(onValueChange(4811).View, { style: null, children: null });
       }
       return tmp14;
     };

@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef8984 from "../../../../_runtime/metro/08984__.js";
+import _modDef8995 from "../../../../_runtime/metro/08995__.js";
 import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 0.8333333333333334;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
   const size = {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[2];
         }
         if (null == avatarSource) {
-          avatarSource = _modDef8984;
+          avatarSource = _modDef8995;
         }
         if (cResult[3] === tmp7) {
           if (cResult[4] === avatarSource) {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: items, resizeMode: "contain", source: null, accessible: false };
       items[1] = solidAvatar;
       if (null == avatarSource) {
-        avatarSource = _modDef8984;
+        avatarSource = _modDef8995;
       }
       const obj2 = { children: null };
       obj.source = avatarSource;

@@ -27,8 +27,8 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-let items = [fn(8675).AutocompleterResultTypes.USER];
-const createStyles = fn(5090);
+let items = [fn(8684).AutocompleterResultTypes.USER];
+const createStyles = fn(5091);
 let obj = {
   containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   searchFieldContainer: null,
@@ -271,7 +271,7 @@ let closure_22 = noop.memo(
         const sortedGuildRoles = guild.sortedGuildRoles;
         ({ start, end } = guild);
         const tmp = closure_21();
-        dependencyMap = guild(1502).useNavigation();
+        dependencyMap = guild(1503).useNavigation();
         if (null == guild) {
           return null;
         } else {
@@ -287,10 +287,10 @@ let closure_22 = noop.memo(
           let formatToPlainStringResult;
           if (found.length > 0) {
             const user = UserStore.getUser(guildMember.userId);
-            let str = guildMember(5405).getNickname(guild.id, undefined, user);
+            let str = guildMember(5406).getNickname(guild.id, undefined, user);
             if (str == null) {
-              str = tmp9(4922).getGlobalName(user);
-              const tmp9Result = tmp9(4922);
+              str = tmp9(4923).getGlobalName(user);
+              const tmp9Result = tmp9(4923);
             }
             if (str == null) {
               let username;
@@ -307,7 +307,7 @@ let closure_22 = noop.memo(
             const intl = tmp2(1126).intl;
             const obj3 = { memberName: str, roleNames: joined };
             formatToPlainStringResult = intl.formatToPlainString(tmp2(1126).t["6eGpWx"], obj3);
-            const obj2 = guildMember(5405);
+            const obj2 = guildMember(5406);
             tmp9 = guildMember;
           }
           const obj4 = {
@@ -333,9 +333,9 @@ let closure_22 = noop.memo(
           };
           obj4.start = start;
           obj4.end = end;
-          return closure_17(guildMember(10281), obj4);
+          return closure_17(guildMember(10266), obj4);
         }
-        const obj = guild(1502);
+        const obj = guild(1503);
       },
 );
 ReactCompilerGating = fn(558);
@@ -961,12 +961,12 @@ export default noop.memo(
                 items: membersManagementActions,
                 children(ref) {
                   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-                  const obj = { source: closure_1_1(8646), accessibilityLabel: null, ref: null };
+                  const obj = { source: closure_1_1(8654), accessibilityLabel: null, ref: null };
                   const intl = closure_1_0(1126).intl;
                   obj.accessibilityLabel = intl.string(closure_1_0(1126).t.ogxXGq);
                   obj.ref = ref.ref;
                   const merged1 = Object.assign(merged);
-                  return closure_1_17(closure_1_0(7079).HeaderActionButton, obj);
+                  return closure_1_17(closure_1_0(7082).HeaderActionButton, obj);
                 },
               });
             },

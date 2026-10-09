@@ -11,7 +11,7 @@ import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx"
 
 require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(13072).sendModelSettings;
+const sendModelSettings = fn(13164).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -232,9 +232,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           stringResult = string(tmp12["/rJzr6"]);
         }
         const obj6 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-        items7[1] = closure_7(tmp(5086).Text, obj6);
+        items7[1] = closure_7(tmp(5087).Text, obj6);
         obj4.children = items7;
-        return closure_8(tmp(5373).Stack, obj4);
+        return closure_8(tmp(5374).Stack, obj4);
       }
       const obj3 = projectId(504);
     };

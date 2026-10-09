@@ -1,5 +1,5 @@
 // discord_app/modules/expression_picker/native/openExpressionPickerActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/expression_picker/native/open
 export const EXPRESSION_PICKER_ACTION_SHEET_KEY = "ExpressionPickerActionSheet";
 export const openExpressionPickerActionSheet = function openExpressionPickerActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9678, dependencyMap.paths),
+    asyncRequireImpl(9697, dependencyMap.paths),
     ExpressionPickerActionSheet,
     arg0,
   );

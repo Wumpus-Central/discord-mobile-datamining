@@ -17,8 +17,8 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-const NO_SUGGESTIONS = fn(16426).NO_SUGGESTIONS;
-const isAllowedType = fn(11578).isAllowedType;
+const NO_SUGGESTIONS = fn(16545).NO_SUGGESTIONS;
+const isAllowedType = fn(11511).isAllowedType;
 const ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useChannelAffinities() {

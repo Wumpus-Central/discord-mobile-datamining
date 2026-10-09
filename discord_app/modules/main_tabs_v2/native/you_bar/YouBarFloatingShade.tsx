@@ -7,18 +7,18 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../../client_themes/native/ClientThemesUtils.tsx";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05388_LinearGradient.js";
 import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ClientThemesBackgroundStore from "../../../client_themes/ClientThemesBackgroundStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(15177).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(16522).GUILD_LIST_WIDTH;
+let closure_5 = fn(15288).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(16645).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()

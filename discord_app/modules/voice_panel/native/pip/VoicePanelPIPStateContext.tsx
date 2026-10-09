@@ -7,10 +7,10 @@ let size = {
   width: false,
   height: null,
   containerHeight: 0,
-  showSecondaryPIP: false,
+  showSecondaryPIP: null,
   scale: null,
 };
-const ReanimatedHelperTypes = fn(6754);
+const ReanimatedHelperTypes = fn(6761);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 let ReactCompilerGating = fn(558);

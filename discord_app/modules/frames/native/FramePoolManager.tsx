@@ -1,7 +1,8 @@
 // discord_app/modules/frames/native/FramePoolManager.tsx
-import getFramesManagerDefault from "../utils/getFramesManager.native.tsx";
+import leaveFrame from "../leaveFrame.tsx";
 import AbstractFramePoolManager from "../AbstractFramePoolManager.tsx";
 
+require = fn;
 class FramePoolManager extends tmp4 {
   constructor() {
     tmp1 = new tmp({ maxBackgrounded: 1, timeoutMs: 90000 }, new.target, tmp);
@@ -23,15 +24,16 @@ prototype["getPoolNodeTag"] = function getPoolNodeTag() {
 prototype["place"] = function place() {};
 prototype["unplace"] = function unplace() {};
 prototype["destroyFrame"] = function destroyFrame(id) {
-  getFramesManagerDefault().leaveFrame(id);
+  leaveFrame.leaveFrame(id);
 };
 const tmp5 = new "destroyFrame"(
   { maxBackgrounded: 1, timeoutMs: 90000 },
   tmp2,
   tmp,
-  Object,
   prototype,
   FramePoolManager,
+  "destroyFrame",
+  new.target,
 );
 tmp5.poolNodeTag = 0;
 const size = fn(2);

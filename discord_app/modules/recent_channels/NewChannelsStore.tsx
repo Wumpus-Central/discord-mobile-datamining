@@ -3,6 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
+import NSFWContentGate from "../age_gate/NSFWContentGate.tsx";
 import SidebarActionTypes from "../sidebar/SidebarActionTypes.tsx";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
@@ -129,7 +130,7 @@ function pruneNewChannels() {
     );
   });
 }
-let closure_7 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();
@@ -170,7 +171,16 @@ prototype["getNewChannelIds"] = function getNewChannelIds(id) {
   } else {
     tmp5 = set;
   }
-  return tmp5;
+  if (obj.currentUserCanSeeNSFW()) {
+    return tmp5;
+  } else {
+    const items = [];
+    HermesBuiltin.arraySpread(tmp5, 0);
+    const _Set = Set;
+    set = new Set(items.filter((item) => NSFWContentGate.isNSFWActivityVisible(channel.getChannel(item))));
+    return set;
+  }
+  obj = NSFWContentGate;
 };
 prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_id, id) {
   if (null == guild_id) {
@@ -195,10 +205,15 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
       if (dependencyMap[guild_id] != null) {
         hasItem = obj.has(id);
       }
-      if (hasItem) {
-        hasItem = null == ReadStateStore.getTrackedAckMessageId(id);
+      let tmp11 = hasItem;
+      if (tmp11) {
+        let result = NSFWContentGate.isNSFWActivityVisible(ChannelStore.getChannel(id));
+        if (result) {
+          result = null == ReadStateStore.getTrackedAckMessageId(id);
+        }
+        tmp11 = result;
       }
-      tmp3 = hasItem;
+      tmp3 = tmp11;
     }
     return tmp3;
   }
@@ -218,6 +233,9 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
     }
   },
   CHANNEL_ACK() {
+    return true;
+  },
+  CURRENT_USER_UPDATE() {
     return true;
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
@@ -332,6 +350,6 @@ const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
   },
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
+let result = size.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
 
 export default newChannelsStore;

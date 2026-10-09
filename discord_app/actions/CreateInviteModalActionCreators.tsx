@@ -62,23 +62,14 @@ export default {
       const obj2 = {
         temporary,
         validate: code,
-        max_age: null,
-        max_uses: null,
-        target_type: null,
-        target_user_id: null,
-        target_application_id: null,
-        flags: null,
-        role_ids: null,
+        max_age: maxAge,
+        max_uses: maxUses,
+        target_type: targetType,
+        target_user_id: targetUserId,
+        target_application_id: targetApplicationId,
+        flags,
+        role_ids: roleIds,
       };
-      const _parseInt = parseInt;
-      obj2.max_age = parseInt(maxAge, 10);
-      const _parseInt2 = parseInt;
-      obj2.max_uses = parseInt(maxUses, 10);
-      obj2.target_type = targetType;
-      obj2.target_user_id = targetUserId;
-      obj2.target_application_id = targetApplicationId;
-      obj2.flags = flags;
-      obj2.role_ids = roleIds;
       const invite1 = InstantInviteActionCreatorsDefault.createInvite(channelId, obj2, arg0);
       invite1.then(
         () => {
@@ -97,7 +88,7 @@ export default {
           DispatcherDefault.dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
         },
       );
-      const tmp7Result = InstantInviteActionCreatorsDefault;
+      const tmp6Result = InstantInviteActionCreatorsDefault;
     }
   },
   close() {

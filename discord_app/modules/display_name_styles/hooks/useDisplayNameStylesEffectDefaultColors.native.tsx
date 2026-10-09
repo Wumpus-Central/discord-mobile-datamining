@@ -7,7 +7,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const DisplayNameStylesConstants = fn(1407);
+const DisplayNameStylesConstants = fn(1408);
 ({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: closure_4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: hasOwnProperty, DISPLAY_NAME_STYLES_PRISM_PRESETS: metroRequire } = DisplayNameStylesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

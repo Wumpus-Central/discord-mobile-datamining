@@ -5,9 +5,9 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = TableRowArrow(1126);
-const SendMessageIcon = TableRowArrow(5041);
-const components_Button_Button = TableRowArrow(5375);
-const TableRowArrow2 = TableRowArrow(6193);
+const SendMessageIcon = TableRowArrow(5042);
+const components_Button_Button = TableRowArrow(5376);
+const TableRowArrow2 = TableRowArrow(6195);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -143,11 +143,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               }
               c3 = 1;
               const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-              const obj2 = tmp3(9185);
-              obj6.optionValues = tmp3(11685).parseOptionValuesForSend(commandContext.channel, command, {});
+              const obj2 = tmp3(9219);
+              obj6.optionValues = tmp3(11621).parseOptionValuesForSend(commandContext.channel, command, {});
               obj6.context = commandContext;
               obj6.sectionName = sectionName;
-              obj6.commandOrigin = tmp3(7235).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+              obj6.commandOrigin = tmp3(7240).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
               dependencyMap = 2;
               c4 = 1;
               const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };

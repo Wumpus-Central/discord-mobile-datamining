@@ -16,8 +16,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     let obj = require("PlatformUtils");
     if (obj.isAndroid()) {
-      let supportsZstd = obj4(13776).getConstants().supportsZstd;
-      const obj2 = obj4(13776);
+      let supportsZstd = obj4(13870).getConstants().supportsZstd;
+      const obj2 = obj4(13870);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -38,25 +38,25 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp8}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp11 = obj4(13763)(combined);
+    const tmp11 = obj4(13857)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp11._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj3.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp11._socketId);
     } else {
-      const isAndroidResult = tmp3(1381).isAndroid();
+      const isAndroidResult = tmp3(1382).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          const result = tmp10(13776).enableZstdStreamSupport(parsed);
-          const tmp10Result = tmp10(13776);
+          const result = tmp10(13870).enableZstdStreamSupport(parsed);
+          const tmp10Result = tmp10(13870);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        const result2 = tmp10(13776).enableZlibStreamSupport(parsed);
-        const tmp10Result3 = tmp10(13776);
+        const result2 = tmp10(13870).enableZlibStreamSupport(parsed);
+        const tmp10Result3 = tmp10(13870);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;
         const result3 = DCDCompressionManager.enableZlibStreamSupport(parsed);
@@ -82,7 +82,7 @@ function createFastConnectSocket() {
       const _window3 = window;
       const obj5 = { ws: tmp11, state: obj4 };
       window._ws = obj5;
-      const tmp3Result = tmp3(1381);
+      const tmp3Result = tmp3(1382);
       tmp10(10).mark("\u{1F310}", "Fastconnect socket created");
       const tmp10Result4 = tmp10(10);
     }

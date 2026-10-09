@@ -15,7 +15,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
   ? function FavoritesGuildHeaderActionButton() {
       const cResult = c.c(4);
       ({ isPreview, label, exitPreview } = useFavoritesGuildHeaderActionDefault());
-      const tmp4Result = importDefault(isPreview ? 6211 : 11216);
+      const tmp4Result = importDefault(isPreview ? 6213 : 10571);
       if (!isPreview) {
         exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
       }
@@ -47,7 +47,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       const obj = {
         variant: "secondary",
         size: "sm",
-        icon: importDefault(isPreview ? 6211 : 11216),
+        icon: importDefault(isPreview ? 6213 : 10571),
         onPress: null,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,
@@ -60,7 +60,7 @@ export const FavoritesGuildHeaderActionButton = ReactCompilerGating.isReactCompi
       return jsx(IconButton.IconButton, {
         variant: "secondary",
         size: "sm",
-        icon: importDefault(isPreview ? 6211 : 11216),
+        icon: importDefault(isPreview ? 6213 : 10571),
         onPress: null,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1,

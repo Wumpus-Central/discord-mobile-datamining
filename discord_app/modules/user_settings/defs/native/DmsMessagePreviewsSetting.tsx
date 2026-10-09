@@ -13,7 +13,7 @@ ReactCompilerGating = fn(558);
 function useDMsMessagePreviewsValue() {
   return useMessagePreviews.useMessagePreviewSetting();
 }
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDMsMessagePreviewsOptions() {
       const cResult = c.c(1);
@@ -65,7 +65,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.OAOUoQ);
   },
-  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  parent: fn(7974).MobileUserSettings.APPEARANCE,
   useValue: useDMsMessagePreviewsValue,
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
     const MessagePreviewSetting = UserSettings.MessagePreviewSetting;

@@ -1,6 +1,6 @@
 // discord_app/components_native/common/SafeAreaView.tsx
 import c from "../../../_runtime/00576_c.js";
-import _modDef1354 from "../../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../../_runtime/metro/01355__.js";
 import useSafeAreaInsetsDefault from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import useRefValueDefault from "../../hooks/useRefValue.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -76,7 +76,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
       items[4] = tmp24;
       importDefault = items;
       const tmp25 = useRefValueDefault(noop.useRef(null));
-      const tmp26 = _modDef1354(items, tmp25);
+      const tmp26 = _modDef1355(items, tmp25);
       closure_2 = tmp26;
       if (tmp26) {
         importDefault = tmp25;
@@ -174,7 +174,7 @@ export const SafeAreaPaddingView = ReactCompilerGating.isReactCompilerEnabled()
       items[4] = tmp12;
       current = items;
       const tmp13 = useRefValueDefault(ref);
-      const tmp14 = _modDef1354(items, tmp13);
+      const tmp14 = _modDef1355(items, tmp13);
       closure_2 = tmp14;
       if (tmp14) {
         current = tmp13;

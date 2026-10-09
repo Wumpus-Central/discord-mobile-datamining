@@ -1,7 +1,7 @@
 // discord_app/modules/app_analytics/useAnalyticsLocations.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import c from "../../../_runtime/00576_c.js";
-import _modDef1354 from "../../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../../_runtime/metro/01355__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -77,7 +77,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             tmp26 = obj5;
           }
           const fn = function x() {
-            if (!_modDef1354(items, first)) {
+            if (!_modDef1355(items, first)) {
               closure_2(items);
             }
           };
@@ -149,7 +149,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const items3 = [items, first];
       const effect = noop.useEffect(() => {
-        if (!_modDef1354(items, first)) {
+        if (!_modDef1355(items, first)) {
           closure_2(items);
         }
       }, items3);

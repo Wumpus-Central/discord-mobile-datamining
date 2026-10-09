@@ -18,7 +18,7 @@ import MessageStore from "../../../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(5083).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5084).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 let MessageAttachmentFlags = fn(1085).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7Result3 = first1(first2.useState(false), 2);
       first2 = tmp7Result3[0];
       closure_6 = tmp7Result3[1];
-      const tmp5 = attachment(8369)(attachment);
+      const tmp5 = attachment(8377)(attachment);
       [tmp17, c7] = first1(first2.useState(), 2);
       let intl = util.intl;
       let stringResult = intl.string(util.t.Y8ujqr);

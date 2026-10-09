@@ -5,7 +5,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
 const ReactCompilerGating = fn(558);
 function getChannelsAllowedToUnlink(arg0) {
   let obj = arg1;

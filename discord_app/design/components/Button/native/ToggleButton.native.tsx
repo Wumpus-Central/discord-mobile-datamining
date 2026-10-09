@@ -9,7 +9,7 @@ require = fn;
 let closure_2 = ["pressed", "ref"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-let obj2 = { Icon: fn(5376).BaseTextButton.Icon };
+let obj2 = { Icon: fn(5377).BaseTextButton.Icon };
 let merged = Object.assign(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function ToggleButton(arg0) {

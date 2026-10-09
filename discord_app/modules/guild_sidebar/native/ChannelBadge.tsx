@@ -11,7 +11,7 @@ import LocaleStore from "../../user_settings/LocaleStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
 const ReactCompilerGating = fn(558);
 const size = fn(2);

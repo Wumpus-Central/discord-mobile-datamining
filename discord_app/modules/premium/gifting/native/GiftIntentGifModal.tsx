@@ -78,14 +78,14 @@ let closure_14 = async function _sendGiftIntentGif(arg0) {
   );
   closure_1 = tmp2;
   ({ channel: closure_129_0, giftIntentType: closure_129_1, text: closure_129_2, gif: closure_129_3 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 let View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const MessageSendLocation = fn(5083).MessageSendLocation;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageContainer: null,

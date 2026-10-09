@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 fn(558);
 const __initData = {
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = hue(576).c(4);
       hue = hue.hue;
       if (cResult[0] !== hue) {
-        const GUMMY_STRIPES = hue(1406).GUMMY_STRIPES;
+        const GUMMY_STRIPES = hue(1407).GUMMY_STRIPES;
         const mapped = GUMMY_STRIPES.map((hueShift, index) =>
           React4(
             closure_9,
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GummyStripesFromHue(hue) {
       hue = hue.hue;
       const obj = { children: null };
-      const GUMMY_STRIPES = hue(1406).GUMMY_STRIPES;
+      const GUMMY_STRIPES = hue(1407).GUMMY_STRIPES;
       obj.children = GUMMY_STRIPES.map((hueShift, index) =>
         React4(
           closure_9,

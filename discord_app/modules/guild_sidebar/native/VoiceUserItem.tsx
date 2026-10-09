@@ -4,13 +4,13 @@ import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import MicrophoneSlashIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import _modDef8139 from "../../../../_runtime/metro/08139__.js";
+import _modDef8147 from "../../../../_runtime/metro/08147__.js";
 import HeadphonesDenyIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
-import GameActivityIconDefault from "../../games/native/GameActivityIcon.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
 import VideoIcon from "../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
+import GameActivityIconDefault from "../../games/native/GameActivityIcon.tsx";
 import getConsoleIcon from "../../game_console/native/getConsoleIcon.tsx";
 import VoiceUserNameItemDefault from "VoiceUserNameItem.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ const jsxProd = fn(21);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
 const XSMALL_20 = fn(1200).AvatarSizes.XSMALL_20;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -47,7 +47,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11777);
+const ChannelListLayout = fn(11714);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };
@@ -346,7 +346,7 @@ export default noop.memo(
                                             let tmp = null;
                                             if (isInEmbeddedActivity) {
                                               const obj = {
-                                                source: _modDef8139,
+                                                source: _modDef8147,
                                                 size: native.Icon.Sizes.REFRESH_SMALL_16,
                                                 style: closure_16.legacyVoiceStateIcon,
                                               };

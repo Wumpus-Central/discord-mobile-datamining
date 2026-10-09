@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
-import v1 from "../../../_runtime/01278_v1.js";
+import v1 from "../../../_runtime/01279_v1.js";
 import SessionUtils from "SessionUtils.tsx";
 
 require = fn;

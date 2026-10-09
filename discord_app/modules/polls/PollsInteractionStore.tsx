@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import discord_common_shallowEqualDefault from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
 import c from "../../../_runtime/00576_c.js";
-import identity from "../../../_runtime/metro/01266__.js";
+import identity from "../../../_runtime/metro/01267__.js";
 import "ReactCompilerGating";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";

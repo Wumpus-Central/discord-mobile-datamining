@@ -5,30 +5,31 @@ import native from "../../design/void/native.tsx";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import useThemeDefault from "../../hooks/useTheme.tsx";
 import common_AlertDefault from "../common/Alert.tsx";
-import _modDef7144 from "../../../_runtime/metro/07144__.js";
-import _modDef7145 from "../../../_runtime/metro/07145__.js";
-import _modDef8070 from "../../../_runtime/metro/08070__.js";
+import FastImageDefault from "../common/FastImage.tsx";
+import _modDef7149 from "../../../_runtime/metro/07149__.js";
+import _modDef7150 from "../../../_runtime/metro/07150__.js";
+import _modDef8078 from "../../../_runtime/metro/08078__.js";
+import _modDef10037 from "../../../_runtime/metro/10037__.js";
+import _modDef10038 from "../../../_runtime/metro/10038__.js";
+import _modDef10039 from "../../../_runtime/metro/10039__.js";
+import _modDef10040 from "../../../_runtime/metro/10040__.js";
+import _modDef10041 from "../../../_runtime/metro/10041__.js";
+import _modDef10042 from "../../../_runtime/metro/10042__.js";
+import _modDef10043 from "../../../_runtime/metro/10043__.js";
+import _modDef10044 from "../../../_runtime/metro/10044__.js";
+import _modDef10045 from "../../../_runtime/metro/10045__.js";
+import _modDef10046 from "../../../_runtime/metro/10046__.js";
+import _modDef10047 from "../../../_runtime/metro/10047__.js";
+import _modDef10048 from "../../../_runtime/metro/10048__.js";
+import _modDef10049 from "../../../_runtime/metro/10049__.js";
+import _modDef10050 from "../../../_runtime/metro/10050__.js";
+import _modDef10051 from "../../../_runtime/metro/10051__.js";
 import _modDef10052 from "../../../_runtime/metro/10052__.js";
 import _modDef10053 from "../../../_runtime/metro/10053__.js";
 import _modDef10054 from "../../../_runtime/metro/10054__.js";
 import _modDef10055 from "../../../_runtime/metro/10055__.js";
 import _modDef10056 from "../../../_runtime/metro/10056__.js";
 import _modDef10057 from "../../../_runtime/metro/10057__.js";
-import _modDef10058 from "../../../_runtime/metro/10058__.js";
-import _modDef10059 from "../../../_runtime/metro/10059__.js";
-import _modDef10060 from "../../../_runtime/metro/10060__.js";
-import _modDef10061 from "../../../_runtime/metro/10061__.js";
-import _modDef10062 from "../../../_runtime/metro/10062__.js";
-import _modDef10063 from "../../../_runtime/metro/10063__.js";
-import _modDef10064 from "../../../_runtime/metro/10064__.js";
-import _modDef10065 from "../../../_runtime/metro/10065__.js";
-import _modDef10066 from "../../../_runtime/metro/10066__.js";
-import _modDef10067 from "../../../_runtime/metro/10067__.js";
-import _modDef10068 from "../../../_runtime/metro/10068__.js";
-import _modDef10069 from "../../../_runtime/metro/10069__.js";
-import _modDef10070 from "../../../_runtime/metro/10070__.js";
-import _modDef10071 from "../../../_runtime/metro/10071__.js";
-import _modDef10072 from "../../../_runtime/metro/10072__.js";
 import ShineAnimationDefault from "ShineAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -36,34 +37,34 @@ require = fn;
 function getActivatedImage(cResult, arg1) {
   if (PremiumUtils.Branding.TIER_0 === cResult) {
     if (tmpResult.isThemeDark(arg1)) {
-      let tmp10Result = _modDef10063;
+      let tmp10Result = _modDef10048;
     } else {
-      tmp10Result = _modDef10064;
+      tmp10Result = _modDef10049;
     }
     return tmp10Result;
   } else if (PremiumUtils.Branding.TIER_1 === cResult) {
     if (tmpResult4.isThemeDark(arg1)) {
-      let tmp8Result = _modDef10065;
+      let tmp8Result = _modDef10050;
     } else {
-      tmp8Result = _modDef10066;
+      tmp8Result = _modDef10051;
     }
     return tmp8Result;
   } else if (PremiumUtils.Branding.TIER_2 === cResult) {
     if (tmpResult5.isThemeDark(arg1)) {
-      let tmp6Result = _modDef10067;
+      let tmp6Result = _modDef10052;
     } else {
-      tmp6Result = _modDef10068;
+      tmp6Result = _modDef10053;
     }
     return tmp6Result;
   } else if (PremiumUtils.Branding.BUNDLE === cResult) {
     if (tmpResult6.isThemeDark(arg1)) {
-      let tmp4Result = _modDef10069;
+      let tmp4Result = _modDef10054;
     } else {
-      tmp4Result = _modDef10070;
+      tmp4Result = _modDef10055;
     }
     return tmp4Result;
   } else if (PremiumUtils.Branding.PREMIUM_GUILD === cResult) {
-    return _modDef10071;
+    return _modDef10056;
   }
 }
 function getDescription(arg0, arg1) {
@@ -85,11 +86,11 @@ function getDescription(arg0, arg1) {
   return intl3.string(util.t.knvOVz);
 }
 get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
+({ View: c3, StyleSheet } = get_ActivityIndicator);
 const SubscriptionStatusTypes = fn(1085).SubscriptionStatusTypes;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let createStyles = fn(5091);
 let obj2 = {
   alert: { overflow: "hidden", paddingBottom: 24 },
   header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" },
@@ -112,11 +113,11 @@ obj2.description = {
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: fn(5974).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(5976).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
-let closure_8 = createStyles.createStyles(obj2);
-createStyles = fn(5090);
-let closure_9 = createStyles.createStyles((arg0) => {
+let closure_7 = createStyles.createStyles(obj2);
+createStyles = fn(5091);
+let closure_8 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.TIER_0 === arg0) {
     const obj2 = { headerImage: { marginLeft: -27, width: 88, top: 18 } };
     return obj2;
@@ -134,8 +135,8 @@ let closure_9 = createStyles.createStyles((arg0) => {
     return obj;
   }
 });
-createStyles = fn(5090);
-let closure_10 = createStyles.createStyles((arg0) => {
+createStyles = fn(5091);
+let closure_9 = createStyles.createStyles((arg0) => {
   if (PremiumUtils.Branding.BUNDLE === arg0) {
     const obj2 = { animation: { borderRadius: 6 } };
     return obj2;
@@ -160,7 +161,7 @@ let obj4 = {
   lineHeight: 16,
   textAlign: "center",
   marginTop: 20,
-  color: fn(5974).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
+  color: fn(5976).DARK_PRIMARY_300_LIGHT_PRIMARY_400,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumActivatedAlert.tsx");
@@ -169,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PremiumActivatedAlert(arg0) {
       const cResult = c.c(51);
       ({ subscription, onClose } = arg0);
-      const tmp4 = closure_8();
+      const tmp4 = closure_7();
       let renewalMutations = subscription;
       if (null != subscription.renewalMutations) {
         const _Object = Object;
@@ -212,8 +213,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { logo: { width: 79, height: 32 } };
         tmp11 = obj5;
       }
-      const tmp12 = closure_9(tmp9);
-      const tmp13 = closure_10(tmp9);
+      const tmp12 = closure_8(tmp9);
+      const tmp13 = closure_9(tmp9);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
         const stringResult = intl.string(util.t.TkTvBz);
@@ -224,18 +225,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp9) {
         if (PremiumUtils.Branding.TIER_0 === tmp9) {
-          let tmp7Result = _modDef10052;
+          let tmp7Result = _modDef10037;
         } else if (PremiumUtils.Branding.TIER_1 === tmp9) {
-          tmp7Result = _modDef10053;
+          tmp7Result = _modDef10038;
         } else {
           if (PremiumUtils.Branding.TIER_2 === tmp9) {
-            tmp7Result = _modDef10054;
+            tmp7Result = _modDef10039;
           } else if (PremiumUtils.Branding.BUNDLE !== tmp9) {
             if (PremiumUtils.Branding.PREMIUM_GUILD === tmp9) {
-              tmp7Result = _modDef10056;
+              tmp7Result = _modDef10041;
             }
           }
-          tmp7Result = _modDef10055;
+          tmp7Result = _modDef10040;
         }
         cResult[3] = tmp9;
         cResult[4] = tmp7Result;
@@ -246,200 +247,201 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[8] !== tmp9) {
             if (PremiumUtils.Branding.TIER_0 === tmp9) {
-              let tmp7Result3 = _modDef10060;
+              let tmp7Result4 = _modDef10045;
             } else {
               if (PremiumUtils.Branding.TIER_1 === tmp9) {
-                tmp7Result3 = _modDef10061;
+                tmp7Result4 = _modDef10046;
               } else if (PremiumUtils.Branding.BUNDLE !== tmp9) {
                 if (PremiumUtils.Branding.TIER_2 !== tmp9) {
                   if (PremiumUtils.Branding.PREMIUM_GUILD === tmp9) {
-                    tmp7Result3 = _modDef10062;
+                    tmp7Result4 = _modDef10047;
                   }
                 }
               }
-              tmp7Result3 = _modDef8070;
+              tmp7Result4 = _modDef8078;
             }
             cResult[8] = tmp9;
-            cResult[9] = tmp7Result3;
+            cResult[9] = tmp7Result4;
           } else {
             if (cResult[10] === tmp11.logo) {
-              if (cResult[11] === tmp25) {
-                let tmp28 = cResult[12];
+              if (cResult[11] === tmp24) {
+                let tmp27 = cResult[12];
               }
               if (cResult[13] === tmp9) {
                 if (cResult[14] === tmp4.logoPlusPremiumGuild) {
-                  let tmp32 = cResult[15];
+                  let tmp30 = cResult[15];
                 }
                 if (cResult[16] !== tmp9) {
                   if (PremiumUtils.Branding.TIER_0 === tmp9) {
-                    let tmp7Result4 = _modDef7144;
+                    let tmp7Result5 = _modDef7149;
                   } else if (PremiumUtils.Branding.TIER_1 === tmp9) {
-                    tmp7Result4 = _modDef7145;
+                    tmp7Result5 = _modDef7150;
                   } else {
                     if (PremiumUtils.Branding.TIER_2 === tmp9) {
-                      tmp7Result4 = _modDef10057;
+                      tmp7Result5 = _modDef10042;
                     } else if (PremiumUtils.Branding.BUNDLE !== tmp9) {
                       if (PremiumUtils.Branding.PREMIUM_GUILD === tmp9) {
-                        tmp7Result4 = _modDef10059;
+                        tmp7Result5 = _modDef10044;
                       }
                     }
-                    tmp7Result4 = _modDef10058;
+                    tmp7Result5 = _modDef10043;
                   }
                   cResult[16] = tmp9;
-                  cResult[17] = tmp7Result4;
+                  cResult[17] = tmp7Result5;
                 } else {
                   if (cResult[18] === tmp12.headerImage) {
                     if (cResult[19] === tmp4.headerImage) {
-                      let tmp39 = cResult[20];
+                      let tmp37 = cResult[20];
                     }
-                    if (cResult[21] === tmp36) {
-                      if (cResult[22] === tmp39) {
-                        let tmp40 = cResult[23];
+                    if (cResult[21] === tmp34) {
+                      if (cResult[22] === tmp37) {
+                        let tmp38 = cResult[23];
                       }
                       if (cResult[24] === tmp4.header) {
-                        if (cResult[25] === tmp40) {
+                        if (cResult[25] === tmp38) {
                           if (cResult[26] === tmp21) {
-                            if (cResult[27] === tmp28) {
-                              if (cResult[28] === tmp32) {
-                                let tmp44 = cResult[29];
+                            if (cResult[27] === tmp27) {
+                              if (cResult[28] === tmp30) {
+                                let tmp41 = cResult[29];
                               }
                               if (cResult[30] === tmp9) {
                                 if (cResult[31] === tmp8) {
-                                  let tmp49 = cResult[32];
+                                  let tmp46 = cResult[32];
                                 }
                                 if (cResult[33] === tmp13.animation) {
-                                  if (cResult[34] === tmp49) {
-                                    let tmp52 = cResult[35];
+                                  if (cResult[34] === tmp46) {
+                                    let tmp49 = cResult[35];
                                   }
                                   if (cResult[36] === tmp9) {
                                     if (cResult[37] === renewalMutations) {
-                                      let tmp56 = cResult[38];
+                                      let tmp53 = cResult[38];
                                     }
                                     if (cResult[39] === tmp4.description) {
-                                      if (cResult[40] === tmp56) {
-                                        let tmp59 = cResult[41];
+                                      if (cResult[40] === tmp53) {
+                                        let tmp56 = cResult[41];
                                       }
                                       if (cResult[42] === tmp4.body) {
-                                        if (cResult[43] === tmp52) {
-                                          if (cResult[44] === tmp59) {
-                                            let tmp62 = cResult[45];
+                                        if (cResult[43] === tmp49) {
+                                          if (cResult[44] === tmp56) {
+                                            let tmp59 = cResult[45];
                                           }
                                           if (cResult[46] === onClose) {
                                             if (cResult[47] === tmp4.alert) {
-                                              if (cResult[48] === tmp44) {
-                                                if (cResult[49] === tmp62) {
-                                                  let tmp66 = cResult[50];
+                                              if (cResult[48] === tmp41) {
+                                                if (cResult[49] === tmp59) {
+                                                  let tmp63 = cResult[50];
                                                 }
-                                                return tmp66;
+                                                return tmp63;
                                               }
                                             }
                                           }
                                           const obj6 = { onClose, confirmText: tmp14, style: tmp16, children: null };
-                                          const items = [tmp44, tmp62];
+                                          const items = [tmp41, tmp59];
                                           obj6.children = items;
-                                          const tmp68 = React5(common_AlertDefault, obj6);
+                                          const tmp65 = timestampProducer(common_AlertDefault, obj6);
                                           cResult[46] = onClose;
                                           cResult[47] = tmp4.alert;
-                                          cResult[48] = tmp44;
-                                          cResult[49] = tmp62;
-                                          cResult[50] = tmp68;
-                                          tmp66 = tmp68;
+                                          cResult[48] = tmp41;
+                                          cResult[49] = tmp59;
+                                          cResult[50] = tmp65;
+                                          tmp63 = tmp65;
                                         }
                                       }
-                                      const obj7 = { style: tmp48, children: null };
-                                      const items1 = [tmp52, tmp59];
+                                      const obj7 = { style: tmp45, children: null };
+                                      const items1 = [tmp49, tmp56];
                                       obj7.children = items1;
-                                      const tmp65 = React5(React4, obj7);
+                                      const tmp62 = timestampProducer(React3, obj7);
                                       cResult[42] = tmp4.body;
-                                      cResult[43] = tmp52;
-                                      cResult[44] = tmp59;
-                                      cResult[45] = tmp65;
-                                      tmp62 = tmp65;
+                                      cResult[43] = tmp49;
+                                      cResult[44] = tmp56;
+                                      cResult[45] = tmp62;
+                                      tmp59 = tmp62;
                                     }
-                                    const obj8 = { style: tmp55, children: tmp56 };
-                                    const tmp61 = timestampProducer(native.LegacyText, obj8);
+                                    const obj8 = { style: tmp52, children: tmp53 };
+                                    const tmp58 = hasOwnProperty(native.LegacyText, obj8);
                                     cResult[39] = tmp4.description;
-                                    cResult[40] = tmp56;
-                                    cResult[41] = tmp61;
-                                    tmp59 = tmp61;
+                                    cResult[40] = tmp53;
+                                    cResult[41] = tmp58;
+                                    tmp56 = tmp58;
                                   }
-                                  const tmp58 = getDescription(tmp9, renewalMutations);
+                                  const tmp55 = getDescription(tmp9, renewalMutations);
                                   cResult[36] = tmp9;
                                   cResult[37] = renewalMutations;
-                                  cResult[38] = tmp58;
-                                  tmp56 = tmp58;
+                                  cResult[38] = tmp55;
+                                  tmp53 = tmp55;
                                 }
-                                const obj9 = { source: tmp49, style: tmp13.animation };
-                                const tmp54 = timestampProducer(ShineAnimationDefault, obj9);
+                                const obj9 = { source: tmp46, style: tmp13.animation };
+                                const tmp51 = hasOwnProperty(ShineAnimationDefault, obj9);
                                 cResult[33] = tmp13.animation;
-                                cResult[34] = tmp49;
-                                cResult[35] = tmp54;
-                                tmp52 = tmp54;
+                                cResult[34] = tmp46;
+                                cResult[35] = tmp51;
+                                tmp49 = tmp51;
                               }
-                              const tmp51 = getActivatedImage(tmp9, tmp8);
+                              const tmp48 = getActivatedImage(tmp9, tmp8);
                               cResult[30] = tmp9;
                               cResult[31] = tmp8;
-                              cResult[32] = tmp51;
-                              tmp49 = tmp51;
+                              cResult[32] = tmp48;
+                              tmp46 = tmp48;
                             }
                           }
                         }
                       }
                       const obj10 = { style: tmp17, children: null };
-                      const items2 = [tmp21, tmp28, tmp32, tmp40];
+                      const items2 = [tmp21, tmp27, tmp30, tmp38];
                       obj10.children = items2;
-                      const tmp47 = React5(React4, obj10);
+                      const tmp44 = timestampProducer(React3, obj10);
                       cResult[24] = tmp4.header;
-                      cResult[25] = tmp40;
+                      cResult[25] = tmp38;
                       cResult[26] = tmp21;
-                      cResult[27] = tmp28;
-                      cResult[28] = tmp32;
-                      cResult[29] = tmp47;
-                      tmp44 = tmp47;
+                      cResult[27] = tmp27;
+                      cResult[28] = tmp30;
+                      cResult[29] = tmp44;
+                      tmp41 = tmp44;
                     }
-                    const obj11 = { source: tmp36, style: tmp39 };
-                    const tmp43 = timestampProducer(React3, obj11);
-                    cResult[21] = tmp36;
-                    cResult[22] = tmp39;
-                    cResult[23] = tmp43;
-                    tmp40 = tmp43;
+                    const obj11 = { source: tmp34, style: tmp37 };
+                    const tmp40 = hasOwnProperty(FastImageDefault, obj11);
+                    cResult[21] = tmp34;
+                    cResult[22] = tmp37;
+                    cResult[23] = tmp40;
+                    tmp38 = tmp40;
                   }
                   const items3 = [tmp12.headerImage, tmp4.headerImage];
                   cResult[18] = tmp12.headerImage;
                   cResult[19] = tmp4.headerImage;
                   cResult[20] = items3;
-                  tmp39 = items3;
+                  tmp37 = items3;
                 }
               }
-              let tmp33 = null;
+              let tmp31 = null;
               if (tmp9 === PremiumUtils.Branding.BUNDLE) {
-                const obj12 = { source: _modDef10072, style: tmp4.logoPlusPremiumGuild };
-                tmp33 = timestampProducer(React3, obj12);
+                const obj12 = { source: _modDef10057, style: tmp4.logoPlusPremiumGuild };
+                tmp31 = hasOwnProperty(FastImageDefault, obj12);
+                const tmp7Result6 = FastImageDefault;
               }
               cResult[13] = tmp9;
               cResult[14] = tmp4.logoPlusPremiumGuild;
-              cResult[15] = tmp33;
-              tmp32 = tmp33;
+              cResult[15] = tmp31;
+              tmp30 = tmp31;
             }
             const obj13 = { source: cResult[9], style: tmp11.logo };
-            const tmp31 = timestampProducer(React3, obj13);
+            const tmp29 = hasOwnProperty(FastImageDefault, obj13);
             cResult[10] = tmp11.logo;
             cResult[11] = cResult[9];
-            cResult[12] = tmp31;
-            tmp28 = tmp31;
+            cResult[12] = tmp29;
+            tmp27 = tmp29;
           }
         }
         const obj14 = { source: cResult[4], style: tmp4.headerBackground };
-        const tmp24 = timestampProducer(React3, obj14);
+        const tmp23 = hasOwnProperty(FastImageDefault, obj14);
         cResult[5] = tmp4.headerBackground;
         cResult[6] = cResult[4];
-        cResult[7] = tmp24;
-        tmp21 = tmp24;
+        cResult[7] = tmp23;
+        tmp21 = tmp23;
       }
     }
   : function PremiumActivatedAlert(onClose) {
       const subscription = onClose.subscription;
-      const tmp = closure_8();
+      const tmp = closure_7();
       let renewalMutations = subscription;
       if (null != subscription.renewalMutations) {
         const _Object = Object;
@@ -474,78 +476,82 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { logo: { width: 79, height: 32 } };
         tmp9 = obj5;
       }
-      const tmp10 = closure_9(premiumBranding);
+      const tmp10 = closure_8(premiumBranding);
       const obj6 = { onClose: onClose.onClose, confirmText: null, style: null, children: null };
-      const tmp11 = closure_10(premiumBranding);
+      const tmp11 = closure_9(premiumBranding);
       const intl = util.intl;
       obj6.confirmText = intl.string(util.t.TkTvBz);
       obj6.style = tmp.alert;
       const obj7 = { style: tmp.header, children: null };
+      const tmp4Result = common_AlertDefault;
       if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-        let tmp4Result5 = _modDef10052;
+        let tmp4Result10 = _modDef10037;
       } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-        tmp4Result5 = _modDef10053;
+        tmp4Result10 = _modDef10038;
       } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-        tmp4Result5 = _modDef10054;
+        tmp4Result10 = _modDef10039;
       } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-        tmp4Result5 = _modDef10055;
+        tmp4Result10 = _modDef10040;
       } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-        tmp4Result5 = _modDef10056;
+        tmp4Result10 = _modDef10041;
       }
-      const items = [timestampProducer(React3, { source: tmp4Result5, style: tmp.headerBackground }), , ,];
+      const items = [hasOwnProperty(FastImageDefault, { source: tmp4Result10, style: tmp.headerBackground }), , ,];
+      const obj8 = { source: tmp4Result10, style: tmp.headerBackground };
+      const tmp4Result9 = FastImageDefault;
       if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-        let tmp4Result6 = _modDef10060;
+        let tmp4Result12 = _modDef10045;
       } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-        tmp4Result6 = _modDef10061;
+        tmp4Result12 = _modDef10046;
       } else {
         if (PremiumUtils.Branding.BUNDLE !== premiumBranding) {
           if (PremiumUtils.Branding.TIER_2 !== premiumBranding) {
             if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-              tmp4Result6 = _modDef10062;
+              tmp4Result12 = _modDef10047;
             }
           }
         }
-        tmp4Result6 = _modDef8070;
+        tmp4Result12 = _modDef8078;
       }
-      items[1] = timestampProducer(React3, { source: tmp4Result6, style: tmp9.logo });
+      items[1] = hasOwnProperty(FastImageDefault, { source: tmp4Result12, style: tmp9.logo });
       let tmp15Result = null;
       if (premiumBranding === PremiumUtils.Branding.BUNDLE) {
-        const obj10 = { source: _modDef10072, style: tmp.logoPlusPremiumGuild };
-        tmp15Result = timestampProducer(React3, obj10);
+        const obj10 = { source: _modDef10057, style: tmp.logoPlusPremiumGuild };
+        tmp15Result = hasOwnProperty(FastImageDefault, obj10);
+        const tmp4Result13 = FastImageDefault;
       }
       items[2] = tmp15Result;
+      const obj9 = { source: tmp4Result12, style: tmp9.logo };
+      const tmp4Result11 = FastImageDefault;
       if (PremiumUtils.Branding.TIER_0 === premiumBranding) {
-        let tmp4Result7 = _modDef7144;
+        let tmp4Result15 = _modDef7149;
       } else if (PremiumUtils.Branding.TIER_1 === premiumBranding) {
-        tmp4Result7 = _modDef7145;
+        tmp4Result15 = _modDef7150;
       } else if (PremiumUtils.Branding.TIER_2 === premiumBranding) {
-        tmp4Result7 = _modDef10057;
+        tmp4Result15 = _modDef10042;
       } else if (PremiumUtils.Branding.BUNDLE === premiumBranding) {
-        tmp4Result7 = _modDef10058;
+        tmp4Result15 = _modDef10043;
       } else if (PremiumUtils.Branding.PREMIUM_GUILD === premiumBranding) {
-        tmp4Result7 = _modDef10059;
+        tmp4Result15 = _modDef10044;
       }
-      const obj11 = { source: tmp4Result7, style: null };
+      const obj11 = { source: tmp4Result15, style: null };
       const items1 = [tmp10.headerImage, tmp.headerImage];
       obj11.style = items1;
-      items[3] = timestampProducer(React3, obj11);
+      items[3] = hasOwnProperty(FastImageDefault, obj11);
       obj7.children = items;
-      const items2 = [React5(React4, obj7)];
+      const items2 = [timestampProducer(React3, obj7)];
       const obj12 = { style: tmp.body, children: null };
       const obj13 = { source: null, style: null };
-      const obj8 = { source: tmp4Result5, style: tmp.headerBackground };
-      const obj9 = { source: tmp4Result6, style: tmp9.logo };
-      const tmp4Result = common_AlertDefault;
+      const tmp4Result14 = FastImageDefault;
       obj13.source = getActivatedImage(premiumBranding, tmp6);
       obj13.style = tmp11.animation;
-      const items3 = [timestampProducer(ShineAnimationDefault, obj13)];
-      const tmp4Result8 = ShineAnimationDefault;
-      items3[1] = timestampProducer(native.LegacyText, {
+      const items3 = [hasOwnProperty(ShineAnimationDefault, obj13)];
+      const tmp4Result16 = ShineAnimationDefault;
+      items3[1] = hasOwnProperty(native.LegacyText, {
         style: tmp.description,
         children: getDescription(premiumBranding, renewalMutations),
       });
       obj12.children = items3;
-      items2[1] = React5(React4, obj12);
+      items2[1] = timestampProducer(React3, obj12);
       obj6.children = items2;
-      return React5(tmp4Result, obj6);
+      return timestampProducer(tmp4Result, obj6);
     };

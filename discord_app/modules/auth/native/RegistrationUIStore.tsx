@@ -20,7 +20,7 @@ export const clearRegistrationErrorMessage = function clearRegistrationErrorMess
   let errors = {};
   const merged = Object.assign(errors.getState().errors);
   delete tmp2[tmp];
-  errors(1271).batchUpdates(() => {
+  errors(1272).batchUpdates(() => {
     errors = { errors };
     errors.setState(errors);
   });

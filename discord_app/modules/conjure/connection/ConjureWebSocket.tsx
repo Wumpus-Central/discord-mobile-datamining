@@ -13,7 +13,9 @@ prototype["open"] = function open(ticket) {
   ({ url, onEvent: closure_1, onClose: closure_2, onError: closure_3 } = ticket);
   this.close();
   const replaced = url.replace(/^https:/i, "wss:").replace(/^http:/i, "ws:");
-  const webSocket = new WebSocket("" + replaced + "/agent/ws?ticket=" + encodeURIComponent(ticket.ticket));
+  const webSocket = new WebSocket(
+    "" + replaced + "/agent/ws?ticket=" + encodeURIComponent(ticket.ticket) + "&debug=on_demand",
+  );
   this.socket = webSocket;
   const listener = webSocket.addEventListener("message", (event) => {
     if (self.socket === webSocket) {
@@ -90,6 +92,23 @@ prototype["sendInterrupt"] = function sendInterrupt() {
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendQueuedMessageAction"] = function sendQueuedMessageAction(arg0, id) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: null, id: null };
+      const _HermesInternal = HermesInternal;
+      obj.type = "" + arg0 + "_queued_message";
+      obj.id = id;
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendPublish"] = function sendPublish() {
   const self = this;
   if (null != this.socket) {
@@ -157,6 +176,19 @@ prototype["sendLoadHistory"] = function sendLoadHistory(olderHistoryCursor) {
     const _JSON = JSON;
     const obj = { type: "load_history", cursor: olderHistoryCursor };
     socket.send(JSON.stringify(obj));
+  }
+};
+prototype["sendDebugSubscribe"] = function sendDebugSubscribe() {
+  const self = this;
+  let tmp = null != this.socket;
+  if (tmp) {
+    const _WebSocket = WebSocket;
+    tmp = self.socket.readyState === WebSocket.OPEN;
+  }
+  if (tmp) {
+    const socket = self.socket;
+    const _JSON = JSON;
+    socket.send(JSON.stringify({ type: "debug_subscribe" }));
   }
 };
 prototype["sendRefreshBrowserSessions"] = function sendRefreshBrowserSessions() {

@@ -1,9 +1,9 @@
 // discord_common/js/packages/flash-list/index.js
 import c from "../../../../_runtime/00576_c.js";
 import PlatformUtils2 from "../../../../discord_app/utils/PlatformUtils.tsx";
-import BottomSheetModal from "../../../../_runtime/06298_BottomSheetModal.js";
-import _modDef6522 from "../../../../_runtime/metro/06522__.js";
-import _mod6523 from "../../../../_runtime/metro/06523__.js";
+import BottomSheetModal from "../../../../_runtime/06305_BottomSheetModal.js";
+import _modDef6529 from "../../../../_runtime/metro/06529__.js";
+import _mod6530 from "../../../../_runtime/metro/06530__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop_mod from "../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport_mod from "../../../../discord_app/modules/reanimated/ReanimatedRexport.tsx";
@@ -17,7 +17,7 @@ let closure_7 = ["preventNativeModalDismiss", "refreshControl", "ref"];
 let noop = noop_mod;
 const RefreshControl = fn(17).RefreshControl;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let obj2;
 if (PlatformUtils.isAndroid()) {
   obj2 = { disabled: true };
@@ -70,7 +70,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
     };
 fn(558);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_15 = ReanimatedRexport.createAnimatedComponent(fn(6523).FlashList);
+let closure_15 = ReanimatedRexport.createAnimatedComponent(fn(6530).FlashList);
 ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (ref) => {
@@ -94,7 +94,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = { maintainVisibleContentPosition: obj2, ref: tmp5 };
       const merged = Object.assign(tmp4);
-      const tmp11 = jsx(_mod6523.FlashList, { maintainVisibleContentPosition: obj2, ref: tmp5 });
+      const tmp11 = jsx(_mod6530.FlashList, { maintainVisibleContentPosition: obj2, ref: tmp5 });
       cResult[3] = tmp4;
       cResult[4] = tmp5;
       cResult[5] = tmp11;
@@ -103,7 +103,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (ref) => {
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const merged1 = Object.assign(merged);
-      return jsx(_mod6523.FlashList, { maintainVisibleContentPosition: obj2, ref: ref.ref });
+      return jsx(_mod6530.FlashList, { maintainVisibleContentPosition: obj2, ref: ref.ref });
     };
 ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -139,7 +139,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return <closure_15 maintainVisibleContentPosition={obj2} ref={ref.ref} />;
     };
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(6523).FlashList);
+let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(6530).FlashList);
 ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
@@ -164,7 +164,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = { ref: tmp5, maintainVisibleContentPosition: obj2, masonry: true };
       const merged = Object.assign(tmp4);
-      const tmp11 = jsx(_mod6523.FlashList, { ref: tmp5, maintainVisibleContentPosition: obj2, masonry: true });
+      const tmp11 = jsx(_mod6530.FlashList, { ref: tmp5, maintainVisibleContentPosition: obj2, masonry: true });
       cResult[3] = tmp4;
       cResult[4] = tmp5;
       cResult[5] = tmp11;
@@ -173,7 +173,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   : (ref) => {
       const merged = Object.assign(ref, Object.assign({ preventNativeModalDismiss: 0, ref: 0 }));
       const merged1 = Object.assign(merged);
-      return jsx(_mod6523.FlashList, { ref: ref.ref, maintainVisibleContentPosition: obj2, masonry: true });
+      return jsx(_mod6530.FlashList, { ref: ref.ref, maintainVisibleContentPosition: obj2, masonry: true });
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -209,7 +209,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj2 = { ref: tmp5, maintainVisibleContentPosition: obj2 };
       const merged = Object.assign(tmp4);
       obj2.refreshControl = tmp10;
-      const tmp14 = jsx(_modDef6522, { ref: tmp5, maintainVisibleContentPosition: obj2 });
+      const tmp14 = jsx(_modDef6529, { ref: tmp5, maintainVisibleContentPosition: obj2 });
       cResult[5] = tmp10;
       cResult[6] = tmp4;
       cResult[7] = tmp5;
@@ -223,12 +223,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_14(preventNativeModalDismiss, refreshControl);
       const merged1 = Object.assign(merged);
       obj.refreshControl = tmp2;
-      return jsx(_modDef6522, { ref, maintainVisibleContentPosition: obj2 });
+      return jsx(_modDef6529, { ref, maintainVisibleContentPosition: obj2 });
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10085 in require("../../../../_runtime/metro/06523__.js")) {
-  arg5[key10085] = require("../../../../_runtime/metro/06523__.js")[key10085];
+for (const key10085 in require("../../../../_runtime/metro/06530__.js")) {
+  arg5[key10085] = require("../../../../_runtime/metro/06530__.js")[key10085];
   continue;
 }
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()

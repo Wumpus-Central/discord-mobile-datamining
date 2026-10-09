@@ -1,6 +1,6 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";
@@ -99,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: null,
       });
     };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 48 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileGamesActionSheet.tsx");
@@ -109,15 +109,15 @@ export default function GuildProfileGamesActionSheet(profile) {
   const id = profile.id;
   const gameActivity = profile.gameActivity;
   const tmp = closure_7();
-  const allGuildProfileGames = id(9087).useAllGuildProfileGames(profile);
-  let obj = id(9087);
+  const allGuildProfileGames = id(12965).useAllGuildProfileGames(profile);
+  let obj = id(12965);
   const intl = id(1126).intl;
-  const obj2 = id(8270);
+  const obj2 = id(8278);
   const items = [id];
   const str = intl.format(id(1126).t.vuAVo7, { serverName: profile.name });
   const callback = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(8831, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
+    obj.openLazy(asyncRequireImpl(8840, dependencyMap.paths), "GuildProfileActionSheet:" + id, { guildId: id });
   }, items);
   const obj3 = {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
@@ -129,7 +129,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   const obj4 = { children: null };
   const obj5 = { style: tmp.container, children: null };
   const str1 = intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString();
-  obj5.children = jsx(id(6267).TableRowGroup, {
+  obj5.children = jsx(id(6269).TableRowGroup, {
     title: intl.format(id(1126).t.vuAVo7, { serverName: profile.name }).toString(),
     hasIcons: true,
     children: allGuildProfileGames.map((game) => (
@@ -137,8 +137,8 @@ export default function GuildProfileGamesActionSheet(profile) {
     )),
   });
   obj4.children = <View style={tmp.container}>{null}</View>;
-  obj3.children = jsx(id(6298).BottomSheetScrollView, { children: null });
-  return jsx(id(6829).BottomSheet, {
+  obj3.children = jsx(id(6305).BottomSheetScrollView, { children: null });
+  return jsx(id(6836).BottomSheet, {
     ref: obj2.useBottomSheetRef().bottomSheetRef,
     scrollable: true,
     onDismiss: callback,

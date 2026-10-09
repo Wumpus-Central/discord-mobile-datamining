@@ -1,7 +1,7 @@
 // discord_app/design/void/Checkbox/native/Checkbox.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _modDef14223 from "../../../../../_runtime/metro/14223__.js";
-import _modDef14224 from "../../../../../_runtime/metro/14224__.js";
+import _modDef14319 from "../../../../../_runtime/metro/14319__.js";
+import _modDef14320 from "../../../../../_runtime/metro/14320__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (style.selected) {
         if (cResult[0] !== style) {
           const obj2 = { style, source: null };
-          tmp = _modDef14223;
+          tmp = _modDef14319;
           obj2.source = tmp;
           const tmp12 = <Image style={style} source={null} />;
           cResult[0] = style;
@@ -27,8 +27,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       } else {
         if (cResult[2] !== style) {
-          const obj3 = { style, source: _modDef14224 };
-          const tmp7 = <Image style={style} source={_modDef14224} />;
+          const obj3 = { style, source: _modDef14320 };
+          const tmp7 = <Image style={style} source={_modDef14320} />;
           cResult[2] = style;
           cResult[3] = tmp7;
           let tmp3 = tmp7;
@@ -41,10 +41,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function Checkbox(style) {
       const obj = { style: style.style, source: null };
       if (style.selected) {
-        obj.source = _modDef14223;
+        obj.source = _modDef14319;
         let tmp5 = obj;
       } else {
-        obj.source = _modDef14224;
+        obj.source = _modDef14320;
         tmp5 = obj;
       }
       return <Image {...tmp5} />;

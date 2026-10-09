@@ -10,7 +10,7 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ Fonts, AnalyticEvents: metroRequire, MessageFlags: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { systemContent: null, messageContent: null };
 let obj3 = { fontStyle: "italic" };
 let TextStyles = TextStyles_mod;
@@ -35,7 +35,7 @@ export default noop.memo(
         const style = channel.style;
         const tmp4 = closure_9();
         let obj = channel(576);
-        const messageRequestPreview = channel(12353).useMessageRequestPreview(channel);
+        const messageRequestPreview = channel(12289).useMessageRequestPreview(channel);
         const message = messageRequestPreview.message;
         ({ loaded, error } = messageRequestPreview);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -90,7 +90,7 @@ export default noop.memo(
           }
           tmp9 = cResult[3];
         }
-        const obj2 = channel(12353);
+        const obj2 = channel(12289);
         const stateFromStoresObject = channel(504).useStateFromStoresObject(first, S, tmp9);
         if (cResult[4] === channel) {
           class S {
@@ -632,10 +632,10 @@ export default noop.memo(
     : function MessageRequestPreview(channel) {
         channel = channel.channel;
         const tmp = closure_9();
-        const messageRequestPreview = channel(12353).useMessageRequestPreview(channel);
+        const messageRequestPreview = channel(12289).useMessageRequestPreview(channel);
         const message = messageRequestPreview.message;
         ({ loaded, error } = messageRequestPreview);
-        let obj = channel(12353);
+        let obj = channel(12289);
         const items = [RelationshipStore];
         const items1 = [message];
         const stateFromStoresObject = channel(504).useStateFromStoresObject(
@@ -693,7 +693,7 @@ export default noop.memo(
             }
             if (null != content) {
               if ("" !== message.content) {
-                const content1 = message(8114)(message, {
+                const content1 = message(8122)(message, {
                   noStyleAndInteraction: true,
                   allowGameMentions: true,
                 }).content;
@@ -730,7 +730,7 @@ export default noop.memo(
               }
               stringResult = stringResult1;
               flag = false;
-              tmp2Result = tmp2(5745);
+              tmp2Result = tmp2(5746);
             } else {
               const intl = tmp2(1126).intl;
               stringResult = intl.string(tmp2(1126).t["0KfDxM"]);

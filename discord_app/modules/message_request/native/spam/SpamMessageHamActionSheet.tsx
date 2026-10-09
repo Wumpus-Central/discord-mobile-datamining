@@ -3,7 +3,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5007 from "../../../../../_runtime/metro/05007__.js";
+import _modDef5008 from "../../../../../_runtime/metro/05008__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   container: null,
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
           const intl = recipientId(1126).intl;
           obj2.content = intl.string(recipientId(1126).t["EDYbS+"]);
-          obj2.icon = _modDef5007;
+          obj2.icon = _modDef5008;
           ToastActionCreatorsDefault.open(obj2);
         },
         onAcceptSuccess: function handleAcceptSuccess() {

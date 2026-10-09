@@ -8,7 +8,7 @@ import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPro
 import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef9742 from "../../../../_runtime/metro/09742__.js";
+import _modDef9761 from "../../../../_runtime/metro/09761__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,8 +17,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(9712).useStickerPickerStore;
-const StickerPickerConstants = fn(9679);
+const useStickerPickerStore = fn(9731).useStickerPickerStore;
+const StickerPickerConstants = fn(9698);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -28,7 +28,7 @@ const Constants = fn(1085);
 ({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED },
   section: null,
@@ -81,7 +81,7 @@ let closure_17 = noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { source: _modDef9742, size: native.Icon.Sizes.SMALL };
+            const obj3 = { source: _modDef9761, size: native.Icon.Sizes.SMALL };
             const tmp11 = __initData2(native.Icon, obj3);
             cResult[5] = tmp11;
             let tmp8 = tmp11;
@@ -137,7 +137,7 @@ let closure_17 = noop.memo(
         const obj = { style: null, children: null };
         const items = [tmp.nsfwContainer, { height: height.height }];
         obj.style = items;
-        const items1 = [__initData2(native.Icon, { source: _modDef9742, size: native.Icon.Sizes.SMALL })];
+        const items1 = [__initData2(native.Icon, { source: _modDef9761, size: native.Icon.Sizes.SMALL })];
         const obj3 = {
           style: tmp.nsfwText,
           variant: "text-sm/normal",

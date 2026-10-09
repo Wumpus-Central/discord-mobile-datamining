@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(12589).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(12529).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1085);
 ({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { iconContainer: null };
 let size = {
   width: 48,
@@ -36,7 +36,7 @@ export default noop.memo(
         type = notification.type;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { size: "sm", color: nativeDefault.colors.WHITE };
-          const tmp8 = jsx(tmp(12690).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          const tmp8 = jsx(tmp(12635).ThemeDarkIcon, { size: "sm", color: nativeDefault.colors.WHITE });
           cResult[0] = tmp8;
           let first = tmp8;
         } else {
@@ -119,7 +119,7 @@ export default noop.memo(
             lineClamp,
             children: notification.subtitle,
           };
-          const tmp17 = jsx(tmp(5086).Text, {
+          const tmp17 = jsx(tmp(5087).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
@@ -169,14 +169,14 @@ export default noop.memo(
         cResult[11] = notification;
         cResult[12] = N;
         cResult[13] = tmp15;
-        cResult[14] = jsx(type(12627).NotificationPressable, {
+        cResult[14] = jsx(type(12567).NotificationPressable, {
           icon: tmp9,
           header: tmp13,
           children: tmp15,
           onPress: N,
           notification,
         });
-        const tmp18 = jsx(type(12627).NotificationPressable, {
+        const tmp18 = jsx(type(12567).NotificationPressable, {
           icon: tmp9,
           header: tmp13,
           children: tmp15,
@@ -189,7 +189,7 @@ export default noop.memo(
         const type = notification.type;
         let obj = {
           style: closure_9().iconContainer,
-          children: jsx(notification(12690).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
+          children: jsx(notification(12635).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE }),
         };
         const items = [notification.title];
         let obj2 = { size: "sm", color: type(587).colors.WHITE };
@@ -206,11 +206,11 @@ export default noop.memo(
         let obj3 = {
           icon: (
             <View style={closure_9().iconContainer}>
-              {jsx(notification(12690).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+              {jsx(notification(12635).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
             </View>
           ),
           header: memo,
-          children: jsx(notification(5086).Text, {
+          children: jsx(notification(5087).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
@@ -219,14 +219,14 @@ export default noop.memo(
           onPress: callback,
           notification,
         };
-        return jsx(notification(12627).NotificationPressable, {
+        return jsx(notification(12567).NotificationPressable, {
           icon: (
             <View style={closure_9().iconContainer}>
-              {jsx(notification(12690).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
+              {jsx(notification(12635).ThemeDarkIcon, { size: "sm", color: type(587).colors.WHITE })}
             </View>
           ),
           header: memo,
-          children: jsx(notification(5086).Text, {
+          children: jsx(notification(5087).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,

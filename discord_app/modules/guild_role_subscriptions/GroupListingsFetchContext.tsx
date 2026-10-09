@@ -7,7 +7,7 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
 require = fn;
-const FetchState = fn(4700).FetchState;
+const FetchState = fn(4702).FetchState;
 const jsx = fn(21).jsx;
 const redux = noop.createContext(undefined);
 fn(558);

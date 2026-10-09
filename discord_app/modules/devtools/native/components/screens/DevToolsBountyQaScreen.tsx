@@ -22,7 +22,7 @@ let items = [
   { value: "60", label: "Last hour" },
   { value: "1440", label: "Last 24 hours" },
 ];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.content = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -41,12 +41,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items = [AdDeliveryStore];
         const fn = function h() {
           const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-          value = deliveryAdDecisionByPlacement.get(closure_0(5980).AdPlacement.MOBILE_HOME_DOCK_AREA);
+          value = deliveryAdDecisionByPlacement.get(closure_0(5982).AdPlacement.MOBILE_HOME_DOCK_AREA);
           let creative;
           if (value != null) {
             creative = value.creative;
           }
-          const deliveredBounty = closure_0(7377).getDeliveredBounty(creative);
+          const deliveredBounty = closure_0(7382).getDeliveredBounty(creative);
           let id;
           if (deliveredBounty != null) {
             id = deliveredBounty.id;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      const tmp5 = str(1630)();
+      const tmp5 = str(1631)();
       const stateFromStores = require("initialize").useStateFromStores(tmp6, tmp7);
       _require = stateFromStores;
       str = "15";
@@ -86,12 +86,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
               function handleRefreshOrganicServe() {
-                const questToDeliver = closure_0(9537).fetchQuestToDeliver(
-                  closure_0(5980).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                const questToDeliver = closure_0(9150).fetchQuestToDeliver(
+                  closure_0(5982).AdPlacement.MOBILE_HOME_DOCK_AREA,
                   "devTools-bountyQa",
                 );
-                const obj = closure_0(9537);
-                str(4766).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
+                const obj = closure_0(9150);
+                str(4768).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
               }
               cResult[8] = handleRefreshOrganicServe;
               let tmp16 = handleRefreshOrganicServe;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[16] !== str4) {
                 let obj3 = { variant: "text-sm/medium", color: "text-muted", children: str4 };
-                const tmp23 = closure_8(tmp(5086).Text, obj3);
+                const tmp23 = closure_8(tmp(5087).Text, obj3);
                 cResult[16] = str4;
                 cResult[17] = tmp23;
                 let tmp21 = tmp23;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const mapped = arr2.map((value) => {
                   value = value.value;
                   ({ label, subLabel } = value);
-                  return closure_1_8(closure_0(6264).TableRadioRow, { value, label, subLabel }, value);
+                  return closure_1_8(closure_0(6266).TableRadioRow, { value, label, subLabel }, value);
                 });
                 cResult[18] = arr2;
                 cResult[19] = mapped;
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp31 = closure_8(tmp(15188).UndoIcon, {});
+                  const tmp31 = closure_8(tmp(15299).UndoIcon, {});
                   cResult[23] = tmp31;
                   let tmp29 = tmp31;
                 } else {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     icon: tmp29,
                     onPress: tmp14,
                   };
-                  const tmp34 = closure_8(tmp(6184).TableRow, obj4);
+                  const tmp34 = closure_8(tmp(6186).TableRow, obj4);
                   cResult[24] = tmp14;
                   cResult[25] = tmp34;
                   let tmp32 = tmp34;
@@ -189,10 +189,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     label: "Refresh Organic Serve",
                     subLabel:
                       "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-                    icon: closure_8(tmp(15186).RedoIcon, {}),
+                    icon: closure_8(tmp(15297).RedoIcon, {}),
                     onPress: tmp16,
                   };
-                  const tmp37 = closure_8(tmp(6184).TableRow, obj5);
+                  const tmp37 = closure_8(tmp(6186).TableRow, obj5);
                   cResult[26] = tmp37;
                   let tmp35 = tmp37;
                 } else {
@@ -233,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let obj7 = { title: "Dock QA", hasIcons: true, children: null };
                   const items2 = [tmp32, tmp35, tmp38];
                   obj7.children = items2;
-                  const tmp43 = closure_9(tmp(6267).TableRowGroup, obj7);
+                  const tmp43 = closure_9(tmp(6269).TableRowGroup, obj7);
                   cResult[30] = tmp32;
                   cResult[31] = tmp38;
                   cResult[32] = tmp43;
@@ -244,10 +244,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let obj8 = {
                     label: "Reset Seen",
                     subLabel: "Clears the Quest Home NEW pill for the last dock bounty. Does not restore the dock.",
-                    icon: closure_8(tmp(6643).EyeIcon, {}),
+                    icon: closure_8(tmp(6650).EyeIcon, {}),
                     onPress: tmp17,
                   };
-                  tmp39 = closure_8(tmp(6184).TableRow, obj8);
+                  tmp39 = closure_8(tmp(6186).TableRow, obj8);
                 }
                 cResult[27] = tmp17;
                 cResult[28] = tmp10;
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 hasIcons: false,
                 children: tmp24,
               };
-              const tmp28 = closure_8(tmp(6265).TableRadioGroup, obj9);
+              const tmp28 = closure_8(tmp(6267).TableRadioGroup, obj9);
               cResult[20] = str;
               cResult[21] = tmp24;
               cResult[22] = tmp28;
@@ -310,9 +310,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         c1 = 3;
                         c3 = 1;
                         const obj7 = {
-                          value: tmp3(11155).resetCreativePreviewDeliveryState(
+                          value: tmp3(12923).resetCreativePreviewDeliveryState(
                             tmp22,
-                            tmp3(5980).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                            tmp3(5982).AdPlacement.MOBILE_HOME_DOCK_AREA,
                           ),
                           done: false,
                         };
@@ -323,7 +323,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const NumberResult = Number(tmp37);
                       c1 = 2;
                       c3 = 1;
-                      const obj8 = { value: tmp3(11155).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+                      const obj8 = { value: tmp3(12923).resetPreviewDeliveryStateLookback(NumberResult), done: false };
                       return obj8;
                     }
                   }
@@ -347,13 +347,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj = { value, done: true };
                       return obj;
                     }
-                    const questToDeliver = tmp3(9537).fetchQuestToDeliver(
-                      tmp3(5980).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                    const questToDeliver = tmp3(9150).fetchQuestToDeliver(
+                      tmp3(5982).AdPlacement.MOBILE_HOME_DOCK_AREA,
                       "devTools-bountyQa",
                     );
                     toast("Reset delivery state and refreshing dock", "bounty-qa-reset-and-refresh");
                     c2 = 0;
-                    const obj2 = tmp3(9537);
+                    const obj2 = tmp3(9150);
                   }
                   c2 = 0;
                   c3 = 3;
@@ -439,9 +439,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     c1 = 3;
                     c3 = 1;
                     const obj7 = {
-                      value: tmp3(11155).resetCreativePreviewDeliveryState(
+                      value: tmp3(12923).resetCreativePreviewDeliveryState(
                         tmp22,
-                        tmp3(5980).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                        tmp3(5982).AdPlacement.MOBILE_HOME_DOCK_AREA,
                       ),
                       done: false,
                     };
@@ -452,7 +452,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const NumberResult = Number(tmp37);
                   c1 = 2;
                   c3 = 1;
-                  const obj8 = { value: tmp3(11155).resetPreviewDeliveryStateLookback(NumberResult), done: false };
+                  const obj8 = { value: tmp3(12923).resetPreviewDeliveryStateLookback(NumberResult), done: false };
                   return obj8;
                 }
               }
@@ -476,13 +476,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { value, done: true };
                   return obj;
                 }
-                const questToDeliver = tmp3(9537).fetchQuestToDeliver(
-                  tmp3(5980).AdPlacement.MOBILE_HOME_DOCK_AREA,
+                const questToDeliver = tmp3(9150).fetchQuestToDeliver(
+                  tmp3(5982).AdPlacement.MOBILE_HOME_DOCK_AREA,
                   "devTools-bountyQa",
                 );
                 toast("Reset delivery state and refreshing dock", "bounty-qa-reset-and-refresh");
                 dependencyMap = 0;
-                const obj2 = tmp3(9537);
+                const obj2 = tmp3(9150);
               }
               dependencyMap = 0;
               c3 = 3;
@@ -500,16 +500,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       const tmp = closure_11();
-      const tmp3 = str(1630)();
+      const tmp3 = str(1631)();
       items = [AdDeliveryStore];
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
         const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
-        value = deliveryAdDecisionByPlacement.get(stateFromStores(5980).AdPlacement.MOBILE_HOME_DOCK_AREA);
+        value = deliveryAdDecisionByPlacement.get(stateFromStores(5982).AdPlacement.MOBILE_HOME_DOCK_AREA);
         let creative;
         if (value != null) {
           creative = value.creative;
         }
-        const deliveredBounty = stateFromStores(7377).getDeliveredBounty(creative);
+        const deliveredBounty = stateFromStores(7382).getDeliveredBounty(creative);
         let id;
         if (deliveredBounty != null) {
           id = deliveredBounty.id;
@@ -548,11 +548,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str4 = "Last dock bounty still in memory: " + stateFromStores + ".";
       }
       const items5 = [
-        closure_8(stateFromStores(5086).Text, { variant: "text-sm/medium", color: "text-muted", children: str4 }),
+        closure_8(stateFromStores(5087).Text, { variant: "text-sm/medium", color: "text-muted", children: str4 }),
         ,
       ];
       let obj = stateFromStores(504);
-      items5[1] = closure_8(stateFromStores(6265).TableRadioGroup, {
+      items5[1] = closure_8(stateFromStores(6267).TableRadioGroup, {
         title: "Reset scope",
         description: "Used by Reset and re-serve. Refresh Organic Serve ignores this.",
         value: str,
@@ -561,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items3.map((value) => {
           value = value.value;
           ({ label, subLabel } = value);
-          return closure_1_8(stateFromStores(6264).TableRadioRow, { value, label, subLabel }, value);
+          return closure_1_8(stateFromStores(6266).TableRadioRow, { value, label, subLabel }, value);
         }),
       });
       const obj4 = {
@@ -573,15 +573,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: items3.map((value) => {
           value = value.value;
           ({ label, subLabel } = value);
-          return closure_1_8(stateFromStores(6264).TableRadioRow, { value, label, subLabel }, value);
+          return closure_1_8(stateFromStores(6266).TableRadioRow, { value, label, subLabel }, value);
         }),
       };
       const items6 = [
-        closure_8(stateFromStores(6184).TableRow, {
+        closure_8(stateFromStores(6186).TableRow, {
           label: "Reset and re-serve",
           subLabel:
             "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-          icon: closure_8(stateFromStores(15188).UndoIcon, {}),
+          icon: closure_8(stateFromStores(15299).UndoIcon, {}),
           onPress: function handleResetAndRefresh() {
             const self = this;
             const apply = closure_2.apply;
@@ -599,7 +599,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         label: "Reset and re-serve",
         subLabel:
           "Clears serve, dismiss, claim, and impression for the selected scope, then asks the dock for a new decision.",
-        icon: closure_8(stateFromStores(15188).UndoIcon, {}),
+        icon: closure_8(stateFromStores(15299).UndoIcon, {}),
         onPress: function handleResetAndRefresh() {
           const self = this;
           const apply = closure_2.apply;
@@ -611,17 +611,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return applyArgumentsResult;
         },
       };
-      items6[1] = closure_8(stateFromStores(6184).TableRow, {
+      items6[1] = closure_8(stateFromStores(6186).TableRow, {
         label: "Refresh Organic Serve",
         subLabel: "Re-runs the dock decision without clearing delivery state. Use to confirm a cooldown still blocks.",
-        icon: closure_8(stateFromStores(15186).RedoIcon, {}),
+        icon: closure_8(stateFromStores(15297).RedoIcon, {}),
         onPress: function handleRefreshOrganicServe() {
-          const questToDeliver = stateFromStores(9537).fetchQuestToDeliver(
-            stateFromStores(5980).AdPlacement.MOBILE_HOME_DOCK_AREA,
+          const questToDeliver = stateFromStores(9150).fetchQuestToDeliver(
+            stateFromStores(5982).AdPlacement.MOBILE_HOME_DOCK_AREA,
             "devTools-bountyQa",
           );
-          const obj = stateFromStores(9537);
-          str(4766).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
+          const obj = stateFromStores(9150);
+          str(4768).open({ content: "Refreshing dock serve", key: "bounty-qa-refresh" });
         },
       });
       let tmp13Result = null;
@@ -629,7 +629,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj7 = {
           label: "Reset Seen",
           subLabel: "Clears the Quest Home NEW pill for the last dock bounty. Does not restore the dock.",
-          icon: closure_8(tmp4(6643).EyeIcon, {}),
+          icon: closure_8(tmp4(6650).EyeIcon, {}),
           onPress: function handleResetSeen() {
             if (null != stateFromStores) {
               items = [tmp];
@@ -643,10 +643,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           },
         };
-        tmp13Result = closure_8(tmp4(6184).TableRow, obj7);
+        tmp13Result = closure_8(tmp4(6186).TableRow, obj7);
       }
       items6[2] = tmp13Result;
-      items5[2] = closure_9(stateFromStores(6267).TableRowGroup, {
+      items5[2] = closure_9(stateFromStores(6269).TableRowGroup, {
         title: "Dock QA",
         hasIcons: true,
         children: items6,

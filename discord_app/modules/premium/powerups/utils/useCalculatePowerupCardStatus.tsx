@@ -5,7 +5,7 @@ import _modDef2597 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PowerupActiveStatusType = fn(4968).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4969).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");

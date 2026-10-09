@@ -1,6 +1,5 @@
 // discord_app/utils/native/AvatarUtils.tsx
 import _mod17 from "../../../_runtime/metro/00017__.js";
-import _modDef1418 from "../../../_runtime/metro/01418__.js";
 import _modDef1419 from "../../../_runtime/metro/01419__.js";
 import _modDef1420 from "../../../_runtime/metro/01420__.js";
 import _modDef1421 from "../../../_runtime/metro/01421__.js";
@@ -26,9 +25,10 @@ import _modDef1440 from "../../../_runtime/metro/01440__.js";
 import _modDef1441 from "../../../_runtime/metro/01441__.js";
 import _modDef1442 from "../../../_runtime/metro/01442__.js";
 import _modDef1443 from "../../../_runtime/metro/01443__.js";
-import _modDef1445 from "../../../_runtime/metro/01445__.js";
+import _modDef1444 from "../../../_runtime/metro/01444__.js";
 import _modDef1446 from "../../../_runtime/metro/01446__.js";
-import _modDef1448 from "../../../_runtime/metro/01448__.js";
+import _modDef1447 from "../../../_runtime/metro/01447__.js";
+import _modDef1449 from "../../../_runtime/metro/01449__.js";
 import NativeMediaManagerModule from "../../../discord_common/js/packages/rtn-codegen/js/NativeMediaManagerModule.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -44,10 +44,10 @@ function ensureAvatarSource(avatarSource) {
   return assetSource;
 }
 const Image = _mod17.Image;
-const items = [_modDef1418, _modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423];
-const items1 = [_modDef1424, _modDef1425, _modDef1426, _modDef1427, _modDef1428, _modDef1429];
-const items2 = [_modDef1430, _modDef1431, _modDef1432, _modDef1433, _modDef1434, _modDef1435];
-const items3 = [_modDef1436, _modDef1437, _modDef1438, _modDef1439, _modDef1440, _modDef1441, _modDef1442, _modDef1443];
+const items = [_modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424];
+const items1 = [_modDef1425, _modDef1426, _modDef1427, _modDef1428, _modDef1429, _modDef1430];
+const items2 = [_modDef1431, _modDef1432, _modDef1433, _modDef1434, _modDef1435, _modDef1436];
+const items3 = [_modDef1437, _modDef1438, _modDef1439, _modDef1440, _modDef1441, _modDef1442, _modDef1443, _modDef1444];
 const set = new Set(NativeMediaManagerModule.getConstants().supportedExtensions);
 const obj = {
   DEFAULT_AVATARS: items,
@@ -55,8 +55,8 @@ const obj = {
   DEFAULT_AVATARS_SMALL_MAX_SIZE: 24,
   DEFAULT_PROVISIONAL_AVATARS: items2,
   DEFAULT_GROUP_DM_AVATARS: items3,
-  BOT_AVATARS: { clyde: _modDef1445, nitro_wumpus: _modDef1446 },
-  DEFAULT_CHANNEL_ICON: _modDef1448,
+  BOT_AVATARS: { clyde: _modDef1446, nitro_wumpus: _modDef1447 },
+  DEFAULT_CHANNEL_ICON: _modDef1449,
   ensureAvatarSource,
   canUseWebp() {
     return set.has("webp");
@@ -71,5 +71,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return require("../../../_runtime/metro/01447__.js");
+  return require("../../../_runtime/metro/01448__.js");
 };

@@ -100,9 +100,9 @@ export const transitionToMessage = function transitionToMessage(channelId, messa
     const CHANNELResult = Routes.CHANNEL(guildIdForGenericRedirect, channel.id, messageId);
   }
 };
-export const transitionToStaticChannelRoute = function transitionToStaticChannelRoute(guildId, GUILD_HOME, arg2) {
+export const transitionToStaticChannelRoute = function transitionToStaticChannelRoute(arg0, arg1, arg2) {
   const obj = router_utils;
   const obj2 = { openChannel: true };
   const merged = Object.assign(arg2);
-  obj.transitionTo(Routes.CHANNEL(guildId, GUILD_HOME), obj2);
+  obj.transitionTo(Routes.CHANNEL(arg0, arg1), obj2);
 };

@@ -6,18 +6,18 @@ import VoiceActionSheetManagerDefault from "../VoiceActionSheetManager.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SortedVoiceStateStore from "../../../../stores/views/SortedVoiceStateStore.tsx";
 
-const VisualEffectViewDefault = tmp5(5363);
-const NUFChannelsManagerDefault = tmp5(13416);
-const NUFVoiceChannelsTemplateDefault = tmp5(13426);
-const GuildEventVoiceBannerDefault = tmp5(13429);
-const VoiceEmptyStateDefault = tmp5(13430);
-const VoiceMemberListDefault = tmp5(13433);
+const VisualEffectViewDefault = tmp5(5364);
+const NUFChannelsManagerDefault = tmp5(13511);
+const NUFVoiceChannelsTemplateDefault = tmp5(13518);
+const GuildEventVoiceBannerDefault = tmp5(13521);
+const VoiceEmptyStateDefault = tmp5(13522);
+const VoiceMemberListDefault = tmp5(13525);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1 }, visualEffectView: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp5 = NUFVoiceChannelsTemplateDefault;
           let obj3 = { channel };
           obj2.children = closure_6(tmp5, obj3);
-          const tmp31 = closure_6(tmp(6885).ActionSheet, obj2);
+          const tmp31 = closure_6(tmp(6892).ActionSheet, obj2);
           cResult[6] = channel;
           cResult[7] = tmp31;
         }
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { channel };
             items2[1] = closure_6(VoiceEmptyStateDefault, obj6);
             obj4.children = items2;
-            const tmp28 = closure_7(tmp(6885).ActionSheet, obj4);
+            const tmp28 = closure_7(tmp(6892).ActionSheet, obj4);
             cResult[8] = channel;
             cResult[9] = tmp28;
             let tmp25 = tmp28;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items3 = [tmp14, tmp17];
           obj10.children = items3;
           obj9.children = closure_7(closure_4, obj10);
-          const tmp24 = closure_6(tmp(6885).ActionSheet, obj9);
+          const tmp24 = closure_6(tmp(6892).ActionSheet, obj9);
           cResult[14] = tmp4.container;
           cResult[15] = tmp14;
           cResult[16] = tmp17;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp33;
         }
         const obj11 = { value: analyticsLocations, children: tmp20 };
-        const tmp35 = closure_6(tmp(6841).AnalyticsLocationProvider, obj11);
+        const tmp35 = closure_6(tmp(6848).AnalyticsLocationProvider, obj11);
         cResult[18] = analyticsLocations;
         cResult[19] = tmp20;
         cResult[20] = tmp35;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { children: null };
         const obj4 = { channel };
         obj3.children = closure_6(NUFVoiceChannelsTemplateDefault, obj4);
-        let children = closure_6(tmp5(6885).ActionSheet, obj3);
+        let children = closure_6(tmp5(6892).ActionSheet, obj3);
         let tmp8 = closure_6;
       } else if (stateFromStores) {
         const obj5 = { children: null };
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { channel };
         items2[1] = closure_6(VoiceEmptyStateDefault, obj7);
         obj5.children = items2;
-        children = closure_7(tmp5(6885).ActionSheet, obj5);
+        children = closure_7(tmp5(6892).ActionSheet, obj5);
         tmp8 = closure_6;
       } else {
         tmp8 = closure_6;
@@ -203,9 +203,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items3[1] = closure_6(VoiceMemberListDefault, obj11);
         obj9.children = items3;
         obj8.children = closure_7(closure_4, obj9);
-        children = closure_6(tmp5(6885).ActionSheet, obj8);
+        children = closure_6(tmp5(6892).ActionSheet, obj8);
       }
-      return tmp8(channel(6841).AnalyticsLocationProvider, {
+      return tmp8(channel(6848).AnalyticsLocationProvider, {
         value: tmp4(AnalyticsLocationDefault.VOICE_ACTION_SHEET).analyticsLocations,
         children,
       });

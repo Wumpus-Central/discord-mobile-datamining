@@ -19,7 +19,7 @@ const Constants = fn(1085);
   AnalyticsSections: closure_9,
   UpsellTypes: c10,
 } = Constants);
-const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUploadAvatar.tsx");
@@ -110,12 +110,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let originalMd5;
                 closure_128_3 = undefined;
                 closure_128_4 = undefined;
-                analyticsLocations(5054).hideActionSheet();
-                const obj13 = analyticsLocations(5054);
+                analyticsLocations(5055).hideActionSheet();
+                const obj13 = analyticsLocations(5055);
                 const obj6 = { size };
                 c2 = 1;
                 c3 = 1;
-                const obj8 = { value: analyticsLocations(7741).openImagePicker(obj6), done: false };
+                const obj8 = { value: analyticsLocations(7750).openImagePicker(obj6), done: false };
                 return obj8;
               }
             } else if (arg0 === 1) {
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 let canUseAnimatedAvatarResult = c2;
                 if (!c2) {
-                  canUseAnimatedAvatarResult = analyticsLocations(4726).canUseAnimatedAvatar(c3);
-                  const obj = analyticsLocations(4726);
+                  canUseAnimatedAvatarResult = analyticsLocations(4728).canUseAnimatedAvatar(c3);
+                  const obj = analyticsLocations(4728);
                 }
                 closure_128_3 = canUseAnimatedAvatarResult;
                 if (isGIF(base64)) {
@@ -145,21 +145,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj10 = { imageUri: base64, description: null, originalMd5: null };
-              const obj2 = guildId(14660);
-              obj10.description = guildId(8269).generateAvatarDescription();
+              const obj2 = guildId(14765);
+              obj10.description = guildId(8277).generateAvatarDescription();
               obj10.originalMd5 = originalMd5;
               closure_128_4 = obj2.createPendingImage(obj10);
               if (c2) {
-                tmp30(8267).setTryItOutAvatar(closure_128_4);
-                const tmp30Result = tmp30(8267);
+                tmp30(8275).setTryItOutAvatar(closure_128_4);
+                const tmp30Result = tmp30(8275);
               } else {
                 const obj11 = { guildId, avatar: closure_128_4 };
-                tmp30(8264).setPendingChanges(obj11);
-                const tmp30Result2 = tmp30(8264);
-                const result = guildId(8266).announcePendingAvatarChange("set");
-                const obj7 = guildId(8266);
+                tmp30(8272).setPendingChanges(obj11);
+                const tmp30Result2 = tmp30(8272);
+                const result = guildId(8274).announcePendingAvatarChange("set");
+                const obj7 = guildId(8274);
               }
-              const obj4 = guildId(8269);
+              const obj4 = guildId(8277);
             }
           } catch (tmp40) {
             c3 = tmp;
@@ -241,12 +241,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let originalMd5;
                   closure_128_3 = undefined;
                   closure_128_4 = undefined;
-                  tmp2(5054).hideActionSheet();
-                  const obj13 = tmp2(5054);
+                  tmp2(5055).hideActionSheet();
+                  const obj13 = tmp2(5055);
                   const obj6 = { size };
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj8 = { value: tmp2(7741).openImagePicker(obj6), done: false };
+                  const obj8 = { value: tmp2(7750).openImagePicker(obj6), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -265,8 +265,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let canUseAnimatedAvatarResult = closure_129_1;
                   if (!closure_129_1) {
-                    canUseAnimatedAvatarResult = tmp2(4726).canUseAnimatedAvatar(closure_129_3);
-                    const obj = tmp2(4726);
+                    canUseAnimatedAvatarResult = tmp2(4728).canUseAnimatedAvatar(closure_129_3);
+                    const obj = tmp2(4728);
                   }
                   closure_128_3 = canUseAnimatedAvatarResult;
                   if (isGIF(base64)) {
@@ -276,21 +276,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj10 = { imageUri: base64, description: null, originalMd5: null };
-                const obj2 = v0(14660);
-                obj10.description = v0(8269).generateAvatarDescription();
+                const obj2 = v0(14765);
+                obj10.description = v0(8277).generateAvatarDescription();
                 obj10.originalMd5 = originalMd5;
                 closure_128_4 = obj2.createPendingImage(obj10);
                 if (closure_129_1) {
-                  tmp30(8267).setTryItOutAvatar(closure_128_4);
-                  const tmp30Result = tmp30(8267);
+                  tmp30(8275).setTryItOutAvatar(closure_128_4);
+                  const tmp30Result = tmp30(8275);
                 } else {
                   const obj11 = { guildId: closure_129_0, avatar: closure_128_4 };
-                  tmp30(8264).setPendingChanges(obj11);
-                  const tmp30Result2 = tmp30(8264);
-                  const result = v0(8266).announcePendingAvatarChange("set");
-                  const obj7 = v0(8266);
+                  tmp30(8272).setPendingChanges(obj11);
+                  const tmp30Result2 = tmp30(8272);
+                  const result = v0(8274).announcePendingAvatarChange("set");
+                  const obj7 = v0(8274);
                 }
-                const obj4 = v0(8269);
+                const obj4 = v0(8277);
               }
             } catch (tmp40) {
               c3 = tmp;

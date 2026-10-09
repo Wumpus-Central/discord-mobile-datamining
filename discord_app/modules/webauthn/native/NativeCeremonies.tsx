@@ -43,7 +43,7 @@ let closure_5 = async function _promptForRegisterCredential() {
           let challenge;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -151,7 +151,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               closure_129_0 = closure_0;
               c5 = 1;
               c6 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -214,7 +214,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
-  setRegistering(5948).registerPasskey;
+  setRegistering(5949).registerPasskey;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -270,7 +270,7 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
     .finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
-  setRegistering(5948).register;
+  setRegistering(5949).register;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -326,8 +326,8 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
     .finally(() => setRegistering(false));
 };
 obj.registerPasskey = function registerPasskey(setError) {
-  const obj = setError(1381);
-  const tmp2 = setRegistering(5948);
+  const obj = setError(1382);
+  const tmp2 = setRegistering(5949);
   if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
@@ -479,7 +479,7 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = setRegistering(5948).register;
+    register = setRegistering(5949).register;
   }
   setError = undefined;
   setError = setError.setError;

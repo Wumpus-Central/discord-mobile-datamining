@@ -27,20 +27,20 @@ Object.defineProperty(prototype, "lastFetchedQuestToDeliver", {
   },
   set: undefined,
 });
-prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(MOBILE_HOME_DOCK_AREA) {
+prototype["isFetchingAdToDeliverByPlacement"] = function isFetchingAdToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP) {
   let flag;
   if (map != null) {
-    flag = map.get(MOBILE_HOME_DOCK_AREA);
+    flag = map.get(QUEST_HOME_BANNER_DESKTOP);
   }
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["canRefreshAd"] = function canRefreshAd(MOBILE_HOME_DOCK_AREA) {
+prototype["canRefreshAd"] = function canRefreshAd(QUEST_HOME_BANNER_DESKTOP) {
   value = undefined;
   if (map4 != null) {
-    value = map4.get(MOBILE_HOME_DOCK_AREA);
+    value = map4.get(QUEST_HOME_BANNER_DESKTOP);
   }
   let tmp3 = null == value;
   if (!tmp3) {

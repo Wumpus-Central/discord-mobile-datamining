@@ -2,12 +2,12 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import EmbeddedActivitiesNativeManagerDefault from "../../native/EmbeddedActivitiesNativeManager.tsx";
-import _modDef10783 from "../../../../../_runtime/metro/10783__.js";
+import leaveEmbeddedActivity from "../../leaveEmbeddedActivity.tsx";
+import _modDef10953 from "../../../../../_runtime/metro/10953__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== onPress) {
         const obj2 = {
           onPress,
-          icon: _modDef10783,
+          icon: _modDef10953,
           text: tmp4,
           accessibilityLabel: tmp5,
           variant: "destructive",
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp11 = jsx(components_Button_Button.Button, {
           onPress,
-          icon: _modDef10783,
+          icon: _modDef10953,
           text: tmp4,
           accessibilityLabel: tmp5,
           variant: "destructive",
@@ -56,7 +56,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : function BaseLeaveActivityButton(onPress) {
       const obj = {
         onPress: onPress.onPress,
-        icon: _modDef10783,
+        icon: _modDef10953,
         text: null,
         accessibilityLabel: null,
         variant: "destructive",
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj.accessibilityLabel = intl2.string(util.t.k0Aph0);
       return jsx(components_Button_Button.Button, {
         onPress: onPress.onPress,
-        icon: _modDef10783,
+        icon: _modDef10953,
         text: null,
         accessibilityLabel: null,
         variant: "destructive",
@@ -80,7 +80,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_5 = tmp2;
 ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
+let result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
@@ -110,17 +110,17 @@ export default noop.memo(
               setMode(ActivityPanelModes.DISCONNECTED);
               const timerId = setTimeout(() => {
                 let _location;
-                if (selfEmbeddedActivity != null) {
-                  _location = selfEmbeddedActivity.location;
+                if (closure_1_0 != null) {
+                  _location = closure_1_0.location;
                 }
                 const obj2 = { location: _location, applicationId: null };
                 let applicationId;
-                if (selfEmbeddedActivity != null) {
-                  applicationId = selfEmbeddedActivity.applicationId;
+                if (closure_1_0 != null) {
+                  applicationId = closure_1_0.applicationId;
                 }
                 obj2.applicationId = applicationId;
-                setMode(dependencyMap[8]).leaveActivity(obj2);
-                const obj = setMode(dependencyMap[8]);
+                const result = selfEmbeddedActivity(dependencyMap[8]).leaveEmbeddedActivity(obj2);
+                const obj = selfEmbeddedActivity(dependencyMap[8]);
               }, 400);
             }}
           />
@@ -156,7 +156,7 @@ export default noop.memo(
                   applicationId = closure_1_0.applicationId;
                 }
                 obj2.applicationId = applicationId;
-                EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj2);
+                const result = leaveEmbeddedActivity.leaveEmbeddedActivity(obj2);
               }, 400);
             }}
           />

@@ -8,7 +8,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import BottomSheetModal from "../../../../../_runtime/06298_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06305_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let guildId = channelId.guildId;
       let obj = channelId(576);
       dependencyMap = closure_13();
-      guildId(1630)();
+      guildId(1631)();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [navigation];
         cResult[0] = items;
@@ -210,10 +210,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult5 = channelId(504);
       const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, O, tmp19);
       const tmpResult6 = channelId(504);
-      navigation = channelId(1502).useNavigation();
-      tmp5(5417)(stateFromStores);
-      const tmpResult7 = channelId(1502);
-      const appChannelBotUserId = channelId(11360).useAppChannelBotUserId(stateFromStores);
+      navigation = channelId(1503).useNavigation();
+      tmp5(5418)(stateFromStores);
+      const tmpResult7 = channelId(1503);
+      const appChannelBotUserId = channelId(10733).useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
         class O {
           constructor() {

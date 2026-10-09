@@ -22,11 +22,11 @@ import handleMessagesTapLink from "../../modules/messages/native/handlers/handle
 import showLongPressURLActionSheetDefault from "../../modules/links/native/showLongPressURLActionSheet.tsx";
 import MessageDataSnowflakeUtils from "../../modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx";
 import showLongPressMessageActionSheet from "../../modules/messages/native/long_press/showLongPressMessageActionSheet.tsx";
-import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
 import handleMessagesTapImage from "../../modules/messages/native/handlers/handleMessagesTapImage.tsx";
 import handleMessagesTapChannel from "../../modules/messages/native/handlers/handleMessagesTapChannel.tsx";
 import handleMessagesLongPressChannel from "../../modules/messages/native/handlers/handleMessagesLongPressChannel.tsx";
 import contentHandlers2 from "../chat/contentHandlers.tsx";
+import GuildNSFWDefault from "../warnings/GuildNSFW.tsx";
 import ChatDefault from "../../modules/chat/native/Chat.android.tsx";
 import ChannelSpoilerDefault from "../../modules/spoiler_channels/native/ChannelSpoiler.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7720);
+const RowGeneratorConstants = fn(7729);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -283,10 +283,10 @@ class ChatPreviewBase extends PureComponent {
           rows: previousRows,
           scrollToMessageId: jumpTargetId,
           jumpTargetId,
-          jumpType: "Set",
+          jumpType: "Symbol",
           shouldInitialScroll: "Array",
-          animated: "2026-04-inappropriate-conversations-prescan",
-          scrollPosition: "user",
+          animated: "DCDZoomLayoutAndroid",
+          scrollPosition: null,
           focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
@@ -319,11 +319,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(9272).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(9310).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(9272);
-          applyArgumentsResult(5101).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(9310);
+          applyArgumentsResult(5102).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -356,8 +356,8 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(5101).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(5101);
+            applyArgumentsResult(5102).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(5102);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
@@ -641,7 +641,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = __initData2(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4787).ThemeContext;
+ChatPreviewBase.contextType = fn(4788).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const ReactCompilerGating = fn(558);
 let obj5 = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -652,11 +652,11 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
   ? function ChatPreview(channelId) {
       const cResult = channelId(576).c(19);
       channelId = channelId.channelId;
-      const InlineAttachmentMedia = channelId(2040).InlineAttachmentMedia;
+      const InlineAttachmentMedia = channelId(2041).InlineAttachmentMedia;
       const setting = InlineAttachmentMedia.useSetting();
-      const InlineEmbedMedia = channelId(2040).InlineEmbedMedia;
+      const InlineEmbedMedia = channelId(2041).InlineEmbedMedia;
       const setting1 = InlineEmbedMedia.useSetting();
-      const RenderEmbeds = channelId(2040).RenderEmbeds;
+      const RenderEmbeds = channelId(2041).RenderEmbeds;
       const setting2 = RenderEmbeds.useSetting();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -698,9 +698,9 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = channelId(504).useStateFromStores(tmp11, C);
       const width = useWindowDimensionsDefault().width;
       const tmpResult5 = channelId(504);
-      const isChannelSpoilerGated = channelId(5949).useIsChannelSpoilerGated(stateFromStores1);
-      const tmpResult6 = channelId(5949);
-      const isChannelContentGated = channelId(5930).useIsChannelContentGated(stateFromStores1);
+      const isChannelSpoilerGated = channelId(5951).useIsChannelSpoilerGated(stateFromStores1);
+      const tmpResult6 = channelId(5951);
+      const isChannelContentGated = channelId(5931).useIsChannelContentGated(stateFromStores1);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor() {
@@ -723,7 +723,7 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp18 = cResult[6];
       }
-      const tmpResult7 = channelId(5930);
+      const tmpResult7 = channelId(5931);
       const stateFromStores2 = channelId(504).useStateFromStores(tmp17, tmp18);
       if (!isChannelSpoilerGated) {
         class C {
@@ -768,11 +768,11 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ChatPreview(channelId) {
       channelId = channelId.channelId;
-      const InlineAttachmentMedia = channelId(2040).InlineAttachmentMedia;
+      const InlineAttachmentMedia = channelId(2041).InlineAttachmentMedia;
       const setting = InlineAttachmentMedia.useSetting();
-      const InlineEmbedMedia = channelId(2040).InlineEmbedMedia;
+      const InlineEmbedMedia = channelId(2041).InlineEmbedMedia;
       const setting1 = InlineEmbedMedia.useSetting();
-      const RenderEmbeds = channelId(2040).RenderEmbeds;
+      const RenderEmbeds = channelId(2041).RenderEmbeds;
       const setting2 = RenderEmbeds.useSetting();
       const items = [AccessibilityStore];
       const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
@@ -780,10 +780,10 @@ export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelStore];
       const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
       const obj2 = channelId(504);
-      const isChannelSpoilerGated = channelId(5949).useIsChannelSpoilerGated(stateFromStores1);
-      const obj3 = channelId(5949);
-      const isChannelContentGated = channelId(5930).useIsChannelContentGated(stateFromStores1);
-      const obj4 = channelId(5930);
+      const isChannelSpoilerGated = channelId(5951).useIsChannelSpoilerGated(stateFromStores1);
+      const obj3 = channelId(5951);
+      const isChannelContentGated = channelId(5931).useIsChannelContentGated(stateFromStores1);
+      const obj4 = channelId(5931);
       const items2 = [ActionSheetStore];
       const obj6 = {};
       const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

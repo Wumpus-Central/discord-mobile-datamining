@@ -6,21 +6,21 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const util = ShopIcon(1126);
 const native = ShopIcon(1200);
-const Text_Text = ShopIcon(5086);
-const components_Button_Button = ShopIcon(5375);
-const Pressables = ShopIcon(6189);
-const XSmallIcon = ShopIcon(6210);
-const NitroWheelIcon = ShopIcon(9005);
-const ShopIcon2 = ShopIcon(11843);
+const Text_Text = ShopIcon(5087);
+const components_Button_Button = ShopIcon(5376);
+const Pressables = ShopIcon(6191);
+const XSmallIcon = ShopIcon(6212);
+const NitroWheelIcon = ShopIcon(9016);
+const ShopIcon2 = ShopIcon(11780);
 require = fn;
 const View = fn(17).View;
-const TrackUserProfileActions = fn(8283).TrackUserProfileActions;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const TrackUserProfileActions = fn(8291).TrackUserProfileActions;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let items = [...fn(7140).Gradients.PREMIUM_GUILD];
+let items = [...fn(7145).Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   upsellContainer: {
     paddingVertical: 16,

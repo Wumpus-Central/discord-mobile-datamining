@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles(() => {
   const obj = {
     chatContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, gap: nativeDefault.space.PX_8 },
@@ -37,7 +37,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === userId) {
             let tmp5 = cResult[5];
           }
-          return iconSize(12408).useProvisionalAccountExplanationText(tmp5);
+          return iconSize(12326).useProvisionalAccountExplanationText(tmp5);
         }
         const obj2 = { userId, renderApplicationName: tmp4 };
         cResult[3] = tmp4;
@@ -63,7 +63,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
         items,
       );
-      return iconSize(12408).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
+      return iconSize(12326).useProvisionalAccountExplanationText({ userId: userId.userId, renderApplicationName });
     };
 fn(558);
 ReactCompilerGating = fn(558);

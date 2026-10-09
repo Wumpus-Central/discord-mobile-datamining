@@ -11,7 +11,7 @@ export const useNavigationTTIContentPainted = ReactCompilerGating.isReactCompile
   ? function useNavigationTTIContentPainted() {
       const cResult = navTTISurface(576).c(14);
       let obj = navTTISurface(576);
-      navTTISurface = navTTISurface(11513).useNavTTISurface();
+      navTTISurface = navTTISurface(11442).useNavTTISurface();
       noop.useRef(null);
       let navigationKey;
       if (navTTISurface != null) {
@@ -168,7 +168,7 @@ export const useNavigationTTIContentPainted = ReactCompilerGating.isReactCompile
       tmp7 = fn2;
     }
   : function useNavigationTTIContentPainted() {
-      navTTISurface = navTTISurface(11513).useNavTTISurface();
+      navTTISurface = navTTISurface(11442).useNavTTISurface();
       noop.useRef(null);
       let navigationKey;
       if (navTTISurface != null) {

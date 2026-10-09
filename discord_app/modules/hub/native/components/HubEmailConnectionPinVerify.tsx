@@ -1,6 +1,6 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5016 from "../../../../../_runtime/metro/05016__.js";
+import _modDef5017 from "../../../../../_runtime/metro/05017__.js";
 import HubJoinManagerDefault from "../../HubJoinManager.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -12,14 +12,13 @@ const require = globalThis.__r;
 const require = fn;
 function presentResendToast(content) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef5016 });
+  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef5017 });
 }
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
-let closure_11 = createStyles.createStyles({
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(5091);
+let closure_10 = createStyles.createStyles({
   container: { alignItems: "center" },
   title: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center", marginBottom: 24 },
@@ -37,15 +36,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = email;
       const guildId = email.guildId;
       onClose = email.onClose;
-      const tmp4 = closure_11();
+      const tmp4 = closure_10();
       if (cResult[0] !== onClose) {
-        const fn = function y() {
+        const fn = function f() {
           HubJoinManagerDefault.initialize(() => {
             dependencyMap(true);
             guildId(onClose[12])();
           });
           return () => {
-            guildId(12519).terminate();
+            guildId(12458).terminate();
           };
         };
         const items = [onClose];
@@ -64,7 +63,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp8 = cResult[5];
         }
         const obj3 = guildId(tmp2[16]);
-        const tmp9 = guildId;
         const throttleResult = guildId(tmp2[16]).throttle(tmp8, 1000);
         [obj4, _slicedToArray] = noop.useState(null);
         if (cResult[6] === email) {
@@ -75,10 +73,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const HubEmailConnectionScreen = tmp(tmp2[18]).HubEmailConnectionScreen;
             const _Symbol = Symbol;
             if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj5 = { source: tmp9(tmp2[19]) };
-              const tmp21 = closure_9(closure_7, obj5);
+              const obj5 = { source: tmp9(tmp2[20]) };
+              const tmp21 = closure_8(tmp9(tmp2[19]), obj5);
               cResult[10] = tmp21;
               let tmp18 = tmp21;
+              const tmp9Result = tmp9(tmp2[19]);
             } else {
               tmp18 = cResult[10];
             }
@@ -99,14 +98,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 color: "mobile-text-heading-primary",
                 children: tmp22,
               };
-              const tmp26 = closure_9(tmp(tmp2[20]).Text, obj6);
+              const tmp26 = closure_8(tmp(tmp2[21]).Text, obj6);
               cResult[12] = tmp4.title;
               cResult[13] = tmp26;
               let tmp24 = tmp26;
             } else {
               tmp24 = cResult[13];
             }
-            const Text = tmp(tmp2[20]).Text;
+            const Text = tmp(tmp2[21]).Text;
             let intl2 = tmp(tmp2[14]).intl;
             const obj7 = { onClick: throttleResult, email };
             const formatResult = intl2.format(tmp(tmp2[14]).t["b+W0oq"], obj7);
@@ -126,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[19] !== tmp4.label) {
                   const obj8 = { style: tmp4.label, variant: "text-sm/semibold", color: "text-muted", children: tmp31 };
-                  const tmp35 = closure_9(tmp(tmp2[20]).Text, obj8);
+                  const tmp35 = closure_8(tmp(tmp2[21]).Text, obj8);
                   cResult[19] = tmp4.label;
                   cResult[20] = tmp35;
                   let tmp33 = tmp35;
@@ -138,9 +137,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     hasError: false,
                     count: 8,
                     onCodeEntered: tmp14,
-                    codeType: tmp(tmp2[21]).CodeType.ALPHANUMERIC,
+                    codeType: tmp(tmp2[22]).CodeType.ALPHANUMERIC,
                   };
-                  const tmp38 = closure_9(tmp(tmp2[21]).CodeBlocks, obj9);
+                  const tmp38 = closure_8(tmp(tmp2[22]).CodeBlocks, obj9);
                   cResult[21] = tmp14;
                   cResult[22] = tmp38;
                   let tmp36 = tmp38;
@@ -151,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[24] === tmp4.error) {
                     let tmp39 = cResult[25];
                   }
-                  if (cResult[26] === closure_6) {
+                  if (cResult[26] === View) {
                     if (cResult[27] === tmp4.container) {
                       if (cResult[28] === tmp28) {
                         if (cResult[29] === tmp33) {
@@ -168,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return tmp45;
                                 }
                                 const obj10 = { children: tmp42 };
-                                const tmp47 = closure_9(HubEmailConnectionScreen, obj10);
+                                const tmp47 = closure_8(HubEmailConnectionScreen, obj10);
                                 cResult[35] = HubEmailConnectionScreen;
                                 cResult[36] = tmp42;
                                 cResult[37] = tmp47;
@@ -183,8 +182,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj11 = { style: tmp4.container, children: null };
                   const items1 = [tmp18, tmp24, tmp28, tmp33, tmp36, tmp39];
                   obj11.children = items1;
-                  const tmp44 = closure_10(closure_6, obj11);
-                  cResult[26] = closure_6;
+                  const tmp44 = closure_9(View, obj11);
+                  cResult[26] = View;
                   cResult[27] = tmp4.container;
                   cResult[28] = tmp28;
                   cResult[29] = tmp33;
@@ -203,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     style: tmp4.error,
                     children: obj4.getAnyErrorMessage(),
                   };
-                  tmp40 = closure_9(tmp(tmp2[20]).Text, obj12);
+                  tmp40 = closure_8(tmp(tmp2[21]).Text, obj12);
                 }
                 cResult[23] = obj4;
                 cResult[24] = tmp4.error;
@@ -217,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               children: formatResult,
             };
-            const tmp30 = closure_9(Text, obj13);
+            const tmp30 = closure_8(Text, obj13);
             cResult[14] = Text;
             cResult[15] = tmp4.description;
             cResult[16] = formatResult;
@@ -336,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return value;
       };
-      const tmp = closure_11();
+      const tmp = closure_10();
       const items = [onClose];
       const effect = noop.useEffect(() => {
         HubJoinManagerDefault.initialize(() => {
@@ -344,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           require("navigateToLastChannel")();
         });
         return () => {
-          closure_1_1(12519).terminate();
+          closure_1_1(12458).terminate();
         };
       }, items);
       const obj = require("../../../../../_runtime/metro/00012__.js");
@@ -382,9 +381,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       [obj2, c3] = noop.useState(null);
       const obj3 = { style: tmp.container, children: null };
+      const obj4 = { source: null };
       const tmp5 = _slicedToArray(noop.useState(null), 2);
       const tmp7 = email;
-      const items1 = [closure_9(closure_7, { source: require("../../../../../_runtime/metro/12520__.js") }), , , , ,];
+      obj4.source = require("../../../../../_runtime/metro/12459__.js");
+      const items1 = [closure_8(require("FastImage"), obj4), , , , ,];
       const obj5 = {
         style: tmp.title,
         accessibilityRole: "header",
@@ -394,17 +395,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let intl = email(onClose[14]).intl;
       obj5.children = intl.string(email(onClose[14]).t.SJ3Lxc);
-      items1[1] = closure_9(email(onClose[20]).Text, obj5);
+      items1[1] = closure_8(email(onClose[21]).Text, obj5);
       const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
       let intl2 = email(onClose[14]).intl;
       obj6.children = intl2.format(email(onClose[14]).t["b+W0oq"], { onClick: throttleResult, email });
-      items1[2] = closure_9(email(onClose[20]).Text, obj6);
+      items1[2] = closure_8(email(onClose[21]).Text, obj6);
       const obj7 = { style: tmp.label, variant: "text-sm/semibold", color: "text-muted", children: null };
       const intl3 = email(onClose[14]).intl;
       obj7.children = intl3.string(email(onClose[14]).t.rpWT1s);
-      items1[3] = closure_9(email(onClose[20]).Text, obj7);
-      const obj4 = { source: require("../../../../../_runtime/metro/12520__.js") };
-      items1[4] = closure_9(email(onClose[21]).CodeBlocks, {
+      items1[3] = closure_8(email(onClose[21]).Text, obj7);
+      const tmp10 = require("FastImage");
+      items1[4] = closure_8(email(onClose[22]).CodeBlocks, {
         hasError: false,
         count: 8,
         onCodeEntered: function handleCodeEntered(arg0) {
@@ -417,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         },
-        codeType: email(onClose[21]).CodeType.ALPHANUMERIC,
+        codeType: email(onClose[22]).CodeType.ALPHANUMERIC,
       });
       let tmp6Result = null != obj2;
       if (tmp6Result) {
@@ -427,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.error,
           children: obj2.getAnyErrorMessage(),
         };
-        tmp6Result = closure_9(tmp7(onClose[20]).Text, obj9);
+        tmp6Result = closure_8(tmp7(onClose[21]).Text, obj9);
       }
       const obj8 = {
         hasError: false,
@@ -442,9 +443,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         },
-        codeType: email(onClose[21]).CodeType.ALPHANUMERIC,
+        codeType: email(onClose[22]).CodeType.ALPHANUMERIC,
       };
       items1[5] = tmp6Result;
       obj3.children = items1;
-      return closure_9(email(onClose[18]).HubEmailConnectionScreen, { children: closure_10(closure_6, obj3) });
+      return closure_8(email(onClose[18]).HubEmailConnectionScreen, { children: closure_9(View, obj3) });
     };

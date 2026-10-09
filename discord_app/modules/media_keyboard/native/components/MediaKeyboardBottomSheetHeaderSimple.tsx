@@ -7,11 +7,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
-let obj = { headerHandleOnlyWrap: { height: fn(1626).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 } };
+const createStyles = fn(5091);
+let obj = { headerHandleOnlyWrap: { height: fn(1627).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 } };
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-const obj3 = { height: fn(1626).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
+const obj3 = { height: fn(1627).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx",

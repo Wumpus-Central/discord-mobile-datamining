@@ -277,7 +277,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp9 = cResult[6];
               }
               const mapped = embeds1.map(tmp9);
-              found = mapped.filter(tmp(1387).isNotNullish);
+              found = mapped.filter(tmp(1388).isNotNullish);
               cResult[2] = embeds1;
               cResult[3] = spoiler;
               cResult[4] = found;
@@ -375,7 +375,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 tmp = null == thumbnail && null != image.images;
               });
-              let found = mapped.filter(tmp(1387).isNotNullish);
+              let found = mapped.filter(tmp(1388).isNotNullish);
             }
             return found;
           }

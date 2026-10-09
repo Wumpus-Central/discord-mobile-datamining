@@ -5,12 +5,12 @@ import useToken from "../../../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import _modDef6732 from "../../../../../../../_runtime/metro/06732__.js";
+import _modDef6739 from "../../../../../../../_runtime/metro/06739__.js";
 import ChannelSettingsActionCreatorsDefault from "../../../../../../actions/ChannelSettingsActionCreators.tsx";
 import openChannelLongPressActionSheet from "../../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import ChannelDetailsUtils from "../ChannelDetailsUtils.tsx";
 import useSearchContext from "../../../../../search/native/hooks/useSearchContext.tsx";
-import tracking_TrackingDefault from "../../../../../search/native/tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../../../../../search/native/tracking/Tracking.tsx";
 import ChannelDetailsMoreButtonDefault from "../ChannelDetailsMoreButton.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import LurkingStore from "../../../../../lurker_mode/LurkingStore.tsx";
@@ -23,20 +23,20 @@ function getItemKey(arg0) {
   return arg0;
 }
 const View = fn(17).View;
-const ChannelDetailsStore = fn(9245);
+const ChannelDetailsStore = fn(9283);
 ({ setIsChannelDetailsSearchActive: closure_9, useIsChannelDetailsSearchActive: c10 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(9581);
+const ChannelDetailsConstants = fn(9600);
 ({ ChannelDetailsButtonTypes: closure_11, ChannelDetailsNavigatorScreens: closure_12 } = ChannelDetailsConstants);
 const ChannelSettingsSections = fn(1085).ChannelSettingsSections;
-let closure_14 = fn(9246).SearchEntrypointAnalyticsLocations;
+let closure_14 = fn(9284).SearchEntrypointAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: {
     position: "relative",
     zIndex: 1,
-    height: fn(12095).SEARCH_BAR_HEIGHT,
+    height: fn(12032).SEARCH_BAR_HEIGHT,
     marginTop: nativeDefault.space.PX_8,
   },
   navigationHeader: null,
@@ -46,7 +46,7 @@ let obj = {
 let obj3 = {
   position: "relative",
   zIndex: 1,
-  height: fn(12095).SEARCH_BAR_HEIGHT,
+  height: fn(12032).SEARCH_BAR_HEIGHT,
   marginTop: nativeDefault.space.PX_8,
 };
 obj.navigationHeader = {
@@ -55,7 +55,7 @@ obj.navigationHeader = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(12095).SEARCH_BAR_HEIGHT,
+  height: fn(12032).SEARCH_BAR_HEIGHT,
 };
 let obj4 = {
   flexDirection: "row",
@@ -63,7 +63,7 @@ let obj4 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_4,
   position: "absolute",
-  height: fn(12095).SEARCH_BAR_HEIGHT,
+  height: fn(12032).SEARCH_BAR_HEIGHT,
 };
 obj.buttonsContainer = {
   flex: 1,
@@ -133,7 +133,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(576);
       const stateFromStores = channelId(504).useStateFromStores(first, tmp8);
       const tmpResult = channelId(504);
-      const navigation = channelId(1502).useNavigation();
+      const navigation = channelId(1503).useNavigation();
       if (cResult[3] === channelId) {
         if (cResult[4] === navigation) {
           let tmp11 = cResult[5];
@@ -148,7 +148,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp14 = cResult[6];
         }
-        const tmp16 = navigation(stateFromStores ? 10326 : 7866);
+        const tmp16 = navigation(stateFromStores ? 10313 : 7875);
         if (cResult[7] === tmp11) {
           if (cResult[8] === size) {
             if (cResult[9] === tmp16) {
@@ -160,7 +160,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { accessibilityLabel: tmp14, onPress: tmp11, variant, size, icon: tmp16 };
-        const tmp20 = closure_15(tmp(8106).IconButton, obj2, constants.MUTE);
+        const tmp20 = closure_15(tmp(8114).IconButton, obj2, constants.MUTE);
         cResult[7] = tmp11;
         cResult[8] = size;
         cResult[9] = tmp16;
@@ -180,7 +180,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = navigation;
       cResult[5] = fn2;
       tmp11 = fn2;
-      const tmpResult2 = channelId(1502);
+      const tmpResult2 = channelId(1503);
     }
   : function MuteButton(channelId) {
       channelId = channelId.channelId;
@@ -197,7 +197,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       const obj = channelId(504);
-      const navigation = channelId(1502).useNavigation();
+      const navigation = channelId(1503).useNavigation();
       const items1 = [channelId, navigation];
       const callback = noop.useCallback(() => {
         navigation.navigate("sidebar", {
@@ -206,7 +206,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           source: "channel-details-navigation-bar",
         });
       }, items1);
-      const obj2 = channelId(1502);
+      const obj2 = channelId(1503);
       ({ size, variant } = closure_19());
       const obj3 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null };
       const intl = channelId(1126).intl;
@@ -214,8 +214,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.onPress = callback;
       obj3.variant = variant;
       obj3.size = size;
-      obj3.icon = navigation(stateFromStores ? 10326 : 7866);
-      return closure_15(channelId(8106).IconButton, obj3, constants.MUTE);
+      obj3.icon = navigation(stateFromStores ? 10313 : 7875);
+      return closure_15(channelId(8114).IconButton, obj3, constants.MUTE);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
@@ -234,7 +234,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               guildId,
               isThreadResult,
             );
-            const obj2 = tracking_TrackingDefault;
+            const obj2 = search_tracking_TrackingDefault;
             const obj = {
               searchContext: channelDetailsSearchContext,
               searchLocation: channel.isPrivate() ? obj2.INDIVIDUAL_DM : obj2.CHANNEL_DETAILS_HEADER,
@@ -269,8 +269,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = channelId(576);
       const stateFromStores = channelId(504).useStateFromStores(tmp5, tmp7);
       const tmpResult = channelId(504);
-      const shouldHideChannelContent = channelId(5930).useShouldHideChannelContent(stateFromStores);
-      const tmpResult2 = channelId(5930);
+      const shouldHideChannelContent = channelId(5931).useShouldHideChannelContent(stateFromStores);
+      const tmpResult2 = channelId(5931);
       ({ size, variant } = closure_19());
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
@@ -292,13 +292,13 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp10 = closure_19();
       const tmp14 = closure_15(
-        channelId(8106).IconButton,
+        channelId(8114).IconButton,
         {
           accessibilityLabel: tmp11,
           onPress: tmp4,
           variant,
           size,
-          icon: _modDef6732,
+          icon: _modDef6739,
           disabled: shouldHideChannelContent,
         },
         constants.SEARCH,
@@ -314,7 +314,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: tmp4,
         variant,
         size,
-        icon: _modDef6732,
+        icon: _modDef6739,
         disabled: shouldHideChannelContent,
       };
     }
@@ -332,7 +332,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             guildId,
             isThreadResult,
           );
-          const obj2 = tracking_TrackingDefault;
+          const obj2 = search_tracking_TrackingDefault;
           const obj = {
             searchContext: channelDetailsSearchContext,
             searchLocation: channel.isPrivate() ? obj2.INDIVIDUAL_DM : obj2.CHANNEL_DETAILS_HEADER,
@@ -344,8 +344,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelStore];
       const stateFromStores = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
       let obj = channelId(504);
-      const shouldHideChannelContent = channelId(5930).useShouldHideChannelContent(stateFromStores);
-      let obj2 = channelId(5930);
+      const shouldHideChannelContent = channelId(5931).useShouldHideChannelContent(stateFromStores);
+      let obj2 = channelId(5931);
       ({ size, variant } = closure_19());
       const obj3 = { accessibilityLabel: null, onPress: null, variant: null, size: null, icon: null, disabled: null };
       const intl = channelId(1126).intl;
@@ -353,9 +353,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.onPress = callback;
       obj3.variant = variant;
       obj3.size = size;
-      obj3.icon = _modDef6732;
+      obj3.icon = _modDef6739;
       obj3.disabled = shouldHideChannelContent;
-      return closure_15(channelId(8106).IconButton, obj3, constants.SEARCH);
+      return closure_15(channelId(8114).IconButton, obj3, constants.SEARCH);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
@@ -363,7 +363,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(8);
       channel = channel.channel;
       const obj = channel(576);
-      const navigation = channel(1502).useNavigation();
+      const navigation = channel(1503).useNavigation();
       if (cResult[0] === channel) {
         if (cResult[1] === navigation) {
           let tmp5 = cResult[2];
@@ -392,9 +392,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityRole: "button",
           variant,
           size,
-          icon: navigation(7083),
+          icon: navigation(7086),
         };
-        const tmp15 = closure_15(tmp(8106).IconButton, obj3, constants.SETTINGS);
+        const tmp15 = closure_15(tmp(8114).IconButton, obj3, constants.SETTINGS);
         cResult[4] = tmp5;
         cResult[5] = size;
         cResult[6] = variant;
@@ -422,11 +422,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = navigation;
       cResult[2] = fn;
       tmp5 = fn;
-      let obj2 = channel(1502);
+      let obj2 = channel(1503);
     }
   : function SettingsButton(channel) {
       channel = channel.channel;
-      const navigation = channel(1502).useNavigation();
+      const navigation = channel(1503).useNavigation();
       const items = [channel, navigation];
       const callback = noop.useCallback(() => {
         if (null != channel) {
@@ -444,7 +444,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
         }
       }, items);
-      const obj = channel(1502);
+      const obj = channel(1503);
       ({ size, variant } = closure_19());
       let obj2 = {
         accessibilityLabel: null,
@@ -459,8 +459,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = callback;
       obj2.variant = variant;
       obj2.size = size;
-      obj2.icon = navigation(7083);
-      return closure_15(channel(8106).IconButton, obj2, constants.SETTINGS);
+      obj2.icon = navigation(7086);
+      return closure_15(channel(8114).IconButton, obj2, constants.SETTINGS);
     };
 const __initData = {
   code: 'function ChannelDetailsNavigationBarTsx1(){const{isActive,withTiming,Easing,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?"auto":"none",opacity:withTiming(isActive?1:0,{duration:200,easing:Easing.bezier(0.25,0.1,0.25,1)},"animate-always",function(finished){if(finished){runOnJS(cleanUp)();}}),width:width};}',
@@ -481,7 +481,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, width } = cleanUp);
       cleanUp = cleanUp.cleanUp;
       const tmp3 = closure_17();
-      const tmp4 = cleanUp.transitionState !== width(4787).TransitionStates.YEETED;
+      const tmp4 = cleanUp.transitionState !== width(4788).TransitionStates.YEETED;
       dependencyMap = tmp4;
       let obj = width(576);
       let fn = function t() {
@@ -511,12 +511,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         obj.width = width;
         return obj;
       };
-      let obj2 = width(4810);
+      let obj2 = width(4811);
       fn.__closure = {
         isActive: tmp4,
-        withTiming: width(5091).withTiming,
-        Easing: width(4810).Easing,
-        runOnJS: width(4810).runOnJS,
+        withTiming: width(5092).withTiming,
+        Easing: width(4811).Easing,
+        runOnJS: width(4811).runOnJS,
         cleanUp,
         width,
       };
@@ -539,7 +539,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp11;
             }
             const obj5 = { style: tmp6, children: tmp7 };
-            const tmp14 = closure_15(cleanUp(4810).View, obj5);
+            const tmp14 = closure_15(cleanUp(4811).View, obj5);
             cResult[7] = tmp6;
             cResult[8] = tmp7;
             cResult[9] = tmp14;
@@ -548,7 +548,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj8 = { ref, channelId: null, guildId: null, showBackButton: true };
         ({ id: obj4.channelId, guild_id: obj4.guildId } = channel);
-        const tmp10 = closure_15(cleanUp(17090), obj8);
+        const tmp10 = closure_15(cleanUp(17240), obj8);
         cResult[3] = channel.guild_id;
         cResult[4] = channel.id;
         cResult[5] = ref;
@@ -562,9 +562,9 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       tmp6 = items;
       let obj3 = {
         isActive: tmp4,
-        withTiming: width(5091).withTiming,
-        Easing: width(4810).Easing,
-        runOnJS: width(4810).runOnJS,
+        withTiming: width(5092).withTiming,
+        Easing: width(4811).Easing,
+        runOnJS: width(4811).runOnJS,
         cleanUp,
         width,
       };
@@ -573,7 +573,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel, width } = cleanUp);
       cleanUp = cleanUp.cleanUp;
       ({ transitionState, ref } = cleanUp);
-      const tmp2 = transitionState !== width(4787).TransitionStates.YEETED;
+      const tmp2 = transitionState !== width(4788).TransitionStates.YEETED;
       dependencyMap = tmp2;
       const tmp = closure_17();
       let fn = function l() {
@@ -603,12 +603,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         obj.width = width;
         return obj;
       };
-      let obj = width(4810);
+      let obj = width(4811);
       fn.__closure = {
         isActive: tmp2,
-        withTiming: width(5091).withTiming,
-        Easing: width(4810).Easing,
-        runOnJS: width(4810).runOnJS,
+        withTiming: width(5092).withTiming,
+        Easing: width(4811).Easing,
+        runOnJS: width(4811).runOnJS,
         cleanUp,
         width,
       };
@@ -617,7 +617,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       let obj3 = {
         style: null,
-        children: closure_15(cleanUp(17090), {
+        children: closure_15(cleanUp(17240), {
           ref,
           channelId: channel.id,
           guildId: channel.guild_id,
@@ -626,7 +626,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const items = [tmp.searchHeader, animatedStyle];
       obj3.style = items;
-      return closure_15(cleanUp(4810).View, obj3);
+      return closure_15(cleanUp(4811).View, obj3);
     };
 const __initData3 = {
   code: 'function ChannelDetailsNavigationBarTsx5(){const{isActive,withTiming,timingFast,runOnJS,cleanUp,width}=this.__closure;return{pointerEvents:isActive?"auto":"none",opacity:withTiming(isActive?1:0,timingFast,"animate-always",function(finished){if(finished){runOnJS(cleanUp)();}}),width:width};}',

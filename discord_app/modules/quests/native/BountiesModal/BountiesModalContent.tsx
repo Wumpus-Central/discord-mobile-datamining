@@ -5,7 +5,7 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Patterns from "../../../../../_runtime/05057_Patterns.js";
+import Patterns from "../../../../../_runtime/05058_Patterns.js";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
@@ -13,10 +13,10 @@ import AdCreativeType from "../../../../../discord_common/js/shared/shared-const
 import QuestDataUtils from "../../utils/QuestDataUtils.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
+import AnimationUtils from "../../../virtual_currency/shared/AnimationUtils.tsx";
 import AppStoreOverlayTelemetryManager from "../AppStoreOverlayTelemetryManager.tsx";
 import VideoQuestUtils from "../../utils/VideoQuestUtils.tsx";
 import QuestContentImpressionTracker from "../QuestContentImpressionTracker.native.tsx";
-import AnimationUtils from "../../../virtual_currency/shared/AnimationUtils.tsx";
 import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -58,9 +58,9 @@ function doRewardEarnedHapticFeedback() {
   const tmp7Result = Patterns;
 }
 let View = fn(17).View;
-const QuestConstants = fn(5977);
+const QuestConstants = fn(5979);
 ({ BOUNTY_ORB_AMOUNT: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15092);
+const BountiesModalConstants = fn(15202);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);
@@ -111,10 +111,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       tmp11 = size;
     }
   : function useBountiesModalVideoLayout() {
-      let size = height(1496)();
+      let size = height(1497)();
       const width = size.width;
       height = size.height;
-      const tmp = height(1630)();
+      const tmp = height(1631)();
       dependencyMap = tmp;
       const items = [width, height, , , ,];
       ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp);
@@ -140,7 +140,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return size;
       }, items);
     };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_21 = createStyles.createStyles(() => {
   const obj = {
     videoWrapper: { position: "absolute" },
@@ -212,8 +212,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                               const stateFromStores = tmp(504).useStateFromStores(tmp18, F);
                               const tmpResult = tmp(504);
-                              const balance = tmp(9026).useFetchVirtualCurrencyBalance().balance;
-                              const tmpResult2 = tmp(9026);
+                              const balance = tmp(9041).useFetchVirtualCurrencyBalance().balance;
+                              const tmpResult2 = tmp(9041);
                               [tmp25, _slicedToArray] = noop.useState(null);
                               if (tmp25 == null) {
                                 class F {
@@ -882,8 +882,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const height = useWindowDimensionsDefault().height;
       const size = closure_20();
       let obj = sharedValue(576);
-      sharedValue = sharedValue(4810).useSharedValue(0);
-      let obj2 = sharedValue(4810);
+      sharedValue = sharedValue(4811).useSharedValue(0);
+      let obj2 = sharedValue(4811);
       [tmp4, importDefault] = noop.useState(null);
       dependencyMap = noop.useRef(null);
       bounty = noop.useRef(0);

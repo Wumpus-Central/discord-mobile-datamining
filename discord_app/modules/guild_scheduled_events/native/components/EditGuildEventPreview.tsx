@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     flex: 1,
@@ -60,7 +60,7 @@ obj2.eventContainer = {
 };
 obj2.channelContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", height: 14 };
 let obj5 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4, height: 14, transform: null };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -121,7 +121,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj2 = str2(576);
       const stateFromStores = f55NX0(504).useStateFromStores(first, tmp4, tmp5);
-      const tmp8 = channel_id(5417)(stateFromStores);
+      const tmp8 = channel_id(5418)(stateFromStores);
       dependencyMap = tmp8;
       if (cResult[4] === stateFromStores) {
         if (cResult[5] === tmp8) {
@@ -190,7 +190,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const f55NX0Result = f55NX0(504);
       const tmp7 = channel_id;
-      let locationFromEvent = f55NX0(8499).getLocationFromEvent(str);
+      let locationFromEvent = f55NX0(8507).getLocationFromEvent(str);
       let tmp19 = tmp8;
       if (tmp8 == null) {
         tmp19 = locationFromEvent;
@@ -218,14 +218,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp23,
           };
-          const tmp27 = closure_6(f55NX0(5086).Text, obj5);
+          const tmp27 = closure_6(f55NX0(5087).Text, obj5);
           cResult[25] = str2.headerTitle;
           cResult[26] = tmp27;
           let tmp25 = tmp27;
         } else {
           tmp25 = cResult[26];
         }
-        const Text = f55NX0(5086).Text;
+        const Text = f55NX0(5087).Text;
         const headerSubtitle = str2.headerSubtitle;
         if (cResult[27] !== stateFromStores) {
           let formatToPlainStringResult;
@@ -233,7 +233,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = f55NX0(1126).intl;
             const obj6 = { channelName: null };
             const obj7 = { channel: stateFromStores };
-            obj6.channelName = tmp7(8626)(obj7);
+            obj6.channelName = tmp7(8634)(obj7);
             formatToPlainStringResult = intl2.formatToPlainString(f55NX0(1126).t.sxcQPE, obj6);
           }
           cResult[27] = stateFromStores;
@@ -306,13 +306,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[19] = formatResult;
         cResult[20] = header;
       }
-      const f55NX0Result1 = f55NX0(8499);
-      const eventLocationIconSource = f55NX0(8624).getEventLocationIconSource(str, stateFromStores, true);
+      const f55NX0Result1 = f55NX0(8507);
+      const eventLocationIconSource = f55NX0(8632).getEventLocationIconSource(str, stateFromStores, true);
       cResult[21] = stateFromStores;
       cResult[22] = str;
       cResult[23] = eventLocationIconSource;
       tmp20 = eventLocationIconSource;
-      const f55NX0Result2 = f55NX0(8624);
+      const f55NX0Result2 = f55NX0(8632);
     }
   : function PreviewBody(event) {
       event = event.event;
@@ -327,7 +327,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         () => ChannelStore.getChannel(channel_id),
         items1,
       );
-      const tmp6 = channel_id(5417)(stateFromStores);
+      const tmp6 = channel_id(5418)(stateFromStores);
       dependencyMap = tmp6;
       let obj = require("initialize");
       const tmp5 = channel_id;
@@ -361,7 +361,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp2(1126).intl;
         const obj6 = { channelName: null };
         const obj7 = { channel: stateFromStores };
-        obj6.channelName = tmp5(8626)(obj7);
+        obj6.channelName = tmp5(8634)(obj7);
         formatToPlainStringResult = intl2.formatToPlainString(tmp2(1126).t.sxcQPE, obj6);
       }
       obj5.accessibilityLabel = formatToPlainStringResult;

@@ -103,9 +103,9 @@ export const formatCount = function formatCount(cache_read_input_tokens) {
   }
   return str;
 };
-export const formatClockTime = function formatClockTime(observedAt) {
-  let combined = observedAt;
-  const date = new Date(observedAt);
+export const formatClockTime = function formatClockTime(ts) {
+  let combined = ts;
+  const date = new Date(ts);
   if (!Number.isNaN(date.getTime())) {
     const _String = String;
     const padStartResult = String(date.getHours()).padStart(2, "0");

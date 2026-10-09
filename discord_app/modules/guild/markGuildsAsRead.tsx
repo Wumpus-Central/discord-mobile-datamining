@@ -10,7 +10,7 @@ import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
 const require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(5974).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
@@ -85,5 +85,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(6789).bulkAck(mapped, onFinished);
+  return mapped(6796).bulkAck(mapped, onFinished);
 }

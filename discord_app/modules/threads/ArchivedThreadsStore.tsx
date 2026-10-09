@@ -113,7 +113,7 @@ function resortListState(value) {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(2067).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(2068).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

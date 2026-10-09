@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -23,7 +23,7 @@ let obj = {
   showSearchButton: null,
 };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -57,8 +57,8 @@ export default noop.memo(
             items = [];
           }
           const mapped = items.map(UserStore.getUser);
-          const found = mapped.filter(onSelectUser(1387).isNotNullish);
-          const mapped1 = found.map(tags(10205));
+          const found = mapped.filter(onSelectUser(1388).isNotNullish);
+          const mapped1 = found.map(tags(10190));
           cResult[0] = selectedUserIds;
           cResult[1] = mapped1;
           tags = mapped1;
@@ -89,7 +89,7 @@ export default noop.memo(
                     accessible: false,
                     children: tmp16,
                   };
-                  const tmp20 = jsx(onSelectUser(5086).Text, {
+                  const tmp20 = jsx(onSelectUser(5087).Text, {
                     style: tmp4.header,
                     variant: "text-sm/medium",
                     color: "text-muted",
@@ -156,7 +156,7 @@ export default noop.memo(
                     tags,
                     ref: tagListInputRef,
                   };
-                  const tmp27 = jsx(tags(8601), {
+                  const tmp27 = jsx(tags(8609), {
                     autoFocus,
                     focusOnAdd: true,
                     footer: tmp10,
@@ -217,12 +217,12 @@ export default noop.memo(
               children: null,
             };
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(12085).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(12022).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(11220).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(10575).CirclePlusIcon;
             }
             obj5.children = <CirclePlusIcon size="xs" />;
-            jsx(onSelectUser(6189).PressableOpacity, {
+            jsx(onSelectUser(6191).PressableOpacity, {
               accessibilityRole: "button",
               accessibilityLabel: stringResult2,
               onPress: onForceSearchResults,

@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import _modDef3181 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -22,7 +22,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(14830);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(14938);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -35,7 +35,7 @@ function handleManualReviewClick() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(5921).AgeCheckStatus;
+const AgeCheckStatus = fn(5922).AgeCheckStatus;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -131,7 +131,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         obj2.text = intl.string(tmp(1126).t.IcA9iD);
         obj2.onPress = handleRetryClick;
-        const tmp8 = closure_12(tmp(5375).Button, obj2);
+        const tmp8 = closure_12(tmp(5376).Button, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -460,7 +460,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj7 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -501,7 +501,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14832, dependencyMap.paths),
+          asyncRequireImpl(14940, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

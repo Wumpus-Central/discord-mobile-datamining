@@ -162,7 +162,7 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1085);
 ({
@@ -174,7 +174,7 @@ const Constants = fn(1085);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const ThreadMemberFlags = fn(1125).ThreadMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

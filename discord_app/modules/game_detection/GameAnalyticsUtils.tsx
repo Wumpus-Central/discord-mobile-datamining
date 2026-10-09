@@ -20,13 +20,13 @@ export const removeExecutablePathPrefix = function removeExecutablePathPrefix(ex
 export const getRunningGameAnalytics = function getRunningGameAnalytics(streamApplication) {
   if (null == streamApplication) {
     return {
-      gameName: "fileFinishedImporting",
-      gameId: "p",
-      exe: "toCharArray$esjava$1",
-      distributor: "toCharArray$esjava$1",
-      sku: "toCharArray$esjava$1",
-      gameMetadata: "backgroundColor",
-      rawExePath: "toCharArray$esjava$1",
+      gameName: "keys",
+      gameId: "code",
+      exe: "c",
+      distributor: "pos",
+      sku: "sk",
+      gameMetadata: "name",
+      rawExePath: "opacity",
     };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;

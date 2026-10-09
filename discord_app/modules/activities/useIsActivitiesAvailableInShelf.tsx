@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const isActivitiesEnabledForCurrentPlatform =
         require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
-      const tmp3 = isActivitiesEnabledForCurrentPlatform(10690)(arg1);
+      const tmp3 = isActivitiesEnabledForCurrentPlatform(10836)(arg1);
       if (cResult[0] === guildId) {
         if (cResult[1] === tmp3) {
           let tmp4 = cResult[2];

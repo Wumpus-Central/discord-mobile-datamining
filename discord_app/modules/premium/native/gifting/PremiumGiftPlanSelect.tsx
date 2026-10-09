@@ -16,9 +16,9 @@ let VerticalGradient = fn(1085).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [, ];
-({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1391).PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1392).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -912,7 +912,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         const tmp4Result8 = tmp4(tmp2[34]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: null, user: null };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: true, user: true };
       const AvatarSizes = tmp(tmp2[30]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

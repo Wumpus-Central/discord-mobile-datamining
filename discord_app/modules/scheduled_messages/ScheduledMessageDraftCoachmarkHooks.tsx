@@ -4,7 +4,7 @@ import useSelectedDismissibleContent from "../dismissible_content/hooks/useSelec
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-let closure_3 = fn(2048).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+let closure_3 = fn(2049).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageDraftCoachmarkHooks.tsx");

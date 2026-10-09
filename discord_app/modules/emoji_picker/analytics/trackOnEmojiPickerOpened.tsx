@@ -144,7 +144,7 @@ function trackOnEmojiPickerOpened(current) {
   };
 }
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1393).EmojiIntention;
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

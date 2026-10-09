@@ -2,21 +2,22 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11245 from "../../../../../_runtime/metro/11245__.js";
-import _modDef11246 from "../../../../../_runtime/metro/11246__.js";
+import _modDef10610 from "../../../../../_runtime/metro/10610__.js";
+import _modDef10611 from "../../../../../_runtime/metro/10611__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -31,7 +32,7 @@ let obj2 = {
   message: { marginTop: 8, textAlign: "center" },
   footer: { paddingHorizontal: 24 },
 };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const size = fn(2);
@@ -41,21 +42,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function GiftCodeRedeemError(message) {
       const cResult = c.c(21);
       message = message.message;
-      const tmp4 = closure_8();
+      const tmp4 = closure_7();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef11245;
+        let tmp5Result = _modDef10610;
+        let tmp7 = importDefault;
       } else {
-        tmp5Result = _modDef11246;
+        tmp5Result = _modDef10611;
+        tmp7 = importDefault;
       }
       if (cResult[0] !== tmp5Result) {
         const obj3 = { source: tmp5Result };
-        const tmp10 = timestampProducer(React3, obj3);
+        const tmp10 = hasOwnProperty(tmp7(6163), obj3);
         cResult[0] = tmp5Result;
         cResult[1] = tmp10;
-        let tmp7 = tmp10;
+        let tmp8 = tmp10;
       } else {
-        tmp7 = cResult[1];
+        tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
@@ -67,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4.header) {
         const obj4 = { variant: "heading-xl/bold", style: tmp4.header, children: tmp11 };
-        const tmp15 = timestampProducer(Text_Text.Text, obj4);
+        const tmp15 = hasOwnProperty(Text_Text.Text, obj4);
         cResult[3] = tmp4.header;
         cResult[4] = tmp15;
         let tmp13 = tmp15;
@@ -79,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp16 = cResult[7];
         }
         if (cResult[8] === tmp4.body) {
-          if (cResult[9] === tmp7) {
+          if (cResult[9] === tmp8) {
             if (cResult[10] === tmp13) {
               if (cResult[11] === tmp16) {
                 let tmp18 = cResult[12];
@@ -102,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return ModalActionCreatorsDefault.pop();
                   },
                 };
-                const tmp26 = timestampProducer(components_Button_Button.Button, obj5);
+                const tmp26 = hasOwnProperty(components_Button_Button.Button, obj5);
                 cResult[14] = tmp26;
                 let tmp24 = tmp26;
               } else {
@@ -110,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[15] !== tmp4.footer) {
                 const obj6 = { style: tmp4.footer, children: tmp24 };
-                const tmp30 = timestampProducer(React4, obj6);
+                const tmp30 = hasOwnProperty(React3, obj6);
                 cResult[15] = tmp4.footer;
                 cResult[16] = tmp30;
                 let tmp27 = tmp30;
@@ -128,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { bottom: true, style: container, children: null };
               const items = [tmp18, tmp27];
               obj7.children = items;
-              const tmp33 = React5(common_SafeAreaView.SafeAreaPaddingView, obj7);
+              const tmp33 = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj7);
               cResult[17] = tmp4.container;
               cResult[18] = tmp27;
               cResult[19] = tmp18;
@@ -138,17 +141,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj8 = { contentContainerStyle: body, alwaysBounceVertical: false, children: null };
-        const items1 = [tmp7, tmp13, tmp16];
+        const items1 = [tmp8, tmp13, tmp16];
         obj8.children = items1;
-        const tmp21 = React5(hasOwnProperty, obj8);
+        const tmp21 = timestampProducer(React4, obj8);
         cResult[8] = tmp4.body;
-        cResult[9] = tmp7;
+        cResult[9] = tmp8;
         cResult[10] = tmp13;
         cResult[11] = tmp16;
         cResult[12] = tmp21;
         tmp18 = tmp21;
       }
-      const tmp17 = timestampProducer(Text_Text.Text, {
+      const tmp17 = hasOwnProperty(Text_Text.Text, {
         variant: "text-lg/medium",
         style: tmp4.message,
         children: message,
@@ -161,27 +164,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = { variant: "text-lg/medium", style: tmp4.message, children: message };
     }
   : function GiftCodeRedeemError(children) {
-      const tmp = closure_8();
+      const tmp = closure_7();
       const theme = Link.useTheme();
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp9Result = _modDef11245;
+        let tmp8Result = _modDef10610;
       } else {
-        tmp9Result = _modDef11246;
+        tmp8Result = _modDef10611;
       }
-      const items = [timestampProducer(React3, { source: tmp9Result }), ,];
+      const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };
       const intl = util.intl;
       obj4.children = intl.formatToMarkdownString(util.t.JUvC0s, {});
-      items[1] = timestampProducer(Text_Text.Text, obj4);
-      items[2] = timestampProducer(Text_Text.Text, {
+      items[1] = hasOwnProperty(Text_Text.Text, obj4);
+      items[2] = hasOwnProperty(Text_Text.Text, {
         variant: "text-lg/medium",
         style: tmp.message,
         children: children.message,
       });
       obj3.children = items;
-      const items1 = [React5(hasOwnProperty, obj3)];
+      const items1 = [timestampProducer(React4, obj3)];
       const obj6 = { style: tmp.footer, children: null };
       const obj7 = { text: null, size: "md", onPress: null };
       const intl2 = util.intl;
@@ -189,8 +192,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.onPress = function onPress() {
         return ModalActionCreatorsDefault.pop();
       };
-      obj6.children = timestampProducer(components_Button_Button.Button, obj7);
-      items1[1] = timestampProducer(React4, obj6);
+      obj6.children = hasOwnProperty(components_Button_Button.Button, obj7);
+      items1[1] = hasOwnProperty(React3, obj6);
       obj2.children = items1;
-      return React5(common_SafeAreaView.SafeAreaPaddingView, obj2);
+      return timestampProducer(common_SafeAreaView.SafeAreaPaddingView, obj2);
     };

@@ -5,7 +5,7 @@ import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObj
 import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
-const OrientationLockState = fn(2023).OrientationLockState;
+const OrientationLockState = fn(2024).OrientationLockState;
 const Constants = fn(1096);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);

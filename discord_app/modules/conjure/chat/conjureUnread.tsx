@@ -29,7 +29,7 @@ function unreadStatus(mentionCount, ackMessageIdResult, arg2) {
   }
   return tmp2;
 }
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(5974).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -222,7 +222,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
       }
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = stateFromStores(16443)();
+      const tmp9 = stateFromStores(16562)();
       dependencyMap = tmp9;
       if (cResult[4] === tmp9) {
         if (cResult[5] === projectId) {
@@ -271,7 +271,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
         },
         items1,
       );
-      let tmp2 = stateFromStores(16443)();
+      let tmp2 = stateFromStores(16562)();
       dependencyMap = tmp2;
       const items2 = [projectId, stateFromStores, tmp2];
       const effect = noop.useEffect(() => {

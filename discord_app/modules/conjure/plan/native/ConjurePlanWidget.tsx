@@ -15,7 +15,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
       const intl = applicationId(1126).intl;
       obj3.children = intl.string(_modDef3827.ove4zH);
-      const items2 = [closure_5(applicationId(5086).Text, obj3), ,];
+      const items2 = [closure_5(applicationId(5087).Text, obj3), ,];
       const obj4 = {
         userId: stateFromStores,
         widget: memo,
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl2 = applicationId(1126).intl;
       obj5.children = intl2.string(_modDef3827.XcIrHx);
-      items2[2] = closure_5(applicationId(5086).Text, obj5);
+      items2[2] = closure_5(applicationId(5087).Text, obj5);
       obj2.children = items2;
-      return closure_6(applicationId(5373).Stack, obj2);
+      return closure_6(applicationId(5374).Stack, obj2);
     };

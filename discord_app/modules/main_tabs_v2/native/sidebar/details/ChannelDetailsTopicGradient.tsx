@@ -39,7 +39,7 @@ export const useChannelTopicGradientBackground = ReactCompilerGating.isReactComp
       tmp7 = items;
     }
   : function useChannelTopicGradientBackground() {
-      token = token(4778).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+      token = token(4779).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
       let items = [token];
       return noop.useMemo(() => {
         const obj = _modDef683(token);

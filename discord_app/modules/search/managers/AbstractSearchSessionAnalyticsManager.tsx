@@ -1,5 +1,5 @@
 // discord_app/modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx
-import v1 from "../../../../_runtime/01278_v1.js";
+import v1 from "../../../../_runtime/01279_v1.js";
 import SearchUtils from "../SearchUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(5253).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(5254).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { imageThumbnail: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -74,8 +74,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj2 = { value: none, label: null, icon: null };
         const intl = tmp(1126).intl;
         obj2.label = intl.string(tmp(1126).t.fUdMeO);
-        const obj3 = { IconComponent: tmp(9306).DenyIcon };
-        obj2.icon = jsx(tmp(6192).TableRowIcon, { IconComponent: tmp(9306).DenyIcon });
+        const obj3 = { IconComponent: tmp(9344).DenyIcon };
+        obj2.icon = jsx(tmp(6194).TableRowIcon, { IconComponent: tmp(9344).DenyIcon });
         cResult[1] = obj2;
         let tmp7 = obj2;
       } else {
@@ -85,8 +85,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
         const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
         const intl2 = tmp(1126).intl;
         obj4.label = intl2.string(tmp(1126).t.LhSyL8);
-        const obj5 = { IconComponent: tmp(10884).BlurBackgroundIcon };
-        obj4.icon = jsx(tmp(6192).TableRowIcon, { IconComponent: tmp(10884).BlurBackgroundIcon });
+        const obj5 = { IconComponent: tmp(11057).BlurBackgroundIcon };
+        obj4.icon = jsx(tmp(6194).TableRowIcon, { IconComponent: tmp(11057).BlurBackgroundIcon });
         cResult[2] = obj4;
         let tmp10 = obj4;
       } else {

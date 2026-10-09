@@ -1,27 +1,28 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/15275_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/15388_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(5977).QuestDockMode;
-const QuestDockConstants = fn(15174);
+const QuestDockMode = fn(5979).QuestDockMode;
+const QuestDockConstants = fn(15285);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
-({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
-let obj = { image: null, overlay: null };
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(5091);
+let obj = { imageContainer: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj3.overflow = "hidden";
 obj3.height = QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 obj3.top = -QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED;
-obj.image = obj3;
+obj.imageContainer = obj3;
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj4.backgroundColor = "rgba(38, 39, 50, 0.3)";
 obj4.height = QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 obj.overlay = obj4;
-let closure_9 = createStyles.createStyles(obj);
+let closure_10 = createStyles.createStyles(obj);
 const __initData = {
   code: "function QuestDockBlurredHeaderPlaceholderTsx1(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,questDockWrapperSpecs}=this.__closure;return{left:activeQuestDockMode.get()===QuestDockMode.EXPANDED?-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,width:questDockWrapperSpecs.get().width+QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED};}",
 };
@@ -35,15 +36,15 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function QuestDockBlurredHeaderPlaceholder(arg0) {
-        const cResult = questDockWrapperSpecs(576).c(20);
+        const cResult = questDockWrapperSpecs(576).c(22);
         ({ layoutAnimation, layoutAnimatedStyle, opacityAnimatedStyle, placeholder } = arg0);
-        const context = noop.useContext(questDockWrapperSpecs(15175).QuestDockGestureContext);
+        const context = noop.useContext(questDockWrapperSpecs(15286).QuestDockGestureContext);
         const activeQuestDockMode = context.activeQuestDockMode;
         if (cResult[0] !== placeholder) {
           let thumbHashToDataURLResult = globalThis;
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-            const fn = function c(str) {
+            const fn = function l(str) {
               return str.charCodeAt(0);
             };
             cResult[2] = fn;
@@ -52,12 +53,12 @@ export default noop.memo(
             tmp6 = cResult[2];
           }
           const _Uint8Array = thumbHashToDataURLResult.Uint8Array;
-          thumbHashToDataURLResult = tmp(15275).thumbHashToDataURL(
+          thumbHashToDataURLResult = tmp(15388).thumbHashToDataURL(
             _Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6),
           );
           cResult[0] = placeholder;
           cResult[1] = thumbHashToDataURLResult;
-          const tmpResult = tmp(15275);
+          const tmpResult = tmp(15388);
         } else {
           if (cResult[3] !== cResult[1]) {
             const obj2 = { uri: tmp5 };
@@ -66,10 +67,10 @@ export default noop.memo(
               constructor() {
                 num = 0;
                 if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-                  tmp = closure_5;
-                  num = -closure_5;
+                  tmp = closure_6;
+                  num = -closure_6;
                 }
-                obj = { left: num, width: questDockWrapperSpecs.get().width + closure_5 };
+                obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
                 return obj;
               }
             }
@@ -77,15 +78,15 @@ export default noop.memo(
           } else {
             tmp8 = cResult[4];
           }
-          const tmp10 = closure_9();
+          const tmp10 = closure_10();
           class O {
             constructor() {
               num = 0;
               if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-                tmp = closure_5;
-                num = -closure_5;
+                tmp = closure_6;
+                num = -closure_6;
               }
-              obj = { left: num, width: questDockWrapperSpecs.get().width + closure_5 };
+              obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
               return obj;
             }
           }
@@ -98,102 +99,122 @@ export default noop.memo(
           O.__closure = obj3;
           O.__workletHash = 11176778421725;
           O.__initData = __initData;
-          const animatedStyle = tmp(4810).useAnimatedStyle(O);
+          const animatedStyle = tmp(4811).useAnimatedStyle(O);
           if (cResult[5] === animatedStyle) {
             if (cResult[6] === layoutAnimatedStyle) {
               if (cResult[7] === opacityAnimatedStyle) {
-                if (cResult[8] === tmp10.image) {
+                if (cResult[8] === tmp10.imageContainer) {
                   let tmp15 = cResult[9];
                 }
-                if (cResult[10] === tmp8) {
-                  if (cResult[11] === layoutAnimation) {
-                    if (cResult[12] === tmp15) {
-                      let tmp16 = cResult[13];
+                if (cResult[10] !== tmp8) {
+                  const obj4 = { source: tmp8, style: null };
+                  class O {
+                    constructor() {
+                      num = 0;
+                      if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
+                        tmp = closure_6;
+                        num = -closure_6;
+                      }
+                      obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
+                      return obj;
                     }
-                    if (cResult[14] === opacityAnimatedStyle) {
-                      if (cResult[15] === tmp10.overlay) {
-                        let tmp20 = cResult[16];
+                  }
+                  const tmp20 = closure_7(activeQuestDockMode(6163), obj4);
+                  cResult[10] = tmp8;
+                  cResult[11] = tmp20;
+                  let tmp16 = tmp20;
+                } else {
+                  tmp16 = cResult[11];
+                }
+                if (cResult[12] === layoutAnimation) {
+                  if (cResult[13] === tmp15) {
+                    if (cResult[14] === tmp16) {
+                      let tmp21 = cResult[15];
+                    }
+                    if (cResult[16] === opacityAnimatedStyle) {
+                      if (cResult[17] === tmp10.overlay) {
+                        let tmp26 = cResult[18];
                       }
-                      if (cResult[17] === tmp16) {
-                        if (cResult[18] === tmp20) {
-                          let tmp25 = cResult[19];
+                      if (cResult[19] === tmp21) {
+                        if (cResult[20] === tmp26) {
+                          let tmp31 = cResult[21];
                         }
-                        return tmp25;
+                        return tmp31;
                       }
-                      const obj4 = { children: null };
+                      const obj5 = { children: null };
                       class O {
                         constructor() {
                           num = 0;
                           if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-                            tmp = closure_5;
-                            num = -closure_5;
+                            tmp = closure_6;
+                            num = -closure_6;
                           }
-                          obj = { left: num, width: questDockWrapperSpecs.get().width + closure_5 };
+                          obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
                           return obj;
                         }
                       }
-                      tmp28[0] = tmp16;
-                      tmp28[1] = tmp20;
-                      obj4.children = tmp28;
-                      const tmp29 = closure_8(closure_7, obj4);
-                      cResult[17] = tmp16;
-                      cResult[18] = tmp20;
-                      cResult[19] = tmp29;
-                      tmp25 = tmp29;
+                      tmp34[0] = tmp21;
+                      tmp34[1] = tmp26;
+                      obj5.children = tmp34;
+                      const tmp35 = closure_9(closure_8, obj5);
+                      cResult[19] = tmp21;
+                      cResult[20] = tmp26;
+                      cResult[21] = tmp35;
+                      tmp31 = tmp35;
                     }
-                    const obj5 = { style: null };
+                    const obj6 = { style: null };
                     class O {
                       constructor() {
                         num = 0;
                         if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-                          tmp = closure_5;
-                          num = -closure_5;
+                          tmp = closure_6;
+                          num = -closure_6;
                         }
-                        obj = { left: num, width: questDockWrapperSpecs.get().width + closure_5 };
+                        obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
                         return obj;
                       }
                     }
-                    tmp23[0] = tmp10.overlay;
-                    tmp23[1] = opacityAnimatedStyle;
-                    obj5.style = tmp23;
-                    const tmp24 = closure_6(activeQuestDockMode(6753), obj5);
-                    cResult[14] = opacityAnimatedStyle;
-                    cResult[15] = tmp10.overlay;
-                    cResult[16] = tmp24;
-                    tmp20 = tmp24;
+                    tmp29[0] = tmp10.overlay;
+                    tmp29[1] = opacityAnimatedStyle;
+                    obj6.style = tmp29;
+                    const tmp30 = closure_7(activeQuestDockMode(6760), obj6);
+                    cResult[16] = opacityAnimatedStyle;
+                    cResult[17] = tmp10.overlay;
+                    cResult[18] = tmp30;
+                    tmp26 = tmp30;
                   }
                 }
-                const obj6 = { source: null, style: null, layout: null };
                 class O {
                   constructor() {
                     num = 0;
                     if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-                      tmp = closure_5;
-                      num = -closure_5;
+                      tmp = closure_6;
+                      num = -closure_6;
                     }
-                    obj = { left: num, width: questDockWrapperSpecs.get().width + closure_5 };
+                    obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
                     return obj;
                   }
                 }
-                obj6.style = tmp15;
-                obj6.layout = layoutAnimation;
-                const tmp19 = closure_6(activeQuestDockMode(4810).Image, obj6);
-                cResult[10] = tmp8;
-                cResult[11] = layoutAnimation;
-                cResult[12] = tmp15;
-                cResult[13] = tmp19;
-                tmp16 = tmp19;
+                tmp24[0] = tmp15;
+                tmp24[1] = layoutAnimation;
+                tmp24[2] = tmp16;
+                const tmp25 = closure_7(activeQuestDockMode(6760), tmp24);
+                cResult[12] = layoutAnimation;
+                cResult[13] = tmp15;
+                cResult[14] = tmp16;
+                cResult[15] = tmp25;
+                tmp21 = tmp25;
               }
             }
           }
-          const items = [tmp10.image, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
+          const items = [tmp10.imageContainer, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
           cResult[5] = animatedStyle;
           cResult[6] = layoutAnimatedStyle;
           cResult[7] = opacityAnimatedStyle;
-          cResult[8] = tmp10.image;
+          cResult[8] = tmp10.imageContainer;
           cResult[9] = items;
           tmp15 = items;
-          const tmpResult2 = tmp(4810);
+          const tmpResult2 = tmp(4811);
         }
         const obj = questDockWrapperSpecs(576);
       }
@@ -210,15 +231,15 @@ export default noop.memo(
           };
           return obj;
         }, items);
-        const tmp3 = closure_9();
+        const tmp3 = closure_10();
         class E {
           constructor() {
             num = 0;
             if (activeQuestDockMode.get() === QuestDockMode.EXPANDED) {
-              tmp = closure_5;
-              num = -closure_5;
+              tmp = closure_6;
+              num = -closure_6;
             }
-            obj = { left: num, width: questDockWrapperSpecs.get().width + closure_5 };
+            obj = { left: num, width: questDockWrapperSpecs.get().width + closure_6 };
             return obj;
           }
         }
@@ -232,15 +253,26 @@ export default noop.memo(
         E.__initData = __initData2;
         const obj3 = { children: null };
         const animatedStyle = placeholder(activeQuestDockMode[10]).useAnimatedStyle(E);
-        const obj4 = { source: memo, style: null, layout: layoutAnimation };
-        const items1 = [tmp3.image, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
+        const obj4 = { style: null, layout: layoutAnimation, children: null };
+        const items1 = [tmp3.imageContainer, layoutAnimatedStyle, animatedStyle, opacityAnimatedStyle];
         obj4.style = items1;
-        const items2 = [closure_6(questDockWrapperSpecs(activeQuestDockMode[10]).Image, obj4)];
-        const obj5 = { style: null };
+        let obj = placeholder(activeQuestDockMode[10]);
+        const obj2 = {
+          activeQuestDockMode,
+          QuestDockMode,
+          QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,
+          questDockWrapperSpecs,
+        };
+        obj4.children = closure_7(questDockWrapperSpecs(activeQuestDockMode[11]), {
+          source: memo,
+          style: StyleSheet.absoluteFill,
+        });
+        const items2 = [closure_7(questDockWrapperSpecs(activeQuestDockMode[12]), obj4)];
+        const obj6 = { style: null };
         const items3 = [tmp3.overlay, opacityAnimatedStyle];
-        obj5.style = items3;
-        items2[1] = closure_6(questDockWrapperSpecs(activeQuestDockMode[11]), obj5);
+        obj6.style = items3;
+        items2[1] = closure_7(questDockWrapperSpecs(activeQuestDockMode[12]), obj6);
         obj3.children = items2;
-        return closure_8(closure_7, obj3);
+        return closure_9(closure_8, obj3);
       },
 );

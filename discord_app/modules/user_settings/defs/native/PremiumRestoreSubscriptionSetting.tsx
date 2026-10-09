@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasPremiumRestoreSubscriptionSetting() {
       const cResult = c.c(4);
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(9005).NitroWheelIcon,
+  IconComponent: fn(9016).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then(

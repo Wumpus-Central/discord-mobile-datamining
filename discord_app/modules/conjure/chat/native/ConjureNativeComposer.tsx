@@ -11,12 +11,12 @@ import ConjureTypes from "../../ConjureTypes.tsx";
 import ImageCarousel from "../../../../components_native/chat/ImageCarousel.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
 import PlusLargeIcon from "../../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
+import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
 import ImagesIcon from "../../../../design/components/Icon/native/redesign/generated/ImagesIcon.tsx";
 import ChatInputNativeCommandsDefault from "../../../chat_input/native/ChatInputNativeCommands.tsx";
 import ChatInputActionButtonDefault from "../../../chat_input/native/action_buttons/ChatInputActionButton.tsx";
 import ChatInputActionButtonTransitionItemDefault from "../../../chat_input/native/action_buttons/ChatInputActionButtonTransitionItem.tsx";
-import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
-import keepLocalCopy from "../../../../../_runtime/12780_keepLocalCopy.js";
+import keepLocalCopy from "../../../../../_runtime/12749_keepLocalCopy.js";
 import FiltersHorizontalIcon from "../../../../design/components/Icon/native/redesign/generated/FiltersHorizontalIcon.tsx";
 import FileUpIcon from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
 import ConjureModelSettingsSheet from "../../model_settings/native/ConjureModelSettingsSheet.tsx";
@@ -60,7 +60,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING,
@@ -2324,7 +2324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
           if (arr.length > diff) {
             const intl = obj2(1126).intl;
-            let obj = { count: obj2(6933).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+            let obj = { count: obj2(6940).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
             _undefined3(intl.formatToPlainString(_modDef3827.Q0aCVZ, obj));
             const _Math = Math;
             const substr = arr.slice(0, Math.max(0, diff));
@@ -2356,7 +2356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             obj3 = obj5;
           });
-          obj2 = obj2(17019);
+          obj2 = obj2(17175);
           result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
         }
       }, items5);
@@ -2396,9 +2396,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c1 = 1;
                   dependencyMap = 1;
                   const obj5 = {
-                    value: projectId(17018).pickConjurePhotos(
+                    value: projectId(17174).pickConjurePhotos(
                       "any",
-                      projectId(6933).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
+                      projectId(6940).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE,
                     ),
                     done: false,
                   };

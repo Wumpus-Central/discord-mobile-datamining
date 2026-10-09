@@ -161,7 +161,7 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
       obj5(584).wait(() => UserActionCreators.fetchProfile(closure_0, obj5, preloadUserBannerImageDefault));
       return Promise.resolve();
     } else {
-      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(8288));
+      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(8296));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

@@ -31,15 +31,15 @@ function handleConnectionOpen() {
             let obj = AudioSettingsUtils;
             let result = obj.coerceAudioContextForProto(first);
             if (null != result) {
-              let tmp53 = arg0[tmp12];
+              let tmp57 = arg0[tmp12];
               let _String = String;
               let _Date = Date;
               let StringResult = String(Date.now());
               let obj2 = {};
               let _Object4 = Object;
               let entries1 = Object.entries(tmp8.localMutes);
-              for (const item10044 of entries1) {
-                let tmp15 = _slicedToArray(item10044, 2);
+              for (const item10045 of entries1) {
+                let tmp15 = _slicedToArray(item10045, 2);
                 let obj3 = { muted: tmp15[1], volume: null, modifiedAt: null, soundboardMuted: false };
                 obj3.volume = DEFAULT_VOLUME_FOR_CONTEXT(tmp7);
                 obj3.modifiedAt = StringResult;
@@ -48,33 +48,38 @@ function handleConnectionOpen() {
               }
               let _Object = Object;
               let entries2 = Object.entries(tmp8.localVolumes);
-              for (const item10065 of entries2) {
-                let tmp25 = _slicedToArray(item10065, 2);
-                let first1 = tmp25[0];
-                let obj5 = { muted: false, modifiedAt: null };
-                obj5.modifiedAt = StringResult;
-                let merged = Object.assign(obj2[first1]);
-                let obj4 = AudioSettingsUtils;
-                obj5.volume = obj4.snapVolumeToDefault(tmp25[1], tmp7);
-                obj2[first1] = obj5;
+              for (const item10066 of entries2) {
+                let tmp25 = _slicedToArray(item10066, 2);
+                [tmp26, tmp27] = tmp25;
+                let tmp29 = obj2[tmp26];
+                if (tmp29 == null) {
+                  let obj4 = { muted: false, modifiedAt: null };
+                  obj4.modifiedAt = StringResult;
+                  tmp29 = obj4;
+                }
+                let obj6 = {};
+                let merged = Object.assign(tmp29);
+                let obj5 = AudioSettingsUtils;
+                obj6.volume = obj5.snapVolumeToDefault(tmp27, tmp7);
+                obj2[tmp26] = obj6;
                 continue;
               }
               let _Object2 = Object;
-              let length = Object.keys(tmp53).length;
+              let length = Object.keys(tmp57).length;
               let _Object3 = Object;
               let entries3 = Object.entries(obj2);
               let entries4 = entries3.entries();
-              for (const item10099 of entries4) {
-                let tmp40 = _slicedToArray(item10099, 2);
-                let tmp41 = _slicedToArray(tmp40[1], 2);
-                [tmp42, tmp43] = tmp41;
-                if (300 - length - (tmp40[0] + 1) <= 0) {
-                  obj6.return();
+              for (const item10103 of entries4) {
+                let tmp44 = _slicedToArray(item10103, 2);
+                let tmp45 = _slicedToArray(tmp44[1], 2);
+                [tmp46, tmp47] = tmp45;
+                if (300 - length - (tmp44[0] + 1) <= 0) {
+                  obj7.return();
                   break;
                 } else {
-                  if (null == tmp53[tmp42]) {
+                  if (null == tmp57[tmp46]) {
                     flag = true;
-                    tmp53[tmp42] = tmp43;
+                    tmp57[tmp46] = tmp47;
                   }
                   continue;
                 }
@@ -119,7 +124,7 @@ function handleSetLocalMute(arg0) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(14207).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(14303).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -195,7 +200,7 @@ function handleSetLocalSoundboardMute(userId) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(14207).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(14303).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -274,7 +279,7 @@ function handleResetMediaEngineSettings(arg0) {
     );
   }
 }
-const MediaEngineContextTypes = fn(5115).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5116).MediaEngineContextTypes;
 function SETTINGS_MIGRATION_KEY(id) {
   return "AudioContextSettingsMigrated:" + id;
 }
@@ -293,7 +298,7 @@ let closure_12 = apply.debounce(() => {
     "audioContextSettings",
     async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14207).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14303).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -357,7 +362,7 @@ let closure_12 = apply.debounce(() => {
   );
 }, 2000);
 let apply = apply_mod;
-let closure_13 = apply.debounce(fn(10897).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = apply.debounce(fn(11071).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 const prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

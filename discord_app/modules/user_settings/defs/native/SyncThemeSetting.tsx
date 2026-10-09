@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [ThemeStore];
       return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncThemeAcrossClientsValue() {
       const cResult = c.c(2);
@@ -64,7 +64,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(7966).MobileUserSettings.APPEARANCE,
+  parent: fn(7974).MobileUserSettings.APPEARANCE,
   useIsDisabled: tmp2,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSyncThemeAcrossClientsValue() {

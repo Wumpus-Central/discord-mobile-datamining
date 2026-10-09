@@ -10,7 +10,7 @@ require = fn;
 let closure_3 = ["children", "noMargin", "displayNameFont"];
 let closure_4 = ["children", "variant"];
 const View = fn(17).View;
-const HappeningNowConstants = fn(15391);
+const HappeningNowConstants = fn(15504);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({
   HAPPENING_NOW_CARD_PADDING: closure_8,
@@ -33,7 +33,7 @@ const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_23 = HAPPENING_NOW_PANELS_CONTAINER_PADDING + HAPPENING_NOW_CARD_MARGIN_RIGHT;
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let closure_24 = createStyles.createStyles((arg0, arg1, arg2) => {
   if ("small" === arg0) {
     const obj2 = { minWidth, maxWidth };
@@ -90,7 +90,7 @@ let closure_24 = createStyles.createStyles((arg0, arg1, arg2) => {
   return obj6;
 });
 fn(558);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj4 = { cardHeaderMargin: { marginRight: HAPPENING_NOW_BADGE_SIZE + 4 } };
 let closure_25 = createStyles.createStyles(obj4);
 let ReactCompilerGating = fn(558);

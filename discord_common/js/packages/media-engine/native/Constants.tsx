@@ -85,6 +85,7 @@ export const NativeFeatures = {
   SPATIAL_AUDIO: "spatial_audio",
   KRISP_NATIVE_ERROR: "krisp_native_error",
   UDP_ENDPOINT_UPDATE: "udp_endpoint_update",
+  ACTIVITY_CAPTURE: "activity_capture",
 };
 export const ClipsRecordingEvent = {
   Started: 0,

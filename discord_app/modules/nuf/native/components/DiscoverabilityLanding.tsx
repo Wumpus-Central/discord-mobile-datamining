@@ -1,6 +1,6 @@
 // discord_app/modules/nuf/native/components/DiscoverabilityLanding.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -9,10 +9,10 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(12437).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12355).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerContainer: { flexGrow: 0, justifyContent: "center", marginBottom: 24 },
@@ -46,7 +46,7 @@ export default function DiscoverabilityLanding(onNext) {
   const allowPhone = tmp2.allowPhone;
   const items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12529, dependencyMap.paths), "Discoverability Landing", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12468, dependencyMap.paths), "Discoverability Landing", {
       allowPhone,
       allowEmail,
     });

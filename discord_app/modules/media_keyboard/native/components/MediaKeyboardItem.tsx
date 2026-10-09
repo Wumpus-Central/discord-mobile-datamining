@@ -8,7 +8,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import _modDef9721 from "../../../../../_runtime/metro/09721__.js";
+import _modDef9740 from "../../../../../_runtime/metro/09740__.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import NativeMenuActionCreatorsDefault from "../../../native_menu/native/NativeMenuActionCreators.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
@@ -20,12 +20,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(9990);
+const DeviceConstants = fn(10009);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj = {
   container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" },
   image: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
@@ -53,7 +53,7 @@ const rect = {
   left: 8,
   bottom: 8,
 };
-let ColorUtils = fn(4927);
+let ColorUtils = fn(4928);
 rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.6);
 rect.borderRadius = nativeDefault.radii.xs;
 obj.labelContainer = rect;
@@ -75,13 +75,13 @@ let size2 = {
   borderWidth: 1,
   borderColor: null,
 };
-ColorUtils = fn(4927);
+ColorUtils = fn(4928);
 size2.borderColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.1);
 obj.checkIconContainer = size2;
 let obj5 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj5.borderRadius = nativeDefault.radii.xs;
-ColorUtils = fn(4927);
+ColorUtils = fn(4928);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.3);
 obj.selectedOverlay = obj5;
 obj.specialButton = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[2];
         }
         if (cResult[3] !== tmp4.icon) {
-          const obj2 = { source: _modDef9721, style: tmp4.icon };
+          const obj2 = { source: _modDef9740, style: tmp4.icon };
           const tmp9 = options(native.Icon, obj2);
           cResult[3] = tmp4.icon;
           cResult[4] = tmp9;
@@ -275,7 +275,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp.labelContainer, style];
       obj.style = items;
       const items1 = [
-        options(native.Icon, { source: _modDef9721, style: tmp.icon }),
+        options(native.Icon, { source: _modDef9740, style: tmp.icon }),
         options(Text_Text.Text, {
           style: textStyle,
           color: "text-overlay-light",
@@ -1018,7 +1018,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = options(React4, obj3);
       return options(React4, obj2);
     };
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj4 = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 let closure_17 = createStyles.createStyleProperties({
   backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT,

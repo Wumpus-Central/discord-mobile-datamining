@@ -23,7 +23,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       obj = adTopic(576);
       const cResult = obj.c(14);
       adTopic = adTopic.adTopic;
-      let AdTopicOptOuts = adTopic(2040).AdTopicOptOuts;
+      let AdTopicOptOuts = adTopic(2041).AdTopicOptOuts;
       const setting = AdTopicOptOuts.useSetting();
       if (cResult[0] === adTopic) {
         if (cResult[1] === setting) {
@@ -75,7 +75,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { label: tmp9, subLabel: cResult[8], value: !tmp4, onValueChange: tmp8 };
-          const tmp19 = closure_5(tmp(6882).TableSwitchRow, obj2);
+          const tmp19 = closure_5(tmp(6889).TableSwitchRow, obj2);
           cResult[9] = tmp8;
           cResult[10] = tmp9;
           cResult[11] = cResult[8];
@@ -92,7 +92,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function AdTopicRow(adTopic) {
       adTopic = adTopic.adTopic;
-      let AdTopicOptOuts = adTopic(2040).AdTopicOptOuts;
+      let AdTopicOptOuts = adTopic(2041).AdTopicOptOuts;
       const setting = AdTopicOptOuts.useSetting();
       const hasItem = setting.includes(adTopic);
       obj = { label: null, subLabel: null, value: null, onValueChange: null };
@@ -114,9 +114,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [...set];
         AdTopicOptOuts2.updateSetting(items);
       };
-      return closure_5(adTopic(6882).TableSwitchRow, obj);
+      return closure_5(adTopic(6889).TableSwitchRow, obj);
     };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj4 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,

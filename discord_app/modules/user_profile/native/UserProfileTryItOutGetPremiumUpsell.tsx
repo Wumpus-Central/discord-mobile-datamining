@@ -1,6 +1,5 @@
 // discord_app/modules/user_profile/native/UserProfileTryItOutGetPremiumUpsell.tsx
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
@@ -11,20 +10,19 @@ require = fn;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_4, AnalyticsPages: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-let items = [AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileTryItOutGetPremiumUpsell.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserProfileTryItOutGetPremiumUpsell(onLayout) {
-      const cResult = analyticsLocations(576).c(10);
+      const cResult = analyticsLocations(576).c(12);
       onLayout = onLayout.onLayout;
       let obj = analyticsLocations(576);
-      const nitroTrialCtaOverride = analyticsLocations(7157).useNitroTrialCtaOverride(
+      const nitroTrialCtaOverride = analyticsLocations(7162).useNitroTrialCtaOverride(
         "user_profile_premium_upsell_card",
       );
-      analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
+      analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       if (cResult[0] !== analyticsLocations) {
         const fn = function o() {
           const obj = {
@@ -40,79 +38,78 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = analyticsLocations;
         cResult[1] = fn;
-        let tmp7 = fn;
+        let tmp6 = fn;
       } else {
-        tmp7 = cResult[1];
+        tmp6 = cResult[1];
       }
-      const obj2 = analyticsLocations(7157);
-      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
-        false,
-        tmp7,
-        constants2.USER_SETTINGS,
-        undefined,
-        items,
-      ));
-      const tmp8 = usePremiumFeatureUpsellGetNitroDefault(false, tmp7, constants2.USER_SETTINGS, undefined, items);
+      const obj2 = analyticsLocations(7162);
+      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS));
+      const tmp7 = usePremiumFeatureUpsellGetNitroDefault(false, tmp6, constants2.USER_SETTINGS);
       const mobileNitroPreviewDirectCheckoutEnabled =
-        analyticsLocations(14753).useMobileNitroPreviewDirectCheckoutEnabled();
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        analyticsLocations(14861).useMobileNitroPreviewDirectCheckoutEnabled();
+      if (cResult[2] !== tmp6) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp(1126).t["MswR/h"]);
-        cResult[2] = stringResult;
-        let tmp10 = stringResult;
+        const obj3 = { onClick: tmp6 };
+        const formatResult = intl.format(tmp(1126).t.TmfgI2, obj3);
+        cResult[2] = tmp6;
+        cResult[3] = formatResult;
+        let tmp9 = formatResult;
       } else {
-        tmp10 = cResult[2];
+        tmp9 = cResult[3];
       }
-      if (cResult[3] !== nitroTrialCtaOverride) {
-        let stringResult1 = nitroTrialCtaOverride;
+      if (cResult[4] !== nitroTrialCtaOverride) {
+        let stringResult = nitroTrialCtaOverride;
         if (nitroTrialCtaOverride == null) {
           const intl2 = tmp(1126).intl;
-          stringResult1 = intl2.string(tmp(1126).t.pj0XBN);
+          stringResult = intl2.string(tmp(1126).t.pj0XBN);
         }
-        cResult[3] = nitroTrialCtaOverride;
-        cResult[4] = stringResult1;
-        let tmp12 = stringResult1;
+        cResult[4] = nitroTrialCtaOverride;
+        cResult[5] = stringResult;
+        let tmp11 = stringResult;
       } else {
-        tmp12 = cResult[4];
+        tmp11 = cResult[5];
       }
-      let tmp15 = mobileNitroPreviewDirectCheckoutEnabled;
+      let tmp14 = mobileNitroPreviewDirectCheckoutEnabled;
       if (mobileNitroPreviewDirectCheckoutEnabled) {
-        tmp15 = loading;
+        tmp14 = loading;
       }
       if (mobileNitroPreviewDirectCheckoutEnabled) {
-        tmp7 = onPress;
+        tmp6 = onPress;
       }
-      if (cResult[5] === onLayout) {
-        if (cResult[6] === tmp12) {
-          if (cResult[7] === tmp15) {
-            if (cResult[8] === tmp7) {
-              let tmp16 = cResult[9];
+      if (cResult[6] === onLayout) {
+        if (cResult[7] === tmp9) {
+          if (cResult[8] === tmp11) {
+            if (cResult[9] === tmp14) {
+              if (cResult[10] === tmp6) {
+                let tmp15 = cResult[11];
+              }
+              return tmp15;
             }
-            return tmp16;
           }
         }
       }
-      const tmp17 = jsx(UserProfileFloatingUpsellDefault, {
-        text: tmp10,
-        buttonText: tmp12,
+      const tmp16 = jsx(UserProfileFloatingUpsellDefault, {
+        text: tmp9,
+        buttonText: tmp11,
         buttonVariant: "experimental_premium-primary",
-        loading: tmp15,
-        onButtonPress: tmp7,
+        loading: tmp14,
+        onButtonPress: tmp6,
         onLayout,
       });
-      cResult[5] = onLayout;
-      cResult[6] = tmp12;
-      cResult[7] = tmp15;
-      cResult[8] = tmp7;
-      cResult[9] = tmp17;
-      tmp16 = tmp17;
-      const tmpResult = analyticsLocations(14753);
+      cResult[6] = onLayout;
+      cResult[7] = tmp9;
+      cResult[8] = tmp11;
+      cResult[9] = tmp14;
+      cResult[10] = tmp6;
+      cResult[11] = tmp16;
+      tmp15 = tmp16;
+      const tmpResult = analyticsLocations(14861);
     }
   : function UserProfileTryItOutGetPremiumUpsell(onLayout) {
       let analyticsLocations;
-      let nitroTrialCtaOverride = analyticsLocations(7157).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-      analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
-      items = [analyticsLocations];
+      let nitroTrialCtaOverride = analyticsLocations(7162).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+      analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
+      const items = [analyticsLocations];
       let callback = noop.useCallback(() => {
         const obj = {
           analyticsLocation: {
@@ -125,17 +122,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         openPremiumModalDefault(obj);
       }, items);
-      let obj = analyticsLocations(7157);
-      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
-        false,
-        callback,
-        constants2.USER_SETTINGS,
-        undefined,
-        items,
-      ));
-      const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
+      let obj = analyticsLocations(7162);
+      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS));
+      const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS);
       const mobileNitroPreviewDirectCheckoutEnabled =
-        analyticsLocations(14753).useMobileNitroPreviewDirectCheckoutEnabled();
+        analyticsLocations(14861).useMobileNitroPreviewDirectCheckoutEnabled();
       const obj3 = {
         text: null,
         buttonText: null,
@@ -144,9 +135,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onButtonPress: null,
         onLayout: null,
       };
-      const obj2 = analyticsLocations(14753);
+      const obj2 = analyticsLocations(14861);
       const intl = analyticsLocations(1126).intl;
-      obj3.text = intl.string(analyticsLocations(1126).t["MswR/h"]);
+      obj3.text = intl.format(analyticsLocations(1126).t.TmfgI2, { onClick: callback });
       if (nitroTrialCtaOverride == null) {
         const intl2 = tmp(1126).intl;
         nitroTrialCtaOverride = intl2.string(tmp(1126).t.pj0XBN);

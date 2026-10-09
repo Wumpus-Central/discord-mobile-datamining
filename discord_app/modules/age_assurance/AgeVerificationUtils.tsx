@@ -100,14 +100,14 @@ let closure_23 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(5914).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(5915).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const MessageEmbedTypes = fn(1085).MessageEmbedTypes;
 const AgeGateConstants = fn(1110);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: map1 } = AgeGateConstants);
 let items = [
-  fn(5915).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(5915).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(5915).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(5916).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(5916).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(5916).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];

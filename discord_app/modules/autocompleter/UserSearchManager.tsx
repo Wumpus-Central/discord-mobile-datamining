@@ -979,7 +979,7 @@ prototype2["getUserSearchContext"] = function getUserSearchContext(parseUserResu
       }
     };
     obj._worker = _worker;
-    obj._uuid = obj(1278).v4();
+    obj._uuid = obj(1279).v4();
     obj._callback = parseUserResults;
     obj._limit = num;
     obj._currentQuery = null;

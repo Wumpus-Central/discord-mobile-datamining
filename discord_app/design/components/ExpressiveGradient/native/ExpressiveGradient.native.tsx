@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05388_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef4659 from "../../../_runtime/metro/04659__.js";
+import _modDef4661 from "../../../_runtime/metro/04661__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
 import isMessageMentioned from "isMessageMentioned.tsx";
@@ -87,9 +87,10 @@ function createMessageRecord(message, arg1) {
   } else if (null != message.webhook_id) {
     user = new UserRecord(message.author);
   } else {
-    user = UserStore.getUser(message.author.id);
+    const author = message.author;
+    user = UserStore.getUser(author.id);
     if (user == null) {
-      user = new UserRecord(message.author);
+      user = new UserRecord(author);
     }
   }
   let obj2 = createMinimalMessageRecord(message);
@@ -105,31 +106,31 @@ function createMessageRecord(message, arg1) {
     const referenced_message = message.referenced_message;
     let id;
     if (referenced_message != null) {
-      const author = referenced_message.author;
-      if (author != null) {
-        id = author.id;
+      const author2 = referenced_message.author;
+      if (author2 != null) {
+        id = author2.id;
       }
     }
   }
   let str = message.content;
-  let tmp17;
+  let tmp18;
   if (message.type === constants2.PREMIUM_REFERRAL) {
     let content;
     if (obj5.isProbablyAValidSnowflake(message.content)) {
       content = message.content;
     }
     str = "";
-    tmp17 = content;
+    tmp18 = content;
     obj5 = SnowflakeUtilsDefault;
   }
-  let tmp20;
+  let tmp21;
   if (message.type === constants2.PREMIUM_GROUP_INVITE) {
     let content1;
     if (obj6.isProbablyAValidSnowflake(message.content)) {
       content1 = message.content;
     }
     str = "";
-    tmp20 = content1;
+    tmp21 = content1;
     obj6 = SnowflakeUtilsDefault;
   }
   const obj9 = {};
@@ -137,17 +138,27 @@ function createMessageRecord(message, arg1) {
   const merged1 = Object.assign(messageAuthor);
   const merged2 = Object.assign(obj2.toJS());
   obj9.author = user;
+  let tmp28 = null;
+  if (null != message.actor) {
+    const actor = message.actor;
+    let user1 = UserStore.getUser(actor.id);
+    if (user1 == null) {
+      user1 = new UserRecord(actor);
+    }
+    tmp28 = user1;
+  }
+  obj9.actor = tmp28;
   obj9.webhookId = message.webhook_id;
   let isBlockedForMessageResult = RelationshipStore.isBlockedForMessage(message);
   if (!isBlockedForMessageResult) {
-    isBlockedForMessageResult = null != tmp15 && RelationshipStore.isBlocked(tmp15);
-    const tmp28 = null != tmp15 && RelationshipStore.isBlocked(tmp15);
+    isBlockedForMessageResult = null != tmp16 && RelationshipStore.isBlocked(tmp16);
+    const tmp36 = null != tmp16 && RelationshipStore.isBlocked(tmp16);
   }
   obj9.blocked = isBlockedForMessageResult;
   let isIgnoredForMessageResult = RelationshipStore.isIgnoredForMessage(message);
   if (!isIgnoredForMessageResult) {
-    isIgnoredForMessageResult = null != tmp15 && RelationshipStore.isIgnored(tmp15);
-    const tmp30 = null != tmp15 && RelationshipStore.isIgnored(tmp15);
+    isIgnoredForMessageResult = null != tmp16 && RelationshipStore.isIgnored(tmp16);
+    const tmp38 = null != tmp16 && RelationshipStore.isIgnored(tmp16);
   }
   obj9.ignored = isIgnoredForMessageResult;
   obj9.mentionEveryone = message.mention_everyone;
@@ -171,8 +182,8 @@ function createMessageRecord(message, arg1) {
   obj10.mentionUsers = mapped;
   obj10.mentionRoles = mention_roles;
   obj9.mentioned = isMessageMentioned.isMentioned(obj10);
-  const tmp9Result = isMessageMentioned;
-  const tmp9Result3 = GiftCodeUtils;
+  const tmp10Result = isMessageMentioned;
+  const tmp10Result3 = GiftCodeUtils;
   const isGiftCodeEmbedResult = GiftCodeUtils.isGiftCodeEmbed(message);
   const findGiftCodes = GiftCodeUtils.findGiftCodes;
   if (isGiftCodeEmbedResult) {
@@ -186,25 +197,25 @@ function createMessageRecord(message, arg1) {
   }
   obj9.giftCodes = findGiftCodesResult;
   obj9.content = str;
-  obj9.referralTrialOfferId = tmp17;
-  obj9.premiumGroupInviteId = tmp20;
+  obj9.referralTrialOfferId = tmp18;
+  obj9.premiumGroupInviteId = tmp21;
   const call = message.call;
-  let tmp36 = null;
+  let tmp44 = null;
   if (null != call) {
-    let tmp39Result = null;
+    let tmp47Result = null;
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = _modDef4659(date);
+      tmp47Result = _modDef4661(date);
     }
     let durationResult = null;
-    if (null != tmp39Result) {
-      durationResult = _modDef4659.duration(tmp39Result.diff(tmp35));
+    if (null != tmp47Result) {
+      durationResult = _modDef4661.duration(tmp47Result.diff(tmp43));
     }
-    const obj11 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
-    tmp36 = obj11;
+    const obj11 = { participants: call.participants, endedTimestamp: tmp47Result, duration: durationResult };
+    tmp44 = obj11;
   }
-  obj9.call = tmp36;
+  obj9.call = tmp44;
   if (null == message.message_snapshots) {
     let items = [];
   } else {
@@ -241,21 +252,21 @@ function createMessageRecord(message, arg1) {
       role_subscription_data: obj7.roleSubscriptionData,
       purchase_notification: obj7.purchaseNotification,
     } = message);
-    let tmp50;
+    let tmp58;
     if (null != message.poll) {
-      tmp50 = transformMessagPollDefault(message.poll);
+      tmp58 = transformMessagPollDefault(message.poll);
     }
-    obj9.poll = tmp50;
+    obj9.poll = tmp58;
     obj9.sharedClientTheme = message.shared_client_theme;
-    let tmp52;
+    let tmp60;
     if (null != gift_info) {
-      tmp52 = gift_info;
+      tmp60 = gift_info;
     }
-    obj9.giftInfo = tmp52;
+    obj9.giftInfo = tmp60;
     obj9.giftingPrompt = message.gifting_prompt;
     ({ boosting_prompt: obj7.boostingPrompt, guild_space_data: obj7.guildSpaceData } = message);
-    const tmp232 = new MessageRecord(obj9);
-    return tmp232;
+    const tmp242 = new MessageRecord(obj9);
+    return tmp242;
   }
   let mapped1;
   if (poll != null) {
@@ -286,7 +297,7 @@ function createMessageRecord(message, arg1) {
   if (mapped1 == null) {
     mapped1 = [];
   }
-  HermesBuiltin.arraySpread(mapped1, tmp48);
+  HermesBuiltin.arraySpread(mapped1, tmp56);
   items1 = items2.map((item) => {
     const obj = {};
     const merged = Object.assign(item);
@@ -310,9 +321,9 @@ function createMessageRecord(message, arg1) {
     }
     return obj;
   });
-  const tmp9Result4 = GiftCodeUtils;
+  const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4718);
+let MessageRecord = fn(4720);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
 const Constants = fn(1085);
@@ -349,11 +360,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef4659(date);
+          tmp = _modDef4661(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef4659.duration(tmp.diff(tmp46));
+          durationResult = _modDef4661.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;

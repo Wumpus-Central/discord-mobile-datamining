@@ -155,27 +155,27 @@ export const APNGPlayer = ReactCompilerGating.isReactCompilerEnabled()
             obj = {
               play() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.play(tmp.current);
                 }
               },
               pause() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.pause(tmp.current);
                 }
               },
               stop() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.seek(ref1.current, 0);
-                  const Commands2 = closure_0(8982).Commands;
+                  const Commands2 = closure_0(8993).Commands;
                   Commands2.pause(ref1.current);
                 }
               },
               seek(arg0) {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.seek(tmp.current, arg0);
                 }
               },
@@ -190,27 +190,27 @@ export const APNGPlayer = ReactCompilerGating.isReactCompilerEnabled()
             obj = {
               play() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.play(tmp.current);
                 }
               },
               pause() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.pause(tmp.current);
                 }
               },
               stop() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.seek(ref1.current, 0);
-                  const Commands2 = closure_0(8982).Commands;
+                  const Commands2 = closure_0(8993).Commands;
                   Commands2.pause(ref1.current);
                 }
               },
               seek(arg0) {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.seek(tmp.current, arg0);
                 }
               },
@@ -226,27 +226,27 @@ export const APNGPlayer = ReactCompilerGating.isReactCompilerEnabled()
             obj = {
               play() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.play(tmp.current);
                 }
               },
               pause() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.pause(tmp.current);
                 }
               },
               stop() {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.seek(ref1.current, 0);
-                  const Commands2 = closure_0(8982).Commands;
+                  const Commands2 = closure_0(8993).Commands;
                   Commands2.pause(ref1.current);
                 }
               },
               seek(arg0) {
                 if (null != ref1.current) {
-                  const Commands = closure_0(8982).Commands;
+                  const Commands = closure_0(8993).Commands;
                   Commands.seek(tmp.current, arg0);
                 }
               },
@@ -259,11 +259,11 @@ export const APNGPlayer = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("c");
       const obj3 = { ref: ref1, onLoad: tmp10 };
       const merged = Object.assign(tmp4);
-      tmp15 = jsx(ref1(8982), { ref: ref1, onLoad: tmp10 });
+      tmp15 = jsx(ref1(8993), { ref: ref1, onLoad: tmp10 });
       cResult[7] = tmp10;
       cResult[8] = tmp4;
       cResult[9] = tmp15;
-      const tmp13 = ref1(8982);
+      const tmp13 = ref1(8993);
     }
   : function APNGPlayer(onLoad) {
       onLoad = onLoad.onLoad;
@@ -278,31 +278,31 @@ export const APNGPlayer = ReactCompilerGating.isReactCompilerEnabled()
       const imperativeHandle = noop.useImperativeHandle(onLoad.ref, () => ({
         play() {
           if (null != ref.current) {
-            const Commands = onLoad(8982).Commands;
+            const Commands = onLoad(8993).Commands;
             Commands.play(tmp.current);
           }
         },
         pause() {
           if (null != ref.current) {
-            const Commands = onLoad(8982).Commands;
+            const Commands = onLoad(8993).Commands;
             Commands.pause(tmp.current);
           }
         },
         stop() {
           if (null != ref.current) {
-            const Commands = onLoad(8982).Commands;
+            const Commands = onLoad(8993).Commands;
             Commands.seek(ref.current, 0);
-            const Commands2 = onLoad(8982).Commands;
+            const Commands2 = onLoad(8993).Commands;
             Commands2.pause(ref.current);
           }
         },
         seek(arg0) {
           if (null != ref.current) {
-            const Commands = onLoad(8982).Commands;
+            const Commands = onLoad(8993).Commands;
             Commands.seek(tmp.current, arg0);
           }
         },
       }));
       const merged1 = Object.assign(merged);
-      return jsx(ref(8982), { ref, onLoad: callback });
+      return jsx(ref(8993), { ref, onLoad: callback });
     };

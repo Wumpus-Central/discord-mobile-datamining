@@ -1,17 +1,21 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01456_priv.js";
+import DurationsDefault from "../../../utils/Durations.tsx";
+import privDefault from "../../../../_runtime/01457_priv.js";
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 
 require = fn;
 function getCacheKey(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
 }
-const navigation = new privDefault({ max: 100 });
+const HOUR = DurationsDefault.Millis.HOUR;
+const navigation = new privDefault({ max: 100, maxAge: HOUR });
 let set = new Set();
-const tmp2 = new privDefault({ max: 100 });
-const navigation2 = new privDefault({ max: 500 });
+let obj = { max: 100, maxAge: HOUR };
+let obj2 = { max: 500, maxAge: HOUR };
+const tmp2 = new privDefault({ max: 100, maxAge: HOUR });
+const navigation2 = new privDefault({ max: 500, maxAge: HOUR });
 const Store = initializeDefault.Store;
 class GameAutocompleteStore extends Store {}
 const prototype = GameAutocompleteStore.prototype;
@@ -54,10 +58,10 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(result, filter_g
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp(8212).shouldSuppressAutocompleteFetch(result, (arg0) =>
+      result1 = tmp(8220).shouldSuppressAutocompleteFetch(result, (arg0) =>
         closure_3.peek("" + closure_0 + ":" + arg0),
       );
-      const tmpResult = tmp(8212);
+      const tmpResult = tmp(8220);
     }
     return result1;
   }

@@ -119,12 +119,12 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (readOnly === undefined) {
         readOnly = false;
       }
-      const scheduleRuleDateRange = rule(12579).getScheduleRuleDateRange(rule);
-      let obj = rule(12579);
-      const obj2 = rule(12579);
+      const scheduleRuleDateRange = rule(12519).getScheduleRuleDateRange(rule);
+      let obj = rule(12519);
+      const obj2 = rule(12519);
       const obj3 = {
         label: scheduleRuleDateRange,
-        subLabel: rule(12579).formatDays(rule.days),
+        subLabel: rule(12519).formatDays(rule.days),
         trailing: null,
         arrow: null,
         onPress: null,
@@ -137,7 +137,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         stringResult = string(tmp4["4z9fN+"]);
       }
-      obj3.trailing = closure_5(rule(5086).Text, {
+      obj3.trailing = closure_5(rule(5087).Text, {
         variant: "text-sm/medium",
         color: "text-subtle",
         children: stringResult,
@@ -153,7 +153,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         };
       }
       obj3.onPress = fn;
-      return closure_5(rule(6184).TableRow, obj3);
+      return closure_5(rule(6186).TableRow, obj3);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };

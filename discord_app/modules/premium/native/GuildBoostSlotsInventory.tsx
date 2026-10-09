@@ -8,9 +8,10 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import actions_BillingActionCreatorsAll from "../../billing/actions/BillingActionCreators.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import useCountdownDefault from "../../../hooks/useCountdown.tsx";
-import _modDef13626 from "../../../../_runtime/metro/13626__.js";
+import _modDef13717 from "../../../../_runtime/metro/13717__.js";
 import SubscriptionPlaceholderPattern from "../../../design/components/Illustration/native/redesign/generated/SubscriptionPlaceholderPattern.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
@@ -22,12 +23,11 @@ import TextStyles from "../../rebrand/native/TextStyles.tsx";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let c14 = "0";
-const createStyles = fn(5090);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
+let c13 = "0";
+const createStyles = fn(5091);
 let obj2 = {
   inventory: { marginBottom: 32 },
   header: { marginHorizontal: 16, marginBottom: 16 },
@@ -92,13 +92,13 @@ obj2.subscriptionSlotInfo = { flexShrink: 1, flexGrow: 1 };
 obj2.subscriptionSlotInfoTitle = { lineHeight: 24 };
 obj2.subscriptionSlotInfoCooldown = { lineHeight: 16 };
 obj2.unusedSlots = { marginBottom: 32 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildBoostSlotCooldown(cooldownEndsAt) {
       const cResult = c.c(9);
       cooldownEndsAt = cooldownEndsAt.cooldownEndsAt;
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       if (cResult[0] !== cooldownEndsAt) {
         const _Date = Date;
         const date = new Date(cooldownEndsAt);
@@ -125,7 +125,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp15;
             }
             const obj3 = { style: tmp19, variant: "text-xs/medium", color: "text-muted", children: tmp13 };
-            const tmp17 = closure_1_11(Text_Text.Text, obj3);
+            const tmp17 = collapsed(Text_Text.Text, obj3);
             cResult[6] = tmp4.subscriptionSlotInfoCooldown;
             cResult[7] = tmp13;
             cResult[8] = tmp17;
@@ -147,7 +147,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cooldownEndsAt = cooldownEndsAt.cooldownEndsAt;
       const items = [cooldownEndsAt];
       const memo = noop.useMemo(() => new Date(cooldownEndsAt), items);
-      const tmp = closure_15();
+      const tmp = closure_14();
       ({ days, hours, minutes } = useCountdownDefault(memo, 15000));
       const tmp3 = useCountdownDefault(memo, 15000);
       let tmp5 = null;
@@ -161,16 +161,16 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         const time = { days, hours, minutes };
         obj.children = intl.format(util.t.NffSH8, time);
-        tmp5 = closure_1_11(Text_Text.Text, obj);
+        tmp5 = collapsed(Text_Text.Text, obj);
       }
       return tmp5;
     };
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildBoostSlotsInventoryRow(arg0) {
       const cResult = c.c(18);
       ({ title, subtitle, action, isLast } = arg0);
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       if (cResult[0] === tmp4.subscriptionSlotInfoTitle) {
         if (cResult[1] === title) {
           let tmp5 = cResult[2];
@@ -200,7 +200,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = { style: tmp4.subscriptionSlot, children: null };
                   const items = [tmp11, tmp15];
                   obj2.children = items;
-                  const tmp22 = __initData(hasOwnProperty, obj2);
+                  const tmp22 = closure_1_11(View, obj2);
                   cResult[14] = tmp4.subscriptionSlot;
                   cResult[15] = tmp11;
                   cResult[16] = tmp15;
@@ -210,7 +210,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp16 = null;
                 if (!isLast) {
                   const obj3 = { style: tmp4.subscriptionSlotBorder };
-                  tmp16 = closure_1_11(hasOwnProperty, obj3);
+                  tmp16 = collapsed(View, obj3);
                 }
                 cResult[11] = isLast;
                 cResult[12] = tmp4.subscriptionSlotBorder;
@@ -221,7 +221,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { style: tmp4.subscriptionSlotInner, children: null };
             const items1 = [tmp7, action];
             obj4.children = items1;
-            const tmp14 = __initData(hasOwnProperty, obj4);
+            const tmp14 = closure_1_11(View, obj4);
             cResult[7] = action;
             cResult[8] = tmp4.subscriptionSlotInner;
             cResult[9] = tmp7;
@@ -232,14 +232,14 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp4.subscriptionSlotInfo, children: null };
         const items2 = [tmp5, subtitle];
         obj5.children = items2;
-        const tmp10 = __initData(hasOwnProperty, obj5);
+        const tmp10 = closure_1_11(View, obj5);
         cResult[3] = tmp4.subscriptionSlotInfo;
         cResult[4] = subtitle;
         cResult[5] = tmp5;
         cResult[6] = tmp10;
         tmp7 = tmp10;
       }
-      const tmp6 = closure_1_11(Text_Text.Text, {
+      const tmp6 = collapsed(Text_Text.Text, {
         style: tmp4.subscriptionSlotInfoTitle,
         lineClamp: 1,
         variant: "text-md/semibold",
@@ -260,12 +260,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function GuildBoostSlotsInventoryRow(arg0) {
       ({ title, subtitle, action, isLast } = arg0);
-      const tmp = closure_15();
+      const tmp = closure_14();
       const obj = { style: tmp.subscriptionSlot, children: null };
       const obj2 = { style: tmp.subscriptionSlotInner, children: null };
       const obj3 = { style: tmp.subscriptionSlotInfo, children: null };
       const items = [
-        closure_1_11(Text_Text.Text, {
+        collapsed(Text_Text.Text, {
           style: tmp.subscriptionSlotInfoTitle,
           lineClamp: 1,
           variant: "text-md/semibold",
@@ -275,20 +275,20 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         subtitle,
       ];
       obj3.children = items;
-      const items1 = [__initData(hasOwnProperty, obj3), action];
+      const items1 = [closure_1_11(View, obj3), action];
       obj2.children = items1;
-      const items2 = [__initData(hasOwnProperty, obj2)];
+      const items2 = [closure_1_11(View, obj2)];
       let tmp4Result = null;
       if (!isLast) {
         const obj5 = { style: tmp.subscriptionSlotBorder };
-        tmp4Result = closure_1_11(hasOwnProperty, obj5);
+        tmp4Result = collapsed(View, obj5);
       }
       items2[1] = tmp4Result;
       obj.children = items2;
-      return __initData(hasOwnProperty, obj);
+      return closure_1_11(View, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildBoostSlot(guildBoostSlot) {
       const cResult = guildBoostSlot(576).c(13);
       guildBoostSlot = guildBoostSlot.guildBoostSlot;
@@ -315,10 +315,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             formatToPlainStringResult = intl.formatToPlainString(tmp(1126).t["ePe+Xh"], obj3);
           }
           cResult[0] = id;
-          cResult[1] = closure_17;
+          cResult[1] = closure_16;
           cResult[2] = formatToPlainStringResult;
           let tmp6 = formatToPlainStringResult;
-          let tmp5 = closure_17;
+          let tmp5 = closure_16;
         } else {
           tmp5 = cResult[1];
           tmp6 = cResult[2];
@@ -327,7 +327,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18 = null;
           if (null != guildBoostSlot.cooldownEndsAt) {
             const obj4 = { cooldownEndsAt: guildBoostSlot.cooldownEndsAt };
-            tmp18 = closure_11(closure_16, obj4);
+            tmp18 = closure_10(closure_15, obj4);
           }
           cResult[3] = guildBoostSlot.cooldownEndsAt;
           cResult[4] = tmp18;
@@ -351,8 +351,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
             const intl2 = tmp(1126).intl;
             obj6.children = intl2.string(tmp(1126).t.jqqLb6);
-            obj5.children = closure_11(tmp(5086).Text, obj6);
-            tmp22 = closure_11(tmp(6189).PressableOpacity, obj5);
+            obj5.children = closure_10(tmp(5087).Text, obj6);
+            tmp22 = closure_10(tmp(6191).PressableOpacity, obj5);
           }
           cResult[5] = guildBoostSlot;
           cResult[6] = tmp22;
@@ -373,7 +373,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj7 = { title: tmp6, subtitle: tmp17, action: tmp21, isLast };
-        const tmp26 = closure_11(tmp5, obj7);
+        const tmp26 = closure_10(tmp5, obj7);
         cResult[7] = tmp5;
         cResult[8] = isLast;
         cResult[9] = tmp6;
@@ -410,7 +410,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp6Result = null;
         if (null != guildBoostSlot.cooldownEndsAt) {
           const obj4 = { cooldownEndsAt: guildBoostSlot.cooldownEndsAt };
-          tmp6Result = closure_11(closure_16, obj4);
+          tmp6Result = closure_10(closure_15, obj4);
         }
         obj3.subtitle = tmp6Result;
         let tmp6Result2 = null;
@@ -428,20 +428,20 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { variant: "text-md/medium", color: "control-brand-foreground", children: null };
           const intl2 = guildBoostSlot(1126).intl;
           obj6.children = intl2.string(guildBoostSlot(1126).t.jqqLb6);
-          obj5.children = closure_11(guildBoostSlot(5086).Text, obj6);
-          tmp6Result2 = closure_11(guildBoostSlot(6189).PressableOpacity, obj5);
+          obj5.children = closure_10(guildBoostSlot(5087).Text, obj6);
+          tmp6Result2 = closure_10(guildBoostSlot(6191).PressableOpacity, obj5);
         }
         obj3.action = tmp6Result2;
         obj3.isLast = tmp;
-        return closure_11(closure_17, obj3);
+        return closure_10(closure_16, obj3);
       }
     };
 ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? function UnusedGuildBoostSlots(unusedSlots) {
       const cResult = found(576).c(13);
       const unusedSlots1 = unusedSlots.unusedSlots;
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       if (cResult[0] === tmp4.unusedSlots) {
         if (cResult[1] === unusedSlots1) {
           let tmp5 = cResult[2];
@@ -453,25 +453,25 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] === tmp6) {
             if (cResult[10] === tmp7) {
               if (cResult[11] === tmp8) {
-                let tmp15 = cResult[12];
+                let tmp16 = cResult[12];
               }
-              return tmp15;
+              return tmp16;
             }
           }
         }
         let obj2 = { style: tmp6, children: null };
         const items = [tmp7, tmp8];
         obj2.children = items;
-        const tmp17 = closure_12(tmp5, obj2);
+        const tmp18 = closure_11(tmp5, obj2);
         cResult[8] = tmp5;
         cResult[9] = tmp6;
         cResult[10] = tmp7;
         cResult[11] = tmp8;
-        cResult[12] = tmp17;
-        tmp15 = tmp17;
+        cResult[12] = tmp18;
+        tmp16 = tmp18;
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function h(cooldownEndsAt) {
+        const fn = function v(cooldownEndsAt) {
           cooldownEndsAt = cooldownEndsAt.cooldownEndsAt;
           let tmp = null != cooldownEndsAt;
           if (tmp) {
@@ -490,70 +490,27 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       found = unusedSlots1.filter(tmp9);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class I {
-          constructor(arg0) {
-            cooldownEndsAt = unusedSlots.cooldownEndsAt;
-            tmp = null == cooldownEndsAt;
-            if (!tmp) {
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = new.target;
-              tmp4 = new.target;
-              tmp5 = cooldownEndsAt;
-              date = new Date(cooldownEndsAt);
-              tmp6 = date;
-              _Date2 = Date;
-              valueOfResult = date.valueOf();
-              tmp = valueOfResult <= Date.now();
-            }
-            return tmp;
+        const fn2 = function w(cooldownEndsAt) {
+          cooldownEndsAt = cooldownEndsAt.cooldownEndsAt;
+          let tmp = null == cooldownEndsAt;
+          if (!tmp) {
+            const _Date = Date;
+            const date = new Date(cooldownEndsAt);
+            const _Date2 = Date;
+            tmp = date.valueOf() <= Date.now();
+            const valueOfResult = date.valueOf();
           }
-        }
-        cResult[7] = I;
+          return tmp;
+        };
+        cResult[7] = fn2;
+        let tmp10 = fn2;
       } else {
-        class I {
-          constructor(arg0) {
-            cooldownEndsAt = unusedSlots.cooldownEndsAt;
-            tmp = null == cooldownEndsAt;
-            if (!tmp) {
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = new.target;
-              tmp4 = new.target;
-              tmp5 = cooldownEndsAt;
-              date = new Date(cooldownEndsAt);
-              tmp6 = date;
-              _Date2 = Date;
-              valueOfResult = date.valueOf();
-              tmp = valueOfResult <= Date.now();
-            }
-            return tmp;
-          }
-        }
+        tmp10 = cResult[7];
       }
-      const found1 = unusedSlots1.filter(I);
+      const found1 = unusedSlots1.filter(tmp10);
       unusedSlots = tmp4.unusedSlots;
       let tmp12 = null;
       if (found1.length > 0) {
-        class I {
-          constructor(arg0) {
-            cooldownEndsAt = unusedSlots.cooldownEndsAt;
-            tmp = null == cooldownEndsAt;
-            if (!tmp) {
-              tmp2 = globalThis;
-              _Date = Date;
-              tmp3 = new.target;
-              tmp4 = new.target;
-              tmp5 = cooldownEndsAt;
-              date = new Date(cooldownEndsAt);
-              tmp6 = date;
-              _Date2 = Date;
-              valueOfResult = date.valueOf();
-              tmp = valueOfResult <= Date.now();
-            }
-            return tmp;
-          }
-        }
         const obj3 = { title: null, action: null, isLast: null };
         let intl = tmp(1126).intl;
         const obj4 = { numSubscriptions: found1.length };
@@ -568,10 +525,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { variant: "text-md/medium", color: "text-link", children: null };
         const intl2 = tmp(1126).intl;
         obj6.children = intl2.string(tmp(1126).t["7KyPor"]);
-        obj5.children = closure_11(tmp(5086).Text, obj6);
-        obj3.action = closure_11(tmp(6189).PressableOpacity, obj5);
+        obj5.children = closure_10(tmp(5087).Text, obj6);
+        obj3.action = closure_10(tmp(6191).PressableOpacity, obj5);
         obj3.isLast = 0 === found.length;
-        tmp12 = closure_11(closure_17, obj3);
+        tmp12 = closure_10(closure_16, obj3);
       }
       const mapped = found.map((cooldownEndsAt, index) => {
         const obj = { title: null, subtitle: null, isLast: null };
@@ -580,22 +537,22 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         let tmpResult = null;
         if (null != cooldownEndsAt.cooldownEndsAt) {
           const obj2 = { cooldownEndsAt: cooldownEndsAt.cooldownEndsAt };
-          tmpResult = closure_2_11(closure_16, obj2);
+          tmpResult = collapsed(closure_15, obj2);
         }
         obj.subtitle = tmpResult;
         obj.isLast = index === found.length - 1;
-        return closure_2_11(closure_17, obj, cooldownEndsAt.id);
+        return collapsed(closure_16, obj, cooldownEndsAt.id);
       });
       cResult[0] = tmp4.unusedSlots;
       cResult[1] = unusedSlots1;
-      cResult[2] = closure_5;
+      cResult[2] = View;
       cResult[3] = unusedSlots;
       cResult[4] = tmp12;
       cResult[5] = mapped;
       tmp7 = tmp12;
       tmp8 = mapped;
       tmp6 = unusedSlots;
-      tmp5 = closure_5;
+      tmp5 = View;
       let obj = found(576);
     }
   : function UnusedGuildBoostSlots(unusedSlots) {
@@ -624,7 +581,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp;
       });
-      let obj = { style: closure_15().unusedSlots, children: null };
+      let obj = { style: closure_14().unusedSlots, children: null };
       let tmp4 = null;
       if (found1.length > 0) {
         let obj2 = { title: null, action: null, isLast: null };
@@ -641,10 +598,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { variant: "text-md/medium", color: "text-link", children: null };
         const intl2 = found(1126).intl;
         obj5.children = intl2.string(found(1126).t["7KyPor"]);
-        obj4.children = closure_11(found(5086).Text, obj5);
-        obj2.action = closure_11(found(6189).PressableOpacity, obj4);
+        obj4.children = closure_10(found(5087).Text, obj5);
+        obj2.action = closure_10(found(6191).PressableOpacity, obj4);
         obj2.isLast = 0 === found.length;
-        tmp4 = closure_11(closure_17, obj2);
+        tmp4 = closure_10(closure_16, obj2);
       }
       const items = [
         tmp4,
@@ -655,28 +612,28 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           let tmpResult = null;
           if (null != cooldownEndsAt.cooldownEndsAt) {
             const obj2 = { cooldownEndsAt: cooldownEndsAt.cooldownEndsAt };
-            tmpResult = closure_2_11(closure_16, obj2);
+            tmpResult = collapsed(closure_15, obj2);
           }
           obj.subtitle = tmpResult;
           obj.isLast = index === found.length - 1;
-          return closure_2_11(closure_17, obj, cooldownEndsAt.id);
+          return collapsed(closure_16, obj, cooldownEndsAt.id);
         }),
       ];
       obj.children = items;
-      return closure_12(closure_5, obj);
+      return closure_11(View, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? function BoostedGuildInfo(arg0) {
       const cResult = c.c(26);
       ({ guild, numGuildBoostSlots } = arg0);
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       if (null == guild) {
         return null;
       } else {
         if (cResult[0] !== guild) {
           const obj2 = { guild, size: GuildIcon.GuildIconSizes.NORMAL, selected: false };
-          const tmp9 = closure_1_11(GuildIconDefault, obj2);
+          const tmp9 = collapsed(GuildIconDefault, obj2);
           cResult[0] = guild;
           cResult[1] = tmp9;
           let tmp5 = tmp9;
@@ -692,8 +649,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp14 = cResult[7];
             }
             if (cResult[8] !== tmp4.guildInfoRowIcon) {
-              const obj3 = { source: _modDef13626, style: tmp4.guildInfoRowIcon };
-              const tmp21 = closure_1_11(timestampProducer, obj3);
+              const obj3 = { source: _modDef13717, style: tmp4.guildInfoRowIcon };
+              const tmp21 = collapsed(FastImageDefault, obj3);
               cResult[8] = tmp4.guildInfoRowIcon;
               cResult[9] = tmp21;
               let tmp17 = tmp21;
@@ -734,7 +691,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj5 = { style: tmp4.guildInfo, children: null };
                     const items = [tmp10, tmp31];
                     obj5.children = items;
-                    const tmp38 = __initData(hasOwnProperty, obj5);
+                    const tmp38 = closure_1_11(View, obj5);
                     cResult[22] = tmp4.guildInfo;
                     cResult[23] = tmp31;
                     cResult[24] = tmp10;
@@ -744,7 +701,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj6 = { children: null };
                   const items1 = [tmp14, tmp27];
                   obj6.children = items1;
-                  const tmp34 = __initData(hasOwnProperty, obj6);
+                  const tmp34 = closure_1_11(View, obj6);
                   cResult[19] = tmp27;
                   cResult[20] = tmp14;
                   cResult[21] = tmp34;
@@ -754,7 +711,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { style: tmp4.guildInfoRowBottom, children: null };
               const items2 = [tmp17, tmp24];
               obj7.children = items2;
-              const tmp30 = __initData(hasOwnProperty, obj7);
+              const tmp30 = closure_1_11(View, obj7);
               cResult[15] = tmp4.guildInfoRowBottom;
               cResult[16] = tmp17;
               cResult[17] = tmp24;
@@ -767,7 +724,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               color: "interactive-text-active",
               children: tmp22,
             };
-            const tmp26 = closure_1_11(Text_Text.Text, obj8);
+            const tmp26 = collapsed(Text_Text.Text, obj8);
             cResult[12] = tmp4.guildInfoSubscriptionCount;
             cResult[13] = tmp22;
             cResult[14] = tmp26;
@@ -779,14 +736,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             color: "interactive-text-active",
             children: guild.name,
           };
-          const tmp16 = closure_1_11(Text_Text.Text, obj9);
+          const tmp16 = collapsed(Text_Text.Text, obj9);
           cResult[5] = guild.name;
           cResult[6] = tmp4.guildInfoName;
           cResult[7] = tmp16;
           tmp14 = tmp16;
         }
         const obj10 = { style: tmp4.guildInfoIcon, children: tmp5 };
-        const tmp13 = closure_1_11(hasOwnProperty, obj10);
+        const tmp13 = collapsed(View, obj10);
         cResult[2] = tmp4.guildInfoIcon;
         cResult[3] = tmp5;
         cResult[4] = tmp13;
@@ -795,14 +752,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function BoostedGuildInfo(guild) {
       guild = guild.guild;
-      const tmp = closure_15();
+      const tmp = closure_14();
       let tmp2 = null;
       if (null != guild) {
         const obj = { style: tmp.guildInfo, children: null };
         const obj2 = { style: tmp.guildInfoIcon, children: null };
         const obj3 = { guild, size: GuildIcon.GuildIconSizes.NORMAL, selected: false };
-        obj2.children = closure_1_11(GuildIconDefault, obj3);
-        const items = [closure_1_11(hasOwnProperty, obj2)];
+        obj2.children = collapsed(GuildIconDefault, obj3);
+        const items = [collapsed(View, obj2)];
         const obj4 = { children: null };
         const obj5 = {
           style: tmp.guildInfoName,
@@ -810,10 +767,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           color: "interactive-text-active",
           children: guild.name,
         };
-        const items1 = [closure_1_11(Text_Text.Text, obj5)];
+        const items1 = [collapsed(Text_Text.Text, obj5)];
         const obj6 = { style: tmp.guildInfoRowBottom, children: null };
-        const obj7 = { source: _modDef13626, style: tmp.guildInfoRowIcon };
-        const items2 = [closure_1_11(timestampProducer, obj7)];
+        const obj7 = { source: null, style: null };
+        obj7.source = _modDef13717;
+        obj7.style = tmp.guildInfoRowIcon;
+        const items2 = [collapsed(FastImageDefault, obj7)];
         const obj8 = {
           style: tmp.guildInfoSubscriptionCount,
           variant: "text-xs/semibold",
@@ -823,23 +782,23 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         const obj9 = { numSubscriptions: guild.numGuildBoostSlots };
         obj8.children = intl.format(util.t.bexfNy, obj9);
-        items2[1] = closure_1_11(Text_Text.Text, obj8);
+        items2[1] = collapsed(Text_Text.Text, obj8);
         obj6.children = items2;
-        items1[1] = __initData(hasOwnProperty, obj6);
+        items1[1] = closure_1_11(View, obj6);
         obj4.children = items1;
-        items[1] = __initData(hasOwnProperty, obj4);
+        items[1] = closure_1_11(View, obj4);
         obj.children = items;
-        tmp2 = __initData(hasOwnProperty, obj);
+        tmp2 = closure_1_11(View, obj);
       }
       return tmp2;
     };
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? function BoostedGuild(guildId) {
       const cResult = guildId(576).c(43);
       guildId = guildId.guildId;
       const guildBoostSlots = guildId.guildBoostSlots;
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[0] = items;
@@ -848,7 +807,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== guildId) {
-        const fn = function n() {
+        const fn = function s() {
           return GuildStore.getGuild(guildId);
         };
         cResult[1] = guildId;
@@ -861,14 +820,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = guildId(504).useStateFromStores(first, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ThemeStore];
-        class I {
-          constructor() {
-            return closure_1_7.theme;
-          }
-        }
+        const fn2 = function y() {
+          return theme.theme;
+        };
         cResult[3] = items1;
-        cResult[4] = I;
-        let tmp10 = I;
+        cResult[4] = fn2;
+        let tmp10 = fn2;
         let tmp9 = items1;
       } else {
         tmp9 = cResult[3];
@@ -881,13 +838,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != stateFromStores) {
           guildBannerSource = null;
           if (null != stateFromStores.banner) {
-            guildBannerSource = guildBoostSlots(1414).getGuildBannerSource(stateFromStores);
-            const obj4 = guildBoostSlots(1414);
-          }
-        }
-        class I {
-          constructor() {
-            return closure_1_7.theme;
+            guildBannerSource = guildBoostSlots(1415).getGuildBannerSource(stateFromStores);
+            const obj4 = guildBoostSlots(1415);
           }
         }
         cResult[5] = stateFromStores;
@@ -897,7 +849,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[6];
       }
       const tmpResult3 = guildId(504);
-      let subscriptionPlaceholderPatternSource = guildId(13627).useSubscriptionPlaceholderPatternSource();
+      let subscriptionPlaceholderPatternSource = guildId(13718).useSubscriptionPlaceholderPatternSource();
       if (null != tmp13) {
         subscriptionPlaceholderPatternSource = tmp13;
       }
@@ -949,7 +901,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                                     return jsx(GuildBoostSlot, obj, guildId.id);
                                   }
                                 }
-                                const tmp44 = closure_11(closure_5, { children: null });
+                                const tmp44 = closure_10(View, { children: null });
                                 cResult[37] = tmp37;
                                 cResult[38] = tmp44;
                                 let tmp41 = tmp44;
@@ -978,7 +930,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                               const obj3 = { style: tmp4.boostedGuild, children: null };
                               const items2 = [tmp34, tmp41];
                               obj3.children = items2;
-                              const tmp47 = closure_12(closure_5, obj3);
+                              const tmp47 = closure_11(View, obj3);
                               cResult[39] = tmp4.boostedGuild;
                               cResult[40] = tmp34;
                               cResult[41] = tmp41;
@@ -1020,28 +972,18 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           tmp38 = P;
                         }
                       }
-                      class I {
-                        constructor() {
-                          return closure_1_7.theme;
-                        }
-                      }
                       const obj5 = { style: tmp4.subscriptionBody, children: null };
                       const items3 = [tmp28, tmp31];
                       obj5.children = items3;
-                      const tmp36 = closure_12(closure_5, obj5);
+                      const tmp36 = closure_11(View, obj5);
                       cResult[27] = tmp4.subscriptionBody;
                       cResult[28] = tmp28;
                       cResult[29] = tmp31;
                       cResult[30] = tmp36;
                       tmp34 = tmp36;
                     }
-                    class I {
-                      constructor() {
-                        return closure_1_7.theme;
-                      }
-                    }
                     const obj6 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
-                    const tmp33 = closure_11(closure_20, obj6);
+                    const tmp33 = closure_10(closure_19, obj6);
                     cResult[24] = stateFromStores;
                     cResult[25] = guildBoostSlots.length;
                     cResult[26] = tmp33;
@@ -1049,15 +991,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              class I {
-                constructor() {
-                  return closure_1_7.theme;
-                }
-              }
               const obj7 = { style: tmp4.subscriptionImageView, children: null };
               const items4 = [tmp20, tmp23, tmp25];
               obj7.children = items4;
-              const tmp30 = closure_12(closure_5, obj7);
+              const tmp30 = closure_11(View, obj7);
               cResult[19] = tmp4.subscriptionImageView;
               cResult[20] = tmp23;
               cResult[21] = tmp25;
@@ -1065,35 +1002,20 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[23] = tmp30;
               tmp28 = tmp30;
             }
-            class I {
-              constructor() {
-                return closure_1_7.theme;
-              }
-            }
             const obj8 = { guild: stateFromStores, theme: stateFromStores1 };
-            const tmp27 = closure_11(guildBoostSlots(13631), obj8);
+            const tmp27 = closure_10(guildBoostSlots(13722), obj8);
             cResult[16] = stateFromStores;
             cResult[17] = stateFromStores1;
             cResult[18] = tmp27;
             tmp25 = tmp27;
-          }
-          class I {
-            constructor() {
-              return closure_1_7.theme;
-            }
           }
           cResult[13] = tmp13;
           cResult[14] = tmp4.subscriptionImageOverlay;
           cResult[15] = null;
           tmp23 = tmp24;
         }
-        class I {
-          constructor() {
-            return closure_1_7.theme;
-          }
-        }
         const obj9 = { source: subscriptionPlaceholderPatternSource, style: tmp19 };
-        const tmp22 = closure_11(guildBoostSlots(6164), obj9);
+        const tmp22 = closure_10(guildBoostSlots(6163), obj9);
         cResult[10] = subscriptionPlaceholderPatternSource;
         cResult[11] = tmp19;
         cResult[12] = tmp22;
@@ -1104,11 +1026,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = prop;
       cResult[9] = items5;
       tmp19 = items5;
-      const tmpResult4 = guildId(13627);
+      const tmpResult4 = guildId(13718);
     }
   : function BoostedGuild(arg0) {
       ({ guildId: require, guildBoostSlots } = arg0);
-      const tmp = closure_15();
+      const tmp = closure_14();
       const items = [GuildStore];
       const stateFromStores = initialize.useStateFromStores(items, () => GuildStore.getGuild(require));
       const items1 = [ThemeStore];
@@ -1117,8 +1039,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != stateFromStores) {
         guildBannerSource = null;
         if (null != stateFromStores.banner) {
-          guildBannerSource = guildBoostSlots(1414).getGuildBannerSource(stateFromStores);
-          const obj3 = guildBoostSlots(1414);
+          guildBannerSource = guildBoostSlots(1415).getGuildBannerSource(stateFromStores);
+          const obj3 = guildBoostSlots(1415);
         }
       }
       let subscriptionPlaceholderPatternSource =
@@ -1138,34 +1060,34 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items2[1] = prop;
       obj7.style = items2;
-      const items3 = [closure_11(guildBoostSlots(6164), obj7), ,];
+      const items3 = [closure_10(guildBoostSlots(6163), obj7), ,];
       let tmp11Result = null;
       if (null != guildBannerSource) {
         const obj8 = { style: tmp.subscriptionImageOverlay };
-        tmp11Result = closure_11(closure_5, obj8);
+        tmp11Result = closure_10(View, obj8);
       }
       items3[1] = tmp11Result;
-      items3[2] = closure_11(guildBoostSlots(13631), { guild: stateFromStores, theme: stateFromStores1 });
+      items3[2] = closure_10(guildBoostSlots(13722), { guild: stateFromStores, theme: stateFromStores1 });
       obj6.children = items3;
       const items4 = [
-        closure_12(closure_5, obj6),
-        closure_11(closure_20, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length }),
+        closure_11(View, obj6),
+        closure_10(closure_19, { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length }),
       ];
       obj5.children = items4;
-      const items5 = [closure_12(closure_5, obj5)];
+      const items5 = [closure_11(View, obj5)];
       const obj9 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
-      const tmp13 = guildBoostSlots(6164);
-      items5[1] = closure_11(closure_5, {
+      const tmp13 = guildBoostSlots(6163);
+      items5[1] = closure_10(View, {
         children: guildBoostSlots.map((guildBoostSlot, index) =>
-          closure_2_11(
-            closure_18,
+          collapsed(
+            closure_17,
             { guild: stateFromStores, guildBoostSlot, isLast: index === guildBoostSlots.length - 1 },
             guildBoostSlot.id,
           ),
         ),
       });
       obj4.children = items5;
-      return closure_12(closure_5, obj4);
+      return closure_11(View, obj4);
     };
 ReactCompilerGating = fn(558);
 let obj7 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1 };
@@ -1175,11 +1097,10 @@ const result = size.fileFinishedImporting("modules/premium/native/GuildBoostSlot
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildBoostSlotsInventory() {
       const cResult = c.c(21);
-      const tmp4 = closure_15();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function o() {
+        const fn = function l() {
           const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-          const guildBoostSlots = tmp16(8000).fetchGuildBoostSlots();
+          const guildBoostSlots = tmp16(8008).fetchGuildBoostSlots();
         };
         const items = [];
         cResult[0] = fn;
@@ -1192,7 +1113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [SubscriptionStore];
-        const fn2 = function s() {
+        const fn2 = function c() {
           return premiumTypeSubscription.getPremiumTypeSubscription();
         };
         cResult[2] = items1;
@@ -1203,15 +1124,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
         tmp9 = cResult[3];
       }
+      const tmp4 = closure_14();
       const stateFromStores = initialize.useStateFromStores(tmp8, tmp9);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GuildBoostSlotStore];
-        const fn3 = function w() {
-          return boostSlots.boostSlots;
-        };
+        class B {
+          constructor() {
+            return closure_1_8.boostSlots;
+          }
+        }
         cResult[4] = items2;
-        cResult[5] = fn3;
-        let tmp13 = fn3;
+        cResult[5] = B;
+        let tmp13 = B;
         let tmp12 = items2;
       } else {
         tmp12 = cResult[4];
@@ -1225,47 +1149,67 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class T {
             constructor(arg0) {
               premiumGuildSubscription = arg0.premiumGuildSubscription;
-              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
             }
           }
           cResult[8] = T;
+          class B {
+            constructor() {
+              return closure_1_8.boostSlots;
+            }
+          }
         } else {
           class T {
             constructor(arg0) {
               premiumGuildSubscription = arg0.premiumGuildSubscription;
-              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
             }
           }
         }
+        class B {
+          constructor() {
+            return closure_1_8.boostSlots;
+          }
+        }
         const obj4 = _modDef12(stateFromStores1);
-        const valueResult = _modDef12(stateFromStores1).groupBy(T).value();
+        const valueResult = _modDef12(stateFromStores1).groupBy(tmp17).value();
         cResult[6] = stateFromStores1;
         cResult[7] = valueResult;
-        const iter = _modDef12(stateFromStores1).groupBy(T);
+        const iter = _modDef12(stateFromStores1).groupBy(tmp17);
       } else {
         class T {
           constructor(arg0) {
             premiumGuildSubscription = arg0.premiumGuildSubscription;
-            return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+            return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
           }
         }
         require = tmp16;
+        class B {
+          constructor() {
+            return closure_1_8.boostSlots;
+          }
+        }
         if (cResult[9] !== tmp16) {
           class T {
             constructor(arg0) {
               premiumGuildSubscription = arg0.premiumGuildSubscription;
-              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
             }
           }
           const keys = Object.keys(tmp16);
-          const found = keys.filter((item) => item !== closure_1_14);
+          const found = keys.filter((item) => item !== closure_1_13);
+          class B {
+            constructor() {
+              return closure_1_8.boostSlots;
+            }
+          }
           cResult[9] = tmp16;
           cResult[10] = found;
         } else {
           class T {
             constructor(arg0) {
               premiumGuildSubscription = arg0.premiumGuildSubscription;
-              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
             }
           }
         }
@@ -1273,53 +1217,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           class T {
             constructor(arg0) {
               premiumGuildSubscription = arg0.premiumGuildSubscription;
-              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
             }
           }
           if (null != stateFromStores) {
             class T {
               constructor(arg0) {
                 premiumGuildSubscription = arg0.premiumGuildSubscription;
-                return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+                return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
               }
             }
             if (cResult[13] === tmp16) {
               class T {
                 constructor(arg0) {
                   premiumGuildSubscription = arg0.premiumGuildSubscription;
-                  return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+                  return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
                 }
               }
             }
-            let tmp25 = null;
-            if (arr4.length > 0) {
-              class T {
-                constructor(arg0) {
-                  premiumGuildSubscription = arg0.premiumGuildSubscription;
-                  return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
-                }
+            class B {
+              constructor() {
+                return closure_1_8.boostSlots;
               }
-              const obj2 = { children: null };
-              const obj3 = { style: tmp4.header, variant: "eyebrow", color: "text-default", children: null };
-              const intl = tmp(1126).intl;
-              obj3.children = intl.string(tmp(1126).t.gB9oQ7);
-              const items3 = [
-                closure_11(tmp(5086).Text, obj3),
-                arr4.map((guildId) => closure_2_11(closure_21, { guildId, guildBoostSlots: tmp16[guildId] }, guildId)),
-              ];
-              obj2.children = items3;
-              tmp25 = closure_12(closure_13, obj2);
             }
             cResult[13] = tmp16;
             cResult[14] = arr4;
             cResult[15] = tmp4.header;
-            cResult[16] = tmp25;
+            cResult[16] = null;
           }
         } else {
           class T {
             constructor(arg0) {
               premiumGuildSubscription = arg0.premiumGuildSubscription;
-              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+              return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
             }
           }
         }
@@ -1328,10 +1258,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult2 = initialize;
     }
   : function GuildBoostSlotsInventory() {
-      const tmp = closure_15();
+      const tmp = closure_14();
       const effect = noop.useEffect(() => {
         const subscriptions = actions_BillingActionCreatorsAll.fetchSubscriptions();
-        const guildBoostSlots = valueResult(8000).fetchGuildBoostSlots();
+        const guildBoostSlots = valueResult(8008).fetchGuildBoostSlots();
       }, []);
       const items = [SubscriptionStore];
       const stateFromStores = initialize.useStateFromStores(items, () =>
@@ -1343,12 +1273,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const valueResult = _modDef12(stateFromStores1)
         .groupBy((premiumGuildSubscription) => {
           premiumGuildSubscription = premiumGuildSubscription.premiumGuildSubscription;
-          return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_14;
+          return null != premiumGuildSubscription ? premiumGuildSubscription.guildId : closure_1_13;
         })
         .value();
       require = valueResult;
       const keys = Object.keys(valueResult);
-      const found = keys.filter((item) => item !== closure_1_14);
+      const found = keys.filter((item) => item !== closure_1_13);
       if (0 !== found.length) {
         let tmp10Result2 = null;
         if (null != stateFromStores) {
@@ -1358,7 +1288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp12 = null;
             if (arr3.length > 0) {
               const obj5 = { unusedSlots: arr3 };
-              tmp12 = closure_11(closure_19, obj5);
+              tmp12 = closure_10(closure_18, obj5);
             }
           }
           const items2 = [tmp12];
@@ -1369,17 +1299,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = tmp3(1126).intl;
             obj7.children = intl.string(tmp3(1126).t.gB9oQ7);
             const items3 = [
-              closure_11(tmp3(5086).Text, obj7),
+              closure_10(tmp3(5087).Text, obj7),
               found.map((guildId) =>
-                closure_2_11(closure_21, { guildId, guildBoostSlots: valueResult[guildId] }, guildId),
+                collapsed(closure_20, { guildId, guildBoostSlots: valueResult[guildId] }, guildId),
               ),
             ];
             obj6.children = items3;
-            tmp10Result = closure_12(closure_13, obj6);
+            tmp10Result = closure_11(closure_12, obj6);
           }
           items2[1] = tmp10Result;
           obj4.children = items2;
-          tmp10Result2 = closure_12(closure_5, obj4);
+          tmp10Result2 = closure_11(View, obj4);
         }
       } else {
         tmp10Result2 = null;

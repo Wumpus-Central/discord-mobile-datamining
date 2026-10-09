@@ -1,7 +1,7 @@
 // discord_app/modules/billing/records/DiscountRecord.tsx
 import Record from "../../../lib/Record.tsx";
 
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = PremiumConstants);
 let closure_0 = {
   [DiscountUserUsageLimitIntervalTypes.DAY]: SubscriptionIntervalTypes.DAY,

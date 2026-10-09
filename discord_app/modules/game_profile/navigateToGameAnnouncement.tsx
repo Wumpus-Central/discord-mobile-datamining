@@ -47,7 +47,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {

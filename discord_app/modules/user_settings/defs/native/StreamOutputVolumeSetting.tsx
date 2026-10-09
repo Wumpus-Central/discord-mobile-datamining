@@ -64,7 +64,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return num;
       });
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasStreamVolumeSetting() {
       const cResult = c.c(1);
@@ -117,7 +117,7 @@ const volumeSlider = SettingBuilders.createVolumeSlider({
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(7966).MobileUserSettings.VOICE,
+  parent: fn(7974).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: tmp2,
   onValueChange: function onStreamValueSettingValueChange(arg0) {

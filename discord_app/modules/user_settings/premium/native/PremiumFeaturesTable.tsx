@@ -5,9 +5,9 @@ import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05387_LinearGradient.js";
-import _modDef13601 from "../../../../../_runtime/metro/13601__.js";
-import _modDef13602 from "../../../../../_runtime/metro/13602__.js";
+import LinearGradientDefault from "../../../../../_runtime/05388_LinearGradient.js";
+import _modDef13692 from "../../../../../_runtime/metro/13692__.js";
+import _modDef13693 from "../../../../../_runtime/metro/13693__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,7 +17,7 @@ const util = EZjXN3(1126);
 require = fn;
 const View = fn(17).View;
 const HorizontalGradient = fn(1085).HorizontalGradient;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({
   NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7,
   PRICE_PLACEHOLDER: closure_8,
@@ -27,7 +27,7 @@ const PremiumConstants = fn(1391);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj2 = {
   container: { display: "flex", flex: 1, width: "100%" },
   headerText: { textAlign: "center" },
@@ -54,7 +54,7 @@ obj2.cell = { paddingVertical: 12 };
 obj2.labelCell = { flex: 1, justifyContent: "flex-start" };
 obj2.dataCell = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
 let obj4 = { borderBottomLeftRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm };
-obj2.themedHighlightedCell = { backgroundColor: fn(5974).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+obj2.themedHighlightedCell = { backgroundColor: fn(5976).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj2.nitroHomeHightlightedBorderLeftRight = {
   borderLeftColor: "rgba(184, 69, 193, 0.5)",
   borderLeftWidth: 2,
@@ -72,7 +72,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const unsafe_rawColors = nativeDefault.unsafe_rawColors;
       const tmp7 = shared.isThemeDark(tmp5) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
       if (cResult[0] !== tmp7) {
-        const obj3 = { source: _modDef13601, color: tmp7, size: native.IconSizes.SMALL };
+        const obj3 = { source: _modDef13692, color: tmp7, size: native.IconSizes.SMALL };
         const tmp10 = closure_1_11(native.Icon, obj3);
         cResult[0] = tmp7;
         cResult[1] = tmp10;
@@ -88,14 +88,14 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const isThemeDarkResult = shared.isThemeDark(tmp3);
       const tmp6 = shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
       return closure_1_11(native.Icon, {
-        source: _modDef13601,
+        source: _modDef13692,
         color: shared.isThemeDark(tmp3) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860,
         size: native.IconSizes.SMALL,
       });
     };
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj8 = { icon: null };
-let obj5 = { backgroundColor: fn(5974).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
+let obj5 = { backgroundColor: fn(5976).PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 obj8.icon = { tintColor: nativeDefault.colors.TEXT_MUTED };
 let closure_16 = createStyles.createStyles(obj8);
 ReactCompilerGating = fn(558);
@@ -104,7 +104,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(2);
       const tmp4 = closure_16();
       if (cResult[0] !== tmp4.icon) {
-        const obj2 = { source: _modDef13602, style: tmp4.icon, size: native.IconSizes.SMALL };
+        const obj2 = { source: _modDef13693, style: tmp4.icon, size: native.IconSizes.SMALL };
         const tmp8 = closure_1_11(native.Icon, obj2);
         cResult[0] = tmp4.icon;
         cResult[1] = tmp8;
@@ -117,7 +117,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   : function CloseIcon() {
       const tmp = closure_16();
       return closure_1_11(native.Icon, {
-        source: _modDef13602,
+        source: _modDef13693,
         style: closure_16().icon,
         size: native.IconSizes.SMALL,
       });
@@ -736,9 +736,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp5;
       const tmp6 = closure_14();
-      const tmp8 = str(4991)();
-      const tmp9 = str(9331)(closure_10.PREMIUM_MONTH_TIER_0);
-      const tmp10 = str(9331)(closure_10.PREMIUM_MONTH_TIER_2);
+      const tmp8 = str(4992)();
+      const tmp9 = str(9369)(closure_10.PREMIUM_MONTH_TIER_0);
+      const tmp10 = str(9369)(closure_10.PREMIUM_MONTH_TIER_2);
       let priceString;
       if (tmp9 != null) {
         priceString = tmp9.priceString;
@@ -754,26 +754,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         priceString1 = closure_8;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const maxFileSizeForPremiumType = tmp(4726).getMaxFileSizeForPremiumType(closure_9.TIER_0);
+        const maxFileSizeForPremiumType = tmp(4728).getMaxFileSizeForPremiumType(closure_9.TIER_0);
         cResult[0] = maxFileSizeForPremiumType;
         let first = maxFileSizeForPremiumType;
-        const tmpResult = tmp(4726);
+        const tmpResult = tmp(4728);
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const maxFileSizeForPremiumType1 = tmp(4726).getMaxFileSizeForPremiumType(closure_9.TIER_2);
+        const maxFileSizeForPremiumType1 = tmp(4728).getMaxFileSizeForPremiumType(closure_9.TIER_2);
         cResult[1] = maxFileSizeForPremiumType1;
         let tmp16 = maxFileSizeForPremiumType1;
-        const tmpResult4 = tmp(4726);
+        const tmpResult4 = tmp(4728);
       } else {
         tmp16 = cResult[1];
       }
       if (cResult[2] !== tmp6.logo) {
         const size = { style: tmp6.logo, width: 48, height: 9 };
-        const tmp22 = closure_11(tmp7(13603), size);
+        const tmp22 = closure_11(tmp7(13694), size);
         const size1 = { style: tmp6.logo, width: 50, height: 9 };
-        const tmp23 = closure_11(tmp7(13604), size1);
+        const tmp23 = closure_11(tmp7(13695), size1);
         cResult[2] = tmp6.logo;
         cResult[3] = tmp22;
         cResult[4] = tmp23;
@@ -798,9 +798,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp26 = cResult[9];
           }
           if (tmpResult5.isThemeDark(tmp8)) {
-            let tmp7Result = tmp7(13605);
+            let tmp7Result = tmp7(13696);
           } else {
-            tmp7Result = tmp7(13606);
+            tmp7Result = tmp7(13697);
           }
           if (cResult[10] === tmp6.logo) {
             if (cResult[11] === tmp7Result) {
@@ -816,9 +816,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp32 = cResult[13];
             }
             if (tmpResult6.isThemeDark(tmp8)) {
-              let tmp7Result2 = tmp7(13607);
+              let tmp7Result2 = tmp7(13698);
             } else {
-              tmp7Result2 = tmp7(13608);
+              tmp7Result2 = tmp7(13699);
             }
             if (cResult[14] === tmp6.logo) {
               if (cResult[15] === tmp7Result2) {
@@ -931,7 +931,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     color: "mobile-text-heading-primary",
                                     children: first,
                                   };
-                                  const tmp75 = closure_11(tmp(5086).Text, obj6);
+                                  const tmp75 = closure_11(tmp(5087).Text, obj6);
                                   cResult[41] = tmp73;
                                   cResult[42] = stringResult3;
                                   cResult[43] = tmp75;
@@ -958,7 +958,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     color: "mobile-text-heading-primary",
                                     children: tmp16,
                                   };
-                                  obj7.column2 = closure_11(tmp(5086).Text, obj8);
+                                  obj7.column2 = closure_11(tmp(5087).Text, obj8);
                                   obj7.column2AccessibilityLabel = tmp16;
                                   cResult[44] = obj7;
                                   let tmp76 = obj7;
@@ -1254,7 +1254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                             if (tmp136) {
                                               const obj24 = { style: tmp6.premiumGroupCard, premiumGroupRole };
-                                              tmp136 = closure_11(tmp7(13609), obj24);
+                                              tmp136 = closure_11(tmp7(13700), obj24);
                                             }
                                             cResult[79] = tmp5;
                                             cResult[80] = premiumGroupRole;
@@ -1269,7 +1269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             accessibilityRole: "header",
                                             children: tmp130,
                                           };
-                                          const tmp134 = closure_11(tmp(5086).Text, obj25);
+                                          const tmp134 = closure_11(tmp(5087).Text, obj25);
                                           cResult[76] = tmp6.headerText;
                                           cResult[77] = tmp130;
                                           cResult[78] = tmp134;
@@ -1355,20 +1355,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp38 = obj29;
             }
             const obj30 = { accessible: true, accessibilityLabel: tmp32, style: tmp6.logo, source: tmp7Result2 };
-            const tmp37 = closure_11(tmp7(6164), obj30);
+            const tmp37 = closure_11(tmp7(6163), obj30);
             cResult[14] = tmp6.logo;
             cResult[15] = tmp7Result2;
             cResult[16] = tmp37;
             tmp35 = tmp37;
-            tmpResult6 = tmp(4929);
+            tmpResult6 = tmp(4930);
           }
           const obj31 = { accessible: true, accessibilityLabel: tmp26, style: tmp6.logo, source: tmp7Result };
-          const tmp31 = closure_11(tmp7(6164), obj31);
+          const tmp31 = closure_11(tmp7(6163), obj31);
           cResult[10] = tmp6.logo;
           cResult[11] = tmp7Result;
           cResult[12] = tmp31;
           tmp29 = tmp31;
-          tmpResult5 = tmp(4929);
+          tmpResult5 = tmp(4930);
         }
       }
       const obj32 = {

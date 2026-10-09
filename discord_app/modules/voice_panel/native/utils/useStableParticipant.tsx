@@ -22,7 +22,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5113).ParticipantTypes;
+const ParticipantTypes = fn(5114).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;
@@ -93,10 +93,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 canRenderVideo: false,
                 userNick: null,
                 userAvatarDecoration: null,
-                streamId: "Set",
+                streamId: "Symbol",
                 ringing: null,
                 hasVideo: 0,
-                isSelf: 1,
+                isSelf: 17,
               };
               id = AuthenticationStore.getId();
               obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);
@@ -210,10 +210,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   canRenderVideo: false,
                   userNick: null,
                   userAvatarDecoration: null,
-                  streamId: "Set",
+                  streamId: "Symbol",
                   ringing: null,
                   hasVideo: 0,
-                  isSelf: 1,
+                  isSelf: 17,
                 };
                 id = AuthenticationStore.getId();
                 obj3.userNick = NicknameUtils.getName(closure_2, closure_1, user);

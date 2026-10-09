@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4693).GuildMemberFlags;
+const GuildMemberFlags = fn(4695).GuildMemberFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -202,7 +202,7 @@ export default noop.memo(
                   return;
                 }
               }
-              const tmp20 = jsx(tmp(12215).ChatXIcon, {});
+              const tmp20 = jsx(tmp(12154).ChatXIcon, {});
               cResult[12] = tmp20;
               const tmp19 = tmp20;
             } else {
@@ -262,7 +262,7 @@ export default noop.memo(
           const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
         }, items2);
         const obj = guildId(504);
-        const automodReason = guildId(4713).getAutomodReason(stateFromStores);
+        const automodReason = guildId(4715).getAutomodReason(stateFromStores);
         if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
           const intl2 = tmp(1126).intl;
           let stringResult = intl2.string(tmp(1126).t.Viksoo);
@@ -284,8 +284,8 @@ export default noop.memo(
           icon: null,
           message: null,
         };
-        const obj2 = guildId(4713);
-        obj3.icon = jsx(guildId(12215).ChatXIcon, {});
+        const obj2 = guildId(4715);
+        obj3.icon = jsx(guildId(12154).ChatXIcon, {});
         obj3.message = stringResult1;
         return jsx(ChatInputGuardDefault, {
           type: "simple-action",

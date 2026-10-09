@@ -6,8 +6,8 @@ import _modDef2597 from "../GuildPowerups.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PerkIcons = fn(1391).PerkIcons;
-const GUILD_FEATURE_TO_PERK = fn(4968).GUILD_FEATURE_TO_PERK;
+const PerkIcons = fn(1392).PerkIcons;
+const GUILD_FEATURE_TO_PERK = fn(4969).GUILD_FEATURE_TO_PERK;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");

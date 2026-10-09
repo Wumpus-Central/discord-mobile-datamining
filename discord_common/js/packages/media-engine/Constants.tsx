@@ -163,6 +163,7 @@ export const Features = {
   SPATIAL_AUDIO: "SPATIAL_AUDIO",
   KRISP_NATIVE_ERROR: "KRISP_NATIVE_ERROR",
   UDP_ENDPOINT_UPDATE: "UDP_ENDPOINT_UPDATE",
+  ACTIVITY_CAPTURE: "ACTIVITY_CAPTURE",
 };
 export const MediaEngineImplementations = { NATIVE: "NATIVE", WEBRTC: "WEBRTC", DUMMY: "DUMMY" };
 export const AudioSubsystems = {

@@ -18,18 +18,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = {
-  [USER_INTERACTION]: fn(8174).ChatIcon,
-  [USER_CALLED]: fn(11559).PhoneIcon,
-  [USER_ADD]: fn(5031).FriendsIcon,
-  [GUILD_ADD]: fn(13713).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(8176).ThreadIcon,
-  [PURCHASES]: fn(7541).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(5049).ClockIcon,
-  [GIFTS]: fn(11561).GiftIcon,
+  [USER_INTERACTION]: fn(8182).ChatIcon,
+  [USER_CALLED]: fn(11488).PhoneIcon,
+  [USER_ADD]: fn(5032).FriendsIcon,
+  [GUILD_ADD]: fn(13805).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(8184).ThreadIcon,
+  [PURCHASES]: fn(7548).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(5050).ClockIcon,
+  [GIFTS]: fn(11490).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7248).TeenActionDisplayType);
-let createStyles = fn(5090);
+  fn(7253).TeenActionDisplayType);
+let createStyles = fn(5091);
 let obj3 = {
   row: {
     display: "flex",
@@ -182,7 +182,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj.children = items;
       return React5(View, obj);
     };
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj7 = { container: null, groupHeader: null };
 let obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
@@ -207,7 +207,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp4, tmp5] = cResult;
       }
       obj = container(576);
-      const ageSpecificText = container(11558).useAgeSpecificText(tmp4, tmp5);
+      const ageSpecificText = container(11487).useAgeSpecificText(tmp4, tmp5);
       container = useIsInAdultAgeGroupDefault();
       if (cResult[2] === ageSpecificText) {
         if (cResult[3] === container) {
@@ -230,8 +230,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         const intl3 = tmp(1126).intl;
                         obj3.text = intl3.string(tmp(1126).t["NX+WJN"]);
                         obj3.onPress = ModalActionCreatorsDefault.pop;
-                        obj2.children = closure_6(tmp(5375).Button, obj3);
-                        const tmp36 = closure_6(tmp(11564).ModalFooter, obj2);
+                        obj2.children = closure_6(tmp(5376).Button, obj3);
+                        const tmp36 = closure_6(tmp(11493).ModalFooter, obj2);
                         cResult[25] = tmp36;
                         let tmp34 = tmp36;
                       } else {
@@ -275,10 +275,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = container(11558);
-      const sortedActivityTypeConfigs = container(7714).getSortedActivityTypeConfigs();
-      const ModalScreen = tmp(7506).ModalScreen;
-      const ModalContent = tmp(7507).ModalContent;
+      const tmpResult = container(11487);
+      const sortedActivityTypeConfigs = container(7723).getSortedActivityTypeConfigs();
+      const ModalScreen = tmp(7511).ModalScreen;
+      const ModalContent = tmp(7512).ModalContent;
       const container2 = groupHeader.container;
       if (cResult[12] === ageSpecificText) {
         if (cResult[13] === groupHeader.groupHeader) {
@@ -327,7 +327,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp18;
         cResult[11] = mapped;
       }
-      const tmp19 = closure_6(container(5086).Text, {
+      const tmp19 = closure_6(container(5087).Text, {
         style: groupHeader.groupHeader,
         variant: "text-lg/bold",
         color: "mobile-text-heading-primary",
@@ -343,7 +343,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: ageSpecificText,
       };
-      const tmpResult2 = container(7714);
+      const tmpResult2 = container(7723);
     }
   : function FamilyCenterModalDataTooltipScreen() {
       const tmp = closure_11();

@@ -8,25 +8,25 @@ const require = globalThis.__r;
 const StickerAnimationSettings = StickersConstants.StickerAnimationSettings;
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
 
-export const transformSticker = function transformSticker(tmp5Result8) {
+export const transformSticker = function transformSticker(tmp2Result4) {
   const AnimateStickers = require("UserSettings").AnimateStickers;
-  _require = tmp5Result8;
+  _require = tmp2Result4;
   const obj = {};
   const setting = AnimateStickers.getSetting();
-  const merged = Object.assign(tmp5Result8);
-  let str = tmp5Result8.id;
+  const merged = Object.assign(tmp2Result4);
+  let str = tmp2Result4.id;
   if (str == null) {
     str = "";
   }
   obj.asset = str;
-  let str2 = require("StickersUtils").getStickerAssetUrl(tmp5Result8, {
+  let str2 = require("StickersUtils").getStickerAssetUrl(tmp2Result4, {
     isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE,
   });
   if (str2 == null) {
     str2 = "";
   }
   obj.url = str2;
-  const NativeLottieRenderMode = tmp(7991).NativeLottieRenderMode;
+  const NativeLottieRenderMode = tmp(7999).NativeLottieRenderMode;
   obj.renderMode =
     setting === StickerAnimationSettings.ALWAYS_ANIMATE ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
   const obj2 = { isPreview: setting !== StickerAnimationSettings.ALWAYS_ANIMATE };
@@ -34,7 +34,7 @@ export const transformSticker = function transformSticker(tmp5Result8) {
   const obj3 = {
     expensive() {
       const intl = util.intl;
-      return intl.formatToPlainString(util.t.rk6pOw, { stickerName: tmp5Result8.name });
+      return intl.formatToPlainString(util.t.rk6pOw, { stickerName: tmp2Result4.name });
     },
     cheap: null,
   };

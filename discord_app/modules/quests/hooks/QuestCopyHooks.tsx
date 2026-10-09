@@ -9,11 +9,11 @@ import QuestTaskUtils from "../utils/QuestTaskUtils.tsx";
 import QuestType from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
 import GameProfileAnalyticUtils from "../../game_profile/GameProfileAnalyticUtils.tsx";
 import useOpenGameProfileModalDefault from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
+import hooks_QuestHooks from "QuestHooks.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
-import hooks_QuestHooks from "QuestHooks.tsx";
-import MobileQuestVideoWatchCtaCopy from "../utils/MobileQuestVideoWatchCtaCopy.tsx";
 import isActivitySupportedOnClientPlatformDefault from "../../activities/utils/isActivitySupportedOnClientPlatform.tsx";
+import MobileQuestVideoWatchCtaCopy from "../utils/MobileQuestVideoWatchCtaCopy.tsx";
 import useInGameQuestConnectState from "../useInGameQuestConnectState.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -24,8 +24,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const util = v1votF6(1126);
-const utils_QuestUtils = v1votF6(7399);
-const SponsoredQuestUtils = v1votF6(11162);
+const utils_QuestUtils = v1votF6(7404);
+const SponsoredQuestUtils = v1votF6(12931);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -423,10 +423,10 @@ function getSimplifiedQuestTaskType(quest) {
   PLAY = constants3.PLAY;
   obj = QuestTaskUtils;
 }
-const QuestConstants = fn(5977);
+const QuestConstants = fn(5979);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestsInstructionsToWinReward(arg0) {
@@ -1896,14 +1896,14 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
           const obj = { value, done: true };
           return obj;
         } else {
-          const obj6 = { content: closure_128_1, ctaContent: tmp4(7404).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
+          const obj6 = { content: closure_128_1, ctaContent: tmp4(7409).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
           let tmp5;
           if (closure_128_3 != null) {
             tmp5 = closure_128_3();
           }
           obj6.impressionId = tmp5;
           obj6.sourceQuestContent = closure_128_4;
-          tmp4(10582).openGameLinkDirectly(closure_128_0, obj6);
+          tmp4(9176).openGameLinkDirectly(closure_128_0, obj6);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -1947,7 +1947,7 @@ export const useModalCtaConfig = ReactCompilerGating.isReactCompilerEnabled() ? 
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(9554).getExternalCtaLabel(quest);
+  obj.ctaText = quest(9165).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

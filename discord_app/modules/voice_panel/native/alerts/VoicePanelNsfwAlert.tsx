@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function VoicePanelNsfwAlert(guildId) {
       guildId = guildId.guildId;
       const onConnect = guildId.onConnect;
-      dependencyMap = guildId(5303).useDismissModalCallback();
+      dependencyMap = guildId(5304).useDismissModalCallback();
       const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
       const intl = guildId(1126).intl;
       const string = intl.string;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = tmp(1126).intl;
       obj4.text = intl3.string(guildId(1126).t.wVq7uo);
-      const items = [closure_5(guildId(5303).AlertActionButton, obj4, "confirm")];
+      const items = [closure_5(guildId(5304).AlertActionButton, obj4, "confirm")];
       const obj5 = {
         variant: "secondary",
         onPress: function handleDisagree() {
@@ -194,9 +194,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl4 = tmp(1126).intl;
       obj5.text = intl4.string(guildId(1126).t["/g10LC"]);
-      items[1] = closure_5(guildId(5303).AlertActionButton, obj5, "add-profile-picture");
+      items[1] = closure_5(guildId(5304).AlertActionButton, obj5, "add-profile-picture");
       obj3.children = items;
-      obj2.actions = closure_6(guildId(5303).AlertActions, obj3);
-      return closure_5(guildId(5303).AlertModal, obj2);
+      obj2.actions = closure_6(guildId(5304).AlertActions, obj3);
+      return closure_5(guildId(5304).AlertModal, obj2);
     };
 export const VOICE_PANEL_NSFW_KEY = "voice-panel-nsfw";

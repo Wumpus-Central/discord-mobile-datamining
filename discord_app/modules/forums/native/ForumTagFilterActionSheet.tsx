@@ -8,13 +8,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
 
 require = fn;
-const ForumChannelStore = fn(11693);
+const ForumChannelStore = fn(11629);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
 const jsx = fn(21).jsx;
 let c12 = 18;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_13 = createStyles.createStyles({
   emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" },
   imageEmoji: { height: 18, width: 18 },

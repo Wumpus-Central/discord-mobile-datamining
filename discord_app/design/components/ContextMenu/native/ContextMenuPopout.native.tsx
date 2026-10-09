@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj2 = { container: null, titleContainer: null, divider: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj2.container = {
@@ -26,7 +26,7 @@ obj2.container = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9299).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9337).CONTEXT_MENU_MIN_WIDTH,
 };
 let obj3 = {
   position: "absolute",
@@ -34,12 +34,12 @@ let obj3 = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(9299).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(9337).CONTEXT_MENU_MIN_WIDTH,
 };
-obj2.titleContainer = { padding: fn(9299).CONTEXT_MENU_ITEM_PADDING };
-let obj4 = { padding: fn(9299).CONTEXT_MENU_ITEM_PADDING };
+obj2.titleContainer = { padding: fn(9337).CONTEXT_MENU_ITEM_PADDING };
+let obj4 = { padding: fn(9337).CONTEXT_MENU_ITEM_PADDING };
 obj2.divider = {
-  borderBottomWidth: fn(9299).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(9337).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_9 = createStyles.createStyles(obj2);
@@ -74,7 +74,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   : function ContextMenuDivider() {
       return timestampProducer(hasOwnProperty, { style: closure_9().divider });
     };
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj8 = { accessibleDismiss: null };
 let obj9 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
@@ -100,17 +100,17 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
         return obj;
       };
-      const obj2 = visible(4810);
+      const obj2 = visible(4811);
       fn.__closure = {
-        withSpring: visible(5374).withSpring,
+        withSpring: visible(5375).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9299).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9337).CONTEXT_MENU_SPRING,
       };
       fn.__workletHash = 6862317967896;
       fn.__initData = __initData2;
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = visible(1381);
+        const tmpResult = visible(1382);
         const intl = visible(1126).intl;
         const string = intl.string;
         let hPBScv = visible(1126).t;
@@ -121,7 +121,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           stringResult = string(hPBScv.xs0juG);
         }
         cResult[0] = stringResult;
-        isAndroidResult = visible(1381).isAndroid();
+        isAndroidResult = visible(1382).isAndroid();
       } else {
         if (cResult[1] === animatedStyle) {
           if (cResult[2] === onPress) {
@@ -138,7 +138,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           onDismiss: onPress,
           accessibilityLabel: cResult[0],
         };
-        const tmp11 = closure_6(visible(5361).Backdrop, obj4);
+        const tmp11 = closure_6(visible(5362).Backdrop, obj4);
         cResult[1] = animatedStyle;
         cResult[2] = onPress;
         cResult[3] = tmp4.accessibleDismiss;
@@ -146,9 +146,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = tmp11;
       }
       const obj3 = {
-        withSpring: visible(5374).withSpring,
+        withSpring: visible(5375).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9299).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9337).CONTEXT_MENU_SPRING,
       };
     }
   : function ContextMenuBackdrop(onDismiss) {
@@ -160,11 +160,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
         return obj;
       };
-      let obj = visible(4810);
+      let obj = visible(4811);
       fn.__closure = {
-        withSpring: visible(5374).withSpring,
+        withSpring: visible(5375).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9299).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9337).CONTEXT_MENU_SPRING,
       };
       fn.__workletHash = 7758377027899;
       fn.__initData = __initData3;
@@ -177,11 +177,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
       };
       const obj2 = {
-        withSpring: visible(5374).withSpring,
+        withSpring: visible(5375).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(9299).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(9337).CONTEXT_MENU_SPRING,
       };
-      const obj4 = visible(1381);
+      const obj4 = visible(1382);
       const intl = visible(1126).intl;
       const string = intl.string;
       const t = visible(1126).t;
@@ -191,7 +191,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.xs0juG);
       }
       obj3.accessibilityLabel = stringResult;
-      return closure_6(visible(5361).Backdrop, obj3);
+      return closure_6(visible(5362).Backdrop, obj3);
     };
 let size = fn(2);
 let result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuPopout.native.tsx");

@@ -16,7 +16,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReportToModPermissions = fn(6972).ReportToModPermissions;
+const ReportToModPermissions = fn(6979).ReportToModPermissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 

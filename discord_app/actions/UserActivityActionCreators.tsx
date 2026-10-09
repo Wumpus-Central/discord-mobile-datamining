@@ -56,11 +56,11 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequireImpl")(11377, dependencyMap.paths);
-  const nextPromise = require("asyncRequireImpl")(11377, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
+  const promise = require("asyncRequireImpl")(10750, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(10750, dependencyMap.paths).then((getSpotifyMetadataFromActivity) =>
     getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
   );
-  require("asyncRequireImpl")(11377, dependencyMap.paths)
+  require("asyncRequireImpl")(10750, dependencyMap.paths)
     .then((getSpotifyMetadataFromActivity) =>
       getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1),
     )

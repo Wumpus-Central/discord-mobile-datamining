@@ -290,6 +290,7 @@ export const TrackUserProfileEditActions = {
   TAG_REMOVED: "TAG_REMOVED",
   PRESS_ADD_COMMENTARY: "PRESS_ADD_COMMENTARY",
   COMMENTARY_EDITED: "COMMENTARY_EDITED",
+  ENTER_TRY_OUT_PREMIUM_PREVIEW: "ENTER_TRY_OUT_PREMIUM_PREVIEW",
 };
 export const ClipsGalleryClipSources = { PICKER: "PICKER", SUGGESTED: "SUGGESTED" };
 export const TrackUserProfileWishlistActions = {

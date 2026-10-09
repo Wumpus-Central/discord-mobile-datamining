@@ -38,7 +38,7 @@ function getContentCategory() {
   items1[1] = obj2;
   return items1;
 }
-const MobileUserSettings = fn(7966).MobileUserSettings;
+const MobileUserSettings = fn(7974).MobileUserSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const ListHeaderComponent = ReactCompilerGating.isReactCompilerEnabled()

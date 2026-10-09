@@ -130,7 +130,7 @@ let closure_9 = async function _remixConjureProjectInto(arg0) {
     }
   })();
 };
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({ ConjureRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = ConjureConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

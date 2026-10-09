@@ -5,9 +5,9 @@ import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01263_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01264_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01278_v1.js";
+import v1 from "../../_runtime/01279_v1.js";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -82,10 +82,10 @@ let Constants = fn(1085);
   RTCConnectionQuality: closure_19,
   BoostedGuildTiers: closure_20,
 } = Constants);
-const StreamSettingsConstants = fn(5210);
+const StreamSettingsConstants = fn(5211);
 ({ ApplicationStreamFPS: closure_21, ApplicationStreamResolutions: closure_22 } = StreamSettingsConstants);
-let closure_23 = fn(5211).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5115);
+let closure_23 = fn(5212).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5116);
 ({
   Features: closure_24,
   MediaEngineContextTypes: closure_25,
@@ -1618,6 +1618,8 @@ prototype["_handleDisconnect"] = function _handleDisconnect(arg0, arg1, code, re
           "output_device_time_to_first_audio",
           "input_device_buffer_overfull_count",
           "output_device_buffer_underrun_count",
+          "input_device_buffer_size",
+          "input_device_buffer_occupied_size_mean",
           "input_device_session_sample_rate",
           "output_device_session_sample_rate",
           "input_device_time_from_connect_to_first_audio_ms",
@@ -2279,16 +2281,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
       if (!self._videoDecoderFallbackSuppressed) {
-        const logger2 = self.logger;
-        logger2.info("Suppressing video decoder fallback: stage channel");
+        const logger = self.logger;
+        logger.info("Suppressing video decoder fallback: stage channel");
         self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger = self.logger;
+      const logger2 = self.logger;
       const _HermesInternal = HermesInternal;
-      logger.info(
+      logger2.info(
         "The originally selected video decoder is not working, fallback to the other available decoders: " +
           mapped.join(","),
       );
@@ -3618,7 +3620,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5119).now();
+  const commitReceivedTime = _connection(5120).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3658,7 +3660,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5119).now();
+  const welcomeReceivedTime = _connection(5120).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

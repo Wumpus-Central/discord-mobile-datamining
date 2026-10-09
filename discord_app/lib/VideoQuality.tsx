@@ -1499,43 +1499,42 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   let num = 1;
   if (!obj.isWeb()) {
     const receiverReports = transport.receiverReports;
-    let num2;
+    let mapped;
     if (receiverReports != null) {
-      num2 = receiverReports.length;
+      let found = receiverReports.filter((item) => null != self.outboundStats[item.ssrc]);
+      mapped = found.map((id) => id.id);
     }
-    if (num2 == null) {
-      num2 = 0;
-    }
-    num = num2;
+    const set = new Set(mapped);
+    num = set.size;
   }
-  const set = new Set();
   const set1 = new Set();
+  const set2 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp7 = self.connection.context === tmp(5135).MediaEngineContextTypes.DEFAULT;
-  if (tmp7) {
-    tmp7 = null != transport.camera;
+  let tmp14 = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  if (tmp14) {
+    tmp14 = null != transport.camera;
   }
-  self.cameraDuration.value = tmp7;
-  let tmp9 = self.connection.context === tmp(5135).MediaEngineContextTypes.DEFAULT;
-  if (tmp9) {
-    tmp9 = null != transport.camera;
+  self.cameraDuration.value = tmp14;
+  let tmp16 = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  if (tmp16) {
+    tmp16 = null != transport.camera;
   }
-  if (tmp9) {
-    tmp9 = self.callUserIdsCount > 1;
+  if (tmp16) {
+    tmp16 = self.callUserIdsCount > 1;
   }
-  self.cameraOpportunityDuration.value = tmp9;
-  let tmp11 = self.connection.context === tmp(5135).MediaEngineContextTypes.DEFAULT;
-  if (tmp11) {
-    tmp11 = null != transport.camera;
+  self.cameraOpportunityDuration.value = tmp16;
+  let tmp18 = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  if (tmp18) {
+    tmp18 = null != transport.camera;
   }
-  if (tmp11) {
-    tmp11 = num > 0;
+  if (tmp18) {
+    tmp18 = num > 0;
   }
-  self.cameraSendDuration.value = tmp11;
-  if (tmp13) {
+  self.cameraSendDuration.value = tmp18;
+  if (tmp20) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  let liveBackgroundEnabled = self.connection.context === tmp(5135).MediaEngineContextTypes.DEFAULT;
+  let liveBackgroundEnabled = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
   if (liveBackgroundEnabled) {
     liveBackgroundEnabled = null != transport.camera;
   }
@@ -1543,8 +1542,8 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     liveBackgroundEnabled = VideoBackgroundStore.liveBackgroundEnabled;
   }
   self.videoBackgroundEnabledDuration.value = liveBackgroundEnabled;
-  obj = videoEntropy(1381);
-  tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
+  obj = videoEntropy(1382);
+  tmp20 = self.cameraDuration.value && !self.cameraDuration.value;
   closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;
   const first = outbound.filter((type) => {
@@ -1563,8 +1562,8 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     videoEntropy = first.videoEntropy;
   }
   const outbound1 = transport.rtp.outbound;
-  let found = outbound1.filter((type) => "video" === type.type);
-  const item = found.forEach((ssrc) => {
+  const found1 = outbound1.filter((type) => "video" === type.type);
+  const item = found1.forEach((ssrc) => {
     if (null != ssrc) {
       ssrc = ssrc.ssrc;
       let obj = self.outboundStats[ssrc];
@@ -1629,100 +1628,112 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         const RawVideoStats = VideoQualityStats.RawVideoStats;
         const parseOutboundStatsResult = RawVideoStats.parseOutboundStats(ssrc, closure_1);
         if (self.connection.context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-          let num18 = transport.screenshare;
-          if (null == num18) {
+          let num20 = transport.screenshare;
+          if (null == num20) {
             parseOutboundStatsResult.screenshareFramesUnique = parseOutboundStatsResult.framesCodec;
           } else {
-            if (null == num18.hybridDxgiFramesUnique) {
-              if (null == num18.hybridGdiBitBltFramesUnique) {
-                if (null == num18.hybridGdiPrintWindowFramesUnique) {
-                  if (null == num18.hybridVideohookFramesUnique) {
-                    if (null == num18.hybridGraphicsCaptureFramesUnique) {
-                      let num8 = num18.screenshareFrames;
-                      if (num8 == null) {
-                        num8 = 0;
+            if (null == num20.hybridDxgiFramesUnique) {
+              if (null == num20.hybridGdiBitBltFramesUnique) {
+                if (null == num20.hybridGdiPrintWindowFramesUnique) {
+                  if (null == num20.hybridVideohookFramesUnique) {
+                    if (null == num20.hybridGraphicsCaptureFramesUnique) {
+                      if (null == num20.hybridExternalFramesUnique) {
+                        let num8 = num20.screenshareFrames;
+                        if (num8 == null) {
+                          num8 = 0;
+                        }
+                        let num9 = num20.videohookFrames;
+                        if (num9 == null) {
+                          num9 = 0;
+                        }
+                        let num10 = num20.quartzFrames;
+                        const sum = num8 + num9;
+                        if (num10 == null) {
+                          num10 = 0;
+                        }
+                        let num11 = num20.screenCaptureKitFrames;
+                        const sum1 = sum + num10;
+                        if (num11 == null) {
+                          num11 = 0;
+                        }
+                        let num12 = num20.x11Frames;
+                        const sum2 = sum1 + num11;
+                        if (num12 == null) {
+                          num12 = 0;
+                        }
+                        let num13 = num20.pipewireFrames;
+                        const sum3 = sum2 + num12;
+                        if (num13 == null) {
+                          num13 = 0;
+                        }
+                        let num14 = num20.activityFrames;
+                        const sum4 = sum3 + num13;
+                        if (num14 == null) {
+                          num14 = 0;
+                        }
+                        let sum5 = sum4 + num14;
                       }
-                      let num9 = num18.videohookFrames;
-                      if (num9 == null) {
-                        num9 = 0;
-                      }
-                      let num10 = num18.quartzFrames;
-                      const sum = num8 + num9;
-                      if (num10 == null) {
-                        num10 = 0;
-                      }
-                      let num11 = num18.screenCaptureKitFrames;
-                      const sum1 = sum + num10;
-                      if (num11 == null) {
-                        num11 = 0;
-                      }
-                      let num12 = num18.x11Frames;
-                      const sum2 = sum1 + num11;
-                      if (num12 == null) {
-                        num12 = 0;
-                      }
-                      let num13 = num18.pipewireFrames;
-                      const sum3 = sum2 + num12;
-                      if (num13 == null) {
-                        num13 = 0;
-                      }
-                      let sum4 = sum3 + num13;
                     }
                   }
                 }
               }
             }
-            let num14 = num18.hybridDxgiFramesUnique;
-            if (num14 == null) {
-              num14 = 0;
-            }
-            let num15 = num18.hybridGdiBitBltFramesUnique;
+            let num15 = num20.hybridDxgiFramesUnique;
             if (num15 == null) {
               num15 = 0;
             }
-            let num16 = num18.hybridGdiPrintWindowFramesUnique;
-            const sum5 = num14 + num15;
+            let num16 = num20.hybridGdiBitBltFramesUnique;
             if (num16 == null) {
               num16 = 0;
             }
-            let num17 = num18.hybridVideohookFramesUnique;
-            const sum6 = sum5 + num16;
+            let num17 = num20.hybridGdiPrintWindowFramesUnique;
+            const sum6 = num15 + num16;
             if (num17 == null) {
               num17 = 0;
             }
-            num18 = num18.hybridGraphicsCaptureFramesUnique;
+            let num18 = num20.hybridVideohookFramesUnique;
             const sum7 = sum6 + num17;
             if (num18 == null) {
               num18 = 0;
             }
-            sum4 = sum7 + num18;
+            let num19 = num20.hybridGraphicsCaptureFramesUnique;
+            const sum8 = sum7 + num18;
+            if (num19 == null) {
+              num19 = 0;
+            }
+            num20 = num20.hybridExternalFramesUnique;
+            const sum9 = sum8 + num19;
+            if (num20 == null) {
+              num20 = 0;
+            }
+            sum5 = sum9 + num20;
           }
         }
         const result = obj.appendAndIncrementStats(parseOutboundStatsResult);
-        let tmp41 = null != ssrc.minResolutionWidth;
-        if (tmp41) {
-          tmp41 = ssrc.minResolutionWidth > 0;
+        let tmp43 = null != ssrc.minResolutionWidth;
+        if (tmp43) {
+          tmp43 = ssrc.minResolutionWidth > 0;
         }
-        if (tmp41) {
-          tmp41 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
-          const tmp42 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
+        if (tmp43) {
+          tmp43 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
+          const tmp44 = null == obj.minWidth || ssrc.minResolutionWidth < obj.minWidth;
         }
-        if (tmp41) {
+        if (tmp43) {
           obj.minWidth = ssrc.minResolutionWidth;
         }
-        let tmp43 = null != ssrc.minResolutionHeight;
-        if (tmp43) {
-          tmp43 = ssrc.minResolutionHeight > 0;
+        let tmp45 = null != ssrc.minResolutionHeight;
+        if (tmp45) {
+          tmp45 = ssrc.minResolutionHeight > 0;
         }
-        if (tmp43) {
-          tmp43 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
-          const tmp44 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
+        if (tmp45) {
+          tmp45 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
+          const tmp46 = null == obj.minHeight || ssrc.minResolutionHeight < obj.minHeight;
         }
-        if (tmp43) {
+        if (tmp45) {
           obj.minHeight = ssrc.minResolutionHeight;
         }
         if (obj.encoderCodec !== VideoQualityStats.CodecTypes.UNKNOWN) {
-          set.add(obj.encoderCodec);
+          set1.add(obj.encoderCodec);
         }
         let maxBitrate;
         if (found != null) {
@@ -1734,22 +1745,22 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         }
         let bitrateTarget = ssrc.bitrateTarget;
         if (bitrateTarget == null) {
-          let num21 = transport.availableOutgoingBitrate;
-          if (num21 == null) {
-            num21 = 0;
+          let num23 = transport.availableOutgoingBitrate;
+          if (num23 == null) {
+            num23 = 0;
           }
-          let num22 = maxBitrate;
+          let num24 = maxBitrate;
           if (maxBitrate == null) {
-            num22 = 0;
+            num24 = 0;
           }
-          bitrateTarget = Math.min(num21, num22);
+          bitrateTarget = Math.min(num23, num24);
         }
         obj.appendTargetRates(maxFrameRate, bitrateTarget, maxBitrate, transport.availableOutgoingBitrate);
-        let num23 = ssrc.averageEncodeTime;
-        if (num23 == null) {
-          num23 = 0;
+        let num25 = ssrc.averageEncodeTime;
+        if (num25 == null) {
+          num25 = 0;
         }
-        obj.averageEncodeTime = num23;
+        obj.averageEncodeTime = num25;
         let prop = ssrc.framesDroppedRateLimiter;
         if (prop == null) {
           prop = null;
@@ -1841,7 +1852,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
           self.emit(obj.FpsUpdate, arg1, parseInboundStatsResult.framesCodec, parseInboundStatsResult.timestamp);
         }
         if (obj.decoderCodec !== VideoQualityStats.CodecTypes.UNKNOWN) {
-          set1.add(obj.decoderCodec);
+          set2.add(obj.decoderCodec);
         }
         if (tmp27) {
           obj.timeToFirstFrame = closure_1 - obj.startTime;
@@ -1849,10 +1860,10 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
       }
     });
-    const tmp16Result = _modDef12;
+    const tmp23Result = _modDef12;
   }
-  if (tmp21) {
-    if (tmpResult.areSetsEqual(set, set1)) {
+  if (tmp28) {
+    if (tmpResult.areSetsEqual(set1, set2)) {
       self.symmetricCodecUpdates = self.symmetricCodecUpdates + 1;
     } else {
       self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;

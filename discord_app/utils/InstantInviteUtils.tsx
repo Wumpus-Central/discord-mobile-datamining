@@ -90,25 +90,25 @@ function addDmUsers(arg0) {
   }
 }
 const ChannelTypes = fn(1085).ChannelTypes;
-const InviteTargetTypes = fn(7418).InviteTargetTypes;
+const InviteTargetTypes = fn(7423).InviteTargetTypes;
 const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
 const days = "days";
 const never = "never";
 const dependencyMap = {
-  [fn(8661).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
-  [fn(8661).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
-  [fn(8661).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
-  [fn(8661).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
-  [fn(8661).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
-  [fn(8661).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
-  [fn(8661).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
-  [fn(8661).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
-  [fn(8661).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
-  [fn(8661).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
+  [fn(8670).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
+  [fn(8670).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
+  [fn(8670).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
+  [fn(8670).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
+  [fn(8670).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
+  [fn(8670).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
+  [fn(8670).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
+  [fn(8670).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
+  [fn(8670).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
+  [fn(8670).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
 };
-let items = [fn(8661).INVITE_OPTIONS_14_DAYS, fn(8661).INVITE_OPTIONS_30_DAYS, fn(8661).INVITE_OPTIONS_60_DAYS];
+let items = [fn(8670).INVITE_OPTIONS_14_DAYS, fn(8670).INVITE_OPTIONS_30_DAYS, fn(8670).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -144,25 +144,25 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(8661).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(8661).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(8661).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(8661).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(8661).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(8661).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(8661).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(8661).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(8661).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(8661).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(8661).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(8661).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(8661).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(8661).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(8661).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(8661).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(8661).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(8661).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(8661).INVITE_OPTIONS_100_TIMES,
+  getMaxUsesOptions: fn(8670).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(8670).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(8670).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(8670).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(8670).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(8670).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(8670).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(8670).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(8670).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(8670).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(8670).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(8670).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(8670).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(8670).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(8670).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(8670).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(8670).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(8670).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(8670).INVITE_OPTIONS_100_TIMES,
 };
 export { RowTypes };
 export const generateRowsForQuery = function generateRowsForQuery(arg0) {
@@ -297,7 +297,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       importDefault = undefined;
       ({ rows: c0, counts: c1 } = obj10);
       if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        const obj12 = { query: tmp44, limit: 3, guildId: "apply" };
+        const obj12 = { query: tmp44, limit: 3, guildId: "code" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);
@@ -523,15 +523,14 @@ export const getUsersAlreadyJoined = function getUsersAlreadyJoined(channel) {
   return new Set();
 };
 export const maxAgeString = function maxAgeString(maxAge, maxUses) {
-  const parsed = parseInt(maxUses, 10);
   value = dependencyMap[maxAge].value;
   const type = dependencyMap[maxAge].type;
   if (minutes === type) {
     const intl4 = util.intl;
-    if (tmp2) {
+    if (tmp) {
       let stringResult = intl4.string(util.t["/WbTXD"]);
     } else {
-      const obj2 = { numUses: parsed };
+      const obj2 = { numUses: maxUses };
       stringResult = intl4.formatToPlainString(util.t.eDRWJK, obj2);
     }
     return stringResult;
@@ -539,11 +538,11 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     const intl3 = util.intl;
     const formatToPlainString2 = intl3.formatToPlainString;
     const t2 = util.t;
-    if (tmp2) {
+    if (tmp) {
       const obj3 = { numHours: value };
       let formatToPlainString2Result = formatToPlainString2(t2.ZVdJMy, obj3);
     } else {
-      const obj4 = { numHours: value, numUses: parsed };
+      const obj4 = { numHours: value, numUses: maxUses };
       formatToPlainString2Result = formatToPlainString2(t2.NgZgAB, obj4);
     }
     return formatToPlainString2Result;
@@ -551,20 +550,20 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     const intl2 = util.intl;
     const formatToPlainString = intl2.formatToPlainString;
     const t = util.t;
-    if (tmp2) {
+    if (tmp) {
       const obj5 = { numDays: value };
       let formatToPlainStringResult = formatToPlainString(t.T96qss, obj5);
     } else {
-      const obj6 = { numDays: value, numUses: parsed };
+      const obj6 = { numDays: value, numUses: maxUses };
       formatToPlainStringResult = formatToPlainString(t.TfuB9B, obj6);
     }
     return formatToPlainStringResult;
   } else if (never === type) {
     const intl = util.intl;
-    if (tmp2) {
+    if (tmp) {
       let stringResult1 = intl.string(util.t.QrHBnC);
     } else {
-      obj = { numUses: parsed };
+      obj = { numUses: maxUses };
       stringResult1 = intl.formatToPlainString(util.t.yJnTxI, obj);
     }
     return stringResult1;

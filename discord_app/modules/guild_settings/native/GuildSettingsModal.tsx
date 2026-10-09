@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(20);
       let obj = require("c");
       const tmp4 = stateFromStores;
-      ({ bottom, left, right } = stateFromStores(1630)());
+      ({ bottom, left, right } = stateFromStores(1631)());
       if (cResult[0] === left) {
         if (cResult[1] === right) {
           let tmp6 = cResult[2];
@@ -585,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp8 = cResult[3];
         }
-        const tmp9 = tmp4(6174)(tmp8);
+        const tmp9 = tmp4(6176)(tmp8);
         _require = tmp9;
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -757,7 +757,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj2.initialRouteState = undefined;
               obj2.screens = tmp14;
               obj2.viewStyle = tmp6;
-              tmp27Result = tmp27(tmp(6679).Navigator, obj2);
+              tmp27Result = tmp27(tmp(6686).Navigator, obj2);
             }
             cResult[16] = first;
             cResult[17] = tmp6;
@@ -819,7 +819,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = right;
       cResult[2] = rect;
       tmp6 = rect;
-      const tmp5 = stateFromStores(1630)();
+      const tmp5 = stateFromStores(1631)();
     }
   : function GuildSettingsModal() {
       let rect = left(right[56])();

@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod4776 from "../../../../../../../_runtime/metro/04776__.js";
+import _mod4777 from "../../../../../../../_runtime/metro/04777__.js";
 import BaseIconImage from "../../BaseIconImage.tsx";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -35,7 +35,7 @@ export const CheckmarkLargeIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod4776;
+        const tmpResult = _mod4777;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const CheckmarkLargeIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod4776,
+        source: _mod4777,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

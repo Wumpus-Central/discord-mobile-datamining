@@ -62,7 +62,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
       return null != closure_4() && staffOrDeveloperSettingPredicate;
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useBuildOverrideActiveDescription() {
       const cResult = c.c(2);
@@ -95,7 +95,7 @@ const pressable = SettingBuilders.createPressable({
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(15055).RefreshIcon,
+  IconComponent: fn(15167).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(2);

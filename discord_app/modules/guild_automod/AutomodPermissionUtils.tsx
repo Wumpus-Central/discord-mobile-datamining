@@ -4,7 +4,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4693).GuildMemberFlags;
+const GuildMemberFlags = fn(4695).GuildMemberFlags;
 let items = [, ,];
 ({
   AUTOMOD_QUARANTINED_BIO: arr[0],

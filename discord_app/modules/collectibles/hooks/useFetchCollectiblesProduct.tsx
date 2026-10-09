@@ -109,7 +109,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
             }
           }
         }
-        tmp20 = tmp21 === tmp(1992).CollectiblesItemType.BUNDLE;
+        tmp20 = tmp21 === tmp(1993).CollectiblesItemType.BUNDLE;
       }
       if (tmp20) {
         class L {
@@ -231,7 +231,7 @@ export const useFetchCollectiblesProduct = ReactCompilerGating.isReactCompilerEn
         if (product != null) {
           type = product.type;
         }
-        tmp10 = type === tmp(1992).CollectiblesItemType.BUNDLE;
+        tmp10 = type === tmp(1993).CollectiblesItemType.BUNDLE;
       }
       if (tmp10) {
         tmp10 = 0 === product.items.length;

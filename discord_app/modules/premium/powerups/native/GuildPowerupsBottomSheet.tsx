@@ -37,8 +37,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const GuildPowerupsBoostGemDefault = tmp5(12272);
-const GuildPowerupsImageDefault = tmp5(12274);
+const GuildPowerupsBoostGemDefault = tmp5(12211);
+const GuildPowerupsImageDefault = tmp5(12213);
 const View = _mod17.View;
 ({ GuildPowerupType: hasOwnProperty, GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP: metroRequire } = GuildPowerupsConstants);
 let closure_7 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;

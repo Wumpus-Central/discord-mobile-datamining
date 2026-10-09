@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/PeopleScreen.tsx
-import tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import SearchPeopleTabStore from "../../../stores/SearchPeopleTabStore.tsx";
@@ -8,9 +8,9 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-const constants2 = fn(9246).SearchResultContentEntityTypes;
+const constants2 = fn(9284).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -460,7 +460,7 @@ export default noop.memo(
         }, items2);
         const items3 = [onPressGroupDMItem, searchContext];
         callback1 = fullscreenPlaceholderCount.useCallback((channelId, index) => {
-          const result = tracking_TrackingDefault.trackSearchResultClicked({
+          const result = search_tracking_TrackingDefault.trackSearchResultClicked({
             searchContext,
             channelId,
             index,

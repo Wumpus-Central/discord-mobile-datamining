@@ -40,7 +40,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const tmp19 = closure_13(tmp10(10386).ShieldIcon, obj2);
+      const tmp19 = closure_13(tmp10(10375).ShieldIcon, obj2);
       cResult[2] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -67,7 +67,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[7] !== tmp24) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp24 };
-      const tmp28 = closure_13(tmp10(5086).Text, obj5);
+      const tmp28 = closure_13(tmp10(5087).Text, obj5);
       cResult[7] = tmp24;
       cResult[8] = tmp28;
       let tmp26 = tmp28;
@@ -118,14 +118,14 @@ function ClassificationPolicyCard(policyExplainerLink) {
     };
     const obj11 = { style: tmp2.classificationPolicyCardIcon, children: null };
     const obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-    obj11.children = closure_13(policyExplainerLink(10386).ShieldIcon, obj12);
+    obj11.children = closure_13(policyExplainerLink(10375).ShieldIcon, obj12);
     const items = [closure_13(closure_4, obj11)];
     const obj13 = { style: tmp2.classificationPolicyCardContent, children: null };
     const obj14 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = policyExplainerLink(1126).intl;
     const obj15 = { classificationDescription: policyExplainerLink.classificationTypeText };
     obj14.children = intl.format(policyExplainerLink(1126).t.zxUdpj, obj15);
-    obj13.children = closure_13(policyExplainerLink(5086).Text, obj14);
+    obj13.children = closure_13(policyExplainerLink(5087).Text, obj14);
     items[1] = closure_13(closure_4, obj13);
     obj10.children = items;
     obj.children = closure_14(TouchableHitBoxDefault, obj10);
@@ -134,7 +134,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(5921);
+const SafetyHubConstants = fn(5922);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: c10,
@@ -143,7 +143,7 @@ const SafetyHubConstants = fn(5921);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,
@@ -391,7 +391,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           return intl.format(util.t["39jfOz"], obj2);
         }
       }, items);
-      obj.children = closure_13(classificationTypeText(5086).Text, {
+      obj.children = closure_13(classificationTypeText(5087).Text, {
         variant: "text-lg/normal",
         style: tmp.headerText,
         color: "mobile-text-heading-primary",
@@ -1031,7 +1031,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4) {
         const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-        const tmp8 = closure_13(tmp(5086).Text, obj3);
+        const tmp8 = closure_13(tmp(5087).Text, obj3);
         cResult[2] = tmp4;
         cResult[3] = tmp8;
         let tmp6 = tmp8;

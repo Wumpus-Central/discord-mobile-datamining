@@ -21,7 +21,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 }, statusRow: { flexDirection: "row", gap: nativeDefault.space.PX_4 }, statusEmoji: { width: 16, height: 16 }, usernameRow: { flexDirection: "row", alignItems: "center", overflow: "visible", gap: 2 }, username: { flexShrink: 1 }, guildTag: { marginLeft: 2, flexShrink: 0 }, statusText: { flexShrink: 1 } };
 let closure_15 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -113,13 +113,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = userId(576);
   const stateFromStores = userId(504).useStateFromStores(tmp5, C);
   const tmpResult = userId(504);
-  const customStatusActivity = userId(10488).useCustomStatusActivity();
-  const tmpResult4 = userId(10488);
+  const customStatusActivity = userId(10478).useCustomStatusActivity();
+  const tmpResult4 = userId(10478);
   state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10224).useGameMentionsAsPlainText(state);
+  const gameMentionsAsPlainText = userId(10209).useGameMentionsAsPlainText(state);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore, , , , , ];
     class C {
@@ -174,21 +174,21 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[4] = userId;
   cResult[5] = M;
   tmp18 = M;
-  const tmpResult5 = userId(10224);
+  const tmpResult5 = userId(10209);
 }) : (function YouName(username) {
   const userId = username.userId;
   const tmp = closure_15();
   let items = [SelfPresenceStore];
   const stateFromStores = userId(504).useStateFromStores(items, () => status.getStatus());
   let obj = userId(504);
-  const customStatusActivity = userId(10488).useCustomStatusActivity();
-  let obj2 = userId(10488);
+  const customStatusActivity = userId(10478).useCustomStatusActivity();
+  let obj2 = userId(10478);
   state = undefined;
   if (customStatusActivity != null) {
     state = customStatusActivity.state;
   }
-  const gameMentionsAsPlainText = userId(10224).useGameMentionsAsPlainText(state);
-  let obj3 = userId(10224);
+  const gameMentionsAsPlainText = userId(10209).useGameMentionsAsPlainText(state);
+  let obj3 = userId(10209);
   const items1 = [PresenceStore, ApplicationStreamingStore, RelationshipStore, ChannelStore, PermissionStore, VoiceStateStore];
   let obj4 = { style: tmp.userText, children: null };
   const stateFromStores1 = userId(504).useStateFromStores(items1, () => {
@@ -204,7 +204,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj5 = { style: tmp.statusRow, children: null };
   if (stateFromStores1) {
     const obj6 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-    let tmp9Result = closure_12(stateFromStores(10220), obj6);
+    let tmp9Result = closure_12(stateFromStores(10205), obj6);
   } else {
     let emoji;
     if (customStatusActivity != null) {
@@ -213,18 +213,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     let tmp11Result2 = null;
     if (null != emoji) {
       const obj7 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-      tmp11Result2 = closure_12(stateFromStores(10242), obj7);
+      tmp11Result2 = closure_12(stateFromStores(10227), obj7);
     }
     const items3 = [tmp11Result2, ];
     const obj8 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, ellipsizeMode: "tail", maxFontSizeMultiplier: 1.75, style: tmp.statusText, children: null };
     let humanizeStatusResult = gameMentionsAsPlainText;
     if (gameMentionsAsPlainText == null) {
-      humanizeStatusResult = tmp2(4922).humanizeStatus(stateFromStores);
-      const tmp2Result2 = tmp2(4922);
+      humanizeStatusResult = tmp2(4923).humanizeStatus(stateFromStores);
+      const tmp2Result2 = tmp2(4923);
     }
     const obj9 = { children: null };
     obj8.children = humanizeStatusResult;
-    items3[1] = closure_12(tmp2(5086).Text, obj8);
+    items3[1] = closure_12(tmp2(5087).Text, obj8);
     obj9.children = items3;
     tmp9Result = closure_13(closure_14, obj9);
   }

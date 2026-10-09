@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CollectiblesPreviewConstants from "CollectiblesPreviewConstants.tsx";
-import _modDef8973 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import _modDef8984 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
 import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { uri: _modDef8973 };
+          const obj2 = { uri: _modDef8984 };
           cResult[3] = obj2;
           let tmp7 = obj2;
         } else {
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: items, children: null };
       items[1] = profileBackground;
       const obj2 = { style: tmp.sampleProfileImage, source: null, accessible: false, resizeMode: "cover" };
-      const obj3 = { uri: _modDef8973 };
+      const obj3 = { uri: _modDef8984 };
       obj2.source = obj3;
       const items1 = [React4(FastImageDefault, obj2), ,];
       let tmp4Result = !flag;

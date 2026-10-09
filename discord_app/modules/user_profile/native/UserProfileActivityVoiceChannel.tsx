@@ -2,10 +2,9 @@
 import _mod17 from "../../../../_runtime/metro/00017__.js";
 import Constants from "../../../../discord_common/js/shared/Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import GuildRecord from "../../../records/GuildRecord.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import DesignSystemsNotificationComponentsExperiment from "../../design/DesignSystemsNotificationComponentsExperiment.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUtils.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
@@ -56,11 +55,11 @@ export default function UserProfileActivityVoiceChannel(guild) {
   } else {
     VoiceNormalIcon = tmp4(tmp3[14]).VoiceNormalIcon;
   }
-  let obj4 = { style: null, children: null };
+  const obj4 = { style: null, children: null };
   const items1 = [tmp.container, guild.style];
   obj4.style = items1;
   if (isScreenReaderEnabled) {
-    let obj5 = { accessible: true, accessibilityLabel: null, children: null };
+    const obj5 = { accessible: true, accessibilityLabel: null, children: null };
     const intl = tmp4(tmp3[15]).intl;
     const obj6 = { guildName: guild.name };
     obj5.accessibilityLabel = intl.formatToPlainString(tmp4(tmp3[15]).t.xm6W9D, obj6);
@@ -75,27 +74,10 @@ export default function UserProfileActivityVoiceChannel(guild) {
       accessibilityLabel: guild.name,
       onPress: function handlePress() {
         onAction({ action: "PRESS_VOICE_CHANNEL_ICON" });
-        const designSystemsNotificationComponents =
-          DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents(
-            "UserProfileActivityVoiceChannel",
-          );
-        const obj2 = ToastActionCreatorsDefault;
-        if (designSystemsNotificationComponents) {
-          const obj3 = { text: guild.name, icon: null };
-          const obj4 = { type: "guild", src: getGuildIconURL(guild, 48), name: guild.name };
-          obj3.icon = obj4;
-          obj2.openMana("GUILD_NAME_TOAST", obj3);
-        } else {
-          const obj5 = {
-            key: "GUILD_NAME_TOAST",
-            content: guild.name,
-            icon() {
-              const obj = { size: guild(onAction[16]).GuildIconSizes.XSMALL, guild };
-              return closure_2_7(channel(onAction[16]), obj);
-            },
-          };
-          obj2.open(obj5);
-        }
+        const obj2 = { text: guild.name, icon: null };
+        const obj = ToastActionCreatorsDefault;
+        obj2.icon = { type: "guild", src: getGuildIconURL(guild, 48), name: guild.name };
+        obj.openMana("GUILD_NAME_TOAST", obj2);
       },
       children: null,
     };
@@ -107,7 +89,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   }
   const items2 = [
     tmp10Result,
-    tmp13(guild(onAction[20]).ChevronSmallRightIcon, { size: "xxs", color: "text-default" }),
+    tmp13(guild(onAction[19]).ChevronSmallRightIcon, { size: "xxs", color: "text-default" }),
     ,
   ];
   if (stateFromStores) {
@@ -120,7 +102,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
       children: null,
     };
     const obj11 = { channel };
-    obj10.accessibilityLabel = tmp2(tmp3[22])(obj11);
+    obj10.accessibilityLabel = tmp2(tmp3[21])(obj11);
     const intl2 = tmp4(tmp3[15]).intl;
     obj10.accessibilityHint = intl2.string(tmp4(tmp3[15]).t["9C444m"]);
     obj10.onPress = function handlePress_0() {
@@ -130,14 +112,14 @@ export default function UserProfileActivityVoiceChannel(guild) {
     };
     const items3 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
     const obj12 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
-    items3[1] = tmp13(tmp4(tmp3[21]).Text, obj12);
+    items3[1] = tmp13(tmp4(tmp3[20]).Text, obj12);
     obj10.children = items3;
     let tmp8Result = closure_8(tmp4(tmp3[17]).PressableOpacity, obj10);
   } else {
     const obj13 = { style: tmp.channelButton, children: null };
     const items4 = [tmp13(VoiceNormalIcon, { size: "xxs", color: "text-default" })];
     const obj14 = { style: tmp.channelName, variant: "text-xs/normal", lineClamp: 1, children: tmp6 };
-    items4[1] = tmp13(tmp4(tmp3[21]).Text, obj14);
+    items4[1] = tmp13(tmp4(tmp3[20]).Text, obj14);
     obj13.children = items4;
     tmp8Result = closure_8(tmp9, obj13);
   }
@@ -148,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13017, dependencyMap.paths),
+      asyncRequireImpl(13099, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,
@@ -157,14 +139,14 @@ export default function UserProfileActivityVoiceChannel(guild) {
           const obj = {};
           const merged = Object.assign(context);
           obj.userId = userId;
-          return channel(onAction[27])(obj);
+          return channel(onAction[26])(obj);
         },
       },
       "stack",
     );
   };
   const obj17 = {
-    size: guild(onAction[29]).AvatarSizes.SIZE_16,
+    size: guild(onAction[28]).AvatarSizes.SIZE_16,
     totalCount: users.length,
     names: users.map((username) => username.username),
     children: null,
@@ -176,7 +158,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj17.children = substr.map((user) =>
     React5(native.Avatar, { size: native.AvatarSizes.SIZE_16, channel, guildId: guild.id, user }, user.id),
   );
-  obj15.children = tmp13(guild(onAction[28]).AvatarPile, obj17);
+  obj15.children = tmp13(guild(onAction[27]).AvatarPile, obj17);
   items2[3] = tmp13(guild(onAction[17]).PressableOpacity, obj15);
   obj4.children = items2;
   return closure_8(newestAnalyticsLocation, obj4);

@@ -92,8 +92,8 @@ let closure_13 = async function _computeNativeDisplayPair(arg0) {
     }
   }
 };
-let closure_9 = fn(8801).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
-let Features = fn(5115).Features;
+let closure_9 = fn(8810).SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION;
+let Features = fn(5116).Features;
 const SecureFramesPairwiseFingerprintMode = { FROZEN: "frozen", LIVE: "live" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

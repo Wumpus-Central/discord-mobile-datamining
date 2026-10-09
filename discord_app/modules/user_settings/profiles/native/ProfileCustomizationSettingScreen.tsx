@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import UserSettingsAccountActionCreators from "../../../../actions/UserSettingsAccountActionCreators.tsx";
-import GuildIdentityActionCreators from "../../../guild_identity/GuildIdentityActionCreators.tsx";
 import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert.tsx";
+import GuildIdentityActionCreators from "../../../guild_identity/GuildIdentityActionCreators.tsx";
 import UserSettingsEditUserProfileDefault from "UserSettingsEditUserProfile.tsx";
 import useUserProfileEditFormDefault from "useUserProfileEditForm.tsx";
 import UserSettingsEditGuildProfileDefault from "UserSettingsEditGuildProfile.tsx";
@@ -31,7 +31,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_15, AnalyticsSections: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_19 = createStyles.createStyles({ container: { height: "100%" }, controls: { paddingTop: 4 } });
 let items = [
   {
@@ -70,15 +70,15 @@ export default noop.memo(
         useMaybeFetchCollectiblesRecommendationsDefault();
         closure_19();
         let obj = obj5(576);
-        const token = obj5(4778).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
+        const token = obj5(4779).useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
         obj5 = token;
         const tmp8 = _slicedToArray(stateFromStores.useState(0), 2);
         importDefault = tmp8[1];
         [dependencyMap, closure_3] = stateFromStores.useState(false);
-        let obj2 = obj5(4778);
-        const nativeStackNavigation = obj5(1502).useNativeStackNavigation();
-        let obj3 = obj5(1502);
-        const params = obj5(6674).useSettingNavigationRoute().params;
+        let obj2 = obj5(4779);
+        const nativeStackNavigation = obj5(1503).useNativeStackNavigation();
+        let obj3 = obj5(1503);
+        const params = obj5(6681).useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
           autoFocusElement = params.autoFocusElement;
@@ -122,7 +122,7 @@ export default noop.memo(
             }
           }
         }
-        let obj4 = obj5(6674);
+        let obj4 = obj5(6681);
         const obj6 = {
           items: tmp13,
           pageWidth: tmp8[0],
@@ -154,7 +154,7 @@ export default noop.memo(
           };
           return maybeShowDiscardChangesAlertDefault(obj);
         };
-        const segmentedControlState = obj5(8505).useSegmentedControlState(obj6);
+        const segmentedControlState = obj5(8513).useSegmentedControlState(obj6);
         const activeIndex = segmentedControlState.activeIndex;
         const tmp18 = items[activeIndex.get(activeIndex)];
         if (tmp18 == null) {
@@ -278,7 +278,7 @@ export default noop.memo(
           }
           tmp35 = cResult[11];
         }
-        const tmpResult = obj5(8505);
+        const tmpResult = obj5(8513);
         stateFromStores = obj5(573).useStateFromStores(tmp34, tmp35);
         closure_11 = tmp20.isSubmitting || tmp28.isSubmitting;
         if (cResult[12] === tmp29) {

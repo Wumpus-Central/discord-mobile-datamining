@@ -2,13 +2,13 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import FramesNativeManagerDefault from "FramesNativeManager.tsx";
+import leaveFrame from "../leaveFrame.tsx";
 import frames_getDefaultOrientationLockState from "getDefaultOrientationLockState.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const FrameLayoutModes = fn(10613).FrameLayoutModes;
+const FrameLayoutModes = fn(10767).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -22,9 +22,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const layoutMode = presentation.layoutMode;
       ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
       let obj = frame(576);
-      const data = frame(6842).useApplication(frame.applicationId).data;
+      const data = frame(6849).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
-      const obj2 = frame(6842);
+      const obj2 = frame(6849);
       const first = _slicedToArray(noop.useState(true), 2)[0];
       if (cResult[0] === frame.applicationId) {
         if (cResult[1] === frame.id) {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const layoutEffect = noop.useLayoutEffect(tmp5, tmp6);
           if (cResult[5] !== frame.id) {
             const fn2 = function u() {
-              FramesNativeManagerDefault.leaveFrame(frame.id);
+              leaveFrame.leaveFrame(frame.id);
             };
             cResult[5] = frame.id;
             cResult[6] = fn2;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const layoutMode = presentation.layoutMode;
       let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
       ({ iframeId, onActivityCrash } = frame);
-      const data = frame(6842).useApplication(frame.applicationId).data;
+      const data = frame(6849).useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
       const tmp3 = _slicedToArray(noop.useState(true), 2);
       let first = tmp3[0];
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [frame.id];
       const items2 = [frame.id];
       const callback = noop.useCallback(() => {
-        FramesNativeManagerDefault.leaveFrame(frame.id);
+        leaveFrame.leaveFrame(frame.id);
       }, items1);
       const callback1 = noop.useCallback(
         (application, arg1) =>
@@ -139,8 +139,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!first) {
         first = null == data;
       }
-      let obj = frame(6842);
-      const baseActivityView = frame(10735).useBaseActivityView({
+      let obj = frame(6849);
+      const baseActivityView = frame(10884).useBaseActivityView({
         orientationLockState: orientationLock,
         showLoadingIndicator: first,
         setShowLoadingStateForLockingOrientation: tmp3[1],
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         applicationId: frame.applicationId,
         iframeId,
         onDisallowedNavigation() {
-          FramesNativeManagerDefault.leaveFrame(frame.id);
+          leaveFrame.leaveFrame(frame.id);
           const obj3 = { body: null, confirmText: null };
           const intl = util.intl;
           obj3.body = intl.string(util.t.tYBBWz);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           actions_AlertActionCreatorsDefault.show(obj3);
         },
         onInvalidUrl() {
-          return FramesNativeManagerDefault.leaveFrame(frame.id);
+          return leaveFrame.leaveFrame(frame.id);
         },
         activityUrl: frame.data.url,
         contextSource: null,
@@ -175,15 +175,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         safeAreasConfig: null,
       };
       const obj4 = { type: null, frameId: null };
-      const tmpResult = frame(10735);
-      obj4.type = frame(10615).EmbeddedContextSourceType.FRAME;
+      const tmpResult = frame(10884);
+      obj4.type = frame(10774).EmbeddedContextSourceType.FRAME;
       obj4.frameId = frame.id;
       obj3.contextSource = obj4;
-      const tmp10 = layoutMode(17462);
-      obj3.queryParams = layoutMode(17459)(frame, frame(10742).ActivityPlatform.MOBILE);
+      const tmp10 = layoutMode(17614);
+      obj3.queryParams = layoutMode(17611)(frame, frame(10901).ActivityPlatform.MOBILE);
       obj3.onLoadError = callback;
-      const tmp11 = layoutMode(17459);
-      obj3.allowPopups = frame(10750).allowPopups(data);
+      const tmp11 = layoutMode(17611);
+      obj3.allowPopups = frame(10920).allowPopups(data);
       obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
       if (isLandscape) {
         landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           applicationId={frame.applicationId}
           iframeId={iframeId}
           onDisallowedNavigation={function onDisallowedNavigation() {
-            FramesNativeManagerDefault.leaveFrame(frame.id);
+            leaveFrame.leaveFrame(frame.id);
             const obj3 = { body: null, confirmText: null };
             const intl = util.intl;
             obj3.body = intl.string(util.t.tYBBWz);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             actions_AlertActionCreatorsDefault.show(obj3);
           }}
           onInvalidUrl={function onInvalidUrl() {
-            return FramesNativeManagerDefault.leaveFrame(frame.id);
+            return leaveFrame.leaveFrame(frame.id);
           }}
           activityUrl={frame.data.url}
           contextSource={null}
@@ -216,5 +216,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           safeAreasConfig={null}
         />
       );
-      return jsx(frame(10735).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+      return jsx(frame(10884).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
     };

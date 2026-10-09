@@ -16,8 +16,8 @@ export const isStickerCategoryNitroLocked = function isStickerCategoryNitroLocke
   if (everyResult) {
     const stickers = type.stickers;
     everyResult = stickers.every((item) => {
-      const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
-      return stickerSendability === closure_0(7037).StickerSendability.SENDABLE_WITH_PREMIUM;
+      const stickerSendability = closure_0(7040).getStickerSendability(item, closure_0, dependencyMap);
+      return stickerSendability === closure_0(7040).StickerSendability.SENDABLE_WITH_PREMIUM;
     });
   }
   return everyResult;
@@ -34,8 +34,8 @@ export const getStickerCategoriesWithNitroLockState = function getStickerCategor
           dependencyMap = tmp2;
           const stickers1 = type.stickers;
           const found = stickers1.filter((item) => {
-            const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
-            return stickerSendability !== closure_0(7037).StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
+            const stickerSendability = closure_0(7040).getStickerSendability(item, closure_0, dependencyMap);
+            return stickerSendability !== closure_0(7040).StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
           });
           if (found.length > 0) {
             const obj2 = {};
@@ -47,8 +47,8 @@ export const getStickerCategoriesWithNitroLockState = function getStickerCategor
             if (everyResult) {
               const stickers = obj2.stickers;
               everyResult = stickers.every((item) => {
-                const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
-                return stickerSendability === closure_0(7037).StickerSendability.SENDABLE_WITH_PREMIUM;
+                const stickerSendability = closure_0(7040).getStickerSendability(item, closure_0, dependencyMap);
+                return stickerSendability === closure_0(7040).StickerSendability.SENDABLE_WITH_PREMIUM;
               });
             }
             if (everyResult) {
@@ -81,8 +81,8 @@ export const getStickerCategoriesWithNitroLockState = function getStickerCategor
     dependencyMap = tmp2;
     const stickers2 = type.stickers;
     const found1 = stickers2.filter((item) => {
-      const stickerSendability = closure_0(7037).getStickerSendability(item, closure_0, dependencyMap);
-      return stickerSendability !== closure_0(7037).StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
+      const stickerSendability = closure_0(7040).getStickerSendability(item, closure_0, dependencyMap);
+      return stickerSendability !== closure_0(7040).StickerSendability.SENDABLE_WITH_BOOSTED_GUILD;
     });
     let tmp18 = null;
     if (0 !== found1.length) {

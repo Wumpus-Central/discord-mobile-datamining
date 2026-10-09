@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_2 = ["icon", "style"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import maybeFetchUserProfileDefault from "../../../user_profile/maybeFetchUserProfile.tsx";
-import GuildIdentityActionCreators from "../../../guild_identity/GuildIdentityActionCreators.tsx";
 import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert.tsx";
+import GuildIdentityActionCreators from "../../../guild_identity/GuildIdentityActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../../../user_profile/UserProfileSettingsStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   guildSelector: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

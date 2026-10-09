@@ -2,22 +2,22 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
 import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import _modDef6905 from "../../../../../_runtime/metro/06905__.js";
+import _modDef6912 from "../../../../../_runtime/metro/06912__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(6902).NsfwGateSource;
+const View = fn(17).View;
+const NsfwGateSource = fn(6909).NsfwGateSource;
 const Constants = fn(1085);
-({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
+({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     flex: 1,
@@ -30,7 +30,7 @@ let obj2 = {
   description: { textAlign: "center", marginBottom: 16 },
   image: { marginBottom: 16 },
 };
-let closure_13 = createStyles.createStyles(obj2);
+let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
   flex: 1,
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function NsfwGateGuild(arg0) {
       const cResult = guildId(576).c(25);
       ({ onClose, guildId } = arg0);
-      const tmp4 = closure_13();
+      const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = guildId(1126).intl;
         const stringResult = intl.string(guildId(1126).t.vAymlG);
@@ -81,669 +81,139 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       importDefault = tmp13;
       if (cResult[4] !== guildId) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
+        const fn = function w() {
+          const obj2 = {
+            guild_id: guildId,
+            user_id: null,
+            is_member: null,
+            is_user_opted_in_to_age_restricted_servers: null,
+            source: null,
+          };
+          let id;
+          if (user != null) {
+            id = user.id;
           }
-        }
+          obj2.user_id = id;
+          let id1;
+          if (user != null) {
+            id1 = user.id;
+          }
+          obj2.is_member = GuildMemberStore.isMember(guildId, id1);
+          let nsfwAllowed;
+          if (user != null) {
+            nsfwAllowed = user.nsfwAllowed;
+          }
+          if (nsfwAllowed) {
+            nsfwAllowed = AgeRestrictedContentSettingsUtils.getViewNsfwGuildsOrDefault();
+          }
+          obj2.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
+          obj2.source = NsfwGateSource.MODAL;
+          AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
+        };
         const items = [guildId, tmp13];
         cResult[4] = guildId;
-        cResult[5] = D;
+        cResult[5] = fn;
         cResult[6] = items;
         let tmp17 = items;
+        let tmp16 = fn;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
+        tmp16 = cResult[5];
         tmp17 = cResult[6];
       }
-      const effect = noop.useEffect(D, tmp17);
+      const effect = noop.useEffect(tmp16, tmp17);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
-        const tmp21 = closure_11(BackgroundImageDefault, {});
-        cResult[7] = tmp21;
-        const tmp19 = tmp21;
+        const tmp22 = closure_10(BackgroundImageDefault, {});
+        cResult[7] = tmp22;
+        let tmp19 = tmp22;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
+        tmp19 = cResult[7];
       }
       if (cResult[8] !== tmp4.image) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
-        const obj4 = { source: _modDef6905, style: tmp4.image };
-        const tmp25 = closure_11(closure_5, obj4);
+        const obj4 = { source: _modDef6912, style: tmp4.image };
+        const tmp27 = closure_10(FastImageDefault, obj4);
         cResult[8] = tmp4.image;
-        cResult[9] = tmp25;
+        cResult[9] = tmp27;
+        let tmp23 = tmp27;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
+        tmp23 = cResult[9];
       }
       if (cResult[10] !== tmp4.header) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
         const obj5 = {
           style: tmp4.header,
           variant: "heading-xl/extrabold",
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp27 = closure_11(guildId(5086).Heading, obj5);
+        const tmp30 = closure_10(guildId(5087).Heading, obj5);
         cResult[10] = tmp4.header;
-        cResult[11] = tmp27;
+        cResult[11] = tmp30;
+        let tmp28 = tmp30;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
+        tmp28 = cResult[11];
       }
       if (cResult[12] !== tmp4.description) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
         const obj6 = { style: tmp4.description, variant: "text-md/normal", color: "text-default", children: tmp7 };
-        const tmp30 = closure_11(guildId(5086).Text, obj6);
+        const tmp34 = closure_10(guildId(5087).Text, obj6);
         const obj7 = { style: tmp4.description, variant: "text-md/normal", color: "text-default", children: tmp9 };
-        const tmp31 = closure_11(guildId(5086).Text, obj7);
+        const tmp35 = closure_10(guildId(5087).Text, obj7);
         cResult[12] = tmp4.description;
-        cResult[13] = tmp30;
-        cResult[14] = tmp31;
-        let tmp29 = tmp31;
+        cResult[13] = tmp34;
+        cResult[14] = tmp35;
+        let tmp32 = tmp35;
+        let tmp31 = tmp34;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
-        tmp29 = cResult[14];
+        tmp31 = cResult[13];
+        tmp32 = cResult[14];
       }
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
-        const stringResult2 = obj8.string(guildId(1126).t.gRqiWV);
+        const intl4 = guildId(1126).intl;
+        const stringResult2 = intl4.string(guildId(1126).t.gRqiWV);
         cResult[15] = stringResult2;
-        const tmp32 = stringResult2;
+        let tmp36 = stringResult2;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
+        tmp36 = cResult[15];
       }
       if (cResult[16] !== onClose) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
-        const obj9 = { onPress: onClose, size: "md", text: tmp32 };
-        const tmp35 = closure_11(guildId(5375).Button, obj9);
+        const obj8 = { onPress: onClose, size: "md", text: tmp36 };
+        const tmp40 = closure_10(guildId(5376).Button, obj8);
         cResult[16] = onClose;
-        cResult[17] = tmp35;
+        cResult[17] = tmp40;
+        let tmp38 = tmp40;
       } else {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
-            }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
-          }
-        }
+        tmp38 = cResult[17];
       }
       if (cResult[18] === tmp4.container) {
-        class D {
-          constructor() {
-            tmp = closure_2;
-            obj = closure_1(closure_2[13]);
-            obj1 = {
-              guild_id: guildId,
-              user_id: null,
-              is_member: null,
-              is_user_opted_in_to_age_restricted_servers: null,
-              source: null,
-            };
-            tmp3 = closure_1;
-            id = undefined;
-            tmp2 = guildId;
-            if (closure_1 != null) {
-              id = tmp3.id;
+        if (cResult[19] === tmp28) {
+          if (cResult[20] === tmp31) {
+            if (cResult[21] === tmp32) {
+              if (cResult[22] === tmp38) {
+                if (cResult[23] === tmp23) {
+                  let tmp41 = cResult[24];
+                }
+                return tmp41;
+              }
             }
-            obj1.user_id = id;
-            id1 = undefined;
-            tmp5 = closure_6;
-            if (tmp3 != null) {
-              id1 = tmp3.id;
-            }
-            obj1.is_member = closure_6.isMember(tmp2, id1);
-            nsfwAllowed = undefined;
-            if (tmp3 != null) {
-              nsfwAllowed = tmp3.nsfwAllowed;
-            }
-            if (nsfwAllowed) {
-              tmp8 = closure_0;
-              obj3 = closure_0(tmp[14]);
-              nsfwAllowed = obj3.getViewNsfwGuildsOrDefault();
-            }
-            obj1.is_user_opted_in_to_age_restricted_servers = nsfwAllowed;
-            obj1.source = NsfwGateSource.MODAL;
-            trackResult = obj.track(AnalyticEvents.GUILD_NSFW_GATE_VIEWED, obj1);
-            return;
           }
         }
       }
-      const obj10 = { style: tmp4.container, children: null };
-      const items1 = [tmp19, tmp22, tmp26, tmp28, tmp29, tmp34];
-      obj10.children = items1;
-      let obj = guildId(576);
+      const obj9 = { style: tmp4.container, children: null };
+      const items1 = [tmp19, tmp23, tmp28, tmp31, tmp32, tmp38];
+      obj9.children = items1;
+      const tmp42 = closure_11(View, obj9);
       cResult[18] = tmp4.container;
-      cResult[19] = tmp26;
-      cResult[20] = tmp28;
-      cResult[21] = tmp29;
-      cResult[22] = tmp34;
-      cResult[23] = tmp22;
-      cResult[24] = closure_12(closure_4, obj10);
-      const tmp36 = closure_12(closure_4, obj10);
+      cResult[19] = tmp28;
+      cResult[20] = tmp31;
+      cResult[21] = tmp32;
+      cResult[22] = tmp38;
+      cResult[23] = tmp23;
+      cResult[24] = tmp42;
+      tmp41 = tmp42;
+      let obj = guildId(576);
     }
   : function NsfwGateGuild(guildId) {
       guildId = guildId.guildId;
       let currentUser;
-      const tmp = closure_13();
+      const tmp = closure_12();
       const intl = guildId(1126).intl;
       const intl2 = guildId(1126).intl;
       const stringResult = intl.string(guildId(1126).t.vAymlG);
@@ -784,22 +254,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
       }, items);
       let obj3 = { style: tmp.container, children: null };
-      const items1 = [closure_11(currentUser(6648), {}), , , , ,];
+      const items1 = [closure_10(currentUser(6655), {}), , , , ,];
+      const obj4 = { source: null, style: null };
       const formatResult = intl3.format(guildId(1126).t.Z12LNW, obj);
-      items1[1] = closure_11(closure_5, { source: currentUser(6905), style: tmp.image });
-      items1[2] = closure_11(guildId(5086).Heading, {
+      obj4.source = currentUser(6912);
+      obj4.style = tmp.image;
+      items1[1] = closure_10(currentUser(6163), obj4);
+      items1[2] = closure_10(guildId(5087).Heading, {
         style: tmp.header,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
         children: stringResult,
       });
-      items1[3] = closure_11(guildId(5086).Text, {
+      items1[3] = closure_10(guildId(5087).Text, {
         style: tmp.description,
         variant: "text-md/normal",
         color: "text-default",
         children: stringResult1,
       });
-      items1[4] = closure_11(guildId(5086).Text, {
+      items1[4] = closure_10(guildId(5087).Text, {
         style: tmp.description,
         variant: "text-md/normal",
         color: "text-default",
@@ -808,7 +281,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { onPress: guildId.onClose, size: "md", text: null };
       const intl4 = guildId(1126).intl;
       obj8.text = intl4.string(guildId(1126).t.gRqiWV);
-      items1[5] = closure_11(guildId(5375).Button, obj8);
+      items1[5] = closure_10(guildId(5376).Button, obj8);
       obj3.children = items1;
-      return closure_12(closure_4, obj3);
+      return closure_11(View, obj3);
     };

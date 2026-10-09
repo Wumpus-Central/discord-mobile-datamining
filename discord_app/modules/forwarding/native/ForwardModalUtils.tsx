@@ -1,5 +1,5 @@
 // discord_app/modules/forwarding/native/ForwardModalUtils.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import ForwardingAnalyticsUtils from "../ForwardingAnalyticsUtils.tsx";
@@ -23,7 +23,7 @@ export const openForwardModal = function openForwardModal(arg0) {
   ({ forwardOptions, customSendHandler } = arg0);
   ForwardingAnalyticsUtils.trackForwardStart(message.channel_id, message.id, source);
   showSearchableDestinationListModalDefault(
-    asyncRequireImpl(11575, dependencyMap.paths),
+    asyncRequireImpl(11508, dependencyMap.paths),
     { message, initialSelectedDestinations, forwardOptions, source, customSendHandler },
     c5,
   );

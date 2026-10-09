@@ -7,7 +7,7 @@ import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
 require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(fn(5910).CountryCodesSets.EU_COUNTRIES, 2);
+HermesBuiltin.arraySpread(fn(5911).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()

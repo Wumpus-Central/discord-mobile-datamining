@@ -37,7 +37,7 @@ export const JSExceptionLocation = {
   MainProcess: 2,
   [2]: "MainProcess",
 };
-export const DesktopSources = { WINDOW: "window", SCREEN: "screen", CAMERA: "camera" };
+export const DesktopSources = { WINDOW: "window", SCREEN: "screen", CAMERA: "camera", ACTIVITY: "activity" };
 export const ThumbarButtonName = { VIDEO: "VIDEO", MUTE: "MUTE", DEAFEN: "DEAFEN", DISCONNECT: "DISCONNECT" };
 export const TrayIcon = {
   DEFAULT: "DEFAULT",

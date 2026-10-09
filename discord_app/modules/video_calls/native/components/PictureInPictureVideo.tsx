@@ -6,7 +6,7 @@ import native2 from "../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useToken2 from "../../../../design/tokens/native/useToken.tsx";
-import _modDef5008 from "../../../../../_runtime/metro/05008__.js";
+import _modDef5009 from "../../../../../_runtime/metro/05009__.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import useAvatarColorDefault from "../../../avatar/useAvatarColor.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
@@ -34,12 +34,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10333);
+const ChannelCallStore = fn(10320);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5113).ParticipantTypes;
+const ParticipantTypes = fn(5114).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -1019,7 +1019,7 @@ let closure_23 = noop.memo(
                               const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
                               const obj5 = {
                                 style: tmp4.thermalAlertIcon,
-                                source: _modDef5008,
+                                source: _modDef5009,
                                 color: tmp4.thermalAlertIcon.color,
                               };
                               obj4.children = value2(native2.Icon, obj5);
@@ -1165,7 +1165,7 @@ let closure_23 = noop.memo(
             let tmp18Result = null;
             if (tmp5) {
               const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef5008, color: tmp.thermalAlertIcon.color };
+              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef5009, color: tmp.thermalAlertIcon.color };
               obj8.children = tmp18(native2.Icon, obj9);
               tmp18Result = tmp18(hasOwnProperty, obj8);
             }

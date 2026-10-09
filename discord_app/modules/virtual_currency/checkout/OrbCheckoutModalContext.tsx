@@ -5,7 +5,7 @@ import CollectiblesProductUtils from "../../collectibles/utils/CollectiblesProdu
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import SKUStore from "../../../stores/game_store/SKUStore.tsx";
-import v1 from "../../../../_runtime/01278_v1.js";
+import v1 from "../../../../_runtime/01279_v1.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import "ReactCompilerGating";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -16,7 +16,7 @@ let obj = {
   skuId: "123",
   skuProductLine: null,
   skuApplicationId: "r",
-  loadId: "Reflect",
+  loadId: "Set",
   analyticsLocations: null,
   analyticsSourceLocation: null,
   isRedeeming: null,

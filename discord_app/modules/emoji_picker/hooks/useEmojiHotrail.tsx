@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EMOJI_ROW_SIZE = fn(5996).EMOJI_ROW_SIZE;
+const EMOJI_ROW_SIZE = fn(5998).EMOJI_ROW_SIZE;
 const ReactCompilerGating = fn(558);
 function getEmojiHotrail(arg0) {
   ({ topEmojis, newlyAddedEmojis, rowSize } = arg0);

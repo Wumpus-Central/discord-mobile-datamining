@@ -4,7 +4,7 @@ import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import GameConsoleStore from "GameConsoleStore.tsx";
 
 const require = fn;
-const CONSOLE_VOICE_PLATFORMS = fn(9127).CONSOLE_VOICE_PLATFORMS;
+const CONSOLE_VOICE_PLATFORMS = fn(9194).CONSOLE_VOICE_PLATFORMS;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

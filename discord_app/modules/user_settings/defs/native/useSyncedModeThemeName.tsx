@@ -7,7 +7,7 @@ import ThemeStore from "../../ThemeStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(1252).BACKGROUND_GRADIENT_PRESETS_MAP;
+let closure_4 = fn(1253).BACKGROUND_GRADIENT_PRESETS_MAP;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/useSyncedModeThemeName.tsx");

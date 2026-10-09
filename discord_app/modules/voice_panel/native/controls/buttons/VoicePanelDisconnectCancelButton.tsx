@@ -5,7 +5,7 @@ import ChannelRTCActionCreatorsDefault from "../../../../../actions/ChannelRTCAc
 import SelectedChannelActionCreatorsDefault from "../../../../../actions/SelectedChannelActionCreators.tsx";
 import ChannelRTCParticipants from "../../../../calls/ChannelRTCParticipants.tsx";
 import StreamActionCreators from "../../../../../actions/StreamActionCreators.tsx";
-import EmbeddedActivitiesNativeManagerDefault from "../../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import leaveEmbeddedActivity from "../../../../activities/leaveEmbeddedActivity.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../../activities/EmbeddedActivitiesStore.tsx";
@@ -15,10 +15,10 @@ import VoicePanelStore from "../../../VoicePanelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11989).VoicePanelModes;
+const VoicePanelModes = fn(11926).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT },
   icon: null,
@@ -201,25 +201,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (closure_3 !== closure_10.ACTIVITY) {
             if (tmp2 === closure_10.STREAM) {
-              tmp17 = closure_1;
-              tmp18 = closure_2;
+              tmp16 = closure_1;
+              tmp17 = closure_2;
               obj6 = closure_1(closure_2[15]);
-              tmp19 = channelId;
+              tmp18 = channelId;
               participant = obj6.selectParticipant(channelId, null);
               if (null != id) {
-                tmp21 = closure_0;
-                obj7 = closure_0(tmp18[16]);
+                tmp20 = closure_0;
+                obj7 = closure_0(tmp17[16]);
                 stopStreamResult = obj7.stopStream(id);
               }
               return;
             } else {
-              tmp11 = closure_1;
-              tmp12 = closure_2;
+              tmp10 = closure_1;
+              tmp11 = closure_2;
               obj4 = closure_1(closure_2[17]);
               disconnectResult = obj4.disconnect();
-              tmp14 = closure_7;
+              tmp13 = closure_7;
               state = closure_7.getState();
-              tmp15 = channelId;
+              tmp14 = channelId;
               closeChannelResult = state.closeChannel(channelId);
             }
           } else {
@@ -228,9 +228,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp5 = closure_0;
             tmp6 = closure_2;
             obj = closure_0(closure_2[12]);
-            tmp8 = closure_1;
             result = obj.activityParticipantIdToApplicationId(id);
-            obj2 = closure_1(closure_2[14]);
+            obj2 = closure_0(closure_2[14]);
             _location = undefined;
             if (currentEmbeddedActivity != null) {
               _location = currentEmbeddedActivity.location;
@@ -238,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj1 = { location: null, applicationId: null };
             obj1.location = _location;
             obj1.applicationId = result;
-            leaveActivityResult = obj2.leaveActivity(obj1);
+            result1 = obj2.leaveEmbeddedActivity(obj1);
           }
           return;
         }
@@ -352,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             _location = currentEmbeddedActivity.location;
           }
           const obj3 = { location: _location, applicationId: result };
-          EmbeddedActivitiesNativeManagerDefault.leaveActivity(obj3);
+          const result1 = leaveEmbeddedActivity.leaveEmbeddedActivity(obj3);
         }
       }, items);
       if (first === constants.ACTIVITY) {

@@ -1,10 +1,9 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01278_v1.js";
+import v1 from "../../../../_runtime/01279_v1.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "ToastActionCreators.tsx";
-import DesignSystemsNotificationComponentsExperiment from "../../design/DesignSystemsNotificationComponentsExperiment.tsx";
 import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import XLargeIcon2 from "../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
@@ -45,13 +44,13 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
   obj.open({
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(5033).UserPlusIcon,
+    IconComponent: tmp2(5034).UserPlusIcon,
     iconColor: "status-positive",
   });
   const obj3 = {
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(5033).UserPlusIcon,
+    IconComponent: tmp2(5034).UserPlusIcon,
     iconColor: "status-positive",
   };
 };
@@ -171,28 +170,11 @@ export const presentFeedbackSent = function presentFeedbackSent() {
 export const presentEmoji = function presentEmoji(id) {
   const emojiURL = AvatarUtilsDefault.getEmojiURL({ id: id.id, animated: id.animated, size: 48 });
   const obj2 = { id: id.id, animated: id.animated, size: 48 };
-  const designSystemsNotificationComponents =
-    DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("presentEmoji");
-  const obj4 = ToastActionCreatorsDefault;
-  if (designSystemsNotificationComponents) {
-    const _HermesInternal3 = HermesInternal;
-    const obj5 = { text: null, icon: null };
-    const _HermesInternal4 = HermesInternal;
-    const combined = "PRESENT_EMOJI-" + id.id;
-    obj5.text = ":" + id.name + ":";
-    const obj6 = { type: "emoji", src: emojiURL, alt: id.name };
-    obj5.icon = obj6;
-    obj4.openMana(combined, obj5);
-  } else {
-    const obj7 = { key: null, content: null, icon: null };
-    const _HermesInternal = HermesInternal;
-    obj7.key = "PRESENT_EMOJI-" + id.id;
-    const _HermesInternal2 = HermesInternal;
-    obj7.content = ":" + id.name + ":";
-    const obj8 = { uri: emojiURL };
-    obj7.icon = obj8;
-    obj4.open(obj7);
-  }
+  const obj4 = { text: null, icon: null };
+  const combined = "PRESENT_EMOJI-" + id.id;
+  obj4.text = ":" + id.name + ":";
+  obj4.icon = { type: "emoji", src: emojiURL, alt: id.name };
+  ToastActionCreatorsDefault.openMana(combined, obj4);
 };
 export const presentNoiseCancellation = function presentNoiseCancellation(arg0) {
   const intl = util.intl;
@@ -207,9 +189,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   const obj2 = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4775).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4776).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4995).XLargeIcon;
+    XLargeIcon = tmp4(4996).XLargeIcon;
   }
   obj2.IconComponent = XLargeIcon;
   let str = "icon-feedback-critical";
@@ -394,26 +376,6 @@ export const presentCommandCopied = function presentCommandCopied() {
   const intl = util.intl;
   obj2.content = intl.string(util.t.U989ct);
   obj2.IconComponent = LinkIcon.LinkIcon;
-  ToastActionCreatorsDefault.open(obj2);
-};
-export const presentGuildMemberBio = function presentGuildMemberBio(guildName, arg1) {
-  closure_0 = arg1;
-  const obj2 = { key: "GUILD_IDENTITY_BIO_TOAST", content: null, icon: null };
-  const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.pOy2tm, { guildName });
-  obj2.icon = function icon() {
-    return closure_0;
-  };
-  ToastActionCreatorsDefault.open(obj2);
-};
-export const presentGuildMemberPronouns = function presentGuildMemberPronouns(guildName, arg1) {
-  closure_0 = arg1;
-  const obj2 = { key: "GUILD_IDENTITY_PRONOUNS_TOAST", content: null, icon: null };
-  const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.gPVLS0, { guildName });
-  obj2.icon = function icon() {
-    return closure_0;
-  };
   ToastActionCreatorsDefault.open(obj2);
 };
 export const presentUserPronouns = function presentUserPronouns() {

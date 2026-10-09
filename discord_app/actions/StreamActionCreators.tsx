@@ -127,7 +127,7 @@ let closure_19 = async function _fetchStreamPreview() {
               const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
-              HTTP = obj6(1294).HTTP;
+              HTTP = obj6(1295).HTTP;
               const request = {
                 url: closure_2_13.STREAM_PREVIEW(HTTPResult),
                 query: null,
@@ -138,7 +138,7 @@ let closure_19 = async function _fetchStreamPreview() {
               timestamp = Date.now();
               obj9.version = timestamp;
               request.query = obj9;
-              obj6 = obj6(1294);
+              obj6 = obj6(1295);
               result = obj6.rejectWithMigratedError();
               request.rejectWithError = result;
               value = HTTP.get(request);
@@ -208,7 +208,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1085);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(5894).StreamTypes;
+const StreamTypes = fn(5895).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -365,15 +365,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(7475)(closure_1_1);
+          closure_1(7480)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5410).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5410);
+          closure_0(5411).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5411);
         }
       }
     };

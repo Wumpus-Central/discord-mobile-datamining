@@ -1,44 +1,41 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx
-import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import EmojiUtils from "../../../../utils/EmojiUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import toastUtils from "../../../../design/mana/components/Toast/toastUtils.native.tsx";
-import DesignSystemsNotificationComponentsExperiment from "../../../design/DesignSystemsNotificationComponentsExperiment.tsx";
 import CheckmarkLargeIcon from "../../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
-import _modDef5005 from "../../../../../_runtime/metro/05005__.js";
-import _modDef5007 from "../../../../../_runtime/metro/05007__.js";
-import _modDef5011 from "../../../../../_runtime/metro/05011__.js";
+import _modDef5006 from "../../../../../_runtime/metro/05006__.js";
+import _modDef5008 from "../../../../../_runtime/metro/05008__.js";
+import _modDef5012 from "../../../../../_runtime/metro/05012__.js";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
-import Toast_Toast from "../../../../design/mana/components/Toast/Toast.native.tsx";
+import Toast from "../../../../design/mana/components/Toast/Toast.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
-import ToastStore from "../../../toast/native/ToastStore.tsx";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let c7 = "This is a toast message";
-let c8 = "https://cdn.discordapp.com/embed/avatars/0.png";
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let c6 = "This is a toast message";
+let c7 = "https://cdn.discordapp.com/embed/avatars/0.png";
 let sum2 = 0;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, previews: { alignItems: "center" } };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? function DemoGroup(arg0) {
       const cResult = c.c(11);
       ({ title, hint, demos } = arg0);
       if (cResult[0] !== title) {
         const obj2 = { variant: "text-lg/bold", children: title };
-        const tmp6 = hasOwnProperty(Text_Text.Text, obj2);
+        const tmp6 = React4(Text_Text.Text, obj2);
         cResult[0] = title;
         cResult[1] = tmp6;
         let tmp4 = tmp6;
@@ -47,7 +44,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== hint) {
         const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: hint };
-        const tmp9 = hasOwnProperty(Text_Text.Text, obj3);
+        const tmp9 = React4(Text_Text.Text, obj3);
         cResult[2] = hint;
         cResult[3] = tmp9;
         let tmp7 = tmp9;
@@ -58,7 +55,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function u(label) {
-            return closure_1_5(
+            return closure_1_4(
               components_Button_Button.Button,
               { variant: "secondary", size: "sm", text: label.label, onPress: label.onPress },
               label.label,
@@ -85,8 +82,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { spacing: nativeDefault.space.PX_8, children: null };
         items = [tmp4, tmp7, cResult[5]];
         obj5.children = items;
-        obj4.children = timestampProducer(Stack_Stack.Stack, obj5);
-        const tmp19 = hasOwnProperty(Card.Card, obj4);
+        obj4.children = hasOwnProperty(Stack_Stack.Stack, obj5);
+        const tmp19 = React4(Card.Card, obj4);
         cResult[7] = tmp4;
         cResult[8] = tmp7;
         cResult[9] = cResult[5];
@@ -100,10 +97,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
       items = [
-        hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: title }),
-        hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: hint }),
+        React4(Text_Text.Text, { variant: "text-lg/bold", children: title }),
+        React4(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", children: hint }),
         demos.map((label) =>
-          closure_1_5(
+          closure_1_4(
             components_Button_Button.Button,
             { variant: "secondary", size: "sm", text: label.label, onPress: label.onPress },
             label.label,
@@ -111,28 +108,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         ),
       ];
       obj2.children = items;
-      obj.children = timestampProducer(Stack_Stack.Stack, obj2);
-      return hasOwnProperty(Card.Card, obj);
+      obj.children = hasOwnProperty(Stack_Stack.Stack, obj2);
+      return React4(Card.Card, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function LiveStores() {
-      const cResult = c.c(17);
+      const cResult = c.c(7);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        items = [ToastStore];
-        const fn = function o() {
-          return content.getContent();
-        };
-        cResult[0] = items;
-        cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
-      } else {
-        [tmp4, tmp5] = cResult;
-      }
-      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function u(currentToastMap) {
+        const fn = function t(currentToastMap) {
           currentToastMap = currentToastMap.currentToastMap;
           value = currentToastMap.get("app");
           let toast;
@@ -141,15 +125,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return toast;
         };
-        cResult[2] = fn2;
-        let tmp8 = fn2;
+        cResult[0] = fn;
+        let first = fn;
       } else {
-        tmp8 = cResult[2];
+        first = cResult[0];
       }
-      const tmpResult = initialize;
-      const toastStore = toastUtils.useToastStore(tmp8);
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn3 = function p(queuedToastsMap) {
+      const toastStore = toastUtils.useToastStore(first);
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn2 = function c(queuedToastsMap) {
           queuedToastsMap = queuedToastsMap.queuedToastsMap;
           value = queuedToastsMap.get("app");
           let num;
@@ -161,105 +144,62 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return num;
         };
-        cResult[3] = fn3;
-        let tmp10 = fn3;
+        cResult[1] = fn2;
+        let tmp6 = fn2;
       } else {
-        tmp10 = cResult[3];
+        tmp6 = cResult[1];
       }
-      const tmpResult3 = toastUtils;
-      const toastStore1 = toastUtils.useToastStore(tmp10);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp14 = hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Live stores" });
-        cResult[4] = tmp14;
-        let tmp12 = tmp14;
+      const tmpResult = toastUtils;
+      const toastStore1 = toastUtils.useToastStore(tmp6);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp10 = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Live store" });
+        cResult[2] = tmp10;
+        let tmp8 = tmp10;
       } else {
-        tmp12 = cResult[4];
+        tmp8 = cResult[2];
       }
       let str = "text-subtle";
-      let str2 = "text-subtle";
       if (null != toastStore) {
-        str2 = "text-feedback-positive";
+        str = "text-feedback-positive";
       }
-      let str3;
+      let str2;
       if (toastStore != null) {
-        str3 = toastStore.text;
+        str2 = toastStore.text;
       }
-      if (str3 == null) {
-        str3 = "idle";
+      if (str2 == null) {
+        str2 = "idle";
       }
-      let str4 = "";
+      let str3 = "";
       if (toastStore1 > 0) {
         const _HermesInternal = HermesInternal;
-        str4 = " (+" + toastStore1 + " queued)";
+        str3 = " (+" + toastStore1 + " queued)";
       }
-      if (cResult[5] === str2) {
-        if (cResult[6] === str3) {
-          if (cResult[7] === str4) {
-            let tmp15 = cResult[8];
+      if (cResult[3] === str) {
+        if (cResult[4] === str2) {
+          if (cResult[5] === str3) {
+            let tmp11 = cResult[6];
           }
-          if (null != stateFromStores) {
-            str = "text-feedback-positive";
-          }
-          if (cResult[9] !== stateFromStores) {
-            let str7 = "idle";
-            if (null != stateFromStores) {
-              let str8 = "(rendered content)";
-              if (typeof stateFromStores.content === "string") {
-                str8 = stateFromStores.content;
-              }
-              str7 = str8;
-            }
-            cResult[9] = stateFromStores;
-            cResult[10] = str7;
-            let tmp17 = str7;
-          } else {
-            tmp17 = cResult[10];
-          }
-          if (cResult[11] === tmp17) {
-            if (cResult[12] === str) {
-              let tmp18 = cResult[13];
-            }
-            if (cResult[14] === tmp18) {
-              if (cResult[15] === tmp15) {
-                let tmp21 = cResult[16];
-              }
-              return tmp21;
-            }
-            const obj2 = { children: null };
-            const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
-            items1 = [tmp12, tmp15, tmp18];
-            obj3.children = items1;
-            obj2.children = timestampProducer(Stack_Stack.Stack, obj3);
-            const tmp25 = hasOwnProperty(Card.Card, obj2);
-            cResult[14] = tmp18;
-            cResult[15] = tmp15;
-            cResult[16] = tmp25;
-            tmp21 = tmp25;
-          }
-          const obj4 = { variant: "text-md/medium", color: str, children: null };
-          items2 = ["Legacy: ", tmp17];
-          obj4.children = items2;
-          const tmp20 = timestampProducer(Text_Text.Text, obj4);
-          cResult[11] = tmp17;
-          cResult[12] = str;
-          cResult[13] = tmp20;
-          tmp18 = tmp20;
+          return tmp11;
         }
       }
-      const obj5 = { variant: "text-md/medium", color: str2, children: null };
-      items3 = ["Mana: ", str3, str4];
-      obj5.children = items3;
-      const tmp16 = timestampProducer(Text_Text.Text, obj5);
-      cResult[5] = str2;
-      cResult[6] = str3;
-      cResult[7] = str4;
-      cResult[8] = tmp16;
-      tmp15 = tmp16;
-      const tmpResult4 = toastUtils;
+      const obj2 = { children: null };
+      const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
+      items = [tmp8];
+      const obj4 = { variant: "text-md/medium", color: str, children: null };
+      items1 = ["Mana: ", str2, str3];
+      obj4.children = items1;
+      items[1] = hasOwnProperty(Text_Text.Text, obj4);
+      obj3.children = items;
+      obj2.children = hasOwnProperty(Stack_Stack.Stack, obj3);
+      const tmp12 = React4(Card.Card, obj2);
+      cResult[3] = str;
+      cResult[4] = str2;
+      cResult[5] = str3;
+      cResult[6] = tmp12;
+      tmp11 = tmp12;
+      const tmpResult2 = toastUtils;
     }
   : function LiveStores() {
-      items = [ToastStore];
-      const stateFromStores = initialize.useStateFromStores(items, () => content.getContent());
       const toastStore = toastUtils.useToastStore((currentToastMap) => {
         currentToastMap = currentToastMap.currentToastMap;
         value = currentToastMap.get("app");
@@ -281,127 +221,33 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return num;
       });
-      const obj4 = { spacing: nativeDefault.space.PX_8, children: null };
-      items1 = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Live stores" }), ,];
+      const obj3 = { spacing: nativeDefault.space.PX_8, children: null };
+      items = [React4(Text_Text.Text, { variant: "text-lg/bold", children: "Live store" })];
       let str = "text-subtle";
-      let str2 = "text-subtle";
       if (null != toastStore) {
-        str2 = "text-feedback-positive";
-      }
-      const obj5 = { variant: "text-md/medium", color: str2, children: null };
-      let str3;
-      if (toastStore != null) {
-        str3 = toastStore.text;
-      }
-      if (str3 == null) {
-        str3 = "idle";
-      }
-      items2 = ["Mana: ", str3];
-      let str4 = "";
-      if (toastStore1 > 0) {
-        const _HermesInternal = HermesInternal;
-        str4 = " (+" + toastStore1 + " queued)";
-      }
-      items2[2] = str4;
-      obj5.children = items2;
-      items1[1] = timestampProducer(Text_Text.Text, obj5);
-      if (null != stateFromStores) {
         str = "text-feedback-positive";
       }
-      const obj6 = { variant: "text-md/medium", color: str, children: null };
-      let str7 = "idle";
-      if (null != stateFromStores) {
-        let str8 = "(rendered content)";
-        if (typeof stateFromStores.content === "string") {
-          str8 = stateFromStores.content;
-        }
-        str7 = str8;
+      const obj4 = { variant: "text-md/medium", color: str, children: null };
+      let str2;
+      if (toastStore != null) {
+        str2 = toastStore.text;
       }
-      const obj7 = { children: null };
-      items3 = ["Legacy: ", str7];
-      obj6.children = items3;
-      items1[2] = timestampProducer(Text_Text.Text, obj6);
+      if (str2 == null) {
+        str2 = "idle";
+      }
+      items1 = ["Mana: ", str2];
+      let str3 = "";
+      if (toastStore1 > 0) {
+        const _HermesInternal = HermesInternal;
+        str3 = " (+" + toastStore1 + " queued)";
+      }
+      const obj5 = { children: null };
+      items1[2] = str3;
       obj4.children = items1;
-      obj7.children = timestampProducer(Stack_Stack.Stack, obj4);
-      return hasOwnProperty(Card.Card, obj7);
-    };
-ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function ActiveRenderer() {
-      const cResult = c.c(6);
-      const designSystemsNotificationComponents =
-        DesignSystemsNotificationComponentsExperiment.useDesignSystemsNotificationComponents(
-          "UserSettingsDesignSystemToast",
-        );
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Active renderer" });
-        cResult[0] = tmp7;
-        let first = tmp7;
-      } else {
-        first = cResult[0];
-      }
-      let str = "Legacy toast";
-      if (designSystemsNotificationComponents) {
-        str = "Mana toast";
-      }
-      if (cResult[1] !== str) {
-        const obj3 = { variant: "text-md/medium", children: str };
-        const tmp10 = hasOwnProperty(Text_Text.Text, obj3);
-        cResult[1] = str;
-        cResult[2] = tmp10;
-        let tmp8 = tmp10;
-      } else {
-        tmp8 = cResult[2];
-      }
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = hasOwnProperty(Text_Text.Text, {
-          variant: "text-sm/normal",
-          color: "text-subtle",
-          children:
-            "Routing happens per toast, so the stores below are what actually rendered. Toggle 2026-09-design-systems-notification-components to switch renderers.",
-        });
-        cResult[3] = tmp13;
-        let tmp11 = tmp13;
-      } else {
-        tmp11 = cResult[3];
-      }
-      if (cResult[4] !== tmp8) {
-        const obj4 = { children: null };
-        const obj5 = { spacing: nativeDefault.space.PX_8, children: null };
-        items = [first, tmp8, tmp11];
-        obj5.children = items;
-        obj4.children = timestampProducer(Stack_Stack.Stack, obj5);
-        const tmp18 = hasOwnProperty(Card.Card, obj4);
-        cResult[4] = tmp8;
-        cResult[5] = tmp18;
-        let tmp14 = tmp18;
-      } else {
-        tmp14 = cResult[5];
-      }
-      return tmp14;
-    }
-  : function ActiveRenderer() {
-      const designSystemsNotificationComponents =
-        DesignSystemsNotificationComponentsExperiment.useDesignSystemsNotificationComponents(
-          "UserSettingsDesignSystemToast",
-        );
-      const obj2 = { spacing: nativeDefault.space.PX_8, children: null };
-      items = [hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Active renderer" }), ,];
-      let str = "Legacy toast";
-      if (designSystemsNotificationComponents) {
-        str = "Mana toast";
-      }
-      const obj3 = { children: null };
-      items[1] = hasOwnProperty(Text_Text.Text, { variant: "text-md/medium", children: str });
-      items[2] = hasOwnProperty(Text_Text.Text, {
-        variant: "text-sm/normal",
-        color: "text-subtle",
-        children:
-          "Routing happens per toast, so the stores below are what actually rendered. Toggle 2026-09-design-systems-notification-components to switch renderers.",
-      });
-      obj2.children = items;
-      obj3.children = timestampProducer(Stack_Stack.Stack, obj2);
-      return hasOwnProperty(Card.Card, obj3);
+      items[1] = hasOwnProperty(Text_Text.Text, obj4);
+      obj3.children = items;
+      obj5.children = hasOwnProperty(Stack_Stack.Stack, obj3);
+      return React4(Card.Card, obj5);
     };
 let items = [
   {
@@ -437,7 +283,7 @@ let items = [
   {
     label: "Success \u2014 checkmark bitmap",
     onPress() {
-      const obj2 = { key: null, content: "Saved", icon: _modDef5005 };
+      const obj2 = { key: null, content: "Saved", icon: _modDef5006 };
       const sum = sum2 + 1;
       sum2 = sum;
       obj2.key = "" + "SUCCESS_BITMAP" + "-" + sum;
@@ -447,7 +293,7 @@ let items = [
   {
     label: "Critical \u2014 yellow alert bitmap",
     onPress() {
-      const obj2 = { key: null, content: "Something went wrong", icon: _modDef5007 };
+      const obj2 = { key: null, content: "Something went wrong", icon: _modDef5008 };
       const sum = sum2 + 1;
       sum2 = sum;
       obj2.key = "" + "ERROR_BITMAP" + "-" + sum;
@@ -457,7 +303,7 @@ let items = [
   {
     label: "Default \u2014 information bitmap",
     onPress() {
-      const obj2 = { key: null, content: Thisisatoastmessage, icon: _modDef5011 };
+      const obj2 = { key: null, content: Thisisatoastmessage, icon: _modDef5012 };
       const sum = sum2 + 1;
       sum2 = sum;
       obj2.key = "" + "INFO_BITMAP" + "-" + sum;
@@ -501,57 +347,6 @@ let items = [
 ];
 let items1 = [
   {
-    label: "Rendered icon",
-    onPress() {
-      const obj2 = {
-        key: null,
-        content: "Icon is a render function",
-        icon() {
-          return closure_1_5(CircleInformationIcon.CircleInformationIcon, { size: "sm", color: "text-brand" });
-        },
-      };
-      const sum = sum2 + 1;
-      sum2 = sum;
-      obj2.key = "" + "RENDERED_ICON" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
-    },
-  },
-  {
-    label: "Rendered content",
-    onPress() {
-      const obj2 = {
-        key: null,
-        content() {
-          return closure_1_5(Text_Text.Text, {
-            variant: "text-sm/semibold",
-            color: "text-brand",
-            children: "Content is a render function",
-          });
-        },
-      };
-      const sum = sum2 + 1;
-      sum2 = sum;
-      obj2.key = "" + "RENDERED_CONTENT" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
-    },
-  },
-  {
-    label: "Unsubstitutable bitmap",
-    onPress() {
-      const obj2 = {
-        key: null,
-        content: "Icon has no Mana equivalent",
-        icon: { uri: "https://cdn.discordapp.com/embed/avatars/0.png" },
-      };
-      const sum = sum2 + 1;
-      sum2 = sum;
-      obj2.key = "" + "UNMAPPED_BITMAP" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
-    },
-  },
-];
-let items2 = [
-  {
     label: "Queue three",
     onPress() {
       const obj2 = { key: null, content: "First of three" };
@@ -588,7 +383,7 @@ let items2 = [
     },
   },
 ];
-let items3 = [
+const items2 = [
   {
     label: "Bottom position",
     onPress() {
@@ -611,18 +406,8 @@ let items3 = [
   },
 ];
 ReactCompilerGating = fn(558);
-let obj10 = {
-  label: "Bottom position",
-  onPress() {
-    const obj2 = { key: null, content: Thisisatoastmessage, position: "bottom" };
-    const sum = sum2 + 1;
-    sum2 = sum;
-    obj2.key = "" + "BOTTOM" + "-" + sum;
-    return ToastActionCreatorsDefault.open(obj2);
-  },
-};
 let obj3 = { padding: nativeDefault.space.PX_16 };
-let obj7 = {
+let obj6 = {
   label: "Success \u2014 checkmark component",
   onPress() {
     const obj2 = {
@@ -637,23 +422,7 @@ let obj7 = {
     return ToastActionCreatorsDefault.open(obj2);
   },
 };
-let obj8 = {
-  label: "Rendered icon",
-  onPress() {
-    const obj2 = {
-      key: null,
-      content: "Icon is a render function",
-      icon() {
-        return closure_1_5(CircleInformationIcon.CircleInformationIcon, { size: "sm", color: "text-brand" });
-      },
-    };
-    const sum = sum2 + 1;
-    sum2 = sum;
-    obj2.key = "" + "RENDERED_ICON" + "-" + sum;
-    return ToastActionCreatorsDefault.open(obj2);
-  },
-};
-let obj9 = {
+let obj7 = {
   label: "Queue three",
   onPress() {
     const obj2 = { key: null, content: "First of three" };
@@ -672,6 +441,16 @@ let obj9 = {
     ToastActionCreatorsDefault.open(obj6);
   },
 };
+let obj8 = {
+  label: "Bottom position",
+  onPress() {
+    const obj2 = { key: null, content: Thisisatoastmessage, position: "bottom" };
+    const sum = sum2 + 1;
+    sum2 = sum;
+    obj2.key = "" + "BOTTOM" + "-" + sum;
+    return ToastActionCreatorsDefault.open(obj2);
+  },
+};
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/design_system/native/UserSettingsDesignSystemToast.tsx",
@@ -679,7 +458,7 @@ const result = size.fileFinishedImporting(
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserSettingsDesignSystemToast() {
-      const cResult = c.c(23);
+      const cResult = c.c(21);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const emojiUrl = EmojiUtils.getEmojiUrl({ name: "\u{1F525}" });
         cResult[0] = emojiUrl;
@@ -688,203 +467,185 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp6 = closure_10();
+      const tmp6 = closure_9();
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = hasOwnProperty(closure_13, {});
-        const tmp17 = hasOwnProperty(closure_12, {});
+        const tmp13 = React4(closure_11, {});
         const obj2 = {
-          title: "Mana renderer",
-          hint: "Under the experiment these all route to the Mana toast. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
+          title: "Automatic mapping",
+          hint: "These use the older toast props and are converted to Mana toasts. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
           demos: items,
         };
-        const tmp20 = hasOwnProperty(closure_11, obj2);
+        const tmp16 = React4(closure_10, obj2);
         const obj3 = {
-          title: "Legacy fallback",
-          hint: "No Mana equivalent, so these stay on the legacy renderer even with the experiment on. Watch which store they land in above.",
+          title: "Queueing",
+          hint: "Toasts queue, but repeats of the key on screen are dropped.",
           demos: items1,
         };
-        const tmp22 = hasOwnProperty(closure_11, obj3);
+        const tmp18 = React4(closure_10, obj3);
         const obj4 = {
-          title: "Queueing",
-          hint: "The legacy store holds one toast and drops repeats of the key on screen; the Mana store queues.",
-          demos: items2,
-        };
-        const tmp24 = hasOwnProperty(closure_11, obj4);
-        const obj5 = {
           title: "Placement",
           hint: "Both are deprecated on the Mana API but still forwarded, so existing call sites keep working.",
-          demos: items3,
+          demos: items2,
         };
-        const tmp26 = hasOwnProperty(closure_11, obj5);
-        cResult[1] = tmp15;
-        cResult[2] = tmp17;
-        cResult[3] = tmp20;
-        cResult[4] = tmp22;
-        cResult[5] = tmp24;
-        cResult[6] = tmp26;
-        let tmp12 = tmp26;
-        let tmp11 = tmp24;
-        let tmp10 = tmp22;
-        let tmp9 = tmp20;
-        let tmp8 = tmp17;
-        let tmp7 = tmp15;
+        const tmp20 = React4(closure_10, obj4);
+        cResult[1] = tmp13;
+        cResult[2] = tmp16;
+        cResult[3] = tmp18;
+        cResult[4] = tmp20;
+        let tmp10 = tmp20;
+        let tmp9 = tmp18;
+        let tmp8 = tmp16;
+        let tmp7 = tmp13;
       } else {
         tmp7 = cResult[1];
         tmp8 = cResult[2];
         tmp9 = cResult[3];
         tmp10 = cResult[4];
-        tmp11 = cResult[5];
-        tmp12 = cResult[6];
       }
-      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp35 = hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Components" });
-        const obj6 = { text: Thisisatoastmessage, variant: "default" };
-        const tmp37 = hasOwnProperty(Toast_Toast.Toast, obj6);
-        const obj7 = {
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp29 = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Components" });
+        const obj5 = { text: Thisisatoastmessage, variant: "default" };
+        const tmp31 = React4(Toast.Toast, obj5);
+        const obj6 = {
           text: Thisisatoastmessage,
           variant: "default",
           icon: CircleInformationIcon.CircleInformationIcon,
         };
-        const tmp38 = hasOwnProperty(Toast_Toast.Toast, obj7);
-        const obj8 = {
+        const tmp32 = React4(Toast.Toast, obj6);
+        const obj7 = {
           text: Thisisatoastmessage,
           variant: "default",
           icon: CircleInformationIcon.CircleInformationIcon,
           iconColor: nativeDefault.colors.ICON_BRAND,
           secondaryIconColor: nativeDefault.colors.ICON_DEFAULT,
         };
-        const tmp40 = hasOwnProperty(Toast_Toast.Toast, obj8);
-        const obj9 = { text: Thisisatoastmessage, variant: "success" };
-        const tmp41 = hasOwnProperty(Toast_Toast.Toast, obj9);
-        const obj10 = { text: Thisisatoastmessage, variant: "critical" };
-        const tmp42 = hasOwnProperty(Toast_Toast.Toast, obj10);
-        const tmp43 = hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
-        cResult[7] = tmp40;
-        cResult[8] = tmp41;
-        cResult[9] = tmp42;
-        cResult[10] = tmp43;
+        const tmp34 = React4(Toast.Toast, obj7);
+        const obj8 = { text: Thisisatoastmessage, variant: "success" };
+        const tmp35 = React4(Toast.Toast, obj8);
+        const obj9 = { text: Thisisatoastmessage, variant: "critical" };
+        const tmp36 = React4(Toast.Toast, obj9);
+        const tmp37 = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
+        cResult[5] = tmp36;
+        cResult[6] = tmp37;
+        cResult[7] = tmp29;
+        cResult[8] = tmp31;
+        cResult[9] = tmp32;
+        cResult[10] = tmp34;
         cResult[11] = tmp35;
-        cResult[12] = tmp37;
-        cResult[13] = tmp38;
-        let tmp33 = tmp38;
-        let tmp32 = tmp37;
-        let tmp31 = tmp35;
-        let tmp30 = tmp43;
-        let tmp29 = tmp42;
-        let tmp28 = tmp41;
-        let tmp27 = tmp40;
+        let tmp27 = tmp35;
+        let tmp26 = tmp34;
+        let tmp25 = tmp32;
+        let tmp24 = tmp31;
+        let tmp23 = tmp29;
+        let tmp22 = tmp37;
+        let tmp21 = tmp36;
       } else {
-        tmp27 = cResult[7];
-        tmp28 = cResult[8];
-        tmp29 = cResult[9];
-        tmp30 = cResult[10];
-        tmp31 = cResult[11];
-        tmp32 = cResult[12];
-        tmp33 = cResult[13];
+        tmp21 = cResult[5];
+        tmp22 = cResult[6];
+        tmp23 = cResult[7];
+        tmp24 = cResult[8];
+        tmp25 = cResult[9];
+        tmp26 = cResult[10];
+        tmp27 = cResult[11];
       }
-      if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+      if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
         if ("" !== first) {
-          const obj11 = { type: "emoji", src: first, alt: "\u{1F525}" };
-          let obj12 = obj11;
+          const obj10 = { type: "emoji", src: first, alt: "\u{1F525}" };
+          let obj11 = obj10;
         } else {
-          obj12 = { type: "emoji", unicode: "\u{1F525}" };
+          obj11 = { type: "emoji", unicode: "\u{1F525}" };
         }
-        const obj13 = { text: "Default reaction set to \u{1F525}", icon: obj12 };
-        const tmp44Result = hasOwnProperty(Toast_Toast.Toast, obj13);
-        cResult[14] = tmp44Result;
+        const obj12 = { text: "Default reaction set to \u{1F525}", icon: obj11 };
+        const tmp38Result = React4(Toast.Toast, obj12);
+        cResult[12] = tmp38Result;
       } else {
         const _Symbol = Symbol;
-        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj14 = { text: "Nelly is now speaking", icon: null };
-          const obj15 = { type: "avatar", src, alt: "Nelly" };
-          obj14.icon = obj15;
-          const tmp50 = hasOwnProperty(Toast_Toast.Toast, obj14);
-          cResult[15] = tmp50;
-          let tmp47 = tmp50;
+        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj13 = { text: "Nelly is now speaking", icon: null };
+          const obj14 = { type: "avatar", src, alt: "Nelly" };
+          obj13.icon = obj14;
+          const tmp44 = React4(Toast.Toast, obj13);
+          cResult[13] = tmp44;
+          let tmp41 = tmp44;
         } else {
-          tmp47 = cResult[15];
+          tmp41 = cResult[13];
         }
         const _Symbol2 = Symbol;
-        if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj16 = { text: "Discord Staff", icon: null };
-          const obj17 = { type: "guild", src, name: "Discord Staff" };
-          obj16.icon = obj17;
-          const tmp54 = hasOwnProperty(Toast_Toast.Toast, obj16);
-          cResult[16] = tmp54;
-          let tmp51 = tmp54;
+        if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj15 = { text: "Discord Staff", icon: null };
+          const obj16 = { type: "guild", src, name: "Discord Staff" };
+          obj15.icon = obj16;
+          const tmp48 = React4(Toast.Toast, obj15);
+          cResult[14] = tmp48;
+          let tmp45 = tmp48;
         } else {
-          tmp51 = cResult[16];
+          tmp45 = cResult[14];
         }
         const _Symbol3 = Symbol;
-        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj18 = { text: "Discord Staff", icon: { type: "guild", src: null, name: "Discord Staff" } };
-          const tmp57 = hasOwnProperty(Toast_Toast.Toast, obj18);
-          cResult[17] = tmp57;
-          let tmp55 = tmp57;
+        if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj17 = { text: "Discord Staff", icon: { type: "guild", src: null, name: "Discord Staff" } };
+          const tmp51 = React4(Toast.Toast, obj17);
+          cResult[15] = tmp51;
+          let tmp49 = tmp51;
         } else {
-          tmp55 = cResult[17];
+          tmp49 = cResult[15];
         }
-        if (cResult[18] !== tmp6.previews) {
-          const obj19 = { spacing: nativeDefault.space.PX_16, children: null };
-          items = [tmp7, tmp8, tmp9, tmp10, tmp11, tmp12];
-          const obj20 = { children: null };
-          const obj21 = { spacing: nativeDefault.space.PX_12, style: tmp6.previews, children: null };
-          items1 = [tmp31, tmp32, tmp33, tmp27, tmp28, tmp29, tmp30, cResult[14], tmp47, tmp51, tmp55];
-          obj21.children = items1;
-          obj20.children = timestampProducer(Stack_Stack.Stack, obj21);
-          items[6] = hasOwnProperty(Card.Card, obj20);
-          obj19.children = items;
-          const tmp62 = timestampProducer(Stack_Stack.Stack, obj19);
-          cResult[18] = tmp6.previews;
-          cResult[19] = tmp62;
-          let tmp58 = tmp62;
+        if (cResult[16] !== tmp6.previews) {
+          const obj18 = { spacing: nativeDefault.space.PX_16, children: null };
+          items = [tmp7, tmp8, tmp9, tmp10];
+          const obj19 = { children: null };
+          const obj20 = { spacing: nativeDefault.space.PX_12, style: tmp6.previews, children: null };
+          items1 = [tmp23, tmp24, tmp25, tmp26, tmp27, tmp21, tmp22, cResult[12], tmp41, tmp45, tmp49];
+          obj20.children = items1;
+          obj19.children = hasOwnProperty(Stack_Stack.Stack, obj20);
+          items[4] = React4(Card.Card, obj19);
+          obj18.children = items;
+          const tmp56 = hasOwnProperty(Stack_Stack.Stack, obj18);
+          cResult[16] = tmp6.previews;
+          cResult[17] = tmp56;
+          let tmp52 = tmp56;
         } else {
-          tmp58 = cResult[19];
+          tmp52 = cResult[17];
         }
-        if (cResult[20] === tmp6.container) {
-          if (cResult[21] === tmp58) {
-            let tmp63 = cResult[22];
+        if (cResult[18] === tmp6.container) {
+          if (cResult[19] === tmp52) {
+            let tmp57 = cResult[20];
           }
-          return tmp63;
+          return tmp57;
         }
-        const obj22 = { contentContainerStyle: tmp6.container, children: tmp58 };
-        const tmp66 = hasOwnProperty(ScrollView, obj22);
-        cResult[20] = tmp6.container;
-        cResult[21] = tmp58;
-        cResult[22] = tmp66;
-        tmp63 = tmp66;
+        const obj21 = { contentContainerStyle: tmp6.container, children: tmp52 };
+        const tmp60 = React4(ScrollView, obj21);
+        cResult[18] = tmp6.container;
+        cResult[19] = tmp52;
+        cResult[20] = tmp60;
+        tmp57 = tmp60;
       }
     }
   : function UserSettingsDesignSystemToast() {
       const emojiUrl = EmojiUtils.getEmojiUrl({ name: "\u{1F525}" });
-      const tmp4 = closure_10();
+      const tmp4 = closure_9();
       const obj2 = { contentContainerStyle: tmp4.container, children: null };
       const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
-      items = [hasOwnProperty(closure_13, {}), hasOwnProperty(closure_12, {}), , , , ,];
-      items[2] = hasOwnProperty(closure_11, {
-        title: "Mana renderer",
-        hint: "Under the experiment these all route to the Mana toast. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
+      items = [React4(closure_11, {}), , , ,];
+      items[1] = React4(closure_10, {
+        title: "Automatic mapping",
+        hint: "These use the older toast props and are converted to Mana toasts. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
         demos: items,
       });
-      items[3] = hasOwnProperty(closure_11, {
-        title: "Legacy fallback",
-        hint: "No Mana equivalent, so these stay on the legacy renderer even with the experiment on. Watch which store they land in above.",
+      items[2] = React4(closure_10, {
+        title: "Queueing",
+        hint: "Toasts queue, but repeats of the key on screen are dropped.",
         demos: items1,
       });
-      items[4] = hasOwnProperty(closure_11, {
-        title: "Queueing",
-        hint: "The legacy store holds one toast and drops repeats of the key on screen; the Mana store queues.",
-        demos: items2,
-      });
-      items[5] = hasOwnProperty(closure_11, {
+      items[3] = React4(closure_10, {
         title: "Placement",
         hint: "Both are deprecated on the Mana API but still forwarded, so existing call sites keep working.",
-        demos: items3,
+        demos: items2,
       });
-      const obj8 = { spacing: nativeDefault.space.PX_12, style: tmp4.previews, children: null };
+      const obj7 = { spacing: nativeDefault.space.PX_12, style: tmp4.previews, children: null };
       items1 = [
-        hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Components" }),
-        hasOwnProperty(Toast_Toast.Toast, { text: Thisisatoastmessage, variant: "default" }),
+        React4(Text_Text.Text, { variant: "text-lg/bold", children: "Components" }),
+        React4(Toast.Toast, { text: Thisisatoastmessage, variant: "default" }),
         ,
         ,
         ,
@@ -895,68 +656,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ,
       ];
       const obj4 = {
-        title: "Mana renderer",
-        hint: "Under the experiment these all route to the Mana toast. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
+        title: "Automatic mapping",
+        hint: "These use the older toast props and are converted to Mana toasts. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
         demos: items,
       };
       const obj5 = {
-        title: "Legacy fallback",
-        hint: "No Mana equivalent, so these stay on the legacy renderer even with the experiment on. Watch which store they land in above.",
+        title: "Queueing",
+        hint: "Toasts queue, but repeats of the key on screen are dropped.",
         demos: items1,
       };
       const obj6 = {
-        title: "Queueing",
-        hint: "The legacy store holds one toast and drops repeats of the key on screen; the Mana store queues.",
-        demos: items2,
-      };
-      const obj7 = {
         title: "Placement",
         hint: "Both are deprecated on the Mana API but still forwarded, so existing call sites keep working.",
-        demos: items3,
+        demos: items2,
       };
-      const obj9 = { text: Thisisatoastmessage, variant: "default" };
-      items1[2] = hasOwnProperty(Toast_Toast.Toast, {
+      const obj8 = { text: Thisisatoastmessage, variant: "default" };
+      items1[2] = React4(Toast.Toast, {
         text: Thisisatoastmessage,
         variant: "default",
         icon: CircleInformationIcon.CircleInformationIcon,
       });
-      const obj10 = {
-        text: Thisisatoastmessage,
-        variant: "default",
-        icon: CircleInformationIcon.CircleInformationIcon,
-      };
-      items1[3] = hasOwnProperty(Toast_Toast.Toast, {
+      const obj9 = { text: Thisisatoastmessage, variant: "default", icon: CircleInformationIcon.CircleInformationIcon };
+      items1[3] = React4(Toast.Toast, {
         text: Thisisatoastmessage,
         variant: "default",
         icon: CircleInformationIcon.CircleInformationIcon,
         iconColor: nativeDefault.colors.ICON_BRAND,
         secondaryIconColor: nativeDefault.colors.ICON_DEFAULT,
       });
-      items1[4] = hasOwnProperty(Toast_Toast.Toast, { text: Thisisatoastmessage, variant: "success" });
-      items1[5] = hasOwnProperty(Toast_Toast.Toast, { text: Thisisatoastmessage, variant: "critical" });
-      items1[6] = hasOwnProperty(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
+      items1[4] = React4(Toast.Toast, { text: Thisisatoastmessage, variant: "success" });
+      items1[5] = React4(Toast.Toast, { text: Thisisatoastmessage, variant: "critical" });
+      items1[6] = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
       if ("" !== emojiUrl) {
-        const obj14 = { type: "emoji", src: emojiUrl, alt: "\u{1F525}" };
-        let obj15 = obj14;
+        const obj13 = { type: "emoji", src: emojiUrl, alt: "\u{1F525}" };
+        let obj14 = obj13;
       } else {
-        obj15 = { type: "emoji", unicode: "\u{1F525}" };
+        obj14 = { type: "emoji", unicode: "\u{1F525}" };
       }
-      const obj16 = { children: null };
-      items1[7] = hasOwnProperty(Toast_Toast.Toast, { text: "Default reaction set to \u{1F525}", icon: obj15 });
-      const obj17 = { text: "Nelly is now speaking", icon: { type: "avatar", src, alt: "Nelly" } };
-      items1[8] = hasOwnProperty(Toast_Toast.Toast, obj17);
-      items1[9] = hasOwnProperty(Toast_Toast.Toast, {
-        text: "Discord Staff",
-        icon: { type: "guild", src, name: "Discord Staff" },
-      });
-      items1[10] = hasOwnProperty(Toast_Toast.Toast, {
+      const obj15 = { children: null };
+      items1[7] = React4(Toast.Toast, { text: "Default reaction set to \u{1F525}", icon: obj14 });
+      const obj16 = { text: "Nelly is now speaking", icon: { type: "avatar", src, alt: "Nelly" } };
+      items1[8] = React4(Toast.Toast, obj16);
+      items1[9] = React4(Toast.Toast, { text: "Discord Staff", icon: { type: "guild", src, name: "Discord Staff" } });
+      items1[10] = React4(Toast.Toast, {
         text: "Discord Staff",
         icon: { type: "guild", src: null, name: "Discord Staff" },
       });
-      obj8.children = items1;
-      obj16.children = timestampProducer(Stack_Stack.Stack, obj8);
-      items[6] = hasOwnProperty(Card.Card, obj16);
+      obj7.children = items1;
+      obj15.children = hasOwnProperty(Stack_Stack.Stack, obj7);
+      items[4] = React4(Card.Card, obj15);
       obj3.children = items;
-      obj2.children = timestampProducer(Stack_Stack.Stack, obj3);
-      return hasOwnProperty(ScrollView, obj2);
+      obj2.children = hasOwnProperty(Stack_Stack.Stack, obj3);
+      return React4(ScrollView, obj2);
     };

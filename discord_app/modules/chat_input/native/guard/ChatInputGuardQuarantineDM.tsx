@@ -6,7 +6,7 @@ import ChatWarningIcon from "../../../../design/components/Icon/native/redesign/
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QUARANTINE_APPEAL_LINK = fn(12187).QUARANTINE_APPEAL_LINK;
+const QUARANTINE_APPEAL_LINK = fn(12126).QUARANTINE_APPEAL_LINK;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

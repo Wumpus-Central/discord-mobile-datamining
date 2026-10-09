@@ -3,9 +3,9 @@ import TTITrackerDefault from "../../tti_analytics/TTITracker.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5015 from "../../../../_runtime/metro/05015__.js";
+import _modDef5016 from "../../../../_runtime/metro/05016__.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
@@ -44,7 +44,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12544, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12483, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -60,12 +60,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_14(id(5375).Button, {
+  return closure_14(id(5376).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(11856).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(11793).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -75,13 +75,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1126).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12545, dependencyMap.paths),
+      asyncRequireImpl(12484, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_14(channel(9041).TagIcon, { size: "xxs" });
-  return closure_14(channel(5375).Button, obj);
+  obj.icon = closure_14(channel(9056).TagIcon, { size: "xxs" });
+  return closure_14(channel(5376).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -117,11 +117,11 @@ function onCreatePostWithoutPermission() {
   const obj2 = { key: "FORUM_NO_POST_PERMISSION_HELP", content: null, icon: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.iyzwnD);
-  obj2.icon = _modDef5015;
+  obj2.icon = _modDef5016;
   ToastActionCreatorsDefault.open(obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(11693).useForumChannelStore;
+const useForumChannelStore = fn(11629).useForumChannelStore;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const Fonts = fn(1096).Fonts;
@@ -140,7 +140,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -1905,7 +1905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(tmp3[17]).intl;
       obj12.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-      obj12.icon = require("../../../../_runtime/metro/12553__.js");
+      obj12.icon = require("../../../../_runtime/metro/12493__.js");
       obj12.disabled = tmp15;
       obj12.positionBottom = insets.bottom + require("native").space.PX_16;
       obj12.onPress = callback1;

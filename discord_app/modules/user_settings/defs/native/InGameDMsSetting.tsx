@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useInGameDMsSettingOptions() {
       const cResult = c.c(3);
@@ -108,7 +108,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(7966).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(7974).MobileUserSettings.CONNECTED_GAMES,
   useOptions: ReactCompilerGating.isReactCompilerEnabled()
     ? function useInGameDMsSettingOptions() {
         const cResult = c.c(3);

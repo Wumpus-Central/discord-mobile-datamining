@@ -1,10 +1,9 @@
 // discord_app/modules/user_profile/native/UserProfilePremiumTryItOutSection.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
-import usePremiumTryItOutPresetShuffleDefault from "../hooks/native/usePremiumTryItOutPresetShuffle.tsx";
+import usePremiumTryItOutPresetShuffleDefault from "../hooks/usePremiumTryItOutPresetShuffle.tsx";
 import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields.tsx";
 import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   cardInner: null,
@@ -70,10 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = analyticsLocations(576).c(26);
       ({ currentUser, onLayout, onPreviewPremium } = arg0);
       const tmp4 = closure_7();
-      let obj = analyticsLocations(576);
-      analyticsLocations = useAnalyticsLocationsDefault(
-        AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM,
-      ).analyticsLocations;
+      analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       usePremiumTryItOutPresetShuffleDefault();
       if (cResult[0] !== analyticsLocations) {
         const fn = function o() {
@@ -85,75 +81,75 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = analyticsLocations;
         cResult[1] = fn;
-        let tmp8 = fn;
+        let tmp7 = fn;
       } else {
-        tmp8 = cResult[1];
+        tmp7 = cResult[1];
       }
       ({ container, cardInner } = tmp4);
-      if (cResult[2] !== tmp8) {
+      if (cResult[2] !== tmp7) {
         const intl = tmp(1126).intl;
-        const obj2 = { onClick: tmp8 };
+        const obj2 = { onClick: tmp7 };
         const formatResult = intl.format(tmp(1126).t.TmfgI2, obj2);
-        cResult[2] = tmp8;
+        cResult[2] = tmp7;
         cResult[3] = formatResult;
-        let tmp9 = formatResult;
+        let tmp8 = formatResult;
       } else {
-        tmp9 = cResult[3];
+        tmp8 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = tmp(1126).intl;
         const stringResult = intl2.string(tmp(1126).t.PxUx8e);
         cResult[4] = stringResult;
-        let tmp11 = stringResult;
+        let tmp10 = stringResult;
       } else {
-        tmp11 = cResult[4];
+        tmp10 = cResult[4];
       }
       if (cResult[5] !== tmp4.dividerLine) {
         const obj3 = { style: tmp4.dividerLine };
-        const tmp16 = closure_5(View, obj3);
+        const tmp15 = closure_5(View, obj3);
         cResult[5] = tmp4.dividerLine;
-        cResult[6] = tmp16;
-        let tmp13 = tmp16;
+        cResult[6] = tmp15;
+        let tmp12 = tmp15;
       } else {
-        tmp13 = cResult[6];
+        tmp12 = cResult[6];
       }
       if (cResult[7] !== tmp4.lockIcon) {
         const obj4 = { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp4.lockIcon };
-        const tmp19 = closure_5(tmp(8198).LockIcon, obj4);
+        const tmp18 = closure_5(tmp(8206).LockIcon, obj4);
         cResult[7] = tmp4.lockIcon;
-        cResult[8] = tmp19;
-        let tmp17 = tmp19;
+        cResult[8] = tmp18;
+        let tmp16 = tmp18;
       } else {
-        tmp17 = cResult[8];
+        tmp16 = cResult[8];
       }
       if (cResult[9] === tmp4.lockCircle) {
-        if (cResult[10] === tmp17) {
-          let tmp20 = cResult[11];
+        if (cResult[10] === tmp16) {
+          let tmp19 = cResult[11];
         }
         if (cResult[12] === tmp4.divider) {
-          if (cResult[13] === tmp13) {
-            if (cResult[14] === tmp20) {
-              let tmp22 = cResult[15];
+          if (cResult[13] === tmp12) {
+            if (cResult[14] === tmp19) {
+              let tmp21 = cResult[15];
             }
             if (cResult[16] !== currentUser) {
               const obj5 = { currentUser, mode: "entrypoint" };
-              const tmp28 = closure_5(UserProfileTryItOutFieldsDefault, obj5);
+              const tmp27 = closure_5(UserProfileTryItOutFieldsDefault, obj5);
               cResult[16] = currentUser;
-              cResult[17] = tmp28;
-              let tmp26 = tmp28;
+              cResult[17] = tmp27;
+              let tmp25 = tmp27;
             } else {
-              tmp26 = cResult[17];
+              tmp25 = cResult[17];
             }
             if (cResult[18] === onLayout) {
               if (cResult[19] === onPreviewPremium) {
                 if (cResult[20] === tmp4.cardInner) {
                   if (cResult[21] === tmp4.container) {
-                    if (cResult[22] === tmp26) {
-                      if (cResult[23] === tmp9) {
-                        if (cResult[24] === tmp22) {
-                          let tmp29 = cResult[25];
+                    if (cResult[22] === tmp25) {
+                      if (cResult[23] === tmp8) {
+                        if (cResult[24] === tmp21) {
+                          let tmp28 = cResult[25];
                         }
-                        return tmp29;
+                        return tmp28;
                       }
                     }
                   }
@@ -163,50 +159,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               style: container,
               innerStyle: cardInner,
-              text: tmp9,
+              text: tmp8,
               textAlign: "center",
-              buttonText: tmp11,
+              buttonText: tmp10,
               onButtonPress: onPreviewPremium,
               onLayout,
               children: null,
             };
-            const items = [tmp22, tmp26];
+            const items = [tmp21, tmp25];
             obj6.children = items;
-            const tmp31 = closure_6(UserProfileUpsellCardV2Default, obj6);
+            const tmp30 = closure_6(UserProfileUpsellCardV2Default, obj6);
             cResult[18] = onLayout;
             cResult[19] = onPreviewPremium;
             cResult[20] = tmp4.cardInner;
             cResult[21] = tmp4.container;
-            cResult[22] = tmp26;
-            cResult[23] = tmp9;
-            cResult[24] = tmp22;
-            cResult[25] = tmp31;
-            tmp29 = tmp31;
+            cResult[22] = tmp25;
+            cResult[23] = tmp8;
+            cResult[24] = tmp21;
+            cResult[25] = tmp30;
+            tmp28 = tmp30;
           }
         }
         const obj7 = { style: tmp4.divider, children: null };
-        const items1 = [tmp13, tmp20];
+        const items1 = [tmp12, tmp19];
         obj7.children = items1;
-        const tmp25 = closure_6(View, obj7);
+        const tmp24 = closure_6(View, obj7);
         cResult[12] = tmp4.divider;
-        cResult[13] = tmp13;
-        cResult[14] = tmp20;
-        cResult[15] = tmp25;
-        tmp22 = tmp25;
+        cResult[13] = tmp12;
+        cResult[14] = tmp19;
+        cResult[15] = tmp24;
+        tmp21 = tmp24;
       }
-      const tmp21 = closure_5(View, { style: tmp4.lockCircle, children: tmp17 });
+      const tmp20 = closure_5(View, { style: tmp4.lockCircle, children: tmp16 });
       cResult[9] = tmp4.lockCircle;
-      cResult[10] = tmp17;
-      cResult[11] = tmp21;
-      tmp20 = tmp21;
-      const obj8 = { style: tmp4.lockCircle, children: tmp17 };
+      cResult[10] = tmp16;
+      cResult[11] = tmp20;
+      tmp19 = tmp20;
+      let obj = analyticsLocations(576);
+      const obj8 = { style: tmp4.lockCircle, children: tmp16 };
     }
   : function UserProfilePremiumTryItOutSection(arg0) {
       ({ currentUser, onLayout, onPreviewPremium } = arg0);
       const tmp = closure_7();
-      const analyticsLocations = useAnalyticsLocationsDefault(
-        AnalyticsLocationDefault.USER_SETTINGS_TRY_OUT_PREMIUM,
-      ).analyticsLocations;
+      const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       usePremiumTryItOutPresetShuffleDefault();
       const items = [analyticsLocations];
       const callback = noop.useCallback(() => {
@@ -236,8 +231,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [closure_5(View, { style: tmp.dividerLine })];
       const obj4 = { style: tmp.lockCircle, children: null };
       const obj3 = { style: tmp.dividerLine };
-      const tmp5 = UserProfileUpsellCardV2Default;
-      obj4.children = closure_5(analyticsLocations(8198).LockIcon, {
+      const tmp4 = UserProfileUpsellCardV2Default;
+      obj4.children = closure_5(analyticsLocations(8206).LockIcon, {
         size: "xs",
         color: nativeDefault.colors.ICON_MUTED,
         style: tmp.lockIcon,
@@ -249,5 +244,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_5(UserProfileTryItOutFieldsDefault, { currentUser, mode: "entrypoint" }),
       ];
       obj.children = items2;
-      return closure_6(tmp5, obj);
+      return closure_6(tmp4, obj);
     };

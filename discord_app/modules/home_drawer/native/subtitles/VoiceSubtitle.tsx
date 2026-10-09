@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === voiceUsers) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: tmp4 };
-            const tmp9 = jsx(tmp(5086).Text, {
+            const tmp9 = jsx(tmp(5087).Text, {
               variant: "text-xs/medium",
               color: "text-voice-connected",
               lineClamp: 1,

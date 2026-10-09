@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = {
@@ -35,8 +35,8 @@ let obj3 = {
 };
 obj2.menu = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(16933).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(16933).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17063).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17063).MESSAGE_EDGE_INSET,
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -105,8 +105,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj4 = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(16933).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(16933).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17063).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17063).MESSAGE_EDGE_INSET,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl = tmp2(1126).intl;
         obj3.children = intl.string(_modDef3827.sA1lTv);
-        const items1 = [closure_5(tmp2(5086).Text, obj3), ,];
+        const items1 = [closure_5(tmp2(5087).Text, obj3), ,];
         const obj4 = {
           style: tmp.chat,
           children: items.map((menu) => {
@@ -257,9 +257,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl2 = tmp2(1126).intl;
         obj5.children = intl2.string(_modDef3827.NnmbJu);
-        items1[2] = closure_5(tmp2(5086).Text, obj5);
+        items1[2] = closure_5(tmp2(5087).Text, obj5);
         obj2.children = items1;
-        tmp5 = closure_6(tmp2(5373).Stack, obj2);
+        tmp5 = closure_6(tmp2(5374).Stack, obj2);
       }
       return tmp5;
     };

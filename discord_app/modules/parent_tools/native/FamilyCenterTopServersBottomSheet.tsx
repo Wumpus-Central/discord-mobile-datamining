@@ -12,7 +12,7 @@ import FamilyCenterStore from "../FamilyCenterStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   header: { textAlign: "center" },
   guildIcon: {
@@ -67,7 +67,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj2 = { label: stateFromStores.name, subLabel: tmp9, icon: tmp11 };
-            const tmp17 = closure_4(tmp(6184).TableRow, obj2);
+            const tmp17 = closure_4(tmp(6186).TableRow, obj2);
             cResult[9] = tmp9;
             cResult[10] = stateFromStores.name;
             cResult[11] = tmp11;
@@ -81,7 +81,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp14;
           tmp11 = tmp14;
         }
-        const topUserOrGuildDescription = tmp(7714).getTopUserOrGuildDescription(
+        const topUserOrGuildDescription = tmp(7723).getTopUserOrGuildDescription(
           guildActivity.messages_sent,
           guildActivity.call_count,
         );
@@ -89,7 +89,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = guildActivity.messages_sent;
         cResult[5] = topUserOrGuildDescription;
         tmp9 = topUserOrGuildDescription;
-        const tmpResult2 = tmp(7714);
+        const tmpResult2 = tmp(7723);
       }
       const tmpResult = guildActivity(504);
     }
@@ -103,14 +103,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == stateFromStores) {
         return null;
       } else {
-        const topUserOrGuildDescription = tmp2(7714).getTopUserOrGuildDescription(
+        const topUserOrGuildDescription = tmp2(7723).getTopUserOrGuildDescription(
           guildActivity.messages_sent,
           guildActivity.call_count,
         );
         const obj2 = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
         const obj3 = { guild: stateFromStores, style: tmp.guildIcon };
         obj2.icon = closure_4(GuildIconDefault, obj3);
-        return closure_4(tmp2(6184).TableRow, obj2);
+        return closure_4(tmp2(6186).TableRow, obj2);
       }
       const obj = guildActivity(504);
     };

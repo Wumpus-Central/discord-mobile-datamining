@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -49,7 +49,7 @@ export default noop.memo(
             const fn2 = function y() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(17490, dependencyMap.paths),
+                asyncRequireImpl(17642, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
@@ -75,7 +75,7 @@ export default noop.memo(
             tmp11 = cResult[7];
           }
           if (cResult[8] !== tmp9) {
-            Button = Button(5375).Button;
+            Button = Button(5376).Button;
             const obj2 = {
               onPress: tmp9,
               icon: null,
@@ -86,7 +86,7 @@ export default noop.memo(
               shrink: true,
               maxFontSizeMultiplier: 1,
             };
-            tmp = stateFromStores(10311);
+            tmp = stateFromStores(10298);
             obj2.icon = tmp;
             obj2.text = tmp10;
             obj2.accessibilityLabel = tmp11;
@@ -123,12 +123,12 @@ export default noop.memo(
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(17490, dependencyMap.paths),
+                asyncRequireImpl(17642, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
             },
-            icon: stateFromStores(10311),
+            icon: stateFromStores(10298),
             text: null,
             accessibilityLabel: null,
             variant: "secondary-overlay",
@@ -140,16 +140,16 @@ export default noop.memo(
           obj2.text = intl.string(tmp(1126).t["OzOM/q"]);
           const intl2 = tmp(1126).intl;
           obj2.accessibilityLabel = intl2.string(tmp(1126).t["OzOM/q"]);
-          tmp4 = jsx(tmp(5375).Button, {
+          tmp4 = jsx(tmp(5376).Button, {
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(17490, dependencyMap.paths),
+                asyncRequireImpl(17642, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
             },
-            icon: stateFromStores(10311),
+            icon: stateFromStores(10298),
             text: null,
             accessibilityLabel: null,
             variant: "secondary-overlay",

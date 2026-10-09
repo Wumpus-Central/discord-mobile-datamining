@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = stateFromStores(576);
       stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp10 = closure_4(tmp(5086).Text, {
+        const tmp10 = closure_4(tmp(5087).Text, {
           color: "text-muted",
           variant: "text-md/medium",
           children: "Character Stage",
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== stage) {
         const obj2 = { color: "text-muted", variant: "text-md/medium", children: stage };
-        const tmp13 = closure_4(tmp(5086).Text, obj2);
+        const tmp13 = closure_4(tmp(5087).Text, obj2);
         cResult[3] = stage;
         cResult[4] = tmp13;
         let tmp11 = tmp13;
@@ -62,11 +62,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[4];
       }
       if (cResult[5] !== activeCustomizationOption) {
-        const customizationOptionName = tmp(15811).getCustomizationOptionName(activeCustomizationOption);
+        const customizationOptionName = tmp(15924).getCustomizationOptionName(activeCustomizationOption);
         cResult[5] = activeCustomizationOption;
         cResult[6] = customizationOptionName;
         let tmp14 = customizationOptionName;
-        const tmpResult2 = tmp(15811);
+        const tmpResult2 = tmp(15924);
       } else {
         tmp14 = cResult[6];
       }
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { color: "text-muted", variant: "text-md/medium", children: null };
         const items1 = ["Trait: ", tmp14];
         obj3.children = items1;
-        const tmp18 = closure_5(tmp(5086).Heading, obj3);
+        const tmp18 = closure_5(tmp(5087).Heading, obj3);
         cResult[7] = tmp14;
         cResult[8] = tmp18;
         let tmp16 = tmp18;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const _Object = values.Object;
-        values = _Object.values(tmp(5457).CheckpointTrait);
+        values = _Object.values(tmp(5458).CheckpointTrait);
         flatMapResult = values.flatMap((item) => {
           if (null == stateFromStores[item]) {
             let items = [];
@@ -172,21 +172,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.container, children: null };
       stateFromStores = stateFromStores(504).useStateFromStores(items, () => CheckpointStore.selectedCharacterTraits);
       let items1 = [
-        closure_4(stateFromStores(5086).Text, {
+        closure_4(stateFromStores(5087).Text, {
           color: "text-muted",
           variant: "text-md/medium",
           children: "Character Stage",
         }),
-        closure_4(stateFromStores(5086).Text, { color: "text-muted", variant: "text-md/medium", children: stage }),
+        closure_4(stateFromStores(5087).Text, { color: "text-muted", variant: "text-md/medium", children: stage }),
         ,
       ];
       const obj3 = { color: "text-muted", variant: "text-md/medium", children: null };
       const obj = stateFromStores(504);
-      const items2 = ["Trait: ", stateFromStores(15811).getCustomizationOptionName(activeCustomizationOption)];
+      const items2 = ["Trait: ", stateFromStores(15924).getCustomizationOptionName(activeCustomizationOption)];
       obj3.children = items2;
-      items1[2] = closure_5(stateFromStores(5086).Heading, obj3);
-      const values = Object.values(stateFromStores(5457).CheckpointTrait);
-      const obj4 = stateFromStores(15811);
+      items1[2] = closure_5(stateFromStores(5087).Heading, obj3);
+      const values = Object.values(stateFromStores(5458).CheckpointTrait);
+      const obj4 = stateFromStores(15924);
       items1[3] = values
         .flatMap((item) => {
           if (null == stateFromStores[item]) {

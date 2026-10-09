@@ -6,7 +6,7 @@ import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
@@ -102,7 +102,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
                 obj5.phone = tmp15;
                 dependencyMap = 2;
                 c3 = 1;
-                const obj7 = { value: tmp2(12444).updateDiscoverability(obj5), done: false };
+                const obj7 = { value: tmp2(12362).updateDiscoverability(obj5), done: false };
                 return obj7;
               }
             } else if (1 === tmp5) {
@@ -129,7 +129,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(12436).startContactSync(closure_129_3), done: false };
+            const obj9 = { value: tmp2(12354).startContactSync(closure_129_3), done: false };
             return obj9;
           } catch (tmp2) {
             c3 = tmp;
@@ -160,7 +160,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
       const obj2 = { type: "Contact Sync", location: { page: "Contact Sync" } };
       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, obj2);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12447, dependencyMap.paths),
+        asyncRequireImpl(12365, dependencyMap.paths),
         "Contact Sync Info Settings",
       );
     }
@@ -194,7 +194,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: v1(7494).requestPermission(constants.CONTACTS), done: false };
+              const obj5 = { value: v1(7499).requestPermission(constants.CONTACTS), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -209,8 +209,8 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               closure_128_8();
             } else {
               const obj7 = { onComplete: closure_128_2, skip: true };
-              const result = tmp4(12436).closeContactSyncModal(obj7);
-              const obj = tmp4(12436);
+              const result = tmp4(12354).closeContactSyncModal(obj7);
+              const obj = tmp4(12354);
             }
             dependencyMap = 3;
           }
@@ -246,6 +246,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     subtitle: null,
     trailing: null,
     header: null,
+    headerInsideCard: true,
     loading: null,
     showSkip: null,
     onAllow: null,
@@ -262,7 +263,10 @@ function ContactSyncLandingScreen(openSettingsSheet) {
     discoverabilityEnabled,
     setDiscoverabilityEnabled: tmp9[1],
   });
-  obj7.header = closure_16(setLoading(onComplete[34]), {});
+  obj7.header = closure_16(openSettingsSheet(onComplete[34]).FindFriendsSpotIllustration, {
+    width: 188,
+    accessible: false,
+  });
   obj7.loading = loading;
   obj7.showSkip = tmp12;
   obj7.onAllow = callback1;
@@ -402,21 +406,21 @@ function getScreens(isOnboarding) {
   return obj3;
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12437);
+const ContactSyncModalStore = fn(12355);
 ({ setName: closure_9, useContactSyncModalStore: c10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(12438);
+const ContactSyncConstants = fn(12356);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const NativePermissionTypes = fn(7477).NativePermissionTypes;
+const NativePermissionTypes = fn(7482).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
-    paddingTop: fn(6261).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(6263).NAV_BAR_HEIGHT + 32,
   },
   landingTrailing: { textAlign: "center" },
 };
@@ -504,7 +508,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       [loading, dependencyMap] = noop.useState(false);
       const obj2 = require("useNavigation");
       ({ name, error, isNameFromContactBook } = closure_10());
-      loading(12455)(navigation, navigateToLandingPage.navigateToLandingPage);
+      loading(12374)(navigation, navigateToLandingPage.navigateToLandingPage);
       if (cResult[0] !== navigation) {
         _require = asyncGeneratorStep(async (arg0) => {
           if (c3 === 2) {
@@ -536,7 +540,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                   closure_2_9(options);
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: options(12436).startContactSync(options), done: false };
+                  const obj5 = { value: options(12354).startContactSync(options), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -617,7 +621,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj5 = { onNext: tmp10, error, loading, initialName: str, prefilledFromContactBook: tmp16 };
-          const tmp19 = closure_16(tmp8(12457), obj5);
+          const tmp19 = closure_16(tmp8(12376), obj5);
           cResult[7] = error;
           cResult[8] = loading;
           cResult[9] = tmp10;
@@ -666,7 +670,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_10();
       const name = tmp5.name;
       ({ isNameFromContactBook, error } = tmp5);
-      loading(12455)(navigation, navigateToLandingPage.navigateToLandingPage);
+      loading(12374)(navigation, navigateToLandingPage.navigateToLandingPage);
       _require = onNext(function* (arg0) {
         if (c3 === 2) {
           c3 = 3;
@@ -697,7 +701,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_2_9(options);
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: options(12436).startContactSync(options), done: false };
+                const obj5 = { value: options(12354).startContactSync(options), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -760,7 +764,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = isNameFromContactBook;
       }
       obj3.prefilledFromContactBook = tmp12;
-      obj2.children = closure_16(loading(12457), obj3);
+      obj2.children = closure_16(loading(12376), obj3);
       return closure_16(View, obj2);
     };
 ReactCompilerGating = fn(558);
@@ -906,7 +910,7 @@ let obj3 = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
-  paddingTop: fn(6261).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(6263).NAV_BAR_HEIGHT + 32,
 };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -995,7 +999,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp21;
               }
               const obj3 = { screens: tmp12, initialRouteStack: tmp17, headerBackTitle: tmp19 };
-              const tmp23 = closure_16(tmp(6679).Navigator, obj3);
+              const tmp23 = closure_16(tmp(6686).Navigator, obj3);
               cResult[17] = tmp12;
               cResult[18] = tmp17;
               cResult[19] = tmp23;

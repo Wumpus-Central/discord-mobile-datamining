@@ -19,21 +19,21 @@ function measureProfileFrameLayer(arg0) {
           closure_0,
           (arg0, arg1) => {
             if (arg0 > 0) {
-              const result = map.set(closure_0, arg1 / arg0);
-              set2.delete(closure_0);
+              const result = map.set(c0, arg1 / arg0);
+              set.delete(c0);
               closure_0(arg1 / arg0);
             } else {
-              set2.add(closure_0);
+              set.add(c0);
               closure_0(null);
             }
           },
           () => {
-            set2.add(closure_0);
+            set.add(c0);
             closure_0(null);
           },
         );
       });
-      const cleanupPromise = promise.finally(() => set.delete(closure_0));
+      const cleanupPromise = promise.finally(() => map.delete(c0));
       const result = map1.set(arg0, cleanupPromise);
       value2 = cleanupPromise;
     }
@@ -90,7 +90,7 @@ let closure_16 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6891).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
@@ -99,263 +99,246 @@ fn(558);
 const ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useProfileFrameLayerAsset(arg0) {
-      const cResult = require("c").c(16);
-      ({ skuId, layer, width } = arg0);
-      if (cResult[0] === layer) {
-        if (cResult[1] === skuId) {
-          let tmp4 = cResult[2];
-        }
-        _require = tmp4;
-        const _Symbol = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor(arg0) {
-              return arg0 + 1;
-            }
-          }
-          cResult[3] = P;
-        } else {
-          class P {
-            constructor(arg0) {
-              return arg0 + 1;
-            }
-          }
-        }
-        const tmp9 = _slicedToArray(noop.useReducer(P, 0), 2)[1];
-        closure_1 = tmp9;
-        if (cResult[4] === tmp4) {
-          class P {
-            constructor(arg0) {
-              return arg0 + 1;
-            }
-          }
-          if (cResult[7] !== tmp4) {
-            class P {
-              constructor(arg0) {
-                return arg0 + 1;
-              }
-            }
-            tmp12[0] = tmp4;
-            cResult[7] = tmp4;
-            cResult[8] = tmp12;
-          } else {
-            class P {
-              constructor(arg0) {
-                return arg0 + 1;
-              }
-            }
-          }
-          const effect = noop.useEffect(tmp10, tmp12);
-          if (cResult[9] === tmp4) {
-            class P {
-              constructor(arg0) {
-                return arg0 + 1;
-              }
-            }
-            if (cResult[13] === tmp15) {
-              class P {
-                constructor(arg0) {
-                  return arg0 + 1;
-                }
-              }
-              return tmp23;
-            }
-            const obj2 = { assetUrl: tmp15, imageHeight: tmp14 };
-            cResult[13] = tmp15;
-            cResult[14] = tmp14;
-            cResult[15] = obj2;
-            tmp23 = obj2;
-          }
-          value = undefined;
-          if (null != tmp4) {
-            class P {
-              constructor(arg0) {
-                return arg0 + 1;
-              }
-            }
-            value = map.get(tmp4);
-          }
-          if (null != value) {
-            class P {
-              constructor(arg0) {
-                return arg0 + 1;
-              }
-            }
-          }
-          let combined = null;
-          if (null != tmp4) {
-            class P {
-              constructor(arg0) {
-                return arg0 + 1;
-              }
-            }
-            if (null != value) {
-              class P {
-                constructor(arg0) {
-                  return arg0 + 1;
-                }
-              }
-              const rounded = Math.round(width * closure_7.get());
-              const _Math = Math;
-              const _HermesInternal = HermesInternal;
-              combined = "" + tmp4 + "?width=" + rounded + "&height=" + Math.round(rounded * value);
-            }
-          }
-          cResult[9] = tmp4;
-          cResult[10] = width;
-          cResult[11] = 0;
-          cResult[12] = combined;
-        }
-        const fn = function h() {
-          let hasItem = null == closure_0;
-          if (!hasItem) {
-            hasItem = "" === tmp;
-          }
-          if (!hasItem) {
-            hasItem = map.has(tmp);
-          }
-          if (!hasItem) {
-            closure_0 = tmp;
-            value = map.get(tmp);
-            if (null != value) {
-              let resolved = Promise.resolve(value);
-            } else {
-              resolved = map1.get(tmp);
-              if (null == resolved) {
-                const promise = new Promise((arg0) => {
-                  closure_0 = arg0;
-                  size = size.getSize(
-                    closure_0,
-                    (arg0, arg1) => {
-                      if (arg0 > 0) {
-                        const result = map.set(closure_0, arg1 / arg0);
-                        set2.delete(closure_0);
-                        closure_0(arg1 / arg0);
-                      } else {
-                        set2.add(closure_0);
-                        closure_0(null);
-                      }
-                    },
-                    () => {
-                      set2.add(closure_0);
-                      closure_0(null);
-                    },
-                  );
-                });
-                const cleanupPromise = promise.finally(() => set.delete(closure_0));
-                const result = map1.set(tmp, cleanupPromise);
-                resolved = cleanupPromise;
-              }
-            }
-            resolved.then((result) => {
-              if (null != result) {
-                closure_1_1();
-              }
-            });
-          }
-        };
-        cResult[4] = tmp4;
-        cResult[5] = tmp9;
-        cResult[6] = fn;
-        tmp10 = fn;
-      }
-      const obj = require("c");
-      const tmpResult = require("CollectiblesAssetUtils");
-      const collectiblesItemAssetUrl = tmpResult.getCollectiblesItemAssetUrl({
+      const cResult = collectiblesItemAssetUrl(ratio[7]).c(14);
+      ({ width, skuId, layer } = arg0);
+      let obj = collectiblesItemAssetUrl(ratio[7]);
+      const obj2 = collectiblesItemAssetUrl(ratio[5]);
+      collectiblesItemAssetUrl = obj2.getCollectiblesItemAssetUrl({
         skuId,
-        assetFormat: require("CollectiblesAssetUtils").CollectiblesItemAssetFormat.STATIC,
+        assetFormat: collectiblesItemAssetUrl(ratio[5]).CollectiblesItemAssetFormat.STATIC,
         assetId: layer.id,
       });
-      cResult[0] = layer;
-      cResult[1] = skuId;
-      cResult[2] = collectiblesItemAssetUrl;
-      tmp4 = collectiblesItemAssetUrl;
       const obj3 = {
         skuId,
-        assetFormat: require("CollectiblesAssetUtils").CollectiblesItemAssetFormat.STATIC,
+        assetFormat: collectiblesItemAssetUrl(ratio[5]).CollectiblesItemAssetFormat.STATIC,
         assetId: layer.id,
       };
-    }
-  : function useProfileFrameLayerAsset(width) {
-      width = width.width;
-      let collectiblesItemAssetUrl;
-      ({ skuId, layer } = width);
-      const obj = collectiblesItemAssetUrl(1986);
-      collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({
-        skuId,
-        assetFormat: collectiblesItemAssetUrl(1986).CollectiblesItemAssetFormat.STATIC,
-        assetId: layer.id,
-      });
-      closure_1 = _slicedToArray(
-        noop.useReducer((arg0) => arg0 + 1, 0),
-        2,
-      )[1];
-      const items = [collectiblesItemAssetUrl];
-      const effect = noop.useEffect(() => {
-        let hasItem = null == collectiblesItemAssetUrl;
-        if (!hasItem) {
-          hasItem = "" === collectiblesItemAssetUrl;
-        }
-        if (!hasItem) {
-          hasItem = map.has(collectiblesItemAssetUrl);
-        }
-        if (!hasItem) {
-          closure_0 = collectiblesItemAssetUrl;
-          value = map.get(collectiblesItemAssetUrl);
-          if (null != value) {
-            let resolved = Promise.resolve(value);
-          } else {
-            resolved = map1.get(collectiblesItemAssetUrl);
-            if (null == resolved) {
-              const promise = new Promise((arg0) => {
-                closure_0 = arg0;
-                size = size.getSize(
-                  closure_0,
-                  (arg0, arg1) => {
-                    if (arg0 > 0) {
-                      const result = map.set(closure_0, arg1 / arg0);
-                      set2.delete(closure_0);
-                      closure_0(arg1 / arg0);
-                    } else {
-                      set2.add(closure_0);
-                      closure_0(null);
-                    }
-                  },
-                  () => {
-                    set2.add(closure_0);
-                    closure_0(null);
-                  },
-                );
-              });
-              const cleanupPromise = promise.finally(() => set.delete(closure_0));
-              let result = map1.set(collectiblesItemAssetUrl, cleanupPromise);
-              resolved = cleanupPromise;
-            }
-          }
-          resolved.then((result) => {
-            if (null != result) {
-              closure_1_1();
-            }
-          });
-        }
-      }, items);
+      [tmp4, tmp5] = noop.useState(null);
+      importDefault = tmp5;
       value = undefined;
       if (null != collectiblesItemAssetUrl) {
         value = map.get(collectiblesItemAssetUrl);
       }
+      ratio = value;
+      if (null != tmp4) {
+        ratio = value;
+        if (tmp4.baseUrl === collectiblesItemAssetUrl) {
+          ratio = tmp4.ratio;
+        }
+      }
+      if (cResult[0] === collectiblesItemAssetUrl) {
+        if (cResult[1] === ratio) {
+          if (cResult[2] === tmp5) {
+            let tmp8 = cResult[3];
+          }
+          if (cResult[4] === collectiblesItemAssetUrl) {
+            if (cResult[5] === ratio) {
+              let tmp9 = cResult[6];
+            }
+            const effect = noop.useEffect(tmp8, tmp9);
+            let num4 = 0;
+            if (null != ratio) {
+              num4 = ratio * width;
+            }
+            if (cResult[7] === collectiblesItemAssetUrl) {
+              if (cResult[8] === ratio) {
+                if (cResult[9] === width) {
+                  let tmp11 = cResult[10];
+                }
+                if (cResult[11] === tmp11) {
+                  if (cResult[12] === num4) {
+                    let tmp18 = cResult[13];
+                  }
+                  return tmp18;
+                }
+                const obj5 = { assetUrl: tmp11, imageHeight: num4 };
+                cResult[11] = tmp11;
+                cResult[12] = num4;
+                cResult[13] = obj5;
+                tmp18 = obj5;
+              }
+            }
+            let combined = null;
+            if (null != collectiblesItemAssetUrl) {
+              combined = null;
+              if (null != ratio) {
+                const _Math = Math;
+                const rounded = Math.round(width * closure_7.get());
+                const _Math2 = Math;
+                const _HermesInternal = HermesInternal;
+                combined =
+                  "" + collectiblesItemAssetUrl + "?width=" + rounded + "&height=" + Math.round(rounded * ratio);
+              }
+            }
+            cResult[7] = collectiblesItemAssetUrl;
+            cResult[8] = ratio;
+            cResult[9] = width;
+            cResult[10] = combined;
+            tmp11 = combined;
+          }
+          const items = [collectiblesItemAssetUrl, ratio];
+          cResult[4] = collectiblesItemAssetUrl;
+          cResult[5] = ratio;
+          cResult[6] = items;
+          tmp9 = items;
+        }
+      }
+      const fn = function n() {
+        if (null != c0) {
+          if ("" !== tmp) {
+            if (null == ratio) {
+              c0 = tmp;
+              value = map.get(tmp);
+              if (null != value) {
+                let resolved = Promise.resolve(value);
+              } else {
+                resolved = map1.get(tmp);
+                if (null == resolved) {
+                  const promise = new Promise((arg0) => {
+                    closure_0 = arg0;
+                    size = size.getSize(
+                      closure_0,
+                      (arg0, arg1) => {
+                        if (arg0 > 0) {
+                          const result = map.set(c0, arg1 / arg0);
+                          set.delete(c0);
+                          closure_0(arg1 / arg0);
+                        } else {
+                          set.add(c0);
+                          closure_0(null);
+                        }
+                      },
+                      () => {
+                        set.add(c0);
+                        closure_0(null);
+                      },
+                    );
+                  });
+                  const cleanupPromise = promise.finally(() => map.delete(c0));
+                  const result = map1.set(tmp, cleanupPromise);
+                  resolved = cleanupPromise;
+                }
+              }
+              resolved.then((ratio) => {
+                let tmp = c0;
+                if (!c0) {
+                  tmp = null == ratio;
+                }
+                if (!tmp) {
+                  const obj = { baseUrl: collectiblesItemAssetUrl, ratio };
+                  closure_1(obj);
+                }
+              });
+              return () => {
+                c0 = true;
+              };
+            }
+          }
+        }
+      };
+      cResult[0] = collectiblesItemAssetUrl;
+      cResult[1] = ratio;
+      cResult[2] = tmp5;
+      cResult[3] = fn;
+      tmp8 = fn;
+      const tmp3 = _slicedToArray(noop.useState(null), 2);
+    }
+  : function useProfileFrameLayerAsset(width) {
+      width = width.width;
+      let collectiblesItemAssetUrl;
+      c1 = undefined;
+      let ratio;
+      ({ skuId, layer } = width);
+      let obj = collectiblesItemAssetUrl(ratio[5]);
+      collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({
+        skuId,
+        assetFormat: collectiblesItemAssetUrl(ratio[5]).CollectiblesItemAssetFormat.STATIC,
+        assetId: layer.id,
+      });
+      const obj2 = {
+        skuId,
+        assetFormat: collectiblesItemAssetUrl(ratio[5]).CollectiblesItemAssetFormat.STATIC,
+        assetId: layer.id,
+      };
+      [tmp3, c1] = noop.useState(null);
+      value = undefined;
+      if (null != collectiblesItemAssetUrl) {
+        value = map.get(collectiblesItemAssetUrl);
+      }
+      ratio = value;
+      if (null != tmp3) {
+        ratio = value;
+        if (tmp3.baseUrl === collectiblesItemAssetUrl) {
+          ratio = tmp3.ratio;
+        }
+      }
+      const items = [collectiblesItemAssetUrl, ratio];
+      const effect = noop.useEffect(() => {
+        if (null != c0) {
+          if ("" !== tmp) {
+            if (null == ratio) {
+              c0 = tmp;
+              value = closure_1_9.get(tmp);
+              if (null != value) {
+                let resolved = Promise.resolve(value);
+              } else {
+                resolved = map.get(tmp);
+                if (null == resolved) {
+                  const promise = new Promise((arg0) => {
+                    closure_0 = arg0;
+                    size = size.getSize(
+                      closure_0,
+                      (arg0, arg1) => {
+                        if (arg0 > 0) {
+                          const result = map.set(c0, arg1 / arg0);
+                          set.delete(c0);
+                          closure_0(arg1 / arg0);
+                        } else {
+                          set.add(c0);
+                          closure_0(null);
+                        }
+                      },
+                      () => {
+                        set.add(c0);
+                        closure_0(null);
+                      },
+                    );
+                  });
+                  const cleanupPromise = promise.finally(() => map.delete(c0));
+                  let result = map.set(tmp, cleanupPromise);
+                  resolved = cleanupPromise;
+                }
+              }
+              resolved.then((ratio) => {
+                let tmp = c0;
+                if (!c0) {
+                  tmp = null == ratio;
+                }
+                if (!tmp) {
+                  const obj = { baseUrl: collectiblesItemAssetUrl, ratio };
+                  c1(obj);
+                }
+              });
+              return () => {
+                c0 = true;
+              };
+            }
+          }
+        }
+      }, items);
       let imageHeight = 0;
-      if (null != value) {
-        imageHeight = value * width;
+      if (null != ratio) {
+        imageHeight = ratio * width;
       }
       let assetUrl = null;
       if (null != collectiblesItemAssetUrl) {
         assetUrl = null;
-        if (null != value) {
+        if (null != ratio) {
           const _Math = Math;
           const rounded = Math.round(width * closure_7.get());
           const _Math2 = Math;
           const _HermesInternal = HermesInternal;
-          assetUrl = "" + collectiblesItemAssetUrl + "?width=" + rounded + "&height=" + Math.round(rounded * value);
+          assetUrl = "" + collectiblesItemAssetUrl + "?width=" + rounded + "&height=" + Math.round(rounded * ratio);
         }
       }
       return { assetUrl, imageHeight };
@@ -401,7 +384,7 @@ export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled(
             let tmp5 = cResult[8];
           }
           if (cResult[9] !== frame.skuId) {
-            const fn2 = function v(assetId) {
+            const fn2 = function h(assetId) {
               const obj = CollectiblesAssetUtils;
               return obj.getCollectiblesItemAssetUrl({
                 skuId: frame.skuId,
@@ -439,7 +422,7 @@ export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled(
           cResult[4] = profileThemeType;
           cResult[5] = found1;
         }
-        const fn = function h(anchor) {
+        const fn = function v(anchor) {
           let tmp3 = null != skuId;
           if (tmp3) {
             tmp3 = !tmp2(anchor);

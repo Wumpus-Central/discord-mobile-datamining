@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import _modDef6837 from "../../../../../_runtime/metro/06837__.js";
+import _modDef6844 from "../../../../../_runtime/metro/06844__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   section: { height: 48, paddingHorizontal: 4 },
   children: { marginLeft: 12 },
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.transform = items;
         return obj2;
       };
-      let obj2 = collapsed(4810);
-      fn.__closure = { withTiming: collapsed(5091).withTiming, collapsed };
+      let obj2 = collapsed(4811);
+      fn.__closure = { withTiming: collapsed(5092).withTiming, collapsed };
       fn.__workletHash = 8513320305499;
       fn.__initData = __initData;
       const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp8 = cResult[5];
           }
           if (cResult[6] !== tmp4.collapseIcon) {
-            const obj4 = { source: _modDef6837, style: tmp4.collapseIcon };
+            const obj4 = { source: _modDef6844, style: tmp4.collapseIcon };
             const tmp16 = closure_6(collapsed(1200).Icon, obj4);
             cResult[6] = tmp4.collapseIcon;
             cResult[7] = tmp16;
@@ -164,12 +164,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const items1 = [label, " \u2014 ", count];
       obj10.children = items1;
-      const tmp7 = closure_5(collapsed(5086).Text, obj10);
+      const tmp7 = closure_5(collapsed(5087).Text, obj10);
       cResult[0] = count;
       cResult[1] = label;
       cResult[2] = tmp7;
       tmp6 = tmp7;
-      const obj3 = { withTiming: collapsed(5091).withTiming, collapsed };
+      const obj3 = { withTiming: collapsed(5092).withTiming, collapsed };
     }
   : function StageSectionHeader(collapsed) {
       collapsed = collapsed.collapsed;
@@ -191,9 +191,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return obj1;
         }
       }
-      let obj = collapsed(4810);
+      let obj = collapsed(4811);
       const tmp2 = collapsed;
-      T.__closure = { withTiming: collapsed(5091).withTiming, collapsed };
+      T.__closure = { withTiming: collapsed(5092).withTiming, collapsed };
       T.__workletHash = 13209446315864;
       T.__initData = __initData2;
       const obj3 = { style: tmp.section, children: null };
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let items = [label, " \u2014 ", count];
       obj5.children = items;
-      const items1 = [closure_5(collapsed(5086).Text, obj5), ,];
+      const items1 = [closure_5(collapsed(5087).Text, obj5), ,];
       let tmp5Result = null != children;
       if (tmp5Result) {
         const obj6 = { style: tmp.children, children };
@@ -216,8 +216,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = tmp5Result;
       const obj7 = { style: tmp.collapseButton, children: null };
       const obj8 = { style: animatedStyle, children: null };
-      let obj2 = { withTiming: collapsed(5091).withTiming, collapsed };
-      obj8.children = closure_6(tmp2(1200).Icon, { source: _modDef6837, style: tmp.collapseIcon });
+      let obj2 = { withTiming: collapsed(5092).withTiming, collapsed };
+      obj8.children = closure_6(tmp2(1200).Icon, { source: _modDef6844, style: tmp.collapseIcon });
       obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
       items1[2] = closure_6(closure_4, obj7);
       obj4.children = items1;

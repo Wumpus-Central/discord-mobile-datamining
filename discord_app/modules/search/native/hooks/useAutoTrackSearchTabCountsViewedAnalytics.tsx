@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx
-import tracking_TrackingDefault from "../tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const SearchTabs = fn(9247).SearchTabs;
+const SearchTabs = fn(9285).SearchTabs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
@@ -282,7 +282,7 @@ export const useAutoTrackSearchTabCountsViewedAnalytics = ReactCompilerGating.is
               tmp20 = tmp22;
             }
             obj2.numLinkTabReturnedResults = tmp20;
-            const result = tracking_TrackingDefault.trackSearchResultReturned(obj2);
+            const result = search_tracking_TrackingDefault.trackSearchResultReturned(obj2);
           }
         }
       }, items1);

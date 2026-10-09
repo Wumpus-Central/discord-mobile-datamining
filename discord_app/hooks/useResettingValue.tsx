@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [tmp4, dependencyMap] = closure_4(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l() {
-          const timeout = new closure_0(2058).Timeout();
+          const timeout = new closure_0(2059).Timeout();
           return timeout;
         };
         cResult[0] = fn;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = _slicedToArray(closure_4(arg0), 2);
       dependencyMap = tmp[1];
       const tmp2 = useInitialValueDefault(() => {
-        const timeout = new closure_0(2058).Timeout();
+        const timeout = new closure_0(2059).Timeout();
         return timeout;
       });
       _slicedToArray = tmp2;

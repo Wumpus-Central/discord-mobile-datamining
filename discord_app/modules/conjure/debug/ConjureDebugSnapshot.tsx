@@ -13,7 +13,7 @@ export const conjureDebugSnapshot = function conjureDebugSnapshot(projectId) {
     last_turn_usage: ConjureDebugStore.getLastTurnUsage(projectId),
     last_compaction: ConjureDebugStore.getLastCompaction(projectId),
     last_compaction_decline: ConjureDebugStore.getLastCompactionDecline(projectId),
-    model_calls: ConjureDebugStore.getModelCalls(projectId),
+    timing_traces: ConjureDebugStore.getTimingTraces(projectId),
     logs: ConjureProjectStore.getLogs(projectId),
   };
   return JSON.stringify(obj, null, 2);

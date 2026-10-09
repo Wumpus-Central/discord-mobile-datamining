@@ -14,24 +14,24 @@ const PhoneActionCreatorsDefault = PhoneActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12437).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12355).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
-let obj2 = { container: { paddingTop: fn(6261).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
-let obj3 = { paddingTop: fn(6261).NAV_BAR_HEIGHT + 32 };
-obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6261).NAV_BAR_HEIGHT + 32 };
+const createStyles = fn(5091);
+let obj2 = { container: { paddingTop: fn(6263).NAV_BAR_HEIGHT + 32 }, redesignContainer: null, header: null, title: null, subtitle: null };
+let obj3 = { paddingTop: fn(6263).NAV_BAR_HEIGHT + 32 };
+obj2.redesignContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6263).NAV_BAR_HEIGHT + 32 };
 obj2.header = { alignItems: "center" };
 obj2.title = { textAlign: "center" };
 obj2.subtitle = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 let closure_11 = createStyles.createStyles(obj2);
 fn(558);
-let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6261).NAV_BAR_HEIGHT + 32 };
+let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingTop: fn(6263).NAV_BAR_HEIGHT + 32 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScreen() {
   const cResult = navigation(576).c(16);
   const obj = navigation(576);
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   const tmp5 = closure_11();
   ({ header, title } = tmp5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -44,7 +44,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScre
   }
   if (cResult[1] !== tmp5.title) {
     const obj3 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: first };
-    const tmp10 = closure_9(tmp(5086).Text, obj3);
+    const tmp10 = closure_9(tmp(5087).Text, obj3);
     cResult[1] = tmp5.title;
     cResult[2] = tmp10;
     let tmp8 = tmp10;
@@ -61,7 +61,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScre
   }
   if (cResult[4] !== tmp5.subtitle) {
     const obj4 = { style: tmp5.subtitle, variant: "text-sm/medium", color: "text-default", children: tmp11 };
-    const tmp15 = closure_9(tmp(5086).Text, obj4);
+    const tmp15 = closure_9(tmp(5087).Text, obj4);
     cResult[4] = tmp5.subtitle;
     cResult[5] = tmp15;
     let tmp13 = tmp15;
@@ -98,7 +98,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScre
           }
         }
       }
-      const obj5 = { style: tmp5.container, reason: tmp(6725).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
+      const obj5 = { style: tmp5.container, reason: tmp(6732).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
       const tmp23 = closure_9(AddPhoneDefault, obj5);
       cResult[12] = tmp16;
       cResult[13] = tmp5.container;
@@ -115,7 +115,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPhoneScre
   cResult[8] = tmp13;
   cResult[9] = tmp17;
   tmp16 = tmp17;
-  const obj2 = navigation(1502);
+  const obj2 = navigation(1503);
 }) : (function AddPhoneScreen() {
   _require = require("useNavigation").useNavigation();
   const tmp = closure_11();

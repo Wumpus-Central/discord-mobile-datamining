@@ -3,8 +3,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
-import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
+import useScaledTextLineHeight from "../../../screen/native/useScaledTextLineHeight.android.tsx";
 import QuestCopyHooks from "../../hooks/QuestCopyHooks.tsx";
 import QuestDockCreativeContext from "QuestDockCreativeContext.tsx";
 import QuestProgressIndicatorDefault from "../QuestProgressIndicator.tsx";
@@ -18,8 +18,8 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 let c7 = "heading-md/semibold";
 let c8 = "text-sm/medium";
-let closure_9 = fn(15174).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
-const createStyles = fn(5090);
+let closure_9 = fn(15285).QUEST_DOCK_COLLAPSED_HEIGHT - 2 * PX_8;
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles({
   wrapper: {
     alignItems: "center",

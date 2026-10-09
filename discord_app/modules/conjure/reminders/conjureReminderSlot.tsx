@@ -8,6 +8,8 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 function selectConjureReminder(arr, unseen) {
   if (unseen.unseen) {
@@ -213,7 +215,7 @@ function nextReminderClockState(projectId, projectId2, now) {
     }
   }
 }
-const ConjureChatStore = fn(13073);
+const ConjureChatStore = fn(12948);
 ({ isStrandedSegment: metroRequire, turnSettled: closure_7 } = ConjureChatStore);
 let items = [60000, 180000, 600000];
 let c9 = 600000;
@@ -1258,7 +1260,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useConjureReminder(projectId, arr, draftHasText) {
       closure_0 = projectId;
-      const tmp = obj(16914)(projectId);
+      const tmp = obj(17042)(projectId);
       let diff = arr.length - 1;
       let tmp4 = null;
       if (0 <= diff) {
@@ -1315,8 +1317,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         bound = Math.max(atResult.created_at, num, num2);
       }
       obj.messageAt = bound;
-      obj.visible = obj(16443)();
-      const tmp2 = obj(16443)();
+      obj.visible = obj(16562)();
+      const tmp2 = obj(16562)();
       [tmp15, tmp16] = obj3.useState(() => {
         const timestamp = Date.now();
         obj = {};
@@ -1560,7 +1562,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         closure_1 = tmp12;
         if (cResult[4] !== cResult[2]) {
-          const fn2 = function v() {
+          const fn2 = function p() {
             if (closure_1) {
               const _setTimeout = setTimeout;
               const timeout = setTimeout(() => closure_0((arr) => arr.filter((leaving) => !leaving.leaving)), 180);
@@ -1723,71 +1725,82 @@ export const useConjureReminder = tmp4;
 export { nextReminderLayers };
 export const useConjureReminderLayers = tmp5;
 export const useConjureUpdatingDots = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureUpdatingDots() {
-      const cResult = stateFromStores(576).c(8);
+  ? function useConjureUpdatingDots(arg0) {
+      const cResult = require("c").c(9);
+      _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         items = [AccessibilityStore];
-        const fn = function u() {
+        const fn = function s() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp4 = items;
-        tmp5 = fn;
+        tmp5 = items;
+        tmp6 = fn;
       } else {
-        [tmp4, tmp5] = cResult;
+        [tmp5, tmp6] = cResult;
       }
-      const obj = stateFromStores(576);
-      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
-      const tmpResult = stateFromStores(504);
-      [tmp9, importDefault] = noop.useState(1);
-      if (cResult[2] !== stateFromStores) {
-        const fn2 = function l() {
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
+      const tmpResult = require("initialize");
+      [tmp10, dependencyMap] = noop.useState(1);
+      if (cResult[2] === (undefined !== arg0 && arg0)) {
+        if (cResult[3] === stateFromStores) {
+          let tmp11 = cResult[4];
+          let tmp12 = cResult[5];
+        }
+        const effect = noop.useEffect(tmp11, tmp12);
+        if (cResult[6] === tmp10) {
+          if (cResult[7] === stateFromStores) {
+            let tmp14 = cResult[8];
+          }
+          return tmp14;
+        }
+        let num3 = 3;
+        if (!stateFromStores) {
+          num3 = tmp10;
+        }
+        const repeatResult = ".".repeat(num3);
+        cResult[6] = tmp10;
+        cResult[7] = stateFromStores;
+        cResult[8] = repeatResult;
+        tmp14 = repeatResult;
+      }
+      const fn2 = function f() {
+        if (!stateFromStores) {
           if (!interval) {
             const _setInterval = setInterval;
-            interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
+            interval = setInterval(() => closure_1_2((arg0) => (arg0 % 3) + 1), 400);
             return () => clearInterval(closure_0);
           }
-        };
-        items1 = [stateFromStores];
-        cResult[2] = stateFromStores;
-        cResult[3] = fn2;
-        cResult[4] = items1;
-        let tmp11 = items1;
-        let tmp10 = fn2;
-      } else {
-        tmp10 = cResult[3];
-        tmp11 = cResult[4];
-      }
-      const effect = noop.useEffect(tmp10, tmp11);
-      if (cResult[5] === tmp9) {
-        if (cResult[6] === stateFromStores) {
-          let tmp13 = cResult[7];
         }
-        return tmp13;
-      }
-      let num5 = 3;
-      if (!stateFromStores) {
-        num5 = tmp9;
-      }
-      const repeatResult = ".".repeat(num5);
-      cResult[5] = tmp9;
-      cResult[6] = stateFromStores;
-      cResult[7] = repeatResult;
-      tmp13 = repeatResult;
-      const tmp8 = _slicedToArray(noop.useState(1), 2);
+      };
+      items1 = [stateFromStores, undefined !== arg0 && arg0];
+      cResult[2] = undefined !== arg0 && arg0;
+      cResult[3] = stateFromStores;
+      cResult[4] = fn2;
+      cResult[5] = items1;
+      tmp12 = items1;
+      tmp11 = fn2;
+      const tmp9 = _slicedToArray(noop.useState(1), 2);
     }
   : function useConjureUpdatingDots() {
+      let flag = arg0;
+      if (arg0 === undefined) {
+        flag = false;
+      }
       items = [AccessibilityStore];
-      stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      const stateFromStores = flag(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
       const tmp2 = _slicedToArray(noop.useState(1), 2);
-      closure_1 = tmp2[1];
-      items1 = [stateFromStores];
+      dependencyMap = tmp2[1];
+      items1 = [stateFromStores, flag];
       const effect = noop.useEffect(() => {
-        if (!interval) {
-          const _setInterval = setInterval;
-          interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
-          return () => clearInterval(closure_0);
+        if (!stateFromStores) {
+          if (!interval) {
+            const _setInterval = setInterval;
+            interval = setInterval(() => closure_1_2((arg0) => (arg0 % 3) + 1), 400);
+            return () => clearInterval(closure_0);
+          }
         }
       }, items1);
       let num = 3;

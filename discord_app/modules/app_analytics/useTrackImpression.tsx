@@ -2,10 +2,10 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtils2 from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef1354 from "../../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../../_runtime/metro/01355__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
-import uniqueIdDefault from "../../../_runtime/05941_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05942_uniqueId.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -66,7 +66,7 @@ function trackImpression(type) {
   }
   const tmpResult5 = AppAnalyticsUtils;
 }
-const ImpressionStore = fn(1265);
+const ImpressionStore = fn(1266);
 ({
   setCurrentImpression: closure_7,
   cleanupImpression: closure_8,
@@ -74,15 +74,15 @@ const ImpressionStore = fn(1265);
   getLocation: c10,
   getImpressionStack: closure_11,
 } = ImpressionStore);
-const AnalyticsUtils = fn(1272);
+const AnalyticsUtils = fn(1273);
 let closure_12 = AnalyticsUtils.trackMaker({
-  analyticEventConfigs: fn(1264).AnalyticEventConfigs,
+  analyticEventConfigs: fn(1265).AnalyticEventConfigs,
   dispatcher: DispatcherDefault,
   TRACK_ACTION_NAME: "TRACK",
 });
 const ReactCompilerGating = fn(558);
 let obj2 = {
-  analyticEventConfigs: fn(1264).AnalyticEventConfigs,
+  analyticEventConfigs: fn(1265).AnalyticEventConfigs,
   dispatcher: DispatcherDefault,
   TRACK_ACTION_NAME: "TRACK",
 };
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp5) {
           ref.current = current;
         }
-        tmp5 = _modDef1354(ref.current, current);
+        tmp5 = _modDef1355(ref.current, current);
         if (!tmp8) {
           ref2.current = current2;
         }
@@ -184,13 +184,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       noop = noop.useRef(undefined);
       noop.useRef(undefined);
-      obj(5392)(() => {
+      obj(5393)(() => {
         if (obj.trackOnInitialLoad) {
-          const tmp6 = _modDef1354(ref.current, current);
+          const tmp6 = _modDef1355(ref.current, current);
           if (!tmp6) {
             ref.current = current;
           }
-          const tmp10 = _modDef1354(ref2.current, current2);
+          const tmp10 = _modDef1355(ref2.current, current2);
           if (!tmp10) {
             ref2.current = current2;
           }
@@ -210,11 +210,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       const effect = noop.useEffect(() => {
         if (!obj.trackOnInitialLoad) {
-          const tmp6 = _modDef1354(ref.current, current);
+          const tmp6 = _modDef1355(ref.current, current);
           if (!tmp6) {
             ref.current = current;
           }
-          const tmp10 = _modDef1354(ref2.current, current2);
+          const tmp10 = _modDef1355(ref2.current, current2);
           if (!tmp10) {
             ref2.current = current2;
           }

@@ -1,16 +1,16 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import c from "../../../../_runtime/00576_c.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef15002 from "../../../../_runtime/metro/15002__.js";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import _modDef15114 from "../../../../_runtime/metro/15114__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
-let closure_7 = createStyles.createStyles({
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5091);
+let closure_6 = createStyles.createStyles({
   art: { marginBottom: 10, width: 243 },
   empty: { display: "flex", alignItems: "center" },
 });
@@ -22,10 +22,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterEmpty(text) {
       const cResult = c.c(8);
       text = text.text;
-      const tmp4 = closure_7();
+      const tmp4 = closure_6();
       if (cResult[0] !== tmp4.art) {
-        const obj2 = { source: _modDef15002, style: tmp4.art, resizeMethod: "scale" };
-        const tmp9 = hasOwnProperty(React4, obj2);
+        const obj2 = { source: _modDef15114, style: tmp4.art, resizeMethod: "scale" };
+        const tmp9 = React4(FastImageDefault, obj2);
         cResult[0] = tmp4.art;
         cResult[1] = tmp9;
         let tmp5 = tmp9;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== text) {
         const obj3 = { variant: "text-sm/medium", color: "text-muted", children: text };
-        const tmp12 = hasOwnProperty(Text_Text.Text, obj3);
+        const tmp12 = React4(Text_Text.Text, obj3);
         cResult[2] = text;
         cResult[3] = tmp12;
         let tmp10 = tmp12;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp4.empty, children: null };
       const items = [tmp5, tmp10];
       obj4.children = items;
-      const tmp14 = timestampProducer(React3, obj4);
+      const tmp14 = hasOwnProperty(View, obj4);
       cResult[4] = tmp4.empty;
       cResult[5] = tmp5;
       cResult[6] = tmp10;
@@ -60,12 +60,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp14;
     }
   : function FamilyCenterEmpty(children) {
-      const tmp = closure_7();
+      const tmp = closure_6();
       const obj = { style: tmp.empty, children: null };
+      const obj2 = { source: _modDef15114, style: tmp.art, resizeMethod: "scale" };
       const items = [
-        hasOwnProperty(React4, { source: _modDef15002, style: tmp.art, resizeMethod: "scale" }),
-        hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
+        React4(FastImageDefault, obj2),
+        React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
       ];
       obj.children = items;
-      return timestampProducer(React3, obj);
+      return hasOwnProperty(View, obj);
     };

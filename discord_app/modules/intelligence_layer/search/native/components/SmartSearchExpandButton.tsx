@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef4051 from "../../SmartSearch.messages.js";
+import _modDef4053 from "../../SmartSearch.messages.js";
 import ChevronSmallDownIcon from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import ChevronSmallUpIcon2 from "../../../../../design/components/Icon/native/redesign/generated/ChevronSmallUpIcon.tsx";
 import useSearchHostSurface from "../useSearchHostSurface.tsx";
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" },
@@ -56,7 +56,7 @@ export default noop.memo(
         }
         if (cResult[0] !== isCollapsed) {
           const intl = util.intl;
-          const tmp9 = _modDef4051;
+          const tmp9 = _modDef4053;
           const stringResult = intl.string(isCollapsed ? tmp9.NuTbB9 : tmp9.FKLBbW);
           cResult[0] = isCollapsed;
           cResult[1] = stringResult;
@@ -140,7 +140,7 @@ export default noop.memo(
           children: null,
         };
         const intl = util.intl;
-        const tmp9 = _modDef4051;
+        const tmp9 = _modDef4053;
         if (isCollapsed) {
           let FKLBbW = tmp9.NuTbB9;
           let tmp10 = importDefault;

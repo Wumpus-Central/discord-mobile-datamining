@@ -52,6 +52,8 @@ export const CLIPS_THUMBNAIL_MAX_HEIGHT = 360;
 export const CLIPS_MAX_PARTICIPANTS = 100;
 export const CLIPS_MAX_TIMELINE_EVENTS = 1000;
 export const CLIPS_TIMELINE_BUFFER_MS = 500;
+export const EVENT_ID_DATA_KEY = "id";
+export const STREAK_KILL_IDS_DATA_KEY = "killIds";
 export const CLIP_NAME_TEMPLATE = (arg0) => "Clip - " + new Date(arg0).toLocaleString();
 export const MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS = 15;
 export const CLIPS_SAVE_TIMEOUT_WARN_MS = result3;

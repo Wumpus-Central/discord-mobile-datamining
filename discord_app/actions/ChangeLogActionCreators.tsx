@@ -67,7 +67,7 @@ export default {
         const _HermesInternal = HermesInternal;
         str = "?" + cacheBustParam();
       }
-      const HTTP = closure_0(1294).HTTP;
+      const HTTP = closure_0(1295).HTTP;
       const _HermesInternal2 = HermesInternal;
       yield HTTP.get({
         url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_0 + "/" + tmp3 + ".json" + str,

@@ -1,12 +1,12 @@
 // discord_app/modules/checkpoint/native/useCheckpointPreloader.tsx
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4873 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
-import _modDef4875 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
-import _modDef15808 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
-import _modDef15810 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
-import _modDef15817 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
-import _modDef15826 from "../../../../discord_assets/assets/checkpoint/voice-soundwave.png.js";
-import _modDef15838 from "../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
+import _modDef4874 from "../../../../discord_assets/assets/mana/rive/native/CheckpointKnickKnacks.riv.js";
+import _modDef4876 from "../../../../discord_assets/assets/mana/rive/native/CheckpointNumbers.riv.js";
+import _modDef15921 from "../../../../discord_assets/assets/checkpoint/click-next.mp3.js";
+import _modDef15923 from "../../../../discord_assets/assets/checkpoint/checkpoint-bgm.mp3.js";
+import _modDef15930 from "../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import _modDef15939 from "../../../../discord_assets/assets/checkpoint/voice-soundwave.png.js";
+import _modDef15951 from "../../../../discord_assets/assets/checkpoint/checkpoint-clyde.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -14,8 +14,8 @@ const require = globalThis.__r;
 
 require = fn;
 const useEffect = fn(19).useEffect;
-const CheckpointFetchStates = fn(15802).CheckpointFetchStates;
-let items = [_modDef4873, _modDef4875, _modDef15817, _modDef15838, _modDef15826, _modDef15810, _modDef15808];
+const CheckpointFetchStates = fn(15915).CheckpointFetchStates;
+let items = [_modDef4874, _modDef4876, _modDef15930, _modDef15951, _modDef15939, _modDef15923, _modDef15921];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/useCheckpointPreloader.tsx");

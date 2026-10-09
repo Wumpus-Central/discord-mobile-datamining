@@ -3,14 +3,14 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c2, Image: c3 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { padding: 16, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   title: { textAlign: "center", marginBottom: 8 },
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { style: tmp4.container, children: null };
               const items = [tmp5, tmp7, tmp10, tmp14];
               obj2.children = items;
-              const tmp20 = hasOwnProperty(React2, obj2);
+              const tmp20 = hasOwnProperty(View, obj2);
               cResult[12] = tmp4.container;
               cResult[13] = tmp5;
               cResult[14] = tmp7;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = tmp16;
           }
           const obj4 = { source: imageSrc, style: tmp4.image };
-          const tmp13 = React4(React3, obj4);
+          const tmp13 = React4(FastImageDefault, obj4);
           cResult[6] = imageSrc;
           cResult[7] = tmp4.image;
           cResult[8] = tmp13;
@@ -131,9 +131,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: description,
         }),
-        React4(React3, { source: imageSrc, style: tmp.image }),
+        React4(FastImageDefault, { source: imageSrc, style: tmp.image }),
         React4(components_Button_Button.Button, { text: CTALabel, size: "md", onPress: onCTAPress, grow: true }),
       ];
       obj.children = items;
-      return hasOwnProperty(React2, obj);
+      return hasOwnProperty(View, obj);
     };

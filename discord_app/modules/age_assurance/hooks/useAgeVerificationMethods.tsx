@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AgeVerificationStore from "../AgeVerificationStore.tsx";
 
 require = fn;
-const AgeVerificationConstants = fn(5914);
+const AgeVerificationConstants = fn(5915);
 ({ VERIFICATION_METHOD_TITLE_MAP: closure_7, VerificationMethod: closure_8 } = AgeVerificationConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -251,11 +251,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        const obj5 = id(5915);
+                        const obj5 = id(5916);
                         const result = obj5.trackAgeVerificationModalClicked(
                           id,
-                          id(5915).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                          id(5915).AgeVerificationModalCta.METHOD_SELECT,
+                          id(5916).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                          id(5916).AgeVerificationModalCta.METHOD_SELECT,
                           id,
                         );
                         v1 = 1;
@@ -649,11 +649,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { value, done: true };
                           return obj3;
                         } else {
-                          const obj5 = id(5915);
+                          const obj5 = id(5916);
                           const result = obj5.trackAgeVerificationModalClicked(
                             id,
-                            id(5915).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
-                            id(5915).AgeVerificationModalCta.METHOD_SELECT,
+                            id(5916).AgeVerificationModalVersion.EXPRESSIVE_PRIMARY,
+                            id(5916).AgeVerificationModalCta.METHOD_SELECT,
                             id,
                           );
                           v1 = 1;

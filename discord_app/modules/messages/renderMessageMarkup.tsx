@@ -197,6 +197,7 @@ export const renderMessageContentMarkup = function renderMessageContentMarkup(
       messageId: guildId.messageId,
       authorId: guildId.authorId,
       muted: false,
+      unknownUserMentionPlaceholder: true,
       disablePressableChannelMention: true,
       textColor: obj.textColor,
     },

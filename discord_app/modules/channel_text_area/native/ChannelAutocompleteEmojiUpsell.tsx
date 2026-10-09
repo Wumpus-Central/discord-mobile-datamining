@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   title: { lineHeight: 16, flex: 1 },
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp18 = items1;
             }
             const obj6 = { style: title, accessibilityRole: "header", variant: "text-sm/medium", children: tmp11 };
-            const tmp15 = closure_5(tmp(5086).Text, obj6);
+            const tmp15 = closure_5(tmp(5087).Text, obj6);
             cResult[10] = tmp4.title;
             cResult[11] = tmp11;
             cResult[12] = tmp15;

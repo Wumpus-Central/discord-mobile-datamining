@@ -142,6 +142,7 @@ export const QuestsExperimentLocations = {
   NITRO_HOME_TAB: "nitro_home_tab",
   QUEST_ORB_MULTIPLIER_TAB_TOOLTIP: "quest_orb_multiplier_tab_tooltip",
   PLAY_QUEST_CONNECTION_MODAL: "play_quest_connection_modal",
+  BOUNTY_PREVIEW_LINK: "bounty_preview_link",
 };
 export const DismissibleQuestContentFlags = DismissibleQuestContentFlags.DismissibleQuestContentFlags;
 export const QuestVariants = QuestVariants.QuestVariants;

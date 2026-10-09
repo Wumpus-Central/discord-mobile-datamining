@@ -9,24 +9,25 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import CheckmarkLargeIcon from "../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../_runtime/05388_LinearGradient.js";
+import FastImageDefault from "../common/FastImage.tsx";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13664 from "../../../_runtime/metro/13664__.js";
-import _modDef13665 from "../../../_runtime/metro/13665__.js";
+import _modDef13755 from "../../../_runtime/metro/13755__.js";
+import _modDef13756 from "../../../_runtime/metro/13756__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7140).Gradients;
-const PremiumConstants = fn(1391);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_9 } =
+({ View: c3, StyleSheet } = get_ActivityIndicator);
+const Gradients = fn(7145).Gradients;
+const PremiumConstants = fn(1392);
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } =
   PremiumConstants);
 const jsxProd = fn(21);
-({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   title: { textAlign: "center" },
   subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" },
@@ -82,11 +83,11 @@ let obj6 = {
   lineHeight: 20,
 };
 obj2.upsellRow = { paddingVertical: 0, marginTop: 8, color: nativeDefault.unsafe_rawColors.WHITE };
-let closure_13 = createStyles.createStyles(obj2);
+let closure_12 = createStyles.createStyles(obj2);
 function FEATURES_UPSELL_PREMIUM_TIER_2() {
   const obj = { IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon, label: null, color: null };
   const intl = util.intl;
-  const obj2 = { discountPercentage: NumberUtils.formatPercent(LocaleStore.locale, options / 100) };
+  const obj2 = { discountPercentage: NumberUtils.formatPercent(LocaleStore.locale, closure_1_8 / 100) };
   obj.label = intl.formatToPlainString(util.t.P3aEj6, obj2);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   const items = [obj];
@@ -106,10 +107,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function PremiumSubscriptionUpsell(arg0) {
       const cResult = c.c(37);
       ({ onLearnMorePremium, style } = arg0);
-      const tmp4 = closure_13();
+      const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function n() {
+        const fn = function s() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -132,20 +133,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[6] === tmp4.subtitle) {
               if (cResult[7] === tmp4.title) {
                 if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13664 };
-                  const tmp22 = collapsed(React4, obj2);
+                  const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef13755 };
+                  const tmp22 = options(FastImageDefault, obj2);
                   cResult[9] = tmp4.upsellFeatureSubLogo;
                   cResult[10] = tmp22;
                   let tmp19 = tmp22;
+                  const tmp8Result = FastImageDefault;
                 } else {
                   tmp19 = cResult[10];
                 }
                 if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13665 };
-                  const tmp26 = collapsed(React4, obj4);
+                  const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef13756 };
+                  const tmp26 = options(FastImageDefault, obj4);
                   cResult[11] = tmp4.upsellFeatureLogoTier2;
                   cResult[12] = tmp26;
                   let tmp23 = tmp26;
+                  const tmp8Result4 = FastImageDefault;
                 } else {
                   tmp23 = cResult[12];
                 }
@@ -183,7 +186,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               text: tmp37,
                               onPress: onLearnMorePremium,
                             };
-                            const tmp41 = collapsed(components_Button_Button.Button, obj5);
+                            const tmp41 = options(components_Button_Button.Button, obj5);
                             cResult[24] = onLearnMorePremium;
                             cResult[25] = tmp41;
                             let tmp39 = tmp41;
@@ -207,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     return tmp51;
                                   }
                                   const obj6 = { style: tmp9, children: tmp46 };
-                                  const tmp54 = collapsed(React3, obj6);
+                                  const tmp54 = options(React3, obj6);
                                   cResult[34] = tmp46;
                                   cResult[35] = tmp9;
                                   cResult[36] = tmp54;
@@ -224,17 +227,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             };
                             const items1 = [tmp11, tmp33, tmp42];
                             obj7.children = items1;
-                            const tmp50 = __initData(LinearGradientDefault, obj7);
+                            const tmp50 = closure_1_11(LinearGradientDefault, obj7);
                             cResult[29] = tmp4.upsellCard;
                             cResult[30] = tmp33;
                             cResult[31] = tmp42;
                             cResult[32] = tmp11;
                             cResult[33] = tmp50;
                             tmp46 = tmp50;
-                            const tmp8Result = LinearGradientDefault;
+                            const tmp8Result5 = LinearGradientDefault;
                           }
                           const obj8 = { style: tmp4.upsellButton, children: tmp39 };
-                          const tmp45 = collapsed(React3, obj8);
+                          const tmp45 = options(React3, obj8);
                           cResult[26] = tmp4.upsellButton;
                           cResult[27] = tmp39;
                           cResult[28] = tmp45;
@@ -245,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj9 = { style: tmp4.upsellFeatures, children: null };
                     const items2 = [tmp19, tmp23, tmp30];
                     obj9.children = items2;
-                    const tmp36 = __initData(React3, obj9);
+                    const tmp36 = closure_1_11(React3, obj9);
                     cResult[18] = tmp4.upsellFeatures;
                     cResult[19] = tmp30;
                     cResult[20] = tmp19;
@@ -256,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj10 = { style: tmp4.upsellFeatureList, features: tmp27, labelStyle: null, rowStyle: null };
                 ({ upsellLabel: obj12.labelStyle, upsellRow: obj12.rowStyle } = tmp4);
-                const tmp32 = collapsed(PremiumFeatureListDefault, obj10);
+                const tmp32 = options(PremiumFeatureListDefault, obj10);
                 cResult[14] = tmp4.upsellFeatureList;
                 cResult[15] = tmp4.upsellLabel;
                 cResult[16] = tmp4.upsellRow;
@@ -265,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          if (tmp8Result2.isPremium(title)) {
+          if (tmp8Result6.isPremium(title)) {
             const obj11 = { children: null };
             const obj13 = {
               style: tmp4.title,
@@ -276,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl2 = util.intl;
             obj13.children = intl2.string(util.t.YYfHlx);
-            const items3 = [collapsed(Text_Text.Text, obj13)];
+            const items3 = [options(Text_Text.Text, obj13)];
             const obj14 = {
               style: tmp4.subtitle,
               variant: "text-md/semibold",
@@ -286,9 +289,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = util.intl;
             const obj15 = { numFreeGuildSubscriptions };
             obj14.children = intl3.format(util.t.Af0zEZ, obj15);
-            items3[1] = collapsed(Text_Text.Text, obj14);
+            items3[1] = options(Text_Text.Text, obj14);
             obj11.children = items3;
-            let tmp13 = __initData(closure_1_11, obj11);
+            let tmp13 = closure_1_11(collapsed, obj11);
           } else {
             const obj16 = {
               style: tmp4.title,
@@ -299,13 +302,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl = util.intl;
             obj16.children = intl.string(util.t["qUl+K4"]);
-            tmp13 = collapsed(Text_Text.Text, obj16);
+            tmp13 = options(Text_Text.Text, obj16);
           }
           cResult[5] = title;
           ({ subtitle: tmp3[6], title } = tmp4);
           cResult[7] = title;
           cResult[8] = tmp13;
-          tmp8Result2 = PremiumUtilsDefault;
+          tmp8Result6 = PremiumUtilsDefault;
         }
         const items4 = [tmp4.upsell, style];
         cResult[2] = style;
@@ -317,7 +320,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function PremiumSubscriptionUpsell(arg0) {
       ({ onLearnMorePremium, style } = arg0);
-      let tmp = closure_13();
+      let tmp = closure_12();
       let stringResult = dependencyMap;
       const items = [UserStore];
       const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -347,7 +350,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl3 = util.intl;
           obj6.children = intl3.string(util.t.YYfHlx);
-          const items2 = [collapsed(Text_Text.Text, obj6)];
+          const items2 = [options(Text_Text.Text, obj6)];
           const obj7 = {
             style: tmp.subtitle,
             variant: "text-md/semibold",
@@ -357,9 +360,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl4 = util.intl;
           const obj8 = { numFreeGuildSubscriptions };
           obj7.children = intl4.format(util.t.Af0zEZ, obj8);
-          items2[1] = collapsed(Text_Text.Text, obj7);
+          items2[1] = options(Text_Text.Text, obj7);
           obj5.children = items2;
-          let tmp5Result1 = __initData(closure_1_11, obj5);
+          let tmp5Result1 = closure_1_11(collapsed, obj5);
         } else {
           const obj9 = {
             style: tmp.title,
@@ -370,35 +373,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl2 = util.intl;
           obj9.children = intl2.string(util.t["qUl+K4"]);
-          tmp5Result1 = collapsed(Text_Text.Text, obj9);
+          tmp5Result1 = options(Text_Text.Text, obj9);
         }
         const items3 = [tmp5Result1, ,];
         const obj10 = { style: tmp.upsellFeatures, children: null };
-        const obj11 = { style: tmp.upsellFeatureSubLogo, source: _modDef13664 };
-        const items4 = [collapsed(React4, obj11), ,];
-        const obj12 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13665 };
-        items4[1] = collapsed(React4, obj12);
-        const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
+        const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
         intlResult1 = PremiumUtilsDefault;
+        obj11.source = _modDef13755;
+        const items4 = [options(FastImageDefault, obj11), ,];
+        const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
+        const intlResult2 = FastImageDefault;
+        obj12.source = _modDef13756;
+        items4[1] = options(FastImageDefault, obj12);
+        const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
+        const intlResult3 = FastImageDefault;
         obj13.features = FEATURES_UPSELL_PREMIUM_TIER_2();
         ({ upsellLabel: obj14.labelStyle, upsellRow: obj14.rowStyle } = tmp);
-        items4[2] = collapsed(PremiumFeatureListDefault, obj13);
+        items4[2] = options(PremiumFeatureListDefault, obj13);
         obj10.children = items4;
-        items3[1] = __initData(React3, obj10);
+        items3[1] = closure_1_11(React3, obj10);
         const obj15 = { style: tmp.upsellButton, children: null };
         const obj16 = { variant: "experimental_premium-secondary", text: null, onPress: null };
         intl = util.intl;
         stringResult = intl.string(util.t.fJOECn);
         obj16.text = stringResult;
         obj16.onPress = onLearnMorePremium;
-        tmp = collapsed(components_Button_Button.Button, obj16);
+        tmp = options(components_Button_Button.Button, obj16);
         obj15.children = tmp;
-        items3[2] = collapsed(React3, obj15);
+        items3[2] = options(React3, obj15);
         obj4.children = items3;
-        obj4 = __initData(intlResult, obj4);
+        obj4 = closure_1_11(intlResult, obj4);
         obj3.children = obj4;
-        collapsed(React3, obj3);
-        const intlResult2 = PremiumFeatureListDefault;
+        options(React3, obj3);
+        const intlResult4 = PremiumFeatureListDefault;
       }
       obj2 = PremiumUtilsDefault;
     };

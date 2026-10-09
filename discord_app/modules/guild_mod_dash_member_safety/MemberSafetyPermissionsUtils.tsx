@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const isGuildOwner = fn(2082).isGuildOwner;
-let closure_8 = fn(4711).MemberSafetyPagePermissions;
+let closure_8 = fn(4713).MemberSafetyPagePermissions;
 const Constants = fn(1085);
 ({ GuildFeatures: closure_9, Permissions: c10 } = Constants);
 let ReactCompilerGating = fn(558);

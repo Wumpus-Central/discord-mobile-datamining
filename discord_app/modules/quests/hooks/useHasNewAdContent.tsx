@@ -6,7 +6,7 @@ import AdContentSeenStore from "../AdContentSeenStore.tsx";
 import QuestStore from "../QuestStore.tsx";
 
 require = fn;
-const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
 const DAY = DurationsDefault.Millis.DAY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

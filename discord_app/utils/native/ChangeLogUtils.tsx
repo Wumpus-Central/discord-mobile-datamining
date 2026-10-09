@@ -11,11 +11,11 @@ import CustomMarkup from "../../modules/markup/CustomMarkup.native.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { link: { color: nativeDefault.colors.TEXT_LINK }, list: { marginBottom: 10 }, container: null, text: null };
 let obj3 = { color: nativeDefault.colors.TEXT_LINK };
-obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-let obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5974).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+obj2.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5976).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+let obj4 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5976).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 obj2.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(obj2);
 const rules = CustomMarkup.createRules({});
@@ -134,14 +134,16 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeL
         const item = closure_0.forEach((type, index) => {
           if ("list" === type.type) {
             if (closure_4.length > 0) {
-              obj = { variant: "text-sm/normal" };
+              const obj2 = { variant: "text-sm/normal" };
               const merged = Object.assign(closure_2);
-              obj.children = closure_0(closure_4, obj);
-              items.push(closure_2_5(closure_0(styling[7]).Text, obj, -1));
+              obj2.children = closure_0(closure_4, obj);
+              const _HermesInternal = HermesInternal;
+              items.push(closure_2_5(closure_0(styling[7]).Text, obj2, "text-" + items.length));
               closure_4 = [];
             }
-            const obj2 = { children: closure_0(type, obj) };
-            items.push(closure_2_5(length, obj2, index));
+            obj = { children: null };
+            obj.children = closure_0(type, obj);
+            items.push(closure_2_5(length, obj, index));
           } else {
             closure_4.push(type);
           }
@@ -150,7 +152,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeL
           const obj2 = { variant: "text-sm/normal" };
           const merged1 = Object.assign(arg0);
           obj2.children = output(length, obj);
-          items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, -1));
+          const _HermesInternal = HermesInternal;
+          items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, "text-" + items.length));
           length = [];
         }
         return items;
@@ -184,14 +187,16 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeL
       item = item.forEach((type, index) => {
         if ("list" === type.type) {
           if (closure_4.length > 0) {
-            obj = { variant: "text-sm/normal" };
+            const obj2 = { variant: "text-sm/normal" };
             const merged = Object.assign(closure_2);
-            obj.children = closure_0(closure_4, obj);
-            items.push(closure_2_5(closure_0(styling[7]).Text, obj, -1));
+            obj2.children = closure_0(closure_4, obj);
+            const _HermesInternal = HermesInternal;
+            items.push(closure_2_5(closure_0(styling[7]).Text, obj2, "text-" + items.length));
             closure_4 = [];
           }
-          const obj2 = { children: closure_0(type, obj) };
-          items.push(closure_2_5(length, obj2, index));
+          obj = { children: null };
+          obj.children = closure_0(type, obj);
+          items.push(closure_2_5(length, obj, index));
         } else {
           closure_4.push(type);
         }
@@ -200,7 +205,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeL
         let obj2 = { variant: "text-sm/normal" };
         const merged1 = Object.assign(arg0);
         obj2.children = closure_2_0(length, obj);
-        items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, -1));
+        let _HermesInternal = HermesInternal;
+        items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, "text-" + items.length));
         length = [];
       }
       return items;
@@ -221,7 +227,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5086).Text;
+    Paragraph = output(5087).Text;
   }
   if (cResult[0] === Paragraph) {
     if (cResult[1] === node.content) {
@@ -250,7 +256,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   }
   let obj = output(576);
   const forResult = Symbol.for("react.early_return_sentinel");
-  const result = output(8100).splitParagraphAtImages(node.content);
+  const result = output(8108).splitParagraphAtImages(node.content);
   if (true === state.changelogImagesDisabled) {
     if (cResult[9] === node.content) {
       if (cResult[10] === output) {
@@ -292,7 +298,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     cResult[12] = outputResult;
     tmp13 = outputResult;
   } else {
-    output(8100);
+    output(8108);
   }
   if (cResult[18] === Paragraph) {
     if (cResult[19] === output) {
@@ -341,7 +347,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
   cResult[21] = tmp4;
   cResult[22] = T;
   tmp20 = T;
-  const tmpResult = output(8100);
+  const tmpResult = output(8108);
 }) : (function ChangeLogParagraph(state) {
   ({ node, output } = state);
   state = state.state;
@@ -353,9 +359,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = output(5086).Text;
+    Paragraph = output(5087).Text;
   }
-  const result = output(8100).splitParagraphAtImages(node.content);
+  const result = output(8108).splitParagraphAtImages(node.content);
   if (true !== state.changelogImagesDisabled) {
     if (tmp5Result.hasImageSegment(result)) {
       let obj2 = {
@@ -393,7 +399,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Change
     }
     return tmp7;
   }
-  let obj = output(8100);
+  let obj = output(8108);
   tmp7 = <Paragraph key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</Paragraph>;
   let obj3 = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
 });
@@ -541,7 +547,7 @@ export const customRules = {
     const styling = inlineStoreParams;
     return {
       react(node, output, state) {
-        return <closure_8 accessibilityRole="link" node={node} output={output} state={state} styling={styling} />;
+        return <closure_8 key={state.key} accessibilityRole="link" node={node} output={output} state={state} styling={styling} />;
       }
     };
   },
@@ -562,7 +568,7 @@ export const customRules = {
   list(styling) {
     return {
       react(node, output, state) {
-        return <closure_9 node={node} output={output} state={state} styling={styling} />;
+        return <closure_9 key={state.key} node={node} output={output} state={state} styling={styling} />;
       }
     };
   },
@@ -579,7 +585,7 @@ export const customRules = {
   },
   blockQuote: {
     react(node, output, state) {
-      return <closure_12 node={node} output={output} state={state} />;
+      return <closure_12 key={state.key} node={node} output={output} state={state} />;
     }
   },
   strong: {
@@ -590,7 +596,7 @@ export const customRules = {
   paragraph(dependencyMap) {
     return {
       react(node, output, state) {
-        return <closure_10 node={node} output={output} state={state} styling={dependencyMap} />;
+        return <closure_10 key={state.key} node={node} output={output} state={state} styling={dependencyMap} />;
       }
     };
   }

@@ -87,9 +87,9 @@ export default {
       trackedActionData: null,
       rejectWithError: null,
     };
-    const tmpResult = permissionOverwrites(5944);
+    const tmpResult = permissionOverwrites(5945);
     request.trackedActionData = {
-      event: guildId(1272).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1273).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
@@ -112,7 +112,7 @@ export default {
       },
     };
     let obj3 = {
-      event: guildId(1272).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1273).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
@@ -134,8 +134,8 @@ export default {
         return TypeUtils.exact(obj2);
       },
     };
-    request.rejectWithError = guildId(1294).rejectWithMigratedError();
-    const obj6 = guildId(1294);
+    request.rejectWithError = guildId(1295).rejectWithMigratedError();
+    const obj6 = guildId(1295);
     return tmpResult.post(request).then(
       (body) => {
         if (UserGuildSettingsStore.isOptInEnabled(guildId)) {

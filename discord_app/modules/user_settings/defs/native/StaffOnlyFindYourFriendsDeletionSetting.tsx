@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _mod4690 from "../../../../../_runtime/metro/04690__.js";
+import _mod4692 from "../../../../../_runtime/metro/04692__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -95,7 +95,7 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-const identity = fn(1266);
+const identity = fn(1267);
 let closure_6 = identity.createWithEqualityFn(() => ({ isLoading: false }));
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -110,10 +110,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_6(first, _mod4690.shallow);
+      return closure_6(first, _mod4692.shallow);
     }
   : function useFindYourFriendsDeletionIsLoading() {
-      return closure_6((isLoading) => isLoading.isLoading, _mod4690.shallow);
+      return closure_6((isLoading) => isLoading.isLoading, _mod4692.shallow);
     };
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -121,7 +121,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsFindYourFriendsDeletionTrailing() {
       const cResult = c.c(2);
@@ -150,7 +150,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7974).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -162,7 +162,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14927).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15039).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsFindYourFriendsDeletionTrailing() {
         const cResult = c.c(2);

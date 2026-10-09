@@ -8,7 +8,7 @@ import PriceUtils from "../../../utils/PriceUtils.tsx";
 import SubscriptionPlanStore from "../../../stores/billing/SubscriptionPlanStore.tsx";
 
 require = fn;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_4, SubscriptionPlans: hasOwnProperty } = PremiumConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

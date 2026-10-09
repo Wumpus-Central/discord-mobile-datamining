@@ -20,16 +20,16 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const util = Form(1126);
-const Text_Text = Form(5086);
-const SceneLoadingIndicator = Form(6718);
-const Form2 = Form(8555);
+const Text_Text = Form(5087);
+const SceneLoadingIndicator = Form(6725);
+const Form2 = Form(8563);
 require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = "delete-guild-template";
 let c11 = "guild-template-unsaved-changes";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: { flex: 1 },
   containerContent: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
@@ -142,7 +142,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5303).showConfirmModal(obj2);
+                    guildId(5304).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -185,7 +185,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5303).showConfirmModal(obj2);
+                    guildId(5304).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -228,7 +228,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5303).showConfirmModal(obj2);
+                    guildId(5304).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -272,7 +272,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5303).showConfirmModal(obj2);
+                    guildId(5304).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -315,7 +315,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5303).showConfirmModal(obj2);
+                    guildId(5304).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -356,7 +356,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                       obj2.onCloseCallback = function onCloseCallback() {
                         return closure_0(false);
                       };
-                      guildId(5303).showConfirmModal(obj2);
+                      guildId(5304).showConfirmModal(obj2);
                     });
                   } else {
                     flag = true;
@@ -397,7 +397,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         obj2.onCloseCallback = function onCloseCallback() {
                           return closure_0(false);
                         };
-                        guildId(5303).showConfirmModal(obj2);
+                        guildId(5304).showConfirmModal(obj2);
                       });
                     } else {
                       flag = true;
@@ -438,7 +438,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                           obj2.onCloseCallback = function onCloseCallback() {
                             return closure_0(false);
                           };
-                          guildId(5303).showConfirmModal(obj2);
+                          guildId(5304).showConfirmModal(obj2);
                         });
                       } else {
                         flag = true;
@@ -481,7 +481,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                           obj2.onCloseCallback = function onCloseCallback() {
                             return closure_0(false);
                           };
-                          guildId(5303).showConfirmModal(obj2);
+                          guildId(5304).showConfirmModal(obj2);
                         });
                       } else {
                         flag = true;
@@ -526,7 +526,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     obj2.onCloseCallback = function onCloseCallback() {
                       return closure_0(false);
                     };
-                    guildId(5303).showConfirmModal(obj2);
+                    guildId(5304).showConfirmModal(obj2);
                   });
                 } else {
                   flag = true;
@@ -571,7 +571,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         closure_1_6(null);
                         closure_1_8(true);
                         c3 = 1;
-                        const obj2 = guildTemplate(11398);
+                        const obj2 = guildTemplate(11305);
                         c4 = 2;
                         c5 = 1;
                         const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -582,7 +582,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     if (1 === tmp7) {
                       c3 = 0;
                       closure_128_0 = closure_2;
-                      const aPIError = new handleSave(5631).APIError(closure_128_0);
+                      const aPIError = new handleSave(5632).APIError(closure_128_0);
                       closure_1_6(aPIError);
                     } else if (arg0 === 1) {
                       c5 = 3;
@@ -628,7 +628,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let obj2 = { headerLeft: fn, headerRight: null };
             if (first) {
-              let fn2 = () => first(handleSave(6203).HeaderSubmittingIndicator, {});
+              let fn2 = () => first(handleSave(6205).HeaderSubmittingIndicator, {});
             } else if (closure_12) {
               fn2 = () => {
                 const obj = { onPress: handleSave, text: null, disabled: null };
@@ -688,7 +688,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 obj2.onCloseCallback = function onCloseCallback() {
                   return closure_0(false);
                 };
-                guildId(5303).showConfirmModal(obj2);
+                guildId(5304).showConfirmModal(obj2);
               });
             } else {
               flag = true;
@@ -815,7 +815,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             obj2.onCloseCallback = function onCloseCallback() {
               return closure_0(false);
             };
-            guildId(5303).showConfirmModal(obj2);
+            guildId(5304).showConfirmModal(obj2);
           });
         } else {
           _Promise1 = _Promise.resolve(true);
@@ -880,7 +880,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     closure_1_7(null);
                     closure_1_9(true);
                     c3 = 1;
-                    const obj2 = guildTemplate(11398);
+                    const obj2 = guildTemplate(11305);
                     c4 = 2;
                     c5 = 1;
                     const obj5 = { value: obj2.updateGuildTemplate(closure_0, tmp7.code, str, str2), done: false };
@@ -891,7 +891,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 if (1 === tmp7) {
                   c3 = 0;
                   closure_128_0 = closure_2;
-                  const aPIError = new handleSave(5631).APIError(closure_128_0);
+                  const aPIError = new handleSave(5632).APIError(closure_128_0);
                   closure_1_7(aPIError);
                 } else if (arg0 === 1) {
                   c5 = 3;
@@ -1269,7 +1269,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_12();
       const items = [
         React5(CircleXIcon, { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(587).colors.WHITE }),
-        React5(tmp4(5086).Text, { variant: "text-sm/normal", children: children.label }),
+        React5(tmp4(5087).Text, { variant: "text-sm/normal", children: children.label }),
       ];
       obj.children = items;
       return closure_1_8(View, obj);
@@ -1627,7 +1627,7 @@ let closure_16 = noop.memo(
         };
         const tmp = _slicedToArray(noop.useState(false), 2);
         _slicedToArray = tmp[1];
-        const tmp3 = guildTemplate(18155)(guildTemplate.code);
+        const tmp3 = guildTemplate(18317)(guildTemplate.code);
         noop = tmp3;
         let obj = { spacing: guildTemplate(587).space.PX_12, children: null };
         let obj2 = { label: null, children: null };

@@ -118,17 +118,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             selectedVoiceChannelId: stateFromStores1,
             voiceStates: stateFromStores,
           };
-          summarizedVoiceUsers = summarizedVoiceUsers(5410).computeSummarizedVoiceUsers(obj3);
+          summarizedVoiceUsers = summarizedVoiceUsers(5411).computeSummarizedVoiceUsers(obj3);
           const found = summarizedVoiceUsers.filter(tmp16);
           cResult[10] = channels;
           cResult[11] = stateFromStores1;
           cResult[12] = stateFromStores;
           cResult[13] = found;
-          const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5410);
+          const summarizedVoiceUsersResult2 = summarizedVoiceUsers(5411);
         }
       }
       const summarizedVoiceUsersResult1 = summarizedVoiceUsers(504);
-      const isAnyVoiceStateStageResult = summarizedVoiceUsers(5410).isAnyVoiceStateStage(
+      const isAnyVoiceStateStageResult = summarizedVoiceUsers(5411).isAnyVoiceStateStage(
         channels,
         stateFromStores1,
         stateFromStores,
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = stateFromStores;
       cResult[9] = isAnyVoiceStateStageResult;
       tmp12 = isAnyVoiceStateStageResult;
-      const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5410);
+      const summarizedVoiceUsersResult3 = summarizedVoiceUsers(5411);
     }
   : function RedesignVoiceUserSummary(channels) {
       channels = channels.channels;
@@ -162,12 +162,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items3,
       );
       const obj2 = channels(stateFromStores[6]);
-      const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers({
+      const obj4 = {
         channels,
         selectedChannelId: "r",
         selectedVoiceChannelId: stateFromStores1,
         voiceStates: stateFromStores,
-      });
+      };
+      const summarizedVoiceUsers = channels(stateFromStores[7]).computeSummarizedVoiceUsers(obj4);
       const users = summarizedVoiceUsers.filter((item) => null != item);
       return jsx(guildId(stateFromStores[8]), { users, max: 8, renderIcon: true, guildId, stageIcon });
     };

@@ -27,15 +27,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [AccessibilityStore];
       return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["S3z+pV"]);
   },
-  parent: fn(7966).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7974).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
-  onValueChange: fn(14520).setSwitchIconsEnabled,
+  onValueChange: fn(14616).setSwitchIconsEnabled,
   hasIcon: true,
 });
 const size = fn(2);

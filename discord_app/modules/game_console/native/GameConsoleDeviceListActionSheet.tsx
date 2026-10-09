@@ -4,10 +4,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import GameConsoleActionCreators from "../GameConsoleActionCreators.tsx";
-import _modDef10906 from "../../../../_runtime/metro/10906__.js";
-import _modDef10907 from "../../../../_runtime/metro/10907__.js";
+import _modDef11081 from "../../../../_runtime/metro/11081__.js";
+import _modDef11082 from "../../../../_runtime/metro/11082__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,11 +18,11 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Pressable: metroRequire, View: closure_7, Image: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
+({ Pressable: metroRequire, View: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
 const ComponentActions = fn(1085).ComponentActions;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { padding: 16, justifyContent: "center", paddingBottom: 90 },
   loading: { minHeight: 56 },
@@ -51,13 +52,13 @@ obj2.emptyArt = { marginBottom: 16 };
 obj2.emptyHeader = { marginBottom: 8, textAlign: "center" };
 obj2.emptyBody = { textAlign: "center" };
 obj2.infoBox = { marginTop: 8 };
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? function TransferFooter(arg0) {
       const cResult = c.c(8);
       ({ onPress, transferring } = arg0);
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       let tmp5 = transferring;
       if (!transferring) {
         tmp5 = null == onPress;
@@ -82,14 +83,14 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp11;
           }
           const obj2 = { bottom: true, style: tmp4.footerContainer, children: tmp9 };
-          const tmp13 = __initData(common_SafeAreaView.SafeAreaPaddingView, obj2);
+          const tmp13 = closure_1_11(common_SafeAreaView.SafeAreaPaddingView, obj2);
           cResult[5] = tmp4.footerContainer;
           cResult[6] = tmp9;
           cResult[7] = tmp13;
           tmp11 = tmp13;
         }
       }
-      const tmp10 = __initData(components_Button_Button.Button, {
+      const tmp10 = closure_1_11(components_Button_Button.Button, {
         loading: transferring,
         disabled: tmp5,
         onPress,
@@ -104,7 +105,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function TransferFooter(arg0) {
       ({ onPress, transferring } = arg0);
-      const obj = { bottom: true, style: closure_15().footerContainer, children: null };
+      const obj = { bottom: true, style: closure_14().footerContainer, children: null };
       const obj2 = { loading: transferring, disabled: null, onPress: null, text: null, grow: true };
       if (!transferring) {
         transferring = null == onPress;
@@ -113,18 +114,18 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.onPress = onPress;
       const intl = util.intl;
       obj2.text = intl.string(util.t.FYi3ry);
-      obj.children = __initData(components_Button_Button.Button, obj2);
-      return __initData(common_SafeAreaView.SafeAreaPaddingView, obj);
+      obj.children = closure_1_11(components_Button_Button.Button, obj2);
+      return closure_1_11(common_SafeAreaView.SafeAreaPaddingView, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? function DeviceOption(arg0) {
       const cResult = c.c(12);
       ({ name, platform } = arg0);
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       ({ deviceOption, deviceIcon } = tmp4);
       if (cResult[0] !== platform) {
-        const tmp7 = _modDef10906;
+        const tmp7 = _modDef11081;
         cResult[0] = platform;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -150,7 +151,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { style: deviceOption, children: null };
           const items = [tmp8, tmp10];
           obj2.children = items;
-          const tmp16 = __initData2(React5, obj2);
+          const tmp16 = __initData(React5, obj2);
           cResult[8] = tmp4.deviceOption;
           cResult[9] = tmp8;
           cResult[10] = tmp10;
@@ -163,24 +164,25 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           variant: "text-md/bold",
           children: name,
         };
-        const tmp12 = __initData(Text_Text.Text, obj3);
+        const tmp12 = closure_1_11(Text_Text.Text, obj3);
         cResult[5] = name;
         cResult[6] = tmp4.deviceText;
         cResult[7] = tmp12;
         tmp10 = tmp12;
       }
-      const tmp9 = __initData(closure_1_8, { style: deviceIcon, source: tmp5 });
+      const tmp9 = closure_1_11(FastImageDefault, { style: deviceIcon, source: tmp5 });
       cResult[2] = tmp4.deviceIcon;
       cResult[3] = tmp5;
       cResult[4] = tmp9;
       tmp8 = tmp9;
     }
   : function DeviceOption(children) {
-      const tmp = closure_15();
+      const tmp = closure_14();
       const obj = { style: tmp.deviceOption, children: null };
+      const obj2 = { style: tmp.deviceIcon, source: _modDef11081 };
       const items = [
-        __initData(closure_1_8, { style: tmp.deviceIcon, source: _modDef10906 }),
-        __initData(Text_Text.Text, {
+        closure_1_11(FastImageDefault, obj2),
+        closure_1_11(Text_Text.Text, {
           style: tmp.deviceText,
           color: "mobile-text-heading-primary",
           variant: "text-md/bold",
@@ -188,16 +190,16 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items;
-      return __initData2(React5, obj);
+      return __initData(React5, obj);
     };
 ReactCompilerGating = fn(558);
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState() {
       const cResult = c.c(13);
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       if (cResult[0] !== tmp4.emptyArt) {
-        const obj2 = { source: _modDef10907, style: tmp4.emptyArt };
-        const tmp9 = __initData(closure_1_8, obj2);
+        const obj2 = { source: _modDef11082, style: tmp4.emptyArt };
+        const tmp9 = closure_1_11(FastImageDefault, obj2);
         cResult[0] = tmp4.emptyArt;
         cResult[1] = tmp9;
         let tmp5 = tmp9;
@@ -219,7 +221,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp10,
         };
-        const tmp14 = __initData(Text_Text.Text, obj3);
+        const tmp14 = closure_1_11(Text_Text.Text, obj3);
         cResult[3] = tmp4.emptyHeader;
         cResult[4] = tmp14;
         let tmp12 = tmp14;
@@ -236,7 +238,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp4.emptyBody) {
         const obj4 = { style: tmp4.emptyBody, variant: "text-md/normal", color: "text-default", children: tmp15 };
-        const tmp19 = __initData(Text_Text.Text, obj4);
+        const tmp19 = closure_1_11(Text_Text.Text, obj4);
         cResult[6] = tmp4.emptyBody;
         cResult[7] = tmp19;
         let tmp17 = tmp19;
@@ -256,7 +258,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp4.emptyContainer, children: null };
       const items = [tmp5, tmp12, tmp17];
       obj5.children = items;
-      const tmp21 = __initData2(React5, obj5);
+      const tmp21 = __initData(React5, obj5);
       cResult[8] = tmp4.emptyContainer;
       cResult[9] = tmp5;
       cResult[10] = tmp12;
@@ -265,9 +267,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       tmp20 = tmp21;
     }
   : function EmptyState() {
-      const tmp = closure_15();
+      const tmp = closure_14();
       const obj = { style: tmp.emptyContainer, children: null };
-      const items = [__initData(closure_1_8, { source: _modDef10907, style: tmp.emptyArt }), ,];
+      const obj2 = { source: _modDef11082, style: tmp.emptyArt };
+      const items = [closure_1_11(FastImageDefault, obj2), ,];
       const obj3 = {
         style: tmp.emptyHeader,
         variant: "heading-md/extrabold",
@@ -276,13 +279,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = util.intl;
       obj3.children = intl.string(util.t.OkJf1e);
-      items[1] = __initData(Text_Text.Text, obj3);
+      items[1] = closure_1_11(Text_Text.Text, obj3);
       const obj4 = { style: tmp.emptyBody, variant: "text-md/normal", color: "text-default", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t["of/l5Z"]);
-      items[2] = __initData(Text_Text.Text, obj4);
+      items[2] = closure_1_11(Text_Text.Text, obj4);
       obj.children = items;
-      return __initData2(React5, obj);
+      return __initData(React5, obj);
     };
 ReactCompilerGating = fn(558);
 let obj4 = {
@@ -299,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       platform = platform.platform;
       _require = platform;
       const channel = platform.channel;
-      closure_15();
+      closure_14();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GameConsoleStore];
         cResult[0] = items;
@@ -308,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== platform) {
-        const fn = function h() {
+        const fn = function v() {
           return GameConsoleStore.getDevicesForPlatform(closure_0);
         };
         cResult[1] = platform;
@@ -329,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== platform) {
         class F {
           constructor() {
-            return closure_10.getFetchingDevices(closure_0);
+            return closure_9.getFetchingDevices(closure_0);
           }
         }
         cResult[4] = platform;
@@ -337,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class F {
           constructor() {
-            return closure_10.getFetchingDevices(closure_0);
+            return closure_9.getFetchingDevices(closure_0);
           }
         }
       }
@@ -346,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class F {
           constructor() {
-            return closure_10.getFetchingDevices(closure_0);
+            return closure_9.getFetchingDevices(closure_0);
           }
         }
         const items2 = [GameConsoleStore];
@@ -355,14 +358,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class F {
           constructor() {
-            return closure_10.getFetchingDevices(closure_0);
+            return closure_9.getFetchingDevices(closure_0);
           }
         }
       }
       if (cResult[7] !== platform) {
         class R {
           constructor() {
-            return closure_10.getLastSelectedDeviceByPlatform(closure_0);
+            return closure_9.getLastSelectedDeviceByPlatform(closure_0);
           }
         }
         cResult[7] = platform;
@@ -370,7 +373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class R {
           constructor() {
-            return closure_10.getLastSelectedDeviceByPlatform(closure_0);
+            return closure_9.getLastSelectedDeviceByPlatform(closure_0);
           }
         }
       }
@@ -385,14 +388,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === stateFromStores) {
         class R {
           constructor() {
-            return closure_10.getLastSelectedDeviceByPlatform(closure_0);
+            return closure_9.getLastSelectedDeviceByPlatform(closure_0);
           }
         }
         const effect = obj5.useEffect(G, items3);
         if (cResult[13] !== platform) {
           class R {
             constructor() {
-              return closure_10.getLastSelectedDeviceByPlatform(closure_0);
+              return closure_9.getLastSelectedDeviceByPlatform(closure_0);
             }
           }
           cResult[13] = platform;
@@ -400,14 +403,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class R {
             constructor() {
-              return closure_10.getLastSelectedDeviceByPlatform(closure_0);
+              return closure_9.getLastSelectedDeviceByPlatform(closure_0);
             }
           }
         }
         if (cResult[15] === channel) {
           class R {
             constructor() {
-              return closure_10.getLastSelectedDeviceByPlatform(closure_0);
+              return closure_9.getLastSelectedDeviceByPlatform(closure_0);
             }
           }
         }
@@ -436,12 +439,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  channel(stateFromStores[19])(null != first1, "selectedDeviceId cannot be null");
+                  channel(stateFromStores[20])(null != first1, "selectedDeviceId cannot be null");
                   closure_1_6(true);
                   c1 = 1;
                   stateFromStores = 1;
                   const obj4 = {
-                    value: tmp4(stateFromStores[20]).transferToPlaystationWithAlert(tmp4, stateFromStores[first1], c1),
+                    value: tmp4(stateFromStores[21]).transferToPlaystationWithAlert(tmp4, stateFromStores[first1], c1),
                     done: false,
                   };
                   return obj4;
@@ -454,8 +457,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                channel(stateFromStores[21]).hideActionSheet();
-                const ComponentDispatch = tmp4(stateFromStores[22]).ComponentDispatch;
+                channel(stateFromStores[22]).hideActionSheet();
+                const ComponentDispatch = tmp4(stateFromStores[23]).ComponentDispatch;
                 ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
                 stateFromStores = 3;
                 return { value: "IconComponent", done: null };
@@ -541,7 +544,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 v1 = 1;
                 dependencyMap = 1;
                 const obj4 = {
-                  value: tmp4(10904).transferToPlaystationWithAlert(
+                  value: tmp4(11073).transferToPlaystationWithAlert(
                     _require,
                     stateFromStores[_slicedToArray],
                     importDefault,
@@ -558,7 +561,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              v1(5054).hideActionSheet();
+              v1(5055).hideActionSheet();
               const ComponentDispatch = tmp4(1121).ComponentDispatch;
               ComponentDispatch.dispatch(constants.TOGGLE_CALL_CONTROL_DRAWER);
               dependencyMap = 3;
@@ -570,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       };
-      const tmp = closure_15();
+      const tmp = closure_14();
       let items = [GameConsoleStore];
       stateFromStores = require("initialize").useStateFromStores(items, () =>
         GameConsoleStore.getDevicesForPlatform(_require),
@@ -607,7 +610,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const values = Object.values(items);
         return values.map((id) => {
-          const obj = { value: id.id, name: closure_1_12(closure_1_17, { name: id.name, platform: id.platform }) };
+          const obj = { value: id.id, name: closure_1_11(closure_1_16, { name: id.name, platform: id.platform }) };
           return obj;
         });
       }, items4);
@@ -626,18 +629,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const result = GameConsoleActionCreators.persistSelectedDeviceId(_require, value);
           },
         };
-        const items5 = [closure_12(require("native").RadioGroup, obj5)];
+        const items5 = [closure_11(require("native").RadioGroup, obj5)];
         const obj6 = { style: tmp.infoBox, children: null };
         const intl = require("util").intl;
         obj6.children = intl.string(require("util").t.dI4HFq);
-        items5[1] = closure_12(require("InfoBox"), obj6);
+        items5[1] = closure_11(require("InfoBox"), obj6);
         obj4.children = items5;
-        let tmp12Result = closure_13(closure_14, obj4);
-        let tmp12 = closure_12;
+        let tmp12Result = closure_12(closure_13, obj4);
+        let tmp12 = closure_11;
         const tmp19 = require("InfoBox");
       } else {
-        tmp12 = closure_12;
-        tmp12Result = closure_12(closure_18, {});
+        tmp12 = closure_11;
+        tmp12Result = closure_11(closure_17, {});
       }
       const obj7 = { transferring: tmp10, onPress: null };
       let handleTransferVoice;
@@ -653,7 +656,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return applyArgumentsResult;
         };
       }
-      const obj8 = { footer: tmp12(closure_16, obj7), header: null, scrollable: true, children: null };
+      const obj8 = { footer: tmp12(closure_15, obj7), header: null, scrollable: true, children: null };
       obj7.onPress = handleTransferVoice;
       const obj9 = { title: null, trailing: null };
       const intl2 = require("util").intl;
@@ -678,7 +681,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj12 = { contentContainerStyle: tmp.container, children: null };
       if (stateFromStores1) {
         const obj13 = { style: tmp.loading };
-        tmp12Result = tmp12(closure_9, obj13);
+        tmp12Result = tmp12(closure_8, obj13);
       }
       obj12.children = tmp12Result;
       obj8.children = tmp12(require("BottomSheetModal").BottomSheetScrollView, obj12);

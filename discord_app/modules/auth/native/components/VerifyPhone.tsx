@@ -7,8 +7,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(16165).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16166);
+let closure_6 = fn(16281).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16282);
 ({
   authStateToRegisterTransitionStep: closure_7,
   RegisterTransitionSteps: closure_8,
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_7 = noop.useRef(false);
       const context = noop.useContext(require("Auth").TrackRegistrationContext);
       const tmp4 = _slicedToArray(noop.useState(false), 2);
-      onPhoneTokenReceived(16182)(closure_7(sourceState));
+      onPhoneTokenReceived(16298)(closure_7(sourceState));
       const items = [context];
       const effect = noop.useEffect(() => {
         if (_undefined()) {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           context(obj);
         }
       }, items);
-      onPhoneTokenReceived(5392)(() => () => {
+      onPhoneTokenReceived(5393)(() => () => {
         let tmpResult;
         if (dependencyMap != null) {
           tmpResult = tmp(ref.current);
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (v3()) {
           context({ step: context.PHONE_VERIFICATION, actionType: callback.SUBMITTED });
         }
-        yield onPhoneTokenReceived(6725).verifyPhone(closure_0, closure_0, false);
+        yield onPhoneTokenReceived(6732).verifyPhone(closure_0, closure_0, false);
         if (1 === tmp7) {
           v0 = 0;
           closure_129_1 = closure_3;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return applyArgumentsResult;
       }, items2);
-      onPhoneTokenReceived(6759)(callback1);
+      onPhoneTokenReceived(6766)(callback1);
       const items3 = [onBail];
       const memo = noop.useMemo(() => {
         let tmp2 = null;
@@ -320,11 +320,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         loading: null,
         disableKeyboardAvoidingView: true,
       };
-      const tmp7 = onPhoneTokenReceived(16182);
+      const tmp7 = onPhoneTokenReceived(16298);
       obj.codeType = require("CodeField").CodeType.NUMERIC;
       obj.footer = memo;
       obj.disabled = tmp5;
-      return jsx(onPhoneTokenReceived(6760), {
+      return jsx(onPhoneTokenReceived(6767), {
         title,
         description,
         error: tmp3,

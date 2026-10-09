@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
-import ConjureActivity from "ConjureActivity.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
+import ConjureActivity from "ConjureActivity.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
@@ -223,7 +223,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           GuildChannelStore,
           UserProfileStore,
           ApplicationStore,
-          tmp(1452).ApexExperimentStore,
+          tmp(1453).ApexExperimentStore,
         ];
         cResult[0] = items;
         let first1 = items;
@@ -285,7 +285,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, tmp(1452).ApexExperimentStore, PermissionStore];
+        const items = [GuildStore, tmp(1453).ApexExperimentStore, PermissionStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -367,7 +367,7 @@ export const useConjureForMeGuildId = ReactCompilerGating.isReactCompilerEnabled
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, SelectedGuildStore, tmp(1452).ApexExperimentStore];
+        const items = [GuildStore, SelectedGuildStore, tmp(1453).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {

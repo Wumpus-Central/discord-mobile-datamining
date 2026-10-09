@@ -6,7 +6,7 @@ import SelfModInappropriateConversationExperiment from "../SelfModInappropriateC
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10251).SafetyWarningTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

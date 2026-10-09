@@ -4,7 +4,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let MetaQuestUtils = fn(1627);
+let MetaQuestUtils = fn(1628);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 const __initData = {
   code: 'function useSafeAreaBottomKeyboardInfoControllerTsx1(e_1){const{runOnJS,KeyboardStateDebugging,IS_SYSTEM_KEYBOARD_EXTERNAL,keyboardOverlapsCurrentAppEntry,keyboardOpenedHeight}=this.__closure;runOnJS(KeyboardStateDebugging.keyboardControllerWorkletEvent)("onStart",e_1.height);if(IS_SYSTEM_KEYBOARD_EXTERNAL){return;}if(e_1.height>0&&keyboardOverlapsCurrentAppEntry.get()){keyboardOpenedHeight.set(e_1.height);}}',

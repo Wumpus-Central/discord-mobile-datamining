@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MessageConstants from "../../MessageConstants.tsx";
 import PublicGuildsUtils from "../../../public_guilds/PublicGuildsUtils.tsx";
 import isCrosspostDefault from "../../isCrosspost.tsx";
-import _modDef8041 from "../../../../../_runtime/metro/08041__.js";
+import _modDef8049 from "../../../../../_runtime/metro/08049__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8041).uri;
+            uri = Image.resolveAssetSource(_modDef8049).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -65,12 +65,12 @@ export default function getTagProperties(arg0) {
         tagAccessibilityLabel: null,
         tagVerified: flag,
         tagTextColor: "Boolean",
-        tagBackgroundColor: "code",
+        tagBackgroundColor: "body",
         tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
         tagIconUrl: tmp5,
         opTagText: stringResult2,
-        opTagTextColor: "height",
-        opTagBackgroundColor: "Array",
+        opTagTextColor: true,
+        opTagBackgroundColor: true,
       };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;

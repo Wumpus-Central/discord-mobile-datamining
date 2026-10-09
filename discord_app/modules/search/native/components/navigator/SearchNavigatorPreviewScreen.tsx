@@ -1,12 +1,12 @@
 // discord_app/modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx
-import tracking_TrackingDefault from "../../tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../../tracking/Tracking.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const ScrollView = fn(17).ScrollView;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const fn = function n() {
-        const result = tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
+        const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
         if (onBeforeJumpToMessage != null) {
           onBeforeJumpToMessage();
         }
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onBeforeJumpToMessage = route.params.onBeforeJumpToMessage;
       const items = [searchContext, channelId, onBeforeJumpToMessage, navigation];
       const callback = onBeforeJumpToMessage.useCallback(() => {
-        const result = tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
+        const result = search_tracking_TrackingDefault.trackSearchJumpToMessage({ searchContext, channelId });
         if (onBeforeJumpToMessage != null) {
           onBeforeJumpToMessage();
         }

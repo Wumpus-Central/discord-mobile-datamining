@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod8600 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8608 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import SuggestedSearchRowDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchRow.tsx";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
@@ -202,11 +202,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9247);
+const SearchConstants = fn(9285);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -326,7 +326,7 @@ export default noop.memo(
             numColumns,
             viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig,
           };
-          const tmp23 = closure_1_8(_mod8600.AnimatedFlashList, obj6);
+          const tmp23 = closure_1_8(_mod8608.AnimatedFlashList, obj6);
           cResult[7] = ItemSeparatorComponent;
           cResult[8] = ListFooterComponent;
           cResult[9] = ListHeaderComponent;
@@ -413,7 +413,7 @@ export default noop.memo(
         obj4.ItemSeparatorComponent = ItemSeparatorComponent;
         obj4.numColumns = numColumns;
         obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-        items[1] = closure_1_8(_mod8600.AnimatedFlashList, obj4);
+        items[1] = closure_1_8(_mod8608.AnimatedFlashList, obj4);
         obj.children = items;
         return options(React4, obj);
       },

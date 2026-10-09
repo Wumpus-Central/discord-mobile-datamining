@@ -17,10 +17,10 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
-    marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11713).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -129,8 +129,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         channelInfo: null,
       };
       const tmp = closure_9();
-      obj.name = React5(tmp5(12104).BaseChannelName, { name: label, mode: DEFAULT });
-      obj.icon = React5(tmp5(12104).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+      obj.name = React5(tmp5(12041).BaseChannelName, { name: label, mode: DEFAULT });
+      obj.icon = React5(tmp5(12041).BaseChannelIcon, { mode: DEFAULT, IconComponent });
       let tmp6Result = null;
       if (null != unreadCount) {
         const obj2 = { value: unreadCount };
@@ -141,7 +141,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11776).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11713).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       });
-      guild(16436);
+      guild(16555);
       let tmp9Result = null;
       if (null != stateFromStores) {
         let row = null;
@@ -393,10 +393,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { style: row, children: null };
         const obj5 = { guild };
-        const items4 = [closure_7(stateFromStores(16437), obj5), , ,];
+        const items4 = [closure_7(stateFromStores(16556), obj5), , ,];
         const obj6 = {
           active: stateFromStores1,
-          IconComponent: tmp(15701).CompassIcon,
+          IconComponent: tmp(15814).CompassIcon,
           label: null,
           handleItemClick: null,
           unreadCount: null,
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         obj6.unreadCount = tmp7;
         items4[1] = closure_7(closure_10, obj6);
-        const obj7 = { IconComponent: tmp(11215).PlusMediumIcon, label: null, handleItemClick: null };
+        const obj7 = { IconComponent: tmp(10570).PlusMediumIcon, label: null, handleItemClick: null };
         const intl2 = tmp(1126).intl;
         obj7.label = intl2.string(tmp(1126).t.emRpdS);
         obj7.handleItemClick = function handleItemClick() {
@@ -419,7 +419,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           });
         };
         items4[2] = closure_7(closure_10, obj7);
-        const obj8 = { IconComponent: tmp(5033).UserPlusIcon, label: null, handleItemClick: null };
+        const obj8 = { IconComponent: tmp(5034).UserPlusIcon, label: null, handleItemClick: null };
         const intl3 = tmp(1126).intl;
         obj8.label = intl3.string(tmp(1126).t.MJQOuJ);
         obj8.handleItemClick = function handleItemClick() {

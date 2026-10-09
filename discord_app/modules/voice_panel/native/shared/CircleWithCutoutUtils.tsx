@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/07550_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07559_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;
@@ -145,11 +145,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       size.children = items1;
       return React4(inlineStylesDefault, size);
     };
-export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, c14) {
-  return buttonRadius - buttonRadius * Math.cos(c14 * closure_5) - badgeRadius;
+export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, c13) {
+  return buttonRadius - buttonRadius * Math.cos(c13 * closure_5) - badgeRadius;
 };
-export const getBadgeLeft = function getBadgeLeft(badgeRadius, buttonRadius, c14) {
-  return buttonRadius + buttonRadius * Math.sin(c14 * closure_5) - badgeRadius;
+export const getBadgeLeft = function getBadgeLeft(badgeRadius, buttonRadius, c13) {
+  return buttonRadius + buttonRadius * Math.sin(c13 * closure_5) - badgeRadius;
 };
 export { getCutoutCenterX };
 export { getCutoutCenterY };

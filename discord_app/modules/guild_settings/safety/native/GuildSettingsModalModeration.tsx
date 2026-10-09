@@ -27,7 +27,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { stack: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createLegacyClassComponentStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -215,7 +215,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(14922).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(15034).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -238,7 +238,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj.disabled = tmp5;
     return collapsed(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(6265).TableRadioGroup, obj, "level-section");
+  return closure_10(self(6267).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -254,7 +254,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(14922).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(15034).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -267,7 +267,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj.disabled = tmp2;
     return collapsed(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(6265).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(6267).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -301,7 +301,7 @@ prototype["handleVerificationLevelChange"] = function handleVerificationLevelCha
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
   GuildSettingsActionCreatorsDefault.updateGuild({ explicitContentFilter });
 };
-GuildSettingsModalModeration.contextType = fn(4787).ThemeContext;
+GuildSettingsModalModeration.contextType = fn(4788).ThemeContext;
 ReactCompilerGating = fn(558);
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guild(576).c(12);
       contentContainerStyle = contentContainerStyle.contentContainerStyle;
       const obj = guild(576);
-      const navigation = guild(1502).useNavigation();
+      const navigation = guild(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildSettingsStore];
         const fn = function s() {
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj2 = guild(1502);
+      const obj2 = guild(1503);
       const stateFromStoresObject = guild(504).useStateFromStoresObject(tmp5, tmp6);
       guild = stateFromStoresObject.guild;
       ({ submitting, hasChanges } = stateFromStoresObject);
@@ -389,8 +389,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ConnectedGuildSettingsModalModeration(contentContainerStyle) {
       guild = undefined;
-      const navigation = guild(1502).useNavigation();
-      const obj = guild(1502);
+      const navigation = guild(1503).useNavigation();
+      const obj = guild(1503);
       const items = [GuildSettingsStore];
       const stateFromStoresObject = guild(504).useStateFromStoresObject(items, () => {
         props = props.getProps();

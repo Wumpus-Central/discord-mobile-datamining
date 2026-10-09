@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
-function updateAveragedStatsHelper(minVersion, arr5, arg2, arr, arr2) {
+function updateAveragedStatsHelper(minVersion, arr2, arg2, arr, arr2) {
   let tmp = arg2;
   const found = arr.find((type) => "video" === type.type);
   if (null == arg2) {
@@ -78,7 +78,7 @@ function updateAveragedStatsHelper(minVersion, arr5, arg2, arr, arr2) {
       found1 = arr2.find((type) => "video" === type.type);
     }
     if (null != found1) {
-      if (arr5 >= tmp.minVersion) {
+      if (arr2 >= tmp.minVersion) {
         tmp.numDatapoints = tmp.numDatapoints - 1;
         if ("packetsSent" in found1) {
           let num11 = found1.packetsSent;
@@ -266,34 +266,38 @@ prototype["getAccumulatedPerformanceStats"] = function getAccumulatedPerformance
 };
 MediaEngineStatsStore.displayName = "MediaEngineStatsStore";
 const mediaEngineStatsStore = new MediaEngineStatsStore(DispatcherDefault, {
-  MEDIA_ENGINE_CONNECTION_STATS: function handleMediaEngineConnectionStats(arg0) {
-    const iter = arg0.connectionStats[Symbol.iterator]();
-    const nextResult = iter.next();
-    while (iter !== undefined) {
-      let tmp2 = nextResult;
-      let prop = nextResult.mediaEngineConnectionId;
-      let tmp3 = prop;
-      if (0 !== prop.length) {
-        {
+  MEDIA_ENGINE_CONNECTION_STATS: function handleMediaEngineConnectionStats(connectionStats) {
+    connectionStats = connectionStats.connectionStats;
+    if (0 === connectionStats.length) {
+      return false;
+    } else {
+      const iter = connectionStats[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp4 = nextResult;
+        let prop = nextResult.mediaEngineConnectionId;
+        let tmp5 = prop;
+        if (0 !== prop.length) {
+          obj[tmp5] = tmp4;
+          if (!(tmp5 in dependencyMap)) {
+            dependencyMap[tmp5] = [];
+          }
+          let arr3 = dependencyMap[tmp5];
+          let arr = arr3.push(tmp4);
+          let arr2;
+          if (dependencyMap[tmp5].length > 30) {
+            let arr4 = dependencyMap[tmp5];
+            arr2 = arr4.shift();
+          }
+          let tmp14 = prop;
+          let tmp15 = nextResult;
+          let tmp17 = getStatsHistoryAtIndex(tmp5, 15);
+          let tmp12Result = updateAveragedStats(closure_3, tmp14, tmp15, tmp17);
+          let tmp12Result2 = updateAveragedStats(closure_2, tmp5, tmp4, arr2);
         }
-        [tmp3] = tmp2;
-        if (!(tmp3 in dependencyMap)) {
-          dependencyMap[tmp3] = [];
-        }
-        let arr2 = dependencyMap[tmp3];
-        let arr = arr2.push(tmp2);
-        let arr5;
-        if (dependencyMap[tmp3].length > 30) {
-          let arr3 = dependencyMap[tmp3];
-          arr5 = arr3.shift();
-        }
-        let tmp12 = prop;
-        let tmp13 = nextResult;
-        let tmp15 = getStatsHistoryAtIndex(tmp3, 15);
-        let tmp10Result = updateAveragedStats(closure_3, tmp12, tmp13, tmp15);
-        let tmp10Result2 = updateAveragedStats(closure_2, tmp3, tmp2, arr5);
+        continue;
       }
-      continue;
+      obj = {};
     }
   },
   MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: function handleResetStats(mediaEngineConnectionId) {

@@ -7,7 +7,7 @@ import DisplayNameStylesSeenStore from "../DisplayNameStylesSeenStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1407);
+const DisplayNameStylesConstants = fn(1408);
 ({ FLYWHEEL_EFFECTS: closure_4, FLYWHEEL_FONTS: hasOwnProperty } = DisplayNameStylesConstants);
 fn(558);
 let ReactCompilerGating = fn(558);

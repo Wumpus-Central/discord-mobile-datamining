@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileAnalyticsContext.tsx
 import c from "../../../_runtime/00576_c.js";
-import v1 from "../../../_runtime/01278_v1.js";
+import v1 from "../../../_runtime/01279_v1.js";
 import useAnalyticsLocationsDefault from "../app_analytics/useAnalyticsLocations.tsx";
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -185,7 +185,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
   ? function useUserProfileAnalyticsContext() {
       const cResult = context(576).c(18);
       context = noop.useContext(closure_5);
-      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6848)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === context) {
           let tmp3 = cResult[2];
@@ -301,7 +301,7 @@ export const useUserProfileAnalyticsContext = ReactCompilerGating.isReactCompile
     }
   : function useUserProfileAnalyticsContext() {
       const context = noop.useContext(closure_5);
-      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6848)().analyticsLocations;
       let obj = {
         context,
         trackUserProfileAction: null,

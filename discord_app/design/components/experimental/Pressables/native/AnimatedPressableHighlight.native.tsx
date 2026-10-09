@@ -12,7 +12,7 @@ let closure_3 = ["children"];
 let closure_4 = ["children"];
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6189).PressableHighlight);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6191).PressableHighlight);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AnimatedPressableHighlightiOS(children) {
@@ -88,7 +88,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 ReactCompilerGating = fn(558);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 if (PlatformUtils.isAndroid()) {
   tmp2 = tmp3;
 }

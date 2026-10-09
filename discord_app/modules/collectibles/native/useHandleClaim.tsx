@@ -29,30 +29,30 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = asyncGeneratorStep(async () => {
         const product = tmp3;
-        await product(7251).claimPremiumCollectiblesProduct(product.skuId);
+        await product(7256).claimPremiumCollectiblesProduct(product.skuId);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "collectible shop claim error", content: null };
           const intl = product(1126).intl;
           obj7.content = intl.string(product(1126).t.CKsXk3);
-          stageCollectibleChangeForEditProfile(4766).open(obj7);
+          stageCollectibleChangeForEditProfile(4768).open(obj7);
           c4 = 3;
-          stageCollectibleChangeForEditProfile(4766);
+          stageCollectibleChangeForEditProfile(4768);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          stageCollectibleChangeForEditProfile(5054).hideAllActionSheets();
-          stageCollectibleChangeForEditProfile(5054);
-          stageCollectibleChangeForEditProfile(11175).open({
+          stageCollectibleChangeForEditProfile(5055).hideAllActionSheets();
+          stageCollectibleChangeForEditProfile(5055);
+          stageCollectibleChangeForEditProfile(12723).open({
             product,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile,
           });
-          stageCollectibleChangeForEditProfile(11175);
-          const collectiblesPurchases = product(7251).fetchCollectiblesPurchases();
+          stageCollectibleChangeForEditProfile(12723);
+          const collectiblesPurchases = product(7256).fetchCollectiblesPurchases();
           c3 = 0;
-          product(7251);
+          product(7256);
         }
         return value;
       });

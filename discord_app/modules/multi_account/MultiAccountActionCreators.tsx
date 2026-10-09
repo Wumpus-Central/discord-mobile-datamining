@@ -54,7 +54,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
             closure_130_5 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp7) {
@@ -72,7 +72,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
                   const obj8 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: id2 };
                   DispatcherDefault.dispatch(obj8);
                   c5 = 1;
-                  const HTTP = closure_0(1294).HTTP;
+                  const HTTP = closure_0(1295).HTTP;
                   const obj9 = { url: constants2.ME, headers: null, retries: 3, rejectWithError: false };
                   const obj10 = { authorization: token };
                   obj9.headers = obj10;

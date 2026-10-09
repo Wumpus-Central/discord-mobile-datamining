@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { containerWithPadding: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function h() {
-          closure_1(5940).pop();
+          closure_1(5941).pop();
         };
         cResult[6] = fn;
       }
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[22] = tmp33;
         const tmp29 = useSafeAreaInsetsDefault();
       }
-      const obj3 = { type: modal(1272).ImpressionTypes.MODAL, name: tmp7, properties: tmp8 };
+      const obj3 = { type: modal(1273).ImpressionTypes.MODAL, name: tmp7, properties: tmp8 };
       cResult[7] = tmp7;
       cResult[8] = tmp8;
       cResult[9] = obj3;
@@ -264,11 +264,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ impressionName, impressionProperties } = props);
       const tmp = closure_12();
       const callback = noop.useCallback(() => {
-        closure_1(5940).pop();
+        closure_1(5941).pop();
       }, []);
       const obj = { type: null, name: null, properties: null };
       const tmp2 = _objectWithoutProperties(props, closure_4);
-      obj.type = modal(1272).ImpressionTypes.MODAL;
+      obj.type = modal(1273).ImpressionTypes.MODAL;
       obj.name = impressionName;
       obj.properties = impressionProperties;
       useTrackImpressionDefault(obj);
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      const layoutEffect = noop.useLayoutEffect(() => modal(7185).trackAppUIViewed("ModalScreen"), []);
+      const layoutEffect = noop.useLayoutEffect(() => modal(7190).trackAppUIViewed("ModalScreen"), []);
       ({ left, right } = useSafeAreaInsetsDefault());
       const tmp13 = useSafeAreaInsetsDefault();
       const items = [absoluteFillObject.absoluteFillObject];
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: items, onAccessibilityEscape: null, children: null };
       items[1] = tmp16;
       if (modal.closable) {
-        let pop = tmp4(5940).pop;
+        let pop = tmp4(5941).pop;
       } else {
         pop = NOOP;
       }
@@ -322,10 +322,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.transitionState = null;
       obj5.onClose = callback;
       const items2 = [<modal.modal />];
-      tmp7Result = modal(17359);
-      let isIOSResult = modal(1381).isIOS();
+      tmp7Result = modal(17507);
+      let isIOSResult = modal(1382).isIOS();
       if (isIOSResult) {
-        isIOSResult = closure_10(tmp7(16905).PortalKeyboardRenderer, { portal: false });
+        isIOSResult = closure_10(tmp7(17033).PortalKeyboardRenderer, { portal: false });
       }
       items2[1] = isIOSResult;
       obj4.children = items2;

@@ -6,7 +6,7 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PowerupActiveStatusType = fn(4968).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4969).PowerupActiveStatusType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { disabled: true, reason: "a" };
+          const obj4 = { disabled: true, reason: "Array" };
           cResult[4] = obj4;
           let tmp13 = obj4;
         } else {
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { disabled: true, reason: "a" };
+          const obj5 = { disabled: true, reason: "Array" };
           cResult[3] = obj5;
           tmp11 = obj5;
         } else {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items1[4] = tmp2.type;
       return stateFromStores.useMemo(() => {
         if (null == stateFromStores) {
-          return { disabled: true, reason: "a" };
+          return { disabled: true, reason: "Array" };
         } else {
           if (closure_4.type !== constants.LEVEL_ACTIVATED) {
             if (closure_4.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             }
           }
-          return { disabled: true, reason: "a" };
+          return { disabled: true, reason: "Array" };
         }
       }, items1);
     };

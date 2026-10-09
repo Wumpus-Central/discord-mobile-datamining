@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
-let closure_6 = fn(7256).transformSKUToCollectiblesItem;
+let closure_6 = fn(7261).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -69,11 +69,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = tmp(504).useStateFromStores(tmp14, tmp16, tmp17);
         if (cResult[12] !== tmp6) {
-          const productNameAndTypeFromSku = tmp(8942).getProductNameAndTypeFromSku(tmp6);
+          const productNameAndTypeFromSku = tmp(8953).getProductNameAndTypeFromSku(tmp6);
           cResult[12] = tmp6;
           cResult[13] = productNameAndTypeFromSku;
           let tmp19 = productNameAndTypeFromSku;
-          const tmpResult2 = tmp(8942);
+          const tmpResult2 = tmp(8953);
         } else {
           tmp19 = cResult[13];
         }
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[25] = tmp32;
             tmp25 = tmp32;
           }
-          OWNED = tmp(8946).WishlistItemCardOverlay.OWNED;
+          OWNED = tmp(8957).WishlistItemCardOverlay.OWNED;
         }
         const fn = function _() {
           let tmp2 = null;

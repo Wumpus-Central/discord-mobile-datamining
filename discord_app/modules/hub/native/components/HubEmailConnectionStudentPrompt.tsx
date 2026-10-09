@@ -5,14 +5,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 const require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12496).HubEmailConnectionSteps;
+const View = fn(17).View;
+const HubEmailConnectionSteps = fn(12433).HubEmailConnectionSteps;
 const Constants = fn(1085);
-({ AnalyticEvents: metroRequire, Fonts } = Constants);
+({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 },
   header: null,
@@ -28,7 +27,7 @@ obj2.row = {
   marginBottom: 8,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-let closure_9 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj4 = {
   borderRadius: nativeDefault.radii.sm,
@@ -43,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = onClose(navigation[9]).c(23);
       onClose = onClose.onClose;
       const invite = onClose.invite;
-      const tmp4 = closure_9();
+      const tmp4 = closure_8();
       const obj = onClose(navigation[9]);
       navigation = onClose(navigation[10]).useNavigation();
       if (cResult[0] === invite) {
@@ -63,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[5] !== tmp4.header) {
             const obj3 = { style: header, children: tmp8 };
-            const tmp12 = closure_7(tmp(tmp2[13]).LegacyText, obj3);
+            const tmp12 = closure_6(tmp(tmp2[13]).LegacyText, obj3);
             cResult[5] = tmp4.header;
             cResult[6] = tmp12;
             let tmp10 = tmp12;
@@ -72,10 +71,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol2 = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj4 = { source: invite(tmp2[14]) };
-            const tmp17 = closure_7(closure_4, obj4);
+            const obj4 = { source: invite(tmp2[15]) };
+            const tmp17 = closure_6(invite(tmp2[14]), obj4);
             cResult[7] = tmp17;
             let tmp13 = tmp17;
+            const tmp16 = invite(tmp2[14]);
           } else {
             tmp13 = cResult[7];
           }
@@ -99,10 +99,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol4 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj5 = { source: invite(tmp2[16]) };
-              const tmp31 = closure_7(closure_4, obj5);
+              const obj5 = { source: invite(tmp2[17]) };
+              const tmp31 = closure_6(invite(tmp2[14]), obj5);
               cResult[13] = tmp31;
               let tmp27 = tmp31;
+              const tmp30 = invite(tmp2[14]);
             } else {
               tmp27 = cResult[13];
             }
@@ -133,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { style: container, children: null };
               const items = [tmp10, tmp22, tmp34];
               obj7.children = items;
-              obj6.children = closure_8(closure_3, obj7);
-              const tmp43 = closure_7(tmp(tmp2[17]).HubEmailConnectionScreen, obj6);
+              obj6.children = closure_7(View, obj7);
+              const tmp43 = closure_6(tmp(tmp2[18]).HubEmailConnectionScreen, obj6);
               cResult[18] = tmp4.container;
               cResult[19] = tmp22;
               cResult[20] = tmp34;
@@ -145,31 +146,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = {
               DEPRECATED_style: tmp4.row,
               leading: tmp27,
-              trailing: invite(tmp2[15]).Arrow,
+              trailing: invite(tmp2[16]).Arrow,
               label: tmp32,
               onPress: onClose,
             };
-            const tmp38 = closure_7(invite(tmp2[15]), obj8);
+            const tmp38 = closure_6(invite(tmp2[16]), obj8);
             cResult[15] = onClose;
             cResult[16] = tmp4.row;
             cResult[17] = tmp38;
             tmp34 = tmp38;
-            const tmp37 = invite(tmp2[15]);
+            const tmp37 = invite(tmp2[16]);
           }
           const obj9 = {
             DEPRECATED_style: tmp4.row,
             leading: tmp13,
-            trailing: invite(tmp2[15]).Arrow,
+            trailing: invite(tmp2[16]).Arrow,
             label: tmp18,
             subLabel: tmp19,
             onPress: tmp6,
           };
-          const tmp26 = closure_7(invite(tmp2[15]), obj9);
+          const tmp26 = closure_6(invite(tmp2[16]), obj9);
           cResult[10] = tmp6;
           cResult[11] = tmp4.row;
           cResult[12] = tmp26;
           tmp22 = tmp26;
-          const tmp25 = invite(tmp2[15]);
+          const tmp25 = invite(tmp2[16]);
         }
       }
       function onContinue() {
@@ -186,14 +187,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function HubEmailConnectionStudentPrompt(onClose) {
       onClose = onClose.onClose;
       const invite = onClose.invite;
-      const tmp = closure_9();
-      dependencyMap = onClose(1502).useNavigation();
+      const tmp = closure_8();
+      dependencyMap = onClose(1503).useNavigation();
       const obj2 = { children: null };
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { style: tmp.header, children: null };
       const intl = onClose(1126).intl;
       obj4.children = intl.string(onClose(1126).t["+/Pv0h"]);
-      const items = [closure_7(onClose(1200).LegacyText, obj4), ,];
+      const items = [closure_6(onClose(1200).LegacyText, obj4), ,];
       const obj5 = {
         DEPRECATED_style: tmp.row,
         leading: null,
@@ -202,11 +203,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         subLabel: null,
         onPress: null,
       };
+      const obj = onClose(1503);
       const obj6 = { source: null };
-      const obj = onClose(1502);
-      obj6.source = invite(12507);
-      obj5.leading = closure_7(closure_4, obj6);
-      obj5.trailing = invite(6817).Arrow;
+      const tmp2 = invite(6824);
+      obj6.source = invite(12444);
+      obj5.leading = closure_6(invite(6163), obj6);
+      obj5.trailing = invite(6824).Arrow;
       const intl2 = onClose(1126).intl;
       obj5.label = intl2.string(onClose(1126).t["a7a/D+"]);
       const intl3 = onClose(1126).intl;
@@ -215,18 +217,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(constants.HUB_STUDENT_PROMPT_CLICKED);
         closure_2.push(HubEmailConnectionSteps.VERIFY_EMAIL, { onClose, invite });
       };
-      items[1] = closure_7(invite(6817), obj5);
+      items[1] = closure_6(tmp2, obj5);
       const obj7 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
+      const tmp3 = invite(6163);
       const obj8 = { source: null };
-      const tmp2 = invite(6817);
-      obj8.source = invite(12508);
-      obj7.leading = closure_7(closure_4, obj8);
-      obj7.trailing = invite(6817).Arrow;
+      const tmp4 = invite(6824);
+      obj8.source = invite(12445);
+      obj7.leading = closure_6(invite(6163), obj8);
+      obj7.trailing = invite(6824).Arrow;
       const intl4 = onClose(1126).intl;
       obj7.label = intl4.string(onClose(1126).t.GLG9n4);
       obj7.onPress = onClose;
-      items[2] = closure_7(invite(6817), obj7);
+      items[2] = closure_6(tmp4, obj7);
       obj3.children = items;
-      obj2.children = closure_8(closure_3, obj3);
-      return closure_7(onClose(12505).HubEmailConnectionScreen, obj2);
+      obj2.children = closure_7(View, obj3);
+      return closure_6(onClose(12442).HubEmailConnectionScreen, obj2);
     };

@@ -8,7 +8,7 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4968);
+const GuildPowerupsConstants = fn(4969);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   analyticsLocations,
                   guildId: stateFromStores.id,
                   onBack() {
-                    return PERK(5940).popWithKey(diff(7118).PREMIUM_KEY);
+                    return PERK(5941).popWithKey(diff(7123).PREMIUM_KEY);
                   },
                   onPaymentSuccess() {
                     const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   },
                   onPaymentDismiss() {
-                    return PERK(5940).popWithKey(diff(7118).PREMIUM_KEY);
+                    return PERK(5941).popWithKey(diff(7123).PREMIUM_KEY);
                   },
                 };
                 const result = tmp17(onToggle[15]).launchGuildBoostFlowOrAlert(obj3);

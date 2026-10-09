@@ -2,6 +2,7 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ConjureTypes from "../ConjureTypes.tsx";
+import ConjureSequencedBuffer from "../debug/ConjureSequencedBuffer.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -14,35 +15,82 @@ function isProjectOwner(item10010) {
   }
   return item10010.owner_user_id === id;
 }
+function logSeq(log) {
+  return log.log.seq;
+}
 function handleProjectUpsert(project) {
   project = project.project;
   const result = map.set(project.id, project);
 }
-function pickNumbers(value7, arg1) {
-  obj = {};
-  const entries = Object.entries(arg1);
-  while (tmp2 !== undefined) {
-    let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, tmp7] = tmp5;
-    if (tmp7 == null) {
-      let tmp8;
-      if (value7 != null) {
-        tmp8 = value7[tmp6];
-      }
-      tmp7 = tmp8;
-    }
-    if (typeof tmp7 === "number") {
-      obj[tmp6] = tmp10;
-    }
-    continue;
+function handleLogAppend(arg0) {
+  ({ projectId, log } = arg0);
+  let str = map5.get(projectId);
+  if (null == str) {
+    const conjureSequencedBuffer = new ConjureSequencedBuffer.ConjureSequencedBuffer(logSeq);
+    const result = map5.set(projectId, conjureSequencedBuffer);
+    str = conjureSequencedBuffer;
   }
-  return obj;
+  if (null != log.seq) {
+    if (-1 !== str.indexOfSeq(log.seq)) {
+      return false;
+    }
+  }
+  const obj2 = { key: null, log };
+  const sum = c21 + 1;
+  c21 = sum;
+  obj2.key = sum;
+  str.insert(obj2);
+  const trimmed = str.trim(500);
+}
+function handleHistoryLoadSettle(status) {
+  ({ projectId, scope } = status);
+  if ("failed" !== status.status) {
+    const obj2 = { status: "loaded", truncated: tmp2, count: tmp };
+    value = map7.get(projectId);
+    if (null == value) {
+      const _Map2 = Map;
+      map = new Map();
+      const result = map7.set(projectId, map);
+      value = map;
+    }
+    const result1 = value.set(scope, obj2);
+  } else {
+    const value4 = map7.get(projectId);
+    let value5;
+    if (value4 != null) {
+      value5 = value4.get(scope);
+    }
+    let flag;
+    if (value5 != null) {
+      flag = value5.truncated;
+    }
+    if (flag == null) {
+      flag = false;
+    }
+    obj = { status: "failed", truncated: flag, count: null };
+    let num;
+    if (value5 != null) {
+      num = value5.count;
+    }
+    if (num == null) {
+      num = 0;
+    }
+    obj.count = num;
+    let value6 = map7.get(projectId);
+    if (null == value6) {
+      const _Map = Map;
+      map1 = new Map();
+      const result2 = map7.set(projectId, map1);
+      value6 = map1;
+    }
+    const result3 = value6.set(scope, obj);
+  }
 }
 let map = new Map();
 let map1 = new Map();
 const map2 = new Map();
 let set = new Set();
-let set1 = new Set();
+const set1 = new Set();
 const map3 = new Map();
 const set2 = new Set();
 let c12 = false;
@@ -56,12 +104,8 @@ let closure_19 = [];
 const map5 = new Map();
 let c21 = 0;
 const map6 = new Map();
+let closure_24 = { status: "idle", truncated: false, count: 0 };
 const map7 = new Map();
-let closure_24 = [];
-const map8 = new Map();
-const map9 = new Map();
-let closure_27 = { status: "idle", truncated: false, count: 0 };
-const map10 = new Map();
 const Store = initializeDefault.Store;
 class ConjureProjectStore extends Store {
 }
@@ -143,22 +187,27 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
 };
 prototype["getLogs"] = function getLogs(projectId) {
   value = map5.get(projectId);
-  if (value == null) {
-    value = closure_19;
+  let snapshotResult;
+  if (value != null) {
+    snapshotResult = value.snapshot();
   }
-  return value;
+  if (snapshotResult == null) {
+    snapshotResult = closure_19;
+  }
+  return snapshotResult;
 };
 prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
   value = map5.get(arg0);
   if (null == value) {
     return 0;
   } else {
-    let num = map7.get(arg0);
+    let num = map6.get(arg0);
     if (num == null) {
       num = 0;
     }
     let num2 = 0;
-    const iter = value[Symbol.iterator]();
+    const values = value.values();
+    const iter = values[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp6 = nextResult;
@@ -177,21 +226,14 @@ prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
     return num2;
   }
 };
-prototype["getTrace"] = function getTrace(projectId) {
-  value = map8.get(projectId);
-  if (value == null) {
-    value = closure_24;
-  }
-  return value;
-};
 prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
-  value = map10.get(arg0);
+  value = map7.get(arg0);
   value2 = undefined;
   if (value != null) {
     value2 = value.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_27;
+    value2 = closure_24;
   }
   return value2;
 };
@@ -219,7 +261,6 @@ prototype["isConjureProjectApplication"] = function isConjureProjectApplication(
   }
   return tmp;
 };
-const map11 = new Map();
 obj = {
   LOGOUT: function handleLogout() {
     obj = map;
@@ -232,15 +273,11 @@ obj = {
                 if (0 === set2.size) {
                   if (0 === map5.size) {
                     if (0 === set3.size) {
-                      if (0 === map8.size) {
-                        if (0 === map10.size) {
-                          if (0 === map9.size) {
-                            if (null == obj) {
-                              if (null == maxProjects) {
-                                if (!c14) {
-                                  return false;
-                                }
-                              }
+                      if (0 === map7.size) {
+                        if (null == obj) {
+                          if (null == maxProjects) {
+                            if (!c14) {
+                              return false;
                             }
                           }
                         }
@@ -266,15 +303,11 @@ obj = {
     map4.clear();
     map6.clear();
     map7.clear();
-    map8.clear();
-    map10.clear();
-    map9.clear();
     obj = null;
     c12 = false;
     error = "unattempted";
     maxProjects = null;
     c14 = false;
-    map11.clear();
   },
   CONJURE_PROJECTS_FETCH_START: function handleProjectsFetchStart(guildId) {
     guildId = guildId.guildId;
@@ -413,18 +446,15 @@ obj = {
     map5.delete(projectId);
     map6.delete(projectId);
     map7.delete(projectId);
-    map8.delete(projectId);
-    map10.delete(projectId);
-    map9.delete(projectId);
-    while (tmp14 !== undefined) {
-      let tmp17 = _slicedToArray(tmp15, 2);
-      let first = tmp17[0];
-      if (tmp17[1] === projectId) {
-        let deleteResult12 = map3.delete(first);
+    while (tmp11 !== undefined) {
+      let tmp14 = _slicedToArray(tmp12, 2);
+      let first = tmp14[0];
+      if (tmp14[1] === projectId) {
+        let deleteResult9 = map3.delete(first);
       }
       continue;
     }
-    tmp14 = map3[Symbol.iterator]();
+    tmp11 = map3[Symbol.iterator]();
   },
   CONJURE_PROJECT_DELETE_FAIL: function handleProjectDeleteFail(projectId) {
     return set2.delete(projectId.projectId);
@@ -443,479 +473,51 @@ obj = {
       const result = map3.set(guildId, projectId);
     }
   },
-  CONJURE_TRACE_REPLAY_STARTING: function handleTraceReplayStarting(projectId) {
-    projectId = projectId.projectId;
-    value = map8.get(projectId);
-    if (value == null) {
-      value = closure_24;
+  CONJURE_HISTORY_LOAD_SETTLE: handleHistoryLoadSettle,
+  CONJURE_DEBUG_BACKLOG: function handleDebugBacklog(arg0) {
+    ({ projectId, backlog } = arg0);
+    for (const item10008 of tmp) {
+      obj = { type: "CONJURE_LOG_APPEND", projectId, log: item10008 };
+      let tmp3 = handleLogAppend(obj);
+      continue;
     }
-    obj = { snapshot: new Set(value.map((kind) => "" + kind.kind + ":" + kind.id)), touched: null };
-    set = new Set(value.map((kind) => "" + kind.kind + ":" + kind.id));
-    obj.touched = new Set();
-    const result = map11.set(projectId, obj);
-    set1 = new Set();
-  },
-  CONJURE_HISTORY_LOAD_SETTLE: function handleHistoryLoadSettle(arg0) {
-    ({ projectId, scope } = arg0);
-    c0 = undefined;
-    value = undefined;
-    ({ status, count, truncated } = arg0);
-    if ("trace" === scope) {
-      value = map11.get(projectId);
-    }
-    c0 = value;
-    if ("trace" === scope) {
-      map11.delete(projectId);
-    }
-    if ("failed" !== status) {
-      if (null != value) {
-        const value6 = map8.get(projectId);
-        if (null != value6) {
-          const result = map8.set(projectId, value6.filter((kind) => {
-            const snapshot = _undefined.snapshot;
-            const hasItem = snapshot.has("" + kind.kind + ":" + kind.id);
-            let hasItem1 = !hasItem;
-            if (hasItem) {
-              const touched = _undefined.touched;
-              const _HermesInternal = HermesInternal;
-              hasItem1 = touched.has("" + kind.kind + ":" + kind.id);
-            }
-            return hasItem1;
-          }));
-        }
-      }
-      const obj2 = { status: "loaded", truncated, count };
-      let value7 = map10.get(projectId);
-      if (null == value7) {
-        const _Map2 = Map;
-        map = new Map();
-        const result1 = map10.set(projectId, map);
-        value7 = map;
-      }
-      const result2 = value7.set(scope, obj2);
-    } else {
-      const value8 = map10.get(projectId);
-      let value9;
-      if (value8 != null) {
-        value9 = value8.get(scope);
-      }
-      let flag;
-      if (value9 != null) {
-        flag = value9.truncated;
-      }
-      if (flag == null) {
-        flag = false;
-      }
-      obj = { status: "failed", truncated: flag, count: null };
-      let num;
-      if (value9 != null) {
-        num = value9.count;
-      }
-      if (num == null) {
-        num = 0;
-      }
-      obj.count = num;
-      let value10 = map10.get(projectId);
-      if (null == value10) {
-        const _Map = Map;
-        map1 = new Map();
-        const result3 = map10.set(projectId, map1);
-        value10 = map1;
-      }
-      const result4 = value10.set(scope, obj);
+    const iter = backlog.states[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let obj3 = { type: "CONJURE_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
+      ({ scope: obj2.scope, status: obj2.status, count: obj2.count } = nextResult);
+      obj3.truncated = true === nextResult.truncated;
+      let tmp6 = handleHistoryLoadSettle(obj3);
+      continue;
     }
   },
-  CONJURE_LOG_APPEND: function handleLogAppend(arg0) {
-    ({ projectId, log } = arg0);
-    const seq = log.seq;
-    if (null != seq) {
-      value = map6.get(projectId);
-      if (null != value) {
-        if (seq <= value) {
-          return false;
-        }
-      }
-      const result = map6.set(projectId, seq);
-    }
-    const obj2 = { key: null, log };
-    const sum = c21 + 1;
-    c21 = sum;
-    obj2.key = sum;
-    value2 = map5.get(projectId);
-    if (null == value2) {
-      const items = [obj2];
-      let combined = items;
-    } else {
-      combined = value2.concat(obj2);
-    }
-    let substr = combined;
-    if (combined.length > 500) {
-      substr = combined.slice(-500);
-    }
-    const result1 = map5.set(projectId, substr);
-  },
+  CONJURE_LOG_APPEND: handleLogAppend,
   CONJURE_LOGS_SEEN: function handleLogsSeen(projectId) {
     projectId = projectId.projectId;
-    value = map5.get(projectId);
     let num = 0;
-    if (null != value) {
-      num = 0;
-      if (0 !== value.length) {
-        num = value[value.length - 1].key;
-      }
-    }
-    let num3 = map7.get(projectId);
-    if (num3 == null) {
-      num3 = 0;
-    }
-    if (num3 >= num) {
-      return false;
-    } else {
-      const result = map7.set(projectId, num);
-    }
-  },
-  CONJURE_TOOL_CALL_APPEND: function handleToolCallAppend(arg0) {
-    ({ projectId, toolCall } = arg0);
-    value = map11.get(projectId);
+    value = map5.get(projectId);
+    let values;
     if (value != null) {
-      const touched = value.touched;
-      const _HermesInternal = HermesInternal;
-      touched.add("" + "tool" + ":" + toolCall.id);
+      values = value.values();
     }
-    const entry_id = toolCall.entry_id;
-    let tmp5 = null != entry_id;
-    if (tmp5) {
-      const value5 = map9.get(projectId);
-      let value6;
-      if (value5 != null) {
-        value6 = value5.get(entry_id);
-      }
-      tmp5 = value6 === tmp4;
+    if (values == null) {
+      values = closure_19;
     }
-    if (tmp5) {
+    while (tmp2 !== undefined) {
+      let _Math = Math;
+      num = Math.max(num, tmp3.key);
+      continue;
+    }
+    let num2 = map6.get(projectId);
+    if (num2 == null) {
+      num2 = 0;
+    }
+    if (num2 >= num) {
       return false;
     } else {
-      let value7 = map8.get(projectId);
-      if (value7 == null) {
-        value7 = closure_24;
-      }
-      const tool = "tool";
-      const id = toolCall.id;
-      const findIndexResult = value7.findIndex((kind) => {
-        let tmp = kind.kind === model;
-        if (tmp) {
-          tmp = kind.id === id;
-        }
-        return tmp;
-      });
-      let tmp11 = null;
-      if (-1 !== findIndexResult) {
-        tmp11 = value7[findIndexResult];
-      }
-      let summary = toolCall.summary;
-      if (summary == null) {
-        let summary1;
-        if (tmp11 != null) {
-          summary1 = tmp11.summary;
-        }
-        summary = summary1;
-      }
-      let fields = toolCall.fields;
-      if (fields == null) {
-        let fields1;
-        if (tmp11 != null) {
-          fields1 = tmp11.fields;
-        }
-        fields = fields1;
-      }
-      let schema = toolCall.schema;
-      if (schema == null) {
-        let schema1;
-        if (tmp11 != null) {
-          schema1 = tmp11.schema;
-        }
-        schema = schema1;
-      }
-      let detail_id = toolCall.detail_id;
-      if (detail_id == null) {
-        let detailId;
-        if (tmp11 != null) {
-          detailId = tmp11.detailId;
-        }
-        detail_id = detailId;
-      }
-      let turn_id = toolCall.turn_id;
-      if (turn_id == null) {
-        let turnId;
-        if (tmp11 != null) {
-          turnId = tmp11.turnId;
-        }
-        turn_id = turnId;
-      }
-      let parent_id = toolCall.parent_id;
-      if (parent_id == null) {
-        let parentId;
-        if (tmp11 != null) {
-          parentId = tmp11.parentId;
-        }
-        parent_id = parentId;
-      }
-      obj = { kind: "tool", id: toolCall.id };
-      if (null != turn_id) {
-        const obj3 = { turnId: turn_id };
-        let obj4 = obj3;
-      } else {
-        obj4 = {};
-      }
-      const merged = Object.assign(obj4);
-      if (null != parent_id) {
-        const obj5 = { parentId: parent_id };
-        let obj6 = obj5;
-      } else {
-        obj6 = {};
-      }
-      const merged1 = Object.assign(obj6);
-      ({ agent: obj2.agent, tool: obj2.tool, status: obj2.status } = toolCall);
-      if (null != summary) {
-        const obj7 = { summary };
-        let obj8 = obj7;
-      } else {
-        obj8 = {};
-      }
-      const merged2 = Object.assign(obj8);
-      if (null != fields) {
-        const obj9 = { fields };
-        let obj10 = obj9;
-      } else {
-        obj10 = {};
-      }
-      const merged3 = Object.assign(obj10);
-      if (null != schema) {
-        const obj11 = { schema };
-        let obj12 = obj11;
-      } else {
-        obj12 = {};
-      }
-      const merged4 = Object.assign(obj12);
-      if (null != detail_id) {
-        const obj13 = { detailId: detail_id };
-        let obj14 = obj13;
-      } else {
-        obj14 = {};
-      }
-      const merged5 = Object.assign(obj14);
-      if (null != toolCall.duration_ms) {
-        const obj15 = { durationMs: toolCall.duration_ms };
-        let obj16 = obj15;
-      } else {
-        obj16 = {};
-      }
-      const merged6 = Object.assign(obj16);
-      if (null != toolCall.result_chars) {
-        const obj17 = { resultChars: toolCall.result_chars };
-        let obj18 = obj17;
-      } else {
-        obj18 = {};
-      }
-      const merged7 = Object.assign(obj18);
-      const tmp42 = true === toolCall.result_truncated ? { resultTruncated: true } : {};
-      const merged8 = Object.assign(tmp42);
-      if (null != toolCall.result_added) {
-        const obj19 = { resultAdded: toolCall.result_added };
-        let obj20 = obj19;
-      } else {
-        obj20 = {};
-      }
-      const merged9 = Object.assign(obj20);
-      if (null != toolCall.result_removed) {
-        const obj21 = { resultRemoved: toolCall.result_removed };
-        let obj22 = obj21;
-      } else {
-        obj22 = {};
-      }
-      const merged10 = Object.assign(obj22);
-      if (null != toolCall.error) {
-        const obj23 = { error: toolCall.error };
-        let obj24 = obj23;
-      } else {
-        obj24 = {};
-      }
-      const merged11 = Object.assign(obj24);
-      let startedAt;
-      if (tmp11 != null) {
-        startedAt = tmp11.startedAt;
-      }
-      if (startedAt == null) {
-        startedAt = toolCall.ts;
-      }
-      obj.startedAt = startedAt;
-      const entry_id2 = toolCall.entry_id;
-      if (null != entry_id2) {
-        let value8 = map9.get(projectId);
-        if (null == value8) {
-          const _Map = Map;
-          map = new Map();
-          const result = map9.set(projectId, map);
-          value8 = map;
-        }
-        const result1 = value8.set(entry_id2, tmp56);
-        if (value8.size > 800) {
-          const iter2 = value8.keys().next();
-          while (true !== iter2.done) {
-            let deleteResult = value8.delete(iter2.value);
-            if (value8.size <= 800) {
-              break;
-            }
-          }
-          const iter = value8.keys();
-        }
-      }
-      if (null == tmp11) {
-        const combined = value7.concat(obj);
-        let substr = combined;
-        if (combined.length > 400) {
-          substr = combined.slice(-400);
-        }
-        const result2 = map8.set(projectId, substr);
-      } else {
-        const substr1 = value7.slice();
-        substr1[findIndexResult] = obj;
-        const result3 = map8.set(projectId, substr1);
-      }
+      const result = map6.set(projectId, num);
     }
-  },
-  CONJURE_MODEL_CALL_APPEND: function handleModelCallAppend(arg0) {
-    ({ projectId, modelCall } = arg0);
-    value = map11.get(projectId);
-    if (value != null) {
-      const touched = value.touched;
-      const _HermesInternal = HermesInternal;
-      touched.add("" + "model" + ":" + modelCall.id);
-    }
-    const entry_id = modelCall.entry_id;
-    let tmp5 = null != entry_id;
-    if (tmp5) {
-      const value5 = map9.get(projectId);
-      let value6;
-      if (value5 != null) {
-        value6 = value5.get(entry_id);
-      }
-      tmp5 = value6 === tmp4;
-    }
-    if (tmp5) {
-      return false;
-    } else {
-      let value7 = map8.get(projectId);
-      if (value7 == null) {
-        value7 = closure_24;
-      }
-      const model = "model";
-      const id = modelCall.id;
-      const findIndexResult = value7.findIndex((kind) => {
-        let tmp = kind.kind === model;
-        if (tmp) {
-          tmp = kind.id === id;
-        }
-        return tmp;
-      });
-      let tmp11 = null;
-      if (-1 !== findIndexResult) {
-        tmp11 = value7[findIndexResult];
-      }
-      obj = { kind: "model", id: null };
-      ({ id: obj2.id, turn_id } = modelCall);
-      if (turn_id == null) {
-        let turnId;
-        if (tmp11 != null) {
-          turnId = tmp11.turnId;
-        }
-        turn_id = turnId;
-      }
-      if (null != turn_id) {
-        let turn_id2 = modelCall.turn_id;
-        if (turn_id2 == null) {
-          let turnId1;
-          if (tmp11 != null) {
-            turnId1 = tmp11.turnId;
-          }
-          turn_id2 = turnId1;
-        }
-        const obj3 = { turnId: turn_id2 };
-        let obj4 = obj3;
-      } else {
-        obj4 = {};
-      }
-      const merged = Object.assign(obj4);
-      ({ agent: obj2.agent, model: obj2.model, status: obj2.status } = modelCall);
-      ({ prompt_tokens: obj5.promptTokens, system_tokens: obj5.systemTokens, tools_tokens: obj5.toolsTokens, messages_tokens: obj5.messagesTokens, tools: obj5.tools, messages: obj5.messages, duration_ms: obj5.durationMs, input_tokens: obj5.inputTokens, output_tokens: obj5.outputTokens, cache_read_tokens: obj5.cacheReadTokens, cache_write_tokens: obj5.cacheWriteTokens, cost_usd: obj5.costUsd } = modelCall);
-      const merged1 = Object.assign(pickNumbers(tmp11, { promptTokens: null, systemTokens: null, toolsTokens: null, messagesTokens: null, tools: null, messages: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, costUsd: null }));
-      let estimated = modelCall.estimated;
-      if (estimated == null) {
-        let estimated1;
-        if (tmp11 != null) {
-          estimated1 = tmp11.estimated;
-        }
-        estimated = estimated1;
-      }
-      const tmp21 = true === estimated ? { estimated: true } : {};
-      const merged2 = Object.assign(tmp21);
-      if (null != modelCall.stop_reason) {
-        const obj7 = { stopReason: modelCall.stop_reason };
-        let obj8 = obj7;
-      } else {
-        obj8 = {};
-      }
-      const merged3 = Object.assign(obj8);
-      if (null != modelCall.error) {
-        const obj9 = { error: modelCall.error };
-        let obj10 = obj9;
-      } else {
-        obj10 = {};
-      }
-      const merged4 = Object.assign(obj10);
-      let startedAt;
-      if (tmp11 != null) {
-        startedAt = tmp11.startedAt;
-      }
-      if (startedAt == null) {
-        startedAt = modelCall.ts;
-      }
-      obj.startedAt = startedAt;
-      const entry_id2 = modelCall.entry_id;
-      if (null != entry_id2) {
-        let value8 = map9.get(projectId);
-        if (null == value8) {
-          const _Map = Map;
-          map = new Map();
-          const result = map9.set(projectId, map);
-          value8 = map;
-        }
-        const result1 = value8.set(entry_id2, tmp32);
-        if (value8.size > 800) {
-          const iter2 = value8.keys().next();
-          while (true !== iter2.done) {
-            let deleteResult = value8.delete(iter2.value);
-            if (value8.size <= 800) {
-              break;
-            }
-          }
-          const iter = value8.keys();
-        }
-      }
-      if (null == tmp11) {
-        const combined = value7.concat(obj);
-        let substr = combined;
-        if (combined.length > 400) {
-          substr = combined.slice(-400);
-        }
-        const result2 = map8.set(projectId, substr);
-      } else {
-        const substr1 = value7.slice();
-        substr1[findIndexResult] = obj;
-        const result3 = map8.set(projectId, substr1);
-      }
-      const obj6 = { promptTokens: null, systemTokens: null, toolsTokens: null, messagesTokens: null, tools: null, messages: null, durationMs: null, inputTokens: null, outputTokens: null, cacheReadTokens: null, cacheWriteTokens: null, costUsd: null };
-    }
+    tmp2 = values[Symbol.iterator]();
   }
 };
 const conjureProjectStore = new ConjureProjectStore(DispatcherDefault, obj);

@@ -3,7 +3,7 @@ import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import BigFlagUtilsAll from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
-import MurmurHashV3Default from "../../_runtime/01263_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01264_MurmurHashV3.js";
 import PermissionUtilsAll from "../utils/PermissionUtils.tsx";
 import ExperimentStore from "../modules/experiments/ExperimentStore.tsx";
 import ApplicationStreamingStore from "ApplicationStreamingStore.tsx";

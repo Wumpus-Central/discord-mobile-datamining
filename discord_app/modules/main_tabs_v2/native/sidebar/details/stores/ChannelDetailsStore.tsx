@@ -107,12 +107,12 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   const merged2 = Object.assign(obj);
   const map = new Map(states);
   const result = map.set(arg0, {});
-  map(1271).batchUpdates(() => {
+  map(1272).batchUpdates(() => {
     const obj = { states: map };
     return obj.setState(obj);
   });
   const obj3 = {};
-  const obj5 = map(1271);
+  const obj5 = map(1272);
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
@@ -128,7 +128,7 @@ export const deleteChannelDetailsSearchState = function deleteChannelDetailsSear
   const states = obj.getState().states;
   states.delete(arg0);
   const map = new Map(states);
-  obj = map(1271);
+  obj = map(1272);
   obj.batchUpdates(() => {
     const obj = { states: map };
     return obj.setState(obj);

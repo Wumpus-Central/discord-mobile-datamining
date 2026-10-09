@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
+({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function MediaPostGridThumbnailAndroid(arg0) {
       const cResult = c.c(33);
       ({ shouldSpoiler, blurTheme, source, androidStyle, backgroundImagesource, resizeMode } = arg0);
@@ -20,7 +20,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         num = 10;
       }
       if (cResult[0] !== androidStyle) {
-        let flattenResult = hasOwnProperty.flatten(androidStyle);
+        let flattenResult = React4.flatten(androidStyle);
         if (flattenResult == null) {
           flattenResult = {};
         }
@@ -52,14 +52,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { style: androidStyle, children: null };
                 const items = [tmp27, tmp31];
                 obj2.children = items;
-                const tmp37 = React5(React4, obj2);
+                const tmp37 = timestampProducer(React3, obj2);
                 cResult[12] = androidStyle;
                 cResult[13] = tmp27;
                 cResult[14] = tmp31;
                 cResult[15] = tmp37;
               }
               const obj3 = { shouldSpoiler, blurTheme };
-              const tmp33 = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj3);
+              const tmp33 = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj3);
               cResult[9] = blurTheme;
               cResult[10] = shouldSpoiler;
               cResult[11] = tmp33;
@@ -67,14 +67,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { style: tmp25, source, blurRadius: num, resizeMode: "cover" };
-          const tmp30 = timestampProducer(FastImageDefault, obj4);
+          const tmp30 = hasOwnProperty(FastImageDefault, obj4);
           cResult[5] = num;
           cResult[6] = source;
           cResult[7] = tmp25;
           cResult[8] = tmp30;
           tmp27 = tmp30;
         }
-        const items1 = [hasOwnProperty.absoluteFill];
+        const items1 = [React4.absoluteFill];
         const size = { width, height };
         items1[1] = size;
         cResult[2] = height;
@@ -111,7 +111,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { style: androidStyle, children: null };
                 const items2 = [tmp9, tmp13, tmp18];
                 obj5.children = items2;
-                const tmp24 = React5(React4, obj5);
+                const tmp24 = timestampProducer(React3, obj5);
                 cResult[28] = androidStyle;
                 cResult[29] = tmp9;
                 cResult[30] = tmp13;
@@ -120,27 +120,27 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp21 = tmp24;
               }
               const obj6 = { shouldSpoiler, blurTheme };
-              const tmp20 = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj6);
+              const tmp20 = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj6);
               cResult[25] = blurTheme;
               cResult[26] = shouldSpoiler;
               cResult[27] = tmp20;
               tmp18 = tmp20;
             }
-            const obj7 = { style: hasOwnProperty.absoluteFill, source, resizeMode };
-            const tmp17 = timestampProducer(FastImageDefault, obj7);
+            const obj7 = { style: React4.absoluteFill, source, resizeMode };
+            const tmp17 = hasOwnProperty(FastImageDefault, obj7);
             cResult[22] = resizeMode;
             cResult[23] = source;
             cResult[24] = tmp17;
             tmp13 = tmp17;
           }
           const obj8 = { style: tmp7, source: backgroundImagesource, resizeMode: "cover" };
-          const tmp12 = timestampProducer(React3, obj8);
+          const tmp12 = hasOwnProperty(FastImageDefault, obj8);
           cResult[19] = backgroundImagesource;
           cResult[20] = tmp7;
           cResult[21] = tmp12;
           tmp9 = tmp12;
         }
-        const items3 = [hasOwnProperty.absoluteFill];
+        const items3 = [React4.absoluteFill];
         const size1 = { width, height, opacity: 0.2 };
         items3[1] = size1;
         cResult[16] = height;
@@ -155,7 +155,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       if (shouldSpoiler) {
         num = 10;
       }
-      let flattenResult = hasOwnProperty.flatten(androidStyle);
+      let flattenResult = React4.flatten(androidStyle);
       if (flattenResult == null) {
         flattenResult = {};
       }
@@ -163,36 +163,36 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == backgroundImagesource) {
         const obj = { style: androidStyle, children: null };
         const obj2 = { style: null, source: null, blurRadius: null, resizeMode: "cover" };
-        const items = [hasOwnProperty.absoluteFill];
+        const items = [React4.absoluteFill];
         const size = { width, height };
         items[1] = size;
         obj2.style = items;
         obj2.source = source;
         obj2.blurRadius = num;
-        const items1 = [timestampProducer(FastImageDefault, obj2)];
+        const items1 = [hasOwnProperty(FastImageDefault, obj2)];
         const obj3 = { shouldSpoiler, blurTheme };
-        items1[1] = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj3);
+        items1[1] = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj3);
         obj.children = items1;
         let obj4 = obj;
       } else {
         obj4 = { style: androidStyle, children: null };
         const obj5 = { style: null, source: null, resizeMode: "cover" };
-        const items2 = [hasOwnProperty.absoluteFill];
+        const items2 = [React4.absoluteFill];
         const size1 = { width, height, opacity: 0.2 };
         items2[1] = size1;
         obj5.style = items2;
         obj5.source = backgroundImagesource;
-        const items3 = [timestampProducer(React3, obj5), ,];
-        const obj6 = { style: hasOwnProperty.absoluteFill, source, resizeMode: resizeMode.resizeMode };
-        items3[1] = timestampProducer(FastImageDefault, obj6);
+        const items3 = [hasOwnProperty(FastImageDefault, obj5), ,];
+        const obj6 = { style: React4.absoluteFill, source, resizeMode: resizeMode.resizeMode };
+        items3[1] = hasOwnProperty(FastImageDefault, obj6);
         const obj7 = { shouldSpoiler, blurTheme };
-        items3[2] = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj7);
+        items3[2] = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj7);
         obj4.children = items3;
       }
-      return React5(React4, obj4);
+      return timestampProducer(React3, obj4);
     };
 ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function MediaPostGridThumbnailIOS(arg0) {
       const cResult = c.c(24);
       ({ shouldSpoiler, blurTheme, source, iosStyle, backgroundImagesource, resizeMode } = arg0);
@@ -211,13 +211,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { children: null };
               const items = [tmp21, tmp25];
               obj2.children = items;
-              const tmp31 = React5(closure_1_8, obj2);
+              const tmp31 = timestampProducer(React5, obj2);
               cResult[7] = tmp21;
               cResult[8] = tmp25;
               cResult[9] = tmp31;
             }
             const obj3 = { shouldSpoiler, blurTheme };
-            const tmp27 = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj3);
+            const tmp27 = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj3);
             cResult[4] = blurTheme;
             cResult[5] = shouldSpoiler;
             cResult[6] = tmp27;
@@ -225,7 +225,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { style: iosStyle, source, resizeMode };
-        const tmp24 = timestampProducer(FastImageDefault, obj4);
+        const tmp24 = hasOwnProperty(FastImageDefault, obj4);
         cResult[0] = iosStyle;
         cResult[1] = resizeMode;
         cResult[2] = source;
@@ -234,7 +234,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [hasOwnProperty.absoluteFill, { opacity: 0.2 }];
+          const items1 = [React4.absoluteFill, { opacity: 0.2 }];
           cResult[10] = items1;
           let tmp4 = items1;
         } else {
@@ -242,7 +242,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[11] !== backgroundImagesource) {
           const obj5 = { style: tmp4, source: backgroundImagesource, resizeMode: "cover" };
-          const tmp9 = timestampProducer(FastImageDefault, obj5);
+          const tmp9 = hasOwnProperty(FastImageDefault, obj5);
           cResult[11] = backgroundImagesource;
           cResult[12] = tmp9;
           let tmp6 = tmp9;
@@ -269,7 +269,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { children: null };
               const items2 = [tmp6, tmp10, tmp14];
               obj6.children = items2;
-              const tmp20 = React5(closure_1_8, obj6);
+              const tmp20 = timestampProducer(React5, obj6);
               cResult[20] = tmp6;
               cResult[21] = tmp10;
               cResult[22] = tmp14;
@@ -277,7 +277,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               tmp17 = tmp20;
             }
             const obj7 = { shouldSpoiler, blurTheme };
-            const tmp16 = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj7);
+            const tmp16 = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj7);
             cResult[17] = blurTheme;
             cResult[18] = shouldSpoiler;
             cResult[19] = tmp16;
@@ -285,7 +285,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj8 = { style: iosStyle, source, resizeMode };
-        const tmp13 = timestampProducer(FastImageDefault, obj8);
+        const tmp13 = hasOwnProperty(FastImageDefault, obj8);
         cResult[13] = iosStyle;
         cResult[14] = resizeMode;
         cResult[15] = source;
@@ -298,25 +298,25 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == backgroundImagesource) {
         const obj = { children: null };
         const obj2 = { style: iosStyle, source, resizeMode };
-        const items = [timestampProducer(FastImageDefault, obj2)];
+        const items = [hasOwnProperty(FastImageDefault, obj2)];
         const obj3 = { shouldSpoiler, blurTheme };
-        items[1] = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj3);
+        items[1] = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj3);
         obj.children = items;
         let obj4 = obj;
       } else {
         obj4 = { children: null };
         const obj5 = { style: null, source: null, resizeMode: "cover" };
-        const items1 = [hasOwnProperty.absoluteFill, { opacity: 0.2 }];
+        const items1 = [React4.absoluteFill, { opacity: 0.2 }];
         obj5.style = items1;
         obj5.source = backgroundImagesource;
-        const items2 = [timestampProducer(FastImageDefault, obj5), ,];
+        const items2 = [hasOwnProperty(FastImageDefault, obj5), ,];
         const obj6 = { style: iosStyle, source, resizeMode };
-        items2[1] = timestampProducer(FastImageDefault, obj6);
+        items2[1] = hasOwnProperty(FastImageDefault, obj6);
         const obj7 = { shouldSpoiler, blurTheme };
-        items2[2] = timestampProducer(ForumPostMedia.ForumPostMediaSpoiler, obj7);
+        items2[2] = hasOwnProperty(ForumPostMedia.ForumPostMediaSpoiler, obj7);
         obj4.children = items2;
       }
-      return React5(closure_1_8, obj4);
+      return timestampProducer(React5, obj4);
     };
 ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -349,11 +349,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmpResult.isAndroid()) {
         const obj3 = {};
         obj2 = Object.assign(obj2);
-        let tmp7Result = timestampProducer(closure_9, obj3);
+        let tmp7Result = hasOwnProperty(closure_8, obj3);
       } else {
         const obj4 = {};
         const merged1 = Object.assign(obj2);
-        tmp7Result = timestampProducer(closure_10, obj4);
+        tmp7Result = hasOwnProperty(closure_9, obj4);
       }
       cResult[0] = source;
       cResult[1] = isPortrait;
@@ -379,11 +379,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (obj2.isAndroid()) {
         const obj3 = {};
         const merged1 = Object.assign(obj);
-        let tmp4Result = timestampProducer(closure_9, obj3);
+        let tmp4Result = hasOwnProperty(closure_8, obj3);
       } else {
         const obj4 = {};
         const merged2 = Object.assign(obj);
-        tmp4Result = timestampProducer(closure_10, obj4);
+        tmp4Result = hasOwnProperty(closure_9, obj4);
       }
       return tmp4Result;
     };

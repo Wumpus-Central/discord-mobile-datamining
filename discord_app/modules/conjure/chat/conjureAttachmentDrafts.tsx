@@ -126,7 +126,7 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const ConjureConnectionStore = fn(13072);
+const ConjureConnectionStore = fn(13164);
 ({
   deleteStagedAttachment: hasOwnProperty,
   sendUserMessage: metroRequire,
@@ -134,7 +134,7 @@ const ConjureConnectionStore = fn(13072);
 } = ConjureConnectionStore);
 let closure_9 = [];
 let c10 = 1;
-const zustandStore = fn(4949).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4950).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;

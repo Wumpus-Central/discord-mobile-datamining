@@ -1,5 +1,5 @@
 // discord_app/modules/polls/transformMessagPoll.tsx
-import _modDef4659 from "../../../_runtime/metro/04659__.js";
+import _modDef4661 from "../../../_runtime/metro/04661__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
@@ -7,6 +7,6 @@ const result = size.fileFinishedImporting("modules/polls/transformMessagPoll.tsx
 export default function transformMessagePoll(expiry) {
   const obj = {};
   const merged = Object.assign(expiry);
-  obj.expiry = _modDef4659(expiry.expiry);
+  obj.expiry = _modDef4661(expiry.expiry);
   return obj;
 }

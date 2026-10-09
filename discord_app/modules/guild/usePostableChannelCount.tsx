@@ -6,7 +6,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

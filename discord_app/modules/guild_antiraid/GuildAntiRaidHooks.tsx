@@ -49,7 +49,7 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(8018).IncidentAlertModeratorPermissions;
+let closure_10 = fn(8026).IncidentAlertModeratorPermissions;
 const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 fn(558);
@@ -171,7 +171,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp16 = tmp15;
           if (null != tmp15) {
             let tmp18 = stateFromStores1;
-            let obj8 = stateFromStores1(8017);
+            let obj8 = stateFromStores1(8025);
             if (obj8.hasDetectedActivity(tmp16)) {
               let obj5 = BigFlagUtilsAll;
               let obj6 = PermissionUtilsAll;
@@ -182,7 +182,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return nextResult.id;
               }
             } else {
-              let tmp18Result = tmp18(8017);
+              let tmp18Result = tmp18(8025);
             }
           }
         }
@@ -250,8 +250,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== stateFromStores1) {
         let isUnderLockdownResult = null != stateFromStores1;
         if (isUnderLockdownResult) {
-          isUnderLockdownResult = tmp(8017).isUnderLockdown(stateFromStores1);
-          const tmpResult4 = tmp(8017);
+          isUnderLockdownResult = tmp(8025).isUnderLockdown(stateFromStores1);
+          const tmpResult4 = tmp(8025);
         }
         cResult[6] = stateFromStores1;
         cResult[7] = isUnderLockdownResult;
@@ -312,8 +312,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let isUnderLockdownResult = null != stateFromStores1;
       if (isUnderLockdownResult) {
-        isUnderLockdownResult = tmp(8017).isUnderLockdown(stateFromStores1);
-        const tmpResult = tmp(8017);
+        isUnderLockdownResult = tmp(8025).isUnderLockdown(stateFromStores1);
+        const tmpResult = tmp(8025);
       }
       obj3.isUnderLockdown = isUnderLockdownResult;
       return obj3;

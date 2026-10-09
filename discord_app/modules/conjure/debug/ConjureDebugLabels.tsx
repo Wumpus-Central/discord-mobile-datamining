@@ -4,8 +4,7 @@ import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
 import ConjureDebugFormat from "ConjureDebugFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const set = new Set(["error", "aborted", "length"]);
-let closure_4 = {
+let closure_3 = {
   db() {
     return _modDef3827["7l+DFG"];
   },
@@ -72,32 +71,6 @@ export const isRenderableLog = function isRenderableLog(log) {
     tmp = typeof log.ts === "string";
   }
   return tmp;
-};
-export const MAX_MODEL_CALL_ROWS = 30;
-export const modelCallOutcome = function modelCallOutcome(call) {
-  let hasItem = null != call.stopReason;
-  if (hasItem) {
-    hasItem = set.has(call.stopReason);
-  }
-  let formatMsResult = null;
-  if (null != call.durationMs) {
-    formatMsResult = ConjureDebugFormat.formatMs(call.durationMs);
-  }
-  const items = [formatMsResult, ,];
-  const formatCountResult = ConjureDebugFormat.formatCount(
-    call.inputTokens + call.cacheReadTokens + call.cacheWriteTokens,
-  );
-  items[1] = "" + formatCountResult + " \u2192 " + ConjureDebugFormat.formatCount(call.outputTokens);
-  let stopReason = null;
-  if (hasItem) {
-    stopReason = call.stopReason;
-  }
-  const obj4 = { text: null, bad: null };
-  items[2] = stopReason;
-  const found = items.filter((item) => null != item);
-  obj4.text = found.join(" \u00B7 ");
-  obj4.bad = hasItem;
-  return obj4;
 };
 export const forceCompactionStatus = function forceCompactionStatus(stateFromStores3) {
   if ("idle" === stateFromStores3) {
@@ -179,7 +152,7 @@ export const analyticsMemoryValue = function analyticsMemoryValue(found) {
 export const analyticsRoleLabel = function analyticsRoleLabel(role) {
   let tmp = null;
   if ("agent" !== role) {
-    tmp = closure_4[role];
+    tmp = closure_3[role];
   }
   let stringResult = null;
   if (null != tmp) {

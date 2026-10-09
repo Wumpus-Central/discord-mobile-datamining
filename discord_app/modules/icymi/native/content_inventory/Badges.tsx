@@ -7,10 +7,10 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils from "../../../content_inventory/utils.tsx";
 import TrophyIcon from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
-import FireIcon2 from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
 import GameControllerIcon from "../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
 import TimerIcon2 from "../../../../design/components/Icon/native/redesign/generated/TimerIcon.tsx";
 import RetryIcon2 from "../../../../design/components/Icon/native/redesign/generated/RetryIcon.tsx";
+import FireIcon2 from "../../../../design/components/Icon/native/redesign/generated/FireIcon.tsx";
 import useTimestampTickedNow from "../../../content_inventory/memberlist/useTimestampTickedNow.tsx";
 import NewUserIcon from "../../../../design/components/Icon/native/redesign/generated/NewUserIcon.tsx";
 import FlashIcon2 from "../../../../design/components/Icon/native/redesign/generated/FlashIcon.tsx";
@@ -34,7 +34,7 @@ let obj2 = {
   icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
 };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -99,10 +99,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ActiveTimestamp(style) {
       const entry = style.entry;
-      const now = entry(12997).useTimestampTickedNow().now;
+      const now = entry(13079).useTimestampTickedNow().now;
       const items = [entry, now];
       const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
-      return closure_6(entry(5086).Text, {
+      return closure_6(entry(5087).Text, {
         style: style.style,
         variant: "text-sm/medium",
         tabularNumbers: true,

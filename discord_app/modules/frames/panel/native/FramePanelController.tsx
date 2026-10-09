@@ -6,8 +6,8 @@ import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 import FramesStore from "../../FramesStore.tsx";
 
 const require = fn;
-const asLaunched = fn(10613).asLaunched;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const asLaunched = fn(10767).asLaunched;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult = mainFrameId(504);
-      const tmp13 = jsx(mainFrameId(17471).BaseActivityPanelController, {
+      const tmp13 = jsx(mainFrameId(17623).BaseActivityPanelController, {
         context: FramePanelStateContextDefault,
         orientationLockStateForApp,
         mode,
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj = mainFrameId(504);
-      return jsx(mainFrameId(17471).BaseActivityPanelController, {
+      return jsx(mainFrameId(17623).BaseActivityPanelController, {
         context: FramePanelStateContextDefault,
         orientationLockStateForApp,
         mode,

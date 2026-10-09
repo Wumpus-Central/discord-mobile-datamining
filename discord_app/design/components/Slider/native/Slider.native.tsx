@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef8380 from "../../../../../_runtime/metro/08380__.js";
+import _modDef8388 from "../../../../../_runtime/metro/08388__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ let closure_3 = ["startIcon", "endIcon", "style", "onValueChange", "step"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
@@ -130,7 +130,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled()
             obj4.minimumTrackTintColor = tmp12.minimumTrackTintColor.backgroundColor;
             obj4.maximumTrackTintColor = tmp12.maximumTrackTintColor.backgroundColor;
             obj4.tapToSeek = true;
-            const tmp26 = closure_7(_modDef8380, obj4);
+            const tmp26 = closure_7(_modDef8388, obj4);
             cResult[16] = tmp13;
             cResult[17] = tmp5;
             cResult[18] = tmp7;
@@ -203,7 +203,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled()
       obj3.minimumTrackTintColor = tmp2.minimumTrackTintColor.backgroundColor;
       obj3.maximumTrackTintColor = tmp2.maximumTrackTintColor.backgroundColor;
       obj3.tapToSeek = true;
-      items1[1] = closure_7(step(8380), obj3);
+      items1[1] = closure_7(step(8388), obj3);
       let tmp8Result = null;
       if (null != endIcon) {
         const obj4 = { style: tmp2.endIcon, children: endIcon };

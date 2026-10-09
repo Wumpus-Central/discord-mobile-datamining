@@ -151,10 +151,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "ICYMI_FEEDBACK_GIVEN",
-          externalChildren: "CLEAR_ICYMI_READ_STATES",
-          expandedChildren: "ICYMI_JOINED_RECOMMENDED_GUILD",
-          children: "ICYMI_SET_VIDEOS_MUTED",
+          label: "APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS",
+          externalChildren: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA",
+          expandedChildren: null,
+          children: "bottom",
         };
         const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
         const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
@@ -171,10 +171,10 @@ export default noop.memo(
           cutouts,
           config,
           overState: "y",
-          label: "ICYMI_FEEDBACK_GIVEN",
-          externalChildren: "CLEAR_ICYMI_READ_STATES",
-          expandedChildren: "ICYMI_JOINED_RECOMMENDED_GUILD",
-          children: "ICYMI_SET_VIDEOS_MUTED",
+          label: "APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS",
+          externalChildren: "APP_LAUNCHER_ONBOARDING_SET_TRIGGERED_ONBOARDING_CONTENT_METADATA",
+          expandedChildren: null,
+          children: "bottom",
         });
       },
 );

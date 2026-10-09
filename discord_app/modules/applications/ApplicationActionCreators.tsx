@@ -56,7 +56,7 @@ let closure_10 = async function _fetchApplication(arg0) {
           closure_131_3 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -172,11 +172,11 @@ export default {
   createApplication(arg0) {
     ({ name: require, guildId: importDefault, type: dependencyMap, teamId: asyncGeneratorStep } = arg0);
     return (async () => {
-      const HTTP = tmp5(1294).HTTP;
+      const HTTP = tmp5(1295).HTTP;
       const request = {
         url: constants.APPLICATIONS,
         body: { name, type, guild_id, team_id },
-        rejectWithError: tmp5(1294).rejectWithMigratedError(),
+        rejectWithError: tmp5(1295).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
@@ -200,13 +200,13 @@ export default {
     const includeTeam = obj.includeTeam;
     closure_2 = Object.assign(obj, Object.assign({ includeTeam: 0 }));
     return (async () => {
-      const HTTP = tmp5(1294).HTTP;
+      const HTTP = tmp5(1295).HTTP;
       const request = { url: closure_1_7.GUILD_APPLICATIONS(tmp5), query: null, rejectWithError: null };
       const obj4 = {};
       const merged = Object.assign(closure_2);
       obj4.include_team = includeTeam;
       request.query = obj4;
-      request.rejectWithError = tmp5(1294).rejectWithMigratedError();
+      request.rejectWithError = tmp5(1295).rejectWithMigratedError();
       await HTTP.get(request);
       const body = value.body;
       tmp2(584).dispatch({ type: "APPLICATIONS_FETCH_SUCCESS", applications: body });
@@ -239,11 +239,11 @@ export default {
   transferApplication(arg0) {
     ({ applicationId: require, teamId: importDefault } = arg0);
     return (async () => {
-      const HTTP = tmp5(1294).HTTP;
+      const HTTP = tmp5(1295).HTTP;
       const request = {
         url: closure_1_7.APPLICATION_OWNER_TRANSFER(_require),
         body: { team_id },
-        rejectWithError: tmp5(1294).rejectWithMigratedError(),
+        rejectWithError: tmp5(1295).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;

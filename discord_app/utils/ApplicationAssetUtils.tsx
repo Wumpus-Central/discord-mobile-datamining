@@ -337,7 +337,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
     num13 = 1;
   }
   closure_131_2 = num13;
-  return "Reflect";
+  return "Set";
 };
 const Constants = fn(1085);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);

@@ -341,21 +341,21 @@ let closure_9 = async function _setMomentLocale(arg0) {
     }
   }
 };
-const identity = fn(1266);
+const identity = fn(1267);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  return {
+  let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "end",
+    error: "backgroundColor",
     localeData: _modDef2130,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "end" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "backgroundColor" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -368,6 +368,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       closure_0({ localeData });
     }
   };
+  return obj;
 });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

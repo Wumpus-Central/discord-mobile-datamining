@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("initialize");
       stateFromStores1 = require("initialize").useStateFromStores(tmp8, tmp10);
-      const RestrictedGuildIds = tmp(2040).RestrictedGuildIds;
+      const RestrictedGuildIds = tmp(2041).RestrictedGuildIds;
       setting = RestrictedGuildIds.useSetting();
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class F {

@@ -12,15 +12,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = {
-  automod: fn(10386).ShieldIcon,
-  overlay: fn(9117).GameControllerIcon,
-  widget: fn(16951).WidgetsIcon,
-  activity: fn(8209).AppsIcon,
-  commands: fn(11230).SlashBoxIcon,
-  chat_bot: fn(8174).ChatIcon,
-  bot: fn(12825).RobotIcon,
+  automod: fn(10375).ShieldIcon,
+  overlay: fn(9184).GameControllerIcon,
+  widget: fn(17083).WidgetsIcon,
+  activity: fn(8217).AppsIcon,
+  commands: fn(10585).SlashBoxIcon,
+  chat_bot: fn(8182).ChatIcon,
+  bot: fn(11388).RobotIcon,
 };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj3 = {
   tags: {
     flexDirection: "row",

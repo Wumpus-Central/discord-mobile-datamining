@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let closure_13 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 },
@@ -359,7 +359,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       tmpResult = shouldAnimate(aPNGPlayerControls[13]);
     };
 ReactCompilerGating = fn(558);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj6 = { preview: null };
 let size = {
   width: PX_40,
@@ -554,7 +554,7 @@ export const PremiumGiftPromotionCollectibleRewardDetails = ReactCompilerGating.
           let rounded = Math.floor(1.2 * PX_40);
         } else {
           rounded = PX_40;
-          if (memo.item.type === tmp8(1992).CollectiblesItemType.AVATAR_DECORATION) {
+          if (memo.item.type === tmp8(1993).CollectiblesItemType.AVATAR_DECORATION) {
             const _Math = Math;
             rounded = Math.floor(1.5 * PX_40);
           }

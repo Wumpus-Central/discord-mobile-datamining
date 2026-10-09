@@ -9,9 +9,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -56,8 +56,8 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
       const cResult = markAsDismissed(576).c(15);
       markAsDismissed = markAsDismissed.markAsDismissed;
       const obj = markAsDismissed(576);
-      let userIsTeen = markAsDismissed(7710).useUserIsTeen();
-      const ProfileVisibility = markAsDismissed(2040).ProfileVisibility;
+      let userIsTeen = markAsDismissed(7719).useUserIsTeen();
+      const ProfileVisibility = markAsDismissed(2041).ProfileVisibility;
       const setting = ProfileVisibility.useSetting();
       if (userIsTeen) {
         userIsTeen = setting !== tmp(1209).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
@@ -123,7 +123,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
               }
             }
           }
-          const tmp20 = markAsDismissed.visibleContent === tmp(2048).DismissibleContent.PRIVATE_PROFILE_COACHMARK;
+          const tmp20 = markAsDismissed.visibleContent === tmp(2049).DismissibleContent.PRIVATE_PROFILE_COACHMARK;
           if (cResult[10] === cResult[2]) {
             class S {
               constructor() {
@@ -175,7 +175,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
         }
         obj4.string(tmp(1126).t["6hEfm1"]);
       }
-      const obj2 = markAsDismissed(7710);
+      const obj2 = markAsDismissed(7719);
     }
   : function usePrivateProfileCoachmarkProps(visibleContent) {
       visibleContent = visibleContent.visibleContent;

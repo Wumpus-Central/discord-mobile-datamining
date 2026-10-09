@@ -1,12 +1,12 @@
 // discord_app/modules/client_themes/native/chat/previewSharedClientTheme.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/client_themes/native/chat/previewSharedClientTheme.tsx");
 
 export const handleTapPreviewSharedClientTheme = function handleTapPreviewSharedClientTheme(message) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11634, dependencyMap.paths), "custom-theme-preview", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11570, dependencyMap.paths), "custom-theme-preview", {
     message: message.message,
     backdropKind: "none",
   });

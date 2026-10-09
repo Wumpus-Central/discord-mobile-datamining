@@ -24,7 +24,7 @@ function b64ToProto(arg0, arg1) {
 const ZERO_STRING_GUILD_ID = fn(1085).ZERO_STRING_GUILD_ID;
 let obj = {
   [PRELOADED_USER_SETTINGS]: fn(1209).PreloadedUserSettings,
-  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1244).FrecencyUserSettings,
+  [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1245).FrecencyUserSettings,
 };
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1095).UserSettingsTypes);
 const size = fn(2);

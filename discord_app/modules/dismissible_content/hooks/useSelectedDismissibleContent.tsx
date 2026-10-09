@@ -8,41 +8,60 @@ require = fn;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useSelectedDismissibleContent(arg0, arg1, arg2) {
-      const cResult = c.c(3);
-      const tmp4 = undefined !== arg2 && arg2;
-      const tmpResult = useGetDismissibleContent;
-      [tmp6, tmp7] = useGetDismissibleContent.useGetDismissibleContent(arg0, arg1);
-      const tmp5 = _slicedToArray(useGetDismissibleContent.useGetDismissibleContent(arg0, arg1), 2);
-      const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(
-        tmp6,
-        tmp7,
-        tmp4,
-      );
-      if (cResult[0] === tmp7) {
-        if (cResult[1] === tmp6) {
-          let tmp9 = cResult[2];
+  ? function useSelectedDismissibleContent(arg0, arg1) {
+      const cResult = c.c(5);
+      if (cResult[0] !== arg1) {
+        let obj2 = arg1;
+        if (undefined === arg1) {
+          obj2 = {};
         }
-        return tmp9;
+        cResult[0] = arg1;
+        cResult[1] = obj2;
+        let tmp4 = obj2;
+      } else {
+        tmp4 = cResult[1];
       }
-      const items = [tmp6, tmp7];
-      cResult[0] = tmp7;
-      cResult[1] = tmp6;
-      cResult[2] = items;
-      tmp9 = items;
+      const bypassAutoDismiss = tmp4.bypassAutoDismiss;
+      let tmp5 = undefined !== bypassAutoDismiss;
+      if (tmp5) {
+        tmp5 = bypassAutoDismiss;
+      }
+      const tmpResult = useGetDismissibleContent;
+      [tmp7, tmp8] = useGetDismissibleContent.useGetDismissibleContent(arg0, tmp4.groupName);
+      const tmp6 = _slicedToArray(useGetDismissibleContent.useGetDismissibleContent(arg0, tmp4.groupName), 2);
+      const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(
+        tmp7,
+        tmp8,
+        tmp5,
+      );
+      if (cResult[2] === tmp8) {
+        if (cResult[3] === tmp7) {
+          let tmp10 = cResult[4];
+        }
+        return tmp10;
+      }
+      const items = [tmp7, tmp8];
+      cResult[2] = tmp8;
+      cResult[3] = tmp7;
+      cResult[4] = items;
+      tmp10 = items;
       const tmpResult2 = useSelectedDismissibleContentShared;
     }
-  : function useSelectedDismissibleContent(arg0, arg1) {
-      let flag = arg2;
-      if (arg2 === undefined) {
-        flag = false;
+  : function useSelectedDismissibleContent(arg0) {
+      let obj = arg1;
+      if (arg1 === undefined) {
+        obj = {};
       }
-      [tmp2, tmp3] = useGetDismissibleContent.useGetDismissibleContent(arg0, arg1);
-      const tmp = _slicedToArray(useGetDismissibleContent.useGetDismissibleContent(arg0, arg1), 2);
+      ({ bypassAutoDismiss, groupName } = obj);
+      if (bypassAutoDismiss === undefined) {
+        bypassAutoDismiss = false;
+      }
+      [tmp2, tmp3] = useGetDismissibleContent.useGetDismissibleContent(arg0, groupName);
+      const tmp = _slicedToArray(useGetDismissibleContent.useGetDismissibleContent(arg0, groupName), 2);
       const selectedDismissibleContentShared = useSelectedDismissibleContentShared.useSelectedDismissibleContentShared(
         tmp2,
         tmp3,
-        flag,
+        bypassAutoDismiss,
       );
       const items = [tmp2, tmp3];
       return items;

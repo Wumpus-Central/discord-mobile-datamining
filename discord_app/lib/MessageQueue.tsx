@@ -13,7 +13,7 @@ let closure_3 = ["channelId", "analyticsLocation"];
 let closure_4 = ["channelId", "analyticsLocation"];
 const Constants = fn(1085);
 ({ AbortCodes: closure_9, Endpoints: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(5083).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
+let closure_12 = fn(5084).MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS;
 const MessageDataType = {
   SEND: 0,
   [0]: "SEND",
@@ -207,8 +207,8 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(nonce, closure_3);
-  const signalStrength = handleCommand1(7170).getSignalStrength();
-  const obj2 = handleCommand1(7170);
+  const signalStrength = handleCommand1(7175).getSignalStrength();
+  const obj2 = handleCommand1(7175);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -230,7 +230,7 @@ prototype["handleSend"] = function handleSend(nonce, fn) {
       const result = requests.set(nonce.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(nonce.nonce);
-    const HTTP = handleCommand1(1294).HTTP;
+    const HTTP = handleCommand1(1295).HTTP;
     const request = { url: collapsed.MESSAGES(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;
@@ -251,8 +251,8 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
     const tmp4 = obj;
   }
   const tmp = _objectWithoutProperties(message, closure_4);
-  const signalStrength = handleCommand1(7170).getSignalStrength();
-  const obj2 = handleCommand1(7170);
+  const signalStrength = handleCommand1(7175).getSignalStrength();
+  const obj2 = handleCommand1(7175);
   const merged = Object.assign(tmp);
   let tmp8 = null != signalStrength;
   if (tmp8) {
@@ -274,7 +274,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, f
       const result = requests.set(message.nonce, abortController);
     }
     const result1 = self.startQueueMetricTimers(message.nonce);
-    const HTTP = handleCommand1(1294).HTTP;
+    const HTTP = handleCommand1(1295).HTTP;
     const request = { url: collapsed.MESSAGES_ANNOUNCEMENT(channelId), body: obj3, context: tmp4, oldFormErrors: true };
     const merged2 = Object.assign(closure_12);
     request.signal = abortController.signal;

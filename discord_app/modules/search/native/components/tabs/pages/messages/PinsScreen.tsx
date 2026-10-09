@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/PinsScreen.tsx
-import tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
+import search_tracking_TrackingDefault from "../../../../tracking/Tracking.tsx";
 import ChannelPinActionCreatorsDefault from "../../../../../../../actions/ChannelPinActionCreators.tsx";
 import MessagesScreenDefault from "MessagesScreen.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
@@ -73,7 +73,7 @@ function InitialPinsScreen(searchContext) {
     obj2.userId = id;
     obj2.index = index;
     obj2.entityType = constants2.MESSAGE;
-    const result = tracking_TrackingDefault.trackSearchResultClicked(obj2);
+    const result = search_tracking_TrackingDefault.trackSearchResultClicked(obj2);
     onPressMessageItem(channelId, messageId);
   }, items5);
   placeholderHeight = fullscreenPlaceholderCount.useRef({});
@@ -142,14 +142,14 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null,
   });
 }
-const FetchState = fn(12805).FetchState;
-const SearchConstants = fn(9247);
+const FetchState = fn(12774).FetchState;
+const SearchConstants = fn(9285);
 ({
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8,
   SearchListItemTypes: closure_9,
   SEARCH_PINNED_MESSAGES_LINE_CLAMP: c10,
 } = SearchConstants);
-let closure_11 = fn(9246).SearchResultContentEntityTypes;
+let closure_11 = fn(9284).SearchResultContentEntityTypes;
 const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

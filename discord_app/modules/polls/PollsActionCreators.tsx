@@ -192,7 +192,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(7873).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(7882).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }
@@ -215,7 +215,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
   await "IconComponent";
   closure_2 = tmp2;
   ({ channelId: closure_130_0, messageId: closure_130_1, answerIds: closure_130_2 } = channelId);
-  return "Reflect";
+  return "Set";
 };
 function handlePollSubmitVote() {
   const self = this;
@@ -263,7 +263,7 @@ let closure_25 = async function _handlePollSubmitVote(arg0) {
           closure_132_5 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -450,7 +450,7 @@ let closure_26 = async function _handleClearPollVote(arg0) {
           let channel;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -550,7 +550,7 @@ let closure_27 = async function _handlePollActionTapped(arg0) {
           ({ channelId: closure_129_0, messageId: closure_129_1, type: closure_129_2 } = closure_0);
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -729,7 +729,7 @@ let closure_28 = async function _createPoll(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -754,7 +754,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11540).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11469).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -790,7 +790,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-              const obj = guildId(9203);
+              const obj = guildId(9237);
               const result = obj.handleUploadMessageAttachmentsErrors({
                 file,
                 guildId: guildId.getGuildId(),
@@ -888,10 +888,10 @@ let closure_29 = async function _endPollEarly(arg0) {
   await "IconComponent";
   closure_1 = tmp2;
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
-const DraftType = fn(7232).DraftType;
-const PollsInteractionStore = fn(10464);
+const DraftType = fn(7237).DraftType;
+const PollsInteractionStore = fn(10454);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

@@ -3,8 +3,8 @@ import util from "../../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import _modDef2597 from "../../GuildPowerups.messages.js";
 import GuildTagUtils from "../../../../guild_tag/GuildTagUtils.tsx";
-import _modDef12303 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
-import _modDef12304 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
+import _modDef12242 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-static.png.js";
+import _modDef12243 from "../../../../../../discord_assets/assets/powerups/badge-packs/group-animated.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
@@ -44,8 +44,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
       if ("guildTagsBadgePacks" !== group.group) {
-        tmp(1387).assertNever(group.group);
-        const tmpResult2 = tmp(1387);
+        tmp(1388).assertNever(group.group);
+        const tmpResult2 = tmp(1388);
       } else {
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const stringResult = intl.string(_modDef2597.KC9HRW);
           const intl2 = tmp(1126).intl;
           const stringResult1 = intl2.string(_modDef2597.GJiSmP);
-          const obj2 = { staticUrl: _modDef12303, animatedUrl: _modDef12304 };
+          const obj2 = { staticUrl: _modDef12242, animatedUrl: _modDef12243 };
           cResult[3] = stringResult;
           cResult[4] = stringResult1;
           cResult[5] = obj2;
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.title = intl.string(_modDef2597.KC9HRW);
           const intl2 = util.intl;
           obj2.description = intl2.string(_modDef2597.GJiSmP);
-          const obj3 = { staticUrl: _modDef12303, animatedUrl: _modDef12304 };
+          const obj3 = { staticUrl: _modDef12242, animatedUrl: _modDef12243 };
           obj2.image = obj3;
           let stringResult;
           if (!stateFromStores) {

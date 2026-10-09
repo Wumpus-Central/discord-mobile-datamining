@@ -5,7 +5,7 @@ import PlatformUtils2 from "../../utils/PlatformUtils.tsx";
 import useToken from "../../design/tokens/native/useToken.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef8380 from "../../../_runtime/metro/08380__.js";
+import _modDef8388 from "../../../_runtime/metro/08388__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -23,15 +23,15 @@ let closure_3 = [
   "accessibilityLabel",
 ];
 const View = fn(17).View;
-let closure_6 = fn(5115).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_6 = fn(5116).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({
   volumerSlider: { flexDirection: "row", alignItems: "center" },
   leftIcon: { marginRight: num },
@@ -91,16 +91,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === tmp8) {
         if (cResult[12] !== tmp15.leftIcon) {
           const obj2 = { style: tmp15.leftIcon };
-          const tmp20 = closure_7(tmp(10869).VoiceXIcon, obj2);
+          const tmp20 = closure_7(tmp(11042).VoiceXIcon, obj2);
           cResult[12] = tmp15.leftIcon;
           cResult[13] = tmp20;
         }
         if (cResult[14] !== tmp10) {
-          const result = tmp(5249).amplitudeToPerceptual(tmp10);
+          const result = tmp(5250).amplitudeToPerceptual(tmp10);
           cResult[14] = tmp10;
           cResult[15] = result;
           let tmp21 = result;
-          const tmpResult2 = tmp(5249);
+          const tmpResult2 = tmp(5250);
         } else {
           tmp21 = cResult[15];
         }
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onValueChange: L,
           onResponderGrant: tmp26,
         };
-        const tmp31 = closure_7(_modDef8380, obj3);
+        const tmp31 = closure_7(_modDef8388, obj3);
         cResult[22] = PRIMARY_400;
         cResult[23] = tmp9;
         cResult[24] = minTrackColor;
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj = useToken;
       const obj3 = { style: tmp4.leftIcon };
-      const tmp7Result = _modDef8380;
+      const tmp7Result = _modDef8388;
       obj4.value = PerceptualVolumeUtils.amplitudeToPerceptual(value);
       obj4.maximumValue = maxVolume;
       obj4.minimumTrackTintColor = minTrackColor;

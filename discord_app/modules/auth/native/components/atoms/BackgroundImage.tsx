@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/atoms/BackgroundImage.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../design/shared.tsx";
-import _modDef6650 from "../../../../../../_runtime/metro/06650__.js";
+import _modDef6657 from "../../../../../../_runtime/metro/06657__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -47,10 +47,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = obj4;
       } else {
         if (tmpResult.isThemeDark(tmp6)) {
-          tmp2 = 6649;
+          tmp2 = 6656;
           let tmp5Result = importDefault(tmp2);
         } else {
-          tmp5Result = _modDef6650;
+          tmp5Result = _modDef6657;
         }
         tmpResult = shared;
       }
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      const tmp = flag(4991)();
+      const tmp = flag(4992)();
       dependencyMap = tmp;
       let items = [backgroundImageSource, flag, tmp];
       let obj = { style: absoluteFill.absoluteFill, children: null };
@@ -76,10 +76,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             let tmp2 = dependencyMap;
             if (obj2.isThemeDark(closure_2)) {
-              tmp2 = 6649;
+              tmp2 = 6656;
               let tmp4Result = importDefault(tmp2);
             } else {
-              tmp4Result = _modDef6650;
+              tmp4Result = _modDef6657;
             }
             obj2 = shared;
           }

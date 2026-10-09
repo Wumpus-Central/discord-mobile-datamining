@@ -1,7 +1,7 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef9437 from "../../../../../_runtime/metro/09437__.js";
+import _modDef9475 from "../../../../../_runtime/metro/09475__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,8 +15,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(2);
       style = style.style;
       if (cResult[0] !== style) {
-        const obj2 = { source: _modDef9437, style, resizeMode: "contain" };
-        const tmp7 = jsx(FastImageDefault, { source: _modDef9437, style, resizeMode: "contain" });
+        const obj2 = { source: _modDef9475, style, resizeMode: "contain" };
+        const tmp7 = jsx(FastImageDefault, { source: _modDef9475, style, resizeMode: "contain" });
         cResult[0] = style;
         cResult[1] = tmp7;
         let tmp3 = tmp7;
@@ -26,6 +26,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return tmp3;
     }
   : function NitroWheel(style) {
-      const obj = { source: _modDef9437, style: style.style, resizeMode: "contain" };
-      return jsx(FastImageDefault, { source: _modDef9437, style: style.style, resizeMode: "contain" });
+      const obj = { source: _modDef9475, style: style.style, resizeMode: "contain" };
+      return jsx(FastImageDefault, { source: _modDef9475, style: style.style, resizeMode: "contain" });
     };

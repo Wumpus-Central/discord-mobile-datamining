@@ -9,8 +9,8 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
-const PlatformUtils = fn(1381);
+const createStyles = fn(5091);
+const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 16;
@@ -23,10 +23,10 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       emojiNode = emojiNode.emojiNode;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const v4Result = tmp(1278).v4();
+        const v4Result = tmp(1279).v4();
         cResult[0] = v4Result;
         nonce = v4Result;
-        const tmpResult = tmp(1278);
+        const tmpResult = tmp(1279);
       } else {
         nonce = cResult[0];
       }
@@ -85,7 +85,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp11;
       }
       const obj3 = { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> };
-      tmp11 = jsx(nonce(6829).BottomSheet, {
+      tmp11 = jsx(nonce(6836).BottomSheet, {
         startExpanded: true,
         onDismiss: S,
         children: <View style={tmp4.contentWrapper}>{tmp8}</View>,
@@ -145,10 +145,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const v4Result = tmp(1278).v4();
+          const v4Result = tmp(1279).v4();
           cResult[2] = v4Result;
           let tmp8 = v4Result;
-          const tmpResult2 = tmp(1278);
+          const tmpResult2 = tmp(1279);
         } else {
           tmp8 = cResult[2];
         }
@@ -180,7 +180,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { startExpanded: true, onDismiss: tmp10, children: null };
                   const obj4 = { style: tmp4.contentWrapper, children: tmp11 };
                   obj3.children = <View style={tmp4.contentWrapper}>{tmp11}</View>;
-                  const tmp18 = jsx(tmp(6829).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
+                  const tmp18 = jsx(tmp(6836).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
                   cResult[11] = tmp4.contentWrapper;
                   cResult[12] = tmp11;
                   cResult[13] = tmp18;
@@ -227,7 +227,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (emojiAndSource.isFetching) {
         return null;
       } else {
-        const v4Result = tmp2(1278).v4();
+        const v4Result = tmp2(1279).v4();
         _require = v4Result;
         const obj3 = {
           startExpanded: true,
@@ -256,7 +256,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           nonce: v4Result,
         });
         obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-        return jsx(tmp2(6829).BottomSheet, {
+        return jsx(tmp2(6836).BottomSheet, {
           startExpanded: true,
           onDismiss() {
             AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });

@@ -5,9 +5,9 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const InputModes = fn(5115).InputModes;
+const InputModes = fn(5116).InputModes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useInputModeSettingTrailing() {
       let Q8gkVL = dependencyMap;
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(7966).MobileUserSettings.VOICE,
+  parent: fn(7974).MobileUserSettings.VOICE,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useInputModeSettingTrailing() {
         let Q8gkVL = dependencyMap;
@@ -102,7 +102,7 @@ const pressable = SettingBuilders.createPressable({
         }
         return stringResult;
       },
-  onPress: fn(10865).handleInputModePress,
+  onPress: fn(11038).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

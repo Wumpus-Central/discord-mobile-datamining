@@ -22,7 +22,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCountFormatter() {
       const cResult = setting(576).c(2);
       let obj = setting(576);
-      setting = setting(2040).SearchResultExactCountEnabled.useSetting();
+      setting = setting(2041).SearchResultExactCountEnabled.useSetting();
       if (cResult[0] !== setting) {
         const fn = function t(toLocaleString) {
           if (!setting) {
@@ -43,7 +43,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp3;
     }
   : function useCountFormatter() {
-      setting = setting(2040).SearchResultExactCountEnabled.useSetting();
+      setting = setting(2041).SearchResultExactCountEnabled.useSetting();
       const items = [setting];
       return noop.useCallback((toLocaleString) => {
         if (!setting) {

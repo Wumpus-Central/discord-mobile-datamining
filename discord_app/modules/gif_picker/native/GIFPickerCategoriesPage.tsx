@@ -10,7 +10,7 @@ import GIFPickerViewStore from "../../../stores/views/GIFPickerViewStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = {
     item: {
@@ -48,9 +48,9 @@ export default noop.memo(
         columns = columns.columns;
         ({ favoritesCategory, inActionSheet, onSelectCategory } = columns);
         if (columns > 2) {
-          let GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(9690).GIF_PICKER_ITEM_ESIMTATED_HEIGHT;
+          let GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(9709).GIF_PICKER_ITEM_ESIMTATED_HEIGHT;
         } else {
-          GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(9690).GIF_PICKER_ITEM_ESIMTATED_HEIGHT / 2;
+          GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(9709).GIF_PICKER_ITEM_ESIMTATED_HEIGHT / 2;
         }
         const tmp4 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
         dependencyMap = tmp4;
@@ -61,7 +61,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const safeAreaBottomKeyboardAware = onSelectCategory(9683)(first).safeAreaBottomKeyboardAware;
+        const safeAreaBottomKeyboardAware = onSelectCategory(9702)(first).safeAreaBottomKeyboardAware;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [GIFPickerViewStore];
           class S {
@@ -178,7 +178,7 @@ export default noop.memo(
                       if (cResult[21] === tmp4.placeholder) {
                         let tmp24 = cResult[22];
                       }
-                      const isPortalKeyboardInModal = tmp10(9461).useIsPortalKeyboardInModal();
+                      const isPortalKeyboardInModal = tmp10(9499).useIsPortalKeyboardInModal();
                       class S {
                         constructor() {
                           obj = { trendingCategories: closure_1_5.getTrendingCategories() };
@@ -276,7 +276,7 @@ export default noop.memo(
                               renderItem: tmp24,
                               accessibilityLabel: tmp30,
                             };
-                            const tmp34 = jsx(onSelectCategory(6735), {
+                            const tmp34 = jsx(onSelectCategory(6742), {
                               estimatedListSize: tmp29,
                               inActionSheet,
                               preventNativeModalDismiss: isPortalKeyboardInModal,
@@ -301,7 +301,7 @@ export default noop.memo(
                       }
                       const obj4 = { sectionItem: null };
                       const obj5 = {
-                        type: tmp10(6742).FastestListPropsPlaceholderType.SHAPE,
+                        type: tmp10(6749).FastestListPropsPlaceholderType.SHAPE,
                         shape: "rect",
                         shapeCount: null,
                         spaceGap: null,
@@ -346,7 +346,7 @@ export default noop.memo(
                           return jsx(View, obj4);
                         }
                       }
-                      obj5.spaceGap = tmp10(9690).GIF_PICKER_GUTTER_SPACING;
+                      obj5.spaceGap = tmp10(9709).GIF_PICKER_GUTTER_SPACING;
                       obj5.borderRadius = tmp4.placeholder.borderRadius;
                       obj5.colorHex = tmp4.placeholder.backgroundColor;
                       obj5.height = tmp26;
@@ -357,7 +357,7 @@ export default noop.memo(
                       cResult[26] = tmp26;
                       cResult[27] = obj4;
                       tmp27 = obj4;
-                      const tmp10Result = tmp10(9461);
+                      const tmp10Result = tmp10(9499);
                     }
                   }
                 }
@@ -427,13 +427,13 @@ export default noop.memo(
             }
           }
           let num3 = 0;
-          if (0 < Math.max(arr2.length, tmp(9690).DEFAULT_CATEGORY_ROWS)) {
+          if (0 < Math.max(arr2.length, tmp(9709).DEFAULT_CATEGORY_ROWS)) {
             do {
               let arr = items3.push(arr2.slice(num3, num3 + columns));
               num3 = num3 + columns;
               let _Math = Math;
               tmp = columns;
-              bound = Math.max(arr2.length, columns(9690).DEFAULT_CATEGORY_ROWS);
+              bound = Math.max(arr2.length, columns(9709).DEFAULT_CATEGORY_ROWS);
             } while (num3 < bound);
           }
           cResult[6] = arr2;

@@ -12,7 +12,7 @@ let closure_3 = ["color"];
 let closure_4 = ["color"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: null,
   default: null,

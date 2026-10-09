@@ -15,31 +15,27 @@ const require = globalThis.__r;
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(10361);
+const Constants = fn(10348);
 ({
   MODAL_LOCATION_CONTEXT_MOBILE: c10,
   NOFILTR_URL: closure_11,
   THROUGHLINE_URL: closure_12,
   REPORTED_USER_CONFIRMATION_TOAST_KEY: map1,
-  TOAST_CHECKMARK_ICON_COLOR: closure_14,
 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 },
-  toastContainer: null,
   helplineGroup: null,
   textCenter: null,
 };
 let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
-obj2.toastContainer = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
-let obj4 = { paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12 };
 obj2.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
 obj2.textCenter = { textAlign: "center" };
-let closure_17 = createStyles.createStyles(obj2);
+let closure_16 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj5 = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
+let obj4 = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/native/components/TakeActionScreen.tsx",
@@ -47,23 +43,22 @@ let result = size.fileFinishedImporting(
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function TakeActionButtons(senderId) {
-      const cResult = require("c").c(45);
+      const cResult = require("c").c(44);
       senderId = senderId.senderId;
       _require = senderId;
       const channelId = senderId.channelId;
       ({ isReported, setReported } = senderId);
       const trackAnalyticsEvent = senderId.trackAnalyticsEvent;
-      const tmp4 = closure_17();
-      _slicedToArray = tmp4;
+      closure_16();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [closure_8];
+        const items = [RelationshipStore];
         cResult[0] = items;
         let first = items;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== senderId) {
-        const fn = function y() {
+        const fn = function h() {
           return RelationshipStore.isBlocked(closure_0);
         };
         const items1 = [senderId];
@@ -83,9 +78,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult5 = require("useLastChannelMessage");
       const shouldShowHelplineLink = require("useHelpLineVisibility").useShouldShowHelplineLink();
       const tmpResult6 = require("useHelpLineVisibility");
-      [r10052, useState] = useState(false);
-      const tmp12 = _slicedToArray(useState(false), 2);
-      const navigation = require("useNavigation").useNavigation();
+      [r10052, noop] = lastChannelMessage(navigation(false), 2);
+      const tmp12 = lastChannelMessage(navigation(false), 2);
+      navigation = require("useNavigation").useNavigation();
       const tmpResult7 = require("useNavigation");
       const shouldShowThroughlineLink = require("useHelpLineVisibility").useShouldShowThroughlineLink();
       if (cResult[4] === channelId) {
@@ -96,30 +91,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[13] === lastChannelMessage) {
                   if (cResult[14] === senderId) {
                     if (cResult[15] === setReported) {
-                      if (cResult[16] === tmp4.toastContainer) {
-                        if (cResult[17] === trackAnalyticsEvent) {
-                          let tmp17 = cResult[18];
-                        }
-                        closure_8 = tmp17;
-                        class X {
-                          constructor() {
-                            obj = closure_1(closure_2[16]);
-                            obj1 = { location: closure_10 };
-                            unblockUserResult = obj.unblockUser(closure_0, obj1);
-                            obj3 = closure_1(closure_2[17]);
-                            result = obj3.showUnblockSuccessToast(closure_0, channelId);
-                            tmp3 = trackAnalyticsEvent(
-                              closure_0(closure_2[18]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK,
-                            );
-                            return;
-                          }
+                      if (cResult[16] === trackAnalyticsEvent) {
+                        let tmp17 = cResult[17];
+                      }
+                      closure_7 = tmp17;
+                      class H {
+                        constructor() {
+                          obj = closure_1(closure_2[16]);
+                          obj1 = { location: closure_10 };
+                          unblockUserResult = obj.unblockUser(closure_0, obj1);
+                          obj3 = closure_1(closure_2[17]);
+                          result = obj3.showUnblockSuccessToast(closure_0, channelId);
+                          tmp3 = trackAnalyticsEvent(
+                            closure_0(closure_2[18]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK,
+                          );
+                          return;
                         }
                       }
                     }
                   }
                 }
               }
-              class X {
+              class H {
                 constructor() {
                   obj = closure_1(closure_2[16]);
                   obj1 = { location: closure_10 };
@@ -152,10 +145,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         throw value;
                       } else if (arg0 === 2) {
                         c2 = 3;
-                        let obj4 = { value, done: true };
+                        const obj4 = { value, done: true };
                         return obj4;
                       } else if (null != user.getUser(tmp4)) {
-                        useState(true);
+                        noop(true);
                         c1 = 1;
                         c2 = 1;
                         const obj5 = {
@@ -163,34 +156,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             lastChannelMessage,
                             () => {
                               dependencyMap(true);
-                              const designSystemsNotificationComponents =
-                                closure_0(4772).getDesignSystemsNotificationComponents("TakeActionScreen");
-                              const obj2 = c1(4766);
-                              if (designSystemsNotificationComponents) {
-                                const obj3 = { text: null, variant: "success" };
-                                const intl2 = closure_0(1126).intl;
-                                obj3.text = intl2.string(closure_0(1126).t.gn2c6X);
-                                obj2.openMana(key, obj3);
-                              } else {
-                                const obj4 = {
-                                  key,
-                                  content: null,
-                                  IconComponent: null,
-                                  iconColor: null,
-                                  containerStyle: null,
-                                };
-                                const intl = closure_0(1126).intl;
-                                obj4.content = intl.string(closure_0(1126).t.gn2c6X);
-                                obj4.IconComponent = closure_0(4992).CircleCheckIcon;
-                                obj4.iconColor = iconColor;
-                                obj4.containerStyle = toastContainer.toastContainer;
-                                obj2.open(obj4);
-                              }
-                              const obj = closure_0(4772);
+                              const obj2 = { text: null, variant: "success" };
+                              const intl = closure_0(1126).intl;
+                              obj2.text = intl.string(closure_0(1126).t.gn2c6X);
+                              c1(4768).openMana(closure_2_13, obj2);
                             },
                             () => {
                               const intl = closure_1_0(1126).intl;
-                              closure_1_0(4765).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                              closure_1_0(4767).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                             },
                           ),
                           done: false,
@@ -203,10 +176,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       c2 = 3;
                       throw value;
                     } else if (arg0 !== 2) {
-                      useState(false);
+                      noop(false);
                       const result = channelId(setReported[17]).showReportSuccessToast(tmp4, c1);
                       trackAnalyticsEvent(tmp4(setReported[18]).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-                      let obj = channelId(setReported[17]);
+                      const obj = channelId(setReported[17]);
                     }
                     c2 = 3;
                     const obj6 = { value, done: true };
@@ -231,13 +204,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[13] = lastChannelMessage;
               cResult[14] = senderId;
               cResult[15] = setReported;
-              cResult[16] = tmp4.toastContainer;
-              cResult[17] = trackAnalyticsEvent;
-              cResult[18] = t6;
+              cResult[16] = trackAnalyticsEvent;
+              cResult[17] = t6;
               tmp17 = t6;
             }
           }
-          class X {
+          class H {
             constructor() {
               obj = closure_1(closure_2[16]);
               obj1 = { location: closure_10 };
@@ -251,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = channelId;
           cResult[9] = senderId;
           cResult[10] = trackAnalyticsEvent;
-          cResult[11] = X;
+          cResult[11] = H;
         }
       }
       const fn2 = function w() {
@@ -265,17 +237,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = senderId;
       cResult[6] = trackAnalyticsEvent;
       cResult[7] = fn2;
+      const tmpResult8 = require("useHelpLineVisibility");
     }
   : function TakeActionButtons(senderId) {
       senderId = senderId.senderId;
       const channelId = senderId.channelId;
       ({ isReported, setReported } = senderId);
       const trackAnalyticsEvent = senderId.trackAnalyticsEvent;
+      noop = undefined;
       useState = undefined;
-      closure_8 = undefined;
-      const tmp = closure_17();
-      _slicedToArray = tmp;
-      const items = [closure_8];
+      const tmp = closure_16();
+      const items = [RelationshipStore];
       const items1 = [senderId];
       const stateFromStores = senderId(setReported[12]).useStateFromStores(
         items,
@@ -286,14 +258,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const lastChannelMessage = senderId(setReported[13]).useLastChannelMessage(channelId);
       let obj2 = senderId(setReported[13]);
       const shouldShowHelplineLink = senderId(setReported[14]).useShouldShowHelplineLink();
-      let obj3 = senderId(setReported[14]);
-      [tmp8, c6] = useState(false);
-      const tmp7 = _slicedToArray(useState(false), 2);
-      closure_7 = senderId(setReported[15]).useNavigation();
+      const obj3 = senderId(setReported[14]);
+      [tmp8, c5] = lastChannelMessage(useState(false), 2);
+      const tmp7 = lastChannelMessage(useState(false), 2);
+      useState = senderId(setReported[15]).useNavigation();
       let obj4 = senderId(setReported[15]);
       const items2 = [senderId, channelId, trackAnalyticsEvent];
       const shouldShowThroughlineLink = senderId(setReported[14]).useShouldShowThroughlineLink();
-      let callback = lastChannelMessage.useCallback(() => {
+      let callback = noop.useCallback(() => {
         const obj2 = { location: _location };
         RelationshipActionCreatorsDefault.blockUser(senderId, { location: _location }).then(() => {
           const result = channelId(setReported[17]).showBlockSuccessToast(senderId, closure_1_1);
@@ -301,14 +273,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK);
       }, items2);
       const items3 = [senderId, channelId, trackAnalyticsEvent];
-      const callback1 = lastChannelMessage.useCallback(() => {
+      const callback1 = noop.useCallback(() => {
         RelationshipActionCreatorsDefault.unblockUser(senderId, { location: _location });
         const obj2 = { location: _location };
         const result = SafetyToastsActionCreatorsDefault.showUnblockSuccessToast(senderId, channelId);
         trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
       }, items3);
-      const items4 = [senderId, channelId, tmp.toastContainer, setReported, lastChannelMessage, trackAnalyticsEvent];
-      closure_8 = lastChannelMessage.useCallback(
+      const items4 = [senderId, channelId, setReported, lastChannelMessage, trackAnalyticsEvent];
+      closure_7 = noop.useCallback(
         trackAnalyticsEvent(function* () {
           if (dependencyMap === 2) {
             dependencyMap = 3;
@@ -331,45 +303,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   throw value;
                 } else if (arg0 === 2) {
                   dependencyMap = 3;
-                  let obj4 = { value, done: true };
+                  const obj4 = { value, done: true };
                   return obj4;
                 } else if (null != user.getUser(senderId)) {
                   _undefined(true);
                   v1 = 1;
                   dependencyMap = 1;
                   const obj5 = {
-                    value: tmp4(7695).submitReportForInappropriateConversationSafetyAlert(
+                    value: tmp4(7704).submitReportForInappropriateConversationSafetyAlert(
                       lastChannelMessage,
                       () => {
                         dependencyMap(true);
-                        const designSystemsNotificationComponents =
-                          closure_0(4772).getDesignSystemsNotificationComponents("TakeActionScreen");
-                        const obj2 = c1(4766);
-                        if (designSystemsNotificationComponents) {
-                          const obj3 = { text: null, variant: "success" };
-                          const intl2 = closure_0(1126).intl;
-                          obj3.text = intl2.string(closure_0(1126).t.gn2c6X);
-                          obj2.openMana(key, obj3);
-                        } else {
-                          const obj4 = {
-                            key,
-                            content: null,
-                            IconComponent: null,
-                            iconColor: null,
-                            containerStyle: null,
-                          };
-                          const intl = closure_0(1126).intl;
-                          obj4.content = intl.string(closure_0(1126).t.gn2c6X);
-                          obj4.IconComponent = closure_0(4992).CircleCheckIcon;
-                          obj4.iconColor = iconColor;
-                          obj4.containerStyle = toastContainer.toastContainer;
-                          obj2.open(obj4);
-                        }
-                        const obj = closure_0(4772);
+                        const obj2 = { text: null, variant: "success" };
+                        const intl = closure_0(1126).intl;
+                        obj2.text = intl.string(closure_0(1126).t.gn2c6X);
+                        c1(4768).openMana(closure_2_13, obj2);
                       },
                       () => {
                         const intl = closure_1_0(1126).intl;
-                        closure_1_0(4765).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                        closure_1_0(4767).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                       },
                     ),
                     done: false,
@@ -382,10 +334,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 dependencyMap = 3;
                 throw value;
               } else if (arg0 !== 2) {
-                closure_128_6(false);
-                const result = v1(7014).showReportSuccessToast(closure_128_0, closure_128_1);
-                closure_128_3(tmp4(10374).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-                let obj = v1(7014);
+                closure_128_5(false);
+                const result = v1(7017).showReportSuccessToast(closure_128_0, closure_128_1);
+                closure_128_3(tmp4(10361).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+                const obj = v1(7017);
               }
               dependencyMap = 3;
               const obj6 = { value, done: true };
@@ -402,14 +354,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         variant: "primary",
         size: "lg",
-        icon: channelId(setReported[26]),
+        icon: channelId(setReported[24]),
         text: null,
         grow: true,
         onPress: null,
       };
-      let intl = senderId(setReported[22]).intl;
+      let intl = senderId(setReported[21]).intl;
       const string = intl.string;
-      const t = senderId(setReported[22]).t;
+      const t = senderId(setReported[21]).t;
       if (stateFromStores) {
         let stringResult = string(t.Hro40y);
       } else {
@@ -420,20 +372,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         callback = callback1;
       }
       obj7.onPress = callback;
-      const items5 = [closure_15(senderId(setReported[25]).Button, obj7), ,];
+      const items5 = [closure_14(senderId(setReported[23]).Button, obj7), ,];
       const obj8 = {
         variant: "secondary",
         size: "lg",
-        icon: channelId(setReported[27]),
+        icon: channelId(setReported[25]),
         loading: tmp8,
         disabled: isReported,
         text: null,
         grow: true,
         onPress: null,
       };
-      let intl2 = tmp2(setReported[22]).intl;
+      const intl2 = tmp2(setReported[21]).intl;
       const string2 = intl2.string;
-      const t2 = tmp2(setReported[22]).t;
+      const t2 = tmp2(setReported[21]).t;
       if (isReported) {
         let string2Result = string2(t2.QvwOJ6);
       } else {
@@ -441,50 +393,50 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj8.text = string2Result;
       obj8.onPress = function onPress() {
-        closure_8();
+        closure_7();
       };
-      items5[1] = closure_15(senderId(setReported[25]).Button, obj8);
+      items5[1] = closure_14(senderId(setReported[23]).Button, obj8);
       if (shouldShowHelplineLink) {
         const obj9 = {
           variant: "secondary",
           size: "lg",
-          icon: tmp15(setReported[28]),
+          icon: tmp15(setReported[26]),
           text: null,
           grow: true,
           onPress: null,
         };
-        const intl6 = tmp2(setReported[22]).intl;
-        obj9.text = intl6.string(tmp2(setReported[22]).t.sZf6cz);
+        const intl6 = tmp2(setReported[21]).intl;
+        obj9.text = intl6.string(tmp2(setReported[21]).t.sZf6cz);
         obj9.onPress = function onPress() {
-          closure_7.push("CRISIS_TEXT_LINE");
+          closure_6.push("CRISIS_TEXT_LINE");
           trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL);
         };
-        let tmp12Result = closure_15(tmp2(setReported[25]).Button, obj9);
+        let tmp12Result = closure_14(tmp2(setReported[23]).Button, obj9);
       } else {
         const obj10 = { style: tmp.helplineGroup, children: null };
-        const Button = tmp2(setReported[25]).Button;
+        const Button = tmp2(setReported[23]).Button;
         const obj11 = {
           variant: "secondary",
           size: "lg",
-          icon: tmp15(setReported[29]),
+          icon: tmp15(setReported[27]),
           text: null,
           grow: true,
           onPress: null,
         };
-        const intl3 = tmp2(setReported[22]).intl;
+        const intl3 = tmp2(setReported[21]).intl;
         const string3 = intl3.string;
-        const t3 = tmp2(setReported[22]).t;
+        const t3 = tmp2(setReported[21]).t;
         if (shouldShowThroughlineLink) {
           obj11.text = string3(t3.HQ2nKl);
           obj11.onPress = function onPress() {
             LinkingDefault.openURL(__initData);
             trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_THROUGHLINE);
           };
-          const items6 = [closure_15(Button, obj11)];
+          const items6 = [closure_14(Button, obj11)];
           const obj12 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
-          const intl5 = tmp2(setReported[22]).intl;
-          obj12.children = intl5.string(tmp2(setReported[22]).t["PMeb/r"]);
-          items6[1] = closure_15(tmp2(setReported[31]).Text, obj12);
+          const intl5 = tmp2(setReported[21]).intl;
+          obj12.children = intl5.string(tmp2(setReported[21]).t["PMeb/r"]);
+          items6[1] = closure_14(tmp2(setReported[29]).Text, obj12);
           obj10.children = items6;
           let tmp18 = obj10;
         } else {
@@ -493,17 +445,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             LinkingDefault.openURL(closure_2_11);
             trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_NO_FILTR);
           };
-          const items7 = [closure_15(Button, obj11)];
+          const items7 = [closure_14(Button, obj11)];
           const obj13 = { variant: "text-xs/medium", color: "text-default", style: tmp.textCenter, children: null };
-          const intl4 = tmp2(setReported[22]).intl;
-          obj13.children = intl4.string(tmp2(setReported[22]).t.XNwhxC);
-          items7[1] = closure_15(tmp2(setReported[31]).Text, obj13);
+          const intl4 = tmp2(setReported[21]).intl;
+          obj13.children = intl4.string(tmp2(setReported[21]).t.XNwhxC);
+          items7[1] = closure_14(tmp2(setReported[29]).Text, obj13);
           obj10.children = items7;
           tmp18 = obj10;
         }
-        tmp12Result = closure_16(tmp13, tmp18);
+        tmp12Result = closure_15(tmp13, tmp18);
       }
       items5[2] = tmp12Result;
       obj6.children = items5;
-      return closure_16(closure_7, obj6);
+      return closure_15(closure_7, obj6);
     };

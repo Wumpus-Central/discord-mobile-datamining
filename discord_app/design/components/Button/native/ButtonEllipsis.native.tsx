@@ -10,9 +10,9 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const ELLIPSIS_APPEAR_TIMING = { duration: 500, easing: null };
-const Easing = fn(4810).Easing;
-ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4810).Easing.quad);
-const createStyles = fn(5090);
+const Easing = fn(4811).Easing;
+ELLIPSIS_APPEAR_TIMING.easing = Easing.inOut(fn(4811).Easing.quad);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles((arg0, arg1, backgroundColor) => {
   if ("lg" === arg0) {
     let num = 4;
@@ -53,9 +53,9 @@ function withEllipsisAnimation(arg0, value) {
 }
 withEllipsisAnimation.__closure = {
   ELLIPSIS_APPEAR_DURATION: 500,
-  withDelay: fn(4810).withDelay,
-  withRepeat: fn(4810).withRepeat,
-  withTiming: fn(5091).withTiming,
+  withDelay: fn(4811).withDelay,
+  withRepeat: fn(4811).withRepeat,
+  withTiming: fn(5092).withTiming,
   ELLIPSIS_APPEAR_TIMING,
 };
 withEllipsisAnimation.__workletHash = 2181731162311;
@@ -217,9 +217,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj3 = {
   ELLIPSIS_APPEAR_DURATION: 500,
-  withDelay: fn(4810).withDelay,
-  withRepeat: fn(4810).withRepeat,
-  withTiming: fn(5091).withTiming,
+  withDelay: fn(4811).withDelay,
+  withRepeat: fn(4811).withRepeat,
+  withTiming: fn(5092).withTiming,
   ELLIPSIS_APPEAR_TIMING,
 };
 const size = fn(2);

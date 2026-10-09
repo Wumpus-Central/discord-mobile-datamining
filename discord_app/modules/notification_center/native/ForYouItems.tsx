@@ -6,7 +6,7 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import Link from "../../../../_runtime/01503_Link.js";
+import Link from "../../../../_runtime/01504_Link.js";
 import parseURLDefault from "../../../utils/native/parseURL.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import CustomMarkupAll from "../../markup/CustomMarkup.native.tsx";
@@ -34,7 +34,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import NotificationCenterStore from "../NotificationCenterStore.tsx";
 
-const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16659);
+const ForYouMentionPlaceholder2 = ForYouMentionPlaceholder(16783);
 require = fn;
 function getMessageContentPreviewV2(item) {
   item = item.item;
@@ -157,30 +157,30 @@ const Constants = fn(1085);
   MessageTypes: closure_18,
   EMPTY_STRING_SNOWFLAKE_ID: closure_19,
 } = Constants);
-const NotificationTypes = fn(5939).NotificationTypes;
+const NotificationTypes = fn(5940).NotificationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22 } = jsxProd);
 const viewabilityConfig = { waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 1000 };
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj = { strong: null };
 let obj3 = {};
-const merged = Object.assign(fn(5086).TextStyleSheet["text-md/medium"]);
+const merged = Object.assign(fn(5087).TextStyleSheet["text-md/medium"]);
 obj3.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj.strong = obj3;
 let closure_24 = createStyles.createStyles(obj);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj4 = { strong: null };
 let obj6 = {};
-const merged1 = Object.assign(fn(5086).TextStyleSheet["text-md/medium"]);
+const merged1 = Object.assign(fn(5087).TextStyleSheet["text-md/medium"]);
 obj6.color = nativeDefault.colors.TEXT_MUTED;
 obj4.strong = obj6;
 let closure_25 = createStyles.createStyles(obj4);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj7 = {
   mention: { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND },
 };
 let closure_26 = createStyles.createStyles(obj7);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj10 = { mention: null };
 let obj9 = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: nativeDefault.colors.MENTION_BACKGROUND };
 obj10.mention = { color: nativeDefault.colors.MENTION_FOREGROUND, backgroundColor: "transparent" };
@@ -195,7 +195,7 @@ function useMarkupReadV2() {}
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 function useMarkupUnreadV2() {}
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj13 = {
   container: { flex: 1 },
   row: null,
@@ -446,7 +446,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       ({ compactMode, roleStyle } = item);
       const tmp3 = closure_32();
       const obj = item(576);
-      const notifCenterV2MessagePreviewParser = message_channel_id(5395).getNotifCenterV2MessagePreviewParser(
+      const notifCenterV2MessagePreviewParser = message_channel_id(5396).getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
         roleStyle,
@@ -473,7 +473,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = message_channel_id(5395);
+      const obj2 = message_channel_id(5396);
       const stateFromStores = item(504).useStateFromStores(first, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [ChannelStore];
@@ -525,7 +525,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp23 = cResult[11];
         }
-        const Text = tmp(5086).Text;
+        const Text = tmp(5087).Text;
         const tmp26 = acked ? tmp3.messagePreviewTextV2Acked : tmp3.messagePreviewTextV2NotAcked;
         let prop;
         if (isSystemMessage) {
@@ -557,7 +557,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             str = "text-muted";
           }
           const obj5 = { textColor: str };
-          const result = tmp(8114).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
+          const result = tmp(8122).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj4, obj5);
           if (null == iconType) {
             if (cResult[15] === Text) {
               if (cResult[16] === tmp28) {
@@ -604,7 +604,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj8 = { style: tmp3.messagePreviewIconV2Container, children: null };
             if (constants4.ATTACHMENT === iconType) {
-              let tmp35 = guild_id(11701);
+              let tmp35 = guild_id(11637);
               const obj9 = { source: tmp35, size: tmp(1200).IconSizes.SMALL, style: null };
               messagePreviewIconV2 = tmp3.messagePreviewIconV2;
               obj9.style = messagePreviewIconV2;
@@ -613,12 +613,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             } else if (constants4.STICKER !== iconType) {
               tmp35 = null;
               if (constants4.VOICE_MESSAGE === iconType) {
-                tmp35 = guild_id(7692);
+                tmp35 = guild_id(7701);
               }
             }
-            tmp35 = guild_id(9748);
+            tmp35 = guild_id(9767);
           }
-          const tmpResult6 = tmp(8114);
+          const tmpResult6 = tmp(8122);
         }
         const items5 = [tmp26, prop];
         cResult[12] = tmp26;
@@ -671,7 +671,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       ({ compactMode, roleStyle } = item);
       let messagePreviewIconV2 = closure_32();
       let SMALL = dependencyMap;
-      const notifCenterV2MessagePreviewParser = message_channel_id(5395).getNotifCenterV2MessagePreviewParser(
+      const notifCenterV2MessagePreviewParser = message_channel_id(5396).getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
         roleStyle,
@@ -681,7 +681,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = item.guild_id;
       message_channel_id = item.message_channel_id;
       ({ content, isSystemMessage } = tmp2);
-      const obj = message_channel_id(5395);
+      const obj = message_channel_id(5396);
       let items = [GuildStore];
       const stateFromStores = item(504).useStateFromStores(items, () => GuildStore.getGuild(guild_id));
       const obj2 = item(504);
@@ -746,18 +746,18 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         str = "text-muted";
       }
       const items5 = [
-        item(8114).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
+        item(8122).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj8, { textColor: str }),
       ];
       if (null == iconType) {
         items5[1] = tmp12;
         obj7.children = items5;
-        items3[1] = closure_22(item(5086).Text, obj7);
+        items3[1] = closure_22(item(5087).Text, obj7);
         obj5.children = items3;
         return closure_22(closure_7, obj5);
       } else {
         const obj9 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
         if (constants4.ATTACHMENT === iconType) {
-          let tmp15 = guild_id(11701);
+          let tmp15 = guild_id(11637);
           const obj10 = { source: tmp15, size: null, style: null };
           SMALL = tmp3(1200).IconSizes.SMALL;
           obj10.size = SMALL;
@@ -768,12 +768,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (constants4.STICKER !== iconType) {
           tmp15 = null;
           if (constants4.VOICE_MESSAGE === iconType) {
-            tmp15 = guild_id(7692);
+            tmp15 = guild_id(7701);
           }
         }
-        tmp15 = guild_id(9748);
+        tmp15 = guild_id(9767);
       }
-      const tmp3Result = item(8114);
+      const tmp3Result = item(8122);
     };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
@@ -970,15 +970,15 @@ let closure_39 = noop.memo(function ForYouRowWrapped(item) {
       obj3.icon = tmp6(notificationCenterItemAcked[44]);
       obj3.IconComponent = tmp2(notificationCenterItemAcked[45]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16656).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16780).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj7 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };
           const intl = tmp3(1126).intl;
           obj7.content = intl.string(tmp3(1126).t.WDxhvB);
-          rowIndex(4766).open(obj7);
+          rowIndex(4768).open(obj7);
           c4 = 3;
-          rowIndex(4766);
+          rowIndex(4768);
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;

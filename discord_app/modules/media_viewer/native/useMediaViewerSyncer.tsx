@@ -824,7 +824,7 @@ function buildThumbnailScrollPositions(sources) {
   }
   return items;
 }
-const Constants = fn(8394);
+const Constants = fn(8402);
 ({
   THUMBNAIL_MARGIN: hasOwnProperty,
   THUMBNAIL_HEIGHT: metroRequire,
@@ -832,7 +832,7 @@ const Constants = fn(8394);
   THUMBNAIL_MIN_WIDTH: closure_8,
   THUMBNAIL_WIDTH_MARGIN: closure_9,
 } = Constants);
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let closure_10 = PlatformUtils.isAndroid();
 let closure_11 = {
   code: "function useMediaViewerSyncerTsx1(){const{thumbnailsScrolling,SCROLLING_DRAG,swipeSource}=this.__closure;thumbnailsScrolling.set(thumbnailsScrolling.get()|SCROLLING_DRAG);swipeSource.set('thumbnails');}",

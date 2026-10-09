@@ -2,6 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import CircleWithCutoutUtils from "../../../voice_panel/native/shared/CircleWithCutoutUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -13,18 +14,17 @@ require = fn;
 let closure_3 = ["isActive", "disableTint", "showBadge", "isSmallSize", "backgroundColor", "tintColor"];
 let closure_4 = ["isSmallSize"];
 let closure_5 = ["notifications", "isMentioned"];
-get_ActivityIndicator = fn(17);
-({ Image: closure_8, View: closure_9 } = get_ActivityIndicator);
-const resetFocusTimer = fn(10333).resetFocusTimer;
+const View = fn(17).View;
+const resetFocusTimer = fn(10320).resetFocusTimer;
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const ColorUtils = fn(4927);
-let closure_13 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
-let c14 = 45;
-let closure_15 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const ColorUtils = fn(4928);
+let closure_12 = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
+let c13 = 45;
+let closure_14 = Object.freeze({ buttonRadius: 28, badgeRadius: 6, cutoutInset: 3 });
 const frozen = Object.freeze({ buttonRadius: 24, badgeRadius: 4, cutoutInset: 2 });
-let closure_17 = 24 + 2 * frozen.buttonRadius * 5 + 96;
-const createStyles = fn(5090);
+let closure_16 = 24 + 2 * frozen.buttonRadius * 5 + 96;
+const createStyles = fn(5091);
 let obj3 = {
   buttonContainer: { position: "absolute" },
   iconContainer: { position: "absolute", justifyContent: "center", alignItems: "center" },
@@ -52,9 +52,9 @@ obj3.notificationText = { lineHeight: 16 };
 obj3.notificationAreaMentioned = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 let obj4 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj3.notificationAreaUnread = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
-let closure_18 = createStyles.createStyles(obj3);
+let closure_17 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
-let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ActionButton(arg0) {
       const cResult = onPress(576).c(52);
       ({ appearsDisabled, backgroundColor, imageStyle, onPress } = arg0);
@@ -69,15 +69,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         lottieComponentColor,
         IconComponent,
       } = arg0);
-      const tmp7 = closure_18();
+      const tmp7 = closure_17();
       let num = 12;
       if (undefined !== isSmallSize && isSmallSize) {
         num = 12;
-        if (tmp9 < closure_17) {
+        if (tmp9 < closure_16) {
           num = 6;
         }
       }
-      const tmp11 = undefined !== isSmallSize && isSmallSize ? frozen : closure_15;
+      const tmp11 = undefined !== isSmallSize && isSmallSize ? frozen : closure_14;
       const result = 2 * tmp11.buttonRadius;
       const result1 = 2 * tmp11.badgeRadius;
       const sum = tmp11.badgeRadius + tmp11.cutoutInset;
@@ -119,7 +119,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp19 = cResult[14];
                 }
                 if (null == backgroundColor) {
-                  backgroundColor = closure_13;
+                  backgroundColor = closure_12;
                 }
                 if (cResult[15] === tmp11.buttonRadius) {
                   if (cResult[16] === sum) {
@@ -146,30 +146,30 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                 if (cResult[29] === source) {
                                   if (cResult[31] === tmp26) {
                                     if (cResult[32] === tmp27) {
-                                      let tmp34 = cResult[33];
+                                      let tmp33 = cResult[33];
                                     }
                                     if (cResult[34] === tmp11.badgeRadius) {
                                       if (cResult[35] === tmp11.buttonRadius) {
                                         if (cResult[36] === result1) {
                                           if (cResult[37] === tmp5) {
                                             if (cResult[38] === tmp7.badge) {
-                                              let tmp38 = cResult[39];
+                                              let tmp37 = cResult[39];
                                             }
                                             if (cResult[40] === children) {
                                               if (cResult[41] === tmp21) {
-                                                if (cResult[42] === tmp34) {
-                                                  if (cResult[43] === tmp38) {
+                                                if (cResult[42] === tmp33) {
+                                                  if (cResult[43] === tmp37) {
                                                     if (cResult[44] === tmp19) {
-                                                      let tmp43 = cResult[45];
+                                                      let tmp42 = cResult[45];
                                                     }
                                                     if (cResult[46] === accessibilityLabel) {
                                                       if (cResult[47] === accessibilityState) {
-                                                        if (cResult[48] === tmp43) {
+                                                        if (cResult[48] === tmp42) {
                                                           if (cResult[49] === tmp15) {
                                                             if (cResult[50] === tmp16) {
-                                                              let tmp47 = cResult[51];
+                                                              let tmp46 = cResult[51];
                                                             }
-                                                            return tmp47;
+                                                            return tmp46;
                                                           }
                                                         }
                                                       }
@@ -181,36 +181,36 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                       onPress: tmp15,
                                                       disabled: false,
                                                       style: tmp16,
-                                                      children: tmp43,
+                                                      children: tmp42,
                                                     };
-                                                    const tmp49 = closure_11(onPress(6189).PressableOpacity, obj3);
+                                                    const tmp48 = closure_10(onPress(6191).PressableOpacity, obj3);
                                                     cResult[46] = accessibilityLabel;
                                                     cResult[47] = accessibilityState;
-                                                    cResult[48] = tmp43;
+                                                    cResult[48] = tmp42;
                                                     cResult[49] = tmp15;
                                                     cResult[50] = tmp16;
-                                                    cResult[51] = tmp49;
-                                                    tmp47 = tmp49;
+                                                    cResult[51] = tmp48;
+                                                    tmp46 = tmp48;
                                                   }
                                                 }
                                               }
                                             }
                                             const obj4 = { style: tmp19, children: null };
-                                            const items = [tmp21, tmp34, tmp38, children];
+                                            const items = [tmp21, tmp33, tmp37, children];
                                             obj4.children = items;
-                                            const tmp46 = closure_12(closure_9, obj4);
+                                            const tmp45 = closure_11(View, obj4);
                                             cResult[40] = children;
                                             cResult[41] = tmp21;
-                                            cResult[42] = tmp34;
-                                            cResult[43] = tmp38;
+                                            cResult[42] = tmp33;
+                                            cResult[43] = tmp37;
                                             cResult[44] = tmp19;
-                                            cResult[45] = tmp46;
-                                            tmp43 = tmp46;
+                                            cResult[45] = tmp45;
+                                            tmp42 = tmp45;
                                           }
                                         }
                                       }
                                     }
-                                    let tmp39 = null;
+                                    let tmp38 = null;
                                     if (tmp5) {
                                       const obj5 = { style: null };
                                       const items1 = [tmp7.badge];
@@ -218,38 +218,38 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                         width: result1,
                                         height: result1,
                                         borderRadius: tmp11.badgeRadius,
-                                        top: onPress(10687).getBadgeTop(
+                                        top: onPress(10833).getBadgeTop(
                                           tmp11.badgeRadius,
                                           tmp11.buttonRadius,
                                           cutoutPositionInDegrees,
                                         ),
                                         left: null,
                                       };
-                                      const tmpResult = onPress(10687);
-                                      size1.left = onPress(10687).getBadgeLeft(
+                                      const tmpResult = onPress(10833);
+                                      size1.left = onPress(10833).getBadgeLeft(
                                         tmp11.badgeRadius,
                                         tmp11.buttonRadius,
                                         cutoutPositionInDegrees,
                                       );
                                       items1[1] = size1;
                                       obj5.style = items1;
-                                      tmp39 = closure_11(closure_9, obj5);
-                                      const tmpResult2 = onPress(10687);
+                                      tmp38 = closure_10(View, obj5);
+                                      const tmpResult2 = onPress(10833);
                                     }
                                     cResult[34] = tmp11.badgeRadius;
                                     cResult[35] = tmp11.buttonRadius;
                                     cResult[36] = result1;
                                     cResult[37] = tmp5;
                                     cResult[38] = tmp7.badge;
-                                    cResult[39] = tmp39;
-                                    tmp38 = tmp39;
+                                    cResult[39] = tmp38;
+                                    tmp37 = tmp38;
                                   }
                                   const obj6 = { style: tmp26, children: cResult[30] };
-                                  const tmp37 = closure_11(closure_9, obj6);
+                                  const tmp36 = closure_10(View, obj6);
                                   cResult[31] = tmp26;
                                   cResult[32] = cResult[30];
-                                  cResult[33] = tmp37;
-                                  tmp34 = tmp37;
+                                  cResult[33] = tmp36;
+                                  tmp33 = tmp36;
                                 }
                               }
                             }
@@ -260,10 +260,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           let cloneElementResult = noop.cloneElement(lottieComponent, obj7);
                         } else if (null != IconComponent) {
                           const obj8 = { style: imageStyle };
-                          cloneElementResult = closure_11(IconComponent, obj8);
+                          cloneElementResult = closure_10(IconComponent, obj8);
                         } else {
                           const obj9 = { source, style: imageStyle };
-                          cloneElementResult = closure_11(closure_8, obj9);
+                          cloneElementResult = closure_10(FastImageDefault, obj9);
                         }
                         cResult[25] = IconComponent;
                         cResult[26] = imageStyle;
@@ -287,7 +287,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   cutoutPositionInDegrees,
                   circleFillColor: backgroundColor,
                 };
-                const tmp24 = closure_11(CircleWithCutoutUtilsDefault, obj10);
+                const tmp24 = closure_10(CircleWithCutoutUtilsDefault, obj10);
                 cResult[15] = tmp11.buttonRadius;
                 cResult[16] = sum;
                 cResult[17] = tmp5;
@@ -342,15 +342,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ lottieComponent, IconComponent } = appearsDisabled);
       ({ children, lottieComponentColor } = appearsDisabled);
-      const tmp = closure_18();
+      const tmp = closure_17();
       let num = 12;
       if (flag2) {
         num = 12;
-        if (tmp4 < closure_17) {
+        if (tmp4 < closure_16) {
           num = 6;
         }
       }
-      const tmp6 = flag2 ? frozen : closure_15;
+      const tmp6 = flag2 ? frozen : closure_14;
       const result = 2 * tmp6.buttonRadius;
       const result1 = 2 * tmp6.badgeRadius;
       const sum = tmp6.badgeRadius + tmp6.cutoutInset;
@@ -381,10 +381,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         circleFillColor: null,
       };
       if (null == backgroundColor) {
-        backgroundColor = closure_13;
+        backgroundColor = closure_12;
       }
       obj3.circleFillColor = backgroundColor;
-      const items1 = [closure_11(CircleWithCutoutUtilsDefault, obj3), , ,];
+      const items1 = [closure_10(CircleWithCutoutUtilsDefault, obj3), , ,];
       const obj4 = { style: null, children: null };
       const items2 = [tmp.iconContainer, { width: result, height: result }];
       obj4.style = items2;
@@ -393,13 +393,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let cloneElementResult = noop.cloneElement(lottieComponent, obj5);
       } else if (null != IconComponent) {
         const obj6 = { style: imageStyle };
-        cloneElementResult = closure_11(IconComponent, obj6);
+        cloneElementResult = closure_10(IconComponent, obj6);
       } else {
         const obj7 = { source, style: imageStyle };
-        cloneElementResult = closure_11(closure_8, obj7);
+        cloneElementResult = closure_10(FastImageDefault, obj7);
       }
       obj4.children = cloneElementResult;
-      items1[1] = closure_11(closure_9, obj4);
+      items1[1] = closure_10(View, obj4);
       let tmp10Result = null;
       if (showBadge) {
         const obj8 = { style: null };
@@ -415,20 +415,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         size.left = CircleWithCutoutUtils.getBadgeLeft(tmp6.badgeRadius, tmp6.buttonRadius, cutoutPositionInDegrees);
         items3[1] = size;
         obj8.style = items3;
-        tmp10Result = closure_11(closure_9, obj8);
+        tmp10Result = closure_10(View, obj8);
         const tmp11Result2 = CircleWithCutoutUtils;
       }
       items1[2] = tmp10Result;
       items1[3] = children;
       obj2.children = items1;
-      obj.children = closure_12(closure_9, obj2);
-      return closure_11(Pressables.PressableOpacity, obj);
+      obj.children = closure_11(View, obj2);
+      return closure_10(Pressables.PressableOpacity, obj);
     };
-let closure_19 = tmp5;
+let closure_18 = tmp4;
 fn(558);
 let obj5 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_600 };
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ToggledActionButton(arg0) {
       const cResult = c.c(20);
       if (cResult[0] !== arg0) {
@@ -517,7 +517,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(tmp5);
       obj4.showBadge = undefined !== tmp7 && tmp7;
       obj4.lottieComponentColor = tmp9;
-      const tmp24 = closure_1_11(closure_19, obj4);
+      const tmp24 = collapsed(closure_18, obj4);
       cResult[12] = undefined !== tmp8 && tmp8;
       cResult[13] = tmp5;
       cResult[14] = undefined !== tmp7 && tmp7;
@@ -572,10 +572,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tintColor = tmp5;
       }
       obj.lottieComponentColor = tintColor;
-      return closure_1_11(closure_19, obj);
+      return collapsed(closure_18, obj);
     };
 ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function PrimaryActionButton(isSmallSize) {
       const cResult = c.c(7);
       if (cResult[0] !== isSmallSize) {
@@ -604,7 +604,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp10;
       }
       const merged = Object.assign(tmp3);
-      const tmp12 = closure_1_11(closure_19, {
+      const tmp12 = collapsed(closure_18, {
         backgroundColor: nativeDefault.unsafe_rawColors.RED_400,
         imageStyle: tmp9,
         isSmallSize: undefined !== tmp4 && tmp4,
@@ -631,15 +631,15 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         isSmallSize: flag,
       };
       const merged1 = Object.assign(merged);
-      return closure_1_11(closure_19, obj);
+      return collapsed(closure_18, obj);
     };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/CallBarAction.tsx");
 
 export const SMALL_ACTION_BUTTON_DIMENSIONS = frozen;
-export const ActionButton = tmp5;
-export const ToggledActionButton = tmp6;
-export const PrimaryActionButton = tmp7;
+export const ActionButton = tmp4;
+export const ToggledActionButton = tmp5;
+export const PrimaryActionButton = tmp6;
 export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
   ? function NotifiedActionButton(arg0) {
       const cResult = c.c(16);
@@ -658,7 +658,7 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[2];
         tmp6 = cResult[3];
       }
-      const tmp10 = closure_18();
+      const tmp10 = closure_17();
       if (true !== tmp4) {
         if (undefined !== tmp4) {
           let notificationAreaMentioned = tmp10.notificationAreaUnread;
@@ -685,15 +685,15 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = {};
               const merged = Object.assign(tmp6);
               obj3.children = tmp15;
-              obj2.children = closure_1_11(closure_19, obj3);
-              const tmp26 = closure_1_11(options, obj2);
+              obj2.children = collapsed(closure_18, obj3);
+              const tmp26 = collapsed(View, obj2);
               cResult[13] = tmp6;
               cResult[14] = tmp15;
               cResult[15] = tmp26;
               tmp19 = tmp26;
             }
             const obj4 = { style: tmp11, children: tmp12 };
-            const tmp18 = closure_1_11(options, obj4);
+            const tmp18 = collapsed(View, obj4);
             cResult[10] = tmp11;
             cResult[11] = tmp12;
             cResult[12] = tmp18;
@@ -705,7 +705,7 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-overlay-light",
             children: tmp5,
           };
-          const tmp14 = closure_1_11(Text_Text.Text, obj5);
+          const tmp14 = collapsed(Text_Text.Text, obj5);
           cResult[7] = tmp5;
           cResult[8] = tmp10.notificationText;
           cResult[9] = tmp14;
@@ -722,7 +722,7 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
   : function NotifiedActionButton(isMentioned) {
       isMentioned = isMentioned.isMentioned;
       const merged = Object.assign(isMentioned, Object.assign({ notifications: 0, isMentioned: 0 }));
-      const tmp2 = closure_18();
+      const tmp2 = closure_17();
       const obj = {};
       const merged1 = Object.assign(merged);
       const items = [tmp2.notificationArea];
@@ -740,10 +740,10 @@ export const NotifiedActionButton = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: isMentioned.notifications,
         };
-        obj3.children = closure_1_11(Text_Text.Text, obj4);
-        obj.children = closure_1_11(options, obj3);
-        obj2.children = closure_1_11(closure_19, obj);
-        return closure_1_11(options, obj2);
+        obj3.children = collapsed(Text_Text.Text, obj4);
+        obj.children = collapsed(View, obj3);
+        obj2.children = collapsed(closure_18, obj);
+        return collapsed(View, obj2);
       }
       notificationAreaMentioned = tmp2.notificationAreaMentioned;
     };

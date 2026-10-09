@@ -5,13 +5,13 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const StickerPickerConstants = fn(9679);
+const StickerPickerConstants = fn(9698);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6837).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles({
   focusedStickerPreviewContainer: {
     position: "absolute",
@@ -23,7 +23,7 @@ let closure_12 = createStyles.createStyles({
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.85)",
   },
-  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "children" },
+  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "ao" },
   stickers: { paddingHorizontal: 16, marginBottom: 16 },
   popoutContainer: { position: "absolute", bottom: 50 },
 });

@@ -11,7 +11,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import PromoSheet from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import _modDef15980 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef16096 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -23,7 +23,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
@@ -48,7 +48,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp22 = tmp5;
           if (tmp5) {
             const obj2 = { onPress: NOOP };
-            tmp22 = React5(tmp(6880).ActionSheetCloseButton, obj2);
+            tmp22 = React5(tmp(6887).ActionSheetCloseButton, obj2);
           }
           cResult[3] = tmp5;
           cResult[4] = tmp22;
@@ -61,7 +61,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[7] === tmp21) {
               if (cResult[10] !== first1) {
                 const obj3 = { value: first1, onChange: tmp9[1], label: "Title" };
-                const tmp30 = React5(tmp(6283).TextInput, obj3);
+                const tmp30 = React5(tmp(6290).TextInput, obj3);
                 cResult[10] = first1;
                 cResult[11] = tmp30;
                 let tmp28 = tmp30;
@@ -87,7 +87,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   clearable: true,
                   onClear: tmp32,
                 };
-                const tmp35 = React5(tmp(6283).TextInput, obj4);
+                const tmp35 = React5(tmp(6290).TextInput, obj4);
                 cResult[13] = tmp12;
                 cResult[14] = tmp35;
                 let tmp33 = tmp35;
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[18] !== first) {
                   const obj5 = { value: first, onValueChange: tmp7[1], label: "Show Leading" };
-                  const tmp41 = React5(tmp(6881).ActionSheetSwitchRow, obj5);
+                  const tmp41 = React5(tmp(6888).ActionSheetSwitchRow, obj5);
                   cResult[18] = first;
                   cResult[19] = tmp41;
                   let tmp39 = tmp41;
@@ -109,7 +109,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[20] !== tmp5) {
                   const obj6 = { value: tmp5, onValueChange: tmp6, label: "Show Trailing" };
-                  const tmp44 = React5(tmp(6881).ActionSheetSwitchRow, obj6);
+                  const tmp44 = React5(tmp(6888).ActionSheetSwitchRow, obj6);
                   cResult[20] = tmp5;
                   cResult[21] = tmp44;
                   let tmp42 = tmp44;
@@ -151,7 +151,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj7 = { spacing: 24, children: null };
                     const items = [tmp36, tmp45, tmp50];
                     obj7.children = items;
-                    const tmp55 = closure_1_8(tmp(5373).Stack, obj7);
+                    const tmp55 = closure_1_8(tmp(5374).Stack, obj7);
                     cResult[29] = tmp45;
                     cResult[30] = tmp50;
                     cResult[31] = tmp36;
@@ -165,7 +165,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                     clearable: true,
                     onClear: M,
                   };
-                  const tmp52 = React5(tmp(6283).TextInput, obj8);
+                  const tmp52 = React5(tmp(6290).TextInput, obj8);
                   cResult[26] = tmp15;
                   cResult[27] = !first;
                   cResult[28] = tmp52;
@@ -173,7 +173,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj9 = { hasIcons: false, children: null };
                 const items1 = [tmp39, tmp42];
                 obj9.children = items1;
-                const tmp47 = closure_1_8(tmp(6881).ActionSheetRow.Group, obj9);
+                const tmp47 = closure_1_8(tmp(6888).ActionSheetRow.Group, obj9);
                 cResult[22] = tmp39;
                 cResult[23] = tmp42;
                 cResult[24] = tmp47;
@@ -182,7 +182,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const obj10 = { children: null };
               const items2 = [tmp28, tmp33];
               obj10.children = items2;
-              const tmp38 = closure_1_8(tmp(5373).Stack, obj10);
+              const tmp38 = closure_1_8(tmp(5374).Stack, obj10);
               cResult[15] = tmp28;
               cResult[16] = tmp33;
               cResult[17] = tmp38;
@@ -191,7 +191,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj11 = { title: first1, subtitle: tmp12, leading: tmp18, trailing: tmp21 };
-        const tmp27 = React5(tmp(6828).BottomSheetTitleHeader, obj11);
+        const tmp27 = React5(tmp(6835).BottomSheetTitleHeader, obj11);
         cResult[5] = tmp12;
         cResult[6] = tmp18;
         cResult[7] = tmp21;
@@ -206,7 +206,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj12 = { onPress: NOOP, label: tmp15 };
-        tmp19 = React5(tmp(8538).ActionSheetHeaderPressableText, obj12);
+        tmp19 = React5(tmp(8546).ActionSheetHeaderPressableText, obj12);
       }
       cResult[0] = tmp15;
       cResult[1] = first;
@@ -235,13 +235,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp14Result = first;
       if (first) {
         const obj2 = { onPress: NOOP, label: tmp12 };
-        tmp14Result = React5(tmp15(8538).ActionSheetHeaderPressableText, obj2);
+        tmp14Result = React5(tmp15(8546).ActionSheetHeaderPressableText, obj2);
       }
       obj.leading = tmp14Result;
       let tmp14Result2 = tmp2;
       if (tmp2) {
         const obj3 = { onPress: NOOP };
-        tmp14Result2 = React5(tmp15(6880).ActionSheetCloseButton, obj3);
+        tmp14Result2 = React5(tmp15(6887).ActionSheetCloseButton, obj3);
       }
       const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
       obj.trailing = tmp14Result2;
@@ -312,7 +312,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           actions: null,
         };
         const obj4 = { type: "image", src: null, aspectRatio: "16/9" };
-        const obj5 = { uri: _modDef15980 };
+        const obj5 = { uri: _modDef16096 };
         obj4.src = obj5;
         obj3.graphic = obj4;
         obj3.actions = first;
@@ -343,7 +343,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
       const tmp = React5(components_Button_Button.Button, obj);
-      obj3.src = { uri: _modDef15980 };
+      obj3.src = { uri: _modDef16096 };
       obj2.graphic = obj3;
       obj2.actions = tmp;
       return React5(PromoSheet.PromoSheet, obj2);

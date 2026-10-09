@@ -2,15 +2,15 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PhoneActionCreators from "../../../phone/PhoneActionCreators.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_4 = fn(6723).PHONE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(6730).PHONE_VERIFICATION_MODAL_KEY;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountPhoneSettingTrailing() {
       const cResult = c.c(2);
@@ -49,7 +49,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t.dEYpSt);
   },
-  parent: fn(7966).MobileUserSettings.ACCOUNT,
+  parent: fn(7974).MobileUserSettings.ACCOUNT,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountPhoneSettingTrailing() {
         const cResult = c.c(2);
@@ -87,7 +87,7 @@ const pressable = SettingBuilders.createPressable({
     const obj2 = { allowDeletePhone: true, reason: null };
     const obj = ModalActionCreatorsDefault;
     obj2.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(6722, dependencyMap.paths), obj2, closure_4);
+    obj.pushLazy(asyncRequireImpl(6729, dependencyMap.paths), obj2, closure_4);
   },
   withArrow: true,
 });

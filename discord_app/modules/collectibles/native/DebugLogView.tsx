@@ -7,11 +7,11 @@ import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7266);
+const CollectiblesDebugStore = fn(7271);
 ({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   debugLogContainer: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[27] !== debugLogText.clearButtonText) {
                 const obj5 = { variant: "text-xs/bold", style: debugLogText.clearButtonText, children: "Clear" };
-                const tmp31 = closure_10(tmp(5086).Text, obj5);
+                const tmp31 = closure_10(tmp(5087).Text, obj5);
                 cResult[27] = debugLogText.clearButtonText;
                 cResult[28] = tmp31;
                 let tmp29 = tmp31;
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { variant: "text-xs/normal", style: tmp23, children: null };
             const items3 = ["Debug Log (", debugLogHeader.length, " entries)"];
             obj8.children = items3;
-            const tmp28 = closure_9(tmp(5086).Text, obj8);
+            const tmp28 = closure_9(tmp(5087).Text, obj8);
             cResult[24] = debugLogHeader.length;
             cResult[25] = tmp23;
             cResult[26] = tmp28;
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj4.style = obj5;
           const items2 = ["Debug Log (", arr.length, " entries)"];
           obj4.children = items2;
-          const items3 = [closure_9(tmp2(5086).Text, obj4)];
+          const items3 = [closure_9(tmp2(5087).Text, obj4)];
           const obj6 = {
             onPress: function handleClear() {
               closure_1();
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           const obj7 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
-          obj6.children = closure_10(tmp2(5086).Text, obj7);
+          obj6.children = closure_10(tmp2(5087).Text, obj7);
           items3[1] = closure_10(closure_5, obj6);
           obj3.children = items3;
           const items4 = [closure_9(stateFromStores, obj3)];

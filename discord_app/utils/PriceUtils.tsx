@@ -41,7 +41,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   }
   return utils_PriceUtils.formatPrice(result, BGN, localeOverride, obj2);
 }
-const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1096).CurrencyCodes;
 let closure_5 = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
 const size = fn(2);

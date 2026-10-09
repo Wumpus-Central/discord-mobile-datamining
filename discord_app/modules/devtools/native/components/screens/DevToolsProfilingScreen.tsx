@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: null, monospace: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -46,10 +46,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_8();
       dependencyMap = tmp5;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const componentRenderStats = tmp(12647).getComponentRenderStats();
+        const componentRenderStats = tmp(12587).getComponentRenderStats();
         cResult[1] = componentRenderStats;
         let tmp6 = componentRenderStats;
-        const tmpResult = tmp(12647);
+        const tmpResult = tmp(12587);
       } else {
         tmp6 = cResult[1];
       }
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = { children: null };
           let obj3 = { title: "Component Profiler", hasIcons: false, children: null };
           const obj4 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: first };
-          obj3.children = closure_5(tmp(6184).TableRow, obj4);
-          let items = [closure_5(tmp(6267).TableRowGroup, obj3)];
+          obj3.children = closure_5(tmp(6186).TableRow, obj4);
+          let items = [closure_5(tmp(6269).TableRowGroup, obj3)];
           const _Object2 = Object;
           const keys1 = Object.keys(tmp6);
           items[1] = keys1.map((item) => {
@@ -119,20 +119,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { variant: "text-xs/semibold", style: tmp5.monospace, children: "<ComponentProfiler />" };
           const items1 = [
             "Make sure you wrap your component in ",
-            closure_5(tmp(5086).Text, obj8),
+            closure_5(tmp(5087).Text, obj8),
             " to enable measurements.",
           ];
           obj7.children = items1;
-          obj6.subLabel = closure_7(tmp(5086).Text, obj7);
-          obj5.children = closure_5(tmp(6184).TableRow, obj6);
-          tmp12 = closure_5(tmp(6267).TableRowGroup, obj5);
+          obj6.subLabel = closure_7(tmp(5087).Text, obj7);
+          obj5.children = closure_5(tmp(6186).TableRow, obj6);
+          tmp12 = closure_5(tmp(6269).TableRowGroup, obj5);
         }
         cResult[3] = tmp5.monospace;
         cResult[4] = tmp12;
       } else {
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_5(tmp(15769).DevToolsProfilingUseStateFromStores, {});
+          const tmp19 = closure_5(tmp(15882).DevToolsProfilingUseStateFromStores, {});
           cResult[5] = tmp19;
           let tmp17 = tmp19;
         } else {
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { spacing: 16, children: null };
           const items2 = [tmp9, tmp17];
           obj9.children = items2;
-          const tmp22 = closure_7(tmp(5373).Stack, obj9);
+          const tmp22 = closure_7(tmp(5374).Stack, obj9);
           cResult[6] = tmp9;
           cResult[7] = tmp22;
           let tmp20 = tmp22;

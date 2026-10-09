@@ -334,11 +334,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(2067);
+const ChannelRecord = fn(2068);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
 const Constants = fn(1085);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(2070).isGuildHomeChannel;
+const isGuildHomeChannel = fn(2071).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -973,7 +973,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1387).isNotNullish);
+            const found = combined.filter(closure_1_0(1388).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found

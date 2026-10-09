@@ -14,7 +14,7 @@ const View = fn(17).View;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_13 = createStyles.createStyles({
   title: { flexDirection: "row", alignItems: "center", gap: 4 },
   titleText: { flexShrink: 1 },
@@ -856,7 +856,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(4942).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(4943).MobileHomeDrawerExperiment;
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -885,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return guildFolderById;
       });
-      const MobileHomeDrawerExperiment = folderId(4942).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = folderId(4943).MobileHomeDrawerExperiment;
       let tmp3 = null;
       if (null != stateFromStores) {
         tmp3 = null;

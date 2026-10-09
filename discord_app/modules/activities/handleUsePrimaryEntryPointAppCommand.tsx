@@ -163,11 +163,10 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
             inviterUserId: closure_129_11,
             onConfirmActivityLaunchChecksAlertOpen: closure_129_12,
           } = closure_0);
-          closure_129_13 = undefined;
           let currentUser;
           c3 = 1;
           c4 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -179,7 +178,6 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
             const obj6 = { value, done: true };
             return obj6;
           } else {
-            closure_129_13 = closure_130_1(closure_130_3[5])();
             currentUser = closure_130_6.getCurrentUser();
             let tmp17 = null != closure_129_2;
             if (tmp17) {
@@ -191,13 +189,12 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
                 }
                 let tmp6 = tmp14;
                 if (tmp14) {
-                  closure_130_2(closure_130_3[6]).markActivityUsed(closure_129_0.id);
-                  const obj3 = closure_130_2(closure_130_3[6]);
+                  closure_130_2(closure_130_3[5]).markActivityUsed(closure_129_0.id);
+                  const obj3 = closure_130_2(closure_130_3[5]);
                   const obj7 = {
                     channelId: closure_129_2,
                     applicationId: closure_129_0.id,
                     isStart: true,
-                    embeddedActivitiesManager: closure_129_13,
                     componentId: closure_129_4,
                     commandOrigin: closure_129_5,
                     sectionName: closure_129_6,
@@ -213,7 +210,7 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
                   c3 = 2;
                   c4 = 1;
                   const obj8 = {
-                    value: closure_130_0(closure_130_3[7]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj7),
+                    value: closure_130_0(closure_130_3[6]).runPrimaryAppCommandOrJoinEmbeddedActivity(obj7),
                     done: false,
                   };
                   return obj8;
@@ -238,9 +235,9 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
         }
         tmp11 = tmp6;
       }
-    } catch (tmp40) {
+    } catch (tmp38) {
       c4 = tmp;
-      throw tmp40;
+      throw tmp38;
     }
   }
 };

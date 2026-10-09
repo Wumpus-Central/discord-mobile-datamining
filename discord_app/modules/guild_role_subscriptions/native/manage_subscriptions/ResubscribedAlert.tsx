@@ -5,22 +5,22 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef15314 from "../../../../../_runtime/metro/15314__.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import _modDef15427 from "../../../../../_runtime/metro/15427__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL },
   body: { alignItems: "center", textAlign: "center" },
   centerText: { textAlign: "center" },
   headerImage: { width: 87, height: 87 },
 };
-let closure_7 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 const size = fn(2);
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ResubscribedAlert(onClose) {
       const cResult = c.c(20);
       onClose = onClose.onClose;
-      const tmp4 = closure_7();
+      const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
         const stringResult = intl.string(util.t["NX+WJN"]);
@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ container, body } = tmp4);
       if (cResult[1] !== tmp4.headerImage) {
-        const obj2 = { source: _modDef15314, style: tmp4.headerImage };
-        const tmp11 = hasOwnProperty(React4, obj2);
+        const obj2 = { source: _modDef15427, style: tmp4.headerImage };
+        const tmp11 = React4(FastImageDefault, obj2);
         cResult[1] = tmp4.headerImage;
         cResult[2] = tmp11;
         let tmp7 = tmp11;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp14 = hasOwnProperty(native.Spacer, { size: 27 });
+        const tmp14 = React4(native.Spacer, { size: 27 });
         cResult[3] = tmp14;
         let tmp12 = tmp14;
       } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.centerText,
           children: tmp15,
         };
-        const tmp19 = hasOwnProperty(Text_Text.Text, obj3);
+        const tmp19 = React4(Text_Text.Text, obj3);
         cResult[5] = tmp4.centerText;
         cResult[6] = tmp19;
         let tmp17 = tmp19;
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp22 = hasOwnProperty(native.Spacer, { size: 12 });
+        const tmp22 = React4(native.Spacer, { size: 12 });
         cResult[7] = tmp22;
         let tmp20 = tmp22;
       } else {
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.centerText,
           children: tmp23,
         };
-        const tmp27 = hasOwnProperty(Text_Text.Text, obj4);
+        const tmp27 = React4(Text_Text.Text, obj4);
         cResult[9] = tmp4.centerText;
         cResult[10] = tmp27;
         let tmp25 = tmp27;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj5 = { confirmText: first, onConfirm: onClose, style: container, children: tmp28 };
-            const tmp33 = hasOwnProperty(common_AlertDefault, obj5);
+            const tmp33 = React4(common_AlertDefault, obj5);
             cResult[16] = onClose;
             cResult[17] = tmp4.container;
             cResult[18] = tmp28;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: body, children: null };
       const items = [tmp7, tmp12, tmp17, tmp20, tmp25];
       obj6.children = items;
-      const tmp29 = timestampProducer(React3, obj6);
+      const tmp29 = hasOwnProperty(View, obj6);
       cResult[11] = tmp4.body;
       cResult[12] = tmp25;
       cResult[13] = tmp7;
@@ -145,20 +145,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp28 = tmp29;
     }
   : function ResubscribedAlert(onClose) {
-      const tmp = closure_7();
+      const tmp = closure_6();
       const obj = { confirmText: null, onConfirm: null, style: null, children: null };
       const intl = util.intl;
       obj.confirmText = intl.string(util.t["NX+WJN"]);
       obj.onConfirm = onClose.onClose;
       obj.style = tmp.container;
       const obj2 = { style: tmp.body, children: null };
+      const obj3 = { source: null, style: null };
       const tmp2 = common_AlertDefault;
-      const items = [
-        hasOwnProperty(React4, { source: _modDef15314, style: tmp.headerImage }),
-        hasOwnProperty(native.Spacer, { size: 27 }),
-        ,
-        ,
-      ];
+      obj3.source = _modDef15427;
+      obj3.style = tmp.headerImage;
+      const items = [React4(FastImageDefault, obj3), React4(native.Spacer, { size: 27 }), , ,];
       const obj4 = {
         variant: "text-lg/semibold",
         color: "mobile-text-heading-primary",
@@ -167,8 +165,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl2 = util.intl;
       obj4.children = intl2.string(util.t.oPV2cy);
-      items[2] = hasOwnProperty(Text_Text.Text, obj4);
-      items[3] = hasOwnProperty(native.Spacer, { size: 12 });
+      items[2] = React4(Text_Text.Text, obj4);
+      items[3] = React4(native.Spacer, { size: 12 });
       const obj5 = {
         variant: "text-md/normal",
         color: "mobile-text-heading-primary",
@@ -177,8 +175,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl3 = util.intl;
       obj5.children = intl3.string(util.t.DdRizV);
-      items[4] = hasOwnProperty(Text_Text.Text, obj5);
+      items[4] = React4(Text_Text.Text, obj5);
       obj2.children = items;
-      obj.children = timestampProducer(React3, obj2);
-      return hasOwnProperty(tmp2, obj);
+      obj.children = hasOwnProperty(View, obj2);
+      return React4(tmp2, obj);
     };

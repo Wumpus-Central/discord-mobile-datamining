@@ -1,5 +1,5 @@
 // discord_app/modules/app_channels/native/AppChannelApplicationSelector.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -51,7 +51,7 @@ export default function AppChannelApplicationSelector(guildId) {
     handlePress = function handlePress() {
       const obj = ActionSheetActionCreatorsDefault;
       obj.openLazy(
-        asyncRequireImpl(8588, dependencyMap.paths),
+        asyncRequireImpl(8596, dependencyMap.paths),
         AppChannelApplicationActionSheet.APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY,
         { guildId, channelId, selectedApplicationId, onChange },
       );

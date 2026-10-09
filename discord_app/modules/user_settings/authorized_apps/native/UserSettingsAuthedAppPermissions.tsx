@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   permissionContainer: { flexDirection: "row", marginTop: 8 },
@@ -183,12 +183,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children[2] = items.map((children, index) => {
             const obj = { style: items.permissionContainer, children: null };
             items = [,];
-            items[0] = closure_2_5(items(4992).CircleCheckIcon, {
+            items[0] = closure_2_5(items(4993).CircleCheckIcon, {
               style: items.permissionIcon,
               size: "xs",
               color: c1(587).colors.STATUS_POSITIVE,
             });
-            items[1] = closure_2_5(items(5086).Text, {
+            items[1] = closure_2_5(items(5087).Text, {
               style: items.permissionText,
               variant: "text-sm/normal",
               color: "text-default",

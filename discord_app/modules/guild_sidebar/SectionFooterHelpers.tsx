@@ -5,7 +5,7 @@ import CategoryCollapseStore from "../../stores/CategoryCollapseStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const ChannelListGuildActionRow = fn(7245).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7250).ChannelListGuildActionRow;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");

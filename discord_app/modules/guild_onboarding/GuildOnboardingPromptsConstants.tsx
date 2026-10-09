@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef1354 from "../../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../../_runtime/metro/01355__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -139,7 +139,7 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = _objectWithoutProperties(obj, closure_3);
-    return _modDef1354(tmp7, _objectWithoutProperties(options, closure_4));
+    return _modDef1355(tmp7, _objectWithoutProperties(options, closure_4));
   }
 };
 export const getDefaultPrompt = function getDefaultPrompt() {

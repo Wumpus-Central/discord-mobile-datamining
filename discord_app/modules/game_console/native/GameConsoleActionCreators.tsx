@@ -1,5 +1,5 @@
 // discord_app/modules/game_console/native/GameConsoleActionCreators.tsx
-import GameConsoleActionCreators from "../GameConsoleActionCreators.tsx";
+import transferToPlayStation from "../transferToPlayStation.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -14,7 +14,7 @@ let closure_4 = async function _transferToPlaystationWithAlert(arg0, arg1, arg2)
     closure_4 = tmp3;
     closure_3 = tmp5;
     closure_131_0 = id;
-    await GameConsoleActionCreators.transferToPlayStation(closure_0, id.id, closure_2);
+    await transferToPlayStation.transferToPlayStation(closure_0, id.id, closure_2);
     if (1 === tmp8) {
       c6 = 0;
       const obj7 = { title: null, body: null };

@@ -210,7 +210,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               addedChannelIds.reduce((acc, item) => {
                 const obj = { flags: null };
                 const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-                obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+                obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
                 acc[item] = obj;
                 return acc;
               }, {}),
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               removedChannelIds.reduce((acc, item) => {
                 const obj = { flags: null };
                 const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-                obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+                obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
                 acc[item] = obj;
                 return acc;
               }, {}),
@@ -317,7 +317,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           addedChannelIds.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-            obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
+            obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, true);
             acc[item] = obj;
             return acc;
           }, {}),
@@ -326,7 +326,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           removedChannelIds.reduce((acc, item) => {
             const obj = { flags: null };
             const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(guildId, item);
-            obj.flags = closure_0(1402).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
+            obj.flags = closure_0(1403).setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
             acc[item] = obj;
             return acc;
           }, {}),

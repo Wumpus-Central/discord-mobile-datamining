@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import _mod8600 from "../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8608 from "../../../../discord_common/js/packages/flash-list/index.js";
 import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_4 = createStyles.createStyles(obj2);
 fn(558);
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           getItemType,
           contentContainerStyle: tmp5.contentContainer,
         };
-        const tmp12 = jsx(_mod8600.FlashList, {
+        const tmp12 = jsx(_mod8608.FlashList, {
           ref,
           data,
           renderItem,
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flashListRef: ref,
         afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
       });
-      return jsx(_mod8600.FlashList, {
+      return jsx(_mod8608.FlashList, {
         ref,
         data,
         renderItem,

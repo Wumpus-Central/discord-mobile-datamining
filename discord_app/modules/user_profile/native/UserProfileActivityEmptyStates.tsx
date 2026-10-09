@@ -83,7 +83,7 @@ let items = [
     return intl.string(util.t.YolGh4);
   },
 ];
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: { alignItems: "center", paddingVertical: nativeDefault.space.PX_32, gap: nativeDefault.space.PX_16 },
   text: null,
@@ -298,7 +298,7 @@ const memoResult = noop.memo(
                 }
               }
               const obj4 = { size: "sm", variant: "secondary", text: tmp15, onPress: A };
-              const tmp18 = closure_7(tmp(5375).Button, obj4);
+              const tmp18 = closure_7(tmp(5376).Button, obj4);
               cResult[10] = A;
               cResult[11] = tmp18;
             } else {
@@ -351,7 +351,7 @@ const memoResult = noop.memo(
           }
         }
         let obj = name(576);
-        name = user(5405).getName(guildId, channelId, user);
+        name = user(5406).getName(guildId, channelId, user);
         const intl = tmp(1126).intl;
         const formatToPlainStringResult = intl.formatToPlainString(name(1126).t.sjSitP, { name });
         cResult[0] = channelId;
@@ -360,16 +360,16 @@ const memoResult = noop.memo(
         cResult[3] = name;
         cResult[4] = formatToPlainStringResult;
         tmp6 = formatToPlainStringResult;
-        let obj2 = user(5405);
+        let obj2 = user(5406);
       }
     : function UserProfileActivityEmptyOtherUser(user) {
         user = user.user;
         let name;
         ({ guildId, channelId } = user);
         const tmp = closure_10();
-        name = name(5405).getName(guildId, channelId, user);
+        name = name(5406).getName(guildId, channelId, user);
         const intl = user(1126).intl;
-        let obj = name(5405);
+        let obj = name(5406);
         items = [user.id];
         let obj2 = {
           heading: intl.formatToPlainString(user(1126).t.sjSitP, { name }),
@@ -395,7 +395,7 @@ const memoResult = noop.memo(
         const intl2 = user(1126).intl;
         obj4.text = intl2.string(user(1126).t["g33r/P"]);
         obj4.onPress = callback;
-        obj3.children = closure_7(user(5375).Button, obj4);
+        obj3.children = closure_7(user(5376).Button, obj4);
         obj2.children = closure_7(View, obj3);
         return closure_7(closure_11, obj2);
       },

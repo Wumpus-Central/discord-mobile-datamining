@@ -13,7 +13,7 @@ import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import Client from "../../../flow/Client.tsx";
-import _modDef5011 from "../../../../_runtime/metro/05011__.js";
+import _modDef5012 from "../../../../_runtime/metro/05012__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -32,11 +32,11 @@ import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import Tracking from "../../forums/tracking/Tracking.tsx";
 import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import MediaPlaybackFacts from "../MediaPlaybackFacts.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -215,8 +215,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9318).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7720);
+let closure_5 = fn(9356).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7729);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1085);
 ({
@@ -441,7 +441,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef5011;
+    tmp36Result = _modDef5012;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();

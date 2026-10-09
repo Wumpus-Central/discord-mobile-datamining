@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/billing/native/PaymentFlowTest.android.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import NativePaymentContext from "../../../payments/native/NativePaymentContext.tsx";
@@ -13,7 +13,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: null,
@@ -189,7 +189,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
           ActionSheetActionCreatorsDefault.hideActionSheet();
           ActionSheetActionCreatorsDefault.openLazy(
-            asyncRequireImpl(15867, dependencyMap.paths),
+            asyncRequireImpl(15982, dependencyMap.paths),
             "SimpleRequestOTPActionSheet",
             obj,
           );
@@ -267,7 +267,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = { selectedSkuId: first, requestType: "giftSku", giftRecipientId: first1, giftMessage: first2 };
             ActionSheetActionCreatorsDefault.hideActionSheet();
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(15867, dependencyMap.paths),
+              asyncRequireImpl(15982, dependencyMap.paths),
               "SimpleRequestOTPActionSheet",
               obj,
             );

@@ -1,10 +1,10 @@
 // discord_app/modules/age_gate/showNSFWGuildJoinGate.native.tsx
-import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/02000_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/age_gate/showNSFWGuildJoinGate.native.tsx");
 
 export const showNSFWGuildJoinGate = function showNSFWGuildJoinGate(id) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6901, dependencyMap.paths), { guildId: id });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6908, dependencyMap.paths), { guildId: id });
 };

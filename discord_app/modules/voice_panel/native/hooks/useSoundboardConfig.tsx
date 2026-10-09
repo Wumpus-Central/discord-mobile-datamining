@@ -7,7 +7,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = globalThis.__r;
 
-const canChannelUseSoundboardDefault = tmp4(7077);
+const canChannelUseSoundboardDefault = tmp4(7080);
 require = fn;
 const SoundboardButtonLocation = {
   VOICE_CONTROLS: "call control drawer",

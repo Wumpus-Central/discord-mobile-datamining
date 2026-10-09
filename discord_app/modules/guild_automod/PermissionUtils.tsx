@@ -5,7 +5,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(11473).AutomodTriggerType;
+const AutomodTriggerType = fn(11403).AutomodTriggerType;
 const Constants = fn(1085);
 ({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 fn(558);

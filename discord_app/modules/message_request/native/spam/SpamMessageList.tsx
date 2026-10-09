@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const MessageRequestEmptyDefault = tmp2(17373);
+const MessageRequestEmptyDefault = tmp2(17521);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
@@ -20,7 +20,7 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "header-section";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -592,10 +592,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       importDefault = tmp;
       const bottom = useSafeAreaInsetsDefault().bottom;
-      dependencyMap = goToMessageRequestPreview(17372).useSpamMessageRequestCount();
+      dependencyMap = goToMessageRequestPreview(17520).useSpamMessageRequestCount();
       const arr = useSortedSpamMessageRequestsDefault();
-      let obj = goToMessageRequestPreview(17372);
-      const hasSingleMessageRequest = goToMessageRequestPreview(17370).useListHasSingleSpamMessageRequest();
+      let obj = goToMessageRequestPreview(17520);
+      const hasSingleMessageRequest = goToMessageRequestPreview(17518).useListHasSingleSpamMessageRequest();
       useMountEffectDefault(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
         const obj2 = { num_spam_message_requests };
@@ -660,5 +660,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.data = items;
         return closure_8(closure_6, obj4);
       }
-      let obj2 = goToMessageRequestPreview(17370);
+      let obj2 = goToMessageRequestPreview(17518);
     };

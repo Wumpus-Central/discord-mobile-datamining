@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const formatted = url.split(/[?#]/)[0].toLowerCase();
             if (formatted.endsWith(".svg")) {
-              SvgUri = SvgUri(7550).SvgUri;
+              SvgUri = SvgUri(7559).SvgUri;
               size = { uri: url, width, height, onError: ignoreSvgError, fallback: null };
               let tmp4Result;
               if (null != fallbackUrl) {
@@ -149,9 +149,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               enableAnimation: null,
             });
           } else {
-            APNGPlayer(1381);
+            APNGPlayer(1382);
           }
-          APNGPlayer = APNGPlayer(8981).APNGPlayer;
+          APNGPlayer = APNGPlayer(8992).APNGPlayer;
           const obj5 = { url: fallbackUrl, style: size, autoplay: true };
           tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
         }

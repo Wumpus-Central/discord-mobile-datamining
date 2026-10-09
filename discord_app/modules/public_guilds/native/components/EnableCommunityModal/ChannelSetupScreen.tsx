@@ -1,6 +1,6 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.tsx";
@@ -10,13 +10,12 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_9 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8038).CREATE_NEW_CHANNEL_VALUE;
+const View = fn(17).View;
+let closure_8 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(8046).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
-({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx",
@@ -76,12 +75,12 @@ export default function ChannelSetupScreen() {
     obj.label = intl.string(util.t.Cla0re);
     let items = [];
     if (null != channels) {
-      const found = channels[closure_9].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+      const found = channels[closure_8].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
       items = found.map((channel) => {
         channel = channel.channel;
         const obj = {
           value: channel.id,
-          label: guild(publicUpdatesChannel[14]).computeChannelName(channel, closure_1_11, closure_1_10, true),
+          label: guild(publicUpdatesChannel[14]).computeChannelName(channel, closure_1_10, closure_1_9, true),
         };
         return obj;
       });
@@ -98,10 +97,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.Yr6nGx);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      rulesChannel(8613).updateGuild({ rulesChannelId });
-      const obj = rulesChannel(8613);
+      rulesChannel(8621).updateGuild({ rulesChannelId });
+      const obj = rulesChannel(8621);
       const obj2 = { rulesChannelId };
-      rulesChannel(5054).hideActionSheet();
+      rulesChannel(5055).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -111,7 +110,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), "SelectRulesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8537, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items3);
   const callback2 = obj.useCallback(() => {
     let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -120,10 +119,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.VqhxxN);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      rulesChannel(8613).updateGuild({ publicUpdatesChannelId });
-      const obj = rulesChannel(8613);
+      rulesChannel(8621).updateGuild({ publicUpdatesChannelId });
+      const obj = rulesChannel(8621);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(5054).hideActionSheet();
+      rulesChannel(5055).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -133,7 +132,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8529, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8537, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items4);
   const obj6 = {
     headerRef: ref,
@@ -145,9 +144,9 @@ export default function ChannelSetupScreen() {
   const obj8 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
   const intl3 = tmp2(tmp3[15]).intl;
   obj8.children = intl3.formatToPlainString(guild(publicUpdatesChannel[15]).t.tInpJj, { number: 2, total: 3 });
-  const items5 = [closure_14(guild(publicUpdatesChannel[22]).Text, obj8), , ,];
+  const items5 = [closure_13(guild(publicUpdatesChannel[22]).Text, obj8), , ,];
   const tmp10 = rulesChannel(publicUpdatesChannel[16])();
-  items5[1] = closure_14(closure_4, {
+  items5[1] = closure_13(rulesChannel(publicUpdatesChannel[23]), {
     resizeMode: "contain",
     source: rulesChannel(publicUpdatesChannel[16])().channelSetup,
   });
@@ -159,7 +158,7 @@ export default function ChannelSetupScreen() {
   };
   const intl4 = tmp2(tmp3[15]).intl;
   obj10.children = intl4.string(guild(publicUpdatesChannel[15]).t.YtXpEh);
-  items5[2] = closure_14(guild(publicUpdatesChannel[22]).Heading, obj10);
+  items5[2] = closure_13(guild(publicUpdatesChannel[22]).Heading, obj10);
   const obj11 = {
     style: enableCommunitySharedStyles.description,
     variant: "text-md/medium",
@@ -168,9 +167,9 @@ export default function ChannelSetupScreen() {
   };
   const intl5 = tmp2(tmp3[15]).intl;
   obj11.children = intl5.string(guild(publicUpdatesChannel[15]).t["J/fYR8"]);
-  items5[3] = closure_14(guild(publicUpdatesChannel[22]).Text, obj11);
+  items5[3] = closure_13(guild(publicUpdatesChannel[22]).Text, obj11);
   obj7.children = items5;
-  const items6 = [closure_15(closure_5, obj7)];
+  const items6 = [closure_14(View, obj7)];
   const obj12 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj13 = { helperText: null, hasIcons: false, children: null };
   const intl6 = tmp2(tmp3[15]).intl;
@@ -178,22 +177,22 @@ export default function ChannelSetupScreen() {
   const obj14 = { label: null, trailing: null, arrow: true, onPress: null };
   const intl7 = tmp2(tmp3[15]).intl;
   obj14.label = intl7.string(guild(publicUpdatesChannel[15]).t.dYrhCO);
-  obj14.trailing = closure_14(guild(publicUpdatesChannel[25]).TableRow.TrailingText, { text: stringResult });
+  obj14.trailing = closure_13(guild(publicUpdatesChannel[26]).TableRow.TrailingText, { text: stringResult });
   obj14.onPress = callback1;
-  obj13.children = closure_14(guild(publicUpdatesChannel[25]).TableRow, obj14);
-  const items7 = [closure_14(guild(publicUpdatesChannel[24]).TableRowGroup, obj13)];
+  obj13.children = closure_13(guild(publicUpdatesChannel[26]).TableRow, obj14);
+  const items7 = [closure_13(guild(publicUpdatesChannel[25]).TableRowGroup, obj13)];
   const obj15 = { helperText: null, hasIcons: false, children: null };
   const intl8 = tmp2(tmp3[15]).intl;
   obj15.helperText = intl8.string(guild(publicUpdatesChannel[15]).t.ZFeonu);
   const obj16 = { label: null, trailing: null, arrow: true, onPress: null };
   const intl9 = tmp2(tmp3[15]).intl;
   obj16.label = intl9.string(guild(publicUpdatesChannel[15]).t.vAyDGU);
-  obj16.trailing = closure_14(guild(publicUpdatesChannel[25]).TableRow.TrailingText, { text: stringResult1 });
+  obj16.trailing = closure_13(guild(publicUpdatesChannel[26]).TableRow.TrailingText, { text: stringResult1 });
   obj16.onPress = callback2;
-  obj15.children = closure_14(guild(publicUpdatesChannel[25]).TableRow, obj16);
-  items7[1] = closure_14(guild(publicUpdatesChannel[24]).TableRowGroup, obj15);
+  obj15.children = closure_13(guild(publicUpdatesChannel[26]).TableRow, obj16);
+  items7[1] = closure_13(guild(publicUpdatesChannel[25]).TableRowGroup, obj15);
   obj12.children = items7;
-  items6[1] = closure_15(guild(publicUpdatesChannel[23]).Stack, obj12);
+  items6[1] = closure_14(guild(publicUpdatesChannel[24]).Stack, obj12);
   obj6.children = items6;
-  return closure_15(guild(publicUpdatesChannel[21]).EnableCommunityModalScreen, obj6);
+  return closure_14(guild(publicUpdatesChannel[21]).EnableCommunityModalScreen, obj6);
 }

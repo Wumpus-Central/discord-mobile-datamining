@@ -6,14 +6,14 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell2 from "../OneWayToTwoWayLinkUpsell.tsx";
-import _modDef15052 from "../../../../../../../_runtime/metro/15052__.js";
+import _modDef15164 from "../../../../../../../_runtime/metro/15164__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Constants = fn(1085);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -42,8 +42,8 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.upsellImage) {
-        const obj4 = { style: tmp4.upsellImage, source: _modDef15052, resizeMode: "contain" };
-        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15052, resizeMode: "contain" });
+        const obj4 = { style: tmp4.upsellImage, source: _modDef15164, resizeMode: "contain" };
+        const tmp17 = jsx(FastImageDefault, { style: tmp4.upsellImage, source: _modDef15164, resizeMode: "contain" });
         cResult[3] = tmp4.upsellImage;
         cResult[4] = tmp17;
         let tmp13 = tmp17;
@@ -94,7 +94,7 @@ export const XboxTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabled()
       const intl2 = util.intl;
       obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
       const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-      obj3.source = _modDef15052;
+      obj3.source = _modDef15164;
       obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
       obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
       obj2.onPress = function onPress() {

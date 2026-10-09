@@ -17,12 +17,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4705).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5083).MessageSendLocation;
+let closure_9 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -273,8 +273,8 @@ export default function ConjurePublishNotesSheet(guildId) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(7358).parse(found, combined);
-                  const tmp31Result = tmp3(7167);
+                  const parsed = tmp3(7363).parse(found, combined);
+                  const tmp31Result = tmp3(7172);
                   const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -303,10 +303,10 @@ export default function ConjurePublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(16845).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+                const result = guildId(16969).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
                 closure_129_21();
                 dependencyMap = 0;
-                const obj = guildId(16845);
+                const obj = guildId(16969);
               }
             }
             const _Error = Error;

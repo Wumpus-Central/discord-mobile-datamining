@@ -320,11 +320,11 @@ function mergeUsersFromMessage(message, arg1) {
   }
   if (null != users) {
     for (const key10045 in resolved.users) {
-      let tmp23 = resolved.users[key10045];
-      if (tmp23.id === AuthenticationStore.getId()) {
+      let tmp27 = resolved.users[key10045];
+      if (tmp27.id === AuthenticationStore.getId()) {
         continue;
       } else {
-        let tmp15 = mergeUser(tmp23, arg1);
+        let tmp15 = mergeUser(tmp27, arg1);
         continue;
       }
       continue;
@@ -341,6 +341,13 @@ function mergeUsersFromMessage(message, arg1) {
   }
   if (tmp17) {
     mergeUser(message.interaction_metadata.user, arg1);
+  }
+  let tmp21 = null != message.actor;
+  if (tmp21) {
+    tmp21 = message.actor.id !== AuthenticationStore.getId();
+  }
+  if (tmp21) {
+    mergeUser(message.actor, arg1);
   }
   if (null != message.message_snapshots) {
     const message_snapshots = message.message_snapshots;
@@ -681,18 +688,25 @@ function handleFetchUsersForGuildEventSuccess(arg0) {
     }
   });
 }
+function mergeUsersFromNotificationCenterItem(other_user) {
+  if (null != other_user.other_user) {
+    mergeUser(other_user.other_user);
+  }
+  if (null != other_user.message) {
+    mergeUsersFromMessage(other_user.message, true);
+  }
+}
 function handleLoadNotificationCenterItems(items) {
   items = items.items;
-  const item = items.forEach((other_user) => {
-    if (null != other_user.other_user) {
-      mergeUser(other_user.other_user);
-    }
-  });
+  const item = items.forEach(mergeUsersFromNotificationCenterItem);
 }
 function handleNotificationCenterItemCreate(item) {
   item = item.item;
   if (null != item.other_user) {
     mergeUser(item.other_user);
+  }
+  if (null != item.message) {
+    mergeUsersFromMessage(item.message, true);
   }
 }
 function handleIncomingMessage(message) {
@@ -740,7 +754,7 @@ function handlePresenceUpdates(updates) {
     if (null == closure_11[item.user.id]) {
       return false;
     } else {
-      const reduced = closure_44.reduce((acc, item) => {
+      const reduced = closure_45.reduce((acc, item) => {
         const user = item.user;
         let tmp2 = acc;
         if (user.hasOwnProperty(item)) {
@@ -1151,11 +1165,11 @@ function handleGuildStickersFetchSuccess(stickers) {
 }
 const Constants = fn(1085);
 ({ UserFlags: closure_7, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
-let closure_10 = fn(1391).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+let closure_10 = fn(1392).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";
-let closure_44 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
+let closure_45 = ["username", "avatar", "global_name", "discriminator", "bot", "primary_guild"];
 let UserStore;
 class UserStore extends tmp2 {
   constructor() {

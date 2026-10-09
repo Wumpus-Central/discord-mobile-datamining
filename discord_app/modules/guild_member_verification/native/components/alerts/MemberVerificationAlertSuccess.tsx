@@ -12,7 +12,7 @@ let closure_3 = ["guildId", "handleConfirmAndAck"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles({
   alert: { marginTop: 120 },
   header: { marginTop: 40, textAlign: "center" },
@@ -102,13 +102,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           ({ alert: _alert, illustrationContainer } = tmp10);
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-            cResult[14] = tmp(6109);
+            cResult[14] = tmp(6111);
             class M {
               constructor() {
                 return closure_1_6.useReducedMotion;
               }
             }
-            const tmpResult4 = tmp(6109);
+            const tmpResult4 = tmp(6111);
           } else {
             const tmp23 = cResult[14];
           }
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 color: "mobile-text-heading-primary",
                 children: tmp33,
               };
-              const tmp37 = closure_8(tmp(5086).Heading, obj3);
+              const tmp37 = closure_8(tmp(5087).Heading, obj3);
               cResult[23] = tmp10.header;
               cResult[24] = tmp33;
               cResult[25] = tmp37;

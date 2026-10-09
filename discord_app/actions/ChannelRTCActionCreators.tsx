@@ -71,6 +71,9 @@ export default {
     }
     const obj2 = { type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: id, chatOpen: shown };
   },
+  updateStageAudienceSidebarOpen(channelId, open) {
+    DispatcherDefault.dispatch({ type: "CHANNEL_RTC_UPDATE_STAGE_AUDIENCE_SIDEBAR_OPEN", channelId, open });
+  },
   jumpToVoiceChannelMessage(voiceGuildId2, voiceChannelId2, voiceMessageId2, jumpType) {
     DispatcherDefault.dispatch({
       type: "CHANNEL_RTC_JUMP_TO_VOICE_CHANNEL_MESSAGE",

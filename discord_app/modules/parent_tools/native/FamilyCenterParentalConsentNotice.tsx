@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const jsx = fn(21).jsx;
 let c5 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, link: { textDecorationLine: "underline" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp14;
                 }
                 const obj4 = { style: tmp3.container, text: cResult[5] };
-                const tmp17 = jsx(onPress(14959), { style: tmp3.container, text: cResult[5] });
+                const tmp17 = jsx(onPress(15071), { style: tmp3.container, text: cResult[5] });
                 cResult[6] = tmp3.container;
                 cResult[7] = cResult[5];
                 cResult[8] = tmp17;

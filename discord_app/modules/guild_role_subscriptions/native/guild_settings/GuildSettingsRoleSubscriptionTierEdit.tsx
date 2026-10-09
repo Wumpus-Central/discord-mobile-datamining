@@ -20,7 +20,7 @@ import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubsc
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import _modDef18303 from "../../../../../_runtime/metro/18303__.js";
+import _modDef18465 from "../../../../../_runtime/metro/18465__.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,13 +30,13 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4700).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(15300).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4702).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(15413).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 }, tabsContainerWithDraft: { paddingBottom: 0 }, actionButton: { alignSelf: "stretch", margin: 16, marginTop: 0 }, tabContent: null, actionHeader: null, actionDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -70,7 +70,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18303 };
+        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18465 };
         const tmp17 = state(native.Icon, obj5);
         cResult[6] = tmp17;
         let tmp15 = tmp17;
@@ -154,7 +154,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = state(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18303 });
+  obj7.icon = state(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18465 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {

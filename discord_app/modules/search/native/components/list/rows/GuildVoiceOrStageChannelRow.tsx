@@ -113,9 +113,9 @@ function getVoiceChannelSubtitle(voiceStates, messagesTabLayout) {
   obj = ChannelListLayout;
 }
 const View = fn(17).View;
-const layout = fn(9247).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9285).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({
   users: { marginTop: 4 },
   subtitle: { marginEnd: 16 },
@@ -183,7 +183,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = getVoiceChannelSubtitle(voiceStates, layout);
       }
       const tmpResult = channel(504);
-      const result = channel(17125).renderChannelSubtitle({
+      const result = channel(17275).renderChannelSubtitle({
         subtitle: tmp11,
         muted: false,
         layout,
@@ -197,7 +197,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = result;
       tmp10 = result;
       const obj3 = { subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id };
-      const tmpResult2 = channel(17125);
+      const tmpResult2 = channel(17275);
     }
   : function GuildVoiceChannelSubtitle(channel) {
       channel = channel.channel;

@@ -5,7 +5,7 @@ import LabFeatureStore from "../labs/LabFeatureStore.tsx";
 
 require = fn;
 const hide_icymi_tab = "hide_icymi_tab";
-let ApexExperiment = fn(1452);
+let ApexExperiment = fn(1453);
 let obj2 = { name: "2026-04-icymi-staff-only", kind: "user", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null };
 obj3[1] = { enabled: true };
@@ -20,7 +20,7 @@ function getICYMIEnabled(ICYMIManager) {
   }
   return enabled;
 }
-ApexExperiment = fn(1452);
+ApexExperiment = fn(1453);
 const obj6 = {
   name: "2026-03-icymi-staff-debugging-utility",
   kind: "user",
@@ -31,7 +31,7 @@ const obj7 = { 1: null };
 obj7[1] = { enabled: true };
 obj6.variations = obj7;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj6);
-ApexExperiment = fn(1452);
+ApexExperiment = fn(1453);
 const obj9 = {
   name: "2026-03-icymi-desktop",
   kind: "user",

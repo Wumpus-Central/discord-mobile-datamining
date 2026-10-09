@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/core/native/useSettingNavigationRoute.tsx
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

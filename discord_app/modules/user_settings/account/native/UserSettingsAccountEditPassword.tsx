@@ -12,7 +12,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef14840 from "../../../../../_runtime/metro/14840__.js";
+import _modDef14948 from "../../../../../_runtime/metro/14948__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -27,8 +27,8 @@ const Constants = fn(1085);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "code", password: 17080385 };
-const createStyles = fn(5090);
+const state = { newPassword: "code", password: 17083457 };
+const createStyles = fn(5091);
 let obj2 = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 },
@@ -155,7 +155,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef14840, style: tmp.image };
+    const obj4 = { source: _modDef14948, style: tmp.image };
     const items1 = [__initData(React4, obj4), ,];
     const obj5 = {
       style: tmp.requiredActionsTitle,
@@ -257,7 +257,7 @@ prototype["render"] = function render() {
   obj13.children = __initData2(hasOwnProperty, obj);
   return __initData(timestampProducer, obj13);
 };
-EditPassword.contextType = fn(4787).ThemeContext;
+EditPassword.contextType = fn(4788).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 };
 const size = fn(2);
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EditPasswordWrapper() {
       const cResult = flag(576).c(6);
       let obj = flag(576);
-      const params = flag(6674).useSettingNavigationRoute().params;
+      const params = flag(6681).useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
         flag = params.isLoginRequiredAction;
@@ -336,10 +336,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      let obj2 = flag(6674);
+      let obj2 = flag(6681);
       const stateFromStoresObject = flag(504).useStateFromStoresObject(first, tmp8);
       const tmpResult = flag(504);
-      const navigation = flag(1502).useNavigation();
+      const navigation = flag(1503).useNavigation();
       if (cResult[3] === navigation) {
         if (cResult[4] === stateFromStoresObject) {
           let tmp11 = cResult[5];
@@ -353,10 +353,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp13;
       tmp11 = tmp13;
       const obj3 = { navigation };
-      const tmpResult2 = flag(1502);
+      const tmpResult2 = flag(1503);
     }
   : function EditPasswordWrapper() {
-      const params = flag(6674).useSettingNavigationRoute().params;
+      const params = flag(6681).useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
         flag = params.isLoginRequiredAction;
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag == null) {
         flag = false;
       }
-      let obj = flag(6674);
+      let obj = flag(6681);
       let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
       const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
         const currentUser = UserStore.getCurrentUser();
@@ -414,7 +414,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return obj2;
       });
       const tmpResult = flag(504);
-      const tmpResult2 = flag(1502);
+      const tmpResult2 = flag(1503);
       const merged = Object.assign(stateFromStoresObject);
-      return closure_12(EditPassword, { navigation: flag(1502).useNavigation() });
+      return closure_12(EditPassword, { navigation: flag(1503).useNavigation() });
     };

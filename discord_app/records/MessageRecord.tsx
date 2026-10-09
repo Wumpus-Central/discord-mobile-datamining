@@ -89,12 +89,12 @@ MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(IS_ANIMATED) {
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
     tmp2 = new MessageRecord(global, new.target, tmp, global, new.target);
-    ({
-      id: tmp2.id,
-      channel_id: tmp2.channel_id,
-      author: tmp2.author,
-      customRenderedContent: tmp2.customRenderedContent,
-    } = global);
+    ({ id: tmp2.id, channel_id: tmp2.channel_id, author: tmp2.author, actor } = global);
+    if (actor == null) {
+      actor = null;
+    }
+    tmp2.actor = actor;
+    tmp2.customRenderedContent = global.customRenderedContent;
     tmp2.mentions = global.mentions || [];
     tmp2.mentionRoles = global.mentionRoles || [];
     tmp2.mentionChannels = global.mentionChannels || [];

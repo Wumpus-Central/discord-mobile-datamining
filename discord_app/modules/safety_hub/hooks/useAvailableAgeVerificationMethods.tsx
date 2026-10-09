@@ -42,7 +42,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
               footerMessage: methods.footerMessage,
               outageBannerMessage: methods.outageBannerMessage,
             };
-            return _true(7528).getAvailableMethodsV2(methods.methods);
+            return _true(7535).getAvailableMethodsV2(methods.methods);
           });
           ageVerificationMethodsV2SuspendedUser
             .then((methods) => {
@@ -59,7 +59,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
                 footerMessage: methods.footerMessage,
                 outageBannerMessage: methods.outageBannerMessage,
               };
-              return _true(7528).getAvailableMethodsV2(methods.methods);
+              return _true(7535).getAvailableMethodsV2(methods.methods);
             })
             .then((methods) => {
               if (!c0) {
@@ -109,7 +109,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
             footerMessage: methods.footerMessage,
             outageBannerMessage: methods.outageBannerMessage,
           };
-          return _true(7528).getAvailableMethodsV2(methods.methods);
+          return _true(7535).getAvailableMethodsV2(methods.methods);
         });
         ageVerificationMethodsV2SuspendedUser
           .then((methods) => {
@@ -126,7 +126,7 @@ export const useAvailableAgeVerificationMethods = ReactCompilerGating.isReactCom
               footerMessage: methods.footerMessage,
               outageBannerMessage: methods.outageBannerMessage,
             };
-            return _true(7528).getAvailableMethodsV2(methods.methods);
+            return _true(7535).getAvailableMethodsV2(methods.methods);
           })
           .then((methods) => {
             if (!c0) {

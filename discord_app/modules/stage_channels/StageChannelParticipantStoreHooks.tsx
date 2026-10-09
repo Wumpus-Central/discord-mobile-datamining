@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[4];
         }
         const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5962).isVersionEqual), 1)[0];
+        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5964).isVersionEqual), 1)[0];
       }
       const fn = function c() {
         const items = [

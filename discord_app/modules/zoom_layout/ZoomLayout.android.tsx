@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 value = PixelRatio.get();
                 const result = x * value;
                 const result1 = y * value;
-                const Commands = ref1(10718).Commands;
+                const Commands = ref1(10864).Commands;
                 Commands.zoomTo(tmp2.current, result / num - result, result1 / num - result1, num, tmp);
               }
             },
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const animated = obj.animated;
               if (null != ref.current) {
-                const Commands = ref1(10718).Commands;
+                const Commands = ref1(10864).Commands;
                 Commands.unzoom(tmp2.current, tmp);
               }
               tmp = undefined === animated || animated;
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             value = PixelRatio.get();
             const result = x * value;
             const result1 = y * value;
-            const Commands = ref(10718).Commands;
+            const Commands = ref(10864).Commands;
             Commands.zoomTo(tmp.current, result / num - result, result1 / num - result1, num, flag);
           }
         },
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             flag = true;
           }
           if (null != ref.current) {
-            const Commands = ref(10718).Commands;
+            const Commands = ref(10864).Commands;
             Commands.unzoom(tmp.current, flag);
           }
         },

@@ -1,7 +1,7 @@
 // discord_app/stores/LocalActivityStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1354 from "../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../_runtime/metro/01355__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ActivityFlagUtils from "../modules/activities/utils/ActivityFlagUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
@@ -270,7 +270,7 @@ const localActivityStore = new LocalActivityStore(DispatcherDefault, {
       let tmp6 = null == dependencyMap[socketId];
     } else {
       const items = [pid, activity, partyPrivacy];
-      tmp6 = _modDef1354(dependencyMap[socketId], items);
+      tmp6 = _modDef1355(dependencyMap[socketId], items);
     }
     if (!tmp6) {
       if (null != activity) {

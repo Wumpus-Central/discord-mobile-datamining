@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -290,7 +290,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   onSubmitEditing: J,
                   onFocus: tmp28,
                   onBlur: tmp31,
-                  leadingIcon: tmp(6731).MagnifyingGlassIcon,
+                  leadingIcon: tmp(6738).MagnifyingGlassIcon,
                   clearable: true,
                   returnKeyType: "search",
                   accessibilityRole: "search",
@@ -298,7 +298,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   autoCapitalize: "none",
                   disabled: tmp7,
                 };
-                const tmp36 = closure_7(tmp(6287).TextField, obj4);
+                const tmp36 = closure_7(tmp(6294).TextField, obj4);
                 cResult[29] = A;
                 cResult[30] = tmp28;
                 cResult[31] = J;
@@ -521,14 +521,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp14 = c8;
       const tmp5 = onChange(flag.useState(false), 2);
       const items6 = [
-        closure_7(options(6287).TextField, {
+        closure_7(options(6294).TextField, {
           placeholder,
           value,
           onChange: callback,
           onSubmitEditing: callback1,
           onFocus: callback2,
           onBlur: callback3,
-          leadingIcon: options(6731).MagnifyingGlassIcon,
+          leadingIcon: options(6738).MagnifyingGlassIcon,
           clearable: true,
           returnKeyType: "search",
           accessibilityRole: "search",

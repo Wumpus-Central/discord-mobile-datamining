@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import DraftStore from "../../../stores/DraftStore.tsx";
 
 const require = fn;
-const DraftType = fn(7232).DraftType;
+const DraftType = fn(7237).DraftType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

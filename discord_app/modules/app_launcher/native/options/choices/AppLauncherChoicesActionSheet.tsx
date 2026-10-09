@@ -4,17 +4,17 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
-import _mod8600 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8608 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { listItemContainer: { overflow: "hidden" }, listItem: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
@@ -43,7 +43,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function FlashL
       return cResult[5];
     }
   }
-  let obj2 = _mod8600;
+  let obj2 = _mod8608;
   if (tmp5) {
     obj2 = { preserveScrollMomentum: true };
     const merged = Object.assign(tmp4);
@@ -58,7 +58,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function FlashL
   cResult[5] = tmp9Result;
 }) : (function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod8600;
+  const tmp3 = _mod8608;
   if (scrollable.scrollable) {
     const obj2 = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   const onChoiceSelect = option.onChoiceSelect;
   const tmp4 = closure_11();
   dependencyMap = tmp4;
-  const bottom = onChoiceSelect(1630)().bottom;
+  const bottom = onChoiceSelect(1631)().bottom;
   if (cResult[0] !== bottom) {
     let sum = bottom;
     if (!tmpResult.isIOS()) {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
     }
     cResult[0] = bottom;
     cResult[1] = sum;
-    tmpResult = tmp(1381);
+    tmpResult = tmp(1382);
   }
   if (cResult[2] !== option.choices) {
     class A {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F109717 */ function() { ... });
+        return choices.map(/* F109645 */ function() { ... });
       }
     }
     cResult[2] = option.choices;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
         if (choices == null) {
           choices = [];
         }
-        return choices.map(/* F109717 */ function() { ... });
+        return choices.map(/* F109645 */ function() { ... });
       }
     }
   }
@@ -213,7 +213,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   ({ initChoiceIndex, onDismiss } = option);
   const tmp = closure_11();
   dependencyMap = tmp;
-  const bottom = onChoiceSelect(1630)().bottom;
+  const bottom = onChoiceSelect(1631)().bottom;
   let sum = bottom;
   if (!obj.isIOS()) {
     sum = bottom + DEFAULT_CONTENT_PADDING;
@@ -289,11 +289,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_9(tmp3(11870).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_9(tmp3(11807).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_9(tmp3(11870).AppLauncherListEmptyState, {});
+    let tmp20 = closure_9(tmp3(11807).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -310,5 +310,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_10(option(11872).AppLauncherCommandOptionActionSheet, obj2);
+  return closure_10(option(11809).AppLauncherCommandOptionActionSheet, obj2);
 });

@@ -22,7 +22,7 @@ const Constants = fn(1085);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" },
@@ -296,9 +296,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           user: stateFromStores,
           guildId: "Boolean",
           size: tmp2(1200).AvatarSizes.NORMAL,
-          status: false,
+          status: null,
           isMobileOnline: null,
-          isVROnline: true,
+          isVROnline: null,
           statusStyle: null,
         };
         let isSystemUserResult;
@@ -454,7 +454,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = null;
           if ("" !== tmp8) {
             if (cResult[7] !== tmp8) {
-              Text = Text(5086).Text;
+              Text = Text(5087).Text;
               const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: tmp8 };
               tmp = closure_12(Text, obj2);
               cResult[7] = tmp8;
@@ -473,8 +473,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = Text(1126).intl;
         let stringResult = intl.string(_modDef3763["D+2/QP"]);
       } else {
-        stringResult = Text(5410).channelTypeString(channel);
-        const TextResult1 = Text(5410);
+        stringResult = Text(5411).channelTypeString(channel);
+        const TextResult1 = Text(5411);
       }
       const TextResult = Text(504);
     }
@@ -499,7 +499,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = null;
           if ("" !== stateFromStores) {
             const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-            tmp8 = closure_12(tmp(5086).Text, obj2);
+            tmp8 = closure_12(tmp(5087).Text, obj2);
           }
         }
         return tmp8;
@@ -507,8 +507,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         let stringResult = intl.string(_modDef3763["D+2/QP"]);
       } else {
-        stringResult = tmp(5410).channelTypeString(channel);
-        const tmpResult = tmp(5410);
+        stringResult = tmp(5411).channelTypeString(channel);
+        const tmpResult = tmp(5411);
       }
       let obj = channel(504);
     };
@@ -518,7 +518,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(48);
       channel = channel.channel;
       closure_15();
-      stateFromStores(5417)(channel);
+      stateFromStores(5418)(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
@@ -823,7 +823,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const containerStyle = channel.containerStyle;
       const tmp4 = closure_15();
-      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6848)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === channel) {
           let tmp5 = cResult[2];
@@ -850,7 +850,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { style: tmp6, onPress: tmp5, children: tmp7 };
-          const tmp13 = closure_12(tmp(6189).PressableOpacity, obj3);
+          const tmp13 = closure_12(tmp(6191).PressableOpacity, obj3);
           cResult[8] = tmp5;
           cResult[9] = tmp6;
           cResult[10] = tmp7;
@@ -880,7 +880,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   : function DMChannelNameHeader(channel) {
       channel = channel.channel;
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(6841)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6848)().analyticsLocations;
       const items = [channel, analyticsLocations];
       const callback = noop.useCallback(() => {
         const recipientId = channel.getRecipientId();
@@ -892,7 +892,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { style: null, onPress: callback, children: closure_12(closure_19, { channel }) };
       const items1 = [closure_15().container, channel.containerStyle];
       obj.style = items1;
-      return closure_12(channel(6189).PressableOpacity, obj);
+      return closure_12(channel(6191).PressableOpacity, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()

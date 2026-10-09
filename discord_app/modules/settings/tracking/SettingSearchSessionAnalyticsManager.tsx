@@ -1,7 +1,7 @@
 // discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01278_v1.js";
+import v1 from "../../../../_runtime/01279_v1.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;

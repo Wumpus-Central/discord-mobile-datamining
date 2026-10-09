@@ -33,18 +33,18 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
   closure_0 = arg0;
   const obj = {
     activeMediaPlayerSource: "IconComponent",
-    mediaSourceMessage: "Set",
+    mediaSourceMessage: "Symbol",
     canAccessMedia: "emoji",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "Reflect",
-    showPip: "MakerNoteSafety",
+    rate: "Set",
+    showPip: 2422,
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: true
+    currentlyDisplayedChannelId: 2425
   };
   return obj;
 });
@@ -115,7 +115,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(1271).batchUpdates(() => {
+  self(1272).batchUpdates(() => {
     const activeMediaPlayerSource = obj.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -171,7 +171,7 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(1271).batchUpdates(() => {
+  self(1272).batchUpdates(() => {
     self.pauseCurrentPlayer();
     obj.setState({ wasPipClosedByUser: true, showPip: false });
   });
@@ -275,7 +275,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(1271).batchUpdates(() => {
+  source(1272).batchUpdates(() => {
     let id;
     state = obj.getState();
     if (source != null) {

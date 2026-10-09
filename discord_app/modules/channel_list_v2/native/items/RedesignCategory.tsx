@@ -53,7 +53,7 @@ function renderCategoryItem(muted) {
       style: styles.categoryText,
       children: name,
     };
-    tmp34Result = closure_11(trailingAction(5086).Text, obj2);
+    tmp34Result = closure_11(trailingAction(5087).Text, obj2);
   }
   let tmp3 = null;
   if (null != icon) {
@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(11215).PlusMediumIcon;
+    Icon = trailingAction(10570).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -121,7 +121,7 @@ function renderCategoryItem(muted) {
         obj7.onLongPress = onLongPress;
         obj7.style = items;
         obj7.children = tmp18Result;
-        let tmp28Result = closure_11(trailingAction(6189).PressableHighlight, obj7);
+        let tmp28Result = closure_11(trailingAction(6191).PressableHighlight, obj7);
       } else {
         const obj8 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = closure_11(View, obj8);
@@ -157,14 +157,14 @@ function renderCategoryItem(muted) {
     const obj11 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = closure_11(Icon, obj11);
     obj10.children = colors;
-    obj10 = closure_11(trailingAction(6189).PressableOpacity, obj10);
+    obj10 = closure_11(trailingAction(6191).PressableOpacity, obj10);
     obj9.children = obj10;
     closure_11(View, obj9);
   }
   const obj = { paddingLeft: 16, marginTop: num, marginBottom };
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11776);
+const RedesignChannelListConstants = fn(11713);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,
@@ -172,7 +172,7 @@ const RedesignChannelListConstants = fn(11776);
 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const styles = createStyles.createStyles(() => {
   const obj = {
     categoryWrapper: { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical, paddingRight: 16 },
@@ -321,7 +321,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp12) {
           obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
           ({ tooltip: obj4.accessibilityLabel, label: obj4.children } = tmp12);
-          tmp16 = closure_11(ChevronSmallDownIcon(5086).Text, obj3);
+          tmp16 = closure_11(ChevronSmallDownIcon(5087).Text, obj3);
         }
         cResult[3] = tmp12;
         cResult[4] = tmp16;
@@ -367,7 +367,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = nativeDefault.colors;
       const obj6 = {};
       merged = Object.assign(merged);
-      ChevronSmallDownIcon = ChevronSmallDownIcon(10508).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = ChevronSmallDownIcon(10498).ChevronSmallDownIcon;
       obj6.icon = closure_11(ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
@@ -432,7 +432,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp9) {
         obj4 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
         ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp9);
-        tmp12 = closure_11(tmp2(5086).Text, obj4);
+        tmp12 = closure_11(tmp2(5087).Text, obj4);
       }
       obj2.note = tmp12;
       obj2.trailingAction = useFavoritesGuildCategoryAddActionDefault(channel);
@@ -442,7 +442,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = nativeDefault.colors;
       const obj7 = {};
       const merged1 = Object.assign(merged);
-      obj7.icon = closure_11(channel(10508).ChevronSmallDownIcon, {
+      obj7.icon = closure_11(channel(10498).ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
         style: collapsed2 ? obj3 : obj4,
@@ -503,7 +503,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const colors = stateFromStores(587).colors;
         const obj5 = {};
         merged = Object.assign(merged);
-        ChevronSmallDownIcon = ChevronSmallDownIcon(10508).ChevronSmallDownIcon;
+        ChevronSmallDownIcon = ChevronSmallDownIcon(10498).ChevronSmallDownIcon;
         const obj6 = {
           size: "xxs",
           color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
@@ -556,7 +556,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const colors = stateFromStores(587).colors;
       obj3 = {};
       const merged1 = Object.assign(merged);
-      obj3.icon = closure_11(tmp2(10508).ChevronSmallDownIcon, {
+      obj3.icon = closure_11(tmp2(10498).ChevronSmallDownIcon, {
         size: "xxs",
         color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
         style: collapsed ? obj3 : obj4,

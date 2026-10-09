@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   controlBarContainer: { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 },
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function SettingsQuestPreviewScreen() {
       const cResult = params(576).c(88);
       let obj = params(576);
-      params = params(1503).useRoute().params;
+      params = params(1504).useRoute().params;
       closure_13();
       let questId;
       if (params != null) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[2];
         tmp12 = cResult[3];
       }
-      const obj2 = params(1503);
+      const obj2 = params(1504);
       stateFromStores = params(504).useStateFromStores(first1, tmp11, tmp12);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [ThemeStore];

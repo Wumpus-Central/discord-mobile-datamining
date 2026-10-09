@@ -14,12 +14,12 @@ import UserProfileStore from "../UserProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(8951).getWishlistProductLines;
-let closure_12 = fn(8283).TrackUserProfileWishlistActions;
-const ACTION_SHEET_MAX_WIDTH = fn(6830).ACTION_SHEET_MAX_WIDTH;
+const getWishlistProductLines = fn(8962).getWishlistProductLines;
+let closure_12 = fn(8291).TrackUserProfileWishlistActions;
+const ACTION_SHEET_MAX_WIDTH = fn(6837).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 },
   loadingContainer: null,
@@ -42,7 +42,7 @@ obj2.itemWrapper = { position: "relative" };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, zIndex: 1 };
 obj2.deleteButton = rect;
 let closure_16 = createStyles.createStyles(obj2);
-const LinearTransition = fn(4810).LinearTransition;
+const LinearTransition = fn(4811).LinearTransition;
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
 const springifyResult = LinearTransition.springify();
 const massResult = LinearTransition.springify().mass(0.8);
@@ -62,13 +62,13 @@ function exitingAnimation() {
   return obj;
 }
 const dampingResult = LinearTransition.springify().mass(0.8).damping(100);
-exitingAnimation.__closure = { withTiming: fn(5091).withTiming };
+exitingAnimation.__closure = { withTiming: fn(5092).withTiming };
 exitingAnimation.__workletHash = 17293915965800;
 exitingAnimation.__initData = {
   code: "function exitingAnimation_EditWishlistActionSheetTsx1(_values){const{withTiming}=this.__closure;return{animations:{opacity:withTiming(0,{duration:150}),transform:[{scale:withTiming(0.8,{duration:150})}]},initialValues:{opacity:1,transform:[{scale:1}]}};}",
 };
 const ReactCompilerGating = fn(558);
-let obj6 = { withTiming: fn(5091).withTiming };
+let obj6 = { withTiming: fn(5092).withTiming };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/EditWishlistActionSheet.tsx");
 
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp4 = closure_16();
       _slicedToArray = wishlistId(504).useStateFromStores(tmp5, W);
-      const bottom = analyticsContext(1630)().bottom;
+      const bottom = analyticsContext(1631)().bottom;
       if (cResult[2] !== analyticsLocations) {
         let items1 = analyticsLocations;
         if (analyticsLocations == null) {
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       const tmpResult = wishlistId(504);
-      const analyticsLocations2 = analyticsContext(6841)(
+      const analyticsLocations2 = analyticsContext(6848)(
         tmp9,
-        tmp8(6865).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+        tmp8(6872).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
       ).analyticsLocations;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
@@ -129,8 +129,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[4];
       }
-      const tmp8Result = analyticsContext(6841);
-      ({ cardWidth: closure_5, rowWidth } = analyticsContext(12971)(tmp12));
+      const tmp8Result = analyticsContext(6848);
+      ({ cardWidth: closure_5, rowWidth } = analyticsContext(13051)(tmp12));
       if (null != rowWidth) {
         let obj3 = { width: rowWidth };
       }
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp14 = analyticsContext(12971)(tmp12);
+      const tmp14 = analyticsContext(13051)(tmp12);
       const stateFromStores = wishlistId(504).useStateFromStores(tmp16, V);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class V {
@@ -555,18 +555,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (analyticsLocations1 == null) {
         analyticsLocations1 = [];
       }
-      analyticsLocations = analyticsContext(6841)(
+      analyticsLocations = analyticsContext(6848)(
         analyticsLocations1,
-        tmp4(6865).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+        tmp4(6872).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
       ).analyticsLocations;
       let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-      const tmp5 = analyticsContext(6841);
-      ({ cardWidth: c5, rowWidth } = analyticsContext(12971)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+      const tmp5 = analyticsContext(6848);
+      ({ cardWidth: c5, rowWidth } = analyticsContext(13051)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
       if (null != rowWidth) {
         let obj3 = { width: rowWidth };
         let tmp7 = obj3;
       }
-      let tmp6 = analyticsContext(12971)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+      let tmp6 = analyticsContext(13051)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
       const items1 = [value];
       stateFromStores = wishlistId(504).useStateFromStores(items1, () => WishlistStore.getWishlist(wishlistId));
       const tmp2Result = wishlistId(504);
@@ -640,7 +640,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp2Result4 = wishlistId(504);
       let intl = tmp2(1126).intl;
       obj4.title = intl.string(wishlistId(1126).t["OEgx/4"]);
-      let obj5 = { contentContainerStyle: { paddingBottom: analyticsContext(1630)().bottom }, children: null };
+      let obj5 = { contentContainerStyle: { paddingBottom: analyticsContext(1631)().bottom }, children: null };
       let obj6 = { style: tmp.container, children: null };
       const obj8 = { style: tmp.toggleRow, children: null };
       const obj9 = { hasIcons: false, children: null };
@@ -651,8 +651,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj10.subLabel = intl3.string(wishlistId(1126).t.dw58pE);
       obj10.value = value;
       obj10.onValueChange = callback;
-      obj9.children = closure_14(wishlistId(6882).TableSwitchRow, obj10);
-      obj8.children = closure_14(wishlistId(6267).TableRowGroup, obj9);
+      obj9.children = closure_14(wishlistId(6889).TableSwitchRow, obj10);
+      obj8.children = closure_14(wishlistId(6269).TableRowGroup, obj9);
       const items8 = [closure_14(stateFromStores, obj8)];
       if (stateFromStores1) {
         if (null == stateFromStores) {
@@ -662,7 +662,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items8[1] = tmp16Result;
         obj6.children = items8;
         obj5.children = closure_15(tmp19, obj6);
-        obj4.children = closure_14(tmp2(6298).BottomSheetScrollView, obj5);
+        obj4.children = closure_14(tmp2(6305).BottomSheetScrollView, obj5);
         return closure_14(tmp4Result, obj4);
       }
       tmp16Result = null;
@@ -724,5 +724,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
         tmp16Result = closure_14(tmp19, obj12);
       }
-      tmp4Result = analyticsContext(10505);
+      tmp4Result = analyticsContext(10495);
     };

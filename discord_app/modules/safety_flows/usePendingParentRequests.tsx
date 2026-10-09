@@ -11,7 +11,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const UserLinkStatus = fn(7248).UserLinkStatus;
+const UserLinkStatus = fn(7253).UserLinkStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

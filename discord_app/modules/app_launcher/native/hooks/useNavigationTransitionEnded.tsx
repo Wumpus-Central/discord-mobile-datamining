@@ -1,11 +1,11 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useAppLauncherNavigation = fn(1501).useAppLauncherNavigation;
+const useAppLauncherNavigation = fn(1502).useAppLauncherNavigation;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");

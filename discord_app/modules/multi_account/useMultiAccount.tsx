@@ -7,7 +7,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import MultiAccountStore from "MultiAccountStore.tsx";
 
 require = fn;
-const MultiAccountTokenStatus = fn(12144).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12081).MultiAccountTokenStatus;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");

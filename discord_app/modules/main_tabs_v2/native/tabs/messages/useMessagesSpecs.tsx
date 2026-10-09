@@ -84,8 +84,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       tmp17 = obj4;
     }
   : function useMessagesSpecs() {
-      fontScale = fontScale(5382).useFontScale();
-      top = top(1630)().top;
+      fontScale = fontScale(5383).useFontScale();
+      top = top(1631)().top;
       const items = [fontScale, top];
       return noop.useMemo(() => {
         const messagesHeaderHeight = MessagesHeader.getMessagesHeaderHeight(fontScale);

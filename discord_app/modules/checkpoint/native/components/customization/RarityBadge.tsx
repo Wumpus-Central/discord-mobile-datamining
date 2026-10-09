@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
-import inlineStyles from "../../../../../../_runtime/07550_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/07559_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(5433);
+const CheckpointConstants = fn(5434);
 ({
   CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire,
   CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7,
@@ -24,7 +24,7 @@ const CheckpointConstants = fn(5433);
 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const obj2 = {
   badge: {
     paddingVertical: nativeDefault.space.PX_4,

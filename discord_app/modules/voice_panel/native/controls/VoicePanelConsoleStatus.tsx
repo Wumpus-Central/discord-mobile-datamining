@@ -6,12 +6,12 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EDGE_GUTTER = fn(11992).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(11987).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(11929).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(11924).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 36;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   consoleParentContainer: {
     zIndex: 1,
@@ -41,7 +41,7 @@ obj2.blockingControlCover = {
 };
 let closure_9 = createStyles.createStyles(obj2);
 let obj5 = {};
-let merged = Object.assign(fn(11989).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(11926).MODE_CHANGE_PHYSICS);
 obj5.overshootClamping = true;
 const __initData = {
   code: 'function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,"respect-motion-settings",function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}',

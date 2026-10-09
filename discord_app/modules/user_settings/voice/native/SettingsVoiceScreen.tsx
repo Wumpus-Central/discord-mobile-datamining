@@ -4,12 +4,13 @@ import util from "../../../../intl/index.native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
+import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
+import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
+import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo from "KrispLogo.tsx";
-import _modDef10880 from "../../../../../_runtime/metro/10880__.js";
-import _modDef10881 from "../../../../../_runtime/metro/10881__.js";
-import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
+import _modDef11053 from "../../../../../_runtime/metro/11053__.js";
+import _modDef11054 from "../../../../../_runtime/metro/11054__.js";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
@@ -52,9 +53,9 @@ function getVoiceSettings() {
   const items5 = [MobileUserSettings.NOISE_SUPPRESSION_KRISP];
   obj8.settings = items5;
   const obj9 = { children: null };
-  const items6 = [options(closure_15, {}), options(closure_14, {})];
+  const items6 = [closure_1_8(closure_14, {}), closure_1_8(closure_13, {})];
   obj9.children = items6;
-  obj8.subLabel = collapsed(closure_1_11, obj9);
+  obj8.subLabel = options(collapsed, obj9);
   items1[4] = obj8;
   const obj10 = { label: null, settings: null };
   const intl7 = util.intl;
@@ -86,31 +87,30 @@ function getVoiceSettings() {
   items1[8] = obj13;
   return items1;
 }
-get_ActivityIndicator = fn(17);
-({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const MobileUserSettings = fn(7966).MobileUserSettings;
+const View = fn(17).View;
+const MobileUserSettings = fn(7974).MobileUserSettings;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const guideURL =
   "" +
   HelpdeskUtils.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) +
   "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
-const createStyles = fn(5090);
-let closure_13 = createStyles.createStyles({
+const createStyles = fn(5091);
+let closure_12 = createStyles.createStyles({
   krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" },
   logo: { marginRight: 8, height: 30, width: 67 },
 });
 let ReactCompilerGating = fn(558);
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? function KrispLogo() {
       const cResult = c.c(9);
-      const tmp4 = closure_13();
+      const tmp4 = closure_12();
       const tmp6 = useThemeDefault();
       if (obj2.isThemeLight(tmp6)) {
-        let tmp5Result = _modDef10880;
+        let tmp5Result = _modDef11053;
       } else {
-        tmp5Result = _modDef10881;
+        tmp5Result = _modDef11054;
       }
       ({ krisp, logo } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -145,8 +145,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { variant: "text-sm/medium", color: "text-link", children: null };
           const intl3 = util.intl;
           obj4.children = intl3.string(util.t.hvVgAZ);
-          obj3.children = options(Text_Text.Text, obj4);
-          const tmp16 = options(LegacyBaseButton.LegacyPressable, obj3);
+          obj3.children = closure_1_8(Text_Text.Text, obj4);
+          const tmp16 = closure_1_8(LegacyBaseButton.LegacyPressable, obj3);
           cResult[5] = tmp16;
           let tmp14 = tmp16;
         } else {
@@ -161,13 +161,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: krisp, children: null };
         const items = [tmp10, tmp14];
         obj5.children = items;
-        const tmp20 = collapsed(React4, obj5);
+        const tmp20 = options(View, obj5);
         cResult[6] = tmp4.krisp;
         cResult[7] = tmp10;
         cResult[8] = tmp20;
         tmp17 = tmp20;
       }
-      const tmp11 = options(hasOwnProperty, { style: logo, source: tmp5Result, accessibilityLabel: first });
+      const tmp11 = closure_1_8(FastImageDefault, { style: logo, source: tmp5Result, accessibilityLabel: first });
       cResult[1] = tmp5Result;
       cResult[2] = tmp4.logo;
       cResult[3] = tmp11;
@@ -175,18 +175,19 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj2 = shared;
     }
   : function KrispLogo() {
-      const tmp = closure_13();
+      const tmp = closure_12();
       const tmp4 = useThemeDefault();
       if (obj.isThemeLight(tmp4)) {
-        let tmp2Result = _modDef10880;
+        let tmp2Result = _modDef11053;
       } else {
-        tmp2Result = _modDef10881;
+        tmp2Result = _modDef11054;
       }
       const obj2 = { style: tmp.krisp, children: null };
       const obj3 = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
+      obj = shared;
       const intl = util.intl;
       obj3.accessibilityLabel = intl.string(util.t.vFiCSx);
-      const items = [options(hasOwnProperty, obj3)];
+      const items = [closure_1_8(FastImageDefault, obj3)];
       const obj4 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
       const intl2 = util.intl;
       obj4.accessibilityLabel = intl2.string(util.t.hvVgAZ);
@@ -194,13 +195,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { variant: "text-sm/medium", color: "text-link", children: null };
       const intl3 = util.intl;
       obj5.children = intl3.string(util.t.hvVgAZ);
-      obj4.children = options(Text_Text.Text, obj5);
-      items[1] = options(LegacyBaseButton.LegacyPressable, obj4);
+      obj4.children = closure_1_8(Text_Text.Text, obj5);
+      items[1] = closure_1_8(LegacyBaseButton.LegacyPressable, obj4);
       obj2.children = items;
-      return collapsed(React4, obj2);
+      return options(View, obj2);
     };
 ReactCompilerGating = fn(558);
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
   ? function SystemProcessingSubLabel() {
       const cResult = c.c(2);
       const noiseCancellationDeferredToSystem = NoiseCancellationUtils.useNoiseCancellationDeferredToSystem();
@@ -216,7 +217,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           obj3.children = intl.format(util.t.EUNgko, obj4);
-          tmp6 = options(Text_Text.Text, obj3);
+          tmp6 = closure_1_8(Text_Text.Text, obj3);
         }
         cResult[0] = noiseCancellationDeferredToSystem;
         cResult[1] = tmp6;
@@ -238,7 +239,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj2.children = intl.format(util.t.EUNgko, obj3);
-        tmp3 = options(Text_Text.Text, obj2);
+        tmp3 = closure_1_8(Text_Text.Text, obj2);
       }
       return tmp3;
     };
@@ -260,7 +261,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { node: first };
-        const tmp10 = options(SettingLayoutDefault, obj3);
+        const tmp10 = closure_1_8(SettingLayoutDefault, obj3);
         cResult[1] = tmp10;
         let tmp7 = tmp10;
       } else {
@@ -273,5 +274,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = SettingBuilders;
         return obj.createList({ sections: getVoiceSettings() });
       }, []);
-      return options(SettingLayoutDefault, { node });
+      return closure_1_8(SettingLayoutDefault, { node });
     };

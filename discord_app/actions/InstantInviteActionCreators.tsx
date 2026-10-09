@@ -6,7 +6,7 @@ import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import errors_V6OrEarlierAPIErrorDefault from "../errors/V6OrEarlierAPIError.tsx";
 import InviteCodeUtils from "../modules/instant_invite/InviteCodeUtils.tsx";
-import _modDef5217 from "../../_runtime/metro/05217__.js";
+import _modDef5218 from "../../_runtime/metro/05218__.js";
 import AgeGateModalActionCreators from "../modules/age_gate/AgeGateModalActionCreators.tsx";
 import GuildActionCreatorsDefault from "GuildActionCreators.tsx";
 import showNSFWGuildJoinGate from "../modules/age_gate/showNSFWGuildJoinGate.native.tsx";
@@ -497,17 +497,17 @@ function trackInviteServerClicked(id5, accept, items2) {
   obj2.location_stack = tmp;
   AnalyticsUtilsDefault.track(constants3.INVITE_SERVER_CLICKED, obj2);
 }
-fn(6137).addPostConnectionCallback;
-let closure_7 = fn(6059).isGuildScheduledEventActive;
-const ChannelRecord = fn(2067);
+fn(6139).addPostConnectionCallback;
+let closure_7 = fn(6061).isGuildScheduledEventActive;
+const ChannelRecord = fn(2068);
 ({ isGuildTextChannelType: closure_8, isGuildVocalChannelOrVocalThreadType: closure_9, createChannelRecord: c10, ChannelRecordBase: closure_11, getAccessPermissions: closure_12 } = ChannelRecord);
 const Constants = fn(1085);
 ({ Endpoints: closure_24, ChannelTypes: closure_25, Routes: closure_26, ME: closure_27, RPCCommands: closure_28, GuildFeatures: closure_29, AnalyticEvents: closure_30, UserFlags: items, Permissions: closure_32, AbortCodes: closure_33 } = Constants);
 const AgeGateSource = fn(1110).AgeGateSource;
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
-const StreamTypes = fn(5894).StreamTypes;
-const InviteTargetTypes = fn(7418).InviteTargetTypes;
-const STAGE_INVITE_STATE_KEY = fn(5888).STAGE_INVITE_STATE_KEY;
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
+const StreamTypes = fn(5895).StreamTypes;
+const InviteTargetTypes = fn(7423).InviteTargetTypes;
+const STAGE_INVITE_STATE_KEY = fn(5889).STAGE_INVITE_STATE_KEY;
 let invite = "invite";
 let c40 = null;
 const size = fn(2);
@@ -621,7 +621,7 @@ export default {
       const obj2 = { type: "INVITE_RESOLVE", code };
       tmp(584).dispatch(obj2);
       const tmpResult = tmp(584);
-      nextPromise = tmp(12897)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(12977)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           const obj2 = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -634,7 +634,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(12897)(code, arg1, arg2);
+      const promise = tmp(12977)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -713,7 +713,7 @@ export default {
               if (0 === length) {
                 delete tmp6[tmp4];
               }
-              const HTTP = closure_0(1294).HTTP;
+              const HTTP = closure_0(1295).HTTP;
               const request = { url: closure_1_24.INSTANT_INVITES(closure_0), body: obj4, context: null, rejectWithError: true };
               const obj6 = { location: _location };
               request.context = obj6;
@@ -727,7 +727,7 @@ export default {
             closure_128_1 = _location;
             const obj8 = { type: "INSTANT_INVITE_CREATE_FAILURE", channelId: closure_129_0 };
             tmp3(584).dispatch(obj8);
-            const tmp30 = new tmp3(5632)(closure_128_1);
+            const tmp30 = new tmp3(5633)(closure_128_1);
             throw tmp30;
           } else if (arg0 === 1) {
             c5 = 3;
@@ -836,13 +836,13 @@ export default {
               }
               dependencyMap = 3;
             } else {
-              const HTTP = tmp2(1294).HTTP;
+              const HTTP = tmp2(1295).HTTP;
               const obj8 = { url: constants.FRIEND_INVITES, context: null, rejectWithError: null };
               const obj9 = { location: closure_129_0 };
               obj8.context = obj9;
-              obj8.rejectWithError = tmp2(1294).rejectWithMigratedError();
+              obj8.rejectWithError = tmp2(1295).rejectWithMigratedError();
               value = HTTP.get(obj8);
-              const obj5 = tmp2(1294);
+              const obj5 = tmp2(1295);
               const obj10 = { type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: null };
               const _Date = Date;
               const date = new Date();
@@ -919,10 +919,10 @@ export default {
   fetchFriendMembers(arg0) {
     closure_0 = arg0;
     return (async () => {
-      await tmp3(5944).get({
+      await tmp3(5945).get({
         url: closure_1_24.INVITE_FRIEND_MEMBERS(code),
         trackedActionData: {
-          event: code(1272).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
+          event: code(1273).NetworkActionNames.INVITE_FRIEND_MEMBERS_FETCH,
           properties(body) {
             const obj2 = { code, friend_count: null };
             let num;
@@ -968,11 +968,11 @@ export default {
     const code = invite.code;
     const channel = invite.channel;
     const obj2 = { url: closure_24.INVITE(code), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const obj = channel(5944);
-    obj2.trackedActionData = { event: code(1272).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    const obj3 = { event: code(1272).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
-    obj2.rejectWithError = code(1294).rejectWithMigratedError();
-    const obj4 = code(1294);
+    const obj = channel(5945);
+    obj2.trackedActionData = { event: code(1273).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    const obj3 = { event: code(1273).NetworkActionNames.INVITE_REVOKE, properties: { uses: invite.uses, max_uses: invite.maxUses, max_age: invite.maxAge, invite_type: invite.type } };
+    obj2.rejectWithError = code(1295).rejectWithMigratedError();
+    const obj4 = code(1295);
     return obj.delete(obj2).then(() => {
       DispatcherDefault.dispatch({ type: "INSTANT_INVITE_REVOKE_SUCCESS", code, channelId: channel.id });
     });
@@ -1878,27 +1878,27 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(12900).onOpenHubInvite(flags);
-        const obj6 = obj(12900);
+        obj(12980).onOpenHubInvite(flags);
+        const obj6 = obj(12980);
       }
     }
     let num = flags.flags;
     if (num == null) {
       num = 0;
     }
-    let hasFlagResult = dMFromUserId(1402).hasFlag(num, dMFromUserId(8486).GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = dMFromUserId(1403).hasFlag(num, dMFromUserId(8494).GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
-      hasFlagResult = tmp6(1402).hasFlag(num, tmp6(8486).GuildInviteFlags.IS_APPLICATION_BYPASS);
-      const tmp6Result = tmp6(1402);
+      hasFlagResult = tmp6(1403).hasFlag(num, tmp6(8494).GuildInviteFlags.IS_APPLICATION_BYPASS);
+      const tmp6Result = tmp6(1403);
     }
     if (null != guild) {
       if (!hasFlagResult) {
         if (flags.new_member) {
           if (tmp6Result3.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(12901).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result4 = tmp6(12901);
+            const result1 = tmp6(12981).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result4 = tmp6(12981);
           }
-          tmp6Result3 = tmp6(12901);
+          tmp6Result3 = tmp6(12981);
         }
       }
     }
@@ -2255,7 +2255,7 @@ export default {
         }
       });
     }
-    const obj2 = dMFromUserId(1402);
+    const obj2 = dMFromUserId(1403);
   },
   openNativeAppModal(inviteKey) {
     const result = InviteCodeUtils.parseExtraDataFromInviteKey(inviteKey);
@@ -2309,21 +2309,21 @@ export default {
       targetChannelId = result.targetChannelId;
     }
     DispatcherDefault.dispatch({ type: "INVITE_APP_OPENING", code });
-    if (null != _modDef5217.ua) {
-      const formatted = _modDef5217.ua.toLowerCase();
+    if (null != _modDef5218.ua) {
+      const formatted = _modDef5218.ua.toLowerCase();
       if (formatted.indexOf("googlebot") > -1) {
         const obj6 = { type: "INVITE_APP_NOT_OPENED", code };
         DispatcherDefault.dispatch(obj6);
         const tmp7Result = DispatcherDefault;
       }
     }
-    const os = _modDef5217.os;
+    const os = _modDef5218.os;
     let family;
     if (os != null) {
       family = os.family;
     }
     if ("Android" !== family) {
-      const os2 = _modDef5217.os;
+      const os2 = _modDef5218.os;
       let family1;
       if (os2 != null) {
         family1 = os2.family;
@@ -2367,9 +2367,9 @@ export default {
       const obj4 = require("DynamicLinkTemplates");
     }
     let obj3 = { type: "INVITE_APP_OPENING", code };
-    const attemptId = tmp18(12903).generateAttemptId();
+    const attemptId = tmp18(12983).generateAttemptId();
     inviteType = undefined;
-    const tmp18Result = tmp18(12903);
+    const tmp18Result = tmp18(12983);
     if (inviteType != null) {
       inviteType = inviteType.inviteType;
     }
@@ -2399,12 +2399,12 @@ export default {
     const tmp7Result5 = generateDynamicLinkDefault;
     const obj8 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
     const tmp7Result6 = AnalyticsUtilsDefault;
-    obj8.fingerprint = tmp18(1277).maybeExtractId(fingerprint);
+    obj8.fingerprint = tmp18(1278).maybeExtractId(fingerprint);
     obj8.attempt_id = attemptId;
     obj8.source = invite;
     obj8.invite_code = baseCode;
     tmp7Result6.track(constants3.DEEP_LINK_CLICKED, obj8);
-    const tmp18Result2 = tmp18(1277);
+    const tmp18Result2 = tmp18(1278);
   },
   setReceivedInstallationIdForInviteCode(inviteCode, receivedInstallationId) {
     DispatcherDefault.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_SET", inviteCode, receivedInstallationId });

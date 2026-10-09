@@ -1,7 +1,7 @@
 // discord_app/i18n/native/updateRules.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../design/void/native.tsx";
-import _modDef1948 from "../../../_runtime/metro/01948__.js";
+import _modDef1949 from "../../../_runtime/metro/01949__.js";
 import LinkingDefault from "../../lib/native/Linking.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -20,9 +20,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       ({ output, state } = node);
       let obj = node(576);
       const tmp = node;
-      const token = node(4778).useToken(nativeDefault.colors.TEXT_LINK);
+      const token = node(4779).useToken(nativeDefault.colors.TEXT_LINK);
       let str = "none";
-      if (noop.useContext(node(4794).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
+      if (noop.useContext(node(4795).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
         str = "underline";
       }
       if (cResult[0] === token) {
@@ -64,7 +64,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] !== node.target) {
             const fn = function f() {
               const obj = LinkingDefault;
-              return obj.openURL(_modDef1948.sanitizeUrl(node.target));
+              return obj.openURL(_modDef1949.sanitizeUrl(node.target));
             };
             cResult[3] = node.target;
             cResult[4] = fn;
@@ -80,7 +80,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = str;
       cResult[2] = obj5;
       tmp5 = obj5;
-      const obj2 = node(4778);
+      const obj2 = node(4779);
     }
   : function I18nLink(node) {
       node = node.node;
@@ -112,7 +112,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == obj.onClick) {
         obj.onClick = () => {
           const obj = LinkingDefault;
-          return obj.openURL(_modDef1948.sanitizeUrl(node.target));
+          return obj.openURL(_modDef1949.sanitizeUrl(node.target));
         };
       }
       const obj2 = node(token[6]);

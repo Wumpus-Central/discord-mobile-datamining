@@ -28,23 +28,23 @@ export const getNames = function getNames(user) {
   const names = {};
   const nick = RelationshipStore.getNickname(user.id);
   if (null != nick) {
-    const obj3 = names(2030);
-    let str = names(2030).stripDiacritics(nick.toLocaleLowerCase());
-    names[nick] = names(2030).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
-    let str2 = names(2030).stripDiacritics(nick.toLocaleLowerCase()).trim();
+    const obj3 = names(2031);
+    let str = names(2031).stripDiacritics(nick.toLocaleLowerCase());
+    names[nick] = names(2031).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
+    let str2 = names(2031).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
   const globalName = UserUtilsDefault.getGlobalName(user);
   if (tmp4) {
-    const obj6 = names(2030);
-    const str4 = names(2030).stripDiacritics(globalName.toLocaleLowerCase());
-    names[globalName] = names(2030).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
-    const str5 = names(2030).stripDiacritics(globalName.toLocaleLowerCase()).trim();
+    const obj6 = names(2031);
+    const str4 = names(2031).stripDiacritics(globalName.toLocaleLowerCase());
+    names[globalName] = names(2031).stripDiacritics(globalName.toLocaleLowerCase()).trim().split(" ");
+    const str5 = names(2031).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
   tmp4 = null != globalName && null == names[globalName];
-  const obj7 = names(2030);
-  const str7 = names(2030).stripDiacritics(username.toLocaleLowerCase());
-  names[user.username] = names(2030).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
+  const obj7 = names(2031);
+  const str7 = names(2031).stripDiacritics(username.toLocaleLowerCase());
+  names[user.username] = names(2031).stripDiacritics(username.toLocaleLowerCase()).trim().split(" ");
   const nicknames = GuildMemberStore.getNicknames(user.id);
   const item = nicknames.forEach((toLocaleLowerCase) => {
     if (null == names[toLocaleLowerCase]) {

@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const ChannelTypes = fn(1085).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { dm: null };
 let size = {
   width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
@@ -421,7 +421,7 @@ export default noop.memo(
           config: memo1,
           cutouts,
           externalChildren: badge,
-          expandedChildren: true,
+          expandedChildren: null,
           children: null,
         };
         let tmp11Result = null;
@@ -466,7 +466,7 @@ export default noop.memo(
           config: memo1,
           cutouts,
           externalChildren: badge,
-          expandedChildren: true,
+          expandedChildren: null,
           children: null,
         });
       },

@@ -46,7 +46,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
     }
   }
 }
-const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
+const SubscriptionIntervalTypes = fn(1392).SubscriptionIntervalTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

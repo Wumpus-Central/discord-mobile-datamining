@@ -161,7 +161,7 @@ let closure_6 = async function _authenticateStripePaymentIntent() {
   await "IconComponent";
   closure_1 = tmp2;
   ({ client_secret: closure_129_0, payment_method_id: closure_129_1 } = closure_0);
-  return "Reflect";
+  return "Set";
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/payments/Stripe3DSChallenge.tsx");

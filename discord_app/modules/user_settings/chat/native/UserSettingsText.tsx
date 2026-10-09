@@ -11,7 +11,7 @@ import TableRadioGroup from "../../../../design/components/TableRow/native/Table
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import _modDef9722 from "../../../../../_runtime/metro/09722__.js";
+import _modDef9741 from "../../../../../_runtime/metro/09741__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj = { style: closure_0.nitroUpsell, children: null };
                             const items = [
                               __initData(native.Icon, {
-                                source: _modDef9722,
+                                source: _modDef9741,
                                 size: native.Icon.Sizes.SMALL,
                                 style: closure_0.nitroIcon,
                               }),

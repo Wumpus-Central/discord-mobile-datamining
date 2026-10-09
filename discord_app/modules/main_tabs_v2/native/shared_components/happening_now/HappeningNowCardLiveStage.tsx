@@ -3,7 +3,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/02000_asyncRequireImpl.js";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import useChannelNameDefault from "../../../../channel/useChannelName.tsx";
 import HappeningNowCard from "HappeningNowCard.tsx";
@@ -93,7 +93,7 @@ function getUsersSubtitle(usersSubtitle) {
   }
 }
 const View = fn(17).View;
-const HappeningNowConstants = fn(15391);
+const HappeningNowConstants = fn(15504);
 ({
   HappeningNowCardTrackingType: hasOwnProperty,
   HAPPENING_NOW_CONTENT_HEIGHT,
@@ -103,7 +103,7 @@ const HappeningNowConstants = fn(15391);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   stagePreviewContainer: {
@@ -374,7 +374,7 @@ export default noop.memo(function HappeningNowCardLiveStage(arg0) {
       destination_channel_id: channel_id,
     });
     const obj2 = { order: index, guild_id, type: constants.GUILD_LIVE_STAGE_CARD, destination_channel_id: channel_id };
-    asyncRequireImpl(11123, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(11297, dependencyMap.paths).then((result) => {
       result.default(channel_id, true);
     });
   }, items);

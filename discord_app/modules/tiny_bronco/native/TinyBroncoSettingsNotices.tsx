@@ -17,11 +17,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(5933).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7015);
+let closure_6 = fn(5934).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7018);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -83,7 +83,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[8] !== tmp8) {
         let obj2 = { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 };
-        const tmp14 = jsx(noticeType(5375).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
+        const tmp14 = jsx(noticeType(5376).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
         cResult[8] = tmp8;
         cResult[9] = tmp14;
         let tmp12 = tmp14;
@@ -169,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = noticeType(1126).intl;
       obj3.text = intl.string(noticeType(1126).t.hvVgAZ);
       obj3.onPress = callback;
-      obj2.button = jsx(noticeType(5375).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+      obj2.button = jsx(noticeType(5376).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
       const intl2 = noticeType(1126).intl;
       obj2.children = intl2.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
       obj.children = jsx(noticeType(1200).HelpMessage, {
@@ -275,7 +275,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         obj2.text = intl.string(tmp(1126).t.FDSSia);
         obj2.onPress = A;
-        const tmp11 = jsx(tmp(5375).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
+        const tmp11 = jsx(tmp(5376).Button, { variant: "secondary", size: "sm", text: null, onPress: null });
         cResult[4] = tmp11;
         const tmp10 = tmp11;
       } else {
@@ -415,7 +415,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = AGE_CONFIRMATION_NOTICE(1126).intl;
       obj3.text = intl.string(AGE_CONFIRMATION_NOTICE(1126).t.FDSSia);
       obj3.onPress = callback1;
-      obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5375).Button, {
+      obj2.button = jsx(AGE_CONFIRMATION_NOTICE(5376).Button, {
         variant: "secondary",
         size: "sm",
         text: null,

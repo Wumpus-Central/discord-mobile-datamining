@@ -16,12 +16,12 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const Constants = fn(2023);
+const Constants = fn(2024);
 ({ OrientationLockState: closure_11, ACTIVITY_LOCKED_ASPECT_RATIO: closure_12 } = Constants);
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_15 = { x: 0, y: 0, gestureActive: false };
-const FunctionUtils = fn(2038);
+const FunctionUtils = fn(2039);
 let closure_16 = FunctionUtils.cachedFunction((arg0, arg1, arg2, arg3) => {
   ({ width, height } = arg0);
   if (constants.LANDSCAPE === arg2) {
@@ -1259,7 +1259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = {
-          context: connectedActivityInTextChannelId(17478),
+          context: connectedActivityInTextChannelId(17630),
           orientationLockStateForApp,
           mode,
           hasConnectedActivity,
@@ -1270,7 +1270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp19 = (
           <closure_24
-            context={connectedActivityInTextChannelId(17478)}
+            context={connectedActivityInTextChannelId(17630)}
             orientationLockStateForApp={orientationLockStateForApp}
             mode={mode}
             hasConnectedActivity={hasConnectedActivity}
@@ -1373,7 +1373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = mode(504);
       return (
         <closure_24
-          context={connectedActivityInTextChannelId(17478)}
+          context={connectedActivityInTextChannelId(17630)}
           orientationLockStateForApp={orientationLockStateForApp}
           mode={mode}
           hasConnectedActivity={hasConnectedActivity}

@@ -8,10 +8,10 @@ import AppStateStore from "../../../../../stores/native/AppStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const TwoFAModalSetupSections = fn(14845).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(14953).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

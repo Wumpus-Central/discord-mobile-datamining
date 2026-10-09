@@ -7,7 +7,7 @@ import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef8054 from "../../../../_runtime/metro/08054__.js";
+import _modDef8062 from "../../../../_runtime/metro/08062__.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";
 import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction.tsx";
@@ -19,7 +19,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(10716).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -29,7 +29,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_17 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 },
   floatingContent: { justifyContent: "flex-end" },
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   size: "sm",
                   variant: "experimental_premium-primary",
                   shiny: tmp23,
-                  icon: _modDef8054,
+                  icon: _modDef8062,
                   onPress: tmp14,
                 };
                 const tmp26 = options(components_Button_Button.Button, obj9);
@@ -966,7 +966,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = !stateFromStores;
       }
       obj7.shiny = tmp15;
-      obj7.icon = _modDef8054;
+      obj7.icon = _modDef8062;
       obj7.onPress = tmp7Result;
       obj6.trailing = options(components_Button_Button.Button, obj7);
       const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

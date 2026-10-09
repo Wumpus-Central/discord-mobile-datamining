@@ -11,7 +11,7 @@ import PromotionsStore from "PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useEligibleActiveOutboundPromotions(arg0) {

@@ -9,21 +9,21 @@ import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
-import _modDef12503 from "../../../../_runtime/metro/12503__.js";
+import _modDef12440 from "../../../../_runtime/metro/12440__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const View = fn(17).View;
 const Constants = fn(1085);
-({ AbortCodes: hasOwnProperty, HelpdeskArticles: metroRequire, InviteStates: closure_7 } = Constants);
+({ AbortCodes: closure_4, HelpdeskArticles: hasOwnProperty, InviteStates: metroRequire } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   expiredImage: { marginTop: 32, marginBottom: 32 },
   expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" },
@@ -39,14 +39,14 @@ obj2.disabledPauseIcon = size;
 obj2.guildIcon = { borderRadius: nativeDefault.radii.lg, opacity: 0.2, zIndex: -999 };
 obj2.disabledTitle = { marginTop: 16, marginBottom: 8, textAlign: "center" };
 obj2.disabledBody = { textAlign: "center", marginBottom: 16 };
-let closure_11 = createStyles.createStyles(obj2);
+let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
   ? function InviteErrorBase(inviteError) {
       const cResult = onPressClose(576).c(27);
       ({ invite, onPressClose } = inviteError);
       inviteError = inviteError.inviteError;
-      const tmp4 = closure_11();
+      const tmp4 = closure_10();
       if (cResult[0] !== onPressClose) {
         function handlePressClose() {
           onPressClose();
@@ -59,17 +59,17 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       importDefault = tmp5;
       let obj = onPressClose(576);
-      const tmp6Result = importDefault(onPressClose(4929).isThemeDark(useThemeDefault()) ? 12500 : 12501);
+      const tmp6Result = importDefault(onPressClose(4930).isThemeDark(useThemeDefault()) ? 12437 : 12438);
       let code;
       if (inviteError != null) {
         code = inviteError.code;
       }
       if (cResult[2] !== code) {
-        const descriptiveInviteError = onPressClose(12502).getDescriptiveInviteError(code);
+        const descriptiveInviteError = onPressClose(12439).getDescriptiveInviteError(code);
         cResult[2] = code;
         cResult[3] = descriptiveInviteError;
         let tmp9 = descriptiveInviteError;
-        const tmpResult2 = onPressClose(12502);
+        const tmpResult2 = onPressClose(12439);
       } else {
         tmp9 = cResult[3];
       }
@@ -87,7 +87,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             const intl = util.intl;
             obj.text = intl.string(util.t.wcqOoF);
             obj.onPress = onPress;
-            return closure_2_8(components_Button_Button.Button, obj);
+            return React5(components_Button_Button.Button, obj);
           }
           cResult[7] = tmp5;
           cResult[8] = renderButton;
@@ -118,72 +118,72 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[12] = title2;
             cResult[13] = title1;
-            let tmp21 = title1;
+            let tmp20 = title1;
           } else {
-            tmp21 = cResult[13];
+            tmp20 = cResult[13];
           }
           if (cResult[14] === tmp4.expiredTitle) {
-            if (cResult[15] === tmp21) {
-              let tmp24 = cResult[16];
+            if (cResult[15] === tmp20) {
+              let tmp23 = cResult[16];
             }
             if (cResult[17] === tmp12) {
               if (cResult[18] === tmp4.expiredBody) {
-                let tmp27 = cResult[19];
+                let tmp26 = cResult[19];
               }
               if (cResult[20] !== tmp15) {
                 const tmp15Result = tmp15();
                 cResult[20] = tmp15;
                 cResult[21] = tmp15Result;
-                let tmp30 = tmp15Result;
+                let tmp29 = tmp15Result;
               } else {
-                tmp30 = cResult[21];
+                tmp29 = cResult[21];
               }
-              if (cResult[22] === tmp30) {
+              if (cResult[22] === tmp29) {
                 if (cResult[23] === tmp16) {
-                  if (cResult[24] === tmp24) {
-                    if (cResult[25] === tmp27) {
-                      let tmp32 = cResult[26];
+                  if (cResult[24] === tmp23) {
+                    if (cResult[25] === tmp26) {
+                      let tmp31 = cResult[26];
                     }
-                    return tmp32;
+                    return tmp31;
                   }
                 }
               }
               const obj2 = { children: null };
-              const items = [tmp16, tmp24, tmp27, tmp30];
+              const items = [tmp16, tmp23, tmp26, tmp29];
               obj2.children = items;
-              const tmp35 = closure_10(closure_9, obj2);
-              cResult[22] = tmp30;
+              const tmp34 = closure_9(closure_8, obj2);
+              cResult[22] = tmp29;
               cResult[23] = tmp16;
-              cResult[24] = tmp24;
-              cResult[25] = tmp27;
-              cResult[26] = tmp35;
-              tmp32 = tmp35;
+              cResult[24] = tmp23;
+              cResult[25] = tmp26;
+              cResult[26] = tmp34;
+              tmp31 = tmp34;
             }
             const obj3 = { style: tmp4.expiredBody, variant: "text-sm/medium", color: "text-default", children: tmp12 };
-            const tmp29 = closure_8(onPressClose(5086).Text, obj3);
+            const tmp28 = closure_7(onPressClose(5087).Text, obj3);
             cResult[17] = tmp12;
             cResult[18] = tmp4.expiredBody;
-            cResult[19] = tmp29;
-            tmp27 = tmp29;
+            cResult[19] = tmp28;
+            tmp26 = tmp28;
           }
           const obj4 = {
             style: tmp4.expiredTitle,
             variant: "heading-xl/extrabold",
             color: "mobile-text-heading-primary",
-            children: tmp21,
+            children: tmp20,
           };
-          const tmp26 = closure_8(onPressClose(5086).Text, obj4);
+          const tmp25 = closure_7(onPressClose(5087).Text, obj4);
           cResult[14] = tmp4.expiredTitle;
-          cResult[15] = tmp21;
-          cResult[16] = tmp26;
-          tmp24 = tmp26;
+          cResult[15] = tmp20;
+          cResult[16] = tmp25;
+          tmp23 = tmp25;
         }
         const obj5 = { style: tmp4.expiredImage, source: tmp6Result };
-        const tmp19 = closure_8(closure_3, obj5);
+        const tmp18 = closure_7(tmp6(6163), obj5);
         cResult[9] = tmp6Result;
         cResult[10] = tmp4.expiredImage;
-        cResult[11] = tmp19;
-        tmp16 = tmp19;
+        cResult[11] = tmp18;
+        tmp16 = tmp18;
       }
       if (invite.state === constants3.BANNED) {
         const intl2 = onPressClose(1126).intl;
@@ -206,12 +206,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = invite.state;
       cResult[6] = stringResult;
       tmp12 = stringResult;
-      const tmpResult = onPressClose(4929);
+      const tmpResult = onPressClose(4930);
     }
   : function InviteErrorBase(invite) {
       ({ onPressClose: require, inviteError } = invite);
-      const tmp = closure_11();
-      const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 12500 : 12501);
+      const tmp = closure_10();
+      const tmp4Result = importDefault(shared.isThemeDark(useThemeDefault()) ? 12437 : 12438);
       let code;
       if (inviteError != null) {
         code = inviteError.code;
@@ -230,7 +230,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           stringResult = intl.string(util.t.FWkU6P);
         }
       }
-      const items = [closure_1_8(React3, { style: tmp.expiredImage, source: tmp4Result }), , ,];
+      const items = [React5(FastImageDefault, { style: tmp.expiredImage, source: tmp4Result }), , ,];
       const obj3 = {
         style: tmp.expiredTitle,
         variant: "heading-xl/extrabold",
@@ -250,8 +250,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       function handlePressClose() {
         require();
       }
-      items[1] = closure_1_8(Text_Text.Text, obj3);
-      items[2] = closure_1_8(Text_Text.Text, {
+      items[1] = React5(Text_Text.Text, obj3);
+      items[2] = React5(Text_Text.Text, {
         style: tmp.expiredBody,
         variant: "text-sm/medium",
         color: "text-default",
@@ -261,16 +261,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const intl4 = util.intl;
       obj6.text = intl4.string(util.t.wcqOoF);
       obj6.onPress = handlePressClose;
-      items[3] = closure_1_8(components_Button_Button.Button, obj6);
+      items[3] = React5(components_Button_Button.Button, obj6);
       obj4.children = items;
-      return collapsed(options, obj4);
+      return options(closure_1_8, obj4);
     };
 ReactCompilerGating = fn(558);
-let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? function InviteDisabledError(onPressClose) {
       const cResult = onPressClose(576).c(30);
       onPressClose = onPressClose.onPressClose;
-      const tmp4 = closure_11();
+      const tmp4 = closure_10();
       if (cResult[0] !== onPressClose) {
         function handlePressClose() {
           onPressClose();
@@ -296,7 +296,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const intl = util.intl;
               obj.text = intl.string(util.t["yD/zkn"]);
               obj.onPress = onPress;
-              return closure_2_8(components_Button_Button.Button, obj);
+              return React5(components_Button_Button.Button, obj);
             }
             cResult[5] = tmp5;
             cResult[6] = renderButton;
@@ -305,8 +305,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = cResult[6];
           }
           if (cResult[7] !== tmp4.disabledPauseIcon) {
-            const obj4 = { style: tmp4.disabledPauseIcon, source: _modDef12503 };
-            const tmp13 = closure_8(tmp(1200).Icon, obj4);
+            const obj4 = { style: tmp4.disabledPauseIcon, source: _modDef12440 };
+            const tmp13 = closure_7(tmp(1200).Icon, obj4);
             cResult[7] = tmp4.disabledPauseIcon;
             cResult[8] = tmp13;
             let tmp10 = tmp13;
@@ -338,7 +338,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-feedback-critical",
                     children: tmp24,
                   };
-                  const tmp28 = closure_8(tmp(5086).Text, obj5);
+                  const tmp28 = closure_7(tmp(5087).Text, obj5);
                   cResult[17] = tmp4.disabledTitle;
                   cResult[18] = tmp28;
                   let tmp26 = tmp28;
@@ -380,7 +380,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj7 = { children: null };
                   const items = [tmp19, tmp26, tmp33, tmp36];
                   obj7.children = items;
-                  const tmp41 = closure_10(closure_9, obj7);
+                  const tmp41 = closure_9(closure_8, obj7);
                   cResult[25] = tmp33;
                   cResult[26] = tmp36;
                   cResult[27] = tmp19;
@@ -394,7 +394,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-default",
                   children: tmp29,
                 };
-                const tmp35 = closure_8(tmp(5086).Text, obj8);
+                const tmp35 = closure_7(tmp(5087).Text, obj8);
                 cResult[20] = tmp4.disabledBody;
                 cResult[21] = tmp29;
                 cResult[22] = tmp35;
@@ -404,15 +404,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const obj10 = { style: tmp4.disabledView, children: null };
             const items1 = [tmp10, tmp14];
             obj10.children = items1;
-            const tmp22 = closure_10(closure_4, obj10);
+            const tmp22 = closure_9(View, obj10);
             cResult[12] = tmp4.disabledView;
             cResult[13] = tmp10;
             cResult[14] = tmp14;
             cResult[15] = tmp22;
             tmp19 = tmp22;
           }
-          const obj11 = { style: tmp4.guildIcon, icon: tmp6, size: tmp(6161).GuildIconSizes.XLARGE };
-          const tmp18 = closure_8(GuildIconDefault, obj11);
+          const obj11 = { style: tmp4.guildIcon, icon: tmp6, size: tmp(6165).GuildIconSizes.XLARGE };
+          const tmp18 = closure_7(GuildIconDefault, obj11);
           cResult[9] = tmp6;
           cResult[10] = tmp4.guildIcon;
           cResult[11] = tmp18;
@@ -430,7 +430,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function InviteDisabledError(onPressClose) {
       onPressClose = onPressClose.onPressClose;
-      const tmp = closure_11();
+      const tmp = closure_10();
       guild = onPressClose.invite.guild;
       if (null == guild) {
         return null;
@@ -442,14 +442,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { children: null };
         const obj5 = { style: tmp.disabledView, children: null };
         const guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64, canAnimate: false });
-        const obj6 = { style: tmp.disabledPauseIcon, source: _modDef12503 };
-        const items = [closure_1_8(native.Icon, obj6)];
+        const obj6 = { style: tmp.disabledPauseIcon, source: _modDef12440 };
+        const items = [React5(native.Icon, obj6)];
         const obj7 = { style: tmp.guildIcon, icon: guildIconURL, size: null };
         const obj3 = { id: null, icon: null, size: 64, canAnimate: false };
         obj7.size = GuildIcon.GuildIconSizes.XLARGE;
-        items[1] = closure_1_8(GuildIconDefault, obj7);
+        items[1] = React5(GuildIconDefault, obj7);
         obj5.children = items;
-        const items1 = [collapsed(React4, obj5), , ,];
+        const items1 = [options(View, obj5), , ,];
         const obj8 = {
           style: tmp.disabledTitle,
           variant: "heading-xl/semibold",
@@ -458,20 +458,20 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl = util.intl;
         obj8.children = intl.string(util.t.jlLX2Z);
-        items1[1] = closure_1_8(Text_Text.Text, obj8);
+        items1[1] = React5(Text_Text.Text, obj8);
         const obj9 = { style: tmp.disabledBody, variant: "text-md/normal", color: "text-default", children: null };
         const intl2 = util.intl;
         const obj11 = { articleLink: null };
         obj11.articleLink = HelpdeskUtilsDefault.getArticleURL(constants2.INVITE_DISABLED);
         obj9.children = intl2.format(util.t.RXSeLl, obj11);
-        items1[2] = closure_1_8(Text_Text.Text, obj9);
+        items1[2] = React5(Text_Text.Text, obj9);
         const obj20 = { variant: "primary", size: "lg", text: null, onPress: null };
         const intl3 = util.intl;
         obj20.text = intl3.string(util.t["yD/zkn"]);
         obj20.onPress = handlePressClose;
-        items1[3] = closure_1_8(components_Button_Button.Button, obj20);
+        items1[3] = React5(components_Button_Button.Button, obj20);
         obj4.children = items1;
-        return collapsed(options, obj4);
+        return options(closure_1_8, obj4);
       }
     };
 ReactCompilerGating = fn(558);
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== inviteError) {
           const obj2 = {};
           const merged = Object.assign(inviteError);
-          const tmp23 = closure_1_8(closure_12, obj2);
+          const tmp23 = React5(closure_11, obj2);
           cResult[0] = inviteError;
           cResult[1] = tmp23;
         }
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] !== inviteError) {
           const obj3 = {};
           const merged1 = Object.assign(inviteError);
-          const tmp15 = closure_1_8(closure_13, obj3);
+          const tmp15 = React5(closure_12, obj3);
           cResult[2] = inviteError;
           cResult[3] = tmp15;
         }
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] !== inviteError) {
           const obj4 = {};
           const merged2 = Object.assign(inviteError);
-          const tmp8 = closure_1_8(closure_12, obj4);
+          const tmp8 = React5(closure_11, obj4);
           cResult[4] = inviteError;
           cResult[5] = tmp8;
           let tmp2 = tmp8;
@@ -518,15 +518,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null == inviteError) {
         const obj2 = {};
         const merged = Object.assign(inviteError);
-        let tmp7 = closure_1_8(closure_12, obj2);
+        let tmp7 = React5(closure_11, obj2);
       } else if (inviteError.code === constants.INVITES_DISABLED) {
         const obj3 = {};
         const merged1 = Object.assign(inviteError);
-        tmp7 = closure_1_8(closure_13, obj3);
+        tmp7 = React5(closure_12, obj3);
       } else {
         const obj = {};
         const merged2 = Object.assign(inviteError);
-        tmp7 = closure_1_8(closure_12, obj);
+        tmp7 = React5(closure_11, obj);
       }
       return tmp7;
     };

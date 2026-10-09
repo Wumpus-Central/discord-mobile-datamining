@@ -107,8 +107,8 @@ prototype["bounceSwipeable"] = function bounceSwipeable(arg0) {
 prototype["closeOpenRow"] = function closeOpenRow() {
   const self = this;
   if (null != this._openRowKey) {
-    if (null != self._refs[self._openRowKey]) {
-      self._refs[self._openRowKey].close();
+    if (self._refs[self._openRowKey] != null) {
+      obj.close();
     }
     self._openRowKey = null;
   }

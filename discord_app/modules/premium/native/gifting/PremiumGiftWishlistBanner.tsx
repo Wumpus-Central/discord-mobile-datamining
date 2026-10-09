@@ -12,17 +12,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(6918).WishlistRecommendationReason;
-const PremiumConstants = fn(1391);
+let constants = fn(6925).WishlistRecommendationReason;
+const PremiumConstants = fn(1392);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1087).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8283).UserProfileSections;
+const UserProfileSections = fn(8291).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = {
     title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 },

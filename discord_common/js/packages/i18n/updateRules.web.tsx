@@ -1,5 +1,5 @@
 // discord_common/js/packages/i18n/updateRules.web.tsx
-import _mod1948 from "../../../../_runtime/metro/01948__.js";
+import _mod1949 from "../../../../_runtime/metro/01949__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -8,9 +8,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
-  paragraph.heading = _mod1948.defaultRules.heading;
-  paragraph.lheading = _mod1948.defaultRules.lheading;
-  paragraph.list = _mod1948.defaultRules.list;
+  paragraph.heading = _mod1949.defaultRules.heading;
+  paragraph.lheading = _mod1949.defaultRules.lheading;
+  paragraph.list = _mod1949.defaultRules.list;
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
   obj.react = function Paragraph(content, fn, key) {
@@ -30,9 +30,9 @@ export default function updateRules(paragraph) {
       obj.onClick = context.context[context.target];
     }
     if (null == obj.onClick) {
-      obj.href = _mod1948.sanitizeUrl(context.target);
+      obj.href = _mod1949.sanitizeUrl(context.target);
       obj.target = "_blank";
-      const sanitizeUrlResult = _mod1948.sanitizeUrl(context.target);
+      const sanitizeUrlResult = _mod1949.sanitizeUrl(context.target);
     }
     const obj3 = { title: context.title };
     const merged = Object.assign(obj);

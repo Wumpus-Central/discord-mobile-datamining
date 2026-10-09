@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06326_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(15177);
+const YouBarConstants = fn(15288);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -32,7 +32,7 @@ const YouBarConstants = fn(15177);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -90,33 +90,33 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       let result = tmp(1200).AVATAR_SIZE_MAP[closure_13] / height;
       dependencyMap = result;
       let result1 = (height - tmp(1200).AVATAR_SIZE_MAP[closure_13]) / 2;
-      const tmp16 = transitionState === transitionState(4787).TransitionStates.MOUNTED;
+      const tmp16 = transitionState === transitionState(4788).TransitionStates.MOUNTED;
       const tmpResult10 = transitionState(504);
       let num5 = 0;
       if (tmp16) {
         num5 = 1;
       }
-      const sharedValue = transitionState(4810).useSharedValue(num5);
-      const tmpResult11 = transitionState(4810);
+      const sharedValue = transitionState(4811).useSharedValue(num5);
+      const tmpResult11 = transitionState(4811);
       let num6 = 1;
       if (!tmp16) {
         num6 = result;
       }
-      const sharedValue1 = transitionState(4810).useSharedValue(num6);
-      const tmpResult12 = transitionState(4810);
+      const sharedValue1 = transitionState(4811).useSharedValue(num6);
+      const tmpResult12 = transitionState(4811);
       if (tmp16) {
         let tmp19 = -closure_17;
       } else {
         tmp19 = -result1;
       }
-      const sharedValue2 = transitionState(4810).useSharedValue(tmp19);
-      const tmpResult13 = transitionState(4810);
+      const sharedValue2 = transitionState(4811).useSharedValue(tmp19);
+      const tmpResult13 = transitionState(4811);
       if (tmp16) {
         let diff = -closure_17 - (height - closure_15) / 2;
       } else {
         diff = -result1;
       }
-      const sharedValue3 = transitionState(4810).useSharedValue(diff);
+      const sharedValue3 = transitionState(4811).useSharedValue(diff);
       if (cResult[4] === sharedValue2) {
         if (cResult[5] === sharedValue) {
           if (cResult[6] === sharedValue1) {
@@ -154,7 +154,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                 OFFLINE = StatusTypes.OFFLINE;
               }
               if (null == OFFLINE) {
-                tmp(4810);
+                tmp(4811);
                 function et() {
                   const rect = { transform: null, left: null, top: null, opacity: null };
                   let obj = { scale: spring.withSpring(sharedValue1.get(), YOU_BAR_SPRING_CONFIG) };
@@ -202,23 +202,23 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1_8.animateYouBarAvatarDeco;
                   }
                 }
-                rect.withSpring = tmp(5374).withSpring;
+                rect.withSpring = tmp(5375).withSpring;
                 rect.scale = sharedValue1;
                 rect.YOU_BAR_SPRING_CONFIG = YOU_BAR_SPRING_CONFIG;
                 rect.left = sharedValue2;
                 rect.top = sharedValue3;
                 rect.opacity = sharedValue;
                 rect.transitionState = transitionState;
-                rect.TransitionStates = tmp(4787).TransitionStates;
-                rect.runOnJS = tmp(4810).runOnJS;
+                rect.TransitionStates = tmp(4788).TransitionStates;
+                rect.runOnJS = tmp(4811).runOnJS;
                 rect.cleanup = cleanup;
                 et.__closure = rect;
                 et.__workletHash = 15831722009842;
                 et.__initData = __initData;
                 const tmp45Result = tmp45(et);
-                const token = tmp(4778).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
-                const tmpResult17 = tmp(4778);
-                const token1 = tmp(4778).useToken(cleanup(587).colors.BORDER_SUBTLE);
+                const token = tmp(4779).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
+                const tmpResult17 = tmp(4779);
+                const token1 = tmp(4779).useToken(cleanup(587).colors.BORDER_SUBTLE);
                 if (null == stateFromStores1) {
                   return null;
                 } else {
@@ -245,7 +245,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[16] = tmp4.avatarShadow;
                   cResult[17] = items3;
                 }
-                const tmpResult18 = tmp(4778);
+                const tmpResult18 = tmp(4779);
               } else {
                 let result2 = closure_16 / 2;
                 let sum = result2 + tmp(1200).STATUS_PADDING;
@@ -329,7 +329,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = items4;
       tmp27 = items4;
       tmp26 = J;
-      const tmpResult14 = transitionState(4810);
+      const tmpResult14 = transitionState(4811);
     }
   : function YouBarAvatarLarge(transitionState) {
       transitionState = transitionState.transitionState;
@@ -519,7 +519,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           status: null,
           statusSizeOverride: null,
           cutout: null,
-          statusStyle: "leden",
+          statusStyle: 0,
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;

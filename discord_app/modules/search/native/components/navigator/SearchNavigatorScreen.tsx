@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, tabs: null, back: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.tabs = { flex: 1, marginTop: nativeDefault.space.PX_16 };
@@ -192,10 +192,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const searchContext = navigation.route.params.searchContext;
       const tmp = closure_8();
       importDefault = tmp;
-      const searchSuggestionsGesture = navigation(17089).useSearchSuggestionsGesture(searchContext);
+      const searchSuggestionsGesture = navigation(17239).useSearchSuggestionsGesture(searchContext);
       ({ gesture, detectorRef, suggestionsContext } = searchSuggestionsGesture);
       const items = [navigation.goBack, tmp.back];
-      let obj = navigation(17089);
+      let obj = navigation(17239);
       let obj2 = { children: null };
       const memo = noop.useMemo(() => {
         const obj = { children: null };
@@ -232,8 +232,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       });
       obj5.children = items3;
       obj4.children = closure_6(View, obj5);
-      obj3.children = closure_5(navigation(16603).NonCollapsableGestureDetector, obj4);
-      items1[1] = closure_5(navigation(17089).SearchSuggestionsProvider, obj3);
+      obj3.children = closure_5(navigation(16726).NonCollapsableGestureDetector, obj4);
+      items1[1] = closure_5(navigation(17239).SearchSuggestionsProvider, obj3);
       obj2.children = items1;
       return closure_6(closure_7, obj2);
     };

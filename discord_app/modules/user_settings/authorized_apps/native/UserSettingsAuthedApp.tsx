@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -13,7 +13,7 @@ import NotificationSettingsUtils from "../../../../utils/NotificationSettingsUti
 import NotificationSettingsModalActionCreatorsDefault from "../../../../actions/NotificationSettingsModalActionCreators.tsx";
 import AuthorizedAppsActionCreatorsDefault from "../../../oauth2/AuthorizedAppsActionCreators.tsx";
 import MaskedLinkUtils from "../../../../utils/MaskedLinkUtils.tsx";
-import EmbeddedActivitiesNativeManagerDefault from "../../../activities/native/EmbeddedActivitiesNativeManager.tsx";
+import leaveEmbeddedActivity from "../../../activities/leaveEmbeddedActivity.tsx";
 import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -28,11 +28,11 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(9581).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10392).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(9600).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10381).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { paddingHorizontal: 16, paddingVertical: 24 },
   section: { marginBottom: 24 },
@@ -106,7 +106,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(7);
       application = application.application;
       const obj = navigation(576);
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       if (cResult[0] !== navigation) {
         const fn = function t() {
           const CommonActions = Link.CommonActions;
@@ -142,12 +142,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = tmp5;
       cResult[4] = formatResult;
       tmp6 = formatResult;
-      const obj2 = navigation(1502);
+      const obj2 = navigation(1503);
       const obj4 = { applicationName: application.name, onConnectionPress: tmp5 };
     }
   : function AuthorizedAppTwoWay(application) {
       let navigation;
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       const items = [navigation];
       const obj2 = { text: null };
       const callback = noop.useCallback(() => {
@@ -202,7 +202,7 @@ function handleDeleteApp(application) {
   if (value != null) {
     _location = value.location;
   }
-  EmbeddedActivitiesNativeManagerDefault.leaveActivity({ location: _location, applicationId: application.id });
+  const result = leaveEmbeddedActivity.leaveEmbeddedActivity({ location: _location, applicationId: application.id });
 }
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedApp.tsx");
@@ -257,8 +257,8 @@ export default function UserSettingsAuthedApp(oauth2Token) {
         application,
         scopes: id.scopes,
         onDelete() {
-          application = id.application;
-          application(stateFromStores[21]).delete(id.id);
+          application = closure_1_0.application;
+          application(stateFromStores[21]).delete(closure_1_0.id);
           const selfEmbeddedActivities = stateFromStores3.getSelfEmbeddedActivities();
           value = selfEmbeddedActivities.get(application.id);
           const obj = application(stateFromStores[21]);
@@ -266,7 +266,10 @@ export default function UserSettingsAuthedApp(oauth2Token) {
           if (value != null) {
             _location = value.location;
           }
-          application(stateFromStores[22]).leaveActivity({ location: _location, applicationId: application.id });
+          const result = id(stateFromStores[22]).leaveEmbeddedActivity({
+            location: _location,
+            applicationId: application.id,
+          });
         },
       }),
     );

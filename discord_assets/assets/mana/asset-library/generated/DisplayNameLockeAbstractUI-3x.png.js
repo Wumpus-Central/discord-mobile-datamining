@@ -1,0 +1,9 @@
+// discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-3x.png.js
+import size from "../../../../../_runtime/metro/00002__.js";
+
+const result = size.fileFinishedImporting(
+  "../discord_assets/assets/mana/asset-library/generated/DisplayNameLockeAbstractUI-3x.png.js",
+);
+
+export default "https://cdn.discordapp.com/assets/content/70445777bd2fc9e6732ac35d8fe90fdc0fa784ab78aba3215726d83240e2869c.png";
+export const metadata = { fileBytes: 84482 };

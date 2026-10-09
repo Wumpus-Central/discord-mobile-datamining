@@ -1,7 +1,8 @@
 // discord_app/modules/saved_messages/useRefreshSavedMessages.tsx
-import c from "../../../_runtime/00576_c.js";
 import SavedMessagesActions from "SavedMessagesActions.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
+
+const require = globalThis.__r;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -9,24 +10,36 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useRefreshSavedMessages() {
-      const cResult = c.c(2);
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function t() {
-          const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
+  ? function useRefreshSavedMessages(arg0) {
+      const cResult = require("c").c(3);
+      _require = tmp2;
+      if (cResult[0] !== (undefined === arg0 || arg0)) {
+        const fn = function f() {
+          if (closure_0) {
+            const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
+          }
         };
-        const items = [];
-        cResult[0] = fn;
-        cResult[1] = items;
-        tmp2 = fn;
-        tmp3 = items;
+        const items = [tmp2];
+        cResult[0] = tmp2;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp4 = items;
+        let tmp3 = fn;
       } else {
-        [tmp2, tmp3] = cResult;
+        tmp3 = cResult[1];
+        tmp4 = cResult[2];
       }
-      const effect = noop.useEffect(tmp2, tmp3);
+      const effect = noop.useEffect(tmp3, tmp4);
     }
   : function useRefreshSavedMessages() {
+      let flag = arg0;
+      if (arg0 === undefined) {
+        flag = true;
+      }
+      const items = [flag];
       const effect = noop.useEffect(() => {
-        const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
-      }, []);
+        if (flag) {
+          const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
+        }
+      }, items);
     };

@@ -8,7 +8,7 @@ require = fn;
 const Constants = fn(1085);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVoiceSettingTrailing() {
       let Q8gkVL = dependencyMap;
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(10891).MicrophoneIcon,
+  IconComponent: fn(11064).MicrophoneIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useVoiceSettingTrailing() {
         let Q8gkVL = dependencyMap;

@@ -6,7 +6,7 @@ import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const FetchState = fn(6786).FetchState;
+const FetchState = fn(6793).FetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/useAuthorizedSlayerApplications.tsx");

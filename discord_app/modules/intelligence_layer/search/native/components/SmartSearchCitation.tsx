@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(9247).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+let closure_5 = fn(9285).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -234,7 +234,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   closure_0 = tmp3;
                   const obj4 = { smartSearchQuery, citation, index, numCitationsPresented };
-                  const result = v2(12077).trackSmartSearchCitationOpened(obj4, v2(12075));
+                  const result = v2(12014).trackSmartSearchCitationOpened(obj4, v2(12012));
                   if ("conversation" === citation.sourceType) {
                     dependencyMap = 1;
                     v2 = 2;
@@ -242,7 +242,7 @@ export const SmartSearchCitation = ReactCompilerGating.isReactCompilerEnabled()
                     const obj5 = { value: onPressConversationCitation(citation), done: false };
                     return obj5;
                   }
-                  const obj6 = v2(12077);
+                  const obj6 = v2(12014);
                 }
               } else if (1 === tmp7) {
                 dependencyMap = 0;

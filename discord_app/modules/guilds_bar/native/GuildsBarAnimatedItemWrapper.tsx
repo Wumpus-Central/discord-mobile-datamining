@@ -11,14 +11,14 @@ require = fn;
 function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   return closure_1_8(closure_18, { sharedId: sharedId.sharedId, id: sharedId.id, selected: sharedId.selected, transitionState, cleanUp }, arg0);
 }
-const IOS_POINTER_STYLE = fn(5384).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16522);
+const IOS_POINTER_STYLE = fn(5385).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(16645);
 ({ GUILD_ITEM_HIT_SLOP: hasOwnProperty, GUILD_ITEM_INSET_LEFT: metroRequire, useGuildWrapperSize: closure_7 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const CORNER_SPRING_PHYSICS = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -31,7 +31,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(5090);
+createStyles = fn(5091);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = { position: "relative", paddingTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingBottom: nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, paddingLeft, height, width: width + hasOwnProperty.left + hasOwnProperty.right };
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
                     let AccessibilityAnnouncer = require;
                     const intl = util.intl;
                     const t = util.t;
-                    AccessibilityAnnouncer = AccessibilityAnnouncer(4788).AccessibilityAnnouncer;
+                    AccessibilityAnnouncer = AccessibilityAnnouncer(4789).AccessibilityAnnouncer;
                     AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
                     ref.current = expanded;
                     const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);
@@ -957,7 +957,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildsBa
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(4788).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(4789).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);

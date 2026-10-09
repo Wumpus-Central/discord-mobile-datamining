@@ -396,7 +396,7 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7248).FamilyCenterAction;
+const FamilyCenterAction = fn(7253).FamilyCenterAction;
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -703,11 +703,11 @@ export default {
     return (async () => {
       const code = tmp2;
       const recipient_id = tmp5;
-      const HTTP = recipient_id(1294).HTTP;
+      const HTTP = recipient_id(1295).HTTP;
       const request = {
         url: constants.FAMILY_CENTER_LINKED_USERS,
         body: { recipient_id, code },
-        rejectWithError: recipient_id(1294).rejectWithMigratedError(),
+        rejectWithError: recipient_id(1295).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
@@ -1057,13 +1057,13 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(2046).getProtoFieldClass(tmp5(1209).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(2047).getProtoFieldClass(tmp5(1209).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(2046);
+              const tmp33Result = tmp5(2047);
               const modifiedProto = tmp33Result.createModifiedProto(
                 tmp13,
                 closure_2,
@@ -1072,16 +1072,16 @@ export default {
                 tmp2,
               );
               if (null != modifiedProto) {
-                const HTTP = tmp5(1294).HTTP;
+                const HTTP = tmp5(1295).HTTP;
                 const request = {
                   url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5),
                   body: null,
                   rejectWithError: null,
                 };
-                const obj4 = { settings: tmp5(1245).protoToB64(tmp5(1209).PreloadedUserSettings, modifiedProto) };
+                const obj4 = { settings: tmp5(1246).protoToB64(tmp5(1209).PreloadedUserSettings, modifiedProto) };
                 request.body = obj4;
-                const tmp33Result3 = tmp5(1245);
-                request.rejectWithError = tmp5(1294).rejectWithMigratedError();
+                const tmp33Result3 = tmp5(1246);
+                request.rejectWithError = tmp5(1295).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj5 = { value: HTTP.patch(request), done: false };
@@ -1089,7 +1089,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(2046);
+              const obj12 = tmp5(2047);
             }
           } else if (arg0 === 1) {
             c3 = 3;

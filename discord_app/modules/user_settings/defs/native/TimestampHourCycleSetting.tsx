@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDMsMessagePreviewsOptions() {
       const cResult = c.c(1);
@@ -59,8 +59,8 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(7966).MobileUserSettings.APPEARANCE,
-  useValue: fn(2040).TimestampHourCycle.useSetting,
+  parent: fn(7974).MobileUserSettings.APPEARANCE,
+  useValue: fn(2041).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
     TimestampHourCycle.updateSetting(Number(arg0));
@@ -111,7 +111,7 @@ const radio = SettingBuilders.createRadio({
           return items;
         }, []);
       },
-  usePredicate: fn(4753).supportsSystemDateFormatter,
+  usePredicate: fn(4755).supportsSystemDateFormatter,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");

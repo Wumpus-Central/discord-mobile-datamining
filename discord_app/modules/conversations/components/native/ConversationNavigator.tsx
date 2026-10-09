@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const NativeStackNavigator = fn(9279);
+const NativeStackNavigator = fn(9317);
 let closure_8 = NativeStackNavigator.createNativeStackNavigator();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const first = _slicedToArray(noop.useState(tmp6), 1)[0];
       if (null != first) {
-        let LIST = tmp(9290).ConversationNavigatorScreens.FOCUS;
+        let LIST = tmp(9328).ConversationNavigatorScreens.FOCUS;
       } else {
-        LIST = tmp(9290).ConversationNavigatorScreens.LIST;
+        LIST = tmp(9328).ConversationNavigatorScreens.LIST;
       }
       if (cResult[2] === channelId) {
         if (cResult[3] === guildId) {
@@ -60,13 +60,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const fn2 = function f(arg0) {
             ({ route, navigation } = arg0);
-            const obj = closure_0(9291);
+            const obj = closure_0(9329);
             return obj.conversationNavigatorListHeaderOptions(route, navigation, {
               backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
             });
           };
           const fn3 = function h() {
-            return closure_0(9302).default;
+            return closure_0(9340).default;
           };
           cResult[5] = fn2;
           cResult[6] = fn3;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] !== tmp8) {
           const obj3 = {
             initialParams: tmp8,
-            name: tmp(9290).ConversationNavigatorScreens.LIST,
+            name: tmp(9328).ConversationNavigatorScreens.LIST,
             options: tmp10,
             getComponent: tmp11,
           };
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const fn4 = function b() {
-                return closure_0(9312).default;
+                return closure_0(9350).default;
               };
               cResult[13] = T;
               cResult[14] = fn4;
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj4 = {
-                name: tmp(9290).ConversationNavigatorScreens.FOCUS,
+                name: tmp(9328).ConversationNavigatorScreens.FOCUS,
                 initialParams: tmp16,
                 options: T,
                 getComponent: tmp23,
@@ -232,9 +232,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       if (null != first) {
-        let LIST = tmp(9290).ConversationNavigatorScreens.FOCUS;
+        let LIST = tmp(9328).ConversationNavigatorScreens.FOCUS;
       } else {
-        LIST = tmp(9290).ConversationNavigatorScreens.LIST;
+        LIST = tmp(9328).ConversationNavigatorScreens.LIST;
       }
       obj2.initialRouteName = LIST;
       let obj = require("Navigator");
@@ -244,13 +244,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: require("ConversationNavigatorUtils").ConversationNavigatorScreens.LIST,
           options(arg0) {
             ({ route, navigation } = arg0);
-            const obj = closure_0(9291);
+            const obj = closure_0(9329);
             return obj.conversationNavigatorListHeaderOptions(route, navigation, {
               backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
             });
           },
           getComponent() {
-            return closure_0(9302).default;
+            return closure_0(9340).default;
           },
         }),
       ];
@@ -269,13 +269,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.initialParams = tmp8;
       obj4.options = function options(arg0) {
         ({ route, navigation } = arg0);
-        const obj = closure_0(9291);
+        const obj = closure_0(9329);
         return obj.conversationNavigatorFocusHeaderOptions(route, navigation, {
           backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND,
         });
       };
       obj4.getComponent = function getComponent() {
-        return closure_0(9312).default;
+        return closure_0(9350).default;
       };
       items[1] = closure_6(closure_8.Screen, obj4);
       obj2.children = items;

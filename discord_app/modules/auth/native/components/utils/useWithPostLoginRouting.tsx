@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useWithP
         obj4.description = intl4.string(closure_0(closure_2[8]).t["0/ALaJ"]);
         obj4.phone = closure_1_6.getCredentials().login;
         tmp30 = closure_3;
-        closure_2 = closure_3(/* F138951 */ function() { ... });
+        closure_2 = closure_3(/* F139285 */ function() { ... });
         obj4.onPhoneTokenReceived = function onPhoneTokenReceived() { ... };
         obj4.onClose = function onClose() { ... };
         arr3 = login.push(closure_1_8.VERIFY_PHONE, obj4);

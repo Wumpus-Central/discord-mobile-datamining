@@ -1,11 +1,12 @@
 // discord_app/modules/links/native/handleSupportedURL.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import QuestContent from "../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
+import AdPlacement from "../../../../discord_common/js/shared/shared-constants/AdPlacement.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CollectiblesActionCreators from "../../collectibles/CollectiblesActionCreators.tsx";
@@ -20,10 +21,10 @@ import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
 import closeVoicePanelsDefault from "../../voice_panel/native/utils/closeVoicePanels.tsx";
 import ApplicationUtils from "../../../utils/native/ApplicationUtils.tsx";
 import authorizeCallbackDefault from "../../oauth2/native/authorizeCallback.tsx";
-import BountyActionCreators from "../../quests/BountyActionCreators.tsx";
 import guild_templates_GuildTemplateActionCreatorsDefault from "../../guild_templates/native/GuildTemplateActionCreators.tsx";
 import FamilyCenterNativeUtils from "../../parent_tools/native/FamilyCenterNativeUtils.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../create_guild/native/CreateGuildModalActionCreators.tsx";
+import BountyActionCreators from "../../quests/BountyActionCreators.tsx";
 import MidjourneyOnboardingUtils from "../../midjourney_onboarding/MidjourneyOnboardingUtils.tsx";
 import GuildSettingsPickerActionCreators from "../../guild_settings_picker/GuildSettingsPickerActionCreators.native.tsx";
 import AgeKeyReturnHandler from "../../age_assurance/native/AgeKeyReturnHandler.tsx";
@@ -36,8 +37,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6137).addPostConnectionCallback;
-let closure_10 = fn(7129).handleMobileWebCheckoutStatus;
+fn(6139).addPostConnectionCallback;
+let closure_10 = fn(7134).handleMobileWebCheckoutStatus;
 const Constants = fn(1085);
 ({
   AnalyticEvents: map1,
@@ -47,14 +48,14 @@ const Constants = fn(1085);
   PlatformTypes: closure_17,
   ME: closure_18,
 } = Constants);
-const StaticChannelRoute = fn(2070).StaticChannelRoute;
-const StreamTypes = fn(5894).StreamTypes;
-const NativePermissionTypes = fn(7477).NativePermissionTypes;
-let closure_22 = fn(10641).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_23 = fn(7248).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_24 = fn(5069).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13902).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(7966).MobileUserSettings;
+const StaticChannelRoute = fn(2071).StaticChannelRoute;
+const StreamTypes = fn(5895).StreamTypes;
+const NativePermissionTypes = fn(7482).NativePermissionTypes;
+let closure_22 = fn(10789).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_23 = fn(7253).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_24 = fn(5070).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(13995).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(7974).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -210,7 +211,13 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[30]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj20 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
+      const obj20 = {
+        guildId: guildId2,
+        channelId: channelId2,
+        messageId: "Array",
+        navigationSettings:
+          -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007748250686510155,
+      };
       const obj25 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj20.navigationSettings = obj25;
       rootNavigationRef1(inviteCode[31])(obj20);
@@ -301,7 +308,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(13914, dependencyMap.paths),
+                    asyncRequireImpl(14007, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -672,15 +679,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(5940).popAll();
-                        const obj5 = closure_1(5940);
+                        closure_1(5941).popAll();
+                        const obj5 = closure_1(5941);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7084).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7084);
+                        dependencyMap(7087).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7087);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(6861).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(6868).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -696,12 +703,12 @@ export default function handleSupportedURL(payload) {
                     if (body != null) {
                       redirect = body.redirect;
                     }
-                    closure_133_1 = closure_1(1383).toURLSafe(redirect);
+                    closure_133_1 = closure_1(1384).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(4763).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(4763);
+                      closure_1(4765).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(4765);
                     }
-                    const obj12 = closure_1(1383);
+                    const obj12 = closure_1(1384);
                   }
                   c8 = 3;
                   const obj = { value, done: true };
@@ -892,8 +899,8 @@ export default function handleSupportedURL(payload) {
                       sourceQuestContent: QuestContent.QuestContent.QUEST_EMBED_MOBILE,
                       properties: null,
                     };
-                    const obj3 = { referrer_id: payload.referrerId };
-                    obj2.properties = obj3;
+                    const obj4 = { referrer_id: payload.referrerId };
+                    obj2.properties = obj4;
                     AnalyticsActions.trackQuestEvent(obj2);
                   }
                   let sort;
@@ -905,22 +912,22 @@ export default function handleSupportedURL(payload) {
                     filter = payload.filter;
                   }
                   const obj5 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
-                  let tmp9 = null;
+                  let tmp3 = null;
                   if (null != sort) {
-                    tmp9 = null;
+                    tmp3 = null;
                     if ("" !== sort) {
-                      tmp9 = sort;
+                      tmp3 = sort;
                     }
                   }
-                  obj5.sort = tmp9;
-                  let tmp10 = null;
+                  obj5.sort = tmp3;
+                  let tmp4 = null;
                   if (null != filter) {
-                    tmp10 = null;
+                    tmp4 = null;
                     if ("" !== filter) {
-                      tmp10 = filter;
+                      tmp4 = filter;
                     }
                   }
-                  obj5.filter = tmp10;
+                  obj5.filter = tmp4;
                   obj5.fromContent = QuestContent.QuestContent.QUEST_SHARE_LINK;
                   QuestUtils.openQuestHome(obj5);
                 });
@@ -936,7 +943,10 @@ export default function handleSupportedURL(payload) {
                   ModalActionCreatorsDefault.popAll();
                   NavigationRouteUtils.navigateToRootTab({ screen: "guilds", guildId });
                   const obj3 = { screen: "guilds", guildId };
-                  const dockCreativePreview = BountyActionCreators.fetchDockCreativePreview(payload.adCreativeId);
+                  const questBarCreativePreview = BountyActionCreators.fetchQuestBarCreativePreview(
+                    payload.adCreativeId,
+                    AdPlacement.AdPlacement.MOBILE_HOME_DOCK_AREA,
+                  );
                 });
                 flag = true;
               } else if (constants2.GIFT === type) {
@@ -944,7 +954,7 @@ export default function handleSupportedURL(payload) {
                   const obj2 = { analyticsLocations: null };
                   const items = [rootNavigationRef1(inviteCode[70]).DEEPLINK];
                   obj2.analyticsLocations = items;
-                  payload(inviteCode[77]).openGiftModal(obj2);
+                  payload(inviteCode[78]).openGiftModal(obj2);
                 });
                 flag = true;
               } else if (constants2.NITRO_HOME === type) {
@@ -956,7 +966,7 @@ export default function handleSupportedURL(payload) {
                 });
                 flag = true;
               } else if (constants2.ACTIVITY === type) {
-                rootNavigationRef1(inviteCode[78])(
+                rootNavigationRef1(inviteCode[79])(
                   payload.applicationId,
                   payload.referrerId,
                   payload.customId,
@@ -998,7 +1008,7 @@ export default function handleSupportedURL(payload) {
                 remoteAuthFingerprint(() => {
                   rootNavigationRef1(inviteCode[18]).popAll();
                   const obj = rootNavigationRef1(inviteCode[18]);
-                  const result = payload(inviteCode[81]).openSubscriptionSettingsFromDeepLink();
+                  const result = payload(inviteCode[82]).openSubscriptionSettingsFromDeepLink();
                 });
                 flag = true;
               } else if (constants2.GAME_PROFILE === type) {
@@ -1068,8 +1078,8 @@ export default function handleSupportedURL(payload) {
                               closure_129_4 = undefined;
                               tmp2(inviteCode[18]).popAll();
                               const items = [
-                                payload(inviteCode[36])(inviteCode[84], inviteCode.paths),
                                 payload(inviteCode[36])(inviteCode[85], inviteCode.paths),
+                                payload(inviteCode[36])(inviteCode[86], inviteCode.paths),
                               ];
                               inviteCode = 1;
                               c4 = 1;
@@ -1134,8 +1144,8 @@ export default function handleSupportedURL(payload) {
     tmp127 = null != guildId && null != channelId;
   }
   if (flag) {
-    const result6 = payload(inviteCode[86]).browserManagerCloseBrowser();
-    const obj50 = payload(inviteCode[86]);
+    const result6 = payload(inviteCode[87]).browserManagerCloseBrowser();
+    const obj50 = payload(inviteCode[87]);
   }
   return flag;
 }

@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import ReanimatedViewNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
-import cancelAnimation from "../../../../_runtime/01655_cancelAnimation.js";
+import cancelAnimation from "../../../../_runtime/01656_cancelAnimation.js";
 
 require = fn;
 let closure_2 = ["ref"];

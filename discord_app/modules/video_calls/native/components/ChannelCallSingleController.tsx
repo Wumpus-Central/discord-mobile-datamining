@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ParticipantTypes = fn(5113).ParticipantTypes;
+const ParticipantTypes = fn(5114).ParticipantTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -98,7 +98,7 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
             }
           }
           let tmp17 = channel;
-          tmp17 = tmp17(tmp15 ? 10925 : 10927);
+          tmp17 = tmp17(tmp15 ? 11100 : 11102);
           let obj2 = { participant: selectedParticipant, channel };
           const tmp16Result = <tmp17 participant={selectedParticipant} channel={channel} />;
           cResult[7] = channel;
@@ -133,13 +133,13 @@ export const ChannelCallSingleController = ReactCompilerGating.isReactCompilerEn
           return null;
         } else {
           let tmp18 = channel;
-          tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10925 : 10927);
+          tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 11100 : 11102);
           let obj2 = { participant: selectedParticipant, channel };
           <tmp18 participant={selectedParticipant} channel={channel} />;
         }
       } else if (ParticipantTypes.USER === type) {
         let obj = { participant: selectedParticipant, channel };
-        return jsx(channel(10928), { participant: selectedParticipant, channel });
+        return jsx(channel(11103), { participant: selectedParticipant, channel });
       } else if (ParticipantTypes.HIDDEN_STREAM === type) {
         return null;
       } else if (ParticipantTypes.ACTIVITY === type) {

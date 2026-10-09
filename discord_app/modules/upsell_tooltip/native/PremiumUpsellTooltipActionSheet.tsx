@@ -5,16 +5,16 @@ import DismissibleContentUnsafeUtils from "../../dismissible_content/Dismissible
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const View = fn(17).View;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     justifyContent: "center",
@@ -48,7 +48,7 @@ const size1 = {
 obj2.nitroWheel = size1;
 let obj4 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
 obj2.buttonContainer = { gap: nativeDefault.space.PX_8 };
-let closure_8 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj5 = { gap: nativeDefault.space.PX_8 };
 size = fn(2);
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ primaryButtonText, primaryButtonIcon, secondaryButtonText, onDismiss } = onPrimaryButtonPress);
       onPrimaryButtonPress = onPrimaryButtonPress.onPrimaryButtonPress;
       const onSecondaryButtonPress = onPrimaryButtonPress.onSecondaryButtonPress;
-      const tmp4 = closure_8();
+      const tmp4 = closure_7();
       if (cResult[0] === dismissibleContent) {
         if (cResult[1] === onDismiss) {
           let tmp5 = cResult[2];
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[14] !== tmp4.nitroWheel) {
                     let obj2 = { style: tmp4.nitroWheel };
-                    const tmp16 = closure_6(dismissibleContent(tmp2[10]).NitroWheel, obj2);
+                    const tmp16 = closure_5(dismissibleContent(tmp2[11]).NitroWheel, obj2);
                     cResult[14] = tmp4.nitroWheel;
                     cResult[15] = tmp16;
                     let tmp14 = tmp16;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               const merged = Object.assign(backdropProps);
                                               obj3.onDismiss = tmp5;
                                               obj3.children = tmp40;
-                                              const tmp49 = closure_6(dismissibleContent(tmp2[13]).BottomSheet, obj3);
+                                              const tmp49 = closure_5(dismissibleContent(tmp2[14]).BottomSheet, obj3);
                                               cResult[48] = backdropProps;
                                               cResult[49] = tmp5;
                                               cResult[50] = tmp40;
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       const obj4 = { style: tmp4.container, children: null };
                                       const items = [tmp10, tmp20, tmp25, tmp36];
                                       obj4.children = items;
-                                      const tmp43 = closure_7(closure_4, obj4);
+                                      const tmp43 = closure_6(onSecondaryButtonPress, obj4);
                                       cResult[42] = tmp4.container;
                                       cResult[43] = tmp36;
                                       cResult[44] = tmp10;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj5 = { style: tmp4.buttonContainer, children: null };
                                   const items1 = [tmp30, tmp33];
                                   obj5.children = items1;
-                                  const tmp39 = closure_7(closure_4, obj5);
+                                  const tmp39 = closure_6(onSecondaryButtonPress, obj5);
                                   cResult[38] = tmp4.buttonContainer;
                                   cResult[39] = tmp30;
                                   cResult[40] = tmp33;
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     onPress: tmp7,
                                     size: "lg",
                                   };
-                                  tmp34 = closure_6(dismissibleContent(tmp2[12]).Button, obj6);
+                                  tmp34 = closure_5(dismissibleContent(tmp2[13]).Button, obj6);
                                 }
                                 cResult[35] = tmp7;
                                 cResult[36] = secondaryButtonText;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               icon: tmp28,
                               size: "lg",
                             };
-                            const tmp32 = closure_6(dismissibleContent(tmp2[12]).Button, obj7);
+                            const tmp32 = closure_5(dismissibleContent(tmp2[13]).Button, obj7);
                             cResult[31] = tmp6;
                             cResult[32] = primaryButtonText;
                             cResult[33] = tmp28;
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             color: "text-default",
                             children: description,
                           };
-                          const tmp27 = closure_6(dismissibleContent(tmp2[11]).Text, obj8);
+                          const tmp27 = closure_5(dismissibleContent(tmp2[12]).Text, obj8);
                           cResult[26] = description;
                           cResult[27] = tmp24;
                           cResult[28] = tmp27;
@@ -237,7 +237,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj9 = { style: tmp4.header, children: null };
                     const items3 = [tmp14, tmp17];
                     obj9.children = items3;
-                    const tmp23 = closure_7(closure_4, obj9);
+                    const tmp23 = closure_6(onSecondaryButtonPress, obj9);
                     cResult[19] = tmp4.header;
                     cResult[20] = tmp14;
                     cResult[21] = tmp17;
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     accessibilityRole: "header",
                     children: title,
                   };
-                  const tmp19 = closure_6(dismissibleContent(tmp2[11]).Text, obj10);
+                  const tmp19 = closure_5(dismissibleContent(tmp2[12]).Text, obj10);
                   cResult[16] = tmp4.title;
                   cResult[17] = title;
                   cResult[18] = tmp19;
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const items4 = [tmp4.img, imageStyle];
               obj11.style = items4;
               obj11.source = imageSource;
-              tmp11 = closure_6(onSecondaryButtonPress, obj11);
+              tmp11 = closure_5(onDismiss(tmp2[10]), obj11);
             }
             cResult[9] = null != imageSource;
             cResult[10] = imageSource;
@@ -326,10 +326,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         secondaryButtonText,
         onDismiss: importDefault,
         onPrimaryButtonPress: dependencyMap,
-        onSecondaryButtonPress: closure_3,
+        onSecondaryButtonPress: View,
       } = arg0);
       ({ title, backdropProps, description, descriptionStyle, imageStyle, primaryButtonText } = arg0);
-      let tmp = closure_8();
+      let tmp = closure_7();
       let obj = { startExpanded: true };
       const merged = Object.assign(backdropProps);
       obj.onDismiss = function handleDismiss(dismissAction) {
@@ -355,13 +355,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [tmp.img, imageStyle];
         obj3.style = items;
         obj3.source = imageSource;
-        tmp2Result = closure_6(closure_3, obj3);
+        tmp2Result = closure_5(FastImageDefault, obj3);
       }
       const items1 = [tmp2Result, , ,];
       const obj4 = { style: tmp.header, children: null };
       const items2 = [
-        closure_6(native.NitroWheel, { style: tmp.nitroWheel }),
-        closure_6(Text_Text.Text, {
+        closure_5(native.NitroWheel, { style: tmp.nitroWheel }),
+        closure_5(Text_Text.Text, {
           variant: "heading-xl/bold",
           style: tmp.title,
           color: "mobile-text-heading-primary",
@@ -370,11 +370,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj4.children = items2;
-      items1[1] = closure_7(closure_4, obj4);
+      items1[1] = closure_6(View, obj4);
       const obj7 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
       const items3 = [tmp.description, descriptionStyle];
       obj7.style = items3;
-      items1[2] = closure_6(Text_Text.Text, obj7);
+      items1[2] = closure_5(Text_Text.Text, obj7);
       const obj8 = { style: tmp.buttonContainer, children: null };
       const obj9 = {
         variant: "active",
@@ -402,14 +402,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         primaryButtonIconResult = primaryButtonIcon();
       }
       obj9.icon = primaryButtonIconResult;
-      const items4 = [closure_6(components_Button_Button.Button, obj9)];
+      const items4 = [closure_5(components_Button_Button.Button, obj9)];
       let tmp2Result2 = null;
       if (null != secondaryButtonText) {
         const obj10 = {
           variant: "secondary",
           text: secondaryButtonText,
           onPress: function handleSecondaryButtonPress() {
-            if (closure_1_3 != null) {
+            if (View != null) {
               tmp();
             }
             ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -427,12 +427,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
           size: "lg",
         };
-        tmp2Result2 = closure_6(components_Button_Button.Button, obj10);
+        tmp2Result2 = closure_5(components_Button_Button.Button, obj10);
       }
       items4[1] = tmp2Result2;
       obj8.children = items4;
-      items1[3] = closure_7(closure_4, obj8);
+      items1[3] = closure_6(View, obj8);
       obj2.children = items1;
-      obj.children = closure_7(closure_4, obj2);
-      return closure_6(Sheet_BottomSheet.BottomSheet, obj);
+      obj.children = closure_6(View, obj2);
+      return closure_5(Sheet_BottomSheet.BottomSheet, obj);
     };

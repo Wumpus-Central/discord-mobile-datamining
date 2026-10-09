@@ -5,18 +5,18 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod14855 from "../../../../../../_runtime/metro/14855__.js";
+import _mod14963 from "../../../../../../_runtime/metro/14963__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -71,7 +71,7 @@ obj2.errorText = {
   marginTop: 8,
   color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL,
 };
-let closure_10 = createStyles.createStyles(obj2);
+let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj5 = {
   fontSize: 14,
@@ -86,17 +86,17 @@ const result = size.fileFinishedImporting("modules/user_settings/account/native/
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function TwoFASetupSuccess() {
       const cResult = c.c(40);
-      const tmp4 = closure_10();
+      const tmp4 = closure_9();
       [tmp6, require] = noop.useState(false);
       const tmp5 = _slicedToArray(noop.useState(false), 2);
       [tmp8, importDefault] = noop.useState("");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
+        const fn = function o() {
           setError("");
           setRegistering = asyncGeneratorStep(async (arg0) => {
             ({ ticket, credential } = closure_0);
             const intl = closure_0(1126).intl;
-            await closure_0(5945).finishRegisterWebAuthnCredential(
+            await closure_0(5946).finishRegisterWebAuthnCredential(
               intl.string(closure_0(1126).t["8H5RmH"]),
               ticket,
               credential,
@@ -109,9 +109,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               c5 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              setError(14843).close();
+              setError(14951).close();
               c4 = 0;
-              setError(14843);
+              setError(14951);
             }
             return value;
           });
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp4.flex) {
         const obj2 = { style: tmp4.flex };
-        const tmp13 = closure_8(closure_6, obj2);
+        const tmp13 = closure_7(View, obj2);
         cResult[1] = tmp4.flex;
         cResult[2] = tmp13;
         let tmp10 = tmp13;
@@ -145,11 +145,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[2];
       }
       if (cResult[3] !== tmp4.image) {
-        const obj3 = { source: _mod14855, style: tmp4.image };
-        const tmp17 = closure_8(closure_7, obj3);
+        const obj3 = { source: _mod14963, style: tmp4.image };
+        const tmp18 = closure_7(FastImageDefault, obj3);
         cResult[3] = tmp4.image;
-        cResult[4] = tmp17;
-        let tmp14 = tmp17;
+        cResult[4] = tmp18;
+        let tmp14 = tmp18;
       } else {
         tmp14 = cResult[4];
       }
@@ -157,66 +157,66 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let intl = util.intl;
         const stringResult = intl.string(util.t.Awk3Gw);
         cResult[5] = stringResult;
-        let tmp18 = stringResult;
+        let tmp19 = stringResult;
       } else {
-        tmp18 = cResult[5];
+        tmp19 = cResult[5];
       }
       if (cResult[6] !== tmp4.success) {
         const obj4 = {
           style: tmp4.success,
           variant: "text-lg/semibold",
           color: "mobile-text-heading-primary",
-          children: tmp18,
+          children: tmp19,
         };
-        const tmp22 = closure_8(Text_Text.Text, obj4);
+        const tmp23 = closure_7(Text_Text.Text, obj4);
         cResult[6] = tmp4.success;
-        cResult[7] = tmp22;
-        let tmp20 = tmp22;
+        cResult[7] = tmp23;
+        let tmp21 = tmp23;
       } else {
-        tmp20 = cResult[7];
+        tmp21 = cResult[7];
       }
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = util.intl;
         const stringResult1 = intl2.string(util.t["0d1bXM"]);
         cResult[8] = stringResult1;
-        let tmp23 = stringResult1;
+        let tmp24 = stringResult1;
       } else {
-        tmp23 = cResult[8];
+        tmp24 = cResult[8];
       }
       if (cResult[9] !== tmp4.successBody) {
-        const obj5 = { style: tmp4.successBody, children: tmp23 };
-        const tmp27 = closure_8(native.LegacyText, obj5);
+        const obj5 = { style: tmp4.successBody, children: tmp24 };
+        const tmp28 = closure_7(native.LegacyText, obj5);
         cResult[9] = tmp4.successBody;
-        cResult[10] = tmp27;
-        let tmp25 = tmp27;
+        cResult[10] = tmp28;
+        let tmp26 = tmp28;
       } else {
-        tmp25 = cResult[10];
+        tmp26 = cResult[10];
       }
       if (cResult[11] !== tmp4.divider) {
         const obj6 = { style: tmp4.divider };
-        const tmp31 = closure_8(closure_6, obj6);
+        const tmp32 = closure_7(View, obj6);
         cResult[11] = tmp4.divider;
-        cResult[12] = tmp31;
-        let tmp28 = tmp31;
+        cResult[12] = tmp32;
+        let tmp29 = tmp32;
       } else {
-        tmp28 = cResult[12];
+        tmp29 = cResult[12];
       }
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = util.intl;
         const stringResult2 = intl3.string(util.t.okgGTu);
         cResult[13] = stringResult2;
-        let tmp32 = stringResult2;
+        let tmp33 = stringResult2;
       } else {
-        tmp32 = cResult[13];
+        tmp33 = cResult[13];
       }
       if (cResult[14] !== tmp4.ctaDescription) {
-        const obj7 = { style: tmp4.ctaDescription, children: tmp32 };
-        const tmp36 = closure_8(native.LegacyText, obj7);
+        const obj7 = { style: tmp4.ctaDescription, children: tmp33 };
+        const tmp37 = closure_7(native.LegacyText, obj7);
         cResult[14] = tmp4.ctaDescription;
-        cResult[15] = tmp36;
-        let tmp34 = tmp36;
+        cResult[15] = tmp37;
+        let tmp35 = tmp37;
       } else {
-        tmp34 = cResult[15];
+        tmp35 = cResult[15];
       }
       if (cResult[16] !== tmp6) {
         const intl4 = util.intl;
@@ -232,39 +232,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[17] = stringResult3;
       } else {
         if (cResult[18] === tmp6) {
-          if (cResult[19] === tmp37) {
-            let tmp40 = cResult[20];
+          if (cResult[19] === tmp38) {
+            let tmp41 = cResult[20];
           }
           if (cResult[21] === tmp8) {
             if (cResult[22] === tmp4.errorText) {
-              let tmp43 = cResult[23];
+              let tmp44 = cResult[23];
             }
             if (cResult[24] === tmp4.buttonWrapper) {
-              if (cResult[25] === tmp40) {
-                if (cResult[26] === tmp43) {
-                  let tmp46 = cResult[27];
+              if (cResult[25] === tmp41) {
+                if (cResult[26] === tmp44) {
+                  let tmp47 = cResult[27];
                 }
                 if (cResult[28] !== tmp4.flex) {
                   const obj8 = { style: tmp4.flex };
-                  const tmp53 = closure_8(closure_6, obj8);
+                  const tmp54 = closure_7(View, obj8);
                   cResult[28] = tmp4.flex;
-                  cResult[29] = tmp53;
-                  let tmp50 = tmp53;
+                  cResult[29] = tmp54;
+                  let tmp51 = tmp54;
                 } else {
-                  tmp50 = cResult[29];
+                  tmp51 = cResult[29];
                 }
                 if (cResult[30] === tmp4.container) {
-                  if (cResult[31] === tmp28) {
-                    if (cResult[32] === tmp34) {
-                      if (cResult[33] === tmp46) {
-                        if (cResult[34] === tmp50) {
+                  if (cResult[31] === tmp29) {
+                    if (cResult[32] === tmp35) {
+                      if (cResult[33] === tmp47) {
+                        if (cResult[34] === tmp51) {
                           if (cResult[35] === tmp10) {
                             if (cResult[36] === tmp14) {
-                              if (cResult[37] === tmp20) {
-                                if (cResult[38] === tmp25) {
-                                  let tmp54 = cResult[39];
+                              if (cResult[37] === tmp21) {
+                                if (cResult[38] === tmp26) {
+                                  let tmp55 = cResult[39];
                                 }
-                                return tmp54;
+                                return tmp55;
                               }
                             }
                           }
@@ -275,54 +275,54 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj9 = { children: null };
                 const obj10 = { style: tmp4.container, children: null };
-                const items = [tmp10, tmp14, tmp20, tmp25, tmp28, tmp34, tmp46, tmp50];
+                const items = [tmp10, tmp14, tmp21, tmp26, tmp29, tmp35, tmp47, tmp51];
                 obj10.children = items;
-                obj9.children = closure_9(closure_6, obj10);
-                const tmp58 = closure_8(TwoFASetupModal.TwoFASetupModalScreen, obj9);
+                obj9.children = closure_8(View, obj10);
+                const tmp59 = closure_7(TwoFASetupModal.TwoFASetupModalScreen, obj9);
                 cResult[30] = tmp4.container;
-                cResult[31] = tmp28;
-                cResult[32] = tmp34;
-                cResult[33] = tmp46;
-                cResult[34] = tmp50;
+                cResult[31] = tmp29;
+                cResult[32] = tmp35;
+                cResult[33] = tmp47;
+                cResult[34] = tmp51;
                 cResult[35] = tmp10;
                 cResult[36] = tmp14;
-                cResult[37] = tmp20;
-                cResult[38] = tmp25;
-                cResult[39] = tmp58;
-                tmp54 = tmp58;
+                cResult[37] = tmp21;
+                cResult[38] = tmp26;
+                cResult[39] = tmp59;
+                tmp55 = tmp59;
               }
             }
             const obj11 = { style: tmp4.buttonWrapper, children: null };
-            const items1 = [tmp40, tmp43];
+            const items1 = [tmp41, tmp44];
             obj11.children = items1;
-            const tmp49 = closure_9(closure_6, obj11);
+            const tmp50 = closure_8(View, obj11);
             cResult[24] = tmp4.buttonWrapper;
-            cResult[25] = tmp40;
-            cResult[26] = tmp43;
-            cResult[27] = tmp49;
-            tmp46 = tmp49;
+            cResult[25] = tmp41;
+            cResult[26] = tmp44;
+            cResult[27] = tmp50;
+            tmp47 = tmp50;
           }
-          let tmp44 = "" !== tmp8;
-          if (tmp44) {
+          let tmp45 = "" !== tmp8;
+          if (tmp45) {
             const obj12 = { style: tmp4.errorText, children: tmp8 };
-            tmp44 = closure_8(native.LegacyText, obj12);
+            tmp45 = closure_7(native.LegacyText, obj12);
           }
           cResult[21] = tmp8;
           cResult[22] = tmp4.errorText;
-          cResult[23] = tmp44;
-          tmp43 = tmp44;
+          cResult[23] = tmp45;
+          tmp44 = tmp45;
         }
         const obj13 = { text: cResult[17], onPress: first, disabled: tmp6, loading: tmp6, grow: true };
-        const tmp42 = closure_8(components_Button_Button.Button, obj13);
+        const tmp43 = closure_7(components_Button_Button.Button, obj13);
         cResult[18] = tmp6;
         cResult[19] = cResult[17];
-        cResult[20] = tmp42;
-        tmp40 = tmp42;
+        cResult[20] = tmp43;
+        tmp41 = tmp43;
       }
       const tmp7 = _slicedToArray(noop.useState(""), 2);
     }
   : function TwoFASetupSuccess() {
-      const tmp = closure_10();
+      const tmp = closure_9();
       [tmp3, require] = noop.useState(false);
       const tmp2 = _slicedToArray(noop.useState(false), 2);
       [tmp5, importDefault] = noop.useState("");
@@ -358,7 +358,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
                   c5 = 1;
                   c6 = 1;
-                  return { value: "Reflect", done: true };
+                  return { value: "Set", done: true };
                 }
               } else if (1 === tmp8) {
                 if (arg0 === 1) {
@@ -374,7 +374,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c5 = 3;
                   c6 = 1;
                   const obj5 = {
-                    value: setRegistering(5945).finishRegisterWebAuthnCredential(
+                    value: setRegistering(5946).finishRegisterWebAuthnCredential(
                       intl.string(setRegistering(1126).t["8H5RmH"]),
                       closure_129_0,
                       closure_129_1,
@@ -392,9 +392,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c6 = 3;
                   throw value;
                 } else if (arg0 !== 2) {
-                  setError(14843).close();
+                  setError(14951).close();
                   c4 = 0;
-                  const obj = setError(14843);
+                  const obj = setError(14951);
                 }
                 c4 = 0;
                 c6 = 3;
@@ -428,10 +428,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         });
       }, []);
       let obj = { style: tmp.container, children: null };
-      const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , ,];
+      const items = [closure_7(View, { style: tmp.flex }), , , , , , ,];
+      let obj3 = { source: null, style: null };
       let obj2 = { style: tmp.flex };
       const tmp4 = _slicedToArray(noop.useState(""), 2);
-      items[1] = closure_8(closure_7, { source: _mod14855, style: tmp.image });
+      obj3.source = _mod14963;
+      obj3.style = tmp.image;
+      items[1] = closure_7(FastImageDefault, obj3);
       let obj4 = {
         style: tmp.success,
         variant: "text-lg/semibold",
@@ -440,16 +443,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let intl = util.intl;
       obj4.children = intl.string(util.t.Awk3Gw);
-      items[2] = closure_8(Text_Text.Text, obj4);
+      items[2] = closure_7(Text_Text.Text, obj4);
       let obj5 = { style: tmp.successBody, children: null };
       const intl2 = util.intl;
       obj5.children = intl2.string(util.t["0d1bXM"]);
-      items[3] = closure_8(native.LegacyText, obj5);
-      items[4] = closure_8(closure_6, { style: tmp.divider });
+      items[3] = closure_7(native.LegacyText, obj5);
+      items[4] = closure_7(View, { style: tmp.divider });
       const obj7 = { style: tmp.ctaDescription, children: null };
       const intl3 = util.intl;
       obj7.children = intl3.string(util.t.okgGTu);
-      items[5] = closure_8(native.LegacyText, obj7);
+      items[5] = closure_7(native.LegacyText, obj7);
       const obj8 = { style: tmp.buttonWrapper, children: null };
       const intl4 = util.intl;
       const string = intl4.string;
@@ -460,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.NIFmCJ);
       }
       const items1 = [
-        closure_8(components_Button_Button.Button, {
+        closure_7(components_Button_Button.Button, {
           text: stringResult,
           onPress: callback,
           disabled: tmp3,
@@ -471,14 +474,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp7Result = "" !== tmp5;
       if (tmp7Result) {
         const obj9 = { style: tmp.errorText, children: tmp5 };
-        tmp7Result = closure_8(native.LegacyText, obj9);
+        tmp7Result = closure_7(native.LegacyText, obj9);
       }
       const obj10 = { children: null };
       items1[1] = tmp7Result;
       obj8.children = items1;
-      items[6] = closure_9(closure_6, obj8);
-      items[7] = closure_8(closure_6, { style: tmp.flex });
+      items[6] = closure_8(View, obj8);
+      items[7] = closure_7(View, { style: tmp.flex });
       obj.children = items;
-      obj10.children = closure_9(closure_6, obj);
-      return closure_8(TwoFASetupModal.TwoFASetupModalScreen, obj10);
+      obj10.children = closure_8(View, obj);
+      return closure_7(TwoFASetupModal.TwoFASetupModalScreen, obj10);
     };

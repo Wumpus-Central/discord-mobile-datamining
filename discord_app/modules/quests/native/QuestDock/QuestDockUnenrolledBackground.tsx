@@ -8,7 +8,7 @@ import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const expandedHeight = fn(15174).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const expandedHeight = fn(15285).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -31,12 +31,12 @@ import GuildRoleConnectionEligibilityStore from "../GuildRoleConnectionEligibili
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const OperatorTypes = fn(6863).OperatorTypes;
+const OperatorTypes = fn(6870).OperatorTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center", padding: 16 },
   header: {
@@ -238,7 +238,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray = groupByResult;
       const keys = Object.keys(groupByResult);
       closure_4 = keys.length - 1;
-      const roleColor = guildId(4778).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+      const roleColor = guildId(4779).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
       const mapped = keys.map((item, index) => {
         const found = arr.filter((operator) => null != operator.operator);
         const found1 = arr.find((application) => null != application.application);
@@ -358,8 +358,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       c3 = groupByResult;
       const keys = Object.keys(groupByResult);
       closure_4 = keys.length - 1;
-      const roleColor = guildId(4778).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
-      let obj2 = guildId(4778);
+      const roleColor = guildId(4779).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+      let obj2 = guildId(4779);
       return closure_16(closure_18, {
         children: keys.map((item, index) => {
           const found = arr.filter((operator) => null != operator.operator);

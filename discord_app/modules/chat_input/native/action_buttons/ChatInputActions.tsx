@@ -369,12 +369,12 @@ class ChatInputActions {
     return onAttachPress(photosButtonExternalRef, obj9);
   }
 }
-const ChatInputConstants = fn(11652);
+const ChatInputConstants = fn(11588);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG },
@@ -382,8 +382,8 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5380).SMALL_BUTTON_HEIGHT + fn(5380).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5380).SMALL_BUTTON_HEIGHT + fn(5380).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5381).SMALL_BUTTON_HEIGHT + fn(5381).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5381).SMALL_BUTTON_HEIGHT + fn(5381).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };

@@ -4,10 +4,10 @@ import GroupDMNitroCapExperiment from "GroupDMNitroCapExperiment.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(11343).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+let closure_3 = fn(10716).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const Constants = fn(1085);
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_4, MAX_GROUP_DM_STAFF_PARTICIPANTS: hasOwnProperty } = Constants);
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/group_dm/getGroupDMRecipientLimit.tsx");
 

@@ -7,9 +7,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[12] === tmp13) {
               let tmp16 = cResult[13];
             }
-            const coachmark = tmp(9375).useCoachmark(guild.targetRef, tmp16);
+            const coachmark = tmp(9413).useCoachmark(guild.targetRef, tmp16);
             return null;
           }
         }
@@ -155,6 +155,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.onButtonPress = callback1;
         return obj;
       }, items2);
-      const coachmark = guild(9375).useCoachmark(guild.targetRef, memo);
+      const coachmark = guild(9413).useCoachmark(guild.targetRef, memo);
       return null;
     };

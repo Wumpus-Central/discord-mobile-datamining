@@ -23,12 +23,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(6920).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(6927).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5090);
+let createStyles = fn(5091);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -113,7 +113,7 @@ obj2.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5090);
+createStyles = fn(5091);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",
@@ -305,7 +305,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       ({ sku, title, body, finePrint, ctaLabel, ctaIcon, ctaLoading, onCtaPress, onClose } = arg0);
       const tmp4 = closure_16();
       _require = tmp4;
-      const width = isScreenLandscape(1496)().width;
+      const width = isScreenLandscape(1497)().width;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
         const fn = function p() {

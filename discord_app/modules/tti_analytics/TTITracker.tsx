@@ -24,7 +24,6 @@ function serialize(arg0, arg1) {
 }
 function loggerCallback() {}
 global.__timingFunction = () => performance.now();
-let closure_7 = null == global.__getTotalRequireTime ? () => 0 : () => global.__getTotalRequireTime();
 class TTITimer {
   constructor(arg0, arg1) {
     merged = Object.assign({
@@ -70,7 +69,15 @@ prototype["recordStart"] = function recordStart() {
 prototype["recordStart_"] = function recordStart_() {
   this.start_ = Date.now();
   this.startNumImports = _modAll2.size();
-  this.startImportTime = closure_7();
+  const __getTotalRequireTime = global.__getTotalRequireTime;
+  let num;
+  if (__getTotalRequireTime != null) {
+    num = __getTotalRequireTime();
+  }
+  if (num == null) {
+    num = 0;
+  }
+  this.startImportTime = num;
 };
 prototype["recordEnd"] = function recordEnd() {
   const self = this;
@@ -87,7 +94,15 @@ prototype["recordEnd"] = function recordEnd() {
 prototype["recordEnd_"] = function recordEnd_() {
   this.end_ = Date.now();
   this.endNumImports = _modAll2.size();
-  this.endImportTime = closure_7();
+  const __getTotalRequireTime = global.__getTotalRequireTime;
+  let num;
+  if (__getTotalRequireTime != null) {
+    num = __getTotalRequireTime();
+  }
+  if (num == null) {
+    num = 0;
+  }
+  this.endImportTime = num;
 };
 prototype["set"] = function set(start_, arg1) {
   const self = this;
@@ -95,7 +110,15 @@ prototype["set"] = function set(start_, arg1) {
     self.start_ = start_;
     self.end_ = start_ + arg1;
     self.endNumImports = _modAll2.size();
-    self.endImportTime = closure_7();
+    const __getTotalRequireTime = global.__getTotalRequireTime;
+    let num;
+    if (__getTotalRequireTime != null) {
+      num = __getTotalRequireTime();
+    }
+    if (num == null) {
+      num = 0;
+    }
+    self.endImportTime = num;
   }
   AppStartPerformanceDefault.mark(self.emoji, self.name, arg1);
   loggerCallback();
@@ -234,10 +257,19 @@ prototype2["record"] = function record() {
   loggerCallback();
 };
 prototype2["recordState_"] = function recordState_(timestamp) {
+  const self = this;
   this.time_ = timestamp;
   this.numImports = _modAll2.size();
-  this.importTime = closure_7();
-  AppStartPerformanceDefault.mark(this.emoji, this.name);
+  const __getTotalRequireTime = global.__getTotalRequireTime;
+  let num;
+  if (__getTotalRequireTime != null) {
+    num = __getTotalRequireTime();
+  }
+  if (num == null) {
+    num = 0;
+  }
+  self.importTime = num;
+  AppStartPerformanceDefault.mark(self.emoji, self.name);
 };
 prototype2["hasData"] = function hasData() {
   return this.time_ > 0;
@@ -275,7 +307,15 @@ Object.defineProperty(prototype3, "time", {
 });
 prototype3["record"] = function record() {
   if (0 === this.time_) {
-    tmp.time_ = closure_7();
+    const __getTotalRequireTime = global.__getTotalRequireTime;
+    let num;
+    if (__getTotalRequireTime != null) {
+      num = __getTotalRequireTime();
+    }
+    if (num == null) {
+      num = 0;
+    }
+    tmp.time_ = num;
   }
 };
 const prototype4 = function TTITrackers() {

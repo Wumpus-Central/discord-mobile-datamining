@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   channelName: { flexShrink: 1, marginStart: 4 },
   channelIcon: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },

@@ -1,7 +1,7 @@
 // discord_app/modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -117,17 +117,17 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(10381, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10368, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         const items = [
           closure_1_10(
-            channelId(5086).Text,
+            channelId(5087).Text,
             { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(5086).Text,
+            channelId(5087).Text,
             { variant: "text-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),
@@ -176,8 +176,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10266).SafetyWarningTypes;
-const Constants = fn(10373);
+const SafetyWarningTypes = fn(10251).SafetyWarningTypes;
+const Constants = fn(10360);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
@@ -187,7 +187,7 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const MuteUntilSeconds = fn(1095).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };

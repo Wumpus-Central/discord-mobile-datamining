@@ -8,12 +8,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(7860).GuildTagBadgeSize;
+const View = fn(17).View;
+const GuildTagBadgeSize = fn(7869).GuildTagBadgeSize;
 const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   card: { padding: nativeDefault.space.PX_16 },
   notice: null,
@@ -33,7 +32,7 @@ obj2.avatar = size;
 obj2.messageBody = { flex: 1 };
 let obj5 = { flexDirection: "row", columnGap: nativeDefault.space.PX_12, alignItems: "flex-start" };
 obj2.usernameRow = { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_4 };
-let closure_13 = createStyles.createStyles(obj2);
+let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj6 = { flexDirection: "row", alignItems: "center", columnGap: nativeDefault.space.PX_4 };
 size = fn(2);
@@ -51,10 +50,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== variant) {
         str = variant;
       }
-      let card = closure_13();
+      let card = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
-        const fn = function b() {
+        const fn = function p() {
           return currentUser.getCurrentUser();
         };
         cResult[0] = items;
@@ -67,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = Card(504).useStateFromStores(tmp3, tmp4);
       const CardResult = Card(504);
-      const name = onAdopted(5405).useName(guildId, null, stateFromStores);
+      const name = onAdopted(5406).useName(guildId, null, stateFromStores);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === guildId) {
           let tmp8 = cResult[4];
@@ -117,17 +116,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp25 = cResult[15];
                 }
                 if (cResult[16] !== card.avatar) {
-                  const obj2 = { source: onAdopted(12617), style: card.avatar, importantForAccessibility: "no" };
-                  const tmp29 = closure_10(closure_6, obj2);
+                  const obj2 = { source: onAdopted(12557), style: card.avatar, importantForAccessibility: "no" };
+                  const tmp29 = closure_9(onAdopted(6163), obj2);
                   cResult[16] = card.avatar;
                   cResult[17] = tmp29;
                   let tmp26 = tmp29;
+                  const tmp6Result = onAdopted(6163);
                 } else {
                   tmp26 = cResult[17];
                 }
                 const _Symbol = Symbol;
                 if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp32 = closure_10(Card(5086).Text, {
+                  const tmp32 = closure_9(Card(5087).Text, {
                     variant: "text-md/semibold",
                     color: "text-default",
                     children: "Locke",
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let obj3 = { variant: "text-md/normal", color: "text-default", children: null };
                   const intl2 = Card(1126).intl;
                   obj3.children = intl2.string(Card(1126).t.KZQ4mF);
-                  const tmp35 = closure_10(Card(5086).Text, obj3);
+                  const tmp35 = closure_9(Card(5087).Text, obj3);
                   cResult[19] = tmp35;
                   let tmp33 = tmp35;
                 } else {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let obj5 = { style: card.messageBody, children: null };
                   const items1 = [tmp30, tmp33];
                   obj5.children = items1;
-                  const tmp39 = closure_11(closure_7, obj5);
+                  const tmp39 = closure_10(View, obj5);
                   cResult[20] = card.messageBody;
                   cResult[21] = tmp39;
                   let tmp36 = tmp39;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[29] !== name) {
                         const obj6 = { variant: "text-md/semibold", color: "text-default", children: name };
-                        const tmp49 = closure_10(Card(5086).Text, obj6);
+                        const tmp49 = closure_9(Card(5087).Text, obj6);
                         cResult[29] = name;
                         cResult[30] = tmp49;
                         let tmp47 = tmp49;
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj7 = { variant: "text-md/normal", color: "text-default", children: null };
                                   const intl3 = Card(1126).intl;
                                   obj7.children = intl3.string(Card(1126).t.LKsPRe);
-                                  const tmp63 = closure_10(Card(5086).Text, obj7);
+                                  const tmp63 = closure_9(Card(5087).Text, obj7);
                                   cResult[40] = tmp63;
                                   let tmp61 = tmp63;
                                 } else {
@@ -214,20 +214,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         }
                                         if (cResult[51] !== card.avatar) {
                                           const obj8 = {
-                                            source: onAdopted(14012),
+                                            source: onAdopted(14109),
                                             style: card.avatar,
                                             importantForAccessibility: "no",
                                           };
-                                          const tmp76 = closure_10(closure_6, obj8);
+                                          const tmp76 = closure_9(onAdopted(6163), obj8);
                                           cResult[51] = card.avatar;
                                           cResult[52] = tmp76;
                                           let tmp73 = tmp76;
+                                          const tmp6Result3 = onAdopted(6163);
                                         } else {
                                           tmp73 = cResult[52];
                                         }
                                         const _Symbol4 = Symbol;
                                         if (cResult[53] === Symbol.for("react.memo_cache_sentinel")) {
-                                          const tmp79 = closure_10(Card(5086).Text, {
+                                          const tmp79 = closure_9(Card(5087).Text, {
                                             variant: "text-md/semibold",
                                             color: "text-default",
                                             children: "Phibi",
@@ -246,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           };
                                           const intl4 = Card(1126).intl;
                                           obj9.children = intl4.string(Card(1126).t.vtCg11);
-                                          const tmp82 = closure_10(Card(5086).Text, obj9);
+                                          const tmp82 = closure_9(Card(5087).Text, obj9);
                                           cResult[54] = tmp82;
                                           let tmp80 = tmp82;
                                         } else {
@@ -256,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                           const obj10 = { style: card.messageBody, children: null };
                                           const items2 = [tmp77, tmp80];
                                           obj10.children = items2;
-                                          const tmp86 = closure_11(closure_7, obj10);
+                                          const tmp86 = closure_10(View, obj10);
                                           cResult[55] = card.messageBody;
                                           cResult[56] = tmp86;
                                           let tmp83 = tmp86;
@@ -309,14 +310,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                         } else {
                                                           if (cResult[74] === tmp99) {
                                                           }
-                                                          Card = Card(6186).Card;
+                                                          Card = Card(6188).Card;
                                                           const obj11 = {
                                                             variant: "secondary",
                                                             radius: 16,
                                                             style: card.card,
                                                             children: tmp99,
                                                           };
-                                                          tmp = closure_10(Card, obj11);
+                                                          tmp = closure_9(Card, obj11);
                                                           cResult[74] = tmp99;
                                                           card = card.card;
                                                           cResult[75] = card;
@@ -326,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                       const obj12 = { children: null };
                                                       const items3 = [tmp22, tmp96];
                                                       obj12.children = items3;
-                                                      const tmp102 = closure_11(closure_12, obj12);
+                                                      const tmp102 = closure_10(closure_11, obj12);
                                                       cResult[71] = tmp96;
                                                       cResult[72] = tmp22;
                                                       cResult[73] = tmp102;
@@ -337,7 +338,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 const obj13 = { spacing: onAdopted(587).space.PX_12, children: null };
                                                 const items4 = [tmp40, tmp68, tmp87, tmp93];
                                                 obj13.children = items4;
-                                                const tmp98 = closure_11(Card(5373).Stack, obj13);
+                                                const tmp98 = closure_10(Card(5374).Stack, obj13);
                                                 cResult[66] = tmp40;
                                                 cResult[67] = tmp68;
                                                 cResult[68] = tmp87;
@@ -353,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               disabled: isDirty,
                                               onPress: tmp17,
                                             };
-                                            const tmp95 = closure_10(Card(5375).Button, obj15);
+                                            const tmp95 = closure_9(Card(5376).Button, obj15);
                                             cResult[62] = tmp16;
                                             cResult[63] = tmp17;
                                             cResult[64] = isDirty;
@@ -364,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         const obj16 = { style: tmp72, children: null };
                                         const items5 = [tmp73, tmp83];
                                         obj16.children = items5;
-                                        const tmp90 = closure_11(closure_7, obj16);
+                                        const tmp90 = closure_10(View, obj16);
                                         cResult[57] = tmp72;
                                         cResult[58] = tmp73;
                                         cResult[59] = tmp83;
@@ -382,7 +383,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj17 = { style: card.message, children: null };
                                   const items7 = [tmp44, tmp64];
                                   obj17.children = items7;
-                                  const tmp71 = closure_11(closure_7, obj17);
+                                  const tmp71 = closure_10(View, obj17);
                                   cResult[44] = card.message;
                                   cResult[45] = tmp44;
                                   cResult[46] = tmp64;
@@ -392,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 const obj18 = { style: card.messageBody, children: null };
                                 const items8 = [tmp57, tmp61];
                                 obj18.children = items8;
-                                const tmp67 = closure_11(closure_7, obj18);
+                                const tmp67 = closure_10(View, obj18);
                                 cResult[41] = card.messageBody;
                                 cResult[42] = tmp57;
                                 cResult[43] = tmp67;
@@ -402,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj19 = { style: card.usernameRow, children: null };
                             const items9 = [tmp47, tmp50];
                             obj19.children = items9;
-                            const tmp60 = closure_11(closure_7, obj19);
+                            const tmp60 = closure_10(View, obj19);
                             cResult[36] = card.usernameRow;
                             cResult[37] = tmp47;
                             cResult[38] = tmp50;
@@ -427,10 +428,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             height: null,
                           };
                           ({ SIZE_12: obj14.width, SIZE_12: obj14.height } = GuildTagBadgeSize);
-                          tmp52Result = closure_10(Card(13968).GuildBadge, size);
+                          tmp52Result = closure_9(Card(14065).GuildBadge, size);
                         }
                         obj20.guildBadge = tmp52Result;
-                        tmp52Result2 = closure_10(Card(8830).BaseGuildTagChiplet, obj20);
+                        tmp52Result2 = closure_9(Card(8839).BaseGuildTagChiplet, obj20);
                       }
                       cResult[31] = badge;
                       cResult[32] = primaryColor;
@@ -440,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp50 = tmp52Result2;
                     }
                     const obj21 = { source: tmp8, style: card.avatar, importantForAccessibility: "no" };
-                    const tmp46 = closure_10(onAdopted(6164), obj21);
+                    const tmp46 = closure_9(onAdopted(6163), obj21);
                     cResult[26] = tmp8;
                     cResult[27] = card.avatar;
                     cResult[28] = tmp46;
@@ -450,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj22 = { style: tmp25, children: null };
                 const items10 = [tmp26, tmp36];
                 obj22.children = items10;
-                const tmp43 = closure_11(closure_7, obj22);
+                const tmp43 = closure_10(View, obj22);
                 cResult[22] = tmp36;
                 cResult[23] = tmp25;
                 cResult[24] = tmp26;
@@ -465,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp25 = items11;
             }
             const obj23 = { variant: "text-sm/medium", color: "text-muted", style: card.notice, children: cResult[9] };
-            const tmp24 = closure_10(Card(5086).Text, obj23);
+            const tmp24 = closure_9(Card(5087).Text, obj23);
             cResult[10] = card.notice;
             cResult[11] = cResult[9];
             cResult[12] = tmp24;
@@ -544,17 +545,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = t5;
         const tmp15 = _slicedToArray(noop.useState(false), 2);
       }
-      let obj4 = onAdopted(5405);
+      let obj4 = onAdopted(5406);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
       }
-      const source = onAdopted(1414).makeSource(avatarURL);
+      const source = onAdopted(1415).makeSource(avatarURL);
       cResult[2] = stateFromStores;
       cResult[3] = guildId;
       cResult[4] = source;
       tmp8 = source;
-      const tmp6Result = onAdopted(1414);
+      const tmp6Result4 = onAdopted(1415);
     }
   : function GuildSettingsServerTagPreview(guildId) {
       guildId = guildId.guildId;
@@ -564,18 +565,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const onAdopted = guildId.onAdopted;
       dependencyMap = undefined;
-      const tmp = closure_13();
+      const tmp = closure_12();
       const items = [UserStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       let obj = guildId(504);
-      const name = onAdopted(5405).useName(guildId, null, stateFromStores);
-      let obj3 = onAdopted(5405);
+      const name = onAdopted(5406).useName(guildId, null, stateFromStores);
+      let obj3 = onAdopted(5406);
       let avatarURL;
       if (stateFromStores != null) {
         avatarURL = stateFromStores.getAvatarURL(guildId, 40);
       }
       let identityGuildId;
-      const source = onAdopted(1414).makeSource(avatarURL);
+      const source = onAdopted(1415).makeSource(avatarURL);
       if (stateFromStores != null) {
         const primaryGuild = stateFromStores.primaryGuild;
         if (primaryGuild != null) {
@@ -593,7 +594,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         isDirty = true === identityEnabled;
       }
-      let obj4 = onAdopted(1414);
+      let obj4 = onAdopted(1415);
       [tmp11, c2] = noop.useState(false);
       const items1 = [guildId, onAdopted];
       const callback = noop.useCallback(
@@ -627,7 +628,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap(true);
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp2(13967).adoptGuildIdentity(guildId, true), done: false };
+                  const obj5 = { value: tmp2(14064).adoptGuildIdentity(guildId, true), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -666,34 +667,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.OVvzY0);
       }
       obj2.children = stringResult;
-      const items2 = [closure_10(guildId(5086).Text, obj2)];
+      const items2 = [closure_9(guildId(5087).Text, obj2)];
       let obj5 = { spacing: onAdopted(587).space.PX_12, children: null };
       const obj6 = { style: null, children: null };
       const items3 = [,];
       ({ message: arr4[0], unfocused: arr4[1] } = tmp);
       obj6.style = items3;
+      const obj7 = { source: null, style: null, importantForAccessibility: "no" };
       const tmp10 = _slicedToArray(noop.useState(false), 2);
-      const items4 = [
-        closure_10(closure_6, { source: onAdopted(12617), style: tmp.avatar, importantForAccessibility: "no" }),
-      ];
+      obj7.source = onAdopted(12557);
+      obj7.style = tmp.avatar;
+      const items4 = [closure_9(onAdopted(6163), obj7)];
       const obj8 = { style: tmp.messageBody, children: null };
       const items5 = [
-        closure_10(guildId(5086).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }),
+        closure_9(guildId(5087).Text, { variant: "text-md/semibold", color: "text-default", children: "Locke" }),
       ];
       const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
       const intl2 = tmp2(1126).intl;
       obj9.children = intl2.string(guildId(1126).t.KZQ4mF);
-      items5[1] = closure_10(guildId(5086).Text, obj9);
+      items5[1] = closure_9(guildId(5087).Text, obj9);
       obj8.children = items5;
-      items4[1] = closure_11(closure_7, obj8);
+      items4[1] = closure_10(View, obj8);
       obj6.children = items4;
-      const items6 = [closure_11(closure_7, obj6), , ,];
+      const items6 = [closure_10(View, obj6), , ,];
       const obj10 = { style: tmp.message, children: null };
-      const items7 = [closure_10(onAdopted(6164), { source, style: tmp.avatar, importantForAccessibility: "no" })];
+      const items7 = [closure_9(onAdopted(6163), { source, style: tmp.avatar, importantForAccessibility: "no" })];
       const obj12 = { style: tmp.messageBody, children: null };
       const obj13 = { style: tmp.usernameRow, children: null };
       const items8 = [
-        closure_10(guildId(5086).Text, { variant: "text-md/semibold", color: "text-default", children: name }),
+        closure_9(guildId(5087).Text, { variant: "text-md/semibold", color: "text-default", children: name }),
       ];
       let tmp15Result3 = null != tag;
       if (tmp15Result3) {
@@ -711,43 +713,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             height: null,
           };
           ({ SIZE_12: obj16.width, SIZE_12: obj16.height } = GuildTagBadgeSize);
-          tmp15Result = closure_10(tmp2(13968).GuildBadge, size);
+          tmp15Result = closure_9(tmp2(14065).GuildBadge, size);
         }
         obj14.guildBadge = tmp15Result;
-        tmp15Result3 = closure_10(tmp2(8830).BaseGuildTagChiplet, obj14);
+        tmp15Result3 = closure_9(tmp2(8839).BaseGuildTagChiplet, obj14);
       }
       items8[1] = tmp15Result3;
       obj13.children = items8;
-      const items9 = [closure_11(closure_7, obj13)];
+      const items9 = [closure_10(View, obj13)];
       const obj15 = { variant: "text-md/normal", color: "text-default", children: null };
       const intl3 = tmp2(1126).intl;
       obj15.children = intl3.string(guildId(1126).t.LKsPRe);
-      items9[1] = closure_10(guildId(5086).Text, obj15);
+      items9[1] = closure_9(guildId(5087).Text, obj15);
       obj12.children = items9;
-      items7[1] = closure_11(closure_7, obj12);
+      items7[1] = closure_10(View, obj12);
       obj10.children = items7;
-      items6[1] = closure_11(closure_7, obj10);
+      items6[1] = closure_10(View, obj10);
       const obj17 = { style: null, children: null };
       const items10 = [,];
       ({ message: arr11[0], unfocused: arr11[1] } = tmp);
       obj17.style = items10;
+      const obj18 = { source: null, style: null, importantForAccessibility: "no" };
       const obj11 = { source, style: tmp.avatar, importantForAccessibility: "no" };
-      const obj7 = { source: onAdopted(12617), style: tmp.avatar, importantForAccessibility: "no" };
-      const items11 = [
-        closure_10(closure_6, { source: onAdopted(14012), style: tmp.avatar, importantForAccessibility: "no" }),
-      ];
+      const tmp4Result = onAdopted(6163);
+      obj18.source = onAdopted(14109);
+      obj18.style = tmp.avatar;
+      const items11 = [closure_9(onAdopted(6163), obj18)];
       const obj19 = { style: tmp.messageBody, children: null };
       const items12 = [
-        closure_10(guildId(5086).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
+        closure_9(guildId(5087).Text, { variant: "text-md/semibold", color: "text-default", children: "Phibi" }),
       ];
       const obj20 = { variant: "text-md/normal", color: "text-default", children: null };
       const intl4 = tmp2(1126).intl;
       obj20.children = intl4.string(guildId(1126).t.vtCg11);
-      items12[1] = closure_10(guildId(5086).Text, obj20);
+      items12[1] = closure_9(guildId(5087).Text, obj20);
       obj19.children = items12;
-      items11[1] = closure_11(closure_7, obj19);
+      items11[1] = closure_10(View, obj19);
       obj17.children = items11;
-      items6[2] = closure_11(closure_7, obj17);
+      items6[2] = closure_10(View, obj17);
       const obj21 = { variant: "primary", text: null, loading: null, disabled: null, onPress: null };
       const intl5 = tmp2(1126).intl;
       obj21.text = intl5.string(guildId(1126).t.cQDYRu);
@@ -767,15 +770,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj22 = { children: null };
       obj21.disabled = isDirty;
       obj21.onPress = callback;
-      items6[3] = closure_10(guildId(5375).Button, obj21);
+      items6[3] = closure_9(guildId(5376).Button, obj21);
       obj5.children = items6;
-      items2[1] = closure_11(guildId(5373).Stack, obj5);
+      items2[1] = closure_10(guildId(5374).Stack, obj5);
       obj22.children = items2;
-      const tmp13Result = closure_11(closure_12, obj22);
+      const tmp13Result = closure_10(closure_11, obj22);
       let tmp15Result4 = tmp13Result;
       if ("plain" !== variant) {
         const obj23 = { variant: "secondary", radius: 16, style: tmp.card, children: tmp13Result };
-        tmp15Result4 = closure_10(tmp2(6186).Card, obj23);
+        tmp15Result4 = closure_9(tmp2(6188).Card, obj23);
       }
       return tmp15Result4;
     };

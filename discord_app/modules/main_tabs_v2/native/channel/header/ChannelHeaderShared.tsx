@@ -12,7 +12,7 @@ import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolid
 import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef12846 from "../../../../../../_runtime/metro/12846__.js";
+import _modDef12813 from "../../../../../../_runtime/metro/12813__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_11 = createStyles.createStyles(() => {
   const obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
@@ -246,7 +246,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp13 = !tmp4;
                   if (!tmp4) {
                     const obj6 = {
-                      source: _modDef12846,
+                      source: _modDef12813,
                       size: native.Icon.Sizes.REFRESH_SMALL_16,
                       style: tmp5.arrowIcon,
                     };
@@ -349,7 +349,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = tmp8;
       let tmp5Result = !disableArrow;
       if (!disableArrow) {
-        const obj6 = { source: _modDef12846, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+        const obj6 = { source: _modDef12813, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
         tmp5Result = tmp5(native.Icon, obj6);
       }
       items[2] = tmp5Result;
@@ -415,7 +415,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         style: tmp4.channelIcon,
-        autoStatusCutout: false,
+        autoStatusCutout: null,
       };
       const tmp7 = closure_1_8(native.Avatar, obj2);
       cResult[0] = isMobileOnline;
@@ -434,11 +434,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         avatarDecoration: user.avatarDecoration,
         guildId: "Boolean",
         size: native.AvatarSizes.REFRESH_MEDIUM_32,
-        status: false,
+        status: null,
         isMobileOnline: null,
-        isVROnline: true,
+        isVROnline: null,
         style: null,
-        autoStatusCutout: false,
+        autoStatusCutout: null,
       };
       let tmp3 = null;
       if (!user.isSystemUser()) {

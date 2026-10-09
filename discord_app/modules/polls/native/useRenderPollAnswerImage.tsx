@@ -11,8 +11,8 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(7232).DraftType;
-const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const DraftType = fn(7237).DraftType;
+const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             status = mediaAttachmentState.status;
           }
         }
-        if (status === tmp(11933).PollMediaUploadAttachmentStatus.PREPARING) {
+        if (status === tmp(11870).PollMediaUploadAttachmentStatus.PREPARING) {
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const tmp38 = <ActivityIndicator />;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp25 = cResult[13];
                 tmp26 = cResult[14];
               }
-              let str = emoji.type === tmp(4724).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+              let str = emoji.type === tmp(4726).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
               if (str == null) {
                 str = "";
               }

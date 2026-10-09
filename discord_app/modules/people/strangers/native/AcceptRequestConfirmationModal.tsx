@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   bodyText: { textAlign: "center", alignItems: "center", gap: nativeDefault.space.PX_8 },
   text: { textAlign: "center" },
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp4.text) {
         const obj2 = { variant: "heading-lg/bold", color: "text-strong", style: text, children: tmp10 };
-        const tmp14 = closure_4(onConfirm(5086).Text, obj2);
+        const tmp14 = closure_4(onConfirm(5087).Text, obj2);
         cResult[5] = tmp4.text;
         cResult[6] = tmp14;
         let tmp12 = tmp14;
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[8] !== tmp4.text) {
         const obj3 = { variant: "text-md/medium", color: "text-subtle", style: tmp4.text, children: tmp15 };
-        const tmp19 = closure_4(onConfirm(5086).Text, obj3);
+        const tmp19 = closure_4(onConfirm(5087).Text, obj3);
         cResult[8] = tmp4.text;
         cResult[9] = tmp19;
         let tmp17 = tmp19;
@@ -132,11 +132,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
       const intl3 = onConfirm(1126).intl;
       obj3.children = intl3.string(onConfirm(1126).t.eJzSDT);
-      const items = [closure_4(onConfirm(5086).Text, obj3)];
+      const items = [closure_4(onConfirm(5087).Text, obj3)];
       const obj4 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
       const intl4 = onConfirm(1126).intl;
       obj4.children = intl4.string(onConfirm(1126).t.GB4jUw);
-      items[1] = closure_4(onConfirm(5086).Text, obj4);
+      items[1] = closure_4(onConfirm(5087).Text, obj4);
       obj2.children = items;
       obj.children = closure_5(View, obj2);
       return closure_4(common_AlertDefault, obj);

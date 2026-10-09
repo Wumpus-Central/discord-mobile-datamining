@@ -3,6 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import FavoritesUtils from "../modules/favorites/FavoritesUtils.tsx";
 import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
+import NSFWContentGate from "../modules/age_gate/NSFWContentGate.tsx";
 import isOptInEnabled from "../modules/opt_in_channels/isOptInEnabled.tsx";
 import RecentMentionsStore from "../modules/inbox/RecentMentionsStore.tsx";
 import NotificationCenterItemsStore from "../modules/notification_center/NotificationCenterItemsStore.tsx";
@@ -56,7 +57,7 @@ function updateGuildUnreadSentinel(NULL_STRING_GUILD_ID) {
   }
   guilds[tmp3] = tmp6;
   tmp6.sentinel = tmp6.sentinel + 1;
-  closure_24 = closure_24 + 1;
+  closure_26 = closure_26 + 1;
 }
 function isCountableChannel(channel) {
   let num = mentionCount;
@@ -93,7 +94,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = options(channel.type);
+            let result2 = collapsed(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -201,7 +202,7 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
         set.delete(tmp2);
       }
     }
-    closure_24 = closure_24 + 1;
+    closure_26 = closure_26 + 1;
     if (tmp2 == null) {
       tmp2 = NULL_STRING_GUILD_ID;
     }
@@ -450,19 +451,19 @@ function recountGuild(guildId, hasItem) {
     obj.sentinel = num;
     if (null == tmp2) {
       const mutablePrivateChannels = ChannelStore.getMutablePrivateChannels();
-      for (const key10155 in mutablePrivateChannels) {
-        let tmp102 = mutablePrivateChannels[key10155];
-        let mentionCount1 = ReadStateStore.getMentionCount(key10155);
-        let tmp76 = mentionCount1 > 0;
-        if (tmp76) {
-          tmp76 = isCountableChannel(tmp102, mentionCount1);
+      for (const key10166 in mutablePrivateChannels) {
+        let tmp107 = mutablePrivateChannels[key10166];
+        let mentionCount1 = ReadStateStore.getMentionCount(key10166);
+        let tmp81 = mentionCount1 > 0;
+        if (tmp81) {
+          tmp81 = isCountableChannel(tmp107, mentionCount1);
         }
-        if (!tmp76) {
+        if (!tmp81) {
           continue;
         } else {
           obj.highImportanceMentionCount = obj.highImportanceMentionCount + mentionCount1;
           let obj2 = { count: mentionCount1, isMentionLowImportance: false };
-          obj.mentionCounts[tmp102.id] = obj2;
+          obj.mentionCounts[tmp107.id] = obj2;
           continue;
         }
         continue;
@@ -477,94 +478,102 @@ function recountGuild(guildId, hasItem) {
       const mutedChannels = UserGuildSettingsStore.getMutedChannels(tmp2);
       const channelOverrides = UserGuildSettingsStore.getChannelOverrides(tmp2);
       const result = isOptInEnabled.isOptInEnabledForGuild(tmp2);
+      const result1 = NSFWContentGate.currentUserCanSeeNSFW();
+      const obj5 = { userCanSeeNSFW: result1, guildIsNSFW: null };
+      let tmp15 = !result1;
+      if (!result1) {
+        tmp15 = isGuildNSFW(GuildStore.getGuild(tmp2));
+      }
+      obj5.guildIsNSFW = tmp15;
       const mutableBasicGuildChannelsForGuild = ChannelStore.getMutableBasicGuildChannelsForGuild(tmp2);
-      for (const key10034 in mutableBasicGuildChannelsForGuild) {
-        let obj12 = mutableBasicGuildChannelsForGuild[key10034];
+      for (const key10044 in mutableBasicGuildChannelsForGuild) {
+        let obj14 = mutableBasicGuildChannelsForGuild[key10044];
         hasItem = isMutedResult;
         if (!isMutedResult) {
-          hasItem = mutedChannels.has(key10034);
+          hasItem = mutedChannels.has(key10044);
         }
         if (!hasItem) {
-          let hasItem1 = null != obj12.parent_id;
+          let hasItem1 = null != obj14.parent_id;
           if (hasItem1) {
-            hasItem1 = mutedChannels.has(obj12.parent_id);
+            hasItem1 = mutedChannels.has(obj14.parent_id);
           }
           hasItem = hasItem1;
         }
-        let tmp20 = obj.unreadByType[constants.CHANNEL];
+        let tmp24 = obj.unreadByType[constants.CHANNEL];
         let guildChannelUnreadState = ReadStateStore.getGuildChannelUnreadState(
-          obj12,
+          obj14,
           result,
           channelOverrides,
           hasItem,
-          tmp20,
+          tmp24,
+          obj5,
         );
         ({ mentionCount, isMentionLowImportance } = guildChannelUnreadState);
-        let tmp30 = mentionCount > 0;
-        if (tmp30) {
-          let tmp32 = !tmp20;
-          if (!tmp20) {
-            let tmp33 = !hasItem;
+        let tmp35 = mentionCount > 0;
+        if (tmp35) {
+          let tmp37 = !tmp24;
+          if (!tmp24) {
+            let tmp38 = !hasItem;
             if (hasItem) {
-              tmp33 = tmp30;
+              tmp38 = tmp35;
             }
-            tmp32 = tmp33;
+            tmp37 = tmp38;
           }
-          if (tmp32) {
-            tmp32 = tmp29;
+          if (tmp37) {
+            tmp37 = tmp34;
           }
-          if (tmp32) {
-            let tmp35 = closure_1_8(obj12.type);
-            let tmp36 = !tmp35;
-            if (tmp35) {
-              tmp36 = 0 !== mentionCount;
+          if (tmp37) {
+            let tmp40 = options(obj14.type);
+            let tmp41 = !tmp40;
+            if (tmp40) {
+              tmp41 = 0 !== mentionCount;
             }
-            if (tmp36) {
-              let canBasicChannelResult = PermissionStore.canBasicChannel(React5(obj12.type), obj12);
+            if (tmp41) {
+              let canBasicChannelResult = PermissionStore.canBasicChannel(closure_1_8(obj14.type), obj14);
               if (canBasicChannelResult) {
-                let tmp40 = null != obj12.guild_id;
-                if (tmp40) {
-                  let tmp41 = result;
+                let tmp45 = null != obj14.guild_id;
+                if (tmp45) {
+                  let tmp46 = result;
                   if (result) {
-                    let result1 = options(obj12.type);
-                    if (!result1) {
-                      result1 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj12);
+                    let result2 = collapsed(obj14.type);
+                    if (!result2) {
+                      result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj14);
                     }
-                    tmp41 = !result1;
+                    tmp46 = !result2;
                   }
-                  if (tmp41) {
-                    tmp41 = 0 === mentionCount;
-                  }
-                  tmp40 = tmp41;
-                }
-                let tmp45 = !tmp40;
-                if (!tmp40) {
-                  let tmp46 = "flags" in obj12;
-                  let tmp47 = !tmp46;
                   if (tmp46) {
-                    tmp47 = !obj12.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL);
+                    tmp46 = 0 === mentionCount;
                   }
-                  if (tmp47) {
-                    let tmp49 = mentionCount > 0;
-                    if (!tmp49) {
-                      tmp49 = UserGuildSettingsStore.resolveUnreadSetting(obj12) === constants2.ALL_MESSAGES;
-                    }
-                    tmp47 = tmp49;
-                  }
-                  tmp45 = tmp47;
+                  tmp45 = tmp46;
                 }
-                canBasicChannelResult = tmp45;
+                let tmp50 = !tmp45;
+                if (!tmp45) {
+                  let tmp51 = "flags" in obj14;
+                  let tmp52 = !tmp51;
+                  if (tmp51) {
+                    tmp52 = !obj14.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL);
+                  }
+                  if (tmp52) {
+                    let tmp54 = mentionCount > 0;
+                    if (!tmp54) {
+                      tmp54 = UserGuildSettingsStore.resolveUnreadSetting(obj14) === constants2.ALL_MESSAGES;
+                    }
+                    tmp52 = tmp54;
+                  }
+                  tmp50 = tmp52;
+                }
+                canBasicChannelResult = tmp50;
               }
-              tmp36 = canBasicChannelResult;
+              tmp41 = canBasicChannelResult;
             }
-            if (!tmp36) {
+            if (!tmp41) {
               continue;
             } else {
-              if (tmp32) {
+              if (tmp37) {
                 obj.unreadByType[constants.CHANNEL] = true;
-                obj.unreadChannelId = key10034;
+                obj.unreadChannelId = key10044;
               }
-              if (!tmp30) {
+              if (!tmp35) {
                 continue;
               } else {
                 if (isMentionLowImportance) {
@@ -572,8 +581,8 @@ function recountGuild(guildId, hasItem) {
                 } else {
                   obj.highImportanceMentionCount = obj.highImportanceMentionCount + mentionCount;
                 }
-                let obj4 = { count: mentionCount, isMentionLowImportance };
-                obj.mentionCounts[obj12.id] = obj4;
+                let obj6 = { count: mentionCount, isMentionLowImportance };
+                obj.mentionCounts[obj14.id] = obj6;
                 continue;
               }
               continue;
@@ -585,29 +594,29 @@ function recountGuild(guildId, hasItem) {
         continue;
       }
       const activeJoinedThreadsForGuild = ActiveJoinedThreadsStore.getActiveJoinedThreadsForGuild(tmp2);
-      for (const key10108 in activeJoinedThreadsForGuild) {
+      for (const key10119 in activeJoinedThreadsForGuild) {
         let keys = Object.keys();
         if (keys === undefined) {
           continue;
         } else {
-          let tmp55 = keys[tmp];
-          while (tmp55 !== undefined) {
+          let tmp60 = keys[tmp];
+          while (tmp60 !== undefined) {
             let isMutedResult1 = obj.unreadByType[constants.CHANNEL];
             if (!isMutedResult1) {
-              isMutedResult1 = !ReadStateStore.hasUnread(tmp55);
+              isMutedResult1 = !ReadStateStore.hasUnread(tmp60);
             }
             if (!isMutedResult1) {
-              isMutedResult1 = JoinedThreadsStore.isMuted(tmp55);
+              isMutedResult1 = JoinedThreadsStore.isMuted(tmp60);
             }
             if (!isMutedResult1) {
               isMutedResult1 = isMutedResult;
             }
             if (!isMutedResult1) {
               obj.unreadByType[constants.CHANNEL] = true;
-              obj.unreadChannelId = tmp55;
+              obj.unreadChannelId = tmp60;
             }
-            let mentionCount2 = ReadStateStore.getMentionCount(tmp55);
-            let isMentionLowImportance1 = ReadStateStore.getIsMentionLowImportance(tmp55);
+            let mentionCount2 = ReadStateStore.getMentionCount(tmp60);
+            let isMentionLowImportance1 = ReadStateStore.getIsMentionLowImportance(tmp60);
             if (mentionCount2 <= 0) {
               continue;
             } else {
@@ -616,8 +625,8 @@ function recountGuild(guildId, hasItem) {
               } else {
                 obj.highImportanceMentionCount = obj.highImportanceMentionCount + mentionCount2;
               }
-              let obj5 = { count: mentionCount2, isMentionLowImportance: isMentionLowImportance1 };
-              obj.mentionCounts[tmp55] = obj5;
+              let obj7 = { count: mentionCount2, isMentionLowImportance: isMentionLowImportance1 };
+              obj.mentionCounts[tmp60] = obj7;
               continue;
             }
             continue;
@@ -625,27 +634,27 @@ function recountGuild(guildId, hasItem) {
         }
         continue;
       }
-      let tmp64 = !tmp63;
+      let tmp69 = !tmp68;
       if (!obj.unreadByType[constants.GUILD_EVENT]) {
         const GUILD_EVENT = constants.GUILD_EVENT;
         const hasUnreadResult = ReadStateStore.hasUnread(tmp2, GUILD_EVENT);
-        let tmp67 = hasUnreadResult;
+        let tmp72 = hasUnreadResult;
         if (GUILD_EVENT === constants.GUILD_EVENT) {
           const isMutedResult2 = UserGuildSettingsStore.isMuted(tmp2);
-          let tmp69 = !isMutedResult2;
+          let tmp74 = !isMutedResult2;
           if (!isMutedResult2) {
-            const result2 = UserGuildSettingsStore.isMuteScheduledEventsEnabled(tmp2);
-            let tmp71 = !result2;
-            if (!result2) {
-              tmp71 = hasUnreadResult;
+            const result3 = UserGuildSettingsStore.isMuteScheduledEventsEnabled(tmp2);
+            let tmp76 = !result3;
+            if (!result3) {
+              tmp76 = hasUnreadResult;
             }
-            tmp69 = tmp71;
+            tmp74 = tmp76;
           }
-          tmp67 = tmp69;
+          tmp72 = tmp74;
         }
-        tmp64 = tmp67;
+        tmp69 = tmp72;
       }
-      if (tmp64) {
+      if (tmp69) {
         obj.unreadByType[constants.GUILD_EVENT] = true;
       }
     }
@@ -655,21 +664,21 @@ function recountGuild(guildId, hasItem) {
       [tmp, tmp2] = item;
       return Number(tmp) !== constants.GUILD_EVENT && tmp2;
     });
-    let tmp79 = tmp2;
+    let tmp84 = tmp2;
     if (tmp2 == null) {
-      tmp79 = NULL_STRING_GUILD_ID;
+      tmp84 = NULL_STRING_GUILD_ID;
     }
-    let tmp81 = tmp2;
+    let tmp86 = tmp2;
     if (tmp2 == null) {
-      tmp81 = NULL_STRING_GUILD_ID;
+      tmp86 = NULL_STRING_GUILD_ID;
     }
-    let tmp82 = guilds[tmp81];
-    if (tmp82 == null) {
-      let tmp84 = tmp2;
+    let tmp87 = guilds[tmp86];
+    if (tmp87 == null) {
+      let tmp89 = tmp2;
       if (tmp2 == null) {
-        tmp84 = NULL_STRING_GUILD_ID;
+        tmp89 = NULL_STRING_GUILD_ID;
       }
-      const obj7 = {
+      const obj9 = {
         unread: false,
         unreadByType: {},
         unreadChannelId: null,
@@ -680,26 +689,26 @@ function recountGuild(guildId, hasItem) {
         sentinel: null,
       };
       let num4;
-      if (guilds[tmp84] != null) {
-        num4 = tmp85.sentinel;
+      if (guilds[tmp89] != null) {
+        num4 = tmp90.sentinel;
       }
       if (num4 == null) {
         num4 = 0;
       }
-      obj7.sentinel = num4;
-      tmp82 = obj7;
+      obj9.sentinel = num4;
+      tmp87 = obj9;
     }
-    guilds[tmp79] = tmp82;
+    guilds[tmp84] = tmp87;
     let flag3 =
-      obj.unread !== tmp82.unread ||
-      obj.highImportanceMentionCount !== tmp82.highImportanceMentionCount ||
-      obj.lowImportanceMentionCount !== tmp82.lowImportanceMentionCount;
+      obj.unread !== tmp87.unread ||
+      obj.highImportanceMentionCount !== tmp87.highImportanceMentionCount ||
+      obj.lowImportanceMentionCount !== tmp87.lowImportanceMentionCount;
     if (flag3) {
-      let tmp87 = tmp2;
+      let tmp92 = tmp2;
       if (tmp2 == null) {
-        tmp87 = NULL_STRING_GUILD_ID;
+        tmp92 = NULL_STRING_GUILD_ID;
       }
-      guilds[tmp87] = obj;
+      guilds[tmp92] = obj;
       if (null != tmp2) {
         if (obj.unread) {
           set.add(tmp2);
@@ -707,12 +716,12 @@ function recountGuild(guildId, hasItem) {
           set.delete(tmp2);
         }
       }
-      closure_24 = closure_24 + 1;
+      closure_26 = closure_26 + 1;
       if (tmp2 == null) {
         tmp2 = NULL_STRING_GUILD_ID;
       }
       updateGuildUnreadSentinel(tmp2);
-      updateNotificationCenterMentions(obj, tmp82);
+      updateNotificationCenterMentions(obj, tmp87);
       flag3 = true;
     }
     return flag3;
@@ -721,7 +730,7 @@ function recountGuild(guildId, hasItem) {
 }
 function handleOverlayInitialize(guilds) {
   guilds = {};
-  closure_24 = 0;
+  closure_26 = 0;
   new Set();
   recountGuild(null);
   for (let num = 0; num < length; num = num + 1) {
@@ -734,10 +743,16 @@ function handleOverlayInitialize(guilds) {
 }
 function handleConnectionOpen(arg0) {
   ({ guilds, readState } = arg0);
-  closure_22 = {};
-  c24 = 0;
+  let set1;
+  closure_24 = {};
+  c26 = 0;
   new Set();
-  const set1 = new Set();
+  const currentUser = UserStore.getCurrentUser();
+  nsfwAllowed = undefined;
+  if (currentUser != null) {
+    nsfwAllowed = currentUser.nsfwAllowed;
+  }
+  set1 = new Set();
   if (readState.entries.length < 500) {
     const entries = readState.entries;
     const item = entries.forEach((mention_count) => {
@@ -761,12 +776,12 @@ function handleConnectionOpen(arg0) {
     });
   }
   recountGuild(null);
-  for (const item10032 of guilds) {
+  for (const item10037 of guilds) {
     let hasItem;
-    if (tmp2) {
-      hasItem = set1.has(tmp5.id);
+    if (tmp4) {
+      hasItem = set1.has(tmp7.id);
     }
-    let tmp6Result = recountGuild(item10032.id, hasItem);
+    let tmp8Result = recountGuild(item10037.id, hasItem);
     continue;
   }
 }
@@ -790,7 +805,7 @@ function handleGuildDelete(guild) {
     const id = guild.id;
     delete tmp2[tmp];
     set.delete(guild.id);
-    closure_24 = closure_24 + 1;
+    closure_26 = closure_26 + 1;
     flag = true;
   }
   return flag;
@@ -986,6 +1001,27 @@ function handleMarkGuildAsRead(guildId) {
 function handleGuildUpdate(guildId) {
   return recountGuild(guildId.guildId);
 }
+function handleGuildNSFWLevelUpdate(guild) {
+  const result = NSFWContentGate.currentUserCanSeeNSFW();
+  let tmp2 = !result;
+  if (!result) {
+    tmp2 = recountGuild(guild.guild.id);
+  }
+  return tmp2;
+}
+function handleCurrentUserNSFWAllowedUpdate() {
+  const currentUser = UserStore.getCurrentUser();
+  nsfwAllowed = undefined;
+  if (currentUser != null) {
+    nsfwAllowed = currentUser.nsfwAllowed;
+  }
+  let flag = nsfwAllowed !== nsfwAllowed;
+  if (flag) {
+    recomputeAllGuilds();
+    flag = true;
+  }
+  return flag;
+}
 function handleUserGuildSettingsFullUpdate(userGuildSettings) {
   userGuildSettings = userGuildSettings.userGuildSettings;
   set = new Set(
@@ -1028,15 +1064,16 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(2067);
-({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
-const ChannelFlags = fn(2070).ChannelFlags;
-const ReadStateConstants = fn(5972);
-({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
+const ChannelRecord = fn(2068);
+({ getBasicAccessPermissions: closure_8, isGuildVocalChannelType: closure_9, isThread: c10 } = ChannelRecord);
+const isGuildNSFW = fn(2082).isGuildNSFW;
+const ChannelFlags = fn(2071).ChannelFlags;
+const ReadStateConstants = fn(5974);
+({ ReadStateTypes: closure_21, UnreadSetting: closure_22 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
 let guilds = {};
 let set = new Set();
-let closure_24 = 0;
+let closure_26 = 0;
 let GuildReadStateStore;
 class GuildReadStateStore extends tmp3 {
   constructor() {
@@ -1060,6 +1097,8 @@ class GuildReadStateStore extends tmp3 {
       GUILD_ROLE_CREATE: handleGuildUpdate,
       GUILD_ROLE_DELETE: handleGuildUpdate,
       GUILD_ROLE_UPDATE: handleGuildUpdate,
+      GUILD_UPDATE: handleGuildNSFWLevelUpdate,
+      CURRENT_USER_UPDATE: handleCurrentUserNSFWAllowedUpdate,
       CHANNEL_CREATE: handleChannelUpdate,
       CHANNEL_UPDATES: handleChannelUpdates,
       THREAD_CREATE: handleThreadUpdate,
@@ -1101,6 +1140,7 @@ const prototype = GuildReadStateStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(
     ChannelStore,
+    GuildStore,
     SelectedChannelStore,
     ReadStateStore,
     PermissionStore,
@@ -1128,7 +1168,7 @@ prototype["hasAnyUnread"] = function hasAnyUnread() {
   return set.size > 0;
 };
 prototype["getStoreChangeSentinel"] = function getStoreChangeSentinel() {
-  return closure_24;
+  return closure_26;
 };
 prototype["getMutableUnreadGuilds"] = function getMutableUnreadGuilds() {
   return set;

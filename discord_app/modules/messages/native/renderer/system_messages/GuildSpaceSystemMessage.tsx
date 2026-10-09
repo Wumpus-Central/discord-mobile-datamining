@@ -33,9 +33,9 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         const channel = ChannelStore.getChannel(message.channel_id);
         [tmp18, tmp19] = substr;
         const tmp17 = _slicedToArray(substr, 2);
-        const userAuthorWithProcessedColor = string(7951).getUserAuthorWithProcessedColor(tmp18, channel);
-        const stringResult = string(7951);
-        const userAuthorWithProcessedColor1 = string(7951).getUserAuthorWithProcessedColor(tmp19, channel);
+        const userAuthorWithProcessedColor = string(7960).getUserAuthorWithProcessedColor(tmp18, channel);
+        const stringResult = string(7960);
+        const userAuthorWithProcessedColor1 = string(7960).getUserAuthorWithProcessedColor(tmp19, channel);
         const intl2 = string(1126).intl;
         let tmp11 = importDefault;
         const obj2 = {
@@ -52,15 +52,15 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         let tmp8;
         if (null != tmp19) {
           const obj4 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp8 = tmp11(7953)(obj4);
+          tmp8 = tmp11(7962)(obj4);
         }
         obj2.username2OnClick = tmp8;
         obj2.additionalCount = diff;
         let formatToPartsResult = intl2.formatToParts(_modDef2469.zUiZPF, obj2);
-        const stringResult1 = string(7951);
+        const stringResult1 = string(7960);
       }
       const obj5 = { content: formatToPartsResult };
-      merged = Object.assign(tmp11(7955)(message));
+      merged = Object.assign(tmp11(7964)(message));
     }
     const intl = string(1126).intl;
     string = intl.string;

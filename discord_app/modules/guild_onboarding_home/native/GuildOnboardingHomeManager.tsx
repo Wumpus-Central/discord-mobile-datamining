@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStor
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4693).GuildMemberFlags;
+const GuildMemberFlags = fn(4695).GuildMemberFlags;
 const prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -89,7 +89,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(17829, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(17983, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -140,7 +140,7 @@ const prototype = function GuildOnboardingHomeManager() {
             closure_129_5 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else {
           if (1 === tmp5) {
@@ -183,11 +183,11 @@ const prototype = function GuildOnboardingHomeManager() {
               tmp13 = null != closure_129_5;
             }
             if (tmp13) {
-              tmp13 = closure_129_5.actionType === applyArgumentsResult(9255).NewMemberActionTypes.VIEW;
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(9293).NewMemberActionTypes.VIEW;
             }
             if (tmp13) {
-              const result = applyArgumentsResult(9254).completeNewMemberAction(closure_129_0, closure_129_1);
-              const obj = applyArgumentsResult(9254);
+              const result = applyArgumentsResult(9292).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(9292);
             }
             arr = memberActions;
           }

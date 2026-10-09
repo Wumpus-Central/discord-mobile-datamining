@@ -3,7 +3,7 @@ import PremiumTypeUtils from "../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/useIsPremiumSubscriber.tsx");

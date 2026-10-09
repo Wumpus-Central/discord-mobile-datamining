@@ -9,7 +9,7 @@ const redux = noop.createContext({
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "Array",
+  handleDismissCoachmarkOnScroll: "r",
 });
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

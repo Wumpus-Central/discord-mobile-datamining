@@ -3,11 +3,11 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import TestModeUtils from "../../../game_store/TestModeUtils.tsx";
 import ApplicationFlagUtils from "../../../applications/utils/ApplicationFlagUtils.tsx";
-import EmbeddedActivitiesManager from "../../../activities/EmbeddedActivitiesManager.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
 import getCurrentEmbeddedActivityChannelDefault from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
+import ActivitySessionAnalytics from "../../../activities/ActivitySessionAnalytics.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
@@ -39,7 +39,7 @@ export default {
       }
       const application = ApplicationStore.getApplication(id);
       if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
-        const activeAnalyticsSessionIDs = EmbeddedActivitiesManager.getActiveAnalyticsSessionIDs(id);
+        const activeAnalyticsSessionIDs = ActivitySessionAnalytics.getActiveAnalyticsSessionIDs(id);
         const obj4 = {
           activity_application_id: id,
           activity_channel_type: null,
@@ -57,7 +57,7 @@ export default {
           prop = activeAnalyticsSessionIDs.activityUserSessionId;
         }
         obj4.activity_user_session_id = prop;
-        const tmpResult2 = EmbeddedActivitiesManager;
+        const tmpResult2 = ActivitySessionAnalytics;
         const obj5 = {};
         const merged = Object.assign(obj4);
         const merged1 = Object.assign(event_properties);
@@ -72,7 +72,7 @@ export default {
     },
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(5635).RPC_LOCAL_SCOPE,
+    scope: fn(5636).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

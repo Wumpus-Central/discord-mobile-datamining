@@ -8,7 +8,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
@@ -16,7 +16,7 @@ import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
-import _mod9026 from "../../virtual_currency/hooks/index.tsx";
+import _mod9041 from "../../virtual_currency/hooks/index.tsx";
 import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder.tsx";
 import TagIcon from "../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
 import getProductName from "../utils/getProductName.tsx";
@@ -30,7 +30,7 @@ const Constants = fn(1085);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,
@@ -107,7 +107,7 @@ const memoResult = noop.memo(
                     let tmp13 = cResult[13];
                   }
                   const discountPercentage2 = tmp13.discountPercentage;
-                  const balance = _mod9026.useFetchVirtualCurrencyBalance().balance;
+                  const balance = _mod9041.useFetchVirtualCurrencyBalance().balance;
                   let tmp17 = null;
                   if (null != tmp9) {
                     tmp17 = null;
@@ -584,7 +584,7 @@ const memoResult = noop.memo(
                       tmp21 = closure_1_8(NitroWheelIcon.NitroWheelIcon, obj23);
                     }
                   }
-                  const tmpResult = _mod9026;
+                  const tmpResult = _mod9041;
                 }
                 const productDiscount = CollectiblesUtils.getProductDiscount(
                   tmp5,

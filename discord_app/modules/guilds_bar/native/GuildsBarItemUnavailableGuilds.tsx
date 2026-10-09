@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef16582 from "../../../../_runtime/metro/16582__.js";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
+import _modDef16705 from "../../../../_runtime/metro/16705__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
 require = fn;
-get_ActivityIndicator = fn(17);
-({ Image: c3, Pressable: closure_4 } = get_ActivityIndicator);
+const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   unavailableGuilds: {
     marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -24,7 +24,7 @@ let size = {
   height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE,
 };
 obj.unavailableGuildsIcon = size;
-let closure_7 = createStyles.createStyles(obj);
+let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
   marginTop: nativeDefault.modules.mobile.GUILD_BAR_ITEM_PADDING,
@@ -38,10 +38,10 @@ export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function GuildsBarItemUnavailableGuilds() {
         const cResult = stateFromStores(576).c(13);
-        let unavailableGuilds = closure_7();
+        let unavailableGuilds = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GuildAvailabilityStore];
-          const fn = function t() {
+          const fn = function o() {
             return GuildAvailabilityStore.totalUnavailableGuilds;
           };
           cResult[0] = items;
@@ -67,7 +67,7 @@ export default noop.memo(
             tmp8 = cResult[3];
           }
           if (cResult[4] !== stateFromStores) {
-            class I {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[6]);
                 obj1 = { title: null, body: null };
@@ -81,9 +81,9 @@ export default noop.memo(
               }
             }
             cResult[4] = stateFromStores;
-            cResult[5] = I;
+            cResult[5] = G;
           } else {
-            class I {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[6]);
                 obj1 = { title: null, body: null };
@@ -98,7 +98,7 @@ export default noop.memo(
             }
           }
           if (cResult[6] !== unavailableGuilds.unavailableGuildsIcon) {
-            class I {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[6]);
                 obj1 = { title: null, body: null };
@@ -111,12 +111,15 @@ export default noop.memo(
                 return;
               }
             }
-            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16582 };
-            const tmp14 = <closure_3 style={unavailableGuilds.unavailableGuildsIcon} source={_modDef16582} />;
+            const obj3 = { style: unavailableGuilds.unavailableGuildsIcon, source: _modDef16705 };
+            const tmp14 = jsx(FastImageDefault, {
+              style: unavailableGuilds.unavailableGuildsIcon,
+              source: _modDef16705,
+            });
             cResult[6] = unavailableGuilds.unavailableGuildsIcon;
             cResult[7] = tmp14;
           } else {
-            class I {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[6]);
                 obj1 = { title: null, body: null };
@@ -131,7 +134,7 @@ export default noop.memo(
             }
           }
           if (cResult[8] === unavailableGuilds.unavailableGuilds) {
-            class I {
+            class G {
               constructor() {
                 obj = closure_1(closure_2[6]);
                 obj1 = { title: null, body: null };
@@ -148,31 +151,31 @@ export default noop.memo(
           const obj4 = {
             accessibilityRole: "button",
             accessibilityLabel: tmp8,
-            onPress: I,
+            onPress: G,
             style: unavailableGuilds.unavailableGuilds,
             children: tmp11,
           };
           const tmp18 = (
-            <closure_4
+            <Pressable
               accessibilityRole="button"
               accessibilityLabel={tmp8}
-              onPress={I}
+              onPress={G}
               style={unavailableGuilds.unavailableGuilds}
             >
               {tmp11}
-            </closure_4>
+            </Pressable>
           );
           unavailableGuilds = unavailableGuilds.unavailableGuilds;
           cResult[8] = unavailableGuilds;
           cResult[9] = tmp8;
-          cResult[10] = I;
+          cResult[10] = G;
           cResult[11] = tmp11;
           cResult[12] = tmp18;
         }
         const tmpResult = stateFromStores(504);
       }
     : function GuildsBarItemUnavailableGuilds() {
-        const tmp = closure_7();
+        const tmp = closure_6();
         const items = [GuildAvailabilityStore];
         stateFromStores = stateFromStores(504).useStateFromStores(
           items,
@@ -199,12 +202,12 @@ export default noop.memo(
             AlertActionCreatorsDefault.show(obj2);
           };
           obj2.style = tmp.unavailableGuilds;
-          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16582 };
-          obj2.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16582} />;
+          const obj4 = { style: tmp.unavailableGuildsIcon, source: _modDef16705 };
+          obj2.children = jsx(FastImageDefault, { style: tmp.unavailableGuildsIcon, source: _modDef16705 });
           tmp5 = (
-            <closure_4 accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
+            <Pressable accessibilityRole="button" accessibilityLabel={null} onPress={null} style={null}>
               {null}
-            </closure_4>
+            </Pressable>
           );
         }
         return tmp5;

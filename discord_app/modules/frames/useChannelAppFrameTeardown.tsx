@@ -1,5 +1,5 @@
 // discord_app/modules/frames/useChannelAppFrameTeardown.tsx
-import getFramesManagerDefault from "utils/getFramesManager.native.tsx";
+import leaveFrame from "leaveFrame.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
@@ -7,8 +7,8 @@ import FramesStore from "FramesStore.tsx";
 
 const require = globalThis.__r;
 
-const require = fn;
-const getFrameSurfaceForChannel = fn(10613).getFrameSurfaceForChannel;
+require = fn;
+const getFrameSurfaceForChannel = fn(10767).getFrameSurfaceForChannel;
 const Permissions = fn(1085).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -16,7 +16,7 @@ const result = size.fileFinishedImporting("modules/frames/useChannelAppFrameTear
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useChannelAppFrameTeardown(id) {
-      const cResult = id(stateFromStores[7]).c(10);
+      const cResult = id(576).c(10);
       id = undefined;
       if (id != null) {
         id = id.id;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      closure_1 = tmp5;
+      dependencyMap = tmp5;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, PermissionStore];
         cResult[2] = items;
@@ -43,12 +43,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== id) {
         class C {
           constructor() {
-            channel = closure_4.getChannel(id);
+            channel = closure_3.getChannel(id);
             canResult = null != channel;
             if (canResult) {
-              tmp3 = closure_5;
+              tmp3 = closure_4;
               tmp4 = Permissions;
-              canResult = closure_5.can(Permissions.VIEW_CHANNEL, channel);
+              canResult = closure_4.can(Permissions.VIEW_CHANNEL, channel);
             }
             return canResult;
           }
@@ -61,41 +61,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class C {
           constructor() {
-            channel = closure_4.getChannel(id);
+            channel = closure_3.getChannel(id);
             canResult = null != channel;
             if (canResult) {
-              tmp3 = closure_5;
+              tmp3 = closure_4;
               tmp4 = Permissions;
-              canResult = closure_5.can(Permissions.VIEW_CHANNEL, channel);
+              canResult = closure_4.can(Permissions.VIEW_CHANNEL, channel);
             }
             return canResult;
           }
         }
         tmp12 = cResult[5];
       }
-      let obj = id(stateFromStores[7]);
-      stateFromStores = id(stateFromStores[8]).useStateFromStores(tmp8, C, tmp12);
+      let obj = id(576);
+      const stateFromStores = id(504).useStateFromStores(tmp8, C, tmp12);
       if (cResult[6] === stateFromStores) {
         class C {
           constructor() {
-            channel = closure_4.getChannel(id);
+            channel = closure_3.getChannel(id);
             canResult = null != channel;
             if (canResult) {
-              tmp3 = closure_5;
+              tmp3 = closure_4;
               tmp4 = Permissions;
-              canResult = closure_5.can(Permissions.VIEW_CHANNEL, channel);
+              canResult = closure_4.can(Permissions.VIEW_CHANNEL, channel);
             }
             return canResult;
           }
         }
-        const effect = noop.useEffect(fn, items2);
+        const effect = stateFromStores.useEffect(fn, items2);
       }
       fn = function _() {
         if (null != closure_1) {
           if (!stateFromStores) {
             const framesForSurface = FramesStore.getFramesForSurface(tmp);
             for (const item10010 of framesForSurface) {
-              let obj = getFramesManagerDefault();
+              let obj = leaveFrame;
               let leaveFrameResult = obj.leaveFrame(item10010.id);
               continue;
             }
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp5;
       cResult[8] = fn;
       cResult[9] = items2;
-      const tmpResult = id(stateFromStores[8]);
+      const tmpResult = id(504);
     }
   : function useChannelAppFrameTeardown(id) {
       _require = id;
@@ -116,14 +116,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         id = id.id;
       }
       const items = [id];
-      const memo = stateFromStores.useMemo(() => {
+      memo = memo.useMemo(() => {
         let tmp2 = null;
         if (null != closure_0) {
           tmp2 = getFrameSurfaceForChannel(tmp);
         }
         return tmp2;
       }, items);
-      const items1 = [ChannelStore, PermissionStore];
+      const items1 = [stateFromStores, PermissionStore];
       const items2 = [id];
       stateFromStores = require("initialize").useStateFromStores(
         items1,
@@ -138,12 +138,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
       const items3 = [memo, stateFromStores];
-      const effect = stateFromStores.useEffect(() => {
+      const effect = memo.useEffect(() => {
         if (null != memo) {
           if (!stateFromStores) {
             const framesForSurface = FramesStore.getFramesForSurface(tmp);
             for (const item10010 of framesForSurface) {
-              let obj = getFramesManagerDefault();
+              let obj = leaveFrame;
               let leaveFrameResult = obj.leaveFrame(item10010.id);
               continue;
             }

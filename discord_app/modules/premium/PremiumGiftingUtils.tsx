@@ -47,7 +47,7 @@ let closure_6 = async function _sendGiftMessage(arg0, arg1) {
     );
   })();
 };
-const MessageSendLocation = fn(5083).MessageSendLocation;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/PremiumGiftingUtils.tsx");
 

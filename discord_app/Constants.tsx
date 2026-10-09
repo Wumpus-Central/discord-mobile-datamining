@@ -1796,6 +1796,7 @@ const frozen2 = Object.freeze({
   ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS: "/users/@me/billing/eligible-application-subscription-guilds",
   APPLICATION_USER_ROLE_CONNECTIONS: "/users/@me/applications/role-connections",
   GET_SAVED_MESSAGES: "/users/@me/saved-messages",
+  GET_BOOKMARKS: "/users/@me/saved-messages/bookmarks",
   PUT_SAVED_MESSAGE(channelId, messageId) {
     return "/users/@me/saved-messages/" + channelId + "/" + messageId;
   },
@@ -3853,6 +3854,7 @@ const obj2 = {
   ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS: "/users/@me/billing/eligible-application-subscription-guilds",
   APPLICATION_USER_ROLE_CONNECTIONS: "/users/@me/applications/role-connections",
   GET_SAVED_MESSAGES: "/users/@me/saved-messages",
+  GET_BOOKMARKS: "/users/@me/saved-messages/bookmarks",
   PUT_SAVED_MESSAGE(channelId, messageId) {
     return "/users/@me/saved-messages/" + channelId + "/" + messageId;
   },
@@ -8134,6 +8136,7 @@ export const AnalyticEvents = {
   UPSELL_VIEWED: "upsell_viewed",
   UPSELL_CLICKED: "upsell_clicked",
   PREMIUM_UPSELL_VIEWED: "premium_upsell_viewed",
+  MOBILE_SUBSCRIPTION_DEEP_LINK_OPENED: "mobile_subscription_deep_link_opened",
   PREMIUM_EDUCATION_VIEWED: "premium_education_viewed",
   PREMIUM_UPSELL_MESSAGE_SENT: "premium_upsell_message_sent",
   PREMIUM_UPSELL_INTERACTED: "premium_upsell_interacted",
@@ -9815,6 +9818,7 @@ export const HelpdeskArticles = {
   SHOP_FRAMES_EARLY_ACCESS: "40775065582615",
   LFG_CHANNELS: "41832532728215",
   CUSTOM_TYPING_INDICATOR: "42962943077271",
+  BUY_GIFT_CARDS: "41159846304279",
 };
 export const HelpdeskArticlesInternalGUIDs = {
   INVALID_BILLING_ADDRESS: "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618",

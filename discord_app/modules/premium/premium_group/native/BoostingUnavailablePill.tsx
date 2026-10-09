@@ -3,7 +3,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import _modDef3277 from "../PremiumGroup.messages.js";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -17,7 +17,7 @@ function handlePress() {
   const obj2 = { aboutText: null };
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
-  const tmp = asyncRequireImpl(13640, dependencyMap.paths);
+  const tmp = asyncRequireImpl(13731, dependencyMap.paths);
   obj2.aboutText = intl.formatToPlainString(_modDef3277["5xN/C1"], { premiumGroupProductName: closure_5() });
   obj.openLazy(tmp, "PremiumGroupEducationActionSheet", obj2);
 }

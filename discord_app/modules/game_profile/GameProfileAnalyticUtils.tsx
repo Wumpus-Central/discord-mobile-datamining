@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01278_v1.js";
+import v1 from "../../../_runtime/01279_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8445).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8453).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -133,6 +133,7 @@ export const GameProfileSources = {
   GuildProfileGames: "guild_profile_games",
   GameInvitesChannel: "game_invites_channel",
   VoiceChannelGames: "voice_channel_games",
+  Frame: "frame",
 };
 export const GameProfileTypes = { FullProfile: "full_profile", MiniProfile: "mini_profile" };
 export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFromInvite(current) {

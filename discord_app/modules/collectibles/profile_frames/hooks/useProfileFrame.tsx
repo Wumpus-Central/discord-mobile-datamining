@@ -5,7 +5,7 @@ import CollectiblesPurchaseStore from "../../CollectiblesPurchaseStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const isProfileFrameRecord = fn(7259).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7264).isProfileFrameRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrame.tsx");

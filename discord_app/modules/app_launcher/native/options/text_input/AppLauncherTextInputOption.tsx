@@ -8,10 +8,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let View = fn(17).View;
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1393).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 const obj2 = {
   container: {
     width: "100%",
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = tmp2[1];
       noop.useRef({ start: 0, end: 0 });
       const ref = noop.useRef(null);
-      let tmp14Result = option.type === onChangeText(1997).ApplicationCommandOptionType.STRING;
+      let tmp14Result = option.type === onChangeText(1998).ApplicationCommandOptionType.STRING;
       closure_7 = tmp14Result;
       const items = [onChangeText];
       onChangeText = noop.useCallback((arg0) => {
@@ -353,17 +353,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
         }
       }, items2);
-      let obj = onChangeText(11232);
-      const animationDelayedAutoFocus = onChangeText(11873).useAnimationDelayedAutoFocus(autoFocus, () => {
+      let obj = onChangeText(10587);
+      const animationDelayedAutoFocus = onChangeText(11810).useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
         }
       });
-      if (obj.useAppLauncherContext().entrypoint === onChangeText(11233).AppLauncherEntrypoint.VOICE) {
+      if (obj.useAppLauncherContext().entrypoint === onChangeText(10588).AppLauncherEntrypoint.VOICE) {
         let TextInput = tmp4(1200).TextInput;
       } else {
-        TextInput = guildId(11878);
+        TextInput = guildId(11815);
       }
       const items3 = [tmp.container, ,];
       if (hasError) {
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPressIn: null,
       };
       let maxLength;
-      if (option.type === onChangeText(1997).ApplicationCommandOptionType.STRING) {
+      if (option.type === onChangeText(1998).ApplicationCommandOptionType.STRING) {
         maxLength = option.maxLength;
       }
       obj4.maxLength = maxLength;
@@ -400,13 +400,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4.onFocus = onFocus;
       obj4.onEndEditing = onEndEditing;
-      if (option.type === onChangeText(1997).ApplicationCommandOptionType.INTEGER) {
+      if (option.type === onChangeText(1998).ApplicationCommandOptionType.INTEGER) {
         let str2 = "numbers-and-punctuation";
         if (tmp4Result.isAndroid()) {
           str2 = "numeric";
         }
         let str = str2;
-        tmp4Result = tmp4(1381);
+        tmp4Result = tmp4(1382);
       } else {
         str = "default";
       }
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        tmp14Result = tmp14(guildId(11879), obj5);
+        tmp14Result = tmp14(guildId(11816), obj5);
       }
       items4[1] = tmp14Result;
       obj3.children = items4;

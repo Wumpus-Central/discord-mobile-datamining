@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let newAnalyticsLoadId = tmp2;
                   newAnalyticsLoadId = undefined;
-                  newAnalyticsLoadId = args(10004).getNewAnalyticsLoadId();
-                  const obj7 = args(7110);
+                  newAnalyticsLoadId = args(10023).getNewAnalyticsLoadId();
+                  const obj7 = args(7115);
                   c3 = 1;
                   c4 = 1;
                   const obj4 = {
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                args(5964).closeApplyBoostModal();
+                args(5966).closeApplyBoostModal();
                 c4 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -164,8 +164,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 let newAnalyticsLoadId = tmp2;
                 newAnalyticsLoadId = undefined;
-                newAnalyticsLoadId = args(10004).getNewAnalyticsLoadId();
-                const obj7 = args(7110);
+                newAnalyticsLoadId = args(10023).getNewAnalyticsLoadId();
+                const obj7 = args(7115);
                 c3 = 1;
                 c4 = 1;
                 const obj4 = {
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              args(5964).closeApplyBoostModal();
+              args(5966).closeApplyBoostModal();
               c4 = 3;
               return { value: "IconComponent", done: null };
             }

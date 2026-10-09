@@ -77,24 +77,38 @@ class VoiceQuality extends tmp2 {
       if (undefined !== input) {
         if (undefined === input.restartCount) {
           if (undefined === input.bufferViolations) {
-            let num = input.timeToFirstCallbackMs;
+            let num = input.bufferSize;
             if (num == null) {
               num = 0;
             }
-            if (tmp6) {
-              inputDeviceStats.timeToFirstCallbackMs = input.timeToFirstCallbackMs;
+            if (0 !== num) {
+              inputDeviceStats.bufferSize = input.bufferSize;
             }
-            let num3 = input.sessionSampleRate;
+            let num3 = input.bufferOccupiedSizeMean;
             if (num3 == null) {
               num3 = 0;
             }
             if (0 !== num3) {
+              inputDeviceStats.bufferOccupiedSizeMean = input.bufferOccupiedSizeMean;
+            }
+            let num4 = input.timeToFirstCallbackMs;
+            if (num4 == null) {
+              num4 = 0;
+            }
+            if (tmp6) {
+              inputDeviceStats.timeToFirstCallbackMs = input.timeToFirstCallbackMs;
+            }
+            let num5 = input.sessionSampleRate;
+            if (num5 == null) {
+              num5 = 0;
+            }
+            if (0 !== num5) {
               if (inputDeviceStats.sessionSampleRate !== input.sessionSampleRate) {
-                let num4 = input.sessionSampleRate;
-                if (num4 == null) {
-                  num4 = 0;
+                let num6 = input.sessionSampleRate;
+                if (num6 == null) {
+                  num6 = 0;
                 }
-                closure_0.emit(obj.InputDeviceSampleRateChanged, num4);
+                closure_0.emit(obj.InputDeviceSampleRateChanged, num6);
               }
               inputDeviceStats.sessionSampleRate = input.sessionSampleRate;
             }
@@ -110,7 +124,7 @@ class VoiceQuality extends tmp2 {
             tmp10 =
               undefined !== input.timeFromConnectToFirstCallbackMs &&
               undefined === inputDeviceStats.timeFromConnectToFirstCallbackMs;
-            tmp6 = 0 !== num && undefined === inputDeviceStats.timeToFirstCallbackMs;
+            tmp6 = 0 !== num4 && undefined === inputDeviceStats.timeToFirstCallbackMs;
           } else {
             const bufferViolations = input.bufferViolations;
             let bufferViolations1 = inputDeviceStats.bufferViolations;
@@ -169,11 +183,11 @@ class VoiceQuality extends tmp2 {
     tmp3.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
         const networkQuality = num.networkQuality;
-        const result = networkQuality.incrementNetworkStats(num(5119).now());
+        const result = networkQuality.incrementNetworkStats(num(5120).now());
         const systemResources = num.systemResources;
         systemResources.takeSample();
         num = 0;
-        const obj2 = num(5119);
+        const obj2 = num(5120);
         let item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             num = type.bitrateTarget;
@@ -322,7 +336,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp35.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(5273).Histogram();
+                prop = new closure_0(5274).Histogram();
               }
               bufferStats.audioJitterBufferHistogram = prop;
               bufferStats.audioJitterTarget = type.audioJitterTarget;
@@ -331,7 +345,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp35.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(5273).Histogram();
+                prop1 = new closure_0(5274).Histogram();
               }
               bufferStats.audioJitterTargetHistogram = prop1;
               bufferStats.audioJitterDelay = type.audioJitterDelay;
@@ -340,7 +354,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp35.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(5273).Histogram();
+                prop2 = new closure_0(5274).Histogram();
               }
               bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } =
@@ -1040,6 +1054,8 @@ prototype["getAudioDeviceStats"] = function getAudioDeviceStats() {
     output_device_time_to_first_audio: null,
     input_device_buffer_overfull_count: null,
     output_device_buffer_underrun_count: null,
+    input_device_buffer_size: null,
+    input_device_buffer_occupied_size_mean: null,
     input_device_session_sample_rate: null,
     output_device_session_sample_rate: null,
     input_device_time_from_connect_to_first_audio_ms: null,
@@ -1067,6 +1083,8 @@ prototype["getAudioDeviceStats"] = function getAudioDeviceStats() {
     accumulated3 = bufferViolations2.accumulated;
   }
   obj.output_device_buffer_underrun_count = accumulated3;
+  obj.input_device_buffer_size = self.inputDeviceStats.bufferSize;
+  obj.input_device_buffer_occupied_size_mean = self.inputDeviceStats.bufferOccupiedSizeMean;
   obj.input_device_session_sample_rate = self.inputDeviceStats.sessionSampleRate;
   obj.output_device_session_sample_rate = self.outputDeviceStats.sessionSampleRate;
   obj.input_device_time_from_connect_to_first_audio_ms = self.inputDeviceStats.timeFromConnectToFirstCallbackMs;

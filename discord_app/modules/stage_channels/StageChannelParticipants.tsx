@@ -98,7 +98,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(5114).getComparator;
+const getComparator = fn(5115).getComparator;
 const StageChannelParticipantNamedIndex = {
   SPEAKER: "SPEAKER",
   AUDIENCE: "AUDIENCE",
@@ -225,7 +225,11 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, 
 prototype["updateParticipant"] = function updateParticipant(arg0) {
   const self = this;
   closure_0 = arg0;
-  let result = this._getParticipantsForUser(arg0, arr);
+  let arr = arg1;
+  if (arg1 === undefined) {
+    arr = self.participants[arg0];
+  }
+  let result = self._getParticipantsForUser(arg0, arr);
   let flag = null != arr;
   if (!flag) {
     flag = 0 !== result.length;
@@ -255,7 +259,7 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
       const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.delete(closure_0);
     });
-    this.participants[arg0] = result;
+    self.participants[arg0] = result;
     flag = true;
   }
   return flag;
@@ -268,12 +272,12 @@ prototype["rebuild"] = function rebuild() {
       const _Set = Set;
       const _Object = Object;
       const set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
-      const _participantsIndex = self._participantsIndex;
+      ({ participants: require, _participantsIndex } = self);
       _participantsIndex.clear();
       const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.clear();
       self.participants = {};
-      const item = set.forEach((item) => self.updateParticipant(item));
+      const item = set.forEach((item) => self.updateParticipant(item, require[item]));
       return true;
     }
   }

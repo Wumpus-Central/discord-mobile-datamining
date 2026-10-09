@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 const jsx = fn(21).jsx;
 const style = { flex: 1 };
 const ImagePlaceholderVersions = { THUMBHASH: 1, [1]: "THUMBHASH" };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = ImageWithThumbhashPlaceholderNativeComponentDefault;
 } else {

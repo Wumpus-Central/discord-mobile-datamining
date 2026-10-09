@@ -101,12 +101,12 @@ function queryForPrimaryAppCommand(context, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9186);
+let ApplicationCommandIndexStore = fn(9220);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
 let c8 = "no primary app command for application";
-let items = [fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1998).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetPrimaryAppCommand(arg0, applicationId) {

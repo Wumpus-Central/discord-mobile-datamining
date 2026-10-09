@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
-const ApplicationTypes = fn(1372).ApplicationTypes;
+const ApplicationTypes = fn(1373).ApplicationTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);

@@ -1,53 +1,67 @@
 // discord_app/design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx
-import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef16981 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
-import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../../_runtime/metro/00002__.js";
+import assetHelpers from "../assetHelpers.native.tsx";
+import _modDef17123 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-1x.png.js";
+import _modDef17124 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
+import _modDef17125 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-3x.png.js";
+import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const jsx = jsxProd.jsx;
+require = fn;
+const jsx = fn(21).jsx;
+let obj = { 1: null, 2: { uri: _modDef17123 }, 3: null };
+const obj2 = { uri: _modDef17123 };
+obj[2] = { uri: _modDef17124 };
+const obj3 = { uri: _modDef17124 };
+obj[3] = { uri: _modDef17125 };
+const ReactCompilerGating = fn(558);
+const obj4 = { uri: _modDef17125 };
+let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx",
 );
 
 export const CaterpillarIllocon = ReactCompilerGating.isReactCompilerEnabled()
   ? function CaterpillarIllocon(arg0) {
-      const cResult = c.c(8);
+      obj = c;
+      const cResult = obj.c(8);
       ({ accessible, accessibilityLabel, resizeMode, size } = arg0);
       let num = 64;
       if (undefined !== size) {
         num = size;
       }
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef16981 };
-        cResult[0] = obj2;
-        let first = obj2;
+      if (cResult[0] !== num) {
+        const size1 = { width: num, height: num, intrinsicWidth: 64, intrinsicHeight: 64 };
+        const assetSizeStyle = assetHelpers.getAssetSizeStyle(size1);
+        cResult[0] = num;
+        cResult[1] = assetSizeStyle;
+        let tmp4 = assetSizeStyle;
+        const tmpResult = assetHelpers;
       } else {
-        first = cResult[0];
+        tmp4 = cResult[1];
       }
-      if (cResult[1] !== num) {
-        const size1 = { width: num, height: num };
-        cResult[1] = num;
-        cResult[2] = size1;
-        let tmp5 = size1;
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const assetSource = assetHelpers.getAssetSource(obj);
+        cResult[2] = assetSource;
+        let tmp6 = assetSource;
+        const tmpResult2 = assetHelpers;
       } else {
-        tmp5 = cResult[2];
+        tmp6 = cResult[2];
       }
       if (cResult[3] === accessibilityLabel) {
         if (cResult[4] === accessible) {
           if (cResult[5] === resizeMode) {
-            if (cResult[6] === tmp5) {
-              let tmp6 = cResult[7];
+            if (cResult[6] === tmp4) {
+              let tmp9 = cResult[7];
             }
-            return tmp6;
+            return tmp9;
           }
         }
       }
-      const tmp7 = jsx(FastImageDefault, {
+      const tmp10 = jsx(FastImageDefault, {
         fadeDuration: 0,
-        source: first,
-        style: tmp5,
+        source: tmp6,
+        style: tmp4,
         accessible,
         accessibilityLabel,
         resizeMode,
@@ -55,9 +69,9 @@ export const CaterpillarIllocon = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = accessibilityLabel;
       cResult[4] = accessible;
       cResult[5] = resizeMode;
-      cResult[6] = tmp5;
-      cResult[7] = tmp7;
-      tmp6 = tmp7;
+      cResult[6] = tmp4;
+      cResult[7] = tmp10;
+      tmp9 = tmp10;
     }
   : function CaterpillarIllocon(size) {
       let num = size.size;
@@ -65,7 +79,12 @@ export const CaterpillarIllocon = ReactCompilerGating.isReactCompilerEnabled()
       if (num === undefined) {
         num = 64;
       }
-      const obj = {
+      const items = [num];
+      const memo = noop.useMemo(() => {
+        const size = { width: num, height: num, intrinsicWidth: 64, intrinsicHeight: 64 };
+        return assetHelpers.getAssetSizeStyle(size);
+      }, items);
+      obj = {
         fadeDuration: 0,
         source: null,
         style: null,
@@ -73,18 +92,19 @@ export const CaterpillarIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      const obj2 = { uri: _modDef16981 };
-      obj.source = obj2;
-      obj.style = { width: num, height: num };
+      obj.source = num(6277).getAssetSource(obj);
+      obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;
       obj.resizeMode = resizeMode;
-      return jsx(FastImageDefault, {
-        fadeDuration: 0,
-        source: null,
-        style: null,
-        accessible: null,
-        accessibilityLabel: null,
-        resizeMode: null,
-      });
+      return (
+        <tmp2
+          fadeDuration={0}
+          source={null}
+          style={null}
+          accessible={null}
+          accessibilityLabel={null}
+          resizeMode={null}
+        />
+      );
     };

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import Patterns from "../../../../../_runtime/05057_Patterns.js";
+import Patterns from "../../../../../_runtime/05058_Patterns.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -36,7 +36,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      const tmp6 = closure_3(type(5375).Button, { variant: "secondary", onPress: tmp4, text: label });
+      const tmp6 = closure_3(type(5376).Button, { variant: "secondary", onPress: tmp4, text: label });
       cResult[2] = label;
       cResult[3] = tmp4;
       cResult[4] = tmp6;
@@ -45,7 +45,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function HapticButton(text) {
       const type = text.type;
-      return closure_3(type(5375).Button, {
+      return closure_3(type(5376).Button, {
         variant: "secondary",
         onPress() {
           return HapticUtils.triggerHapticFeedback(type);
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           items4.map((description) => {
             ({ label, pattern: closure_0 } = description);
             return closure_3(
-              closure_0(5375).Button,
+              closure_0(5376).Button,
               {
                 variant: "secondary",
                 onPress() {
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items4.map((description) => {
           ({ label, pattern: closure_0 } = description);
           return closure_3(
-            closure_0(5375).Button,
+            closure_0(5376).Button,
             {
               variant: "secondary",
               onPress() {

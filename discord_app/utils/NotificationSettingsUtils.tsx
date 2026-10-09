@@ -10,8 +10,8 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4720).NotificationSettingsUpdateType;
-const UnreadSetting = fn(5972).UnreadSetting;
+const constants2 = fn(4722).NotificationSettingsUpdateType;
+const UnreadSetting = fn(5974).UnreadSetting;
 const UserSettingsConstants = fn(1095);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = {
@@ -388,7 +388,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   }
   const isChannelMutedResult = UserGuildSettingsStore.isChannelMuted(guildId, channelId);
   const tmp12 = num2 ^ num;
-  const obj4 = guildId(1402);
+  const obj4 = guildId(1403);
   const lastMessage = MessageStore.getLastMessage(channelId);
   let type;
   if (lastMessage != null) {
@@ -397,7 +397,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   if (type == null) {
     type = null;
   }
-  const removeFlagsResult = guildId(1402).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
+  const removeFlagsResult = guildId(1403).removeFlags(tmp12, constants3.FAVORITED, constants3.OPT_IN_ENABLED);
   const obj3 = {};
   const merged = Object.assign(computeResult1);
   const merged1 = Object.assign(LastMentionTimestampStore.getStats(guildId));

@@ -1,5 +1,5 @@
 // discord_app/lib/StateManager.tsx
-import _modDef1354 from "../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../_runtime/metro/01355__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/StateManager.tsx");
@@ -45,14 +45,14 @@ prototype["update"] = function update() {
   const merged1 = Object.assign(obj);
   const nextState = this.getNextState({});
   if (flag) {
-    self.dirty = !_modDef1354(nextState, self.getInitialState());
+    self.dirty = !_modDef1355(nextState, self.getInitialState());
   } else {
     const _Object = Object;
     const keys = Object.keys(nextState);
     for (const item10021 of keys) {
       let dirty = self.dirty;
       if (!dirty) {
-        dirty = !_modDef1354(self.state[item10021], nextState[item10021]);
+        dirty = !_modDef1355(self.state[item10021], nextState[item10021]);
       }
       self.dirty = dirty;
       continue;

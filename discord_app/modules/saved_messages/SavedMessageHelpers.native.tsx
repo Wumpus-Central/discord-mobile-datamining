@@ -39,17 +39,17 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
           const intl5 = tmp8(1126).intl;
           obj2.cancelText = intl5.string(closure_0(1126).t.ZGbTcy);
           obj2.onCancel = function onCancel() {
-            const SavedMessageSortTypes = displayToast(9633).SavedMessageSortTypes;
-            return displayToast(12656).showForLaterModal(
+            const SavedMessageSortTypes = displayToast(9652).SavedMessageSortTypes;
+            return displayToast(12596).showForLaterModal(
               closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK,
             );
           };
-          closure_1(5297).show(obj2);
+          closure_1(5298).show(obj2);
           return null;
         } else {
           const obj5 = {
             key: "SAVED_MESSAGE_CREATE_ERROR",
-            IconComponent: closure_0(5000).CircleErrorIcon,
+            IconComponent: closure_0(5001).CircleErrorIcon,
             content: null,
           };
           let message;
@@ -64,7 +64,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
             message = intl.string(tmp12(1126).t.R0RpRX);
           }
           obj5.content = message;
-          closure_1(4766).open(obj5);
+          closure_1(4768).open(obj5);
           return null;
         }
       });
@@ -96,7 +96,7 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
     closure_1 = tmp2;
     displayToast2 = displayToast.displayToast;
     closure_129_1 = Object.assign(displayToast, Object.assign({ displayToast: 0 }));
-    return "Reflect";
+    return "Set";
   })();
   iter.next();
   return iter;
@@ -108,7 +108,7 @@ let closure_8 = async function _removeSavedMessage() {
     .catch((error) => {
       const obj2 = {
         key: "SAVED_MESSAGE_REMOVE_ERROR",
-        IconComponent: closure_1_0(5000).CircleErrorIcon,
+        IconComponent: closure_1_0(5001).CircleErrorIcon,
         content: null,
       };
       let message;
@@ -123,7 +123,7 @@ let closure_8 = async function _removeSavedMessage() {
         message = intl.string(closure_1_0(1126).t.R0RpRX);
       }
       obj2.content = message;
-      closure_1_1(4766).open(obj2);
+      closure_1_1(4768).open(obj2);
       return null;
     });
   if (null != value) {
@@ -156,10 +156,10 @@ let closure_8 = async function _removeSavedMessage() {
   closure_1 = tmp2;
   ({ displayToast: closure_129_0, isReminder: closure_129_1 } = closure_0);
   closure_129_2 = Object.assign(closure_0, Object.assign({ displayToast: 0, isReminder: 0 }));
-  return "Reflect";
+  return "Set";
 };
 const AbortCodes = fn(1085).AbortCodes;
-const SavedMessagesConstants = fn(12665);
+const SavedMessagesConstants = fn(12606);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

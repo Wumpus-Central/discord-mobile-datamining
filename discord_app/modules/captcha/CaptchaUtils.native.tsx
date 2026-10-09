@@ -6,7 +6,7 @@ import SharedCaptchaUtils from "SharedCaptchaUtils.tsx";
 import ActionSheetStore from "../action_sheet/native/ActionSheetStore.tsx";
 
 require = fn;
-const CAPTCHA_MODAL_KEY = fn(5731).CAPTCHA_MODAL_KEY;
+const CAPTCHA_MODAL_KEY = fn(5732).CAPTCHA_MODAL_KEY;
 let obj = {
   showCaptcha(options, arg1) {
     _require = arg1;
@@ -28,7 +28,7 @@ let obj = {
     };
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(require("asyncRequireImpl")(17737, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
+    obj2.openLazy(require("asyncRequireImpl")(17889, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj3);
   },
   showCaptchaAsync(nextResult1) {
     if (arg1 === undefined) {

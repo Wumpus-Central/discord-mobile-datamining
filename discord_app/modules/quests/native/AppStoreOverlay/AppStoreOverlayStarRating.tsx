@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayStarRating.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import StarIcon from "../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import StarOutlineIcon from "../../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
+import StarIcon from "../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", gap: 2 },
   star: null,

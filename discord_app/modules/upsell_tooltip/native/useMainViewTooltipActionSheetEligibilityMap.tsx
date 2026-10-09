@@ -27,7 +27,7 @@ const require = globalThis.__r;
 
 require = fn;
 const PlatformTypes = fn(1085).PlatformTypes;
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,

@@ -43,7 +43,7 @@ function getConsoleInfo(type) {
 }
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   consoleIconContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const arr = useGameConsoleAccountsDefault();
       if (cResult[0] !== arr) {
         const mapped = arr.map(getConsoleInfo);
-        const found = mapped.filter(tmp(1387).isNotNullish);
+        const found = mapped.filter(tmp(1388).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
         let tmp5 = found;

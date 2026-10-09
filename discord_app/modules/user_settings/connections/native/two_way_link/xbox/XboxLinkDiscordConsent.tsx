@@ -2,9 +2,9 @@
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const XboxLinkModalScenes = fn(9113).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9180).XboxLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
-const XBOX_CLIENT_SCOPES = fn(9127).XBOX_CLIENT_SCOPES;
+const XBOX_CLIENT_SCOPES = fn(9194).XBOX_CLIENT_SCOPES;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -17,7 +17,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(9);
       ({ callbackCode, callbackState } = arg0);
       const obj = navigation(576);
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       if (cResult[0] !== navigation) {
         const fn = function l() {
           navigation.push(XboxLinkModalScenes.SUCCESS);
@@ -48,12 +48,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj2 = navigation(1502);
-      const tmp8 = jsx(navigation(9128).TwoWayLinkDiscordConsent, {
+      const obj2 = navigation(1503);
+      const tmp8 = jsx(navigation(9195).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.XBOX,
         callbackCode,
         callbackState,
-        clientId: navigation(9156).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+        clientId: navigation(12294).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
         scopes: XBOX_CLIENT_SCOPES,
         onNext: tmp5,
         onError: tmp6,
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.XBOX,
         callbackCode,
         callbackState,
-        clientId: navigation(9156).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+        clientId: navigation(12294).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
         scopes: XBOX_CLIENT_SCOPES,
         onNext: tmp5,
         onError: tmp6,
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function XboxLinkDiscordConsent(arg0) {
       let navigation;
       ({ callbackCode, callbackState } = arg0);
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       const items = [navigation];
       const items1 = [navigation];
       const callback = noop.useCallback(() => {
@@ -86,12 +86,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = noop.useCallback(() => {
         navigation.push(XboxLinkModalScenes.ERROR);
       }, items1);
-      const obj = navigation(1502);
-      return jsx(navigation(9128).TwoWayLinkDiscordConsent, {
+      const obj = navigation(1503);
+      return jsx(navigation(9195).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.XBOX,
         callbackCode,
         callbackState,
-        clientId: navigation(9156).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+        clientId: navigation(12294).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
         scopes: XBOX_CLIENT_SCOPES,
         onNext: callback,
         onError: callback1,

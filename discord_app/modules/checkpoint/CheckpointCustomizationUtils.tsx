@@ -158,7 +158,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     tmp5 = _require;
     CHECKPOINT_OUTFIT_COLOR_OPTION_NAMES = require("CheckpointTraitOptionNames").CHECKPOINT_TRAIT_OPTION_NAMES[tmp4];
   }
-  dependencyMap = tmp5(15812).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
+  dependencyMap = tmp5(15925).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
   return arr.map((optionId) => {
     trait = optionId;
     const obj = {
@@ -172,7 +172,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
         }
         return str;
       },
-      rarity: trait(15812).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
+      rarity: trait(15925).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
       asset: null,
     };
     let layer;

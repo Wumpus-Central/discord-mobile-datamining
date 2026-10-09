@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", marginLeft: -2 },
@@ -622,7 +622,7 @@ export default noop.memo(
           let obj6 = {
             size: tmp(tmp2[9]).Icon.Sizes.CUSTOM,
             style: { height: 14, width: 14 },
-            source: require("../../../../../../_runtime/metro/17127__.js"),
+            source: require("../../../../../../_runtime/metro/17277__.js"),
           };
           const items4 = [closure_4(tmp(tmp2[9]).Icon, obj6)];
           let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };

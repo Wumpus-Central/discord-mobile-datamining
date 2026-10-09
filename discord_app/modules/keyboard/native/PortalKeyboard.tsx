@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import Portal from "../../../../_runtime/04952_Portal.js";
+import Portal from "../../../../_runtime/04953_Portal.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

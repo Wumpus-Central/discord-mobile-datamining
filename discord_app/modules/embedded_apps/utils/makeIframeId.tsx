@@ -1,5 +1,5 @@
 // discord_app/modules/embedded_apps/utils/makeIframeId.tsx
-import v1 from "../../../../_runtime/01278_v1.js";
+import v1 from "../../../../_runtime/01279_v1.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/embedded_apps/utils/makeIframeId.tsx");

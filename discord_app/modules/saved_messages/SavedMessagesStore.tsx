@@ -39,6 +39,11 @@ function upsertSavedMessage(saveData) {
   }
   const result = secondaryIndexMap.set(combined, saveData);
   const messageId = saveData.saveData.messageId;
+  if (null == saveData.saveData.dueAt) {
+    set1.add(messageId);
+  } else {
+    set1.delete(messageId);
+  }
   const channelId = saveData.saveData.channelId;
   set = map.get(channelId);
   if (set == null) {
@@ -48,7 +53,7 @@ function upsertSavedMessage(saveData) {
   set.add(messageId);
   const result1 = map.set(channelId, set);
   if (null == saveData.message) {
-    set1.add(messageId);
+    set2.add(messageId);
   }
   if (null != saveData.saveData.dueAt) {
     const _Date2 = Date;
@@ -58,6 +63,26 @@ function upsertSavedMessage(saveData) {
     }
   }
   set.delete(messageId);
+}
+function resetSavedMessages(bookmarkIds) {
+  secondaryIndexMap.clear();
+  map.clear();
+  set2.clear();
+  set1.clear();
+  while (tmp5 !== undefined) {
+    let addResult = set1.add(tmp6);
+    continue;
+  }
+  nextBefore = null;
+  c13 = null;
+  c12 = false;
+  if (set1.size > 0) {
+    let LOADED_FINISHED = SavedMessagesTypes.BookmarksFetchState.LOADED_HAS_MORE;
+  } else {
+    LOADED_FINISHED = SavedMessagesTypes.BookmarksFetchState.LOADED_FINISHED;
+  }
+  FAILED = LOADED_FINISHED;
+  tmp5 = bookmarkIds[Symbol.iterator]();
 }
 function nullifyMessageObject(channelId) {
   const combined = "" + channelId.channelId + "-" + channelId.messageId;
@@ -77,7 +102,7 @@ function nullifyMessageObject(channelId) {
   }
 }
 function handleGuild() {
-  let tmp = 0 !== set1.size;
+  let tmp = 0 !== set2.size;
   if (tmp) {
     if (!c6) {
       c6 = true;
@@ -88,7 +113,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4702).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4704).SecondaryIndexMap(
   (saveData) => {
     const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
@@ -113,6 +138,11 @@ let c6 = true;
 let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
+let nextBefore = null;
+let FAILED = fn(9652).BookmarksFetchState.LOADED_FINISHED;
+let c12 = false;
+let c13 = null;
+const set2 = new Set();
 const map = new Map();
 const Store = initializeDefault.Store;
 class SavedMessagesStore extends Store {}
@@ -155,7 +185,19 @@ prototype["getMostRecentOverdueDueAt"] = function getMostRecentOverdueDueAt() {
   }
 };
 prototype["getSavedMessageCount"] = function getSavedMessageCount() {
-  return secondaryIndexMap.size();
+  return secondaryIndexMap.values(SavedMessagesTypes.SavedMessageSortTypes.REMINDER).length + set1.size;
+};
+prototype["getBookmarkCount"] = function getBookmarkCount() {
+  return set1.size;
+};
+prototype["getBookmarksCursor"] = function getBookmarksCursor() {
+  return nextBefore;
+};
+prototype["getBookmarksFetchState"] = function getBookmarksFetchState() {
+  return FAILED;
+};
+prototype["hasFetchedBookmarks"] = function hasFetchedBookmarks() {
+  return c12;
 };
 prototype["getIsStale"] = function getIsStale() {
   return c6;
@@ -164,8 +206,7 @@ prototype["getLastChanged"] = function getLastChanged() {
   return closure_7;
 };
 prototype["isMessageBookmarked"] = function isMessageBookmarked(id, id2) {
-  value = secondaryIndexMap.get("" + id + "-" + id2);
-  return null != value && null == value.saveData.dueAt;
+  return set1.has(id2);
 };
 prototype["isMessageReminder"] = function isMessageReminder(id, id2) {
   value = secondaryIndexMap.get("" + id + "-" + id2);
@@ -178,20 +219,15 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
   },
   LOGOUT: function handleLogout() {
     c6 = true;
-    secondaryIndexMap.clear();
-    map.clear();
-    set1.clear();
+    resetSavedMessages([]);
   },
-  SAVED_MESSAGES_UPDATE: function handleUpdate(arg0) {
+  SAVED_MESSAGES_UPDATE: function handleUpdate(bookmarkIds) {
     c6 = false;
-    secondaryIndexMap.clear();
-    map.clear();
-    set1.clear();
-    while (tmp4 !== undefined) {
-      let tmp7 = upsertSavedMessage(tmp5);
+    resetSavedMessages(bookmarkIds.bookmarkIds);
+    for (const item10011 of tmp) {
+      let tmp4 = upsertSavedMessage(item10011);
       continue;
     }
-    tmp4 = arg0.savedMessages[Symbol.iterator]();
   },
   SAVED_MESSAGE_CREATE: function handleCreate(savedMessage) {
     upsertSavedMessage(savedMessage.savedMessage);
@@ -199,20 +235,49 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
   SAVED_MESSAGE_DELETE: function handleDelete(savedMessageData) {
     savedMessageData = savedMessageData.savedMessageData;
     const combined = "" + savedMessageData.channelId + "-" + savedMessageData.messageId;
+    const messageId = savedMessageData.messageId;
     value = secondaryIndexMap.get(combined);
-    if (null != value) {
+    if (null == value) {
+      let flag = set1.delete(messageId);
+    } else {
       secondaryIndexMap.delete(combined);
-      const messageId = savedMessageData.messageId;
+      set1.delete(messageId);
       value2 = map.get(value.saveData.channelId);
       if (value2 != null) {
         value2.delete(messageId);
       }
-      set1.delete(messageId);
+      set2.delete(messageId);
       set.delete(messageId);
       const _Date = Date;
       closure_7 = Date.now();
+      flag = true;
     }
-    return false;
+    return flag;
+  },
+  BOOKMARKS_FETCH: function handleBookmarksFetch(requestId) {
+    FAILED = SavedMessagesTypes.BookmarksFetchState.LOADING;
+    requestId = requestId.requestId;
+  },
+  BOOKMARKS_FETCH_SUCCESS: function handleBookmarksFetchSuccess(requestId) {
+    ({ nextBefore, bookmarks } = requestId);
+    if (requestId.requestId !== c13) {
+      return false;
+    } else {
+      c13 = null;
+      const BookmarksFetchState = SavedMessagesTypes.BookmarksFetchState;
+      FAILED = tmp ? BookmarksFetchState.LOADED_HAS_MORE : BookmarksFetchState.LOADED_FINISHED;
+      c12 = true;
+      nextBefore = bookmarks[Symbol.iterator]();
+      bookmarks = 0;
+    }
+  },
+  BOOKMARKS_FETCH_FAILURE: function handleBookmarksFetchFailure(requestId) {
+    if (requestId.requestId !== c13) {
+      return false;
+    } else {
+      c13 = null;
+      FAILED = SavedMessagesTypes.BookmarksFetchState.FAILED;
+    }
   },
   MESSAGE_DELETE: function handleMessageDelete(channelId) {
     const combined = "" + channelId.channelId + "-" + channelId.id;
@@ -266,7 +331,7 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
   GUILD_UPDATE: handleGuild,
   GUILD_DELETE: handleGuild,
   CHANNEL_CREATE: function handleChannelCreate(arg0) {
-    let tmp2 = 0 !== set1.size;
+    let tmp2 = 0 !== set2.size;
     if (tmp2) {
       let tmp4 = !c6;
       if (!c6) {
@@ -283,7 +348,7 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
     channels = channels.channels;
-    if (0 === set1.size) {
+    if (0 === set2.size) {
       return false;
     } else if (c6) {
       return false;
@@ -301,7 +366,7 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
     }
   },
   CHANNEL_DELETE: function handleChannelDelete(arg0) {
-    let tmp2 = 0 !== set1.size;
+    let tmp2 = 0 !== set2.size;
     if (tmp2) {
       let tmp4 = !c6;
       if (!c6) {
@@ -317,7 +382,7 @@ const savedMessagesStore = new SavedMessagesStore(DispatcherDefault, {
     return tmp2;
   },
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(arg0) {
-    let tmp2 = 0 !== set1.size;
+    let tmp2 = 0 !== set2.size;
     if (tmp2) {
       let tmp4 = !c6;
       if (!c6) {

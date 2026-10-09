@@ -5,7 +5,7 @@ import GroupIcon from "../../../../../../design/components/Icon/native/redesign/
 import VoiceNormalIcon from "../../../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
 import ScreenStreamIcon from "../../../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
 import GameControllerIcon from "../../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import _modDef9118 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
+import _modDef9185 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -32,11 +32,11 @@ function getXboxValueProps() {
   items[3] = obj4;
   return items;
 }
-const XboxLinkModalScenes = fn(9113).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9180).XboxLinkModalScenes;
 const Constants = fn(1085);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_8 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(10);
       const tmp4 = closure_8();
       const obj = navigation(576);
-      navigation = navigation(1502).useNavigation();
+      navigation = navigation(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
         const intl = tmp(1126).intl;
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp16[0] = _modDef9118;
+        tmp16[0] = _modDef9185;
         cResult[4] = tmp16;
       } else {
         class N {
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp22;
       }
-      tmp22 = jsx(navigation(9119).TwoWayLinkLanding, {
+      tmp22 = jsx(navigation(9186).TwoWayLinkLanding, {
         platformType: constants2.XBOX,
         img: tmp16,
         imgStyle: tmp4.image,
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = N;
       cResult[8] = tmp4.image;
       cResult[9] = tmp22;
-      const obj2 = navigation(1502);
+      const obj2 = navigation(1503);
       const obj6 = {
         platformType: constants2.XBOX,
         img: tmp16,
@@ -160,8 +160,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function XboxLinkLanding() {
       const tmp = closure_8();
-      navigation = navigation(1502).useNavigation();
-      const obj = navigation(1502);
+      navigation = navigation(1503).useNavigation();
+      const obj = navigation(1503);
       const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
       const intl = navigation(1126).intl;
       const items = [navigation];
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         navigation.push(XboxLinkModalScenes.PRE_CONNECT);
       }, items);
-      const memo1 = noop.useMemo(() => ({ uri: _modDef9118 }), []);
+      const memo1 = noop.useMemo(() => ({ uri: _modDef9185 }), []);
       const obj3 = {
         platformType: constants2.XBOX,
         img: memo1,
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.body = intl.format(navigation(1126).t.CIc3IN, { helpdeskArticleUrl: articleURL });
       obj3.onNext = callback;
       obj3.valueProps = memo;
-      return jsx(navigation(9119).TwoWayLinkLanding, {
+      return jsx(navigation(9186).TwoWayLinkLanding, {
         platformType: constants2.XBOX,
         img: memo1,
         imgStyle: tmp.image,

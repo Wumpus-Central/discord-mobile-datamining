@@ -4,14 +4,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef9993 from "../../../../_runtime/metro/09993__.js";
+import _modDef10012 from "../../../../_runtime/metro/10012__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" },
   imageContainer: null,
@@ -51,7 +51,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
         tmp5 = cResult[1];
       }
       if (cResult[2] !== tmp4.icon) {
-        const obj3 = { source: _modDef9993, style: tmp4.icon, color: tmp4.icon.color };
+        const obj3 = { source: _modDef10012, style: tmp4.icon, color: tmp4.icon.color };
         const tmp12 = React4(native.Icon, obj3);
         cResult[2] = tmp4.icon;
         cResult[3] = tmp12;
@@ -128,7 +128,7 @@ export const ForYouUnreadClearedState = ReactCompilerGating.isReactCompilerEnabl
       const obj = { style: tmp.container, children: null };
       const items = [
         React4(View, { style: tmp.imageContainer }),
-        React4(native.Icon, { source: _modDef9993, style: tmp.icon, color: tmp.icon.color }),
+        React4(native.Icon, { source: _modDef10012, style: tmp.icon, color: tmp.icon.color }),
       ];
       const obj4 = { children: null };
       const obj5 = {

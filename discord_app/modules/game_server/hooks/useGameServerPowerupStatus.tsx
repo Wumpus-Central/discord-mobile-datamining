@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
-      const tmp2 = stateFromStores(12312)(arg0);
+      const tmp2 = stateFromStores(12251)(arg0);
       dependencyMap = tmp2;
       const items2 = [tmp2, stateFromStores];
       return noop.useMemo(() => {

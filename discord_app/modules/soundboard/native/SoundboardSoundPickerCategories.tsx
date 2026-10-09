@@ -12,8 +12,8 @@ import SoundboardTypes from "../SoundboardTypes.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import TrophyIcon from "../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
-import _modDef9714 from "../../../../_runtime/metro/09714__.js";
-import _modDef17554 from "../../../../_runtime/metro/17554__.js";
+import _modDef9733 from "../../../../_runtime/metro/09733__.js";
+import _modDef17706 from "../../../../_runtime/metro/17706__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -26,12 +26,12 @@ let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const setSearchQuery = fn(17538).setSearchQuery;
+const setSearchQuery = fn(17690).setSearchQuery;
 const Constants = fn(1085);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_11, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj = {
   container: {
     borderTopWidth: StyleSheet.hairlineWidth,
@@ -114,7 +114,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp30 = cResult[3];
           }
-          let tmp12 = _modDef9714;
+          let tmp12 = _modDef9733;
           let tmp11 = null;
           let tmp14 = tmp30;
           let tmp13 = null;
@@ -151,7 +151,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp20 = cResult[7];
           }
-          tmp12 = _modDef17554;
+          tmp12 = _modDef17706;
           tmp11 = null;
           tmp14 = tmp20;
           tmp13 = null;
@@ -165,7 +165,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp16 = cResult[8];
           }
-          tmp12 = _modDef17554;
+          tmp12 = _modDef17706;
           tmp11 = null;
           tmp14 = tmp16;
           tmp13 = null;
@@ -319,7 +319,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
         const intl4 = util.intl;
         name = intl4.string(util.t.y3LQCG);
-        tmp6 = _modDef9714;
+        tmp6 = _modDef9733;
         tmp7 = null;
         tmp14Result = null;
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -332,13 +332,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
         const intl2 = util.intl;
         name = intl2.string(util.t.Rtvk9X);
-        tmp6 = _modDef17554;
+        tmp6 = _modDef17706;
         tmp7 = null;
         tmp14Result = null;
       } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
         const intl = util.intl;
         name = intl.string(util.t.sKt3xS);
-        tmp6 = _modDef17554;
+        tmp6 = _modDef17706;
         tmp7 = null;
         tmp14Result = null;
       } else {

@@ -3,7 +3,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import AnalyticsTrackingStore from "AnalyticsTrackingStore.tsx";
 import StandardAnalyticsConstants from "StandardAnalyticsConstants.tsx";
 import AnalyticsTrackingActionCreators from "AnalyticsTrackingActionCreators.tsx";
-import _modDef1354 from "../../../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../../../_runtime/metro/01355__.js";
 import encodeProperties from "encodeProperties.tsx";
 import AnalyticsSchema from "AnalyticsSchema.tsx";
 import getSuperProperties from "getSuperProperties.tsx";
@@ -83,7 +83,7 @@ export const trackMaker = (arg0) => {
             }
           }
           if (obj3.deduplicate) {
-            if (_modDef1354(closure_5[joined], obj2)) {
+            if (_modDef1355(closure_5[joined], obj2)) {
               return Promise.resolve();
             } else {
               closure_5[joined] = obj2;

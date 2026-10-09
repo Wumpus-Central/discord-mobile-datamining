@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05388_LinearGradient.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
@@ -53,13 +53,13 @@ function getPremiumUpsellLabel(TIER_0, featureName, fn) {
 let closure_3 = ["shouldShow"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const PremiumConstants = fn(1391);
+const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7140).Gradients;
+const Gradients = fn(7145).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -571,13 +571,13 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5374).withSpring, springStandard: fn(5378).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5375).withSpring, springStandard: fn(5379).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
 };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5374).withSpring, springStandard: fn(5378).springStandard };
+let obj3 = { withSpring: fn(5375).withSpring, springStandard: fn(5379).springStandard };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 

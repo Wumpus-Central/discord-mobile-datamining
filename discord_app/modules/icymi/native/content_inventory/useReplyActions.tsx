@@ -1,5 +1,5 @@
 // discord_app/modules/icymi/native/content_inventory/useReplyActions.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ContentInventoryEntryType from "../../../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
@@ -13,10 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7232).DraftType;
-const EmojiIntention = fn(1392).EmojiIntention;
-const MessageSendLocation = fn(5083).MessageSendLocation;
-const jsx = fn(21).jsx;
+const DraftType = fn(7237).DraftType;
+const EmojiIntention = fn(1393).EmojiIntention;
+const MessageSendLocation = fn(5084).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -34,14 +33,14 @@ export const useReplyActions = function useReplyActions(cResult) {
   hotwheels_gaming_activity = "unknown";
   let content_type = content.content_type;
   if (require("ContentInventoryEntryType").ContentInventoryEntryType.TOP_GAME !== content_type) {
-    if (tmp(tmp2[9]).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-      if (tmp(tmp2[9]).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(tmp2[8]).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+      if (tmp(tmp2[8]).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
         hotwheels_gaming_activity = "hotwheels_custom_status";
         str = "hotwheels_custom_status";
       }
     }
     const items1 = [sendMessage];
-    stateFromStores1 = tmp(tmp2[8]).useStateFromStores(items1, () => {
+    stateFromStores1 = tmp(tmp2[7]).useStateFromStores(items1, () => {
       if (null == stateFromStores) {
         return null;
       } else {
@@ -63,172 +62,147 @@ export const useReplyActions = function useReplyActions(cResult) {
               if (id != null) {
                 id = id.id;
               }
-              stateFromStores(hotwheels_gaming_activity[10]).clearAll(id, callback1.ChannelMessage);
+              stateFromStores(hotwheels_gaming_activity[9]).clearAll(id, callback1.ChannelMessage);
             }
           : undefined,
       items2,
     );
-    _require = stateFromStores1((entry) => {
-      c3 = 0;
-      c4 = 0;
-      return (function* (arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            const obj2 = { value, done: true };
-            return obj2;
-          } else {
-            return { value: "IconComponent", done: null };
-          }
+    _require = stateFromStores1(function* (entry) {
+      if (num8 === 2) {
+        num8 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (entry === 1) {
+          throw value;
+        } else if (entry === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj6 = { value, done: true };
-                return obj6;
-              } else {
-                closure_2 = tmp5;
-                closure_129_0 = entry;
-                closure_129_1 = undefined;
-                let channel;
-                closure_129_3 = undefined;
-                closure_129_4 = undefined;
-                if (null != tmp2) {
-                  c3 = 1;
-                  c4 = 1;
-                  const obj8 = {
-                    value: stateFromStores(hotwheels_gaming_activity[11]).getOrEnsurePrivateChannel(tmp2.id),
-                    done: false,
-                  };
-                  return obj8;
-                } else {
-                  c4 = 3;
-                }
-              }
-            } else {
-              if (1 === tmp5) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj10 = { value, done: true };
-                  return obj10;
-                } else {
-                  closure_129_1 = value;
-                  channel = callback.getChannel(closure_129_1);
-                  let str5 = null;
-                  if (null != channel) {
-                    if (
-                      entry.content_type === entry(hotwheels_gaming_activity[9]).ContentInventoryEntryType.CUSTOM_STATUS
-                    ) {
-                      entry(hotwheels_gaming_activity[12]);
-                      const obj11 = {
-                        status: entry.extra.status,
-                        emojiStr: null,
-                        reply: null,
-                        username: null,
-                        attachments: null,
-                      };
-                      if (str5 == entry.extra.emoji_name) {
-                        obj11.emojiStr = "";
-                        obj11.reply = closure_129_0;
-                        obj11.username = stateFromStores(hotwheels_gaming_activity[13]).getName(tmp2);
-                        obj11.attachments = entry.extra.attachments;
-                        closure_129_3 = tmp47(obj11);
-                        const obj13 = stateFromStores(hotwheels_gaming_activity[13]);
-                        closure_129_4 = stateFromStores(hotwheels_gaming_activity[14]).parse(channel, closure_129_3);
-                        const obj15 = stateFromStores(hotwheels_gaming_activity[15]);
-                        const obj12 = { location: constants.ICYMI };
-                        c3 = 3;
-                        c4 = 1;
-                        const obj16 = {
-                          value: obj15.sendMessage(channel.id, closure_129_4, false, obj12),
-                          done: false,
-                        };
-                        return obj16;
-                      } else {
-                        if (str5 == entry.extra.emoji_id) {
-                          const _HermesInternal = HermesInternal;
-                          let combined = "" + entry.extra.emoji_name;
-                        } else {
-                          str5 = globalThis;
-                          const _String = String;
-                        }
-                        str5 = "`:";
-                        combined = "`:" + entry.extra.emoji_name + ":`";
-                      }
-                    } else {
-                      const obj17 = {
-                        channel,
-                        content: closure_129_0,
-                        entry,
-                        whenReady: false,
-                        doNotNotifyOnError: false,
-                        location: constants.ICYMI,
-                      };
-                      c3 = 2;
-                      c4 = 1;
-                      const obj18 = {
-                        value: entry(hotwheels_gaming_activity[16]).sendMessageWithEmbed(obj17),
-                        done: false,
-                      };
-                      return obj18;
-                    }
-                  }
-                }
-              } else if (2 === tmp5) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj20 = { value, done: true };
-                  return obj20;
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj = { value, done: true };
-                return obj;
-              }
-              stateFromStores(hotwheels_gaming_activity[17]).hideActionSheet();
-              const obj3 = stateFromStores(hotwheels_gaming_activity[17]);
-              if (!obj4.getDesignSystemsNotificationComponents("useReplyActions")) {
-                const obj21 = { key: "content_inventory_message_sent", content: null, icon: null };
-                const intl = entry(hotwheels_gaming_activity[20]).intl;
-                obj21.content = intl.string(entry(hotwheels_gaming_activity[20]).t.fjcCk5);
-                obj21.icon = function icon() {
-                  return closure_1_10(entry(closure_1_2[21]).ChatCheckIcon, {});
-                };
-                stateFromStores(hotwheels_gaming_activity[19]).open(obj21);
-                const obj5 = stateFromStores(hotwheels_gaming_activity[19]);
-              }
-              obj4 = entry(hotwheels_gaming_activity[18]);
-            }
-            const obj22 = { text: null, icon: null };
-            const intl2 = entry(hotwheels_gaming_activity[20]).intl;
-            obj22.text = intl2.string(entry(hotwheels_gaming_activity[20]).t.fjcCk5);
-            obj22.icon = entry(hotwheels_gaming_activity[21]).ChatCheckIcon;
-            stateFromStores(hotwheels_gaming_activity[19]).openMana("content_inventory_message_sent", obj22);
-            const obj7 = stateFromStores(hotwheels_gaming_activity[19]);
-          } catch (tmp82) {
-            c4 = tmp;
-            throw tmp82;
-          }
+          return { value: "IconComponent", done: null };
         }
-      })();
+      } else {
+        try {
+          num8 = 2;
+          if (0 === c3) {
+            num8 = 1;
+            if (entry === 1) {
+              num8 = 3;
+              throw value;
+            } else if (entry === 2) {
+              num8 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              closure_2 = tmp2;
+              const id = tmp5;
+              closure_129_0 = entry;
+              closure_129_1 = undefined;
+              let channel;
+              closure_129_3 = undefined;
+              closure_129_4 = undefined;
+              if (null != id) {
+                c3 = num8;
+                const obj7 = {
+                  value: stateFromStores(hotwheels_gaming_activity[10]).getOrEnsurePrivateChannel(id.id),
+                  done: false,
+                };
+                return obj7;
+              } else {
+                num8 = 3;
+              }
+            }
+          } else {
+            num8 = 1;
+            if (1 === tmp5) {
+              if (entry === num8) {
+                num8 = 3;
+                throw value;
+              } else if (entry === 2) {
+                num8 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              } else {
+                closure_129_1 = value;
+                channel = callback.getChannel(closure_129_1);
+                let str4 = null;
+              }
+            } else if (2 === tmp5) {
+              if (entry === num8) {
+                num8 = 3;
+                throw value;
+              } else if (entry === 2) {
+                num8 = 3;
+                const obj9 = { value, done: true };
+                return obj9;
+              }
+            } else if (entry === num8) {
+              num8 = 3;
+              throw value;
+            } else if (entry === 2) {
+              num8 = 3;
+              const obj = { value, done: true };
+              return obj;
+            }
+            stateFromStores(hotwheels_gaming_activity[16]).hideActionSheet();
+            const obj3 = stateFromStores(hotwheels_gaming_activity[16]);
+            const obj13 = { text: null, icon: null };
+            const intl = entry(hotwheels_gaming_activity[18]).intl;
+            obj13.text = intl.string(entry(hotwheels_gaming_activity[18]).t.fjcCk5);
+            obj13.icon = entry(hotwheels_gaming_activity[19]).ChatCheckIcon;
+            stateFromStores(hotwheels_gaming_activity[17]).openMana("content_inventory_message_sent", obj13);
+            const obj4 = stateFromStores(hotwheels_gaming_activity[17]);
+          }
+          if (entry.content_type === entry(hotwheels_gaming_activity[8]).ContentInventoryEntryType.CUSTOM_STATUS) {
+            entry(hotwheels_gaming_activity[11]);
+            const obj14 = {
+              status: entry.extra.status,
+              emojiStr: null,
+              reply: null,
+              username: null,
+              attachments: null,
+            };
+            if (str4 == entry.extra.emoji_name) {
+              obj14.emojiStr = "";
+              obj14.reply = closure_129_0;
+              obj14.username = stateFromStores(hotwheels_gaming_activity[12]).getName(id);
+              obj14.attachments = entry.extra.attachments;
+              closure_129_3 = tmp36(obj14);
+              const obj10 = stateFromStores(hotwheels_gaming_activity[12]);
+              closure_129_4 = stateFromStores(hotwheels_gaming_activity[13]).parse(channel, closure_129_3);
+              const obj12 = stateFromStores(hotwheels_gaming_activity[14]);
+              const obj15 = { location: constants.ICYMI };
+              c3 = 3;
+              const obj17 = { value: obj12.sendMessage(channel.id, closure_129_4, false, obj15), done: false };
+              return obj17;
+            } else {
+              if (str4 == entry.extra.emoji_id) {
+                const _HermesInternal = HermesInternal;
+                let combined = "" + entry.extra.emoji_name;
+              } else {
+                str4 = globalThis;
+                const _String = String;
+              }
+              str4 = "`:";
+              combined = "`:" + entry.extra.emoji_name + ":`";
+            }
+          } else {
+            const obj18 = {
+              channel,
+              content: closure_129_0,
+              entry,
+              whenReady: false,
+              doNotNotifyOnError: false,
+              location: constants.ICYMI,
+            };
+            c3 = 2;
+            const obj19 = { value: entry(hotwheels_gaming_activity[15]).sendMessageWithEmbed(obj18), done: false };
+            return obj19;
+          }
+        } catch (tmp73) {
+          num8 = tmp;
+          throw tmp73;
+        }
+      }
     });
     const items3 = [stateFromStores, content];
     sendMessage = obj3.useCallback(function () {
@@ -301,7 +275,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16749, dependencyMap.paths),
+          asyncRequireImpl(16875, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

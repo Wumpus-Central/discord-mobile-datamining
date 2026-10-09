@@ -1,6 +1,6 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelContainer.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4692 from "../../../../_runtime/metro/04692__.js";
+import _mod4694 from "../../../../_runtime/metro/04694__.js";
 import MediaPlayerManager from "../../media/native/MediaPlayerManager.tsx";
 import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController.tsx";
 import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI.tsx";
@@ -66,7 +66,7 @@ export default noop.memo(
           first = cResult[0];
         }
         const tmpResult = MediaPlayerManager;
-        const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4692.useShallow(first));
+        const mediaPlayerManagerStore = tmpResult.useMediaPlayerManagerStore(_mod4694.useShallow(first));
         if (cResult[1] !== mediaPlayerManagerStore) {
           let tmp7 = null;
           if (mediaPlayerManagerStore) {

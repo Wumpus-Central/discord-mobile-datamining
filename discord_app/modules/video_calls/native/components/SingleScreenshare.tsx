@@ -6,10 +6,10 @@ import ScreenshareParticipantDefault from "ScreenshareParticipant.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const ChannelCallStore = fn(10333);
+const ChannelCallStore = fn(10320);
 ({ resetFocus: c3, toggleFocus: closure_4 } = ChannelCallStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { stageStreamContainer: { backgroundColor: nativeDefault.colors.BLACK } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

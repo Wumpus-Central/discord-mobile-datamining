@@ -1,10 +1,10 @@
 // discord_app/modules/frames/panel/native/LeaveActivityButton.tsx
-import FramesNativeManagerDefault from "../../native/FramesNativeManager.tsx";
+import leaveFrame from "../../leaveFrame.tsx";
 import LeaveActivityButton from "../../../activities/panel/native/LeaveActivityButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(6072).ActivityPanelModes;
+const ActivityPanelModes = fn(6074).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,20 +13,20 @@ const result = size.fileFinishedImporting("modules/frames/panel/native/LeaveActi
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function LeaveActivityButton(frame) {
-        const cResult = frame(576).c(3);
+        const cResult = frame(setMode[4]).c(3);
         frame = frame.frame;
-        const setMode = frame.setMode;
+        setMode = frame.setMode;
         if (cResult[0] === frame) {
           if (cResult[1] === setMode) {
             let tmp4 = cResult[2];
           }
           return tmp4;
         }
-        const tmp5 = jsx(frame(17499).BaseLeaveActivityButton, {
+        const tmp5 = jsx(frame(setMode[6]).BaseLeaveActivityButton, {
           onPress() {
             setMode(ActivityPanelModes.DISCONNECTED);
             const timerId = setTimeout(() => {
-              setMode(dependencyMap[5]).leaveFrame(id.id);
+              frame(setMode[5]).leaveFrame(id.id);
             }, 400);
           },
         });
@@ -34,23 +34,14 @@ export default noop.memo(
         cResult[1] = setMode;
         cResult[2] = tmp5;
         tmp4 = tmp5;
-        const obj = frame(576);
-        const obj2 = {
-          onPress() {
-            setMode(ActivityPanelModes.DISCONNECTED);
-            const timerId = setTimeout(() => {
-              setMode(dependencyMap[5]).leaveFrame(id.id);
-            }, 400);
-          },
-        };
       }
     : function LeaveActivityButton(arg0) {
-        ({ frame: require, setMode: importDefault } = arg0);
+        ({ frame: require, setMode: dependencyMap } = arg0);
         return jsx(LeaveActivityButton.BaseLeaveActivityButton, {
           onPress() {
-            importDefault(ActivityPanelModes.DISCONNECTED);
+            dependencyMap(ActivityPanelModes.DISCONNECTED);
             const timerId = setTimeout(() => {
-              FramesNativeManagerDefault.leaveFrame(id.id);
+              leaveFrame.leaveFrame(id.id);
             }, 400);
           },
         });

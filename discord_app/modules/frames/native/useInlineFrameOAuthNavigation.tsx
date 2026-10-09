@@ -6,9 +6,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../FramesStore.tsx";
 
 require = fn;
-const isLaunched = fn(10613).isLaunched;
+const isLaunched = fn(10767).isLaunched;
 const ComponentActions = fn(1085).ComponentActions;
-let closure_8 = fn(10641).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_8 = fn(10789).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 

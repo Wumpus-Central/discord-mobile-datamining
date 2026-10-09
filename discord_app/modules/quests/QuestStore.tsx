@@ -158,7 +158,7 @@ function _runExpirationCheck() {
   }
   const obj = require("QuestExpirationUtils");
 }
-const QuestsExperimentLocations = fn(5977).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
 new Map();
 let c33 = null;
 let c34 = null;
@@ -369,11 +369,11 @@ const questStore = new QuestStore(DispatcherDefault, {
       let tmp9 = nextResult;
       let result = map.set(nextResult.id, nextResult);
       let tmp13 = mapped;
-      let obj5 = mapped(7385);
+      let obj5 = mapped(7390);
       let result1 = map1.set(nextResult.id, obj5.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5980).QuestContent.QUEST_BAR)) {
-        let tmp13Result = tmp13(7386);
+      if (targetedContent.includes(mapped(5982).QuestContent.QUEST_BAR)) {
+        let tmp13Result = tmp13(7391);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp13Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -395,7 +395,7 @@ const questStore = new QuestStore(DispatcherDefault, {
     for (const item10131 of values) {
       if (!map.has(item10131.id)) {
         let result3 = map.set(item10131.id, item10131);
-        let obj10 = mapped(7385);
+        let obj10 = mapped(7390);
         let result4 = map1.set(item10131.id, obj10.isQuestExpired(item10131));
       }
       continue;

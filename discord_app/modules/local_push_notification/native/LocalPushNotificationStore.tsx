@@ -2,13 +2,13 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef4659 from "../../../../_runtime/metro/04659__.js";
+import _modDef4661 from "../../../../_runtime/metro/04661__.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildVerificationStore from "../../../stores/GuildVerificationStore.tsx";
 
 require = fn;
-const Constants = fn(12367);
+const Constants = fn(11372);
 ({ LocalNotificationTypes: hasOwnProperty, FIRE_DATE_FORMAT: metroRequire } = Constants);
 const VerificationLevels = fn(1085).VerificationLevels;
 const set = new Set();
@@ -25,26 +25,25 @@ LocalPushNotificationStore.displayName = "LocalPushNotificationStore";
 const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleCheckScheduledNotifs() {
     const scheduledLocalNotifications = PushNotificationDefault.getScheduledLocalNotifications((arr) => {
-      const found = arr.filter((userInfo) => {
-        let tmp = null != userInfo.userInfo;
-        if (tmp) {
-          tmp = userInfo.userInfo.type === constants.GUILD_VERIFICATION;
-        }
-        return tmp;
-      });
-      const item = found.forEach((userInfo) => {
+      const item = arr.forEach((userInfo) => {
         userInfo = userInfo.userInfo;
-        const guildId = userInfo.guildId;
-        if (null != guild.getGuild(guildId)) {
-          if (!closure_1_4.canChatInGuild(guildId)) {
-            set.add(userInfo);
-          }
+        let tmp = null != userInfo;
+        if (tmp) {
+          tmp = userInfo.type === constants.GUILD_VERIFICATION;
         }
-        const result = closure_1_1(10820).cancelLocalNotifications(userInfo);
-        const obj = closure_1_1(10820);
-        const result1 = closure_1_1(10820).cancelLocalNotifications(userInfo);
-        set.delete(userInfo);
-        const obj2 = closure_1_1(10820);
+        if (tmp) {
+          const guildId = userInfo.guildId;
+          if (null != guild.getGuild(guildId)) {
+            if (!closure_1_4.canChatInGuild(guildId)) {
+              set.add(userInfo);
+            }
+          }
+          const result = closure_1_1(10991).cancelLocalNotifications(userInfo);
+          const obj = closure_1_1(10991);
+          const result1 = closure_1_1(10991).cancelLocalNotifications(userInfo);
+          set.delete(userInfo);
+          const obj2 = closure_1_1(10991);
+        }
       });
     });
   },
@@ -59,12 +58,12 @@ const localPushNotificationStore = new LocalPushNotificationStore(DispatcherDefa
         if (guild.verificationLevel === VerificationLevels.MEDIUM) {
           const verificationLevel = guild.verificationLevel;
           if (VerificationLevels.MEDIUM === verificationLevel) {
-            let obj = _modDef4659(check.accountDeadline);
+            let obj = _modDef4661(check.accountDeadline);
           } else if (VerificationLevels.HIGH === verificationLevel) {
-            obj = _modDef4659(check.memberDeadline);
+            obj = _modDef4661(check.memberDeadline);
           }
           if (null != obj) {
-            if (!obj.isSameOrBefore(_modDef4659(), "minute")) {
+            if (!obj.isSameOrBefore(_modDef4661(), "minute")) {
               const obj2 = { type: constants.GUILD_VERIFICATION, guildId: guild.id };
               set.add(obj2);
               const obj3 = {

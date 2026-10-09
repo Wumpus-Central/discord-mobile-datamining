@@ -53,7 +53,7 @@ function isVoicePanelParticipantFocusable(guildId, channelId, id2) {
     }
   }
 }
-const CallConstants = fn(5113);
+const CallConstants = fn(5114);
 ({ isActivityParticipant: metroRequire, isStreamParticipant: closure_7, isUserParticipant: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

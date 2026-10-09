@@ -2,11 +2,11 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef5016 from "../../../../../_runtime/metro/05016__.js";
+import _modDef5017 from "../../../../../_runtime/metro/05017__.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
 import IconActionButton from "IconActionButton.tsx";
-import _mod16255 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod16374 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
@@ -19,7 +19,7 @@ let closure_3 = ["alternateVariant"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_11 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
@@ -104,7 +104,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[3] !== color) {
         const obj3 = { ref, color, size: "sm", autoPlay: true };
-        const tmp10 = options(_mod16255.MessageRequestLottie, obj3);
+        const tmp10 = options(_mod16374.MessageRequestLottie, obj3);
         cResult[3] = color;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -127,7 +127,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      return options(_mod16255.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+      return options(_mod16374.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = {
-          source: _modDef5016,
+          source: _modDef5017,
           IconComponent,
           accessibilityLabel: tmp13,
           buttonText: tmp15,
@@ -309,12 +309,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged2 = Object.assign(merged);
           tmp24 = options(IconButton.IconButton, obj4);
         }
-        const items = [tmp24, str > 0 && tmp27(tmp26(12830).ButtonBadge, { badgePosition: "right" })];
+        const items = [tmp24, str > 0 && tmp27(tmp26(12797).ButtonBadge, { badgePosition: "right" })];
         obj2.children = items;
         return collapsed(View, obj2);
       } else {
         const obj = {
-          source: _modDef5016,
+          source: _modDef5017,
           IconComponent,
           accessibilityLabel: null,
           buttonText: null,

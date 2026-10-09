@@ -13,7 +13,7 @@ import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallStore = fn(10333);
+const ChannelCallStore = fn(10320);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,
@@ -133,7 +133,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       stateFromStores1 = tmp;
       const tmp8 = useIsActivityFocusedDefault(id.id);
-      const tmp10 = tmp2(1381).isIOS() && tmp8;
+      const tmp10 = tmp2(1382).isIOS() && tmp8;
       importDefault = tmp10;
       const items2 = [tmp, tmp10];
       return noop.useMemo(() => ({ reveal: stateFromStores1, prefersDeferringSystemGestures }), items2);

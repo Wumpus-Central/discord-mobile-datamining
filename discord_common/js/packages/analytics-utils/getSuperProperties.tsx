@@ -4,7 +4,7 @@ import encodeProperties from "encodeProperties.tsx";
 import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.tsx";
 import clientLaunchId from "clientLaunchId.tsx";
-import formatDefault from "../../../../_runtime/01363_format.js";
+import formatDefault from "../../../../_runtime/01364_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
 import SessionStorage3 from "../storage/SessionStorage.tsx";
@@ -193,7 +193,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35020200000000", 10) };
+    obj = { client_build_number: parseInt("35020300000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

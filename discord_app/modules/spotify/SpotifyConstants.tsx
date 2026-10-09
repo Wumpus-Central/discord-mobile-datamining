@@ -69,7 +69,7 @@ const obj2 = {
   APP_STORE: null,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
 };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";

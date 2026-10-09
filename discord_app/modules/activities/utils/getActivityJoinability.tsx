@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/getActivityJoinability.tsx
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import hasFlagDefault from "hasFlag.tsx";
-import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability.tsx";
 import getPartySize from "getPartySize.tsx";
 import isPartyFull from "isPartyFull.tsx";
 import getIsInParty from "getIsInParty.tsx";
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity.tsx";
+import useIsActivitiesEnabledForCurrentPlatform from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability.tsx";
 import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

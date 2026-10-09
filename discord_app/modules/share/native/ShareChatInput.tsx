@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     flex: 1,
@@ -48,7 +48,7 @@ const obj5 = {
   paddingTop: null,
   paddingBottom: null,
 };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let num = 2;
 if (PlatformUtils.isAndroid()) {
   num = 0;

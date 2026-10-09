@@ -1,6 +1,6 @@
 // discord_app/modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx
 import c from "../../../../_runtime/00576_c.js";
-import LegacyBaseButton from "../../../../_runtime/06326_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06333_LegacyBaseButton.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 

@@ -25,11 +25,11 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(11746).FrecencySectionSelection;
+let FrecencySectionSelection = fn(11683).FrecencySectionSelection;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { marginBottom: nativeDefault.space.PX_16 },
   headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -163,7 +163,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[4];
       }
       const mapped = apps.map(tmp4);
-      const found = mapped.filter(onlyActivityApps(1387).isNotNullish);
+      const found = mapped.filter(onlyActivityApps(1388).isNotNullish);
       cResult[0] = apps;
       cResult[1] = onlyActivityApps;
       cResult[2] = found;
@@ -194,7 +194,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return mapped.filter(GlobalUtils.isNotNullish);
       }, items);
-      onlyActivityApps(6847)(memo);
+      onlyActivityApps(6854)(memo);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -532,7 +532,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         if (cResult[0] !== app.section.application) {
-          const appLauncherIconSource = tmp(11744).getAppLauncherIconSource(app.section.application);
+          const appLauncherIconSource = tmp(11681).getAppLauncherIconSource(app.section.application);
           cResult[0] = app.section.application;
           cResult[1] = appLauncherIconSource;
           class A {
@@ -555,7 +555,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmpResult = tmp(11744);
+          const tmpResult = tmp(11681);
         }
         const tmp8 = disabled ? tmp5.appContainerDisabled : tmp5.appContainer;
         const application = app.section.application;
@@ -622,7 +622,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               obj2.onPress = tmp9;
               const items = [tmp10, tmp14];
               obj2.children = items;
-              const tmp19 = closure_14(tmp(6189).PressableOpacity, obj2, app.applicationId);
+              const tmp19 = closure_14(tmp(6191).PressableOpacity, obj2, app.applicationId);
               cResult[11] = app.applicationId;
               cResult[12] = disabled;
               cResult[13] = tmp8;
@@ -662,7 +662,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp11 = null != tmp6;
           if (tmp11) {
             const obj4 = { style: tmp5.appIcon, source: tmp6 };
-            tmp11 = closure_13(onAppSelected(6164), obj4);
+            tmp11 = closure_13(onAppSelected(6163), obj4);
           }
           cResult[5] = tmp6;
           class A {
@@ -727,7 +727,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == app.section) {
         return null;
       } else {
-        const appLauncherIconSource = app(11744).getAppLauncherIconSource(app.section.application);
+        const appLauncherIconSource = app(11681).getAppLauncherIconSource(app.section.application);
         let obj = {
           style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
           disabled,
@@ -759,13 +759,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp3 = null != appLauncherIconSource;
         if (tmp3) {
           const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-          tmp3 = closure_13(onAppSelected(6164), obj2);
+          tmp3 = closure_13(onAppSelected(6163), obj2);
         }
         const items = [tmp3];
         const obj3 = { submitting, style: tmp.submittingOverlay };
-        items[1] = closure_13(app(11753).SubmittingOverlay, obj3);
+        items[1] = closure_13(app(11690).SubmittingOverlay, obj3);
         obj.children = items;
-        return closure_14(app(6189).PressableOpacity, obj, app.applicationId);
+        return closure_14(app(6191).PressableOpacity, obj, app.applicationId);
       }
     };
 size = fn(2);

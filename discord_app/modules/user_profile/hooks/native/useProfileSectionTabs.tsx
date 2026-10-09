@@ -3,7 +3,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const UserProfileSections = fn(8283).UserProfileSections;
+const UserProfileSections = fn(8291).UserProfileSections;
 const ReactCompilerGating = fn(558);
 function getProfileTabSectionIndex(initialTab, wishlistTabIndex) {
   if (UserProfileSections.WISHLIST === initialTab) {

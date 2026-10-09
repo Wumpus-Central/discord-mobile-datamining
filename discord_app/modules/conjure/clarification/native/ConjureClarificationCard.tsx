@@ -8,7 +8,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, optionHeader: null, footer: null, customField: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.optionHeader = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -64,11 +64,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   id = tmp17;
   closure_11 = tmp18;
   if (cResult[3] !== clarification.questions[bound]) {
-    const isImageQuestionResult = clarification(17013).isImageQuestion(tmp17);
+    const isImageQuestionResult = clarification(17169).isImageQuestion(tmp17);
     cResult[3] = tmp17;
     cResult[4] = isImageQuestionResult;
     let tmp19 = isImageQuestionResult;
-    const tmpResult = clarification(17013);
+    const tmpResult = clarification(17169);
   } else {
     tmp19 = cResult[4];
   }
@@ -80,11 +80,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     }
     let optionHeader = tmp21;
   } else {
-    optionHeader = clarification(17013).answeredOptionIds(first1[tmp17.id]);
-    const tmpResult4 = clarification(17013);
+    optionHeader = clarification(17169).answeredOptionIds(first1[tmp17.id]);
+    const tmpResult4 = clarification(17169);
   }
   let obj = clarification(576);
-  const conjureOwnImages = clarification(17014).useConjureOwnImages(projectId, first1, tmp9);
+  const conjureOwnImages = clarification(17170).useConjureOwnImages(projectId, first1, tmp9);
   if (cResult[5] === first1) {
     if (cResult[6] === clarification) {
       if (cResult[7] === bound) {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                   }
                   let multiSelectAnswerResult = null;
                   if (tmp18) {
-                    const tmpResult6 = clarification(17015);
+                    const tmpResult6 = clarification(17171);
                     class Z {
                       constructor() {
                         tmp = closure_8;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                         obj7.onPress = onDismiss;
                                         let intl = clarification(1126).intl;
                                         obj7.accessibilityLabel = intl.string(onSubmit(3827).qVXlk0);
-                                        tmp46 = closure_6(clarification(8106).IconButton, obj7);
+                                        tmp46 = closure_6(clarification(8114).IconButton, obj7);
                                       }
                                       class Z {
                                         constructor() {
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                               }
                                             }
                                             obj8.children = obj20.string(onSubmit(3827).tE8qbz);
-                                            tmp53 = closure_6(clarification(5086).Text, obj8);
+                                            tmp53 = closure_6(clarification(5087).Text, obj8);
                                           }
                                           class Z {
                                             constructor() {
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                                       const obj9 = { style: tmp4.card, children: null };
                                                                                       let items = [tmp49, tmp52, tmp56, tmp59, tmp62];
                                                                                       obj9.children = items;
-                                                                                      const tmp74 = closure_7(onSubmit(16948), obj9);
+                                                                                      const tmp74 = closure_7(onSubmit(17080), obj9);
                                                                                       cResult[73] = tmp4.card;
                                                                                       cResult[74] = tmp49;
                                                                                       cResult[75] = tmp52;
@@ -412,7 +412,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                       }
                                                                       obj11.text = obj23.string(onSubmit(3827).Pk5lfA);
                                                                       obj11.onPress = tmp24;
-                                                                      tmp65 = closure_6(clarification(5375).Button, obj11);
+                                                                      tmp65 = closure_6(clarification(5376).Button, obj11);
                                                                     }
                                                                   }
                                                                   let items1 = [tmp65, , ];
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                                                       closure_14(tmp);
                                                                     }
                                                                   };
-                                                                  obj14 = closure_6(clarification(5375).Button, obj14);
+                                                                  obj14 = closure_6(clarification(5376).Button, obj14);
                                                                   items1[2] = obj14;
                                                                   obj10.children = items1;
                                                                   closure_7(View, obj10);
@@ -599,7 +599,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
                                 }
                                 const obj18 = { index: bound + 1, total: length };
                                 obj17.children = obj13.formatToPlainString(onSubmit(3827).yzYUjq, obj18);
-                                const tmp36 = closure_6(clarification(5086).Text, obj17);
+                                const tmp36 = closure_6(clarification(5087).Text, obj17);
                               }
                               cResult[28] = bound;
                               cResult[29] = length;
@@ -798,7 +798,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   cResult[9] = clarification.questions[bound].id;
   cResult[10] = M;
   tmp22 = M;
-  const tmpResult5 = clarification(17014);
+  const tmpResult5 = clarification(17170);
 }) : (function ConjureClarificationCard(onSubmit) {
   ({ projectId, clarification } = onSubmit);
   onSubmit = onSubmit.onSubmit;
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   closure_11 = tmp12;
   let t = dependencyMap;
   let tmp5 = first(noop.useState({}), 2);
-  const isImageQuestionResult = clarification(17013).isImageQuestion(clarification.questions[bound]);
+  const isImageQuestionResult = clarification(17169).isImageQuestion(clarification.questions[bound]);
   c12 = isImageQuestionResult;
   if (true === clarification.questions[bound].multi_select) {
     let tmp16 = tmp7[0][tmp11.id];
@@ -839,12 +839,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     }
     let answeredOptionIdsResult = tmp16;
   } else {
-    answeredOptionIdsResult = tmp13(17013).answeredOptionIds(first[tmp11.id]);
-    const tmp13Result = tmp13(17013);
+    answeredOptionIdsResult = tmp13(17169).answeredOptionIds(first[tmp11.id]);
+    const tmp13Result = tmp13(17169);
   }
   c13 = answeredOptionIdsResult;
-  const obj2 = clarification(17013);
-  const conjureOwnImages = clarification(17014).useConjureOwnImages(projectId, first, tmp4);
+  const obj2 = clarification(17169);
+  const conjureOwnImages = clarification(17170).useConjureOwnImages(projectId, first, tmp4);
   let items = [first, clarification, bound, onSubmit, clarification.questions[bound].id];
   callback = obj.useCallback((arg0) => {
     if (null != onSubmit) {
@@ -918,7 +918,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   }
   let multiSelectAnswerResult = null;
   if (true === clarification.questions[bound].multi_select) {
-    const tmp13Result4 = tmp13(17015);
+    const tmp13Result4 = tmp13(17171);
     multiSelectAnswerResult = tmp13Result4.multiSelectAnswer(tmp11, answeredOptionIdsResult, str, conjureOwnImages.multiPartFor(tmp11));
   }
   c17 = multiSelectAnswerResult;
@@ -954,23 +954,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   let obj5 = { style: tmp.footer, children: null };
   let obj6 = { style: tmp.customField, children: null };
   let tmp32 = null;
-  const tmp13Result3 = clarification(17014);
+  const tmp13Result3 = clarification(17170);
   if (clarification.questions.length > 1) {
     const obj7 = { variant: "text-xs/semibold", color: "text-muted", children: null };
     let intl = tmp13(1126).intl;
     const obj8 = { index: bound + 1, total: length };
     obj7.children = intl.formatToPlainString(tmp29(3827).yzYUjq, obj8);
-    tmp32 = closure_6(tmp13(5086).Text, obj7);
+    tmp32 = closure_6(tmp13(5087).Text, obj7);
   }
-  const items4 = [tmp32, closure_6(clarification(5086).Text, { variant: "text-md/semibold", color: "text-default", accessibilityRole: "header", children: clarification.questions[bound].question })];
+  const items4 = [tmp32, closure_6(clarification(5087).Text, { variant: "text-md/semibold", color: "text-default", accessibilityRole: "header", children: clarification.questions[bound].question })];
   obj6.children = items4;
   const items5 = [closure_7(c5, obj6), ];
   let tmp34Result = null;
   if (null != onDismiss) {
-    const obj10 = { variant: "tertiary", size: "sm", icon: tmp34(tmp13(6210).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
+    const obj10 = { variant: "tertiary", size: "sm", icon: tmp34(tmp13(6212).XSmallIcon, { size: "sm" }), onPress: onDismiss, accessibilityLabel: null };
     let intl2 = tmp13(1126).intl;
     obj10.accessibilityLabel = intl2.string(tmp29(3827).qVXlk0);
-    tmp34Result = tmp34(tmp13(8106).IconButton, obj10);
+    tmp34Result = tmp34(tmp13(8114).IconButton, obj10);
   }
   items5[1] = tmp34Result;
   obj5.children = items5;
@@ -980,13 +980,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl3 = tmp13(1126).intl;
     obj11.children = intl3.string(tmp29(3827).tE8qbz);
-    tmp34Result5 = tmp34(tmp13(5086).Text, obj11);
+    tmp34Result5 = tmp34(tmp13(5087).Text, obj11);
   }
   items6[1] = tmp34Result5;
   if (isImageQuestionResult) {
     const obj12 = { projectId, question: tmp11, selectedIds: answeredOptionIdsResult, disabled: tmp9, onPick: callback1, own: conjureOwnImages.controlsFor(tmp11, tmp9) };
-    let tmp34Result6 = tmp34(tmp29(17016), obj12);
-    const tmp29Result = tmp29(17016);
+    let tmp34Result6 = tmp34(tmp29(17172), obj12);
+    const tmp29Result = tmp29(17172);
   } else if (tmp12) {
     const obj13 = { hasIcons: false, children: null };
     options = tmp11.options;
@@ -1017,7 +1017,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       };
       return closure_6(clarification(optionHeader[18]).TableCheckboxRow, obj, label.id);
     });
-    tmp34Result6 = tmp34(tmp13(6267).TableRowGroup, obj13);
+    tmp34Result6 = tmp34(tmp13(6269).TableRowGroup, obj13);
   } else {
     const options1 = tmp11.options;
     tmp34Result6 = options1.map((answer) => {
@@ -1081,7 +1081,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       });
     };
     obj14.onSubmitEditing = callback3;
-    tmp34Result7 = tmp34(tmp13(6283).TextInput, obj14);
+    tmp34Result7 = tmp34(tmp13(6290).TextInput, obj14);
   }
   items6[3] = tmp34Result7;
   if (clarification.questions.length <= 1) {
@@ -1102,7 +1102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       const intl6 = tmp13(1126).intl;
       obj17.text = intl6.string(tmp29(3827).Pk5lfA);
       obj17.onPress = callback2;
-      tmp34Result8 = tmp34(tmp13(5375).Button, obj17);
+      tmp34Result8 = tmp34(tmp13(5376).Button, obj17);
     }
   }
   const items7 = [tmp34Result8, closure_6(c5, { style: tmp.customField }), ];
@@ -1123,7 +1123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
       callback(tmp);
     }
   };
-  obj19 = tmp34(tmp13(5375).Button, obj19);
+  obj19 = tmp34(tmp13(5376).Button, obj19);
   items7[2] = obj19;
   obj16.children = items7;
   closure_7(c5, obj16);

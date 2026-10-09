@@ -174,7 +174,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           closure_128_1 = undefined;
           closure_128_2 = undefined;
           (function onUploadIntlDataRequestStart() {
-            closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           if (obj11.isIOS()) {
             let ANDROID_APP = constants.IOS_APP;
@@ -200,7 +200,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       } else if (1 === tmp9) {
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(
             () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
             5000,
@@ -218,7 +218,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           closure_129_1(closure_129_3[14]).open(obj4);
           c3 = 0;
           (function onUploadIntlDataRequestFinish() {
-            closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(
               () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
               5000,
@@ -233,7 +233,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           } else if (arg0 === 2) {
             c3 = 0;
             (function onUploadIntlDataRequestFinish() {
-              closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
               const timerId = setTimeout(
                 () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
                 5000,
@@ -274,7 +274,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
         }
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1271).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(
             () => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })),
             5000,
@@ -312,7 +312,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadIntlDataDisabled() {
   return closure_9().isDisabled;
 }
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUploadIntlDataTrailing() {
       const cResult = c.c(2);
@@ -350,7 +350,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15642).FileUpIcon,
+  IconComponent: fn(15755).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -361,7 +361,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14927).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15039).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useUploadIntlDataTrailing() {
         const cResult = c.c(2);

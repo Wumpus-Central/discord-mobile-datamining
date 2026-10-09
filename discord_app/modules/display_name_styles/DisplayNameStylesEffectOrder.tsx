@@ -3,7 +3,7 @@ import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperi
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const DisplayNameStylesConstants = fn(1407);
+const DisplayNameStylesConstants = fn(1408);
 const EFFECT_ORDER = DisplayNameStylesConstants.EFFECT_ORDER;
 let items = [...tmp2.FLYWHEEL_EFFECTS];
 const ReactCompilerGating = fn(558);
@@ -18,7 +18,7 @@ export const useVisibleEffectOrder = ReactCompilerGating.isReactCompilerEnabled(
     }
   : function useVisibleEffectOrder() {
       isDisplayNameStylesFlywheelSettersEnabled =
-        isDisplayNameStylesFlywheelSettersEnabled(14685).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
+        isDisplayNameStylesFlywheelSettersEnabled(14791).useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
       items = [isDisplayNameStylesFlywheelSettersEnabled];
       return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER), items);
     };

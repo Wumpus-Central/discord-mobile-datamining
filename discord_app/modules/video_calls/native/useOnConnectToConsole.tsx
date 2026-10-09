@@ -2,8 +2,8 @@
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import XboxLinkModalActionCreatorsDefault from "../../user_settings/connections/native/two_way_link/xbox/XboxLinkModalActionCreators.tsx";
-import PlayStationLinkModalActionCreatorsDefault from "../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx";
 import beginConsoleTransfer from "../../game_console/native/beginConsoleTransfer.tsx";
+import PlayStationLinkModalActionCreatorsDefault from "../../user_settings/connections/native/two_way_link/playstation/PlayStationLinkModalActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;

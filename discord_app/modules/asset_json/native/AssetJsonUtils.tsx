@@ -81,7 +81,7 @@ let closure_7 = async function _loadJsonAsset(arg0) {
           closure_130_4 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

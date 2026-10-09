@@ -7,7 +7,7 @@ import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 require = fn;
-const createExecutable = fn(2021).createExecutable;
+const createExecutable = fn(2022).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -167,7 +167,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(c9) {
+prototype["getCoverURL"] = function getCoverURL(c8) {
   const media = this.media;
   let cover;
   if (media != null) {

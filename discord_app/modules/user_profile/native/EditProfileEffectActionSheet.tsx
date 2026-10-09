@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05387_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
 import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
@@ -18,11 +18,11 @@ import CollectiblesPurchaseStore from "../../collectibles/CollectiblesPurchaseSt
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const isProfileEffectRecord = fn(7258).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7263).isProfileEffectRecord;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   bounceOffset: { position: "absolute", top: -250, height: 250, right: 0, left: 0 },
@@ -440,7 +440,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let purchase;
       ({ previewSkuId, user, guildId } = arg0);
       const tmp = closure_12();
-      const tmp2 = purchase(8273)(previewSkuId);
+      const tmp2 = purchase(8281)(previewSkuId);
       const product = tmp2.product;
       c0 = product;
       purchase = tmp2.purchase;
@@ -464,11 +464,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp3;
       }, items);
-      const items1 = [closure_9(purchase(10486), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+      const items1 = [closure_9(purchase(10476), { user, guildId, profileEffect: memo, maxWidth: 250 })];
       const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
       const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
       obj2.colors = items2;
-      items1[1] = closure_9(purchase(5387), obj2);
+      items1[1] = closure_9(purchase(5388), obj2);
       obj.children = items1;
       return closure_10(closure_5, obj);
     };
@@ -628,13 +628,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (str == null) {
         str = "";
       }
-      const tmp4Result = isTryItOut(8286)(str);
+      const tmp4Result = isTryItOut(8294)(str);
       dependencyMap = tmp4Result;
       const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
       selectedProfileEffect = tmp6[0];
-      const tmp4 = isTryItOut(8286);
-      let obj = guildId(8270);
-      const analyticsLocations = isTryItOut(6841)(tmp2(6865).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+      const tmp4 = isTryItOut(8294);
+      let obj = guildId(8278);
+      const analyticsLocations = isTryItOut(6848)(tmp2(6872).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
       const items = [guildId, tmp4Result];
       memo = memo.useMemo(() => {
         const obj = {
@@ -696,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = guildId(1126).intl;
       obj6.children = intl.string(guildId(1126).t["/6nv6N"]);
-      items3[1] = closure_9(guildId(5086).Text, obj6);
+      items3[1] = closure_9(guildId(5087).Text, obj6);
       items3[2] = closure_9(closure_13, {
         user,
         selectedProfileEffect,
@@ -717,7 +717,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       let skuId;
       const obj5 = { style: tmp.bounceOffset };
-      const tmp2Result = isTryItOut(6841);
+      const tmp2Result = isTryItOut(6848);
       if (currentProfileEffect != null) {
         skuId = currentProfileEffect.skuId;
       }
@@ -730,9 +730,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.isTryItOut = isTryItOut;
       obj7.onApply = callback1;
       obj7.analyticsLocations = analyticsLocations;
-      obj7.analyticsSource = isTryItOut(6865).EDIT_PROFILE_EFFECT_SHEET;
-      items4[1] = closure_9(isTryItOut(8272), obj7);
+      obj7.analyticsSource = isTryItOut(6872).EDIT_PROFILE_EFFECT_SHEET;
+      items4[1] = closure_9(isTryItOut(8280), obj7);
       obj3.children = items4;
-      obj2.children = closure_10(guildId(6829).BottomSheet, obj3);
-      return closure_9(guildId(6841).AnalyticsLocationProvider, obj2);
+      obj2.children = closure_10(guildId(6836).BottomSheet, obj3);
+      return closure_9(guildId(6848).AnalyticsLocationProvider, obj2);
     };

@@ -28,7 +28,7 @@ const Constants = fn(1085);
 ({ PermissionOverrideType: closure_14, ChannelSettingsSections: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { tableRowGroupContainer: { marginBottom: nativeDefault.space.PX_16 }, tableContainer: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_16 };
 obj2.tableContainer = { marginHorizontal: nativeDefault.space.PX_12 };
@@ -49,7 +49,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         if (cResult[5] === tableRowGroupContainer.tableRowGroupContainer) {
           const _Symbol = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp22 = closure_16(tmp(15055).RefreshIcon, {});
+            const tmp22 = closure_16(tmp(15167).RefreshIcon, {});
             let intl2 = tmp(1126).intl;
             const stringResult = intl2.string(tmp(1126).t.NVwuHq);
             cResult[10] = tmp22;
@@ -62,7 +62,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           }
           if (cResult[12] !== tmp4) {
             let obj2 = { icon: tmp19, label: tmp20, onPress: tmp4 };
-            const tmp26 = closure_16(tmp(6184).TableRow, obj2);
+            const tmp26 = closure_16(tmp(6186).TableRow, obj2);
             cResult[12] = tmp4;
             cResult[13] = tmp26;
             let tmp24 = tmp26;
@@ -101,9 +101,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         }
       }
     }
-    const channelName = tmp(5417).computeChannelName(category, UserStore, RelationshipStore);
+    const channelName = tmp(5418).computeChannelName(category, UserStore, RelationshipStore);
     const tableRowGroupContainer2 = tableRowGroupContainer.tableRowGroupContainer;
-    const TableRowGroup = tmp(6267).TableRowGroup;
+    const TableRowGroup = tmp(6269).TableRowGroup;
     let intl = tmp(1126).intl;
     const formatToPlainString = intl.formatToPlainString;
     let t = tmp(1126).t;
@@ -122,7 +122,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     cResult[7] = View;
     cResult[8] = formatToPlainStringResult;
     cResult[9] = tableRowGroupContainer2;
-    const tmpResult = tmp(5417);
+    const tmpResult = tmp(5418);
   }
   const fn = function o() {
     let obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
@@ -130,10 +130,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     obj2.title = intl.string(channel(1126).t.YWMtRe);
     const intl2 = channel(1126).intl;
     let obj3 = { channelName: null, categoryName: null };
-    let obj = category(5297);
-    obj3.channelName = channel(5417).computeChannelName(closure_0, UserStore, RelationshipStore, true);
-    let obj4 = channel(5417);
-    obj3.categoryName = channel(5417).computeChannelName(category, UserStore, RelationshipStore);
+    let obj = category(5298);
+    obj3.channelName = channel(5418).computeChannelName(closure_0, UserStore, RelationshipStore, true);
+    let obj4 = channel(5418);
+    obj3.categoryName = channel(5418).computeChannelName(category, UserStore, RelationshipStore);
     obj2.body = intl2.format(channel(1126).t["iKW+jY"], obj3);
     const intl3 = channel(1126).intl;
     obj2.confirmText = intl3.string(channel(1126).t.eW8Gy4);
@@ -167,12 +167,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               closure_128_0 = undefined;
               const guild_id = tmp5.guild_id;
               const obj8 = PermissionUtilsAll;
-              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(11360).getAppChannelBotUserId(tmp2));
+              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(10733).getAppChannelBotUserId(tmp2));
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(11360);
+              const obj9 = tmp2(10733);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(8581).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
+              const obj5 = { value: tmp2(8589).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -185,7 +185,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           } else {
             if (value) {
               const obj7 = { permissionOverwrites: null };
-              const obj = tmp2(9648);
+              const obj = tmp2(9667);
               obj7.permissionOverwrites = category(12).values(closure_128_0);
               obj.saveChannel(tmp2.id, obj7);
               const obj3 = category(12);
@@ -226,10 +226,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     obj2.title = intl.string(channel(1126).t.YWMtRe);
     const intl2 = channel(1126).intl;
     let obj3 = { channelName: null, categoryName: null };
-    let obj = category(5297);
-    obj3.channelName = channel(5417).computeChannelName(closure_0, UserStore, RelationshipStore, true);
-    let obj4 = channel(5417);
-    obj3.categoryName = channel(5417).computeChannelName(category, UserStore, RelationshipStore);
+    let obj = category(5298);
+    obj3.channelName = channel(5418).computeChannelName(closure_0, UserStore, RelationshipStore, true);
+    let obj4 = channel(5418);
+    obj3.categoryName = channel(5418).computeChannelName(category, UserStore, RelationshipStore);
     obj2.body = intl2.format(channel(1126).t["iKW+jY"], obj3);
     const intl3 = channel(1126).intl;
     obj2.confirmText = intl3.string(channel(1126).t.eW8Gy4);
@@ -263,12 +263,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               closure_128_0 = undefined;
               const guild_id = tmp5.guild_id;
               const obj8 = PermissionUtilsAll;
-              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(11360).getAppChannelBotUserId(tmp2));
+              const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(tmp5, tmp2(10733).getAppChannelBotUserId(tmp2));
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(11360);
+              const obj9 = tmp2(10733);
               c2 = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(8581).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
+              const obj5 = { value: tmp2(8589).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp2, syncedPermissionOverwrites[guild_id].deny, syncedPermissionOverwrites[guild_id].allow), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -281,7 +281,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           } else {
             if (value) {
               const obj7 = { permissionOverwrites: null };
-              const obj = tmp2(9648);
+              const obj = tmp2(9667);
               obj7.permissionOverwrites = category(12).values(closure_128_0);
               obj.saveChannel(tmp2.id, obj7);
               const obj3 = category(12);
@@ -308,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     obj.show(obj2);
   }, items);
   const tmp = closure_18();
-  const channelName = channel(5417).computeChannelName(category, UserStore, RelationshipStore);
+  const channelName = channel(5418).computeChannelName(category, UserStore, RelationshipStore);
   let obj2 = { style: tmp.tableRowGroupContainer, children: null };
   let intl = channel(1126).intl;
   const formatToPlainString = intl.formatToPlainString;
@@ -321,12 +321,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj4);
   }
   let obj5 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj6 = { icon: closure_16(channel(15055).RefreshIcon, {}), label: null, onPress: null };
+  let obj6 = { icon: closure_16(channel(15167).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1126).intl;
   obj6.label = intl2.string(channel(1126).t.NVwuHq);
   obj6.onPress = callback;
-  obj5.children = closure_16(channel(6184).TableRow, obj6);
-  obj2.children = closure_16(channel(6267).TableRowGroup, obj5);
+  obj5.children = closure_16(channel(6186).TableRow, obj6);
+  obj2.children = closure_16(channel(6269).TableRowGroup, obj5);
   return closure_16(View, obj2);
 });
 ReactCompilerGating = fn(558);
@@ -367,7 +367,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
   const cResult = navigation(576).c(17);
   const tmp4 = closure_18();
   const obj = navigation(576);
-  navigation = navigation(1502).useNavigation();
+  navigation = navigation(1503).useNavigation();
   if (isEditing.isEditing) {
     return null;
   } else {
@@ -393,7 +393,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
     }
     const _Symbol2 = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp13 = closure_16(tmp(11215).PlusMediumIcon, {});
+      const tmp13 = closure_16(tmp(10570).PlusMediumIcon, {});
       const intl2 = tmp(1126).intl;
       const stringResult1 = intl2.string(tmp(1126).t.fVWxvT);
       cResult[3] = tmp13;
@@ -412,7 +412,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
               return closure_1(constants.ROLE);
             }
       };
-      const tmp17 = closure_16(tmp(6184).TableRow, obj3);
+      const tmp17 = closure_16(tmp(6186).TableRow, obj3);
       cResult[5] = tmp6;
       cResult[6] = tmp17;
       let tmp15 = tmp17;
@@ -421,7 +421,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
     }
     const _Symbol3 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp21 = closure_16(tmp(11215).PlusMediumIcon, {});
+      const tmp21 = closure_16(tmp(10570).PlusMediumIcon, {});
       const intl3 = tmp(1126).intl;
       const stringResult2 = intl3.string(tmp(1126).t.riesLt);
       cResult[7] = tmp21;
@@ -440,7 +440,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
               return closure_1(constants.MEMBER);
             }
       };
-      const tmp25 = closure_16(tmp(6184).TableRow, obj4);
+      const tmp25 = closure_16(tmp(6186).TableRow, obj4);
       cResult[9] = tmp6;
       cResult[10] = tmp25;
       let tmp23 = tmp25;
@@ -467,13 +467,13 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
     const obj6 = { title: tmp8, hasIcons: true, children: null };
     const items = [tmp15, tmp23];
     obj6.children = items;
-    const tmp28 = closure_17(tmp(6267).TableRowGroup, obj6);
+    const tmp28 = closure_17(tmp(6269).TableRowGroup, obj6);
     cResult[11] = tmp15;
     cResult[12] = tmp23;
     cResult[13] = tmp28;
     tmp26 = tmp28;
   }
-  const obj2 = navigation(1502);
+  const obj2 = navigation(1503);
 }) : (function AddPermission(isEditing) {
   let _require;
   const tmp = closure_18();
@@ -485,22 +485,22 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddPer
     const obj3 = { title: null, hasIcons: true, children: null };
     const intl = tmp2(1126).intl;
     obj3.title = intl.string(tmp2(1126).t.vPHdP5);
-    const obj4 = { icon: closure_16(tmp2(11215).PlusMediumIcon, {}), label: null, onPress: null };
+    const obj4 = { icon: closure_16(tmp2(10570).PlusMediumIcon, {}), label: null, onPress: null };
     const intl2 = tmp2(1126).intl;
     obj4.label = intl2.string(tmp2(1126).t.fVWxvT);
     obj4.onPress = function onPress() {
       closure_0.push(constants2.NEW_PERMISSION, { type: constants.ROLE });
     };
-    const items = [closure_16(tmp2(6184).TableRow, obj4), ];
-    const obj5 = { icon: closure_16(tmp2(11215).PlusMediumIcon, {}), label: null, onPress: null };
+    const items = [closure_16(tmp2(6186).TableRow, obj4), ];
+    const obj5 = { icon: closure_16(tmp2(10570).PlusMediumIcon, {}), label: null, onPress: null };
     const intl3 = tmp2(1126).intl;
     obj5.label = intl3.string(tmp2(1126).t.riesLt);
     obj5.onPress = function onPress() {
       closure_0.push(constants2.NEW_PERMISSION, { type: constants.MEMBER });
     };
-    items[1] = closure_16(tmp2(6184).TableRow, obj5);
+    items[1] = closure_16(tmp2(6186).TableRow, obj5);
     obj3.children = items;
-    obj2.children = closure_17(tmp2(6267).TableRowGroup, obj3);
+    obj2.children = closure_17(tmp2(6269).TableRowGroup, obj3);
     return closure_16(View, obj2);
   }
   const obj = require("useNavigation");
@@ -860,7 +860,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function RoleOv
       }
     }, role.id);
   });
-  obj4.children = closure_16(guild(6267).TableRowGroup, obj5);
+  obj4.children = closure_16(guild(6269).TableRowGroup, obj5);
   return closure_16(View, obj4);
 });
 ReactCompilerGating = fn(558);
@@ -1095,7 +1095,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function Member
         }
       }, user.id);
     });
-    obj2.children = closure_16(guild_id(6267).TableRowGroup, obj3);
+    obj2.children = closure_16(guild_id(6269).TableRowGroup, obj3);
     tmp4 = closure_16(View, obj2);
   }
   return tmp4;

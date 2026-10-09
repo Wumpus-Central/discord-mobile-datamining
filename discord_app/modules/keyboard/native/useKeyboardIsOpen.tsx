@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === tmp5) {
           let tmp7 = cResult[2];
         }
-        return appEntryKey(1500)(tmp7);
+        return appEntryKey(1501)(tmp7);
       }
       const fn = function o(arg0) {
         const systemKeyboardOpen = tmp.systemKeyboardOpen;
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      importDefault = flag(1499).useAppEntryKey();
+      importDefault = flag(1500).useAppEntryKey();
       return KeyboardUIStoreDefault((arg0) => {
         const systemKeyboardOpen = tmp.systemKeyboardOpen;
         if (flag) {

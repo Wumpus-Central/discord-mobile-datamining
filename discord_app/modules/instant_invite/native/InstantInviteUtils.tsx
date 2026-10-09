@@ -181,9 +181,9 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj2.track(constants.INSTANT_INVITE_OPTION_CLICKED, obj3);
   const tmpResult = InviteCodeUtils;
 }
-const ChannelRecordBase = fn(2067).ChannelRecordBase;
-const InviteTargetTypes = fn(7418).InviteTargetTypes;
-const IOS_COPY_TO_PASTEBOARD = fn(8664).IOS_COPY_TO_PASTEBOARD;
+const ChannelRecordBase = fn(2068).ChannelRecordBase;
+const InviteTargetTypes = fn(7423).InviteTargetTypes;
+const IOS_COPY_TO_PASTEBOARD = fn(8673).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_14, InviteOptionsType: closure_15, Permissions: closure_16 } = Constants);
 const size = fn(2);
@@ -225,8 +225,8 @@ export const showVanityUrlInviteActionSheet = function showVanityUrlInviteAction
   openInstantInviteActionSheetDefault(obj4);
 };
 export { trackOptionClicked };
-export function getShareMessage(CreateInviteModalStore) {
-  return CreateInviteModalStore;
+export function getShareMessage(defaultChannel) {
+  return defaultChannel;
 }
 export const handleOpenShareSheet = function handleOpenShareSheet(code, channel, shareMessage, source) {
   let flag = arg4;

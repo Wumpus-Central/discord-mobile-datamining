@@ -4,7 +4,7 @@ import EmojiStore from "../../emojis/EmojiStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1392).EmojiIntention;
+const EmojiIntention = fn(1393).EmojiIntention;
 let closure_4 = [];
 const ReactCompilerGating = fn(558);
 function getTopAndNewlyAddedEmojis(emojiStoreInstance) {

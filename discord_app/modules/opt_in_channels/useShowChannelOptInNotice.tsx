@@ -5,7 +5,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
-const ChannelFlags = fn(2070).ChannelFlags;
+const ChannelFlags = fn(2071).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/opt_in_channels/useShowChannelOptInNotice.tsx");

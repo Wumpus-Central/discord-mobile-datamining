@@ -5,8 +5,8 @@ import FastImageDefault from "../../../../../../components_native/common/FastIma
 import useAvatarColorDefault from "../../../../../avatar/useAvatarColor.tsx";
 import useDisplayProfileDefault from "../../../../../user_profile/hooks/useDisplayProfile.tsx";
 import UserProfileBannerDefault from "../../../../../user_profile/native/UserProfileBanner.tsx";
-import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import AppLauncherContext from "../../../AppLauncherContext.tsx";
+import useEmbeddedActivityBackgroundDefault from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
 import HeroMedia from "../../application_view/activity/HeroMedia.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import UserRecord from "../../../../../../records/UserRecord.tsx";
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const Constants = fn(1085);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_9 = createStyles.createStyles({
   imageContainer: { width: "100%", height: "100%" },
   image: { width: "100%", height: "100%" },
@@ -88,7 +88,7 @@ let closure_10 = noop.memo(
                   }
                 }
                 if (null != imageSource) {
-                  tmp6 = tmp6(6164);
+                  tmp6 = tmp6(6163);
                   const obj = { style: imageStyle, source: imageSource, resizeMode: "cover" };
                   let tmp19 = <tmp6 style={imageStyle} source={imageSource} resizeMode="cover" />;
                 } else {
@@ -124,8 +124,8 @@ let closure_10 = noop.memo(
       }
     : function RecommendationBannerEmbedded(applicationId) {
         let heroMediaDimensions;
-        let obj = heroMediaDimensions(11232);
-        heroMediaDimensions = heroMediaDimensions(11787).useHeroMediaDimensions({
+        let obj = heroMediaDimensions(10587);
+        heroMediaDimensions = heroMediaDimensions(11724).useHeroMediaDimensions({
           width: obj.useRequiredAppLauncherContext().width,
         });
         const tmp4 = useEmbeddedActivityBackgroundDefault({

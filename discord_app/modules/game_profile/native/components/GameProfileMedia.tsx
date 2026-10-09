@@ -28,8 +28,8 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
-let closure_14 = 2 * (fn(8898).MEDIA_ITEM_MAX_WIDTH + PX_12);
-const createStyles = fn(5090);
+let closure_14 = 2 * (fn(8909).MEDIA_ITEM_MAX_WIDTH + PX_12);
+const createStyles = fn(5091);
 let obj = {
   container: { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 },
   list: { overflow: "visible" },
@@ -44,8 +44,8 @@ let obj = {
 let obj3 = { gap: nativeDefault.space.PX_12, marginHorizontal: -nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 obj.mediaItem = {
-  maxWidth: fn(8898).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(8898).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(8909).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(8909).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -325,8 +325,8 @@ let closure_21 = noop.memo(function TrailerItem(sources) {
 });
 ReactCompilerGating = fn(558);
 let obj4 = {
-  maxWidth: fn(8898).MEDIA_ITEM_MAX_WIDTH,
-  maxHeight: fn(8898).MEDIA_ITEM_MAX_HEIGHT,
+  maxWidth: fn(8909).MEDIA_ITEM_MAX_WIDTH,
+  maxHeight: fn(8909).MEDIA_ITEM_MAX_HEIGHT,
   borderRadius: nativeDefault.radii.lg,
   overflow: "hidden",
 };
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ game, trackAction } = arg0);
       closure_15();
       let obj = trackAction(576);
-      const obscured = trackAction(8887).useObscuredSurface().obscured;
+      const obscured = trackAction(8898).useObscuredSurface().obscured;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [bound1];
         const fn = function s() {
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj2 = trackAction(8887);
+      const obj2 = trackAction(8898);
       const stateFromStores = trackAction(504).useStateFromStores(tmp5, tmp6);
       const tmpResult = trackAction(504);
       [tmp10, dependencyMap] = noop.useState(0);
@@ -362,10 +362,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = _slicedToArray(noop.useState(false), 2)[1];
       noop.useRef(null);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const carouselPreviewPixelSize = trackAction(8898).getCarouselPreviewPixelSize();
+        const carouselPreviewPixelSize = trackAction(8909).getCarouselPreviewPixelSize();
         cResult[2] = carouselPreviewPixelSize;
         let tmp14 = carouselPreviewPixelSize;
-        const tmpResult2 = trackAction(8898);
+        const tmpResult2 = trackAction(8909);
       } else {
         tmp14 = cResult[2];
       }
@@ -403,8 +403,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const bound = Math.max(0, Math.min(trackAction(8898).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
-      bound1 = Math.min(trackAction(8898).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8898).MEDIA_ITEM_ASPECT_RATIO);
+      const bound = Math.max(0, Math.min(trackAction(8909).MEDIA_ITEM_MAX_WIDTH, tmp10 - PX_12 - 2 * PX_16));
+      bound1 = Math.min(trackAction(8909).MEDIA_ITEM_MAX_HEIGHT, bound / trackAction(8909).MEDIA_ITEM_ASPECT_RATIO);
       if (cResult[6] !== arr2) {
         class F {
           constructor(arg0) {

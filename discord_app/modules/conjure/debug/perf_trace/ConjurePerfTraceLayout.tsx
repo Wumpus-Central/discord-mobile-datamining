@@ -9,10 +9,10 @@ function walkNodes(findPerfTraceNodeResult, fn) {
   }
   tmp2 = findPerfTraceNodeResult.children[Symbol.iterator]();
 }
-function describeName(name) {
-  name = name.name;
+function describePerfSpan(nextResult) {
+  const name = nextResult.name;
   const searchResult = name.search(/[.:]/);
-  const name1 = name.name;
+  const name1 = nextResult.name;
   if (-1 === searchResult) {
     let substr = name1;
   } else {
@@ -20,7 +20,7 @@ function describeName(name) {
   }
   let str = "";
   if (-1 !== searchResult) {
-    const name2 = name.name;
+    const name2 = nextResult.name;
     str = name2.slice(searchResult + 1);
   }
   const str2 = str.replace(/([a-z0-9])([A-Z])/g, "$1 $2");
@@ -28,13 +28,13 @@ function describeName(name) {
     .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
     .replace(/_/g, " ")
     .toLowerCase();
-  const attrs = name.attrs;
+  const attrs = nextResult.attrs;
   let cmd;
   if (attrs != null) {
     cmd = attrs.cmd;
   }
   if (cmd == null) {
-    const attrs2 = name.attrs;
+    const attrs2 = nextResult.attrs;
     let model;
     if (attrs2 != null) {
       model = attrs2.model;
@@ -99,24 +99,17 @@ function childrenByParent(spans) {
   }
   return map;
 }
-function spanEnd(reported_at, end) {
-  reported_at = end.end;
-  if (reported_at == null) {
-    reported_at = reported_at.reported_at;
-  }
-  return reported_at;
-}
 function coveredMs(items, arr, applyResult, applyResult1) {
-  let reported_at = items;
+  let as_of = items;
   closure_1 = applyResult;
   closure_2 = applyResult1;
   const mapped = arr.map((start) => {
     const items = [Math.max(start.start, closure_1)];
-    reported_at = start.end;
-    if (reported_at == null) {
-      reported_at = reported_at.reported_at;
+    as_of = start.end;
+    if (as_of == null) {
+      as_of = as_of.as_of;
     }
-    items[1] = Math.min(reported_at, closure_2);
+    items[1] = Math.min(as_of, closure_2);
     return items;
   });
   const found = mapped.filter((item) => {
@@ -191,11 +184,11 @@ export const perfTraceExtent = function perfTraceExtent(trace) {
   const items = [1];
   HermesBuiltin.arraySpread(
     spans.map((end) => {
-      let reported_at = end.end;
-      if (reported_at == null) {
-        reported_at = trace.reported_at;
+      let as_of = end.end;
+      if (as_of == null) {
+        as_of = trace.as_of;
       }
-      return reported_at;
+      return as_of;
     }),
     1,
   );
@@ -219,15 +212,37 @@ export const perfTraceStatus = function perfTraceStatus(trace) {
     }
     str = "error";
     if (false !== ok) {
-      const spans2 = trace.spans;
-      let str2 = "ok";
-      if (spans2.some((end) => null == end.end)) {
-        str2 = "started";
+      const live = trace.live;
+      let tmp4 = !live;
+      if (!live) {
+        const spans2 = trace.spans;
+        tmp4 = !spans2.every((end) => null != end.end);
       }
-      str = str2;
+      str = "error";
+      if (!tmp4) {
+        const spans3 = trace.spans;
+        let str2 = "running";
+        if (spans3.every((end) => null != end.end)) {
+          str2 = "ok";
+        }
+        str = str2;
+      }
     }
   }
   return str;
+};
+export const perfTraceFinished = function perfTraceFinished(timingTrace) {
+  const spans = timingTrace.spans;
+  return spans.every((end) => null != end.end);
+};
+export const perfTraceInterrupted = function perfTraceInterrupted(live) {
+  live = live.live;
+  let tmp = !live;
+  if (!live) {
+    const spans = live.spans;
+    tmp = !spans.every((end) => null != end.end);
+  }
+  return tmp;
 };
 export const perfTraceTree = function perfTraceTree(spans) {
   closure_0 = spans;
@@ -260,20 +275,20 @@ export const perfTraceTree = function perfTraceTree(spans) {
       const applyResult = Math.min.apply(items);
       const items1 = [
         ...items.map((end) => {
-          let reported_at = end.end;
-          if (reported_at == null) {
-            reported_at = items.reported_at;
+          let as_of = end.end;
+          if (as_of == null) {
+            as_of = items.as_of;
           }
-          return reported_at;
+          return as_of;
         }),
       ];
       let applyResult1 = Math.max.apply(items1);
       let mapped = items.map((end) => {
-        let reported_at = end.end;
-        if (reported_at == null) {
-          reported_at = items.reported_at;
+        let as_of = end.end;
+        if (as_of == null) {
+          as_of = items.as_of;
         }
-        return reported_at - end.start;
+        return as_of - end.start;
       });
       if (1 === items.length) {
         let items4 = map.get(first.id);
@@ -318,17 +333,17 @@ export const perfTraceTree = function perfTraceTree(spans) {
           const hasItem = closure_0.includes(end);
           let tmp2 = !hasItem;
           if (!hasItem) {
-            let reported_at = end.end;
-            if (reported_at == null) {
-              reported_at = closure_0.reported_at;
+            let as_of = end.end;
+            if (as_of == null) {
+              as_of = closure_0.as_of;
             }
-            let tmp6 = closure_0.start < reported_at;
+            let tmp6 = closure_0.start < as_of;
             if (tmp6) {
-              let reported_at2 = closure_0.end;
-              if (reported_at2 == null) {
-                reported_at2 = closure_0.reported_at;
+              let as_of2 = closure_0.end;
+              if (as_of2 == null) {
+                as_of2 = closure_0.as_of;
               }
-              tmp6 = end.start < reported_at2;
+              tmp6 = end.start < as_of2;
             }
             tmp2 = tmp6;
           }
@@ -439,7 +454,7 @@ export const visiblePerfTraceRows = function visiblePerfTraceRows(cResult, arg1)
 };
 export const overviewView = function overviewView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f127898 = (depth) => {
+  const f114502 = (depth) => {
     let tmp = depth.depth > 0;
     if (tmp) {
       const children = depth.children;
@@ -451,7 +466,7 @@ export const overviewView = function overviewView(children) {
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f127900(children);
+      tmp = f114518(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -466,14 +481,61 @@ export const overviewView = function overviewView(children) {
   obj.revealed = new Set();
   return obj;
 };
+export const extendView = function extendView(collapsed, memo, current) {
+  closure_129_0 = (depth) => {
+    let tmp = depth.depth > 0;
+    if (tmp) {
+      const children = depth.children;
+      tmp = !children.some((significant) => significant.significant);
+    }
+    return tmp;
+  };
+  const set = new Set();
+  closure_129_1 = set;
+  function walk(children) {
+    let tmp = children.children.length > 0;
+    if (tmp) {
+      tmp = f114518(children);
+    }
+    if (tmp) {
+      set.add(children.key);
+    }
+    for (const item10016 of tmp5) {
+      let tmp7 = walk(item10016);
+      continue;
+    }
+  }
+  closure_129_2 = walk;
+  walk(memo);
+  new Set();
+  const items = [...set];
+  const found = items.filter((item) => !set.has(item));
+  let tmp4 = collapsed;
+  if (0 !== found.length) {
+    const obj = {};
+    const merged = Object.assign(collapsed);
+    const _Set = Set;
+    const items1 = [];
+    HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(collapsed.collapsed, 0));
+    const set2 = new Set(items1);
+    obj.collapsed = set2;
+    tmp4 = obj;
+  }
+  return tmp4;
+};
+export const perfTraceKeys = function perfTraceKeys(cResult) {
+  const set = new Set();
+  walkNodes(cResult, (key) => set.add(key.key));
+  return set;
+};
 export const expandedView = function expandedView(children) {
   const obj = { collapsed: new Set(), revealed: null };
-  const f127899 = () => true;
+  const f114517 = () => true;
   const set1 = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f127900(children);
+      tmp = f114518(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -489,12 +551,12 @@ export const expandedView = function expandedView(children) {
 };
 export const collapsedView = function collapsedView(children) {
   const obj = { collapsed: null, revealed: null };
-  const f127900 = (depth) => depth.depth > 0;
+  const f114518 = (depth) => depth.depth > 0;
   const set = new Set();
   function walk(children) {
     let tmp = children.children.length > 0;
     if (tmp) {
-      tmp = f127900(children);
+      tmp = f114518(children);
     }
     if (tmp) {
       set.add(children.key);
@@ -508,6 +570,32 @@ export const collapsedView = function collapsedView(children) {
   obj.collapsed = set;
   obj.revealed = new Set();
   return obj;
+};
+export const toggleNode = function toggleNode(collapsed, findPerfTraceNodeResult) {
+  collapsed = collapsed.collapsed;
+  if (collapsed.has(findPerfTraceNodeResult.key)) {
+    const _Set2 = Set;
+    const set = new Set(collapsed.collapsed);
+    set.delete(findPerfTraceNodeResult.key);
+    const obj2 = { collapsed: set, revealed: null };
+    const children = findPerfTraceNodeResult.children;
+    if (children.some((significant) => significant.significant)) {
+      let revealed = collapsed.revealed;
+    } else {
+      const _Set3 = Set;
+      const set1 = new Set(collapsed.revealed);
+      revealed = set1.add(findPerfTraceNodeResult.key);
+    }
+    obj2.revealed = revealed;
+    return obj2;
+  } else {
+    const obj = {};
+    const merged = Object.assign(collapsed);
+    const _Set = Set;
+    const set2 = new Set(collapsed.collapsed);
+    obj.collapsed = set2.add(findPerfTraceNodeResult.key);
+    return obj;
+  }
 };
 export const expandSubtree = function expandSubtree(collapsed, findPerfTraceNodeResult) {
   collapsed = new Set(collapsed.collapsed);
@@ -528,39 +616,25 @@ export const findPerfTraceNode = function findPerfTraceNode(findPerfTraceNodeRes
   });
   return closure_1;
 };
-export const perfTraceSelfTimes = function perfTraceSelfTimes(trace, arg1) {
-  const map = new Map();
-  const iter = trace.spans[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    if (null != nextResult.parent) {
-      let tmp15 = spanEnd(trace, tmp2);
-      let tmp16 = tmp15;
-      let diff = tmp15 - tmp2.start;
-      let items1 = obj.get(tmp2.id);
+export const perfSpanSelfTimes = function perfSpanSelfTimes(spans) {
+  closure_1 = childrenByParent(spans);
+  spans = spans.spans;
+  return new Map(
+    spans.map((end) => {
+      let as_of = end.end;
+      if (as_of == null) {
+        as_of = spans.as_of;
+      }
+      const items = [end.id];
+      const diff = as_of - end.start;
+      let items1 = closure_1.get(end.id);
       if (items1 == null) {
         items1 = [];
       }
-      let diff1 = diff - coveredMs(trace, items1, tmp2.start, tmp16);
-      let tmp9 = describeName(tmp2);
-      let _HermesInternal = HermesInternal;
-      let combined = "" + tmp9.service + " " + tmp9.operation;
-      let num2 = map.get(combined);
-      if (num2 == null) {
-        num2 = 0;
-      }
-      let result = map.set(combined, num2 + diff1);
-    }
-    continue;
-  }
-  const items = [...map.entries()];
-  const mapped = items.map((item) => {
-    [tmp, tmp2] = item;
-    return { name, ms };
-  });
-  const sorted = mapped.sort((ms, ms2) => ms2.ms - ms.ms);
-  return sorted.slice(0, arg1);
+      items[1] = diff - coveredMs(spans, items1, end.start, as_of);
+      return items;
+    }),
+  );
 };
 export const perfTimelineTicks = function perfTimelineTicks(arg0) {
   const result = arg0 / 6;
@@ -597,3 +671,4 @@ export const formatSpanAttrs = function formatSpanAttrs(attrs) {
   }
   return str;
 };
+export { describePerfSpan };

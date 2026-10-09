@@ -50,14 +50,14 @@ function queryGuilds(query) {
   }
   return reduced;
 }
-const UserSettingsSafetySelectedGuildStore = fn(16074);
+const UserSettingsSafetySelectedGuildStore = fn(16190);
 ({
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = { iconContainer: { marginRight: nativeDefault.space.PX_12 } };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -88,7 +88,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (selectedGuildId !== value) {
         if (null != stateFromStores) {
           if (cResult[4] !== stateFromStores) {
-            const obj2 = { type: tmp(5441).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
+            const obj2 = { type: tmp(5442).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
             ({ name: obj3.label, id: obj3.value } = stateFromStores);
             cResult[4] = stateFromStores;
             cResult[5] = obj2;
@@ -100,7 +100,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { type: tmp(5441).SelectOptionType.GUILD, guild: null, label: null, value: null };
+        const obj4 = { type: tmp(5442).SelectOptionType.GUILD, guild: null, label: null, value: null };
         const obj5 = { id: value, name: null };
         const intl = tmp(1126).intl;
         obj5.name = intl.string(tmp(1126).t["32u1Dx"]);
@@ -122,12 +122,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       );
       if (selectedGuildId !== value) {
         if (null != stateFromStores) {
-          let obj3 = { type: tmp(5441).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
+          let obj3 = { type: tmp(5442).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
           ({ name: obj2.label, id: obj2.value } = stateFromStores);
         }
         return obj3;
       }
-      const obj4 = { type: selectedGuildId(5441).SelectOptionType.GUILD, guild: null, label: null, value: null };
+      const obj4 = { type: selectedGuildId(5442).SelectOptionType.GUILD, guild: null, label: null, value: null };
       const obj = selectedGuildId(504);
       const obj5 = { id: value, name: null };
       const intl = tmp(1126).intl;
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         function submitSelection() {
-          return closure_1(5054).hideActionSheet();
+          return closure_1(5055).hideActionSheet();
         }
         cResult[4] = submitSelection;
         let tmp11 = submitSelection;
@@ -221,11 +221,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         function renderIcon(value) {
           if (value.value === closure_1_7) {
-            let tmp6 = jsx(iter(14778).GuildSelectDefaultIcon, {});
+            let tmp6 = jsx(iter(14886).GuildSelectDefaultIcon, {});
           } else {
-            const obj = { guild: value.guild, size: iter(6161).GuildIconSizes.SMALL_32 };
-            tmp6 = jsx(closure_1(6161), { guild: value.guild, size: iter(6161).GuildIconSizes.SMALL_32 });
-            const tmp4 = closure_1(6161);
+            const obj = { guild: value.guild, size: iter(6165).GuildIconSizes.SMALL_32 };
+            tmp6 = jsx(closure_1(6165), { guild: value.guild, size: iter(6165).GuildIconSizes.SMALL_32 });
+            const tmp4 = closure_1(6165);
           }
           return tmp6;
         }
@@ -237,11 +237,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         function renderHeaderIcon(value) {
           if (value.value === closure_1_7) {
-            let tmp6 = jsx(iter(14778).GuildSelectDefaultIcon, { size: "xs" });
+            let tmp6 = jsx(iter(14886).GuildSelectDefaultIcon, { size: "xs" });
           } else {
-            const obj = { guild: value.guild, size: iter(6161).GuildIconSizes.XSMALL };
-            tmp6 = jsx(closure_1(6161), { guild: value.guild, size: iter(6161).GuildIconSizes.XSMALL });
-            const tmp4 = closure_1(6161);
+            const obj = { guild: value.guild, size: iter(6165).GuildIconSizes.XSMALL };
+            tmp6 = jsx(closure_1(6165), { guild: value.guild, size: iter(6165).GuildIconSizes.XSMALL });
+            const tmp4 = closure_1(6165);
           }
           return tmp6;
         }

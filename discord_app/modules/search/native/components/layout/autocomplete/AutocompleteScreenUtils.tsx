@@ -7,11 +7,11 @@ import PollsIcon from "../../../../../../design/components/Icon/native/redesign/
 import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import VideoIcon from "../../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
+import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import ForwardingIconDefault from "../../../../../forwarding/native/ForwardingIcon.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
 import SoundboardIcon from "../../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
 import StickerIcon from "../../../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
-import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import EmbedIcon from "../../../../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import WebhookIcon from "../../../../../../design/components/Icon/native/redesign/generated/WebhookIcon.tsx";
 import GuildMemberStore from "../../../../../../stores/GuildMemberStore.tsx";
@@ -20,7 +20,7 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(9247).SearchListItemTypes;
+const SearchListItemTypes = fn(9285).SearchListItemTypes;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(

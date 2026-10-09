@@ -1,15 +1,15 @@
 // discord_app/modules/embedded_apps/native/utils/createWebViewController.tsx
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
-import createWebViewHtmlFile from "createWebViewHtmlFile.tsx";
 import WebViewPostMessageTransportDefault from "../../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
+import createWebViewHtmlFile from "createWebViewHtmlFile.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = globalThis.__r;
 
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
-let closure_5 = fn(2023).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5635).TransportTypes;
+let closure_5 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+const TransportTypes = fn(5636).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 

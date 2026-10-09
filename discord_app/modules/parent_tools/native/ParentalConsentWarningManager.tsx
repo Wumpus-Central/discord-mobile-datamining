@@ -1,5 +1,5 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
-import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ParentalConsentWarningTypes from "../ParentalConsentWarningTypes.tsx";
 import ParentalConsentWarningActionCreators from "../ParentalConsentWarningActionCreators.tsx";
@@ -45,13 +45,13 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(17928, dependencyMap.paths),
+      asyncRequireImpl(18086, dependencyMap.paths),
       "ParentalConsentWarningModal",
       obj,
     );
   }
 }
-const FamilyCenterConstants = fn(7248);
+const FamilyCenterConstants = fn(7253);
 ({ UserLinkStatus: closure_7, UserLinkType: closure_8 } = FamilyCenterConstants);
 const AppStates = fn(1085).AppStates;
 const prototype = function ParentalConsentWarningManager() {

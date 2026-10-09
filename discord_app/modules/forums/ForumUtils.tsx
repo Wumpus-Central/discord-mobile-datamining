@@ -12,8 +12,8 @@ function getCreationDefaultFormatter() {
   time.month = intl.string(util.t["nBNJ/L"]);
   return time;
 }
-const ForumTimestampFormats = fn(6961).ForumTimestampFormats;
-const ChannelFlags = fn(2070).ChannelFlags;
+const ForumTimestampFormats = fn(6968).ForumTimestampFormats;
+const ChannelFlags = fn(2071).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");
 

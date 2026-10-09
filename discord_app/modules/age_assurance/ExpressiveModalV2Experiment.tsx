@@ -5,7 +5,7 @@ import SafetyHubUtils from "../safety_hub/SafetyHubUtils.tsx";
 import SafetyHubStore from "../safety_hub/SafetyHubStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1452);
+const ApexExperiment = fn(1453);
 let obj2 = { kind: "user", name: "2026-07-expressive-modal-v2", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null, 2: { enabled: true } };
 obj3[2] = { enabled: true };

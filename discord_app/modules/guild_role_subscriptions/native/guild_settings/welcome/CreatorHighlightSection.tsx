@@ -5,7 +5,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef9399 from "../../../../../../_runtime/metro/09399__.js";
+import _modDef9437 from "../../../../../../_runtime/metro/09437__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   horizontalContainer: { flexDirection: "row" },
   serverSubscriberCount: { marginTop: 8 },
@@ -114,7 +114,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 size: native.Icon.Sizes.SMALL,
                 color: nativeDefault.unsafe_rawColors.WHITE,
                 style: tmp4.subscriberCountIcon,
-                source: _modDef9399,
+                source: _modDef9437,
               };
               const tmp12 = timestampProducer(native.Icon, obj2);
               cResult[7] = tmp4.subscriberCountIcon;
@@ -193,7 +193,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.WHITE,
           style: tmp.subscriberCountIcon,
-          source: _modDef9399,
+          source: _modDef9437,
         }),
       ];
       const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -217,7 +217,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const guild_id = highlightedCreatorGuild.guild_id;
       ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-      const tmp7 = guild_id(18238)(guild_id, 3, 60);
+      const tmp7 = guild_id(18400)(guild_id, 3, 60);
       dependencyMap = tmp7;
       const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
       if (cResult[0] === tmp7.details) {
@@ -227,7 +227,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp8) {
           const _Symbol2 = Symbol;
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp67 = closure_6(tmp6(18210), {});
+            const tmp67 = closure_6(tmp6(18372), {});
             cResult[3] = tmp67;
             let tmp65 = tmp67;
           } else {
@@ -265,7 +265,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 lineBreakMode: "tail",
                 children: guildName,
               };
-              const tmp17 = closure_6(tmp(5086).Text, obj5);
+              const tmp17 = closure_6(tmp(5087).Text, obj5);
               cResult[11] = guildName;
               cResult[12] = tmp17;
               let tmp15 = tmp17;
@@ -368,7 +368,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                                 onPress: tmp9,
                                                 shrink: true,
                                               };
-                                              const tmp55 = closure_6(tmp(5376).BaseTextButton, obj8);
+                                              const tmp55 = closure_6(tmp(5377).BaseTextButton, obj8);
                                               cResult[45] = tmp9;
                                               cResult[46] = tmp4.viewServerButton;
                                               cResult[47] = tmp55;
@@ -394,7 +394,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                               obj10.variant = typeConsolidationEyebrow.variant;
                               const intl3 = tmp(1126).intl;
                               obj10.children = intl3.string(tmp(1126).t.wg53L8);
-                              const items2 = [closure_6(tmp(5086).Text, obj10)];
+                              const items2 = [closure_6(tmp(5087).Text, obj10)];
                               const obj11 = { style: null, children: null };
                               const items3 = [,];
                               ({ horizontalContainer: arr5[0], emojiContainer: arr5[1] } = tmp4);
@@ -418,7 +418,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                                 };
                                 const _HermesInternal = HermesInternal;
                                 obj12.children = "+" + notShownEmojiCount;
-                                tmp47Result = closure_6(tmp(5086).Text, obj12);
+                                tmp47Result = closure_6(tmp(5087).Text, obj12);
                               }
                               items4[1] = tmp47Result;
                               obj11.children = items4;
@@ -447,7 +447,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                             lineBreakMode: "tail",
                             children: tmp35,
                           };
-                          const tmp41 = closure_6(tmp(5086).Text, obj13);
+                          const tmp41 = closure_6(tmp(5087).Text, obj13);
                           cResult[30] = tmp4.ownerUsername;
                           cResult[31] = tmp35;
                           cResult[32] = tmp41;
@@ -473,7 +473,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                         color: "text-default",
                         children: quote,
                       };
-                      const tmp33 = closure_6(tmp(5086).Text, obj15);
+                      const tmp33 = closure_6(tmp(5087).Text, obj15);
                       cResult[24] = quote;
                       cResult[25] = tmp4.ownerQuote;
                       cResult[26] = tmp33;
@@ -512,7 +512,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             tmp18 = tmp20;
           }
           const obj19 = { style: tmp4.guildIcon, source: tmp11 };
-          const tmp14 = closure_6(tmp6(6164), obj19);
+          const tmp14 = closure_6(tmp6(6163), obj19);
           cResult[8] = tmp4.guildIcon;
           cResult[9] = tmp11;
           cResult[10] = tmp14;
@@ -546,12 +546,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const guild_id = highlightedCreatorGuild.guild_id;
       let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
       ({ quote, quote_attribution } = highlightedCreatorGuild);
-      const tmp6 = guild_id(18238)(guild_id, 3, 60);
+      const tmp6 = guild_id(18400)(guild_id, 3, 60);
       dependencyMap = tmp6;
       const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
       let items = [hasAllImperativeDetails, tmp6];
       if (tmp6.isLoading) {
-        const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18210), {}) };
+        const obj2 = { style: tmp.cardContainer, children: closure_6(tmp5(18372), {}) };
         return closure_6(closure_4, obj2);
       } else if (hasAllImperativeDetails) {
         const details = tmp6.details;
@@ -562,7 +562,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp.guildIcon, source: null };
         const obj6 = { uri: guildAvatarUrl };
         obj5.source = obj6;
-        const items1 = [closure_6(tmp5(6164), obj5)];
+        const items1 = [closure_6(tmp5(6163), obj5)];
         const obj7 = { style: tmp.cardHeaderContainer, children: null };
         const obj8 = {
           variant: "heading-md/extrabold",
@@ -571,7 +571,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           lineBreakMode: "tail",
           children: guildName,
         };
-        const items2 = [closure_6(tmp2(5086).Text, obj8)];
+        const items2 = [closure_6(tmp2(5087).Text, obj8)];
         let tmp11Result = null != subscriberCount;
         if (tmp11Result) {
           const obj9 = { subscriberCount, style: tmp.serverSubscriberCount };
@@ -583,7 +583,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj4.children = items1;
         const items3 = [closure_7(closure_4, obj4), , , ,];
         const obj10 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
-        items3[1] = closure_6(tmp2(5086).Text, obj10);
+        items3[1] = closure_6(tmp2(5087).Text, obj10);
         const obj11 = {
           style: tmp.ownerUsername,
           variant: "text-sm/normal",
@@ -600,7 +600,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj12.attributionTitle = quote_attribution_title;
         obj11.children = intl.format(tmp2(1126).t.m0b6Kj, obj12);
-        items3[2] = closure_6(tmp2(5086).Text, obj11);
+        items3[2] = closure_6(tmp2(5087).Text, obj11);
         let tmp9Result = null != emojisToShow;
         if (tmp9Result) {
           tmp9Result = emojisToShow.length > 0;
@@ -613,7 +613,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           obj14.variant = typeConsolidationEyebrow.variant;
           const intl3 = tmp2(1126).intl;
           obj14.children = intl3.string(tmp2(1126).t.wg53L8);
-          const items5 = [closure_6(tmp2(5086).Text, obj14)];
+          const items5 = [closure_6(tmp2(5087).Text, obj14)];
           const obj15 = { style: null, children: null };
           const items6 = [,];
           ({ horizontalContainer: arr7[0], emojiContainer: arr7[1] } = tmp);
@@ -637,7 +637,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const _HermesInternal = HermesInternal;
             obj16.children = "+" + notShownEmojiCount;
-            tmp11Result2 = closure_6(tmp2(5086).Text, obj16);
+            tmp11Result2 = closure_6(tmp2(5087).Text, obj16);
           }
           items7[1] = tmp11Result2;
           obj15.children = items7;
@@ -651,7 +651,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const intl4 = tmp2(1126).intl;
         obj18.text = intl4.string(tmp2(1126).t.mQ2IGa);
         obj18.onPress = tmp7;
-        obj17.children = closure_6(tmp2(5376).BaseTextButton, obj18);
+        obj17.children = closure_6(tmp2(5377).BaseTextButton, obj18);
         items3[4] = closure_6(closure_4, obj17);
         obj3.children = items3;
         return closure_7(closure_4, obj3);

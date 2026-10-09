@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
@@ -11,7 +11,7 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(5972).ReadStateTypes;
+const ReadStateTypes = fn(5974).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
@@ -48,7 +48,7 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12100, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
+    obj.openLazy(asyncRequireImpl(12037, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
       guildId: user.id,
     });
   }, items4);
@@ -60,13 +60,13 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1126).intl;
     name = intl.string(tmp(1126).t.tlopTM);
   }
-  let mode = tmp(12104).ChannelModes.DEFAULT;
+  let mode = tmp(12041).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(12104).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12041).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

@@ -319,7 +319,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
     }
   }
 };
-const PlatformUtils = fn(1381);
+const PlatformUtils = fn(1382);
 let str = "discord_ios";
 if (PlatformUtils.isAndroid()) {
   str = "discord_android";

@@ -1857,7 +1857,7 @@ class TypingIndicatorEmoji$Type extends MessageType8 {
 }
 const prototype8 = TypingIndicatorEmoji$Type.prototype;
 prototype8["create"] = function create(arr) {
-  obj = { emoji: { oneofKind: "create" }, animated: false };
+  obj = { emoji: { oneofKind: "r" }, animated: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -3130,7 +3130,7 @@ class Badge$Type extends MessageType16 {
 }
 const prototype16 = Badge$Type.prototype;
 prototype16["create"] = function create(arr) {
-  obj = { badge: { oneofKind: "create" } };
+  obj = { badge: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {
@@ -3554,7 +3554,7 @@ class UserData$Type extends MessageType19 {
         },
       },
     };
-    items = [, , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , ,];
     items[0] = obj;
     obj1 = {
       no: 2,
@@ -3709,6 +3709,7 @@ class UserData$Type extends MessageType19 {
         return userCountryDataType;
       },
     };
+    items[21] = { no: 22, name: "hidden_flags", kind: "scalar", T: 4 };
     tmp1 = new tmp("discord_protos.users.v1.UserData", items, T);
     return tmp1;
   }
@@ -3721,6 +3722,7 @@ prototype19["create"] = function create(arr) {
     safetyFlags: {},
     isPendingRequiredAction: false,
     disableStaffDiscount: false,
+    hiddenFlags: "0",
   };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
@@ -4137,6 +4139,10 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(linkedUsers, t
       tag.tag(21, _mod1210.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
+  }
+  if ("0" !== linkedUsers.hiddenFlags) {
+    tag.tag(22, _mod1210.WireType.Varint).uint64(linkedUsers.hiddenFlags);
+    const tagResult27 = tag.tag(22, _mod1210.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
@@ -5763,7 +5769,7 @@ class PerkConfig$Type extends MessageType29 {
 }
 const prototype29 = PerkConfig$Type.prototype;
 prototype29["create"] = function create(arr) {
-  obj = { source: [], kind: { oneofKind: "create" } };
+  obj = { source: [], kind: { oneofKind: "r" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1210.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== arr) {

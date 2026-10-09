@@ -11,7 +11,7 @@ import BountyStore from "../../BountyStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const BOUNTY_ORB_AMOUNT = fn(5977).BOUNTY_ORB_AMOUNT;
+const BOUNTY_ORB_AMOUNT = fn(5979).BOUNTY_ORB_AMOUNT;
 let jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -898,10 +898,10 @@ export const BountiesScrollVideoItem = ReactCompilerGating.isReactCompilerEnable
       if (flag4 === undefined) {
         flag4 = false;
       }
-      return flag3(bounty(11164).BillableAdPlacementImpressionTrackerNative, {
+      return flag3(bounty(12933).BillableAdPlacementImpressionTrackerNative, {
         adContentId: bounty.id,
-        adCreativeType: bounty(5984).AdCreativeType.BOUNTY,
-        questContent: bounty(5982).QuestContent.VIDEO_MODAL_MOBILE,
+        adCreativeType: bounty(5986).AdCreativeType.BOUNTY,
+        questContent: bounty(5984).QuestContent.VIDEO_MODAL_MOBILE,
         sourceQuestContent,
         overrideVisibility: isActive,
         children() {

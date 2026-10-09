@@ -14,7 +14,7 @@ const View = fn(17).View;
 const getGuildIconSource = fn(2082).getGuildIconSource;
 const ME = fn(1085).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         badge,
       } = arg0);
       if (undefined === iconSize) {
-        iconSize = guildId(6161).GuildIconSizes.LARGE;
+        iconSize = guildId(6165).GuildIconSizes.LARGE;
       }
       const tmp7 = closure_10();
       const obj = guildId(576);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = guildId(504);
       const stateFromStoresObject = guildId(504).useStateFromStoresObject(tmp14, tmp16, tmp17);
       ({ unread: unread2, badge: badge2 } = stateFromStoresObject);
-      const tmpResult5 = guildId(17704);
+      const tmpResult5 = guildId(17856);
       const tmp20 = tmp4 ? tmpResult5.SimpleGuildContainerAnimated : tmpResult5.SimpleGuildContainer;
       if (cResult[7] === size) {
         if (cResult[8] === style) {
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const tmp22 = useSimpleGuildSizeDefault(tmp21);
-        const activityIndicatorState = guildId(16574).useActivityIndicatorState(guildId);
+        const activityIndicatorState = guildId(16697).useActivityIndicatorState(guildId);
         let tmp32 = unread2;
         if (!unread2) {
           tmp32 = tmp6;
@@ -424,7 +424,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj8 = { style: tmp7.dmsWrapper, children: null };
                   let colors = nativeDefault.colors;
                   const obj9 = { color: tmp6 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-                  colors = jsx(guildId(8174).ChatIcon, {
+                  colors = jsx(guildId(8182).ChatIcon, {
                     color: tmp6 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT,
                   });
                   obj8.children = colors;
@@ -449,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp32;
         cResult[22] = tmp35Result;
         tmp33 = tmp35Result;
-        const tmpResult6 = guildId(16574);
+        const tmpResult6 = guildId(16697);
       }
       const obj10 = { size, style };
       cResult[7] = size;

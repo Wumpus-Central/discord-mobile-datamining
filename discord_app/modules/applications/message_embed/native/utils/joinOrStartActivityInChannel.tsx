@@ -52,7 +52,7 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
           closure_130_10 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -99,7 +99,6 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
             channelId: closure_130_1,
             applicationId: closure_130_0,
             isStart: null == closure_130_10,
-            embeddedActivitiesManager: closure_131_1(closure_131_2[6])(),
             analyticsLocations: closure_130_2,
             customId: closure_130_3,
             referrerId: closure_130_4,
@@ -124,9 +123,9 @@ let closure_7 = async function _joinOrStartActivityInChannel(arg0) {
         const obj = { value, done: true };
         return obj;
       }
-    } catch (tmp43) {
+    } catch (tmp41) {
       c5 = tmp;
-      throw tmp43;
+      throw tmp41;
     }
   }
 };

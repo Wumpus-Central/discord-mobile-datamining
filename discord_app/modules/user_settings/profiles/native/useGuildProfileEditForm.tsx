@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8260).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8268).IGNORE_GUILD_IDS;
 let FormStates = fn(1085).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged1 = Object.assign(stateFromStoresObject.errors);
       memo = selectedGuild.useMemo(() => {
         const delayedCall = new stateFromStores(pendingNickname[13]).DelayedCall(200, () => {
-          pendingAvatar(584).wait(stateFromStores(9097).resetAllPending);
+          pendingAvatar(584).wait(stateFromStores(10608).resetAllPending);
         });
         return delayedCall;
       }, []);

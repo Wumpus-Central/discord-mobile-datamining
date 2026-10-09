@@ -19,16 +19,16 @@ const require = globalThis.__r;
 const initialize = formatToPlainString(504);
 require = fn;
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(12732);
+const GiftingBadgeConstants = fn(12677);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,
   getNextTierForProgress: closure_8,
 } = GiftingBadgeConstants);
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     screenContainer: { flex: 1 },
@@ -132,7 +132,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp10 = closure_10(tmp(11561).GiftIcon, obj2);
+        const tmp10 = closure_10(tmp(11490).GiftIcon, obj2);
         const intl = tmp(1126).intl;
         const stringResult = intl.string(_modDef2661.g86YiI);
         cResult[3] = tmp10;
@@ -170,7 +170,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { grow: true, variant: "primary", icon: tmp8, text: tmp9, onPress: tmp6 };
-        const tmp13 = closure_10(tmp(5375).Button, obj3);
+        const tmp13 = closure_10(tmp(5376).Button, obj3);
         cResult[5] = tmp6;
         cResult[6] = tmp13;
       } else {
@@ -206,7 +206,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp(1126).intl;
         obj4.text = intl2.string(_modDef2661["sa/cfM"]);
         obj4.onPress = T;
-        const tmp15 = closure_10(tmp(5375).Button, obj4);
+        const tmp15 = closure_10(tmp(5376).Button, obj4);
         cResult[7] = tmp15;
         const tmp14 = tmp15;
       } else {
@@ -259,26 +259,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: closure_12(useSafeAreaInsetsDefault().bottom).footer, children: null };
       const callback1 = noop.useCallback(() => {
         ModalActionCreatorsDefault.pop();
-        const rootNavigationRef = onSendGift(4937).getRootNavigationRef();
+        const rootNavigationRef = onSendGift(4938).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.navigate("you");
         }
       }, []);
       const obj2 = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
       const tmp = closure_12(useSafeAreaInsetsDefault().bottom);
-      obj2.icon = closure_10(onSendGift(11561).GiftIcon, {
+      obj2.icon = closure_10(onSendGift(11490).GiftIcon, {
         size: "sm",
         color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT,
       });
       const intl = onSendGift(1126).intl;
       obj2.text = intl.string(_modDef2661.g86YiI);
       obj2.onPress = callback;
-      const items1 = [closure_10(onSendGift(5375).Button, obj2)];
+      const items1 = [closure_10(onSendGift(5376).Button, obj2)];
       const obj4 = { grow: true, variant: "secondary", text: null, onPress: null };
       const intl2 = onSendGift(1126).intl;
       obj4.text = intl2.string(_modDef2661["sa/cfM"]);
       obj4.onPress = callback1;
-      items1[1] = closure_10(onSendGift(5375).Button, obj4);
+      items1[1] = closure_10(onSendGift(5376).Button, obj4);
       obj.children = items1;
       return closure_11(View, obj);
     };

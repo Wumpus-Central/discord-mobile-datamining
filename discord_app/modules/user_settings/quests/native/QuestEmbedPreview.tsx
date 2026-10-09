@@ -4,8 +4,8 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import CodedLink from "../../../coded_links/CodedLink.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
-import ChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
 import QuestCopyUtils from "../../../quests/utils/QuestCopyUtils.tsx";
+import ChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
 import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
@@ -191,14 +191,14 @@ export const QuestEmbedPreview = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp2(1126).intl;
         obj2.title = intl.string(tmp2(1126).t["habP/M"]);
         let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-        obj2.children = jsx(stateFromStores(9308), {
+        obj2.children = jsx(stateFromStores(9346), {
           rowGenerator: memo,
           message: memo1,
           horizontalOffset: 0,
           pointerEvents: "none",
         });
-        tmp6 = jsx(stateFromStores(15252), { title: null, children: null });
-        const tmp9 = stateFromStores(15252);
+        tmp6 = jsx(stateFromStores(15365), { title: null, children: null });
+        const tmp9 = stateFromStores(15365);
       }
       return tmp6;
     };

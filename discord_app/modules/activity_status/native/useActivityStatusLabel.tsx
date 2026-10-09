@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1126);
-const VoiceActivityStatus = v0wJXSh(10240);
+const VoiceActivityStatus = v0wJXSh(10225);
 require = fn;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);

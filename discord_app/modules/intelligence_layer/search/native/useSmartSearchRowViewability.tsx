@@ -88,7 +88,7 @@ export const useSmartSearchRowViewability = ReactCompilerGating.isReactCompilerE
       }, items1);
       const effect1 = noop.useEffect(
         () => () => {
-          closure_1_1(12077).setIsRowViewable(false, closure_1_1(12075));
+          closure_1_1(12014).setIsRowViewable(false, closure_1_1(12012));
         },
         [],
       );

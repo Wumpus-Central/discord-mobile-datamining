@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [MediaEngineStore];
       return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
     };
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasNoiseSuppressionSetting() {
       const cResult = c.c(2);
@@ -56,7 +56,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(7966).MobileUserSettings.VOICE,
+  parent: fn(7974).MobileUserSettings.VOICE,
   useValue: tmp2,
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
     const NoiseSuppressionOpt = UserSettingsVoiceUtils.NoiseSuppressionOpt;

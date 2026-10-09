@@ -8,9 +8,9 @@ import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx"
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CollectiblesActionCreators from "../../collectibles/CollectiblesActionCreators.tsx";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
-import utils_openGiftModal from "../../premium/native/utils/openGiftModal.tsx";
-import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
 import QuestsEligibility from "../../quests/lib/QuestsEligibility.tsx";
+import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
+import utils_openGiftModal from "../../premium/native/utils/openGiftModal.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const UserSettingsSections = Constants.UserSettingsSections;

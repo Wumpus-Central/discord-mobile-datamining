@@ -83,7 +83,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(16234);
+const JankScreenConstants = fn(16353);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
@@ -207,6 +207,6 @@ export const attachJankActionSheetReporter = function attachJankActionSheetRepor
         tmp = length < length;
       });
     }
-    obj = length(1381);
+    obj = length(1382);
   }
 };

@@ -14,10 +14,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   row: {
-    height: fn(6261).NAV_BAR_HEIGHT,
+    height: fn(6263).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -26,7 +26,7 @@ let obj2 = {
   logOut: null,
 };
 let obj3 = {
-  height: fn(6261).NAV_BAR_HEIGHT,
+  height: fn(6263).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "center",

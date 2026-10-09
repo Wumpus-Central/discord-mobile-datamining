@@ -12,7 +12,7 @@ import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const PlatformUtils = tmp(1381);
+const PlatformUtils = tmp(1382);
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 let ReactCompilerGating = ReactCompilerGating_mod;

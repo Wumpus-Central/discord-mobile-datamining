@@ -1,6 +1,6 @@
 // discord_app/modules/intelligence_layer/search/native/useSearchHostSurface.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../../_runtime/01503_Link.js";
+import Link from "../../../../../_runtime/01504_Link.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import SearchNavigatorConstants from "../../../search/native/components/navigator/SearchNavigatorConstants.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";

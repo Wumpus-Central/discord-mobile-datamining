@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
 import c from "../../../../_runtime/00576_c.js";
-import Link from "../../../../_runtime/01503_Link.js";
+import Link from "../../../../_runtime/01504_Link.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

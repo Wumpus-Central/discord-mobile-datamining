@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-      const profileFrames = stateFromStores(7264).getProfileFrames(stateFromStores, tmp12);
+      const profileFrames = stateFromStores(7269).getProfileFrames(stateFromStores, tmp12);
       if (cResult[11] === tmp13) {
         if (cResult[12] === stateFromStores) {
           let tmp18 = cResult[13];
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = stateFromStores;
       cResult[13] = fn3;
       tmp18 = fn3;
-      const tmpResult4 = stateFromStores(7264);
+      const tmpResult4 = stateFromStores(7269);
     }
   : function useProfileFrameSections() {
       let obj = stateFromStores(573);
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const items2 = [first, tmp2[1], stateFromStores];
       obj2 = stateFromStores(573);
-      return first(13301)(
+      return first(13396)(
         useMemo(() => {
           let obj = CollectiblesUtils;
           const profileFrames = obj.getProfileFrames(stateFromStores, first);

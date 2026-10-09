@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6059).isGuildEventEnded;
+const isGuildEventEnded = fn(6061).isGuildEventEnded;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 let obj = {
   loading: false,
@@ -213,7 +213,7 @@ let obj = {
   notifCenterIds: new Set(),
   notifCenterLocalItems: [],
   paginationHasMore: true,
-  paginationCursor: "Set",
+  paginationCursor: "Symbol",
   notifCenterActive: "none",
   notifCenterTabFocused: "URL",
 };
@@ -397,7 +397,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "Set",
+      paginationCursor: "Symbol",
       notifCenterActive: "none",
       notifCenterTabFocused: "URL",
     };
@@ -539,7 +539,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "Set",
+      paginationCursor: "Symbol",
       notifCenterActive: "none",
       notifCenterTabFocused: "URL",
     };
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6064);
+        obj = id(6066);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -710,7 +710,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterIds: new Set(),
       notifCenterLocalItems: null,
       paginationHasMore: true,
-      paginationCursor: "Set",
+      paginationCursor: "Symbol",
       notifCenterActive: "none",
       notifCenterTabFocused: "URL",
     };

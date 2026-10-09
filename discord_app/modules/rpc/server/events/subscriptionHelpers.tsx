@@ -1,8 +1,8 @@
 // discord_app/modules/rpc/server/events/subscriptionHelpers.tsx
 import QuestTaskUtils from "../../../quests/utils/QuestTaskUtils.tsx";
 import useIsScreenLandscape from "../../../screen/useIsScreenLandscape.native.tsx";
-import useThermalState from "../../../device/useThermalState.tsx";
 import isPostMessageSocketDefault from "../../helpers/isPostMessageSocket.tsx";
+import useThermalState from "../../../device/useThermalState.tsx";
 import activityInstanceConnectedParticipants from "../../helpers/activityInstanceConnectedParticipants.tsx";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ConjureBuilderPreviewStore from "../../../conjure/preview/ConjureBuilderPreviewStore.tsx";
@@ -11,7 +11,7 @@ import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
 const RPCEvents = fn(1085).RPCEvents;
-const Constants = fn(2023);
+const Constants = fn(2024);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");

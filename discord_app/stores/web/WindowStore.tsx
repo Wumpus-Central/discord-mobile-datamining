@@ -180,7 +180,7 @@ const windowStore = new WindowStore(DispatcherDefault, {
     return flag;
   },
 });
-fn(1999)(1264, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
+fn(2000)(1265, dependencyMap.paths).then((addExtraAnalyticsDecorator) => {
   const result = addExtraAnalyticsDecorator.addExtraAnalyticsDecorator(() => {});
 });
 let size = fn(2);

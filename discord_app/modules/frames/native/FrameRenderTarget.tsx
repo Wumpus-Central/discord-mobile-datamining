@@ -3,10 +3,10 @@ import c from "../../../../_runtime/00576_c.js";
 import useFramePoolBorrowDefault from "useFramePoolBorrow.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const WebView = WebViewTarget(7511);
+const WebView = WebViewTarget(7518);
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let closure_5 = createStyles.createStyles({ target: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()

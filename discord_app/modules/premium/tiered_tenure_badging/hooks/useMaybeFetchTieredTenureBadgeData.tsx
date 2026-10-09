@@ -6,7 +6,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const PremiumTypes = fn(1391).PremiumTypes;
+const PremiumTypes = fn(1392).PremiumTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -31,12 +31,12 @@ export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCom
       const obj = stateFromStores(576);
       stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
       const tmpResult = stateFromStores(504);
-      const isPremiumSubscriber = stateFromStores(10511).useIsPremiumSubscriber(PremiumTypes.TIER_2);
+      const isPremiumSubscriber = stateFromStores(10501).useIsPremiumSubscriber(PremiumTypes.TIER_2);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === isPremiumSubscriber) {
           let tmp9 = cResult[4];
         }
-        isPremiumSubscriber(5392)(tmp9);
+        isPremiumSubscriber(5393)(tmp9);
       }
       const fn2 = function c() {
         let id;
@@ -52,7 +52,7 @@ export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCom
       cResult[3] = isPremiumSubscriber;
       cResult[4] = fn2;
       tmp9 = fn2;
-      const tmpResult2 = stateFromStores(10511);
+      const tmpResult2 = stateFromStores(10501);
     }
   : function useMaybeFetchTieredTenureBadgeData() {
       const items = [UserStore];

@@ -3,7 +3,7 @@ import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
 import DurationsDefault from "../utils/Durations.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1354 from "../../_runtime/metro/01354__.js";
+import _modDef1355 from "../../_runtime/metro/01355__.js";
 import ConnectedAccountsActionCreatorsDefault from "../actions/ConnectedAccountsActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ConnectedAccountsStore from "ConnectedAccountsStore.tsx";
@@ -530,7 +530,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1354(stream.stream, stream)) {
+    if (_modDef1355(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

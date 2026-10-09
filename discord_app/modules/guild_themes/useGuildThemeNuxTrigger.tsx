@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let constants = fn(2060).DismissibleContentGroupName;
+let constants = fn(2061).DismissibleContentGroupName;
 let c5 = 2000;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/guild_themes/useGuildThemeNux
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildThemeNuxTrigger(arg0, isNuxOpen) {
   _require = arg0;
-  const cResult = require("c").c(12);
+  const cResult = require("c").c(13);
   isNuxOpen = isNuxOpen.isNuxOpen;
   const openNux = isNuxOpen.openNux;
   const obj = require("c");
@@ -28,20 +28,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     cResult[0] = tmp4;
     cResult[1] = items1;
   } else {
-    const tmp8 = openNux(tmp(tmp2[7]).useSelectedDismissibleContent(cResult[1], constants.GUILD_THEME_NUX), 2);
-    noop = tmp9;
-    const tmp10 = tmp8[0] === tmp(tmp2[6]).DismissibleContent.GUILD_THEME_NUX;
-    constants = tmp10;
-    noop.useRef(false);
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj3 = { groupName: constants.GUILD_THEME_NUX };
+      cResult[2] = obj3;
+      let tmp7 = obj3;
+    } else {
+      tmp7 = cResult[2];
+    }
+    const tmp10 = openNux(tmp(tmp2[7]).useSelectedDismissibleContent(cResult[1], tmp7), 2);
+    noop = tmp11;
+    const tmp12 = tmp10[0] === tmp(tmp2[6]).DismissibleContent.GUILD_THEME_NUX;
+    constants = tmp12;
+    noop.useRef(false);
+    const _Symbol2 = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       class D {
         constructor() {
           closure_5.current = false;
           return;
         }
       }
-      cResult[2] = D;
+      cResult[3] = D;
     } else {
       class D {
         constructor() {
@@ -50,16 +58,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         }
       }
     }
-    if (cResult[3] !== arg0) {
+    if (cResult[4] !== arg0) {
       class D {
         constructor() {
           closure_5.current = false;
           return;
         }
       }
-      tmp14[0] = arg0;
-      cResult[3] = arg0;
-      cResult[4] = tmp14;
+      tmp15[0] = arg0;
+      cResult[4] = arg0;
+      cResult[5] = tmp15;
     } else {
       class D {
         constructor() {
@@ -68,8 +76,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         }
       }
     }
-    const effect = noop.useEffect(D, tmp14);
-    if (cResult[5] === arg0) {
+    const effect = noop.useEffect(D, tmp15);
+    if (cResult[6] === arg0) {
       class D {
         constructor() {
           closure_5.current = false;
@@ -77,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         }
       }
     }
-    class N {
+    class U {
       constructor() {
         if (closure_4) {
           tmp = isNuxOpen;
@@ -95,14 +103,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         return;
       }
     }
-    const items2 = [tmp10, isNuxOpen, arg0, tmp8[1], openNux];
-    cResult[5] = arg0;
-    cResult[6] = isNuxOpen;
-    cResult[7] = tmp8[1];
-    cResult[8] = openNux;
-    cResult[9] = tmp10;
-    cResult[10] = N;
-    cResult[11] = items2;
+    const items2 = [tmp12, isNuxOpen, arg0, tmp10[1], openNux];
+    cResult[6] = arg0;
+    cResult[7] = isNuxOpen;
+    cResult[8] = tmp10[1];
+    cResult[9] = openNux;
+    cResult[10] = tmp12;
+    cResult[11] = U;
+    cResult[12] = items2;
     const tmpResult = tmp(tmp2[7]);
   }
   const obj2 = require("GuildThemeResolver");
@@ -120,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   } else {
     items1 = [];
   }
-  const tmp4 = openNux(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items1, constants.GUILD_THEME_NUX), 2);
+  const tmp4 = openNux(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items1, { groupName: constants.GUILD_THEME_NUX }), 2);
   noop = tmp5;
   const tmp6 = tmp4[0] === require("dismissible_content").DismissibleContent.GUILD_THEME_NUX;
   constants = tmp6;

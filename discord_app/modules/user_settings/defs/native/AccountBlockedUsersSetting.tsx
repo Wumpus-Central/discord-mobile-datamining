@@ -6,7 +6,7 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountBlockedUsersSettingDescription() {
       const cResult = c.c(4);
@@ -80,8 +80,8 @@ const route = SettingBuilders.createRoute({
         const intl = util.intl;
         return intl.format(util.t["r91W/h"], { numberOfBlockedUsers });
       },
-  IconComponent: fn(9306).DenyIcon,
-  parent: fn(7966).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  IconComponent: fn(9344).DenyIcon,
+  parent: fn(7974).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1085).UserSettingsSections.BLOCKED_USERS_V2,
     getComponent() {

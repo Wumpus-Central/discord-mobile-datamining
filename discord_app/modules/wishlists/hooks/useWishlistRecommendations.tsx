@@ -17,7 +17,7 @@ import WishlistRecommendationsStore from "../WishlistRecommendationsStore.tsx";
 import WishlistRecommendationRecord from "../records/WishlistRecommendationRecord.tsx";
 
 require = fn;
-let closure_8 = fn(6918).WishlistRecommendationReason;
+let closure_8 = fn(6925).WishlistRecommendationReason;
 let closure_9 = 30 * DurationsDefault.Millis.MINUTE;
 let combinedSkusToUserAndReason = {
   state: "success",
@@ -47,7 +47,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === userIdsAndWishlistIds) {
           let tmp8 = cResult[4];
         }
-        const fetchWishlists = applicationIdsFilter(8949).useFetchWishlists(tmp8);
+        const fetchWishlists = applicationIdsFilter(8960).useFetchWishlists(tmp8);
         ({ wishlists, isFetching, errors } = fetchWishlists);
         if (cResult[5] === applicationIdsFilter) {
           if (cResult[6] === wishlists) {
@@ -259,7 +259,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const _Object = Object;
-          const found = wishlists.filter(applicationIdsFilter(1387).isNotNullish);
+          const found = wishlists.filter(applicationIdsFilter(1388).isNotNullish);
           const found1 = found.flatMap(tmp24).filter(tmp25);
           const fromEntriesResult = Object.fromEntries(found1.map(T));
           cResult[8] = applicationIdsFilter;
@@ -267,7 +267,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = fromEntriesResult;
           const flatMapResult = found.flatMap(tmp24);
         }
-        const found2 = wishlists.filter(applicationIdsFilter(1387).isNotNullish);
+        const found2 = wishlists.filter(applicationIdsFilter(1388).isNotNullish);
         const obj3 = {};
         const iter = found2[Symbol.iterator]();
         iter.next();
@@ -376,7 +376,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = wishlists;
         cResult[7] = obj3;
         tmp10 = obj3;
-        const tmpResult2 = applicationIdsFilter(8949);
+        const tmpResult2 = applicationIdsFilter(8960);
       }
       const obj4 = { wishlistIdsAndUsers: userIdsAndWishlistIds, source };
       cResult[2] = source;

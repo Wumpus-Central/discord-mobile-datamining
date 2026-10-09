@@ -16,7 +16,7 @@ import FlagIcon from "../../../../../design/components/Icon/native/redesign/gene
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategories = fn(5996).EmojiCategories;
+const EmojiCategories = fn(5998).EmojiCategories;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

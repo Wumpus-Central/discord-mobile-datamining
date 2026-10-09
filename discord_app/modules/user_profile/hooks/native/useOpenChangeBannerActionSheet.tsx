@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/native/useOpenChangeBannerActionSheet.tsx
-import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserProfileActionCreators from "../../UserProfileActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -53,7 +53,7 @@ export default function useOpenChangeBannerActionSheet(user) {
       obj3.selectionContext = closure_1_2 ? GIFSelectionContext.PROFILE_TRY_IT_OUT : GIFSelectionContext.PROFILE_EDIT;
       obj2.openLazy(user(flag[3])(flag[6], flag.paths), "Select GIF Banner", obj3);
     };
-    obj.openLazy(asyncRequireImpl(14659, dependencyMap.paths), "Change Banner", obj2);
-    const tmp3 = asyncRequireImpl(14659, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(14764, dependencyMap.paths), "Change Banner", obj2);
+    const tmp3 = asyncRequireImpl(14764, dependencyMap.paths);
   }, items);
 }

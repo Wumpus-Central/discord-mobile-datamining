@@ -28,7 +28,7 @@ function isSecureFramesUIEnabled(isCallRTCConnectionEmpty) {
     return false;
   }
 }
-let closure_4 = fn(8801).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(8810).END_TO_END_ENCRYPTION_DISABLED;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");

@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ImageLoaderUtils from "../../../image_upload/ImageLoaderUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import utils_UploadUtilsDefault from "../../../../utils/native/UploadUtils.tsx";
+import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -194,7 +194,7 @@ let closure_3 = ["description", "imageUploadSize", "image", "setImage", "disable
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             obj5 = { text: tmp15, variant: "secondary", onPress: tmp14, size: "md", disabled: tmp5 };
-            const tmp24 = closure_8(tmp(5375).Button, obj5);
+            const tmp24 = closure_8(tmp(5376).Button, obj5);
             cResult[15] = tmp15;
             cResult[16] = tmp5;
             cResult[17] = tmp14;
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: tmp4,
           };
-          const tmp21 = closure_8(tmp(5086).Text, obj6);
+          const tmp21 = closure_8(tmp(5087).Text, obj6);
           cResult[12] = tmp4;
           cResult[13] = tmp13.imageDescription;
           cResult[14] = tmp21;
@@ -397,13 +397,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: tmp2.imageSelectionRow, children: null };
       const obj2 = { style: tmp2.buttonColumn, children: null };
       const items = [
-        closure_8(tmp6(5086).Text, {
+        closure_8(tmp6(5087).Text, {
           style: tmp2.imageDescription,
           variant: "text-sm/medium",
           color: "text-default",
           children: children.description,
         }),
-        closure_8(tmp6(5375).Button, {
+        closure_8(tmp6(5376).Button, {
           text: stringResult,
           variant: "secondary",
           onPress: function handleSelectImage() {

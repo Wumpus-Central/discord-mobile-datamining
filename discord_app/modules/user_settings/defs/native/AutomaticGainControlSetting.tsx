@@ -6,7 +6,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11262);
+const SettingBuilders = fn(10629);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAutomaticGainControlSettingValue() {
       const cResult = c.c(2);
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.cUMdH0);
   },
-  parent: fn(7966).MobileUserSettings.VOICE,
+  parent: fn(7974).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAutomaticGainControlSettingValue() {
         const cResult = c.c(2);
@@ -55,7 +55,7 @@ const toggle = SettingBuilders.createToggle({
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
       },
-  onValueChange: fn(10875).handleAutomaticGainControlChange,
+  onValueChange: fn(11048).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["6EjbvA"]);

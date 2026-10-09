@@ -1,7 +1,7 @@
 // discord_app/modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import _modDef17313 from "../../../_runtime/metro/17313__.js";
+import _modDef17461 from "../../../_runtime/metro/17461__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             );
             items = found.map((id) => id.id);
           }
-          return _modDef17313(items, (arg0) => stateFromStoresArray.includes(arg0));
+          return _modDef17461(items, (arg0) => stateFromStoresArray.includes(arg0));
         }, items2),
         2,
       );

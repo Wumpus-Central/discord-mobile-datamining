@@ -2,8 +2,8 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ExperimentStore from "ExperimentStore.tsx";
 
-const registerExperiment = fn(4976).registerExperiment;
-const ExperimentConstants = fn(4977);
+const registerExperiment = fn(4977).registerExperiment;
+const ExperimentConstants = fn(4978);
 ({ ExperimentTypes: closure_4, ExposureTypes } = ExperimentConstants);
 const ExperimentSystem = { LEGACY: "legacy", APEX: "apex" };
 const size = fn(2);

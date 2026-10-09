@@ -10,7 +10,7 @@ import GuildsBarDnDStore from "../../../guilds_bar/native/GuildsBarDnDStore.tsx"
 
 require = fn;
 const FAVORITES = fn(1085).FAVORITES;
-const ContentDismissActionType = fn(2060).ContentDismissActionType;
+const ContentDismissActionType = fn(2061).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}",
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ReanimatedRexport.runOnJS(closure_2)(arg0);
         }
       };
-      const tmpResult = markAsDismissed(4810);
-      fn2.__closure = { runOnJS: markAsDismissed(4810).runOnJS, setScrolledToTop: tmp10 };
+      const tmpResult = markAsDismissed(4811);
+      fn2.__closure = { runOnJS: markAsDismissed(4811).runOnJS, setScrolledToTop: tmp10 };
       fn2.__workletHash = 13648062364539;
       fn2.__initData = __initData2;
       const animatedReaction = tmpResult.useAnimatedReaction(C, fn2);
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         buttonLabel: tmp20,
         onButtonPress: D,
       };
-      const obj2 = { runOnJS: markAsDismissed(4810).runOnJS, setScrolledToTop: tmp10 };
+      const obj2 = { runOnJS: markAsDismissed(4811).runOnJS, setScrolledToTop: tmp10 };
       const obj3 = {
         visible: tmp9,
         position: "bottom",

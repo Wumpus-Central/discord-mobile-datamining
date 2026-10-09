@@ -14,13 +14,13 @@ import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTyp
 import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import LinkExternalSmallIcon from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
-import _modDef8746 from "../../../../_runtime/metro/08746__.js";
+import _modDef8755 from "../../../../_runtime/metro/08755__.js";
+import QuestUtils from "QuestUtils.native.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import QuestCopyUtils from "../utils/QuestCopyUtils.tsx";
-import QuestUtils from "QuestUtils.native.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
-import _modDef15233 from "../../../../_runtime/metro/15233__.js";
+import _modDef15346 from "../../../../_runtime/metro/15346__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import QuestStore from "../QuestStore.tsx";
@@ -29,7 +29,7 @@ require = fn;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(_objectWithoutProperties(ref, closure_3));
-  obj.icon = _modDef8746;
+  obj.icon = _modDef8755;
   obj.variant = "secondary";
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.CAgr1w);
@@ -390,7 +390,7 @@ export default noop.memo(
           const intl = util.intl;
           obj2.label = intl.string(util.t.GcsZKJ);
           obj2.action = callback2;
-          obj2.iconSource = _modDef15233;
+          obj2.iconSource = _modDef15346;
           items[1] = obj2;
           if (flag) {
             const obj3 = { label: null, IconComponent: null, action: null };

@@ -1,6 +1,6 @@
 // discord_app/actions/SelectedChannelActionCreatorsAdditional.native.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import v1 from "../../_runtime/01278_v1.js";
+import v1 from "../../_runtime/01279_v1.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import GuildVerificationStore from "../stores/GuildVerificationStore.tsx";
@@ -13,7 +13,7 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5888).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5889).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 

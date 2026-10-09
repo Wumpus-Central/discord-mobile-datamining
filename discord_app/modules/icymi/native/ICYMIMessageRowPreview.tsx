@@ -345,11 +345,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = useThemeDefault();
       if (cResult[0] !== tmp5) {
         const obj2 = { seeMoreLabelColor: tmp4(587).colors.TEXT_DEFAULT };
-        const tmp7 = lineClamp(5090).createNativeStyleProperties(obj2)(tmp5);
+        const tmp7 = lineClamp(5091).createNativeStyleProperties(obj2)(tmp5);
         cResult[0] = tmp5;
         cResult[1] = tmp7;
         let tmp6 = tmp7;
-        const tmpResult = lineClamp(5090);
+        const tmpResult = lineClamp(5091);
       } else {
         tmp6 = cResult[1];
       }
@@ -360,7 +360,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const RenderEmbeds = lineClamp(2040).RenderEmbeds;
+          const RenderEmbeds = lineClamp(2041).RenderEmbeds;
           const setting = RenderEmbeds.getSetting();
           cResult[5] = setting;
           let tmp10 = setting;
@@ -369,7 +369,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const InlineEmbedMedia = lineClamp(2040).InlineEmbedMedia;
+          const InlineEmbedMedia = lineClamp(2041).InlineEmbedMedia;
           const setting1 = InlineEmbedMedia.getSetting();
           cResult[6] = setting1;
           let tmp12 = setting1;
@@ -378,7 +378,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol3 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const InlineAttachmentMedia = lineClamp(2040).InlineAttachmentMedia;
+          const InlineAttachmentMedia = lineClamp(2041).InlineAttachmentMedia;
           const setting2 = InlineAttachmentMedia.getSetting();
           cResult[7] = setting2;
           let tmp14 = setting2;
@@ -386,7 +386,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = cResult[7];
         }
         if (cResult[8] !== messageOptions) {
-          const obj4 = new tmp4(7719)();
+          const obj4 = new tmp4(7728)();
           const obj3 = {
             renderEmbeds: tmp10,
             inlineEmbedMedia: tmp12,
@@ -436,7 +436,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           messageSizeCacheRef,
           maxHeight,
         };
-        const tmp26 = jsx(tmp4(9308), {
+        const tmp26 = jsx(tmp4(9346), {
           pointerEvents: str,
           horizontalOffset: 0,
           modifyRow: tmp8,
@@ -477,7 +477,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (str === undefined) {
         str = "none";
       }
-      const tmp = messageOptions(4991)();
+      const tmp = messageOptions(4992)();
       let obj = createStyles;
       dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(587).colors.TEXT_DEFAULT })(
         tmp,
@@ -512,7 +512,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return jsx(messageOptions(9308), {
+      return jsx(messageOptions(9346), {
         pointerEvents: str,
         horizontalOffset: 0,
         modifyRow(arg0) {
@@ -649,11 +649,11 @@ export const MessageRowPreview = noop.memo(
           obj.pointerEvents = merged.pointerEvents;
           return obj;
         }, items);
-        const tmp3 = merged(6988)(message);
+        const tmp3 = merged(6995)(message);
         let obj = {};
         const merged1 = Object.assign(memo);
         const obj2 = {};
-        const merged2 = Object.assign(message(7721).DEFAULT_OPTIONS);
+        const merged2 = Object.assign(message(7730).DEFAULT_OPTIONS);
         obj2.ignoreMentioned = true;
         obj2.renderReplies = false;
         obj2.renderThreadEmbeds = false;

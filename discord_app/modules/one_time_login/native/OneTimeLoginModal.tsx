@@ -7,6 +7,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import CircleErrorIcon from "../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
+import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import ThemedGradientDefault from "../../client_themes/native/ThemedGradient.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -17,13 +18,13 @@ const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ActivityIndicator: metroRequire, Image: closure_7 } = get_ActivityIndicator);
+({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1085);
-({ Routes: c10, AnalyticEvents: closure_11 } = Constants);
-let closure_12 = fn(1252).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+({ Routes: closure_9, AnalyticEvents: c10 } = Constants);
+let closure_11 = fn(1253).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
-({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5090);
+({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const createStyles = fn(5091);
 let obj2 = {
   container: {
     padding: 24,
@@ -78,9 +79,9 @@ let size = {
   alignSelf: "center",
 };
 obj2.raisedIcon = size;
-let closure_15 = createStyles.createStyles(obj2);
+let closure_14 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-const obj6 = { textDecorationLine: "underline", textDecorationColor: nativeDefault.colors.TEXT_DEFAULT, flexShrink: 1 };
+let obj6 = { textDecorationLine: "underline", textDecorationColor: nativeDefault.colors.TEXT_DEFAULT, flexShrink: 1 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/one_time_login/native/OneTimeLoginModal.tsx");
 
@@ -89,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(46);
       token = token.token;
       _require = token;
-      const tmp4 = closure_15();
+      const tmp4 = closure_14();
       importDefault = tmp4;
       const tmp5 = useSafeAreaInsetsDefault();
       const height = useWindowDimensionsDefault().height;
@@ -103,111 +104,60 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[4] = obj2;
         }
         if (cResult[5] !== token) {
-          class T {
-            constructor() {
-              obj = closure_1(closure_2[15]);
-              obj1 = { has_token: null != closure_0 };
-              trackResult = obj.track(AnalyticEvents.ONE_TIME_LOGIN_MODAL_OPENED, obj1);
-              obj3 = closure_1(closure_2[15]);
-              trackResult1 = obj3.track(AnalyticEvents.DEEP_LINK_CLICKED, {
-                source: "native_modal",
-                destination: "one_time_login_native_modal",
-                deep_link_provider: "native_app",
-              });
-              return;
-            }
-          }
+          const fn = function p() {
+            AnalyticsUtilsDefault.track(constants.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != closure_0 });
+            const obj2 = { has_token: null != closure_0 };
+            AnalyticsUtilsDefault.track(constants.DEEP_LINK_CLICKED, {
+              source: "native_modal",
+              destination: "one_time_login_native_modal",
+              deep_link_provider: "native_app",
+            });
+          };
           const items = [token];
           cResult[5] = token;
-          cResult[6] = T;
+          cResult[6] = fn;
           cResult[7] = items;
           let tmp9 = items;
+          let tmp8 = fn;
         } else {
-          class T {
-            constructor() {
-              obj = closure_1(closure_2[15]);
-              obj1 = { has_token: null != closure_0 };
-              trackResult = obj.track(AnalyticEvents.ONE_TIME_LOGIN_MODAL_OPENED, obj1);
-              obj3 = closure_1(closure_2[15]);
-              trackResult1 = obj3.track(AnalyticEvents.DEEP_LINK_CLICKED, {
-                source: "native_modal",
-                destination: "one_time_login_native_modal",
-                deep_link_provider: "native_app",
-              });
-              return;
-            }
-          }
+          tmp8 = cResult[6];
           tmp9 = cResult[7];
         }
-        const effect = noop.useEffect(T, tmp9);
+        const effect = noop.useEffect(tmp8, tmp9);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class T {
-            constructor() {
-              obj = closure_1(closure_2[15]);
-              obj1 = { has_token: null != closure_0 };
-              trackResult = obj.track(AnalyticEvents.ONE_TIME_LOGIN_MODAL_OPENED, obj1);
-              obj3 = closure_1(closure_2[15]);
-              trackResult1 = obj3.track(AnalyticEvents.DEEP_LINK_CLICKED, {
-                source: "native_modal",
-                destination: "one_time_login_native_modal",
-                deep_link_provider: "native_app",
-              });
-              return;
-            }
-          }
-          cResult[8] = tmp14;
+          const fn2 = function k() {
+            closure_1(onPress[15]).track(constants2.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, { current_state: "loading" });
+            const obj = closure_1(onPress[15]);
+            closure_1(onPress[16]).popWithKey("ONE_TIME_LOGIN_MODAL");
+            const obj2 = closure_1(onPress[16]);
+            closure_0(onPress[17]).resetToAuthRoute();
+          };
+          cResult[8] = fn2;
+          let tmp13 = fn2;
         } else {
-          class T {
-            constructor() {
-              obj = closure_1(closure_2[15]);
-              obj1 = { has_token: null != closure_0 };
-              trackResult = obj.track(AnalyticEvents.ONE_TIME_LOGIN_MODAL_OPENED, obj1);
-              obj3 = closure_1(closure_2[15]);
-              trackResult1 = obj3.track(AnalyticEvents.DEEP_LINK_CLICKED, {
-                source: "native_modal",
-                destination: "one_time_login_native_modal",
-                deep_link_provider: "native_app",
-              });
-              return;
-            }
-          }
+          tmp13 = cResult[8];
         }
-        dependencyMap = tmp14;
+        dependencyMap = tmp13;
         const _Symbol2 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          class D {
-            constructor() {
-              obj = closure_1(closure_2[15]);
-              trackResult = obj.track(closure_1_11.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, {
-                current_state: "already_logged_in",
-              });
-              obj2 = closure_1(closure_2[16]);
-              popWithKeyResult = obj2.popWithKey("ONE_TIME_LOGIN_MODAL");
-              obj3 = closure_0(closure_2[18]);
-              transitionToResult = obj3.transitionTo(closure_1_10.ME);
-              return;
-            }
-          }
-          cResult[9] = D;
+          const fn3 = function b() {
+            closure_1(onPress[15]).track(constants2.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, {
+              current_state: "already_logged_in",
+            });
+            const obj = closure_1(onPress[15]);
+            closure_1(onPress[16]).popWithKey("ONE_TIME_LOGIN_MODAL");
+            const obj2 = closure_1(onPress[16]);
+            closure_0(onPress[18]).transitionTo(constants.ME);
+          };
+          cResult[9] = fn3;
+          let tmp14 = fn3;
         } else {
-          class D {
-            constructor() {
-              obj = closure_1(closure_2[15]);
-              trackResult = obj.track(closure_1_11.ONE_TIME_LOGIN_MODAL_CANCEL_CLICKED, {
-                current_state: "already_logged_in",
-              });
-              obj2 = closure_1(closure_2[16]);
-              popWithKeyResult = obj2.popWithKey("ONE_TIME_LOGIN_MODAL");
-              obj3 = closure_0(closure_2[18]);
-              transitionToResult = obj3.transitionTo(closure_1_10.ME);
-              return;
-            }
-          }
+          tmp14 = cResult[9];
         }
-        onPress = D;
+        onPress = tmp14;
         if (cResult[10] !== tmp4.raisedIcon) {
-          class S {
+          class G {
             constructor() {
               obj = closure_0(closure_2[19]);
               obj1 = { header: null, title: null, content: null, actions: null };
@@ -234,9 +184,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[10] = tmp4.raisedIcon;
-          cResult[11] = S;
+          cResult[11] = G;
         } else {
-          class S {
+          class G {
             constructor() {
               obj = closure_0(closure_2[19]);
               obj1 = { header: null, title: null, content: null, actions: null };
@@ -263,9 +213,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        noop = S;
+        noop = G;
         if (cResult[12] !== tmp4.raisedIcon) {
-          class P {
+          class R {
             constructor() {
               tmp = closure_0;
               tmp2 = closure_2;
@@ -283,7 +233,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               intl = closure_0(closure_2[22]).intl;
               obj1.title = intl.string(closure_0(closure_2[22]).t.MKW8z2);
               intl2 = closure_0(closure_2[22]).intl;
-              currentUser = closure_9.getCurrentUser();
+              currentUser = closure_8.getCurrentUser();
               str = undefined;
               if (currentUser != null) {
                 str = currentUser.username;
@@ -306,9 +256,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[12] = tmp4.raisedIcon;
-          cResult[13] = P;
+          cResult[13] = R;
         } else {
-          class P {
+          class R {
             constructor() {
               tmp = closure_0;
               tmp2 = closure_2;
@@ -326,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               intl = closure_0(closure_2[22]).intl;
               obj1.title = intl.string(closure_0(closure_2[22]).t.MKW8z2);
               intl2 = closure_0(closure_2[22]).intl;
-              currentUser = closure_9.getCurrentUser();
+              currentUser = closure_8.getCurrentUser();
               str = undefined;
               if (currentUser != null) {
                 str = currentUser.username;
@@ -349,9 +299,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        closure_5 = P;
-        if (cResult[14] === P) {
-          class P {
+        closure_5 = R;
+        if (cResult[14] === R) {
+          class R {
             constructor() {
               tmp = closure_0;
               tmp2 = closure_2;
@@ -369,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               intl = closure_0(closure_2[22]).intl;
               obj1.title = intl.string(closure_0(closure_2[22]).t.MKW8z2);
               intl2 = closure_0(closure_2[22]).intl;
-              currentUser = closure_9.getCurrentUser();
+              currentUser = closure_8.getCurrentUser();
               str = undefined;
               if (currentUser != null) {
                 str = currentUser.username;
@@ -453,14 +403,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return applyArgumentsResult;
         }
-        cResult[14] = P;
-        cResult[15] = S;
+        cResult[14] = R;
+        cResult[15] = G;
         cResult[16] = token;
         cResult[17] = t9;
       }
       let obj = require("c");
       if (tmpResult.isAndroid()) {
-        class P {
+        class R {
           constructor() {
             tmp = closure_0;
             tmp2 = closure_2;
@@ -478,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             intl = closure_0(closure_2[22]).intl;
             obj1.title = intl.string(closure_0(closure_2[22]).t.MKW8z2);
             intl2 = closure_0(closure_2[22]).intl;
-            currentUser = closure_9.getCurrentUser();
+            currentUser = closure_8.getCurrentUser();
             str = undefined;
             if (currentUser != null) {
               str = currentUser.username;
@@ -507,7 +457,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function OneTimeLoginModal(token) {
       token = token.token;
       onPress = undefined;
-      const tmp = closure_15();
+      const tmp = closure_14();
       importDefault = tmp;
       const tmp2 = useSafeAreaInsetsDefault();
       dependencyMap = tmp2;
@@ -522,9 +472,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return { height };
       }, items);
       const effect = onPress.useEffect(() => {
-        AnalyticsUtilsDefault.track(constants2.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != token });
+        AnalyticsUtilsDefault.track(constants.ONE_TIME_LOGIN_MODAL_OPENED, { has_token: null != token });
         const obj2 = { has_token: null != token };
-        AnalyticsUtilsDefault.track(constants2.DEEP_LINK_CLICKED, {
+        AnalyticsUtilsDefault.track(constants.DEEP_LINK_CLICKED, {
           source: "native_modal",
           destination: "one_time_login_native_modal",
           deep_link_provider: "native_app",
@@ -550,9 +500,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback2 = onPress.useCallback(() => {
         const obj2 = { header: null, title: null, content: null, actions: null };
         const obj = useAlertStore;
-        obj2.header = __initData2(hasOwnProperty, {
+        obj2.header = __initData(hasOwnProperty, {
           style: closure_1.raisedIcon,
-          children: __initData2(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+          children: __initData(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
         });
         const intl = util.intl;
         obj2.title = intl.string(util.t.L6htwI);
@@ -562,17 +512,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { onPress, text: null };
         const intl3 = util.intl;
         obj5.text = intl3.string(util.t["9vN0pz"]);
-        obj4.children = __initData2(AlertModal.AlertActionButton, obj5, "confirm");
-        obj2.actions = __initData2(AlertModal.AlertActions, obj4);
-        obj.openAlert("invalid-login-alert", __initData2(AlertModal.AlertModal, obj2));
+        obj4.children = __initData(AlertModal.AlertActionButton, obj5, "confirm");
+        obj2.actions = __initData(AlertModal.AlertActions, obj4);
+        obj.openAlert("invalid-login-alert", __initData(AlertModal.AlertModal, obj2));
       }, items2);
       const items3 = [tmp.raisedIcon, callback1];
       const callback3 = onPress.useCallback(() => {
         const obj2 = { header: null, title: null, content: null, actions: null };
         const obj = useAlertStore;
-        obj2.header = __initData2(hasOwnProperty, {
+        obj2.header = __initData(hasOwnProperty, {
           style: closure_1.raisedIcon,
-          children: __initData2(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+          children: __initData(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
         });
         const intl = util.intl;
         obj2.title = intl.string(util.t.MKW8z2);
@@ -590,12 +540,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { onPress: callback1, text: null };
         const intl3 = util.intl;
         obj5.text = intl3.string(util.t["3PatSz"]);
-        obj4.children = __initData2(AlertModal.AlertActionButton, obj5, "confirm");
-        obj2.actions = __initData2(AlertModal.AlertActions, obj4);
-        obj.openAlert("already-logged-in-alert", __initData2(AlertModal.AlertModal, obj2));
+        obj4.children = __initData(AlertModal.AlertActionButton, obj5, "confirm");
+        obj2.actions = __initData(AlertModal.AlertActions, obj4);
+        obj.openAlert("already-logged-in-alert", __initData(AlertModal.AlertModal, obj2));
         const obj3 = {
           style: closure_1.raisedIcon,
-          children: __initData2(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
+          children: __initData(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }),
         };
       }, items3);
       const items4 = [token, callback2, callback3];
@@ -662,32 +612,35 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         absolute: true,
         wide: true,
         tall: true,
-        gradientOverride: closure_12[5],
+        gradientOverride: closure_11[5],
         mix: true,
         angleOverride: 0,
         mixAmount: null,
       };
-      let obj3 = { dark: token(4896).OverlayOpacity.LEVEL_1 };
+      let obj3 = { dark: token(4897).OverlayOpacity.LEVEL_1 };
       obj2.mixAmount = obj3;
-      const items6 = [closure_13(ThemedGradientDefault, obj2)];
+      const items6 = [closure_12(ThemedGradientDefault, obj2)];
       let obj4 = { style: tmp.container, children: null };
       let obj5 = { style: tmp.centerContent, children: null };
-      const items7 = [closure_13(callback3, { source: token(13913), style: tmp.logo })];
+      const obj6 = { source: null, style: null };
+      obj6.source = token(14006);
+      obj6.style = tmp.logo;
+      const items7 = [closure_12(FastImageDefault, obj6)];
       const obj7 = { style: tmp.loadingContainer, children: null };
-      const items8 = [closure_13(callback2, {})];
+      const items8 = [closure_12(callback2, {})];
       const obj8 = { variant: "text-lg/semibold", children: null };
       let intl = token(1126).intl;
       obj8.children = intl.string(token(1126).t.W9uNdG);
-      items8[1] = closure_13(token(5086).Text, obj8);
+      items8[1] = closure_12(token(5087).Text, obj8);
       obj7.children = items8;
-      items7[1] = closure_14(callback1, obj7);
+      items7[1] = closure_13(callback1, obj7);
       obj5.children = items7;
-      const items9 = [closure_14(callback1, obj5)];
+      const items9 = [closure_13(callback1, obj5)];
       const obj9 = { style: tmp.bottomContent, children: null };
       const obj10 = { variant: "text-sm/normal", children: null };
       let intl2 = token(1126).intl;
       obj10.children = intl2.string(token(1126).t["ZXe5/Y"]);
-      const items10 = [closure_13(token(5086).Text, obj10)];
+      const items10 = [closure_12(token(5087).Text, obj10)];
       const obj11 = {
         textColor: "text-default",
         text: null,
@@ -699,11 +652,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj11.text = intl3.string(token(1126).t.FIEwfG);
       obj11.onPress = onPress;
       obj11.textStyle = tmp.link;
-      items10[1] = closure_13(token(6614).LinkButton, obj11);
+      items10[1] = closure_12(token(6621).LinkButton, obj11);
       obj9.children = items10;
-      items9[1] = closure_14(callback1, obj9);
+      items9[1] = closure_13(callback1, obj9);
       obj4.children = items9;
-      items6[1] = closure_14(callback1, obj4);
+      items6[1] = closure_13(callback1, obj4);
       obj.children = items6;
-      return closure_14(callback1, obj);
+      return closure_13(callback1, obj);
     };

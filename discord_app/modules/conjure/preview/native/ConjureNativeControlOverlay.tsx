@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = 280;
-const createStyles = fn(5090);
+const createStyles = fn(5091);
 let obj2 = {
   root: { flex: 1 },
   content: { flex: 1 },
@@ -85,12 +85,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ projectId, visible, onOpenPublishedApp, children } = active);
       const tmp4 = closure_10();
       let obj = conjureControlPhase(576);
-      conjureControlPhase = conjureControlPhase(16902).useConjureControlPhase(active.active);
-      let obj2 = conjureControlPhase(16902);
-      const conjureControlStop = conjureControlPhase(16902).useConjureControlStop(projectId);
+      conjureControlPhase = conjureControlPhase(17030).useConjureControlPhase(active.active);
+      let obj2 = conjureControlPhase(17030);
+      const conjureControlStop = conjureControlPhase(17030).useConjureControlStop(projectId);
       ({ stop, stopping } = conjureControlStop);
-      let obj3 = conjureControlPhase(16902);
-      const conjureControlTuning = conjureControlPhase(12372).useConjureControlTuning(projectId);
+      let obj3 = conjureControlPhase(17030);
+      const conjureControlTuning = conjureControlPhase(11377).useConjureControlTuning(projectId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [sharedValue2];
         let fn = function c() {
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp8, tmp9] = cResult;
       }
-      let obj4 = conjureControlPhase(12372);
+      let obj4 = conjureControlPhase(11377);
       const stateFromStores = conjureControlPhase(504).useStateFromStores(tmp8, tmp9);
       let tmp12 = visible;
       if (visible) {
@@ -111,9 +111,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp12;
       const tmpResult = conjureControlPhase(504);
-      const sharedValue = conjureControlPhase(4810).useSharedValue(0);
-      const tmpResult7 = conjureControlPhase(4810);
-      const sharedValue1 = conjureControlPhase(4810).useSharedValue(0);
+      const sharedValue = conjureControlPhase(4811).useSharedValue(0);
+      const tmpResult7 = conjureControlPhase(4811);
+      const sharedValue1 = conjureControlPhase(4811).useSharedValue(0);
       if (cResult[2] === conjureControlPhase) {
         if (cResult[3] === stateFromStores) {
           if (cResult[4] === sharedValue1) {
@@ -121,7 +121,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp16 = cResult[6];
           }
           const effect = sharedValue.useEffect(tmp15, tmp16);
-          sharedValue2 = tmp(4810).useSharedValue(0.5);
+          sharedValue2 = tmp(4811).useSharedValue(0.5);
           if (cResult[7] === tmp12) {
             if (cResult[8] === sharedValue2) {
               if (cResult[9] === stateFromStores) {
@@ -176,8 +176,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               U.__workletHash = 5735939888549;
               U.__initData = __initData;
-              const animatedStyle = tmp(4810).useAnimatedStyle(U);
-              const tmpResult10 = tmp(4810);
+              const animatedStyle = tmp(4811).useAnimatedStyle(U);
+              const tmpResult10 = tmp(4811);
               class M {
                 constructor() {
                   obj = { transform: null };
@@ -194,8 +194,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               M.__closure = obj6;
               M.__workletHash = 11424550793114;
               M.__initData = __initData2;
-              const animatedStyle1 = tmp(4810).useAnimatedStyle(M);
-              const tmpResult11 = tmp(4810);
+              const animatedStyle1 = tmp(4811).useAnimatedStyle(M);
+              const tmpResult11 = tmp(4811);
               class G {
                 constructor() {
                   obj = { opacity: closure_5.get() };
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               G.__closure = obj7;
               G.__workletHash = 3342596553897;
               G.__initData = __initData3;
-              const animatedStyle2 = tmp(4810).useAnimatedStyle(G);
+              const animatedStyle2 = tmp(4811).useAnimatedStyle(G);
               if (visible) {
                 visible = "idle" !== conjureControlPhase;
               }
@@ -636,7 +636,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[13] = conjureControlTuning;
                 cResult[14] = stringResult;
               }
-              const tmpResult12 = tmp(4810);
+              const tmpResult12 = tmp(4811);
             }
           }
           class B {
@@ -682,7 +682,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp20 = items3;
           tmp19 = B;
           obj8 = sharedValue;
-          const tmpResult9 = tmp(4810);
+          const tmpResult9 = tmp(4811);
         }
       }
       class D {
@@ -747,7 +747,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = items4;
       tmp16 = items4;
       tmp15 = D;
-      const tmpResult8 = conjureControlPhase(4810);
+      const tmpResult8 = conjureControlPhase(4811);
     }
   : function ConjureNativeControlOverlay(arg0) {
       ({ projectId, visible, onOpenPublishedApp } = arg0);
@@ -758,13 +758,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue2;
       ({ active, children } = arg0);
       const tmp = closure_10();
-      conjureControlPhase = conjureControlPhase(16902).useConjureControlPhase(active);
-      let obj = conjureControlPhase(16902);
-      const conjureControlStop = conjureControlPhase(16902).useConjureControlStop(projectId);
+      conjureControlPhase = conjureControlPhase(17030).useConjureControlPhase(active);
+      let obj = conjureControlPhase(17030);
+      const conjureControlStop = conjureControlPhase(17030).useConjureControlStop(projectId);
       ({ stop, stopping } = conjureControlStop);
-      let obj2 = conjureControlPhase(16902);
-      const conjureControlTuning = conjureControlPhase(12372).useConjureControlTuning(projectId);
-      let obj3 = conjureControlPhase(12372);
+      let obj2 = conjureControlPhase(17030);
+      const conjureControlTuning = conjureControlPhase(11377).useConjureControlTuning(projectId);
+      let obj3 = conjureControlPhase(11377);
       let items = [sharedValue2];
       const stateFromStores = conjureControlPhase(504).useStateFromStores(items, () => sharedValue2.useReducedMotion);
       let tmp8 = visible;
@@ -773,9 +773,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp8;
       let obj4 = conjureControlPhase(504);
-      sharedValue = conjureControlPhase(4810).useSharedValue(0);
-      const tmp2Result = conjureControlPhase(4810);
-      sharedValue1 = conjureControlPhase(4810).useSharedValue(0);
+      sharedValue = conjureControlPhase(4811).useSharedValue(0);
+      const tmp2Result = conjureControlPhase(4811);
+      sharedValue1 = conjureControlPhase(4811).useSharedValue(0);
       const items1 = [sharedValue1, conjureControlPhase, stateFromStores];
       const effect = sharedValue.useEffect(() => {
         if ("controlling" === conjureControlPhase) {
@@ -799,8 +799,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const result2 = sharedValue1.set(0);
         }
       }, items1);
-      const tmp2Result6 = conjureControlPhase(4810);
-      sharedValue2 = conjureControlPhase(4810).useSharedValue(0.5);
+      const tmp2Result6 = conjureControlPhase(4811);
+      sharedValue2 = conjureControlPhase(4811).useSharedValue(0.5);
       const items2 = [tmp8, sharedValue2, stateFromStores];
       const effect1 = sharedValue.useEffect(() => {
         if (closure_2) {
@@ -818,7 +818,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ReanimatedRexport.cancelAnimation(sharedValue2);
         const result2 = sharedValue2.set(0.5);
       }, items2);
-      const tmp2Result7 = conjureControlPhase(4810);
+      const tmp2Result7 = conjureControlPhase(4811);
       class P {
         constructor() {
           obj = { height: null };
@@ -830,8 +830,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       P.__closure = { shown: sharedValue1, barHeight: sharedValue };
       P.__workletHash = 10340375351296;
       P.__initData = __initData4;
-      const animatedStyle = conjureControlPhase(4810).useAnimatedStyle(P);
-      const tmp2Result8 = conjureControlPhase(4810);
+      const animatedStyle = conjureControlPhase(4811).useAnimatedStyle(P);
+      const tmp2Result8 = conjureControlPhase(4811);
       class V {
         constructor() {
           obj = { transform: null };
@@ -847,8 +847,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       V.__closure = { shown: sharedValue1, barHeight: sharedValue };
       V.__workletHash = 13798762691965;
       V.__initData = __initData5;
-      const animatedStyle1 = conjureControlPhase(4810).useAnimatedStyle(V);
-      const tmp2Result9 = conjureControlPhase(4810);
+      const animatedStyle1 = conjureControlPhase(4811).useAnimatedStyle(V);
+      const tmp2Result9 = conjureControlPhase(4811);
       class L {
         constructor() {
           obj = { opacity: closure_5.get() };
@@ -858,7 +858,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       L.__closure = { pulse: sharedValue2 };
       L.__workletHash = 6446462441996;
       L.__initData = __initData6;
-      const animatedStyle2 = conjureControlPhase(4810).useAnimatedStyle(L);
+      const animatedStyle2 = conjureControlPhase(4811).useAnimatedStyle(L);
       const intl = tmp2(1126).intl;
       const tmp18 = stateFromStores(3827);
       if (tmp8) {
@@ -888,10 +888,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return sharedValue.set(nativeEvent.nativeEvent.layout.height);
             };
             if (tmp8) {
-              let tmp42Result = closure_6(tmp2(14051).AILoader, { size: 12, color: "text-overlay-light" });
+              let tmp42Result = closure_6(tmp2(14148).AILoader, { size: 12, color: "text-overlay-light" });
             } else {
               const obj8 = { size: "sm", color: tmp17(587).colors.TEXT_OVERLAY_LIGHT };
-              tmp42Result = closure_6(tmp2(16903).SparklesIcon, obj8);
+              tmp42Result = closure_6(tmp2(17031).SparklesIcon, obj8);
             }
             const items5 = [tmp42Result, ,];
             const obj9 = {
@@ -910,13 +910,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             obj9.accessibilityLabel = combined;
             obj9.children = stringResult;
-            items5[1] = closure_6(tmp2(5086).Text, obj9);
+            items5[1] = closure_6(tmp2(5087).Text, obj9);
             if (!tmp8) {
               let tmp27Result = null;
               items5[2] = tmp27Result;
               obj7.children = items5;
-              obj6.children = closure_7(tmp17(4810).View, obj7);
-              tmp42Result4 = closure_6(tmp17(4810).View, obj6);
+              obj6.children = closure_7(tmp17(4811).View, obj7);
+              tmp42Result4 = closure_6(tmp17(4811).View, obj6);
             }
             const obj10 = { style: tmp.actions, children: null };
             let tmp42Result5 = null;
@@ -925,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const intl3 = tmp2(1126).intl;
               obj11.text = intl3.string(tmp17(3827)["1NcO7H"]);
               obj11.onPress = onOpenPublishedApp;
-              tmp42Result5 = closure_6(tmp2(5375).Button, obj11);
+              tmp42Result5 = closure_6(tmp2(5376).Button, obj11);
             }
             const items6 = [tmp42Result5];
             let tmp42Result6 = null;
@@ -935,7 +935,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj12.text = intl4.string(tmp17(3827).oU59sU);
               obj12.loading = stopping;
               obj12.onPress = stop;
-              tmp42Result6 = closure_6(tmp2(5375).Button, obj12);
+              tmp42Result6 = closure_6(tmp2(5376).Button, obj12);
             }
             items6[1] = tmp42Result6;
             obj10.children = items6;
@@ -959,7 +959,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj16 = { style: null, pointerEvents: "none" };
           const items9 = [tmp.glow, animatedStyle2];
           obj16.style = items9;
-          const items10 = [closure_6(tmp17(4810).View, obj16)];
+          const items10 = [closure_6(tmp17(4811).View, obj16)];
           const obj17 = { style: tmp.border, pointerEvents: "none" };
           items10[1] = closure_6(tmp28, obj17);
           obj15.children = items10;
@@ -969,5 +969,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj5.children = items7;
         return closure_7(sharedValue1, obj5);
       }
-      const tmp2Result10 = conjureControlPhase(4810);
+      const tmp2Result10 = conjureControlPhase(4811);
     };
