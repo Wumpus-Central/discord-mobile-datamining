@@ -1,9 +1,10 @@
 // _runtime/metro/06328__.js
-import _mod6329 from "06329__.js";
+const global = arg0;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const initialize = function initialize() {
-  _mod6329.startListening();
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
 };

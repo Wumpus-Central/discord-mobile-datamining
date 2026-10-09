@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 130,
-  height: 82,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "3c9f06960d8f7bccd426e0e87c7d7947",
-  name: "screenshare_splash",
+  hash: "64a0c4e1c40187f5f8992fdc3d83c704",
+  name: "ic_arrow_back_24px",
   type: "png",
 });

@@ -1,13 +1,31 @@
 // _runtime/metro/11245__.js
-import registerAsset from "01132__.js";
+import _mod11246 from "11246__.js";
+import setupIntegration from "11223__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 200,
-  height: 104,
-  scales: [1, 2, 3],
-  hash: "47b8d830403152e049ae36d361c38751",
-  name: "img_invalid_link_dark",
-  type: "png",
-});
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
+          }
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
+        }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod11246.addMetadataToStackFrames(options.getOptions().stackParser, type);
+      }
+    });
+  },
+}));

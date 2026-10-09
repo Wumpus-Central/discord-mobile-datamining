@@ -1,4 +1,11 @@
 // _runtime/metro/14163__.js
-import _mod14152 from "14152__.js";
+import registerAsset from "01132__.js";
 
-export default (arg0, arg1) => new _mod14152(arg0, arg1).minor;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "42c5142fba4f2f3f3d86c5b7ea6fd4ac",
+  name: "YouTab",
+  type: "lottie",
+});

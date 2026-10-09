@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 98,
-  height: 88,
+  httpServerLocation: "/assets/modules/premium/native/images/perks",
+  width: 300.5,
+  height: 175,
   scales: [2, 3],
-  hash: "e786e2db9ac41808374260a48d3a5876",
-  name: "img_marketing_frog",
+  hash: "767971903774f3e283939a2d77b5c958",
+  name: "server_boosts",
   type: "png",
 });

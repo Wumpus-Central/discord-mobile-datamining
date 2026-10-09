@@ -1,4 +1,11 @@
 // _runtime/metro/14167__.js
-import _mod14166 from "14166__.js";
+import registerAsset from "01132__.js";
 
-export default (arg0, arg1, arg2) => _mod14166(arg1, arg0, arg2);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "e2ea348445c8a662d796c112d980d074",
+  name: "Microphone",
+  type: "lottie",
+});

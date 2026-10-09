@@ -1,30 +1,13 @@
 // _runtime/metro/11067__.js
-import setupIntegration from "11049__.js";
+import registerAsset from "01132__.js";
 
-const weakMap = new WeakMap();
-
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function () {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(10999).getOriginalFunction(this);
-        const obj = closure_1_0(10999);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {}
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
-  },
-}));
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "494f8fec7816d9dd79747ac9155bc550",
+  name: "voice_bar_mute_off",
+  type: "png",
+});

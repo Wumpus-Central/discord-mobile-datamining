@@ -1,34 +1,50 @@
 // _runtime/metro/06487__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod6488 from "06488__.js";
-import noop_mod from "00019__.js";
+import cancelAnimation from "../01656_cancelAnimation.js";
+import value2 from "../06306_value2.js";
+import _mod6310 from "06310__.js";
+import BottomSheetContext from "../06316_BottomSheetContext.js";
+import noop from "00019__.js";
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
-  ({ backgroundComponent, backgroundStyle } = arg0);
-  let items = [backgroundStyle];
-  ({ animatedIndex, animatedPosition } = arg0);
-  const style = useMemo(() => {
-    const items = [_mod6488.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
-  }, items);
-  if (backgroundComponent == null) {
-    backgroundComponent = backgroundStyle(6489).BottomSheetBackground;
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
+
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod6310.useGestureEventsHandlersDefault;
   }
-  return (
-    <backgroundComponent
-      pointerEvents="none"
-      animatedIndex={animatedIndex}
-      animatedPosition={animatedPosition}
-      style={style}
-    />
+  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod6310.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod6310.useGestureHandler(
+    value2.GESTURE_SOURCE.CONTENT,
+    animatedContentGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
   );
-});
-memoResult.displayName = "BottomSheetBackgroundContainer";
-
-export const BottomSheetBackgroundContainer = memoResult;
+  const gestureHandler1 = _mod6310.useGestureHandler(
+    value2.GESTURE_SOURCE.HANDLE,
+    animatedHandleGestureState,
+    sharedValue,
+    handleOnStart,
+    handleOnChange,
+    handleOnEnd,
+    handleOnFinalize,
+  );
+  const items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(
+    () => ({
+      contentPanGestureHandler: gestureHandler,
+      handlePanGestureHandler: gestureHandler1,
+      animatedGestureSource: sharedValue,
+    }),
+    items,
+  );
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+}

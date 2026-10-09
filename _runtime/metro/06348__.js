@@ -1,7 +1,4 @@
 // _runtime/metro/06348__.js
-let closure_0 = 1;
+import _modDef6349 from "06349__.js";
 
-export const getNextHandlerTag = function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
-};
+export default _modDef6349;

@@ -1,15 +1,21 @@
 // _runtime/metro/05186__.js
-import identity from "../00549_identity.js";
-import _mod680 from "00680__.js";
-import constant from "../05187_constant.js";
 
-if (_mod680) {
-  let fn = (arg0, arg1) => {
-    const obj = { configurable: true, enumerable: false, value: constant(arg1), writable: true };
-    return _mod680(arg0, "toString", obj);
+export default function shortOut(arg0) {
+  closure_0 = arg0;
+  c1 = 0;
+  closure_2 = 0;
+  return () => {
+    const tmp = now();
+    closure_2 = tmp;
+    if (0 < 16 - (tmp - closure_2)) {
+      const sum = c1 + 1;
+      c1 = sum;
+      if (800 <= sum) {
+        return arguments[0];
+      }
+    } else {
+      c1 = 0;
+    }
+    return closure_0(...arguments);
   };
-} else {
-  fn = identity;
 }
-
-export default fn;

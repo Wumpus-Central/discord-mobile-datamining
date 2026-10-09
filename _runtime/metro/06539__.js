@@ -1,11 +1,13 @@
 // _runtime/metro/06539__.js
-import _mod6540 from "06540__.js";
 
-export default function toPropertyKey(arg0) {
-  const tmp = _mod6540(arg0, "string");
-  let text = tmp;
-  if ("symbol" != obj.default(tmp)) {
-    text = `${tmp}`;
+export default function _arrayLikeToArray(arg0, arg1) {
+  let length = arg1;
+  if (tmp) {
+    length = arg0.length;
   }
-  return text;
+  const ArrayResult = Array(length);
+  for (let num = 0; num < length; num = num + 1) {
+    ArrayResult[num] = arg0[num];
+  }
+  return ArrayResult;
 }

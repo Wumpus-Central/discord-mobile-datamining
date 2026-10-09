@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/images/native/emoji",
   width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "7e58d4dc1cf5cf663768e2048a34f162",
-  name: "ic_file_small_archive",
+  height: 24,
+  scales: [2, 3],
+  hash: "79fe2790d902aba7709041b8b44a4ced",
+  name: "ic_emoji_recent_color_24px",
   type: "png",
 });

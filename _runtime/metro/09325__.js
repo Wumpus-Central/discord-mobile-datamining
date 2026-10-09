@@ -1,13 +1,39 @@
 // _runtime/metro/09325__.js
-import registerAsset from "01132__.js";
+import Link from "../01504_Link.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/wumpus",
-  width: 84,
-  height: 66,
-  scales: [1],
-  hash: "18d0a2a6cf6cc6fa0358c3bbfd2bce6e",
-  name: "wumpus-mario",
-  type: "png",
-});
+require = arg1;
+
+export const useInvalidPreventRemoveError = function useInvalidPreventRemoveError(descriptors) {
+  const first = Object.keys(Link.usePreventRemoveContext().preventedRoutes)[0];
+  let prop;
+  if (descriptors[first] != null) {
+    options = tmp2.options;
+    if (options != null) {
+      prop = options.headerBackButtonMenuEnabled;
+    }
+  }
+  let name;
+  if (descriptors[first] != null) {
+    const route = tmp2.route;
+    if (route != null) {
+      name = route.name;
+    }
+  }
+  const items = [first, prop, name];
+  const effect = noop.useEffect(() => {
+    if (null != first) {
+      if (prop) {
+        const _HermesInternal = HermesInternal;
+        const _console = console;
+        console.error(
+          "The screen " +
+            name +
+            " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " +
+            name +
+            " screen to get rid of this error.",
+        );
+      }
+    }
+  }, items);
+};

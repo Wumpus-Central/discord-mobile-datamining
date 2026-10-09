@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
+  httpServerLocation: "/assets/modules/age_gate/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f6824e7bd3f8a83813ab333cc29423f8",
-  name: "yellow-alert",
+  hash: "d591eaa154611b58ebc00af8c514af58",
+  name: "check",
   type: "png",
 });

@@ -1,40 +1,13 @@
 // _runtime/metro/08541__.js
-import _mod8542 from "08542__.js";
-import get_ActivityIndicator from "00017__.js";
+import registerAsset from "01132__.js";
 
-({
-  NativeModules: c3,
-  Platform,
-  TurboModuleRegistry: closure_4,
-  requireNativeComponent: hasOwnProperty,
-} = get_ActivityIndicator);
-
-export const getNativeComponent = () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod8542.getInstallationErrorMessage());
-    }
-  }
-};
-export const getNativeModule = () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod8542.getInstallationErrorMessage());
-    }
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "60c832d89b9f9ddf8ba9ba1f90955760",
+  name: "ic-location",
+  type: "png",
+});

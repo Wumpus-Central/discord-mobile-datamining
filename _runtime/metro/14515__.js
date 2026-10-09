@@ -1,36 +1,19 @@
 // _runtime/metro/14515__.js
-import get_ActivityIndicator from "00017__.js";
+import _mod14481 from "14481__.js";
+import _mod14502 from "14502__.js";
+import f2 from "../14516_f.js";
+import _mod14526 from "14526__.js";
+import _mod14527 from "14527__.js";
 
-export default function getReactNativePlatformConstants() {
-  const obj = {
-    osRelease: "",
-    model: "",
-    serverHost: "",
-    uiMode: "",
-    serial: "",
-    forceTouch: false,
-    interfaceIdiom: "",
-    systemName: "",
+let closure_2 = _mod14481([].concat);
+
+export default _mod14502("Reflect", "ownKeys") ||
+  function ownKeys(arg0) {
+    const fResult = f2.f(_mod14526(arg0));
+    const f = _mod14527.f;
+    let tmp2 = fResult;
+    if (f) {
+      tmp2 = closure_2(fResult, f(arg0));
+    }
+    return tmp2;
   };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
-    const obj5 = {};
-    const merged = Object.assign(obj);
-    ({
-      Release: obj3.osRelease,
-      Model: obj3.model,
-      ServerHost: obj3.serverHost,
-      uiMode: obj3.uiMode,
-      Serial: obj3.serial,
-    } = get_ActivityIndicator.Platform.constants);
-    return obj5;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    const obj6 = {};
-    const merged1 = Object.assign(obj);
-    obj6.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj6;
-  } else {
-    return obj;
-  }
-}

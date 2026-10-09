@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/age_gate/native/images",
-  width: 274.5,
-  height: 110,
-  scales: [2, 3],
-  hash: "43e5ff0d9ea5f04fe209ebfd15e2d439",
-  name: "nsfw_gate_unavailable",
+  httpServerLocation: "/assets/modules/create_guild/native/images",
+  width: 161,
+  height: 105,
+  scales: [1, 2, 3],
+  hash: "15df55e98006c5e50dacb86d466b47d8",
+  name: "invite-wumpus-ticket",
   type: "png",
 });

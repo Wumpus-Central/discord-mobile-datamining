@@ -1,3 +1,13 @@
 // _runtime/metro/08713__.js
+import registerAsset from "01132__.js";
 
-export default { MODE_NUMBER: 1, MODE_ALPHA_NUM: 2, MODE_8BIT_BYTE: 4, MODE_KANJI: 8 };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "13168e0700737564714d8e4fc44106f6",
+  name: "ShareIcon",
+  type: "png",
+});

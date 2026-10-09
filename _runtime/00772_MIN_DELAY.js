@@ -357,7 +357,7 @@ export function makeOfflineTransport(arg0) {
         flag = false;
       }
       closure_130_1 = flag;
-      return "Reflect";
+      return "Set";
     };
     closure_1 = closure_0(createStore);
     if (createStore.createStore) {

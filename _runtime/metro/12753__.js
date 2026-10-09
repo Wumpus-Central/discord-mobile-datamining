@@ -1,15 +1,41 @@
 // _runtime/metro/12753__.js
-const require = globalThis.__r;
+import _mod17 from "00017__.js";
 
-for (const key10013 in require("enhancedFetch")) {
-  arg5[key10013] = require("enhancedFetch")[key10013];
-  continue;
-}
-for (const key10017 in require("fillProductsWithAdditionalData")) {
-  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
-  continue;
-}
-for (const key10021 in require("RNIapIos")) {
-  arg5[key10021] = require("RNIapIos")[key10021];
-  continue;
-}
+const Platform = _mod17.Platform;
+const frozen = Object.freeze({
+  allFiles: "*/*",
+  audio: "audio/*",
+  csv: ["text/csv", "text/comma-separated-values"],
+  doc: "application/msword",
+  docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  images: "image/*",
+  pdf: "application/pdf",
+  plainText: "text/plain",
+  json: "application/json",
+  ppt: "application/vnd.ms-powerpoint",
+  pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+  video: "video/*",
+  xls: "application/vnd.ms-excel",
+  xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  zip: "application/zip",
+});
+const frozen1 = Object.freeze({
+  allFiles: "public.item",
+  audio: "public.audio",
+  csv: "public.comma-separated-values-text",
+  doc: "com.microsoft.word.doc",
+  docx: "org.openxmlformats.wordprocessingml.document",
+  images: "public.image",
+  pdf: "com.adobe.pdf",
+  plainText: "public.plain-text",
+  json: "public.json",
+  ppt: "com.microsoft.powerpoint.ppt",
+  pptx: "org.openxmlformats.presentationml.presentation",
+  video: "public.movie",
+  xls: "com.microsoft.excel.xls",
+  xlsx: "org.openxmlformats.spreadsheetml.sheet",
+  zip: "public.zip-archive",
+});
+
+export const types = frozen;
+export const typesAreEqual = true;

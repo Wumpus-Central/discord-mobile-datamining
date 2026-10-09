@@ -1,16 +1,17 @@
 // _runtime/metro/06712__.js
-import CardAnimationContext from "../06706_CardAnimationContext.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-require = arg1;
-
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+const constants = _mod17.Platform.constants;
+if (constants != null) {
+  const reactNativeVersion = constants.reactNativeVersion;
+}
+try {
+  let major;
+  if (reactNativeVersion != null) {
+    major = reactNativeVersion.major;
   }
-};
+  if (0 !== major) {
+    const InteractionManager = _mod17.InteractionManager;
+  }
+  exports.InteractionManager = InteractionManager;
+} catch (err) {}

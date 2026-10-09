@@ -1,54 +1,19 @@
 // _runtime/metro/06602__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod6303 from "06303__.js";
-import LegacyBaseButton from "../06326_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
+import _mod19 from "00019__.js";
+import _mod6554 from "06554__.js";
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(
-  forwardRef((onFocus, ref) => {
-    onFocus = onFocus.onFocus;
-    const onBlur = onFocus.onBlur;
-    const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-    const shouldHandleKeyboardEvents = _mod6303.useBottomSheetInternal().shouldHandleKeyboardEvents;
-    const items = [onFocus, shouldHandleKeyboardEvents];
-    const items1 = [onBlur, shouldHandleKeyboardEvents];
-    const items2 = [shouldHandleKeyboardEvents];
-    const tmp2 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = true;
-      if (onFocus) {
-        tmp(arg0);
-      }
-    }, items);
-    React3(
-      () => () => {
-        shouldHandleKeyboardEvents.value = false;
-      },
-      items2,
-    );
-    const tmp3 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1);
-    const merged1 = Object.assign(merged);
-    return jsx(LegacyBaseButton.TextInput, {
-      ref,
-      onFocus: tmp2,
-      onBlur: React2((arg0) => {
-        shouldHandleKeyboardEvents.value = false;
-        if (onBlur) {
-          tmp(arg0);
-        }
-      }, items1),
-    });
-  }),
-);
-memoResult.displayName = "BottomSheetTextInput";
+_mod19.useCallback;
 
-export default memoResult;
+export const useMappingHelper = () => {
+  const recyclerViewContext = _mod6554.useRecyclerViewContext();
+  const obj2 = { getMappingKey: null };
+  const items = [recyclerViewContext];
+  obj2.getMappingKey = useCallback((arg0, arg1) => {
+    let tmp = arg0;
+    if (recyclerViewContext) {
+      tmp = arg1;
+    }
+    return tmp;
+  }, items);
+  return obj2;
+};

@@ -1,19 +1,13 @@
 // _runtime/metro/12767__.js
-const require = globalThis.__r;
+import registerAsset from "01132__.js";
 
-for (const key10013 in require("RNIapAmazonModule")) {
-  arg5[key10013] = require("RNIapAmazonModule")[key10013];
-  continue;
-}
-for (const key10017 in require("12760__.js")) {
-  arg5[key10017] = require("12760__.js")[key10017];
-  continue;
-}
-for (const key10021 in require("12761__.js")) {
-  arg5[key10021] = require("12761__.js")[key10021];
-  continue;
-}
-for (const key10025 in require("12768__.js")) {
-  arg5[key10025] = require("12768__.js")[key10025];
-  continue;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "9d92aa1c45b82a477ca0857bf43b0863",
+  name: "PencilSparkleIcon",
+  type: "png",
+});

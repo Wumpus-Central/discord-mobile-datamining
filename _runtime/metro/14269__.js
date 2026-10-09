@@ -1,11 +1,4 @@
 // _runtime/metro/14269__.js
-import registerAsset from "01132__.js";
+import _mod14262 from "14262__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/intl/messages",
-  scales: [1],
-  hash: "b076f35cb059256a96b9ed5a60c93c6b",
-  name: "international.compiled.messages",
-  type: "jsona",
-});
+export default (arg0, arg1, arg2) => _mod14262(arg0, arg1, arg2) < 0;

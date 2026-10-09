@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 320,
   height: 320,
   scales: [1],
-  hash: "76a844d17fcdbbb8dd91d3757efd431a",
-  name: "default_provisional_avatar_2",
+  hash: "aedb4c161a8b10bd63dac9d5860c62fe",
+  name: "default_provisional_avatar_1",
   type: "png",
 });

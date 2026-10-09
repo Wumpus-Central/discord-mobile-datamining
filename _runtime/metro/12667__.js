@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "6deb5144fd1fa39d4c62b384e76c1144",
-  name: "BookmarkIcon",
+  httpServerLocation: "/assets/modules/premium/native/images",
+  width: 216,
+  height: 115,
+  scales: [1],
+  hash: "6aec591fd331d7a257e3dc97a1b2a4c2",
+  name: "gift_cake",
   type: "png",
 });

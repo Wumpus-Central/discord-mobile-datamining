@@ -1,15 +1,15 @@
 // _runtime/metro/04514__.js
-import module_4506_mod from "04506__.js";
-import requiredArgs_mod from "../04157_requiredArgs.js";
+import module_4503_mod from "04503__.js";
+import requiredArgs_mod from "../04159_requiredArgs.js";
 
-let module_4506 = module_4506_mod;
-if (!module_4506) {
-  const obj = { default: module_4506 };
+let module_4503 = module_4503_mod;
+if (!module_4503) {
+  const obj = { default: module_4503 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4506;
+  tmp3 = module_4503;
 }
-module_4506 = tmp3;
+module_4503 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
+export default function isThisHour(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4506.default(Date.now(), arg0);
+  return module_4503.default(Date.now(), arg0);
 };
 export default exports.default;

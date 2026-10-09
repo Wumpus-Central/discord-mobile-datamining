@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f707107902b0c142d4942c459b0a28b3",
-  name: "TwitchNeutralIcon",
+  hash: "34bb1c89964a0349aafd993e713936d7",
+  name: "ScreenIcon",
   type: "png",
 });

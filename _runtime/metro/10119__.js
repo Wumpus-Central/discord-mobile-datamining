@@ -1,386 +1,221 @@
 // _runtime/metro/10119__.js
-import cancelAnimation from "../01655_cancelAnimation.js";
-import SINGLE_ITEM from "../10104_SINGLE_ITEM.js";
-import handlerOffsetDirection from "../10107_handlerOffsetDirection.js";
-import round from "../10120_round.js";
+import cancelAnimation from "../01656_cancelAnimation.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
-const require = globalThis.__r;
-
 require = fn;
-const useRef = fn(19).useRef;
-let closure_4 = {
-  code: "function pnpm_useCarouselControllerTsx1(){const{handlerOffset,round,size,dataInfo,convertToSharedIndex,loop,autoFillData}=this.__closure;const handlerOffsetValue=handlerOffset.value;const toInt=round(handlerOffsetValue/size)%dataInfo.length;const isPositive=handlerOffsetValue<=0;const i=isPositive?Math.abs(toInt):Math.abs(toInt>0?dataInfo.length-toInt:0);const newSharedIndexValue=convertToSharedIndex({loop:loop,rawDataLength:dataInfo.originalLength,autoFillData:autoFillData,index:i});return{i:i,newSharedIndexValue:newSharedIndexValue};}",
-};
-let closure_5 = {
-  code: "function pnpm_useCarouselControllerTsx2({i:i,newSharedIndexValue:newSharedIndexValue}){const{index,runOnJS,setSharedIndex}=this.__closure;index.value=i;runOnJS(setSharedIndex)(newSharedIndexValue);}",
-};
-let closure_6 = {
-  code: 'function pnpm_useCarouselControllerTsx3(toValue,onFinished){const{runOnJS,onScrollEnd,duration,Easing,dealWithAnimation,withAnimation}=this.__closure;var _withAnimation;const callback=function(isFinished){"worklet";if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}};const defaultWithAnimation={type:"timing",config:{duration:duration,easing:Easing.easeOutQuart}};return dealWithAnimation((_withAnimation=withAnimation)!==null&&_withAnimation!==void 0?_withAnimation:defaultWithAnimation)(toValue,callback);}',
-};
-let closure_7 = {
-  code: "function pnpm_useCarouselControllerTsx4(isFinished){const{runOnJS,onScrollEnd,onFinished}=this.__closure;if(isFinished){runOnJS(onScrollEnd)();onFinished&&runOnJS(onFinished)();}}",
-};
+let closure_3 = ["width", "height", "borderRadius", "backgroundColor"];
+let closure_4 = ["width", "height", "borderRadius", "backgroundColor"];
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
 let closure_8 = {
-  code: "function pnpm_useCarouselControllerTsx5(opts={}){const{canSliding,loop,index,dataInfo,size,overscrollEnabled,containerSize,onScrollStart,currentFixedPage,handlerOffset,scrollWithTiming}=this.__closure;var _onScrollStart;const{count=1,animated=true,onFinished:onFinished}=opts;if(!canSliding())return;if(!loop&&index.value>=dataInfo.length-1)return;const visibleContentWidth=(dataInfo.length-index.value)*size;if(!overscrollEnabled&&!(visibleContentWidth>containerSize.value.width)){return;}(_onScrollStart=onScrollStart)===null||_onScrollStart===void 0||_onScrollStart();const nextPage=currentFixedPage()+count;index.value=nextPage;if(animated){handlerOffset.value=scrollWithTiming(-nextPage*size,onFinished);}else{handlerOffset.value=-nextPage*size;onFinished===null||onFinished===void 0||onFinished();}}",
+  code: "function pnpm_PaginationItemTsx1(){const{runOnJS,handleCustomAnimation,animValue}=this.__closure;var _animValue;runOnJS(handleCustomAnimation)((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value);}",
+};
+const __initData = {
+  code: 'function pnpm_PaginationItemTsx2(){const{size,defaultDotSize,dotStyle,activeDotStyle,animValue,index,count,interpolate,Extrapolation,interpolateColor,customReanimatedStyleRef}=this.__closure;var _dotStyle,_activeDotStyle,_animValue,_animValue2,_animValue3,_ref,_ref2,_customReanimatedStyl,_restStyle$transform,_customReanimatedStyl2,_customReanimatedStyl3;const{width=size||defaultDotSize,height=size||defaultDotSize,borderRadius:borderRadius,backgroundColor="#FFF",...restDotStyle}=(_dotStyle=dotStyle)!==null&&_dotStyle!==void 0?_dotStyle:{};const{width:activeWidth=width,height:activeHeight=height,borderRadius:activeBorderRadius,backgroundColor:activeBackgroundColor="#000",...restActiveDotStyle}=(_activeDotStyle=activeDotStyle)!==null&&_activeDotStyle!==void 0?_activeDotStyle:{};let val=Math.abs(((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)-index);if(index===0&&((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value)>count-1)val=Math.abs(((_animValue3=animValue)===null||_animValue3===void 0?void 0:_animValue3.value)-count);const inputRange=[0,1,2];const restStyle=(_ref=val===0?restActiveDotStyle:restDotStyle)!==null&&_ref!==void 0?_ref:{};return{width:interpolate(val,inputRange,[activeWidth,width,width],Extrapolation.CLAMP),height:interpolate(val,inputRange,[activeHeight,height,height],Extrapolation.CLAMP),borderRadius:interpolate(val,inputRange,[(_ref2=activeBorderRadius!==null&&activeBorderRadius!==void 0?activeBorderRadius:borderRadius)!==null&&_ref2!==void 0?_ref2:0,borderRadius!==null&&borderRadius!==void 0?borderRadius:0,borderRadius!==null&&borderRadius!==void 0?borderRadius:0],Extrapolation.CLAMP),backgroundColor:interpolateColor(val,inputRange,[activeBackgroundColor,backgroundColor,backgroundColor]),...restStyle,...((_customReanimatedStyl=customReanimatedStyleRef.value)!==null&&_customReanimatedStyl!==void 0?_customReanimatedStyl:{}),transform:[...((_restStyle$transform=restStyle===null||restStyle===void 0?void 0:restStyle.transform)!==null&&_restStyle$transform!==void 0?_restStyle$transform:[]),...((_customReanimatedStyl2=(_customReanimatedStyl3=customReanimatedStyleRef.value)===null||_customReanimatedStyl3===void 0?void 0:_customReanimatedStyl3.transform)!==null&&_customReanimatedStyl2!==void 0?_customReanimatedStyl2:[])]};}',
 };
 
-export const useCarouselController = function useCarouselController(size) {
-  _require = size;
-  function setSharedIndex(current) {
-    closure_13.current = current;
-  }
-  size = size.size;
-  const loop = size.loop;
-  const dataLength = size.dataLength;
-  const handlerOffset = size.handlerOffset;
-  const withAnimation = size.withAnimation;
-  const defaultIndex = size.defaultIndex;
-  let num = 0;
-  if (undefined !== defaultIndex) {
-    num = defaultIndex;
-  }
-  const duration = size.duration;
-  const autoFillData = size.autoFillData;
-  const fixedDirection = size.fixedDirection;
-  const globalState = require("10111__.js").useGlobalState();
-  const overscrollEnabled = globalState.props.overscrollEnabled;
-  const containerSize = globalState.layout.containerSize;
-  const items = [dataLength];
-  const memo = loop.useMemo(() => ({ length: dataLength, disable: !dataLength, originalLength: dataLength }), items);
-  let obj = require("10111__.js");
-  const sharedValue = require("cancelAnimation").useSharedValue(num);
-  const tmp3 = dataLength(num);
-  const items1 = [handlerOffset, memo, size, loop];
-  let obj2 = require("cancelAnimation");
-  const currentFixedPage = loop.useCallback(() => {
-    if (loop) {
-      const _Math2 = Math;
-      return -Math.round(handlerOffset.value / size);
-    } else {
-      const result = (handlerOffset.value / size) % memo.length;
-      if (handlerOffset.value <= 0) {
-        const _Math = Math;
-        let absolute = Math.abs(result);
-      } else {
-        let num2 = 0;
-        if (result > 0) {
-          num2 = arr.length - result;
-        }
-        absolute = Math.abs(num2);
-      }
-      return Math.round(absolute);
+export const PaginationItem = (animValue) => {
+  const iter = animValue.animValue;
+  const dotStyle = animValue.dotStyle;
+  const activeDotStyle = animValue.activeDotStyle;
+  const index = animValue.index;
+  const count = animValue.count;
+  let size = animValue.size;
+  ({ horizontal, customReanimatedStyle } = animValue);
+  const accessibilityLabel = animValue.accessibilityLabel;
+  ({ children, onPress } = animValue);
+  const sharedValue = iter(activeDotStyle[4]).useSharedValue({});
+  function handleCustomAnimation(arg0) {
+    let obj;
+    if (customReanimatedStyle != null) {
+      obj = tmp2(arg0, index, count);
     }
-  }, items1);
-  const tmp4 = dataLength(num);
-  let fn = function v() {
-    value = handlerOffset.value;
-    const result = round.round(value / size) % memo.length;
-    if (value <= 0) {
-      const _Math = Math;
-      let absolute = Math.abs(result);
-    } else {
-      let num = 0;
-      if (result > 0) {
-        num = memo.length - result;
-      }
-      absolute = Math.abs(num);
-    }
-    const obj2 = { i: absolute, newSharedIndexValue: null };
-    obj2.newSharedIndexValue = SINGLE_ITEM.convertToSharedIndex({
-      loop,
-      rawDataLength: memo.originalLength,
-      autoFillData,
-      index: absolute,
-    });
-    return obj2;
-  };
-  let obj3 = require("cancelAnimation");
-  fn.__closure = {
-    handlerOffset,
-    round: require("round").round,
-    size,
-    dataInfo: memo,
-    convertToSharedIndex: require("SINGLE_ITEM").convertToSharedIndex,
-    loop,
-    autoFillData,
-  };
-  fn.__workletHash = 15925793381075;
-  fn.__initData = handlerOffset;
-  const fn2 = function c(arg0) {
-    sharedValue.value = arg0.i;
-    cancelAnimation.runOnJS(setSharedIndex)(arg0.newSharedIndexValue);
-  };
-  let obj4 = {
-    handlerOffset,
-    round: require("round").round,
-    size,
-    dataInfo: memo,
-    convertToSharedIndex: require("SINGLE_ITEM").convertToSharedIndex,
-    loop,
-    autoFillData,
-  };
-  fn2.__closure = { index: sharedValue, runOnJS: require("cancelAnimation").runOnJS, setSharedIndex };
-  fn2.__workletHash = 4173925309211;
-  fn2.__initData = withAnimation;
-  const items2 = [tmp4, tmp3, size, memo, sharedValue, loop, autoFillData, handlerOffset];
-  const animatedReaction = obj3.useAnimatedReaction(fn, fn2, items2);
-  const items3 = [sharedValue, autoFillData, memo, loop];
-  const callback1 = loop.useCallback(
-    () =>
-      SINGLE_ITEM.computedRealIndexWithAutoFillData({
-        index: sharedValue.value,
-        dataLength: memo.originalLength,
-        loop,
-        autoFillData,
-      }),
-    items3,
-  );
-  const items4 = [memo];
-  const callback2 = loop.useCallback(() => !memo.disable, items4);
-  const items5 = [size];
-  const callback3 = loop.useCallback(() => {
-    const onScrollEnd = size.onScrollEnd;
-    if (onScrollEnd != null) {
-      onScrollEnd();
-    }
-  }, items5);
-  const items6 = [size];
-  const callback4 = loop.useCallback(() => {
-    const onScrollStart = size.onScrollStart;
-    if (onScrollStart != null) {
-      onScrollStart();
-    }
-  }, items6);
-  const fn3 = function z(arg0, onFinished) {
-    size = onFinished;
-    const fn = function i(arg0) {
-      if (arg0) {
-        cancelAnimation.runOnJS(callback3)();
-        if (closure_0) {
-          cancelAnimation.runOnJS(tmp5)();
-          const tmpResult = cancelAnimation;
-        }
-      }
-    };
-    fn.__closure = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
-    fn.__workletHash = 14195210871308;
-    fn.__initData = autoFillData;
-    const obj2 = { type: "timing", config: null };
-    let obj = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
-    obj2.config = { duration, easing: size(size[5]).Easing.easeOutQuart };
-    const obj3 = { duration, easing: size(size[5]).Easing.easeOutQuart };
-    let tmp = withAnimation;
-    if (withAnimation == null) {
-      tmp = obj2;
-    }
-    return size(size[6]).dealWithAnimation(tmp)(arg0, fn);
-  };
-  const obj5 = { index: sharedValue, runOnJS: require("cancelAnimation").runOnJS, setSharedIndex };
-  fn3.__closure = {
-    runOnJS: require("cancelAnimation").runOnJS,
-    onScrollEnd: callback3,
-    duration,
-    Easing: require("DATA_LENGTH").Easing,
-    dealWithAnimation: require("dealWithAnimation").dealWithAnimation,
-    withAnimation,
-  };
-  fn3.__workletHash = 4740828363382;
-  fn3.__initData = duration;
-  const items7 = [duration, withAnimation, callback3];
-  const callback5 = loop.useCallback(fn3, items7);
-  class W {
-    constructor() {
-      obj = size;
-      if (size === undefined) {
-        obj = {};
-      }
-      count = obj.count;
-      num = 1;
-      if (undefined !== count) {
-        num = count;
-      }
-      animated = obj.animated;
-      tmp = undefined === animated || animated;
-      onFinished = obj.onFinished;
-      if (closure_17()) {
-        tmp2 = loop;
-        if (loop) {
-          tmp5 = closure_11;
-          tmp7 = size;
-          tmp9 = overscrollEnabled;
-          if (overscrollEnabled) {
-            tmp11 = null;
-            if (closure_19 != null) {
-              tmp12 = closure_19();
-            }
-            tmp13 = closure_14;
-            sum = closure_14() + num;
-            tmp6.value = sum;
-            tmp15 = handlerOffset;
-            tmp16 = -sum;
-            if (tmp) {
-              tmp18 = closure_20;
-              tmp15.value = closure_20(tmp16 * tmp7, onFinished);
-            } else {
-              tmp15.value = tmp16 * tmp7;
-              if (onFinished != null) {
-                onFinishedResult = onFinished();
-              }
-            }
-          } else {
-            tmp10 = containerSize;
-          }
-        } else {
-          tmp3 = closure_12;
-          tmp4 = closure_11;
-        }
-      }
-      return;
-    }
-  }
-  W.__closure = {
-    canSliding: callback2,
-    loop,
-    index: sharedValue,
-    dataInfo: memo,
-    size,
-    overscrollEnabled,
-    containerSize,
-    onScrollStart: callback4,
-    currentFixedPage,
-    handlerOffset,
-    scrollWithTiming: callback5,
-  };
-  W.__workletHash = 4352275578667;
-  W.__initData = fixedDirection;
-  const items8 = [callback2, loop, sharedValue, memo, callback4, handlerOffset, size, callback5, currentFixedPage];
-  const callback6 = loop.useCallback(W, items8);
-  const items9 = [callback2, loop, sharedValue, callback4, handlerOffset, size, callback5, currentFixedPage];
-  const callback7 = loop.useCallback(() => {
-    let obj = arg0;
-    if (arg0 === undefined) {
+    if (obj == null) {
       obj = {};
     }
-    const count = obj.count;
-    let num = 1;
-    if (undefined !== count) {
-      num = count;
+    sharedValue.value = obj;
+  }
+  let obj = iter(activeDotStyle[4]);
+  const tmp = activeDotStyle;
+  const fn = function _() {
+    value = undefined;
+    if (iter != null) {
+      value = iter.value;
     }
-    const animated = obj.animated;
-    const onFinished = obj.onFinished;
-    if (callback2()) {
-      if (loop) {
-        if (callback4 != null) {
-          callback4();
-        }
-        const diff = callback() - num;
-        sharedValue.value = diff;
-        if (tmp) {
-          handlerOffset.value = callback5(tmp10 * size, onFinished);
-        } else {
-          handlerOffset.value = tmp10 * size;
-          if (onFinished != null) {
-            onFinished();
-          }
-        }
+    cancelAnimation.runOnJS(handleCustomAnimation)(value);
+  };
+  const obj2 = iter(activeDotStyle[4]);
+  fn.__closure = { runOnJS: iter(activeDotStyle[4]).runOnJS, handleCustomAnimation, animValue: iter };
+  fn.__workletHash = 10388501491479;
+  fn.__initData = handleCustomAnimation;
+  const derivedValue = obj2.useDerivedValue(fn);
+  let obj3 = { runOnJS: iter(activeDotStyle[4]).runOnJS, handleCustomAnimation, animValue: iter };
+  const fn2 = function k() {
+    size = dotStyle;
+    if (dotStyle == null) {
+      size = {};
+    }
+    let width = size.width;
+    if (undefined === width) {
+      let num = size;
+      if (!size) {
+        num = 10;
       }
+      width = num;
     }
-    tmp = undefined === animated || animated;
-  }, items9);
-  const items10 = [
-    size,
-    loop,
-    sharedValue,
-    fixedDirection,
-    handlerOffset,
-    memo.length,
-    callback2,
-    callback4,
-    callback5,
-  ];
-  const callback8 = loop.useCallback((onFinished) => {
-    ({ i, animated } = onFinished);
-    onFinished = onFinished.onFinished;
-    if (i !== sharedValue.value) {
-      if (callback2()) {
-        if (callback4 != null) {
-          callback4();
-        }
-        const result = handlerOffsetDirection.handlerOffsetDirection(handlerOffset, fixedDirection);
-        const result1 = memo.length * size;
-        let flag = false;
-        const result2 = i * size * result;
-        if (loop) {
-          const _Math = Math;
-          flag = Math.abs(handlerOffset.value % result1) / result1 >= 0.5;
-        }
-        const _Math2 = Math;
-        const _Math3 = Math;
-        let num2 = 0;
-        const rounded = Math.floor(Math.abs(handlerOffset.value / result1));
-        if (flag) {
-          num2 = 1;
-        }
-        const sum = (rounded + num2) * result1 * result + result2;
-        if (tmp) {
-          sharedValue.value = i;
-          handlerOffset.value = callback5(sum, onFinished);
-        } else {
-          handlerOffset.value = sum;
-          sharedValue.value = i;
-          if (onFinished != null) {
-            onFinished();
-          }
-        }
+    let height = size.height;
+    if (undefined === height) {
+      let num2 = size;
+      if (!size) {
+        num2 = 10;
       }
+      height = num2;
     }
-    tmp = undefined !== animated && animated;
-  }, items10);
-  const items11 = [callback7, callback6, callback8];
-  const callback9 = loop.useCallback(() => {
-    let obj = arg0;
-    if (arg0 === undefined) {
+    ({ borderRadius, backgroundColor } = size);
+    let str = "#FFF";
+    if (undefined !== backgroundColor) {
+      str = backgroundColor;
+    }
+    let obj = _objectWithoutProperties(size, closure_3);
+    let size2 = activeDotStyle;
+    if (activeDotStyle == null) {
+      size2 = {};
+    }
+    let width2 = size2.width;
+    if (undefined === width2) {
+      width2 = width;
+    }
+    let height2 = size2.height;
+    if (undefined === height2) {
+      height2 = height;
+    }
+    ({ borderRadius: borderRadius2, backgroundColor: backgroundColor2 } = size2);
+    let str2 = "#000";
+    if (undefined !== backgroundColor2) {
+      str2 = backgroundColor2;
+    }
+    let value5;
+    if (iter != null) {
+      value5 = iter.value;
+    }
+    let absolute = Math.abs(value5 - index);
+    let tmp5 = 0 === index;
+    if (tmp5) {
+      let value6;
+      if (iter != null) {
+        value6 = iter.value;
+      }
+      tmp5 = value6 > count - 1;
+    }
+    if (tmp5) {
+      let value7;
+      if (iter != null) {
+        value7 = iter.value;
+      }
+      absolute = Math.abs(value7 - count);
+    }
+    if (0 === absolute) {
+      obj = tmpResult;
+    }
+    if (obj == null) {
       obj = {};
     }
-    ({ index, count, animated } = obj);
-    const onFinished = obj.onFinished;
-    if (typeof index === "number") {
-      if (index > -1) {
-        const obj2 = { i: index, animated: tmp, onFinished };
-        callback8(obj2);
-      }
+    const items = [0, 1, 2];
+    const size1 = { width: null, height: null, borderRadius: null, backgroundColor: null };
+    tmpResult = _objectWithoutProperties(size2, closure_4);
+    const items1 = [width2, width, width];
+    size1.width = cancelAnimation.interpolate(absolute, items, items1, cancelAnimation.Extrapolation.CLAMP);
+    const items2 = [height2, height, height];
+    size1.height = cancelAnimation.interpolate(absolute, items, items2, cancelAnimation.Extrapolation.CLAMP);
+    if (borderRadius2 == null) {
+      borderRadius2 = borderRadius;
     }
-    if (count) {
-      const _Math = Math;
-      const rounded = Math.round(count);
-      if (rounded < 0) {
-        const obj3 = { count: null, animated: null, onFinished: null };
-        const _Math2 = Math;
-        obj3.count = Math.abs(rounded);
-        obj3.animated = tmp;
-        obj3.onFinished = onFinished;
-        callback7(obj3);
-      } else {
-        const obj4 = { count: rounded, animated: tmp, onFinished };
-        callback6(obj4);
-      }
+    if (borderRadius2 == null) {
+      borderRadius2 = 0;
     }
-  }, items11);
-  const items12 = [callback1, callback6, callback7, callback9];
-  const imperativeHandle = loop.useImperativeHandle(
-    size.ref,
-    () => ({ next: callback6, prev: callback7, getCurrentIndex: callback1, scrollTo: callback9 }),
-    items12,
-  );
-  return {
-    next: callback6,
-    prev: callback7,
-    scrollTo: callback9,
-    getCurrentIndex: callback1,
-    getSharedIndex() {
-      return ref.current;
-    },
-    index: sharedValue,
+    const items3 = [borderRadius2, ,];
+    let num4 = borderRadius;
+    if (borderRadius == null) {
+      num4 = 0;
+    }
+    items3[1] = num4;
+    if (borderRadius == null) {
+      borderRadius = 0;
+    }
+    items3[2] = borderRadius;
+    size1.borderRadius = cancelAnimation.interpolate(absolute, items, items3, cancelAnimation.Extrapolation.CLAMP);
+    const items4 = [str2, str, str];
+    size1.backgroundColor = cancelAnimation.interpolateColor(absolute, items, items4);
+    const merged = Object.assign(obj);
+    let value8 = sharedValue.value;
+    if (value8 == null) {
+      value8 = {};
+    }
+    const merged1 = Object.assign(value8);
+    let transform;
+    if (obj != null) {
+      transform = obj.transform;
+    }
+    if (transform == null) {
+      transform = [];
+    }
+    const items5 = [...transform];
+    value = sharedValue.value;
+    let transform1;
+    if (value != null) {
+      transform1 = value.transform;
+    }
+    if (transform1 == null) {
+      transform1 = [];
+    }
+    HermesBuiltin.arraySpread(transform1, tmp14);
+    size1.transform = items5;
+    return size1;
   };
+  let obj4 = iter(activeDotStyle[4]);
+  fn2.__closure = {
+    size,
+    defaultDotSize: 10,
+    dotStyle,
+    activeDotStyle,
+    animValue: iter,
+    index,
+    count,
+    interpolate: iter(activeDotStyle[4]).interpolate,
+    Extrapolation: iter(activeDotStyle[4]).Extrapolation,
+    interpolateColor: iter(activeDotStyle[4]).interpolateColor,
+    customReanimatedStyleRef: sharedValue,
+  };
+  fn2.__workletHash = 8302907289230;
+  fn2.__initData = __initData;
+  let items = [iter, index, count, horizontal, dotStyle, activeDotStyle, customReanimatedStyle];
+  const obj6 = {
+    onPress,
+    accessibilityLabel,
+    accessibilityRole: "button",
+    accessibilityHint: null,
+    accessibilityState: null,
+    children: null,
+  };
+  let str = "";
+  const animatedStyle = obj4.useAnimatedStyle(fn2, items);
+  if (iter.value !== index) {
+    const _HermesInternal = HermesInternal;
+    str = "Go to " + accessibilityLabel;
+  }
+  obj6.accessibilityHint = str;
+  obj6.accessibilityState = { selected: iter.value === index };
+  let str3 = "0deg";
+  if (horizontal) {
+    str3 = "90deg";
+  }
+  const obj7 = { style: null, children };
+  const obj8 = { overflow: "hidden", transform: null };
+  let items1 = [{ rotateZ: str3 }];
+  obj8.transform = items1;
+  let items2 = [obj8, dotStyle, animatedStyle];
+  obj7.style = items2;
+  obj6.children = sharedValue(dotStyle(tmp[4]).View, obj7);
+  return sharedValue(customReanimatedStyle, obj6);
 };

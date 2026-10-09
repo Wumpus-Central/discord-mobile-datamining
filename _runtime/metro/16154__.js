@@ -1,16 +1,13 @@
 // _runtime/metro/16154__.js
-import _modDef16152 from "16152__.js";
-import noop from "00019__.js";
+import registerAsset from "01132__.js";
 
-export default function useReanimatedTransitionProgress() {
-  const context = noop.useContext(_modDef16152);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error(
-      "Couldn't find values for reanimated transition progress. Are you inside a screen in Native Stack?",
-    );
-    throw error;
-  } else {
-    return context;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/collectibles/native/images",
+  width: 375,
+  height: 162,
+  scales: [1],
+  hash: "bda37cc0de8c36fb8217439574ac2fe2",
+  name: "featured_page_footer_light",
+  type: "png",
+});

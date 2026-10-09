@@ -1,111 +1,57 @@
 // _runtime/metro/01342__.js
 import _mod1305 from "01305__.js";
-import _mod1339 from "01339__.js";
+import _mod1306 from "01306__.js";
+import callBoundIntrinsic from "../01339_callBoundIntrinsic.js";
+import _mod1340 from "01340__.js";
 
-export default function getSideChannelList() {
-  let obj = {
-    assert(arg0) {
-      if (!obj.has(arg0)) {
-        const tmp32 = new _mod1305("Side channel does not contain " + _mod1339(arg0));
-        throw tmp32;
-      }
-    },
-    delete(arg0) {
-      let next = obj;
-      if (obj) {
-        next = obj.next;
-      }
-      let iter = obj;
-      if (!obj) {
-        let tmp6;
-        if (undefined) {
-          tmp6 = next;
+let tmp = _mod1305("%Map%", true);
+let closure_2 = tmp;
+let closure_3 = callBoundIntrinsic("Map.prototype.get", true);
+let closure_4 = callBoundIntrinsic("Map.prototype.set", true);
+let closure_5 = callBoundIntrinsic("Map.prototype.has", true);
+let closure_6 = callBoundIntrinsic("Map.prototype.delete", true);
+let closure_7 = callBoundIntrinsic("Map.prototype.size", true);
+
+export default tmp &&
+  function getSideChannelMap() {
+    const obj = {
+      assert(arg0) {
+        if (!obj.has(arg0)) {
+          const tmp32 = new _mod1306("Side channel does not contain " + _mod1340(arg0));
+          throw tmp32;
         }
-        if (tmp6) {
-          tmp6 = next === undefined;
-        }
-      } else {
-        let iter2 = iter.next;
-        if (null != iter2) {
-          while (iter2.key !== arg0) {
-            let next2 = iter2.next;
-            iter = iter2;
-            iter2 = next2;
+      },
+      delete(arg0) {
+        if (closure_0) {
+          if (0 === closure_7(closure_0)) {
+            closure_0 = undefined;
           }
+          return closure_6(tmp, arg0);
+        } else {
+          return false;
         }
-        iter.next = iter2.next;
-      }
-    },
-    get(arg0) {
-      let tmp;
-      if (obj) {
-        let iter2 = obj.next;
-        let tmp3 = obj;
-        let tmp4;
-        if (null != iter2) {
-          while (iter2.key !== arg0) {
-            let next = iter2.next;
-            tmp3 = iter2;
-            iter2 = next;
-          }
-          tmp3.next = iter2.next;
-          iter2.next = obj.next;
-          obj.next = iter2;
-          tmp4 = iter2;
+      },
+      get(arg0) {
+        if (closure_0) {
+          return closure_3(tmp, arg0);
         }
-        value = tmp4;
-        if (tmp4) {
-          value = tmp4.value;
+      },
+      has(arg0) {
+        let tmp = closure_0;
+        if (tmp) {
+          tmp = closure_5(closure_0, arg0);
         }
-        tmp = value;
-      }
-      return tmp;
-    },
-    has(arg0) {
-      if (!obj) {
-        return obj;
-      } else {
-        let iter2 = obj.next;
-        let tmp3 = obj;
-        if (null != iter2) {
-          while (iter2.key !== arg0) {
-            let next = iter2.next;
-            tmp3 = iter2;
-            iter2 = next;
-          }
+        return tmp;
+      },
+      set(arg0, arg1) {
+        let tmp = closure_0;
+        if (!closure_0) {
+          const tmp5 = new closure_2();
+          closure_0 = tmp5;
+          tmp = tmp5;
         }
-        tmp3.next = iter2.next;
-        iter2.next = obj.next;
-        obj.next = iter2;
-      }
-    },
-    set(key, value) {
-      let iter = obj;
-      if (!obj) {
-        obj = { next: "create" };
-        iter = obj;
-      }
-      let iter2 = iter.next;
-      let tmp = iter;
-      let tmp2;
-      if (null != iter2) {
-        while (iter2.key !== key) {
-          let next = iter2.next;
-          tmp = iter2;
-          iter2 = next;
-        }
-        tmp.next = iter2.next;
-        iter2.next = iter.next;
-        iter.next = iter2;
-        tmp2 = iter2;
-      }
-      if (tmp2) {
-        tmp2.value = value;
-      } else {
-        const entry = { key, next: iter.next, value };
-        iter.next = entry;
-      }
-    },
+        closure_4(tmp, arg0, arg1);
+      },
+    };
+    return obj;
   };
-  return obj;
-}

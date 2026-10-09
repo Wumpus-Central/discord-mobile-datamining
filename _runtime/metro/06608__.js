@@ -1,6 +1,4 @@
 // _runtime/metro/06608__.js
-import LegacyBaseButton from "../06326_LegacyBaseButton.js";
+import _modDef6609 from "06609__.js";
 
-export const TouchableOpacity = LegacyBaseButton.TouchableOpacity;
-export const TouchableHighlight = LegacyBaseButton.TouchableHighlight;
-export const TouchableWithoutFeedback = LegacyBaseButton.TouchableWithoutFeedback;
+export default _modDef6609;

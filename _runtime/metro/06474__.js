@@ -1,91 +1,150 @@
 // _runtime/metro/06474__.js
-import _mod19 from "00019__.js";
-import _modDef38 from "00038__.js";
+import value2 from "../06306_value2.js";
+import LegacyBaseButton from "../06333_LegacyBaseButton.js";
 
-const useMemo = _mod19.useMemo;
+const require = globalThis.__r;
 
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    if (snapPoints) {
-      value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
+require = arg1;
+let dependencyMap = arg6;
+let __initData = {
+  code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
+};
+let __initData2 = {
+  code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
+};
+let __initData3 = {
+  code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
+};
+let __initData4 = {
+  code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}",
+};
+
+export const useGestureHandler = (
+  CONTENT,
+  animatedContentGestureState,
+  sharedValue,
+  handleOnStart,
+  handleOnChange,
+  handleOnEnd,
+  handleOnFinalize,
+) => {
+  const _require = CONTENT;
+  dependencyMap = animatedContentGestureState;
+  __initData = sharedValue;
+  __initData2 = handleOnStart;
+  __initData3 = handleOnChange;
+  __initData4 = handleOnEnd;
+  const obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
+  class R {
+    constructor(arg0) {
+      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
+      closure_2.value = closure_0;
+      tmp = closure_3(closure_0, CONTENT);
+      return;
+    }
+  }
+  const obj2 = require("cancelAnimation");
+  R.__closure = {
+    state: animatedContentGestureState,
+    State: require("LegacyBaseButton").State,
+    gestureSource: sharedValue,
+    source: CONTENT,
+    onStart: handleOnStart,
+  };
+  R.__workletHash = 16113572067379;
+  R.__initData = __initData;
+  const items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
+  obj.handleOnStart = obj2.useWorkletCallback(R, items);
+  const obj3 = {
+    state: animatedContentGestureState,
+    State: require("LegacyBaseButton").State,
+    gestureSource: sharedValue,
+    source: CONTENT,
+    onStart: handleOnStart,
+  };
+  class U {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp2 = CONTENT;
+        tmp3 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp4 = closure_4;
+        tmp5 = closure_4(tmp, CONTENT);
       }
-      let items = value;
-    } else {
-      items = [];
+      return;
     }
-    let tmp5 = items;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
-    }
-    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
+  }
+  U.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    onChange: handleOnChange,
+  };
+  U.__workletHash = 9050442757159;
+  U.__initData = __initData2;
+  const items1 = [animatedContentGestureState, sharedValue, CONTENT, handleOnChange];
+  obj.handleOnChange = require("cancelAnimation").useWorkletCallback(U, items1);
+  const obj4 = require("cancelAnimation");
+  class C {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = CONTENT;
+        tmp4 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_5;
+        tmp8 = closure_5(tmp2, CONTENT);
       }
-      let tmp4 = parsed > 0;
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
+      return;
+    }
+  }
+  const obj5 = require("cancelAnimation");
+  C.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("value2").GESTURE_SOURCE,
+    onEnd: handleOnEnd,
+  };
+  C.__workletHash = 10682034812271;
+  C.__initData = __initData3;
+  const items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
+  obj.handleOnEnd = obj5.useWorkletCallback(C, items2);
+  const obj6 = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("value2").GESTURE_SOURCE,
+    onEnd: handleOnEnd,
+  };
+  class T {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = CONTENT;
+        tmp4 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_6;
+        tmp8 = closure_6(tmp2, CONTENT);
       }
-      snapPoints(enableDynamicSizing[1])(
-        tmp4,
-        "Snap point '" +
-          item +
-          "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.",
-      );
-      const tmp3 = snapPoints(enableDynamicSizing[1]);
-    });
-    let tmp9 = "value" in items;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
+      return;
     }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    _modDef38(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    const tmp2Result = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === index;
-    }
-    _modDef38(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    const tmp2Result5 = _modDef38;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
-    }
-    if (!tmp16) {
-      let tmp17 = index >= -1;
-      if (tmp17) {
-        tmp17 = index <= items.length - 1;
-      }
-      tmp16 = tmp17;
-    }
-    _modDef38(
-      tmp16,
-      `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`,
-    );
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result6 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result7 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-    const tmp2Result8 = _modDef38;
-  }, items);
+  }
+  const obj7 = require("cancelAnimation");
+  T.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("value2").GESTURE_SOURCE,
+    onFinalize: handleOnFinalize,
+  };
+  T.__workletHash = 9696716573416;
+  T.__initData = __initData4;
+  const items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
+  obj.handleOnFinalize = obj7.useWorkletCallback(T, items3);
+  return obj;
 };

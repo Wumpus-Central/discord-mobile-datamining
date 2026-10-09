@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  httpServerLocation: "/assets/images/native/main_tabs",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e831387e9387034c87c9b5bc784cf6eb",
-  name: "partner_icon",
+  hash: "afec4e7bfe67c8da93450ca26af6a62e",
+  name: "NotificationCenter",
   type: "png",
 });

@@ -1,50 +1,77 @@
 // _runtime/metro/06523__.js
-import ErrorMessages from "../06525_ErrorMessages.js";
-import FlashList from "../06526_FlashList.js";
-import _mod6546 from "06546__.js";
-import _mod6547 from "06547__.js";
-import _mod6585 from "06585__.js";
-import RenderTargetOptions from "../06586_RenderTargetOptions.js";
-import _modDef6587 from "06587__.js";
-import _mod6588 from "06588__.js";
-import Cancellable from "../06589_Cancellable.js";
-import JSFPSMonitor from "../06590_JSFPSMonitor.js";
-import _mod6592 from "06592__.js";
-import runScrollBenchmark from "../06593_runScrollBenchmark.js";
-import _mod6594 from "06594__.js";
-import _mod6595 from "06595__.js";
-import _modDef6596 from "06596__.js";
-import LayoutCommitObserver from "../06597_LayoutCommitObserver.js";
-import get_ActivityIndicator from "06524__.js";
+import _mod17 from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import value2 from "../06306_value2.js";
+import LegacyBaseButton from "../06333_LegacyBaseButton.js";
+import noop_mod from "00019__.js";
+import cancelAnimation from "../01656_cancelAnimation.js";
 
-if (get_ActivityIndicator.isNewArch()) {
-  exports.FlashList = FlashList.FlashList;
-  exports.FlashListRef = _mod6585.FlashListRef;
-  exports.FlashListProps = RenderTargetOptions.FlashListProps;
-  exports.ListRenderItem = RenderTargetOptions.ListRenderItem;
-  exports.ListRenderItemInfo = RenderTargetOptions.ListRenderItemInfo;
-  exports.RenderTarget = RenderTargetOptions.RenderTarget;
-  exports.RenderTargetOptions = RenderTargetOptions.RenderTargetOptions;
-  exports.AnimatedFlashList = _modDef6587;
-  exports.useBenchmark = _mod6588.useBenchmark;
-  exports.BenchmarkParams = _mod6588.BenchmarkParams;
-  exports.BenchmarkResult = _mod6588.BenchmarkResult;
-  exports.useDataMultiplier = _mod6592.useDataMultiplier;
-  exports.useFlatListBenchmark = runScrollBenchmark.useFlatListBenchmark;
-  exports.FlatListBenchmarkParams = runScrollBenchmark.FlatListBenchmarkParams;
-  exports.useLayoutState = _mod6546.useLayoutState;
-  exports.useRecyclingState = _mod6594.useRecyclingState;
-  exports.useMappingHelper = _mod6595.useMappingHelper;
-  exports.JSFPSMonitor = JSFPSMonitor.JSFPSMonitor;
-  exports.JSFPSResult = JSFPSMonitor.JSFPSResult;
-  exports.autoScroll = Cancellable.autoScroll;
-  exports.Cancellable = Cancellable.Cancellable;
-  exports.ViewToken = _modDef6596;
-  exports.useFlashListContext = _mod6547.useFlashListContext;
-  exports.LayoutCommitObserver = LayoutCommitObserver.LayoutCommitObserver;
-  exports.LayoutCommitObserverProps = LayoutCommitObserver.LayoutCommitObserverProps;
-} else {
-  const _Error = Error;
-  const error = new Error(ErrorMessages.ErrorMessages.flashListV2OnlySupportsNewArchitecture);
-  throw error;
-}
+let noop = noop_mod;
+({ useContext: c2, useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
+const __initData = {
+  code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}",
+};
+const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
+  ({ onRefresh, scrollableGesture } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
+  let iter;
+  const tmp4 = iter(scrollableGesture(6317).BottomSheetDraggableContext);
+  dependencyMap = tmp4;
+  const bottomSheetInternal = scrollableGesture(6310).useBottomSheetInternal();
+  iter = bottomSheetInternal.animatedScrollableState;
+  if (!tmp4) {
+    if (bottomSheetInternal.enableContentPanningGesture) {
+      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
+    }
+  }
+  const obj = scrollableGesture(6310);
+  const fn = function f() {
+    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
+  };
+  const tmp2Result = scrollableGesture(1656);
+  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6306).SCROLLABLE_STATE };
+  fn.__workletHash = 8403038560398;
+  fn.__initData = __initData;
+  let items = [iter.value];
+  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
+  const items1 = [tmp4, scrollableGesture];
+  const tmp7 = closure_3(() => {
+    let result;
+    if (closure_1) {
+      const Gesture = LegacyBaseButton.Gesture;
+      const NativeResult = Gesture.Native();
+      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
+      const items = [];
+      HermesBuiltin.arraySpread(
+        scrollableGesture.toGestureArray(),
+        HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0),
+      );
+      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
+      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
+      const applyResult = HermesBuiltin.apply(items, NativeResult);
+    }
+    return result;
+  }, items1);
+  if (tmp7) {
+    const obj3 = { gesture: tmp7, children: null };
+    const obj4 = {};
+    const merged1 = Object.assign(merged);
+    obj4.onRefresh = onRefresh;
+    obj4.animatedProps = animatedProps;
+    obj3.children = <closure_5 />;
+    let tmp8Result = jsx(scrollableGesture(6333).GestureDetector, { gesture: tmp7, children: null });
+  } else {
+    const obj5 = {};
+    const merged2 = Object.assign(merged);
+    obj5.onRefresh = onRefresh;
+    obj5.animatedProps = animatedProps;
+    tmp8Result = <closure_5 />;
+  }
+  return tmp8Result;
+});
+memoResult.displayName = "BottomSheetRefreshControl";
+
+export default memoResult;

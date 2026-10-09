@@ -1,27 +1,18 @@
 // _runtime/metro/07808__.js
-import findOffsets from "../07809_findOffsets.js";
-
-require = arg1;
-const dependencyMap = arg6;
-
-export default {
-  isHeicFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
-          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
+class MetadataMissingError {
+  constructor(arg0) {
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
     }
-  },
-  findHeicOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
-  },
-};
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
+  }
+}
+let error = new Error();
+MetadataMissingError.prototype = error;
+
+export default { MetadataMissingError };

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/nuf_channels/native/images",
-  width: 38,
-  height: 76,
-  scales: [1],
-  hash: "0874b569caae69893f5d6cd4e4046089",
-  name: "star_green",
+  httpServerLocation: "/assets/images/native/gifting",
+  width: 132,
+  height: 145,
+  scales: [1, 2, 3],
+  hash: "79c6466cf28ca8f6510b4a84fb435a2a",
+  name: "wumpus_snowglobe_premium120",
   type: "png",
 });

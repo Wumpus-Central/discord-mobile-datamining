@@ -1,77 +1,25 @@
 // _runtime/metro/06516__.js
-import _mod17 from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
-import value2 from "../06299_value2.js";
-import LegacyBaseButton from "../06326_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
-import cancelAnimation from "../01655_cancelAnimation.js";
+import _mod19 from "00019__.js";
+import value2 from "../06306_value2.js";
 
-let noop = noop_mod;
-({ useContext: c2, useMemo: c3, memo } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
-const __initData = {
-  code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}",
+const useMemo = _mod19.useMemo;
+
+export const useBottomSheetTimingConfigs = (arg0) => {
+  const easing = arg0;
+  const items = [, ,];
+  ({ duration: arr[0], easing: arr[1], reduceMotion: arr[2] } = arg0);
+  return useMemo(() => {
+    let ANIMATION_EASING = easing.easing;
+    if (!ANIMATION_EASING) {
+      ANIMATION_EASING = value2.ANIMATION_EASING;
+    }
+    const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
+    let ANIMATION_DURATION = easing.duration;
+    if (!ANIMATION_DURATION) {
+      ANIMATION_DURATION = value2.ANIMATION_DURATION;
+    }
+    obj.duration = ANIMATION_DURATION;
+    obj.reduceMotion = easing.reduceMotion;
+    return obj;
+  }, items);
 };
-const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
-  ({ onRefresh, scrollableGesture } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
-  let iter;
-  const tmp4 = iter(scrollableGesture(6310).BottomSheetDraggableContext);
-  dependencyMap = tmp4;
-  const bottomSheetInternal = scrollableGesture(6303).useBottomSheetInternal();
-  iter = bottomSheetInternal.animatedScrollableState;
-  if (!tmp4) {
-    if (bottomSheetInternal.enableContentPanningGesture) {
-      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
-    }
-  }
-  const obj = scrollableGesture(6303);
-  const fn = function f() {
-    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
-  };
-  const tmp2Result = scrollableGesture(1655);
-  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6299).SCROLLABLE_STATE };
-  fn.__workletHash = 8403038560398;
-  fn.__initData = __initData;
-  let items = [iter.value];
-  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
-  const items1 = [tmp4, scrollableGesture];
-  const tmp7 = closure_3(() => {
-    let result;
-    if (closure_1) {
-      const Gesture = LegacyBaseButton.Gesture;
-      const NativeResult = Gesture.Native();
-      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
-      const items = [];
-      HermesBuiltin.arraySpread(
-        scrollableGesture.toGestureArray(),
-        HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0),
-      );
-      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
-      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
-      const applyResult = HermesBuiltin.apply(items, NativeResult);
-    }
-    return result;
-  }, items1);
-  if (tmp7) {
-    const obj3 = { gesture: tmp7, children: null };
-    const obj4 = {};
-    const merged1 = Object.assign(merged);
-    obj4.onRefresh = onRefresh;
-    obj4.animatedProps = animatedProps;
-    obj3.children = <closure_5 />;
-    let tmp8Result = jsx(scrollableGesture(6326).GestureDetector, { gesture: tmp7, children: null });
-  } else {
-    const obj5 = {};
-    const merged2 = Object.assign(merged);
-    obj5.onRefresh = onRefresh;
-    obj5.animatedProps = animatedProps;
-    tmp8Result = <closure_5 />;
-  }
-  return tmp8Result;
-});
-memoResult.displayName = "BottomSheetRefreshControl";
-
-export default memoResult;

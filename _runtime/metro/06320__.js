@@ -1,12 +1,15 @@
 // _runtime/metro/06320__.js
-const fn = function o() {
+import _mod19 from "00019__.js";
+import BottomSheetContext from "../06316_BottomSheetContext.js";
 
+const useContext = _mod19.useContext;
+
+export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
 };
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
-
-export () => {
-
-}
-export const workletNoop = fn;

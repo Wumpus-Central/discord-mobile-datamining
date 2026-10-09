@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ef42f58d92ae3022fbec5decb610cbf2",
-  name: "ThreadMinusIcon",
+  httpServerLocation: "/assets/images/native/empties",
+  width: 120,
+  height: 96,
+  scales: [2],
+  hash: "e8874e4fc596af26bfde9d20b7f75908",
+  name: "search_empty_state_dark",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "313d0291c31affa2231c3200ee7f2822",
-  name: "CircleQuestionIcon",
+  hash: "6abfee45e74bcd203f98d0b7a2a2c9af",
+  name: "TranscriptOutlineIcon",
   type: "png",
 });

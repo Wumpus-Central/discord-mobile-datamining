@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [1, 3],
-  hash: "a7612bc39c46be7d197676beec9cb4bf",
-  name: "ic_browse_channel",
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 151,
+  height: 119,
+  scales: [2, 3],
+  hash: "2a93fa6b4a038d5a151d558000723423",
+  name: "img_wump_trash_darker",
   type: "png",
 });

@@ -1,7 +1,12 @@
 // _runtime/metro/06443__.js
-import 00065__ from "00065__.js";
+import ComposedGestureName from "../06392_ComposedGestureName.js";
+import _mod6441 from "06441__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
+require = arg1;
+const dependencyMap = arg6;
 
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useSimultaneousGestures = function useSimultaneousGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
+  return _mod6441.useComposedGesture.apply(items1);
+};

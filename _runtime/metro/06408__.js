@@ -1,23 +1,31 @@
 // _runtime/metro/06408__.js
-import ComposedGestureName from "../06385_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06394_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6409 from "06409__.js";
+import traverseAndConfigureRelations from "../06407_traverseAndConfigureRelations.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const items = [
-  ["maxDistance", "maxDist"],
-  ["maxDuration", "maxDurationMs"],
-  ["maxDelay", "maxDelayMs"],
-];
-const map = new Map(items);
-let closure_3 = {};
+({ useEffect: c2, useMemo: c3 } = noop);
 
-export const useTapGesture = function useTapGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_3;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
-  return _mod6409.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  const items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+    }
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
+    }
+  }, items1);
 };

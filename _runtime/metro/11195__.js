@@ -1,11 +1,7 @@
 // _runtime/metro/11195__.js
-import registerAsset from "01132__.js";
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "3712e3aa74966ab918e86302cf0f502f",
-  name: "SpendEarnOrbs",
-  type: "lottie",
-});
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

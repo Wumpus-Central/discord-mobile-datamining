@@ -83,7 +83,7 @@ let closure_6 = _classPrivateFieldKey("entries");
 class PerformanceObserverEntryList {
   constructor(arg0) {
     tmp = closure_3(this, PerformanceObserver);
-    definePropertyResult = Object.defineProperty(this, metroRequire, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, metroRequire, { writable: true, value: "Array" });
     closure_4(this, metroRequire)[metroRequire] = global;
     return;
   }
@@ -151,8 +151,8 @@ class PerformanceObserver {
     obj1 = { value: closure_2_14 };
     definePropertyResult1 = Object.defineProperty(this, closure_12, obj1);
     definePropertyResult2 = Object.defineProperty(this, closure_8, { writable: true, value: null });
-    definePropertyResult3 = Object.defineProperty(this, closure_9, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(this, c10, { writable: true, value: "a" });
+    definePropertyResult3 = Object.defineProperty(this, closure_9, { writable: true, value: "Array" });
+    definePropertyResult4 = Object.defineProperty(this, c10, { writable: true, value: "Array" });
     definePropertyResult5 = Object.defineProperty(this, closure_11, { writable: true, value: false });
     closure_4(this, closure_9)[closure_9] = global;
     return;

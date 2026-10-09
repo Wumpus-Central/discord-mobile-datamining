@@ -1,34 +1,15 @@
 // _runtime/metro/10110__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
 
-export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
+const useEffect = _mod19.useEffect;
+
+export const useUpdateGestureConfig = (arg0, options) => {
   closure_0 = arg0;
-  const items = [arg0];
-  const effect = noop.useEffect(() => {
-    const size = closure_0;
-    ({ defaultIndex, dataLength } = closure_0);
-    if (typeof defaultIndex === "number") {
-      if (dataLength > 0) {
-        const _Error3 = Error;
-        const error = new Error("DefaultIndex must be in the range of data length.");
-        throw error;
-      }
-    }
-    if (!size.mode) {
-      if (!size.vertical) {
-        if (!size.width) {
-          const _Error = Error;
-          const error1 = new Error("`width` must be specified for horizontal carousels.");
-          throw error1;
-        }
-      }
-      if (size.vertical) {
-        if (!size.height) {
-          const _Error2 = Error;
-          const error2 = new Error("`height` must be specified for vertical carousels.");
-          throw error2;
-        }
-      }
+  const enabled = options.enabled;
+  const items = [enabled, arg0];
+  useEffect(() => {
+    if (undefined !== enabled) {
+      closure_0.enabled(tmp);
     }
   }, items);
 };

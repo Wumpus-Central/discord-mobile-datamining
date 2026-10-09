@@ -1,11 +1,12 @@
 // _runtime/metro/09949__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod9789 from "09789__.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod9946 from "09946__.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const UKTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,31 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ENMergeDateRangeRefiner {
+class UKTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ENMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKTimeUnitAgoFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -61,14 +45,26 @@ class ENMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENMergeDateRangeRefiner;
-_inherits(ENMergeDateRangeRefiner, fn(_mod9789).default);
+_inherits(UKTimeUnitAgoFormatParser, _mod9946.AbstractParserWithLeftBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(to|-)\s*$/i;
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(" + UKTimeUnitAgoFormatParser(9944).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const parseDurationResult = UKTimeUnitAgoFormatParser(9944).parseDuration(arg1[1]);
+      const ParsingComponents = UKTimeUnitAgoFormatParser(9793).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        UKTimeUnitAgoFormatParser(9792).reverseDuration(UKTimeUnitAgoFormatParser(9944).parseDuration(arg1[1])),
+      );
+    },
+  },
+];
 
-export default _createClass(ENMergeDateRangeRefiner, items);
+export default _createClass(UKTimeUnitAgoFormatParser, items);

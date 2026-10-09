@@ -1,9 +1,13 @@
 // _runtime/metro/11023__.js
-import errorCallback from "../10989_errorCallback.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const addTracingExtensions = function addTracingExtensions() {
-  const result = errorCallback.registerSpanErrorInstrumentation();
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "4e9d569d897ff379f07644deddf6baf5",
+  name: "ScreenXIcon",
+  type: "png",
+});

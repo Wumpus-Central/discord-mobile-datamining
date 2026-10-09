@@ -1,25 +1,11 @@
 // _runtime/metro/14504__.js
+import _mod14485 from "14485__.js";
+import _mod14505 from "14505__.js";
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      apiResponse(request, response, tmp4Result) {
-        let status = response;
-        if (response) {
-          status = response.status;
-        }
-        if (status) {
-          status = typeof response.status === "number";
-        }
-        if (status) {
-          status = response.status >= 200;
-        }
-        if (status) {
-          status = response.status <= 299;
-        }
-        closure_0.send("api.response", { request, response, duration: tmp4Result }, !status);
-      },
-    },
-  };
+export default (arg0, arg1) => {
+  let tmp4;
+  if (!_mod14485(arg0[arg1])) {
+    tmp4 = _mod14505(tmp);
+  }
+  return tmp4;
 };

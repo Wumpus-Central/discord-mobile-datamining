@@ -365,7 +365,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "twitch.tv", type: "twitch.com", listener: "youtube.com" };
+          obj = { fired: false, wrapFn: "a", target: "adam", type: "\u00E7ember hareketi", listener: "erkek" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;
@@ -392,7 +392,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "twitch.tv", type: "twitch.com", listener: "youtube.com" };
+          obj = { fired: false, wrapFn: "a", target: "adam", type: "\u00E7ember hareketi", listener: "erkek" };
           obj.target = this;
           obj.type = global;
           obj.listener = require;

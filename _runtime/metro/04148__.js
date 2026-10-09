@@ -3,9 +3,9 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==",
   scales: [1],
-  hash: "6f4c73639d8995237de08278d7e1bc4d",
-  name: "MacaronPhase1.compiled.messages",
+  hash: "2365f8a990c2a379d00ee4a3e78c6502",
+  name: "zh-CN.messages.2365f8a990c2a379d00ee4a3e78c6502.compiled.messages",
   type: "jsona",
 });

@@ -1,77 +1,140 @@
 // _runtime/metro/14377__.js
 import _mod14378 from "14378__.js";
-import _mod14379 from "14379__.js";
-import _mod14380 from "14380__.js";
-import _mod14417 from "14417__.js";
-import _mod14418 from "14418__.js";
-import _mod14434 from "14434__.js";
+import CanonicalizeTimeZoneName from "../14379_CanonicalizeTimeZoneName.js";
+import CoerceOptionsToObject from "../14380_CoerceOptionsToObject.js";
+import _mod14381 from "14381__.js";
+import GetNumberOption from "../14386_GetNumberOption.js";
+import GetOption from "../14388_GetOption.js";
+import GetOptionsObject from "../14389_GetOptionsObject.js";
+import GetStringOrBooleanOption from "../14390_GetStringOrBooleanOption.js";
+import IsSanctionedSimpleUnitIdentifier from "../14391_IsSanctionedSimpleUnitIdentifier.js";
+import IsValidTimeZoneName from "../14392_IsValidTimeZoneName.js";
+import IsWellFormedCurrencyCode from "../14393_IsWellFormedCurrencyCode.js";
+import IsWellFormedUnitIdentifier from "../14394_IsWellFormedUnitIdentifier.js";
+import ApplyUnsignedRoundingMode from "../14395_ApplyUnsignedRoundingMode.js";
+import CollapseNumberRange from "../14396_CollapseNumberRange.js";
+import ComputeExponent from "../14397_ComputeExponent.js";
+import ComputeExponentForMagnitude from "../14398_ComputeExponentForMagnitude.js";
+import FormatNumericToString from "../14399_FormatNumericToString.js";
+import GetUnsignedRoundingMode from "../14400_GetUnsignedRoundingMode.js";
+import ToRawPrecision from "../14401_ToRawPrecision.js";
+import ToRawFixed from "../14402_ToRawFixed.js";
+import CurrencyDigits from "../14403_CurrencyDigits.js";
+import FormatApproximately from "../14407_FormatApproximately.js";
+import FormatNumeric from "../14408_FormatNumeric.js";
+import PartitionNumberPattern from "../14409_PartitionNumberPattern.js";
+import FormatNumericRange from "../14410_FormatNumericRange.js";
+import PartitionNumberRangePattern from "../14411_PartitionNumberRangePattern.js";
+import FormatNumericRangeToParts from "../14412_FormatNumericRangeToParts.js";
+import FormatNumericToParts from "../14413_FormatNumericToParts.js";
+import InitializeNumberFormat from "../14414_InitializeNumberFormat.js";
+import SetNumberFormatUnitOptions from "../14429_SetNumberFormatUnitOptions.js";
+import SetNumberFormatDigitOptions from "../14430_SetNumberFormatDigitOptions.js";
+import PartitionPattern from "../14431_PartitionPattern.js";
+import SupportedLocales from "../14432_SupportedLocales.js";
+import RangePatternType from "../14434_RangePatternType.js";
 import _mod14435 from "14435__.js";
+import _mod14436 from "14436__.js";
+import _mod14437 from "14437__.js";
+import _mod14438 from "14438__.js";
+import _mod14439 from "14439__.js";
+import e_mod from "../01172_e.js";
 
-export default (dontCallGetSet, obj) => {
-  ({ target, global: _global, stat } = dontCallGetSet);
-  const tmp3 = _mod14378;
-  if (_global) {
-    let prototype = tmp3;
-  } else {
-    let tmp4 = tmp3[target];
-    if (stat) {
-      if (!tmp4) {
-        tmp4 = _mod14379(target, {});
-      }
-      prototype = tmp4;
-    } else {
-      prototype = tmp4;
-      if (tmp4) {
-        prototype = _mod14378[target].prototype;
-      }
-    }
-  }
-  if (prototype) {
-    for (const key10024 in arg1) {
-      let tmp21 = arg1[key10024];
-      if (arg0.dontCallGetSet) {
-        obj = _mod14380;
-        let iter = obj.f(prototype, key10024);
-        value = iter;
-        if (iter) {
-          value = iter.value;
-        }
-        let tmp7 = value;
-      } else {
-        tmp7 = prototype[key10024];
-      }
-      let sum = key10024;
-      let tmp12 = _mod14417;
-      if (!_global) {
-        let str4 = "#";
-        if (stat) {
-          str4 = ".";
-        }
-        sum = target + str4 + key10024;
-      }
-      if (!tmp12(sum, arg0.forced)) {
-        if (undefined !== tmp7) {
-          if (typeof tmp21 === typeof tmp7) {
-            continue;
-          } else {
-            let tmp22 = _mod14418(tmp21, tmp7);
-          }
-        }
-        continue;
-      }
-      let sham = arg0.sham;
-      if (!sham) {
-        let sham2 = tmp7;
-        if (tmp7) {
-          sham2 = tmp7.sham;
-        }
-        sham = sham2;
-      }
-      if (sham) {
-        let tmp14 = _mod14434(tmp21, "sham", true);
-      }
-      let tmp19 = _mod14435(prototype, key10024, tmp21, arg0);
-      continue;
-    }
-  }
-};
+const require = globalThis.__r;
+
+let e = e_mod;
+e.__exportStar(_mod14378, exports);
+let e = e_mod;
+e.__exportStar(CanonicalizeTimeZoneName, exports);
+let e = e_mod;
+e.__exportStar(CoerceOptionsToObject, exports);
+let e = e_mod;
+e.__exportStar(GetNumberOption, exports);
+let e = e_mod;
+e.__exportStar(GetOption, exports);
+let e = e_mod;
+e.__exportStar(GetOptionsObject, exports);
+let e = e_mod;
+e.__exportStar(GetStringOrBooleanOption, exports);
+let e = e_mod;
+e.__exportStar(IsSanctionedSimpleUnitIdentifier, exports);
+let e = e_mod;
+e.__exportStar(IsValidTimeZoneName, exports);
+let e = e_mod;
+e.__exportStar(IsWellFormedCurrencyCode, exports);
+let e = e_mod;
+e.__exportStar(IsWellFormedUnitIdentifier, exports);
+let e = e_mod;
+e.__exportStar(ApplyUnsignedRoundingMode, exports);
+let e = e_mod;
+e.__exportStar(CollapseNumberRange, exports);
+let e = e_mod;
+e.__exportStar(ComputeExponent, exports);
+let e = e_mod;
+e.__exportStar(ComputeExponentForMagnitude, exports);
+let e = e_mod;
+e.__exportStar(CurrencyDigits, exports);
+let e = e_mod;
+e.__exportStar(FormatApproximately, exports);
+let e = e_mod;
+e.__exportStar(FormatNumeric, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericRange, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericRangeToParts, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericToParts, exports);
+let e = e_mod;
+e.__exportStar(FormatNumericToString, exports);
+let e = e_mod;
+e.__exportStar(GetUnsignedRoundingMode, exports);
+let e = e_mod;
+e.__exportStar(InitializeNumberFormat, exports);
+let e = e_mod;
+e.__exportStar(PartitionNumberPattern, exports);
+let e = e_mod;
+e.__exportStar(PartitionNumberRangePattern, exports);
+let e = e_mod;
+e.__exportStar(SetNumberFormatDigitOptions, exports);
+let e = e_mod;
+e.__exportStar(SetNumberFormatUnitOptions, exports);
+let e = e_mod;
+e.__exportStar(ToRawFixed, exports);
+let e = e_mod;
+e.__exportStar(ToRawPrecision, exports);
+let e = e_mod;
+e.__exportStar(PartitionPattern, exports);
+let e = e_mod;
+e.__exportStar(SupportedLocales, exports);
+let e = e_mod;
+e.__exportStar(_mod14381, exports);
+let e = e_mod;
+e.__exportStar(RangePatternType, exports);
+let e = e_mod;
+e.__exportStar(_mod14435, exports);
+let e = e_mod;
+e.__exportStar(_mod14436, exports);
+let e = e_mod;
+e.__exportStar(_mod14437, exports);
+let e = e_mod;
+e.__exportStar(_mod14438, exports);
+let e = e_mod;
+e.__exportStar(_mod14439, exports);
+
+export const _formatToParts = require("e").__importDefault(require("14404__.js")).default;
+export const createDataProperty = require("14383__.js").createDataProperty;
+export const defineProperty = require("14383__.js").defineProperty;
+export const getInternalSlot = require("14383__.js").getInternalSlot;
+export const getMultiInternalSlots = require("14383__.js").getMultiInternalSlots;
+export const isLiteralPart = require("14383__.js").isLiteralPart;
+export const setInternalSlot = require("14383__.js").setInternalSlot;
+export const setMultiInternalSlots = require("14383__.js").setMultiInternalSlots;
+export const isMissingLocaleDataError = require("14433__.js").isMissingLocaleDataError;
+export const createMemoizedDateTimeFormat = require("14383__.js").createMemoizedDateTimeFormat;
+export const createMemoizedListFormat = require("14383__.js").createMemoizedListFormat;
+export const createMemoizedLocale = require("14383__.js").createMemoizedLocale;
+export const createMemoizedNumberFormat = require("14383__.js").createMemoizedNumberFormat;
+export const createMemoizedPluralRules = require("14383__.js").createMemoizedPluralRules;
+export const invariant = require("14383__.js").invariant;
+export const ZERO = require("TEN").ZERO;
+export const ToIntlMathematicalValue = require("ToIntlMathematicalValue").ToIntlMathematicalValue;

@@ -1,28 +1,16 @@
 // _runtime/metro/06477__.js
-import _mod19 from "00019__.js";
-import _mod6321 from "06321__.js";
-
-const useLayoutEffect = _mod19.useLayoutEffect;
-
-export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (obj.isFabricInstalled()) {
-    useLayoutEffect(() => {
-      if (closure_0) {
-        if (closure_0.current) {
-          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
-            if (typeof closure_0.current.getBoundingClientRect === "function") {
-              const current2 = closure_0.current;
-              closure_1(current2.getBoundingClientRect());
-            }
-          } else {
-            const current = closure_0.current;
-            closure_1(current.unstable_getBoundingClientRect());
-          }
-        }
-      }
-    });
-  }
-  obj = _mod6321;
+const fn = function t(arg0, velocityY, substr) {
+  closure_0 = arg0 + 0.2 * velocityY;
+  closure_1 = min.apply(
+    null,
+    substr.map((item) => Math.abs(closure_0 - item)),
+  );
+  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
 };
+fn.__closure = {};
+fn.__workletHash = 8913698095371;
+fn.__initData = {
+  code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}",
+};
+
+export const snapPoint = fn;

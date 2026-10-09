@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/modules/media_viewer/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ad50b5e2cb199dc282a7ce82f2fb5245",
-  name: "FlashIcon",
+  hash: "87391322b2483c883b3f5fd1ac4080a9",
+  name: "ic_eye",
   type: "png",
 });
