@@ -6,7 +6,7 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1243 */;
 import resolveThemeDefault from "resolveTheme" /* 1250 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2046 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 14315 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 14370 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
@@ -128,9 +128,8 @@ const themeStore = new ThemeStore(DispatcherDefault, {
         }, UserSettingsDelay.INFREQUENT_USER_ACTION);
       }
       obj = DispatcherDefault;
-      obj.wait(() => {
-        DispatcherDefault.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
-      });
+      const obj2 = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } };
+      obj.dispatch(obj2);
     }
     const tmp13 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp13 !== closure_13;

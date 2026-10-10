@@ -1,12 +1,12 @@
-// === Module 8617: AddModerators ===
+// === Module 8633: AddModerators ===
 
-// Module 8617 (AddModerators)
+// Module 8633 (AddModerators)
 import nativeDefault from "native" /* 587 */;
-import HeaderActionButton from "HeaderActionButton" /* 7082 */;
+import HeaderActionButton from "HeaderActionButton" /* 7088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const RowType = fn(7489).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, moderatorDescriptionContainer: { margin: 16 }, errorMessage: { margin: 16, marginBottom: 0 } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -151,8 +151,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddModer
               let tmp38 = null;
               if (null != tmp20.message) {
                 const obj8 = { style: tmp10.errorMessage, children: null };
-                const obj9 = { messageType: tmp(tmp2[20]).HelpMessageTypes.ERROR, children: tmp20.message };
-                obj8.children = closure_10(tmp(tmp2[20]).HelpMessage, obj9);
+                const obj9 = { type: "critical", message: tmp20.message, role: "alert" };
+                obj8.children = closure_10(tmp(tmp2[20]).InlineNotice, obj9);
                 tmp38 = closure_10(View, obj8);
               }
               cResult[21] = tmp20.message;
@@ -186,18 +186,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddModer
       }
     }
   }
-  class I {
+  class N {
     constructor() {
       values = Object.values(closure_5);
       found = values.filter((row) => null != row.row.id);
       mapped = found.map((row) => {
         row = row.row;
         if (row.rowType === constants.ROLE) {
-          let moderatorOverwrite = guildId(5890).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.ROLE);
-          const obj2 = guildId(5890);
+          let moderatorOverwrite = guildId(5893).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.ROLE);
+          const obj2 = guildId(5893);
         } else {
-          moderatorOverwrite = guildId(5890).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.MEMBER);
-          const obj = guildId(5890);
+          moderatorOverwrite = guildId(5893).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.MEMBER);
+          const obj = guildId(5893);
         }
         return moderatorOverwrite;
       });
@@ -218,8 +218,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddModer
   cResult[7] = tmp4;
   cResult[9] = first1;
   cResult[10] = tmp6;
-  cResult[11] = I;
-  tmp26 = I;
+  cResult[11] = N;
+  tmp26 = N;
   const tmp17Result = _slicedToArray(noop.useState(tmp22), 2);
 }) : (function AddModerators(guildId) {
   guildId = guildId.guildId;
@@ -244,11 +244,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddModer
     const mapped = found.map((row) => {
       row = row.row;
       if (row.rowType === constants.ROLE) {
-        let moderatorOverwrite = guildId(5890).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.ROLE);
-        const obj2 = guildId(5890);
+        let moderatorOverwrite = guildId(5893).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.ROLE);
+        const obj2 = guildId(5893);
       } else {
-        moderatorOverwrite = guildId(5890).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.MEMBER);
-        const obj = guildId(5890);
+        moderatorOverwrite = guildId(5893).createModeratorOverwrite(row.id, guildId(1998).PermissionOverwriteType.MEMBER);
+        const obj = guildId(5893);
       }
       return moderatorOverwrite;
     });
@@ -286,8 +286,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddModer
   const items2 = [closure_10(View, obj3), , ];
   if (null != tmp10[1].message) {
     const obj5 = { style: tmp3.errorMessage, children: null };
-    const obj6 = { messageType: tmp4(tmp5[20]).HelpMessageTypes.ERROR, children: tmp12.message };
-    obj5.children = closure_10(tmp4(tmp5[20]).HelpMessage, obj6);
+    const obj6 = { type: "critical", message: tmp12.message, role: "alert" };
+    obj5.children = closure_10(tmp4(tmp5[20]).InlineNotice, obj6);
     tmp = closure_10(View, obj5);
   }
   items2[1] = tmp;

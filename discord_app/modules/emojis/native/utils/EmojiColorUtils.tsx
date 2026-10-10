@@ -1,6 +1,6 @@
-// === Module 16421: utils/EmojiColorUtils ===
+// === Module 16491: utils/EmojiColorUtils ===
 
-// Module 16421 (utils/EmojiColorUtils)
+// Module 16491 (utils/EmojiColorUtils)
 import privDefault from "priv" /* 1457 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_6 = async function _getFromCacheOrFallback2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_7 = async function _getEmojiDominantColors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

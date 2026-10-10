@@ -1,6 +1,6 @@
-// === Module 10539: BadgeDirectoryUpdatesExperiment ===
+// === Module 10573: BadgeDirectoryUpdatesExperiment ===
 
-// Module 10539 (BadgeDirectoryUpdatesExperiment)
+// Module 10573 (BadgeDirectoryUpdatesExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import "ReactCompilerGating";

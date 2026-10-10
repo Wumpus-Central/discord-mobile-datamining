@@ -1,12 +1,12 @@
-// === Module 6126: MemberVerificationAlertRejected ===
+// === Module 6119: MemberVerificationAlertRejected ===
 
-// Module 6126 (MemberVerificationAlertRejected)
+// Module 6119 (MemberVerificationAlertRejected)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4901 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4940 */;
 
 const require = globalThis.__r;
 
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             }
             const result = tmp2(stateFromStores[13]).openMemberVerificationModal(tmp2);
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp20) {
           c2 = tmp;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6123);
+            const obj4 = v1(6116);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -404,9 +404,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           if (closure_128_1 != null) {
             tmp6();
           }
-          const result = guildId(6151).openMemberVerificationModal(closure_128_0);
+          const result = guildId(6144).openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp19) {
         dependencyMap = tmp;
@@ -445,7 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -464,7 +464,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             if (stateFromStores2 != null) {
               isPending = stateFromStores2.isPending;
             }
-            const obj4 = v1(6123);
+            const obj4 = v1(6116);
             if (isPending) {
               v1 = 2;
               dependencyMap = 1;
@@ -498,9 +498,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           if (closure_128_1 != null) {
             tmp6();
           }
-          const result = guildId(6151).openMemberVerificationModal(closure_128_0);
+          const result = guildId(6144).openMemberVerificationModal(closure_128_0);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp19) {
         dependencyMap = tmp;

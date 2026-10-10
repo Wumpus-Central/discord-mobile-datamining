@@ -1,8 +1,8 @@
-// === Module 13489: InAppReportsBreadCrumbs ===
+// === Module 13540: InAppReportsBreadCrumbs ===
 
-// Module 13489 (InAppReportsBreadCrumbs)
+// Module 13540 (InAppReportsBreadCrumbs)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -14,7 +14,7 @@ let closure_3 = ["element", "menuName"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
 let size = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj2.breadCrumbDot = size;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
         const fn = function h(multiSelect) {
           multiSelect = multiSelect.multiSelect;
           const first = _slicedToArray(multiSelect.destination, 1)[0];
-          state = undefined;
+          let state;
           if (multiSelect != null) {
             state = multiSelect.state;
           }
@@ -77,12 +77,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
       if (0 === found.length) {
         return null;
       } else if (cResult[2] !== menuName) {
-        const REPORT_TO_MOD = tmp(7707).ReportMenuTypeSets.REPORT_TO_MOD;
+        const REPORT_TO_MOD = tmp(7724).ReportMenuTypeSets.REPORT_TO_MOD;
         const hasItem = REPORT_TO_MOD.has(menuName);
         const intl = tmp(1126).intl;
         const string = intl.string;
         if (hasItem) {
-          let stringResult = string(tmp8(2697)["6mx/DP"]);
+          let stringResult = string(tmp8(2700)["6mx/DP"]);
         } else {
           stringResult = string(tmp(1126).t["+3V9Tp"]);
         }
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
           tmp17 = tmp19;
         }
         const obj4 = { style: tmp5.title, accessibilityRole: "header", variant: "text-xs/bold", children: cResult[3] };
-        const tmp15 = closure_7(tmp(5087).Text, obj4);
+        const tmp15 = closure_7(tmp(5088).Text, obj4);
         cResult[4] = tmp5.title;
         cResult[5] = cResult[3];
         cResult[6] = tmp15;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
       found = found(12).flatMap(merged.history, (destination) => {
         [tmp] = destination.destination;
         const multiSelect = destination.multiSelect;
-        state = undefined;
+        let state;
         if (multiSelect != null) {
           state = multiSelect.state;
         }
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
         const intl = require("util").intl;
         const string = intl.string;
         if (hasItem) {
-          prop = tmp7(2697)["6mx/DP"];
+          prop = tmp7(2700)["6mx/DP"];
           let stringResult = string(prop);
         } else {
           stringResult = string(tmp12(1126).t["+3V9Tp"]);
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Breadcru
       const flatMapResult = found(12).flatMap(merged.history, (destination) => {
         [tmp] = destination.destination;
         const multiSelect = destination.multiSelect;
-        state = undefined;
+        let state;
         if (multiSelect != null) {
           state = multiSelect.state;
         }

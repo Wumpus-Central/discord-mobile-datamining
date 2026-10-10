@@ -1,13 +1,13 @@
-// === Module 15190: PremiumGiftingSetting ===
+// === Module 15252: PremiumGiftingSetting ===
 
-// Module 15190 (PremiumGiftingSetting)
+// Module 15252 (PremiumGiftingSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4741 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7130 */;
-import PromotionsHooks from "PromotionsHooks" /* 9100 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10460 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4782 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7136 */;
+import PromotionsHooks from "PromotionsHooks" /* 9120 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremiumGiftingSettingTrailing() {
   const cResult = c.c(2);
   const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
@@ -67,7 +67,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(11490).GiftIcon,
+  IconComponent: fn(11536).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },

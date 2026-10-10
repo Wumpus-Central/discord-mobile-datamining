@@ -1,13 +1,13 @@
-// === Module 14127: GuildHeaderCountsStore ===
+// === Module 14182: GuildHeaderCountsStore ===
 
-// Module 14127 (GuildHeaderCountsStore)
+// Module 14182 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6974 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4981 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 6980 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
 import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 
 const obj = {};
 const dependencyMap = obj;
@@ -56,21 +56,21 @@ const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "toCharArray$esjava$1", onlineCount: "T", memberCount: "code" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "code", memberCount: "ip" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "toCharArray$esjava$1", onlineCount: "T", memberCount: "code" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "code", memberCount: "ip" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "toCharArray$esjava$1", onlineCount: "T", memberCount: "code" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "code", memberCount: "ip" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   }

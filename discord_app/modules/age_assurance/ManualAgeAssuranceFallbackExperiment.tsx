@@ -1,7 +1,7 @@
-// === Module 5920: ManualAgeAssuranceFallbackExperiment ===
+// === Module 7542: ManualAgeAssuranceFallbackExperiment ===
 
-// Module 5920 (ManualAgeAssuranceFallbackExperiment)
-import SafetyHubStore from "SafetyHubStore" /* 5921 */;
+// Module 7542 (ManualAgeAssuranceFallbackExperiment)
+import SafetyHubStore from "SafetyHubStore" /* 7536 */;
 
 const require = fn;
 const ApexExperiment = fn(1453);

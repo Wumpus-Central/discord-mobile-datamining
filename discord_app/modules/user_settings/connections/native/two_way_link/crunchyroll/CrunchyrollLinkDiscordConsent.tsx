@@ -1,12 +1,12 @@
-// === Module 12887: CrunchyrollLinkDiscordConsent ===
+// === Module 12934: CrunchyrollLinkDiscordConsent ===
 
-// Module 12887 (CrunchyrollLinkDiscordConsent)
+// Module 12934 (CrunchyrollLinkDiscordConsent)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(12882).CrunchyrollLinkModalScenes;
+let closure_3 = fn(12929).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1085).PlatformTypes;
-const CrunchyrollConnectionConstants = fn(8440);
+const CrunchyrollConnectionConstants = fn(8456);
 ({ CRUNCHYROLL_CLIENT_ID: hasOwnProperty, CRUNCHYROLL_CLIENT_SCOPES: metroRequire } = CrunchyrollConnectionConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
       }
     }
   }
-  const tmp8 = jsx(tmp(9195).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: tmp5, onError: tmp6 });
+  const tmp8 = jsx(tmp(9222).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: tmp5, onError: tmp6 });
   cResult[4] = callbackCode;
   cResult[5] = callbackState;
   cResult[6] = tmp6;
@@ -70,5 +70,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR);
   }, items1);
-  return jsx(navigation(9195).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
+  return jsx(navigation(9222).TwoWayLinkDiscordConsent, { platformType: PlatformTypes.CRUNCHYROLL, callbackCode, callbackState, clientId, scopes, onNext: callback, onError: callback1 });
 });

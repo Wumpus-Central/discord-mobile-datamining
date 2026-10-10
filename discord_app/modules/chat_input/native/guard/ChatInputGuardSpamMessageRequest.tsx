@@ -1,6 +1,6 @@
-// === Module 12123: ChatInputGuardSpamMessageRequest ===
+// === Module 12167: ChatInputGuardSpamMessageRequest ===
 
-// Module 12123 (ChatInputGuardSpamMessageRequest)
+// Module 12167 (ChatInputGuardSpamMessageRequest)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -46,11 +46,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   longestChannelMessageBeforeReply = channel(longestChannelMessageBeforeReply[7]).useLongestChannelMessageBeforeReply(channel.id, tmp9);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     function handleRequestError() {
-      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      const obj2 = { text: null, variant: "critical" };
       const intl = channel(longestChannelMessageBeforeReply[9]).intl;
-      obj2.content = intl.string(channel(longestChannelMessageBeforeReply[9]).t["EDYbS+"]);
-      obj2.icon = navigation(longestChannelMessageBeforeReply[10]);
-      navigation(longestChannelMessageBeforeReply[8]).open(obj2);
+      obj2.text = intl.string(channel(longestChannelMessageBeforeReply[9]).t["EDYbS+"]);
+      navigation(longestChannelMessageBeforeReply[8]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     }
     cResult[5] = handleRequestError;
     let tmp12 = handleRequestError;
@@ -81,7 +80,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return;
       }
     }
-    const messageRequestActions = tmp(tmp2[11]).useMessageRequestActions(obj3);
+    const messageRequestActions = tmp(tmp2[10]).useMessageRequestActions(obj3);
     const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
     ({ isRejectLoading, isUserProfileLoading, isOptimisticRejected, markAsNotSpam } = messageRequestActions);
     if (!isRejectLoading) {
@@ -110,13 +109,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     function handleAcceptClick(stopPropagation) {
       stopPropagation.stopPropagation();
-      markAsNotSpam(channel, longestChannelMessageBeforeReply, () => channel(longestChannelMessageBeforeReply[12]).transitionToChannel(id.id, { navigationReplace: true }));
+      markAsNotSpam(channel, longestChannelMessageBeforeReply, () => channel(longestChannelMessageBeforeReply[11]).transitionToChannel(id.id, { navigationReplace: true }));
     }
     cResult[11] = channel;
     cResult[12] = markAsNotSpam;
     cResult[13] = longestChannelMessageBeforeReply;
     cResult[14] = handleAcceptClick;
-    const tmpResult4 = tmp(tmp2[11]);
+    const tmpResult4 = tmp(tmp2[10]);
   }
   obj3 = { user: stateFromStores, onError: tmp12, onRejectSuccess: E };
   cResult[8] = E;
@@ -132,20 +131,19 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items = [c4];
   const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   let obj2 = channel(504);
-  dependencyMap = channel(12124).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
+  dependencyMap = channel(12168).useLongestChannelMessageBeforeReply(channel.id, channel.getRecipientId());
   const items1 = [navigation];
   const callback = noop.useCallback(() => {
     navigation.pop();
   }, items1);
-  const obj3 = channel(12124);
-  const messageRequestActions = channel(12116).useMessageRequestActions({
+  const obj3 = channel(12168);
+  const messageRequestActions = channel(12160).useMessageRequestActions({
     user: stateFromStores,
     onError: function handleRequestError() {
-      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      const obj2 = { text: null, variant: "critical" };
       const intl = channel(1126).intl;
-      obj2.content = intl.string(channel(1126).t["EDYbS+"]);
-      obj2.icon = navigation(5008);
-      navigation(4768).open(obj2);
+      obj2.text = intl.string(channel(1126).t["EDYbS+"]);
+      navigation(4809).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback
   });
@@ -158,15 +156,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp7 = isOptimisticRejected;
   }
   const obj6 = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
-  const obj4 = channel(12116);
+  const obj4 = channel(12160);
   const obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {
-      const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      const obj2 = { text: null, variant: "critical" };
       const intl = channel(1126).intl;
-      obj2.content = intl.string(channel(1126).t["EDYbS+"]);
-      obj2.icon = navigation(5008);
-      navigation(4768).open(obj2);
+      obj2.text = intl.string(channel(1126).t["EDYbS+"]);
+      navigation(4809).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
     },
     onRejectSuccess: callback
   };
@@ -189,9 +186,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj6.buttonSecondaryText = intl4.string(channel(1126).t.olZgw5);
   obj6.buttonSecondaryOnPress = function handleAcceptClick(stopPropagation) {
     stopPropagation.stopPropagation();
-    _undefined2(channel, closure_2, () => channel(closure_2[12]).transitionToChannel(id.id, { navigationReplace: true }));
+    _undefined2(channel, closure_2, () => channel(closure_2[11]).transitionToChannel(id.id, { navigationReplace: true }));
   };
   obj6.buttonSecondaryDisabled = tmp7;
   obj6.buttonSecondaryLoading = isUserProfileLoading;
-  return jsx(navigation(12122), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
+  return jsx(navigation(12166), { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonPrimaryVariant: "destructive", buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null });
 }));

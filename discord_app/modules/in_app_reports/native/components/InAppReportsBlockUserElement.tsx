@@ -1,13 +1,13 @@
-// === Module 13494: InAppReportsBlockUserElement ===
+// === Module 13545: InAppReportsBlockUserElement ===
 
-// Module 13494 (InAppReportsBlockUserElement)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7011 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7017 */;
+// Module 13545 (InAppReportsBlockUserElement)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7025 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 
 const require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockUse
               obj1 = { other_user_id: user.id, report_id: reportId };
               trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.IAR_BLOCK_USER_BUTTON_CLICKED, obj1);
               obj3 = closure_1(closure_2[10]);
-              blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" });
+              blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" }, channelId);
               obj4 = closure_1(closure_2[11]);
               result = obj4.showBlockSuccessToast(user.id, channelId);
               return;
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BlockUse
           obj1 = { other_user_id: user.id, report_id: reportId };
           trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.IAR_BLOCK_USER_BUTTON_CLICKED, obj1);
           obj3 = closure_1(closure_2[10]);
-          blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" });
+          blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" }, channelId);
           obj4 = closure_1(closure_2[11]);
           result = obj4.showBlockSuccessToast(user.id, channelId);
           return;

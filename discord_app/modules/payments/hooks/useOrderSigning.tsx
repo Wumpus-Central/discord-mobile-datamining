@@ -1,15 +1,15 @@
-// === Module 9051: useOrderSigning ===
+// === Module 9070: useOrderSigning ===
 
-// Module 9051 (useOrderSigning)
-import BillingUtils from "BillingUtils" /* 4743 */;
-import BillingErrorDefault from "BillingError" /* 4750 */;
+// Module 9070 (useOrderSigning)
+import BillingUtils from "BillingUtils" /* 4784 */;
+import BillingErrorDefault from "BillingError" /* 4791 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: hasOwnProperty, useState: metroRequire } = noop);
-const OrderStatus = fn(5070).OrderStatus;
+const OrderStatus = fn(5071).OrderStatus;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/payments/hooks/useOrderSigning.tsx");
 
@@ -70,7 +70,7 @@ export const useOrderSigning = function useOrderSigning(order) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

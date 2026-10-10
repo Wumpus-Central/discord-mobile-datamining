@@ -1,6 +1,6 @@
-// === Module 2083: ServerNSFWLevelExperiment ===
+// === Module 2084: ServerNSFWLevelExperiment ===
 
-// Module 2083 (ServerNSFWLevelExperiment)
+// Module 2084 (ServerNSFWLevelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

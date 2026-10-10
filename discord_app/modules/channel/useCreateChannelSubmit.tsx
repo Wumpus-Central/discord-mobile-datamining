@@ -1,7 +1,7 @@
-// === Module 8584: useCreateChannelSubmit ===
+// === Module 8600: useCreateChannelSubmit ===
 
-// Module 8584 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 8585 */;
+// Module 8600 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 8601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ export default function useCreateChannelSubmit(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ export default function useCreateChannelSubmit(arg0) {
           if (3 === tmp8) {
             c6 = 1;
             closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(4930).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(4969).AccessibilityAnnouncer;
             const intl = closure_0(1126).intl;
             AccessibilityAnnouncer.announce(intl.string(closure_0(1126).t["0SbUzm"]));
             const body = closure_131_13.body;
@@ -129,7 +129,7 @@ export default function useCreateChannelSubmit(arg0) {
               id = closure_131_10.id;
               guild_id = closure_131_10.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(4930).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer2 = closure_0(4969).AccessibilityAnnouncer;
                 const intl2 = closure_0(1126).intl;
                 const obj9 = { name: closure_131_5 };
                 AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1126).t.Wke70b, obj9));

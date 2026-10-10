@@ -1,14 +1,14 @@
-// === Module 8081: VoiceSessionUtils ===
+// === Module 8099: VoiceSessionUtils ===
 
-// Module 8081 (VoiceSessionUtils)
+// Module 8099 (VoiceSessionUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMessageAuthor from "useMessageAuthor" /* 5624 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7979 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8082 */;
+import useMessageAuthor from "useMessageAuthor" /* 5627 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7997 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8100 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7341 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7347 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;

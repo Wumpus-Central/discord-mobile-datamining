@@ -1,10 +1,10 @@
-// === Module 17173: MaximizeIcon ===
+// === Module 17243: MaximizeIcon ===
 
-// Module 17173 (MaximizeIcon)
+// Module 17243 (MaximizeIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod11576 from "module_11576" /* 11576 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod11622 from "module_11622" /* 11622 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const MaximizeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11576;
+    const tmpResult = _mod11622;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const MaximizeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11576, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11622, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

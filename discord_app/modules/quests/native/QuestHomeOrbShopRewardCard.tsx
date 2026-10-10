@@ -1,10 +1,10 @@
-// === Module 15276: QuestHomeOrbShopRewardCard ===
+// === Module 15338: QuestHomeOrbShopRewardCard ===
 
-// Module 15276 (QuestHomeOrbShopRewardCard)
+// Module 15338 (QuestHomeOrbShopRewardCard)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7268 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8284 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7274 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8300 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1087).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { card: { overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, position: "relative" }, assetTile: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.assetTile = {};

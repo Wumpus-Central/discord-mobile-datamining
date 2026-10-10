@@ -1,12 +1,12 @@
-// === Module 15781: UserSettingsDebugLogs ===
+// === Module 15843: UserSettingsDebugLogs ===
 
-// Module 15781 (UserSettingsDebugLogs)
+// Module 15843 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15782 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,12 +17,12 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, searchWrap: null, searchField: null, shareButton: null, list: null, log: null, code: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.searchField = { flex: 1 };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6300).InputHeights.MD, width: fn(6300).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6301).InputHeights.MD, width: fn(6301).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 obj2.shareButton = size;
 let obj4 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 obj2.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
       closure_1_1((arg0) => arg0 + 1);
-      ToastActionCreatorsDefault.open({ content: "Debug logs refreshed", key: "debug-logs-refreshed" });
+      ToastActionCreatorsDefault.open("debug-logs-refreshed", { text: "Debug logs refreshed" });
     };
     cResult[0] = fn;
     first = fn;
@@ -573,7 +573,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   [tmp6, importDefault] = sortOrder(noop.useState(0), 2);
   const onRefresh = noop.useCallback(() => {
     closure_1_1((arg0) => arg0 + 1);
-    ToastActionCreatorsDefault.open({ content: "Debug logs refreshed", key: "debug-logs-refreshed" });
+    ToastActionCreatorsDefault.open("debug-logs-refreshed", { text: "Debug logs refreshed" });
   }, []);
   let Storage = require("Storage").Storage;
   let str = Storage.get("debug-log-sort-order", "oldest");
@@ -684,7 +684,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj8.data = tmp4Result4[0];
   obj8.renderItem = callback1;
   obj8.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_8608").FlashList, obj8);
+  items4[1] = closure_8(require("module_8624").FlashList, obj8);
   obj2.children = items4;
   return first1(memo, obj2);
 });

@@ -1,21 +1,21 @@
-// === Module 13951: showVoiceChannelBlockedUserWarning ===
+// === Module 14004: showVoiceChannelBlockedUserWarning ===
 
-// Module 13951 (showVoiceChannelBlockedUserWarning)
+// Module 14004 (showVoiceChannelBlockedUserWarning)
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
 
 require = fn;
-const SharedSpacesWarningStore = fn(13950);
+const SharedSpacesWarningStore = fn(14003);
 ({ queueBlockWarning: closure_4, dequeueBlockWarning: hasOwnProperty } = SharedSpacesWarningStore);
-const constants = fn(13952).VoiceChannelWarningSurfaces;
+const constants = fn(14005).VoiceChannelWarningSurfaces;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx");
 
 export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, items1) {
-  state = AppStateStore.getState();
+  const state = AppStateStore.getState();
   if (state === ConstantsIOS.AppStates.ACTIVE) {
     hasOwnProperty();
     const obj2 = { channelId, blockedUserId: items1, impressionName: null, impressionProperties: null };
@@ -26,8 +26,8 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj3.blocked_user_ids = items;
     obj3.warning_surface = constants.POST_JOIN_SHEET;
     obj2.impressionProperties = obj3;
-    obj.openLazy(asyncRequireImpl(13953, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
-    const tmp11 = asyncRequireImpl(13953, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(14006, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
+    const tmp11 = asyncRequireImpl(14006, dependencyMap.paths);
   } else {
     React4();
   }

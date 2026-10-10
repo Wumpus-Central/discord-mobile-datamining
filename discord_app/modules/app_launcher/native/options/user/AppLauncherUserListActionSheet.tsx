@@ -1,15 +1,15 @@
-// === Module 11847: AppLauncherUserListActionSheet ===
+// === Module 11891: AppLauncherUserListActionSheet ===
 
-// Module 11847 (AppLauncherUserListActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import TableRow from "TableRow" /* 6186 */;
+// Module 11891 (AppLauncherUserListActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import TableRow from "TableRow" /* 6179 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -43,7 +43,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySt
       return tmp7;
     }
   }
-  const tmp8 = jsx(onPressRow(11807).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
+  const tmp8 = jsx(onPressRow(11851).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
   cResult[4] = tmp4.emptyState;
   cResult[5] = tmp5;
   cResult[6] = tmp6;
@@ -64,7 +64,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySt
   };
   const items = [onPressRow.query];
   obj.data = items;
-  return jsx(onPressRow(11807).AppLauncherList, {
+  return jsx(onPressRow(11851).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: null,
     renderItem(label) {
@@ -330,7 +330,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
       tmp11[1] = guild_id;
       tmp11[3] = U;
       tmp11[6] = tmp4;
-      tmp9Result = jsx(tmp10(10711), tmp11);
+      tmp9Result = jsx(tmp10(10746), tmp11);
     }
     cResult[8] = channel;
     cResult[9] = id;

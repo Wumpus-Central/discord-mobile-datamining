@@ -1,36 +1,36 @@
-// === Module 16680: HomeDrawerGuildRow ===
+// === Module 16750: HomeDrawerGuildRow ===
 
-// Module 16680 (HomeDrawerGuildRow)
-import Text_Text from "Text/Text" /* 5087 */;
-import useChannelName from "useChannelName" /* 5418 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10312 */;
-import BellZIcon from "BellZIcon" /* 12618 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 16685 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 16686 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 16687 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 16689 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 16690 */;
+// Module 16750 (HomeDrawerGuildRow)
+import Text_Text from "Text/Text" /* 5088 */;
+import useChannelName from "useChannelName" /* 5421 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10345 */;
+import BellZIcon from "BellZIcon" /* 12665 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 16755 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 16756 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 16757 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 16759 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 16760 */;
 import noop from "module_19" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildChannelStore from "GuildChannelStore" /* 4707 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6084 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import ReadStateStore from "ReadStateStore" /* 6042 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5973 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6077 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import ReadStateStore from "ReadStateStore" /* 6035 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const isThread = fn(2068).isThread;
+const isThread = fn(2069).isThread;
 const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = { STREAMING: "streaming", VOICE: "voice", MENTION: "mention", TYPING: "typing", UNREAD: "unread", NONE: "none" };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_21 = createStyles.createStyles({ guildName: { flexDirection: "row", alignItems: "center", gap: 4 }, guildNameText: { flexShrink: 1 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -160,7 +160,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildR
         }
       }
       const obj3 = { variant: "text-md/medium", style: tmp4.guildNameText, lineClamp: 1, color: "text-default", children: guild.name };
-      const tmp22 = closure_18(tmp(5087).Text, obj3);
+      const tmp22 = closure_18(tmp(5088).Text, obj3);
       cResult[12] = guild.name;
       cResult[13] = tmp4.guildNameText;
       cResult[14] = "text-default";
@@ -224,7 +224,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildR
       }
       obj2.color = str;
       obj2.children = guild.name;
-      const items = [collapsedCategories(Text_Text.Text, obj2), collapsedCategories(value2, { size: "xs", color: "icon-muted" })];
+      const items = [collapsedCategories(Text_Text.Text, obj2), collapsedCategories(value3, { size: "xs", color: "icon-muted" })];
       obj.children = items;
       return closure_2_19(View, obj);
     }
@@ -472,7 +472,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   } else {
     tmp8 = cResult[3];
   }
-  const MobileHomeDrawerExperiment = tmp(4943).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = tmp(4982).MobileHomeDrawerExperiment;
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
@@ -498,7 +498,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   ({ disableSubtitle, onActiveHookChange } = guildId);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4943).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4982).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

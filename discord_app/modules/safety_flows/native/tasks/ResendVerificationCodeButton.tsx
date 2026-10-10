@@ -1,6 +1,6 @@
-// === Module 18564: ResendVerificationCodeButton ===
+// === Module 18638: ResendVerificationCodeButton ===
 
-// Module 18564 (ResendVerificationCodeButton)
+// Module 18638 (ResendVerificationCodeButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ export default function ResendVerificationCodeButton(flowId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -60,19 +60,17 @@ export default function ResendVerificationCodeButton(flowId) {
               c3 = 2;
               v3 = 3;
               c4 = 1;
-              const obj6 = { value: tmp4(tmp43[5]).resendVerificationCode(flowId), done: false };
+              const obj6 = { value: tmp4(tmp40[5]).resendVerificationCode(flowId), done: false };
               return obj6;
             }
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c3 = 1;
-              const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-              const intl = tmp4(tmp43[8]).intl;
-              obj7.content = intl.string(v3(tmp43[9])["3AXMYu"]);
-              obj7.icon = v3(tmp43[10]);
-              obj7.IconComponent = tmp4(tmp43[11]).XLargeIcon;
-              v3(tmp43[7]).open(obj7);
-              const obj3 = v3(tmp43[7]);
+              const obj7 = { text: null, variant: "critical" };
+              const intl = tmp4(tmp40[8]).intl;
+              obj7.text = intl.string(v3(tmp40[9])["3AXMYu"]);
+              v3(tmp40[7]).open("SAFETY_FLOWS_VERIFY_EMAIL_ERROR", obj7);
+              const obj3 = v3(tmp40[7]);
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
@@ -83,22 +81,22 @@ export default function ResendVerificationCodeButton(flowId) {
               const obj8 = { value, done: true };
               return obj8;
             } else {
-              tmp4(tmp43[6]).showVerificationSent();
+              tmp4(tmp40[6]).showVerificationSent();
               closure_128_3(30);
               c3 = 1;
-              const obj = tmp4(tmp43[6]);
+              const obj = tmp4(tmp40[6]);
             }
             c3 = 0;
             closure_128_1(false);
           }
           c3 = 0;
           closure_128_1(false);
-          throw tmp43;
-        } catch (tmp43) {
+          throw tmp40;
+        } catch (tmp40) {
           if (tmp5 === c3) {
             c4 = tmp3;
-            throw tmp43;
-          } else if (tmp2 === tmp45) {
+            throw tmp40;
+          } else if (tmp2 === tmp42) {
             v3 = tmp2;
           } else {
             v3 = tmp;
@@ -125,7 +123,7 @@ export default function ResendVerificationCodeButton(flowId) {
     formatResult = intl3.string(tmp8(tmp7[9]).ah0EUu);
   }
   obj2.children = formatResult;
-  obj.children = jsx(flowId(countdown[12]).Text, { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null });
+  obj.children = jsx(flowId(countdown[10]).Text, { variant: "text-sm/medium", color: "text-link", accessibilityLabel: null, importantForAccessibility: "no", children: null });
   return <Pressable onPress={noop.useCallback(asyncGeneratorStep(async () => {
     if (c4 === 2) {
       c4 = 3;
@@ -137,7 +135,7 @@ export default function ResendVerificationCodeButton(flowId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -157,19 +155,17 @@ export default function ResendVerificationCodeButton(flowId) {
             c3 = 2;
             v3 = 3;
             c4 = 1;
-            const obj6 = { value: tmp4(tmp43[5]).resendVerificationCode(flowId), done: false };
+            const obj6 = { value: tmp4(tmp40[5]).resendVerificationCode(flowId), done: false };
             return obj6;
           }
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-            const intl = tmp4(tmp43[8]).intl;
-            obj7.content = intl.string(v3(tmp43[9])["3AXMYu"]);
-            obj7.icon = v3(tmp43[10]);
-            obj7.IconComponent = tmp4(tmp43[11]).XLargeIcon;
-            v3(tmp43[7]).open(obj7);
-            const obj3 = v3(tmp43[7]);
+            const obj7 = { text: null, variant: "critical" };
+            const intl = tmp4(tmp40[8]).intl;
+            obj7.text = intl.string(v3(tmp40[9])["3AXMYu"]);
+            v3(tmp40[7]).open("SAFETY_FLOWS_VERIFY_EMAIL_ERROR", obj7);
+            const obj3 = v3(tmp40[7]);
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -180,22 +176,22 @@ export default function ResendVerificationCodeButton(flowId) {
             const obj8 = { value, done: true };
             return obj8;
           } else {
-            tmp4(tmp43[6]).showVerificationSent();
+            tmp4(tmp40[6]).showVerificationSent();
             closure_128_3(30);
             c3 = 1;
-            const obj = tmp4(tmp43[6]);
+            const obj = tmp4(tmp40[6]);
           }
           c3 = 0;
           closure_128_1(false);
         }
         c3 = 0;
         closure_128_1(false);
-        throw tmp43;
-      } catch (tmp43) {
+        throw tmp40;
+      } catch (tmp40) {
         if (tmp5 === c3) {
           c4 = tmp3;
-          throw tmp43;
-        } else if (tmp2 === tmp45) {
+          throw tmp40;
+        } else if (tmp2 === tmp42) {
           v3 = tmp2;
         } else {
           v3 = tmp;

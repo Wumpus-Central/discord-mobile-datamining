@@ -1,22 +1,22 @@
-// === Module 16590: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 16657: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 16590 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 16657 (GuildRoleSubscriptionsUpsellActionSheet)
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8621 */;
-import _modDef16591 from "module_16591" /* 16591 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
+import _modDef16658 from "module_16658" /* 16658 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -43,11 +43,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: markAsDismissed(16591) };
-      const tmp12 = closure_6(markAsDismissed(6163), obj2);
+      const obj2 = { source: markAsDismissed(16658) };
+      const tmp12 = closure_6(markAsDismissed(6156), obj2);
       cResult[5] = tmp12;
       let tmp8 = tmp12;
-      const tmp11 = markAsDismissed(6163);
+      const tmp11 = markAsDismissed(6156);
     } else {
       tmp8 = cResult[5];
     }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     if (cResult[7] !== tmp4.title) {
       const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp13 };
-      const tmp17 = closure_6(tmp(5087).Text, obj3);
+      const tmp17 = closure_6(tmp(5088).Text, obj3);
       cResult[7] = tmp4.title;
       cResult[8] = tmp17;
       let tmp15 = tmp17;
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     if (cResult[10] !== tmp4.description) {
       const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-      const tmp22 = closure_6(tmp(5087).Text, obj4);
+      const tmp22 = closure_6(tmp(5088).Text, obj4);
       cResult[10] = tmp4.description;
       cResult[11] = tmp22;
       let tmp20 = tmp22;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     }
     if (cResult[13] !== tmp5) {
       const obj5 = { onPress: tmp5, text: tmp23 };
-      const tmp27 = closure_6(tmp(5376).Button, obj5);
+      const tmp27 = closure_6(tmp(5379).Button, obj5);
       cResult[13] = tmp5;
       cResult[14] = tmp27;
       let tmp25 = tmp27;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
         }
       }
       const obj7 = { onPress: T, text: tmp29, variant: "secondary" };
-      const tmp32 = closure_6(tmp(5376).Button, obj7);
+      const tmp32 = closure_6(tmp(5379).Button, obj7);
       cResult[18] = T;
       cResult[19] = tmp32;
     } else {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
       const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
       const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
       obj8.children = items;
-      const tmp39 = closure_7(tmp(6836).BottomSheet, obj8);
+      const tmp39 = closure_7(tmp(6839).BottomSheet, obj8);
       cResult[23] = tmp25;
       cResult[24] = tmp33;
       cResult[25] = tmp6;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
     },
     children: null
   };
-  const obj2 = { source: _modDef16591 };
+  const obj2 = { source: _modDef16658 };
   const items = [closure_6(FastImageDefault, obj2), , , , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

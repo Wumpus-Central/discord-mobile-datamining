@@ -12,10 +12,10 @@ import DesignIds from "DesignIds" /* 1368 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1381 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import DeviceUtils from "DeviceUtils" /* 5067 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5727 */;
-import MetricEvents from "MetricEvents" /* 5731 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 14313 */;
+import DeviceUtils from "DeviceUtils" /* 5068 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5730 */;
+import MetricEvents from "MetricEvents" /* 5734 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 14368 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -34,7 +34,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(5726).increment(obj6, true);
-  const tmp26Result = tmp26(5726);
+  tmp26(5729).increment(obj6, true);
+  const tmp26Result = tmp26(5729);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1085);
@@ -634,7 +634,7 @@ export const initSentry = function initSentry() {
           if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
-          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35020300000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@350.3.0-2+350203", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          const obj3 = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "35020400000000", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@350.4.0-2+350204", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -665,7 +665,7 @@ export const initSentry = function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod686;
-          _mod686.setTag("buildNumber", "35020300000000");
+          _mod686.setTag("buildNumber", "35020400000000");
           const tmp15Result17 = _mod686;
           _mod686.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod686;

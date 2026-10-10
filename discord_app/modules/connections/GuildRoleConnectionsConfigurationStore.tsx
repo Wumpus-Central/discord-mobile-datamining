@@ -1,9 +1,9 @@
-// === Module 18275: GuildRoleConnectionsConfigurationStore ===
+// === Module 18349: GuildRoleConnectionsConfigurationStore ===
 
-// Module 18275 (GuildRoleConnectionsConfigurationStore)
+// Module 18349 (GuildRoleConnectionsConfigurationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

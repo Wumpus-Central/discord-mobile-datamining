@@ -1,7 +1,7 @@
-// === Module 6293: ErrorText ===
+// === Module 6288: ErrorText ===
 
-// Module 6293 (ErrorText)
-import shared from "shared" /* 4930 */;
+// Module 6288 (ErrorText)
+import shared from "shared" /* 4969 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -17,11 +17,11 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = require("c").c(11);
   ({ children, style } = arg0);
   if (cResult[0] !== children) {
-    const nodeText = tmp(4781).getNodeText(children);
+    const nodeText = tmp(4820).getNodeText(children);
     cResult[0] = children;
     cResult[1] = nodeText;
     let tmp4 = nodeText;
-    const tmpResult = tmp(4781);
+    const tmpResult = tmp(4820);
   } else {
     tmp4 = cResult[1];
   }
@@ -49,7 +49,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const effect = noop.useEffect(tmp6, tmp7);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = closure_3(tmp(5001).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" });
+    const tmp11 = closure_3(tmp(6289).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" });
     cResult[5] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -57,7 +57,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[6] !== children) {
     const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", children };
-    const tmp14 = closure_3(tmp(5087).Text, obj2);
+    const tmp14 = closure_3(tmp(5088).Text, obj2);
     cResult[6] = children;
     cResult[7] = tmp14;
     let tmp12 = tmp14;
@@ -82,7 +82,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
 }) : (function ErrorText(children) {
   children = children.children;
   let nodeText;
-  nodeText = nodeText(4781).getNodeText(children);
+  nodeText = nodeText(4820).getNodeText(children);
   const items = [nodeText];
   const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
@@ -95,7 +95,7 @@ export const ErrorText = ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }, items);
   const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
-  const items1 = [closure_3(nodeText(5001).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(5087).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  const items1 = [closure_3(nodeText(6289).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(5088).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
   obj2.children = items1;
-  return closure_4(nodeText(5374).Stack, obj2);
+  return closure_4(nodeText(5377).Stack, obj2);
 });

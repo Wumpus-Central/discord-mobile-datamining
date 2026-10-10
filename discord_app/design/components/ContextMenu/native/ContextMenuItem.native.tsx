@@ -1,12 +1,12 @@
-// === Module 14196: ContextMenuItem ===
+// === Module 14251: ContextMenuItem ===
 
-// Module 14196 (ContextMenuItem)
+// Module 14251 (ContextMenuItem)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4811 */;
-import spring from "spring" /* 5375 */;
-import springPresets from "springPresets" /* 5379 */;
-import ContextMenuState from "ContextMenuState" /* 9336 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9337 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
+import spring from "spring" /* 5378 */;
+import springPresets from "springPresets" /* 5382 */;
+import ContextMenuState from "ContextMenuState" /* 9363 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9364 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { container: { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 }, containerRefresh: { justifyContent: "flex-start" }, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
   const obj2 = { padding: ContextMenuConstants.CONTEXT_MENU_ITEM_PADDING, minHeight: ContextMenuConstants.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
@@ -83,7 +83,7 @@ export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled() ? (f
           const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
           value = itemMeasurements.get();
           value[result + ContextMenuState.INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
-          const value4 = itemMeasurements.get();
+          value4 = itemMeasurements.get();
           value4[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
           const value5 = itemMeasurements.get();
           value5[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
@@ -370,7 +370,7 @@ export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled() ? (f
           const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
           value = itemMeasurements.get();
           value[result + ContextMenuState.INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
-          const value4 = itemMeasurements.get();
+          value4 = itemMeasurements.get();
           value4[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
           const value5 = itemMeasurements.get();
           value5[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;

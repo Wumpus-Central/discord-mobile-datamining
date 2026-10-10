@@ -1,6 +1,6 @@
-// === Module 12605: SavedMessageHelpers ===
+// === Module 12652: SavedMessageHelpers ===
 
-// Module 12605 (SavedMessageHelpers)
+// Module 12652 (SavedMessageHelpers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -19,26 +19,25 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
         }
       }
       if (code === constants.TOO_MANY_SAVED_MESSAGES) {
-        closure_0 = tmp5;
-        const obj2 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
+        closure_0 = tmp6;
+        const obj3 = { title: null, body: null, confirmText: null, cancelText: null, onCancel: null, isDismissable: false };
         const intl2 = closure_0(1126).intl;
-        obj2.title = intl2.string(closure_0(1126).t.mlbiZW);
+        obj3.title = intl2.string(closure_0(1126).t.mlbiZW);
         const intl3 = closure_0(1126).intl;
         const t = closure_0(1126).t;
-        const obj3 = { max: null != closure_1_1.dueAt ? closure_2_6 : closure_2_5 };
-        obj2.body = intl3.formatToPlainString(null != closure_1_1.dueAt ? t.Anr1Dg : t["1zVbEG"], obj3);
-        const intl4 = tmp8(1126).intl;
-        obj2.confirmText = intl4.string(closure_0(1126).t.BddRzS);
-        const intl5 = tmp8(1126).intl;
-        obj2.cancelText = intl5.string(closure_0(1126).t.ZGbTcy);
-        obj2.onCancel = function onCancel() {
-          const SavedMessageSortTypes = displayToast(9652).SavedMessageSortTypes;
-          return displayToast(12596).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+        const obj4 = { max: null != closure_1_1.dueAt ? closure_2_6 : closure_2_5 };
+        obj3.body = intl3.formatToPlainString(null != closure_1_1.dueAt ? t.Anr1Dg : t["1zVbEG"], obj4);
+        const intl4 = tmp9(1126).intl;
+        obj3.confirmText = intl4.string(closure_0(1126).t.BddRzS);
+        const intl5 = tmp9(1126).intl;
+        obj3.cancelText = intl5.string(closure_0(1126).t.ZGbTcy);
+        obj3.onCancel = function onCancel() {
+          const SavedMessageSortTypes = displayToast(9681).SavedMessageSortTypes;
+          return displayToast(12643).showForLaterModal(closure_0 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
         };
-        closure_1(5298).show(obj2);
+        closure_1(5299).show(obj3);
         return null;
       } else {
-        const obj5 = { key: "SAVED_MESSAGE_CREATE_ERROR", IconComponent: closure_0(5001).CircleErrorIcon, content: null };
         let message;
         if (error != null) {
           const body2 = error.body;
@@ -47,11 +46,11 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
           }
         }
         if (message == null) {
-          const intl = tmp12(1126).intl;
-          message = intl.string(tmp12(1126).t.R0RpRX);
+          const intl = closure_0(1126).intl;
+          message = intl.string(closure_0(1126).t.R0RpRX);
         }
-        obj5.content = message;
-        closure_1(4768).open(obj5);
+        const obj = { text: message, variant: "critical" };
+        closure_1(4809).open("SAVED_MESSAGE_CREATE_ERROR", obj);
         return null;
       }
     });
@@ -66,12 +65,12 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
         }
         closure_129_2 = stringResult;
         if (null != closure_129_1.dueAt) {
-          let BookmarkIcon = closure_130_0(closure_130_2[10]).ClockIcon;
+          let BookmarkIcon = closure_130_0(closure_130_2[9]).ClockIcon;
         } else {
-          BookmarkIcon = closure_130_0(closure_130_2[11]).BookmarkIcon;
+          BookmarkIcon = closure_130_0(closure_130_2[10]).BookmarkIcon;
         }
         closure_129_3 = BookmarkIcon;
-        closure_130_1(closure_130_2[8]).open({ key: "SAVED_MESSAGE_CREATE_SUCCESS", IconComponent: closure_129_3, content: closure_129_2 });
+        closure_130_1(closure_130_2[8]).open("SAVED_MESSAGE_CREATE_SUCCESS", { text: closure_129_2, icon: closure_129_3 });
         closure_130_1(closure_130_2[8]);
       }
     }
@@ -87,7 +86,6 @@ let closure_7 = async function _addOrUpdateSavedMessage(arg0) {
 let closure_8 = async function _removeSavedMessage() {
   closure_130_0(closure_130_2[3]);
   await closure_130_0(closure_130_2[3]).deleteSavedMessage(closure_129_2).catch((error) => {
-    const obj2 = { key: "SAVED_MESSAGE_REMOVE_ERROR", IconComponent: closure_1_0(5001).CircleErrorIcon, content: null };
     let message;
     if (error != null) {
       const body = error.body;
@@ -96,11 +94,10 @@ let closure_8 = async function _removeSavedMessage() {
       }
     }
     if (message == null) {
-      const intl = closure_1_0(1126).intl;
-      message = intl.string(closure_1_0(1126).t.R0RpRX);
+      const intl = closure_1_0(dependencyMap[5]).intl;
+      message = intl.string(closure_1_0(dependencyMap[5]).t.R0RpRX);
     }
-    obj2.content = message;
-    closure_1_1(4768).open(obj2);
+    closure_1_1(dependencyMap[8]).open("SAVED_MESSAGE_REMOVE_ERROR", { text: message, variant: "critical" });
     return null;
   });
   if (null != value) {
@@ -113,13 +110,13 @@ let closure_8 = async function _removeSavedMessage() {
         closure_129_3 = stringResult;
         if (null == closure_129_2.dueAt) {
           if (!closure_129_1) {
-            let ClockIcon = closure_130_0(closure_130_2[11]).BookmarkIcon;
+            let ClockIcon = closure_130_0(closure_130_2[10]).BookmarkIcon;
           }
           closure_129_4 = ClockIcon;
-          closure_130_1(closure_130_2[8]).open({ key: "SAVED_MESSAGE_REMOVE_SUCCESS", IconComponent: closure_129_4, content: closure_129_3 });
+          closure_130_1(closure_130_2[8]).open("SAVED_MESSAGE_REMOVE_SUCCESS", { text: closure_129_3, icon: closure_129_4 });
           closure_130_1(closure_130_2[8]);
         }
-        ClockIcon = closure_130_0(closure_130_2[10]).ClockIcon;
+        ClockIcon = closure_130_0(closure_130_2[9]).ClockIcon;
       }
       const intl2 = closure_130_0(closure_130_2[5]).intl;
       stringResult = intl2.string(closure_130_0(closure_130_2[5]).t.D0tS02);
@@ -132,7 +129,7 @@ let closure_8 = async function _removeSavedMessage() {
   return "Set";
 };
 const AbortCodes = fn(1085).AbortCodes;
-const SavedMessagesConstants = fn(12606);
+const SavedMessagesConstants = fn(12653);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");

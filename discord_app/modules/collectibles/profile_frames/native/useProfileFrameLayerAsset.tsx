@@ -1,6 +1,6 @@
-// === Module 8332: useProfileFrameLayerAsset ===
+// === Module 8348: useProfileFrameLayerAsset ===
 
-// Module 8332 (useProfileFrameLayerAsset)
+// Module 8348 (useProfileFrameLayerAsset)
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1987 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -85,7 +85,7 @@ let closure_16 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6904).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();

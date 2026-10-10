@@ -1,27 +1,27 @@
-// === Module 15396: QuestDockBountySmokeLayer ===
+// === Module 15458: QuestDockBountySmokeLayer ===
 
-// Module 15396 (QuestDockBountySmokeLayer)
+// Module 15458 (QuestDockBountySmokeLayer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import QuestDockUtils from "QuestDockUtils" /* 15284 */;
-import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15374 */;
-import BountiesAndroidQuestBarSmokeAnimationExperiment from "BountiesAndroidQuestBarSmokeAnimationExperiment" /* 15397 */;
-import _modDef15398 from "module_15398" /* 15398 */;
-import _modDef15399 from "module_15399" /* 15399 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 15400 */;
-import _modDef15401 from "module_15401" /* 15401 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import QuestDockUtils from "QuestDockUtils" /* 15346 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15436 */;
+import BountiesAndroidQuestBarSmokeAnimationExperiment from "BountiesAndroidQuestBarSmokeAnimationExperiment" /* 15459 */;
+import _modDef15460 from "module_15460" /* 15460 */;
+import _modDef15461 from "module_15461" /* 15461 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 15462 */;
+import _modDef15463 from "module_15463" /* 15463 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
-const _modDef15402 = tmp9(15402);
+const _modDef15464 = tmp9(15464);
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 3.75;
@@ -34,21 +34,21 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
   const isBountiesAndroidQuestBarSmokeAnimationEnabled = BountiesAndroidQuestBarSmokeAnimationExperiment.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE);
   if (obj2.isAndroid()) {
     if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-      let tmp3 = _modDef15399;
+      let tmp3 = _modDef15461;
     }
     return tmp3;
   }
-  tmp3 = _modDef15398;
+  tmp3 = _modDef15460;
   obj2 = PlatformUtils;
 }) : (function useQuestDockBountySmokeCollapsedPlaceholderUrl() {
   const isBountiesAndroidQuestBarSmokeAnimationEnabled = BountiesAndroidQuestBarSmokeAnimationExperiment.useIsBountiesAndroidQuestBarSmokeAnimationEnabled(QuestsExperimentLocations.QUESTS_BAR_MOBILE);
   if (obj2.isAndroid()) {
     if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-      let tmp3 = _modDef15399;
+      let tmp3 = _modDef15461;
     }
     return tmp3;
   }
-  tmp3 = _modDef15398;
+  tmp3 = _modDef15460;
   obj2 = PlatformUtils;
 });
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -60,7 +60,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-    const obj3 = { uri: _modDef15398 };
+    const obj3 = { uri: _modDef15460 };
     obj2.source = obj3;
     obj2.style = StyleSheet.absoluteFillObject;
     const tmp8 = closure_1_8(FastImageDefault, obj2);
@@ -72,7 +72,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   return first;
 }) : (function QuestDockBountySmokePlaceholder() {
   const obj = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-  const obj2 = { uri: _modDef15398 };
+  const obj2 = { uri: _modDef15460 };
   obj.source = obj2;
   obj.style = StyleSheet.absoluteFillObject;
   return closure_1_8(FastImageDefault, obj);
@@ -151,7 +151,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
       }
     }
     const obj2 = { style: tmp12 ? closure_13.video : closure_13.hiddenVideo, source: null, resizeMode: "cover", paused: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", onReadyForDisplay: null, onError: null };
-    const obj3 = { uri: _modDef15401 };
+    const obj3 = { uri: _modDef15463 };
     obj2.source = obj3;
     if (!tmp4) {
       class M {
@@ -164,7 +164,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     obj2.paused = tmp4;
     obj2.onReadyForDisplay = tmp18;
     obj2.onError = M;
-    tmp21Result = tmp21(tmp(8409).VideoComponent, obj2);
+    tmp21Result = tmp21(tmp(8425).VideoComponent, obj2);
   }
   cResult[4] = tmp10;
   cResult[5] = tmp12;
@@ -202,7 +202,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   let tmp18Result = !stateFromStores;
   if (!stateFromStores) {
     const obj3 = { style: tmp7 ? closure_13.video : closure_13.hiddenVideo, source: null, resizeMode: "cover", paused: null, muted: true, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants", onReadyForDisplay: null, onError: null };
-    const obj4 = { uri: _modDef15401 };
+    const obj4 = { uri: _modDef15463 };
     obj3.source = obj4;
     if (!flag) {
       flag = !tmp5;
@@ -210,7 +210,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     obj3.paused = flag;
     obj3.onReadyForDisplay = callback;
     obj3.onError = tmp14;
-    tmp18Result = closure_8(tmp(8409).VideoComponent, obj3);
+    tmp18Result = closure_8(tmp(8425).VideoComponent, obj3);
   }
   const children = [tmp18Result, ];
   let tmp20 = !tmp7;
@@ -286,7 +286,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   if (!stateFromStores) {
     tmp9Result = null;
     if (tmp16) {
-      tmp9Result = _modDef15402;
+      tmp9Result = _modDef15464;
     }
   }
   const tmp11Result = tmp11(noop.useState(tmp9Result), 2);
@@ -445,7 +445,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     obj2.paused = tmp4;
     obj2.onLoad = U;
     obj2.onError = tmp34;
-    tmp36Result = tmp36(tmp(8409).VideoComponent, obj2);
+    tmp36Result = tmp36(tmp(8425).VideoComponent, obj2);
   }
   cResult[10] = tmp10;
   cResult[11] = undefined !== paused && paused;
@@ -499,7 +499,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
   if (!stateFromStores) {
     tmp4Result = null;
     if (tmp11) {
-      tmp4Result = tmp4(15402);
+      tmp4Result = tmp4(15464);
     }
   }
   const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
@@ -538,17 +538,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function QuestD
     obj3.paused = flag;
     obj3.onLoad = callback;
     obj3.onError = tmp24;
-    tmp28Result = closure_8(tmp(8409).VideoComponent, obj3);
+    tmp28Result = closure_8(tmp(8425).VideoComponent, obj3);
   }
   const children = [tmp28Result, ];
   let tmp30 = !tmp8;
   if (!tmp8) {
     const obj5 = { source: null, style: null, resizeMode: "cover", accessible: false, importantForAccessibility: "no-hide-descendants" };
-    const obj6 = { uri: tmp4(15399) };
+    const obj6 = { uri: tmp4(15461) };
     obj5.source = obj6;
     obj5.style = StyleSheet.absoluteFillObject;
-    tmp30 = closure_8(tmp4(6163), obj5);
-    const tmp4Result2 = tmp4(6163);
+    tmp30 = closure_8(tmp4(6156), obj5);
+    const tmp4Result2 = tmp4(6156);
   }
   children[1] = tmp30;
   return closure_10(closure_9, { children });

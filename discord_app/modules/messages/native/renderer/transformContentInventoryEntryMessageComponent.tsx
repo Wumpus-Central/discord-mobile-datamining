@@ -1,27 +1,27 @@
-// === Module 8250: transformContentInventoryEntryMessageComponent ===
+// === Module 8266: transformContentInventoryEntryMessageComponent ===
 
-// Module 8250 (transformContentInventoryEntryMessageComponent)
+// Module 8266 (transformContentInventoryEntryMessageComponent)
 import _mod17 from "module_17" /* 17 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import util from "util" /* 1126 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
 import Constants from "Constants" /* 2024 */;
-import ColorUtils from "ColorUtils" /* 4928 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
-import _modDef7672 from "module_7672" /* 7672 */;
-import _modDef8099 from "module_8099" /* 8099 */;
-import _modDef8147 from "module_8147" /* 8147 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8251 */;
-import useAvatarColor from "useAvatarColor" /* 8252 */;
-import useHeroColors from "useHeroColors" /* 8253 */;
-import utils from "utils" /* 8255 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8256 */;
-import _modDef8257 from "module_8257" /* 8257 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8258 */;
-import _modDef8260 from "module_8260" /* 8260 */;
-import _modDef8261 from "module_8261" /* 8261 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import ColorUtils from "ColorUtils" /* 4967 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
+import _modDef7689 from "module_7689" /* 7689 */;
+import _modDef8117 from "module_8117" /* 8117 */;
+import _modDef8163 from "module_8163" /* 8163 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8267 */;
+import useAvatarColor from "useAvatarColor" /* 8268 */;
+import useHeroColors from "useHeroColors" /* 8269 */;
+import utils from "utils" /* 8271 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8272 */;
+import _modDef8273 from "module_8273" /* 8273 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8274 */;
+import _modDef8276 from "module_8276" /* 8276 */;
+import _modDef8277 from "module_8277" /* 8277 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 import UserStore from "UserStore" /* 1390 */;
 import size from "module_2" /* 2 */;
 
@@ -46,13 +46,13 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
           iconURL = application.getIconURL(ImageSizes.LARGE);
         }
         if (iconURL == null) {
-          iconURL = Image.resolveAssetSource(_modDef7672).uri;
+          iconURL = Image.resolveAssetSource(_modDef7689).uri;
         }
         let tmp45 = assetImage;
         if (assetImage == null) {
           tmp45 = iconURL;
         }
-        if (tmp45 === Image.resolveAssetSource(_modDef7672).uri) {
+        if (tmp45 === Image.resolveAssetSource(_modDef7689).uri) {
           let tmp47 = items;
         } else {
           if (tmpResult29.hasFetchedColors(tmp45)) {
@@ -87,7 +87,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
             const obj3 = { text: sum };
             items2.push(obj3);
           }
-          const obj4 = { imageUrl: tmp45, title: contentInventoryEntry.extra.media_title, subtitles: items2, gradientColors: tmp47, platformIconUrl: Image.resolveAssetSource(_modDef8260).uri };
+          const obj4 = { imageUrl: tmp45, title: contentInventoryEntry.extra.media_title, subtitles: items2, gradientColors: tmp47, platformIconUrl: Image.resolveAssetSource(_modDef8276).uri };
           tmp49 = obj4;
           const obj33 = /\w+ (\d+), \w+ (\d+)/;
         }
@@ -114,9 +114,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
               const items4 = [];
               const intl = util.intl;
               const obj5 = { count };
-              const obj6 = { badgeUrl: Image.resolveAssetSource(_modDef8099).uri, text: intl.formatToPlainString(util.t.HtifnG, obj5) };
+              const obj6 = { badgeUrl: Image.resolveAssetSource(_modDef8117).uri, text: intl.formatToPlainString(util.t.HtifnG, obj5) };
               items4.push(obj6);
-              const obj7 = { imageUrl: image_url2, title: contentInventoryEntry.extra.artist.name, subtitles: items4, gradientColors: items3, platformIconUrl: Image.resolveAssetSource(_modDef8261).uri };
+              const obj7 = { imageUrl: image_url2, title: contentInventoryEntry.extra.artist.name, subtitles: items4, gradientColors: items3, platformIconUrl: Image.resolveAssetSource(_modDef8277).uri };
               tmp30 = obj7;
               const formatToPlainStringResult1 = intl.formatToPlainString(util.t.HtifnG, obj5);
             }
@@ -150,7 +150,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
             const items6 = [obj9];
             obj8.subtitles = items6;
             obj8.gradientColors = items5;
-            obj8.platformIconUrl = Image.resolveAssetSource(_modDef8261).uri;
+            obj8.platformIconUrl = Image.resolveAssetSource(_modDef8277).uri;
             tmp25 = obj8;
             const tmpResult41 = ColorUtils;
           }
@@ -163,9 +163,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
         if (null != application1) {
           let uri = application1.getIconURL(ImageSizes.LARGE);
           if (uri == null) {
-            uri = Image.resolveAssetSource(_modDef7672).uri;
+            uri = Image.resolveAssetSource(_modDef7689).uri;
           }
-          if (uri === Image.resolveAssetSource(_modDef7672).uri) {
+          if (uri === Image.resolveAssetSource(_modDef7689).uri) {
             let tmp7 = items;
           } else {
             if (tmpResult42.hasFetchedColors(uri)) {
@@ -182,7 +182,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
           }
           if (null != tmp7) {
             const items8 = [];
-            const obj10 = { badgeUrl: Image.resolveAssetSource(_modDef8147).uri };
+            const obj10 = { badgeUrl: Image.resolveAssetSource(_modDef8163).uri };
             const timestamp = message.timestamp;
             const time = timestamp.getTime();
             const obj11 = {};
@@ -229,9 +229,9 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
   if (null != application2) {
     let game_name = application2.getIconURL(ImageSizes.LARGE);
     if (game_name == tmp54) {
-      game_name = Image.resolveAssetSource(_modDef7672).uri;
+      game_name = Image.resolveAssetSource(_modDef7689).uri;
     }
-    if (game_name === Image.resolveAssetSource(_modDef7672).uri) {
+    if (game_name === Image.resolveAssetSource(_modDef7689).uri) {
       let tmp60 = items;
     } else {
       if (tmpResult49.hasFetchedColors(game_name)) {
@@ -260,14 +260,14 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
           const _HermesInternal2 = HermesInternal;
           const obj18 = { badgeUrl: null, text: null };
           const combined = "" + intl2.string(util.t["/50eHi"]) + " - " + intl3.formatToPlainString(util.t.C0AxoR, obj17);
-          obj18.badgeUrl = Image.resolveAssetSource(_modDef8099).uri;
+          obj18.badgeUrl = Image.resolveAssetSource(_modDef8117).uri;
           obj18.text = combined;
           items10.push(obj18);
           const stringResult = intl2.string(util.t["/50eHi"]);
         }
         const tmpResult54 = utils;
       } else {
-        const obj19 = { badgeUrl: Image.resolveAssetSource(_modDef8257).uri };
+        const obj19 = { badgeUrl: Image.resolveAssetSource(_modDef8273).uri };
         const timestamp2 = message.timestamp;
         const time1 = timestamp2.getTime();
         const obj20 = {};

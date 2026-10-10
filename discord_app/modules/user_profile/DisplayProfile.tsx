@@ -1,9 +1,9 @@
-// === Module 8297: DisplayProfile ===
+// === Module 8313: DisplayProfile ===
 
-// Module 8297 (DisplayProfile)
+// Module 8313 (DisplayProfile)
 import PremiumConstants from "PremiumConstants" /* 1392 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8274 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8290 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

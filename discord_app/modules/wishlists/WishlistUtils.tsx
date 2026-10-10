@@ -1,15 +1,15 @@
-// === Module 13315: WishlistUtils ===
+// === Module 13365: WishlistUtils ===
 
-// Module 13315 (WishlistUtils)
+// Module 13365 (WishlistUtils)
 import util from "util" /* 1126 */;
-import StorefrontUtils from "StorefrontUtils" /* 6929 */;
+import StorefrontUtils from "StorefrontUtils" /* 6935 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKURecord from "SKURecord" /* 6095 */;
+import SKURecord from "SKURecord" /* 6088 */;
 
 require = fn;
-let closure_4 = fn(8964).isCollectiblesWishlistItemRecord;
-let closure_5 = fn(8965).isPremiumWishlistItemRecord;
-const isSKUWishlistItemRecord = fn(8966).isSKUWishlistItemRecord;
+let closure_4 = fn(8983).isCollectiblesWishlistItemRecord;
+let closure_5 = fn(8984).isPremiumWishlistItemRecord;
+const isSKUWishlistItemRecord = fn(8985).isSKUWishlistItemRecord;
 const SKUProductLines = fn(1085).SKUProductLines;
 const PremiumSubscriptionSKUs = fn(1392).PremiumSubscriptionSKUs;
 const size = fn(2);

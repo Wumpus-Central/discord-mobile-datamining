@@ -1,11 +1,11 @@
-// === Module 18514: BasicGuildActionCreators ===
+// === Module 18588: BasicGuildActionCreators ===
 
-// Module 18514 (BasicGuildActionCreators)
+// Module 18588 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import BasicGuildStore from "BasicGuildStore" /* 7955 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import BasicGuildStore from "BasicGuildStore" /* 7973 */;
 
 require = fn;
 let closure_8 = async function _fetchBasicGuild() {
@@ -23,7 +23,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

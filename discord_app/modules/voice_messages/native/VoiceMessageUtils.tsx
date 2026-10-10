@@ -1,13 +1,13 @@
-// === Module 11910: VoiceMessageUtils ===
+// === Module 11954: VoiceMessageUtils ===
 
-// Module 11910 (VoiceMessageUtils)
+// Module 11954 (VoiceMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import HapticUtils from "HapticUtils" /* 5056 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5136 */;
-import downsampleWaveformDefault from "downsampleWaveform" /* 11911 */;
+import HapticUtils from "HapticUtils" /* 5057 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5137 */;
+import downsampleWaveformDefault from "downsampleWaveform" /* 11955 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import apply from "module_12" /* 12 */;
@@ -24,7 +24,7 @@ let closure_22 = async function _startAudioRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -80,14 +80,14 @@ let closure_22 = async function _startAudioRecording(arg0) {
         if (closure_130_11.getState().recordingId !== closure_129_0) {
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } else {
           closure_130_9(closure_130_12.STARTED);
           const _Date = Date;
           closure_130_10(Date.now());
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       }
     } catch (tmp22) {
@@ -145,7 +145,7 @@ let closure_26 = async function _endAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -221,7 +221,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -255,7 +255,7 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
         closure_129_23();
         closure_129_7(closure_128_0);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp15) {
       c3 = tmp;
@@ -263,17 +263,17 @@ let closure_28 = async function _stopAndCacheAudioRecording() {
     }
   }
 };
-const VoiceMessagesUIStore = fn(11586);
+const VoiceMessagesUIStore = fn(11632);
 ({ addVoiceMessageWave: hasOwnProperty, resetVoiceMessageState: metroRequire, setSavedVoiceMessageUploadData: closure_7, setVoiceMessageRecordingId: closure_8, setVoiceMessageRecordingState: closure_9, setVoiceMessageStartTimeMillis: c10, useVoiceMessagesUIStore: closure_11, VoiceMessageRecordingStatus: closure_12 } = VoiceMessagesUIStore);
-const VoiceMessageConstants = fn(11587);
+const VoiceMessageConstants = fn(11633);
 ({ WAVEFORM_WAVE_MAX_VALUE: map1, VOICE_RECORDING_MIN_DB: closure_14, VOICE_RECORDING_MAX_DB: closure_15, WAVEFORM_MAX_SAMPLES: closure_16, VOICE_RECORDING_MAX_DURATION_MILLIS: closure_17 } = VoiceMessageConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let c19 = null;
 let closure_20 = new LoggerDefault("VoiceMessages");
 let closure_21 = apply.throttle((arg0) => {
-  state = closure_1_11.getState();
+  const state = closure_1_11.getState();
   if (null != state.startTimeMillis) {
-    hasOwnProperty(__initData2 * ((arg0 - closure_1_14) / (closure_1_15 - closure_1_14)));
+    hasOwnProperty(map1 * ((arg0 - closure_1_14) / (value2 - closure_1_14)));
     let tmp8 = null == state.savedVoiceMessageUploadData;
     if (tmp8) {
       const _performance = performance;
@@ -289,7 +289,7 @@ let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMess
 
 export const generateBase64EncodedWaveform = function generateBase64EncodedWaveform(arg0) {
   let arr = arg0;
-  if (arg0.length > value2) {
+  if (arg0.length > value3) {
     arr = downsampleWaveformDefault(arg0, tmp);
   }
   const mapped = arr.map((item) => Math.min(item, closure_1_13));

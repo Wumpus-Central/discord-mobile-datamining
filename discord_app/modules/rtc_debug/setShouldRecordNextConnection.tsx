@@ -1,9 +1,9 @@
-// === Module 5223: setShouldRecordNextConnection ===
+// === Module 5224: setShouldRecordNextConnection ===
 
-// Module 5223 (setShouldRecordNextConnection)
+// Module 5224 (setShouldRecordNextConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5224 */;
-import RTCDebugStore from "RTCDebugStore" /* 5134 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5225 */;
+import RTCDebugStore from "RTCDebugStore" /* 5135 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc_debug/setShouldRecordNextConnection.tsx");

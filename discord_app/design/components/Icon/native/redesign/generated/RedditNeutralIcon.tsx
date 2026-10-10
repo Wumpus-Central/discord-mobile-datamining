@@ -1,10 +1,10 @@
-// === Module 9089: RedditNeutralIcon ===
+// === Module 9109: RedditNeutralIcon ===
 
-// Module 9089 (RedditNeutralIcon)
+// Module 9109 (RedditNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod9090 from "module_9090" /* 9090 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod9110 from "module_9110" /* 9110 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RedditNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9090;
+    const tmpResult = _mod9110;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RedditNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9090, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9110, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

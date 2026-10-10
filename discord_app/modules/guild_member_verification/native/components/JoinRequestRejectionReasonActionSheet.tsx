@@ -1,6 +1,6 @@
-// === Module 12331: JoinRequestRejectionReasonActionSheet ===
+// === Module 12375: JoinRequestRejectionReasonActionSheet ===
 
-// Module 12331 (JoinRequestRejectionReasonActionSheet)
+// Module 12375 (JoinRequestRejectionReasonActionSheet)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ class JoinRequestRejectionReasonActionSheet {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -83,7 +83,7 @@ class JoinRequestRejectionReasonActionSheet {
               const obj6 = { text: null, variant: "critical" };
               const intl = tmp4(tmp24[9]).intl;
               obj6.text = intl.string(tmp4(tmp24[9]).t["TQY/Rd"]);
-              v3(tmp24[8]).openMana("JOIN_REQUEST_REJECT", obj6);
+              v3(tmp24[8]).open("JOIN_REQUEST_REJECT", obj6);
               const obj5 = v3(tmp24[8]);
               v3(tmp24[10]).hideAllActionSheets();
               c3 = 1;
@@ -139,7 +139,7 @@ class JoinRequestRejectionReasonActionSheet {
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({ container: { padding: 20 }, buttonGroup: { marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestRejectionReasonActionSheet.tsx");

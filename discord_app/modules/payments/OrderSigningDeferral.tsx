@@ -1,7 +1,7 @@
-// === Module 9052: OrderSigningDeferral ===
+// === Module 9071: OrderSigningDeferral ===
 
-// Module 9052 (OrderSigningDeferral)
-import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9053 */;
+// Module 9071 (OrderSigningDeferral)
+import Stripe3DSChallenge from "Stripe3DSChallenge" /* 9072 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _performSigningDeferralAction(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_3 = async function _performSigningDeferralAction(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     } catch (tmp18) {
       c1 = tmp;
       throw tmp18;

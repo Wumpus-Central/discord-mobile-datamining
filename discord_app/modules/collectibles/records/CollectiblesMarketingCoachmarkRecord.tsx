@@ -1,7 +1,7 @@
-// === Module 7282: CollectiblesMarketingCoachmarkRecord ===
+// === Module 7289: CollectiblesMarketingCoachmarkRecord ===
 
-// Module 7282 (CollectiblesMarketingCoachmarkRecord)
-import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7280 */;
+// Module 7289 (CollectiblesMarketingCoachmarkRecord)
+import CollectiblesMarketingType from "CollectiblesMarketingType" /* 7287 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function CollectiblesMarketingCoachmarkRecord(arg0) {
@@ -25,6 +25,24 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
     const obj2 = Object.create(prototype.prototype);
     obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
     ({ title: tmp6.title, body: tmp6.body, assetDark: tmp6.assetDark, assetLight: tmp6.assetLight, version: tmp6.version, refTargetBackground: tmp6.refTargetBackground, badgeIcon: tmp6.badgeIcon, badgeText: tmp6.badgeText, badgeCountdownEndsAt: tmp6.badgeCountdownEndsAt, buttonLabel: tmp6.buttonLabel, showHoverGradient: tmp6.showHoverGradient, displayType: tmp6.displayType } = obj);
+    return obj2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+prototype["fromPersisted"] = function fromPersisted(badgeCountdownEndsAt) {
+  const obj = {};
+  const merged = Object.assign(badgeCountdownEndsAt);
+  let date;
+  if (null != badgeCountdownEndsAt.badgeCountdownEndsAt) {
+    const _Date = Date;
+    date = new Date(badgeCountdownEndsAt.badgeCountdownEndsAt);
+  }
+  obj.badgeCountdownEndsAt = date;
+  if (typeof prototype === "function") {
+    const obj2 = Object.create(prototype.prototype);
+    obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.COACHMARK;
+    ({ title: tmp7.title, body: tmp7.body, assetDark: tmp7.assetDark, assetLight: tmp7.assetLight, version: tmp7.version, refTargetBackground: tmp7.refTargetBackground, badgeIcon: tmp7.badgeIcon, badgeText: tmp7.badgeText, badgeCountdownEndsAt: tmp7.badgeCountdownEndsAt, buttonLabel: tmp7.buttonLabel, showHoverGradient: tmp7.showHoverGradient, displayType: tmp7.displayType } = obj);
     return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");

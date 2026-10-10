@@ -1,23 +1,23 @@
-// === Module 11101: ScreenshareParticipant ===
+// === Module 11141: ScreenshareParticipant ===
 
-// Module 11101 (ScreenshareParticipant)
+// Module 11141 (ScreenshareParticipant)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10844 */;
-import _modDef10845 from "module_10845" /* 10845 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 11012 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 10882 */;
+import _modDef10883 from "module_10883" /* 10883 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 11052 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Screensh
             let tmp11 = cResult[11];
           }
           if (cResult[12] !== tmp10.image) {
-            const obj2 = { source: _modDef10845, style: tmp10.image };
+            const obj2 = { source: _modDef10883, style: tmp10.image };
             const tmp15 = hasOwnProperty(FastImageDefault, obj2);
             cResult[12] = tmp10.image;
             cResult[13] = tmp15;
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Screensh
   obj2.style = items2;
   const obj3 = { source: null, style: null };
   const tmp3 = useParticipantTileTapGestureDefault({ onSingleTapStart: callback, onDoubleTapStart: callback1 });
-  obj3.source = _modDef10845;
+  obj3.source = _modDef10883;
   obj3.style = tmp4.image;
   const items3 = [hasOwnProperty(FastImageDefault, obj3), , , ];
   const obj4 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };

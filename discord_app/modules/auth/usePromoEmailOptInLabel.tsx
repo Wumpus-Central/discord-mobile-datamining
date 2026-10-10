@@ -1,9 +1,9 @@
-// === Module 16321: usePromoEmailOptInLabel ===
+// === Module 16388: usePromoEmailOptInLabel ===
 
-// Module 16321 (usePromoEmailOptInLabel)
+// Module 16388 (usePromoEmailOptInLabel)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import RegistrationEmailOptInCopyExperimentDefault from "RegistrationEmailOptInCopyExperiment" /* 16322 */;
+import RegistrationEmailOptInCopyExperimentDefault from "RegistrationEmailOptInCopyExperiment" /* 16389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

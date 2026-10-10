@@ -1,8 +1,8 @@
-// === Module 12532: GuildAntiRaidPermissionsUtils ===
+// === Module 12579: GuildAntiRaidPermissionsUtils ===
 
-// Module 12532 (GuildAntiRaidPermissionsUtils)
-import PermissionStore from "PermissionStore" /* 4709 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10660 */;
+// Module 12579 (GuildAntiRaidPermissionsUtils)
+import PermissionStore from "PermissionStore" /* 4750 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
 
 const require = globalThis.__r;
 
@@ -150,8 +150,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanRepo
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(8025).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(8025);
+    hasDetectedActivityResult = tmp(8043).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(8043);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {

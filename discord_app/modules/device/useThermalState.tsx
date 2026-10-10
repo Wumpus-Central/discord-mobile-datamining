@@ -1,9 +1,9 @@
-// === Module 14644: useThermalState ===
+// === Module 14698: useThermalState ===
 
-// Module 14644 (useThermalState)
+// Module 14698 (useThermalState)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5295 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5296 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

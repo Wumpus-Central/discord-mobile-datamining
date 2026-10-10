@@ -1,7 +1,7 @@
-// === Module 13973: isUserSettingsOpen ===
+// === Module 14027: isUserSettingsOpen ===
 
-// Module 13973 (isUserSettingsOpen)
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
+// Module 14027 (isUserSettingsOpen)
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,7 +24,7 @@ function isUserSettingsOpen() {
       someResult = routes.some((name) => {
         let tmp = "settings" === name.name;
         if (!tmp) {
-          state = name.state;
+          const state = name.state;
           let routes1;
           if (state != null) {
             routes1 = state.routes;
@@ -35,7 +35,7 @@ function isUserSettingsOpen() {
             someResult = routes.some((name) => {
               let tmp = "settings" === name.name;
               if (!tmp) {
-                state = name.state;
+                const state = name.state;
                 let routes1;
                 if (state != null) {
                   routes1 = state.routes;
@@ -46,7 +46,7 @@ function isUserSettingsOpen() {
                   someResult = routes.some((name) => {
                     let tmp = "settings" === name.name;
                     if (!tmp) {
-                      state = name.state;
+                      const state = name.state;
                       let routes1;
                       if (state != null) {
                         routes1 = state.routes;
@@ -57,7 +57,7 @@ function isUserSettingsOpen() {
                         someResult = routes.some((name) => {
                           let tmp = "settings" === name.name;
                           if (!tmp) {
-                            state = name.state;
+                            const state = name.state;
                             let routes1;
                             if (state != null) {
                               routes1 = state.routes;
@@ -117,7 +117,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
               someResult = routes.some((name) => {
                 let tmp = "settings" === name.name;
                 if (!tmp) {
-                  state = name.state;
+                  const state = name.state;
                   let routes1;
                   if (state != null) {
                     routes1 = state.routes;
@@ -128,7 +128,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                     someResult = routes.some((name) => {
                       let tmp = "settings" === name.name;
                       if (!tmp) {
-                        state = name.state;
+                        const state = name.state;
                         let routes1;
                         if (state != null) {
                           routes1 = state.routes;
@@ -184,7 +184,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
           someResult = routes.some((name) => {
             let tmp = "settings" === name.name;
             if (!tmp) {
-              state = name.state;
+              const state = name.state;
               let routes1;
               if (state != null) {
                 routes1 = state.routes;
@@ -195,7 +195,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                 someResult = routes.some((name) => {
                   let tmp = "settings" === name.name;
                   if (!tmp) {
-                    state = name.state;
+                    const state = name.state;
                     let routes1;
                     if (state != null) {
                       routes1 = state.routes;

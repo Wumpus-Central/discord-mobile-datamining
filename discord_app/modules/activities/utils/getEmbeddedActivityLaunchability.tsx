@@ -1,18 +1,19 @@
-// === Module 10802: getEmbeddedActivityLaunchability ===
+// === Module 10876: getEmbeddedActivityLaunchability ===
 
-// Module 10802 (getEmbeddedActivityLaunchability)
+// Module 10876 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1126 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10803 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import AgeGateUtils from "AgeGateUtils" /* 5924 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 10846 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getEmbeddedActivityLaunchability(arg0) {
-  ({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore } = arg0);
+  ({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore, isContentGated } = arg0);
   const channel = ChannelStore.getChannel(channelId);
   if (null == channel) {
     return obj.NO_CHANNEL;
@@ -33,9 +34,11 @@ function getEmbeddedActivityLaunchability(arg0) {
               return obj.IS_AFK_CHANNEL;
             } else {
               if (PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
-                const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(channel.getGuildId());
-                if (channel.isVocal()) {
-                  if (currentClientVoiceChannelId !== channelId) {
+                const getCurrentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId;
+                if (isContentGated) {
+                  return obj.CHANNEL_CONTENT_GATED;
+                } else if (channel.isVocal()) {
+                  if (tmp8 !== channelId) {
                     if (!canResult) {
                       return obj.NO_CHANNEL_CONNECT_PERMISSION;
                     }
@@ -60,7 +63,7 @@ function getEmbeddedActivityLaunchability(arg0) {
 }
 let closure_6 = fn(2024).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
 const Permissions = fn(1085).Permissions;
-const EmbeddedActivityLaunchability = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL" };
+const EmbeddedActivityLaunchability = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL", CHANNEL_CONTENT_GATED: 8, [8]: "CHANNEL_CONTENT_GATED" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
@@ -68,13 +71,20 @@ const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedA
 export { EmbeddedActivityLaunchability };
 export { getEmbeddedActivityLaunchability };
 export const getEmbeddedActivityLaunchabilityForChannel = function getEmbeddedActivityLaunchabilityForChannel(channelId) {
-  return getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore });
+  const obj = { channelId, isContentGated: null, ChannelStore: null, GuildStore: null, PermissionStore: null, VoiceStateStore: null };
+  const channel = ChannelStore.getChannel(channelId);
+  obj.isContentGated = AgeGateUtils.isChannelContentGated(channel);
+  obj.ChannelStore = ChannelStore;
+  obj.GuildStore = GuildStore;
+  obj.PermissionStore = PermissionStore;
+  obj.VoiceStateStore = VoiceStateStore;
+  return getEmbeddedActivityLaunchability(obj);
 };
 export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedActivityLaunchability(channelId) {
-  const _require = channelId;
-  const cResult = require("c").c(4);
+  _require = channelId;
+  const cResult = require("c").c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
+    const items = [ChannelStore];
     cResult[0] = items;
     let first = items;
   } else {
@@ -83,39 +93,81 @@ export const useEmbeddedActivityLaunchability = ReactCompilerGating.isReactCompi
   if (cResult[1] !== channelId) {
     class A {
       constructor() {
-        obj = { channelId: closure_0, ChannelStore: closure_2, GuildStore: closure_3, PermissionStore: closure_4, VoiceStateStore: closure_5 };
-        return getEmbeddedActivityLaunchability(obj);
+        return closure_2.getChannel(closure_0);
       }
     }
     const items1 = [channelId];
     cResult[1] = channelId;
     cResult[2] = A;
     cResult[3] = items1;
-    let tmp10 = items1;
+    let tmp7 = items1;
   } else {
     class A {
       constructor() {
-        obj = { channelId: closure_0, ChannelStore: closure_2, GuildStore: closure_3, PermissionStore: closure_4, VoiceStateStore: closure_5 };
-        return getEmbeddedActivityLaunchability(obj);
+        return closure_2.getChannel(closure_0);
       }
     }
-    tmp10 = cResult[3];
+    tmp7 = cResult[3];
   }
   const obj = require("c");
-  return require("initialize").useStateFromStores(first, A, tmp10);
+  const stateFromStores = require("initialize").useStateFromStores(first, A, tmp7);
+  const tmpResult = require("initialize");
+  isChannelContentGated = require("AgeGateUtils").useIsChannelContentGated(stateFromStores);
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    class A {
+      constructor() {
+        return closure_2.getChannel(closure_0);
+      }
+    }
+    const items2 = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
+    cResult[4] = items2;
+    const tmp10 = items2;
+  } else {
+    class A {
+      constructor() {
+        return closure_2.getChannel(closure_0);
+      }
+    }
+  }
+  if (cResult[5] === channelId) {
+    class A {
+      constructor() {
+        return closure_2.getChannel(closure_0);
+      }
+    }
+    return tmp(tmp2[10]).useStateFromStores(tmp10, fn, items3);
+  }
+  fn = function u() {
+    return getEmbeddedActivityLaunchability({ channelId, isContentGated: isChannelContentGated, ChannelStore, GuildStore, PermissionStore, VoiceStateStore });
+  };
+  items3 = [channelId, isChannelContentGated];
+  cResult[5] = channelId;
+  cResult[6] = isChannelContentGated;
+  cResult[7] = fn;
+  cResult[8] = items3;
+  const tmpResult3 = require("AgeGateUtils");
 }) : (function useEmbeddedActivityLaunchability(channelId) {
-  const _require = channelId;
-  const items = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
+  _require = channelId;
+  const items = [ChannelStore];
   const items1 = [channelId];
-  return require("initialize").useStateFromStores(items, () => getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore }), items1);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
+  const obj = require("initialize");
+  isChannelContentGated = require("AgeGateUtils").useIsChannelContentGated(stateFromStores);
+  const obj2 = require("AgeGateUtils");
+  const items2 = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
+  const items3 = [channelId, isChannelContentGated];
+  return require("initialize").useStateFromStores(items2, () => getEmbeddedActivityLaunchability({ channelId, isContentGated: isChannelContentGated, ChannelStore, GuildStore, PermissionStore, VoiceStateStore }), items3);
 });
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {
+    const intl4 = util.intl;
+    return intl4.string(util.t.qJvTKQ);
+  } else if (obj.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === arg0) {
     const intl3 = util.intl;
-    return intl3.string(util.t.qJvTKQ);
-  } else if (tmp.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === arg0) {
+    return intl3.string(util.t.hHGrWz);
+  } else if (obj.CHANNEL_CONTENT_GATED === arg0) {
     const intl2 = util.intl;
-    return intl2.string(util.t.hHGrWz);
+    return intl2.string(util.t.pKLV22);
   } else {
     const intl = util.intl;
     return intl.string(util.t.j29zCr);

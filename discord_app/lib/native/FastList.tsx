@@ -1,13 +1,13 @@
-// === Module 6759: FastList ===
+// === Module 6760: FastList ===
 
-// Module 6759 (FastList)
+// Module 6760 (FastList)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4811 */;
-import NativeViewDefault from "NativeView" /* 6168 */;
-import BottomSheetModal from "BottomSheetModal" /* 6305 */;
-import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 6762 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
+import NativeViewDefault from "NativeView" /* 6161 */;
+import BottomSheetModal from "BottomSheetModal" /* 6306 */;
+import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 6763 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -2051,7 +2051,7 @@ prototype4["queueViewabilityChange"] = function queueViewabilityChange() {
 prototype4["reset"] = function reset() {
   const self = this;
   let num = this.props.chunkBase;
-  state = this.state;
+  const state = this.state;
   ({ fastListComputer, items } = state);
   if (!state.isFirstLayout) {
     ({ setState, getInitialState } = self);
@@ -2172,7 +2172,7 @@ prototype4["clampInitialScrollPosition"] = function clampInitialScrollPosition()
 prototype4["computeBlocks"] = function computeBlocks() {
   const self = this;
   ({ batchesToRender, chunkBase } = this.props);
-  state = this.state;
+  const state = this.state;
   const fastListComputer = state.fastListComputer;
   ({ isFirstLayout, items } = state);
   if (chunkBase == null) {

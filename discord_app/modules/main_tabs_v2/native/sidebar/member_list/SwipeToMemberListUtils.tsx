@@ -1,8 +1,8 @@
-// === Module 10627: SwipeToMemberListUtils ===
+// === Module 10661: SwipeToMemberListUtils ===
 
-// Module 10627 (SwipeToMemberListUtils)
+// Module 10661 (SwipeToMemberListUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import ChatGestureSettings from "ChatGestureSettings" /* 10628 */;
+import ChatGestureSettings from "ChatGestureSettings" /* 10662 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

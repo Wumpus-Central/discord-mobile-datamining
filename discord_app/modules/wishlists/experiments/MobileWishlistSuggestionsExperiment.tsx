@@ -1,6 +1,6 @@
-// === Module 13330: MobileWishlistSuggestionsExperiment ===
+// === Module 13380: MobileWishlistSuggestionsExperiment ===
 
-// Module 13330 (MobileWishlistSuggestionsExperiment)
+// Module 13380 (MobileWishlistSuggestionsExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

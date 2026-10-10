@@ -1,11 +1,11 @@
-// === Module 18513: ForwardGuildBreadcrumbManager ===
+// === Module 18587: ForwardGuildBreadcrumbManager ===
 
-// Module 18513 (ForwardGuildBreadcrumbManager)
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18041 */;
-import BasicGuildActionCreators from "BasicGuildActionCreators" /* 18514 */;
-import BasicGuildStore from "BasicGuildStore" /* 7955 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+// Module 18587 (ForwardGuildBreadcrumbManager)
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18113 */;
+import BasicGuildActionCreators from "BasicGuildActionCreators" /* 18588 */;
+import BasicGuildStore from "BasicGuildStore" /* 7973 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 function fetchForwardReferencedGuilds(message_reference) {
@@ -24,8 +24,8 @@ function fetchForwardReferencedGuilds(message_reference) {
       tmp2 = null == BasicGuildStore.getGuildOrStatus(guild_id);
     }
     if (tmp2) {
-      const result = guild_id(18028).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
-      const obj = guild_id(18028);
+      const result = guild_id(18100).queueMessageLinkFetch(() => BasicGuildActionCreators.fetchBasicGuild(guild_id));
+      const obj = guild_id(18100);
     }
   }
 }

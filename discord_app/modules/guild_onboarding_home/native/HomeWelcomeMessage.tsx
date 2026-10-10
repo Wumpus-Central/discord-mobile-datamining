@@ -1,13 +1,13 @@
-// === Module 16935: HomeWelcomeMessage ===
+// === Module 17003: HomeWelcomeMessage ===
 
-// Module 16935 (HomeWelcomeMessage)
+// Module 17003 (HomeWelcomeMessage)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6919 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 6925 */;
 
 require = fn;
 function replaceUsernameVariable(message, str, username) {
@@ -34,7 +34,7 @@ function replaceUsernameVariable(message, str, username) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { relativeContainer: { position: "relative" }, welcomeContainer: { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" }, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
 let obj3 = { marginHorizontal: 12, marginVertical: 16, borderRadius: nativeDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
 obj2.welcomeContent = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
@@ -373,7 +373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelc
           return null;
         }
         const items5 = [stateFromStores2, stateFromStores3];
-        class W {
+        class H {
           constructor() {
             obj = closure_2;
             tmp = null == closure_2 || obj.isNonUserBot();
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelc
               if (tmp5 != null) {
                 id2 = tmp5.id;
               }
-              obj1 = { dispatchWait: true, guildId: null };
+              obj1 = { guildId: null };
               obj1.guildId = id2;
               tmp4Result = tmp4(id, avatarURL, obj1);
             }
@@ -411,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelc
           }
         }
       }
-      class W {
+      class H {
         constructor() {
           obj = closure_2;
           tmp = null == closure_2 || obj.isNonUserBot();
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelc
             if (tmp5 != null) {
               id2 = tmp5.id;
             }
-            obj1 = { dispatchWait: true, guildId: null };
+            obj1 = { guildId: null };
             obj1.guildId = id2;
             tmp4Result = tmp4(id, avatarURL, obj1);
           }
@@ -439,7 +439,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelc
         }
       }
       cResult[21] = undefined;
-      cResult[22] = W;
+      cResult[22] = H;
     }
     let obj2 = {};
     obj2[guildId] = tmp32;
@@ -508,7 +508,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeWelc
       if (stateFromStores3 != null) {
         id2 = stateFromStores3.id;
       }
-      const obj2 = { dispatchWait: true, guildId: id2 };
+      const obj2 = { guildId: id2 };
       maybeFetchUserProfileDefault(id, avatarURL, obj2);
     }
     tmp = null == stateFromStores2 || stateFromStores2.isNonUserBot();

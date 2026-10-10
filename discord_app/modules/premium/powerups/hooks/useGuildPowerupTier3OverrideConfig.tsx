@@ -1,8 +1,8 @@
-// === Module 12248: useGuildPowerupTier3OverrideConfig ===
+// === Module 12292: useGuildPowerupTier3OverrideConfig ===
 
-// Module 12248 (useGuildPowerupTier3OverrideConfig)
-import _modDef2597 from "module_2597" /* 2597 */;
-import GuildStore from "GuildStore" /* 2086 */;
+// Module 12292 (useGuildPowerupTier3OverrideConfig)
+import _modDef2600 from "module_2600" /* 2600 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { shouldShow: true, text: null };
       intl = intl(1126).intl;
-      stringResult = intl.string(_modDef2597.l9n4QZ);
+      stringResult = intl.string(_modDef2600.l9n4QZ);
       obj2.text = stringResult;
       cResult[4] = obj2;
     }
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   })) {
     const obj2 = { shouldShow: true, text: null };
     const intl = require("util").intl;
-    obj2.text = intl.string(_modDef2597.l9n4QZ);
+    obj2.text = intl.string(_modDef2600.l9n4QZ);
     let obj3 = obj2;
   } else {
     obj3 = { shouldShow: false, text: "" };

@@ -1,12 +1,12 @@
-// === Module 10127: SocialLayerStorefrontActionCreators ===
+// === Module 10156: SocialLayerStorefrontActionCreators ===
 
-// Module 10127 (SocialLayerStorefrontActionCreators)
+// Module 10156 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8971 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6926 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8990 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6932 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
             }
             closure_132_6 = tmp59;
             storefrontFetchState = closure_133_5.getStorefrontFetchState(closure_132_0);
-            state = undefined;
+            let state;
             if (storefrontFetchState != null) {
               state = storefrontFetchState.state;
             }
@@ -268,7 +268,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -428,7 +428,7 @@ let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -448,7 +448,7 @@ let closure_22 = async function _fetchSocialLayerStorefrontEntries() {
             closure_129_1 = undefined;
             let body;
             storefrontEntries = storefrontEntries.getStorefrontEntries(applicationId);
-            state = undefined;
+            let state;
             if (storefrontEntries != null) {
               state = storefrontEntries.state;
             }
@@ -533,7 +533,7 @@ let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -556,7 +556,7 @@ let closure_23 = async function _fetchSocialLayerStorefrontById(arg0) {
             let body;
             closure_131_5 = undefined;
             storefrontById = storefrontById.getStorefrontById(storefrontId);
-            state = undefined;
+            let state;
             if (storefrontById != null) {
               state = storefrontById.state;
             }
@@ -710,7 +710,7 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

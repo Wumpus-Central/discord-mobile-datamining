@@ -1,15 +1,15 @@
-// === Module 13283: UserProfileApplicationWidgetSkeletons ===
+// === Module 13333: UserProfileApplicationWidgetSkeletons ===
 
-// Module 13283 (UserProfileApplicationWidgetSkeletons)
+// Module 13333 (UserProfileApplicationWidgetSkeletons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { skeleton: { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL } };
 let closure_4 = createStyles.createStyles(obj2);
 fn(558);

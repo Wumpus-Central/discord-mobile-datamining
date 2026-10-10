@@ -1,23 +1,23 @@
-// === Module 17106: GoatIllocon ===
+// === Module 17175: GoatIllocon ===
 
-// Module 17106 (GoatIllocon)
+// Module 17175 (GoatIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef17107 from "module_17107" /* 17107 */;
-import _modDef17108 from "module_17108" /* 17108 */;
-import _modDef17109 from "module_17109" /* 17109 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import assetHelpers from "assetHelpers" /* 6272 */;
+import _modDef17176 from "module_17176" /* 17176 */;
+import _modDef17177 from "module_17177" /* 17177 */;
+import _modDef17178 from "module_17178" /* 17178 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17107 }, 3: null };
-const obj2 = { uri: _modDef17107 };
-obj[2] = { uri: _modDef17108 };
-const obj3 = { uri: _modDef17108 };
-obj[3] = { uri: _modDef17109 };
+let obj = { 1: null, 2: { uri: _modDef17176 }, 3: null };
+const obj2 = { uri: _modDef17176 };
+obj[2] = { uri: _modDef17177 };
+const obj3 = { uri: _modDef17177 };
+obj[3] = { uri: _modDef17178 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17109 };
+const obj4 = { uri: _modDef17178 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/GoatIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const GoatIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6277).getAssetSource(obj);
+  obj.source = num(6272).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

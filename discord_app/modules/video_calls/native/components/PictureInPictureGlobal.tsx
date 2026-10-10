@@ -1,38 +1,38 @@
-// === Module 17545: PictureInPictureGlobal ===
+// === Module 17617: PictureInPictureGlobal ===
 
-// Module 17545 (PictureInPictureGlobal)
+// Module 17617 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native2 from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import timing from "timing" /* 5092 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6045 */;
-import NavigatorConstants from "NavigatorConstants" /* 6263 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import timing from "timing" /* 5093 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6038 */;
+import NavigatorConstants from "NavigatorConstants" /* 6258 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
-import transitionToActivityDefault from "transitionToActivity" /* 10814 */;
-import PictureInPictureDefault from "PictureInPicture" /* 10823 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 10825 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17546 */;
+import transitionToActivityDefault from "transitionToActivity" /* 10824 */;
+import PictureInPictureDefault from "PictureInPicture" /* 10833 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 10835 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 17618 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(10827);
+const usePipDimensionsDefault = tmp5(10837);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9356).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9383).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
-const ParticipantTypes = fn(5114).ParticipantTypes;
+const ParticipantTypes = fn(5115).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
 const native = fn(1200);
 obj.elevationShadow = native.generateBoxShadowStyle(fn(1200).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
@@ -360,8 +360,8 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(10824).useShouldForcePipOrientation(tmp31);
-    tmp(8310);
+    const shouldForcePipOrientation = tmp(10834).useShouldForcePipOrientation(tmp31);
+    tmp(8326);
     if (cResult[20] === channel.id) {
       class M {
         constructor() {
@@ -409,7 +409,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
     tmp35 = obj2;
-    const tmpResult9 = tmp(10824);
+    const tmpResult9 = tmp(10834);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {
@@ -618,7 +618,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   [tmp5, tmp6] = noop.useState(first);
   if (cResult[1] !== channel) {
     const obj2 = { channel };
-    const tmp10 = closure_1_15(closure_19, obj2);
+    const tmp10 = value2(closure_19, obj2);
     cResult[1] = channel;
     cResult[2] = tmp10;
     let tmp7 = tmp10;
@@ -633,7 +633,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       return tmp11;
     }
   }
-  const tmp12 = closure_1_15(PictureInPictureDefault, { channel, preferredPosition: tmp5, onMove: tmp6, children: tmp7 });
+  const tmp12 = value2(PictureInPictureDefault, { channel, preferredPosition: tmp5, onMove: tmp6, children: tmp7 });
   cResult[3] = channel;
   cResult[4] = tmp5;
   cResult[5] = tmp7;
@@ -645,8 +645,8 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   [tmp2, tmp3] = noop.useState(() => constants.TOP_RIGHT);
   const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: null };
   const tmp = _slicedToArray(noop.useState(() => constants.TOP_RIGHT), 2);
-  obj.children = closure_1_15(closure_19, { channel });
-  return closure_1_15(PictureInPictureDefault, obj);
+  obj.children = value2(closure_19, { channel });
+  return value2(PictureInPictureDefault, obj);
 }));
 const __initData = { code: "function PictureInPictureGlobalTsx1(){const{withTiming,drawerState,STANDARD_EASING}=this.__closure;return withTiming(drawerState,{easing:STANDARD_EASING,duration:250});}" };
 const __initData2 = { code: "function PictureInPictureGlobalTsx2(){const{interpolate,animatedDrawerState,NAV_BAR_HEIGHT,PADDING,chatInputContainerHeight,PIP_AVOIDANCE_TAB_BAR_HEIGHT}=this.__closure;return{marginTop:interpolate(animatedDrawerState.get(),[0,1],[NAV_BAR_HEIGHT+PADDING,PADDING]),marginBottom:interpolate(animatedDrawerState.get(),[0,1],[chatInputContainerHeight+PADDING,PIP_AVOIDANCE_TAB_BAR_HEIGHT+PADDING])};}" };

@@ -1,22 +1,22 @@
-// === Module 14884: SettingListRenderer ===
+// === Module 14943: SettingListRenderer ===
 
-// Module 14884 (SettingListRenderer)
+// Module 14943 (SettingListRenderer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import _mod8608 from "module_8608" /* 8608 */;
-import SettingRenderer from "SettingRenderer" /* 14886 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14887 */;
-import useAutoScrollToSetting from "useAutoScrollToSetting" /* 14892 */;
-import useSettingSearchResults from "useSettingSearchResults" /* 14893 */;
-import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 14896 */;
-import SettingSearchBarDefault from "SettingSearchBar" /* 14897 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import _mod8624 from "module_8624" /* 8624 */;
+import SettingRenderer from "SettingRenderer" /* 14945 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14946 */;
+import useAutoScrollToSetting from "useAutoScrollToSetting" /* 14951 */;
+import useSettingSearchResults from "useSettingSearchResults" /* 14952 */;
+import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 14955 */;
+import SettingSearchBarDefault from "SettingSearchBar" /* 14956 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14885 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14755 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14944 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14810 */;
 
 const require = globalThis.__r;
 
@@ -76,9 +76,9 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(10630).ListItemType;
+const ListItemType = fn(10664).ListItemType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 }, contentContainer: { paddingHorizontal: 16 }, searchResultsHeader: { paddingBottom: 24 }, spacer: { paddingTop: 24 }, subLabel: { marginTop: 8 } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -212,7 +212,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
         }
       }
       const obj4 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType };
-      const tmp24 = jsx(_mod8608.FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType });
+      const tmp24 = jsx(_mod8624.FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType });
       cResult[7] = tmp7;
       cResult[8] = node.ListHeaderComponent;
       cResult[9] = tmp14;
@@ -241,7 +241,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(14892).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(14951).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   const obj4 = {};
@@ -253,7 +253,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   obj3.renderItem = renderItem;
   obj3.data = memo;
   obj3.getItemType = getItemType;
-  obj2.children = jsx(node(8608).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
+  obj2.children = jsx(node(8624).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
   return <View style={tmp.container}>{null}</View>;
 }));
 const size = fn(2);
@@ -274,7 +274,7 @@ export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompi
   } else {
     first = cResult[0];
   }
-  state = UserSettingSearchStore.useState(first);
+  const state = UserSettingSearchStore.useState(first);
   const field = SettingBlocklistStore.useField("blocklist");
   if (cResult[1] === field) {
     if (cResult[2] === node) {
@@ -319,7 +319,7 @@ export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompi
                     }
                   }
                   const obj4 = { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType };
-                  const tmp29 = jsx(_mod8608.FlashList, { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType });
+                  const tmp29 = jsx(_mod8624.FlashList, { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType });
                   cResult[19] = tmp16;
                   cResult[20] = tmp13;
                   cResult[21] = arr;
@@ -377,7 +377,7 @@ export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompi
 }) : (function SearchableSettingsList(node) {
   node = node.node;
   let settings;
-  state = undefined;
+  let state;
   let field;
   let memo2;
   let tmp = memo2();

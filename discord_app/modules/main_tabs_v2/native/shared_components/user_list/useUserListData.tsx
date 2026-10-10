@@ -1,21 +1,21 @@
-// === Module 10189: useUserListData ===
+// === Module 10218: useUserListData ===
 
-// Module 10189 (useUserListData)
+// Module 10218 (useUserListData)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import GuildUtilsDefault from "GuildUtils" /* 6103 */;
-import UserSearchItemsDefault from "UserSearchItems" /* 7339 */;
-import UserSearchUtils from "UserSearchUtils" /* 7343 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 8688 */;
+import GuildUtilsDefault from "GuildUtils" /* 6096 */;
+import UserSearchItemsDefault from "UserSearchItems" /* 7345 */;
+import UserSearchUtils from "UserSearchUtils" /* 7349 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8703 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7344 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7340 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7341 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7350 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7346 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7347 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;

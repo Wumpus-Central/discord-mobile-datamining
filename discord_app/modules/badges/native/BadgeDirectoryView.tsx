@@ -1,15 +1,15 @@
-// === Module 10542: BadgeDirectoryView ===
+// === Module 10576: BadgeDirectoryView ===
 
-// Module 10542 (BadgeDirectoryView)
+// Module 10576 (BadgeDirectoryView)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8305 */;
-import BadgeUtils from "BadgeUtils" /* 10544 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10547 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8321 */;
+import BadgeUtils from "BadgeUtils" /* 10578 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10581 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10543 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 10577 */;
 import UserStore from "UserStore" /* 1390 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8300 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8316 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null, centered: null, section: null, grid: null, tile: null, badgeIndicator: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_48 };
@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
               return;
             }
           }
-          const badgeIndicatorIds = targetUsername(10545).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
+          const badgeIndicatorIds = targetUsername(10579).useBadgeDirectoryBadgeIndicators(tmp43).badgeIndicatorIds;
           class U {
             constructor() {
               currentUser = closure_1_7.getCurrentUser();
@@ -633,7 +633,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
           const intl = targetUsername(1126).intl;
           const obj3 = { username: targetUsername };
           stringResult = intl.formatToPlainString(targetUsername(1126).t.EIcwoe, obj3);
-          const tmpResult8 = targetUsername(10545);
+          const tmpResult8 = targetUsername(10579);
         }
         const obj4 = { badges: stateFromStoresArray, enabled: !tmp17 };
         cResult[28] = stateFromStoresArray;
@@ -777,7 +777,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     const obj3 = { badges: stateFromStoresArray, enabled: null };
     let tmp33Result = !tmp10;
     obj3.enabled = tmp33Result;
-    const badgeIndicatorIds = targetUsername(10545).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
+    const badgeIndicatorIds = targetUsername(10579).useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
     if (null != targetUserId && targetUserId !== stateFromStores) {
       if (null != targetUsername) {
         const intl2 = targetUsername(1126).intl;
@@ -814,21 +814,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
           const obj7 = { variant: "text-md/semibold", children: null };
           const intl3 = targetUsername(1126).intl;
           obj7.children = intl3.string(targetUsername(1126).t.iufib1);
-          const items13 = [closure_10(targetUsername(5087).Text, obj7), , ];
+          const items13 = [closure_10(targetUsername(5088).Text, obj7), , ];
           const obj8 = { variant: "text-md/normal", color: "text-subtle", children: null };
           const intl4 = targetUsername(1126).intl;
           obj8.children = intl4.string(targetUsername(1126).t.eAn6z2);
-          items13[1] = closure_10(targetUsername(5087).Text, obj8);
+          items13[1] = closure_10(targetUsername(5088).Text, obj8);
           const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: null };
           const intl5 = targetUsername(1126).intl;
           obj9.text = intl5.string(targetUsername(1126).t["7NqTJn"]);
-          items13[2] = closure_10(targetUsername(5376).Button, obj9);
+          items13[2] = closure_10(targetUsername(5379).Button, obj9);
           obj5.children = items13;
           return closure_11(closure_5, obj5);
         }
       }
       if (!stateFromStores1) {
-        const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6160).ActivityIndicator, {}) };
+        const obj10 = { style: tmp.centered, children: closure_10(targetUsername(6153).ActivityIndicator, {}) };
         closure_10(closure_5, obj10);
       }
       let result1 = (diff - result) / 4;
@@ -864,7 +864,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
         string = intl9.string;
         stringResult1 = string(targetUsername(1126).t.msyp90);
         obj16.text = stringResult1;
-        items = closure_10(targetUsername(5376).Button, obj16);
+        items = closure_10(targetUsername(5379).Button, obj16);
         obj15.children = items;
         let tmp33Result2 = closure_10(closure_5, obj15);
       } else {
@@ -874,7 +874,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
           const obj18 = { variant: "secondary", onPress: callback1, text: null };
           const intl8 = targetUsername(1126).intl;
           obj18.text = intl8.string(targetUsername(1126).t["6CLLyH"]);
-          obj17.children = closure_10(targetUsername(5376).Button, obj18);
+          obj17.children = closure_10(targetUsername(5379).Button, obj18);
           tmp33Result2 = closure_10(closure_5, obj17);
         }
       }
@@ -884,7 +884,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     }
     const intl = targetUsername(1126).intl;
     formatToPlainStringResult = intl.string(targetUsername(1126).t.UqnlQF);
-    const tmp6Result6 = targetUsername(10545);
+    const tmp6Result6 = targetUsername(10579);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

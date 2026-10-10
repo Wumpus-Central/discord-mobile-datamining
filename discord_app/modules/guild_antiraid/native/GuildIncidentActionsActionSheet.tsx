@@ -1,26 +1,26 @@
-// === Module 11342: GuildIncidentActionsActionSheet ===
+// === Module 11384: GuildIncidentActionsActionSheet ===
 
-// Module 11342 (GuildIncidentActionsActionSheet)
+// Module 11384 (GuildIncidentActionsActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5055 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8025 */;
-import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11344 */;
-import GuildRaidLockdownFeedbackActionSheetDefault from "GuildRaidLockdownFeedbackActionSheet" /* 11346 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8043 */;
+import GuildAntiRaidActionCreators from "GuildAntiRaidActionCreators" /* 11386 */;
+import GuildRaidLockdownFeedbackActionSheetDefault from "GuildRaidLockdownFeedbackActionSheet" /* 11388 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10660 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
-const GuildIncidentsActionSheetStore = fn(11343);
+const GuildIncidentsActionSheetStore = fn(11385);
 ({ resetGuildIncidentsActionSheetStore: hasOwnProperty, setInitialTime: metroRequire, setPauseDms: closure_7, setPauseInvites: closure_8, setTime: closure_9, useGuildIncidentsActionSheetStore: c10 } = GuildIncidentsActionSheetStore);
-const getTimeframes = fn(8026).getTimeframes;
+const getTimeframes = fn(8044).getTimeframes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
-const value2 = createStyles.createStyles({ beta: { marginLeft: -12 } });
+const createStyles = fn(5092);
+const value3 = createStyles.createStyles({ beta: { marginLeft: -12 } });
 const ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function DurationSelectionActionSheet(onClose) {
   let map = onClose;
@@ -28,19 +28,19 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
   const cResult = onClose(576).c(15);
   onClose = onClose.onClose;
   if (cResult[0] !== onClose) {
-    const ActionSheet = map(6892).ActionSheet;
+    const ActionSheet = map(6898).ActionSheet;
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { title: null };
       const intl = map(1126).intl;
       obj2.title = intl.string(map(1126).t.vKYZzc);
-      const tmp11 = closure_14(map(6835).BottomSheetTitleHeader, obj2);
+      const tmp11 = closure_14(map(6838).BottomSheetTitleHeader, obj2);
       cResult[6] = tmp11;
       let tmp9 = tmp11;
     } else {
       tmp9 = cResult[6];
     }
-    Group = map(6888).ActionSheetRow.Group;
+    Group = map(6894).ActionSheetRow.Group;
     map = getTimeframes().map;
     const mapped = map((label) => closure_1_14(onClose(dependencyMap[12]).ActionSheetRow, {
       label: label.label,
@@ -96,9 +96,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
   const obj2 = { title: null };
   const intl = onClose(1126).intl;
   obj2.title = intl.string(onClose(1126).t.vKYZzc);
-  const items = [closure_14(onClose(6835).BottomSheetTitleHeader, obj2), ];
+  const items = [closure_14(onClose(6838).BottomSheetTitleHeader, obj2), ];
   const arr = getTimeframes();
-  items[1] = closure_14(onClose(6888).ActionSheetRow.Group, {
+  items[1] = closure_14(onClose(6894).ActionSheetRow.Group, {
     hasIcons: false,
     children: getTimeframes().map((label) => closure_1_14(onClose(dependencyMap[12]).ActionSheetRow, {
       label: label.label,
@@ -109,7 +109,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Durati
     }, label.value))
   });
   obj.children = items;
-  return closure_15(onClose(6892).ActionSheet, obj);
+  return closure_15(onClose(6898).ActionSheet, obj);
 });
 class GuildIncidentActionsActionSheet {
   constructor(arg0) {
@@ -122,7 +122,7 @@ class GuildIncidentActionsActionSheet {
     closure_6 = undefined;
     closure_7 = undefined;
     onDurationSelectorClose = function onDurationSelectorClose() {
-      const obj2 = { content: state(GuildIncidentActionsActionSheet, { guild, analyticsData }), key: "GuildIncidentActionsActionSheet" };
+      const obj2 = { content: closure_2_14(GuildIncidentActionsActionSheet, { guild, analyticsData }), key: "GuildIncidentActionsActionSheet" };
       ActionSheetActionCreators.showActionSheet(obj2);
     };
     tmp = closure_16();
@@ -192,7 +192,7 @@ class GuildIncidentActionsActionSheet {
     intl2 = tmp3(tmp4[11]).intl;
     obj18.label = intl2.string(tmp3(tmp4[11]).t.vKYZzc);
     obj18.onPress = function onDropdownPress() {
-      const obj2 = { content: state(closure_17, { onClose: onDurationSelectorClose }), key: "DurationSelectionActionSheet" };
+      const obj2 = { content: closure_2_14(closure_17, { onClose: onDurationSelectorClose }), key: "DurationSelectionActionSheet" };
       ActionSheetActionCreators.showActionSheet(obj2);
     };
     intl3 = tmp3(tmp4[11]).intl;
@@ -264,7 +264,7 @@ class GuildIncidentActionsActionSheet {
             if (!tmp11) {
               const obj7 = { content: null, key: "GuildRaidLockdownFeedbackActionSheet" };
               const obj8 = { guildId: guild.id };
-              obj7.content = state(GuildRaidLockdownFeedbackActionSheetDefault, obj8);
+              obj7.content = closure_2_14(GuildRaidLockdownFeedbackActionSheetDefault, obj8);
               ActionSheetActionCreators.showActionSheet(obj7);
               const tmpResult = ActionSheetActionCreators;
             }

@@ -1,15 +1,15 @@
-// === Module 12916: VideoQuestUtils ===
+// === Module 12964: VideoQuestUtils ===
 
-// Module 12916 (VideoQuestUtils)
+// Module 12964 (VideoQuestUtils)
 import util from "util" /* 1126 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7390 */;
-import AnalyticsActions from "AnalyticsActions" /* 7400 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7406 */;
-import QuestActionCreators from "QuestActionCreators" /* 9150 */;
-import NetworkStore from "NetworkStore" /* 5281 */;
-import QuestStore from "QuestStore" /* 7384 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7386 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7396 */;
+import AnalyticsActions from "AnalyticsActions" /* 7406 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7412 */;
+import QuestActionCreators from "QuestActionCreators" /* 9171 */;
+import NetworkStore from "NetworkStore" /* 5282 */;
+import QuestStore from "QuestStore" /* 7390 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7392 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -17,7 +17,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(12917).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(12965).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestExpirationUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {
@@ -111,7 +111,7 @@ export const getVideoQuestEndCardCtaText = function getVideoQuestEndCardCtaText(
 };
 export const handleVideoQuestModalClose = function handleVideoQuestModalClose(arg0) {
   ({ questId, sourceQuestContent, videoSessionId } = arg0);
-  state = VideoQuestUIStore.getState();
+  const state = VideoQuestUIStore.getState();
   state.setTranscriptEnabled(false);
   const state1 = VideoQuestUIStore.getState();
   const videoProgress = state1.getVideoProgress(questId);

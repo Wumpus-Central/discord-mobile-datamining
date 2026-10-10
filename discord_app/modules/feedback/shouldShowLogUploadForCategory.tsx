@@ -1,7 +1,7 @@
-// === Module 17967: shouldShowLogUploadForCategory ===
+// === Module 18039: shouldShowLogUploadForCategory ===
 
-// Module 17967 (shouldShowLogUploadForCategory)
-import Constants from "Constants" /* 9621 */;
+// Module 18039 (shouldShowLogUploadForCategory)
+import Constants from "Constants" /* 9650 */;
 import size from "module_2" /* 2 */;
 
 const FeedbackRating = Constants.FeedbackRating;

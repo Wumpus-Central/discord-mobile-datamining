@@ -1,6 +1,6 @@
-// === Module 17468: permissions/PermissionUtils ===
+// === Module 17540: permissions/PermissionUtils ===
 
-// Module 17468 (permissions/PermissionUtils)
+// Module 17540 (permissions/PermissionUtils)
 import Constants from "Constants" /* 1096 */;
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;

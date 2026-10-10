@@ -1,17 +1,17 @@
-// === Module 4721: ReactionUtils ===
+// === Module 4762: ReactionUtils ===
 
-// Module 4721 (ReactionUtils)
+// Module 4762 (ReactionUtils)
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7882 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7900 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4722).NotificationSettingsUpdateType;
+const constants3 = fn(4763).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 

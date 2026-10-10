@@ -1,25 +1,24 @@
-// === Module 6154: MemberVerificationModal ===
+// === Module 6147: MemberVerificationModal ===
 
-// Module 6154 (MemberVerificationModal)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 6147 (MemberVerificationModal)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4811 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4903 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6109 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4942 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6102 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6155 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6148 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 let View = fn(17).View;
-const MemberVerificationFormConstants = fn(6156);
+const MemberVerificationFormConstants = fn(6149);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { flex: { flex: 1 }, flexLoading: { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scrollContainer: null, closeButtonContainer: null, closeIconContainer: null, closeIconOverBanner: null, closeIconAfterBanner: null, headerSeparator: null };
 let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -64,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   const tmp9 = onClose(top[13])();
   const isThemeDarkResult = guildId(top[14]).isThemeDark(tmp9);
   View = isThemeDarkResult;
-  const tmp11 = closure_8();
+  const tmp11 = ref();
   closure_5 = tmp11;
   const obj4 = guildId(top[14]);
   class A {
@@ -207,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     tmp28 = cResult[11];
   }
   closure_7 = tmp28;
-  closure_8 = sharedValue.useRef(onClose);
+  const tmpResult = guildId(top[17]);
   if (cResult[12] !== onClose) {
     class Q {
       constructor() {
@@ -242,16 +241,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -278,16 +276,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -299,16 +296,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -331,16 +327,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -350,16 +345,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -369,21 +363,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
     }
-    const tmp38 = closure_9(tmp(top[21]).ActivityIndicator, {});
+    const tmp38 = closure_9(tmp(top[20]).ActivityIndicator, {});
     class K {
       constructor() {
         formFields = undefined;
@@ -403,16 +396,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -422,16 +414,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -459,16 +450,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     class Y {
       constructor() {
         if (closure_7) {
-          tmp = closure_1;
-          tmp2 = closure_2;
-          obj = closure_1(closure_2[19]);
-          waitResult = obj.wait(() => {
-            const current = ref.current;
-            if (current != null) {
-              current();
-            }
-            const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-          });
+          current = closure_8.current;
+          tmp = null;
+          if (current != null) {
+            currentResult = current();
+          }
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[19]);
+          result = obj.openMemberVerificationUpdateAlert();
         }
         return;
       }
@@ -481,7 +471,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   let top;
   let stateFromStores;
   let memo1;
-  closure_8 = undefined;
+  let ref;
   let tmp = closure_12();
   const rect = onClose(top[12])();
   top = rect.top;
@@ -498,7 +488,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   const tmp7 = onClose(top[13])();
   const isThemeDarkResult = guildId(top[14]).isThemeDark(tmp7);
   c4 = isThemeDarkResult;
-  const tmp9 = closure_8();
+  const tmp9 = ref();
   closure_5 = tmp9;
   const obj3 = guildId(top[14]);
   const fn2 = function b() {
@@ -575,20 +565,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     closure_0 = Object.values(MemberVerificationTypes.VerificationFormFieldTypes);
     return formFields.some((field_type) => !closure_0.includes(field_type.field_type));
   }, items3);
-  closure_8 = obj10.useRef(onClose);
+  ref = obj10.useRef(onClose);
   const effect = obj10.useEffect(() => {
     closure_8.current = onClose;
   });
   const items4 = [memo1];
   const effect1 = obj10.useEffect(() => {
     if (memo1) {
-      DispatcherDefault.wait(() => {
-        const current = ref.current;
-        if (current != null) {
-          current();
-        }
-        const result = guildId(top[20]).openMemberVerificationUpdateAlert();
-      });
+      const current = ref.current;
+      if (current != null) {
+        current();
+      }
+      const result = MemberVerificationAlertActionCreators.openMemberVerificationUpdateAlert();
     }
   }, items4);
   if (null != tmp13) {
@@ -601,9 +589,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         obj12.scrollEventThrottle = memo1;
         obj12.onScroll = animatedScrollHandler;
         const obj14 = { guild: tmp13, scrollTop: sharedValue, hasManualFormFields: memo };
-        const items5 = [closure_9(tmp2(tmp3[22]), obj14), , ];
+        const items5 = [closure_9(tmp2(tmp3[21]), obj14), , ];
         const obj15 = { style: tmp.headerSeparator };
-        items5[1] = closure_9(tmp2(tmp3[23]), obj15);
+        items5[1] = closure_9(tmp2(tmp3[22]), obj15);
         const obj16 = {
           guild: tmp13,
           onSuccess: function handleSuccess(application_status) {
@@ -616,7 +604,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
                 },
           onClose
         };
-        items5[2] = closure_9(tmp2(tmp3[24]), obj16);
+        items5[2] = closure_9(tmp2(tmp3[23]), obj16);
         obj12.children = items5;
         const items6 = [closure_10(tmp2(tmp3[6]).ScrollView, obj12), ];
         const obj17 = { style: null, children: null };
@@ -625,8 +613,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         items7[1] = obj18;
         obj17.style = items7;
         const obj19 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
-        const intl = tmp4(tmp3[25]).intl;
-        obj19.accessibilityLabel = intl.string(tmp4(tmp3[25]).t.cpT0Cq);
+        const intl = tmp4(tmp3[24]).intl;
+        obj19.accessibilityLabel = intl.string(tmp4(tmp3[24]).t.cpT0Cq);
         obj19.style = tmp.closeIconContainer;
         obj19.onPress = function onPress() {
           let tmp;
@@ -635,11 +623,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
           }
           return tmp;
         };
-        const obj20 = { source: tmp2(tmp3[26]), style: null };
+        const obj20 = { source: tmp2(tmp3[25]), style: null };
         const items8 = [tmp.closeIconOverBanner, animatedStyle];
         obj20.style = items8;
         const items9 = [closure_9(closure_11, obj20), ];
-        const obj21 = { source: tmp2(tmp3[26]), style: null };
+        const obj21 = { source: tmp2(tmp3[25]), style: null };
         const items10 = [tmp.closeIconAfterBanner, ];
         class S {
           constructor() {
@@ -654,16 +642,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
         obj21.style = items10;
         items9[1] = closure_9(closure_11, obj21);
         obj19.children = items9;
-        obj17.children = closure_10(tmp4(tmp3[27]).PressableOpacity, obj19);
+        obj17.children = closure_10(tmp4(tmp3[26]).PressableOpacity, obj19);
         items6[1] = closure_9(c4, obj17);
         obj11.children = items6;
-        let tmp27 = closure_10(tmp2(tmp3[28]), obj11);
-        const tmp2Result = tmp2(tmp3[28]);
+        let tmp27 = closure_10(tmp2(tmp3[27]), obj11);
+        const tmp2Result = tmp2(tmp3[27]);
       }
       return tmp27;
     }
   }
   const obj9 = guildId(top[17]);
-  tmp27 = closure_9(c4, { style: tmp.flexLoading, children: closure_9(guildId(top[21]).ActivityIndicator, {}) });
-  const obj22 = { style: tmp.flexLoading, children: closure_9(guildId(top[21]).ActivityIndicator, {}) };
+  tmp27 = closure_9(c4, { style: tmp.flexLoading, children: closure_9(guildId(top[20]).ActivityIndicator, {}) });
+  const obj22 = { style: tmp.flexLoading, children: closure_9(guildId(top[20]).ActivityIndicator, {}) };
 });

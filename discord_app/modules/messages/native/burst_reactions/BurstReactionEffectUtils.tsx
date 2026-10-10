@@ -1,8 +1,8 @@
-// === Module 7907: burst_reactions/BurstReactionEffectUtils ===
+// === Module 7925: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 7907 (burst_reactions/BurstReactionEffectUtils)
-import EmojiUtils from "EmojiUtils" /* 4727 */;
-import getBurstAnimation from "getBurstAnimation" /* 7908 */;
+// Module 7925 (burst_reactions/BurstReactionEffectUtils)
+import EmojiUtils from "EmojiUtils" /* 4768 */;
+import getBurstAnimation from "getBurstAnimation" /* 7926 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ let closure_8 = async function _generateAnimationSource(arg0, arg1, arg2, arg3) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ let closure_10 = async function _generateAnimationSourceFromLocalImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -362,7 +362,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBurstReac
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -446,7 +446,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBurstReac
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -531,7 +531,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -565,7 +565,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp14) {
           c3 = tmp;
@@ -610,7 +610,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -644,7 +644,7 @@ export const useSuperReactionAnimationSourceFromLocalImage = ReactCompilerGating
             closure_128_0 = value;
             v1(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp14) {
           c3 = tmp;

@@ -1,15 +1,15 @@
-// === Module 18502: QuestFetchManager ===
+// === Module 18576: QuestFetchManager ===
 
-// Module 18502 (QuestFetchManager)
+// Module 18576 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6078 */;
-import QuestsEligibility from "QuestsEligibility" /* 9144 */;
-import QuestActionCreators from "QuestActionCreators" /* 9150 */;
-import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 18503 */;
-import QuestStore from "QuestStore" /* 7384 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6071 */;
+import QuestsEligibility from "QuestsEligibility" /* 9165 */;
+import QuestActionCreators from "QuestActionCreators" /* 9171 */;
+import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 18577 */;
+import QuestStore from "QuestStore" /* 7390 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -124,7 +124,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
     const currentQuests = QuestActionCreators.fetchCurrentQuests();
     const tmpResult = QuestActionCreators;
     if (tmpResult2.isMac()) {
-      state = DiscordAppStateDefault.getState();
+      const state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
     tmpResult2 = PlatformUtils;

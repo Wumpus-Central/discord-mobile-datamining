@@ -1,12 +1,12 @@
-// === Module 14989: WebAuthnNameStep ===
+// === Module 15048: WebAuthnNameStep ===
 
-// Module 14989 (WebAuthnNameStep)
+// Module 15048 (WebAuthnNameStep)
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import useNavigation from "useNavigation" /* 1503 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6681 */;
-import Form from "Form" /* 8563 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6682 */;
+import Form from "Form" /* 8579 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles({ margin: { margin: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
@@ -33,7 +33,7 @@ export default function WebAuthnNameStep() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -78,15 +78,13 @@ export default function WebAuthnNameStep() {
         } else {
           c3 = 0;
           closure_128_3(false);
-          const obj8 = { key: "WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-success" };
+          const obj8 = { text: null, variant: "success" };
           const intl = tmp4(tmp32[11]).intl;
-          obj8.content = intl.string(tmp4(tmp32[11]).t.j3d5qI);
-          obj8.icon = v3(tmp32[12]);
-          obj8.IconComponent = tmp4(tmp32[13]).CircleCheckIcon;
-          v3(tmp32[10]).open(obj8);
+          obj8.text = intl.string(tmp4(tmp32[11]).t.j3d5qI);
+          v3(tmp32[10]).open("WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", obj8);
           const replaced = closure_128_2.replace(constants.WEBAUTHN_SUCCESS);
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp32) {
         if (tmp5 === c3) {

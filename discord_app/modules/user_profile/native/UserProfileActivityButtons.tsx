@@ -1,38 +1,38 @@
-// === Module 13105: UserProfileActivityButtons ===
+// === Module 13152: UserProfileActivityButtons ===
 
-// Module 13105 (UserProfileActivityButtons)
+// Module 13152 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import LinkingDefault from "Linking" /* 4765 */;
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
+import LinkingDefault from "Linking" /* 4806 */;
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6851 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7492 */;
-import isStreamingDefault from "isStreaming" /* 8368 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9177 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 10766 */;
-import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 10812 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 13106 */;
-import getActivityJoinability from "getActivityJoinability" /* 13107 */;
-import getStreamURLDefault from "getStreamURL" /* 13109 */;
+import isStreamingDefault from "isStreaming" /* 8384 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9204 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 10801 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 10822 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 13153 */;
+import getActivityJoinability from "getActivityJoinability" /* 13154 */;
+import getStreamURLDefault from "getStreamURL" /* 13156 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4981 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import LocalActivityStore from "LocalActivityStore" /* 10613 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5756 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5020 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import LocalActivityStore from "LocalActivityStore" /* 10647 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 
 const require = globalThis.__r;
 const getActivityJoinabilityDefault = getActivityJoinability;
@@ -40,17 +40,17 @@ const getActivityJoinabilityDefault = getActivityJoinability;
 require = fn;
 const Constants = fn(1085);
 ({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
-const SpotifyConstants = fn(8442);
+const SpotifyConstants = fn(8458);
 ({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { icon: { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT } };
 let closure_20 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinActivityButton(user) {
-  const cResult = user(activity[19]).c(27);
+  const cResult = user(activity[19]).c(32);
   user = user.user;
   const currentUser = user.currentUser;
   activity = user.activity;
@@ -63,143 +63,119 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinActivity
   }
   if (cResult[0] === id) {
     if (cResult[1] === user.id) {
-      let tmp6 = cResult[2];
+      let tmp5 = cResult[2];
     }
-    ConnectedAccountsStore = tmp6;
+    ConnectedAccountsStore = tmp5;
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const items = [];
       cResult[3] = items;
-      let tmp14 = items;
+      let tmp10 = items;
     } else {
-      tmp14 = cResult[3];
+      tmp10 = cResult[3];
     }
     if (cResult[4] === activity) {
-      if (cResult[5] === tmp6) {
+      if (cResult[5] === tmp5) {
         if (cResult[6] === user.id) {
-          let tmp15 = cResult[7];
+          const tmp11 = cResult[7];
         }
-        const stateFromStores = tmp(tmp2[23]).useStateFromStores(tmp14, tmp15);
+        const stateFromStores = tmp(tmp2[23]).useStateFromStores(tmp10, tmp11);
         const _Symbol2 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const items1 = [analyticsLocations, GuildStore, stateFromStores, , , , , , , ];
+          const items1 = [analyticsLocations];
+          cResult[8] = items1;
+          let tmp13 = items1;
+        } else {
+          tmp13 = cResult[8];
+        }
+        if (cResult[9] !== stateFromStores) {
           class U {
             constructor() {
-              obj = { isEmbedded: true, user, currentUser, activity, application, channelId: closure_7, ChannelStore: closure_5, GuildStore: closure_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_11, SelectedChannelStore: closure_12, VoiceStateStore: closure_14, PermissionStore: closure_10, LocalActivityStore: closure_9, SelfPresenceStore: closure_13, EmbeddedActivitiesStore: closure_4 };
-              return closure_1(closure_2[24])(obj);
+              return closure_5.getChannel(closure_7);
             }
           }
-          items1[4] = SelectedChannelStore;
-          items1[5] = VoiceStateStore;
-          items1[6] = PermissionStore;
-          items1[7] = LocalActivityStore;
-          items1[8] = SelfPresenceStore;
-          items1[9] = onAction;
-          cResult[8] = items1;
-          let tmp17 = items1;
+          const items2 = [stateFromStores];
+          cResult[9] = stateFromStores;
+          cResult[10] = U;
+          class E {
+            constructor() {
+              obj = { channelId: closure_6, userId: user.id, activity };
+              return closure_1(closure_2[22])(obj);
+            }
+          }
+          let tmp16 = items2;
         } else {
-          tmp17 = cResult[8];
+          class U {
+            constructor() {
+              return closure_5.getChannel(closure_7);
+            }
+          }
+          tmp16 = cResult[11];
         }
-        if (cResult[9] === activity) {
-          if (cResult[10] === application) {
-            if (cResult[11] === stateFromStores) {
-              if (cResult[12] === currentUser) {
-                if (cResult[13] === user) {
-                  let tmp28 = cResult[14];
-                }
-                const stateFromStores1 = tmp(tmp2[23]).useStateFromStores(tmp17, tmp28);
-                if (tmp4(tmp2[25])(activity)) {
-                  if (null != application) {
-                    if (stateFromStores1 !== tmp(tmp2[24]).ActivityJoinability.CANNOT_JOIN) {
-                      if (cResult[15] !== stateFromStores1) {
-                        if (stateFromStores1 === tmp(tmp2[24]).ActivityJoinability.JOINED) {
-                          const intl2 = tmp(tmp2[26]).intl;
-                          let stringResult = intl2.string(tmp(tmp2[26]).t.DPfdsq);
-                        } else {
-                          const intl = tmp(tmp2[26]).intl;
-                          stringResult = intl.string(tmp(tmp2[26]).t["4i2vj+"]);
-                        }
-                        cResult[15] = stateFromStores1;
-                        cResult[16] = stringResult;
-                      } else {
-                        const _Symbol3 = Symbol;
-                        if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp35 = jsx(tmp(tmp2[27]).AppsIcon, { size: "sm", color: "white" });
-                          cResult[17] = tmp35;
-                          let tmp33 = tmp35;
-                        } else {
-                          tmp33 = cResult[17];
-                        }
-                        if (cResult[18] === analyticsLocations) {
-                          if (cResult[19] === application.id) {
-                            if (cResult[20] === stateFromStores) {
-                              if (cResult[21] === onAction) {
-                                let tmp37 = cResult[22];
-                              }
-                              if (cResult[23] === tmp30) {
-                                if (cResult[24] === tmp38) {
-                                  if (cResult[25] === tmp37) {
-                                    let tmp39 = cResult[26];
-                                  }
-                                  return tmp39;
-                                }
-                              }
-                              const obj2 = { text: tmp30, icon: tmp33, variant: "active", disabled: stateFromStores1 === tmp36, onPress: null };
-                              class U {
-                                constructor() {
-                                  obj = { isEmbedded: true, user, currentUser, activity, application, channelId: closure_7, ChannelStore: closure_5, GuildStore: closure_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_11, SelectedChannelStore: closure_12, VoiceStateStore: closure_14, PermissionStore: closure_10, LocalActivityStore: closure_9, SelfPresenceStore: closure_13, EmbeddedActivitiesStore: closure_4 };
-                                  return closure_1(closure_2[24])(obj);
-                                }
-                              }
-                              const tmp41 = jsx(tmp(tmp2[30]).Button, { text: tmp30, icon: tmp33, variant: "active", disabled: stateFromStores1 === tmp36, onPress: null });
-                              cResult[23] = tmp30;
-                              cResult[24] = stateFromStores1 === tmp36;
-                              cResult[25] = tmp37;
-                              cResult[26] = tmp41;
-                              tmp39 = tmp41;
-                            }
-                          }
-                        }
-                        const fn = function x() {
-                          onAction({ action: "PRESS_JOIN_BUTTON" });
-                          handleJoinEmbeddedActivityDefault({ applicationId: application.id, activityChannelId: stateFromStores, locationObject: {}, analyticsLocations });
-                          ActionSheetActionCreatorsDefault.hideAllActionSheets();
-                        };
-                        cResult[18] = analyticsLocations;
-                        class U {
-                          constructor() {
-                            obj = { isEmbedded: true, user, currentUser, activity, application, channelId: closure_7, ChannelStore: closure_5, GuildStore: closure_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_11, SelectedChannelStore: closure_12, VoiceStateStore: closure_14, PermissionStore: closure_10, LocalActivityStore: closure_9, SelfPresenceStore: closure_13, EmbeddedActivitiesStore: closure_4 };
-                            return closure_1(closure_2[24])(obj);
-                          }
-                        }
-                        cResult[19] = application.id;
-                        cResult[20] = stateFromStores;
-                        cResult[21] = onAction;
-                        cResult[22] = fn;
-                        tmp37 = fn;
-                      }
-                    }
-                  }
-                }
-                return null;
-              }
+        class E {
+          constructor() {
+            obj = { channelId: closure_6, userId: user.id, activity };
+            return closure_1(closure_2[22])(obj);
+          }
+        }
+        const stateFromStores1 = obj4.useStateFromStores(tmp13, U, tmp16);
+        const tmpResult = tmp(tmp2[23]);
+        const isChannelContentGated = tmp(tmp2[24]).useIsChannelContentGated(stateFromStores1);
+        const _Symbol3 = Symbol;
+        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+          class U {
+            constructor() {
+              return closure_5.getChannel(closure_7);
+            }
+          }
+          const items3 = [analyticsLocations, isChannelContentGated, stateFromStores, , , , , , , ];
+          class E {
+            constructor() {
+              obj = { channelId: closure_6, userId: user.id, activity };
+              return closure_1(closure_2[22])(obj);
+            }
+          }
+          items3[4] = SelectedChannelStore;
+          items3[5] = VoiceStateStore;
+          items3[6] = PermissionStore;
+          items3[7] = LocalActivityStore;
+          class D {
+            constructor() {
+              obj = { isEmbedded: true, user, currentUser, activity, application, channelId: closure_7, isContentGated: closure_8, ChannelStore: closure_5, GuildStore: closure_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_11, SelectedChannelStore: closure_12, VoiceStateStore: closure_14, PermissionStore: closure_10, LocalActivityStore: closure_9, SelfPresenceStore: closure_13, EmbeddedActivitiesStore: closure_4 };
+              return closure_1(closure_2[25])(obj);
+            }
+          }
+          items3[8] = SelfPresenceStore;
+          items3[9] = onAction;
+          cResult[12] = items3;
+        } else {
+          class U {
+            constructor() {
+              return closure_5.getChannel(closure_7);
             }
           }
         }
-        class U {
-          constructor() {
-            obj = { isEmbedded: true, user, currentUser, activity, application, channelId: closure_7, ChannelStore: closure_5, GuildStore: closure_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_11, SelectedChannelStore: closure_12, VoiceStateStore: closure_14, PermissionStore: closure_10, LocalActivityStore: closure_9, SelfPresenceStore: closure_13, EmbeddedActivitiesStore: closure_4 };
-            return closure_1(closure_2[24])(obj);
+        if (cResult[13] === activity) {
+          class U {
+            constructor() {
+              return closure_5.getChannel(closure_7);
+            }
           }
         }
-        cResult[9] = activity;
-        cResult[10] = application;
-        cResult[11] = stateFromStores;
-        cResult[12] = currentUser;
-        cResult[13] = user;
-        cResult[14] = U;
-        tmp28 = U;
-        const tmpResult = tmp(tmp2[23]);
+        class D {
+          constructor() {
+            obj = { isEmbedded: true, user, currentUser, activity, application, channelId: closure_7, isContentGated: closure_8, ChannelStore: closure_5, GuildStore: closure_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_11, SelectedChannelStore: closure_12, VoiceStateStore: closure_14, PermissionStore: closure_10, LocalActivityStore: closure_9, SelfPresenceStore: closure_13, EmbeddedActivitiesStore: closure_4 };
+            return closure_1(closure_2[25])(obj);
+          }
+        }
+        cResult[13] = activity;
+        cResult[14] = application;
+        cResult[15] = stateFromStores;
+        cResult[16] = currentUser;
+        cResult[17] = isChannelContentGated;
+        cResult[18] = user;
+        cResult[19] = D;
+        const tmpResult3 = tmp(tmp2[24]);
       }
     }
     class E {
@@ -209,31 +185,38 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinActivity
       }
     }
     cResult[4] = activity;
-    cResult[5] = tmp6;
+    cResult[5] = tmp5;
     cResult[6] = user.id;
     cResult[7] = E;
-    tmp15 = E;
   }
-  let id1;
   if (application != null) {
-    id1 = application.id;
+    class U {
+      constructor() {
+        return closure_5.getChannel(closure_7);
+      }
+    }
   }
-  const embeddedActivityForUserId = onAction.getEmbeddedActivityForUserId(user.id, id1);
-  const obj = user(activity[19]);
-  tmp4 = currentUser;
-  let _location;
+  const embeddedActivityForUserId = onAction.getEmbeddedActivityForUserId(user.id, undefined);
+  let obj = user(activity[19]);
   if (embeddedActivityForUserId != null) {
-    _location = embeddedActivityForUserId.location;
+    class U {
+      constructor() {
+        return closure_5.getChannel(closure_7);
+      }
+    }
   }
-  const embeddedActivityLocationChannelId = user(activity[21]).getEmbeddedActivityLocationChannelId(_location);
-  let id2;
+  const embeddedActivityLocationChannelId = user(activity[21]).getEmbeddedActivityLocationChannelId(undefined);
   if (application != null) {
-    id2 = application.id;
+    class U {
+      constructor() {
+        return closure_5.getChannel(closure_7);
+      }
+    }
   }
-  cResult[0] = id2;
+  cResult[0] = undefined;
   cResult[1] = user.id;
   cResult[2] = embeddedActivityLocationChannelId;
-  tmp6 = embeddedActivityLocationChannelId;
+  tmp5 = embeddedActivityLocationChannelId;
   const tmpResult4 = user(activity[21]);
 }) : (function JoinActivityButton(user) {
   user = user.user;
@@ -241,7 +224,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinActivity
   const application = user.application;
   const onAction = user.onAction;
   let channelId;
-  closure_7 = undefined;
+  let stateFromStores;
+  let isContentGated;
   let JOINED = activity;
   const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
   let id;
@@ -254,38 +238,45 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinActivity
     _location = embeddedActivityForUserId.location;
   }
   channelId = user(JOINED[21]).getEmbeddedActivityLocationChannelId(_location);
-  const obj = user(JOINED[21]);
+  let obj = user(JOINED[21]);
   const tmp2 = onAction;
-  closure_7 = user(JOINED[23]).useStateFromStores([], () => getActivityChannelIdDefault({ channelId, userId: user.id, activity }));
+  stateFromStores = user(JOINED[23]).useStateFromStores([], () => getActivityChannelIdDefault({ channelId, userId: user.id, activity }));
   const tmp5Result = user(JOINED[23]);
-  const items = [analyticsLocations, GuildStore, closure_7, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, tmp2];
-  const stateFromStores = user(JOINED[23]).useStateFromStores(items, () => getActivityJoinabilityDefault({ isEmbedded: true, user, currentUser, activity, application, channelId, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore }));
-  let tmp8 = null;
+  const items = [analyticsLocations];
+  const items1 = [stateFromStores];
+  const stateFromStores1 = user(JOINED[23]).useStateFromStores(items, () => ChannelStore.getChannel(stateFromStores), items1);
+  const tmp5Result4 = user(JOINED[23]);
+  isContentGated = user(JOINED[24]).useIsChannelContentGated(stateFromStores1);
+  const tmp5Result5 = user(JOINED[24]);
+  const items2 = [analyticsLocations, isContentGated, stateFromStores, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, tmp2];
+  const stateFromStores2 = user(JOINED[23]).useStateFromStores(items2, () => getActivityJoinabilityDefault({ isEmbedded: true, user, currentUser, activity, application, channelId: stateFromStores, isContentGated, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore }));
+  let tmp10 = null;
   if (require("isEmbeddedActivity")(activity)) {
-    tmp8 = null;
+    tmp10 = null;
     if (null != application) {
-      tmp8 = null;
-      if (stateFromStores !== tmp5(JOINED[24]).ActivityJoinability.CANNOT_JOIN) {
-        if (stateFromStores === tmp5(JOINED[24]).ActivityJoinability.JOINED) {
-          const intl2 = tmp5(JOINED[26]).intl;
-          let stringResult = intl2.string(tmp5(JOINED[26]).t.DPfdsq);
+      tmp10 = null;
+      if (stateFromStores2 !== tmp5(JOINED[25]).ActivityJoinability.CANNOT_JOIN) {
+        if (stateFromStores2 === tmp5(JOINED[25]).ActivityJoinability.JOINED) {
+          const intl2 = tmp5(JOINED[27]).intl;
+          let stringResult = intl2.string(tmp5(JOINED[27]).t.DPfdsq);
         } else {
-          const intl = tmp5(JOINED[26]).intl;
-          stringResult = intl.string(tmp5(JOINED[26]).t["4i2vj+"]);
+          const intl = tmp5(JOINED[27]).intl;
+          stringResult = intl.string(tmp5(JOINED[27]).t["4i2vj+"]);
         }
-        const obj2 = { text: stringResult, icon: jsx(tmp5(JOINED[27]).AppsIcon, { size: "sm", color: "white" }), variant: "active", disabled: null, onPress: null };
-        JOINED = tmp5(JOINED[24]).ActivityJoinability.JOINED;
-        obj2.disabled = stateFromStores === JOINED;
+        const obj2 = { text: stringResult, icon: jsx(tmp5(JOINED[28]).AppsIcon, { size: "sm", color: "white" }), variant: "active", disabled: null, onPress: null };
+        JOINED = tmp5(JOINED[25]).ActivityJoinability.JOINED;
+        obj2.disabled = stateFromStores2 === JOINED;
         obj2.onPress = function onPress() {
           onAction({ action: "PRESS_JOIN_BUTTON" });
-          handleJoinEmbeddedActivityDefault({ applicationId: application.id, activityChannelId, locationObject: {}, analyticsLocations });
           ActionSheetActionCreatorsDefault.hideAllActionSheets();
+          ModalActionCreatorsDefault.popAll();
+          handleJoinEmbeddedActivityDefault({ applicationId: application.id, activityChannelId: stateFromStores, locationObject: {}, analyticsLocations });
         };
-        jsx(tmp5(JOINED[30]).Button, { text: stringResult, icon: jsx(tmp5(JOINED[27]).AppsIcon, { size: "sm", color: "white" }), variant: "active", disabled: null, onPress: null });
+        jsx(tmp5(JOINED[32]).Button, { text: stringResult, icon: jsx(tmp5(JOINED[28]).AppsIcon, { size: "sm", color: "white" }), variant: "active", disabled: null, onPress: null });
       }
     }
   }
-  return tmp8;
+  return tmp10;
 });
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActivityButton(user) {
@@ -317,14 +308,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActi
           }
           const stateFromStores = tmp(tmp2[23]).useStateFromStores(tmp6, tmp17);
           if (null != application) {
-            if (stateFromStores !== tmp(tmp2[24]).ActivityJoinability.CANNOT_JOIN) {
+            if (stateFromStores !== tmp(tmp2[25]).ActivityJoinability.CANNOT_JOIN) {
               if (cResult[9] !== stateFromStores) {
-                if (stateFromStores === tmp(tmp2[24]).ActivityJoinability.JOINED) {
-                  const intl2 = tmp(tmp2[26]).intl;
-                  let stringResult = intl2.string(tmp(tmp2[26]).t.DPfdsq);
+                if (stateFromStores === tmp(tmp2[25]).ActivityJoinability.JOINED) {
+                  const intl2 = tmp(tmp2[27]).intl;
+                  let stringResult = intl2.string(tmp(tmp2[27]).t.DPfdsq);
                 } else {
-                  const intl = tmp(tmp2[26]).intl;
-                  stringResult = intl.string(tmp(tmp2[26]).t.VJlc0S);
+                  const intl = tmp(tmp2[27]).intl;
+                  stringResult = intl.string(tmp(tmp2[27]).t.VJlc0S);
                 }
                 cResult[9] = stateFromStores;
                 cResult[10] = stringResult;
@@ -339,16 +330,18 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActi
                         class U {
                           constructor() {
                             tmp = onAction({ action: "PRESS_JOIN_BUTTON" });
-                            obj = closure_1(closure_2[31]);
+                            obj = closure_1(closure_2[29]);
+                            hideAllActionSheetsResult = obj.hideAllActionSheets();
+                            obj2 = closure_1(closure_2[30]);
+                            popAllResult = obj2.popAll();
+                            obj3 = closure_1(closure_2[33]);
                             obj1 = { userId: user.id, sessionId: activity.session_id, application: closure_6, channelId: null, messageId: null, applicationActivity: activity, source: "UserProfile", analyticsLocations };
-                            joined = obj.join(obj1);
-                            obj3 = closure_1(closure_2[29]);
-                            hideAllActionSheetsResult = obj3.hideAllActionSheets();
+                            joined = obj3.join(obj1);
                             return;
                           }
                         }
                         let obj2 = { text: tmp20, variant: "active", disabled: stateFromStores === tmp23, onPress: tmp24 };
-                        const tmp28 = jsx(tmp(tmp2[30]).Button, { text: tmp20, variant: "active", disabled: stateFromStores === tmp23, onPress: tmp24 });
+                        const tmp28 = jsx(tmp(tmp2[32]).Button, { text: tmp20, variant: "active", disabled: stateFromStores === tmp23, onPress: tmp24 });
                         cResult[17] = tmp20;
                         cResult[18] = stateFromStores === tmp23;
                         cResult[19] = tmp24;
@@ -360,11 +353,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActi
                 class U {
                   constructor() {
                     tmp = onAction({ action: "PRESS_JOIN_BUTTON" });
-                    obj = closure_1(closure_2[31]);
+                    obj = closure_1(closure_2[29]);
+                    hideAllActionSheetsResult = obj.hideAllActionSheets();
+                    obj2 = closure_1(closure_2[30]);
+                    popAllResult = obj2.popAll();
+                    obj3 = closure_1(closure_2[33]);
                     obj1 = { userId: user.id, sessionId: activity.session_id, application: closure_6, channelId: null, messageId: null, applicationActivity: activity, source: "UserProfile", analyticsLocations };
-                    joined = obj.join(obj1);
-                    obj3 = closure_1(closure_2[29]);
-                    hideAllActionSheetsResult = obj3.hideAllActionSheets();
+                    joined = obj3.join(obj1);
                     return;
                   }
                 }
@@ -383,7 +378,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActi
       }
     }
     const fn = function b() {
-      return getActivityJoinabilityDefault({ user, currentUser, activity, application, channelId: null, isEmbedded: false, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore });
+      return getActivityJoinabilityDefault({ user, currentUser, activity, application, channelId: null, isEmbedded: false, isContentGated: false, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore });
     };
     cResult[4] = activity;
     cResult[5] = application;
@@ -406,7 +401,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActi
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   application = { id: application.id, deeplink_uri: application.deepLinkUri };
   const items = [analyticsLocations, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, onAction];
-  const stateFromStores = useStateFromStores.useStateFromStores(items, () => getActivityJoinabilityDefault({ user, currentUser, activity: session_id, application, channelId: null, isEmbedded: false, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore }));
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => getActivityJoinabilityDefault({ user, currentUser, activity: session_id, application, channelId: null, isEmbedded: false, isContentGated: false, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore }));
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
@@ -423,9 +418,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinGameActi
       obj2.disabled = stateFromStores === JOINED;
       obj2.onPress = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
-        const joined = GamesActionCreatorsDefault.join({ userId: user.id, sessionId: session_id.session_id, application, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations });
-        const obj2 = { userId: user.id, sessionId: session_id.session_id, application, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations };
         ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        ModalActionCreatorsDefault.popAll();
+        const joined = GamesActionCreatorsDefault.join({ userId: user.id, sessionId: session_id.session_id, application, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations });
       };
       jsx(components_Button_Button.Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
     }
@@ -442,7 +437,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
   const tmp3 = closure_20();
   const sync_id = activity.sync_id;
   let tmp5 = null;
-  if (sync_id(10223)(activity)) {
+  if (sync_id(10252)(activity)) {
     tmp5 = null;
     if (null != sync_id) {
       if (cResult[0] !== activity.name) {
@@ -456,8 +451,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
         tmp6 = cResult[1];
       }
       if (cResult[2] !== tmp3.icon) {
-        const obj3 = { size: Button(1200).Icon.Sizes.SMALL, source: sync_id(8261), disableColor: true, style: tmp3.icon };
-        const tmp10 = jsx(Button(1200).Icon, { size: Button(1200).Icon.Sizes.SMALL, source: sync_id(8261), disableColor: true, style: tmp3.icon });
+        const obj3 = { size: Button(1200).Icon.Sizes.SMALL, source: sync_id(8277), disableColor: true, style: tmp3.icon };
+        const tmp10 = jsx(Button(1200).Icon, { size: Button(1200).Icon.Sizes.SMALL, source: sync_id(8277), disableColor: true, style: tmp3.icon });
         cResult[2] = tmp3.icon;
         cResult[3] = tmp10;
         let tmp8 = tmp10;
@@ -472,7 +467,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
           if (cResult[8] === tmp8) {
           }
         }
-        Button = Button(5376).Button;
+        Button = Button(5379).Button;
         let obj4 = { text: tmp6, icon: tmp8, variant: "secondary", onPress: tmp11 };
         tmp = <Button text={tmp6} icon={tmp8} variant="secondary" onPress={tmp11} />;
         cResult[7] = tmp6;
@@ -491,7 +486,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -512,13 +507,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(10749).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(10784).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -529,13 +524,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(10749);
+              const obj7 = closure_0(10784);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_1);
               } else {
                 obj7.attributeInstall();
-                sync_id(4765).openURL(constants.APP_STORE);
-                const obj = sync_id(4765);
+                sync_id(4806).openURL(constants.APP_STORE);
+                const obj = sync_id(4806);
               }
               c3 = 0;
               c5 = 3;
@@ -572,15 +567,15 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10223)(activity)) {
+  if (sync_id(10252)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
       const intl = util.intl;
       let obj2 = { platform: activity.name };
       obj.text = intl.formatToPlainString(util.t.LEgD7t, obj2);
-      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8261), disableColor: true, style: tmp.icon };
-      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8261), disableColor: true, style: tmp.icon });
+      const obj3 = { size: native.Icon.Sizes.SMALL, source: sync_id(8277), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8277), disableColor: true, style: tmp.icon });
       obj.onPress = asyncGeneratorStep(async () => {
         if (c5 === 2) {
           c5 = 3;
@@ -592,7 +587,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -612,13 +607,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(tmp22[35]).canOpenSpotifyUrl(), done: false };
+                const obj5 = { value: closure_0(tmp22[37]).canOpenSpotifyUrl(), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else if (arg0 === 1) {
               c5 = 3;
               throw value;
@@ -629,13 +624,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlayOnSpotif
               return obj6;
             } else {
               closure_128_0 = value;
-              const obj7 = closure_0(tmp22[35]);
+              const obj7 = closure_0(tmp22[37]);
               if (closure_128_0) {
                 obj7.openUrl(closure_128_0, constants2.TRACK, closure_129_1);
               } else {
                 obj7.attributeInstall();
-                tmp3(tmp22[36]).openURL(constants.APP_STORE);
-                const obj = tmp3(tmp22[36]);
+                tmp3(tmp22[38]).openURL(constants.APP_STORE);
+                const obj = tmp3(tmp22[38]);
               }
               c3 = 0;
               c5 = 3;
@@ -685,7 +680,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function WatchActivit
       }
       if (cResult[3] === onAction) {
       }
-      Button = Button(5376).Button;
+      Button = Button(5379).Button;
       const obj2 = {
         text: tmp8,
         variant: "secondary",
@@ -769,16 +764,16 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                     }
                   }
                   let obj2 = { text: null, variant: null, grow: true, onPress: null };
-                  class T {
+                  class C {
                     constructor() {
                       tmp = onAction({ action: "PRESS_JOIN_CALL_BUTTON" });
                       tmp2 = closure_2;
                       obj = closure_1(closure_2[29]);
                       hideAllActionSheetsResult = obj.hideAllActionSheets();
-                      obj2 = closure_1(closure_2[39]);
+                      obj2 = closure_1(closure_2[30]);
                       popAllResult = obj2.popAll();
                       tmp5 = closure_0;
-                      obj3 = closure_0(closure_2[40]);
+                      obj3 = closure_0(closure_2[41]);
                       rootNavigationRef = obj3.getRootNavigationRef();
                       isReadyResult = undefined;
                       if (rootNavigationRef != null) {
@@ -798,11 +793,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                         goBackResult = rootNavigationRef.goBack();
                       }
                       if (closure_3) {
-                        tmp5Result = tmp5(tmp2[41]);
+                        tmp5Result = tmp5(tmp2[42]);
                         tmp14 = channel;
                         connectAndOpenResult = tmp5Result.connectAndOpen(channel);
                       } else {
-                        tmp5Result1 = tmp5(tmp2[42]);
+                        tmp5Result1 = tmp5(tmp2[43]);
                         tmp11 = channel;
                         tmp12 = newestAnalyticsLocation;
                         openGuildVoiceModalResult = tmp5Result1.openGuildVoiceModal(channel, newestAnalyticsLocation);
@@ -812,7 +807,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                   }
                   obj2.variant = str;
                   obj2.onPress = tmp11;
-                  const tmp14 = jsx(tmp(tmp2[30]).Button, { text: null, variant: null, grow: true, onPress: null });
+                  const tmp14 = jsx(tmp(tmp2[32]).Button, { text: null, variant: null, grow: true, onPress: null });
                   cResult[17] = tmp8;
                   cResult[18] = str;
                   cResult[19] = tmp11;
@@ -821,16 +816,16 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                 }
               }
             }
-            class T {
+            class C {
               constructor() {
                 tmp = onAction({ action: "PRESS_JOIN_CALL_BUTTON" });
                 tmp2 = closure_2;
                 obj = closure_1(closure_2[29]);
                 hideAllActionSheetsResult = obj.hideAllActionSheets();
-                obj2 = closure_1(closure_2[39]);
+                obj2 = closure_1(closure_2[30]);
                 popAllResult = obj2.popAll();
                 tmp5 = closure_0;
-                obj3 = closure_0(closure_2[40]);
+                obj3 = closure_0(closure_2[41]);
                 rootNavigationRef = obj3.getRootNavigationRef();
                 isReadyResult = undefined;
                 if (rootNavigationRef != null) {
@@ -850,11 +845,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
                   goBackResult = rootNavigationRef.goBack();
                 }
                 if (closure_3) {
-                  tmp5Result = tmp5(tmp2[41]);
+                  tmp5Result = tmp5(tmp2[42]);
                   tmp14 = channel;
                   connectAndOpenResult = tmp5Result.connectAndOpen(channel);
                 } else {
-                  tmp5Result1 = tmp5(tmp2[42]);
+                  tmp5Result1 = tmp5(tmp2[43]);
                   tmp11 = channel;
                   tmp12 = newestAnalyticsLocation;
                   openGuildVoiceModalResult = tmp5Result1.openGuildVoiceModal(channel, newestAnalyticsLocation);
@@ -866,8 +861,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
             cResult[13] = tmp4;
             cResult[14] = newestAnalyticsLocation;
             cResult[15] = onAction;
-            cResult[16] = T;
-            tmp11 = T;
+            cResult[16] = C;
+            tmp11 = C;
           }
         }
       }
@@ -933,9 +928,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
   if (isInChannel) {
     if (!isDMResult) {
       if (!channel.isGroupDM()) {
-        const intl3 = tmp4(v7hwn2A[26]).intl;
+        const intl3 = tmp4(v7hwn2A[27]).intl;
         const string2 = intl3.string;
-        const t2 = tmp4(v7hwn2A[26]).t;
+        const t2 = tmp4(v7hwn2A[27]).t;
         if (isGuildStageVoiceResult) {
           let string2Result = string2(t2.Acqcot);
         } else {
@@ -943,15 +938,15 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
         }
       }
     }
-    const intl4 = tmp4(v7hwn2A[26]).intl;
-    v7hwn2A = tmp4(v7hwn2A[26]).t["7hwn2A"];
+    const intl4 = tmp4(v7hwn2A[27]).intl;
+    v7hwn2A = tmp4(v7hwn2A[27]).t["7hwn2A"];
     string2Result = intl4.string(v7hwn2A);
   } else {
     if (!isDMResult) {
       if (!channel.isGroupDM()) {
-        const intl = tmp4(v7hwn2A[26]).intl;
+        const intl = tmp4(v7hwn2A[27]).intl;
         const string = intl.string;
-        const t = tmp4(v7hwn2A[26]).t;
+        const t = tmp4(v7hwn2A[27]).t;
         if (isGuildStageVoiceResult) {
           let stringResult = string(t["7vb2cc"]);
         } else {
@@ -993,10 +988,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceChannel
           const tmp5Result2 = PrivateChannelCallUtils;
         }
       };
-      return jsx(channel(newestAnalyticsLocation[30]).Button, { text: stringResult, variant: null, grow: true, onPress: null });
+      return jsx(channel(newestAnalyticsLocation[32]).Button, { text: stringResult, variant: null, grow: true, onPress: null });
     }
-    const intl2 = tmp4(v7hwn2A[26]).intl;
-    stringResult = intl2.string(tmp4(v7hwn2A[26]).t.ozoE2A);
+    const intl2 = tmp4(v7hwn2A[27]).intl;
+    stringResult = intl2.string(tmp4(v7hwn2A[27]).t.ozoE2A);
   }
 });
 const size = fn(2);
@@ -1036,16 +1031,16 @@ export const ConnectPlatformButton = ReactCompilerGating.isReactCompilerEnabled(
     return null;
   } else {
     if (cResult[3] !== type) {
-      value = tmp5(tmp2[43]).get(type);
+      value = tmp5(tmp2[44]).get(type);
       _require = value;
-      const Button = tmp(tmp2[30]).Button;
-      const intl = tmp(tmp2[26]).intl;
+      const Button = tmp(tmp2[32]).Button;
+      const intl = tmp(tmp2[27]).intl;
       const obj2 = { platform: value.name };
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[26]).t.XWSHTb, obj2);
-      const Icon = tmp(tmp2[33]).Icon;
-      const SMALL = tmp(tmp2[33]).Icon.Sizes.SMALL;
-      const tmp5Result = tmp5(tmp2[43]);
-      const source = tmp(tmp2[44]).makeSource(value.icon.whitePNG);
+      const formatToPlainStringResult = intl.formatToPlainString(tmp(tmp2[27]).t.XWSHTb, obj2);
+      const Icon = tmp(tmp2[35]).Icon;
+      const SMALL = tmp(tmp2[35]).Icon.Sizes.SMALL;
+      const tmp5Result = tmp5(tmp2[44]);
+      const source = tmp(tmp2[45]).makeSource(value.icon.whitePNG);
       cResult[3] = type;
       cResult[4] = Icon;
       cResult[5] = Button;
@@ -1058,7 +1053,7 @@ export const ConnectPlatformButton = ReactCompilerGating.isReactCompilerEnabled(
       let tmp12 = SMALL;
       let tmp10 = Button;
       let tmp9 = Icon;
-      const tmpResult2 = tmp(tmp2[44]);
+      const tmpResult2 = tmp(tmp2[45]);
     } else {
       tmp9 = cResult[4];
       tmp10 = cResult[5];
@@ -1105,14 +1100,14 @@ export const ConnectPlatformButton = ReactCompilerGating.isReactCompilerEnabled(
               platformType: type.type,
               location: newestAnalyticsLocation,
               onClose() {
-                return type(onAction[46]).openUserSettings({ screen: constants.CONNECTIONS });
+                return type(onAction[47]).openUserSettings({ screen: constants.CONNECTIONS });
               }
             });
             const obj = {
               platformType: type.type,
               location: newestAnalyticsLocation,
               onClose() {
-                return type(onAction[46]).openUserSettings({ screen: constants.CONNECTIONS });
+                return type(onAction[47]).openUserSettings({ screen: constants.CONNECTIONS });
               }
             };
           };
@@ -1147,17 +1142,17 @@ export const ConnectPlatformButton = ReactCompilerGating.isReactCompilerEnabled(
   if (obj.useStateFromStores(items, () => null != ConnectedAccountsStore.getAccount(null, type))) {
     return null;
   } else {
-    value = tmp2(tmp3[43]).get(type);
+    value = tmp2(tmp3[44]).get(type);
     c3 = value;
     const obj2 = { text: null, icon: null, variant: "secondary", onPress: null };
-    const intl = tmp4(tmp3[26]).intl;
+    const intl = tmp4(tmp3[27]).intl;
     const obj3 = { platform: value.name };
-    obj2.text = intl.formatToPlainString(tmp4(tmp3[26]).t.XWSHTb, obj3);
-    const obj4 = { size: tmp4(tmp3[33]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null };
-    const tmp2Result = tmp2(tmp3[43]);
-    obj4.source = tmp4(tmp3[44]).makeSource(value.icon.whitePNG);
+    obj2.text = intl.formatToPlainString(tmp4(tmp3[27]).t.XWSHTb, obj3);
+    const obj4 = { size: tmp4(tmp3[35]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null };
+    const tmp2Result = tmp2(tmp3[44]);
+    obj4.source = tmp4(tmp3[45]).makeSource(value.icon.whitePNG);
     obj4.style = tmp.icon;
-    obj2.icon = jsx(tmp4(tmp3[33]).Icon, { size: tmp4(tmp3[33]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null });
+    obj2.icon = jsx(tmp4(tmp3[35]).Icon, { size: tmp4(tmp3[35]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null });
     obj2.onPress = function onPress() {
       let str = "PRESS_CONNECT_XBOX_BUTTON";
       if (type === constants.PLAYSTATION) {
@@ -1168,18 +1163,18 @@ export const ConnectPlatformButton = ReactCompilerGating.isReactCompilerEnabled(
         platformType: _undefined.type,
         location: newestAnalyticsLocation,
         onClose() {
-          return type(newestAnalyticsLocation[46]).openUserSettings({ screen: constants.CONNECTIONS });
+          return type(newestAnalyticsLocation[47]).openUserSettings({ screen: constants.CONNECTIONS });
         }
       });
       const obj = {
         platformType: _undefined.type,
         location: newestAnalyticsLocation,
         onClose() {
-          return type(newestAnalyticsLocation[46]).openUserSettings({ screen: constants.CONNECTIONS });
+          return type(newestAnalyticsLocation[47]).openUserSettings({ screen: constants.CONNECTIONS });
         }
       };
     };
-    return jsx(tmp4(tmp3[30]).Button, { text: null, icon: null, variant: "secondary", onPress: null });
+    return jsx(tmp4(tmp3[32]).Button, { text: null, icon: null, variant: "secondary", onPress: null });
   }
   obj = type(newestAnalyticsLocation[23]);
 });
@@ -1192,7 +1187,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
     tmp = null;
     if (index < activity.buttons.length) {
       let obj = index;
-      if (activity(index[47])(activity)) {
+      if (activity(index[48])(activity)) {
         const intl = require("util").intl;
         let stringResult = intl.string(require("util").t.I6JG46);
       } else {
@@ -1212,7 +1207,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -1235,7 +1230,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                       c3 = 1;
                       c4 = 2;
                       c5 = 1;
-                      const obj5 = { value: id(tmp20[48]).getMetadata(activity, id.id), done: false };
+                      const obj5 = { value: id(tmp20[49]).getMetadata(activity, id.id), done: false };
                       return obj5;
                     }
                   } else {
@@ -1255,15 +1250,15 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                       if (closure_128_0.button_urls.length <= closure_129_2) {
                         c3 = 0;
                         c5 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       } else {
                         closure_128_1 = closure_128_0.button_urls[closure_129_2];
                         if (typeof closure_128_1 !== "string") {
                           c3 = 0;
                           c5 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         } else {
-                          closure_128_2 = tmp3(tmp20[49]).safeParseWithQuery(closure_128_1);
+                          closure_128_2 = tmp3(tmp20[50]).safeParseWithQuery(closure_128_1);
                           let protocol;
                           if (closure_128_2 != null) {
                             protocol = closure_128_2.protocol;
@@ -1274,27 +1269,27 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                               hostname = closure_128_2.hostname;
                             }
                             if (null != hostname) {
-                              closure_128_3 = tmp3(tmp20[49]).format(closure_128_2);
-                              const obj = tmp3(tmp20[49]);
+                              closure_128_3 = tmp3(tmp20[50]).format(closure_128_2);
+                              const obj = tmp3(tmp20[50]);
                               const obj7 = {
                                 href: closure_128_3,
                                 onConfirm() {
-                                                  return closure_1(closure_2[36]).openURL(closure_1_3);
+                                                  return closure_1(closure_2[38]).openURL(closure_1_3);
                                                 },
                                 trusted: false
                               };
-                              id(tmp20[50]).handleClick(obj7);
+                              id(tmp20[51]).handleClick(obj7);
                               c3 = 0;
-                              const obj2 = id(tmp20[50]);
+                              const obj2 = id(tmp20[51]);
                             }
                           }
-                          const obj8 = tmp3(tmp20[49]);
+                          const obj8 = tmp3(tmp20[50]);
                         }
                       }
                     }
                     c3 = 0;
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp20) {
                   if (tmp4 === c3) {
@@ -1321,7 +1316,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -1344,7 +1339,7 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                       c3 = 1;
                       c4 = 2;
                       c5 = 1;
-                      const obj5 = { value: id(tmp20[48]).getMetadata(activity, id.id), done: false };
+                      const obj5 = { value: id(tmp20[49]).getMetadata(activity, id.id), done: false };
                       return obj5;
                     }
                   } else {
@@ -1364,15 +1359,15 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                       if (closure_128_0.button_urls.length <= closure_129_2) {
                         c3 = 0;
                         c5 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       } else {
                         closure_128_1 = closure_128_0.button_urls[closure_129_2];
                         if (typeof closure_128_1 !== "string") {
                           c3 = 0;
                           c5 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         } else {
-                          closure_128_2 = tmp3(tmp20[49]).safeParseWithQuery(closure_128_1);
+                          closure_128_2 = tmp3(tmp20[50]).safeParseWithQuery(closure_128_1);
                           let protocol;
                           if (closure_128_2 != null) {
                             protocol = closure_128_2.protocol;
@@ -1383,27 +1378,27 @@ export const CustomActivityButton = function CustomActivityButton(index) {
                               hostname = closure_128_2.hostname;
                             }
                             if (null != hostname) {
-                              closure_128_3 = tmp3(tmp20[49]).format(closure_128_2);
-                              const obj = tmp3(tmp20[49]);
+                              closure_128_3 = tmp3(tmp20[50]).format(closure_128_2);
+                              const obj = tmp3(tmp20[50]);
                               const obj7 = {
                                 href: closure_128_3,
                                 onConfirm() {
-                                                  return closure_1(closure_2[36]).openURL(closure_1_3);
+                                                  return closure_1(closure_2[38]).openURL(closure_1_3);
                                                 },
                                 trusted: false
                               };
-                              id(tmp20[50]).handleClick(obj7);
+                              id(tmp20[51]).handleClick(obj7);
                               c3 = 0;
-                              const obj2 = id(tmp20[50]);
+                              const obj2 = id(tmp20[51]);
                             }
                           }
-                          const obj8 = tmp3(tmp20[49]);
+                          const obj8 = tmp3(tmp20[50]);
                         }
                       }
                     }
                     c3 = 0;
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp20) {
                   if (tmp4 === c3) {

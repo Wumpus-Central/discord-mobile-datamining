@@ -1,21 +1,21 @@
-// === Module 16019: DevToolsInAppNotificationTestingScreen ===
+// === Module 16081: DevToolsInAppNotificationTestingScreen ===
 
-// Module 16019 (DevToolsInAppNotificationTestingScreen)
+// Module 16081 (DevToolsInAppNotificationTestingScreen)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import StickersTypes from "StickersTypes" /* 5747 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12528 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12530 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import StickersTypes from "StickersTypes" /* 5750 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12575 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12577 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6037 */;
-import MessageRecord from "MessageRecord" /* 4720 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import StickersStore from "StickersStore" /* 6030 */;
+import MessageRecord from "MessageRecord" /* 4761 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -28,7 +28,7 @@ function getSelectedGuildChannel() {
     channel = ChannelStore.getChannel(channelId);
   }
   if (null == channel) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
     let obj = null;
   } else {
     const guildId = channel.getGuildId();
@@ -42,7 +42,7 @@ function getSelectedGuildChannel() {
   if (null == obj) {
     return null;
   } else if (null == obj.guild) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a guild channel first", variant: "critical" });
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a guild channel first", variant: "critical" });
   } else {
     const obj5 = { channel: null, guild: null };
     ({ channel: obj3.channel, guild: obj3.guild } = obj);
@@ -58,7 +58,7 @@ function buildTestMessageData(arg0) {
     channel = ChannelStore.getChannel(channelId);
   }
   if (null == channel) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
     let obj = null;
   } else {
     const guildId = channel.getGuildId();
@@ -71,7 +71,7 @@ function buildTestMessageData(arg0) {
   }
   let currentUser = UserStore.getCurrentUser();
   if (null == currentUser) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Current user is null", variant: "critical" });
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Current user is null", variant: "critical" });
     currentUser = null;
   }
   if (null != obj) {
@@ -178,12 +178,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(2068).createChannelRecord;
+const createChannelRecord = fn(2069).createChannelRecord;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -292,7 +292,7 @@ const items3 = [
         channel = ChannelStore.getChannel(channelId);
       }
       if (null == channel) {
-        ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
+        ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
         let obj = null;
       } else {
         const guildId = channel.getGuildId();
@@ -329,7 +329,7 @@ const items3 = [
       const tmp = getSelectedGuildChannel();
       let currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
-        ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Current user is null", variant: "critical" });
+        ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Current user is null", variant: "critical" });
         currentUser = null;
       }
       if (null != tmp) {
@@ -411,7 +411,7 @@ const items3 = [
     build: function buildMessageRequestNotification() {
       let currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
-        ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Current user is null", variant: "critical" });
+        ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Current user is null", variant: "critical" });
         currentUser = null;
       }
       let tmp5 = null;
@@ -515,7 +515,7 @@ let obj6 = {
       channel = ChannelStore.getChannel(channelId);
     }
     if (null == channel) {
-      ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
+      ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", { text: "Select a channel first", variant: "critical" });
       let obj = null;
     } else {
       const guildId = channel.getGuildId();
@@ -586,19 +586,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         options = title.options;
         obj2.children = options.map((label) => {
           closure_0 = label;
-          return closure_1_14(first(6186).TableRow, {
+          return closure_1_14(first(6179).TableRow, {
             label: label.label,
             subLabel: label.subLabel,
-            icon: closure_1_14(first(15804).BeakerIcon, {}),
+            icon: closure_1_14(first(15866).BeakerIcon, {}),
             onPress() {
               return first(closure_0);
             },
-            trailing: closure_1_14(first(6195).TableRowArrow, {})
+            trailing: closure_1_14(first(6188).TableRowArrow, {})
           }, label.label);
         });
-        items = [state(TableRowGroup.TableRowGroup, obj2), state(native.Spacer, { size: nativeDefault.space.PX_16 })];
+        items = [closure_2_14(TableRowGroup.TableRowGroup, obj2), closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 })];
         obj.children = items;
-        return closure_2_15(noop.Fragment, obj, title.title);
+        return value2(noop.Fragment, obj, title.title);
       });
       cResult[6] = tmp14;
       cResult[7] = mapped;
@@ -615,18 +615,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         hasIcons: true,
         children: items3.map((label) => {
               closure_0 = label;
-              return closure_1_14(first(6186).TableRow, {
+              return closure_1_14(first(6179).TableRow, {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(first(15804).BeakerIcon, {}),
+                icon: closure_1_14(first(15866).BeakerIcon, {}),
                 onPress() {
                   return first(closure_0);
                 },
-                trailing: closure_1_14(first(6195).TableRowArrow, {})
+                trailing: closure_1_14(first(6188).TableRowArrow, {})
               }, label.label);
             })
       };
-      const tmp20 = closure_14(tmp(6269).TableRowGroup, obj4);
+      const tmp20 = closure_14(tmp(6264).TableRowGroup, obj4);
       cResult[8] = tmp20;
       let tmp17 = tmp20;
     } else {
@@ -673,19 +673,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       options = title.options;
       obj2.children = options.map((label) => {
         closure_0 = label;
-        return closure_1_14(closure_1_0(6186).TableRow, {
+        return closure_1_14(closure_1_0(6179).TableRow, {
           label: label.label,
           subLabel: label.subLabel,
-          icon: closure_1_14(closure_1_0(15804).BeakerIcon, {}),
+          icon: closure_1_14(closure_1_0(15866).BeakerIcon, {}),
           onPress() {
             return closure_2_0(closure_0);
           },
-          trailing: closure_1_14(closure_1_0(6195).TableRowArrow, {})
+          trailing: closure_1_14(closure_1_0(6188).TableRowArrow, {})
         }, label.label);
       });
-      items = [state(TableRowGroup.TableRowGroup, obj2), state(native.Spacer, { size: nativeDefault.space.PX_16 })];
+      items = [closure_2_14(TableRowGroup.TableRowGroup, obj2), closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 })];
       obj.children = items;
-      return closure_2_15(noop.Fragment, obj, title.title);
+      return value2(noop.Fragment, obj, title.title);
     }),
 
   ];
@@ -693,14 +693,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   items1[2] = closure_14(require("TableRowGroup").TableRowGroup, {
     title: "Other Notification Types",
     hasIcons: true,
-    children: items3.map((label) => closure_1_14(label(6186).TableRow, {
+    children: items3.map((label) => closure_1_14(label(6179).TableRow, {
       label: label.label,
       subLabel: label.subLabel,
-      icon: closure_1_14(label(15804).BeakerIcon, {}),
+      icon: closure_1_14(label(15866).BeakerIcon, {}),
       onPress() {
         return label(label);
       },
-      trailing: closure_1_14(label(6195).TableRowArrow, {})
+      trailing: closure_1_14(label(6188).TableRowArrow, {})
     }, label.label))
   });
   obj.children = items1;

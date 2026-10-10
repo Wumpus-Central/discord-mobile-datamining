@@ -1,6 +1,6 @@
-// === Module 11784: useDelayedSwapToActivityActionLeave ===
+// === Module 11828: useDelayedSwapToActivityActionLeave ===
 
-// Module 11784 (useDelayedSwapToActivityActionLeave)
+// Module 11828 (useDelayedSwapToActivityActionLeave)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ export const useDelayedSwapToActivityActionLeave = ReactCompilerGating.isReactCo
   [tmp3, dependencyMap] = noop.useState(arg0);
   if (cResult[0] !== arg0) {
     const fn = function c() {
-      if (timeout === timeout(11687).ActivityAction.LEAVE) {
+      if (timeout === timeout(11733).ActivityAction.LEAVE) {
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => dependencyMap(closure_0), 100);
         return () => clearTimeout(closure_0);
@@ -45,7 +45,7 @@ export const useDelayedSwapToActivityActionLeave = ReactCompilerGating.isReactCo
   dependencyMap = tmp[1];
   const items = [arg0];
   const layoutEffect = noop.useLayoutEffect(() => {
-    if (timeout === timeout(11687).ActivityAction.LEAVE) {
+    if (timeout === timeout(11733).ActivityAction.LEAVE) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => dependencyMap(closure_0), 100);
       return () => clearTimeout(closure_0);

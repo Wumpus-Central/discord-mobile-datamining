@@ -1,6 +1,6 @@
-// === Module 15546: useDisplayNameStylesHandleApply ===
+// === Module 15608: useDisplayNameStylesHandleApply ===
 
-// Module 15546 (useDisplayNameStylesHandleApply)
+// Module 15608 (useDisplayNameStylesHandleApply)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,10 +9,10 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
 
-export const DisplayNameStylesApplyLocations = { TRY_THIS_STYLE: "try_this_style", PROFILE_EDITOR: "profile_editor" };
+export const DisplayNameStylesEntryPoints = { TRY_THIS_STYLE: "try_this_style", PROFILE_EDITOR: "profile_editor" };
 export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHandleApply(hasChanges) {
   hasChanges = hasChanges.hasChanges;
-  const _location = hasChanges.location;
+  const entryPoint = hasChanges.entryPoint;
   const selectedFontId = hasChanges.selectedFontId;
   const selectedEffectId = hasChanges.selectedEffectId;
   const selectedColors = hasChanges.selectedColors;
@@ -26,7 +26,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
   }
   const onSaveError = hasChanges.onSaveError;
   closure_11 = selectedColors.useRef(false);
-  let items = [hasChanges, _location, selectedFontId, selectedEffectId, selectedColors, defaultColor, onClose, guildId, isTryItOut, flag, onSaveError];
+  let items = [hasChanges, entryPoint, selectedFontId, selectedEffectId, selectedColors, defaultColor, onClose, guildId, isTryItOut, flag, onSaveError];
   return selectedColors.useCallback(selectedEffectId(function*() {
     if (constants === 2) {
       constants = 3;
@@ -38,7 +38,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -132,7 +132,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
             closure_129_11.current = false;
           }
         }
-        const obj12 = { font_name: hasChanges(tmp62[8]).DisplayNameFont[closure_129_2], effect_name: hasChanges(tmp62[3]).DisplayNameEffect[closure_129_3], colors: closure_129_4, location: closure_129_1 };
+        const obj12 = { font_name: hasChanges(tmp62[8]).DisplayNameFont[closure_129_2], effect_name: hasChanges(tmp62[3]).DisplayNameEffect[closure_129_3], colors: closure_129_4, entry_point: closure_129_1 };
         tmp4(tmp62[7]).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj12);
         if (closure_129_8 != null) {
           closure_129_8();

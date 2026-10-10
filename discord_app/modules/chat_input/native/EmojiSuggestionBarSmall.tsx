@@ -1,11 +1,11 @@
-// === Module 12101: EmojiSuggestionBarSmall ===
+// === Module 12145: EmojiSuggestionBarSmall ===
 
-// Module 12101 (EmojiSuggestionBarSmall)
+// Module 12145 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 9484 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9510 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12094 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 9513 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9539 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12138 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,9 +15,9 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 let closure_3 = ["anchorTop", "onOccupiedHeightChange", "ref"];
 const jsx = fn(21).jsx;
-const sum = fn(9400).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9429).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = { position: "absolute", top: null, right: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: sum, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
@@ -110,16 +110,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiS
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: closure_3, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   const tmp = closure_9(displayEmojis.anchorTop);
-  const suggestionBarHeight = displayEmojis(12094).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
-  let obj = displayEmojis(12094);
+  const suggestionBarHeight = displayEmojis(12138).useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  let obj = displayEmojis(12138);
   const fn = function j() {
     const obj = { opacity: null };
     const items = [0, closure_8];
     obj.opacity = ReanimatedRexport.interpolate(suggestionBarHeight.get(), items, [0, 1]);
     return obj;
   };
-  let obj2 = displayEmojis(4811);
-  fn.__closure = { interpolate: displayEmojis(4811).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
+  let obj2 = displayEmojis(4850);
+  fn.__closure = { interpolate: displayEmojis(4850).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
   fn.__workletHash = 8299755729224;
   fn.__initData = __initData2;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -186,7 +186,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
     tmp7 = cResult[4];
   }
   let obj = require("c");
-  const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(tmp6, tmp(12094).MAX_SUGGESTIONS_LARGE, 1, tmp7);
+  const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(tmp6, tmp(12138).MAX_SUGGESTIONS_LARGE, 1, tmp7);
   ({ unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable } = emojiSuggestionBarState);
   if (0 === unlockedEmojis.length) {
     if (0 === lockedEmojis.length) {
@@ -206,7 +206,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
           }
         }
         const obj2 = { item: undefined, renderItem: tmp15 };
-        const tmp18 = jsx(tmp(4788).TransitionItem, { item: undefined, renderItem: tmp15 });
+        const tmp18 = jsx(tmp(4827).TransitionItem, { item: undefined, renderItem: tmp15 });
         cResult[16] = undefined;
         cResult[17] = tmp15;
         cResult[18] = tmp18;

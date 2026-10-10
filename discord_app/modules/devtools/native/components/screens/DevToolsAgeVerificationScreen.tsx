@@ -1,14 +1,14 @@
-// === Module 15998: DevToolsAgeVerificationScreen ===
+// === Module 16060: DevToolsAgeVerificationScreen ===
 
-// Module 15998 (DevToolsAgeVerificationScreen)
+// Module 16060 (DevToolsAgeVerificationScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
-import TableRow from "TableRow" /* 6186 */;
-import TableRowArrow from "TableRowArrow" /* 6195 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import KeyIcon from "KeyIcon" /* 6638 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
+import TableRow from "TableRow" /* 6179 */;
+import TableRowArrow from "TableRowArrow" /* 6188 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import KeyIcon from "KeyIcon" /* 6639 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -30,7 +30,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
   await AgeVerificationURLActionCreators.requestAgeVerification({});
   if (1 === tmp7) {
     c3 = 0;
-    closure_129_1(closure_129_2[8]).open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
+    closure_129_1(closure_129_2[8]).open("age-verification-test-failure", { text: "Failed to show age verification test modal" });
     c5 = 3;
     closure_129_1(closure_129_2[8]);
   } else if (arg0 === 1) {
@@ -44,7 +44,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
       verificationVendorName: closure_128_0.verification_vendor_name,
       incodeParameters: closure_128_0.incode_parameters,
       onComplete() {
-          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+          closure_1_1(closure_1_2[8]).open("age-verification-test-success", { text: "[On Complete] Successfully age verified" });
         },
       entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
     });
@@ -56,7 +56,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
       verificationVendorName: closure_128_0.verification_vendor_name,
       incodeParameters: closure_128_0.incode_parameters,
       onComplete() {
-          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+          closure_1_1(closure_1_2[8]).open("age-verification-test-success", { text: "[On Complete] Successfully age verified" });
         },
       entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
     };
@@ -66,7 +66,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };

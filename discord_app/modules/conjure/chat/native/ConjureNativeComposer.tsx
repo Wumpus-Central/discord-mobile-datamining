@@ -1,36 +1,36 @@
-// === Module 17202: ConjureNativeComposer ===
+// === Module 17274: ConjureNativeComposer ===
 
-// Module 17202 (ConjureNativeComposer)
+// Module 17274 (ConjureNativeComposer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import useToken from "useToken" /* 4779 */;
-import WarningIcon from "WarningIcon" /* 5004 */;
-import SendMessageIcon from "SendMessageIcon" /* 5042 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5055 */;
-import ConjureTypes from "ConjureTypes" /* 6940 */;
-import ImageCarousel from "ImageCarousel" /* 9989 */;
-import MusicIcon from "MusicIcon" /* 10218 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10275 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11369 */;
-import ImagesIcon from "ImagesIcon" /* 11537 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11616 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11891 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11899 */;
-import keepLocalCopy from "keepLocalCopy" /* 12749 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15195 */;
-import FileUpIcon from "FileUpIcon" /* 15755 */;
-import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 17005 */;
-import StopIcon from "StopIcon" /* 17161 */;
-import conjurePickedFiles from "conjurePickedFiles" /* 17174 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17175 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import useToken from "useToken" /* 4818 */;
+import SendMessageIcon from "SendMessageIcon" /* 5040 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
+import ConjureTypes from "ConjureTypes" /* 6946 */;
+import WarningIcon from "WarningIcon" /* 7571 */;
+import ImageCarousel from "ImageCarousel" /* 10018 */;
+import MusicIcon from "MusicIcon" /* 10247 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10308 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11411 */;
+import ImagesIcon from "ImagesIcon" /* 11583 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11662 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11935 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11943 */;
+import keepLocalCopy from "keepLocalCopy" /* 12796 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15257 */;
+import FileUpIcon from "FileUpIcon" /* 15817 */;
+import ConjureModelSettingsSheet from "ConjureModelSettingsSheet" /* 17073 */;
+import StopIcon from "StopIcon" /* 17231 */;
+import conjurePickedFiles from "conjurePickedFiles" /* 17244 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13164 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 17188 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13213 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 17260 */;
 
 const require = globalThis.__r;
 const ConjureModelSettingsSheetDefault = ConjureModelSettingsSheet;
@@ -43,11 +43,11 @@ function draftAccessibilityLabel(draft) {
   if ("uploading" === draft.status) {
     const intl3 = util.intl;
     const obj3 = { name: draft.name };
-    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3827.MWTYwv, obj3);
+    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3849.MWTYwv, obj3);
   } else if (null != draft.errorText) {
     const intl2 = util.intl;
     ({ name: obj2.name, errorText: obj2.error } = draft);
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3827.U2WbGx, { name: null, error: null });
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3849.U2WbGx, { name: null, error: null });
     const obj5 = { name: null, error: null };
   } else {
     const intl = util.intl;
@@ -62,7 +62,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 120;
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, draftCarousel: null, draftOverlay: null, trailingButton: null, trailingSlot: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -787,7 +787,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -817,7 +817,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
               } else {
                 projectId(value);
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp10) {
               c2 = tmp;
@@ -1038,7 +1038,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -1087,7 +1087,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
                       }));
                     }
                     c4 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp17) {
                   c4 = tmp;
@@ -2184,8 +2184,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
       const diff = ConjureTypes.CONJURE_MAX_ATTACHMENTS_PER_MESSAGE - conjureAttachmentDrafts.getConjureAttachmentDrafts(closure_0, "chat").length;
       if (arr.length > diff) {
         const intl = obj2(1126).intl;
-        let obj = { count: obj2(6940).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
-        _undefined3(intl.formatToPlainString(_modDef3827.Q0aCVZ, obj));
+        let obj = { count: obj2(6946).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE };
+        _undefined3(intl.formatToPlainString(_modDef3849.Q0aCVZ, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
         arr = substr;
@@ -2216,7 +2216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         };
         obj3 = obj5;
       });
-      obj2 = obj2(17175);
+      obj2 = obj2(17245);
       result = obj2.addConjureAttachmentDrafts(closure_0, "chat", mapped);
     }
   }, items5);
@@ -2234,7 +2234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -2251,7 +2251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
             projectId = callback3;
             c1 = 1;
             dependencyMap = 1;
-            const obj5 = { value: projectId(17174).pickConjurePhotos("any", projectId(6940).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
+            const obj5 = { value: projectId(17244).pickConjurePhotos("any", projectId(6946).CONJURE_MAX_ATTACHMENTS_PER_MESSAGE), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -2264,7 +2264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         } else {
           projectId(value);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp10) {
         dependencyMap = tmp;
@@ -2299,7 +2299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -2348,7 +2348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
               }));
             }
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp17) {
           c4 = tmp;
@@ -2372,13 +2372,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
   const memo = obj.useMemo(() => {
     const obj = { label: null, IconComponent: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3827["51+9lc"]);
+    obj.label = intl.string(_modDef3849["51+9lc"]);
     obj.IconComponent = ImagesIcon.ImagesIcon;
     obj.action = callback4;
     let items = [obj, , ];
     const obj2 = { label: null, IconComponent: null, action: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3827["10ljr2"]);
+    obj2.label = intl2.string(_modDef3849["10ljr2"]);
     obj2.IconComponent = MusicIcon.MusicIcon;
     obj2.action = function action() {
       const items = [closure_0(running[26]).types.audio];
@@ -2387,7 +2387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
     items[1] = obj2;
     const obj3 = { label: null, IconComponent: null, action: null };
     const intl3 = util.intl;
-    obj3.label = intl3.string(_modDef3827.aotDee);
+    obj3.label = intl3.string(_modDef3849.aotDee);
     obj3.IconComponent = FileUpIcon.FileUpIcon;
     obj3.action = function action() {
       return callback6();
@@ -2459,12 +2459,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
     if ("stop" === key.key) {
       const obj2 = { style: closure_14.trailingButton, IconComponent: StopIcon.StopIcon, onPress: onInterrupt, disabled: null == onInterrupt, accessibilityLabel: null };
       const intl2 = util.intl;
-      obj2.accessibilityLabel = intl2.string(_modDef3827.wiguT0);
+      obj2.accessibilityLabel = intl2.string(_modDef3849.wiguT0);
       let tmp14 = closure_2_11(ChatInputActionButtonDefault, obj2);
     } else if ("models" === key.key) {
       const obj = { style: closure_14.trailingButton, IconComponent: FiltersHorizontalIcon.FiltersHorizontalIcon, onPress: callback8, disabled: !canSend, accessibilityLabel: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3827["3E7Yc0"]);
+      obj.accessibilityLabel = intl.string(_modDef3849["3E7Yc0"]);
       tmp14 = closure_2_11(ChatInputActionButtonDefault, obj);
     } else {
       const obj5 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
@@ -2530,7 +2530,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
         const obj = { ref, IconComponent: PlusLargeIcon.PlusLargeIcon, onPress, disabled: !canSend, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
         const intl = util.intl;
-        obj.accessibilityLabel = intl.string(_modDef3827.hFS71Z);
+        obj.accessibilityLabel = intl.string(_modDef3849.hFS71Z);
         obj.accessibilityActions = accessibilityActions;
         obj.onAccessibilityAction = onAccessibilityAction;
         return closure_2_11(ChatInputActionButtonDefault, obj);
@@ -2549,7 +2549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
       ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
       const obj = { ref, IconComponent: PlusLargeIcon.PlusLargeIcon, onPress, disabled: !canSend, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3827.hFS71Z);
+      obj.accessibilityLabel = intl.string(_modDef3849.hFS71Z);
       obj.accessibilityActions = accessibilityActions;
       obj.onAccessibilityAction = onAccessibilityAction;
       return closure_2_11(ChatInputActionButtonDefault, obj);

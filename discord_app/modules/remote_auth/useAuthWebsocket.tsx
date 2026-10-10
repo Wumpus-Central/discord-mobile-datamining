@@ -1,11 +1,11 @@
-// === Module 16326: useAuthWebsocket ===
+// === Module 16393: useAuthWebsocket ===
 
-// Module 16326 (useAuthWebsocket)
+// Module 16393 (useAuthWebsocket)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 569 */;
-import useStableCallbackDefault from "useStableCallback" /* 6644 */;
-import typing from "typing" /* 16325 */;
-import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 16327 */;
+import useStableCallbackDefault from "useStableCallback" /* 6645 */;
+import typing from "typing" /* 16392 */;
+import RemoteAuthCryptoDefault from "RemoteAuthCrypto" /* 16394 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -34,7 +34,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
   first = tmp6[0];
   noop = tmp8;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj3 = { step: tmp(16325).RemoteAuthStep.INITIALIZING };
+    let obj3 = { step: tmp(16392).RemoteAuthStep.INITIALIZING };
     cResult[0] = obj3;
     let first1 = obj3;
   } else {
@@ -189,7 +189,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
   first = tmp2[0];
   noop = tmp4;
   const tmp5 = first(noop.useState({ step: require("typing").RemoteAuthStep.INITIALIZING }), 2);
-  state = tmp5[0];
+  const state = tmp5[0];
   closure_7 = tmp5[1];
   logger = noop.useRef(null);
   const memo = noop.useMemo(() => new closure_1(flag[8])(1500, 30000), []);
@@ -279,7 +279,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -325,7 +325,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   encrypted_nonce = closure_129_1.encrypted_nonce;
                   c3 = 2;
                   c4 = 1;
-                  let obj5 = { value: info(16327).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
+                  let obj5 = { value: info(16394).decryptNonce(closure_130_8(), encrypted_nonce), done: false };
                   return obj5;
                 } else if ("pending_remote_init" === op) {
                   closure_1_9.succeed();
@@ -333,14 +333,14 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   ComponentDispatch2.dispatch(constants.WAVE_EMPHASIZE);
                   c3 = 3;
                   c4 = 1;
-                  const obj6 = { value: info(16327).publicKeyFingerprint(closure_130_8()), done: false };
+                  const obj6 = { value: info(16394).publicKeyFingerprint(closure_130_8()), done: false };
                   return obj6;
                 } else if ("pending_login" === op) {
                   ticket = closure_129_1.ticket;
                   if (null == ticket) {
                     closure_1_11();
                   } else {
-                    let obj7 = { step: closure_2_0(16325).RemoteAuthStep.PENDING_LOGIN, ticket };
+                    let obj7 = { step: closure_2_0(16392).RemoteAuthStep.PENDING_LOGIN, ticket };
                     c7(obj7);
                     const HTTP = closure_2_0(1295).HTTP;
                     const request = { url: constants2.REMOTE_AUTH_LOGIN, body: null, oldFormErrors: true, rejectWithError: true };
@@ -348,11 +348,11 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                     request.body = obj8;
                     const postResult = HTTP.post(request);
                     HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F157802 */ function() { ... });
+                      closure_0 = closure_1_3(/* F158257 */ function() { ... });
                       return () => { ... };
                     })()).catch(() => closure_1_11());
                     const nextPromise = HTTP.post(request).then((() => {
-                      closure_0 = closure_1_3(/* F157802 */ function() { ... });
+                      closure_0 = closure_1_3(/* F158257 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -364,7 +364,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   closure_129_6 = closure_129_1.encrypted_user_payload;
                   c3 = 4;
                   c4 = 1;
-                  const obj9 = { value: closure_2_0(16329).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
+                  const obj9 = { value: closure_2_0(16396).decodeEncodedUserRecord(closure_130_8(), closure_129_6), done: false };
                   return obj9;
                 } else if ("cancel" === op) {
                   closure_130_1("remote auth handshake cancelled.");
@@ -400,13 +400,13 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                 } else if ("heartbeat_ack" === op) {
                   closure_130_7 = true;
                   c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 } else {
                   !(function warn(arg0) {
                     return logger.warn("[" + Date.now() - data + "ms" + "] " + "received unsupported message");
                   })("received unsupported message");
                   c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               }
             } else if (2 === tmp5) {
@@ -444,7 +444,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
                   throw error;
                 } else {
                   closure_130_1("handshake complete awaiting remote auth.");
-                  const obj19 = { step: closure_2_0(16325).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
+                  const obj19 = { step: closure_2_0(16392).RemoteAuthStep.PENDING_REMOTE_INIT, fingerprint: closure_129_4 };
                   c7(obj19);
                   c4 = 3;
                   const obj20 = { value: undefined, done: true };
@@ -460,7 +460,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               return obj21;
             } else {
               closure_129_7 = value;
-              let obj = { step: closure_2_0(16325).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
+              let obj = { step: closure_2_0(16392).RemoteAuthStep.PENDING_TICKET, user: closure_129_7 };
               c7(obj);
               c4 = 3;
               const obj22 = { value: undefined, done: true };
@@ -496,7 +496,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -513,7 +513,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               closure_1 = tmp4;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: info(16327).generateRsaKeyPair(), done: false };
+              const obj6 = { value: info(16394).generateRsaKeyPair(), done: false };
               return obj6;
             }
           } else if (1 === tmp4) {
@@ -528,7 +528,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               closure_129_3 = value;
               c2 = 2;
               c3 = 1;
-              const obj9 = { value: info(16327).serializePublicKey(closure_129_3), done: false };
+              const obj9 = { value: info(16394).serializePublicKey(closure_129_3), done: false };
               return obj9;
             }
           } else if (2 === tmp4) {
@@ -544,7 +544,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
               closure_0 = closure_129_1;
               c2 = 3;
               c3 = 1;
-              const obj11 = { value: info(16327).publicKeyFingerprint(closure_129_3), done: false };
+              const obj11 = { value: info(16394).publicKeyFingerprint(closure_129_3), done: false };
               return obj11;
             }
           } else if (arg0 === 1) {
@@ -562,7 +562,7 @@ export const useAuthWebsocket = ReactCompilerGating.isReactCompilerEnabled() ? (
             closure_129_2.send(JSON.stringify(obj12));
             getKeyPair.current = closure_129_3;
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp16) {
           c3 = tmp;

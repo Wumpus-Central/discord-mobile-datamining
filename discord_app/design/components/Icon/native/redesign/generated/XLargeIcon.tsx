@@ -1,10 +1,10 @@
-// === Module 4996: XLargeIcon ===
+// === Module 10258: XLargeIcon ===
 
-// Module 4996 (XLargeIcon)
+// Module 10258 (XLargeIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod4997 from "module_4997" /* 4997 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod10259 from "module_10259" /* 10259 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const XLargeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod4997;
+    const tmpResult = _mod10259;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const XLargeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4997, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10259, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

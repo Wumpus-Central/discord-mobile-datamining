@@ -1,19 +1,19 @@
-// === Module 6079: isChannelFocused ===
+// === Module 6072: isChannelFocused ===
 
-// Module 6079 (isChannelFocused)
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4939 */;
-import useChatLayout from "useChatLayout" /* 4940 */;
+// Module 6072 (isChannelFocused)
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4978 */;
+import useChatLayout from "useChatLayout" /* 4979 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 6080 */;
-import VoicePanelStore from "VoicePanelStore" /* 6081 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
+import NavigationHistoryStore from "NavigationHistoryStore" /* 6073 */;
+import VoicePanelStore from "VoicePanelStore" /* 6074 */;
 
 const require = globalThis.__r;
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(4937);
+const NavigationRouteUtils = params(4976);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -68,7 +68,7 @@ function getFocusedChannelId() {
     } else {
       routes2 = NavigationRouteUtils;
       if (!isChatLockedOpen) {
-        state = num2.state;
+        const state = num2.state;
         let tmp10;
         if (state != tmp2) {
           const routes3 = state.routes;
@@ -144,7 +144,7 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6080).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6073).CHANNEL_PREFIX;
 let c9 = null;
 const ReactCompilerGating = fn(558);
 function isChannelFocused() {
@@ -238,7 +238,7 @@ export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadS
   if (ChannelRTCStore.getChatOpen(channelId)) {
     return true;
   } else {
-    state = VoicePanelStore.getState();
+    const state = VoicePanelStore.getState();
     if (state.isVoicePanelFullscreen()) {
       return false;
     } else if (getFocusedChannelId() === channelId) {

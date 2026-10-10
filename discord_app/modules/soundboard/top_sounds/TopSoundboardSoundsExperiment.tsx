@@ -1,6 +1,6 @@
-// === Module 17695: TopSoundboardSoundsExperiment ===
+// === Module 17767: TopSoundboardSoundsExperiment ===
 
-// Module 17695 (TopSoundboardSoundsExperiment)
+// Module 17767 (TopSoundboardSoundsExperiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

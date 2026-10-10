@@ -1,6 +1,6 @@
-// === Module 15631: AnimateStickersSetting ===
+// === Module 15693: AnimateStickersSetting ===
 
-// Module 15631 (AnimateStickersSetting)
+// Module 15693 (AnimateStickersSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const StickerAnimationSettings = fn(2044).StickerAnimationSettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAnimateStickerSettingOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,7 +59,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.R5nQkS);
   },
-  parent: fn(7974).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7992).MobileUserSettings.ACCESSIBILITY,
   useValue: fn(2041).AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
     const AnimateStickers = UserSettings.AnimateStickers;

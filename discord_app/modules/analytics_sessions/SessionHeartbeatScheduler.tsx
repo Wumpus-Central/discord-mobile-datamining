@@ -1,6 +1,6 @@
-// === Module 7177: SessionHeartbeatScheduler ===
+// === Module 7183: SessionHeartbeatScheduler ===
 
-// Module 7177 (SessionHeartbeatScheduler)
+// Module 7183 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -8,16 +8,16 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7178 */;
-import SessionRouteUtils2 from "SessionRouteUtils" /* 7179 */;
-import MonotonicClock from "MonotonicClock" /* 7180 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7185 */;
-import SessionUtils from "SessionUtils" /* 7187 */;
+import SessionForegroundUtils2 from "SessionForegroundUtils" /* 7184 */;
+import SessionRouteUtils2 from "SessionRouteUtils" /* 7185 */;
+import MonotonicClock from "MonotonicClock" /* 7186 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 7191 */;
+import SessionUtils from "SessionUtils" /* 7193 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 5885 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import IdleStore from "IdleStore" /* 5888 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 
 require = fn;
 function trackHeartbeat() {
@@ -41,7 +41,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -240,7 +240,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -279,7 +279,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -312,7 +312,7 @@ function handleAuthenticationChange() {
   scheduleHeartbeatTracking();
 }
 function handleRTCStateChange() {
-  state = RTCConnectionStore.getState();
+  const state = RTCConnectionStore.getState();
   if (closure_21 !== state) {
     closure_21 = state;
     scheduleHeartbeatTracking();
@@ -339,7 +339,7 @@ function handleAppStateUpdate(state) {
   }
 }
 function handleFluxInitialized() {
-  state = RTCConnectionStore.getState();
+  const state = RTCConnectionStore.getState();
   closure_22 = SessionForegroundUtils2.isForegrounded();
   closure_23 = SessionRouteUtils2.isActiveUserRoute();
   handleAuthenticationChange();
@@ -365,7 +365,7 @@ let closure_39 = async function _getSession() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -523,9 +523,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7178);
+const SessionForegroundUtils = fn(7184);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7179);
+const SessionRouteUtils = fn(7185);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 17156: ConjureIdeasOffer ===
+// === Module 17226: ConjureIdeasOffer ===
 
-// Module 17156 (ConjureIdeasOffer)
+// Module 17226 (ConjureIdeasOffer)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 17087 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 17156 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { source: null };
     const intl = util.intl;
-    obj2.source = intl.string(_modDef3827.s96AWB);
+    obj2.source = intl.string(_modDef3849.s96AWB);
     const tmp8 = React4(ConjureNativeMarkdownDefault, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = util.intl;
-    const stringResult = intl2.string(_modDef3827["U/bLzU"]);
+    const stringResult = intl2.string(_modDef3849["U/bLzU"]);
     cResult[1] = stringResult;
     let tmp10 = stringResult;
   } else {
@@ -72,12 +72,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
   const items = [onAsk.attribution, , ];
   const obj2 = { source: null };
   const intl = util.intl;
-  obj2.source = intl.string(_modDef3827.s96AWB);
+  obj2.source = intl.string(_modDef3849.s96AWB);
   items[1] = React4(ConjureNativeMarkdownDefault, obj2);
   const obj3 = { direction: "horizontal", children: null };
   const obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
   const intl2 = util.intl;
-  obj4.text = intl2.string(_modDef3827["U/bLzU"]);
+  obj4.text = intl2.string(_modDef3849["U/bLzU"]);
   obj3.children = React4(components_Button_Button.Button, obj4);
   items[2] = React4(Stack_Stack.Stack, obj3);
   obj.children = items;

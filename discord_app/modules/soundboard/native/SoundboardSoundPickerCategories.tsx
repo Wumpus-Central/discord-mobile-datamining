@@ -1,21 +1,21 @@
-// === Module 17708: SoundboardSoundPickerCategories ===
+// === Module 17780: SoundboardSoundPickerCategories ===
 
-// Module 17708 (SoundboardSoundPickerCategories)
+// Module 17780 (SoundboardSoundPickerCategories)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import ClockIcon from "ClockIcon" /* 5050 */;
-import HapticUtils from "HapticUtils" /* 5056 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5057 */;
-import GuildIconDefault from "GuildIcon" /* 6165 */;
-import Pressables from "Pressables" /* 6191 */;
-import SoundboardTypes from "SoundboardTypes" /* 7042 */;
-import LockIcon from "LockIcon" /* 8206 */;
-import TrophyIcon from "TrophyIcon" /* 8906 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9432 */;
-import _modDef9733 from "module_9733" /* 9733 */;
-import _modDef17706 from "module_17706" /* 17706 */;
+import ClockIcon from "ClockIcon" /* 5051 */;
+import HapticUtils from "HapticUtils" /* 5057 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5058 */;
+import GuildIconDefault from "GuildIcon" /* 6158 */;
+import Pressables from "Pressables" /* 6184 */;
+import SoundboardTypes from "SoundboardTypes" /* 7048 */;
+import LockIcon from "LockIcon" /* 8222 */;
+import TrophyIcon from "TrophyIcon" /* 8925 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9461 */;
+import _modDef9762 from "module_9762" /* 9762 */;
+import _modDef17778 from "module_17778" /* 17778 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -28,12 +28,12 @@ let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: closure_7, FlatList: closure_8 } = get_ActivityIndicator);
-const setSearchQuery = fn(17690).setSearchQuery;
+const setSearchQuery = fn(17762).setSearchQuery;
 const Constants = fn(1085);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_11, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
 let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
 obj.item = size;
@@ -75,7 +75,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp30 = cResult[3];
       }
-      let tmp12 = _modDef9733;
+      let tmp12 = _modDef9762;
       let tmp11 = null;
       let tmp14 = tmp30;
       let tmp13 = null;
@@ -112,7 +112,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp20 = cResult[7];
       }
-      tmp12 = _modDef17706;
+      tmp12 = _modDef17778;
       tmp11 = null;
       tmp14 = tmp20;
       tmp13 = null;
@@ -126,7 +126,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
       } else {
         tmp16 = cResult[8];
       }
-      tmp12 = _modDef17706;
+      tmp12 = _modDef17778;
       tmp11 = null;
       tmp14 = tmp16;
       tmp13 = null;
@@ -205,7 +205,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
                   const obj7 = { style: tmp43, children: null };
                   const items = [tmp44, tmp48];
                   obj7.children = items;
-                  const tmp55 = __initData2(closure_1_7, obj7);
+                  const tmp55 = map1(closure_1_7, obj7);
                   cResult[28] = tmp43;
                   cResult[29] = tmp44;
                   cResult[30] = tmp48;
@@ -274,7 +274,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef9733;
+    tmp6 = _modDef9762;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -287,13 +287,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17706;
+    tmp6 = _modDef17778;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17706;
+    tmp6 = _modDef17778;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -338,7 +338,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function SoundC
   }
   items1[1] = locked;
   obj6.children = items1;
-  obj5.children = __initData2(handlePressCategory, obj6);
+  obj5.children = map1(handlePressCategory, obj6);
   return __initData(Pressables.PressableOpacity, obj5, name);
 });
 ReactCompilerGating = fn(558);

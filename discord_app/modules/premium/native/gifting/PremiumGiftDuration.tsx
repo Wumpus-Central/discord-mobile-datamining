@@ -1,15 +1,15 @@
-// === Module 12691: PremiumGiftDuration ===
+// === Module 12738: PremiumGiftDuration ===
 
-// Module 12691 (PremiumGiftDuration)
+// Module 12738 (PremiumGiftDuration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4793 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import TableRow from "TableRow" /* 6186 */;
-import RowButton2 from "RowButton" /* 8565 */;
-import NativeGiftContext from "NativeGiftContext" /* 10025 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10078 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import TableRow from "TableRow" /* 6179 */;
+import RowButton2 from "RowButton" /* 8581 */;
+import NativeGiftContext from "NativeGiftContext" /* 10054 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10107 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let items = [, ];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_8 }, containerSelected: null, labelContainer: null, labelPromo: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8 };
 obj2.containerSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, borderWidth: 2 };
@@ -274,7 +274,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   });
   return timestampProducer(View, obj2);
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj8 = { durationContainer: null, durationTitle: null };
 let obj5 = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 obj8.durationContainer = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -290,7 +290,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   const cResult = planInterval(576).c(9);
   const tmp4 = closure_11();
   const obj = planInterval(576);
-  planInterval = planInterval(10025).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10054).useNativeGiftContext().planInterval;
   ({ durationContainer, durationTitle } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
@@ -302,7 +302,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   }
   if (cResult[1] !== tmp4.durationTitle) {
     const obj3 = { style: durationTitle, variant: "text-sm/semibold", children: first };
-    const tmp9 = closure_6(tmp(5087).Text, obj3);
+    const tmp9 = closure_6(tmp(5088).Text, obj3);
     cResult[1] = tmp4.durationTitle;
     cResult[2] = tmp9;
     let tmp7 = tmp9;
@@ -334,15 +334,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   cResult[7] = tmp10;
   cResult[8] = tmp14;
   tmp13 = tmp14;
-  const obj2 = planInterval(10025);
+  const obj2 = planInterval(10054);
 }) : (function PremiumGiftDuration() {
   const tmp = closure_11();
-  planInterval = planInterval(10025).useNativeGiftContext().planInterval;
+  planInterval = planInterval(10054).useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: null };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1126).intl;
   obj3.children = intl.string(planInterval(1126).t["8XT6Nf"]);
-  items = [closure_6(planInterval(5087).Text, obj3), ];
+  items = [closure_6(planInterval(5088).Text, obj3), ];
   items[1] = items.map((planInterval, index) => timestampProducer(closure_10, { selected: planInterval === planInterval, planInterval }, index));
   obj2.children = items;
   return closure_7(View, obj2);

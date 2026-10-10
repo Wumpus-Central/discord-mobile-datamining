@@ -1,20 +1,20 @@
-// === Module 6836: Sheet/BottomSheet ===
+// === Module 6839: Sheet/BottomSheet ===
 
-// Module 6836 (Sheet/BottomSheet)
+// Module 6839 (Sheet/BottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5361 */;
-import LinearGradientDefault from "LinearGradient" /* 5388 */;
-import NavigatorConstants from "NavigatorConstants" /* 6263 */;
-import BottomSheetModal from "BottomSheetModal" /* 6305 */;
-import NavScrim from "NavScrim" /* 6726 */;
-import ActionSheetContextDefault from "ActionSheetContext" /* 6838 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6840 */;
-import Sheet_BottomSheetBackdrop from "Sheet/BottomSheetBackdrop" /* 6841 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
+import LinearGradientDefault from "LinearGradient" /* 5391 */;
+import NavigatorConstants from "NavigatorConstants" /* 6258 */;
+import BottomSheetModal from "BottomSheetModal" /* 6306 */;
+import NavScrim from "NavScrim" /* 6727 */;
+import ActionSheetContextDefault from "ActionSheetContext" /* 6841 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6843 */;
+import Sheet_BottomSheetBackdrop from "Sheet/BottomSheetBackdrop" /* 6844 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -28,11 +28,11 @@ let closure_4 = ["startHeight", "contentHeight", "maxHeight", "hasEverExpanded",
 let closure_5 = ["scrollable", "startHeight", "maxHeight", "containerHeight", "startExpanded", "backdropOpacity", "backdropChildren", "header", "handleComponent", "handleDisabled", "dismissAccessibilityLabel", "footer", "onExpand", "onDismiss", "keyboardShouldPersistTaps", "children", "backgroundStyles", "contentStyles", "bodyStyles", "borderGradient", "showGradient", "extraContent", "contentHeight", "ref"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_9, View: c10, Platform } = get_ActivityIndicator);
-const ActionSheetConstants = fn(6837);
+const ActionSheetConstants = fn(6840);
 ({ ACTION_SHEET_START_HEIGHT_RATIO: closure_11, ACTION_SHEET_MAX_WIDTH: closure_12, ACTION_SHEET_SPRING_CONFIG: map1, ACTION_SHEET_SPRING_CONFIG_REDUCED_MOTION: closure_14, ACTION_SHEET_GRADIENT_BORDER_WIDTH: closure_15, ACTION_SHEET_GRADIENT_BORDER_RADIUS: closure_16, ACTION_SHEET_BORDER_RADIUS: closure_17, ACTION_SHEET_INNER_BORDER_RADIUS: closure_18, ACTION_SHEET_MINIMUM_BOTTOM_PADDING: closure_19 } = ActionSheetConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_22 = createStyles.createStyles((arg0) => {
   let num = arg1;
   if (arg1 === undefined) {
@@ -853,7 +853,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
       let tmp43 = cResult[29];
     }
     const layoutEffect = obj2.useLayoutEffect(tmp42, tmp43);
-    const bottomSheetImperativeHandle = tmp(6839).useBottomSheetImperativeHandle(tmp12, ref1);
+    const bottomSheetImperativeHandle = tmp(6842).useBottomSheetImperativeHandle(tmp12, ref1);
     if (cResult[30] === close) {
       if (cResult[31] === transitionState) {
         let tmp46 = cResult[32];
@@ -864,7 +864,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
         if (cResult[35] === onLeave) {
           let tmp49 = cResult[36];
         }
-        const unmountEffect = tmp(5393).useUnmountEffect(tmp49);
+        const unmountEffect = tmp(5396).useUnmountEffect(tmp49);
         if (cResult[37] !== close) {
           function ie(arg0, arg1, arg2, arg3, arg4) {
             if (arg4 !== BottomSheetModal.ANIMATION_SOURCE.KEYBOARD) {
@@ -914,7 +914,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
         const tmp54 = closure_28(tmp13.animatedIndex);
         closure_14 = tmp54;
-        const tmpResult4 = tmp(5393);
+        const tmpResult4 = tmp(5396);
         function ke() {
           return closure_14.get() <= -1;
         }
@@ -922,17 +922,17 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
         ke.__closure = obj3;
         ke.__workletHash = 4341912681188;
         ke.__initData = __initData;
-        const derivedValue = tmp(4811).useDerivedValue(ke);
-        const tmpResult5 = tmp(4811);
-        class Oe {
+        const derivedValue = tmp(4850).useDerivedValue(ke);
+        const tmpResult5 = tmp(4850);
+        class Be {
           constructor() {
             return closure_15.get();
           }
         }
         const obj4 = { animatedIsVisuallyClosed: derivedValue };
-        Oe.__closure = obj4;
-        Oe.__workletHash = 6995719052506;
-        Oe.__initData = __initData2;
+        Be.__closure = obj4;
+        Be.__workletHash = 6995719052506;
+        Be.__initData = __initData2;
         class De {
           constructor(arg0) {
             tmp = backdropChildren;
@@ -951,13 +951,13 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             return;
           }
         }
-        const obj5 = { transitionState, runOnJS: tmp(4811).runOnJS, onLeave };
+        const obj5 = { transitionState, runOnJS: tmp(4850).runOnJS, onLeave };
         De.__closure = obj5;
         De.__workletHash = 1921852093213;
         De.__initData = __initData3;
-        const animatedReaction = tmp(4811).useAnimatedReaction(Oe, De);
+        const animatedReaction = tmp(4850).useAnimatedReaction(Be, De);
         if (cResult[41] !== dismissAccessibilityLabel) {
-          class Be {
+          class Oe {
             constructor() {
               obj = {
                 accessibilityLabel: closure_2,
@@ -972,9 +972,9 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           cResult[41] = dismissAccessibilityLabel;
-          cResult[42] = Be;
+          cResult[42] = Oe;
         } else {
-          class Be {
+          class Oe {
             constructor() {
               obj = {
                 accessibilityLabel: closure_2,
@@ -990,7 +990,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
         }
         if (cResult[43] === tmp31) {
-          class Be {
+          class Oe {
             constructor() {
               obj = {
                 accessibilityLabel: closure_2,
@@ -1075,7 +1075,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           closure_27(tmp35(1497)(tmp64));
-          tmp35(4933)();
+          tmp35(4972)();
           if (tmp13.backgroundComponent != null) {
             class Me {
               constructor(arg0) {
@@ -1244,10 +1244,10 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
                         let items = [tmp75, tmp79];
                         obj7.children = items;
                         obj6.children = closure_21(ref1, obj7);
-                        const tmp87 = closure_20(tmp(6842).LayerScope, obj6);
+                        const tmp87 = closure_20(tmp(6845).LayerScope, obj6);
                         cResult[67] = tmp74;
                         cResult[68] = tmp75;
-                        class Oe {
+                        class Be {
                           constructor() {
                             return closure_15.get();
                           }
@@ -1341,7 +1341,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
         cResult[43] = tmp31;
         cResult[44] = backdropOpacity;
         cResult[45] = Le;
-        const tmpResult6 = tmp(4811);
+        const tmpResult6 = tmp(4850);
       }
       function oe() {
         if (ref.current) {
@@ -1383,7 +1383,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[33] = items5;
     tmp47 = items5;
     tmp46 = re;
-    let tmpResult = tmp(6839);
+    let tmpResult = tmp(6842);
   }
   function te() {
     registerDismissHandler(closure_4);
@@ -1498,35 +1498,44 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }, items3);
   const tmp16 = closure_28(merged.animatedIndex);
   closure_14 = tmp16;
-  const tmp8Result5 = backdropOpacity(dismissAccessibilityLabel[21]);
-  function be() {
+  const tmp8Result4 = backdropOpacity(dismissAccessibilityLabel[21]);
+  function me() {
     return closure_14.get() <= -1;
   }
-  be.__closure = { animatedIndex: tmp16 };
-  be.__workletHash = 11856440255681;
-  be.__initData = __initData4;
-  const derivedValue = backdropOpacity(dismissAccessibilityLabel[17]).useDerivedValue(be);
-  const tmp8Result6 = backdropOpacity(dismissAccessibilityLabel[17]);
+  me.__closure = { animatedIndex: tmp16 };
+  me.__workletHash = 11856440255681;
+  me.__initData = __initData4;
+  const derivedValue = backdropOpacity(dismissAccessibilityLabel[17]).useDerivedValue(me);
+  const tmp8Result5 = backdropOpacity(dismissAccessibilityLabel[17]);
   function pe() {
     return derivedValue.get();
   }
   pe.__closure = { animatedIsVisuallyClosed: derivedValue };
   pe.__workletHash = 888700167933;
   pe.__initData = __initData5;
-  function me(arg0) {
-    let tmp = arg0;
-    if (arg0) {
-      tmp = "exiting" === transitionState;
-    }
-    if (tmp) {
-      ReanimatedRexport.runOnJS(onLeave)();
+  class Se {
+    constructor(arg0) {
+      tmp = scrollable;
+      if (scrollable) {
+        tmp2 = transitionState;
+        str = "exiting";
+        tmp = "exiting" === transitionState;
+      }
+      if (tmp) {
+        tmp3 = closure_0;
+        tmp4 = closure_2;
+        obj = closure_0(closure_2[17]);
+        tmp5 = onLeave;
+        tmp6 = obj.runOnJS(onLeave)();
+      }
+      return;
     }
   }
-  const tmp8Result7 = backdropOpacity(dismissAccessibilityLabel[17]);
-  me.__closure = { transitionState, runOnJS: backdropOpacity(dismissAccessibilityLabel[17]).runOnJS, onLeave };
-  me.__workletHash = 9237161324088;
-  me.__initData = __initData6;
-  const animatedReaction = tmp8Result7.useAnimatedReaction(pe, me);
+  const tmp8Result6 = backdropOpacity(dismissAccessibilityLabel[17]);
+  Se.__closure = { transitionState, runOnJS: backdropOpacity(dismissAccessibilityLabel[17]).runOnJS, onLeave };
+  Se.__workletHash = 9237161324088;
+  Se.__initData = __initData6;
+  const animatedReaction = tmp8Result6.useAnimatedReaction(pe, Se);
   const items4 = [dismissAccessibilityLabel];
   const items5 = [backdropOpacity, backdropChildren];
   const callback2 = obj.useCallback(() => constants2(ActionSheetHeaderBar.ActionSheetHeaderBar, {
@@ -1562,17 +1571,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp25 = backdropChildren(dismissAccessibilityLabel[26])();
   const backgroundComponent = merged.backgroundComponent;
   if (backgroundComponent != null) {
-    const obj3 = { ref: ref1, accessible: null, accessibilityRole: "none", accessibilityLabel: "", startHeight: null, contentHeight: null, maxHeight: null, containerHeight: null, startExpanded: null, hasEverExpanded: null, windowDimensions: null, wrapperStyle: null, onExpand: null, enablePanDownToClose: true, containerStyle: null, backgroundStyle: null, topInset: null, keyboardBehavior: null, keyboardBlurBehavior: "restore", keyboardShouldPersistTaps: null, animationConfigs: null, overrideReduceMotion: null, handleIndicatorStyle: null, handleComponent: null, backdropComponent: null, backgroundComponent: null, renderFooter: null, animatedIndex: null, onAnimate: null, onClose: null, borderGradient: null, extraContent: null, children: null };
-    const tmp8Result8 = tmp8(tmp3[8]);
-    const isIOSResult = tmp8(tmp3[8]).isIOS();
-    obj3.accessible = !tmp8(tmp3[8]).isIOS();
-    obj3.startHeight = startHeight;
-    obj3.contentHeight = contentHeight;
-    obj3.maxHeight = maxHeight;
-    obj3.containerHeight = containerHeight;
-    obj3.startExpanded = startExpanded;
-    obj3.hasEverExpanded = tmp7[0];
-    obj3.windowDimensions = tmp22;
+    const obj3 = { ref: ref1, accessible: false, accessibilityRole: "none", accessibilityLabel: "", startHeight, contentHeight, maxHeight, containerHeight, startExpanded, hasEverExpanded: tmp7[0], windowDimensions: tmp22, wrapperStyle: null, onExpand: null, enablePanDownToClose: true, containerStyle: null, backgroundStyle: null, topInset: null, keyboardBehavior: null, keyboardBlurBehavior: "restore", keyboardShouldPersistTaps: null, animationConfigs: null, overrideReduceMotion: null, handleIndicatorStyle: null, handleComponent: null, backdropComponent: null, backgroundComponent: null, renderFooter: null, animatedIndex: null, onAnimate: null, onClose: null, borderGradient: null, extraContent: null, children: null };
     const items7 = [tmp5.wrapper, null != borderGradient && tmp5.wrapperWithBorder];
     obj3.wrapperStyle = items7;
     obj3.onExpand = callback1;
@@ -1589,14 +1588,14 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj3.animationConfigs = tmp9;
     obj3.overrideReduceMotion = tmp8(tmp3[17]).ReduceMotion.Never;
     obj3.handleIndicatorStyle = tmp5.handleIndicator;
-    let tmp30 = null;
+    let tmp28 = null;
     if (!handleDisabled) {
       if (handleComponent == null) {
         handleComponent = callback2;
       }
-      tmp30 = handleComponent;
+      tmp28 = handleComponent;
     }
-    obj3.handleComponent = tmp30;
+    obj3.handleComponent = tmp28;
     obj3.backdropComponent = callback3;
     obj3.backgroundComponent = backgroundComponent;
     obj3.renderFooter = callback4;
@@ -1611,7 +1610,7 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     let tmp27Result = null != header;
     if (tmp27Result) {
       const obj5 = { style: tmp5.header, children: header };
-      tmp27Result = closure_20(tmp32, obj5);
+      tmp27Result = closure_20(tmp30, obj5);
     }
     const obj6 = { children: null };
     const items10 = [tmp27Result, ];
@@ -1626,11 +1625,11 @@ export const BottomSheet = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const tmp27Result3 = closure_20(tmp24, obj3);
     let tmp27Result4 = tmp27Result3;
     if (showGradient) {
-      let tmp36 = tmp25;
+      let tmp34 = tmp25;
       if (tmp25 == null) {
-        tmp36 = null;
+        tmp34 = null;
       }
-      const obj8 = { gradient: tmp36, children: tmp27Result3 };
+      const obj8 = { gradient: tmp34, children: tmp27Result3 };
       tmp27Result4 = closure_20(tmp8(tmp3[28]).ThemeContextProvider, obj8);
     }
     return tmp27Result4;

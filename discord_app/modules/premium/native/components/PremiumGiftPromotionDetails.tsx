@@ -1,16 +1,16 @@
-// === Module 10083: PremiumGiftPromotionDetails ===
+// === Module 10112: PremiumGiftPromotionDetails ===
 
-// Module 10083 (PremiumGiftPromotionDetails)
+// Module 10112 (PremiumGiftPromotionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import SKUPreview from "SKUPreview" /* 8956 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import SKUPreview from "SKUPreview" /* 8975 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 let closure_3 = ["imageUrl", "shouldAnimate"];
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_13 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_12 }, image: null, textContainer: null };
   const size = { width: 64, height: 64, borderRadius: nativeDefault.radii.xs };
@@ -349,7 +349,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   tmpResult = shouldAnimate(aPNGPlayerControls[13]);
 });
 ReactCompilerGating = fn(558);
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj6 = { preview: null };
 let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: null, overflow: "hidden" };
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumGiftPromotionDetails(arg0) {

@@ -1,9 +1,9 @@
-// === Module 7046: transitionToGuild ===
+// === Module 7052: transitionToGuild ===
 
-// Module 7046 (transitionToGuild)
+// Module 7052 (transitionToGuild)
 import router_utils from "router_utils" /* 1112 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6665 */;
-import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6914 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6666 */;
+import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6920 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

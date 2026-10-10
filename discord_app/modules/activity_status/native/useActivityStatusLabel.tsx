@@ -1,19 +1,19 @@
-// === Module 12809: useActivityStatusLabel ===
+// === Module 12856: useActivityStatusLabel ===
 
-// Module 12809 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10207 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10208 */;
-import isGameActivityDefault from "isGameActivity" /* 10215 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10220 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import PresenceStore from "PresenceStore" /* 5107 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+// Module 12856 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10236 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10237 */;
+import isGameActivityDefault from "isGameActivity" /* 10244 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10249 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import PresenceStore from "PresenceStore" /* 5108 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 
 const util = v0wJXSh(1126);
-const VoiceActivityStatus = v0wJXSh(10225);
+const VoiceActivityStatus = v0wJXSh(10254);
 require = fn;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
         return null;
       } else {
         const activities = PresenceStore.getActivities(tmp);
-        state = undefined;
+        let state;
         if (activities != null) {
           const found = activities.find((type) => type.type === constants.CUSTOM_STATUS);
           if (found != null) {
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
       return null;
     } else {
       const activities = PresenceStore.getActivities(tmp);
-      state = undefined;
+      let state;
       if (activities != null) {
         const found = activities.find((type) => type.type === constants.CUSTOM_STATUS);
         if (found != null) {

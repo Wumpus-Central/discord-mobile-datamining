@@ -1,10 +1,10 @@
-// === Module 13657: useReferralProgramEligibleUsers ===
+// === Module 13709: useReferralProgramEligibleUsers ===
 
-// Module 13657 (useReferralProgramEligibleUsers)
+// Module 13709 (useReferralProgramEligibleUsers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7168 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7174 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {
@@ -59,7 +59,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
               let _Array = Array;
               let tmp34 = closure_131_7(Array.from(closure_130_0.values()));
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else {
               c5 = 1;
               closure_130_1 = tmp17;
@@ -118,7 +118,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {
@@ -156,7 +156,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                     stateFromStores = dependencyMap;
                     closure_3 = dependencyMap[Symbol.iterator]();
                     if (closure_3 === undefined) {
-                      let obj5 = searchQuery(7169);
+                      let obj5 = searchQuery(7175);
                       c9 = 4;
                       c10 = 1;
                       let obj6 = { value: obj5.fetchReferralEligibleUsers(closure_133_0, closure_134_0, closure_133_1), done: false };
@@ -166,9 +166,9 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                       closure_133_3 = tmp44;
                       closure_133_4 = stateFromStores(closure_133_3, 2);
                       closure_133_5 = closure_133_4[0];
-                      if (closure_133_4[1] === searchQuery(7169).ReferralOfferStatus.PENDING) {
+                      if (closure_133_4[1] === searchQuery(7175).ReferralOfferStatus.PENDING) {
                         if (!closure_134_12.has(closure_133_5)) {
-                          obj3 = searchQuery(8289);
+                          obj3 = searchQuery(8305);
                           c9 = 5;
                           c10 = 1;
                           let obj7 = { value: obj3.getUser(closure_133_5), done: false };

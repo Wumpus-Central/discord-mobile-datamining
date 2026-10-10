@@ -1,24 +1,24 @@
-// === Module 7700: StageBlockedUsersActionSheet ===
+// === Module 7717: StageBlockedUsersActionSheet ===
 
-// Module 7700 (StageBlockedUsersActionSheet)
+// Module 7717 (StageBlockedUsersActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5955 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5948 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5889).STAGE_BLOCKED_USERS_SHEET_KEY;
+let closure_8 = fn(5892).STAGE_BLOCKED_USERS_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { paddingHorizontal: 16 }, header: { padding: 16 }, title: { marginTop: 16, marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 16 }, buttons: { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingVertical: 8 }, userContainer: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "flex-start", marginVertical: 8, width: "100%" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4, marginEnd: 12 }, avatar: { opacity: 0.5 }, iconContainer: null, icon: null, flex: null, blocked: null, ignored: null };
 let size = { position: "absolute", top: -4, right: 4, height: 16, width: 16, alignItems: "center", justifyContent: "center", borderRadius: 8, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj2.iconContainer = size;
@@ -143,7 +143,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
               }
             }
             const obj2 = { style: tmp4.iconContainer, children: null };
-            const obj3 = { style: tmp4.icon, source: user(7701), color: user(587).unsafe_rawColors.WHITE };
+            const obj3 = { style: tmp4.icon, source: user(7718), color: user(587).unsafe_rawColors.WHITE };
             obj2.children = closure_9(channelId(1200).Icon, obj3);
             tmp24 = closure_9(View, obj2);
           }
@@ -199,7 +199,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Restri
   const items2 = [closure_9(native.CutoutableAvatarImage, { source: avatarSource, size: native.AvatarSizes.REFRESH_MEDIUM_32, style: tmp.avatar }), ];
   if (speaker) {
     const obj6 = { style: tmp.iconContainer, children: null };
-    const obj7 = { style: tmp.icon, source: user(7701), color: user(587).unsafe_rawColors.WHITE };
+    const obj7 = { style: tmp.icon, source: user(7718), color: user(587).unsafe_rawColors.WHITE };
     obj6.children = closure_9(native.Icon, obj7);
     speaker = closure_9(View, obj6);
   }
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
   [r10020, dependencyMap] = onPress(arr4.useState(0), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     function handleDismiss() {
-      onAccept(5055).hideActionSheet(closure_1_8);
+      onAccept(5056).hideActionSheet(closure_1_8);
     }
     cResult[0] = handleDismiss;
     onPress = handleDismiss;
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
     if (cResult[2] === onAccept) {
       let tmp7 = cResult[3];
     }
-    const stageBlockedUsers = tmp(7702).useStageBlockedUsers(channel.id);
-    const tmpResult = tmp(7702);
-    const stageIgnoredUsers = tmp(7702).useStageIgnoredUsers(channel.id);
+    const stageBlockedUsers = tmp(7719).useStageBlockedUsers(channel.id);
+    const tmpResult = tmp(7719);
+    const stageIgnoredUsers = tmp(7719).useStageIgnoredUsers(channel.id);
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       class E {
@@ -551,7 +551,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
         }
       }
       const obj2 = { text: tmp9, onPress: tmp7 };
-      const tmp12 = closure_9(tmp(5376).Button, obj2);
+      const tmp12 = closure_9(tmp(5379).Button, obj2);
       cResult[6] = tmp7;
       cResult[7] = tmp12;
     } else {
@@ -574,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
       const intl = tmp(1126).intl;
       obj3.text = intl.string(tmp(1126).t.CZGqeT);
       obj3.onPress = onPress;
-      const tmp14 = closure_9(tmp(5376).Button, obj3);
+      const tmp14 = closure_9(tmp(5379).Button, obj3);
       cResult[8] = tmp14;
       const tmp13 = tmp14;
     } else {
@@ -676,7 +676,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
               }
             }
             const obj5 = { inActionSheet: true, contentContainerStyle: tmp4.container, accessibilityLabel: tmp30, sections: tmp33, renderItem: tmp25, itemSize: tmp19 };
-            const tmp37 = closure_9(onAccept(6759), obj5);
+            const tmp37 = closure_9(onAccept(6760), obj5);
             cResult[25] = tmp25;
             cResult[26] = tmp4.container;
             cResult[27] = tmp33;
@@ -704,11 +704,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
     const obj7 = { bottom: true, style: tmp4.buttons, onLayout: E, children: null };
     const items1 = [tmp11, tmp13];
     obj7.children = items1;
-    const tmp17 = closure_10(tmp(6810).SafeAreaPaddingView, obj7);
+    const tmp17 = closure_10(tmp(6813).SafeAreaPaddingView, obj7);
     cResult[9] = tmp4.buttons;
     cResult[10] = tmp11;
     cResult[11] = tmp17;
-    const tmpResult2 = tmp(7702);
+    const tmpResult2 = tmp(7719);
   }
   function handleJoin() {
     onAccept(channel);
@@ -726,9 +726,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
   const tmp = closure_11();
   const tmp2 = items1(noop.useState(0), 2);
   dependencyMap = tmp2[1];
-  const stageBlockedUsers = channel(7702).useStageBlockedUsers(channel.id);
-  const obj = channel(7702);
-  const stageIgnoredUsers = channel(7702).useStageIgnoredUsers(channel.id);
+  const stageBlockedUsers = channel(7719).useStageBlockedUsers(channel.id);
+  const obj = channel(7719);
+  const stageIgnoredUsers = channel(7719).useStageIgnoredUsers(channel.id);
   const callback = noop.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);
   }, []);
@@ -740,21 +740,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
     onAccept(channel);
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_8);
   };
-  const items = [closure_9(channel(5376).Button, obj4), ];
+  const items = [closure_9(channel(5379).Button, obj4), ];
   const obj5 = { variant: "secondary", text: null, onPress: null };
   const intl2 = channel(1126).intl;
   obj5.text = intl2.string(channel(1126).t.CZGqeT);
   obj5.onPress = function handleDismiss() {
-    onAccept(5055).hideActionSheet(closure_1_8);
+    onAccept(5056).hideActionSheet(closure_1_8);
   };
-  items[1] = closure_9(channel(5376).Button, obj5);
+  items[1] = closure_9(channel(5379).Button, obj5);
   obj3.children = items;
   items1 = [];
-  const obj2 = channel(7702);
+  const obj2 = channel(7719);
   HermesBuiltin.arraySpread(stageIgnoredUsers, HermesBuiltin.arraySpread(stageBlockedUsers, 0));
-  const obj6 = { scrollable: true, header: closure_9(closure_13, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: closure_10(channel(6810).SafeAreaPaddingView, obj3), children: null };
+  const obj6 = { scrollable: true, header: closure_9(closure_13, { blockedUserCount: stageBlockedUsers.length, ignoredUserCount: stageIgnoredUsers.length }), footer: closure_10(channel(6813).SafeAreaPaddingView, obj3), children: null };
   const obj7 = { inActionSheet: true, contentContainerStyle: tmp.container, accessibilityLabel: null, sections: null, renderItem: null, itemSize: null };
-  const tmp4 = closure_10(channel(6810).SafeAreaPaddingView, obj3);
+  const tmp4 = closure_10(channel(6813).SafeAreaPaddingView, obj3);
   const intl3 = channel(1126).intl;
   obj7.accessibilityLabel = intl3.string(channel(1126).t["3VoRLH"]);
   const items2 = [items1.length];
@@ -765,7 +765,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageBlo
   obj7.itemSize = function getRowHeight() {
     return 48;
   };
-  const items3 = [closure_9(onAccept(6759), obj7), closure_9(View, { style: { height: tmp2[0] } })];
+  const items3 = [closure_9(onAccept(6760), obj7), closure_9(View, { style: { height: tmp2[0] } })];
   obj6.children = items3;
-  return closure_10(channel(6836).BottomSheet, obj6);
+  return closure_10(channel(6839).BottomSheet, obj6);
 });

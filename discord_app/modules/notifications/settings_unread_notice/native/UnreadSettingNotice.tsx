@@ -1,9 +1,9 @@
-// === Module 10440: UnreadSettingNotice ===
+// === Module 10473: UnreadSettingNotice ===
 
-// Module 10440 (UnreadSettingNotice)
+// Module 10473 (UnreadSettingNotice)
 import nativeDefault from "native" /* 587 */;
-import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10441 */;
-import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 10442 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10474 */;
+import updateChannelUnreadSettingsDefault from "updateChannelUnreadSettings" /* 10475 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 let closure_4 = fn(1095).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = { display: "flex", flexDirection: "row", paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSe
     const obj3 = { variant: "text-md/semibold", children: null };
     const intl = tmp(1126).intl;
     obj3.children = intl.string(tmp(1126).t.i4xQ5o);
-    const tmp11 = closure_5(tmp(5087).Text, obj3);
+    const tmp11 = closure_5(tmp(5088).Text, obj3);
     cResult[2] = tmp11;
     let tmp9 = tmp11;
   } else {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSe
     const obj5 = { variant: "text-xs/medium", color: "text-link", children: null };
     const intl2 = tmp(1126).intl;
     obj5.children = intl2.string(tmp(1126).t.KyUKhT);
-    const tmp19 = closure_5(tmp(5087).Text, obj5);
+    const tmp19 = closure_5(tmp(5088).Text, obj5);
     cResult[7] = tmp19;
     let tmp17 = tmp19;
   } else {

@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1252 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4926 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4965 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
@@ -37,7 +37,7 @@ function loadFromProtoSettings() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
+      DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
     }
   }
 }
@@ -55,7 +55,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
+      DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
     }
   }
 }
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "Set" };
+    obj = { theme: "backgroundColor", customTheme: "IconComponent" };
   }
   return obj;
 };
@@ -273,7 +273,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(DispatcherDefault, {
         if (clientThemeSettings != null) {
           prop = clientThemeSettings.customUserThemeSettings;
         }
-        DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
+        DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
       }
     }
   },

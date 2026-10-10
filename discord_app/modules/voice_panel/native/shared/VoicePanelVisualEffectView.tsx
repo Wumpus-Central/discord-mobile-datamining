@@ -1,13 +1,13 @@
-// === Module 17785: VoicePanelVisualEffectView ===
+// === Module 17857: VoicePanelVisualEffectView ===
 
-// Module 17785 (VoicePanelVisualEffectView)
+// Module 17857 (VoicePanelVisualEffectView)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4779 */;
-import shared from "shared" /* 4930 */;
-import native from "native" /* 8525 */;
+import useToken from "useToken" /* 4818 */;
+import shared from "shared" /* 4969 */;
+import native from "native" /* 8541 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ DynamicColorIOS: closure_4, StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { wrapper: null, border: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.wrapper = {};

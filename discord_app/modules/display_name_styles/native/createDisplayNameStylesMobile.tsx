@@ -1,9 +1,9 @@
-// === Module 7963: createDisplayNameStylesMobile ===
+// === Module 7981: createDisplayNameStylesMobile ===
 
-// Module 7963 (createDisplayNameStylesMobile)
+// Module 7981 (createDisplayNameStylesMobile)
 import DisplayNameFont from "DisplayNameFont" /* 1410 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;

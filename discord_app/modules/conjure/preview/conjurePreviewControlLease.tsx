@@ -1,6 +1,6 @@
-// === Module 11377: conjurePreviewControlLease ===
+// === Module 11419: conjurePreviewControlLease ===
 
-// Module 11377 (conjurePreviewControlLease)
+// Module 11419 (conjurePreviewControlLease)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -234,7 +234,7 @@ export const beginConjureControlOperation = function beginConjureControlOperatio
     closure_129_1 = undefined;
     closure_129_2 = undefined;
     closure_129_3 = undefined;
-    let value4 = map.get(TableRowGroup);
+    value4 = map.get(TableRowGroup);
     if (value4 == null) {
       const obj4 = { holders: 0, timers: null };
       const _Set = Set;

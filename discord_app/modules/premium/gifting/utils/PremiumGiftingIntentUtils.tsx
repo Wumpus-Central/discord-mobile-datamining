@@ -1,6 +1,6 @@
-// === Module 11328: PremiumGiftingIntentUtils ===
+// === Module 11369: PremiumGiftingIntentUtils ===
 
-// Module 11328 (PremiumGiftingIntentUtils)
+// Module 11369 (PremiumGiftingIntentUtils)
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1392 */;
 import size from "module_2" /* 2 */;

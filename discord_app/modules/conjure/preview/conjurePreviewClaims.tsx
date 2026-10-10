@@ -1,6 +1,6 @@
-// === Module 13172: conjurePreviewClaims ===
+// === Module 13222: conjurePreviewClaims ===
 
-// Module 13172 (conjurePreviewClaims)
+// Module 13222 (conjurePreviewClaims)
 import _slicedToArray from "module_32" /* 32 */;
 
 function forget(get, arg1) {
@@ -25,7 +25,7 @@ export const awaitConjurePreviewClaim = function awaitConjurePreviewClaim(projec
     clearTimeout(value.timer);
     value.resolve(null);
   }
-  const value4 = map1.get(id);
+  value4 = map1.get(id);
   if (null != value4) {
     const value5 = map1.get(id);
     if (null != value5) {
@@ -90,7 +90,7 @@ export const resolveConjurePreviewClaim = function resolveConjurePreviewClaim(pr
   } else if (!map2.has(id)) {
     const obj7 = { uploadToken: upload_token, projectId };
     closure_1 = id;
-    const value4 = map1.get(id);
+    value4 = map1.get(id);
     if (null != value4) {
       const _clearTimeout = clearTimeout;
       clearTimeout(value4.timer);

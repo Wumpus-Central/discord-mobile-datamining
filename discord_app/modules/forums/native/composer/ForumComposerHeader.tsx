@@ -1,15 +1,15 @@
-// === Module 9690: ForumComposerHeader ===
+// === Module 9719: ForumComposerHeader ===
 
-// Module 9690 (ForumComposerHeader)
+// Module 9719 (ForumComposerHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useChannelNameDefault from "useChannelName" /* 5418 */;
-import Pressables from "Pressables" /* 6191 */;
-import XSmallIcon from "XSmallIcon" /* 6212 */;
-import BookCheckIcon from "BookCheckIcon" /* 8186 */;
-import ForumIcon from "ForumIcon" /* 8199 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useChannelNameDefault from "useChannelName" /* 5421 */;
+import Pressables from "Pressables" /* 6184 */;
+import XSmallIcon from "XSmallIcon" /* 6207 */;
+import BookCheckIcon from "BookCheckIcon" /* 8202 */;
+import ForumIcon from "ForumIcon" /* 8215 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { headerBar: { height, flexDirection: "row", alignItems: "center" }, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: { marginHorizontal: nativeDefault.space.PX_16 }, headerBarSeparator: null, button: null };
   const obj4 = {};

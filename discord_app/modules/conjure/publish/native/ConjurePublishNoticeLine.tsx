@@ -1,17 +1,17 @@
-// === Module 17150: ConjurePublishNoticeLine ===
+// === Module 17220: ConjurePublishNoticeLine ===
 
-// Module 17150 (ConjurePublishNoticeLine)
+// Module 17220 (ConjurePublishNoticeLine)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 17042 */;
-import conjureReminderSlot from "conjureReminderSlot" /* 17154 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useConjurePublishAction from "useConjurePublishAction" /* 17110 */;
+import conjureReminderSlot from "conjureReminderSlot" /* 17224 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const useConjurePublishActionDefault = useConjurePublishAction;
 
-const _modDef3827 = tmp4(3827);
+const _modDef3849 = tmp4(3849);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -21,9 +21,9 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   const cResult = projectId(576).c(10);
   projectId = projectId.projectId;
   const notice = projectId.notice;
-  const context = noop.useContext(projectId(17042).ConjurePublishActionContext);
-  const tmp5 = context(17151)(projectId);
-  const tmp6 = context(17152)(projectId);
+  const context = noop.useContext(projectId(17110).ConjurePublishActionContext);
+  const tmp5 = context(17221)(projectId);
+  const tmp6 = context(17222)(projectId);
   if (cResult[0] === context) {
     if (cResult[1] === projectId) {
       let tmp7 = cResult[2];
@@ -36,7 +36,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
           }
           if (cResult[8] !== tmp8) {
             const obj2 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
-            const tmp14 = closure_5(tmp(5087).Text, obj2);
+            const tmp14 = closure_5(tmp(5088).Text, obj2);
             cResult[8] = tmp8;
             cResult[9] = tmp14;
             let tmp12 = tmp14;
@@ -50,20 +50,20 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
     const intl = tmp(1126).intl;
     const obj3 = { name: tmp5, server: null, onOpen: null };
     let str = tmp6;
-    const tmpResult = tmp(17153);
+    const tmpResult = tmp(17223);
     if (tmp6 == null) {
       str = "";
     }
     obj3.server = str;
     obj3.onOpen = tmp7;
-    const formatResult = intl.format(tmp(17153).publishNoticeMessage(notice, tmp6), obj3);
+    const formatResult = intl.format(tmp(17223).publishNoticeMessage(notice, tmp6), obj3);
     cResult[3] = tmp7;
     cResult[4] = tmp5;
     cResult[5] = notice;
     cResult[6] = tmp6;
     cResult[7] = formatResult;
     tmp8 = formatResult;
-    const publishNoticeMessageResult = tmp(17153).publishNoticeMessage(notice, tmp6);
+    const publishNoticeMessageResult = tmp(17223).publishNoticeMessage(notice, tmp6);
   }
   const fn = function o() {
     if (null != context) {
@@ -77,8 +77,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   let obj = projectId(576);
 }) : (function PublishedNoticeLine(projectId) {
   projectId = projectId.projectId;
-  const context = noop.useContext(projectId(17042).ConjurePublishActionContext);
-  const tmp3 = context(17152)(projectId);
+  const context = noop.useContext(projectId(17110).ConjurePublishActionContext);
+  const tmp3 = context(17222)(projectId);
   const items = [context, projectId];
   const callback = noop.useCallback(() => {
     if (null != context) {
@@ -86,17 +86,17 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
     }
   }, items);
   const intl = projectId(1126).intl;
-  const tmp2 = context(17151)(projectId);
+  const tmp2 = context(17221)(projectId);
   const obj2 = { name: tmp2, server: null, onOpen: null };
   let str = tmp3;
-  let obj = projectId(17153);
+  let obj = projectId(17223);
   if (tmp3 == null) {
     str = "";
   }
-  const publishNoticeMessageResult = projectId(17153).publishNoticeMessage(projectId.notice, tmp3);
+  const publishNoticeMessageResult = projectId(17223).publishNoticeMessage(projectId.notice, tmp3);
   obj2.server = str;
   obj2.onOpen = callback;
-  return closure_5(projectId(5087).Text, { variant: "text-md/normal", color: "text-default", children: intl.format(projectId(17153).publishNoticeMessage(projectId.notice, tmp3), obj2) });
+  return closure_5(projectId(5088).Text, { variant: "text-md/normal", color: "text-default", children: intl.format(projectId(17223).publishNoticeMessage(projectId.notice, tmp3), obj2) });
 });
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function OutdatedNoticeLine(projectId) {
@@ -116,7 +116,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outdate
         }
         if (cResult[4] !== tmp8) {
           const obj2 = { variant: "text-xs/normal", color: "text-muted", children: tmp8 };
-          const tmp12 = closure_5(tmp(5087).Text, obj2);
+          const tmp12 = closure_5(tmp(5088).Text, obj2);
           cResult[4] = tmp8;
           cResult[5] = tmp12;
         }
@@ -130,7 +130,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outdate
               closure_1.run("outdated_notice");
             }
       };
-      const formatResult = intl.format(_modDef3827.X8tdbS, obj3);
+      const formatResult = intl.format(_modDef3849.X8tdbS, obj3);
       cResult[1] = projectId;
       cResult[2] = tmp5;
       cResult[3] = formatResult;
@@ -165,8 +165,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Outdate
               closure_1.run("outdated_notice");
             }
       };
-      obj.children = intl.format(_modDef3827.X8tdbS, obj2);
-      let tmp8 = closure_5(projectId(5087).Text, obj);
+      obj.children = intl.format(_modDef3849.X8tdbS, obj2);
+      let tmp8 = closure_5(projectId(5088).Text, obj);
     }
     tmp8 = closure_5(closure_9, {});
   }
@@ -177,7 +177,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Updatin
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3827.lexcBN);
+    const stringResult = intl.string(_modDef3849.lexcBN);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -198,7 +198,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Updatin
   return tmp8;
 }) : (function UpdatingNoticeLine() {
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3827.lexcBN);
+  const stringResult = intl.string(_modDef3849.lexcBN);
   const conjureUpdatingDots = conjureReminderSlot.useConjureUpdatingDots();
   const obj2 = { variant: "text-xs/normal", color: "text-muted", accessibilityLabel: stringResult, children: null };
   const items = [stringResult, conjureUpdatingDots];

@@ -1,9 +1,9 @@
-// === Module 8657: StartEventUtils ===
+// === Module 8667: StartEventUtils ===
 
-// Module 8657 (StartEventUtils)
+// Module 8667 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -27,7 +27,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -240,8 +240,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "Set";
 };
-let closure_4 = fn(2068).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(2070);
+let closure_4 = fn(2069).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(2071);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);

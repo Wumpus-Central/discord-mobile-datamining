@@ -1,10 +1,10 @@
-// === Module 8447: GuildAffinitiesStore ===
+// === Module 8463: GuildAffinitiesStore ===
 
-// Module 8447 (GuildAffinitiesStore)
+// Module 8463 (GuildAffinitiesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8448 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8464 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };

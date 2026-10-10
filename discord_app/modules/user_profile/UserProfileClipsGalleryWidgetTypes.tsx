@@ -1,8 +1,8 @@
-// === Module 7322: UserProfileClipsGalleryWidgetTypes ===
+// === Module 7328: UserProfileClipsGalleryWidgetTypes ===
 
-// Module 7322 (UserProfileClipsGalleryWidgetTypes)
+// Module 7328 (UserProfileClipsGalleryWidgetTypes)
 import _modDef1355 from "module_1355" /* 1355 */;
-import WidgetType from "WidgetType" /* 7315 */;
+import WidgetType from "WidgetType" /* 7321 */;
 import size from "module_2" /* 2 */;
 
 function isUploadedWidgetClip(status) {

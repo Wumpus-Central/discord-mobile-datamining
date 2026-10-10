@@ -1,16 +1,16 @@
-// === Module 14712: RPCServer ===
+// === Module 14766: RPCServer ===
 
-// Module 14712 (RPCServer)
+// Module 14766 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import RPCErrorDefault from "RPCError" /* 10896 */;
-import transformUserDefault from "transformUser" /* 10906 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 11379 */;
-import validateScopeDefault from "validateScope" /* 14656 */;
+import RPCErrorDefault from "RPCError" /* 10936 */;
+import transformUserDefault from "transformUser" /* 10946 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 11421 */;
+import validateScopeDefault from "validateScope" /* 14710 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(5636).TransportTypes;
+const TransportTypes = fn(5639).TransportTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
@@ -172,7 +172,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -282,7 +282,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -401,7 +401,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -547,7 +547,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

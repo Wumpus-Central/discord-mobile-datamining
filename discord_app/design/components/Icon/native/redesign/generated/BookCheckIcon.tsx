@@ -1,10 +1,10 @@
-// === Module 8186: BookCheckIcon ===
+// === Module 8202: BookCheckIcon ===
 
-// Module 8186 (BookCheckIcon)
+// Module 8202 (BookCheckIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod8173 from "module_8173" /* 8173 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod8189 from "module_8189" /* 8189 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const BookCheckIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8173;
+    const tmpResult = _mod8189;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const BookCheckIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8173, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8189, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

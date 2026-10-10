@@ -1,6 +1,6 @@
-// === Module 7030: MobileWebHandoffUtils ===
+// === Module 7036: MobileWebHandoffUtils ===
 
-// Module 7030 (MobileWebHandoffUtils)
+// Module 7036 (MobileWebHandoffUtils)
 import v1 from "v1" /* 1279 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_4 = async function _createHandoffToken(key) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

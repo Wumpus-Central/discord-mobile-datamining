@@ -1,14 +1,14 @@
-// === Module 14645: activityInstanceConnectedParticipants ===
+// === Module 14699: activityInstanceConnectedParticipants ===
 
-// Module 14645 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 10906 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+// Module 14699 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 10946 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(5636);
+const Constants = fn(5639);
 let obj = { [Constants.RPC_SCOPE_CONFIG.ANY]: items };
 items = [Constants.RPC_AUTHENTICATED_SCOPE];
 const size = fn(2);
@@ -52,12 +52,12 @@ export const activityInstanceConnectedParticipantsUpdateEvent = {
         const obj = { participants: [] };
         let obj2 = obj;
       } else {
-        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4698).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
-        const obj4 = embeddedActivityLocationGuildId(4698);
-        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4698).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
+        embeddedActivityLocationGuildId = embeddedActivityLocationGuildId(4739).getEmbeddedActivityLocationGuildId(currentEmbeddedActivity.location);
+        const obj4 = embeddedActivityLocationGuildId(4739);
+        embeddedActivityLocationChannelId = embeddedActivityLocationGuildId(4739).getEmbeddedActivityLocationChannelId(currentEmbeddedActivity.location);
         obj2 = { participants: null };
         const _Array = Array;
-        const obj5 = embeddedActivityLocationGuildId(4698);
+        const obj5 = embeddedActivityLocationGuildId(4739);
         obj2.participants = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
           user = user.getUser(arg0);
           if (null != user) {

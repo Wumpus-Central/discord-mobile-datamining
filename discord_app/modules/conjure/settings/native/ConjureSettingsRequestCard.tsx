@@ -1,9 +1,9 @@
-// === Module 17182: ConjureSettingsRequestCard ===
+// === Module 17253: ConjureSettingsRequestCard ===
 
-// Module 17182 (ConjureSettingsRequestCard)
+// Module 17253 (ConjureSettingsRequestCard)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5055 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 16993 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5056 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 17061 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureSettingsSheetDefault = ConjureSettingsSheet;
@@ -11,7 +11,7 @@ const ConjureSettingsSheetDefault = ConjureSettingsSheet;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { card: { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -33,8 +33,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
         const intl = tmp(1126).intl;
-        obj2.children = intl.string(note(3827)["jZjP+I"]);
-        const tmp10 = closure_4(tmp(5087).Text, obj2);
+        obj2.children = intl.string(note(3849)["jZjP+I"]);
+        const tmp10 = closure_4(tmp(5088).Text, obj2);
         cResult[4] = tmp10;
         let tmp7 = tmp10;
       } else {
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       if (cResult[5] !== note.note) {
         if (null == note.note) {
           const intl2 = tmp(1126).intl;
-          let note2 = intl2.string(note(3827).XuOf5s);
+          let note2 = intl2.string(note(3849).XuOf5s);
           note = note.note;
           cResult[5] = note;
           cResult[6] = note2;
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       } else {
         if (cResult[7] !== cResult[6]) {
           const obj3 = { variant: "text-sm/normal", color: "text-default", children: tmp11 };
-          const tmp17 = closure_4(tmp(5087).Text, obj3);
+          const tmp17 = closure_4(tmp(5088).Text, obj3);
           cResult[7] = tmp11;
           cResult[8] = tmp17;
           let tmp15 = tmp17;
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const _Symbol2 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = tmp(1126).intl;
-          const stringResult = intl3.string(note(3827).d49riY);
+          const stringResult = intl3.string(note(3849).d49riY);
           cResult[9] = stringResult;
           let tmp18 = stringResult;
         } else {
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         }
         if (cResult[10] !== tmp5) {
           const obj4 = { variant: "secondary", size: "sm", onPress: tmp5, text: tmp18 };
-          const tmp23 = closure_4(tmp(5376).Button, obj4);
+          const tmp23 = closure_4(tmp(5379).Button, obj4);
           cResult[10] = tmp5;
           cResult[11] = tmp23;
           let tmp21 = tmp23;
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const obj5 = { style: tmp4.card, children: null };
         const items = [tmp7, tmp15, tmp21];
         obj5.children = items;
-        const tmp27 = closure_5(note(17080), obj5);
+        const tmp27 = closure_5(note(17149), obj5);
         cResult[12] = tmp4.card;
         cResult[13] = tmp15;
         cResult[14] = tmp21;
@@ -119,8 +119,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   const tmp = closure_6();
   let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = projectId(1126).intl;
-  obj2.children = intl.string(request(3827)["jZjP+I"]);
-  const items1 = [closure_4(projectId(5087).Text, obj2), , ];
+  obj2.children = intl.string(request(3849)["jZjP+I"]);
+  const items1 = [closure_4(projectId(5088).Text, obj2), , ];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -129,12 +129,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     items1[1] = closure_4(tmp9, obj3);
     const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp8(1126).intl;
-    obj4.text = intl3.string(tmp4(3827).d49riY);
-    items1[2] = closure_4(tmp8(5376).Button, obj4);
+    obj4.text = intl3.string(tmp4(3849).d49riY);
+    items1[2] = closure_4(tmp8(5379).Button, obj4);
     obj.children = items1;
     return closure_5(tmp6, obj);
   }
   const intl2 = tmp8(1126).intl;
-  note = intl2.string(tmp4(3827).XuOf5s);
-  tmp6 = request(17080);
+  note = intl2.string(tmp4(3849).XuOf5s);
+  tmp6 = request(17149);
 });

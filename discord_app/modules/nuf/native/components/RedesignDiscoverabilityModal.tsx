@@ -1,23 +1,23 @@
-// === Module 18072: RedesignDiscoverabilityModal ===
+// === Module 18146: RedesignDiscoverabilityModal ===
 
-// Module 18072 (RedesignDiscoverabilityModal)
+// Module 18146 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12362 */;
-import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12375 */;
-import NUFActionCreators from "NUFActionCreators" /* 12383 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12406 */;
+import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12419 */;
+import NUFActionCreators from "NUFActionCreators" /* 12427 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12355).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12399).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: null };
 let obj3 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(6263).NAV_BAR_HEIGHT + 32 };
+obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(6258).NAV_BAR_HEIGHT + 32 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function DiscoverabilityLandingScene(onComplete) {
@@ -202,7 +202,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Discov
       tmp15 = tmp18;
     }
     const obj3 = { onNext: tmp9, loading: false, initialName: name };
-    const tmp14 = jsx(allowPhone(12376), { onNext: tmp9, loading: false, initialName: name });
+    const tmp14 = jsx(allowPhone(12420), { onNext: tmp9, loading: false, initialName: name });
     cResult[6] = tmp9;
     cResult[7] = name;
     cResult[8] = tmp14;
@@ -244,7 +244,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Discov
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(12376), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12420), { onNext: callback, loading: false, initialName: null });
   return <View style={tmp.container}>{null}</View>;
 });
 ReactCompilerGating = fn(558);
@@ -400,7 +400,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignDisc
   }, items);
   const intl = onComplete(1126).intl;
   obj.headerBackTitle = intl.string(onComplete(1126).t["13/7kX"]);
-  return jsx(onComplete(6686).Navigator, { headerStyle: closure_8().header, screens: null, initialRouteName: onComplete(1105).DiscoverabilityScenes.LANDING, headerBackTitle: null });
+  return jsx(onComplete(6687).Navigator, { headerStyle: closure_8().header, screens: null, initialRouteName: onComplete(1105).DiscoverabilityScenes.LANDING, headerBackTitle: null });
 });
 tmp2.modalConfig = { animation: fn(1085).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);

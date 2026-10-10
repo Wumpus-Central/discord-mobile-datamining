@@ -1,27 +1,27 @@
-// === Module 17042: useConjurePublishAction ===
+// === Module 17110: useConjurePublishAction ===
 
-// Module 17042 (useConjurePublishAction)
+// Module 17110 (useConjurePublishAction)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6849 */;
-import ConjureUtils from "ConjureUtils" /* 6939 */;
-import ConjureTypes from "ConjureTypes" /* 6940 */;
-import UserActionCreators from "UserActionCreators" /* 8289 */;
-import conjureAppInServer from "conjureAppInServer" /* 11367 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 11369 */;
-import openConjurePublishDestination from "openConjurePublishDestination" /* 17043 */;
-import conjurePublishFailureMessageDefault from "conjurePublishFailureMessage" /* 17044 */;
-import conjurePublishAction2 from "conjurePublishAction" /* 17045 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6852 */;
+import ConjureUtils from "ConjureUtils" /* 6945 */;
+import ConjureTypes from "ConjureTypes" /* 6946 */;
+import UserActionCreators from "UserActionCreators" /* 8305 */;
+import conjureAppInServer from "conjureAppInServer" /* 11409 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 11411 */;
+import openConjurePublishDestination from "openConjurePublishDestination" /* 17111 */;
+import conjurePublishFailureMessageDefault from "conjurePublishFailureMessage" /* 17112 */;
+import conjurePublishAction2 from "conjurePublishAction" /* 17113 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildChannelStore from "GuildChannelStore" /* 4707 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
 
 const require = globalThis.__r;
 
@@ -122,7 +122,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -168,7 +168,7 @@ let closure_20 = async function _requestConjureInstallConsent(arg0) {
             }
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -298,7 +298,7 @@ function startPublish(project, navigatesOnPublish, platform) {
   }, () => {
 
   });
-  nextPromise.then(() => {
+  nextPromise.then((channel_skipped) => {
     if (null != project.guildId) {
       const obj = UserActionCreators;
       const profile = obj.fetchProfile(conjureAppInServer.conjureProductionBotUserId(project), { withMutualGuilds: true });
@@ -306,7 +306,11 @@ function startPublish(project, navigatesOnPublish, platform) {
 
       });
     }
-    if (null != destination) {
+    if (true === channel_skipped.channel_skipped) {
+      const obj4 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false };
+      DispatcherDefault.dispatch(obj4);
+    }
+    if (tmp9) {
       const nextPromise = promise.then(() => {
         let tmp;
         if ("channel" === destination) {
@@ -392,13 +396,14 @@ function startPublish(project, navigatesOnPublish, platform) {
         return closure_0(platform[14]).openConjurePublishDestination(destination, { applicationId: tmp.project.application_id, guildId: tmp.guildId, appChannelId: tmp.appChannelId, openProfile: closure_1_2.openProfile, openAutomodSettings: closure_1_2.openAutomodSettings });
       });
     }
+    tmp9 = null != destination && true !== channel_skipped.channel_skipped;
   }, (message) => {
     DispatcherDefault.dispatch({ type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false });
     if (message instanceof Error) {
       message = message.message;
     } else {
       const intl = util.intl;
-      message = intl.string(_modDef3827.gMWZeG);
+      message = intl.string(_modDef3849.gMWZeG);
     }
     platform.showError(message);
     const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false };
@@ -430,7 +435,7 @@ let closure_22 = async function _waitForAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -512,7 +517,7 @@ let closure_25 = async function _runConjurePublishAction(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -546,7 +551,7 @@ let closure_25 = async function _runConjurePublishAction(arg0) {
                     const result = MISSING_MANAGE_CHANNELS(confirmReason[25]);
                     const obj5 = { entryPoint: tmp23, publishState: null, surface: null, installScope: null, action: null };
                     const status2 = showPublishBlockedResult1.input.status;
-                    state = undefined;
+                    let state;
                     if (status2 != null) {
                       state = status2.state;
                     }
@@ -654,7 +659,7 @@ let closure_27 = async function _continuePublish(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -687,13 +692,13 @@ let closure_27 = async function _continuePublish(arg0, arg1, arg2) {
                   set.add(closure_0);
                   c9 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f155576 = requestConsent;
+                  f156025 = requestConsent;
                   if (requestConsent == null) {
-                    f155576 = (arg0) => closure_2_19(arg0, closure_1_3);
+                    f156025 = (arg0) => closure_2_19(arg0, closure_1_3);
                   }
                   c10 = 2;
                   c11 = 1;
-                  const obj4 = { value: f155576(closure_0), done: false };
+                  const obj4 = { value: f156025(closure_0), done: false };
                   return obj4;
                 }
               }
@@ -718,7 +723,7 @@ let closure_27 = async function _continuePublish(arg0, arg1, arg2) {
           closure_135_23.delete(closure_134_0);
           if (closure_135_13.isProjectPublishing(closure_134_0)) {
             c11 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             closure_134_4 = closure_135_17(closure_134_0, closure_134_3);
             let integrationStatus;
@@ -759,7 +764,7 @@ let closure_27 = async function _continuePublish(arg0, arg1, arg2) {
           }
         }
         c11 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp48) {
         closure_8 = tmp48;
         if (tmp4 === c9) {
@@ -772,9 +777,9 @@ let closure_27 = async function _continuePublish(arg0, arg1, arg2) {
     }
   })();
 };
-const ConjureConnectionStore = fn(13164);
+const ConjureConnectionStore = fn(13213);
 ({ draftPatchNotes: closure_11, publishProject: closure_12 } = ConjureConnectionStore);
-const canPublishProject = fn(10617).canPublishProject;
+const canPublishProject = fn(10651).canPublishProject;
 const Permissions = fn(1085).Permissions;
 let context = noop.createContext(null);
 const set = new Set();
@@ -951,7 +956,7 @@ export default function useConjurePublishAction(arg0, arg1) {
     }
     return tmp;
   }, items2);
-  state = undefined;
+  let state;
   if (memo != null) {
     const status2 = memo.status;
     if (status2 != null) {

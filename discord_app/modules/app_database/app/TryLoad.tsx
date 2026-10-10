@@ -1,6 +1,6 @@
-// === Module 2110: TryLoad ===
+// === Module 2111: TryLoad ===
 
-// Module 2110 (TryLoad)
+// Module 2111 (TryLoad)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -16,7 +16,7 @@ let closure_4 = async function _tryLoadAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 12640: hideLaunchPad ===
+// === Module 12687: hideLaunchPad ===
 
-// Module 12640 (hideLaunchPad)
+// Module 12687 (hideLaunchPad)
 import Constants from "Constants" /* 1085 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import size from "module_2" /* 2 */;

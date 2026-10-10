@@ -1,14 +1,14 @@
-// === Module 10754: getCanJoin ===
+// === Module 10789: getCanJoin ===
 
-// Module 10754 (getCanJoin)
+// Module 10789 (getCanJoin)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import hasFlagDefault from "hasFlag" /* 7006 */;
-import isInviteActiveDefault from "isInviteActive" /* 10755 */;
-import getPartySize from "getPartySize" /* 10756 */;
-import isPartyFull from "isPartyFull" /* 10758 */;
-import getIsInParty from "getIsInParty" /* 10759 */;
-import getIsAskToJoin from "getIsAskToJoin" /* 10760 */;
-import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 10761 */;
+import hasFlagDefault from "hasFlag" /* 7012 */;
+import isInviteActiveDefault from "isInviteActive" /* 10790 */;
+import getPartySize from "getPartySize" /* 10791 */;
+import isPartyFull from "isPartyFull" /* 10793 */;
+import getIsInParty from "getIsInParty" /* 10794 */;
+import getIsAskToJoin from "getIsAskToJoin" /* 10795 */;
+import getRemoteJoinableActivityPlatform from "getRemoteJoinableActivityPlatform" /* 10796 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -71,7 +71,7 @@ export const getCanJoin = function getCanJoin(currentUserId) {
     return { canJoin: false, remoteJoinPlatform: null };
   }
 };
-export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
+export const getCanSync = function getCanSync(activity, tmp9Result, arg2, id) {
   let tmp = null != activity;
   if (tmp) {
     let tmp6 = isInviteActiveDefault(activity, arg2, id.id);
@@ -80,8 +80,8 @@ export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
       if (tmp8) {
         let isPlatformEmbedded = PlatformUtils.isPlatformEmbedded;
         if (isPlatformEmbedded) {
-          isPlatformEmbedded = !getIsInParty.getIsInParty(tmp8Result, activity);
-          const tmp9Result = getIsInParty;
+          tmp9Result = getIsInParty;
+          isPlatformEmbedded = !tmp9Result.getIsInParty(tmp9Result, activity);
         }
         tmp8 = isPlatformEmbedded;
       }

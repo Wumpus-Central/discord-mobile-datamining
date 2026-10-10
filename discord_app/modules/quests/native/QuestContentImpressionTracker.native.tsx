@@ -1,12 +1,12 @@
-// === Module 12933: QuestContentImpressionTracker ===
+// === Module 12981: QuestContentImpressionTracker ===
 
-// Module 12933 (QuestContentImpressionTracker)
+// Module 12981 (QuestContentImpressionTracker)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import usePreviousDefault from "usePrevious" /* 5929 */;
-import AdCreativeType from "AdCreativeType" /* 5986 */;
-import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 9174 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 12934 */;
+import usePreviousDefault from "usePrevious" /* 5922 */;
+import AdCreativeType from "AdCreativeType" /* 5979 */;
+import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 9201 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 12982 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
@@ -89,7 +89,7 @@ function initHandlers(arg0) {
     }
   }
 }
-let closure_6 = fn(7414).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_6 = fn(9176).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const AppStates = fn(1085).AppStates;
 const createElement = fn(19).createElement;
 const jsx = fn(21).jsx;
@@ -116,8 +116,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
     tmp6 = cResult[3];
   }
   const obj = adContentIds(576);
-  const tmpResult = adContentIds(8608);
-  const tmp9 = _slicedToArray(adContentIds(8608).useRecyclingState(false, tmp6), 2)[1];
+  const tmpResult = adContentIds(8624);
+  const tmp9 = _slicedToArray(adContentIds(8624).useRecyclingState(false, tmp6), 2)[1];
   dependencyMap = tmp9;
   if (cResult[4] === adContentIds) {
     if (cResult[5] === tmp9) {
@@ -129,7 +129,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
       if (overrideVisibility == null) {
         overrideVisibility = tmp8;
       }
-      const tmp16 = overrideVisibility !== visibilityRef(5929)(overrideVisibility);
+      const tmp16 = overrideVisibility !== visibilityRef(5922)(overrideVisibility);
       if (cResult[9] === overrideVisibility) {
         if (cResult[10] === tmp16) {
           let tmp18 = cResult[11];
@@ -172,14 +172,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
   cResult[8] = items1;
   tmp11 = items1;
   tmp10 = fn;
-  const tmp7 = _slicedToArray(adContentIds(8608).useRecyclingState(false, tmp6), 2);
+  const tmp7 = _slicedToArray(adContentIds(8624).useRecyclingState(false, tmp6), 2);
 }) : (function useVisibilityData(adContentIds) {
   adContentIds = adContentIds.adContentIds;
   const visibilityRef = adContentIds.visibilityRef;
   let overrideVisibility = adContentIds.overrideVisibility;
   const joined = adContentIds.join("_");
   const items = [joined];
-  const tmp3 = _slicedToArray(adContentIds(8608).useRecyclingState(false, items), 2);
+  const tmp3 = _slicedToArray(adContentIds(8624).useRecyclingState(false, items), 2);
   dependencyMap = tmp4;
   const items1 = [adContentIds, tmp3[1], visibilityRef];
   const effect = noop.useEffect(() => {
@@ -206,8 +206,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
   if (overrideVisibility == null) {
     overrideVisibility = tmp3[0];
   }
-  const obj = adContentIds(8608);
-  return { visible: overrideVisibility, visibleChanged: overrideVisibility !== visibilityRef(5929)(overrideVisibility) };
+  const obj = adContentIds(8624);
+  return { visible: overrideVisibility, visibleChanged: overrideVisibility !== visibilityRef(5922)(overrideVisibility) };
 });
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function AdContentImpressionTrackerBaseNative(skipRemountKey) {

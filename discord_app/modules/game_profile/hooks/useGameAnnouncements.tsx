@@ -1,9 +1,9 @@
-// === Module 8943: useGameAnnouncements ===
+// === Module 8962: useGameAnnouncements ===
 
-// Module 8943 (useGameAnnouncements)
+// Module 8962 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8944 */;
-import GameProfileStore from "GameProfileStore" /* 8867 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8963 */;
+import GameProfileStore from "GameProfileStore" /* 8886 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

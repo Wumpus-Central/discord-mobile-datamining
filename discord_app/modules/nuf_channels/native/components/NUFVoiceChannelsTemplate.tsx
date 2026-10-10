@@ -1,11 +1,11 @@
-// === Module 13518: NUFVoiceChannelsTemplate ===
+// === Module 13569: NUFVoiceChannelsTemplate ===
 
-// Module 13518 (NUFVoiceChannelsTemplate)
+// Module 13569 (NUFVoiceChannelsTemplate)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5886 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13511 */;
-import NUFTemplateDefault from "NUFTemplate" /* 13519 */;
-import _modDef13520 from "module_13520" /* 13520 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13562 */;
+import NUFTemplateDefault from "NUFTemplate" /* 13570 */;
+import _modDef13571 from "module_13571" /* 13571 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoice
     let obj2 = {
       title: tmp4,
       description: tmp5,
-      imageSrc: _modDef13520,
+      imageSrc: _modDef13571,
       CTALabel: tmp8,
       onCTAPress() {
           const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoice
     const tmp14 = jsx(NUFTemplateDefault, {
       title: tmp4,
       description: tmp5,
-      imageSrc: _modDef13520,
+      imageSrc: _modDef13571,
       CTALabel: tmp8,
       onCTAPress() {
           const result = NUFChannelsManagerDefault.handleVoiceChannelsOnboard();
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NUFVoice
   obj.title = intl.string(channel(1126).t.w5HAll);
   const intl2 = channel(1126).intl;
   obj.description = intl2.string(channel(1126).t.Ww4hhq);
-  obj.imageSrc = _modDef13520;
+  obj.imageSrc = _modDef13571;
   const intl3 = channel(1126).intl;
   obj.CTALabel = intl3.string(channel(1126).t.eIi3Om);
   obj.onCTAPress = function onCTAPress() {

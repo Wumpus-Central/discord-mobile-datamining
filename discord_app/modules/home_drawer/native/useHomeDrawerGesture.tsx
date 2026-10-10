@@ -1,21 +1,21 @@
-// === Module 16367: useHomeDrawerGesture ===
+// === Module 16434: useHomeDrawerGesture ===
 
-// Module 16367 (useHomeDrawerGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
-import HapticUtils from "HapticUtils" /* 5056 */;
-import timing from "timing" /* 5092 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5094 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16363 */;
+// Module 16434 (useHomeDrawerGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
+import HapticUtils from "HapticUtils" /* 5057 */;
+import timing from "timing" /* 5093 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5095 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16430 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16362 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16368 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16429 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16435 */;
 
 require = fn;
-const computeMaxX = fn(16362).computeMaxX;
+const computeMaxX = fn(16429).computeMaxX;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const LaunchPadTypes = fn(10625).LaunchPadTypes;
+const LaunchPadTypes = fn(10659).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;
@@ -67,17 +67,17 @@ let closure_57 = { code: "function useHomeDrawerGestureTsx39(event_0,manager){co
 let closure_58 = { code: "function useHomeDrawerGestureTsx40(event){const{isPanelTouchActive,dragOffsetX,activationOffsetX,didSettle,didSnapThisGesture,snappedByDrag,hasThrown,flingThrow,withTiming,HOME_DRAWER_FLING_RETURN_TIMING,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);dragOffsetX.set(0);activationOffsetX.set(0);didSettle.set(false);didSnapThisGesture.set(false);snappedByDrag.set(false);hasThrown.set(false);flingThrow.set(withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING));gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 fn(558);
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(6333).Gesture;
+let Gesture = fn(6334).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(6761);
+let ReanimatedHelperTypes = fn(6762);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(6761);
+ReanimatedHelperTypes = fn(6762);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(6761);
+ReanimatedHelperTypes = fn(6762);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(6761);
+ReanimatedHelperTypes = fn(6762);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 let ReactCompilerGating = fn(558);
@@ -1306,7 +1306,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   closure_25 = tmp22[1];
   const effect = obj11.useEffect(() => {
     const rootNavigationRef = landOnHome(snapX[19]).getRootNavigationRef();
-    state = rootNavigationRef;
+    let state = rootNavigationRef;
     if (null != rootNavigationRef) {
       state = undefined;
       if (rootNavigationRef != null) {
@@ -1372,7 +1372,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     enablePeekHint = config.enablePeekHint;
   }
   const homeDrawerPeekHint = landOnHome(snapX[20]).useHomeDrawerPeekHint(enablePeekHint, sharedValue8);
-  state = navigation.getState();
+  let state = navigation.getState();
   const tmpResult11 = landOnHome(snapX[20]);
   let tmp29;
   if (state != null) {
@@ -1428,7 +1428,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   const items2 = [navigation, setPanelX, enableHome];
   const effect3 = obj11.useEffect(() => {
     function handleStateChange(data) {
-      state = data.data.state;
+      const state = data.data.state;
       let tmp;
       if (state != null) {
         const routes = state.routes;
@@ -1469,7 +1469,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     navigation.addListener("state", handleStateChange);
     return () => {
       navigation.removeListener("state", handleStateChange);
-      state = HomeDrawerSubtitleStore.getState();
+      const state = HomeDrawerSubtitleStore.getState();
       state.stopTimer();
     };
   }, items2);
@@ -1484,7 +1484,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       const result = panelX.set(num2);
       const result1 = isOpenTarget.set(true === drawerOpen);
       if (drawerOpen) {
-        state = HomeDrawerSubtitleStore.getState();
+        const state = HomeDrawerSubtitleStore.getState();
         state.startTimer();
       }
       ref.current = true;
@@ -1849,7 +1849,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
         }
         if (typeof shouldOpenFromPosition === "function") {
           if (typeof visualPanelX === "function") {
-            const value4 = panelX.get();
+            value4 = panelX.get();
             let num5 = 0;
             if (derivedValue.get()) {
               num5 = c13;

@@ -1,8 +1,8 @@
-// === Module 6727: KeyboardAwareView ===
+// === Module 6728: KeyboardAwareView ===
 
-// Module 6727 (KeyboardAwareView)
-import useKeyboardDuration from "useKeyboardDuration" /* 6664 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6665 */;
+// Module 6728 (KeyboardAwareView)
+import useKeyboardDuration from "useKeyboardDuration" /* 6665 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1499 */;

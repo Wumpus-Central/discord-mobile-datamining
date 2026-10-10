@@ -1,16 +1,16 @@
-// === Module 6812: GuildOnboardingPromptOptionButton ===
+// === Module 6815: GuildOnboardingPromptOptionButton ===
 
-// Module 6812 (GuildOnboardingPromptOptionButton)
+// Module 6815 (GuildOnboardingPromptOptionButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import timing from "timing" /* 5092 */;
-import spring from "spring" /* 5375 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import timing from "timing" /* 5093 */;
+import spring from "spring" /* 5378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
 
 require = fn;
 const View = fn(17).View;
@@ -18,9 +18,9 @@ const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let obj = { duration: 200, easing: null };
-let Easing = fn(4811).Easing;
-obj.easing = Easing.out(fn(4811).Easing.ease);
-const createStyles = fn(5091);
+let Easing = fn(4850).Easing;
+obj.easing = Easing.out(fn(4850).Easing.ease);
+const createStyles = fn(5092);
 let obj3 = { container: { borderRadius: nativeDefault.radii.md, borderWidth: 2, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE, marginBottom: 8 }, optionButton: { paddingVertical: 12, paddingHorizontal: 16, display: "flex", flexDirection: "row", alignItems: "center" }, optionTextEmoji: { fontSize: 24, lineHeight: 24, marginRight: 12, paddingTop: 5 }, optionImageEmoji: { height: 24, width: 24, marginRight: 12 }, optionText: { flexShrink: 1 }, checkIcon: null, newBadgeWrapper: null, newBadge: null, roleCount: null };
 let size = { position: "absolute", top: -6, right: -6, width: 20, height: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" };
 obj3.checkIcon = size;
@@ -1334,12 +1334,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       return obj7;
     }
   }
-  let obj3 = option(4811);
-  S.__closure = { selected, withTiming: option(5092).withTiming, Easing: option(4811).Easing, useReducedMotion: stateFromStores1, withSequence: option(4811).withSequence, withSpring: option(5375).withSpring };
+  let obj3 = option(4850);
+  S.__closure = { selected, withTiming: option(5093).withTiming, Easing: option(4850).Easing, useReducedMotion: stateFromStores1, withSequence: option(4850).withSequence, withSpring: option(5378).withSpring };
   S.__workletHash = 8205438722579;
   S.__initData = derivedValue1;
   const animatedStyle = obj3.useAnimatedStyle(S);
-  const tmp8 = selected(6813)(option.guildId);
+  const tmp8 = selected(6816)(option.guildId);
   closure_5 = tmp8;
   num = 0;
   if (null != tmp8) {
@@ -1389,7 +1389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       ref.current = false;
     }
   }, items4);
-  let obj4 = { selected, withTiming: option(5092).withTiming, Easing: option(4811).Easing, useReducedMotion: stateFromStores1, withSequence: option(4811).withSequence, withSpring: option(5375).withSpring };
+  let obj4 = { selected, withTiming: option(5093).withTiming, Easing: option(4850).Easing, useReducedMotion: stateFromStores1, withSequence: option(4850).withSequence, withSpring: option(5378).withSpring };
   let obj5 = stateFromStores1;
   class V {
     constructor() {
@@ -1434,13 +1434,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       return obj8;
     }
   }
-  let tmp2Result = option(4811);
-  V.__closure = { showMemberCount, withDelay: option(4811).withDelay, withTiming: option(5092).withTiming, Easing: option(4811).Easing, useReducedMotion: stateFromStores1 };
+  let tmp2Result = option(4850);
+  V.__closure = { showMemberCount, withDelay: option(4850).withDelay, withTiming: option(5093).withTiming, Easing: option(4850).Easing, useReducedMotion: stateFromStores1 };
   V.__workletHash = 10755800239871;
   V.__initData = __initData3;
   const animatedStyle1 = tmp2Result.useAnimatedStyle(V);
-  const obj6 = { showMemberCount, withDelay: option(4811).withDelay, withTiming: option(5092).withTiming, Easing: option(4811).Easing, useReducedMotion: stateFromStores1 };
-  sharedValue = option(4811).useSharedValue(1);
+  const obj6 = { showMemberCount, withDelay: option(4850).withDelay, withTiming: option(5093).withTiming, Easing: option(4850).Easing, useReducedMotion: stateFromStores1 };
+  sharedValue = option(4850).useSharedValue(1);
   isUnseen = canBeNew;
   if (canBeNew) {
     isUnseen = option.isUnseen;
@@ -1508,15 +1508,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       title = option.title;
     }
   }, items5);
-  const tmp2Result11 = option(4811);
-  token = option(4779).useToken(tmp7(587).colors.BORDER_SUBTLE);
-  const tmp2Result12 = option(4779);
-  token1 = option(4779).useToken(tmp7(587).colors.BACKGROUND_BRAND);
-  const tmp2Result13 = option(4779);
-  token2 = option(4779).useToken(tmp7(587).colors.BORDER_STRONG);
-  const tmp2Result14 = option(4779);
-  token3 = option(4779).useToken(tmp7(587).colors.BACKGROUND_BASE_LOWEST);
-  const tmp2Result15 = option(4779);
+  const tmp2Result11 = option(4850);
+  token = option(4818).useToken(tmp7(587).colors.BORDER_SUBTLE);
+  const tmp2Result12 = option(4818);
+  token1 = option(4818).useToken(tmp7(587).colors.BACKGROUND_BRAND);
+  const tmp2Result13 = option(4818);
+  token2 = option(4818).useToken(tmp7(587).colors.BORDER_STRONG);
+  const tmp2Result14 = option(4818);
+  token3 = option(4818).useToken(tmp7(587).colors.BACKGROUND_BASE_LOWEST);
+  const tmp2Result15 = option(4818);
   const fn = function q() {
     obj = timing;
     num = 0;
@@ -1525,12 +1525,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     }
     return obj.withTiming(num, obj);
   };
-  const tmp2Result16 = option(4811);
-  fn.__closure = { withTiming: option(5092).withTiming, selected, SELECTION_TIMING: sharedValue };
+  const tmp2Result16 = option(4850);
+  fn.__closure = { withTiming: option(5093).withTiming, selected, SELECTION_TIMING: sharedValue };
   fn.__workletHash = 12520862943769;
   fn.__initData = __initData4;
   derivedValue = tmp2Result16.useDerivedValue(fn);
-  const obj7 = { withTiming: option(5092).withTiming, selected, SELECTION_TIMING: sharedValue };
+  const obj7 = { withTiming: option(5093).withTiming, selected, SELECTION_TIMING: sharedValue };
   class W {
     constructor() {
       obj = closure_0(closure_2[13]);
@@ -1541,12 +1541,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       return obj.withTiming(num, closure_11);
     }
   }
-  const tmp2Result17 = option(4811);
-  W.__closure = { withTiming: option(5092).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
+  const tmp2Result17 = option(4850);
+  W.__closure = { withTiming: option(5093).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
   W.__workletHash = 6695066984001;
   W.__initData = __initData5;
   derivedValue1 = tmp2Result17.useDerivedValue(W);
-  const obj8 = { withTiming: option(5092).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
+  const obj8 = { withTiming: option(5093).withTiming, isNew: isUnseen, SELECTION_TIMING: sharedValue };
   class X {
     constructor() {
       obj = closure_0(closure_2[7]);
@@ -1567,12 +1567,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       return obj1;
     }
   }
-  const tmp2Result18 = option(4811);
-  X.__closure = { interpolateColor: option(4811).interpolateColor, newProgress: derivedValue1, unselectedBorderColor: token, newBorderColor: token1, selectedProgress: derivedValue, selectedBorderColor: token2, selectedBackgroundColor: token3 };
+  const tmp2Result18 = option(4850);
+  X.__closure = { interpolateColor: option(4850).interpolateColor, newProgress: derivedValue1, unselectedBorderColor: token, newBorderColor: token1, selectedProgress: derivedValue, selectedBorderColor: token2, selectedBackgroundColor: token3 };
   X.__workletHash = 11103701630825;
   X.__initData = __initData6;
   const animatedStyle2 = tmp2Result18.useAnimatedStyle(X);
-  const obj9 = { interpolateColor: option(4811).interpolateColor, newProgress: derivedValue1, unselectedBorderColor: token, newBorderColor: token1, selectedProgress: derivedValue, selectedBorderColor: token2, selectedBackgroundColor: token3 };
+  const obj9 = { interpolateColor: option(4850).interpolateColor, newProgress: derivedValue1, unselectedBorderColor: token, newBorderColor: token1, selectedProgress: derivedValue, selectedBorderColor: token2, selectedBackgroundColor: token3 };
   const fn2 = function z() {
     if (stateFromStores1) {
       obj = {};
@@ -1587,9 +1587,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
   fn2.__closure = { useReducedMotion: stateFromStores1, scale_0: sharedValue };
   fn2.__workletHash = 15537308682382;
   fn2.__initData = __initData7;
-  const animatedStyle3 = option(4811).useAnimatedStyle(fn2);
-  const tmp2Result19 = option(4811);
-  const checkboxA11yNative = option(4793).useCheckboxA11yNative({ checked: selected });
+  const animatedStyle3 = option(4850).useAnimatedStyle(fn2);
+  const tmp2Result19 = option(4850);
+  const checkboxA11yNative = option(4832).useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   const obj10 = { style: null, children: null };
   const items6 = [tmp.container, animatedStyle3, animatedStyle2];
@@ -1664,23 +1664,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
       str = "";
     }
     obj13.name = str;
-    obj12.children = closure_9(tmp7(6816), obj13);
+    obj12.children = closure_9(tmp7(6819), obj13);
     tmp38Result = tmp38(closure_5, obj12);
-    const tmp7Result = tmp7(6816);
+    const tmp7Result = tmp7(6819);
   }
   const items7 = [tmp38Result, ];
   const obj15 = { style: tmp.optionText, children: null };
-  const items8 = [closure_9(option(5087).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title }), ];
+  const items8 = [closure_9(option(5088).Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title }), ];
   let tmp44Result = null != option.description && option.description.length > 0;
   if (tmp44Result) {
     const obj17 = { variant: "text-xs/medium", color: "text-default", children: option.description };
-    tmp44Result = tmp44(tmp2(5087).Text, obj17);
+    tmp44Result = tmp44(tmp2(5088).Text, obj17);
   }
   items8[1] = tmp44Result;
   obj15.children = items8;
   items7[1] = ref(closure_5, obj15);
   obj11.children = items7;
-  const items9 = [ref(option(6191).PressableOpacity, obj11), , , ];
+  const items9 = [ref(option(6184).PressableOpacity, obj11), , , ];
   let tmp44Result2 = null;
   if (num > 0) {
     const obj18 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: null, children: null };
@@ -1690,17 +1690,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
     let intl = tmp2(1126).intl;
     const obj20 = { memberCount: num };
     obj19.children = intl.format(tmp2(1126).t.EgKsZA, obj20);
-    obj18.children = tmp44(tmp2(5087).Text, obj19);
-    tmp44Result2 = tmp44(tmp7(4811).View, obj18);
+    obj18.children = tmp44(tmp2(5088).Text, obj19);
+    tmp44Result2 = tmp44(tmp7(4850).View, obj18);
   }
   items9[1] = tmp44Result2;
   const obj21 = { style: null, children: null };
   const items11 = [tmp.checkIcon, animatedStyle];
   obj21.style = items11;
   const obj16 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: option.title };
-  const tmp2Result20 = option(4793);
-  obj21.children = closure_9(option(6819).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
-  items9[2] = closure_9(selected(4811).View, obj21);
+  const tmp2Result20 = option(4832);
+  obj21.children = closure_9(option(6822).CheckmarkSmallIcon, { size: "xs", color: selected(587).colors.WHITE });
+  items9[2] = closure_9(selected(4850).View, obj21);
   if (canBeNew) {
     canBeNew = !selected;
   }
@@ -1716,5 +1716,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PromptOp
   }
   items9[3] = canBeNew;
   obj10.children = items9;
-  return ref(selected(4811).View, obj10);
+  return ref(selected(4850).View, obj10);
 });

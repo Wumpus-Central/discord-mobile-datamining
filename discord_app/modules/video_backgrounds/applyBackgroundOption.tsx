@@ -1,16 +1,16 @@
-// === Module 5252: applyBackgroundOption ===
+// === Module 5253: applyBackgroundOption ===
 
-// Module 5252 (applyBackgroundOption)
+// Module 5253 (applyBackgroundOption)
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5136 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5255 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5257 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5260 */;
-import getFilterImageDefault from "getFilterImage" /* 5265 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5266 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5137 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5256 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5258 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5261 */;
+import getFilterImageDefault from "getFilterImage" /* 5266 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5267 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1390 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5253 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 5254 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -54,7 +54,7 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -79,11 +79,11 @@ let closure_12 = async function _applyBackgroundOption(arg0, arg1, arg2) {
             if (null == asset) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.NONE);
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else if (asset === closure_2_7) {
               applyBackgroundMediaFilterSettings(closure_0, closure_1, BaseConnectionEvent.FilterSettingsGraph.BACKGROUND_BLUR);
               c9 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else {
               if (typeof asset !== "string") {
                 if (typeof asset !== "number") {
@@ -252,7 +252,7 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(5254);
+const VideoBackgroundConstants = fn(5255);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
 const NOOP = fn(1085).NOOP;
 const size = fn(2);

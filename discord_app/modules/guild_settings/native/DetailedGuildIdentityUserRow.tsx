@@ -1,15 +1,15 @@
-// === Module 10266: DetailedGuildIdentityUserRow ===
+// === Module 10299: DetailedGuildIdentityUserRow ===
 
-// Module 10266 (DetailedGuildIdentityUserRow)
+// Module 10299 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
-import TableRow from "TableRow" /* 6186 */;
-import Form from "Form" /* 8563 */;
-import DiscordTagDefault from "DiscordTag" /* 8749 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
+import TableRow from "TableRow" /* 6179 */;
+import Form from "Form" /* 8579 */;
+import DiscordTagDefault from "DiscordTag" /* 8765 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { mainIdentity: { flexDirection: "row", alignItems: "center" }, primaryAvatar: { marginRight: nativeDefault.space.PX_4 }, mainTag: null };
 let obj3 = { marginRight: nativeDefault.space.PX_4 };
 obj.mainTag = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontSize: 12 };
@@ -215,7 +215,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
               const obj2 = { accessibilityLabel, arrow, disabled, end, icon: tmp7, label: tmp10, onPress, start, subLabel, trailing, accessibilityRole, accessibilityState };
-              const tmp16 = closure_5(FormRow(6186).TableRow, obj2);
+              const tmp16 = closure_5(FormRow(6179).TableRow, obj2);
               cResult[29] = accessibilityLabel;
               cResult[30] = accessibilityRole;
               cResult[31] = accessibilityState;
@@ -277,7 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
             }
-            FormRow = FormRow(8563).FormRow;
+            FormRow = FormRow(8579).FormRow;
             const obj5 = { accessibilityLabel, disabled, leading: tmp17, label: tmp20, onPress, subLabel, trailing, accessibilityRole, accessibilityState };
             tmp = closure_5(FormRow, obj5);
             cResult[11] = accessibilityLabel;

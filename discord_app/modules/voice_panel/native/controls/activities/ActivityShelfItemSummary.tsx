@@ -1,15 +1,15 @@
-// === Module 17750: ActivityShelfItemSummary ===
+// === Module 17822: ActivityShelfItemSummary ===
 
-// Module 17750 (ActivityShelfItemSummary)
+// Module 17822 (ActivityShelfItemSummary)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import ButtonPill from "ButtonPill" /* 5386 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5392 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10688 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17751 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import ButtonPill from "ButtonPill" /* 5389 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5395 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10723 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,10 +17,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
-const ColorUtils = fn(4928);
+const ColorUtils = fn(4967);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

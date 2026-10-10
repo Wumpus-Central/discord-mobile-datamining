@@ -1,6 +1,6 @@
-// === Module 11116: StageChannelBackground ===
+// === Module 11156: StageChannelBackground ===
 
-// Module 11116 (StageChannelBackground)
+// Module 11156 (StageChannelBackground)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

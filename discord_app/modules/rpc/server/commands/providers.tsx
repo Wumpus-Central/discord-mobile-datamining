@@ -1,12 +1,12 @@
-// === Module 14676: providers ===
+// === Module 14730: providers ===
 
-// Module 14676 (providers)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10899 */;
+// Module 14730 (providers)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 10939 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
 
 const require = fn;
-let Constants = fn(5636);
+let Constants = fn(5639);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
 ({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
@@ -44,7 +44,7 @@ obj2 = {
       throw tmp4Result1;
     } else if (provider !== constants.AMAZON_MUSIC) {
       let obj5 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp22 = new tmp4(tmp[9])(obj5, "Command not available for this application");
+      let tmp22 = new tmp4(tmp[9])(obj5, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
       _require = asyncGeneratorStep(async (arg0, arg1) => {
@@ -58,7 +58,7 @@ obj2 = {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -122,7 +122,7 @@ obj2 = {
                   if (closure_0.aborted) {
                     const result = handleSocketDisconnected();
                     c7 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   } else {
                     const subscription = provider(connection_redirect[10]).subscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
                     let ComponentDispatch = closure_0(connection_redirect[11]).ComponentDispatch;
@@ -161,15 +161,15 @@ obj2 = {
                 }
               }
               const obj10 = { errorCode: OAUTH2_ERROR.OAUTH2_ERROR };
-              const tmp20 = new provider(connection_redirect[9])(obj10, "Refreshing access token did not return a new access token");
-              throw tmp20;
+              const tmp22 = new provider(connection_redirect[9])(obj10, "Refreshing access token did not return a new access token");
+              throw tmp22;
             }
             c7 = 3;
-          } catch (tmp45) {
-            closure_4 = tmp45;
+          } catch (tmp47) {
+            closure_4 = tmp47;
             if (tmp4 === c5) {
               c7 = tmp2;
-              throw tmp45;
+              throw tmp47;
             } else {
               c6 = tmp;
             }
@@ -221,7 +221,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 11748: ApplicationDirectorySearchResultType ===
+// === Module 11793: ApplicationDirectorySearchResultType ===
 
-// Module 11748 (ApplicationDirectorySearchResultType)
+// Module 11793 (ApplicationDirectorySearchResultType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationDirectorySearchResultType.tsx");

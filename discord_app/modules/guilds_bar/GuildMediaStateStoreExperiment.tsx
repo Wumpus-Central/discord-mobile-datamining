@@ -1,6 +1,6 @@
-// === Module 16696: GuildMediaStateStoreExperiment ===
+// === Module 16766: GuildMediaStateStoreExperiment ===
 
-// Module 16696 (GuildMediaStateStoreExperiment)
+// Module 16766 (GuildMediaStateStoreExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 

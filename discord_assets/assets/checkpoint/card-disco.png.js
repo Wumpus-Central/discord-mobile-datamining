@@ -1,6 +1,6 @@
-// === Module 5449: ? ===
+// === Module 5452: ? ===
 
-// Module 5449
+// Module 5452
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-disco.png.js");

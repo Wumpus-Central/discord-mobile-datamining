@@ -1,6 +1,6 @@
-// === Module 8526: ActionSheetDragHandleConstants ===
+// === Module 8542: ActionSheetDragHandleConstants ===
 
-// Module 8526 (ActionSheetDragHandleConstants)
+// Module 8542 (ActionSheetDragHandleConstants)
 import nativeDefault from "native" /* 587 */;
 
 const PX_4 = nativeDefault.space.PX_4;

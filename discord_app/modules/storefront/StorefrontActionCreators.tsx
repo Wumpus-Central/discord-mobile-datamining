@@ -1,15 +1,15 @@
-// === Module 8970: StorefrontActionCreators ===
+// === Module 8989: StorefrontActionCreators ===
 
-// Module 8970 (StorefrontActionCreators)
+// Module 8989 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 4730 */;
-import SKUPricesStore from "SKUPricesStore" /* 6930 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8971 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8972 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8973 */;
+import BillingInfoStore from "BillingInfoStore" /* 4771 */;
+import SKUPricesStore from "SKUPricesStore" /* 6936 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8990 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8991 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8992 */;
 
 require = fn;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -39,7 +39,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -70,7 +70,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -98,7 +98,7 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -187,7 +187,7 @@ let closure_15 = async function _claimStorefrontPromotion() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -318,7 +318,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

@@ -1,16 +1,16 @@
-// === Module 17244: SearchFilterSuggestions ===
+// === Module 17316: SearchFilterSuggestions ===
 
-// Module 17244 (SearchFilterSuggestions)
+// Module 17316 (SearchFilterSuggestions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4788 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import spring from "spring" /* 5375 */;
-import springPresets from "springPresets" /* 5379 */;
-import TableRow from "TableRow" /* 6186 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11990 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 17245 */;
+import native from "native" /* 4827 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import spring from "spring" /* 5378 */;
+import springPresets from "springPresets" /* 5382 */;
+import TableRow from "TableRow" /* 6179 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12034 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 17317 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -22,9 +22,9 @@ function getSuggestionsKey(arr) {
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
 const View = fn(17).View;
-const SearchFilterAddLocations = fn(9284).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9311).SearchFilterAddLocations;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { card: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.card = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
@@ -227,7 +227,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   tmp5 = fn2;
   let obj4 = { withSpring: state(sharedValue[14]).withSpring, opacity: sharedValue, springStandard: state(sharedValue[15]).springStandard, state, TransitionStates: state(sharedValue[16]).TransitionStates, runOnJS: state(sharedValue[13]).runOnJS, cleanUp };
 }) : (function AnimatedEnterExitContainer(children) {
-  state = children.state;
+  const state = children.state;
   const cleanUp = children.cleanUp;
   let sharedValue;
   sharedValue = state(sharedValue[13]).useSharedValue(0);
@@ -509,12 +509,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const containerStyle = searchContext.containerStyle;
   const tmp = closure_10();
   dependencyMap = tmp;
-  const searchSuggestionsContext = searchContext(17239).useSearchSuggestionsContext();
+  const searchSuggestionsContext = searchContext(17311).useSearchSuggestionsContext();
   const suggestionsRef = searchSuggestionsContext.suggestionsRef;
   const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
   const dismissed = searchSuggestionsContext.dismissed;
-  let obj = searchContext(17239);
-  const validFilterTokens = searchContext(17248).useValidFilterTokens(searchContext);
+  let obj = searchContext(17311);
+  const validFilterTokens = searchContext(17320).useValidFilterTokens(searchContext);
   const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
   const first = tmp4[0];
   closure_8 = tmp6;
@@ -552,7 +552,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     constants(closure_1_18);
   }), items);
-  let obj2 = searchContext(17248);
+  let obj2 = searchContext(17320);
   const fn = function _() {
     return dismissed.get();
   };
@@ -564,8 +564,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ReanimatedRexport.runOnJS(closure_8)(closure_18);
     }
   };
-  const obj3 = searchContext(4811);
-  fn2.__closure = { runOnJS: searchContext(4811).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+  const obj3 = searchContext(4850);
+  fn2.__closure = { runOnJS: searchContext(4850).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
   fn2.__workletHash = 4958389658939;
   fn2.__initData = __initData6;
   const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
@@ -603,5 +603,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return memo(closure_1_11, {}, text.text);
     })}</View></closure_17>;
   }, items4);
-  return memo(searchContext(4788).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
+  return memo(searchContext(4827).TransitionGroup, { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey });
 }));

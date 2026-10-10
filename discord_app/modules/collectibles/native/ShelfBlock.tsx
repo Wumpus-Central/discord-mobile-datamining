@@ -1,14 +1,14 @@
-// === Module 16155: ShelfBlock ===
+// === Module 16222: ShelfBlock ===
 
-// Module 16155 (ShelfBlock)
+// Module 16222 (ShelfBlock)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7256 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8948 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8951 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7262 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8967 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8970 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7257 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "#ffffff";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, containerWithBackground: null, backgroundImage: null, header: null, headingWrapper: null, listEdgeSpacer: null, listItemSeparator: null };
 let obj3 = { width: "100%", paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj2.containerWithBackground = { marginTop: nativeDefault.space.PX_24, paddingTop: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, overflow: "hidden" };

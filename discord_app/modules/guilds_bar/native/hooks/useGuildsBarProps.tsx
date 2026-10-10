@@ -1,30 +1,30 @@
-// === Module 16655: useGuildsBarProps ===
+// === Module 16725: useGuildsBarProps ===
 
-// Module 16655 (useGuildsBarProps)
+// Module 16725 (useGuildsBarProps)
 import useWindowDimensions from "useWindowDimensions" /* 1497 */;
-import GuildsBarGuildFolderDefault from "GuildsBarGuildFolder" /* 16656 */;
-import GuildsBarPendingGuildFolderDefault from "GuildsBarPendingGuildFolder" /* 16670 */;
-import GuildsBarMessagesDefault from "GuildsBarMessages" /* 16671 */;
-import GuildsBarFavoritesDefault from "GuildsBarFavorites" /* 16674 */;
-import GuildsBarGuildDefault from "GuildsBarGuild" /* 16679 */;
-import GuildsBarDirectMessageDefault from "GuildsBarDirectMessage" /* 16706 */;
-import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 16709 */;
-import GuildsBarPendingGuildDefault from "GuildsBarPendingGuild" /* 16710 */;
-import GuildsBarGeoRestrictedGuildDefault from "GuildsBarGeoRestrictedGuild" /* 16711 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16713 */;
+import GuildsBarGuildFolderDefault from "GuildsBarGuildFolder" /* 16726 */;
+import GuildsBarPendingGuildFolderDefault from "GuildsBarPendingGuildFolder" /* 16740 */;
+import GuildsBarMessagesDefault from "GuildsBarMessages" /* 16741 */;
+import GuildsBarFavoritesDefault from "GuildsBarFavorites" /* 16744 */;
+import GuildsBarGuildDefault from "GuildsBarGuild" /* 16749 */;
+import GuildsBarDirectMessageDefault from "GuildsBarDirectMessage" /* 16776 */;
+import GuildsBarSeparatorDefault from "GuildsBarSeparator" /* 16779 */;
+import GuildsBarPendingGuildDefault from "GuildsBarPendingGuild" /* 16780 */;
+import GuildsBarGeoRestrictedGuildDefault from "GuildsBarGeoRestrictedGuild" /* 16781 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16783 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
-import LurkingStore from "LurkingStore" /* 4710 */;
-import MessageRequestStore from "MessageRequestStore" /* 6062 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6063 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13958 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5972 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13966 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
-import SortedGuildStore from "SortedGuildStore" /* 5970 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16648 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
+import LurkingStore from "LurkingStore" /* 4751 */;
+import MessageRequestStore from "MessageRequestStore" /* 6055 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6056 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 14012 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5965 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 14020 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import SortedGuildStore from "SortedGuildStore" /* 5963 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16718 */;
 
 const require = globalThis.__r;
 
@@ -434,8 +434,8 @@ function getAnchorIndexFromId(arg0) {
     }
   }
 }
-const GuildsNodeType = fn(5970).GuildsNodeType;
-const GuildsBarConstants = fn(16645);
+const GuildsNodeType = fn(5963).GuildsNodeType;
+const GuildsBarConstants = fn(16715);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 const constants2 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -1124,22 +1124,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(itemSize(16714), {}, item);
+              return closure_1_19(itemSize(16784), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(itemSize(16715), {}, item);
+              return closure_1_19(itemSize(16785), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(itemSize(16716), {}, item);
+              return closure_1_19(itemSize(16786), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(itemSize(16714), {}, item);
+              return closure_1_19(itemSize(16784), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(itemSize(16715), {}, item);
+              return closure_1_19(itemSize(16785), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(itemSize(16716), {}, item);
+              return closure_1_19(itemSize(16786), {}, item);
             }
           })
         });

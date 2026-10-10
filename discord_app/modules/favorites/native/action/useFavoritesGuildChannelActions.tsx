@@ -1,9 +1,9 @@
-// === Module 10434: useFavoritesGuildChannelActions ===
+// === Module 10467: useFavoritesGuildChannelActions ===
 
-// Module 10434 (useFavoritesGuildChannelActions)
+// Module 10467 (useFavoritesGuildChannelActions)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import FavoriteStore from "FavoriteStore" /* 2067 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import FavoriteStore from "FavoriteStore" /* 2068 */;
 
 const require = globalThis.__r;
 
@@ -19,11 +19,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   const favoritesAccess = require("FavoritesHooks").useFavoritesAccess(arg1);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
   if (cResult[0] !== channelId) {
-    const isFavoritableChannelResult = tmp(2089).isFavoritableChannel(channelId);
+    const isFavoritableChannelResult = tmp(2090).isFavoritableChannel(channelId);
     cResult[0] = channelId;
     cResult[1] = isFavoritableChannelResult;
     let tmp5 = isFavoritableChannelResult;
-    const tmpResult = tmp(2089);
+    const tmpResult = tmp(2090);
   } else {
     tmp5 = cResult[1];
   }
@@ -193,6 +193,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   if (tmp7) {
     tmp7 = !isFavoritesGuildSelected;
   }
-  const favoritesBetaTagDismissibleContent = tmp(10295).useFavoritesBetaTagDismissibleContent(tmp7);
+  const favoritesBetaTagDismissibleContent = tmp(10328).useFavoritesBetaTagDismissibleContent(tmp7);
   return { isExperimentEnabled, hasFavoritesAccess: hasAccess, canFavoriteChannel: isFavoritableChannelResult, isChannelInFavorites: stateFromStores, isFavoritesGuild: isFavoritesGuildSelected, channelId: channelId.id, shouldShowBetaTag: favoritesBetaTagDismissibleContent.shouldShowBetaTag, dismissBetaTag: favoritesBetaTagDismissibleContent.dismissBetaTag };
 });

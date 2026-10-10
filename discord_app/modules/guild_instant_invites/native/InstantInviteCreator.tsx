@@ -1,18 +1,18 @@
-// === Module 10265: InstantInviteCreator ===
+// === Module 10298: InstantInviteCreator ===
 
-// Module 10265 (InstantInviteCreator)
+// Module 10298 (InstantInviteCreator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 const native = Stack(1200);
-const Stack_Stack = Stack(5374);
-const DetailedGuildIdentityUserRow = Stack(10266);
+const Stack_Stack = Stack(5377);
+const DetailedGuildIdentityUserRow = Stack(10299);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ identity: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

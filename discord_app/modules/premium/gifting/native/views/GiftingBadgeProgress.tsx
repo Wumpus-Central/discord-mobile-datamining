@@ -1,18 +1,18 @@
-// === Module 12678: GiftingBadgeProgress ===
+// === Module 12725: GiftingBadgeProgress ===
 
-// Module 12678 (GiftingBadgeProgress)
+// Module 12725 (GiftingBadgeProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2661 from "module_2661" /* 2661 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10070 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10076 */;
+import _modDef2664 from "module_2664" /* 2664 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10099 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10105 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8300).getSingleRequirementThreshold;
+let closure_4 = fn(8316).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -62,7 +62,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function Gifting
   obj.children = hasOwnProperty(View, obj2);
   return hasOwnProperty(View, obj);
 });
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj3 = { container: { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 }, content: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj4 = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_16 };
 obj3.content = { flex: 1, paddingHorizontal: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_4 };
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
           const obj8 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj9 = { count: progress, threshold: tmp21 };
-          obj8.children = intl.format(_modDef2661.iIpfQe, obj9);
+          obj8.children = intl.format(_modDef2664.iIpfQe, obj9);
           tmp37 = hasOwnProperty(Text_Text.Text, obj8);
         }
         cResult[6] = tmp6;
@@ -335,7 +335,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
     const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
     const obj10 = { count: progress, threshold: tmp7 };
-    obj9.children = intl.format(_modDef2661.iIpfQe, obj10);
+    obj9.children = intl.format(_modDef2664.iIpfQe, obj10);
     tmp17Result = hasOwnProperty(Text_Text.Text, obj9);
   }
   obj8.children = tmp17Result;

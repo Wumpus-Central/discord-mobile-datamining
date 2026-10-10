@@ -1,16 +1,16 @@
-// === Module 17654: FramePanelContainer ===
+// === Module 17726: FramePanelContainer ===
 
-// Module 17654 (FramePanelContainer)
+// Module 17726 (FramePanelContainer)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import WakeLockDefault from "WakeLock" /* 10918 */;
-import FramePanelControllerDefault from "FramePanelController" /* 17655 */;
-import FramePanelUIDefault from "FramePanelUI" /* 17657 */;
+import WakeLockDefault from "WakeLock" /* 10958 */;
+import FramePanelControllerDefault from "FramePanelController" /* 17727 */;
+import FramePanelUIDefault from "FramePanelUI" /* 17729 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 10772 */;
+import FramesStore from "FramesStore" /* 10807 */;
 
 require = fn;
-const isLaunched = fn(10767).isLaunched;
+const isLaunched = fn(10802).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const FrameActivities = "FrameActivities";

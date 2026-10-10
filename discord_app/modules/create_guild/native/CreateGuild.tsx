@@ -1,8 +1,8 @@
-// === Module 11986: CreateGuild ===
+// === Module 12030: CreateGuild ===
 
-// Module 11986 (CreateGuild)
+// Module 12030 (CreateGuild)
 import nativeDefault from "native" /* 587 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5370 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -11,7 +11,7 @@ const ScrollView = fn(17).ScrollView;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { flex: { flex: 1 }, contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingBottom: 16 }, header: { textAlign: "center" }, description: { lineHeight: 18, textAlign: "center", marginBottom: 24 }, iconUploader: { alignSelf: "center", marginBottom: 4 }, hint: { marginBottom: 8 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
     first = cResult[0];
   }
   let obj = isScreenReaderEnabled(576);
-  isScreenReaderEnabled = isScreenReaderEnabled(5361).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = isScreenReaderEnabled(5362).useIsScreenReaderEnabled();
   const ref = noop.useRef(null);
   if (cResult[1] !== isScreenReaderEnabled) {
     class R {
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
         }
       }
       let obj2 = { iconBackgroundColor: tmp4.contentContainer.backgroundColor, style: tmp4.iconUploader, onPress: onIconPress, icon: guild.icon };
-      const tmp27 = closure_7(ref(11312), obj2);
+      const tmp27 = closure_7(ref(11353), obj2);
       cResult[15] = guild.icon;
       cResult[16] = onIconPress;
       cResult[17] = tmp4.contentContainer.backgroundColor;
@@ -340,17 +340,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
       cResult[19] = tmp27;
     }
     const obj3 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp19 };
-    const tmp23 = closure_7(tmp(5087).Text, obj3);
+    const tmp23 = closure_7(tmp(5088).Text, obj3);
     cResult[12] = tmp4.description;
     cResult[13] = tmp19;
     cResult[14] = tmp23;
   }
   const obj6 = { ref, style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 };
-  const tmpResult = isScreenReaderEnabled(5361);
+  const tmpResult = isScreenReaderEnabled(5362);
   cResult[7] = tmp4.header;
   cResult[8] = tmp16;
-  cResult[9] = closure_7(isScreenReaderEnabled(5087).Text, { ref, style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 });
-  const tmp18 = closure_7(isScreenReaderEnabled(5087).Text, { ref, style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 });
+  cResult[9] = closure_7(isScreenReaderEnabled(5088).Text, { ref, style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 });
+  const tmp18 = closure_7(isScreenReaderEnabled(5088).Text, { ref, style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 });
 }) : (function CreateGuild(arg0) {
   ({ guild, error, customTitle, customDescription, customButtonLabel, autoFocus } = arg0);
   ({ onIconPress, onNameChange, onStaffOnlyChange, onCreate, submitting } = arg0);
@@ -365,7 +365,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  isScreenReaderEnabled = isScreenReaderEnabled(5361).useIsScreenReaderEnabled();
+  isScreenReaderEnabled = isScreenReaderEnabled(5362).useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   const items = [isScreenReaderEnabled];
   const effect = noop.useEffect(() => {
@@ -385,15 +385,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
     customTitle = intl.string(tmp4(1126).t.XioBx6);
   }
   obj3.children = customTitle;
-  const items1 = [closure_7(isScreenReaderEnabled(5087).Text, obj3), , , , , , , ];
+  const items1 = [closure_7(isScreenReaderEnabled(5088).Text, obj3), , , , , , , ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
     const intl2 = tmp4(1126).intl;
     customDescription = intl2.string(tmp4(1126).t["/k/L/j"]);
   }
   obj4.children = customDescription;
-  items1[1] = closure_7(isScreenReaderEnabled(5087).Text, obj4);
-  items1[2] = closure_7(ref(11312), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
+  items1[1] = closure_7(isScreenReaderEnabled(5088).Text, obj4);
+  items1[2] = closure_7(ref(11353), { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon });
   const obj6 = { clearable: true, label: null, errorMessage: null, value: null, onChange: null, autoFocus: null, autoCorrect: false, returnKeyType: "done" };
   const intl3 = tmp4(1126).intl;
   obj6.label = intl3.string(isScreenReaderEnabled(1126).t.dBih7e);
@@ -409,18 +409,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
   }
   let tmp9Result = !!isStaffResult;
   obj6.autoFocus = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(6290).TextInput, obj6);
+  items1[3] = closure_7(isScreenReaderEnabled(6285).TextInput, obj6);
   if (tmp9Result) {
     const obj7 = { onValueChange: onStaffOnlyChange, value: guild.staffOnly, start: true, end: true, label: "Staff Only", subLabel: null };
     const intl4 = tmp4(1126).intl;
     obj7.subLabel = intl4.string(tmp4(1126).t.edQ5va);
-    tmp9Result = closure_7(tmp4(6889).TableSwitchRow, obj7);
+    tmp9Result = closure_7(tmp4(6895).TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
   const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1126).intl;
   obj8.children = intl5.format(isScreenReaderEnabled(1126).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
-  items1[5] = closure_7(isScreenReaderEnabled(5087).Text, obj8);
+  items1[5] = closure_7(isScreenReaderEnabled(5088).Text, obj8);
   const obj10 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
   if (customButtonLabel == null) {
     const intl6 = tmp4(1126).intl;
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
   obj10.text = customButtonLabel;
   obj10.onPress = onCreate;
   obj10.loading = submitting;
-  items1[6] = closure_7(isScreenReaderEnabled(5376).Button, obj10);
+  items1[6] = closure_7(isScreenReaderEnabled(5379).Button, obj10);
   let firstFieldErrorMessage1;
   if (error != null) {
     firstFieldErrorMessage1 = error.getFirstFieldErrorMessage("name");
@@ -453,12 +453,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateGu
           message2 = error.message;
         }
         const obj11 = { children: message2 };
-        tmp9Result2 = closure_7(ref(6620), obj11);
-        const tmp12Result = ref(6620);
+        tmp9Result2 = closure_7(ref(6621), obj11);
+        const tmp12Result = ref(6621);
       }
     }
   }
   items1[7] = tmp9Result2;
-  obj.children = closure_8(isScreenReaderEnabled(5374).Stack, { children: items1 });
+  obj.children = closure_8(isScreenReaderEnabled(5377).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
 });

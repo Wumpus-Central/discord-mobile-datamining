@@ -1,8 +1,8 @@
-// === Module 16277: createChatPanelNativeStackNavigator ===
+// === Module 16344: createChatPanelNativeStackNavigator ===
 
-// Module 16277 (createChatPanelNativeStackNavigator)
+// Module 16344 (createChatPanelNativeStackNavigator)
 import Link from "Link" /* 1504 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -262,7 +262,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPan
 }) : (function ChatPanelNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
-  state = undefined;
+  let state;
   let descriptors;
   const navigationBuilder = state(descriptors[5]).useNavigationBuilder(state(descriptors[5]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;

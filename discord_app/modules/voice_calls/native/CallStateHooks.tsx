@@ -1,19 +1,19 @@
-// === Module 13537: CallStateHooks ===
+// === Module 13588: CallStateHooks ===
 
-// Module 13537 (CallStateHooks)
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+// Module 13588 (CallStateHooks)
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5755 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import CallStore from "CallStore" /* 5758 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
-const ParticipantTypes = fn(5114).ParticipantTypes;
+const ParticipantTypes = fn(5115).ParticipantTypes;
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "Array" });
+const merged = Object.assign({ initialized: false, callId: "a" });
 let obj2 = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/CallStateHooks.tsx");
@@ -60,7 +60,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10985)();
+  const tmp3 = id(11025)();
   dependencyMap = tmp3;
   obj2 = require("initialize");
   const items2 = [RTCConnectionStore];
@@ -80,7 +80,7 @@ export default function _default() {
         obj.initialized = false;
       }
       obj.callId = stateFromStores;
-      state = RTCConnectionStore.getState();
+      const state = RTCConnectionStore.getState();
       let initialized = obj.initialized;
       if (!initialized) {
         let tmp10 = state !== constants.DISCONNECTED;
@@ -94,7 +94,7 @@ export default function _default() {
     }
   }, items4);
   obj.initialized = obj.initialized || flag2;
-  state = obj2.CONNECTING;
+  let state = obj2.CONNECTING;
   let initialized = tmp6.initialized;
   if (flag) {
     state = tmp7.DISCONNECTING;

@@ -1,9 +1,9 @@
-// === Module 10767: FramesConstants ===
+// === Module 10802: FramesConstants ===
 
-// Module 10767 (FramesConstants)
+// Module 10802 (FramesConstants)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1085 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8594 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8610 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -65,7 +65,7 @@ export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type
   }
 };
 export const isLaunched = function isLaunched(conjureBuilderPreviewFrame) {
-  state = undefined;
+  let state;
   if (conjureBuilderPreviewFrame != null) {
     state = conjureBuilderPreviewFrame.state;
   }
@@ -84,7 +84,7 @@ export const getFrameHostWindowKey = function getFrameHostWindowKey(state) {
   return hostWindowKey;
 };
 export const asLaunched = function asLaunched(mainFrame) {
-  state = undefined;
+  let state;
   if (mainFrame != null) {
     state = mainFrame.state;
   }

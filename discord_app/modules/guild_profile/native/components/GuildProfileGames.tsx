@@ -1,21 +1,21 @@
-// === Module 8858: GuildProfileGames ===
+// === Module 8877: GuildProfileGames ===
 
-// Module 8858 (GuildProfileGames)
+// Module 8877 (GuildProfileGames)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8859 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8860 */;
-import components_GameIconDefault from "components/GameIcon" /* 12961 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8879 */;
+import components_GameIconDefault from "components/GameIcon" /* 13008 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { display: "flex", flexDirection: "row", gap: 8 }, favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 }, lastItem: { position: "relative", width: 32, height: 32 }, lastItemOverlay: null, lastItemImage: null, lastItemText: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.xs };
 obj2.lastItemOverlay = rect;
@@ -192,9 +192,8 @@ export default function GuildProfileGames(profile) {
     }
     return tmp2;
   }, items);
-  onPressFallback = noop.useCallback((content) => {
-    const obj = lastGameToDisplay(remainingGames[12]);
-    obj.open({ key: "profile-game-" + content.id, content: content.name });
+  onPressFallback = noop.useCallback((name) => {
+    lastGameToDisplay(remainingGames[12]).open("profile-game-" + name.id, { text: name.name });
   }, []);
   [][0] = profile;
   let tmp9 = null;

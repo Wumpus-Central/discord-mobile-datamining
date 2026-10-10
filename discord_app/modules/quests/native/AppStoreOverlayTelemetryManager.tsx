@@ -1,10 +1,10 @@
-// === Module 12895: AppStoreOverlayTelemetryManager ===
+// === Module 12942: AppStoreOverlayTelemetryManager ===
 
-// Module 12895 (AppStoreOverlayTelemetryManager)
+// Module 12942 (AppStoreOverlayTelemetryManager)
 import Constants from "Constants" /* 1085 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

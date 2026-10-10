@@ -1,15 +1,15 @@
-// === Module 18405: useIsCreatorMonetizationRequestRejected ===
+// === Module 18479: useIsCreatorMonetizationRequestRejected ===
 
-// Module 18405 (useIsCreatorMonetizationRequestRejected)
+// Module 18479 (useIsCreatorMonetizationRequestRejected)
 import util from "util" /* 1126 */;
-import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 18374 */;
+import CreatorMonetizationEligibilityConstants from "CreatorMonetizationEligibilityConstants" /* 18448 */;
 import size from "module_2" /* 2 */;
 
 const constants = CreatorMonetizationEligibilityConstants.CreatorMonetizationApplicationState;
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
-  state = undefined;
+  let state;
   if (latestRequest != null) {
     latestRequest = latestRequest.latestRequest;
     if (latestRequest != null) {

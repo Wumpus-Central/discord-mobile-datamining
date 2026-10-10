@@ -1,8 +1,8 @@
-// === Module 10765: startAuthorizationNoHook ===
+// === Module 10800: startAuthorizationNoHook ===
 
-// Module 10765 (startAuthorizationNoHook)
-import LinkingDefault from "Linking" /* 4765 */;
-import useAuthorizationApp from "useAuthorizationApp" /* 6853 */;
+// Module 10800 (startAuthorizationNoHook)
+import LinkingDefault from "Linking" /* 4806 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 6856 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 16952: PruneGuildModalActionCreators ===
+// === Module 17020: PruneGuildModalActionCreators ===
 
-// Module 16952 (PruneGuildModalActionCreators)
+// Module 17020 (PruneGuildModalActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -34,7 +34,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -67,7 +67,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp5) {
           v3 = tmp;

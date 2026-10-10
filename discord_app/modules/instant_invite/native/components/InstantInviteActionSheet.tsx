@@ -1,21 +1,21 @@
-// === Module 8676: InstantInviteActionSheet ===
+// === Module 8691: InstantInviteActionSheet ===
 
-// Module 8676 (InstantInviteActionSheet)
+// Module 8691 (InstantInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5073 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8667 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8677 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 8679 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5074 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 8692 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 8694 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2069 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8668 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
+import StageInstanceStore from "StageInstanceStore" /* 2070 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8683 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -24,7 +24,7 @@ const InviteTargetTypes = fn(7423).InviteTargetTypes;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;
@@ -45,7 +45,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loadin
     let num4 = 0;
     do {
       let obj2 = { row: num4 };
-      let arr = items.push(__initData2(UserPlaceholderRowDefault, obj2, num4));
+      let arr = items.push(map1(UserPlaceholderRowDefault, obj2, num4));
       num4 = num4 + 1;
     } while (num4 < 10);
     cResult[0] = items;
@@ -55,7 +55,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loadin
   }
   if (cResult[1] !== tmp2.placeholderHeader) {
     const obj3 = { style: tmp2.placeholderHeader };
-    const tmp11 = __initData2(hasOwnProperty, obj3);
+    const tmp11 = map1(hasOwnProperty, obj3);
     cResult[1] = tmp2.placeholderHeader;
     cResult[2] = tmp11;
     let tmp8 = tmp11;
@@ -64,7 +64,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loadin
   }
   if (cResult[3] !== tmp2.placeholderLabel) {
     const obj4 = { style: tmp2.placeholderLabel };
-    const tmp15 = __initData2(hasOwnProperty, obj4);
+    const tmp15 = map1(hasOwnProperty, obj4);
     cResult[3] = tmp2.placeholderLabel;
     cResult[4] = tmp15;
     let tmp12 = tmp15;
@@ -80,7 +80,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loadin
   const obj5 = { children: null };
   const items1 = [tmp8, tmp12, first];
   obj5.children = items1;
-  const tmp17 = closure_1_15(state, obj5);
+  const tmp17 = value2(closure_1_14, obj5);
   cResult[5] = tmp8;
   cResult[6] = tmp12;
   cResult[7] = tmp17;
@@ -91,13 +91,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Loadin
   let num = 0;
   do {
     let obj = { row: num };
-    let arr = items.push(__initData2(UserPlaceholderRowDefault, obj, num));
+    let arr = items.push(map1(UserPlaceholderRowDefault, obj, num));
     num = num + 1;
   } while (num < 10);
   const obj2 = { children: null };
-  const items1 = [__initData2(hasOwnProperty, { style: tmp.placeholderHeader }), __initData2(hasOwnProperty, { style: tmp.placeholderLabel }), items];
+  const items1 = [map1(hasOwnProperty, { style: tmp.placeholderHeader }), map1(hasOwnProperty, { style: tmp.placeholderLabel }), items];
   obj2.children = items1;
-  return closure_1_15(state, obj2);
+  return value2(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let obj4 = { paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_4 };

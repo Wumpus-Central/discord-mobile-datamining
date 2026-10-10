@@ -140,7 +140,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -211,7 +211,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                       closure_130_6 = HermesBuiltin.apply(items1, undefined);
                       if (closure_130_6 === closure_1_8) {
                         c7 = 3;
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       } else {
                         if (null != closure_130_6) {
                           if (!(function isCachedDataStale(getState, arg1) {
@@ -228,7 +228,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                             }
                           })(closure_130_3, closure_131_9)) {
                             c7 = 3;
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "+51" };
                           }
                         }
                         failureLockedUntil = closure_130_3.getState().failureLockedUntil;
@@ -236,7 +236,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                           const _Date2 = Date;
                           if (Date.now() < failureLockedUntil) {
                             c7 = 3;
-                            return { value: "IconComponent", done: null };
+                            return { value: "IconComponent", done: "+51" };
                           }
                         }
                       }

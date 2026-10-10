@@ -1,10 +1,10 @@
-// === Module 16497: FolderPlusIcon ===
+// === Module 16567: FolderPlusIcon ===
 
-// Module 16497 (FolderPlusIcon)
+// Module 16567 (FolderPlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod16051 from "module_16051" /* 16051 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod16113 from "module_16113" /* 16113 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const FolderPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16051;
+    const tmpResult = _mod16113;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const FolderPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16051, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16113, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

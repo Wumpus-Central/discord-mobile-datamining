@@ -1,20 +1,20 @@
-// === Module 13411: transformMessageAttachments ===
+// === Module 13461: transformMessageAttachments ===
 
-// Module 13411 (transformMessageAttachments)
+// Module 13461 (transformMessageAttachments)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5416 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7729 */;
-import noConflictDefault from "noConflict" /* 7747 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8228 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8229 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8246 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8248 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 8377 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 9574 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11536 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5419 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7747 */;
+import noConflictDefault from "noConflict" /* 7765 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8244 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 8245 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8262 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 8264 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 8393 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 9603 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11582 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;

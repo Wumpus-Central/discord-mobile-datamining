@@ -1,7 +1,7 @@
-// === Module 16616: useGameClaimCoachmark ===
+// === Module 16683: useGameClaimCoachmark ===
 
-// Module 16616 (useGameClaimCoachmark)
-import PermissionStore from "PermissionStore" /* 4709 */;
+// Module 16683 (useGameClaimCoachmark)
+import PermissionStore from "PermissionStore" /* 4750 */;
 
 const require = globalThis.__r;
 

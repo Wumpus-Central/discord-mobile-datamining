@@ -1,23 +1,23 @@
-// === Module 18274: GuildSettingsRolesStore ===
+// === Module 18348: GuildSettingsRolesStore ===
 
-// Module 18274 (GuildSettingsRolesStore)
+// Module 18348 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import PlainRecord from "PlainRecord" /* 2079 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2119 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2121 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5405 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12084 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 18269 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 18275 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8622 */;
+import PlainRecord from "PlainRecord" /* 2080 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2120 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2122 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5408 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12128 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 18343 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 18349 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8638 */;
 import Constants from "Constants" /* 1085 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18276 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 18350 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 14790: UserProfileDisplayNameStylesEditButton ===
+// === Module 14846: UserProfileDisplayNameStylesEditButton ===
 
-// Module 14790 (UserProfileDisplayNameStylesEditButton)
+// Module 14846 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10231 */;
-import _modDef13403 from "module_13403" /* 13403 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14792 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14793 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10262 */;
+import _modDef13453 from "module_13453" /* 13453 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14848 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 14849 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -17,9 +17,9 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 obj2.ggContainer = size;
@@ -234,8 +234,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                 }
                 const fn = function x() {
                   if (null == closure_6) {
-                    const obj2 = { source: _modDef13403, style: closure_3.noneIcon };
-                    let tmp10 = jsx(native.Icon, { source: _modDef13403, style: closure_3.noneIcon });
+                    const obj2 = { source: _modDef13453, style: closure_3.noneIcon };
+                    let tmp10 = jsx(native.Icon, { source: _modDef13453, style: closure_3.noneIcon });
                   } else {
                     const obj = { style: closure_3.ggContainer, children: null };
                     const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -357,8 +357,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef13403, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef13403, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef13453, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef13453, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

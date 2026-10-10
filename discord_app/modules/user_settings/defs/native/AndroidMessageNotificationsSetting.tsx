@@ -1,15 +1,15 @@
-// === Module 15707: AndroidMessageNotificationsSetting ===
+// === Module 15769: AndroidMessageNotificationsSetting ===
 
-// Module 15707 (AndroidMessageNotificationsSetting)
+// Module 15769 (AndroidMessageNotificationsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import _modDef2891 from "module_2891" /* 2891 */;
-import SettingsConstants from "SettingsConstants" /* 7974 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15701 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15695 */;
+import _modDef2894 from "module_2894" /* 2894 */;
+import SettingsConstants from "SettingsConstants" /* 7992 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15763 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15757 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 10629 */;
+import SettingBuilders_mod from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidMessageNotificationsEnabled: c3, setAndroidMessageNotificationsEnabled } = AndroidNotificationSettingsStore);
@@ -70,11 +70,11 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2891.odJXYJ);
+  return intl.string(_modDef2894.odJXYJ);
 };
 obj3.useDescription = function useDescription() {
   const intl = util.intl;
-  return intl.string(_modDef2891["+jwUmI"]);
+  return intl.string(_modDef2894["+jwUmI"]);
 };
 obj3.parent = MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN;
 obj3.usePredicate = function usePredicate() {

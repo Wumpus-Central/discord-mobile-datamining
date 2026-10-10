@@ -1,20 +1,20 @@
-// === Module 9270: HeaderShared ===
+// === Module 9297: HeaderShared ===
 
-// Module 9270 (HeaderShared)
+// Module 9297 (HeaderShared)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useToken from "useToken" /* 4779 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Pressables from "Pressables" /* 6191 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6206 */;
-import _mod6214 from "module_6214" /* 6214 */;
-import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9272 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9277 */;
-import ChannelActionsDefault from "ChannelActions" /* 9282 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 12805 */;
+import useToken from "useToken" /* 4818 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Pressables from "Pressables" /* 6184 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6201 */;
+import _mod6209 from "module_6209" /* 6209 */;
+import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 9299 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 9304 */;
+import ChannelActionsDefault from "ChannelActions" /* 9309 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 12852 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,17 +28,17 @@ let closure_3 = ["title", "subtitle", "color", "subtitleColor", "icon", "maxFont
 let closure_4 = ["labelStyle"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(9271).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(9298).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { headerRightContainer: { marginRight: 16 }, headerWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 }, actionButtonPressable: { padding: 8, zIndex: 100, width: 40, height: 40, borderRadius: 20 }, actionButtonIcon: null, headerText: null, subtitleText: null, backButtonLabel: null, titleContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", alignItems: "center", flexShrink: 0, flexGrow: 1, borderColor: nativeDefault.colors.MOBILE_HEADER_BORDER, borderBottomWidth: 1 };
 obj.actionButtonIcon = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 let obj5 = {};
-let merged = Object.assign(fn(5087).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(5088).TextStyleSheet["text-md/semibold"]);
 obj5.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj5;
 let obj4 = { tintColor: nativeDefault.colors.MOBILE_HEADER_ICON_DEFAULT };
@@ -230,7 +230,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GenericHeade
   }
   const tmp5 = closure_11();
   closure_5 = tmp5;
-  const tmp6 = color(6206)("os-drawn");
+  const tmp6 = color(6201)("os-drawn");
   if (null == subtitle) {
     if (null == tmp6) {
       let renderTitleContainerResult = renderTitleContainer("header");
@@ -288,7 +288,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
     const obj3 = { labelStyle: tmp10, displayMode: "default", backImage: tmp12, truncatedLabel: null, accessibilityLabel: null };
     ({ label: obj2.truncatedLabel, label: obj2.accessibilityLabel } = tmp5);
     const merged = Object.assign(tmp5);
-    const tmp18 = options(_mod6214.HeaderBackButton, obj3);
+    const tmp18 = options(_mod6209.HeaderBackButton, obj3);
     cResult[7] = tmp5;
     cResult[8] = tmp10;
     cResult[9] = tmp18;
@@ -313,7 +313,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextBu
   const items = [closure_11().backButtonLabel, labelStyle.labelStyle];
   obj.labelStyle = items;
   const merged1 = Object.assign(merged);
-  return options(_mod6214.HeaderBackButton, obj);
+  return options(_mod6209.HeaderBackButton, obj);
 });
 let closure_14 = tmp6;
 ReactCompilerGating = fn(558);
@@ -342,7 +342,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const obj = navigation(576);
   const text = navigation(1504).useTheme().colors.text;
   const tmpResult = navigation(1504);
-  const gradientTop = navigation(9279).useGradientTop();
+  const gradientTop = navigation(9306).useGradientTop();
   const sum = num + MIN_HEADER_HEIGHT;
   if (cResult[0] === num) {
     if (cResult[1] === sum) {
@@ -454,7 +454,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   cResult[1] = sum;
   cResult[2] = obj6;
   tmp9 = obj6;
-  const tmpResult2 = navigation(9279);
+  const tmpResult2 = navigation(9306);
 }) : (function HeaderInner(style) {
   ({ navigation, options, back, shouldHandleSafeArea } = style);
   if (shouldHandleSafeArea === undefined) {

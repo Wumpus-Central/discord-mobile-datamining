@@ -1,13 +1,13 @@
-// === Module 16508: guild_themes/useGuildThemeNuxTrigger ===
+// === Module 16578: guild_themes/useGuildThemeNuxTrigger ===
 
-// Module 16508 (guild_themes/useGuildThemeNuxTrigger)
+// Module 16578 (guild_themes/useGuildThemeNuxTrigger)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let constants = fn(2061).DismissibleContentGroupName;
+let constants = fn(2062).DismissibleContentGroupName;
 let c5 = 2000;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

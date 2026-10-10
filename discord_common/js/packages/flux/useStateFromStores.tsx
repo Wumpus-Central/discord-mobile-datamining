@@ -20,11 +20,11 @@ function useStateFromStores(items, cResult, items1) {
   }
   _slicedToArray = tmp;
   let current;
-  state = undefined;
+  let state;
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: cResult, prevDeps: "Boolean", state: "body" };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: cResult, prevDeps: "Boolean", state: "bm" };
     tmp2.current = obj;
   }
   current = tmp2.current;

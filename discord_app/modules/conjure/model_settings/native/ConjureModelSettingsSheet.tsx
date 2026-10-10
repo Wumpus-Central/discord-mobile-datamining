@@ -1,19 +1,19 @@
-// === Module 17005: ConjureModelSettingsSheet ===
+// === Module 17073: ConjureModelSettingsSheet ===
 
-// Module 17005 (ConjureModelSettingsSheet)
+// Module 17073 (ConjureModelSettingsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
-import ActionSheet from "ActionSheet" /* 6892 */;
-import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 16975 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
+import ActionSheet from "ActionSheet" /* 6898 */;
+import ConjureEffortPickerDefault from "ConjureEffortPicker" /* 17043 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13164 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13213 */;
 
 require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(13164).sendModelSettings;
+const sendModelSettings = fn(13213).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -222,16 +222,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureMod
     const items7 = [closure_7(ConjureEffortPickerDefault, obj5), ];
     const intl = tmp(1126).intl;
     const string = intl.string;
-    const tmp12 = _modDef3827;
+    const tmp12 = _modDef3849;
     if (tmp5) {
       let stringResult = string(tmp12.GxpdUR);
     } else {
       stringResult = string(tmp12["/rJzr6"]);
     }
     const obj6 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-    items7[1] = closure_7(tmp(5087).Text, obj6);
+    items7[1] = closure_7(tmp(5088).Text, obj6);
     obj4.children = items7;
-    return closure_8(tmp(5374).Stack, obj4);
+    return closure_8(tmp(5377).Stack, obj4);
   }
   const obj3 = projectId(504);
 });
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { title: null };
     const intl = util.intl;
-    obj2.title = intl.string(_modDef3827["3E7Yc0"]);
+    obj2.title = intl.string(_modDef3849["3E7Yc0"]);
     const tmp7 = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureM
   const obj = { header: null, children: null };
   const obj2 = { title: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3827["3E7Yc0"]);
+  obj2.title = intl.string(_modDef3849["3E7Yc0"]);
   obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
   obj.children = React5(View, { children: React5(closure_9, { projectId: projectId.projectId }) });
   return React5(ActionSheet.ActionSheet, obj);

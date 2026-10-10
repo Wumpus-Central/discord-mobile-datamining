@@ -1,11 +1,11 @@
-// === Module 14871: EditGuildIdentityAvatar ===
+// === Module 14930: EditGuildIdentityAvatar ===
 
-// Module 14871 (EditGuildIdentityAvatar)
+// Module 14930 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9242 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9269 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1085);
 const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");

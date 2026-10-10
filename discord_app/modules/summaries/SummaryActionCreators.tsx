@@ -1,6 +1,6 @@
-// === Module 9646: SummaryActionCreators ===
+// === Module 9675: SummaryActionCreators ===
 
-// Module 9646 (SummaryActionCreators)
+// Module 9675 (SummaryActionCreators)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,9 +8,9 @@ import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import SummaryStore from "SummaryStore" /* 9585 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import SummaryStore from "SummaryStore" /* 9614 */;
 
 require = fn;
 function fetchSummary() {
@@ -38,7 +38,7 @@ let closure_13 = async function _fetchSummary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -133,7 +133,7 @@ let closure_14 = async function _fetchSummaries() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -259,7 +259,7 @@ let closure_16 = async function _fetchChannelAffinities() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -336,7 +336,7 @@ let closure_16 = async function _fetchChannelAffinities() {
         obj9.receivedAt = Date.now();
         closure_130_1(closure_130_2[7]).dispatch(obj9);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp38) {
       closure_3 = tmp38;
@@ -454,7 +454,7 @@ let closure_20 = async function _deleteSummary(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -497,7 +497,7 @@ let closure_20 = async function _deleteSummary(arg0) {
         closure_130_1(closure_130_2[7]).dispatch(obj7);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -578,7 +578,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetc
             return { value, done: true };
           } else {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -637,7 +637,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMaybeFetc
           return { value, done: true };
         } else {
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else if (arg0 === 1) {
         c4 = 3;

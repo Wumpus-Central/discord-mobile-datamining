@@ -1,9 +1,9 @@
-// === Module 8406: MediaModalTiktok ===
+// === Module 8422: MediaModalTiktok ===
 
-// Module 8406 (MediaModalTiktok)
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8372 */;
-import useVideoControls from "useVideoControls" /* 8373 */;
-import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8407 */;
+// Module 8422 (MediaModalTiktok)
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8388 */;
+import useVideoControls from "useVideoControls" /* 8389 */;
+import MediaModalWebViewBase from "MediaModalWebViewBase" /* 8423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,11 +12,11 @@ let jsx = fn(21).jsx;
 let c6 = "https://www.tiktok.com/player/v1/";
 let closure_7 = { controls: 0, enable_music_info: 0, enable_timestamp: 0, utm_source: "discord.gg" };
 let c8 = "\n  window.addEventListener('message', function(event) {\n    if (!event.data[\"x-tiktok-player\"]) {\n      return;\n    }\n    window.ReactNativeWebView.postMessage(JSON.stringify(event.data));\n  }, true);\n";
-let obj = { "-1": fn(8407).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
-obj[0] = fn(8407).PlayerState.ENDED;
-obj[1] = fn(8407).PlayerState.PLAYING;
-obj[2] = fn(8407).PlayerState.PAUSED;
-obj[3] = fn(8407).PlayerState.BUFFERING;
+let obj = { "-1": fn(8423).PlayerState.UNSTARTED, 0: null, 1: null, 2: null, 3: null };
+obj[0] = fn(8423).PlayerState.ENDED;
+obj[1] = fn(8423).PlayerState.PLAYING;
+obj[2] = fn(8423).PlayerState.PAUSED;
+obj[3] = fn(8423).PlayerState.BUFFERING;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/renderers/MediaModalTiktok.tsx");
@@ -508,7 +508,7 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
         const current = ref.current;
         if (current != null) {
           const _HermesInternal = HermesInternal;
-          current.injectJavaScript("\n    window.postMessage(" + tmp5 + ", '*')\n  ");
+          current.injectJavaScript("\n    window.postMessage(" + tmp6 + ", '*')\n  ");
         }
         const obj2 = { "x-tiktok-player": true };
       }

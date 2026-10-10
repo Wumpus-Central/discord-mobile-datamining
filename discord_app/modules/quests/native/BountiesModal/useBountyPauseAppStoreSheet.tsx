@@ -1,16 +1,17 @@
-// === Module 15215: useBountyPauseAppStoreSheet ===
+// === Module 15277: useBountyPauseAppStoreSheet ===
 
-// Module 15215 (useBountyPauseAppStoreSheet)
+// Module 15277 (useBountyPauseAppStoreSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import AdCreativeType from "AdCreativeType" /* 5986 */;
-import AnalyticsActions from "AnalyticsActions" /* 7400 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9154 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15210 */;
-import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15213 */;
+import AdCreativeType from "AdCreativeType" /* 5979 */;
+import AnalyticsActions from "AnalyticsActions" /* 7406 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 9181 */;
+import trackAppStoreOverlaySurfaceClicked from "trackAppStoreOverlaySurfaceClicked" /* 12959 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15272 */;
+import QuestCustomAppStoreOverlayUtils from "QuestCustomAppStoreOverlayUtils" /* 15275 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
 const ComponentActions = fn(1085).ComponentActions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -298,7 +299,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       return trackingCtx.trackAdContentAppStoreOverlayEvent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, inlineStoreAppId, overlayVariant, event, timeSpentMs, overlaySurface });
     };
     obj4.trackOverlaySurfaceClick = function trackOverlaySurfaceClick(overlaySurface) {
-      trackingCtx = AnalyticsActions;
+      trackingCtx = trackAppStoreOverlaySurfaceClicked;
       return trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
     };
     obj4.appStoreOverlayCarouselScrollContext = { adContentId: trackingCtx.id };

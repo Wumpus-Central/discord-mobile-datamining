@@ -2,10 +2,10 @@
 
 // Module 7484 (useIsOnStartStageScreenStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2072 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 const require = globalThis.__r;
 

@@ -1,10 +1,10 @@
-// === Module 8886: RiotGamesNeutralIcon ===
+// === Module 8905: RiotGamesNeutralIcon ===
 
-// Module 8886 (RiotGamesNeutralIcon)
+// Module 8905 (RiotGamesNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod8887 from "module_8887" /* 8887 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod8906 from "module_8906" /* 8906 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RiotGamesNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8887;
+    const tmpResult = _mod8906;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RiotGamesNeutralIcon = ReactCompilerGating.isReactCompilerEnabled()
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8887, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8906, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

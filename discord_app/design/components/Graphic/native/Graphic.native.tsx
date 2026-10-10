@@ -1,10 +1,10 @@
-// === Module 9423: Graphic ===
+// === Module 9452: Graphic ===
 
-// Module 9423 (Graphic)
+// Module 9452 (Graphic)
 import c from "c" /* 576 */;
-import native from "native" /* 4788 */;
-import GraphicTypes from "GraphicTypes" /* 4896 */;
-import FastImageDefault from "FastImage" /* 6163 */;
+import native from "native" /* 4827 */;
+import GraphicTypes from "GraphicTypes" /* 4935 */;
+import FastImageDefault from "FastImage" /* 6156 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ let closure_3 = ["aspectRatio", "style"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const dependencyMap = { "21/9": 2.3333333333333335, "16/9": 1.7777777777777777, "6/4": 1.5, "2/1": 2, "1/1": 1 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles({ container: { width: "100%", justifyContent: "center", alignItems: "center", overflow: "hidden" }, image: { width: "100%", height: "100%" } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageGraphic(src) {

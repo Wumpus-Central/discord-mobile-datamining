@@ -1,44 +1,44 @@
-// === Module 14947: UserSettingsAccountEditPassword ===
+// === Module 15006: UserSettingsAccountEditPassword ===
 
-// Module 14947 (UserSettingsAccountEditPassword)
+// Module 15006 (UserSettingsAccountEditPassword)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import TextInput from "TextInput" /* 6290 */;
-import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 6669 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6678 */;
-import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 6679 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6684 */;
-import _modDef14948 from "module_14948" /* 14948 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import TextInput from "TextInput" /* 6285 */;
+import UserSettingsAccountActionCreatorsAll from "UserSettingsAccountActionCreators" /* 6670 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6679 */;
+import showInvalidUsernameToastNative from "showInvalidUsernameToastNative" /* 6680 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6685 */;
+import _modDef15007 from "module_15007" /* 15007 */;
 import noop from "module_19" /* 19 */;
-import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2057 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7088 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 2058 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7094 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const UserSettingsAccountUnverifiedHeaderDefault = UserSettingsAccountUnverifiedHeader;
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1085);
-({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
+({ AnalyticEvents: closure_9, LoginRequiredActions: c10 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "code", password: 17083457 };
-const createStyles = fn(5091);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(5092);
 let obj2 = { onePass: { width: 20, height: 20 }, unverifiedWrapper: { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 }, container: { padding: 16 }, header: { marginBottom: 20 }, requiredActionsSubtitle: { textAlign: "center", marginTop: 8 }, requiredActionsTitle: { flex: 1, textAlign: "center" }, image: { marginTop: 12, marginBottom: 16, alignSelf: "center" } };
-let closure_15 = createStyles.createLegacyClassComponentStyles(obj2);
+let closure_14 = createStyles.createLegacyClassComponentStyles(obj2);
 const Component = noop.Component;
 class EditPassword extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.state = closure_14;
+    applyArgumentsResult.state = closure_13;
     applyArgumentsResult.newPasswordRef = null;
     applyArgumentsResult.passwordManagerRef = null;
     applyArgumentsResult.handlePasswordChange = function handlePasswordChange(password) {
@@ -134,32 +134,32 @@ prototype["getError"] = function getError(arg0) {
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = closure_15(this.context);
+  const tmp = closure_14(this.context);
   ({ password, newPassword } = this.state);
   const props = this.props;
   ({ showForcedPasswordUpdate, submitting, hasBannerText } = props);
   const obj = { style: tmp.container, children: null };
   ({ passwordLabel, newPasswordLabel } = props);
   if (hasBannerText) {
-    const obj2 = { style: tmp.unverifiedWrapper, children: __initData(UserSettingsAccountUnverifiedHeaderDefault, {}) };
-    hasBannerText = __initData(hasOwnProperty, obj2);
+    const obj2 = { style: tmp.unverifiedWrapper, children: closure_1_11(UserSettingsAccountUnverifiedHeaderDefault, {}) };
+    hasBannerText = closure_1_11(React4, obj2);
   }
   const items = [hasBannerText, , , ];
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     const obj3 = { style: tmp.header, children: null };
-    const obj4 = { source: _modDef14948, style: tmp.image };
-    const items1 = [__initData(React4, obj4), , ];
+    const obj4 = { source: _modDef15007, style: tmp.image };
+    const items1 = [closure_1_11(FastImageDefault, obj4), , ];
     const obj5 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
     obj5.children = intl.string(util.t.geta79);
-    items1[1] = __initData(Text_Text.Text, obj5);
+    items1[1] = closure_1_11(Text_Text.Text, obj5);
     const obj6 = { style: tmp.requiredActionsSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
     const intl2 = util.intl;
     obj6.children = intl2.string(util.t["37iHbZ"]);
-    items1[2] = __initData(Text_Text.Text, obj6);
+    items1[2] = closure_1_11(Text_Text.Text, obj6);
     obj3.children = items1;
-    tmp4Result = __initData2(hasOwnProperty, obj3);
+    tmp4Result = __initData(React4, obj3);
   }
   items[1] = tmp4Result;
   let tmp4Result2 = !showForcedPasswordUpdate;
@@ -168,23 +168,23 @@ prototype["render"] = function render() {
     const obj8 = { style: tmp.requiredActionsTitle, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl3 = util.intl;
     obj8.children = intl3.string(util.t.geta79);
-    const items2 = [__initData(Text_Text.Text, obj8), ];
+    const items2 = [closure_1_11(Text_Text.Text, obj8), ];
     const obj9 = { style: tmp.requiredActionsSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
     const intl4 = util.intl;
     obj9.children = intl4.string(util.t.x5tG4V);
-    items2[1] = __initData(Text_Text.Text, obj9);
+    items2[1] = closure_1_11(Text_Text.Text, obj9);
     obj7.children = items2;
-    tmp4Result2 = __initData2(hasOwnProperty, obj7);
+    tmp4Result2 = __initData(React4, obj7);
   }
   items[2] = tmp4Result2;
-  const items3 = [__initData(TextInput.TextInput, { label: passwordLabel, secureTextEntry: true, errorMessage: self.getError("password"), onChange: self.handlePasswordChange, value: password, onSubmitEditing: self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword, returnKeyType: "next", autoComplete: "current-password", required: true }), , ];
+  const items3 = [closure_1_11(TextInput.TextInput, { label: passwordLabel, secureTextEntry: true, errorMessage: self.getError("password"), onChange: self.handlePasswordChange, value: password, onSubmitEditing: self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword, returnKeyType: "next", autoComplete: "current-password", required: true }), , ];
   const obj11 = { label: newPasswordLabel, ref: self.handleSetNewPasswordRef, secureTextEntry: true, errorMessage: self.getError("new_password"), onChange: self.handleNewPasswordChange, value: newPassword, returnKeyType: "done", autoComplete: "new-password", onSubmitEditing: null, required: true };
   let handleSubmit;
   if (self.canSubmit()) {
     handleSubmit = self.handleSubmit;
   }
   obj11.onSubmitEditing = handleSubmit;
-  items3[1] = __initData(TextInput.TextInput, obj11);
+  items3[1] = closure_1_11(TextInput.TextInput, obj11);
   const obj12 = { text: null, onPress: null, loading: null, disabled: null };
   const intl5 = util.intl;
   obj12.text = intl5.string(util.t["FRep5/"]);
@@ -199,14 +199,14 @@ prototype["render"] = function render() {
   const obj13 = { children: null };
   const obj14 = { spacing: 24, children: null };
   obj12.disabled = submitting;
-  items3[2] = __initData(components_Button_Button.Button, obj12);
+  items3[2] = closure_1_11(components_Button_Button.Button, obj12);
   obj14.children = items3;
-  items[3] = __initData2(Stack_Stack.Stack, obj14);
+  items[3] = __initData(Stack_Stack.Stack, obj14);
   obj.children = items;
-  obj13.children = __initData2(hasOwnProperty, obj);
-  return __initData(timestampProducer, obj13);
+  obj13.children = __initData(React4, obj);
+  return closure_1_11(hasOwnProperty, obj13);
 };
-EditPassword.contextType = fn(4788).ThemeContext;
+EditPassword.contextType = fn(4827).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xs, marginVertical: 16 };
 const size = fn(2);
@@ -215,7 +215,7 @@ let result = size.fileFinishedImporting("modules/user_settings/account/native/Us
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPasswordWrapper() {
   const cResult = flag(576).c(6);
   let obj = flag(576);
-  const params = flag(6681).useSettingNavigationRoute().params;
+  const params = flag(6682).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   } else {
     tmp8 = cResult[2];
   }
-  let obj2 = flag(6681);
+  let obj2 = flag(6682);
   const stateFromStoresObject = flag(504).useStateFromStoresObject(first, tmp8);
   const tmpResult = flag(504);
   const navigation = flag(1503).useNavigation();
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
     return tmp11;
   }
   const merged = Object.assign(stateFromStoresObject);
-  const tmp13 = closure_12(EditPassword, { navigation });
+  const tmp13 = closure_11(EditPassword, { navigation });
   cResult[3] = navigation;
   cResult[4] = stateFromStoresObject;
   cResult[5] = tmp13;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   const obj3 = { navigation };
   const tmpResult2 = flag(1503);
 }) : (function EditPasswordWrapper() {
-  const params = flag(6681).useSettingNavigationRoute().params;
+  const params = flag(6682).useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {
     flag = params.isLoginRequiredAction;
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   if (flag == null) {
     flag = false;
   }
-  let obj = flag(6681);
+  let obj = flag(6682);
   let items = [UserStore, UserSettingsAccountStore, LoginRequiredActionStore];
   const stateFromStoresObject = flag(504).useStateFromStoresObject(items, () => {
     const currentUser = UserStore.getCurrentUser();
@@ -343,5 +343,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditPass
   const tmpResult = flag(504);
   const tmpResult2 = flag(1503);
   const merged = Object.assign(stateFromStoresObject);
-  return closure_12(EditPassword, { navigation: flag(1503).useNavigation() });
+  return closure_11(EditPassword, { navigation: flag(1503).useNavigation() });
 });

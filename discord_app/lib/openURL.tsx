@@ -1,6 +1,6 @@
-// === Module 4759: openURL ===
+// === Module 4800: openURL ===
 
-// Module 4759 (openURL)
+// Module 4800 (openURL)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_3 = async function _openURL(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_3 = async function _openURL(arg0) {
         const obj = { skipExtensionCheck: closure_130_1, analyticsLocations: [] };
         value.default(closure_130_0, obj);
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp15) {
       c4 = tmp;

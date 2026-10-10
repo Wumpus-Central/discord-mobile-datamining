@@ -1,33 +1,33 @@
-// === Module 17639: ActivityPanelHeader ===
+// === Module 17711: ActivityPanelHeader ===
 
-// Module 17639 (ActivityPanelHeader)
+// Module 17711 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6854 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17630 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17640 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17641 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17645 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17646 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17651 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17702 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17712 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17713 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17717 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17718 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17723 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
-const native = GestureDetector(4788);
-const LegacyBaseButton = GestureDetector(6333);
+const native = GestureDetector(4827);
+const LegacyBaseButton = GestureDetector(6334);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(6074);
+const ActivityPanelConstants = fn(6067);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -102,7 +102,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
                   return;
                 }
               }
-              const obj3 = { runOnJS: setMode(4811).runOnJS, setMode, ActivityPanelModes };
+              const obj3 = { runOnJS: setMode(4850).runOnJS, setMode, ActivityPanelModes };
               T.__closure = obj3;
               T.__workletHash = 14504167937928;
               T.__initData = __initData;
@@ -126,7 +126,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
                 }
               }
             }
-            const obj4 = { mode: setMode(17636).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
+            const obj4 = { mode: setMode(17708).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: T, disableHorizontalSafeAreas: true };
             cResult[15] = T;
             cResult[16] = pipState;
             cResult[17] = wrapperOffset;
@@ -202,7 +202,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
     items[2] = obj;
     return items;
   }, items1);
-  obj.runOnJS = landscape(4811).runOnJS;
+  obj.runOnJS = landscape(4850).runOnJS;
   obj.setMode = setMode;
   obj.ActivityPanelModes = ActivityPanelModes;
   fn.__closure = obj;
@@ -211,8 +211,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActiv
   const items2 = [setMode];
   const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
-  const obj3 = { mode: landscape(17636).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
-  obj2.gesture = setMode(17636)(obj3);
+  const obj3 = { mode: landscape(17708).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj2.gesture = setMode(17708)(obj3);
   obj2.headerWrapperStyles = memo;
   obj2.headerStyles = memo1;
   obj2.styles = tmp;
@@ -266,7 +266,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivity
         const obj4 = { style: headerWrapperStyles, children: null };
         const items = [first, tmp9, tmp13];
         obj4.children = items;
-        const tmp20 = __initData2(hasOwnProperty, obj4);
+        const tmp20 = map1(hasOwnProperty, obj4);
         cResult[7] = headerWrapperStyles;
         cResult[8] = tmp9;
         cResult[9] = tmp13;
@@ -308,14 +308,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseActivity
     const obj5 = { style: headerStyles, children };
     items[2] = __initData(hasOwnProperty, obj5);
     obj3.children = items;
-    obj2.children = __initData2(hasOwnProperty, obj3);
+    obj2.children = map1(hasOwnProperty, obj3);
     obj.children = __initData(LegacyBaseButton.GestureDetector, obj2);
     tmp3Result2 = __initData(native.ThemeContextProvider, obj);
   }
   return tmp3Result2;
 });
 let closure_18 = tmp7;
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj4 = { buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, buttonContainerLandscape: { flexDirection: "column-reverse" } };
 const styles = createStyles.createStyles(obj4);
 ReactCompilerGating = fn(558);
@@ -447,7 +447,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     const obj4 = { hasConnectedActivity: tmp25, gesture, headerWrapperStyles, headerStyles, landscape, children: null };
                     const items3 = [tmp37, tmp41, tmp43];
                     obj4.children = items3;
-                    const tmp49 = __initData2(closure_18, obj4);
+                    const tmp49 = map1(closure_18, obj4);
                     cResult[28] = gesture;
                     cResult[29] = headerStyles;
                     cResult[30] = headerWrapperStyles;
@@ -471,7 +471,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             const obj6 = { style: tmp27, children: null };
             const items4 = [tmp30, tmp33, tmp36];
             obj6.children = items4;
-            const tmp40 = __initData2(hasOwnProperty, obj6);
+            const tmp40 = map1(hasOwnProperty, obj6);
             cResult[20] = tmp27;
             cResult[21] = tmp30;
             cResult[22] = tmp33;
@@ -550,7 +550,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   items3[2] = tmp20;
   obj4.children = items3;
-  const items4 = [__initData2(hasOwnProperty, obj4), , ];
+  const items4 = [map1(hasOwnProperty, obj4), , ];
   let tmp21 = null;
   if (!landscape) {
     tmp21 = tmp8Result;
@@ -560,7 +560,7 @@ let closure_20 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp5Result = MinimizeActivityButtonDefault;
   items4[2] = __initData(LeaveActivityButtonDefault, { selfEmbeddedActivity: tmp23, setMode });
   obj3.children = items4;
-  return __initData2(closure_18, obj3);
+  return map1(closure_18, obj3);
 }));
 ReactCompilerGating = fn(558);
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBaseActivityPanelHeader(context) {

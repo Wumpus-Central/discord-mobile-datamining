@@ -1,12 +1,12 @@
-// === Module 17978: ForumManager ===
+// === Module 18050: ForumManager ===
 
-// Module 17978 (ForumManager)
-import ForumPostDataLoader from "ForumPostDataLoader" /* 6997 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+// Module 18050 (ForumManager)
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7003 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
-const isStaticChannelRoute = fn(2071).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2072).isStaticChannelRoute;
 class ForumManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

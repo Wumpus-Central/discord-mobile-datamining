@@ -1,14 +1,14 @@
-// === Module 2086: GuildStore ===
+// === Module 2087: GuildStore ===
 
-// Module 2086 (GuildStore)
+// Module 2087 (GuildStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
-import FavoritesConstants from "FavoritesConstants" /* 2077 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 2078 */;
-import SetUtils from "SetUtils" /* 2081 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 2087 */;
-import PlainRecord from "PlainRecord" /* 2079 */;
-import GuildRecord from "GuildRecord" /* 2082 */;
+import FavoritesConstants from "FavoritesConstants" /* 2078 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 2079 */;
+import SetUtils from "SetUtils" /* 2082 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 2088 */;
+import PlainRecord from "PlainRecord" /* 2080 */;
+import GuildRecord from "GuildRecord" /* 2083 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 

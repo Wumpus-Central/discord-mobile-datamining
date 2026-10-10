@@ -1,18 +1,18 @@
-// === Module 12482: ReportToModChannelStore ===
+// === Module 12529: ReportToModChannelStore ===
 
-// Module 12482 (ReportToModChannelStore)
+// Module 12529 (ReportToModChannelStore)
 import c from "c" /* 576 */;
 import module_570 from "module_570" /* 570 */;
-import "module_4951";
-import module_4951 from "module_4951" /* 4951 */;
+import "module_4990";
+import module_4990 from "module_4990" /* 4990 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let obj = { name: "report-to-mod-channel-storage", storage: null };
-obj.storage = module_4951.createJSONStorage(() => require("LocalStorageWrapper"));
-let obj2 = module_570.create(module_4951.persist((arg0, arg1) => {
+obj.storage = module_4990.createJSONStorage(() => require("LocalStorageWrapper"));
+let obj2 = module_570.create(module_4990.persist((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {

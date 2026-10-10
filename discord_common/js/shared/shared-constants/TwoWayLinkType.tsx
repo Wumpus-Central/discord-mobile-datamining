@@ -1,6 +1,6 @@
-// === Module 9192: TwoWayLinkType ===
+// === Module 9219: TwoWayLinkType ===
 
-// Module 9192 (TwoWayLinkType)
+// Module 9219 (TwoWayLinkType)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["desktop", "device_code", "mobile", "web"]) };

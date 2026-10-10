@@ -1,25 +1,25 @@
-// === Module 8077: ReferralTrialEmbed ===
+// === Module 8095: ReferralTrialEmbed ===
 
-// Module 8077 (ReferralTrialEmbed)
+// Module 8095 (ReferralTrialEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import PremiumUtils from "PremiumUtils" /* 4728 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import createStyles from "createStyles" /* 5091 */;
-import ProductIds from "ProductIds" /* 7120 */;
-import useTrialOffer from "useTrialOffer" /* 7165 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7872 */;
-import _modDef8062 from "module_8062" /* 8062 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 8066 */;
-import _modDef8078 from "module_8078" /* 8078 */;
-import _modDef8079 from "module_8079" /* 8079 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
+import PremiumUtils from "PremiumUtils" /* 4769 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import createStyles from "createStyles" /* 5092 */;
+import ProductIds from "ProductIds" /* 7126 */;
+import useTrialOffer from "useTrialOffer" /* 7171 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7890 */;
+import _modDef8080 from "module_8080" /* 8080 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 8084 */;
+import _modDef8096 from "module_8096" /* 8096 */;
+import _modDef8097 from "module_8097" /* 8097 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 import UserStore from "UserStore" /* 1390 */;
-import SubscriptionStore from "SubscriptionStore" /* 4734 */;
-import UserOfferStore from "UserOfferStore" /* 7166 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import SubscriptionStore from "SubscriptionStore" /* 4775 */;
+import UserOfferStore from "UserOfferStore" /* 7172 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -38,13 +38,13 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
     const channel = ChannelStore.getChannel(message.getChannelId());
     if (null != channel) {
       if (channel.isDM()) {
-        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8078), headerText: null, headerColor: null, thumbnailUrl: null };
+        const obj = { backgroundColor, borderColor: backgroundColor, thumbnailCornerRadius: 3, headerLogoUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef8096), headerText: null, headerColor: null, thumbnailUrl: null };
         const intl = util.intl;
         const tmp44Result = renderer_EmbedUtils;
         obj.headerText = intl.string(util.t.gtNqJQ).toLocaleLowerCase();
         obj.headerColor = headerTextColor;
         const stringResult = intl.string(util.t.gtNqJQ);
-        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8079);
+        obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8097);
         let userId;
         if (relevantUserTrialOffer != null) {
           userId = relevantUserTrialOffer.userId;
@@ -158,7 +158,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
                     const intl8 = util.intl;
                     obj11.acceptLabelText = intl8.string(util.t.bXTClc);
                     obj11.acceptLabelColor = acceptLabelColor;
-                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8062);
+                    obj11.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8080);
                     tmp33 = obj11;
                     const tmp44Result11 = renderer_EmbedUtils;
                   }

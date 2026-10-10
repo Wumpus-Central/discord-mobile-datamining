@@ -1,6 +1,6 @@
-// === Module 18563: VerifyEmailScreen ===
+// === Module 18637: VerifyEmailScreen ===
 
-// Module 18563 (VerifyEmailScreen)
+// Module 18637 (VerifyEmailScreen)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -76,10 +76,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               v0 = 0;
               v0(false);
               closure_1_5(false);
-              const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null };
+              const obj7 = { text: null };
               const intl = tmp3(first[10]).intl;
-              obj7.content = intl.string(ref(first[11]).PfbG6H);
-              ref(first[9]).open(obj7);
+              obj7.text = intl.string(ref(first[11]).PfbG6H);
+              ref(first[9]).open("SAFETY_FLOWS_VERIFY_EMAIL_ERROR", obj7);
               const obj2 = ref(first[9]);
             } else if (arg0 === 1) {
               c4 = 3;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -225,10 +225,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             c3 = 0;
             closure_128_3(false);
             closure_128_5(false);
-            const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null };
+            const obj7 = { text: null };
             const intl = tmp3(tmp30[10]).intl;
-            obj7.content = intl.string(ref(tmp30[11]).PfbG6H);
-            ref(tmp30[9]).open(obj7);
+            obj7.text = intl.string(ref(tmp30[11]).PfbG6H);
+            ref(tmp30[9]).open("SAFETY_FLOWS_VERIFY_EMAIL_ERROR", obj7);
             const obj2 = ref(tmp30[9]);
           } else if (arg0 === 1) {
             c4 = 3;
@@ -267,20 +267,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj3 = { title: null, action: null, onAction: null, submitting: null, children: null };
   let obj2 = onTaskComplete(value[7]);
   let intl = onTaskComplete(value[10]).intl;
-  obj3.title = intl.string(require("module_2859")["Qm6K/s"]);
+  obj3.title = intl.string(require("module_2862")["Qm6K/s"]);
   const intl2 = onTaskComplete(value[10]).intl;
-  obj3.action = intl2.string(require("module_2859").wq2RDq);
+  obj3.action = intl2.string(require("module_2862").wq2RDq);
   obj3.onAction = onAction;
   obj3.submitting = tmp4[0];
   let obj4 = { spacing: require("native").space.PX_16, children: null };
   let obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl3 = onTaskComplete(value[10]).intl;
-  obj5.children = intl3.string(require("module_2859").aveKoG);
+  obj5.children = intl3.string(require("module_2862").aveKoG);
   const items3 = [onAction(onTaskComplete(value[12]).Text, obj5), ];
   let obj6 = { spacing: require("native").space.PX_8, children: null };
   let obj7 = { placeholder: null, maxLength: 6, returnKeyType: "done", value: null, onChange: null };
   const intl4 = onTaskComplete(value[10]).intl;
-  obj7.placeholder = intl4.string(require("module_2859").d9Ykjr);
+  obj7.placeholder = intl4.string(require("module_2862").d9Ykjr);
   obj7.value = value;
   obj7.onChange = tmp2[1];
   const items4 = [onAction(onTaskComplete(value[13]).TextInput, obj7), ];

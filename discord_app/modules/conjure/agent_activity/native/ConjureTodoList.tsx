@@ -1,15 +1,15 @@
-// === Module 17166: ConjureTodoList ===
+// === Module 17236: ConjureTodoList ===
 
-// Module 17166 (ConjureTodoList)
+// Module 17236 (ConjureTodoList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import FormCheckbox from "FormCheckbox" /* 6184 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 17063 */;
-import ConjureTodoAgents from "ConjureTodoAgents" /* 17147 */;
-import ConjureTodoState from "ConjureTodoState" /* 17167 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import FormCheckbox from "FormCheckbox" /* 6177 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 17131 */;
+import ConjureTodoAgents from "ConjureTodoAgents" /* 17216 */;
+import ConjureTodoState from "ConjureTodoState" /* 17237 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { list: { gap: nativeDefault.space.PX_8 }, row: null, marker: null, markerUnfinished: null, markerInProgress: null, markerSpinner: null, text: null, agents: null, agentMark: null, agentMarkTint0: null, agentMarkTint1: null, agentMarkTint2: null, agentMarkTint3: null, textCompleted: null };
 let obj3 = { gap: nativeDefault.space.PX_8 };
 obj2.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
@@ -74,10 +74,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
                     let obj2 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
                     let intl = tmp(1126).intl;
                     const obj3 = { count: tmp6 };
-                    obj2.accessibilityLabel = intl.formatToPlainString(items1(3827).SPGdDc, obj3);
+                    obj2.accessibilityLabel = intl.formatToPlainString(items1(3849).SPGdDc, obj3);
                     const _HermesInternal = HermesInternal;
                     obj2.children = "+" + tmp6;
-                    tmp18 = closure_6(tmp(5087).Text, obj2);
+                    tmp18 = closure_6(tmp(5088).Text, obj2);
                   }
                   cResult[12] = tmp6;
                   cResult[13] = tmp18;
@@ -126,7 +126,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
       items[1] = items1[ConjureNativeStatusLine.laneTintIndexFor(key.key) % ConjureNativeStatusLine.LANE_TINT_COUNT];
       obj.style = items;
       const intl = util.intl;
-      obj.accessibilityLabel = intl.formatToPlainString(_modDef3827.TVvPCJ, { name: key.name, task: key.task });
+      obj.accessibilityLabel = intl.formatToPlainString(_modDef3849.TVvPCJ, { name: key.name, task: key.task });
       return timestampProducer(hasOwnProperty, obj, key.key);
     });
     tmp12 = forResult;
@@ -166,7 +166,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
           items[1] = items[ConjureNativeStatusLine.laneTintIndexFor(key.key) % ConjureNativeStatusLine.LANE_TINT_COUNT];
           obj.style = items;
           const intl = util.intl;
-          obj.accessibilityLabel = intl.formatToPlainString(_modDef3827.TVvPCJ, { name: key.name, task: key.task });
+          obj.accessibilityLabel = intl.formatToPlainString(_modDef3849.TVvPCJ, { name: key.name, task: key.task });
           return timestampProducer(hasOwnProperty, obj, key.key);
         }),
 
@@ -176,10 +176,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoAge
       const obj3 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
       let intl = tmp2(1126).intl;
       const obj4 = { count: overflow };
-      obj3.accessibilityLabel = intl.formatToPlainString(items(3827).SPGdDc, obj4);
+      obj3.accessibilityLabel = intl.formatToPlainString(items(3849).SPGdDc, obj4);
       const _HermesInternal = HermesInternal;
       obj3.children = "+" + overflow;
-      tmp9 = closure_6(tmp2(5087).Text, obj3);
+      tmp9 = closure_6(tmp2(5088).Text, obj3);
     }
     items1[1] = tmp9;
     obj2.children = items1;
@@ -206,17 +206,17 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
           if (cResult[11] !== status) {
             if ("completed" === status) {
               const intl4 = util.intl;
-              let stringResult = intl4.string(_modDef3827.KvBdun);
+              let stringResult = intl4.string(_modDef3849.KvBdun);
             } else {
               if ("in_progress" === status) {
                 const intl3 = util.intl;
-                stringResult = intl3.string(_modDef3827["m5G9+S"]);
+                stringResult = intl3.string(_modDef3849["m5G9+S"]);
               } else if ("unfinished" !== status) {
                 const intl = util.intl;
-                stringResult = intl.string(_modDef3827.sPGeWi);
+                stringResult = intl.string(_modDef3849.sPGeWi);
               }
               const intl2 = util.intl;
-              stringResult = intl2.string(_modDef3827.lRpwhD);
+              stringResult = intl2.string(_modDef3849.lRpwhD);
             }
             cResult[11] = status;
             cResult[12] = stringResult;
@@ -264,17 +264,17 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
   if (cResult[0] !== status) {
     if ("completed" === status) {
       const intl8 = util.intl;
-      let stringResult1 = intl8.string(_modDef3827.KvBdun);
+      let stringResult1 = intl8.string(_modDef3849.KvBdun);
     } else {
       if ("in_progress" === status) {
         const intl7 = util.intl;
-        stringResult1 = intl7.string(_modDef3827["m5G9+S"]);
+        stringResult1 = intl7.string(_modDef3849["m5G9+S"]);
       } else if ("unfinished" !== status) {
         const intl5 = util.intl;
-        stringResult1 = intl5.string(_modDef3827.sPGeWi);
+        stringResult1 = intl5.string(_modDef3849.sPGeWi);
       }
       const intl6 = util.intl;
-      stringResult1 = intl6.string(_modDef3827.lRpwhD);
+      stringResult1 = intl6.string(_modDef3849.lRpwhD);
     }
     cResult[0] = status;
     cResult[1] = stringResult1;
@@ -317,16 +317,16 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
       obj.style = items;
       if ("completed" === status) {
         const intl4 = util.intl;
-        let stringResult = intl4.string(_modDef3827.KvBdun);
+        let stringResult = intl4.string(_modDef3849.KvBdun);
       } else if ("in_progress" === status) {
         const intl3 = util.intl;
-        stringResult = intl3.string(_modDef3827["m5G9+S"]);
+        stringResult = intl3.string(_modDef3849["m5G9+S"]);
       } else if ("unfinished" === status) {
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef3827.lRpwhD);
+        stringResult = intl2.string(_modDef3849.lRpwhD);
       } else {
         const intl = util.intl;
-        stringResult = intl.string(_modDef3827.sPGeWi);
+        stringResult = intl.string(_modDef3849.sPGeWi);
       }
       obj.accessibilityLabel = stringResult;
       let tmp2Result = null;
@@ -340,23 +340,23 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function TodoMa
   }
   if ("completed" === status) {
     const intl8 = util.intl;
-    let stringResult1 = intl8.string(_modDef3827.KvBdun);
+    let stringResult1 = intl8.string(_modDef3849.KvBdun);
     let tmp21 = require;
   } else {
     if ("in_progress" === status) {
       const intl7 = util.intl;
-      stringResult1 = intl7.string(_modDef3827["m5G9+S"]);
+      stringResult1 = intl7.string(_modDef3849["m5G9+S"]);
       tmp21 = require;
     } else if ("unfinished" !== status) {
       tmp21 = require;
       const intl5 = util.intl;
-      stringResult1 = intl5.string(_modDef3827.sPGeWi);
+      stringResult1 = intl5.string(_modDef3849.sPGeWi);
     }
     const intl6 = util.intl;
-    stringResult1 = intl6.string(_modDef3827.lRpwhD);
+    stringResult1 = intl6.string(_modDef3849.lRpwhD);
     tmp21 = require;
   }
-  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6184).FormCheckbox, { checked: "completed" === status }) };
+  { accessible: true, accessibilityRole: "image", accessibilityLabel: stringResult1, children: timestampProducer(tmp21(6177).FormCheckbox, { checked: "completed" === status }) };
 });
 ReactCompilerGating = fn(558);
 const obj10 = { backgroundColor: nativeDefault.colors.TEXT_FEEDBACK_INFO };
@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
         const _Symbol3 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(1126).intl;
-          const stringResult = intl2.string(textCompleted(3827).RtzECX);
+          const stringResult = intl2.string(textCompleted(3849).RtzECX);
           cResult[12] = stringResult;
           let tmp25 = stringResult;
         } else {
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
             if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = tmp(1126).intl;
               const intl4 = tmp(1126).intl;
-              const stringResult2 = intl4.string(textCompleted(3827).xydHoj);
+              const stringResult2 = intl4.string(textCompleted(3849).xydHoj);
               class W {
                 constructor(arg0) {
                   tmp = closure_0;
@@ -456,8 +456,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
               }
               cResult[18] = stringResult2;
               let tmp32 = stringResult2;
-              let tmp31 = intl3.string(textCompleted(3827).RKyN9q);
-              const stringResult1 = intl3.string(textCompleted(3827).RKyN9q);
+              let tmp31 = intl3.string(textCompleted(3849).RKyN9q);
+              const stringResult1 = intl3.string(textCompleted(3849).RKyN9q);
             } else {
               tmp31 = cResult[17];
               tmp32 = cResult[18];
@@ -542,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                                 obj2.showLabel = tmp31;
                                 obj2.hideLabel = tmp32;
                                 obj2.children = tmp49;
-                                const tmp56 = closure_6(textCompleted(17081), obj2);
+                                const tmp56 = closure_6(textCompleted(17150), obj2);
                                 cResult[40] = tmp6;
                                 cResult[41] = onToggleExpanded;
                                 cResult[42] = tmp5;
@@ -660,7 +660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
                             }
                             tmp48[2] = tmp7.text;
                             tmp48[3] = provisional;
-                            items1[1] = closure_6(tmp(5087).Text, tmp48);
+                            items1[1] = closure_6(tmp(5088).Text, tmp48);
                             obj4.children = items1;
                             tmp43 = closure_7(closure_5, obj4);
                           }
@@ -836,7 +836,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
           }
         }
         const obj5 = { accessibilityLiveRegion: str4, accessibilityLabel: tmp10, children: tmp9 };
-        const tmp29 = closure_6(tmp(17081).ConjureNativeCollapsibleMeta, obj5);
+        const tmp29 = closure_6(tmp(17150).ConjureNativeCollapsibleMeta, obj5);
         cResult[13] = tmp9;
         cResult[14] = tmp10;
         cResult[15] = str4;
@@ -860,11 +860,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp14) {
-    const groupAgentsByTodoResult = tmp(17147).groupAgentsByTodo(tmp14);
+    const groupAgentsByTodoResult = tmp(17216).groupAgentsByTodo(tmp14);
     cResult[10] = tmp14;
     cResult[11] = groupAgentsByTodoResult;
     let tmp16 = groupAgentsByTodoResult;
-    const tmpResult = tmp(17147);
+    const tmpResult = tmp(17216);
   } else {
     tmp16 = cResult[11];
   }
@@ -872,7 +872,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   if (0 !== todos.length) {
     const intl = tmp(1126).intl;
     const obj6 = { completed: length, total: length2 };
-    const formatToPlainStringResult = intl.formatToPlainString(textCompleted(3827)["P/I+JW"], obj6);
+    const formatToPlainStringResult = intl.formatToPlainString(textCompleted(3849)["P/I+JW"], obj6);
     class W {
       constructor(arg0) {
         tmp = closure_0;
@@ -918,7 +918,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       }
     }
     const obj7 = { completed: length, total: length2 };
-    const tmp23Result = tmp23(textCompleted(3827)["7tzwKB"], obj7);
+    const tmp23Result = tmp23(textCompleted(3849)["7tzwKB"], obj7);
     let tmp19 = forResult;
   } else {
     tmp19 = null;
@@ -973,11 +973,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   }
   const intl = agents(1126).intl;
   const intl2 = agents(1126).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(flag2(3827)["P/I+JW"], { completed: length, total: todos.length });
+  const formatToPlainStringResult = intl.formatToPlainString(flag2(3849)["P/I+JW"], { completed: length, total: todos.length });
   let obj = { title: null, meta: null, showHeader: null, superseded: null, expanded: null, onToggleExpanded: null, showLabel: null, hideLabel: null, children: null };
-  const formatToPlainStringResult1 = intl2.formatToPlainString(flag2(3827)["7tzwKB"], { completed: length, total: todos.length });
+  const formatToPlainStringResult1 = intl2.formatToPlainString(flag2(3849)["7tzwKB"], { completed: length, total: todos.length });
   const intl3 = agents(1126).intl;
-  obj.title = intl3.string(flag2(3827).RtzECX);
+  obj.title = intl3.string(flag2(3849).RtzECX);
   let str = "none";
   if (flag) {
     str = "none";
@@ -985,15 +985,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       str = "polite";
     }
   }
-  obj.meta = closure_6(agents(17081).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
+  obj.meta = closure_6(agents(17150).ConjureNativeCollapsibleMeta, { accessibilityLiveRegion: str, accessibilityLabel: formatToPlainStringResult1, children: formatToPlainStringResult });
   obj.showHeader = todos.length > 0;
   obj.superseded = flag3;
   obj.expanded = flag4;
   obj.onToggleExpanded = announceProgress.onToggleExpanded;
   const intl4 = agents(1126).intl;
-  obj.showLabel = intl4.string(flag2(3827).RKyN9q);
+  obj.showLabel = intl4.string(flag2(3849).RKyN9q);
   const intl5 = agents(1126).intl;
-  obj.hideLabel = intl5.string(flag2(3827).xydHoj);
+  obj.hideLabel = intl5.string(flag2(3849).xydHoj);
   let obj2 = { style: tmp.list, children: null };
   let items1 = [
     todos.map((status) => {
@@ -1032,7 +1032,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
       let obj3 = { style: tmp.row, children: null };
       let items2 = [closure_6(closure_10, { status: "pending" }), ];
       let obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.text, children: provisional };
-      items2[1] = closure_6(agents(5087).Text, obj4);
+      items2[1] = closure_6(agents(5088).Text, obj4);
       obj3.children = items2;
       tmp10Result = closure_7(closure_5, obj3);
     }
@@ -1040,6 +1040,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureT
   items1[1] = tmp10Result;
   obj2.children = items1;
   obj.children = closure_7(closure_5, obj2);
-  return closure_6(flag2(17081), obj);
+  return closure_6(flag2(17150), obj);
 });
 export { todoProgress };

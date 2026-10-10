@@ -1,26 +1,26 @@
-// === Module 17798: VoicePanelDisconnectCancelButton ===
+// === Module 17870: VoicePanelDisconnectCancelButton ===
 
-// Module 17798 (VoicePanelDisconnectCancelButton)
+// Module 17870 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5105 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5886 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6045 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6038 */;
 import StreamActionCreators from "StreamActionCreators" /* 7443 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10777 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10812 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
-import VoicePanelStore from "VoicePanelStore" /* 6081 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
+import VoicePanelStore from "VoicePanelStore" /* 6074 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11926).VoicePanelModes;
+const VoicePanelModes = fn(11970).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { disconnectCancelBG: { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT }, icon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT };
 obj2.icon = { tintColor: nativeDefault.colors.WHITE };
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Disconne
         }
       } else {
         SelectedChannelActionCreatorsDefault.disconnect();
-        state = VoicePanelStore.getState();
+        const state = VoicePanelStore.getState();
         state.closeChannel(channelId);
       }
     } else {

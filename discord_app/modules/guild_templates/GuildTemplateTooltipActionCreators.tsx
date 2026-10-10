@@ -1,9 +1,9 @@
-// === Module 7021: GuildTemplateTooltipActionCreators ===
+// === Module 7027: GuildTemplateTooltipActionCreators ===
 
-// Module 7021 (GuildTemplateTooltipActionCreators)
+// Module 7027 (GuildTemplateTooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
 
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
@@ -23,7 +23,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -55,7 +55,7 @@ export default {
             return obj;
           }
           guildId = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } catch (tmp7) {
           guildId = tmp;
           throw tmp7;

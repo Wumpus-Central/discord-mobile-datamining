@@ -1,22 +1,22 @@
-// === Module 13405: EditCollectiblesPreviewDetails ===
+// === Module 13455: EditCollectiblesPreviewDetails ===
 
-// Module 13405 (EditCollectiblesPreviewDetails)
+// Module 13455 (EditCollectiblesPreviewDetails)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
-import DateUtils from "DateUtils" /* 4752 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8281 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
+import DateUtils from "DateUtils" /* 4793 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8297 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({ productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 } });
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditCollectiblesPreviewDescription(product) {

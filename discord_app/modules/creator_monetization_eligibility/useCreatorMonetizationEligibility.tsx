@@ -1,12 +1,12 @@
-// === Module 18404: useCreatorMonetizationEligibility ===
+// === Module 18478: useCreatorMonetizationEligibility ===
 
-// Module 18404 (useCreatorMonetizationEligibility)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 18377 */;
+// Module 18478 (useCreatorMonetizationEligibility)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 18451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-let closure_6 = fn(18374).CreatorMonetizationApplicationState;
+let closure_6 = fn(18448).CreatorMonetizationApplicationState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = closure_3;
-            const tmp45 = new closure_0(5633)(closure_129_1);
+            const tmp45 = new closure_0(5636)(closure_129_1);
             tmp4(tmp45);
             c4 = 0;
             closure_1(false);
@@ -74,7 +74,7 @@ export default function useCreatorMonetizationEligibility(arg0) {
             obj6.notNSFW = 0 === Object.keys(closure_129_0.nsfw_properties).length;
             obj6.canApply = closure_129_0.can_apply;
             const latest_request2 = closure_129_0.latest_request;
-            state = undefined;
+            let state;
             if (latest_request2 != null) {
               state = latest_request2.state;
             }

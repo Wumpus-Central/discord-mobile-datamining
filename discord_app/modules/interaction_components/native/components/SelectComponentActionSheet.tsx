@@ -1,23 +1,23 @@
-// === Module 11335: SelectComponentActionSheet ===
+// === Module 11376: SelectComponentActionSheet ===
 
-// Module 11335 (SelectComponentActionSheet)
+// Module 11376 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4793 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import FormCheckbox from "FormCheckbox" /* 6184 */;
-import TableRow from "TableRow" /* 6186 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8751 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import FormCheckbox from "FormCheckbox" /* 6177 */;
+import TableRow from "TableRow" /* 6179 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 8767 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(6837).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6840).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" }, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.tagListIconWrapper = size;
@@ -121,12 +121,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
                           tmp2(arg0, tmp);
                         }
                       };
-                      obj3.onChangeText = function onChangeText(arg0) {
+                      obj3.onChangeText = function onChangeText(ref) {
                         const current = ref.current;
                         if (current != null) {
                           current.scrollTo({ y: 0, animated: false });
                         }
-                        onQueryChange(arg0);
+                        onQueryChange(ref);
                       };
                       tmp20Result2 = closure_8(selectedOptions(onPressOptionItem[13]), obj3);
                       const tmp22 = selectedOptions(onPressOptionItem[13]);
@@ -274,10 +274,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
     const obj3 = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1126).intl;
     obj3.text = intl3.string(tmp6(1126).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5376).Button, obj3);
+    tmp5Result = closure_8(tmp6(5379).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(6835).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(6838).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;
@@ -304,15 +304,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
           tmp2(arg0, tmp);
         }
       };
-      obj4.onChangeText = function onChangeText(arg0) {
+      obj4.onChangeText = function onChangeText(ref) {
         const current = ref.current;
         if (current != null) {
           current.scrollTo({ y: 0, animated: false });
         }
-        onQueryChange(arg0);
+        onQueryChange(ref);
       };
-      tmp5Result4 = closure_8(selectedOptions(8609), obj4);
-      const tmp13 = selectedOptions(8609);
+      tmp5Result4 = closure_8(selectedOptions(8625), obj4);
+      const tmp13 = selectedOptions(8625);
     }
   }
   children[1] = tmp5Result4;

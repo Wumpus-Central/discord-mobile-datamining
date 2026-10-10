@@ -1,12 +1,12 @@
-// === Module 13079: useTimestampTickedNow ===
+// === Module 13126: useTimestampTickedNow ===
 
-// Module 13079 (useTimestampTickedNow)
+// Module 13126 (useTimestampTickedNow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 const require = globalThis.__r;
 
@@ -141,7 +141,7 @@ export const useTimestampTickedNow = ReactCompilerGating.isReactCompilerEnabled(
   importDefault = result;
   const items1 = [result];
   const effect = noop.useEffect(() => {
-    const interval = new closure_0(2059).Interval();
+    const interval = new closure_0(2060).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
       const rounded = Math.floor(timestamp / c1(1102).Millis.SECOND);

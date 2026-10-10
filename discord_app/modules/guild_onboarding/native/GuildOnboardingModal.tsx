@@ -1,20 +1,20 @@
-// === Module 6807: GuildOnboardingModal ===
+// === Module 6810: GuildOnboardingModal ===
 
-// Module 6807 (GuildOnboardingModal)
+// Module 6810 (GuildOnboardingModal)
 import router_utils from "router_utils" /* 1112 */;
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6129 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6790 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6791 */;
-import GuildOnboardingPromptsDefault from "GuildOnboardingPrompts" /* 6808 */;
-import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 6809 */;
-import GuildOnboardingConnectionPromptDefault from "GuildOnboardingConnectionPrompt" /* 6845 */;
-import GuildOnboardingCompletedDefault from "GuildOnboardingCompleted" /* 6873 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6122 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6793 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6794 */;
+import GuildOnboardingPromptsDefault from "GuildOnboardingPrompts" /* 6811 */;
+import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 6812 */;
+import GuildOnboardingConnectionPromptDefault from "GuildOnboardingConnectionPrompt" /* 6848 */;
+import GuildOnboardingCompletedDefault from "GuildOnboardingCompleted" /* 6879 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6155 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6785 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6148 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6788 */;
 
 require = fn;
 function headerTitle() {
@@ -33,7 +33,7 @@ function getScreens(guildId) {
     fullscreen: true,
     headerTitle,
     headerRight,
-    headerLeft: guildId(6205).getHeaderCloseButton(() => {
+    headerLeft: guildId(6200).getHeaderCloseButton(() => {
       if (backShouldLeaveGuild) {
         let tmp4 = onClose;
         let channel = ChannelStore.getChannel(SelectedChannelStore.getLastSelectedChannelId());
@@ -84,7 +84,7 @@ function getScreens(guildId) {
   };
   return obj;
 }
-let constants = fn(6782).GuildOnboardingModalStates;
+let constants = fn(6785).GuildOnboardingModalStates;
 const Constants = fn(1085);
 ({ GuildFeatures: c10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;

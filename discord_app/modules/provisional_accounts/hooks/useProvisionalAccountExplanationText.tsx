@@ -1,12 +1,12 @@
-// === Module 12326: useProvisionalAccountExplanationText ===
+// === Module 12370: useProvisionalAccountExplanationText ===
 
-// Module 12326 (useProvisionalAccountExplanationText)
+// Module 12370 (useProvisionalAccountExplanationText)
 import c from "c" /* 576 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12327 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12371 */;
 import noop from "module_19" /* 19 */;
 
 const util = rSUACb(1126);
-const HelpdeskUtilsDefault = tmp2(2127);
+const HelpdeskUtilsDefault = tmp2(2128);
 require = fn;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const ReactCompilerGating = fn(558);

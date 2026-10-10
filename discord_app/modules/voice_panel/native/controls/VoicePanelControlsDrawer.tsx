@@ -1,17 +1,17 @@
-// === Module 17813: VoicePanelControlsDrawer ===
+// === Module 17885: VoicePanelControlsDrawer ===
 
-// Module 17813 (VoicePanelControlsDrawer)
+// Module 17885 (VoicePanelControlsDrawer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import Suspender from "Suspender" /* 5329 */;
-import spring from "spring" /* 5375 */;
-import useRefValueDefault from "useRefValue" /* 6167 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9550 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 11923 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11933 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17814 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17825 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import Suspender from "Suspender" /* 5330 */;
+import spring from "spring" /* 5378 */;
+import useRefValueDefault from "useRefValue" /* 6160 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9579 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 11967 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11977 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17886 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,12 +22,12 @@ function renderChat(shown) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(11926);
+const VoicePanelConstants = fn(11970);
 ({ MODE_CHANGE_PHYSICS: closure_7, VoicePanelModes: closure_8 } = VoicePanelConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 200;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { drawer: { flex: 1, zIndex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

@@ -1,14 +1,14 @@
-// === Module 15635: UserSettingsLocale ===
+// === Module 15697: UserSettingsLocale ===
 
-// Module 15635 (UserSettingsLocale)
+// Module 15697 (UserSettingsLocale)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import TableRadioRow from "TableRadioRow" /* 6266 */;
-import flags from "flags" /* 15636 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import TableRadioRow from "TableRadioRow" /* 6261 */;
+import flags from "flags" /* 15698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_10 = async function _handleLanguageChange(arg0) {
       } else {
         closure_130_1(closure_130_2[8]).updateLocale(closure_129_0);
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp14) {
       c4 = tmp;
@@ -75,9 +75,9 @@ let closure_10 = async function _handleLanguageChange(arg0) {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const setAppLocale = fn(2129).setAppLocale;
+const setAppLocale = fn(2130).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

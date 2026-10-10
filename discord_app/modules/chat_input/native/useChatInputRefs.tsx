@@ -1,29 +1,29 @@
-// === Module 11615: useChatInputRefs ===
+// === Module 11661: useChatInputRefs ===
 
-// Module 11615 (useChatInputRefs)
+// Module 11661 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ChatInputUtils from "ChatInputUtils" /* 4946 */;
-import StickersUtils from "StickersUtils" /* 5746 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7172 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7900 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 9659 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 9661 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11616 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 11625 */;
+import ChatInputUtils from "ChatInputUtils" /* 4985 */;
+import StickersUtils from "StickersUtils" /* 5749 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7918 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 9688 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 9690 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11662 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 11671 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7903 */;
-import StickersStore from "StickersStore" /* 6037 */;
-import DraftStore from "DraftStore" /* 7237 */;
-import EditMessageStore from "EditMessageStore" /* 7362 */;
-import SlowmodeStore from "SlowmodeStore" /* 7368 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7921 */;
+import StickersStore from "StickersStore" /* 6030 */;
+import DraftStore from "DraftStore" /* 7243 */;
+import EditMessageStore from "EditMessageStore" /* 7368 */;
+import SlowmodeStore from "SlowmodeStore" /* 7374 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const DraftType = fn(7237).DraftType;
-let closure_11 = fn(9356).updateChatInputContainerHeight;
+const DraftType = fn(7243).DraftType;
+let closure_11 = fn(9383).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const COMMAND_SENTINEL = fn(5401).COMMAND_SENTINEL;
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const COMMAND_SENTINEL = fn(5404).COMMAND_SENTINEL;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
 
@@ -41,7 +41,7 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(6176)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(6169)(() => ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   closure_12 = tmp2;
   const propsPrev = noop.useRef(chatInputProps);
   const props = noop.useRef(chatInputProps);
@@ -67,7 +67,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_1_12.handleRef(null, channel.channel.id);
     };
   }, items2);
-  state = noop.useRef(chatInputTextFieldHeight(6176)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  const state = noop.useRef(chatInputTextFieldHeight(6169)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   noop.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = noop.useMemo(() => {
@@ -361,7 +361,7 @@ export default function useChatInputRefs(chatInputProps) {
                 const merged = Object.assign(ref.current);
                 obj4.chatInputRef = chatInputRef;
                 obj2.params = obj4;
-                const result = threadCreationCallback(11625).chatInputSendApplicationCommand(obj2);
+                const result = threadCreationCallback(11671).chatInputSendApplicationCommand(obj2);
               });
             }
             if (!sendCommandResult) {
@@ -382,15 +382,15 @@ export default function useChatInputRefs(chatInputProps) {
                   tmp8 = chatInputRef;
                   obj3.chatInputRef = chatInputRef;
                   obj2.params = obj3;
-                  const result = chatInputProps(11625).chatInputHandleSendText(obj2);
-                  const obj = chatInputProps(11625);
+                  const result = chatInputProps(11671).chatInputHandleSendText(obj2);
+                  const obj = chatInputProps(11671);
                 }
-                const keyboardType = chatInputProps(4948).getKeyboardType();
+                const keyboardType = chatInputProps(4987).getKeyboardType();
                 if (keyboardType === chatInputProps(1629).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
                 }
-                obj4 = chatInputProps(4948);
+                obj4 = chatInputProps(4987);
               });
               let obj = chatInputTextFieldHeight(ref[14]);
             }

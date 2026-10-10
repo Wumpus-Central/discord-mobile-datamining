@@ -1,11 +1,11 @@
-// === Module 8071: usePremiumDiscountOffer ===
+// === Module 8089: usePremiumDiscountOffer ===
 
-// Module 8071 (usePremiumDiscountOffer)
+// Module 8089 (usePremiumDiscountOffer)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import ProductIds from "ProductIds" /* 7120 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8072 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import ProductIds from "ProductIds" /* 7126 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8090 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
 require = fn;
 const PremiumConstants = fn(1392);

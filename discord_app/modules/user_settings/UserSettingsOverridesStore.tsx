@@ -26,7 +26,7 @@ function updateExistingSettings() {
   }
   obj.animateEmoji = value3;
   const textAndImages3 = settings.textAndImages;
-  let value4;
+  value4 = undefined;
   if (textAndImages3 != null) {
     if (textAndImages3.animateStickers != null) {
       value4 = iter3.value;
@@ -98,7 +98,7 @@ obj = {
     }
     obj.animateEmoji = value3;
     const textAndImages3 = settings.textAndImages;
-    let value4;
+    value4 = undefined;
     if (textAndImages3 != null) {
       if (textAndImages3.animateStickers != null) {
         value4 = iter3.value;

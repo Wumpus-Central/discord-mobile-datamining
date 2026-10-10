@@ -1,12 +1,12 @@
-// === Module 10456: GiftCodeStore ===
+// === Module 10490: GiftCodeStore ===
 
-// Module 10456 (GiftCodeStore)
+// Module 10490 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import _modDef4661 from "module_4661" /* 4661 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5630 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 10457 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10026 */;
+import _modDef4702 from "module_4702" /* 4702 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5633 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 10491 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10055 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -18,14 +18,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(2059).Timeout();
+      const timeout = new code(2060).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4661().valueOf();
+          const diff = valueOfResult - _modDef4702().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -110,7 +110,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef4661();
+          const obj4 = _modDef4702();
         }
       }
     }
@@ -147,21 +147,17 @@ function resolveMessageGiftCodes(message, arg1) {
   }
   if (0 !== findGiftCodesResult.length) {
     const item = findGiftCodesResult.forEach((item) => {
-      closure_0 = item;
       let hasItem = items.includes(item);
       if (!hasItem) {
-        hasItem = closure_11.includes(item);
+        hasItem = closure_1_11.includes(item);
       }
       if (!hasItem) {
         if (!items.includes(item)) {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = item;
         }
-        closure_1(584).wait(() => {
-          const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(closure_0, false, true);
-          return giftCode.catch(closure_2_6);
-        });
-        const obj = closure_1(584);
+        const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(item, false, true);
+        giftCode.catch(closure_1_6);
       }
     });
   }

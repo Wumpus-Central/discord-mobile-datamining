@@ -1,18 +1,18 @@
-// === Module 12830: NitroLimitUpsellBar ===
+// === Module 12877: NitroLimitUpsellBar ===
 
-// Module 12830 (NitroLimitUpsellBar)
+// Module 12877 (NitroLimitUpsellBar)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import WarningIcon from "WarningIcon" /* 5004 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import _modDef9508 from "module_9508" /* 9508 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9752 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import WarningIcon from "WarningIcon" /* 7571 */;
+import _modDef9537 from "module_9537" /* 9537 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9781 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5091 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
     let tmp6Result = React4(WarningIcon.WarningIcon, obj6);
   } else {
-    const obj7 = { source: _modDef9508, style: tmp4.icon };
+    const obj7 = { source: _modDef9537, style: tmp4.icon };
     tmp6Result = React4(FastImageDefault, obj7);
   }
   cResult[0] = isAtLimit;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NitroLim
     let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
     let tmp9 = React4;
   } else {
-    const obj3 = { source: _modDef9508, style: tmp.icon };
+    const obj3 = { source: _modDef9537, style: tmp.icon };
     tmp4Result = React4(FastImageDefault, obj3);
     tmp9 = React4;
   }

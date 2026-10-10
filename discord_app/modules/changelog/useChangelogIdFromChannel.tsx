@@ -1,7 +1,7 @@
-// === Module 12112: useChangelogIdFromChannel ===
+// === Module 12156: useChangelogIdFromChannel ===
 
-// Module 12112 (useChangelogIdFromChannel)
-import MessageStore from "MessageStore" /* 5429 */;
+// Module 12156 (useChangelogIdFromChannel)
+import MessageStore from "MessageStore" /* 5432 */;
 
 const require = globalThis.__r;
 

@@ -1,10 +1,10 @@
-// === Module 12986: CustomActivityLinkUtils ===
+// === Module 13033: CustomActivityLinkUtils ===
 
-// Module 12986 (CustomActivityLinkUtils)
+// Module 13033 (CustomActivityLinkUtils)
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12989 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 13036 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 12987 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 13034 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -28,7 +28,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -117,7 +117,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

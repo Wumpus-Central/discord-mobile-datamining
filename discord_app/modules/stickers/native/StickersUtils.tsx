@@ -1,20 +1,20 @@
-// === Module 9730: stickers/StickersUtils ===
+// === Module 9759: stickers/StickersUtils ===
 
-// Module 9730 (stickers/StickersUtils)
+// Module 9759 (stickers/StickersUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1629 */;
-import StickersTypes from "StickersTypes" /* 5747 */;
-import StickerCategoryUtils from "StickerCategoryUtils" /* 9732 */;
-import _modDef9733 from "module_9733" /* 9733 */;
-import _modDef9734 from "module_9734" /* 9734 */;
+import StickersTypes from "StickersTypes" /* 5750 */;
+import StickerCategoryUtils from "StickerCategoryUtils" /* 9761 */;
+import _modDef9762 from "module_9762" /* 9762 */;
+import _modDef9763 from "module_9763" /* 9763 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(9731).useStickerPickerStore;
+const useStickerPickerStore = fn(9760).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1085).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const ReactCompilerGating = fn(558);
@@ -150,9 +150,9 @@ export const useStickerCategories = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
     if (type.type === StickersTypes.StickerCategoryTypes.FAVORITE) {
-      let tmp14 = _modDef9733;
+      let tmp14 = _modDef9762;
     } else {
-      tmp14 = _modDef9734;
+      tmp14 = _modDef9763;
     }
     const obj3 = {};
     const merged1 = Object.assign(type);
@@ -245,7 +245,7 @@ export const dropPreloadedSticker = function dropPreloadedSticker(arg0) {
   NativeLottieUtils.dropPreload(arg0);
 };
 export const openStickerPickerToPackId = function openStickerPickerToPackId(arg0, dependencyMap) {
-  state = useStickerPickerStore.getState();
+  const state = useStickerPickerStore.getState();
   state.setPackToScrollTo(dependencyMap);
   const timerId = setTimeout(() => {
     const current = ref.current;

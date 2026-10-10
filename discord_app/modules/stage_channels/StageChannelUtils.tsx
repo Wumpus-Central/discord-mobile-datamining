@@ -3,13 +3,13 @@
 // Module 7488 (StageChannelUtils)
 import _mod12 from "module_12" /* 12 */;
 import util from "util" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import StageInstanceStore from "StageInstanceStore" /* 2069 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 
 require = fn;
-const constants = fn(5889).RequestToSpeakPermissionStates;
+const constants = fn(5892).RequestToSpeakPermissionStates;
 const Permissions = fn(1085).Permissions;
 const RowType = fn(7489).RowType;
 const size = fn(2);

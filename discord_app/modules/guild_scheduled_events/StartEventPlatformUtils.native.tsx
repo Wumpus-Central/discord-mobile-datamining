@@ -1,14 +1,14 @@
-// === Module 8658: StartEventPlatformUtils ===
+// === Module 8668: StartEventPlatformUtils ===
 
-// Module 8658 (StartEventPlatformUtils)
+// Module 8668 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1112 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5886 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5889 */;
 import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 7492 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 
 require = fn;
 let closure_10 = async function _navigateToEvent(arg0) {
@@ -22,7 +22,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -120,7 +120,7 @@ let closure_10 = async function _navigateToEvent(arg0) {
     }
   }
 };
-let closure_8 = fn(2070).GuildScheduledEventEntityTypes;
+let closure_8 = fn(2071).GuildScheduledEventEntityTypes;
 const Routes = fn(1085).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");

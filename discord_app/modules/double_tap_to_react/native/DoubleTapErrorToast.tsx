@@ -1,9 +1,9 @@
-// === Module 7972: DoubleTapErrorToast ===
+// === Module 7990: DoubleTapErrorToast ===
 
-// Module 7972 (DoubleTapErrorToast)
+// Module 7990 (DoubleTapErrorToast)
 import util from "util" /* 1126 */;
 import EmojiConstants from "EmojiConstants" /* 1393 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
 import size from "module_2" /* 2 */;
 
 const EmojiDisabledReasons = EmojiConstants.EmojiDisabledReasons;
@@ -23,5 +23,5 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
     const obj3 = { emojiName };
     stringResult = intl.formatToPlainString(util.t.WZGLFq, obj3);
   }
-  ToastActionCreatorsDefault.openMana("EMOJI_DOUBLE_TAP_ERROR", { text: stringResult, variant: "critical" });
+  ToastActionCreatorsDefault.open("EMOJI_DOUBLE_TAP_ERROR", { text: stringResult, variant: "critical" });
 };

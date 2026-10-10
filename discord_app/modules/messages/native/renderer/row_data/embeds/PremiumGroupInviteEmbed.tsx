@@ -1,14 +1,14 @@
-// === Module 8058: PremiumGroupInviteEmbed ===
+// === Module 8076: PremiumGroupInviteEmbed ===
 
-// Module 8058 (PremiumGroupInviteEmbed)
+// Module 8076 (PremiumGroupInviteEmbed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3277 from "module_3277" /* 3277 */;
-import createStyles from "createStyles" /* 5091 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7872 */;
-import _modDef8059 from "module_8059" /* 8059 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8060 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4742 */;
+import _modDef3280 from "module_3280" /* 3280 */;
+import createStyles from "createStyles" /* 5092 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7890 */;
+import _modDef8077 from "module_8077" /* 8077 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8078 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4783 */;
 import size from "module_2" /* 2 */;
 
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: closure_4 } = PremiumGroupConstants);
@@ -20,7 +20,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createStyles.createNativeStyleProperties(obj2)(theme));
     const tmp9 = createStyles.createNativeStyleProperties(obj2)(theme);
     const author = message.author;
-    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8059);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8077);
     const obj3 = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
     const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj3);
     if (null != premiumGroupInviteEmbedText) {
@@ -31,7 +31,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       obj.learnMoreLinkOnClick = obj5;
       const obj8 = { headerText: header, headerColor: headerTextColor, backgroundColor, borderColor: backgroundColor, headerImageUrl: assetUriForEmbed, betaPillText: null, betaPillTextColor: null, betaPillBackgroundColor: null, bodyText: null, bodyTextColor: null, learnMoreLink: null };
       const intl2 = util.intl;
-      const formatToPartsResult = intl.formatToParts(_modDef3277["9VTnfI"], obj);
+      const formatToPartsResult = intl.formatToParts(_modDef3280["9VTnfI"], obj);
       obj8.betaPillText = intl2.string(util.t.oW0eUd).toUpperCase();
       obj8.betaPillTextColor = betaPillTextColor;
       obj8.betaPillBackgroundColor = betaPillBackgroundColor;

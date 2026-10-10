@@ -1,9 +1,9 @@
-// === Module 18593: i18nMessagesProvider ===
+// === Module 18667: i18nMessagesProvider ===
 
-// Module 18593 (i18nMessagesProvider)
+// Module 18667 (i18nMessagesProvider)
 import util from "util" /* 1126 */;
 import _mod1165 from "module_1165" /* 1165 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 18594 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 18668 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("i18n/native/i18nMessagesProvider.tsx");

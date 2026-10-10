@@ -1,9 +1,9 @@
-// === Module 12188: useGuildPowerupRollbackEnabled ===
+// === Module 12232: useGuildPowerupRollbackEnabled ===
 
-// Module 12188 (useGuildPowerupRollbackEnabled)
+// Module 12232 (useGuildPowerupRollbackEnabled)
 import c from "c" /* 576 */;
-import Powerups from "Powerups" /* 4972 */;
-import ServerThemeExperiment from "ServerThemeExperiment" /* 4974 */;
+import Powerups from "Powerups" /* 5011 */;
+import ServerThemeExperiment from "ServerThemeExperiment" /* 5013 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

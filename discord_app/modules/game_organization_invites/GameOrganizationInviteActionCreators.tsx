@@ -1,6 +1,6 @@
-// === Module 18036: GameOrganizationInviteActionCreators ===
+// === Module 18108: GameOrganizationInviteActionCreators ===
 
-// Module 18036 (GameOrganizationInviteActionCreators)
+// Module 18108 (GameOrganizationInviteActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -24,7 +24,7 @@ const obj = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -108,7 +108,7 @@ const obj = {
             tmp3(tmp37[2]).dispatch(obj14);
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp37) {
           if (tmp4 === c3) {

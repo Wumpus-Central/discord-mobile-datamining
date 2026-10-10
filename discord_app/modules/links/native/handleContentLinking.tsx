@@ -1,6 +1,6 @@
-// === Module 9645: handleContentLinking ===
+// === Module 9674: handleContentLinking ===
 
-// Module 9645 (handleContentLinking)
+// Module 9674 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             const obj5 = closure_130_1(closure_130_2[6]);
           }
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
         if (safe) {
           const obj9 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch, isAppStartupNavigation: closure_129_11 };
@@ -144,7 +144,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(6139).addPostConnectionCallback;
+fn(6132).addPostConnectionCallback;
 const Routes = fn(1085).Routes;
 let c6 = null;
 const size = fn(2);

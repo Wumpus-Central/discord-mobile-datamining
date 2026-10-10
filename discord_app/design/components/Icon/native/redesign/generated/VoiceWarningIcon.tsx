@@ -1,10 +1,10 @@
-// === Module 8210: VoiceWarningIcon ===
+// === Module 8226: VoiceWarningIcon ===
 
-// Module 8210 (VoiceWarningIcon)
+// Module 8226 (VoiceWarningIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod8155 from "module_8155" /* 8155 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod8171 from "module_8171" /* 8171 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const VoiceWarningIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod8155;
+    const tmpResult = _mod8171;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const VoiceWarningIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8155, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8171, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,15 +1,15 @@
-// === Module 10620: ExternalStreamingStore ===
+// === Module 10654: ExternalStreamingStore ===
 
-// Module 10620 (ExternalStreamingStore)
+// Module 10654 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import _modDef1355 from "module_1355" /* 1355 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6868 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
-import StreamerModeStore from "StreamerModeStore" /* 4924 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
+import StreamerModeStore from "StreamerModeStore" /* 4963 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -21,7 +21,7 @@ let closure_16 = async function _getTwitchGame() {
   closure_3 = tmp2;
   closure_2 = tmp3;
   closure_130_0 = closure_0;
-  if (null != state[closure_0]) {
+  if (null != value[closure_0]) {
     return tmp26;
   }
   await makeTwitchRequest("/games", { id: tmp23 }, tmp24);
@@ -98,7 +98,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

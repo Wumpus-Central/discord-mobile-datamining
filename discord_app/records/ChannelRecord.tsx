@@ -1,17 +1,17 @@
-// === Module 2068: ChannelRecord ===
+// === Module 2069: ChannelRecord ===
 
-// Module 2068 (ChannelRecord)
+// Module 2069 (ChannelRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
 import privDefault from "priv" /* 1457 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2072 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2073 */;
-import ForumLayout from "ForumLayout" /* 2074 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2075 */;
-import TypeUtils from "TypeUtils" /* 2076 */;
-import StageInstanceStore from "StageInstanceStore" /* 2069 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2073 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2074 */;
+import ForumLayout from "ForumLayout" /* 2075 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2076 */;
+import TypeUtils from "TypeUtils" /* 2077 */;
+import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 
 require = fn;
@@ -62,7 +62,7 @@ const Constants = fn(1085);
 ({ BITRATE_DEFAULT: hasOwnProperty, ChannelTypes } = Constants);
 const BasicPermissions = Constants.BasicPermissions;
 ({ ChannelTypesSets: closure_8, Permissions } = Constants);
-const ChannelFlags = fn(2071).ChannelFlags;
+const ChannelFlags = fn(2072).ChannelFlags;
 let items = [, , , , , , , , , , ];
 ({ GUILD_TEXT: arr[0], GUILD_ANNOUNCEMENT: arr[1], ANNOUNCEMENT_THREAD: arr[2], PUBLIC_THREAD: arr[3], PRIVATE_THREAD: arr[4], GUILD_DIRECTORY: arr[5], GUILD_FORUM: arr[6], GUILD_MEDIA: arr[7], GUILD_APP: arr[8], DM: arr[9], GROUP_DM: arr[10] } = ChannelTypes);
 const set = new Set(items);
@@ -691,7 +691,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     }
     obj.type = UNKNOWN;
     ({ user_limit: obj.userLimit_, version: obj.version, video_quality_mode: obj.videoQualityMode, linked_lobby: obj.linkedLobby, hd_streaming_until: obj.hdStreamingUntil, hd_streaming_buyer_id: obj.hdStreamingBuyerId, voice_hangout: obj.voiceHangout } = application_id);
-    return obj7(2076).dangerouslyCast(obj, UnknownChannelRecord);
+    return obj7(2077).dangerouslyCast(obj, UnknownChannelRecord);
   } else {
     const available_tags = application_id.available_tags;
     if (null == available_tags) {
@@ -784,7 +784,7 @@ GuildVocalChannelRecord["fromServer"] = function fromServer(application_id, arg1
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(2076).dangerouslyCast(obj, tmp7);
+  return obj6(2077).dangerouslyCast(obj, tmp7);
 };
 class GuildTextualChannelRecord extends ChannelRecordBase {
   constructor(arg0) {
@@ -860,7 +860,7 @@ GuildTextualChannelRecord["fromServer"] = function fromServer(application_id, ar
   if (tmp7 == null) {
     tmp7 = UnknownChannelRecord;
   }
-  return obj6(2076).dangerouslyCast(obj, tmp7);
+  return obj6(2077).dangerouslyCast(obj, tmp7);
 };
 class GuildAnnouncementChannelRecord extends GuildTextualChannelRecord {
 }
@@ -981,7 +981,7 @@ ForumChannelRecord["fromServer"] = function fromServer(available_tags, arg1) {
     }
     obj.type = GUILD_TEXT;
     obj.version = available_tags.version;
-    return obj8(2076).dangerouslyCast(obj, ForumChannelRecord);
+    return obj8(2077).dangerouslyCast(obj, ForumChannelRecord);
   }
 };
 class IdAsNumberCache {

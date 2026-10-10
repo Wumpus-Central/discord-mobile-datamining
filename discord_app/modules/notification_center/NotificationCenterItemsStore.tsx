@@ -1,15 +1,15 @@
-// === Module 6064: NotificationCenterItemsStore ===
+// === Module 6057: NotificationCenterItemsStore ===
 
-// Module 6064 (NotificationCenterItemsStore)
+// Module 6057 (NotificationCenterItemsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5431 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6065 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6066 */;
-import ExperimentStore from "ExperimentStore" /* 4977 */;
-import MessageRecord from "MessageRecord" /* 4720 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6058 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6059 */;
+import ExperimentStore from "ExperimentStore" /* 5016 */;
+import MessageRecord from "MessageRecord" /* 4761 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -195,7 +195,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6061).isGuildEventEnded;
+const isGuildEventEnded = fn(6054).isGuildEventEnded;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: [], paginationHasMore: true, paginationCursor: "Symbol", notifCenterActive: "none", notifCenterTabFocused: "URL" };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -551,7 +551,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6066);
+        obj = id(6059);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);

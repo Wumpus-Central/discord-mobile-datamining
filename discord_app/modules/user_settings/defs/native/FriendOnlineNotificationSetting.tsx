@@ -1,11 +1,11 @@
-// === Module 15717: FriendOnlineNotificationSetting ===
+// === Module 15779: FriendOnlineNotificationSetting ===
 
-// Module 15717 (FriendOnlineNotificationSetting)
+// Module 15779 (FriendOnlineNotificationSetting)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import SettingsConstants from "SettingsConstants" /* 7974 */;
-import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15718 */;
-import SettingBuilders from "SettingBuilders" /* 10629 */;
+import SettingsConstants from "SettingsConstants" /* 7992 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15780 */;
+import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

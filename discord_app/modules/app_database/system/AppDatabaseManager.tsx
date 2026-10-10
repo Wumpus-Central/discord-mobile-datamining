@@ -1,10 +1,10 @@
-// === Module 7327: AppDatabaseManager ===
+// === Module 7333: AppDatabaseManager ===
 
-// Module 7327 (AppDatabaseManager)
+// Module 7333 (AppDatabaseManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Dispatcher from "Dispatcher" /* 584 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 2107 */;
-import actions2 from "actions" /* 7328 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 2108 */;
+import actions2 from "actions" /* 7334 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -71,7 +71,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
   if (null != value) {
     if (0 !== value.length) {
       if (null != databaseResult) {
-        if (stateResult === require("module_2091").DatabaseState.Open) {
+        if (stateResult === require("module_2092").DatabaseState.Open) {
           let combined = null;
           if (!set.has(type.type)) {
             const _HermesInternal2 = HermesInternal;

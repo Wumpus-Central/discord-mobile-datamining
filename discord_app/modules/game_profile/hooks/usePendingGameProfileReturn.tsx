@@ -1,11 +1,11 @@
-// === Module 12109: usePendingGameProfileReturn ===
+// === Module 12153: usePendingGameProfileReturn ===
 
-// Module 12109 (usePendingGameProfileReturn)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8859 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8865 */;
+// Module 12153 (usePendingGameProfileReturn)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8878 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8884 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2020 */;
-import GameProfileStore from "GameProfileStore" /* 8867 */;
+import GameProfileStore from "GameProfileStore" /* 8886 */;
 
 require = fn;
 const AVATAR_SIZE = fn(1085).AVATAR_SIZE;
@@ -51,11 +51,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendi
           tmp2 = closure_1;
           tmp3 = closure_2;
           obj = closure_1(closure_2[7]);
-          obj1 = { gameId: null, source: null, initialScrollOffset: null };
-          obj1.gameId = tmp.gameId;
-          tmp4 = closure_0;
-          obj1.source = closure_0(closure_2[8]).GameProfileSources.AnnouncementChannelReturn;
-          obj1.initialScrollOffset = tmp.initialScrollOffset;
+          obj1 = { gameId: null, source: null, initialScrollOffset: null, initialTab: null };
+          ({ gameId: obj2.gameId, source } = tmp);
+          if (source == null) {
+            tmp4 = closure_0;
+            source = closure_0(tmp3[8]).GameProfileSources.AnnouncementChannelReturn;
+          }
+          obj1.source = source;
+          ({ initialScrollOffset: obj2.initialScrollOffset, tab: obj2.initialTab } = tmp);
           returnToGameProfileResult = obj.returnToGameProfile(obj1);
         }
         return;
@@ -71,11 +74,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendi
           tmp2 = closure_1;
           tmp3 = closure_2;
           obj = closure_1(closure_2[7]);
-          obj1 = { gameId: null, source: null, initialScrollOffset: null };
-          obj1.gameId = tmp.gameId;
-          tmp4 = closure_0;
-          obj1.source = closure_0(closure_2[8]).GameProfileSources.AnnouncementChannelReturn;
-          obj1.initialScrollOffset = tmp.initialScrollOffset;
+          obj1 = { gameId: null, source: null, initialScrollOffset: null, initialTab: null };
+          ({ gameId: obj2.gameId, source } = tmp);
+          if (source == null) {
+            tmp4 = closure_0;
+            source = closure_0(tmp3[8]).GameProfileSources.AnnouncementChannelReturn;
+          }
+          obj1.source = source;
+          ({ initialScrollOffset: obj2.initialScrollOffset, tab: obj2.initialTab } = tmp);
           returnToGameProfileResult = obj.returnToGameProfile(obj1);
         }
         return;
@@ -90,11 +96,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendi
           tmp2 = closure_1;
           tmp3 = closure_2;
           obj = closure_1(closure_2[7]);
-          obj1 = { gameId: null, source: null, initialScrollOffset: null };
-          obj1.gameId = tmp.gameId;
-          tmp4 = closure_0;
-          obj1.source = closure_0(closure_2[8]).GameProfileSources.AnnouncementChannelReturn;
-          obj1.initialScrollOffset = tmp.initialScrollOffset;
+          obj1 = { gameId: null, source: null, initialScrollOffset: null, initialTab: null };
+          ({ gameId: obj2.gameId, source } = tmp);
+          if (source == null) {
+            tmp4 = closure_0;
+            source = closure_0(tmp3[8]).GameProfileSources.AnnouncementChannelReturn;
+          }
+          obj1.source = source;
+          ({ initialScrollOffset: obj2.initialScrollOffset, tab: obj2.initialTab } = tmp);
           returnToGameProfileResult = obj.returnToGameProfile(obj1);
         }
         return;
@@ -111,11 +120,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendi
           tmp2 = closure_1;
           tmp3 = closure_2;
           obj = closure_1(closure_2[7]);
-          obj1 = { gameId: null, source: null, initialScrollOffset: null };
-          obj1.gameId = tmp.gameId;
-          tmp4 = closure_0;
-          obj1.source = closure_0(closure_2[8]).GameProfileSources.AnnouncementChannelReturn;
-          obj1.initialScrollOffset = tmp.initialScrollOffset;
+          obj1 = { gameId: null, source: null, initialScrollOffset: null, initialTab: null };
+          ({ gameId: obj2.gameId, source } = tmp);
+          if (source == null) {
+            tmp4 = closure_0;
+            source = closure_0(tmp3[8]).GameProfileSources.AnnouncementChannelReturn;
+          }
+          obj1.source = source;
+          ({ initialScrollOffset: obj2.initialScrollOffset, tab: obj2.initialTab } = tmp);
           returnToGameProfileResult = obj.returnToGameProfile(obj1);
         }
         return;
@@ -301,8 +313,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendi
   const items1 = [stateFromStores];
   const callback = noop.useCallback(() => {
     if (null != stateFromStores) {
-      const obj2 = { gameId: stateFromStores.gameId, source: GameProfileAnalyticUtils.GameProfileSources.AnnouncementChannelReturn, initialScrollOffset: stateFromStores.initialScrollOffset };
-      GameProfileActionCreatorsDefault.returnToGameProfile(obj2);
+      const obj3 = { gameId: null, source: null, initialScrollOffset: null, initialTab: null };
+      ({ gameId: obj2.gameId, source } = stateFromStores);
+      if (source == null) {
+        source = GameProfileAnalyticUtils.GameProfileSources.AnnouncementChannelReturn;
+      }
+      obj3.source = source;
+      ({ initialScrollOffset: obj2.initialScrollOffset, tab: obj2.initialTab } = stateFromStores);
+      GameProfileActionCreatorsDefault.returnToGameProfile(obj3);
     }
   }, items1);
   let obj = channelId(stateFromStores1[6]);
@@ -339,7 +357,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePendi
       if (stateFromStores1 != null) {
         iconURL = stateFromStores1.getIconURL(AVATAR_SIZE);
       }
-      const obj3 = { gameId: stateFromStores1.id, gameName: name, gameIconUrl: iconURL, onReturnToGameProfile: callback };
+      let obj3 = { gameId: stateFromStores1.id, gameName: name, gameIconUrl: iconURL, onReturnToGameProfile: callback };
       return obj3;
     }
   }

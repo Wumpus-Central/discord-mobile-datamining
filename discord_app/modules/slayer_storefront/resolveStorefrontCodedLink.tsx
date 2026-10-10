@@ -1,9 +1,9 @@
-// === Module 18038: resolveStorefrontCodedLink ===
+// === Module 18110: resolveStorefrontCodedLink ===
 
-// Module 18038 (resolveStorefrontCodedLink)
+// Module 18110 (resolveStorefrontCodedLink)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 6094 */;
+import SKUStore from "SKUStore" /* 6087 */;
 
 const require = fn;
 const set = new Set();
@@ -11,9 +11,9 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStorefrontCodedLink.tsx");
 
 export default function resolveStorefrontCodedLink(arg0, code) {
-  const result = obj3(10651).parseStorefrontCodedLink(code);
+  const result = obj3(10685).parseStorefrontCodedLink(code);
   if (null != result) {
-    if (arg0 === tmp(5076).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (arg0 === tmp(5077).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
       obj3 = obj2;
     } else {
@@ -26,7 +26,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         skuId(584).dispatch(obj5);
         let obj4 = skuId(584);
         const items = [skuId];
-        const storefrontCodedLink = tmp(10651).makeStorefrontCodedLink(items, result.scopeId);
+        const storefrontCodedLink = tmp(10685).makeStorefrontCodedLink(items, result.scopeId);
         closure_129_0 = storefrontCodedLink;
         closure_129_1 = asyncGeneratorStep(async () => {
           if (v3 === 2) {
@@ -39,7 +39,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -86,7 +86,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   return obj;
                 }
                 v3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp9) {
               v3 = tmp;
@@ -96,7 +96,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const result1 = tmp(18028).queueMessageLinkFetch(asyncGeneratorStep(async () => {
+          const result1 = tmp(18100).queueMessageLinkFetch(asyncGeneratorStep(async () => {
             if (c4 === 2) {
               c4 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -107,7 +107,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -145,7 +145,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
                   c3 = 0;
                   set.delete(closure_128_0);
                   c4 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp23) {
                 closure_2 = tmp23;
@@ -158,12 +158,12 @@ export default function resolveStorefrontCodedLink(arg0, code) {
               }
             }
           }));
-          const tmpResult2 = tmp(18028);
+          const tmpResult2 = tmp(18100);
         }
-        const tmpResult = tmp(10651);
+        const tmpResult = tmp(10685);
       }
       tmp4 = null != SKUStore.get(skuId) || SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId);
     }
   }
-  let obj = obj3(10651);
+  let obj = obj3(10685);
 };

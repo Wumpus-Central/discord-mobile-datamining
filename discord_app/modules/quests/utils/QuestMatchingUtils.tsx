@@ -1,13 +1,13 @@
-// === Module 12919: QuestMatchingUtils ===
+// === Module 12967: QuestMatchingUtils ===
 
-// Module 12919 (QuestMatchingUtils)
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7390 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7404 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7406 */;
-import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 12492 */;
+// Module 12967 (QuestMatchingUtils)
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7396 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7410 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7412 */;
+import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 12539 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 10614 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 10648 */;
 
 require = fn;
 function questMatchesActivity(arg0, id) {
@@ -76,7 +76,7 @@ function questMatchesApplicationId(arg0, quest) {
   const allApplicationIds = QuestTaskUtils.getAllApplicationIds(quest);
   return null != allApplicationIds && allApplicationIds.some((item) => item === closure_0);
 }
-const QuestConstants = fn(5979);
+const QuestConstants = fn(5972);
 ({ DISCORD_APPLICATION_ID: metroRequire, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: closure_7, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_8 } = QuestConstants);
 const ActivityGamePlatforms = fn(1085).ActivityGamePlatforms;
 let closure_10 = fn(2024).XBOX_ACTIVITY_APPLICATION_ID;

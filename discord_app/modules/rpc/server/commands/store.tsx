@@ -1,9 +1,9 @@
-// === Module 14680: merged15 ===
+// === Module 14734: merged15 ===
 
-// Module 14680 (merged15)
-import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7109 */;
-import RPCErrorDefault from "RPCError" /* 10896 */;
-import validateTransportType from "validateTransportType" /* 14682 */;
+// Module 14734 (merged15)
+import EntitlementActionCreatorsAll from "EntitlementActionCreators" /* 7115 */;
+import RPCErrorDefault from "RPCError" /* 10936 */;
+import validateTransportType from "validateTransportType" /* 14736 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -110,7 +110,7 @@ let closure_11 = async function _getSkusHandler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -255,7 +255,7 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(5636);
+let Constants = fn(5639);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1085);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);

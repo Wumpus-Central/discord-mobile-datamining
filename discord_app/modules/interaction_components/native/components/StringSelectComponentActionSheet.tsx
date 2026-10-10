@@ -1,17 +1,17 @@
-// === Module 11334: StringSelectComponentActionSheet ===
+// === Module 11375: StringSelectComponentActionSheet ===
 
-// Module 11334 (StringSelectComponentActionSheet)
+// Module 11375 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 1998 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import EmojiDefault from "Emoji" /* 6816 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import EmojiDefault from "Emoji" /* 6819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" }, textEmoji: { fontSize: 16, color: "#000000" }, fastImageEmoji: { width: 24, height: 24 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,8 +27,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
   let tmp3 = closure_6();
   dependencyMap = tmp3;
   let obj = selectionActionComponent(576);
-  const obj2 = selectionActionComponent(8240);
-  const tmp5 = first(noop.useState(new Set(selectionActionComponent(8240).getInitialStringSelectOptions(selectionActionComponent, selectionActionComponent.containerId))), 2);
+  const obj2 = selectionActionComponent(8256);
+  const tmp5 = first(noop.useState(new Set(selectionActionComponent(8256).getInitialStringSelectOptions(selectionActionComponent, selectionActionComponent.containerId))), 2);
   first = tmp5[0];
   noop = tmp5[1];
   jsx = tmp7;
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
                 }
               }
               const obj3 = { onPressOptionItem: tmp10, renderIcon: tmp11, skipIcon: !tmp18, renderDescription: tmp12, selectionActionComponent, labelComponent, options: selectionActionComponent.options, itemStyle: tmp13, selectedCount: first.size, isSelected: Z, submitSelection: tmp9, itemAccessibilityLabel: tmp24, channelId, allowEmpty };
-              const tmp30 = jsx(onSubmit(11335), { onPressOptionItem: tmp10, renderIcon: tmp11, skipIcon: !tmp18, renderDescription: tmp12, selectionActionComponent, labelComponent, options: selectionActionComponent.options, itemStyle: tmp13, selectedCount: first.size, isSelected: Z, submitSelection: tmp9, itemAccessibilityLabel: tmp24, channelId, allowEmpty });
+              const tmp30 = jsx(onSubmit(11376), { onPressOptionItem: tmp10, renderIcon: tmp11, skipIcon: !tmp18, renderDescription: tmp12, selectionActionComponent, labelComponent, options: selectionActionComponent.options, itemStyle: tmp13, selectedCount: first.size, isSelected: Z, submitSelection: tmp9, itemAccessibilityLabel: tmp24, channelId, allowEmpty });
               cResult[23] = allowEmpty;
               cResult[24] = channelId;
               cResult[25] = labelComponent;
@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
   cResult[3] = tmp8;
   cResult[4] = submitSelectedSelections;
   tmp9 = submitSelectedSelections;
-  set = new Set(selectionActionComponent(8240).getInitialStringSelectOptions(selectionActionComponent, selectionActionComponent.containerId));
+  set = new Set(selectionActionComponent(8256).getInitialStringSelectOptions(selectionActionComponent, selectionActionComponent.containerId));
 }) : (function StringSelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const onSubmit = selectionActionComponent.onSubmit;
@@ -580,8 +580,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8240);
-  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8240).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
+  let obj = selectionActionComponent(8256);
+  let tmp3 = first(noop.useState(new Set(selectionActionComponent(8256).getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
   let items = [selectionActionComponent];
@@ -665,7 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
     channelId: null,
     allowEmpty: null
   };
-  set = new Set(selectionActionComponent(8240).getInitialStringSelectOptions(selectionActionComponent, containerId));
+  set = new Set(selectionActionComponent(8256).getInitialStringSelectOptions(selectionActionComponent, containerId));
   const tmp9 = memo;
   if (selectionOptionItemWithDescription) {
     selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;
@@ -690,5 +690,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StringSe
   };
   obj2.channelId = channelId;
   obj2.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(11335), obj2);
+  return tmp9(onSubmit(11376), obj2);
 });

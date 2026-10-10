@@ -1,7 +1,7 @@
-// === Module 13342: useFriendRequestActions ===
+// === Module 13392: useFriendRequestActions ===
 
-// Module 13342 (useFriendRequestActions)
-import PeopleUtilsDefault from "PeopleUtils" /* 10200 */;
+// Module 13392 (useFriendRequestActions)
+import PeopleUtilsDefault from "PeopleUtils" /* 10229 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

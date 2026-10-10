@@ -1,15 +1,15 @@
-// === Module 11071: GameConsoleActionCreators ===
+// === Module 11111: GameConsoleActionCreators ===
 
-// Module 11071 (GameConsoleActionCreators)
+// Module 11111 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5248 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11072 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5249 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 11112 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import SessionsStore from "SessionsStore" /* 5111 */;
-import GameConsoleStore from "GameConsoleStore" /* 5110 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import SessionsStore from "SessionsStore" /* 5112 */;
+import GameConsoleStore from "GameConsoleStore" /* 5111 */;
 
 require = fn;
 function disconnectRemote() {
@@ -91,7 +91,7 @@ let closure_12 = async function _getConnectNonce() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ let closure_14 = async function _fetchDevices() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ let closure_16 = async function _cancelCommand() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -313,7 +313,7 @@ let closure_16 = async function _cancelCommand() {
           const obj11 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS", platform: closure_131_0, deviceId: closure_131_1, commandId: closure_131_2 };
           closure_132_1(closure_132_2[6]).dispatch(obj11);
           c8 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp28) {
         closure_5 = tmp28;

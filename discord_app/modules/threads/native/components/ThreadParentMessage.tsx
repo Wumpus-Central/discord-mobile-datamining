@@ -1,17 +1,17 @@
-// === Module 17235: ThreadParentMessage ===
+// === Module 17307: ThreadParentMessage ===
 
-// Module 17235 (ThreadParentMessage)
+// Module 17307 (ThreadParentMessage)
 import initialize from "initialize" /* 504 */;
 import router_utils from "router_utils" /* 1112 */;
-import Pressables from "Pressables" /* 6191 */;
-import RowGeneratorDefault from "RowGenerator" /* 7728 */;
-import ChatItemDefault from "ChatItem" /* 9346 */;
+import Pressables from "Pressables" /* 6184 */;
+import RowGeneratorDefault from "RowGenerator" /* 7746 */;
+import ChatItemDefault from "ChatItem" /* 9373 */;
 import noop from "module_19" /* 19 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7306 */;
-import MessageStore from "MessageStore" /* 5429 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7312 */;
+import MessageStore from "MessageStore" /* 5432 */;
 
 require = fn;
-const ReferencedMessageState = fn(7306).ReferencedMessageState;
+const ReferencedMessageState = fn(7312).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderEmbeds: true, ignoreMentioned: true, inlineAttachmentMedia: true, inlineEmbedMedia: true, renderReactions: false, renderReplies: true, renderThreadEmbeds: false });
@@ -36,7 +36,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadChan
       let tmp5 = cResult[3];
     }
     const stateFromStores = PressableOpacity(tmp[7]).useStateFromStores(first, tmp5);
-    state = undefined;
+    let state;
     if (stateFromStores != null) {
       state = stateFromStores.state;
     }
@@ -100,7 +100,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ThreadChan
   rowGenerator = initialize;
   const items = [ReferencedMessageStore];
   const stateFromStores = rowGenerator.useStateFromStores(items, () => ReferencedMessageStore.getMessage(dependencyMap, importDefault));
-  state = undefined;
+  let state;
   if (stateFromStores != null) {
     state = stateFromStores.state;
   }
@@ -160,7 +160,7 @@ export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerE
       }
       if (cResult[5] !== stateFromStores) {
         const obj3 = { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" };
-        tmp2 = jsx(channelId(9346), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
+        tmp2 = jsx(channelId(9373), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
         cResult[5] = stateFromStores;
         cResult[6] = tmp2;
       }

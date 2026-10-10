@@ -1,14 +1,14 @@
-// === Module 7704: ReportModals ===
+// === Module 7721: ReportModals ===
 
-// Module 7704 (ReportModals)
-import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import MenuTypes from "MenuTypes" /* 7705 */;
-import showReportModal from "showReportModal" /* 7706 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7708 */;
+// Module 7721 (ReportModals)
+import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import MenuTypes from "MenuTypes" /* 7722 */;
+import showReportModal from "showReportModal" /* 7723 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7725 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StageInstanceStore from "StageInstanceStore" /* 2069 */;
-import MessageRecord from "MessageRecord" /* 4720 */;
+import StageInstanceStore from "StageInstanceStore" /* 2070 */;
+import MessageRecord from "MessageRecord" /* 4761 */;
 import UserRecord from "UserRecord" /* 1404 */;
 
 require = fn;
@@ -208,7 +208,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "Set" });
+  const merged = Object.assign({ message_id: "backgroundColor", channel_id: "IconComponent" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

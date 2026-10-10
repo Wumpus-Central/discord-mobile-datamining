@@ -1,8 +1,8 @@
-// === Module 13198: resolvedValues ===
+// === Module 13248: resolvedValues ===
 
-// Module 13198 (resolvedValues)
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 13199 */;
-import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 13200 */;
+// Module 13248 (resolvedValues)
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 13249 */;
+import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 13250 */;
 import size from "module_2" /* 2 */;
 
 function resolveFieldValue(image, items, applicationAssets) {

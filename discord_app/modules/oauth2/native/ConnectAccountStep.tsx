@@ -1,20 +1,20 @@
-// === Module 9213: ConnectAccountStep ===
+// === Module 9240: ConnectAccountStep ===
 
-// Module 9213 (ConnectAccountStep)
+// Module 9240 (ConnectAccountStep)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4776 */;
-import shared from "shared" /* 4930 */;
-import useThemeDefault from "useTheme" /* 4992 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import PlatformsDefault from "Platforms" /* 5760 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6849 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9177 */;
+import shared from "shared" /* 4969 */;
+import useThemeDefault from "useTheme" /* 5031 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import PlatformsDefault from "Platforms" /* 5763 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6195 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6852 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9204 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -22,7 +22,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flexDirection: "column", gap: 16, width: "100%" }, header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 }, headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 }, card: { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.md }, cardName: { flex: 1, minWidth: 0 }, cardInfo: { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 }, platformIcon: null, platformIconSmall: null, infoNotice: null, infoText: null, divider: null };
 let size = { width: 40, height: 40, borderRadius: nativeDefault.radii.sm };
 obj2.platformIcon = size;
@@ -42,7 +42,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
   const tmp4 = closure_10();
-  const tmp6 = platformType(4992)();
+  const tmp6 = platformType(5031)();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ApplicationStore];
     cResult[0] = items;
@@ -256,7 +256,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
         }
       }
       const obj4 = { color: tmp5(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-      const tmp35 = closure_8(tmp(9214).MoreHorizontalIcon, obj4);
+      const tmp35 = closure_8(tmp(9241).MoreHorizontalIcon, obj4);
       class E {
         constructor() {
           currentUser = null;
@@ -329,7 +329,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     cResult[26] = tmp41;
   }
   const tmpResult3 = clientId(504);
-  value = platformType(5760).get(platformType);
+  value = platformType(5763).get(platformType);
   if (null == value) {
     class G {
       constructor() {
@@ -359,16 +359,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
       }
     }
     const icon = value.icon;
-    const source = obj5.makeSource(tmp(4930).isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
-    const tmpResult4 = tmp(4930);
+    const source = obj5.makeSource(tmp(4969).isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
+    const tmpResult4 = tmp(4969);
   }
-  const tmp5Result4 = platformType(5760);
+  const tmp5Result4 = platformType(5763);
 }) : (function ConnectAccountStep(clientId) {
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
   const platformName = clientId.platformName;
   const tmp = closure_10();
-  const tmp4 = platformType(4992)();
+  const tmp4 = platformType(5031)();
   const items = [ApplicationStore];
   const items1 = [clientId];
   const stateFromStores = clientId(504).useStateFromStores(items, () => ApplicationStore.getApplication(clientId), items1);
@@ -382,7 +382,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     return currentUser;
   });
   const obj2 = clientId(504);
-  value = platformType(5760).get(platformType);
+  value = platformType(5763).get(platformType);
   if (null == value) {
     let applicationIconSource;
     if (null != stateFromStores) {
@@ -413,7 +413,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     const obj9 = { source: applicationIconSource, size: tmp5(1200).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1200).Avatar, obj9), , ];
     const obj10 = { color: tmp2(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(9214).MoreHorizontalIcon, obj10);
+    items4[1] = closure_8(tmp5(9241).MoreHorizontalIcon, obj10);
     const obj11 = { source: userAvatarSource, size: tmp5(1200).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1200).Avatar, obj11);
     obj8.children = items4;
@@ -421,16 +421,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     const obj12 = { variant: "text-lg/normal", color: "text-default", children: null };
     const intl = tmp5(1126).intl;
     obj12.children = intl.string(tmp5(1126).t.uT1CPa);
-    items5[1] = closure_8(tmp5(5087).Text, obj12);
+    items5[1] = closure_8(tmp5(5088).Text, obj12);
     const obj13 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: str };
-    items5[2] = closure_8(tmp5(5087).Text, obj13);
+    items5[2] = closure_8(tmp5(5088).Text, obj13);
     obj6.children = items5;
     const items6 = [closure_9(View, obj6), , , ];
     const obj14 = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl2 = tmp5(1126).intl;
     const obj15 = { applicationName: str, platformName };
     obj14.children = intl2.format(tmp5(1126).t["aJRE/Q"], obj15);
-    items6[1] = closure_8(tmp5(5087).Text, obj14);
+    items6[1] = closure_8(tmp5(5088).Text, obj14);
     const obj16 = { style: tmp.card, children: null };
     let tmp16Result = null;
     if (null != null) {
@@ -439,7 +439,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     }
     const items7 = [tmp16Result, , ];
     const obj18 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
-    items7[1] = closure_8(tmp5(5087).Text, obj18);
+    items7[1] = closure_8(tmp5(5088).Text, obj18);
     const obj19 = {
       variant: "primary",
       size: "sm",
@@ -450,17 +450,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
     };
     const intl3 = tmp5(1126).intl;
     obj19.text = intl3.string(tmp5(1126).t.S0W8Z5);
-    items7[2] = closure_8(tmp5(5376).Button, obj19);
+    items7[2] = closure_8(tmp5(5379).Button, obj19);
     obj16.children = items7;
     items6[2] = closure_9(View, obj16);
     const obj20 = { style: tmp.infoNotice, children: null };
     const obj21 = { color: tmp2(587).colors.ICON_FEEDBACK_INFO, size: "sm" };
-    const items8 = [closure_8(tmp5(5013).CircleInformationIcon, obj21), ];
+    const items8 = [closure_8(tmp5(5046).CircleInformationIcon, obj21), ];
     const obj22 = { variant: "text-sm/normal", color: "text-default", style: tmp.infoText, children: null };
     const intl4 = tmp5(1126).intl;
     const obj23 = { platformName, applicationName: str };
     obj22.children = intl4.format(tmp5(1126).t["8psEFX"], obj23);
-    items8[1] = closure_8(tmp5(5087).Text, obj22);
+    items8[1] = closure_8(tmp5(5088).Text, obj22);
     obj20.children = items8;
     items6[3] = closure_9(View, obj20);
     obj5.children = items6;
@@ -468,10 +468,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectAcc
   } else {
     const tmp5Result = tmp5(1415);
     const icon = value.icon;
-    const source = tmp5Result.makeSource(tmp5(4930).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
-    const tmp5Result2 = tmp5(4930);
+    const source = tmp5Result.makeSource(tmp5(4969).isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
+    const tmp5Result2 = tmp5(4969);
   }
-  const obj3 = platformType(5760);
+  const obj3 = platformType(5763);
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");

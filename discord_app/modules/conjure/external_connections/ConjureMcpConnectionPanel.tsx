@@ -1,6 +1,6 @@
-// === Module 17047: ConjureMcpConnectionPanel ===
+// === Module 17115: ConjureMcpConnectionPanel ===
 
-// Module 17047 (ConjureMcpConnectionPanel)
+// Module 17115 (ConjureMcpConnectionPanel)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const fetchProjectMcpConnection = fn(13164).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(13213).fetchProjectMcpConnection;
 let closure_6 = {
   setTimeout(arg0, arg1) {
     return setTimeout(arg0, arg1);
@@ -52,7 +52,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -92,7 +92,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             let connection = null;
             if (!closure_129_0) {

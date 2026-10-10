@@ -1,6 +1,6 @@
-// === Module 8270: BioMaxLengthExperiment ===
+// === Module 8286: BioMaxLengthExperiment ===
 
-// Module 8270 (BioMaxLengthExperiment)
+// Module 8286 (BioMaxLengthExperiment)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;

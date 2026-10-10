@@ -1,21 +1,21 @@
-// === Module 18302: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 18376: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 18302 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 18376 (GuildSettingsRoleEditConnectionConfiguration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import shared from "shared" /* 4930 */;
-import useThemeDefault from "useTheme" /* 4992 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import PlatformsDefault from "Platforms" /* 5760 */;
-import TableRow from "TableRow" /* 6186 */;
-import Pressables from "Pressables" /* 6191 */;
-import XSmallIcon from "XSmallIcon" /* 6212 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 10678 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 18303 */;
+import shared from "shared" /* 4969 */;
+import useThemeDefault from "useTheme" /* 5031 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import PlatformsDefault from "Platforms" /* 5763 */;
+import TableRow from "TableRow" /* 6179 */;
+import Pressables from "Pressables" /* 6184 */;
+import XSmallIcon from "XSmallIcon" /* 6207 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 10712 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 18377 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -96,11 +96,11 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1085).PlatformTypes;
-const Constants = fn(6870);
+const Constants = fn(6876);
 ({ MetadataFields: closure_7, OperatorTypes: closure_8, MetadataItemTypes: closure_9, GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: c10, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { numericalInputContainerIOSInline: { marginTop: -2 }, numericalInputContainerAndroidInline: null, numericalInputContainerBase: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm }, numericalInput: null, appNumericalInput: null, appNumericalInputContainer: null, appNumericalInputText: null, numericalInputDisabled: null, metadataRow: null, metadataRowText: null };
 let obj3 = { transform: null };
 let items = [{ translateY: 10 }];
@@ -144,7 +144,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       }
     }
     if (cResult[0] !== bot) {
-      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+      const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
       const tmp26 = onChangeText(native.Avatar, obj3);
       cResult[0] = bot;
       cResult[1] = tmp26;
@@ -165,7 +165,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
             name1 = getOrFetchApplicationBatched.name;
           }
         } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+          const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
           const tmp20 = onChangeText(native.Avatar, obj4);
           cResult[2] = getOrFetchApplicationBatched.bot;
           cResult[3] = tmp20;
@@ -280,7 +280,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+    const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
     let bot;
     if (integration != null) {
       const application = integration.application;
@@ -301,7 +301,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       }
       let tmp11;
       if (null != bot1) {
-        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+        const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
         tmp11 = onChangeText(native.Avatar, obj3);
       }
       let name1;
@@ -472,7 +472,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function Boolea
     }
     _slicedToArray(tmp, num);
   };
-  return onChangeText(metadataField(6889).TableSwitchRow, obj, metadataField);
+  return onChangeText(metadataField(6895).TableSwitchRow, obj, metadataField);
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function NumericalConfigRule(existingPendingConfiguration) {
@@ -1227,7 +1227,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   const tmpResult3 = require("RoleConnectionRequirementUtils");
   const tmpResult4 = require("RoleConnectionRequirementUtils");
   const str1 = require("RoleConnectionRequirementUtils").displayedValueFor(value3, realizedOperatorForResult).toString();
-  let value4;
+  value4 = undefined;
   if (existingPendingConfiguration != null) {
     if (existingPendingConfiguration.configuration != null) {
       value4 = iter3.value;
@@ -1282,7 +1282,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
   if (num == null) {
     num = -1;
   }
-  const realizedOperatorForResult = metadataField(18303).realizedOperatorFor(existingPendingConfiguration.operator);
+  const realizedOperatorForResult = metadataField(18377).realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
   if (existingPendingConfiguration != null) {
@@ -1290,9 +1290,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       value = iter.value;
     }
   }
-  let obj = metadataField(18303);
-  const tmpResult = metadataField(18303);
-  str1 = metadataField(18303).displayedValueFor(value, realizedOperatorForResult).toString();
+  let obj = metadataField(18377);
+  const tmpResult = metadataField(18377);
+  str1 = metadataField(18377).displayedValueFor(value, realizedOperatorForResult).toString();
   let mapped = noop;
   [value] = noop.useState(str1);
   closure_10 = tmp9;
@@ -1368,7 +1368,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
       obj5.children = onInputValueChange(metadataField(1200).TextInput, obj6, metadataField);
       let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer"), ];
       const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(5087).Text, obj7);
+      items1[1] = onInputValueChange(metadataField(5088).Text, obj7);
       obj4.children = items1;
       tmp21Result = closure_13(tmp22, obj4);
     }
@@ -1404,9 +1404,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Numeri
           _slicedToArray(tmp3, num);
         }
     };
-    return onInputValueChange(metadataField(6889).TableSwitchRow, obj8, metadataField);
+    return onInputValueChange(metadataField(6895).TableSwitchRow, obj8, metadataField);
   }
-  const str = metadataField(18303).displayedValueFor(value, realizedOperatorForResult);
+  const str = metadataField(18377).displayedValueFor(value, realizedOperatorForResult);
 });
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function BlueskyMetadataRules(arg0) {
@@ -1420,7 +1420,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bluesk
     first = cResult[0];
   }
   if (cResult[1] !== configMetadataMap) {
-    const value4 = configMetadataMap.get(React5.CREATED_AT);
+    value4 = configMetadataMap.get(React5.CREATED_AT);
     cResult[1] = configMetadataMap;
     cResult[2] = value4;
     let tmp8 = value4;
@@ -1469,7 +1469,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bluesk
               const obj3 = { children: null };
               const items = [tmp11, tmp16, tmp24];
               obj3.children = items;
-              const tmp32 = __initData2(state, obj3);
+              const tmp32 = map1(closure_1_14, obj3);
               cResult[19] = tmp11;
               cResult[20] = tmp16;
               cResult[21] = tmp24;
@@ -1512,7 +1512,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Bluesk
   const obj4 = { fieldTextHook: util.t["/w/EYk"], metadataField: React5.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
   items[2] = onChangeText(closure_18, { fieldTextHook: util.t["5I4mVS"], metadataField: React5.BLUESKY_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.BLUESKY_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function SteamMetadataRules(arg0) {
@@ -1590,7 +1590,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function SteamM
                   const obj3 = { children: null };
                   const items = [tmp11, tmp16, tmp24, tmp32];
                   obj3.children = items;
-                  const tmp40 = __initData2(state, obj3);
+                  const tmp40 = map1(closure_1_14, obj3);
                   cResult[25] = tmp11;
                   cResult[26] = tmp16;
                   cResult[27] = tmp24;
@@ -1645,7 +1645,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function SteamM
   const obj5 = { fieldTextHook: util.t["ZCNdD/"], metadataField: React5.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked };
   items[3] = onChangeText(closure_18, { fieldTextHook: util.t["MCHnK+"], metadataField: React5.STEAM_ITEM_COUNT_TF2, existingPendingConfiguration: configMetadataMap.get(React5.STEAM_ITEM_COUNT_TF2), platform: value, onConfigurationChange, locked });
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TwitterMetadataRules(arg0) {
@@ -1732,7 +1732,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Twitte
                   const obj3 = { children: null };
                   const items = [tmp11, tmp16, tmp24, tmp34];
                   obj3.children = items;
-                  const tmp42 = __initData2(state, obj3);
+                  const tmp42 = map1(closure_1_14, obj3);
                   cResult[26] = tmp34;
                   cResult[27] = tmp11;
                   cResult[28] = tmp16;
@@ -1794,7 +1794,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Twitte
   obj6.locked = locked;
   items[3] = onChangeText(closure_17, obj6);
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedditMetadataRules(arg0) {
@@ -1890,7 +1890,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reddit
                   const obj3 = { children: null };
                   const items = [tmp11, tmp16, tmp26, tmp36];
                   obj3.children = items;
-                  const tmp44 = __initData2(state, obj3);
+                  const tmp44 = map1(closure_1_14, obj3);
                   cResult[27] = tmp36;
                   cResult[28] = tmp11;
                   cResult[29] = tmp16;
@@ -1959,7 +1959,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Reddit
   obj6.locked = locked;
   items[3] = onChangeText(closure_17, obj6);
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function PaypalMetadataRules(arg0) {
@@ -1995,7 +1995,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Paypal
         tmp13 = cResult[7];
       }
       if (cResult[8] !== configMetadataMap) {
-        const value4 = configMetadataMap.get(React5.PAYPAL_VERIFIED);
+        value4 = configMetadataMap.get(React5.PAYPAL_VERIFIED);
         cResult[8] = configMetadataMap;
         cResult[9] = value4;
         let tmp15 = value4;
@@ -2016,7 +2016,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Paypal
           const obj3 = { children: null };
           const items = [tmp11, tmp18];
           obj3.children = items;
-          const tmp26 = __initData2(state, obj3);
+          const tmp26 = map1(closure_1_14, obj3);
           cResult[14] = tmp11;
           cResult[15] = tmp18;
           cResult[16] = tmp26;
@@ -2054,7 +2054,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Paypal
   obj4.locked = locked;
   items[1] = onChangeText(closure_17, obj4);
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function EbayMetadataRules(arg0) {
@@ -2156,7 +2156,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function EbayMe
                       const obj3 = { children: null };
                       const items = [tmp11, tmp16, tmp24, tmp32, tmp43];
                       obj3.children = items;
-                      const tmp51 = __initData2(state, obj3);
+                      const tmp51 = map1(closure_1_14, obj3);
                       cResult[32] = tmp43;
                       cResult[33] = tmp11;
                       cResult[34] = tmp16;
@@ -2230,7 +2230,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function EbayMe
   obj7.locked = locked;
   items[4] = onChangeText(closure_17, obj7);
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function TikTokMetadataRules(arg0) {
@@ -2316,7 +2316,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function TikTok
                   const obj3 = { children: null };
                   const items = [tmp13, tmp18, tmp26, tmp34];
                   obj3.children = items;
-                  const tmp42 = __initData2(state, obj3);
+                  const tmp42 = map1(closure_1_14, obj3);
                   cResult[26] = tmp34;
                   cResult[27] = tmp13;
                   cResult[28] = tmp18;
@@ -2378,7 +2378,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function TikTok
   const obj5 = { fieldTextHook: util.t.JHEsYw, metadataField: React5.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked };
   items[3] = onChangeText(closure_18, { fieldTextHook: util.t.tEFCYA, metadataField: React5.TIKTOK_LIKES_COUNT, existingPendingConfiguration: configMetadataMap.get(React5.TIKTOK_LIKES_COUNT), platform: value, onConfigurationChange, locked });
   obj2.children = items;
-  return __initData2(state, obj2);
+  return map1(closure_1_14, obj2);
 });
 ReactCompilerGating = fn(558);
 let obj5 = { color: nativeDefault.colors.TEXT_MUTED };
@@ -2575,7 +2575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         };
         const items = [tmp22(closure_16, obj14), tmp21];
         obj13.children = items;
-        return __initData2(TableRowGroup.TableRowGroup, obj13);
+        return map1(TableRowGroup.TableRowGroup, obj13);
       } catch (err) {
       }
     }

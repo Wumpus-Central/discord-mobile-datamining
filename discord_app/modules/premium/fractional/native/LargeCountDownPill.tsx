@@ -1,15 +1,15 @@
-// === Module 13680: LargeCountDownPill ===
+// === Module 13732: LargeCountDownPill ===
 
-// Module 13680 (LargeCountDownPill)
+// Module 13732 (LargeCountDownPill)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5091 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LargeCou
       obj2.text = intl.string(util.t["Mv4E/M"]);
       obj2.icon = CircleInformationIcon.CircleInformationIcon;
       obj2.iconColor = nativeDefault.colors.STATUS_WARNING;
-      ToastActionCreatorsDefault.openMana("LARGE_COUNTDOWN_PILL_TOAST", obj2);
+      ToastActionCreatorsDefault.open("LARGE_COUNTDOWN_PILL_TOAST", obj2);
     }
     cResult[0] = handlePress;
     let first = handlePress;
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function LargeCou
       obj2.text = intl.string(util.t["Mv4E/M"]);
       obj2.icon = CircleInformationIcon.CircleInformationIcon;
       obj2.iconColor = nativeDefault.colors.STATUS_WARNING;
-      ToastActionCreatorsDefault.openMana("LARGE_COUNTDOWN_PILL_TOAST", obj2);
+      ToastActionCreatorsDefault.open("LARGE_COUNTDOWN_PILL_TOAST", obj2);
     },
     children: null
   };

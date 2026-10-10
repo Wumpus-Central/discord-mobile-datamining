@@ -1,26 +1,26 @@
-// === Module 18001: InteractionModalUtils ===
+// === Module 18073: InteractionModalUtils ===
 
-// Module 18001 (InteractionModalUtils)
+// Module 18073 (InteractionModalUtils)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Server from "Server" /* 1998 */;
-import ComponentStateContext from "ComponentStateContext" /* 8233 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9235 */;
-import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 9679 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 10773 */;
+import ComponentStateContext from "ComponentStateContext" /* 8249 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9262 */;
+import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 9708 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 10808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7889 */;
-import InteractionModalStore from "InteractionModalStore" /* 14575 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8234 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7907 */;
+import InteractionModalStore from "InteractionModalStore" /* 14629 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8250 */;
 
 require = fn;
 function validate(arr) {
@@ -2093,7 +2093,7 @@ let closure_21 = async function _submitModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -2187,7 +2187,7 @@ let closure_21 = async function _submitModal(arg0) {
         closure_131_7 = send;
         send();
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp10) {
       c6 = tmp;
@@ -2195,8 +2195,8 @@ let closure_21 = async function _submitModal(arg0) {
     }
   }
 };
-const DraftType = fn(7237).DraftType;
-const InteractionModalState = fn(14575).InteractionModalState;
+const DraftType = fn(7243).DraftType;
+const InteractionModalState = fn(14629).InteractionModalState;
 const Endpoints = fn(1085).Endpoints;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -2437,7 +2437,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -2472,7 +2472,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;
@@ -2524,7 +2524,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -2559,7 +2559,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useModalStat
           return obj;
         }
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp13) {
         c0 = tmp;
         throw tmp13;

@@ -1,11 +1,11 @@
-// === Module 17920: AutomodRemovedContentActionCreators ===
+// === Module 17992: AutomodRemovedContentActionCreators ===
 
-// Module 17920 (AutomodRemovedContentActionCreators)
+// Module 17992 (AutomodRemovedContentActionCreators)
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 const size = fn(2);
@@ -18,17 +18,17 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
     name = channel.name;
   }
   if (null != name) {
-    const obj2 = { key: null, content: null };
     const _HermesInternal = HermesInternal;
-    obj2.key = "AUTOMOD_REMOVED_" + channel_id;
+    const obj2 = { text: null };
+    const combined = "AUTOMOD_REMOVED_" + channel_id;
     const intl = util.intl;
     const obj3 = { channel: null };
     const _HermesInternal2 = HermesInternal;
     obj3.channel = "#" + name;
-    obj2.content = intl.formatToPlainString(util.t["9U3Wb3"], obj3);
-    ToastActionCreatorsDefault.open(obj2);
+    obj2.text = intl.formatToPlainString(util.t["9U3Wb3"], obj3);
+    ToastActionCreatorsDefault.open(combined, obj2);
   }
 };
 export const openRemovedContentModal = function openRemovedContentModal(action) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17921, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17993, dependencyMap.paths), "AutomodRemovedContentSheet", { action });
 };

@@ -1,13 +1,13 @@
-// === Module 17881: superagentPatch ===
+// === Module 17953: superagentPatch ===
 
-// Module 17881 (superagentPatch)
+// Module 17953 (superagentPatch)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1296 */;
-import getTimeZoneDefault from "getTimeZone" /* 17884 */;
-import trackHttpRequestDefault from "trackHttpRequest" /* 17885 */;
+import getTimeZoneDefault from "getTimeZone" /* 17956 */;
+import trackHttpRequestDefault from "trackHttpRequest" /* 17957 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4977 */;
+import ExperimentStore from "ExperimentStore" /* 5016 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
 function isAnalyticsEndpoint(pathname) {
@@ -22,7 +22,7 @@ function isAnalyticsEndpoint(pathname) {
 const AbortCodes = fn(1085).AbortCodes;
 let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(17882).IdGenerator();
+const idGenerator = new fn(17954).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
 const ApexExperiment = fn(1453);
 let obj2 = { name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: null };
@@ -66,7 +66,7 @@ HTTPUtils.setRequestPatch({
         const result = promise.set("Authorization", _default.getToken());
       }
       const tmpResult = tmp(1295);
-      const result1 = tmp(17883).updateDynamicSuperProperties();
+      const result1 = tmp(17955).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -112,7 +112,7 @@ HTTPUtils.setRequestPatch({
           return reduced.join(",");
         })(items));
       }
-      const result6 = promise.set("X-Discord-Locale", promise(2128).default.locale);
+      const result6 = promise.set("X-Discord-Locale", promise(2129).default.locale);
       const tmp18 = getTimeZoneDefault();
       if (null != tmp18) {
         const result7 = promise.set("X-Discord-Timezone", tmp18);
@@ -163,7 +163,7 @@ HTTPUtils.setRequestPatch({
         } catch (err) {
         }
       }
-      const tmpResult2 = tmp(17883);
+      const tmpResult2 = tmp(17955);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
@@ -266,7 +266,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [statusCode(2000)(17888, dependencyMap.paths), statusCode(2000)(5724, dependencyMap.paths)];
+        const items = [statusCode(2000)(17960, dependencyMap.paths), statusCode(2000)(5727, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -365,12 +365,12 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(2000)(15888, dependencyMap.paths);
-          statusCode(2000)(15888, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = statusCode(2000)(15950, dependencyMap.paths);
+          statusCode(2000)(15950, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(2000)(15888, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(2000)(15950, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -382,11 +382,11 @@ HTTPUtils.setRequestPatch({
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2000)(6106, dependencyMap.paths).then((result) => {
+      tmp7(2000)(6099, dependencyMap.paths).then((result) => {
         result.default();
       });
       flag = false;
-      const promise3 = tmp7(2000)(6106, dependencyMap.paths);
+      const promise3 = tmp7(2000)(6099, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -394,7 +394,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2000)(5900, dependencyMap.paths).then((result) => {
+        tmp7(2000)(5903, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -403,7 +403,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2000)(5900, dependencyMap.paths);
+        const promise2 = tmp7(2000)(5903, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -415,16 +415,16 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2000)(17899, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(2000)(17971, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2000)(17899, dependencyMap.paths);
+          const promise = tmp7(2000)(17971, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(17898);
+      tmp7Result = tmp7(17970);
     }
-    obj = statusCode(7014);
+    obj = statusCode(7021);
   }
 });
 HTTPUtils = fn(1295);
@@ -439,7 +439,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

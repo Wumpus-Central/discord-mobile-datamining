@@ -1,17 +1,17 @@
-// === Module 15037: AndroidViewNsfwDmCommandsSetting ===
+// === Module 15096: AndroidViewNsfwDmCommandsSetting ===
 
-// Module 15037 (AndroidViewNsfwDmCommandsSetting)
+// Module 15096 (AndroidViewNsfwDmCommandsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
-import AgeGateUtils from "AgeGateUtils" /* 5931 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6910 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 6911 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
+import AgeGateUtils from "AgeGateUtils" /* 5924 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6916 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 6917 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
-import SettingsConstants from "SettingsConstants" /* 7974 */;
+import SettingsConstants from "SettingsConstants" /* 7992 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 10629 */;
+import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 
 const PlatformUtils = tmp(1382);

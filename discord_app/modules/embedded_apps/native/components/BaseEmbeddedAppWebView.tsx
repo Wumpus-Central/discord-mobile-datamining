@@ -1,19 +1,19 @@
-// === Module 10912: BaseEmbeddedAppWebView ===
+// === Module 10952: BaseEmbeddedAppWebView ===
 
-// Module 10912 (BaseEmbeddedAppWebView)
+// Module 10952 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
-import usePreviousDefault from "usePrevious" /* 5929 */;
-import WebView from "WebView" /* 7518 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 10891 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
+import usePreviousDefault from "usePrevious" /* 5922 */;
+import WebView from "WebView" /* 7521 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 10931 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9046 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9065 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -40,7 +40,7 @@ const Linking = fn(17).Linking;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_10 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_12 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_13 = new LoggerDefault("BaseEmbeddedAppWebView");
 const PlatformUtils = fn(1382);
@@ -282,7 +282,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                             const obj2 = { value, done: true };
                                                             return obj2;
                                                           } else {
-                                                            return { value: "IconComponent", done: null };
+                                                            return { value: "IconComponent", done: "+51" };
                                                           }
                                                         } else {
                                                           try {
@@ -334,7 +334,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                               closure_2_25(closure_130_2.map((item) => "^" + closure_1_1(closure_1_3[26])(item).replace(/\\\*/g, ".*")));
                                                               closure_2_23(true);
                                                               c5 = 3;
-                                                              return { value: "IconComponent", done: null };
+                                                              return { value: "IconComponent", done: "+51" };
                                                             }
                                                           } catch (tmp10) {
                                                             c5 = tmp;
@@ -568,7 +568,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                               const obj2 = { value, done: true };
                                                               return obj2;
                                                             } else {
-                                                              return { value: "IconComponent", done: null };
+                                                              return { value: "IconComponent", done: "+51" };
                                                             }
                                                           } else {
                                                             try {
@@ -652,7 +652,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                     c7 = 1;
                                                                     c8 = 2;
                                                                     c9 = 1;
-                                                                    const obj6 = { value: closure_1_15.injectJavaScript(applicationId(10891)(obj4)), done: false };
+                                                                    const obj6 = { value: closure_1_15.injectJavaScript(applicationId(10931)(obj4)), done: false };
                                                                     return obj6;
                                                                   }
                                                                 }
@@ -660,7 +660,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                 if (1 === tmp8) {
                                                                   c7 = 0;
                                                                   if (null != ref.current) {
-                                                                    closure_1_28(applicationId(10891)(closure_132_0));
+                                                                    closure_1_28(applicationId(10931)(closure_132_0));
                                                                   }
                                                                 } else if (arg0 === 1) {
                                                                   c9 = 3;
@@ -986,7 +986,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -1179,7 +1179,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -1387,7 +1387,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -1439,7 +1439,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                 closure_1_26(closure_130_2.map((item) => "^" + closure_1_1(closure_1_3[26])(item).replace(/\\\*/g, ".*")));
                 closure_1_24(true);
                 c5 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp10) {
               c5 = tmp;
@@ -1522,7 +1522,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -1606,7 +1606,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                       c7 = 1;
                       c8 = 2;
                       c9 = 1;
-                      const obj6 = { value: memo.injectJavaScript(applicationId(10891)(obj4)), done: false };
+                      const obj6 = { value: memo.injectJavaScript(applicationId(10931)(obj4)), done: false };
                       return obj6;
                     }
                   }
@@ -1614,7 +1614,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                   if (1 === tmp8) {
                     c7 = 0;
                     if (null != ref.current) {
-                      callback4(applicationId(10891)(closure_132_0));
+                      callback4(applicationId(10931)(closure_132_0));
                     }
                   } else if (arg0 === 1) {
                     c9 = 3;

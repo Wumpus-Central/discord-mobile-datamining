@@ -1,6 +1,6 @@
-// === Module 18508: VideoStutterMitigationExperiment ===
+// === Module 18582: VideoStutterMitigationExperiment ===
 
-// Module 18508 (VideoStutterMitigationExperiment)
+// Module 18582 (VideoStutterMitigationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

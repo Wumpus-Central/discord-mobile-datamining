@@ -1,10 +1,10 @@
-// === Module 8357: profile_customization/ProfileCustomizationUtils ===
+// === Module 8373: profile_customization/ProfileCustomizationUtils ===
 
-// Module 8357 (profile_customization/ProfileCustomizationUtils)
+// Module 8373 (profile_customization/ProfileCustomizationUtils)
 import c from "c" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import VideoBackground from "VideoBackground" /* 8358 */;
+import VideoBackground from "VideoBackground" /* 8374 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -91,14 +91,14 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
     pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
   }
 });
-export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, arg2, acked) {
+export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, avatarSrcOverride, stateFromStores) {
   if (null == getAvatarURL) {
     return null;
   } else {
-    let userAvatarURL = arg2;
-    if (undefined === arg2) {
-      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(getAvatarURL.getAvatarURL(guildId, 80, !acked));
-      const tmp2 = !acked;
+    let userAvatarURL = avatarSrcOverride;
+    if (undefined === avatarSrcOverride) {
+      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(getAvatarURL.getAvatarURL(guildId, 80, !stateFromStores));
+      const tmp2 = !stateFromStores;
     } else {
       if (userAvatarURL == null) {
         const obj2 = {};

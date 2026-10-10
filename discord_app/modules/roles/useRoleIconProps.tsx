@@ -1,10 +1,10 @@
-// === Module 6876: useRoleIconProps ===
+// === Module 6882: useRoleIconProps ===
 
-// Module 6876 (useRoleIconProps)
-import RoleIconUtils from "RoleIconUtils" /* 6877 */;
+// Module 6882 (useRoleIconProps)
+import RoleIconUtils from "RoleIconUtils" /* 6883 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 
@@ -225,14 +225,14 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
     if (cResult[5] !== stateFromStores) {
       let tmp12;
       if (null != stateFromStores) {
-        const roleIconData = tmp(6877).getRoleIconData(stateFromStores, undefined);
+        const roleIconData = tmp(6883).getRoleIconData(stateFromStores, undefined);
         if (null != roleIconData) {
-          const obj2 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 139390878661308780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+          const obj2 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "guild_id" };
           ({ name: obj4.name, id: obj4.roleId } = stateFromStores);
           obj2.unicodeEmoji = roleIconData.unicodeEmoji;
           tmp12 = obj2;
         }
-        const tmpResult2 = tmp(6877);
+        const tmpResult2 = tmp(6883);
       }
       cResult[5] = stateFromStores;
       cResult[6] = tmp12;
@@ -321,7 +321,7 @@ export const useRoleIconPropsForPreview = ReactCompilerGating.isReactCompilerEna
     if (null != stateFromStores) {
       const roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, undefined);
       if (null != roleIconData) {
-        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: 139390878661308780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
+        const obj3 = { src: roleIconData.customIconSrc, name: null, roleId: null, size: "Array", unicodeEmoji: "guild_id" };
         ({ name: obj2.name, id: obj2.roleId } = stateFromStores);
         obj3.unicodeEmoji = roleIconData.unicodeEmoji;
         tmp2 = obj3;

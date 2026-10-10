@@ -1,22 +1,22 @@
-// === Module 9219: AppLauncherUtils ===
+// === Module 9246: AppLauncherUtils ===
 
-// Module 9219 (AppLauncherUtils)
+// Module 9246 (AppLauncherUtils)
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import Server from "Server" /* 1998 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2029 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7236 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8594 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9205 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 10588 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10787 */;
-import getPlatformDefault from "getPlatform" /* 11670 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7242 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8610 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9232 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 10622 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 10861 */;
+import getPlatformDefault from "getPlatform" /* 11716 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9220 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9247 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
-import AppLauncherStore from "AppLauncherStore" /* 11728 */;
+import AppLauncherStore from "AppLauncherStore" /* 11773 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const BuiltInSectionId = fn(5400).BuiltInSectionId;
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const BuiltInSectionId = fn(5403).BuiltInSectionId;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -155,7 +155,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;

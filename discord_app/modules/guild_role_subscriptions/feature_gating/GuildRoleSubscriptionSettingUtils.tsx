@@ -1,9 +1,9 @@
-// === Module 6956: GuildRoleSubscriptionSettingUtils ===
+// === Module 6962: GuildRoleSubscriptionSettingUtils ===
 
-// Module 6956 (GuildRoleSubscriptionSettingUtils)
-import GuildRecord from "GuildRecord" /* 2082 */;
-import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 6957 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
+// Module 6962 (GuildRoleSubscriptionSettingUtils)
+import GuildRecord from "GuildRecord" /* 2083 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 6963 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
 import UserStore from "UserStore" /* 1390 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

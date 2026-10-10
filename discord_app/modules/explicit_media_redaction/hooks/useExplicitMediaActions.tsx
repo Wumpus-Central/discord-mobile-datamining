@@ -1,6 +1,6 @@
-// === Module 11423: useExplicitMediaActions ===
+// === Module 11468: useExplicitMediaActions ===
 
-// Module 11423 (useExplicitMediaActions)
+// Module 11468 (useExplicitMediaActions)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ export const useExplicitMediaActions = function useExplicitMediaActions(onError)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

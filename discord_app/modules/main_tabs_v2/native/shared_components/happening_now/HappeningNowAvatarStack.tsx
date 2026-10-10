@@ -1,25 +1,25 @@
-// === Module 16425: HappeningNowAvatarStack ===
+// === Module 16495: HappeningNowAvatarStack ===
 
-// Module 16425 (HappeningNowAvatarStack)
+// Module 16495 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import spring from "spring" /* 5375 */;
-import ClipView from "ClipView" /* 8997 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import spring from "spring" /* 5378 */;
+import ClipView from "ClipView" /* 9016 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 
 const require = globalThis.__r;
 const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(13102).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13149).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles((arg0, marginLeft) => {
   const obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 }, avatarBubbles: { display: "flex", flexDirection: "row" }, avatars: { display: "flex", flexDirection: "row" }, shiftedAvatar: { marginLeft: -marginLeft }, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
   const obj2 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
@@ -81,7 +81,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
   if (undefined !== isTyping && isTyping) {
     num6 = 1;
   }
-  const sharedValue = guildId(4811).useSharedValue(num6);
+  const sharedValue = guildId(4850).useSharedValue(num6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [LocaleStore];
     class M {
@@ -97,7 +97,7 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
     tmp10 = cResult[2];
     tmp11 = cResult[3];
   }
-  const tmpResult = guildId(4811);
+  const tmpResult = guildId(4850);
   const stateFromStores = guildId(573).useStateFromStores(tmp10, tmp11);
   const tmpResult3 = guildId(573);
   class J {
@@ -110,8 +110,8 @@ export const HappeningNowAvatarStack = ReactCompilerGating.isReactCompilerEnable
       return obj;
     }
   }
-  const tmpResult4 = guildId(4811);
-  J.__closure = { interpolate: guildId(4811).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+  const tmpResult4 = guildId(4850);
+  J.__closure = { interpolate: guildId(4850).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
   J.__workletHash = 14140918847743;
   J.__initData = __initData;
   const animatedStyle = tmpResult4.useAnimatedStyle(J);

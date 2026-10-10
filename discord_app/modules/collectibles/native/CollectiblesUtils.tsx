@@ -1,15 +1,15 @@
-// === Module 9039: collectibles/CollectiblesUtils ===
+// === Module 9058: collectibles/CollectiblesUtils ===
 
-// Module 9039 (collectibles/CollectiblesUtils)
+// Module 9058 (collectibles/CollectiblesUtils)
 import Constants from "Constants" /* 1085 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4741 */;
-import PriceUtils from "PriceUtils" /* 6933 */;
-import IAPStoreDefault from "IAPStore" /* 7125 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7268 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
-import types from "types" /* 8304 */;
-import _modDef9040 from "module_9040" /* 9040 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4782 */;
+import PriceUtils from "PriceUtils" /* 6939 */;
+import IAPStoreDefault from "IAPStore" /* 7131 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7274 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
+import types from "types" /* 8320 */;
+import _modDef9059 from "module_9059" /* 9059 */;
 import size from "module_2" /* 2 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -191,6 +191,39 @@ export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(cRes
     return tmp5;
   }
 };
+export const getGoogleSkuIds = function getGoogleSkuIds(products) {
+  let items = [];
+  let item = products.forEach((googleSkuIds) => {
+    let tmp = undefined !== googleSkuIds.googleSkuIds;
+    if (tmp) {
+      tmp = null !== googleSkuIds.googleSkuIds;
+    }
+    if (tmp) {
+      let push = items.push;
+      let _Object = Object;
+      items = [];
+      HermesBuiltin.arraySpread(Object.values(googleSkuIds.googleSkuIds), 0);
+      HermesBuiltin.apply(items, items);
+    }
+    if (obj.getIsVariantProduct(googleSkuIds)) {
+      const variants = googleSkuIds.variants;
+      const item = variants.forEach((googleSkuIds) => {
+        let tmp = undefined !== googleSkuIds.googleSkuIds;
+        if (tmp) {
+          tmp = null !== googleSkuIds.googleSkuIds;
+        }
+        if (tmp) {
+          const push = navigation.push;
+          const _Object = Object;
+          items = [];
+          HermesBuiltin.arraySpread(Object.values(googleSkuIds.googleSkuIds), 0);
+          HermesBuiltin.apply(items, navigation);
+        }
+      });
+    }
+  });
+  return items;
+};
 export const isGPlaySynced = function isGPlaySynced(variants) {
   if (obj.getIsVariantProduct(variants)) {
     variants = variants.variants;
@@ -314,8 +347,8 @@ export const filterGPlaySyncedCategories = function filterGPlaySyncedCategories(
     return items;
   }
 };
-export const filterHiddenCategories = function filterHiddenCategories(arr) {
-  return arr.filter((unpublishedAt) => {
+export const filterHiddenCategories = function filterHiddenCategories(result1) {
+  return result1.filter((unpublishedAt) => {
     let tmp = null == unpublishedAt.unpublishedAt;
     if (!tmp) {
       const _Date = Date;
@@ -329,5 +362,5 @@ export const filterHiddenCategories = function filterHiddenCategories(arr) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9040, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9059, description: "", isPreviewMode: true };
 };

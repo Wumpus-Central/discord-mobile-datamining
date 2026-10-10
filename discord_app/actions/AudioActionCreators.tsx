@@ -1,21 +1,21 @@
-// === Module 5242: AudioActionCreators ===
+// === Module 5243: AudioActionCreators ===
 
-// Module 5242 (AudioActionCreators)
+// Module 5243 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5224 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5248 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 5252 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 5269 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 5225 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5249 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 5253 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 5270 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SpatialAudioStore from "SpatialAudioStore" /* 5243 */;
-import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5246 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import SpatialAudioStore from "SpatialAudioStore" /* 5244 */;
+import CertifiedDeviceStore from "CertifiedDeviceStore" /* 5247 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -56,8 +56,8 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1085);
 ({ InputModes: closure_11, AnalyticEvents: closure_12 } = Constants);
-const SoundOutputChannel = fn(5247).SoundOutputChannel;
-const MediaEngineContextTypes = fn(5116).MediaEngineContextTypes;
+const SoundOutputChannel = fn(5248).SoundOutputChannel;
+const MediaEngineContextTypes = fn(5117).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_16 = debounceDefault((target_user_id, context, volume) => {
@@ -599,7 +599,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -617,7 +617,7 @@ export default {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: v1(5224)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
+              const obj4 = { value: v1(5225)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -631,7 +631,7 @@ export default {
             const obj6 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
             v1(584).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -680,7 +680,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -698,7 +698,7 @@ export default {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: v1(5224)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
+              const obj4 = { value: v1(5225)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -712,7 +712,7 @@ export default {
             const obj6 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
             v1(584).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;

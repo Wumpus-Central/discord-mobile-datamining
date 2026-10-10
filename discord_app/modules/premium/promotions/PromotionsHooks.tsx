@@ -1,14 +1,14 @@
-// === Module 9100: PromotionsHooks ===
+// === Module 9120: PromotionsHooks ===
 
-// Module 9100 (PromotionsHooks)
+// Module 9120 (PromotionsHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
-import PromotionUtils from "PromotionUtils" /* 9135 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
+import PromotionUtils from "PromotionUtils" /* 9156 */;
+import PromotionsActionCreatorsDefault from "PromotionsActionCreators" /* 9157 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import PromotionsStore from "PromotionsStore" /* 9101 */;
+import PromotionsStore from "PromotionsStore" /* 9121 */;
 
 const require = globalThis.__r;
 
@@ -169,7 +169,6 @@ fn(558);
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboundPromotions() {
   const cResult = stateFromStores(576).c(38);
-  let tmp4 = globalThis;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PromotionsStore];
     const fn = function l() {
@@ -230,12 +229,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
     const _Symbol2 = Symbol;
     if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
       const items3 = [PromotionsStore];
-      const fn4 = function w() {
-        return PromotionsStore.claimedOutboundPromotionCodesLoaded;
-      };
+      class E {
+        constructor() {
+          return closure_1_5.claimedOutboundPromotionCodesLoaded;
+        }
+      }
       cResult[11] = items3;
-      cResult[12] = fn4;
-      let tmp24 = fn4;
+      cResult[12] = E;
+      let tmp24 = E;
       let tmp23 = items3;
     } else {
       tmp23 = cResult[11];
@@ -250,12 +251,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
             tmp = closure_1;
             tmp2 = closure_2;
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => closure_1_1(closure_1_2[10]).markOutboundPromotionsSeen());
+            result = obj.markOutboundPromotionsSeen();
           }
           return;
         }
       }
       const items4 = [stateFromStores];
+      class E {
+        constructor() {
+          return closure_1_5.claimedOutboundPromotionCodesLoaded;
+        }
+      }
       cResult[13] = stateFromStores;
       cResult[14] = A;
       cResult[15] = items4;
@@ -267,7 +273,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
             tmp = closure_1;
             tmp2 = closure_2;
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => closure_1_1(closure_1_2[10]).markOutboundPromotionsSeen());
+            result = obj.markOutboundPromotionsSeen();
           }
           return;
         }
@@ -282,60 +288,65 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
             tmp = closure_1;
             tmp2 = closure_2;
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => closure_1_1(closure_1_2[10]).markOutboundPromotionsSeen());
+            result = obj.markOutboundPromotionsSeen();
           }
           return;
         }
       }
       const effect1 = noop.useEffect(D, tmp31);
       const _Symbol3 = Symbol;
-      if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+      class E {
+        constructor() {
+          return closure_1_5.claimedOutboundPromotionCodesLoaded;
+        }
+      }
+      if (tmp33 === Symbol.for("react.memo_cache_sentinel")) {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
         const items5 = [];
-        cResult[20] = M;
+        class E {
+          constructor() {
+            return closure_1_5.claimedOutboundPromotionCodesLoaded;
+          }
+        }
         cResult[21] = items5;
-        let tmp34 = items5;
+        let tmp35 = items5;
       } else {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
-        tmp34 = cResult[21];
+        tmp35 = cResult[21];
       }
-      const effect2 = noop.useEffect(M, tmp34);
+      const effect2 = noop.useEffect(M, tmp35);
       if (cResult[22] !== stateFromStores2) {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
         const claimedOutboundPromotionCodeMap = obj9.getClaimedOutboundPromotionCodeMap(stateFromStores2);
-        cResult[22] = stateFromStores2;
+        class E {
+          constructor() {
+            return closure_1_5.claimedOutboundPromotionCodesLoaded;
+          }
+        }
         cResult[23] = claimedOutboundPromotionCodeMap;
       } else {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
@@ -345,20 +356,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
-        cResult[24] = tmp39;
+        cResult[24] = tmp40;
+        class E {
+          constructor() {
+            return closure_1_5.claimedOutboundPromotionCodesLoaded;
+          }
+        }
       } else {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
@@ -368,9 +380,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
@@ -378,92 +388,76 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
           class M {
             constructor() {
               obj = closure_1(closure_2[9]);
-              waitResult = obj.wait(() => {
-                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-              });
+              claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
               return;
             }
           }
-          cResult[27] = tmp43;
+          cResult[27] = tmp44;
+          class E {
+            constructor() {
+              return closure_1_5.claimedOutboundPromotionCodesLoaded;
+            }
+          }
         } else {
           class M {
             constructor() {
               obj = closure_1(closure_2[9]);
-              waitResult = obj.wait(() => {
-                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-              });
+              claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
               return;
             }
           }
         }
-        const set = new tmp4.Set(arr9.map(tmp43));
-        tmp4 = set;
+        class E {
+          constructor() {
+            return closure_1_5.claimedOutboundPromotionCodesLoaded;
+          }
+        }
+        const tmp452 = new tmp45(arr9.map(tmp43));
         cResult[25] = arr9;
-        cResult[26] = set;
+        cResult[26] = tmp452;
       } else {
         class M {
           constructor() {
             obj = closure_1(closure_2[9]);
-            waitResult = obj.wait(() => {
-              const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-            });
+            claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
             return;
           }
         }
-        dependencyMap = tmp41;
-        if (cResult[28] === tmp41) {
+        dependencyMap = tmp42;
+        if (cResult[28] === tmp42) {
           class M {
             constructor() {
               obj = closure_1(closure_2[9]);
-              waitResult = obj.wait(() => {
-                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-              });
+              claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
               return;
             }
           }
         }
-        if (cResult[31] !== tmp41) {
-          class M {
-            constructor() {
-              obj = closure_1(closure_2[9]);
-              waitResult = obj.wait(() => {
-                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-              });
-              return;
-            }
-          }
-          cResult[31] = tmp41;
-          cResult[32] = tmp49;
-        } else {
-          class M {
-            constructor() {
-              obj = closure_1(closure_2[9]);
-              waitResult = obj.wait(() => {
-                const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-              });
-              return;
-            }
+        class E {
+          constructor() {
+            return closure_1_5.claimedOutboundPromotionCodesLoaded;
           }
         }
-        const found = stateFromStores2.filter(tmp49);
-        cResult[28] = tmp41;
+        const found = stateFromStores2.filter(tmp50);
+        cResult[28] = tmp42;
         cResult[29] = stateFromStores2;
         cResult[30] = found;
       }
     }
     class D {
       constructor() {
-        obj = closure_1(closure_2[9]);
-        waitResult = obj.wait(() => {
-          let tmp = closure_1_1;
-          if (closure_1_1) {
-            tmp = null == stateFromStores;
-          }
-          if (tmp) {
-            const activePromotions = closure_1(dependencyMap[10]).fetchActivePromotions();
-            const obj = closure_1(dependencyMap[10]);
-          }
-        });
+        tmp = closure_1;
+        if (closure_1) {
+          tmp2 = closure_0;
+          tmp3 = null;
+          tmp = null == closure_0;
+        }
+        if (tmp) {
+          tmp4 = closure_1;
+          tmp5 = closure_2;
+          obj = closure_1(closure_2[9]);
+          activePromotions = obj.fetchActivePromotions();
+        }
         return;
       }
     }
@@ -481,9 +475,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
     class M {
       constructor() {
         obj = closure_1(closure_2[9]);
-        waitResult = obj.wait(() => {
-          const claimedOutboundPromotionCodes = closure_1_1(closure_1_2[10]).fetchClaimedOutboundPromotionCodes();
-        });
+        claimedOutboundPromotionCodes = obj.fetchClaimedOutboundPromotionCodes();
         return;
       }
     }
@@ -516,26 +508,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOutboun
   const items4 = [stateFromStores];
   const effect = activeOutboundPromotions.useEffect(() => {
     if (null != stateFromStores) {
-      DispatcherDefault.wait(() => closure_1_1(stateFromStores2[10]).markOutboundPromotionsSeen());
+      const result = PromotionsActionCreatorsDefault.markOutboundPromotionsSeen();
     }
   }, items4);
   const items5 = [stateFromStores, tmp8];
   const effect1 = activeOutboundPromotions.useEffect(() => {
-    DispatcherDefault.wait(() => {
-      let tmp = closure_1_1;
-      if (closure_1_1) {
-        tmp = null == stateFromStores;
-      }
-      if (tmp) {
-        const activePromotions = isPremiumExactlyResult(stateFromStores2[10]).fetchActivePromotions();
-        const obj = isPremiumExactlyResult(stateFromStores2[10]);
-      }
-    });
+    let tmp = isPremiumExactlyResult;
+    if (isPremiumExactlyResult) {
+      tmp = null == stateFromStores;
+    }
+    if (tmp) {
+      const activePromotions = PromotionsActionCreatorsDefault.fetchActivePromotions();
+    }
   }, items5);
   const effect2 = activeOutboundPromotions.useEffect(() => {
-    isPremiumExactlyResult(stateFromStores2[9]).wait(() => {
-      const claimedOutboundPromotionCodes = closure_1_1(stateFromStores2[10]).fetchClaimedOutboundPromotionCodes();
-    });
+    const claimedOutboundPromotionCodes = isPremiumExactlyResult(stateFromStores2[9]).fetchClaimedOutboundPromotionCodes();
   }, []);
   const items6 = [stateFromStores2];
   const claimedOutboundPromotionCodeMap = activeOutboundPromotions.useMemo(() => PromotionUtils.getClaimedOutboundPromotionCodeMap(stateFromStores2), items6);

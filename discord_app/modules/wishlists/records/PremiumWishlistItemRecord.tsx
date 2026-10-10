@@ -1,8 +1,8 @@
-// === Module 8965: PremiumWishlistItemRecord ===
+// === Module 8984: PremiumWishlistItemRecord ===
 
-// Module 8965 (PremiumWishlistItemRecord)
-import SKURecord from "SKURecord" /* 6095 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8963 */;
+// Module 8984 (PremiumWishlistItemRecord)
+import SKURecord from "SKURecord" /* 6088 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8982 */;
 
 const SKUProductLines = fn(1085).SKUProductLines;
 const prototype = function PremiumWishlistItemRecord(sku) {

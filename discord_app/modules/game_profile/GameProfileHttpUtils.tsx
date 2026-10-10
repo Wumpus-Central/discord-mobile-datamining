@@ -1,15 +1,15 @@
-// === Module 8944: GameProfileHttpUtils ===
+// === Module 8963: GameProfileHttpUtils ===
 
-// Module 8944 (GameProfileHttpUtils)
+// Module 8963 (GameProfileHttpUtils)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import StoreUtils from "StoreUtils" /* 5641 */;
+import StoreUtils from "StoreUtils" /* 5644 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7277 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
-import GameProfileStore from "GameProfileStore" /* 8867 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7284 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
+import GameProfileStore from "GameProfileStore" /* 8886 */;
 
 require = fn;
 let closure_9 = async function _getShopCollection() {
@@ -54,7 +54,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_10 = async function _fetchSimilarGames(arg0) {
         const obj7 = { type: "GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS", gameId: closure_130_0, games: closure_130_1 };
         closure_131_1(closure_131_2[6]).dispatch(obj7);
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp14) {
       c5 = tmp;
@@ -163,7 +163,7 @@ let closure_11 = async function _getGameAnnouncements() {
   })();
 };
 const Endpoints = fn(1085).Endpoints;
-let closure_8 = fn(8945).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_8 = fn(8964).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameProfileStore, {
   getQueryId(arg0, arg1) {

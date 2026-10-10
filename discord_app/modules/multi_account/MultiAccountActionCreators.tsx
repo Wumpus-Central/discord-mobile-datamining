@@ -1,14 +1,14 @@
-// === Module 12085: MultiAccountActionCreators ===
+// === Module 12129: MultiAccountActionCreators ===
 
-// Module 12085 (MultiAccountActionCreators)
+// Module 12129 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TokenManagerAll from "TokenManager" /* 1111 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5937 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5930 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 12081 */;
+import MultiAccountStore from "MultiAccountStore" /* 12125 */;
 
 const require = fn;
 const Constants = fn(1085);
@@ -31,7 +31,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

@@ -2,8 +2,8 @@
 
 // Module 7424 (GuildProfileUtils)
 import Constants from "Constants" /* 1085 */;
-import ChannelRecord from "ChannelRecord" /* 2068 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
+import ChannelRecord from "ChannelRecord" /* 2069 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ChannelRecord.createChannelRecordFromInvite;

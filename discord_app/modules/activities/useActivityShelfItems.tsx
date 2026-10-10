@@ -1,8 +1,8 @@
-// === Module 11668: useActivityShelfItems ===
+// === Module 11714: useActivityShelfItems ===
 
-// Module 11668 (useActivityShelfItems)
+// Module 11714 (useActivityShelfItems)
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9046 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9065 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -32,10 +32,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   const obj = enableFilter(576);
   const filter = enableFilter(504).useStateFromStoresObject(tmp5, tmp6).filter;
   const tmpResult = enableFilter(504);
-  const activityShelfData = enableFilter(11669).useActivityShelfData(enableFilter.guildId);
-  const tmp9 = filter(11671)(activityShelfData);
-  const tmpResult3 = enableFilter(11669);
-  const developerActivityShelfItems = enableFilter(11672).useDeveloperActivityShelfItems();
+  const activityShelfData = enableFilter(11715).useActivityShelfData(enableFilter.guildId);
+  const tmp9 = filter(11717)(activityShelfData);
+  const tmpResult3 = enableFilter(11715);
+  const developerActivityShelfItems = enableFilter(11718).useDeveloperActivityShelfItems();
   if (cResult[2] === tmp4) {
     if (cResult[3] === filter) {
       let tmp11 = cResult[4];
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   cResult[3] = filter;
   cResult[4] = shouldKeepShelfItem;
   tmp11 = shouldKeepShelfItem;
-  const tmpResult4 = enableFilter(11672);
+  const tmpResult4 = enableFilter(11718);
 }) : (function useActivityShelfItems(enableFilter) {
   let flag = enableFilter.enableFilter;
   if (flag === undefined) {
@@ -95,11 +95,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useActiv
   let items = [DeveloperActivityShelfStore];
   const filter = flag(504).useStateFromStoresObject(items, () => ({ filter: filter.getFilter() })).filter;
   const obj = flag(504);
-  const activityShelfData = flag(11669).useActivityShelfData(enableFilter.guildId);
-  const tmp2 = filter(11671)(activityShelfData);
+  const activityShelfData = flag(11715).useActivityShelfData(enableFilter.guildId);
+  const tmp2 = filter(11717)(activityShelfData);
   dependencyMap = tmp2;
-  const obj2 = flag(11669);
-  const developerActivityShelfItems = flag(11672).useDeveloperActivityShelfItems();
+  const obj2 = flag(11715);
+  const developerActivityShelfItems = flag(11718).useDeveloperActivityShelfItems();
   const items1 = [developerActivityShelfItems, flag, filter, tmp2];
   return developerActivityShelfItems.useMemo(() => {
     function shouldKeepShelfItem(application) {

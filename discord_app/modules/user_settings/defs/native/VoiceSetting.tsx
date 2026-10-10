@@ -1,6 +1,6 @@
-// === Module 15454: VoiceSetting ===
+// === Module 15516: VoiceSetting ===
 
-// Module 15454 (VoiceSetting)
+// Module 15516 (VoiceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
@@ -10,7 +10,7 @@ require = fn;
 const Constants = fn(1085);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11064).MicrophoneIcon,
+  IconComponent: fn(11104).MicrophoneIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useVoiceSettingTrailing() {
     let Q8gkVL = dependencyMap;
     const cResult = c.c(4);

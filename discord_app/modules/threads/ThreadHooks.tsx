@@ -1,21 +1,21 @@
-// === Module 6965: ThreadHooks ===
+// === Module 6971: ThreadHooks ===
 
-// Module 6965 (ThreadHooks)
+// Module 6971 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5905 */;
-import AgeGateUtils from "AgeGateUtils" /* 5931 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6086 */;
-import useIsRemoteDefault from "useIsRemote" /* 6966 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6967 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5908 */;
+import AgeGateUtils from "AgeGateUtils" /* 5924 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6079 */;
+import useIsRemoteDefault from "useIsRemote" /* 6972 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6973 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4976 */;
+import createExperiment from "createExperiment" /* 5015 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6041 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6034 */;
 
 require = fn;
 function canUnarchiveThread(stateFromStores) {
@@ -55,7 +55,7 @@ function canUnarchiveThread(stateFromStores) {
   }
   return tmp10;
 }
-const THREADED_CHANNEL_TYPES = fn(2068).THREADED_CHANNEL_TYPES;
+const THREADED_CHANNEL_TYPES = fn(2069).THREADED_CHANNEL_TYPES;
 const Constants = fn(1085);
 ({ Permissions: c10, MessageFlags: closure_11, ChannelTypes: closure_12 } = Constants);
 let obj = { id: "2022-07_voice_in_threads", label: "Voice in Threads", kind: "guild", defaultConfig: { enabled: false }, treatments: null };

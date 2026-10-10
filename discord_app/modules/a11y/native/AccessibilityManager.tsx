@@ -1,15 +1,15 @@
-// === Module 14613: AccessibilityManager ===
+// === Module 14667: AccessibilityManager ===
 
-// Module 14613 (AccessibilityManager)
+// Module 14667 (AccessibilityManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4927 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10339 */;
-import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14614 */;
-import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14615 */;
-import updateSaturation from "updateSaturation" /* 14617 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4966 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10372 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14668 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14669 */;
+import updateSaturation from "updateSaturation" /* 14671 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -56,7 +56,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ export default {
             closure_128_0 = value;
             const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp12) {
           c3 = tmp;

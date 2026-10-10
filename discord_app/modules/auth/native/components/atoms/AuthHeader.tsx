@@ -1,15 +1,15 @@
-// === Module 6654: AuthHeader ===
+// === Module 6655: AuthHeader ===
 
-// Module 6654 (AuthHeader)
+// Module 6655 (AuthHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5903 */;
+import TextStyles from "TextStyles" /* 5906 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { header: null };
 const obj3 = {};
 const merged = Object.assign(TextStyles(fn(1085).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

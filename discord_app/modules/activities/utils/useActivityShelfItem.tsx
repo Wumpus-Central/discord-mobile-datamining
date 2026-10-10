@@ -1,22 +1,22 @@
-// === Module 11687: useActivityShelfItem ===
+// === Module 11733: useActivityShelfItem ===
 
-// Module 11687 (useActivityShelfItem)
+// Module 11733 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import Server from "Server" /* 1998 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4698 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6854 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9205 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10768 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10777 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10878 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10879 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10922 */;
-import getPlatformDefault from "getPlatform" /* 11670 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11688 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11689 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4739 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6857 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 9232 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 10803 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10812 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 10918 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 10919 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
+import getPlatformDefault from "getPlatform" /* 11716 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11734 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11735 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
 require = fn;
 function useOnActivityItemSelected(arg0) {
@@ -37,8 +37,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = referrerId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6848)().analyticsLocations;
-  closure_13 = context(10879)();
+  analyticsLocations = context(6851)().analyticsLocations;
+  closure_13 = context(10919)();
   obj = canLaunchContextlessFrame;
   closure_14 = obj.canLaunchContextlessFrame(application);
   if (null == application) {
@@ -59,7 +59,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -131,7 +131,7 @@ function useOnActivityItemSelected(arg0) {
           } else if (1 === tmp8) {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             if (2 === tmp8) {
               if (arg0 === 1) {
@@ -152,7 +152,7 @@ function useOnActivityItemSelected(arg0) {
             } else if (3 === tmp8) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else if (4 === tmp8) {
               if (arg0 === 1) {
                 c5 = 3;
@@ -170,7 +170,7 @@ function useOnActivityItemSelected(arg0) {
               c3 = 0;
             }
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
           c3 = 0;
           c5 = 3;
@@ -200,7 +200,7 @@ function useOnActivityItemSelected(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -256,7 +256,7 @@ function useOnActivityItemSelected(arg0) {
             return obj;
           }
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } catch (tmp17) {
           c0 = tmp;
           throw tmp17;
@@ -280,7 +280,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(2024).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1085).ApplicationFlags;
-const MAIN_SURFACE = fn(10767).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10802).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 const ReactCompilerGating = fn(558);

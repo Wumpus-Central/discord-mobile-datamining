@@ -1,21 +1,21 @@
-// === Module 11090: StageChannelExpandedControls ===
+// === Module 11130: StageChannelExpandedControls ===
 
-// Module 11090 (StageChannelExpandedControls)
+// Module 11130 (StageChannelExpandedControls)
 import nativeDefault from "native" /* 587 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10837 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10849 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
-const useChannelVideoLimitDefault = tmp2(8771);
+const useChannelVideoLimitDefault = tmp2(8788);
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: null };
 let obj3 = { backgroundColor: null, borderRadius: null, overflow: "hidden" };
-const ColorUtils = fn(4928);
+const ColorUtils = fn(4967);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.24);
 obj3.borderRadius = nativeDefault.radii.sm;
 obj.container = obj3;
@@ -29,10 +29,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = channel(576).c(38);
   channel = channel.channel;
   const tmp3 = closure_8();
-  const tmp5 = stateFromStores1(10837)(channel.id);
+  const tmp5 = stateFromStores1(10849)(channel.id);
   const obj = channel(576);
   const tmp4 = stateFromStores1;
-  const isConnectedToVoiceChannel = channel(10324).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore];
     cResult[0] = items;
@@ -54,7 +54,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp9 = cResult[2];
     tmp10 = cResult[3];
   }
-  const obj2 = channel(10324);
+  const obj2 = channel(10357);
   const stateFromStores = DeafenButton(504).useStateFromStores(first, tmp9, tmp10);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [ApplicationStreamingStore];
@@ -102,8 +102,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     num11 = 0;
   }
   const DeafenButtonResult2 = DeafenButton(504);
-  const stageHasMedia = DeafenButton(5892).useStageHasMedia(channel.id);
-  const reachedLimit = tmp4(8771)(channel).reachedLimit;
+  const stageHasMedia = DeafenButton(5895).useStageHasMedia(channel.id);
+  const reachedLimit = tmp4(8788)(channel).reachedLimit;
   if (cResult[10] === channel) {
     if (cResult[11] === stateFromStores1) {
       if (cResult[12] === stageHasMedia) {
@@ -141,7 +141,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp23 = jsx(DeafenButton(11091).StreamVolumeItem, {});
+    const tmp23 = jsx(DeafenButton(11131).StreamVolumeItem, {});
     cResult[19] = tmp23;
     let tmp21 = tmp23;
   } else {
@@ -164,7 +164,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               items5.push(tmp28);
             }
             const obj4 = { channel, disabled: tmp25 };
-            const tmp30 = jsx(DeafenButton(11091).ScreenshareButton, { channel, disabled: tmp25 });
+            const tmp30 = jsx(DeafenButton(11131).ScreenshareButton, { channel, disabled: tmp25 });
             cResult[25] = channel;
             cResult[26] = tmp25;
             cResult[27] = tmp30;
@@ -194,7 +194,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     items5.push(tmp32);
     if (cResult[31] !== channel) {
-      DeafenButton = DeafenButton(11091).DeafenButton;
+      DeafenButton = DeafenButton(11131).DeafenButton;
       const obj5 = { channel };
       const tmp37 = <DeafenButton channel={channel} />;
       cResult[31] = channel;
@@ -214,20 +214,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[17] = stateFromStoresArray;
     cResult[18] = items5;
   }
-  const tmp33 = jsx(DeafenButton(11091).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel });
+  const tmp33 = jsx(DeafenButton(11131).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel });
   cResult[28] = channel.id;
   cResult[29] = isConnectedToVoiceChannel;
   cResult[30] = tmp33;
   tmp32 = tmp33;
-  const DeafenButtonResult3 = DeafenButton(5892);
+  const DeafenButtonResult3 = DeafenButton(5895);
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
 }) : (function StageChannelExpandedControls(channel) {
   channel = channel.channel;
   importDefault = undefined;
   const tmp = closure_8();
   const tmp4 = useCanSpeakInChannelDefault(channel.id);
-  const isConnectedToVoiceChannel = channel(10324).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(10324);
+  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(10357);
   const items = [GuildStore];
   const items1 = [channel.guild_id];
   const stateFromStores = channel(504).useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id), items1);
@@ -246,9 +246,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     num = 0;
   }
   const obj4 = channel(504);
-  const stageHasMedia = channel(5892).useStageHasMedia(channel.id);
+  const stageHasMedia = channel(5895).useStageHasMedia(channel.id);
   const items5 = [];
-  items5.push(jsx(channel(11091).StreamVolumeItem, {}));
+  items5.push(jsx(channel(11131).StreamVolumeItem, {}));
   if (tmp11) {
     const obj5 = { channel, disabled: null };
     let tmp12 = stateFromStoresArray.length > 0;
@@ -263,12 +263,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp12 = reachedLimit;
     }
     obj5.disabled = tmp12;
-    items5.push(jsx(tmp5(11091).ScreenshareButton, { channel, disabled: null }));
+    items5.push(jsx(tmp5(11131).ScreenshareButton, { channel, disabled: null }));
   }
-  items5.push(jsx(channel(11091).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
-  items5.push(jsx(channel(11091).DeafenButton, { channel }));
+  items5.push(jsx(channel(11131).AudioRouteButton, { channelId: channel.id, isConnectedToVoiceChannel }));
+  items5.push(jsx(channel(11131).DeafenButton, { channel }));
   const obj6 = { channelId: channel.id, isConnectedToVoiceChannel };
   tmp11 = num > 0 && tmp4;
-  const tmp5Result = channel(5892);
+  const tmp5Result = channel(5895);
   return <View style={tmp.container}>{items5.map((children, index) => <View key={index}>{children}</View>)}</View>;
 }));

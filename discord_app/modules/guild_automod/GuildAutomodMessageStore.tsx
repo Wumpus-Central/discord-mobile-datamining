@@ -1,15 +1,15 @@
-// === Module 7734: GuildAutomodMessageStore ===
+// === Module 7752: GuildAutomodMessageStore ===
 
-// Module 7734 (GuildAutomodMessageStore)
+// Module 7752 (GuildAutomodMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5431 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7223 */;
-import MessageQueue from "MessageQueue" /* 7735 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 7863 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import MessageStore from "MessageStore" /* 5429 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5434 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7229 */;
+import MessageQueue from "MessageQueue" /* 7753 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 7881 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import MessageStore from "MessageStore" /* 5432 */;
 
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {

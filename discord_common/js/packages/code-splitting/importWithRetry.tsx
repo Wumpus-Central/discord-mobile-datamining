@@ -1,6 +1,6 @@
-// === Module 4748: importWithRetry ===
+// === Module 4789: importWithRetry ===
 
-// Module 4748 (importWithRetry)
+// Module 4789 (importWithRetry)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_4 = async function _importWithRetry(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

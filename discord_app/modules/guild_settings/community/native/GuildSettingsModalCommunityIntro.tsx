@@ -1,20 +1,20 @@
-// === Module 18325: GuildSettingsModalCommunityIntro ===
+// === Module 18399: GuildSettingsModalCommunityIntro ===
 
-// Module 18325 (GuildSettingsModalCommunityIntro)
+// Module 18399 (GuildSettingsModalCommunityIntro)
 import c from "c" /* 576 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4767 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import LightbulbIcon from "LightbulbIcon" /* 9535 */;
-import AnalyticsIcon from "AnalyticsIcon" /* 9725 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 18330 */;
+import ToastUtils from "ToastUtils" /* 4808 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
+import LightbulbIcon from "LightbulbIcon" /* 9564 */;
+import AnalyticsIcon from "AnalyticsIcon" /* 9754 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 18404 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8622 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8638 */;
 
 const require = globalThis.__r;
 
@@ -75,7 +75,7 @@ const Constants = fn(1085);
 ({ HelpdeskArticles: closure_9, GuildFeatures: c10, GuildSettingsSections: closure_11, Permissions: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" }, featureIcon: null, featureDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 obj2.featureIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
@@ -101,7 +101,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Featur
     }
     if (cResult[5] !== header) {
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header };
-      const tmp11 = __initData2(Text_Text.Heading, obj2);
+      const tmp11 = map1(Text_Text.Heading, obj2);
       cResult[5] = header;
       cResult[6] = tmp11;
       let tmp9 = tmp11;
@@ -110,7 +110,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Featur
     }
     if (cResult[7] !== body) {
       const obj3 = { variant: "text-sm/medium", color: "text-default", children: body };
-      const tmp14 = __initData2(Text_Text.Text, obj3);
+      const tmp14 = map1(Text_Text.Text, obj3);
       cResult[7] = body;
       cResult[8] = tmp14;
       let tmp12 = tmp14;
@@ -133,7 +133,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Featur
         const obj4 = { style: featureCard, children: null };
         const items = [tmp7, tmp15];
         obj4.children = items;
-        const tmp22 = state(React4, obj4);
+        const tmp22 = closure_1_14(React4, obj4);
         cResult[13] = tmp4.featureCard;
         cResult[14] = tmp7;
         cResult[15] = tmp15;
@@ -144,14 +144,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Featur
     const obj5 = { style: tmp4.featureDescription, children: null };
     const items1 = [tmp9, tmp12];
     obj5.children = items1;
-    const tmp18 = state(React4, obj5);
+    const tmp18 = closure_1_14(React4, obj5);
     cResult[9] = tmp4.featureDescription;
     cResult[10] = tmp9;
     cResult[11] = tmp12;
     cResult[12] = tmp18;
     tmp15 = tmp18;
   }
-  const tmp8 = __initData2(React4, { style: featureIcon, children: tmp5 });
+  const tmp8 = map1(React4, { style: featureIcon, children: tmp5 });
   cResult[2] = tmp4.featureIcon;
   cResult[3] = tmp5;
   cResult[4] = tmp8;
@@ -160,13 +160,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Featur
   ({ icon, header, body } = arg0);
   const tmp = closure_16();
   const obj = { style: tmp.featureCard, children: null };
-  const items = [__initData2(React4, { style: tmp.featureIcon, children: icon() }), ];
+  const items = [map1(React4, { style: tmp.featureIcon, children: icon() }), ];
   const obj3 = { style: tmp.featureDescription, children: null };
-  const items1 = [__initData2(Text_Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), __initData2(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
+  const items1 = [map1(Text_Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
   obj3.children = items1;
-  items[1] = state(React4, obj3);
+  items[1] = closure_1_14(React4, obj3);
   obj.children = items;
-  return state(React4, obj);
+  return closure_1_14(React4, obj);
 });
 ReactCompilerGating = fn(558);
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
@@ -329,9 +329,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         tmp5 = closure_1;
         tmp6 = closure_2;
         obj = closure_1(closure_2[18]);
-        waitResult = obj.wait(() => onClose(navigation[19]).setSection(constants.COMMUNITY));
-        tmp8 = closure_2;
-        tmp9 = GuildSettingsSections;
+        tmp7 = GuildSettingsSections;
+        setSectionResult = obj.setSection(GuildSettingsSections.COMMUNITY);
+        tmp9 = closure_2;
         obj1 = { onClose: null };
         tmp10 = onClose;
         obj1.onClose = onClose;
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
       tmp = hasItem;
     }
     if (tmp) {
-      DispatcherDefault.wait(() => onClose(navigation[19]).setSection(constants.COMMUNITY));
+      GuildSettingsActionCreatorsDefault.setSection(constants3.COMMUNITY);
       const obj2 = { onClose };
       const replaced = navigation.replace(constants3.COMMUNITY, obj2);
     }
@@ -389,7 +389,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const items4 = [tmp.contentPadding, contentContainerStyle.contentContainerStyle];
   obj7.contentContainerStyle = items4;
   const introHeaderSource = require("IntroHeader").useIntroHeaderSource();
-  const items5 = [closure_13(onClose(navigation[23]), { resizeMode: "contain", source: introHeaderSource, style: tmp.headerImage }), , , , , ];
+  const items5 = [closure_13(onClose(navigation[22]), { resizeMode: "contain", source: introHeaderSource, style: tmp.headerImage }), , , , , ];
   const obj9 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require("util").intl;
   obj9.children = intl.string(require("util").t["M/gBcA"]);
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   const obj11 = { helpdeskArticle: null };
   const obj5 = require("IntroHeader");
   const obj8 = { resizeMode: "contain", source: introHeaderSource, style: tmp.headerImage };
-  obj11.helpdeskArticle = onClose(navigation[24]).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
+  obj11.helpdeskArticle = onClose(navigation[23]).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
   obj10.children = intl2.format(require("util").t["52EgsM"], obj11);
   items5[2] = closure_13(require("Text/Text").Text, obj10);
   const obj13 = { text: null, onPress: null, disabled: null };
@@ -419,7 +419,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
   obj14.children = intl4.string(require("util").t.HgTI2N);
   items5[4] = closure_13(require("Text/Text").Text, obj14);
   const obj15 = { style: tmp.features, children: null };
-  const obj12 = onClose(navigation[24]);
+  const obj12 = onClose(navigation[23]);
   obj15.children = communityFeatures().map((item, index) => {
     const merged = Object.assign(item);
     return closure_1_13(closure_1_18, {}, index);

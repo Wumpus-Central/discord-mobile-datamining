@@ -1,21 +1,21 @@
-// === Module 10295: FavoritesDismissibleContent ===
+// === Module 10328: FavoritesDismissibleContent ===
 
-// Module 10295 (FavoritesDismissibleContent)
+// Module 10328 (FavoritesDismissibleContent)
 import c from "c" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7093 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7094 */;
-import FavoritesHooks from "FavoritesHooks" /* 10279 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10281 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10293 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10294 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7099 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 7100 */;
+import FavoritesHooks from "FavoritesHooks" /* 10312 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10314 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10326 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10327 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 let items = [fn(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(2049).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(2049).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
 let items1 = [fn(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const items2 = [fn(2049).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
@@ -189,7 +189,7 @@ export const useFavoritesBetaTagDismissibleContent = ReactCompilerGating.isReact
   const isFreemium = require("FavoritesGuildExperiment").useFavoritesGuildConfig(first).isFreemium;
   if (cResult[1] === arg0) {
     if (cResult[2] === isFreemium) {
-      const tmp7 = _slicedToArray(tmp(7093).useSelectedDismissibleContent(cResult[3]), 2);
+      const tmp7 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[3]), 2);
       _require = tmp8;
       const tmp9 = tmp7[0] === tmp(2049).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
       closure_1 = tmp9;
@@ -218,7 +218,7 @@ export const useFavoritesBetaTagDismissibleContent = ReactCompilerGating.isReact
       cResult[5] = tmp9;
       cResult[6] = fn;
       tmp10 = fn;
-      const tmpResult2 = tmp(7093);
+      const tmpResult2 = tmp(7099);
     }
   }
   if (!isFreemium) {

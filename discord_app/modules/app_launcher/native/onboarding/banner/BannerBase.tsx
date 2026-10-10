@@ -1,17 +1,17 @@
-// === Module 11691: BannerBase ===
+// === Module 11737: BannerBase ===
 
-// Module 11691 (BannerBase)
+// Module 11737 (BannerBase)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import ColorUtils from "ColorUtils" /* 4928 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import spring from "spring" /* 5375 */;
-import _mod11692 from "module_11692" /* 11692 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import ColorUtils from "ColorUtils" /* 4967 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import spring from "spring" /* 5378 */;
+import _mod11738 from "module_11738" /* 11738 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 const require = globalThis.__r;
 
@@ -21,27 +21,30 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
-const createStyles = fn(5091);
-let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(11680).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const createStyles = fn(5092);
+let obj2 = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerTextContainerWithImage: null, bannerTextContainerWithoutImage: null, bannerText: null, bannerTextCentered: null };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(11726).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 obj2.banner = rect;
 obj2.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
 obj2.bannerBackgroundGradient = rect1;
 obj2.imageContainer = { width: 72 };
 obj2.trinketsLottie = { width: 175, height: 175, position: "absolute", top: -38, left: -27, zIndex: 1, pointerEvents: "none" };
-obj2.bannerTextContainer = { alignItems: "center", justifyContent: "center", marginLeft: nativeDefault.space.PX_12, flexShrink: 1 };
+obj2.bannerTextContainer = { alignItems: "center", justifyContent: "center", flexShrink: 1 };
+obj2.bannerTextContainerWithImage = { marginLeft: nativeDefault.space.PX_12 };
+obj2.bannerTextContainerWithoutImage = { flex: 1 };
 obj2.bannerText = { width: "100%" };
+obj2.bannerTextCentered = { textAlign: "center" };
 let closure_10 = createStyles.createStyles(obj2);
 const __initData = { code: "function BannerBaseTsx1(){const{bannerMeasured,withDelay,withSpring,SPRING_CONFIG}=this.__closure;return{opacity:bannerMeasured.get()?withDelay(150,withSpring(1,SPRING_CONFIG)):0,transform:[{translateY:bannerMeasured.get()?withDelay(150,withSpring(0,SPRING_CONFIG)):30}]};}" };
 const __initData2 = { code: "function BannerBaseTsx2(){const{bannerMeasured,withDelay,withSpring,SPRING_CONFIG}=this.__closure;return{opacity:bannerMeasured.get()?withDelay(150,withSpring(1,SPRING_CONFIG)):0,transform:[{translateY:bannerMeasured.get()?withDelay(150,withSpring(0,SPRING_CONFIG)):30}]};}" };
 const ReactCompilerGating = fn(558);
-let obj3 = { alignItems: "center", justifyContent: "center", marginLeft: nativeDefault.space.PX_12, flexShrink: 1 };
+let obj3 = { marginLeft: nativeDefault.space.PX_12 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BannerBase.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBase(arg0) {
-  const cResult = c.c(49);
+  const cResult = c.c(52);
   ({ image, text } = arg0);
   const tmp4 = closure_10();
   [tmp6, require] = noop.useState(0);
@@ -63,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
     cResult[2] = backgroundColor;
     cResult[3] = hexOpacityToRgbaResult1;
     let tmp12 = hexOpacityToRgbaResult1;
-    const tmpResult5 = ColorUtils;
+    const tmpResult4 = ColorUtils;
   } else {
     tmp12 = cResult[3];
   }
@@ -104,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
     } else {
       tmp20 = cResult[10];
     }
-    const tmpResult6 = initialize;
+    const tmpResult5 = initialize;
     class M {
       constructor() {
         obj = closure_1;
@@ -182,46 +185,132 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                 if (cResult[27] === tmp29) {
                   let tmp30 = cResult[28];
                 }
-                const _Symbol3 = Symbol;
-                ({ imageContainer, trinketsLottie } = tmp4);
-                if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmpResult8 = _mod11692;
-                  cResult[29] = tmpResult8;
-                  let tmp33 = tmpResult8;
-                } else {
-                  tmp33 = cResult[29];
-                }
-                if (cResult[30] === tmp4.trinketsLottie) {
-                  if (cResult[31] === tmp35) {
-                    let tmp36 = cResult[32];
-                  }
-                  if (cResult[33] === image) {
-                    if (cResult[34] === tmp4.imageContainer) {
-                      if (cResult[35] === tmp36) {
-                        let tmp39 = cResult[36];
+                if (cResult[29] === image) {
+                  if (cResult[30] === tmp4.imageContainer) {
+                    if (cResult[31] === tmp4.trinketsLottie) {
+                      if (cResult[32] === stateFromStores) {
+                        let tmp33 = cResult[33];
                       }
-                      if (cResult[37] === tmp4.bannerText) {
-                        if (cResult[38] === text) {
-                          let tmp43 = cResult[39];
+                      const tmp42 = null != image ? tmp4.bannerTextContainerWithImage : tmp4.bannerTextContainerWithoutImage;
+                      if (cResult[34] === tmp4.bannerTextContainer) {
+                        if (cResult[35] === tmp42) {
+                          let tmp43 = cResult[36];
                         }
-                        if (cResult[40] === tmp4.bannerTextContainer) {
-                          if (cResult[41] === tmp43) {
-                            let tmp46 = cResult[42];
+                        if (cResult[37] === tmp4.bannerText) {
+                          if (cResult[38] === tmp44) {
+                            let tmp45 = cResult[39];
                           }
-                          if (cResult[43] === tmp20) {
-                            if (cResult[44] === tmp30) {
-                              if (cResult[45] === tmp39) {
-                                if (cResult[46] === tmp46) {
-                                  if (cResult[47] === tmp25) {
-                                    let tmp50 = cResult[48];
+                          if (cResult[40] === tmp45) {
+                            if (cResult[41] === text) {
+                              let tmp46 = cResult[42];
+                            }
+                            if (cResult[43] === tmp43) {
+                              if (cResult[44] === tmp46) {
+                                let tmp49 = cResult[45];
+                              }
+                              if (cResult[46] === tmp20) {
+                                if (cResult[47] === tmp30) {
+                                  if (cResult[48] === tmp33) {
+                                    if (cResult[49] === tmp49) {
+                                      if (cResult[50] === tmp25) {
+                                        let tmp53 = cResult[51];
+                                      }
+                                      return tmp53;
+                                    }
                                   }
-                                  return tmp50;
                                 }
                               }
+                              let obj4 = { style: tmp25, onLayout: tmp20, children: null };
+                              const items1 = [tmp30, tmp33, tmp49];
+                              class M {
+                                constructor() {
+                                  obj = closure_1;
+                                  num = 0;
+                                  if (closure_1.get()) {
+                                    tmp = closure_0;
+                                    tmp2 = closure_2;
+                                    obj2 = closure_0(closure_2[10]);
+                                    tmp3 = closure_0;
+                                    tmp4 = closure_2;
+                                    obj3 = closure_0(closure_2[14]);
+                                    tmp5 = closure_9;
+                                    num2 = 1;
+                                    num3 = 150;
+                                    num = obj2.withDelay(150, obj3.withSpring(1, closure_9));
+                                  }
+                                  obj1 = { opacity: num, transform: null };
+                                  num4 = 30;
+                                  if (obj.get()) {
+                                    tmp6 = closure_0;
+                                    tmp7 = closure_2;
+                                    obj5 = closure_0(closure_2[10]);
+                                    tmp8 = closure_0;
+                                    tmp9 = closure_2;
+                                    obj6 = closure_0(closure_2[14]);
+                                    tmp10 = closure_9;
+                                    num5 = 150;
+                                    num4 = obj5.withDelay(150, obj6.withSpring(0, closure_9));
+                                  }
+                                  items = [];
+                                  items[0] = { translateY: num4 };
+                                  obj1.transform = items;
+                                  return obj1;
+                                }
+                              }
+                              const tmp55 = closure_8(tmp8(4850).View, obj4);
+                              cResult[46] = tmp20;
+                              cResult[47] = tmp30;
+                              cResult[48] = tmp33;
+                              cResult[49] = tmp49;
+                              cResult[50] = tmp25;
+                              cResult[51] = tmp55;
+                              tmp53 = tmp55;
                             }
+                            let obj5 = { style: tmp43, children: tmp46 };
+                            const tmp52 = closure_7(View, obj5);
+                            cResult[43] = tmp43;
+                            class M {
+                              constructor() {
+                                obj = closure_1;
+                                num = 0;
+                                if (closure_1.get()) {
+                                  tmp = closure_0;
+                                  tmp2 = closure_2;
+                                  obj2 = closure_0(closure_2[10]);
+                                  tmp3 = closure_0;
+                                  tmp4 = closure_2;
+                                  obj3 = closure_0(closure_2[14]);
+                                  tmp5 = closure_9;
+                                  num2 = 1;
+                                  num3 = 150;
+                                  num = obj2.withDelay(150, obj3.withSpring(1, closure_9));
+                                }
+                                obj1 = { opacity: num, transform: null };
+                                num4 = 30;
+                                if (obj.get()) {
+                                  tmp6 = closure_0;
+                                  tmp7 = closure_2;
+                                  obj5 = closure_0(closure_2[10]);
+                                  tmp8 = closure_0;
+                                  tmp9 = closure_2;
+                                  obj6 = closure_0(closure_2[14]);
+                                  tmp10 = closure_9;
+                                  num5 = 150;
+                                  num4 = obj5.withDelay(150, obj6.withSpring(0, closure_9));
+                                }
+                                items = [];
+                                items[0] = { translateY: num4 };
+                                obj1.transform = items;
+                                return obj1;
+                              }
+                            }
+                            cResult[44] = tmp46;
+                            cResult[45] = tmp52;
+                            tmp49 = tmp52;
                           }
-                          let obj4 = { style: tmp25, onLayout: tmp20, children: null };
-                          const items1 = [tmp30, tmp39, tmp46];
+                          let obj6 = { variant: "text-md/semibold", color: "text-overlay-light", style: tmp45, children: text };
+                          const tmp48 = closure_7(Text_Text.Text, obj6);
+                          cResult[40] = tmp45;
                           class M {
                             constructor() {
                               obj = closure_1;
@@ -257,18 +346,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                               return obj1;
                             }
                           }
-                          const tmp52 = closure_8(tmp8(4811).View, obj4);
-                          cResult[43] = tmp20;
-                          cResult[44] = tmp30;
-                          cResult[45] = tmp39;
-                          cResult[46] = tmp46;
-                          cResult[47] = tmp25;
-                          cResult[48] = tmp52;
-                          tmp50 = tmp52;
+                          cResult[42] = tmp48;
+                          tmp46 = tmp48;
                         }
-                        let obj5 = { style: tmp4.bannerTextContainer, children: tmp43 };
-                        const tmp49 = closure_7(View, obj5);
-                        cResult[40] = tmp4.bannerTextContainer;
+                        const items2 = [tmp4.bannerText, null == image && tmp4.bannerTextCentered];
+                        cResult[37] = tmp4.bannerText;
+                        cResult[38] = null == image && tmp4.bannerTextCentered;
                         class M {
                           constructor() {
                             obj = closure_1;
@@ -304,13 +387,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                             return obj1;
                           }
                         }
-                        cResult[41] = tmp43;
-                        cResult[42] = tmp49;
-                        tmp46 = tmp49;
+                        cResult[39] = items2;
+                        tmp45 = items2;
                       }
-                      let obj6 = { variant: "text-md/semibold", color: "text-overlay-light", style: tmp4.bannerText, children: text };
-                      const tmp45 = closure_7(Text_Text.Text, obj6);
-                      cResult[37] = tmp4.bannerText;
+                      const items3 = [tmp4.bannerTextContainer, tmp42];
+                      cResult[34] = tmp4.bannerTextContainer;
                       class M {
                         constructor() {
                           obj = closure_1;
@@ -346,13 +427,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                           return obj1;
                         }
                       }
-                      cResult[39] = tmp45;
-                      tmp43 = tmp45;
+                      cResult[36] = items3;
+                      tmp43 = items3;
                     }
                   }
-                  const obj7 = { style: imageContainer, children: null };
-                  const items2 = [tmp36, image];
-                  obj7.children = items2;
+                }
+                let tmp35 = null != image;
+                if (tmp35) {
+                  const obj7 = { style: tmp4.imageContainer, children: null };
+                  const obj8 = { style: tmp4.trinketsLottie, source: _mod11738, autoPlay: !stateFromStores };
                   class M {
                     constructor() {
                       obj = closure_1;
@@ -388,13 +471,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                       return obj1;
                     }
                   }
-                  cResult[33] = image;
-                  cResult[34] = tmp4.imageContainer;
-                  cResult[35] = tmp36;
-                  cResult[36] = tmp42;
-                  tmp39 = tmp42;
+                  tmp40[0] = closure_7(tmp8(6105), obj8);
+                  tmp40[1] = image;
+                  obj7.children = tmp40;
+                  tmp35 = closure_8(View, obj7);
+                  const tmp8Result = tmp8(6105);
                 }
-                const obj8 = { style: null, source: null, autoPlay: null };
+                cResult[29] = image;
+                cResult[30] = tmp4.imageContainer;
                 class M {
                   constructor() {
                     obj = closure_1;
@@ -430,16 +514,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                     return obj1;
                   }
                 }
-                obj8.source = tmp33;
-                obj8.autoPlay = !stateFromStores;
-                const tmp38 = closure_7(tmp8(6112), obj8);
-                cResult[30] = tmp4.trinketsLottie;
-                cResult[31] = !stateFromStores;
-                cResult[32] = tmp38;
-                tmp36 = tmp38;
+                cResult[32] = stateFromStores;
+                cResult[33] = tmp35;
+                tmp33 = tmp35;
               }
               const obj9 = { start: tmp26, end: tmp27, colors: tmp14, style: tmp29 };
-              const tmp32 = closure_7(tmp8(5388), obj9);
+              const tmp32 = closure_7(tmp8(5391), obj9);
               class M {
                 constructor() {
                   obj = closure_1;
@@ -479,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
               cResult[28] = tmp32;
               tmp30 = tmp32;
             }
-            const items3 = [tmp4.bannerBackgroundGradient, tmp28];
+            const items4 = [tmp4.bannerBackgroundGradient, tmp28];
             cResult[23] = tmp4.bannerBackgroundGradient;
             cResult[24] = tmp28;
             class M {
@@ -517,7 +597,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
                 return obj1;
               }
             }
-            tmp29 = items3;
+            tmp29 = items4;
           }
           const size = { height: tmp6, width: diff };
           cResult[20] = tmp6;
@@ -561,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
           tmp28 = size;
         }
       }
-      const items4 = [tmp4.banner, tmp24, animatedStyle];
+      const items5 = [tmp4.banner, tmp24, animatedStyle];
       cResult[14] = animatedStyle;
       cResult[15] = tmp4.banner;
       class M {
@@ -600,24 +680,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
         }
       }
       cResult[16] = tmp24;
-      cResult[17] = items4;
-      tmp25 = items4;
+      cResult[17] = items5;
+      tmp25 = items5;
     }
     const obj10 = { opacity: num9, width: diff };
     cResult[11] = diff;
     cResult[12] = num9;
     cResult[13] = obj10;
     tmp24 = obj10;
-    const tmpResult7 = ReanimatedRexport;
+    const tmpResult6 = ReanimatedRexport;
   }
-  const items5 = [tmp10, tmp12];
+  const items6 = [tmp10, tmp12];
   cResult[4] = tmp10;
   cResult[5] = tmp12;
-  cResult[6] = items5;
-  tmp14 = items5;
-}) : (function BannerBase(arg0) {
+  cResult[6] = items6;
+  tmp14 = items6;
+}) : (function BannerBase(children) {
+  const image = children.image;
   _require = undefined;
-  ({ image, text } = arg0);
   const tmp = closure_10();
   let num = 0;
   [tmp3, c0] = noop.useState(0);
@@ -678,17 +758,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BannerBa
   const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
   obj8.style = items3;
-  const items4 = [closure_7(sharedValue(5388), obj8), , ];
-  const obj9 = { style: tmp.imageContainer, children: null };
-  const obj10 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
-  let obj6 = { bannerMeasured: sharedValue, withDelay: require("ReanimatedRexport").withDelay, withSpring: require("spring").withSpring, SPRING_CONFIG };
-  obj10.source = require("module_11692");
-  obj10.autoPlay = !stateFromStores;
-  const items5 = [closure_7(sharedValue(6112), obj10), image];
-  obj9.children = items5;
-  items4[1] = closure_8(View, obj9);
-  const obj11 = { style: tmp.bannerTextContainer, children: closure_7(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-overlay-light", style: tmp.bannerText, children: text }) };
+  const items4 = [closure_7(sharedValue(5391), obj8), , ];
+  let tmp11Result = null != image;
+  if (tmp11Result) {
+    const obj9 = { style: tmp.imageContainer, children: null };
+    const obj10 = { style: tmp.trinketsLottie, source: tmp4(11738), autoPlay: !stateFromStores };
+    const items5 = [closure_7(tmp7(6105), obj10), image];
+    obj9.children = items5;
+    tmp11Result = closure_8(View, obj9);
+    const tmp7Result = tmp7(6105);
+  }
+  items4[1] = tmp11Result;
+  const items6 = [tmp.bannerTextContainer, ];
+  const obj11 = { style: items6, children: null };
+  items6[1] = null != image ? tmp.bannerTextContainerWithImage : tmp.bannerTextContainerWithoutImage;
+  const items7 = [tmp.bannerText, ];
+  let bannerTextCentered = null == image;
+  if (bannerTextCentered) {
+    bannerTextCentered = tmp.bannerTextCentered;
+  }
+  items7[1] = bannerTextCentered;
+  obj11.children = closure_7(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-overlay-light", style: items7, children: children.text });
   items4[2] = closure_7(View, obj11);
   obj7.children = items4;
-  return closure_8(sharedValue(4811).View, obj7);
+  return closure_8(sharedValue(4850).View, obj7);
 });

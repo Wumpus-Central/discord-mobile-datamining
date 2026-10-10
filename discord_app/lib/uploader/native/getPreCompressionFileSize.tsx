@@ -1,7 +1,7 @@
-// === Module 9677: getPreCompressionFileSize ===
+// === Module 9706: getPreCompressionFileSize ===
 
-// Module 9677 (getPreCompressionFileSize)
-import utils_UploadUtils from "utils/UploadUtils" /* 7750 */;
+// Module 9706 (getPreCompressionFileSize)
+import utils_UploadUtils from "utils/UploadUtils" /* 7768 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_3 = async function _getPreCompressionFileSize(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

@@ -1,6 +1,6 @@
-// === Module 4935: CustomThemesRandomUtils ===
+// === Module 4974: CustomThemesRandomUtils ===
 
-// Module 4935 (CustomThemesRandomUtils)
+// Module 4974 (CustomThemesRandomUtils)
 import _modDef683 from "module_683" /* 683 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
             let obj = _modDef683(items);
             value = obj.get("hsl.h");
             value3 = obj.get("hsl.s");
-            const value4 = obj.get("hsl.l");
+            value4 = obj.get("hsl.l");
             if (constants.ANALOGOUS === items1) {
               return (function generateAnalogousColors(items, value3, value4, value) {
                 const obj = closure_1_0(683);

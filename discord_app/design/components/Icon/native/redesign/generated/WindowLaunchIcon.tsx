@@ -1,10 +1,10 @@
-// === Module 12822: WindowLaunchIcon ===
+// === Module 12869: WindowLaunchIcon ===
 
-// Module 12822 (WindowLaunchIcon)
+// Module 12869 (WindowLaunchIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod12823 from "module_12823" /* 12823 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod12870 from "module_12870" /* 12870 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const WindowLaunchIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12823;
+    const tmpResult = _mod12870;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const WindowLaunchIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12823, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12870, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

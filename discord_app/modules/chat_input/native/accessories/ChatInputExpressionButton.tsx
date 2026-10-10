@@ -1,17 +1,17 @@
-// === Module 11816: ChatInputExpressionButton ===
+// === Module 11860: ChatInputExpressionButton ===
 
-// Module 11816 (ChatInputExpressionButton)
+// Module 11860 (ChatInputExpressionButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import useToken from "useToken" /* 4779 */;
-import Pressables from "Pressables" /* 6191 */;
+import useToken from "useToken" /* 4818 */;
+import Pressables from "Pressables" /* 6184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_5 = createStyles.createStyles((height) => {
   const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = { borderRadius: nativeDefault.radii.sm, height, width: height, alignItems: "center", justifyContent: "center" };
@@ -67,7 +67,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else {
       tmp17 = cResult[7];
     }
-    const tmp5Result = importDefault(showKeyboardIcon ? 11817 : 8942);
+    const tmp5Result = importDefault(showKeyboardIcon ? 11861 : 8961);
     if (cResult[8] === tmp9.expressionButtonIconTint) {
       if (cResult[9] === token1) {
         if (cResult[10] === tmp5Result) {
@@ -142,6 +142,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.accessibilityState = { expanded: flag };
   obj4.onPress = callback;
   const ref = noop.useRef(null);
-  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11817 : 8942) });
+  obj4.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11861 : 8961) });
   return jsx(Pressables.PressableOpacity, { ref: noop.useRef(null), style: null, hitSlop: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null });
 }));

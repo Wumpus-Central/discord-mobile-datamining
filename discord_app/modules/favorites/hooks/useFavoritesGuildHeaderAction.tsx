@@ -1,11 +1,11 @@
-// === Module 16494: useFavoritesGuildHeaderAction ===
+// === Module 16564: useFavoritesGuildHeaderAction ===
 
-// Module 16494 (useFavoritesGuildHeaderAction)
+// Module 16564 (useFavoritesGuildHeaderAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
-import _modDef3439 from "module_3439" /* 3439 */;
-import FavoritesHooks from "FavoritesHooks" /* 10279 */;
+import _modDef3442 from "module_3442" /* 3442 */;
+import FavoritesHooks from "FavoritesHooks" /* 10312 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   if (cResult[1] !== hasAccess) {
     const intl = util.intl;
     if (hasAccess) {
-      tmp2 = _modDef3439;
+      tmp2 = _modDef3442;
       let ojM1xJ = tmp2.G9fGlP;
     } else {
       ojM1xJ = util.t.ojM1xJ;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   }, []);
   const intl = util.intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3439.G9fGlP;
+    let ojM1xJ = _modDef3442.G9fGlP;
   } else {
     ojM1xJ = util.t.ojM1xJ;
   }

@@ -1,6 +1,6 @@
-// === Module 5990: UserSettingsKeys ===
+// === Module 5983: UserSettingsKeys ===
 
-// Module 5990 (UserSettingsKeys)
+// Module 5983 (UserSettingsKeys)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/UserSettingsKeys.tsx");

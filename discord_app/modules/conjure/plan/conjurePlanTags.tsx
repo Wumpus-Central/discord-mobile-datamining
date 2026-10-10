@@ -1,46 +1,26 @@
-// === Module 17085: conjurePlanTags ===
+// === Module 17143: conjurePlanTags ===
 
-// Module 17085 (conjurePlanTags)
-import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import size from "module_2" /* 2 */;
+// Module 17143 (conjurePlanTags)
+import _modDef3849 from "module_3849" /* 3849 */;
 
+const obj = {};
+obj[fn(6946).ConjureSupportedSurface.APP_CHANNEL] = _modDef3849.zrk93C;
+obj[fn(6946).ConjureSupportedSurface.VOICE_CHANNEL] = _modDef3849.r5Ra0p;
+obj[fn(6946).ConjureSupportedSurface.ACTIVITY] = fn(1126).t.IC5Ann;
+obj[fn(6946).ConjureSupportedSurface.OVERLAY] = _modDef3849.liTNf3;
+obj[fn(6946).ConjureSupportedSurface.PROFILE_WIDGET] = _modDef3849["EswAi+"];
+obj[fn(6946).ConjureSupportedSurface.AUTOMOD] = _modDef3849.DnWMLj;
+obj[fn(6946).ConjureSupportedSurface.BOT] = _modDef3849.VFWfz1;
+obj[fn(6946).ConjureSupportedSurface.APPLICATION_COMMANDS] = _modDef3849.w7JaEP;
+const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanTags.tsx");
 
-export const CONJURE_PLAN_TAG_LABELS = { automod: _modDef3827.DnWMLj, overlay: _modDef3827.liTNf3, widget: _modDef3827["EswAi+"], activity: util.t.IC5Ann, commands: _modDef3827.w7JaEP, chat_bot: _modDef3827["5QSvrP"], bot: _modDef3827.VFWfz1 };
-export const getConjurePlanTags = function getConjurePlanTags(proposal, botInteraction) {
-  if (null != proposal.automod) {
-    return ["automod"];
-  } else {
-    const items = [];
-    if (obj.planSupportsOverlay(proposal)) {
-      items.push("overlay");
-    }
-    if (null != proposal.widget_config) {
-      items.push("widget");
-    }
-    if (true === proposal.is_activity) {
-      const items1 = [];
-      items1[HermesBuiltin.arraySpread(items, 0)] = "activity";
-      let tmp7 = items1;
-    } else if (null == botInteraction) {
-      const items2 = [];
-      items2[HermesBuiltin.arraySpread(items, 0)] = "bot";
-      tmp7 = items2;
-    } else {
-      let tmp5 = tmp4;
-      if ("commands" !== botInteraction) {
-        tmp5 = "both" !== botInteraction;
-      }
-      if (!tmp5) {
-        items.push("commands");
-      }
-      tmp7 = items;
-      if ("commands" !== botInteraction) {
-        items.push("chat_bot");
-        tmp7 = items;
-      }
-    }
-    return tmp7;
+export const CONJURE_PLAN_SURFACE_LABELS = obj;
+export const planDeclaresSurface = function planDeclaresSurface(proposal, AUTOMOD) {
+  const supported_surfaces = proposal.supported_surfaces;
+  let hasItem;
+  if (supported_surfaces != null) {
+    hasItem = supported_surfaces.includes(AUTOMOD);
   }
+  return true === hasItem;
 };

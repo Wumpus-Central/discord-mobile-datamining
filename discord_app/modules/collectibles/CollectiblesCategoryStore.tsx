@@ -1,14 +1,14 @@
-// === Module 7257: CollectiblesCategoryStore ===
+// === Module 7263: CollectiblesCategoryStore ===
 
-// Module 7257 (CollectiblesCategoryStore)
+// Module 7263 (CollectiblesCategoryStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7258 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7264 */;
 
 require = fn;
 function updateCategoriesAndProducts(map) {
@@ -84,7 +84,7 @@ Object.defineProperty(prototype, "isFetchingCategories", {
 prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    state = undefined;
+    let state;
     if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }

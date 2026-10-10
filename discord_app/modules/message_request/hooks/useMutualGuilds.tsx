@@ -1,9 +1,9 @@
-// === Module 17515: useMutualGuilds ===
+// === Module 17587: useMutualGuilds ===
 
-// Module 17515 (useMutualGuilds)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 17587 (useMutualGuilds)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -33,7 +33,7 @@ export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactComp
   } else {
     tmp6 = cResult[2];
   }
-  let obj = require("c");
+  const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [UserProfileStore];
@@ -89,8 +89,8 @@ export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactComp
       if (tmp) {
         tmp7 = closure_1;
         tmp8 = closure_2;
-        obj = closure_1(closure_2[6]);
-        waitResult = obj.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
+        tmp9 = closure_0;
+        tmp10 = closure_1(closure_2[6])(closure_0, undefined, { withMutualGuilds: true });
       }
       return;
     }
@@ -108,7 +108,7 @@ export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactComp
   _require = arg0;
   const items = [UserStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserStore.getUser(closure_0));
-  let obj = require("initialize");
+  const obj = require("initialize");
   const items1 = [UserProfileStore];
   stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
     const mutualGuilds = UserProfileStore.getMutualGuilds(closure_0);
@@ -131,7 +131,7 @@ export const useMutualGuildsForMessageRequests = ReactCompilerGating.isReactComp
       tmp = null == UserProfileStore.getMutualGuilds(closure_0);
     }
     if (tmp) {
-      DispatcherDefault.wait(() => stateFromStores(stateFromStoresArray[7])(closure_1_0, undefined, { withMutualGuilds: true }));
+      maybeFetchUserProfileDefault(closure_0, undefined, { withMutualGuilds: true });
     }
   }, items2);
   return stateFromStoresArray;

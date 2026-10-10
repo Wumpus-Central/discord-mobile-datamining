@@ -1,7 +1,7 @@
-// === Module 14027: useDeviceCodeAuthorizeCallback ===
+// === Module 14082: useDeviceCodeAuthorizeCallback ===
 
-// Module 14027 (useDeviceCodeAuthorizeCallback)
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6868 */;
+// Module 14082 (useDeviceCodeAuthorizeCallback)
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6874 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ let closure_6 = async function _createTwoWayLink(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -56,7 +56,7 @@ let closure_6 = async function _createTwoWayLink(arg0, arg1) {
             closure_133_2 = undefined;
             let url;
             closure_133_4 = undefined;
-            state = undefined;
+            let state;
             const result = require("ActivateDeviceUtils").clientIdToActivateDevicePlatform(closure_0);
             closure_133_2 = result;
             if (null == result) {
@@ -191,7 +191,7 @@ let closure_6 = async function _createTwoWayLink(arg0, arg1) {
           } else {
             c8 = 0;
             c10 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c10 = 3;
@@ -271,7 +271,7 @@ export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompile
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -404,7 +404,7 @@ export const useDeviceCodeAuthorizeCallback = ReactCompilerGating.isReactCompile
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

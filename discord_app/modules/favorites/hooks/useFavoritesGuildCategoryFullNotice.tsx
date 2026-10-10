@@ -1,16 +1,16 @@
-// === Module 16451: useFavoritesGuildCategoryFullNotice ===
+// === Module 16521: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16451 (useFavoritesGuildCategoryFullNotice)
+// Module 16521 (useFavoritesGuildCategoryFullNotice)
 import c from "c" /* 576 */;
-import _modDef3439 from "module_3439" /* 3439 */;
-import FavoriteStore from "FavoriteStore" /* 2067 */;
+import _modDef3442 from "module_3442" /* 3442 */;
+import FavoriteStore from "FavoriteStore" /* 2068 */;
 
 const initialize = intl(504);
 const util = intl(1126);
-const FavoritesUtils = intl(2089);
-const FavoritesHooks = intl(10279);
+const FavoritesUtils = intl(2090);
+const FavoritesHooks = intl(10312);
 require = fn;
-let closure_4 = fn(2077).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+let closure_4 = fn(2078).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
 const ChannelTypes = fn(1085).ChannelTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -52,9 +52,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
               if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj2 = { label: null, tooltip: null };
                 const intl2 = util.intl;
-                obj2.label = intl2.string(_modDef3439.WsUrMD);
+                obj2.label = intl2.string(_modDef3442.WsUrMD);
                 intl = util.intl;
-                stringResult = intl.string(_modDef3439.dW9Kov);
+                stringResult = intl.string(_modDef3442.dW9Kov);
                 obj2.tooltip = stringResult;
                 cResult[2] = obj2;
               }
@@ -86,9 +86,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
             if (formatted === closure_4.toLowerCase()) {
               const obj2 = { label: null, tooltip: null };
               const intl = util.intl;
-              obj2.label = intl.string(_modDef3439.WsUrMD);
+              obj2.label = intl.string(_modDef3442.WsUrMD);
               const intl2 = util.intl;
-              obj2.tooltip = intl2.string(_modDef3439.dW9Kov);
+              obj2.tooltip = intl2.string(_modDef3442.dW9Kov);
               tmp6 = obj2;
             }
           }

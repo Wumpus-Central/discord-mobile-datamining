@@ -1,22 +1,22 @@
-// === Module 15675: UserSettingsText ===
+// === Module 15737: UserSettingsText ===
 
-// Module 15675 (UserSettingsText)
+// Module 15737 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5259 */;
-import TableRadioRow from "TableRadioRow" /* 6266 */;
-import TableRadioGroup from "TableRadioGroup" /* 6267 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6678 */;
-import TableSwitchRow from "TableSwitchRow" /* 6889 */;
-import _modDef9741 from "module_9741" /* 9741 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5260 */;
+import TableRadioRow from "TableRadioRow" /* 6261 */;
+import TableRadioGroup from "TableRadioGroup" /* 6262 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6679 */;
+import TableSwitchRow from "TableSwitchRow" /* 6895 */;
+import _modDef9770 from "module_9770" /* 9770 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import SubscriptionStore from "SubscriptionStore" /* 4734 */;
+import SubscriptionStore from "SubscriptionStore" /* 4775 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1206 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1207 */;
 
@@ -29,7 +29,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                       }
                       function renderNitroUpsellText() {
                         const obj = { style: closure_0.nitroUpsell, children: null };
-                        const items = [__initData(native.Icon, { source: _modDef9741, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
+                        const items = [__initData(native.Icon, { source: _modDef9770, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
                         const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
                         const intl = util.intl;
                         obj3.children = intl.format(util.t.uW1zul, {
@@ -463,7 +463,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                         });
                         items[1] = __initData(Text_Text.Text, obj3);
                         obj.children = items;
-                        return __initData2(View, obj);
+                        return map1(View, obj);
                       }
                       cResult[37] = tmp39;
                       cResult[38] = tmp6.nitroIcon;
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   obj4.onValueChange = UserSettings.InlineAttachmentMedia.updateSetting;
                   items[1] = __initData(TableSwitchRow.TableSwitchRow, obj4);
                   obj2.children = items;
-                  const items1 = [__initData2(TableRowGroup.TableRowGroup, obj2), ];
+                  const items1 = [map1(TableRowGroup.TableRowGroup, obj2), ];
                   const obj5 = { description: null, hasIcons: false, children: null };
                   const intl5 = util.intl;
                   obj5.description = intl5.string(util.t.T0rbtM);
@@ -505,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   obj5.children = __initData(TableSwitchRow.TableSwitchRow, obj6);
                   items1[1] = __initData(TableRowGroup.TableRowGroup, obj5);
                   obj.children = items1;
-                  return __initData2(state, obj);
+                  return map1(closure_2_14, obj);
                 }
                 cResult[26] = setting;
                 cResult[27] = setting1;

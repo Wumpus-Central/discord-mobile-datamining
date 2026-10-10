@@ -1,6 +1,6 @@
-// === Module 5146: pollConnectionStats ===
+// === Module 5147: pollConnectionStats ===
 
-// Module 5146 (pollConnectionStats)
+// Module 5147 (pollConnectionStats)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export default function pollConnectionStats(on) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {
@@ -60,7 +60,7 @@ export default function pollConnectionStats(on) {
               on = items[Symbol.iterator]();
             }
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (1 === tmp5) {
           c5 = 0;

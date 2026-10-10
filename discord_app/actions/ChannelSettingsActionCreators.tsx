@@ -1,12 +1,12 @@
-// === Module 9667: ChannelSettingsActionCreators ===
+// === Module 9696: ChannelSettingsActionCreators ===
 
-// Module 9667 (ChannelSettingsActionCreators)
+// Module 9696 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 9668 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 9697 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 function init(channelId, location, subsection) {
@@ -61,7 +61,7 @@ let closure_9 = async function _saveChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -200,8 +200,8 @@ let closure_9 = async function _saveChannel(arg0) {
             tmp5 = isThreadResult;
           }
           if (!tmp5) {
-            const result = closure_1(7021).checkGuildTemplateDirty(guildId);
-            const tmpResult = closure_1(7021);
+            const result = closure_1(7027).checkGuildTemplateDirty(guildId);
+            const tmpResult = closure_1(7027);
           }
           return arg0;
         }, (body) => {
@@ -238,7 +238,7 @@ let closure_10 = async function _deleteChannel(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -292,7 +292,7 @@ let closure_10 = async function _deleteChannel(arg0) {
         }
         closure_130_8();
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp22) {
       c4 = tmp;

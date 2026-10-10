@@ -1,6 +1,6 @@
-// === Module 12357: ContactSyncPersistedStore ===
+// === Module 12401: ContactSyncPersistedStore ===
 
-// Module 12357 (ContactSyncPersistedStore)
+// Module 12401 (ContactSyncPersistedStore)
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
@@ -27,7 +27,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
     });
   });
   let obj = require("ReactBatchUpdates");
-  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 }));
+  DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === arg0 });
 });
 const useContactSyncStore = module_570.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
@@ -71,7 +71,7 @@ export const setStoredContacts = function setStoredContacts(arg0) {
     });
   });
   const obj = require("ReactBatchUpdates");
-  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 }));
+  DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === arg0 });
 };
 export const deleteStoredContacts = function deleteStoredContacts() {
   const Storage = Storage4.Storage;

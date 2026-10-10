@@ -1,7 +1,7 @@
-// === Module 17628: useActivityWebViewLockManager ===
+// === Module 17700: useActivityWebViewLockManager ===
 
-// Module 17628 (useActivityWebViewLockManager)
-import native from "native" /* 4788 */;
+// Module 17700 (useActivityWebViewLockManager)
+import native from "native" /* 4827 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -101,14 +101,17 @@ export default function useActivityWebViewLockManager() {
 };
 export const useLockedWebView = function useLockedWebView(transitionState) {
   transitionState = transitionState.transitionState;
-  let shown;
-  shown = transitionState(shown[2]).useSharedValue(false);
-  const renderWebView = noop.useContext(transitionState.context).useActivityWebViewLock();
-  const items = [shown, transitionState, renderWebView];
-  const effect = noop.useEffect(() => {
+  const hasActivity = transitionState.hasActivity;
+  let renderWebView;
+  const shown = transitionState(hasActivity[2]).useSharedValue(false);
+  renderWebView = renderWebView.useContext(transitionState.context).useActivityWebViewLock();
+  const items = [shown, transitionState, renderWebView, hasActivity];
+  const effect = renderWebView.useEffect(() => {
     if (transitionState !== native.TransitionStates.YEETED) {
       if (renderWebView) {
-        const result = shown.set(true);
+        if (hasActivity) {
+          const result = shown.set(true);
+        }
       }
     }
     const result1 = shown.set(false);

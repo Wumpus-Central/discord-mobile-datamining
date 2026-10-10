@@ -1,6 +1,6 @@
-// === Module 7287: ShopBlockType ===
+// === Module 7294: ShopBlockType ===
 
-// Module 7287 (ShopBlockType)
+// Module 7294 (ShopBlockType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ShopBlockType.tsx");

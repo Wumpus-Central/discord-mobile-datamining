@@ -1,28 +1,28 @@
-// === Module 13047: ShopThisLookActionSheet ===
+// === Module 13094: ShopThisLookActionSheet ===
 
-// Module 13047 (ShopThisLookActionSheet)
+// Module 13094 (ShopThisLookActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7256 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7268 */;
-import ShopThisLookUtils from "ShopThisLookUtils" /* 13048 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13050 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7262 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7274 */;
+import ShopThisLookUtils from "ShopThisLookUtils" /* 13095 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 13097 */;
 import noop from "module_19" /* 19 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8328 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8344 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_MAX_WIDTH = fn(6837).ACTION_SHEET_MAX_WIDTH;
-const UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
+const ACTION_SHEET_MAX_WIDTH = fn(6840).ACTION_SHEET_MAX_WIDTH;
+const UserProfileThemeTypes = fn(6904).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, description: null, itemsContainer: null, cardWrapper: null, wishlistButton: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
 obj2.description = { textAlign: "center", marginTop: -nativeDefault.space.PX_8 };
@@ -30,7 +30,7 @@ let obj4 = { textAlign: "center", marginTop: -nativeDefault.space.PX_8 };
 obj2.itemsContainer = { alignSelf: "center", flexDirection: "row", flexWrap: "wrap", paddingBottom: nativeDefault.space.PX_8 };
 obj2.cardWrapper = { position: "relative" };
 let obj6 = {};
-const merged = Object.assign(fn(8957).CARD_TOP_RIGHT_OVERLAY_POSITION);
+const merged = Object.assign(fn(8976).CARD_TOP_RIGHT_OVERLAY_POSITION);
 obj6.zIndex = 1;
 obj2.wishlistButton = obj6;
 let closure_11 = createStyles.createStyles(obj2);
@@ -153,10 +153,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopTh
                   constructor() {
                     tmp = closure_6();
                     obj = closure_1(closure_2[9]);
-                    obj1 = { key: "SHOP_THIS_LOOK_ITEM_UNAVAILABLE", content: null };
+                    obj1 = { text: null };
                     intl = closure_0(closure_2[10]).intl;
-                    obj1.content = intl.string(closure_0(closure_2[10]).t.YymRft);
-                    openResult = obj.open(obj1);
+                    obj1.text = intl.string(closure_0(closure_2[10]).t.YymRft);
+                    openResult = obj.open("SHOP_THIS_LOOK_ITEM_UNAVAILABLE", obj1);
                     return;
                   }
                 }
@@ -174,10 +174,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopTh
                   constructor() {
                     tmp = closure_6();
                     obj = closure_1(closure_2[9]);
-                    obj1 = { key: "SHOP_THIS_LOOK_ITEM_UNAVAILABLE", content: null };
+                    obj1 = { text: null };
                     intl = closure_0(closure_2[10]).intl;
-                    obj1.content = intl.string(closure_0(closure_2[10]).t.YymRft);
-                    openResult = obj.open(obj1);
+                    obj1.text = intl.string(closure_0(closure_2[10]).t.YymRft);
+                    openResult = obj.open("SHOP_THIS_LOOK_ITEM_UNAVAILABLE", obj1);
                     return;
                   }
                 }
@@ -265,10 +265,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopTh
   ref = undefined;
   let callback;
   let wishlistButton = closure_11();
-  const collectiblesShopProduct = skuId(9068).useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
+  const collectiblesShopProduct = skuId(9088).useCollectiblesShopProduct(skuId, { needsCategory: false, shouldFetchProduct: false });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
-  let obj = skuId(9068);
+  let obj = skuId(9088);
   const tmp = skuId;
   const items = [ref];
   const items1 = [skuId];
@@ -341,28 +341,28 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopTh
         },
       accessibilityHidden: true
     };
-    let tmp23 = closure_9(onPress(8957), obj3);
+    let tmp23 = closure_9(onPress(8976), obj3);
   } else {
     tmp23 = null;
     if (null != stateFromStores) {
       if (memo) {
         const obj4 = { style: wishlistButton.cardWrapper, children: null };
         const obj5 = { sku: stateFromStores, size, onPress: callback1 };
-        const items7 = [closure_9(onPress(12680), obj5), ];
+        const items7 = [closure_9(onPress(12727), obj5), ];
         let tmp17Result = null != memo1;
         if (tmp17Result) {
           callback1 = { selectedProduct: memo1, style: null };
           wishlistButton = wishlistButton.wishlistButton;
           callback1.style = wishlistButton;
-          tmp17Result = closure_9(onPress(9022), callback1);
+          tmp17Result = closure_9(onPress(9041), callback1);
         }
         items7[1] = tmp17Result;
         obj4.children = items7;
         let tmp15Result = closure_10(memo, obj4);
       } else {
-        const obj6 = { sku: stateFromStores, size, overlay: tmp(8957).WishlistItemCardOverlay.LOCKED, onPress: tmp10 };
-        tmp15Result = closure_9(onPress(12680), obj6);
-        const tmp13 = onPress(12680);
+        const obj6 = { sku: stateFromStores, size, overlay: tmp(8976).WishlistItemCardOverlay.LOCKED, onPress: tmp10 };
+        tmp15Result = closure_9(onPress(12727), obj6);
+        const tmp13 = onPress(12727);
       }
     }
   }
@@ -378,7 +378,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopThis
   ({ userId, guildId } = arg0);
   const tmp4 = closure_11();
   let obj = cardWidth(576);
-  const equippedCollectibleSkuIds = cardWidth(8325).useEquippedCollectibleSkuIds(userId, guildId);
+  const equippedCollectibleSkuIds = cardWidth(8341).useEquippedCollectibleSkuIds(userId, guildId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
     cResult[0] = obj3;
@@ -386,115 +386,194 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopThis
   } else {
     first = cResult[0];
   }
-  const tmp8 = analyticsLocations(13051)(first);
+  const tmp8 = analyticsLocations(13098)(first);
   cardWidth = tmp8.cardWidth;
   ({ rowWidth, gap } = tmp8);
-  let obj2 = cardWidth(8325);
-  analyticsLocations = analyticsLocations(6848)(analyticsLocations(6872).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  let obj2 = cardWidth(8341);
+  const tmp7 = analyticsLocations;
+  analyticsLocations = analyticsLocations(6851)(analyticsLocations(6878).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   if (cResult[1] !== analyticsLocations) {
-    const fn = function k(initialProductSkuId) {
-      ActionSheetActionCreatorsDefault.hideActionSheet();
-      const obj2 = CollectiblesActionCreators;
-      const result = obj2.openCollectiblesShopMobile({ initialProductSkuId, analyticsLocations, analyticsSource: AnalyticsLocationDefault.USER_PROFILE_OVERFLOW_MENU });
-    };
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
     cResult[1] = analyticsLocations;
-    cResult[2] = fn;
-    let tmp10 = fn;
+    cResult[2] = T;
   } else {
-    tmp10 = cResult[2];
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
   }
-  dependencyMap = tmp10;
+  dependencyMap = T;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const items = [tmp7(6872).SHOP_THIS_LOOK_ACTION_SHEET];
-    cResult[3] = items;
-    let tmp11 = items;
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
+    tmp12[0] = tmp7(6878).SHOP_THIS_LOOK_ACTION_SHEET;
+    cResult[3] = tmp12;
   } else {
-    tmp11 = cResult[3];
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1126).intl;
-    const stringResult = intl.string(tmp(1126).t.xNdRDO);
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
+    const stringResult = obj4.string(tmp(1126).t.xNdRDO);
     cResult[4] = stringResult;
-    let tmp12 = stringResult;
   } else {
-    tmp12 = cResult[4];
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
   }
   ({ container, description } = tmp4);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(tmp(1126).t["ws+0Lr"]);
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
+    const stringResult1 = obj5.string(tmp(1126).t["ws+0Lr"]);
     cResult[5] = stringResult1;
-    let tmp14 = stringResult1;
+    const tmp15 = stringResult1;
   } else {
-    tmp14 = cResult[5];
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
   }
   if (cResult[6] !== tmp4.description) {
-    const obj4 = { variant: "text-sm/medium", color: "text-subtle", style: description, children: tmp14 };
-    const tmp18 = closure_9(tmp(5087).Text, obj4);
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
+    const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: description, children: tmp15 };
+    const tmp18 = closure_9(tmp(5088).Text, obj6);
     cResult[6] = tmp4.description;
     cResult[7] = tmp18;
-    let tmp16 = tmp18;
   } else {
-    tmp16 = cResult[7];
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
+    }
   }
   if (cResult[8] === gap) {
-    if (cResult[9] === rowWidth) {
-      let tmp19 = cResult[10];
+    class T {
+      constructor(arg0) {
+        obj = closure_1(closure_2[24]);
+        hideActionSheetResult = obj.hideActionSheet();
+        obj2 = closure_0(closure_2[25]);
+        obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+        result = obj2.openCollectiblesShopMobile(obj1);
+        return;
+      }
     }
     if (cResult[11] === tmp4.itemsContainer) {
-      if (cResult[12] === tmp19) {
-        let tmp20 = cResult[13];
+      class T {
+        constructor(arg0) {
+          obj = closure_1(closure_2[24]);
+          hideActionSheetResult = obj.hideActionSheet();
+          obj2 = closure_0(closure_2[25]);
+          obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+          result = obj2.openCollectiblesShopMobile(obj1);
+          return;
+        }
       }
       if (cResult[14] === cardWidth) {
-        if (cResult[15] === tmp10) {
-          if (cResult[16] === equippedCollectibleSkuIds) {
-            if (cResult[21] === tmp20) {
-              if (cResult[22] === tmp21) {
-                let tmp25 = cResult[23];
-              }
-              if (cResult[24] === tmp4.container) {
-                if (cResult[25] === tmp25) {
-                  if (cResult[26] === tmp16) {
-                    let tmp29 = cResult[27];
-                  }
-                  return tmp29;
-                }
-              }
-              const obj5 = { value: tmp11, children: null };
-              const obj6 = { startExpanded: true, title: tmp12, children: null };
-              const obj7 = { style: container, children: null };
-              const items1 = [tmp16, tmp25];
-              obj7.children = items1;
-              obj6.children = closure_10(closure_5, obj7);
-              obj5.children = closure_9(tmp7(10495), obj6);
-              const tmp34 = closure_9(tmp(6848).AnalyticsLocationProvider, obj5);
-              cResult[24] = tmp4.container;
-              cResult[25] = tmp25;
-              cResult[26] = tmp16;
-              cResult[27] = tmp34;
-              tmp29 = tmp34;
-              const tmp7Result = tmp7(10495);
-            }
-            const obj8 = { style: tmp20, children: cResult[17] };
-            const tmp28 = closure_9(closure_5, obj8);
-            cResult[21] = tmp20;
-            cResult[22] = cResult[17];
-            cResult[23] = tmp28;
-            tmp25 = tmp28;
+        class T {
+          constructor(arg0) {
+            obj = closure_1(closure_2[24]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_0(closure_2[25]);
+            obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+            result = obj2.openCollectiblesShopMobile(obj1);
+            return;
           }
         }
       }
       if (cResult[18] === cardWidth) {
-        if (cResult[19] === tmp10) {
-          let tmp22 = cResult[20];
+        class T {
+          constructor(arg0) {
+            obj = closure_1(closure_2[24]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_0(closure_2[25]);
+            obj1 = { initialProductSkuId: arg0, analyticsLocations, analyticsSource: closure_1(closure_2[23]).USER_PROFILE_OVERFLOW_MENU };
+            result = obj2.openCollectiblesShopMobile(obj1);
+            return;
+          }
         }
-        const mapped = equippedCollectibleSkuIds.map(tmp22);
+        const mapped = equippedCollectibleSkuIds.map(tmp21);
         cResult[14] = cardWidth;
-        cResult[15] = tmp10;
+        cResult[15] = T;
         cResult[16] = equippedCollectibleSkuIds;
         cResult[17] = mapped;
       }
-      const fn2 = function x(skuId) {
+      const fn = function x(skuId) {
         size = skuId;
         return closure_1_9(closure_1_12, {
           skuId,
@@ -505,22 +584,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopThis
         }, skuId);
       };
       cResult[18] = cardWidth;
-      cResult[19] = tmp10;
-      cResult[20] = fn2;
-      tmp22 = fn2;
+      cResult[19] = T;
+      cResult[20] = fn;
+      tmp21 = fn;
     }
-    const items2 = [tmp4.itemsContainer, tmp19];
+    const items = [tmp4.itemsContainer, tmp19];
     cResult[11] = tmp4.itemsContainer;
     cResult[12] = tmp19;
-    cResult[13] = items2;
-    tmp20 = items2;
+    cResult[13] = items;
   }
-  const obj9 = { gap, width: rowWidth };
+  const obj7 = { gap, width: rowWidth };
   cResult[8] = gap;
   cResult[9] = rowWidth;
-  cResult[10] = obj9;
-  tmp19 = obj9;
-  const tmp9 = analyticsLocations(6848);
+  cResult[10] = obj7;
+  const tmp9 = analyticsLocations(6851);
 }) : (function ShopThisLookActionSheet(arg0) {
   _require = undefined;
   let analyticsLocations;
@@ -529,9 +606,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopThis
   const equippedCollectibleSkuIds = require("useMaybeFetchEquippedCollectibleProducts").useEquippedCollectibleSkuIds(userId, guildId);
   let obj = require("useMaybeFetchEquippedCollectibleProducts");
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(13051)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
-  const tmp2 = analyticsLocations(13051)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
-  analyticsLocations = analyticsLocations(6848)(analyticsLocations(6872).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
+  ({ cardWidth: c0, rowWidth, gap } = analyticsLocations(13098)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp2 = analyticsLocations(13098)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  analyticsLocations = analyticsLocations(6851)(analyticsLocations(6878).USER_PROFILE_OVERFLOW_MENU).analyticsLocations;
   const items = [analyticsLocations];
   dependencyMap = noop.useCallback((initialProductSkuId) => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -539,10 +616,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopThis
     const result = obj2.openCollectiblesShopMobile({ initialProductSkuId, analyticsLocations, analyticsSource: AnalyticsLocationDefault.USER_PROFILE_OVERFLOW_MENU });
   }, items);
   const obj3 = { value: null, children: null };
-  const items1 = [analyticsLocations(6872).SHOP_THIS_LOOK_ACTION_SHEET];
+  const items1 = [analyticsLocations(6878).SHOP_THIS_LOOK_ACTION_SHEET];
   obj3.value = items1;
   const obj4 = { startExpanded: true, title: null, children: null };
-  const tmp3 = analyticsLocations(6848);
+  const tmp3 = analyticsLocations(6851);
   const intl = require("util").intl;
   obj4.title = intl.string(require("util").t.xNdRDO);
   const obj5 = { style: tmp.container, children: null };
@@ -568,6 +645,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ShopThis
   items2[1] = closure_9(closure_5, obj7);
   obj5.children = items2;
   obj4.children = closure_10(closure_5, obj5);
-  obj3.children = closure_9(analyticsLocations(10495), obj4);
+  obj3.children = closure_9(analyticsLocations(10529), obj4);
   return closure_9(require("useAnalyticsLocations").AnalyticsLocationProvider, obj3);
 });

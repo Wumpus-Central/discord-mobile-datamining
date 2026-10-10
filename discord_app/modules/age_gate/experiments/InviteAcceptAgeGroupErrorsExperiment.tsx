@@ -1,6 +1,6 @@
-// === Module 9596: InviteAcceptAgeGroupErrorsExperiment ===
+// === Module 9625: InviteAcceptAgeGroupErrorsExperiment ===
 
-// Module 9596 (InviteAcceptAgeGroupErrorsExperiment)
+// Module 9625 (InviteAcceptAgeGroupErrorsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

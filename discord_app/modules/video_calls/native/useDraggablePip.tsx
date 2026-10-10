@@ -1,16 +1,16 @@
-// === Module 10829: useDraggablePip ===
+// === Module 10839: useDraggablePip ===
 
-// Module 10829 (useDraggablePip)
+// Module 10839 (useDraggablePip)
 import native from "native" /* 1200 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import timing from "timing" /* 5092 */;
-import spring from "spring" /* 5375 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9550 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import timing from "timing" /* 5093 */;
+import spring from "spring" /* 5378 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9579 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const useChannelCallStore = fn(10320).useChannelCallStore;
-const Constants = fn(10816);
+const useChannelCallStore = fn(10353).useChannelCallStore;
+const Constants = fn(10826);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };
 let __initData = { code: "function useDraggablePipTsx1(){const{withTiming,pipFocus,PIP_FOCUS_SCALE,STANDARD_EASING}=this.__closure;return withTiming(pipFocus?PIP_FOCUS_SCALE:1,{easing:STANDARD_EASING,duration:250});}" };
@@ -287,7 +287,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled() ? (f
       const _Math2 = Math;
       const bound = Math.min(Math.max(sum, 0), diff);
       const sum1 = sharedValue3.get() + 0.0875 * velocityX.velocityY;
-      const value4 = derivedValue6.get();
+      value4 = derivedValue6.get();
       const diff1 = value4 - derivedValue4.get();
       if (typeof tmp4 === "function") {
         const _Math3 = Math;
@@ -400,7 +400,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled() ? (f
     const obj = { transform: null };
     const obj2 = { translateX: null };
     value = sharedValue1.get();
-    const value4 = derivedValue3.get();
+    value4 = derivedValue3.get();
     obj2.translateX = value + (value4 - derivedValue1.get()) / 2;
     const items = [obj2, , ];
     const obj3 = { translateY: null };
@@ -663,7 +663,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled() ? (f
       const _Math2 = Math;
       const bound = Math.min(Math.max(sum, 0), diff);
       const sum1 = sharedValue3.get() + 0.0875 * velocityX.velocityY;
-      const value4 = derivedValue6.get();
+      value4 = derivedValue6.get();
       const diff1 = value4 - derivedValue4.get();
       if (typeof tmp4 === "function") {
         const _Math3 = Math;
@@ -767,7 +767,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled() ? (f
     const obj = { transform: null };
     const obj2 = { translateX: null };
     value = sharedValue1.get();
-    const value4 = derivedValue3.get();
+    value4 = derivedValue3.get();
     obj2.translateX = value + (value4 - derivedValue1.get()) / 2;
     const items = [obj2, , ];
     const obj3 = { translateY: null };

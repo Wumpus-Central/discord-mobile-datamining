@@ -1,14 +1,14 @@
-// === Module 9409: DoubleTapReminderToast ===
+// === Module 9438: DoubleTapReminderToast ===
 
-// Module 9409 (DoubleTapReminderToast)
+// Module 9438 (DoubleTapReminderToast)
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 2061 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4899 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7968 */;
-import DoubleTapEmojiUpdatedToast from "DoubleTapEmojiUpdatedToast" /* 9410 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 2062 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4938 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7986 */;
+import DoubleTapEmojiUpdatedToast from "DoubleTapEmojiUpdatedToast" /* 9439 */;
 import size from "module_2" /* 2 */;
 
 const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
@@ -43,7 +43,7 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       obj2.text = intl.formatToPlainString(util.t.C2tQIV, obj3);
       const obj4 = ToastActionCreatorsDefault;
       obj2.icon = DoubleTapEmojiUpdatedToast.getToastEmojiEntity(name);
-      obj4.openMana("DOUBLE_TAP_TO_REACT_REMINDER", obj2);
+      obj4.open("DOUBLE_TAP_TO_REACT_REMINDER", obj2);
       const tmpResult5 = DoubleTapEmojiUpdatedToast;
       const obj5 = { dismissAction: ContentDismissActionType.AUTO_DISMISS, forceTrack: true };
       const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj5);

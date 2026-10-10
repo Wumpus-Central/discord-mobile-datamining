@@ -3,7 +3,7 @@
 // Module 7504 (mobile/NativePermissionUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1126 */;
-import useAlertStore from "useAlertStore" /* 5300 */;
+import useAlertStore from "useAlertStore" /* 5301 */;
 import openPrivacySettingsDefault from "openPrivacySettings" /* 7506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -36,7 +36,7 @@ let closure_8 = async function _combineStatuses(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {

@@ -1,6 +1,6 @@
-// === Module 11589: MobileEmojiSuggestionsExperiment ===
+// === Module 11635: MobileEmojiSuggestionsExperiment ===
 
-// Module 11589 (MobileEmojiSuggestionsExperiment)
+// Module 11635 (MobileEmojiSuggestionsExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

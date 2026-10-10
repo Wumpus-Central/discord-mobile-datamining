@@ -1,14 +1,14 @@
-// === Module 17743: UserVideoFailed ===
+// === Module 17815: UserVideoFailed ===
 
-// Module 17743 (UserVideoFailed)
+// Module 17815 (UserVideoFailed)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5136 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5242 */;
-import AVError from "AVError" /* 5288 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 10859 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5137 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5243 */;
+import AVError from "AVError" /* 5289 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 10897 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const VideoToggleState = fn(1085).VideoToggleState;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, text: { textAlign: "center" }, button: { marginTop: 16, alignSelf: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVide
                           const intl3 = tmp(1126).intl;
                           obj4.text = intl3.string(tmp(1126).t["hxmQ/e"]);
                           obj4.onPress = tmp13;
-                          tmp43 = closure_7(tmp(5376).Button, obj4);
+                          tmp43 = closure_7(tmp(5379).Button, obj4);
                         }
                         cResult[38] = tmp13;
                         cResult[39] = tmp6;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVide
       const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_0);
       AudioActionCreatorsDefault.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       const timerId = setTimeout(() => {
-        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, closure_0(5136).MediaEngineContextTypes.DEFAULT, false);
+        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, closure_0(5137).MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     }
     cResult[23] = str2;
@@ -175,14 +175,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserVide
     }
     if (cResult[29] !== tmp10.text) {
       const obj6 = { variant: "text-md/semibold", color: "text-strong", style: formatToPlainString, children: ejOT95 };
-      const tmp29 = closure_7(tmp(5087).Text, obj6);
+      const tmp29 = closure_7(tmp(5088).Text, obj6);
       cResult[29] = tmp10.text;
       cResult[30] = tmp29;
       let tmp27 = tmp29;
     } else {
       tmp27 = cResult[30];
     }
-    const Text = tmp(5087).Text;
+    const Text = tmp(5088).Text;
     const text = tmp10.text;
     const intl2 = tmp(1126).intl;
     formatToPlainString = intl2.formatToPlainString;

@@ -1,34 +1,34 @@
-// === Module 16457: ThreadChannel ===
+// === Module 16527: ThreadChannel ===
 
-// Module 16457 (ThreadChannel)
+// Module 16527 (ThreadChannel)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5102 */;
-import inlineStyles from "inlineStyles" /* 7559 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10421 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16458 */;
+import transitionToChannel from "transitionToChannel" /* 5103 */;
+import inlineStyles from "inlineStyles" /* 7576 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10454 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16528 */;
 import noop from "module_19" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import ReadStateStore from "ReadStateStore" /* 6042 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import ReadStateStore from "ReadStateStore" /* 6035 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5115 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5116 */;
 
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11713);
+const RedesignChannelListConstants = fn(11758);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1085).Permissions;
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 let closure_16 = fn(1125).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: nativeDefault.radii.md, flex: 1 }, threadRow: { flex: 0, flexDirection: "row", alignSelf: "stretch" }, unreadContainer: { width: 8, alignItems: "flex-start", justifyContent: "flex-start" }, spineSpacer: { width: 28 }, unreadIcon: null, threadLineSegment: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
 obj.unreadIcon = size;
@@ -39,7 +39,7 @@ let ReactCompilerGating = fn(558);
 let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SpineCurveSvg(color) {
   const cResult = c.c(7);
   color = color.color;
-  const sum = __initData2(color.fontScale) / 2 - 16 + 2;
+  const sum = map1(color.fontScale) / 2 - 16 + 2;
   if (cResult[0] !== sum) {
     const rect = { position: "absolute", left: 23, top: sum };
     cResult[0] = sum;
@@ -71,7 +71,7 @@ let closure_21 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
 }) : (function SpineCurveSvg(arg0) {
   ({ color, fontScale } = arg0);
   const size = { width: 12, height: 16, style: null, children: null };
-  const rect = { position: "absolute", left: 23, top: __initData2(fontScale) / 2 - 16 + 2 };
+  const rect = { position: "absolute", left: 23, top: map1(fontScale) / 2 - 16 + 2 };
   size.style = rect;
   size.children = constants(inlineStyles.Path, { fill: color, d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z" });
   return constants(inlineStylesDefault, size);

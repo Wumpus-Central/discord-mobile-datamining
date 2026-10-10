@@ -1,9 +1,9 @@
-// === Module 9742: StickerPackBanner ===
+// === Module 9771: StickerPackBanner ===
 
-// Module 9742 (StickerPackBanner)
+// Module 9771 (StickerPackBanner)
 import c from "c" /* 576 */;
-import StickersUtils from "StickersUtils" /* 5746 */;
-import FastImageDefault from "FastImage" /* 6163 */;
+import StickersUtils from "StickersUtils" /* 5749 */;
+import FastImageDefault from "FastImage" /* 6156 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

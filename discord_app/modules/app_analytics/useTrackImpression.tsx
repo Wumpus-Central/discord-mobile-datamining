@@ -1,17 +1,17 @@
-// === Module 8952: useTrackImpression ===
+// === Module 8971: useTrackImpression ===
 
-// Module 8952 (useTrackImpression)
+// Module 8971 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1265 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
 import _modDef1355 from "module_1355" /* 1355 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
-import useMountEffectDefault from "useMountEffect" /* 5393 */;
-import uniqueIdDefault from "uniqueId" /* 5942 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
+import useMountEffectDefault from "useMountEffect" /* 5396 */;
+import uniqueIdDefault from "uniqueId" /* 5935 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 
 const require = globalThis.__r;
 
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrack
   noop = undefined;
   noop = noop.useRef(undefined);
   noop.useRef(undefined);
-  obj(5393)(() => {
+  obj(5396)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = _modDef1355(ref.current, current);
       if (!tmp6) {

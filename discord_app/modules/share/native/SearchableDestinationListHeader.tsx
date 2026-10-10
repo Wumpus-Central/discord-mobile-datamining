@@ -1,17 +1,17 @@
-// === Module 11520: SearchableDestinationListHeader ===
+// === Module 11566: SearchableDestinationListHeader ===
 
-// Module 11520 (SearchableDestinationListHeader)
+// Module 11566 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
-import _mod6214 from "module_6214" /* 6214 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6625 */;
-import HeaderShared from "HeaderShared" /* 9270 */;
+import NavigatorHeader from "NavigatorHeader" /* 6200 */;
+import _mod6209 from "module_6209" /* 6209 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6626 */;
+import HeaderShared from "HeaderShared" /* 9297 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 const obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -35,11 +35,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
       let tmp7 = cResult[2];
     }
     if (cResult[3] !== onClose) {
-      const headerCloseButton = subtitle(6205).getHeaderCloseButton(onClose);
+      const headerCloseButton = subtitle(6200).getHeaderCloseButton(onClose);
       cResult[3] = onClose;
       cResult[4] = headerCloseButton;
       let tmp8 = headerCloseButton;
-      const tmpResult = subtitle(6205);
+      const tmpResult = subtitle(6200);
     } else {
       tmp8 = cResult[4];
     }
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
       if (!tmpResult3.isIOS()) {
         let num3 = top;
       } else {
-        subtitle(6625);
+        subtitle(6626);
         num3 = 0;
       }
       cResult[5] = top;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     const obj2 = { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
     ({ headerLeftContainer: obj5.headerLeftContainerStyle, headerRightContainer: obj5.headerRightContainerStyle } = tmp4);
     obj2.headerStatusBarHeight = sum;
-    const tmp14 = jsx(subtitle(6214).Header, { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
+    const tmp14 = jsx(subtitle(6209).Header, { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
     cResult[7] = headerRight;
     cResult[8] = tmp4.header;
     cResult[9] = tmp4.headerLeftContainer;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     num = 0;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return jsx(_mod6214.Header, {
+  return jsx(_mod6209.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

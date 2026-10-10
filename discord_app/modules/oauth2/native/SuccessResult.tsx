@@ -1,16 +1,16 @@
-// === Module 10791: ? ===
+// === Module 10865: ? ===
 
-// Module 10791
+// Module 10865
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
-import transitionToGuild from "transitionToGuild" /* 7046 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+import transitionToGuild from "transitionToGuild" /* 7052 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const Constants = fn(1085);
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollView: { flex: 1 }, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollViewContentContainer = { height: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
   guild = guild.guild;
   const application = guild.application;
   const tmp4 = closure_15();
-  guild(8434);
+  guild(8450);
   if (null == application) {
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
@@ -475,11 +475,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
               return;
             }
           }
-          tmp52[0] = application(10792);
-          const tmp53 = closure_12(application(6163), tmp52);
+          tmp52[0] = application(10866);
+          const tmp53 = closure_12(application(6156), tmp52);
           cResult[26] = tmp53;
           const tmp49 = tmp53;
-          const tmp51 = application(6163);
+          const tmp51 = application(6156);
         } else {
           class M {
             constructor() {
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           obj4.children = tmp56;
-          const tmp58 = closure_12(tmp(5087).Text, obj4);
+          const tmp58 = closure_12(tmp(5088).Text, obj4);
           cResult[28] = tmp4.text;
           cResult[29] = tmp58;
         } else {
@@ -633,7 +633,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SuccessR
             }
           }
           obj6.children = tmp7;
-          tmp60 = closure_12(tmp(5087).Text, obj6);
+          tmp60 = closure_12(tmp(5088).Text, obj6);
         }
         cResult[30] = tmp4.text;
         cResult[31] = tmp7;

@@ -1,16 +1,16 @@
-// === Module 17066: ConjureMessageAuthor ===
+// === Module 17134: ConjureMessageAuthor ===
 
-// Module 17066 (ConjureMessageAuthor)
+// Module 17134 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Pressables from "Pressables" /* 6191 */;
-import AppsIcon from "AppsIcon" /* 8217 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 17067 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 17068 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 17069 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Pressables from "Pressables" /* 6184 */;
+import AppsIcon from "AppsIcon" /* 8233 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 17135 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 17136 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 17137 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -18,9 +18,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, conjureTile: null };
-let size = { width: fn(17063).MESSAGE_AVATAR_SIZE, height: fn(17063).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(17131).MESSAGE_AVATAR_SIZE, height: fn(17131).MESSAGE_AVATAR_SIZE, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_CODE, alignItems: "center", justifyContent: "center" };
 obj2.conjureTile = size;
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -254,7 +254,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeade
   const at = arg0.at;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3827.uk6jhJ);
+    const stringResult = intl.string(_modDef3849.uk6jhJ);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -273,7 +273,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeade
 }) : (function ConjureHeader(arg0) {
   const obj = { name: null, color: "text-brand", at: null };
   const intl = util.intl;
-  obj.name = intl.string(_modDef3827.uk6jhJ);
+  obj.name = intl.string(_modDef3849.uk6jhJ);
   obj.at = arg0.at;
   return timestampProducer(closure_10, obj);
 });
@@ -318,14 +318,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       }
       if (cResult[6] === tmp4) {
       }
-      PressableOpacity = PressableOpacity(6191).PressableOpacity;
+      PressableOpacity = PressableOpacity(6184).PressableOpacity;
       const obj2 = { onPress: tmp4, onLongPress: tmp4, accessibilityRole: "button", accessibilityLabel: tmp6, children: tmp8 };
       tmp = closure_6(PressableOpacity, obj2);
       cResult[6] = tmp4;
       cResult[7] = tmp8;
       cResult[8] = tmp;
     }
-    const obj3 = { size, user: tmp3, guildId: "r" };
+    const obj3 = { size, user: tmp3, guildId: "Array" };
     const tmp10 = closure_6(PressableOpacity(1200).Avatar, obj3);
     cResult[3] = size;
     cResult[4] = tmp3;
@@ -351,7 +351,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
     let obj = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = require("util").intl;
     obj.accessibilityLabel = intl.string(require("util").t.iXAna6);
-    const obj2 = { size: NORMAL, user: tmp3, guildId: "r" };
+    const obj2 = { size: NORMAL, user: tmp3, guildId: "Array" };
     obj.children = closure_6(require("native").Avatar, obj2);
     tmp5 = closure_6(require("Pressables").PressableOpacity, obj);
   }

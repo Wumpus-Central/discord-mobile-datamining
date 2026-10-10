@@ -1,8 +1,8 @@
-// === Module 9313: ConversationsAnalytics ===
+// === Module 9340: ConversationsAnalytics ===
 
-// Module 9313 (ConversationsAnalytics)
+// Module 9340 (ConversationsAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);

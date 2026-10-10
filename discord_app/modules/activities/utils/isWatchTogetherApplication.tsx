@@ -1,6 +1,6 @@
-// === Module 10842: isWatchTogetherApplication ===
+// === Module 10880: isWatchTogetherApplication ===
 
-// Module 10842 (isWatchTogetherApplication)
+// Module 10880 (isWatchTogetherApplication)
 import Constants from "Constants" /* 2024 */;
 import size from "module_2" /* 2 */;
 

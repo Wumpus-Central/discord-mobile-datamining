@@ -1,6 +1,6 @@
-// === Module 12530: InAppNotificationActionCreators ===
+// === Module 12577: InAppNotificationActionCreators ===
 
-// Module 12530 (InAppNotificationActionCreators)
+// Module 12577 (InAppNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
@@ -11,8 +11,6 @@ export default {
     DispatcherDefault.dispatch({ type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult });
   },
   clearNotification() {
-    DispatcherDefault.wait(() => {
-      DispatcherDefault.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
-    });
+    DispatcherDefault.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
   }
 };

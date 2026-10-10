@@ -1,7 +1,7 @@
-// === Module 8361: useProfileTileGradient ===
+// === Module 8377: useProfileTileGradient ===
 
-// Module 8361 (useProfileTileGradient)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
+// Module 8377 (useProfileTileGradient)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -51,32 +51,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
       return tmp(tmp2[7]).useVideoTileGradientColors(tmp9, tmp10);
     }
   }
-  class I {
-    constructor() {
-      tmp2 = null != userId;
-      tmp = userId;
-      if (tmp2) {
-        tmp2 = closure_2;
-      }
-      if (tmp2) {
-        tmp3 = closure_1;
-        tmp4 = closure_2;
-        obj = { guildId: null, dispatchWait: true };
-        tmp5 = guildId;
-        obj.guildId = guildId;
-        tmp6 = closure_1(closure_2[6])(tmp, undefined, obj);
-      }
-      return;
+  const fn = function v() {
+    let tmp2 = null != userId;
+    if (tmp2) {
+      tmp2 = isVideoBackgroundProfileFetchEnabled;
     }
-  }
+    if (tmp2) {
+      const obj = { guildId };
+      maybeFetchUserProfileDefault(userId, undefined, obj);
+    }
+  };
   const items = [isVideoBackgroundProfileFetchEnabled, userId, guildId];
   cResult[2] = guildId;
   cResult[3] = isVideoBackgroundProfileFetchEnabled;
   cResult[4] = userId;
-  cResult[5] = I;
+  cResult[5] = fn;
   cResult[6] = items;
   tmp13 = items;
-  tmp12 = I;
+  tmp12 = fn;
   const tmpResult = userId(isVideoBackgroundProfileFetchEnabled[5]);
 }) : (function useProfileTileGradient(userId) {
   userId = userId.userId;
@@ -100,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useProfi
       tmp2 = isVideoBackgroundProfileFetchEnabled;
     }
     if (tmp2) {
-      const obj = { guildId, dispatchWait: true };
+      const obj = { guildId };
       maybeFetchUserProfileDefault(userId, undefined, obj);
     }
   }, items);

@@ -1,10 +1,10 @@
-// === Module 9083: GlobeEarthIcon ===
+// === Module 9103: GlobeEarthIcon ===
 
-// Module 9083 (GlobeEarthIcon)
+// Module 9103 (GlobeEarthIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod9084 from "module_9084" /* 9084 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod9104 from "module_9104" /* 9104 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const GlobeEarthIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9084;
+    const tmpResult = _mod9104;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const GlobeEarthIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9084, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9104, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

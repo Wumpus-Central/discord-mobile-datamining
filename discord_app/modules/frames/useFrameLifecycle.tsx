@@ -1,6 +1,6 @@
-// === Module 17224: useFrameLifecycle ===
+// === Module 17296: useFrameLifecycle ===
 
-// Module 17224 (useFrameLifecycle)
+// Module 17296 (useFrameLifecycle)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -37,7 +37,7 @@ function useFrameLifecycleState(applicationId) {
       const obj6 = { state: obj.Error };
       let obj10 = obj6;
     } else {
-      state = undefined;
+      let state;
       if (tmp3 != null) {
         state = tmp3.state;
       }
@@ -45,7 +45,7 @@ function useFrameLifecycleState(applicationId) {
         const obj7 = { state: obj.Loading, frame: tmp3 };
         obj10 = obj7;
       } else if (isLoading) {
-        const obj8 = { state: obj.Loading, frame: "r" };
+        const obj8 = { state: obj.Loading, frame: "Array" };
         obj10 = obj8;
       } else {
         if (null != data) {
@@ -67,7 +67,7 @@ function useFrameLifecycleState(applicationId) {
     return obj3;
   }
 }
-const FramesConstants = fn(10767);
+const FramesConstants = fn(10802);
 ({ isLaunched: metroRequire, makeFrameId: closure_7 } = FramesConstants);
 const FrameLifecycleState = { Loading: "loading", AwaitingLaunch: "awaiting-launch", Launched: "launched", RenderingElsewhere: "rendering-elsewhere", NoApplication: "no-application", DoesNotSupportSurface: "does-not-support-surface", Error: "error" };
 const ReactCompilerGating = fn(558);
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFrame
     const surface2 = tmp4.surface;
     setFailed = tmp4.setFailed;
     const lifecycle = tmp4.lifecycle;
-    state = lifecycle.state;
+    const state = lifecycle.state;
     if (cResult[3] === applicationId) {
       if (cResult[4] === setFailed) {
         if (cResult[5] === state) {
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFrame
   const surface = tmp.surface;
   const setFailed = tmp.setFailed;
   const lifecycle = tmp.lifecycle;
-  state = lifecycle.state;
+  const state = lifecycle.state;
   const items = [state, applicationId, surface, setFailed];
   const effect = noop.useEffect(() => {
     closure_0 = async function _launch2() {

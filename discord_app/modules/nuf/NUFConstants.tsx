@@ -1,6 +1,6 @@
-// === Module 12384: NUFConstants ===
+// === Module 12428: NUFConstants ===
 
-// Module 12384 (NUFConstants)
+// Module 12428 (NUFConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/nuf/NUFConstants.tsx");

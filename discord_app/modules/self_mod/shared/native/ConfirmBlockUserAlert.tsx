@@ -1,20 +1,20 @@
-// === Module 10388: ConfirmBlockUserAlert ===
+// === Module 10421: ConfirmBlockUserAlert ===
 
-// Module 10388 (ConfirmBlockUserAlert)
+// Module 10421 (ConfirmBlockUserAlert)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7011 */;
-import ReportModals from "ReportModals" /* 7704 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
+import ReportModals from "ReportModals" /* 7721 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const LOCATION_CONTEXT_MOBILE = fn(10348).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(10381).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { header: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" }, text: null, buttonsContainer: null };
 let obj3 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 obj2.text = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_4, textAlign: "center" };
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmB
     constructor() {
       obj = closure_1(closure_2[12]);
       obj1 = { location: LOCATION_CONTEXT_MOBILE };
-      blockUserResult = obj.blockUser(userId, obj1);
+      blockUserResult = obj.blockUser(userId, obj1, channelId);
       nextPromise = blockUserResult.then(() => { ... });
       return;
     }
@@ -138,7 +138,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmB
   const items1 = [userId, channelId];
   const callback = onClose.useCallback(() => {
     const obj2 = { location: LOCATION_CONTEXT_MOBILE };
-    RelationshipActionCreatorsDefault.blockUser(userId, { location: LOCATION_CONTEXT_MOBILE }).then(() => {
+    RelationshipActionCreatorsDefault.blockUser(userId, { location: LOCATION_CONTEXT_MOBILE }, channelId).then(() => {
       const result = channelId(onCancel[13]).showBlockSuccessToast(userId, closure_1_1);
     });
   }, items1);

@@ -1,19 +1,19 @@
-// === Module 15700: InAppNotificationsSetting ===
+// === Module 15762: InAppNotificationsSetting ===
 
-// Module 15700 (InAppNotificationsSetting)
+// Module 15762 (InAppNotificationsSetting)
 import c from "c" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import _modDef2891 from "module_2891" /* 2891 */;
-import SettingsConstants from "SettingsConstants" /* 7974 */;
-import FocusModeUtils from "FocusModeUtils" /* 12524 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14628 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15701 */;
+import _modDef2894 from "module_2894" /* 2894 */;
+import SettingsConstants from "SettingsConstants" /* 7992 */;
+import FocusModeUtils from "FocusModeUtils" /* 12571 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14682 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15763 */;
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 10629 */;
+import SettingBuilders_mod from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -90,7 +90,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2891.sH5mu9);
+  return intl.string(_modDef2894.sH5mu9);
 };
 obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function useRedesignInAppNotificationsDescription() {
   let cIRG0s = dependencyMap;
@@ -103,7 +103,7 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function u
       cIRG0s = util.t.cIRG0s;
       let stringResult = string(cIRG0s);
     } else {
-      stringResult = string(_modDef2891["T/zMdV"]);
+      stringResult = string(_modDef2894["T/zMdV"]);
     }
     cResult[0] = focusModeEnabled;
     cResult[1] = stringResult;
@@ -117,7 +117,7 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled() ? (function u
   if (focusModeEnabled) {
     let stringResult = string(util.t.cIRG0s);
   } else {
-    stringResult = string(_modDef2891["T/zMdV"]);
+    stringResult = string(_modDef2894["T/zMdV"]);
   }
   return stringResult;
 });

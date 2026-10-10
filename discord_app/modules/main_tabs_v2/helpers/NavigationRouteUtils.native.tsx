@@ -1,12 +1,12 @@
-// === Module 4937: NavigationRouteUtils ===
+// === Module 4976: NavigationRouteUtils ===
 
-// Module 4937 (NavigationRouteUtils)
+// Module 4976 (NavigationRouteUtils)
 import v1 from "v1" /* 1279 */;
 import Link from "Link" /* 1504 */;
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4944 */;
-import Types from "Types" /* 4945 */;
-import ChatInputUtils from "ChatInputUtils" /* 4946 */;
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4983 */;
+import Types from "Types" /* 4984 */;
+import ChatInputUtils from "ChatInputUtils" /* 4985 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -156,7 +156,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+      const rootNavigationRef = closure_0(4977).getRootNavigationRef();
       let tmp;
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
@@ -196,7 +196,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
       let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         return rootNavigationRef.addListener("state", () => {
-          const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+          const rootNavigationRef = closure_0(4977).getRootNavigationRef();
           let tmp2;
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
@@ -223,7 +223,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
             }
           }
           closure_1_0(tmp2);
-          const obj = closure_0(4938);
+          const obj = closure_0(4977);
         });
       }
     };
@@ -240,7 +240,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
   return tmp3[0];
 }) : (function useOpenModalKey() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+    const rootNavigationRef = closure_0(4977).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -273,7 +273,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+        const rootNavigationRef = closure_0(4977).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -300,7 +300,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOpenModal
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(4938);
+        const obj = closure_0(4977);
       });
     }
   }, []);
@@ -532,7 +532,7 @@ export const navigateToChannel = function navigateToChannel(openChannel) {
   return false;
 };
 export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
-  const rootNavigationRef = icymiScreen(4938).getRootNavigationRef();
+  const rootNavigationRef = icymiScreen(4977).getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -551,13 +551,13 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
             const obj2 = { screen, params: null };
             const obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             obj2.params = obj3;
-            const rootNavigationRef1 = tmp(4938).getRootNavigationRef();
+            const rootNavigationRef1 = tmp(4977).getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp3) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: null, params: null };
-                  const tmpResult3 = tmp(4939);
+                  const tmpResult3 = tmp(4978);
                   const _HermesInternal = HermesInternal;
                   obj4.key = "tabs-" + tmp(1279).v4();
                   obj4.params = obj2;
@@ -577,7 +577,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
                 }
               }
             }
-            const tmpResult = tmp(4938);
+            const tmpResult = tmp(4977);
           } else {
             const obj6 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
             rootNavigationRef.setParams(obj6);
@@ -772,7 +772,7 @@ export const getSelectedGuildFromRoute = function getSelectedGuildFromRoute() {
       }
     }
     if (null != tmp2) {
-      state = tmp2.state;
+      const state = tmp2.state;
       if (null != state) {
         let tmp4;
         if (null != state.routes[state.index]) {
@@ -935,7 +935,7 @@ export const useCurrentNavigationRouteName = ReactCompilerGating.isReactCompiler
   const cResult = require("c").c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
-      const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+      const rootNavigationRef = closure_0(4977).getRootNavigationRef();
       let tmp;
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
@@ -961,7 +961,7 @@ export const useCurrentNavigationRouteName = ReactCompilerGating.isReactCompiler
       let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       if (null != rootNavigationRef) {
         return rootNavigationRef.addListener("state", () => {
-          const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+          const rootNavigationRef = closure_0(4977).getRootNavigationRef();
           let tmp2;
           if (null != rootNavigationRef) {
             if (rootNavigationRef.isReady()) {
@@ -974,7 +974,7 @@ export const useCurrentNavigationRouteName = ReactCompilerGating.isReactCompiler
             }
           }
           closure_1_0(tmp2);
-          const obj = closure_0(4938);
+          const obj = closure_0(4977);
         });
       }
     };
@@ -991,7 +991,7 @@ export const useCurrentNavigationRouteName = ReactCompilerGating.isReactCompiler
   return tmp3[0];
 }) : (function useCurrentNavigationRouteName() {
   let tmp = _slicedToArray(closure_5(() => {
-    const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+    const rootNavigationRef = closure_0(4977).getRootNavigationRef();
     let tmp;
     if (null != rootNavigationRef) {
       if (rootNavigationRef.isReady()) {
@@ -1010,7 +1010,7 @@ export const useCurrentNavigationRouteName = ReactCompilerGating.isReactCompiler
     let rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       return rootNavigationRef.addListener("state", () => {
-        const rootNavigationRef = closure_0(4938).getRootNavigationRef();
+        const rootNavigationRef = closure_0(4977).getRootNavigationRef();
         let tmp2;
         if (null != rootNavigationRef) {
           if (rootNavigationRef.isReady()) {
@@ -1023,7 +1023,7 @@ export const useCurrentNavigationRouteName = ReactCompilerGating.isReactCompiler
           }
         }
         closure_1_0(tmp2);
-        const obj = closure_0(4938);
+        const obj = closure_0(4977);
       });
     }
   }, []);
@@ -1053,7 +1053,7 @@ export const getCurrentRouteParents = function getCurrentRouteParents() {
           if (index2 == null) {
             index2 = 0;
           }
-          state = routes2[index2].state;
+          let state = routes2[index2].state;
           state2 = undefined;
           if (state != null) {
             ({ index: index3, routes: routes3 } = state);
@@ -1081,7 +1081,7 @@ export const getTabsRouteIfActive = function getTabsRouteIfActive(arg0) {
       tmp2 = tmp;
     }
   }
-  state = undefined;
+  let state;
   if (tmp2 != null) {
     state = tmp2.state;
   }
@@ -1114,7 +1114,7 @@ export const getICYMIRouteIfActive = function getICYMIRouteIfActive(index) {
       tmp3 = tmp;
     }
   }
-  state = undefined;
+  let state;
   if (tmp3 != null) {
     state = tmp3.state;
   }

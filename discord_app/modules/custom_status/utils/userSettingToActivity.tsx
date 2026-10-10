@@ -1,10 +1,10 @@
-// === Module 10478: userSettingToActivity ===
+// === Module 10512: userSettingToActivity ===
 
-// Module 10478 (userSettingToActivity)
+// Module 10512 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
 import Constants from "Constants" /* 1085 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 16995: useConjureLiveReloadSetting ===
+// === Module 17063: useConjureLiveReloadSetting ===
 
-// Module 16995 (useConjureLiveReloadSetting)
+// Module 17063 (useConjureLiveReloadSetting)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 13168 */;
+import ConjureLiveReloadStore from "ConjureLiveReloadStore" /* 13217 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const sendLiveReload = fn(13164).sendLiveReload;
+const sendLiveReload = fn(13213).sendLiveReload;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/live_reload/useConjureLiveReloadSetting.tsx");

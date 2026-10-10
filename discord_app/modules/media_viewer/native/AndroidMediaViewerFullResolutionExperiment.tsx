@@ -1,6 +1,6 @@
-// === Module 13026: AndroidMediaViewerFullResolutionExperiment ===
+// === Module 13073: AndroidMediaViewerFullResolutionExperiment ===
 
-// Module 13026 (AndroidMediaViewerFullResolutionExperiment)
+// Module 13073 (AndroidMediaViewerFullResolutionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

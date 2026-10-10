@@ -1,10 +1,10 @@
-// === Module 16530: useActiveEventOrStageInstanceChannel ===
+// === Module 16600: useActiveEventOrStageInstanceChannel ===
 
-// Module 16530 (useActiveEventOrStageInstanceChannel)
+// Module 16600 (useActiveEventOrStageInstanceChannel)
 import c from "c" /* 576 */;
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8638 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16529 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 8654 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16599 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

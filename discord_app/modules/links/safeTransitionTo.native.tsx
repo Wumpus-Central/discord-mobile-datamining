@@ -1,12 +1,12 @@
-// === Module 6943: safeTransitionTo ===
+// === Module 6949: safeTransitionTo ===
 
-// Module 6943 (safeTransitionTo)
+// Module 6949 (safeTransitionTo)
 import router_utils from "router_utils" /* 1112 */;
-import LinkUtils from "LinkUtils" /* 5419 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 6944 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6945 */;
+import LinkUtils from "LinkUtils" /* 5422 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 6950 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 6951 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {
@@ -20,7 +20,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

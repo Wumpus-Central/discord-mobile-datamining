@@ -1,6 +1,6 @@
-// === Module 18288: GuildSettingsRolesActionCreators ===
+// === Module 18362: GuildSettingsRolesActionCreators ===
 
-// Module 18288 (GuildSettingsRolesActionCreators)
+// Module 18362 (GuildSettingsRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -109,7 +109,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -144,7 +144,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_10 = undefined;
               closure_145_11 = undefined;
               closure_145_12 = undefined;
-              let value4;
+              value4 = undefined;
               closure_145_14 = undefined;
               c20 = 1;
               c21 = 1;
@@ -210,7 +210,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             ComponentDispatch.dispatch(closure_144_4.EMPHASIZE_NOTICE);
             if (!closure_145_5.throwErr) {
               c21 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else {
               throw closure_145_15;
             }

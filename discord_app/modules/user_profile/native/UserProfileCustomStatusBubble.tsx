@@ -1,18 +1,18 @@
-// === Module 10479: UserProfileCustomStatusBubble ===
+// === Module 10513: UserProfileCustomStatusBubble ===
 
-// Module 10479 (UserProfileCustomStatusBubble)
+// Module 10513 (UserProfileCustomStatusBubble)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import EmojiDefault from "Emoji" /* 6816 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import inlineStyles from "inlineStyles" /* 7559 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 10482 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import EmojiDefault from "Emoji" /* 6819 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import inlineStyles from "inlineStyles" /* 7576 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 10516 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 let Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
   const colors = nativeDefault.colors;
@@ -103,7 +103,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status
   return __initData(inlineStylesDefault, size);
 });
 let closure_16 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-const dependencyMap = { [fn(6898).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+const dependencyMap = { [fn(6904).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiImage(arg0) {
   const cResult = c.c(14);
@@ -242,7 +242,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       let obj4 = { variant: textVariant, color: "text-default", lineClamp, onTextLayout, style: tmp10, children: null };
       let items = [tmp13, text];
       obj4.children = items;
-      const tmp17 = closure_12(emoji(5087).Text, obj4);
+      const tmp17 = closure_12(emoji(5088).Text, obj4);
       cResult[10] = lineClamp;
       cResult[11] = onTextLayout;
       cResult[12] = tmp13;
@@ -270,7 +270,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
         obj6.style = obj7;
         items[1] = closure_2_11(closure_2_8, obj6);
         obj2.children = items;
-        let tmp4 = __initData(__initData2, obj2);
+        let tmp4 = __initData(map1, obj2);
       } else {
         let name;
         if (emoji != null) {
@@ -285,7 +285,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
           obj8.style = obj9;
           items1[1] = closure_2_11(closure_2_8, obj8);
           obj.children = items1;
-          tmp4 = __initData(__initData2, obj);
+          tmp4 = __initData(map1, obj);
         }
       }
       return tmp4;
@@ -329,7 +329,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       obj8.style = obj9;
       items[1] = closure_1_11(closure_1_8, obj8);
       obj4.children = items;
-      let tmp8Result = __initData(__initData2, obj4);
+      let tmp8Result = __initData(map1, obj4);
     } else {
       let name;
       if (emoji != null) {
@@ -344,7 +344,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
         obj11.style = obj12;
         items1[1] = closure_1_11(closure_1_8, obj11);
         obj10.children = items1;
-        tmp8Result = __initData(__initData2, obj10);
+        tmp8Result = __initData(map1, obj10);
       }
     }
     const items2 = [tmp8Result, text];
@@ -359,7 +359,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
     obj2 = PlatformUtils;
   }
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_20 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOnlyStatusContent(arg0) {
@@ -521,7 +521,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const trackUserProfileAction = require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmpResult8 = require("UserProfileAnalyticsContext");
   if (undefined === previewText) {
-    state = undefined;
+    let state;
     if (customStatusActivity != null) {
       state = customStatusActivity.state;
     }
@@ -879,7 +879,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   trackUserProfileAction = require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext().trackUserProfileAction;
   const tmp5Result6 = require("UserProfileAnalyticsContext");
   if (undefined === previewText) {
-    state = undefined;
+    let state;
     if (customStatusActivity != null) {
       state = customStatusActivity.state;
     }

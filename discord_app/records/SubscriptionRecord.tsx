@@ -1,11 +1,11 @@
-// === Module 4735: SubscriptionRecord ===
+// === Module 4776: SubscriptionRecord ===
 
-// Module 4735 (SubscriptionRecord)
+// Module 4776 (SubscriptionRecord)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1989 */;
-import PremiumSubscription from "PremiumSubscription" /* 4740 */;
+import PremiumSubscription from "PremiumSubscription" /* 4781 */;
 import Record from "Record" /* 1405 */;
-import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4736 */;
-import InvoiceRecord from "InvoiceRecord" /* 4737 */;
+import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4777 */;
+import InvoiceRecord from "InvoiceRecord" /* 4778 */;
 
 require = fn;
 function createSubscriptionItemFromServer(id) {
@@ -13,7 +13,7 @@ function createSubscriptionItemFromServer(id) {
 }
 const Constants = fn(1085);
 ({ PaymentGateways: hasOwnProperty, SubscriptionStatusTypes: metroRequire, SubscriptionStatusTypesSets: closure_7, SubscriptionTypes: closure_8 } = Constants);
-const BillingConstants = fn(4739);
+const BillingConstants = fn(4780);
 ({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: c10 } = BillingConstants);
 const PremiumConstants = fn(1392);
 ({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
@@ -175,7 +175,7 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
 });
 Object.defineProperty(prototype, "planIdFromItems", {
   get: function planIdFromItems() {
-    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(__initData2));
+    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(map1));
   },
   set: undefined
 });

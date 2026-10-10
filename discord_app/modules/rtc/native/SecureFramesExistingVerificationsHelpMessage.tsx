@@ -1,13 +1,13 @@
-// === Module 8821: SecureFramesExistingVerificationsHelpMessage ===
+// === Module 8840: SecureFramesExistingVerificationsHelpMessage ===
 
-// Module 8821 (SecureFramesExistingVerificationsHelpMessage)
+// Module 8840 (SecureFramesExistingVerificationsHelpMessage)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import native from "native" /* 1200 */;
-import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 8822 */;
-import createStyles from "createStyles" /* 5091 */;
+import InlineNotice from "InlineNotice" /* 7567 */;
+import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 8841 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
           tmp9 = cResult[7];
         }
         if (cResult[8] !== tmp9) {
-          const obj3 = { messageType: native.HelpMessageTypes.INFO, children: tmp9 };
-          const tmp13 = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: tmp9 });
+          const obj3 = { type: "info", message: tmp9, role: "static" };
+          const tmp13 = jsx(InlineNotice.InlineNotice, { type: "info", message: tmp9, role: "static" });
           cResult[8] = tmp9;
           cResult[9] = tmp13;
           let tmp11 = tmp13;
@@ -81,11 +81,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     const obj2 = { style: null, children: null };
     const items = [tmp.container, style];
     obj2.style = items;
-    const obj3 = { messageType: native.HelpMessageTypes.INFO, children: null };
+    const obj3 = { type: "info", message: null, role: "static" };
     const intl = util.intl;
     const obj4 = { count: secureFramesUserVerifiedKeysCount };
-    obj3.children = intl.format(util.t.uZDkz0, obj4);
-    obj2.children = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: null });
+    obj3.message = intl.format(util.t.uZDkz0, obj4);
+    obj2.children = jsx(InlineNotice.InlineNotice, { type: "info", message: null, role: "static" });
     tmp5 = <View style={null}>{null}</View>;
   }
   return tmp5;

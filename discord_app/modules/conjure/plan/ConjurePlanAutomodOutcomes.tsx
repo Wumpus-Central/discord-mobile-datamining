@@ -1,10 +1,10 @@
-// === Module 17093: ConjurePlanAutomodOutcomes ===
+// === Module 17162: ConjurePlanAutomodOutcomes ===
 
-// Module 17093 (ConjurePlanAutomodOutcomes)
+// Module 17162 (ConjurePlanAutomodOutcomes)
 import util from "util" /* 1126 */;
-import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5078 */;
+import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2127 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5079 */;
 import size from "module_2" /* 2 */;
 
 const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;
@@ -17,28 +17,28 @@ export const CONJURE_PLAN_AUTOMOD_OUTCOMES = {
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827.Vi4cjL);
+      return intl.string(_modDef3849.Vi4cjL);
     },
     blockedStyle: false
   },
   block: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827.YdnZ8q);
+      return intl.string(_modDef3849.YdnZ8q);
     },
     blockedStyle: true
   },
   timeout: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827.QGrx9O);
+      return intl.string(_modDef3849.QGrx9O);
     },
     blockedStyle: true
   },
   allow: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827.RGzFNK);
+      return intl.string(_modDef3849.RGzFNK);
     },
     blockedStyle: false
   }
@@ -47,21 +47,21 @@ export const CONJURE_PLAN_AUTOMOD_SECTIONS = {
   blocked: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827.YdnZ8q);
+      return intl.string(_modDef3849.YdnZ8q);
     },
     tone: "red"
   },
   alert: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827["8ockl9"]);
+      return intl.string(_modDef3849["8ockl9"]);
     },
     tone: "blurple"
   },
   allowed: {
     label() {
       const intl = util.intl;
-      return intl.string(_modDef3827.RGzFNK);
+      return intl.string(_modDef3849.RGzFNK);
     },
     tone: "green"
   }

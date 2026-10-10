@@ -1,6 +1,6 @@
-// === Module 12186: GuildDismissibleContentUtils ===
+// === Module 12230: GuildDismissibleContentUtils ===
 
-// Module 12186 (GuildDismissibleContentUtils)
+// Module 12230 (GuildDismissibleContentUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2048 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const UserSettingsDelay = fn(1095).UserSettingsDelay;
 const ReactCompilerGating = fn(558);
 function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {

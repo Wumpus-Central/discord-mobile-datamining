@@ -1,17 +1,17 @@
-// === Module 7192: modules/Messages ===
+// === Module 7198: modules/Messages ===
 
-// Module 7192 (modules/Messages)
+// Module 7198 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2090 */;
-import _mod2091 from "module_2091" /* 2091 */;
-import requireSortedDescending from "requireSortedDescending" /* 5753 */;
-import isReadableChannel from "isReadableChannel" /* 7199 */;
-import KvMessage2 from "KvMessage" /* 7202 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2091 */;
+import _mod2092 from "module_2092" /* 2092 */;
+import requireSortedDescending from "requireSortedDescending" /* 5756 */;
+import isReadableChannel from "isReadableChannel" /* 7205 */;
+import KvMessage2 from "KvMessage" /* 7208 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 7193 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7199 */;
 
 require = fn;
 let closure_8 = new LoggerDefault("Messages");
@@ -45,7 +45,7 @@ prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const self = this;
   const result = requireSortedDescending.requireSortedDescending(arr);
   const map = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   const iter = arr[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -140,7 +140,7 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -282,13 +282,13 @@ prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009,
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod2091.ConflictOptions.Skip);
+  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod2092.ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
   const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
   const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const KvMessage = KvMessage2.KvMessage;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod2091.ConflictOptions.Replace);
+  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod2092.ConflictOptions.Replace);
   messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
@@ -334,7 +334,7 @@ prototype2["updateOne"] = function updateOne(guildId, channel_id, message, datab
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

@@ -1,6 +1,6 @@
-// === Module 14722: NativeAppLifecycleModule ===
+// === Module 14776: NativeAppLifecycleModule ===
 
-// Module 14722 (NativeAppLifecycleModule)
+// Module 14776 (NativeAppLifecycleModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

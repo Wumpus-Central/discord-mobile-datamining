@@ -1,18 +1,18 @@
-// === Module 13368: ProductDetailsActionSheetInfo ===
+// === Module 13418: ProductDetailsActionSheetInfo ===
 
-// Module 13368 (ProductDetailsActionSheetInfo)
+// Module 13418 (ProductDetailsActionSheetInfo)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9025 */;
-import useProductDescription from "useProductDescription" /* 13369 */;
-import InlinePriceTagDefault from "InlinePriceTag" /* 13370 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9044 */;
+import useProductDescription from "useProductDescription" /* 13419 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 13420 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5091 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

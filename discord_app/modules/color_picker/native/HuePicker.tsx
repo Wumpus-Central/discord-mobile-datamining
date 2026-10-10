@@ -1,9 +1,9 @@
-// === Module 14773: HuePicker ===
+// === Module 14828: HuePicker ===
 
-// Module 14773 (HuePicker)
+// Module 14828 (HuePicker)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14770 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14825 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };
 let size = { left: 0, position: "absolute", borderColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: nativeDefault.radii.sm, borderWidth: 2 };
 obj2.slider = size;
@@ -45,7 +45,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHue
             ReanimatedRexport.runOnJS(tmp)();
           }
         };
-        const obj2 = { onPanFinalize, runOnJS: tmp(4811).runOnJS };
+        const obj2 = { onPanFinalize, runOnJS: tmp(4850).runOnJS };
         fn3.__closure = obj2;
         fn3.__workletHash = 2479115151384;
         fn3.__initData = __initData3;
@@ -60,7 +60,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHue
           if (cResult[9] === tmp6) {
             let tmp8 = cResult[10];
           }
-          const panGesture = tmp(6333).usePanGesture(tmp8);
+          const panGesture = tmp(6334).usePanGesture(tmp8);
           if (cResult[11] !== panGesture) {
             const obj3 = { gesture: panGesture };
             cResult[11] = panGesture;

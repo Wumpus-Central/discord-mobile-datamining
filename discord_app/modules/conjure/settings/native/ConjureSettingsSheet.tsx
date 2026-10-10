@@ -1,24 +1,24 @@
-// === Module 16993: ConjureSettingsSheet ===
+// === Module 17061: ConjureSettingsSheet ===
 
-// Module 16993 (ConjureSettingsSheet)
+// Module 17061 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6663 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6664 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 13164 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 13213 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
 
-const useConjureProjectSettingsFormDefault = tmp5(16994);
+const useConjureProjectSettingsFormDefault = tmp5(17062);
 const require = fn;
 const View = fn(17).View;
-let isProjectOwner = fn(10617).isProjectOwner;
+let isProjectOwner = fn(10651).isProjectOwner;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
-let obj = { project: _modDef3827.W0eQfN, app: _modDef3827.lFaJYF, secrets: _modDef3827.vDpCPU, model: _modDef3827.Rs3qc9 };
-const createStyles = fn(5091);
+let obj = { project: _modDef3849.W0eQfN, app: _modDef3849.lFaJYF, secrets: _modDef3849.vDpCPU, model: _modDef3849.Rs3qc9 };
+const createStyles = fn(5092);
 let closure_14 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
@@ -76,7 +76,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
               if (cResult[13] === tmp12) {
                 let tmp13 = cResult[14];
               }
-              const segmentedControlState = Tabs(8513).useSegmentedControlState(tmp13);
+              const segmentedControlState = Tabs(8529).useSegmentedControlState(tmp13);
               if (cResult[15] === segmentedControlState) {
                 if (cResult[16] === tabs.length) {
                   return cResult[17];
@@ -94,12 +94,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
               }
               let obj3 = { onLayout: first, children: null };
               if (tabs.length > 3) {
-                Tabs = Tabs(12313).Tabs;
+                Tabs = Tabs(12357).Tabs;
                 obj = { state: segmentedControlState };
                 let tmp15Result = tmp15(Tabs, obj);
               } else {
                 const obj4 = { state: segmentedControlState };
-                tmp15Result = tmp15(Tabs(8761).SegmentedControl, obj4);
+                tmp15Result = tmp15(Tabs(8778).SegmentedControl, obj4);
               }
               obj3.children = tmp15Result;
               obj3 = tmp15(View, obj3);
@@ -107,7 +107,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
               tabs = tabs.length;
               cResult[16] = tabs;
               cResult[17] = obj3;
-              const TabsResult = Tabs(8513);
+              const TabsResult = Tabs(8529);
             }
           }
         }
@@ -168,7 +168,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
     return obj;
   }), items);
   const tmp = _slicedToArray(noop.useState(0), 2);
-  obj = tabs(8513);
+  obj = tabs(8529);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -182,10 +182,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp8Result = closure_10(tmp5(12313).Tabs, obj4);
+    let tmp8Result = closure_10(tmp5(12357).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp8Result = closure_10(tmp5(8761).SegmentedControl, obj5);
+    tmp8Result = closure_10(tmp5(8778).SegmentedControl, obj5);
   }
   obj3.children = tmp8Result;
   return closure_10(View, obj3);
@@ -399,7 +399,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   closure_11 = undefined;
   let canSave;
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
-  const tmp3 = closure_14(stateFromStores1(6663)({ includeKeyboardHeight: true }).insets.bottom);
+  const tmp3 = closure_14(stateFromStores1(6664)({ includeKeyboardHeight: true }).insets.bottom);
   let items = [memo];
   const items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => ConjureProjectStore.getProject(projectId), items1);
@@ -431,9 +431,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = stateFromStores1(16994)(projectId, guild_id);
+  const tmpResultResult = stateFromStores1(17062)(projectId, guild_id);
   asyncGeneratorStep = tmpResultResult;
-  const tmp13 = stateFromStores1(17000)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+  const tmp13 = stateFromStores1(17068)({ projectId, scopeKeys, note, notifyAgent, isPreview });
   _slicedToArray = tmp13;
   isScoped = tmp13.isScoped;
   loaded = tmp13.loaded;
@@ -493,7 +493,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -564,11 +564,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   }), items8);
   let obj5 = { startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
   const intl = tmp4(1126).intl;
-  obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3827).bA4VU5);
+  obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3849).bA4VU5);
   const intl2 = tmp4(1126).intl;
-  const tmpResult2 = stateFromStores1(3827);
-  const tmpResult = stateFromStores1(16994);
-  obj5.header = found(projectId(6835).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) });
+  const tmpResult2 = stateFromStores1(3849);
+  const tmpResult = stateFromStores1(17062);
+  obj5.header = found(projectId(6838).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) });
   const obj7 = { style: tmp3.container, children: null };
   let tmp21Result = null;
   if (!isScoped) {
@@ -609,7 +609,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     tmp21Result3 = null;
     if ("model" === found) {
       const obj9 = { projectId };
-      tmp21Result3 = tmp21(tmp4(17005).ConjureModelSettingsContent, obj9);
+      tmp21Result3 = tmp21(tmp4(17073).ConjureModelSettingsContent, obj9);
     }
   }
   items9[4] = tmp21Result3;
@@ -620,26 +620,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       if (stateFromStores2) {
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl3 = tmp4(1126).intl;
-        obj10.children = intl3.string(tmp(3827).lJJayk);
-        let tmp21Result4 = tmp21(tmp4(5087).Text, obj10);
+        obj10.children = intl3.string(tmp(3849).lJJayk);
+        let tmp21Result4 = tmp21(tmp4(5088).Text, obj10);
       } else {
-        tmp21Result4 = tmp21(tmp4(6160).ActivityIndicator, {});
+        tmp21Result4 = tmp21(tmp4(6153).ActivityIndicator, {});
       }
     }
   }
   items9[5] = tmp31;
   const intl4 = tmp4(1126).intl;
   if (isScoped) {
-    let A7dQd9 = tmp(3827).A7dQd9;
+    let A7dQd9 = tmp(3849).A7dQd9;
   } else {
     A7dQd9 = tmp4(1126).t["R3BPH+"];
   }
   const obj6 = { title: intl2.string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) };
   const tmp23 = closure_11;
   const tmp24 = loaded;
-  items9[6] = found(projectId(5376).Button, { text: intl4.string(A7dQd9), variant: "primary", loading: tmpResultResult.saving || tmp13.saving, disabled: !canSave, onPress: callback });
+  items9[6] = found(projectId(5379).Button, { text: intl4.string(A7dQd9), variant: "primary", loading: tmpResultResult.saving || tmp13.saving, disabled: !canSave, onPress: callback });
   obj7.children = items9;
   obj5.children = tmp23(tmp24, obj7);
-  return found(projectId(6892).ActionSheet, obj5);
+  return found(projectId(6898).ActionSheet, obj5);
 });
 export const CONJURE_SETTINGS_SHEET_KEY = "ConjureSettingsSheet";

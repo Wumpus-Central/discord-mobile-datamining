@@ -1,15 +1,15 @@
-// === Module 15512: SameAsDeviceThemeSetting ===
+// === Module 15574: SameAsDeviceThemeSetting ===
 
-// Module 15512 (SameAsDeviceThemeSetting)
+// Module 15574 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15369 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15431 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSameAsDeviceThemeValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.c445ix);
   },
-  parent: fn(7974).MobileUserSettings.APPEARANCE,
+  parent: fn(7992).MobileUserSettings.APPEARANCE,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useSameAsDeviceThemeValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

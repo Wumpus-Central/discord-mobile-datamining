@@ -1,9 +1,9 @@
-// === Module 17016: conjurePreviewTargets ===
+// === Module 17084: conjurePreviewTargets ===
 
-// Module 17016 (conjurePreviewTargets)
+// Module 17084 (conjurePreviewTargets)
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import ConjurePreviewMode from "ConjurePreviewMode" /* 17013 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import ConjurePreviewMode from "ConjurePreviewMode" /* 17080 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewTargets.tsx");
@@ -44,13 +44,13 @@ export const getPreviewTargetLabel = function getPreviewTargetLabel(memo2) {
     return ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo2.surface);
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3827.y5GiL1);
+    return intl3.string(_modDef3849.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3827["2940LX"]);
+    return intl2.string(_modDef3849["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef3827.tjpaGN);
+    return intl.string(_modDef3849.tjpaGN);
   }
 };
 export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2) {

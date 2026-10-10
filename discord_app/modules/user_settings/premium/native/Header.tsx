@@ -1,21 +1,21 @@
-// === Module 13683: premium/Header ===
+// === Module 13735: premium/Header ===
 
-// Module 13683 (premium/Header)
+// Module 13735 (premium/Header)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4930 */;
-import useThemeDefault from "useTheme" /* 4992 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import _modDef13684 from "module_13684" /* 13684 */;
-import _modDef13685 from "module_13685" /* 13685 */;
+import shared from "shared" /* 4969 */;
+import useThemeDefault from "useTheme" /* 5031 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import _modDef13736 from "module_13736" /* 13736 */;
+import _modDef13737 from "module_13737" /* 13737 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -39,9 +39,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(s
       tmp9 = cResult[3];
     }
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result = _modDef13684;
+      let tmp5Result = _modDef13736;
     } else {
-      tmp5Result = _modDef13685;
+      tmp5Result = _modDef13737;
     }
     if (cResult[4] !== tmp5Result) {
       const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -105,9 +105,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Header(s
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13684;
+    let tmp2Result = _modDef13736;
   } else {
-    tmp2Result = _modDef13685;
+    tmp2Result = _modDef13737;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2), ];

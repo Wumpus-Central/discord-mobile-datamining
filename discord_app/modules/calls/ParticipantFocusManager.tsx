@@ -1,9 +1,9 @@
-// === Module 18094: ParticipantFocusManager ===
+// === Module 18168: ParticipantFocusManager ===
 
-// Module 18094 (ParticipantFocusManager)
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+// Module 18168 (ParticipantFocusManager)
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 class ParticipantFocusManager extends tmp2 {
   constructor() {

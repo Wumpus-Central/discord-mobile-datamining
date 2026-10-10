@@ -1,6 +1,6 @@
-// === Module 5086: HighlightJsAnsiLanguage ===
+// === Module 5087: HighlightJsAnsiLanguage ===
 
-// Module 5086 (HighlightJsAnsiLanguage)
+// Module 5087 (HighlightJsAnsiLanguage)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { 1: "bold", 4: "underline" };

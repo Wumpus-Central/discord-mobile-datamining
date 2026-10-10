@@ -1,22 +1,22 @@
-// === Module 11410: AutomodUserProfileQuarantineAlert ===
+// === Module 11455: AutomodUserProfileQuarantineAlert ===
 
-// Module 11410 (AutomodUserProfileQuarantineAlert)
+// Module 11455 (AutomodUserProfileQuarantineAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4715 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import common_AlertDefault from "common/Alert" /* 5395 */;
-import _modDef11411 from "module_11411" /* 11411 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11412 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4756 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import common_AlertDefault from "common/Alert" /* 5398 */;
+import _modDef11456 from "module_11456" /* 11456 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11457 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
 let closure_3 = ["title", "description", "buttonCta", "onConfirm"];
@@ -26,13 +26,13 @@ let closure_6 = ["guildId", "guildName", "automodReason"];
 let closure_7 = ["guildName"];
 let closure_8 = ["guildName"];
 const View = fn(17).View;
-const QUARANTINE_USER_ALERT_KEY = fn(11403).QUARANTINE_USER_ALERT_KEY;
+const QUARANTINE_USER_ALERT_KEY = fn(11448).QUARANTINE_USER_ALERT_KEY;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_16, UserSettingsSections: closure_17 } = Constants);
-const GuildMemberFlags = fn(4695).GuildMemberFlags;
+const GuildMemberFlags = fn(4736).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { wrapper: { padding: 16 }, body: { flexDirection: "column", alignItems: "center" }, mainIcon: null, title: null, description: null };
 let size = { width: 48, height: 48, tintColor: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL, marginBottom: 16 };
 obj2.mainIcon = size;
@@ -76,7 +76,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBl
     const onClose = tmp4.onClose;
   }
   if (cResult[7] !== tmp12.mainIcon) {
-    const obj2 = { source: _modDef11411, size: native.Icon.Sizes.CUSTOM, style: tmp12.mainIcon };
+    const obj2 = { source: _modDef11456, size: native.Icon.Sizes.CUSTOM, style: tmp12.mainIcon };
     const tmp18 = closure_1_19(native.Icon, obj2);
     cResult[7] = tmp12.mainIcon;
     cResult[8] = tmp18;
@@ -174,7 +174,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatBl
   obj.onConfirm = onConfirm;
   const obj2 = { style: tmp2.body, children: null };
   const tmp6 = common_AlertDefault;
-  const items = [closure_1_19(native.Icon, { source: _modDef11411, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), closure_1_19(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), closure_1_19(Text_Text.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
+  const items = [closure_1_19(native.Icon, { source: _modDef11456, size: native.Icon.Sizes.CUSTOM, style: tmp2.mainIcon }), closure_1_19(Text_Text.Text, { style: tmp2.title, accessibilityRole: "header", variant: "heading-md/medium", color: "mobile-text-heading-primary", children: title }), closure_1_19(Text_Text.Text, { style: tmp2.description, variant: "text-sm/medium", color: "text-default", children: description })];
   obj2.children = items;
   obj.children = constants2(View, obj2);
   return closure_1_19(tmp6, obj);
@@ -304,8 +304,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerSer
     stringResult = intl.string(util.t.TBeZmG);
   }
   const tmp = _objectWithoutProperties(arg0, closure_6);
-  const tmp2Result = tmp2(11412);
-  [require, tmp8] = tmp2(11412).useOpenFixQuarantinedProfileModal({ guildId });
+  const tmp2Result = tmp2(11457);
+  [require, tmp8] = tmp2(11457).useOpenFixQuarantinedProfileModal({ guildId });
   if (!tmp8) {
     const intl3 = tmp2(1126).intl;
     stringResult = intl3.string(tmp2(1126).t.FFj5Dt);
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodU
       if (cResult[12] === stateFromStores) {
         let tmp18 = cResult[13];
       }
-      stateFromStores(5393)(tmp18);
+      stateFromStores(5396)(tmp18);
       if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) {
         if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) {
           if (stateFromStores2 === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodU
       return AutomodPermissionUtils.getAutomodReason(automodQuarantinedGuildMemberFlags);
     }
   }, items4);
-  stateFromStores(5393)(() => {
+  stateFromStores(5396)(() => {
     AnalyticsUtilsDefault.track(constants.OPEN_MODAL, { type: QUARANTINE_USER_ALERT_KEY, guild_id: guildId, other_user_id: stateFromStores });
   });
   if (stateFromStores2 !== GuildMemberFlags.AUTOMOD_QUARANTINED_BIO) {

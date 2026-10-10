@@ -1,8 +1,8 @@
-// === Module 11790: useFilterAndSortToOnlyFrecentCommands ===
+// === Module 11834: useFilterAndSortToOnlyFrecentCommands ===
 
-// Module 11790 (useFilterAndSortToOnlyFrecentCommands)
+// Module 11834 (useFilterAndSortToOnlyFrecentCommands)
 import noop from "module_19" /* 19 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9222 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 9249 */;
 
 const require = fn;
 const size = fn(2);

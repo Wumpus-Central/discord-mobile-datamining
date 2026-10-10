@@ -1,6 +1,6 @@
-// === Module 9226: ApplicationCommandQueryTypes ===
+// === Module 9253: ApplicationCommandQueryTypes ===
 
-// Module 9226 (ApplicationCommandQueryTypes)
+// Module 9253 (ApplicationCommandQueryTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryTypes.tsx");

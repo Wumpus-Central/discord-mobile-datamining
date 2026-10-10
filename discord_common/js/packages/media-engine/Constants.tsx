@@ -1,7 +1,7 @@
-// === Module 5116: Constants ===
+// === Module 5117: Constants ===
 
-// Module 5116 (Constants)
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5117 */;
+// Module 5117 (Constants)
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 5118 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");

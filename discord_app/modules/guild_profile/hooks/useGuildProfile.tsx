@@ -1,9 +1,9 @@
-// === Module 8601: useGuildProfile ===
+// === Module 8617: useGuildProfile ===
 
-// Module 8601 (useGuildProfile)
+// Module 8617 (useGuildProfile)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildProfileStore from "GuildProfileStore" /* 8600 */;
+import GuildProfileStore from "GuildProfileStore" /* 8616 */;
 
 const require = globalThis.__r;
 
@@ -113,7 +113,7 @@ export const useGuildProfile = ReactCompilerGating.isReactCompilerEnabled() ? (f
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

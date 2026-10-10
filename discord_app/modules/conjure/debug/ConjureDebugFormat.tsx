@@ -1,6 +1,6 @@
-// === Module 17207: ConjureDebugFormat ===
+// === Module 17288: ConjureDebugFormat ===
 
-// Module 17207 (ConjureDebugFormat)
+// Module 17288 (ConjureDebugFormat)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugFormat.tsx");
@@ -122,10 +122,10 @@ export const formatClockTime = function formatClockTime(ts) {
   }
   return combined;
 };
-export const formatObservedAt = function formatObservedAt(since) {
-  const date = new Date(since);
+export const formatObservedAt = function formatObservedAt(observedAt) {
+  const date = new Date(observedAt);
   if (Number.isNaN(date.getTime())) {
-    return since;
+    return observedAt;
   } else {
     const _Date = Date;
     const date1 = new Date();

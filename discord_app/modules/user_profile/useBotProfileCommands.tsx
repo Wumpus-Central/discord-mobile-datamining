@@ -1,8 +1,8 @@
-// === Module 10582: useBotProfileCommands ===
+// === Module 10616: useBotProfileCommands ===
 
-// Module 10582 (useBotProfileCommands)
+// Module 10616 (useBotProfileCommands)
 import c from "c" /* 576 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9778 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

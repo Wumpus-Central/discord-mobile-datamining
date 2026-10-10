@@ -1,25 +1,25 @@
-// === Module 10483: EditCustomStatusWithPreview ===
+// === Module 10517: EditCustomStatusWithPreview ===
 
-// Module 10483 (EditCustomStatusWithPreview)
+// Module 10517 (EditCustomStatusWithPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import shared from "shared" /* 4930 */;
-import ChatInputUtils from "ChatInputUtils" /* 4946 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5370 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
-import Pressables from "Pressables" /* 6191 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
-import _modDef6619 from "module_6619" /* 6619 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9397 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9604 */;
-import setCustomStatusDefault from "setCustomStatus" /* 10487 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 10489 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 10492 */;
+import shared from "shared" /* 4969 */;
+import ChatInputUtils from "ChatInputUtils" /* 4985 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+import Pressables from "Pressables" /* 6184 */;
+import NavigatorHeader from "NavigatorHeader" /* 6200 */;
+import _modDef6620 from "module_6620" /* 6620 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9426 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 9633 */;
+import setCustomStatusDefault from "setCustomStatus" /* 10521 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 10523 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 10526 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -106,7 +106,7 @@ function EditCustomStatusWithPreview(navigation) {
   const callback1 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(4930).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = navigation(4969).AccessibilityAnnouncer;
       const intl = navigation(1126).intl;
       AccessibilityAnnouncer.announce(intl.string(navigation(1126).t.YdUwBS));
     }, 300);
@@ -179,7 +179,7 @@ function EditCustomStatusWithPreview(navigation) {
     let tmp2 = null;
     if (null != stateFromStores) {
       const obj = { user: tmp, pendingStatusText, pendingStatusEmoji: first1, placeholderText };
-      tmp2 = __initData2(CustomStatusPreviewDefault, obj);
+      tmp2 = map1(CustomStatusPreviewDefault, obj);
     }
     return tmp2;
   }, items10);
@@ -255,7 +255,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.label = intl3.string(tmp6(tmp7[12]).t["+14vvU"]);
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10572, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10606, dependencyMap.paths), "ClearAfterOptionsActionSheet", { initialValue: first2, onChange });
     };
     const obj19 = { variant: "text-sm/medium", children: tmp10(tmp7[41])(first2) };
     obj18.trailing = ref1(tmp6(tmp7[33]).Text, obj19);
@@ -293,13 +293,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(10484).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(10518).STATUS_MAX_LENGTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1393).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 }, statusInputRow: { flexDirection: "row", alignItems: "center" }, emoji: { marginRight: 8 }, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
 let obj3 = { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 };
 obj2.status = { color: nativeDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
@@ -342,8 +342,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
     tmp8 = cResult[2];
   }
   if (cResult[3] !== tmp4.closeIcon) {
-    const obj3 = { source: _modDef6619, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
-    const tmp12 = __initData2(native.Icon, obj3);
+    const obj3 = { source: _modDef6620, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+    const tmp12 = map1(native.Icon, obj3);
     cResult[3] = tmp4.closeIcon;
     cResult[4] = tmp12;
     let tmp9 = tmp12;
@@ -356,7 +356,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
     }
     return tmp13;
   }
-  const tmp14 = __initData2(Pressables.PressableOpacity, { style: first, accessibilityRole: "button", accessibilityLabel: tmp6, onPress, hitSlop: tmp8, children: tmp9 });
+  const tmp14 = map1(Pressables.PressableOpacity, { style: first, accessibilityRole: "button", accessibilityLabel: tmp6, onPress, hitSlop: tmp8, children: tmp9 });
   cResult[5] = onPress;
   cResult[6] = tmp9;
   cResult[7] = tmp14;
@@ -368,8 +368,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function ClearI
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
   const tmp = closure_15();
-  obj.children = __initData2(native.Icon, { source: _modDef6619, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
-  return __initData2(Pressables.PressableOpacity, obj);
+  obj.children = map1(native.Icon, { source: _modDef6620, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL });
+  return map1(Pressables.PressableOpacity, obj);
 });
 ReactCompilerGating = fn(558);
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       analyticsLocations(1383);
       obj3.headerStatusBarHeight = 12;
       obj3.headerStyle = tmp6;
-      const tmp8Result = closure_13(analyticsLocations(6686).Navigator, obj3);
+      const tmp8Result = closure_13(analyticsLocations(6687).Navigator, obj3);
       cResult[4] = tmp4;
       cResult[5] = tmp8Result;
       let tmp7 = tmp8Result;
@@ -417,10 +417,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     const obj = { title: null };
     const intl = analyticsLocations(1126).intl;
     obj.title = intl.string(analyticsLocations(1126).t.Iuzg8R);
-    return closure_1_13(analyticsLocations(9270).GenericHeaderTitle, obj);
+    return closure_1_13(analyticsLocations(9297).GenericHeaderTitle, obj);
   };
   const obj = analyticsLocations(576);
-  obj5.headerLeft = analyticsLocations(6205).getHeaderCloseButton(_prompt(5941).pop);
+  obj5.headerLeft = analyticsLocations(6200).getHeaderCloseButton(_prompt(5934).pop);
   obj5.render = function render(arg0, navigation) {
     return closure_2_13(EditCustomStatusWithPreview, { navigation, onClose: _prompt(dependencyMap[45]).pop, analyticsLocations, prompt: _prompt });
   };
@@ -429,7 +429,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
   cResult[1] = _prompt;
   cResult[2] = obj4;
   tmp4 = obj4;
-  const tmpResult4 = analyticsLocations(6205);
+  const tmpResult4 = analyticsLocations(6200);
 }) : (function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const _prompt = analyticsLocations.prompt;
@@ -443,7 +443,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
       const obj = { title: null };
       const intl = analyticsLocations(1126).intl;
       obj.title = intl.string(analyticsLocations(1126).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(9270).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(9297).GenericHeaderTitle, obj);
     };
     obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj2.render = function render(arg0, navigation) {
@@ -460,5 +460,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditCust
     obj3 = { height: 56 };
   }
   obj.headerStyle = obj3;
-  return closure_13(analyticsLocations(6686).Navigator, obj);
+  return closure_13(analyticsLocations(6687).Navigator, obj);
 });

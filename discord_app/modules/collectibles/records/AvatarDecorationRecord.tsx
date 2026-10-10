@@ -1,6 +1,6 @@
-// === Module 7262: AvatarDecorationRecord ===
+// === Module 7268: AvatarDecorationRecord ===
 
-// Module 7262 (AvatarDecorationRecord)
+// Module 7268 (AvatarDecorationRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
 import BaseCollectiblesItemRecord from "BaseCollectiblesItemRecord" /* 1992 */;
 

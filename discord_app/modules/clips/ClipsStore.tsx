@@ -4,10 +4,10 @@
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import DiscordNativeDefault from "DiscordNative" /* 4690 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 14227 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14229 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14230 */;
+import DiscordNativeDefault from "DiscordNative" /* 4731 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14282 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14284 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14285 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2019 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -24,7 +24,7 @@ let closure_36 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_36 = async function _migrateDefaultStorage() {
           closure_0 = tmp7;
           closure_128_0 = undefined;
           closure_128_1 = undefined;
-          if (clipsSettings.clipsSettings.storageLocation === value2) {
+          if (clipsSettings.clipsSettings.storageLocation === value3) {
             if (null != DiscordNativeDefault) {
               if (null != DiscordNativeDefault.app) {
                 c3 = 1;
@@ -229,7 +229,7 @@ function trackClipMessage(message) {
         flag3 = recordPOVMatches(items1, tmp3);
         const tmp13Result = recordPOVMatches(items1, tmp3);
       }
-      let value4 = map2.get(message.id);
+      value4 = map2.get(message.id);
       if (value4 == null) {
         value4 = [];
       }
@@ -240,11 +240,11 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(7744);
+const ClipsConstants = fn(7762);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1085);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5211);
+const StreamSettingsConstants = fn(5212);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};

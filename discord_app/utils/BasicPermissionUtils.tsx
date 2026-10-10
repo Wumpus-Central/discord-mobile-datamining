@@ -1,6 +1,6 @@
-// === Module 4718: BasicPermissionUtils ===
+// === Module 4759: BasicPermissionUtils ===
 
-// Module 4718 (BasicPermissionUtils)
+// Module 4759 (BasicPermissionUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
 

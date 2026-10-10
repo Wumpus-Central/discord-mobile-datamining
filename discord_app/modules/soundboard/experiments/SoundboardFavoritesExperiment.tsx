@@ -1,6 +1,6 @@
-// === Module 5428: SoundboardFavoritesExperiment ===
+// === Module 5431: SoundboardFavoritesExperiment ===
 
-// Module 5428 (SoundboardFavoritesExperiment)
+// Module 5431 (SoundboardFavoritesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

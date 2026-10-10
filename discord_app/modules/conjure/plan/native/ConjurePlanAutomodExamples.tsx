@@ -1,29 +1,29 @@
-// === Module 17092: ConjurePlanAutomodExamples ===
+// === Module 17161: ConjurePlanAutomodExamples ===
 
-// Module 17092 (ConjurePlanAutomodExamples)
+// Module 17161 (ConjurePlanAutomodExamples)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AvatarUtils from "AvatarUtils" /* 1415 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1418 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 17093 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 17162 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5087);
+const Text_Text = Text(5088);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let obj = { blocked: fn(10375).ShieldIcon, alert: fn(8756).BellIcon, allowed: fn(4993).CircleCheckIcon };
+let obj = { blocked: fn(10408).ShieldIcon, alert: fn(8772).BellIcon, allowed: fn(6867).CircleCheckIcon };
 let obj2 = { blurple: { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND }, red: null, green: null };
 let obj3 = { text: "text-brand", icon: nativeDefault.colors.TEXT_BRAND };
 obj2.red = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let obj4 = { text: "text-feedback-critical", icon: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj2.green = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj7 = { heading: null, examples: null, section: null, sectionHeader: null, sectionLabel: null, rows: null, row: null, blockedRow: null, blockedBar: null, rowBody: null };
 let obj5 = { text: "text-feedback-positive", icon: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj7.heading = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -409,7 +409,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj3.children = intl2.string(_modDef3827.z4ZKYG);
+    obj3.children = intl2.string(_modDef3849.z4ZKYG);
     const tmp13 = React4(Text_Text.Text, obj3);
     cResult[2] = tmp13;
     let tmp10 = tmp13;
@@ -475,7 +475,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
         }
         const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl3 = util.intl;
-        obj5.children = intl3.string(_modDef3827.bo4MOx);
+        obj5.children = intl3.string(_modDef3849.bo4MOx);
         const tmp29 = React4(Text_Text.Text, obj5);
         cResult[11] = tmp29;
         const tmp27 = tmp29;
@@ -524,7 +524,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const items = [React4(native.Avatar, obj3), ];
   const obj6 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj6.children = intl2.string(_modDef3827.z4ZKYG);
+  obj6.children = intl2.string(_modDef3849.z4ZKYG);
   items[1] = React4(Text_Text.Text, obj6);
   obj2.children = items;
   const items1 = [hasOwnProperty(View, obj2), , ];
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   items1[1] = React4(View, obj7);
   const obj9 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl3 = util.intl;
-  obj9.children = intl3.string(_modDef3827.bo4MOx);
+  obj9.children = intl3.string(_modDef3849.bo4MOx);
   items1[2] = React4(Text_Text.Text, obj9);
   obj.children = items1;
   return hasOwnProperty(Stack_Stack.Stack, obj);

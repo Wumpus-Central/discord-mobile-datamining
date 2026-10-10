@@ -1,12 +1,12 @@
-// === Module 11802: CommandOptionView ===
+// === Module 11846: CommandOptionView ===
 
-// Module 11802 (CommandOptionView)
+// Module 11846 (CommandOptionView)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
-import _modDef9761 from "module_9761" /* 9761 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11804 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
+import _modDef9790 from "module_9790" /* 9790 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11848 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [fn(1998).ApplicationCommandOptionType.STRING, fn(1998).ApplicationCommandOptionType.INTEGER, fn(1998).ApplicationCommandOptionType.ATTACHMENT, fn(1998).ApplicationCommandOptionType.BOOLEAN, fn(1998).ApplicationCommandOptionType.MENTIONABLE, fn(1998).ApplicationCommandOptionType.USER, fn(1998).ApplicationCommandOptionType.ROLE, fn(1998).ApplicationCommandOptionType.CHANNEL, fn(1998).ApplicationCommandOptionType.NUMBER];
 const set = new Set(items);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { optionDescription: { marginTop: 4 }, optionErrorContainer: { flexDirection: "row", alignItems: "center", marginTop: 4 }, optionErrorIcon: { marginRight: 4, tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" }, labelText: { marginBottom: 8 } };
 let closure_8 = createStyles.createStyles(obj2);
 let items1 = [fn(1998).ApplicationCommandOptionType.STRING, fn(1998).ApplicationCommandOptionType.INTEGER, fn(1998).ApplicationCommandOptionType.NUMBER];
@@ -117,17 +117,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
   const tmp = closure_8();
   const items = [AccessibilityStore];
   const stateFromStores = option(504).useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
-  const ReduceMotion = option(4811).ReduceMotion;
+  const ReduceMotion = option(4850).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
   const obj = option(504);
-  const optionEnteringAnimation = option(11803).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(11847).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
       fn = (fn) => fn();
     }
-    const FadeOut = tmp2(4811).FadeOut;
-    const FadeInUp = tmp2(4811).FadeInUp;
+    const FadeOut = tmp2(4850).FadeOut;
+    const FadeInUp = tmp2(4850).FadeInUp;
     const obj2 = { transform: null };
     items1 = [{ translateY: -10 }];
     obj2.transform = items1;
@@ -147,8 +147,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     const obj5 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(11803).ExitingAnimation,
-      layout: tmp2(11803).LayoutAnimation,
+      exiting: tmp2(11847).ExitingAnimation,
+      layout: tmp2(11847).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     let tmp17Result = hasItem1;
     if (hasItem1) {
       const obj7 = { style: tmp.labelText, variant: "text-sm/semibold", color: "text-subtle", children: option.displayName };
-      tmp17Result = closure_5(tmp2(5087).Text, obj7);
+      tmp17Result = closure_5(tmp2(5088).Text, obj7);
     }
     const items2 = [tmp17Result, , , ];
     const obj8 = {
@@ -184,13 +184,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     };
     items2[1] = closure_5(AppLauncherCommandOptionDefault, obj8);
     const obj9 = { style: tmp.optionDescription, variant: "text-xs/medium", color: "text-muted", children: option.displayDescription };
-    items2[2] = closure_5(tmp2(5087).Text, obj9);
+    items2[2] = closure_5(tmp2(5088).Text, obj9);
     if (hasItem) {
       const obj10 = { collapsable: false, entering: reduceMotionResult1, exiting: reduceMotionResult, style: tmp.optionErrorContainer, children: null };
-      const obj11 = { style: tmp.optionErrorIcon, source: _modDef9761, size: tmp2(1200).IconSizes.REFRESH_SMALL_16 };
+      const obj11 = { style: tmp.optionErrorIcon, source: _modDef9790, size: tmp2(1200).IconSizes.REFRESH_SMALL_16 };
       const items3 = [closure_5(tmp2(1200).Icon, obj11), ];
       const obj12 = { variant: "text-xs/medium", color: "text-feedback-critical", children: optionValidationResults[option.name].error };
-      items3[1] = closure_5(tmp2(5087).Text, obj12);
+      items3[1] = closure_5(tmp2(5088).Text, obj12);
       obj10.children = items3;
       hasItem = closure_6(ReanimatedRexportDefault.View, obj10);
     }
@@ -198,10 +198,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CommandO
     obj6.children = items2;
     obj5.children = closure_6(View, obj6);
     obj4.children = closure_5(ReanimatedRexportDefault.View, obj5);
-    obj3.children = closure_5(tmp2(11811).AwaitAnimationContext, obj4);
-    return closure_5(tmp2(4811).LayoutAnimationConfig, obj3);
+    obj3.children = closure_5(tmp2(11855).AwaitAnimationContext, obj4);
+    return closure_5(tmp2(4850).LayoutAnimationConfig, obj3);
   } else {
     return null;
   }
-  const tmp2Result = option(11803);
+  const tmp2Result = option(11847);
 });

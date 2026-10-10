@@ -1,11 +1,11 @@
-// === Module 7343: UserSearchUtils ===
+// === Module 7349: UserSearchUtils ===
 
-// Module 7343 (UserSearchUtils)
+// Module 7349 (UserSearchUtils)
 import StringUtils from "StringUtils" /* 2031 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7344 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7350 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 
 require = fn;
 const RelationshipTypes = fn(1085).RelationshipTypes;

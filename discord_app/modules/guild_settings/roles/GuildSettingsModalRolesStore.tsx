@@ -1,14 +1,14 @@
-// === Module 18268: GuildSettingsModalRolesStore ===
+// === Module 18342: GuildSettingsModalRolesStore ===
 
-// Module 18268 (GuildSettingsModalRolesStore)
+// Module 18342 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4930 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12084 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import shared from "shared" /* 4969 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12128 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 require = fn;
 function handleGuildRoleCreateOrUpdate(arg0) {

@@ -1,15 +1,15 @@
-// === Module 16012: TakeActionScreen ===
+// === Module 16074: TakeActionScreen ===
 
-// Module 16012 (TakeActionScreen)
+// Module 16074 (TakeActionScreen)
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4765 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7011 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7017 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10361 */;
+import LinkingDefault from "Linking" /* 4806 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7017 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7025 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10394 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -17,11 +17,11 @@ const require = globalThis.__r;
 require = fn;
 let useState = fn(19).useState;
 const View = fn(17).View;
-const Constants = fn(10348);
+const Constants = fn(10381);
 ({ MODAL_LOCATION_CONTEXT_MOBILE: c10, NOFILTR_URL: closure_11, THROUGHLINE_URL: closure_12, REPORTED_USER_CONFIRMATION_TOAST_KEY: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 }, helplineGroup: null, textCenter: null };
 let obj3 = { display: "flex", alignItems: "center", alignSelf: "stretch", gap: nativeDefault.space.PX_16 };
 obj2.helplineGroup = { display: "flex", alignSelf: "stretch", gap: nativeDefault.space.PX_4 };
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
                     constructor() {
                       obj = closure_1(closure_2[16]);
                       obj1 = { location: closure_10 };
-                      unblockUserResult = obj.unblockUser(closure_0, obj1);
+                      unblockUserResult = obj.unblockUser(closure_0, obj1, channelId);
                       obj3 = closure_1(closure_2[17]);
                       result = obj3.showUnblockSuccessToast(closure_0, channelId);
                       tmp3 = trackAnalyticsEvent(closure_0(closure_2[18]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
             constructor() {
               obj = closure_1(closure_2[16]);
               obj1 = { location: closure_10 };
-              unblockUserResult = obj.unblockUser(closure_0, obj1);
+              unblockUserResult = obj.unblockUser(closure_0, obj1, channelId);
               obj3 = closure_1(closure_2[17]);
               result = obj3.showUnblockSuccessToast(closure_0, channelId);
               tmp3 = trackAnalyticsEvent(closure_0(closure_2[18]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
                 let obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -145,10 +145,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
                                 const obj2 = { text: null, variant: "success" };
                                 const intl = closure_0(1126).intl;
                                 obj2.text = intl.string(closure_0(1126).t.gn2c6X);
-                                c1(4768).openMana(closure_2_13, obj2);
+                                c1(4809).open(closure_2_13, obj2);
                               }, () => {
                                 const intl = closure_1_0(1126).intl;
-                                closure_1_0(4767).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                                closure_1_0(4808).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                               }),
                       done: false
                     };
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
         constructor() {
           obj = closure_1(closure_2[16]);
           obj1 = { location: closure_10 };
-          unblockUserResult = obj.unblockUser(closure_0, obj1);
+          unblockUserResult = obj.unblockUser(closure_0, obj1, channelId);
           obj3 = closure_1(closure_2[17]);
           result = obj3.showUnblockSuccessToast(closure_0, channelId);
           tmp3 = trackAnalyticsEvent(closure_0(closure_2[18]).CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
@@ -212,7 +212,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
   }
   const fn2 = function w() {
     const obj2 = { location: _location };
-    RelationshipActionCreatorsDefault.blockUser(closure_0, { location: _location }).then(() => {
+    RelationshipActionCreatorsDefault.blockUser(closure_0, { location: _location }, channelId).then(() => {
       const result = channelId(setReported[17]).showBlockSuccessToast(closure_1_0, closure_1_1);
     });
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK);
@@ -246,14 +246,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
   const shouldShowThroughlineLink = senderId(setReported[14]).useShouldShowThroughlineLink();
   let callback = noop.useCallback(() => {
     const obj2 = { location: _location };
-    RelationshipActionCreatorsDefault.blockUser(senderId, { location: _location }).then(() => {
+    RelationshipActionCreatorsDefault.blockUser(senderId, { location: _location }, channelId).then(() => {
       const result = channelId(setReported[17]).showBlockSuccessToast(senderId, closure_1_1);
     });
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_BLOCK);
   }, items2);
   const items3 = [senderId, channelId, trackAnalyticsEvent];
   const callback1 = noop.useCallback(() => {
-    RelationshipActionCreatorsDefault.unblockUser(senderId, { location: _location });
+    RelationshipActionCreatorsDefault.unblockUser(senderId, { location: _location }, channelId);
     const obj2 = { location: _location };
     const result = SafetyToastsActionCreatorsDefault.showUnblockSuccessToast(senderId, channelId);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_UNBLOCK);
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -288,15 +288,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
             v1 = 1;
             dependencyMap = 1;
             const obj5 = {
-              value: tmp4(7704).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
+              value: tmp4(7721).submitReportForInappropriateConversationSafetyAlert(lastChannelMessage, () => {
                         dependencyMap(true);
                         const obj2 = { text: null, variant: "success" };
                         const intl = closure_0(1126).intl;
                         obj2.text = intl.string(closure_0(1126).t.gn2c6X);
-                        c1(4768).openMana(closure_2_13, obj2);
+                        c1(4809).open(closure_2_13, obj2);
                       }, () => {
                         const intl = closure_1_0(1126).intl;
-                        closure_1_0(4767).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
+                        closure_1_0(4808).presentFailedToast(intl.string(closure_1_0(1126).t["0YV04/"]));
                       }),
               done: false
             };
@@ -309,9 +309,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TakeActi
           throw value;
         } else if (arg0 !== 2) {
           closure_128_5(false);
-          const result = v1(7017).showReportSuccessToast(closure_128_0, closure_128_1);
-          closure_128_3(tmp4(10361).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
-          const obj = v1(7017);
+          const result = v1(7025).showReportSuccessToast(closure_128_0, closure_128_1);
+          closure_128_3(tmp4(10394).CtaEventTypes.USER_TAKEOVER_MODAL_REPORT);
+          const obj = v1(7025);
         }
         dependencyMap = 3;
         const obj6 = { value, done: true };

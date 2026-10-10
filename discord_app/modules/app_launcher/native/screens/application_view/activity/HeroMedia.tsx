@@ -1,21 +1,21 @@
-// === Module 11724: HeroMedia ===
+// === Module 11769: HeroMedia ===
 
-// Module 11724 (HeroMedia)
+// Module 11769 (HeroMedia)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6854 */;
-import common_VideoDefault from "common/Video" /* 8409 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10589 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10922 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11688 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6857 */;
+import common_VideoDefault from "common/Video" /* 8425 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10623 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 10962 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11734 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ mediaBackground: { backgroundColor: "black" } });
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHeroMediaDimensions(arg0) {

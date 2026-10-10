@@ -1,6 +1,6 @@
-// === Module 2059: Timers ===
+// === Module 2060: Timers ===
 
-// Module 2059 (Timers)
+// Module 2060 (Timers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 class Timeout {
@@ -233,7 +233,7 @@ prototype5["_flush"] = function _flush() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

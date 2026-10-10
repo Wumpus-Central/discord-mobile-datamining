@@ -1,14 +1,14 @@
-// === Module 17663: VoicePanelContainer ===
+// === Module 17735: VoicePanelContainer ===
 
-// Module 17663 (VoicePanelContainer)
+// Module 17735 (VoicePanelContainer)
 import c from "c" /* 576 */;
-import _mod4692 from "module_4692" /* 4692 */;
-import native from "native" /* 4788 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 17664 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 17826 */;
+import _mod4733 from "module_4733" /* 4733 */;
+import native from "native" /* 4827 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 17736 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 17898 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import VoicePanelStore from "VoicePanelStore" /* 6081 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import VoicePanelStore from "VoicePanelStore" /* 6074 */;
 
 require = fn;
 function getChannelKey(arg0) {
@@ -102,7 +102,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     first = cResult[0];
   }
-  const tmp5 = VoicePanelStore(first, _mod4692.shallow);
+  const tmp5 = VoicePanelStore(first, _mod4733.shallow);
   if (cResult[1] !== tmp5) {
     const obj2 = { items: tmp5, getItemKey: getChannelKey, renderItem: renderVoicePanel };
     const tmp10 = jsx(native.TransitionGroup, { items: tmp5, getItemKey: getChannelKey, renderItem: renderVoicePanel });
@@ -114,6 +114,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   return tmp6;
 }) : (function VoicePanelContainer() {
-  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4692.shallow);
-  return jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4692.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4733.shallow);
+  return jsx(native.TransitionGroup, { items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4733.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 }));

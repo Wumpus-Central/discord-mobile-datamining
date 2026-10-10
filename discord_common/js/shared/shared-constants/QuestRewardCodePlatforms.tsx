@@ -1,6 +1,6 @@
-// === Module 5983: QuestRewardCodePlatforms ===
+// === Module 5976: QuestRewardCodePlatforms ===
 
-// Module 5983 (QuestRewardCodePlatforms)
+// Module 5976 (QuestRewardCodePlatforms)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardCodePlatforms.tsx");

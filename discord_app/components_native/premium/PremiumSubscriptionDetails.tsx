@@ -1,58 +1,58 @@
-// === Module 13568: PremiumSubscriptionDetails ===
+// === Module 13619: PremiumSubscriptionDetails ===
 
-// Module 13568 (PremiumSubscriptionDetails)
+// Module 13619 (PremiumSubscriptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7119 */;
-import _modDef7149 from "module_7149" /* 7149 */;
-import _modDef8078 from "module_8078" /* 8078 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10023 */;
-import _modDef10037 from "module_10037" /* 10037 */;
-import _modDef10038 from "module_10038" /* 10038 */;
-import _modDef10039 from "module_10039" /* 10039 */;
-import _modDef10040 from "module_10040" /* 10040 */;
-import _modDef10041 from "module_10041" /* 10041 */;
-import _modDef10042 from "module_10042" /* 10042 */;
-import _modDef10045 from "module_10045" /* 10045 */;
-import _modDef13569 from "module_13569" /* 13569 */;
-import _modDef13570 from "module_13570" /* 13570 */;
-import _modDef13571 from "module_13571" /* 13571 */;
-import _modDef13572 from "module_13572" /* 13572 */;
-import _modDef13573 from "module_13573" /* 13573 */;
-import _modDef13574 from "module_13574" /* 13574 */;
-import _modDef13575 from "module_13575" /* 13575 */;
-import _modDef13576 from "module_13576" /* 13576 */;
-import _modDef13577 from "module_13577" /* 13577 */;
-import _modDef13578 from "module_13578" /* 13578 */;
-import _modDef13579 from "module_13579" /* 13579 */;
-import _modDef13580 from "module_13580" /* 13580 */;
-import _modDef13581 from "module_13581" /* 13581 */;
-import _modDef13582 from "module_13582" /* 13582 */;
-import _modDef13583 from "module_13583" /* 13583 */;
-import _modDef13584 from "module_13584" /* 13584 */;
-import _modDef13585 from "module_13585" /* 13585 */;
-import _modDef13586 from "module_13586" /* 13586 */;
-import _modDef13587 from "module_13587" /* 13587 */;
-import _modDef13588 from "module_13588" /* 13588 */;
-import _modDef13589 from "module_13589" /* 13589 */;
-import _modDef13590 from "module_13590" /* 13590 */;
-import _modDef13591 from "module_13591" /* 13591 */;
-import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13593 */;
-import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13605 */;
-import SubscriptionRenewalMutationsNoticeDefault from "SubscriptionRenewalMutationsNotice" /* 13606 */;
-import SubscriptionAccountHoldNoticeDefault from "SubscriptionAccountHoldNotice" /* 13607 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6851 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 7125 */;
+import _modDef7155 from "module_7155" /* 7155 */;
+import _modDef8096 from "module_8096" /* 8096 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10052 */;
+import _modDef10066 from "module_10066" /* 10066 */;
+import _modDef10067 from "module_10067" /* 10067 */;
+import _modDef10068 from "module_10068" /* 10068 */;
+import _modDef10069 from "module_10069" /* 10069 */;
+import _modDef10070 from "module_10070" /* 10070 */;
+import _modDef10071 from "module_10071" /* 10071 */;
+import _modDef10074 from "module_10074" /* 10074 */;
+import _modDef13620 from "module_13620" /* 13620 */;
+import _modDef13621 from "module_13621" /* 13621 */;
+import _modDef13622 from "module_13622" /* 13622 */;
+import _modDef13623 from "module_13623" /* 13623 */;
+import _modDef13624 from "module_13624" /* 13624 */;
+import _modDef13625 from "module_13625" /* 13625 */;
+import _modDef13626 from "module_13626" /* 13626 */;
+import _modDef13627 from "module_13627" /* 13627 */;
+import _modDef13628 from "module_13628" /* 13628 */;
+import _modDef13629 from "module_13629" /* 13629 */;
+import _modDef13630 from "module_13630" /* 13630 */;
+import _modDef13631 from "module_13631" /* 13631 */;
+import _modDef13632 from "module_13632" /* 13632 */;
+import _modDef13633 from "module_13633" /* 13633 */;
+import _modDef13634 from "module_13634" /* 13634 */;
+import _modDef13635 from "module_13635" /* 13635 */;
+import _modDef13636 from "module_13636" /* 13636 */;
+import _modDef13637 from "module_13637" /* 13637 */;
+import _modDef13638 from "module_13638" /* 13638 */;
+import _modDef13639 from "module_13639" /* 13639 */;
+import _modDef13640 from "module_13640" /* 13640 */;
+import _modDef13641 from "module_13641" /* 13641 */;
+import _modDef13642 from "module_13642" /* 13642 */;
+import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet" /* 13644 */;
+import PremiumSubscriptionInvoice from "PremiumSubscriptionInvoice" /* 13656 */;
+import SubscriptionRenewalMutationsNoticeDefault from "SubscriptionRenewalMutationsNotice" /* 13657 */;
+import SubscriptionAccountHoldNoticeDefault from "SubscriptionAccountHoldNotice" /* 13658 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13592);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13643);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
@@ -78,7 +78,7 @@ let closure_28 = async function _handleCancelSubscription() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -124,7 +124,7 @@ let closure_28 = async function _handleCancelSubscription() {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -224,7 +224,7 @@ let closure_31 = async function _onResubscribeClick(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -290,7 +290,7 @@ let closure_31 = async function _onResubscribeClick(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp19) {
         c3 = tmp;
         throw tmp19;
@@ -368,26 +368,26 @@ class PremiumSubscriptionHeader {
       tmp14 = coercedPremiumGuildSubscriptionStatus;
     } else {
       tmp6Result = tmp6(tmp3[11]);
-      tmp36 = SubscriptionPlanInfo;
-      tmp37 = SubscriptionPlanInfo[planIdFromInvoice];
+      tmp35 = SubscriptionPlanInfo;
+      tmp36 = SubscriptionPlanInfo[planIdFromInvoice];
       statusFromInvoice = tmp6Result.getStatusFromInvoice(subscription, renewalInvoicePreview);
       formatRateResult = null;
       str = "missing subscription planInfo";
-      tmp38 = tmp6(tmp3[56])(null != tmp37, "missing subscription planInfo");
+      tmp37 = tmp6(tmp3[56])(null != tmp36, "missing subscription planInfo");
       tmp6Result1 = tmp6(tmp3[11]);
       obj34 = { subscription: null, planId: null, price: null, includePremiumGuilds: true };
       obj34.subscription = subscription;
       obj34.planId = planIdFromInvoice;
       if (null != stateFromStores1) {
         tmp2Result2 = tmp2(tmp3[59]);
-        formatRateResult = tmp2Result2.formatRate(stateFromStores1.priceString, tmp37.interval, tmp37.intervalCount);
+        formatRateResult = tmp2Result2.formatRate(stateFromStores1.priceString, tmp36.interval, tmp36.intervalCount);
       }
       obj34.price = formatRateResult;
       premiumGuildHeaderDescription = tmp6Result1.getPlanDescription(obj34);
       tmp14 = statusFromInvoice;
     }
-    tmp19 = tmp14 === SubscriptionStatusTypes.CANCELED;
     tmp18 = SubscriptionStatusTypes;
+    tmp19 = tmp14 === SubscriptionStatusTypes.CANCELED;
     if (tmp14 === SubscriptionStatusTypes.ACTIVE) {
       tmp21 = closure_20;
       ACTIVE = closure_20.ACTIVE;
@@ -402,6 +402,13 @@ class PremiumSubscriptionHeader {
     if (isOnPlatformMatchingExternalPaymentGateway) {
       isOnPlatformMatchingExternalPaymentGateway = subscription.isOnPlatformMatchingExternalPaymentGateway;
     }
+    tmp22 = isOnPlatformMatchingExternalPaymentGateway;
+    if (isOnPlatformMatchingExternalPaymentGateway) {
+      tmp22 = null == subscription.renewalMutations;
+    }
+    if (tmp22) {
+      tmp22 = subscription.status !== tmp18.BILLING_RETRY;
+    }
     tmp23 = jsxs;
     tmp24 = View;
     obj35 = { style: null, children: null };
@@ -412,7 +419,6 @@ class PremiumSubscriptionHeader {
     obj36 = { style: tmp.header, children: null };
     tmp25 = jsx;
     obj37 = { source: closure_21[premiumBranding][ACTIVE], style: tmp.headerBackground };
-    tmp22 = null != subscription.renewalMutations;
     items3 = [, , , ];
     items3[0] = jsx(Image, obj37);
     obj38 = { style: tmp.logoContainer, children: null };
@@ -453,7 +459,7 @@ class PremiumSubscriptionHeader {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -492,7 +498,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 closure_128_2(false);
                 c4 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp23) {
               closure_2 = tmp23;
@@ -515,98 +521,96 @@ class PremiumSubscriptionHeader {
     }
     items6 = [, , , ];
     items6[0] = tmp25Result;
-    tmp29 = null;
-    if (isOnPlatformMatchingExternalPaymentGateway) {
-      tmp29 = null;
-      if (!tmp22) {
-        obj45 = { style: null, children: null };
-        obj45.style = tmp.buttonWrapper;
-        obj46 = { onPress: null, variant: "primary-overlay", text: null, size: "sm" };
-        obj46.onPress = function onPress() {
-          handleManageSubscription(subscription, closure_1, analyticsLocations);
-        };
-        if (subscription.status === tmp18.ACCOUNT_HOLD) {
-          intl3 = tmp2(tmp3[62]).intl;
-          stringResult = intl3.string(tmp2(tmp3[62]).t.SgX7Ra);
-        } else {
-          intl2 = tmp2(tmp3[62]).intl;
-          stringResult = intl2.string(tmp2(tmp3[62]).t.gmVtgF);
+    if (!tmp22) {
+      items6[1] = null;
+      tmp2Result3 = tmp2(tmp3[11]);
+      tmp25Result1 = null;
+      if (tmp2Result3.subscriptionHasPremiumGuildPlan(subscription)) {
+        tmp25Result1 = null;
+        if (null != onClickManagePremiumGuild) {
+          obj45 = { style: null, children: null };
+          obj45.style = tmp.buttonWrapper;
+          obj46 = { onPress: null, variant: "primary-overlay", text: null, size: "sm" };
+          obj46.onPress = onClickManagePremiumGuild;
+          intl4 = tmp2(tmp3[62]).intl;
+          obj46.text = intl4.string(tmp2(tmp3[62]).t.gIVkjm);
+          obj45.children = tmp25(tmp2(tmp3[61]).Button, obj46);
+          tmp25Result1 = tmp25(tmp24, obj45);
         }
-        obj46.text = stringResult;
-        obj46 = tmp25(tmp2(tmp3[61]).Button, obj46);
-        obj45.children = obj46;
-        tmp25Result1 = tmp25(tmp24, obj45);
       }
-    }
-    items6[1] = tmp29;
-    tmp2Result3 = tmp2(tmp3[11]);
-    tmp25Result2 = null;
-    if (tmp2Result3.subscriptionHasPremiumGuildPlan(subscription)) {
+      items6[2] = tmp25Result1;
       tmp25Result2 = null;
-      if (null != onClickManagePremiumGuild) {
-        obj47 = { style: null, children: null };
-        obj47.style = tmp.buttonWrapper;
-        obj48 = { onPress: null, variant: "primary-overlay", text: null, size: "sm" };
-        obj48.onPress = onClickManagePremiumGuild;
-        intl4 = tmp2(tmp3[62]).intl;
-        obj48.text = intl4.string(tmp2(tmp3[62]).t.gIVkjm);
-        obj47.children = tmp25(tmp2(tmp3[61]).Button, obj48);
-        tmp25Result2 = tmp25(tmp24, obj47);
+      if (isOnPlatformMatchingExternalPaymentGateway) {
+        obj47 = { accessibilityRole: "link", style: null, onPress: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
+        obj47.style = tmp.cancelLink;
+        obj47.onPress = function onPress() {
+          closure_0 = subscription;
+          closure_1 = analyticsLocations;
+          const result = PremiumAnalyticsUtils.trackPremiumSubscriptionCancellationStarted(subscription, analyticsLocations);
+          if (obj2.isBoostOnlySubscription(subscription)) {
+            let tmp6ResultResult = handleCancelSubscription(subscription, analyticsLocations);
+          } else {
+            const obj3 = {
+              subscription,
+              mode: PremiumPlanWhatYouLoseActionSheet.WhatYouLoseMode.CANCEL,
+              onContinue(arg0) {
+                  return handleCancelSubscription(closure_0, closure_1, arg0);
+                }
+            };
+            tmp6ResultResult = openPremiumPlanWhatYouLoseActionSheetDefault(obj3);
+            const tmp6Result = openPremiumPlanWhatYouLoseActionSheetDefault;
+          }
+          return tmp6ResultResult;
+        };
+        intl5 = tmp2(tmp3[62]).intl;
+        obj47.children = intl5.string(tmp2(tmp3[62]).t["ETE/oC"]);
+        tmp25Result2 = tmp25(tmp2(tmp3[63]).Text, obj47);
       }
-    }
-    items6[2] = tmp25Result2;
-    tmp25Result3 = null;
-    if (isOnPlatformMatchingExternalPaymentGateway) {
-      obj49 = { accessibilityRole: "link", style: null, onPress: null, variant: "text-sm/medium", color: "text-overlay-light", children: null };
-      obj49.style = tmp.cancelLink;
-      obj49.onPress = function onPress() {
-        closure_0 = subscription;
-        closure_1 = analyticsLocations;
-        const result = PremiumAnalyticsUtils.trackPremiumSubscriptionCancellationStarted(subscription, analyticsLocations);
-        if (obj2.isBoostOnlySubscription(subscription)) {
-          let tmp6ResultResult = handleCancelSubscription(subscription, analyticsLocations);
-        } else {
-          const obj3 = {
-            subscription,
-            mode: PremiumPlanWhatYouLoseActionSheet.WhatYouLoseMode.CANCEL,
-            onContinue(arg0) {
-                return handleCancelSubscription(closure_0, closure_1, arg0);
-              }
-          };
-          tmp6ResultResult = openPremiumPlanWhatYouLoseActionSheetDefault(obj3);
-          const tmp6Result = openPremiumPlanWhatYouLoseActionSheetDefault;
-        }
-        return tmp6ResultResult;
+      items6[3] = tmp25Result2;
+      obj42.children = items6;
+      items3[3] = tmp23(tmp24, obj42);
+      obj36.children = items3;
+      items7 = [, ];
+      items7[0] = tmp23(tmp24, obj36);
+      tmp23Result = null;
+      if (isMismatchResult) {
+        obj48 = { accessibilityRole: "alert", style: null, children: null };
+        obj48.style = tmp.appleAccountMismatchNotice;
+        obj49 = { size: "sm", color: null };
+        obj49.color = tmp6(tmp3[9]).colors.ICON_FEEDBACK_WARNING;
+        items8 = [, ];
+        items8[0] = tmp25(tmp2(tmp3[64]).WarningIcon, obj49);
+        obj50 = { variant: "text-sm/medium", color: "text-strong", style: null, children: null };
+        obj50.style = tmp.appleAccountMismatchNoticeText;
+        intl6 = tmp2(tmp3[62]).intl;
+        obj50.children = intl6.string(tmp2(tmp3[62]).t.meauFg);
+        items8[1] = tmp25(tmp2(tmp3[63]).Text, obj50);
+        obj48.children = items8;
+        tmp23Result = tmp23(tmp24, obj48);
+      }
+      items7[1] = tmp23Result;
+      obj35.children = items7;
+      return tmp23(tmp24, obj35);
+    } else {
+      obj51 = { style: null, children: null };
+      obj51.style = tmp.buttonWrapper;
+      obj52 = { onPress: null, variant: "primary-overlay", text: null, size: "sm" };
+      obj52.onPress = function onPress() {
+        handleManageSubscription(subscription, closure_1, analyticsLocations);
       };
-      intl5 = tmp2(tmp3[62]).intl;
-      obj49.children = intl5.string(tmp2(tmp3[62]).t["ETE/oC"]);
-      tmp25Result3 = tmp25(tmp2(tmp3[63]).Text, obj49);
+      if (subscription.status === tmp18.ACCOUNT_HOLD) {
+        intl3 = tmp2(tmp3[62]).intl;
+        stringResult = intl3.string(tmp2(tmp3[62]).t.SgX7Ra);
+      } else {
+        intl2 = tmp2(tmp3[62]).intl;
+        stringResult = intl2.string(tmp2(tmp3[62]).t.gmVtgF);
+      }
+      obj52.text = stringResult;
+      obj52 = tmp25(tmp2(tmp3[61]).Button, obj52);
+      obj51.children = obj52;
+      tmp25Result3 = tmp25(tmp24, obj51);
     }
-    items6[3] = tmp25Result3;
-    obj42.children = items6;
-    items3[3] = tmp23(tmp24, obj42);
-    obj36.children = items3;
-    items7 = [, ];
-    items7[0] = tmp23(tmp24, obj36);
-    tmp23Result = null;
-    if (isMismatchResult) {
-      obj50 = { accessibilityRole: "alert", style: null, children: null };
-      obj50.style = tmp.appleAccountMismatchNotice;
-      obj51 = { size: "sm", color: null };
-      obj51.color = tmp6(tmp3[9]).colors.ICON_FEEDBACK_WARNING;
-      items8 = [, ];
-      items8[0] = tmp25(tmp2(tmp3[64]).WarningIcon, obj51);
-      obj52 = { variant: "text-sm/medium", color: "text-strong", style: null, children: null };
-      obj52.style = tmp.appleAccountMismatchNoticeText;
-      intl6 = tmp2(tmp3[62]).intl;
-      obj52.children = intl6.string(tmp2(tmp3[62]).t.meauFg);
-      items8[1] = tmp25(tmp2(tmp3[63]).Text, obj52);
-      obj50.children = items8;
-      tmp23Result = tmp23(tmp24, obj50);
-    }
-    items7[1] = tmp23Result;
-    obj35.children = items7;
-    return tmp23(tmp24, obj35);
+    return;
   }
 }
 get_ActivityIndicator = fn(17);
@@ -621,7 +625,7 @@ let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
 let obj = { fontSize: 14, marginTop: 10, color: nativeDefault.unsafe_rawColors.WHITE };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj3 = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, header: { padding: 16 }, headerBackground: null, wumpusImg: null, logoContainer: null, container: null, buttonContainer: null, buttonWrapper: null, cancelLink: null, appleAccountMismatchNotice: null, appleAccountMismatchNoticeText: null, desktopSubtext: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -643,84 +647,84 @@ let closure_19 = createStyles.createStyles(obj3);
 let obj8 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj9 = {};
 let obj10 = {};
-obj10[obj8.ACTIVE] = _modDef10040;
-obj10[obj8.ERROR] = _modDef13569;
-obj10[obj8.RESUB] = _modDef13570;
-obj9[fn(4728).Branding.BUNDLE] = obj10;
+obj10[obj8.ACTIVE] = _modDef10069;
+obj10[obj8.ERROR] = _modDef13620;
+obj10[obj8.RESUB] = _modDef13621;
+obj9[fn(4769).Branding.BUNDLE] = obj10;
 let obj11 = {};
-obj11[obj8.ACTIVE] = _modDef10037;
-obj11[obj8.ERROR] = _modDef13569;
-obj11[obj8.RESUB] = _modDef13570;
-obj9[fn(4728).Branding.TIER_0] = obj11;
+obj11[obj8.ACTIVE] = _modDef10066;
+obj11[obj8.ERROR] = _modDef13620;
+obj11[obj8.RESUB] = _modDef13621;
+obj9[fn(4769).Branding.TIER_0] = obj11;
 let obj12 = {};
-obj12[obj8.ACTIVE] = _modDef10038;
-obj12[obj8.ERROR] = _modDef13569;
-obj12[obj8.RESUB] = _modDef13570;
-obj9[fn(4728).Branding.TIER_1] = obj12;
+obj12[obj8.ACTIVE] = _modDef10067;
+obj12[obj8.ERROR] = _modDef13620;
+obj12[obj8.RESUB] = _modDef13621;
+obj9[fn(4769).Branding.TIER_1] = obj12;
 let obj13 = {};
-obj13[obj8.ACTIVE] = _modDef10039;
-obj13[obj8.ERROR] = _modDef13569;
-obj13[obj8.RESUB] = _modDef13570;
-obj9[fn(4728).Branding.TIER_2] = obj13;
+obj13[obj8.ACTIVE] = _modDef10068;
+obj13[obj8.ERROR] = _modDef13620;
+obj13[obj8.RESUB] = _modDef13621;
+obj9[fn(4769).Branding.TIER_2] = obj13;
 let obj14 = {};
-obj14[obj8.ACTIVE] = _modDef10041;
-obj14[obj8.ERROR] = _modDef13571;
-obj14[obj8.RESUB] = _modDef13572;
-obj9[fn(4728).Branding.PREMIUM_GUILD] = obj14;
+obj14[obj8.ACTIVE] = _modDef10070;
+obj14[obj8.ERROR] = _modDef13622;
+obj14[obj8.RESUB] = _modDef13623;
+obj9[fn(4769).Branding.PREMIUM_GUILD] = obj14;
 let obj15 = {};
 let obj16 = {};
-obj16[obj8.ACTIVE] = _modDef13573;
-obj16[obj8.ERROR] = _modDef13573;
-obj16[obj8.RESUB] = _modDef13573;
-obj15[fn(4728).Branding.BUNDLE] = obj16;
+obj16[obj8.ACTIVE] = _modDef13624;
+obj16[obj8.ERROR] = _modDef13624;
+obj16[obj8.RESUB] = _modDef13624;
+obj15[fn(4769).Branding.BUNDLE] = obj16;
 let obj17 = {};
-obj17[obj8.ACTIVE] = _modDef7149;
-obj17[obj8.ERROR] = _modDef13574;
-obj17[obj8.RESUB] = _modDef13575;
-obj15[fn(4728).Branding.TIER_0] = obj17;
+obj17[obj8.ACTIVE] = _modDef7155;
+obj17[obj8.ERROR] = _modDef13625;
+obj17[obj8.RESUB] = _modDef13626;
+obj15[fn(4769).Branding.TIER_0] = obj17;
 let obj18 = {};
-obj18[obj8.ACTIVE] = _modDef13576;
-obj18[obj8.ERROR] = _modDef13577;
-obj18[obj8.RESUB] = _modDef13578;
-obj15[fn(4728).Branding.TIER_1] = obj18;
+obj18[obj8.ACTIVE] = _modDef13627;
+obj18[obj8.ERROR] = _modDef13628;
+obj18[obj8.RESUB] = _modDef13629;
+obj15[fn(4769).Branding.TIER_1] = obj18;
 let obj19 = {};
-obj19[obj8.ACTIVE] = _modDef10042;
-obj19[obj8.ERROR] = _modDef13579;
-obj19[obj8.RESUB] = _modDef13580;
-obj15[fn(4728).Branding.TIER_2] = obj19;
+obj19[obj8.ACTIVE] = _modDef10071;
+obj19[obj8.ERROR] = _modDef13630;
+obj19[obj8.RESUB] = _modDef13631;
+obj15[fn(4769).Branding.TIER_2] = obj19;
 let obj20 = {};
-obj20[obj8.ACTIVE] = _modDef13581;
-obj20[obj8.ERROR] = _modDef13582;
-obj20[obj8.RESUB] = _modDef13583;
-obj15[fn(4728).Branding.PREMIUM_GUILD] = obj20;
-let closure_23 = { [fn(4728).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size }, [fn(4728).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(4728).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(4728).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(4728).Branding.PREMIUM_GUILD]: { [obj8.ACTIVE]: { width: 51, height: 36 }, [obj8.ERROR]: size2, [obj8.RESUB]: size2 } };
+obj20[obj8.ACTIVE] = _modDef13632;
+obj20[obj8.ERROR] = _modDef13633;
+obj20[obj8.RESUB] = _modDef13634;
+obj15[fn(4769).Branding.PREMIUM_GUILD] = obj20;
+let closure_23 = { [fn(4769).Branding.BUNDLE]: { [obj8.ACTIVE]: size, [obj8.ERROR]: size, [obj8.RESUB]: size }, [fn(4769).Branding.TIER_0]: { [obj8.ACTIVE]: { height: 35, width: 29 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(4769).Branding.TIER_1]: { [obj8.ACTIVE]: { height: 35, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(4769).Branding.TIER_2]: { [obj8.ACTIVE]: { height: 37, width: 49 }, [obj8.ERROR]: size1, [obj8.RESUB]: size1 }, [fn(4769).Branding.PREMIUM_GUILD]: { [obj8.ACTIVE]: { width: 51, height: 36 }, [obj8.ERROR]: size2, [obj8.RESUB]: size2 } };
 let obj21 = {};
 let obj22 = {};
-obj22[obj8.ACTIVE] = _modDef13584;
-obj22[obj8.ERROR] = _modDef13584;
-obj22[obj8.RESUB] = _modDef13585;
-obj21[fn(4728).Branding.BUNDLE] = obj22;
+obj22[obj8.ACTIVE] = _modDef13635;
+obj22[obj8.ERROR] = _modDef13635;
+obj22[obj8.RESUB] = _modDef13636;
+obj21[fn(4769).Branding.BUNDLE] = obj22;
 let obj23 = {};
-obj23[obj8.ACTIVE] = _modDef10045;
-obj23[obj8.ERROR] = _modDef10045;
-obj23[obj8.RESUB] = _modDef13586;
-obj21[fn(4728).Branding.TIER_0] = obj23;
+obj23[obj8.ACTIVE] = _modDef10074;
+obj23[obj8.ERROR] = _modDef10074;
+obj23[obj8.RESUB] = _modDef13637;
+obj21[fn(4769).Branding.TIER_0] = obj23;
 let obj24 = {};
-obj24[obj8.ACTIVE] = _modDef13587;
-obj24[obj8.ERROR] = _modDef13587;
-obj24[obj8.RESUB] = _modDef13588;
-obj21[fn(4728).Branding.TIER_1] = obj24;
+obj24[obj8.ACTIVE] = _modDef13638;
+obj24[obj8.ERROR] = _modDef13638;
+obj24[obj8.RESUB] = _modDef13639;
+obj21[fn(4769).Branding.TIER_1] = obj24;
 let obj25 = {};
-obj25[obj8.ACTIVE] = _modDef8078;
-obj25[obj8.ERROR] = _modDef8078;
-obj25[obj8.RESUB] = _modDef13589;
-obj21[fn(4728).Branding.TIER_2] = obj25;
+obj25[obj8.ACTIVE] = _modDef8096;
+obj25[obj8.ERROR] = _modDef8096;
+obj25[obj8.RESUB] = _modDef13640;
+obj21[fn(4769).Branding.TIER_2] = obj25;
 let obj26 = {};
-obj26[obj8.ACTIVE] = _modDef13590;
-obj26[obj8.ERROR] = _modDef13590;
-obj26[obj8.RESUB] = _modDef13591;
-obj21[fn(4728).Branding.PREMIUM_GUILD] = obj26;
-let dependencyMap = { [fn(4728).Branding.BUNDLE]: { height: 33, width: 205 }, [fn(4728).Branding.TIER_0]: { height: 32, width: 59 }, [fn(4728).Branding.TIER_1]: { height: 16, width: 156 }, [fn(4728).Branding.TIER_2]: { height: 32, width: 78 }, [fn(4728).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
+obj26[obj8.ACTIVE] = _modDef13641;
+obj26[obj8.ERROR] = _modDef13641;
+obj26[obj8.RESUB] = _modDef13642;
+obj21[fn(4769).Branding.PREMIUM_GUILD] = obj26;
+let dependencyMap = { [fn(4769).Branding.BUNDLE]: { height: 33, width: 205 }, [fn(4769).Branding.TIER_0]: { height: 32, width: 59 }, [fn(4769).Branding.TIER_1]: { height: 16, width: 156 }, [fn(4769).Branding.TIER_2]: { height: 32, width: 78 }, [fn(4769).Branding.PREMIUM_GUILD]: { height: 17, width: 184 } };
 let closure_26 = { [obj8.ACTIVE]: obj, [obj8.ERROR]: obj, [obj8.RESUB]: obj2 };
 const ReactCompilerGating = fn(558);
 let obj7 = { alignSelf: "stretch", flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, margin: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg };
@@ -735,7 +739,7 @@ function onCancelClick(subscription, analyticsLocations) {
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(13593).WhatYouLoseMode.CANCEL,
+      mode: tmp(13644).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
           return handleCancelSubscription(closure_0, closure_1, arg0);
         }

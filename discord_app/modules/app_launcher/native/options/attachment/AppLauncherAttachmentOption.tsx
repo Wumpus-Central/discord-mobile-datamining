@@ -1,18 +1,18 @@
-// === Module 11818: AppLauncherAttachmentOption ===
+// === Module 11862: AppLauncherAttachmentOption ===
 
-// Module 11818 (AppLauncherAttachmentOption)
+// Module 11862 (AppLauncherAttachmentOption)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FileIcon from "FileIcon" /* 11819 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11821 */;
+import FileIcon from "FileIcon" /* 11863 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11865 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7889 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7907 */;
 
 require = fn;
 let View = fn(17).View;
-const DraftType = fn(7237).DraftType;
+const DraftType = fn(7243).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = { justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.imageIconWrapper = size;

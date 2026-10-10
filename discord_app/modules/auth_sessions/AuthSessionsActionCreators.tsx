@@ -1,6 +1,6 @@
-// === Module 15146: AuthSessionsActionCreators ===
+// === Module 15207: AuthSessionsActionCreators ===
 
-// Module 15146 (AuthSessionsActionCreators)
+// Module 15207 (AuthSessionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -33,7 +33,7 @@ let closure_6 = async function _logOutSessions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_6 = async function _logOutSessions(arg0) {
             let items = length;
             if (num2 === length.length) {
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             items = [length];

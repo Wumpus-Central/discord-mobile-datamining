@@ -1,20 +1,20 @@
-// === Module 12693: IAPUtils ===
+// === Module 12740: IAPUtils ===
 
-// Module 12693 (IAPUtils)
+// Module 12740 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import v1 from "v1" /* 1279 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1381 */;
 import PlatformUtils2 from "PlatformUtils" /* 1382 */;
-import DeviceUtils from "DeviceUtils" /* 5067 */;
-import ProductIds from "ProductIds" /* 7120 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 12714 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 12715 */;
+import DeviceUtils from "DeviceUtils" /* 5068 */;
+import ProductIds from "ProductIds" /* 7126 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 12761 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 12762 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5090 */;
+import DevSettingsStore from "DevSettingsStore" /* 5091 */;
 import UserStore from "UserStore" /* 1390 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_16 = async function _restorePurchases(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_19 = async function _fetchStoreFront() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -269,7 +269,7 @@ let closure_19 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_12695").getStorefront(), done: false };
+            const obj6 = { value: require("module_12742").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -309,7 +309,7 @@ let closure_19 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5909).convertToAlpha2;
+const convertToAlpha2 = fn(5911).convertToAlpha2;
 const Constants = fn(1085);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1392).NAMESPACE_SNOWFLAKE_UUID;
@@ -317,9 +317,9 @@ const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 let PlatformUtils = fn(1382);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(12694).default;
+  _default = fn(12741).default;
 }
-let items = [fn(12695).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(12695).ErrorCode.E_UNKNOWN];
+let items = [fn(12742).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(12742).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 const ReactCompilerGating = fn(558);
@@ -368,7 +368,7 @@ let obj = {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -391,7 +391,7 @@ let obj = {
                   c5 = 1;
                   c6 = 2;
                   c7 = 1;
-                  const obj5 = { value: sku(12695).clearTransactionIOS(), done: false };
+                  const obj5 = { value: sku(12742).clearTransactionIOS(), done: false };
                   return obj5;
                 } else {
                   const _Error2 = Error;
@@ -416,7 +416,7 @@ let obj = {
                   const obj8 = { sku, appAccountToken, withOffer };
                   c6 = 3;
                   c7 = 1;
-                  const obj9 = { value: sku(12695).requestPurchase(obj8), done: false };
+                  const obj9 = { value: sku(12742).requestPurchase(obj8), done: false };
                   return obj9;
                 }
               } else if (arg0 === 1) {
@@ -508,8 +508,8 @@ if (PlatformUtils) {
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(5067).getIsRunningOnSimulator();
-      let obj8 = fn(5067);
+      isRunningOnSimulator = fn(5068).getIsRunningOnSimulator();
+      let obj8 = fn(5068);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -522,7 +522,7 @@ if (PlatformUtils) {
   let obj6 = fn(1382);
 }
 if (PlatformUtils) {
-  obj = fn(12716).default;
+  obj = fn(12763).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();
@@ -561,7 +561,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -586,7 +586,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
                 const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
                 c6 = 2;
                 c7 = 1;
-                const obj7 = { value: requestJSONString(12695).requestPurchase(obj6), done: false };
+                const obj7 = { value: requestJSONString(12742).requestPurchase(obj6), done: false };
                 return obj7;
               } else {
                 const _Error2 = Error;
@@ -599,8 +599,8 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
               c5 = 0;
               closure_130_3 = closure_4;
               if (!set.has(closure_130_3.code)) {
-                const result = requestJSONString(4743).captureBillingException(closure_130_3);
-                const obj3 = requestJSONString(4743);
+                const result = requestJSONString(4784).captureBillingException(closure_130_3);
+                const obj3 = requestJSONString(4784);
               }
               closure_130_1(closure_130_3);
             } else if (arg0 === 1) {

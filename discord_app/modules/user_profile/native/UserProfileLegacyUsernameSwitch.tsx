@@ -1,8 +1,8 @@
-// === Module 14824: UserProfileLegacyUsernameSwitch ===
+// === Module 14883: UserProfileLegacyUsernameSwitch ===
 
-// Module 14824 (UserProfileLegacyUsernameSwitch)
-import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6669 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8272 */;
+// Module 14883 (UserProfileLegacyUsernameSwitch)
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6670 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8288 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         }
       }
       let obj2 = { value: tmp6, label: first, subLabel: cResult[3], accessibilityLabel: tmp11, onValueChange: tmp13 };
-      const tmp16 = jsx(tmp(14795).UserProfileEditFormSwitch, { value: tmp6, label: first, subLabel: cResult[3], accessibilityLabel: tmp11, onValueChange: tmp13 });
+      const tmp16 = jsx(tmp(14851).UserProfileEditFormSwitch, { value: tmp6, label: first, subLabel: cResult[3], accessibilityLabel: tmp11, onValueChange: tmp13 });
       cResult[7] = tmp6;
       cResult[8] = cResult[3];
       cResult[9] = tmp13;
@@ -112,5 +112,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       UserProfileSettingsActionCreators.setPendingChanges(obj2);
     }
   };
-  return jsx(setting(14795).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
+  return jsx(setting(14851).UserProfileEditFormSwitch, { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null });
 });

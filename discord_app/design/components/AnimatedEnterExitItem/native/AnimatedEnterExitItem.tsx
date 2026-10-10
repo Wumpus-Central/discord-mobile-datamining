@@ -1,9 +1,9 @@
-// === Module 9419: AnimatedEnterExitItem ===
+// === Module 9448: AnimatedEnterExitItem ===
 
-// Module 9419 (AnimatedEnterExitItem)
+// Module 9448 (AnimatedEnterExitItem)
 import c from "c" /* 576 */;
-import native from "native" /* 4788 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import native from "native" /* 4827 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   ({ renderItem, item, shouldAnimate } = entering);
   entering = entering.entering;
   const exiting = entering.exiting;
-  state = entering.state;
+  const state = entering.state;
   const cleanUp = entering.cleanUp;
   const useReducedMotion = entering.useReducedMotion;
   let obj = shouldAnimate(entering[3]);
@@ -164,7 +164,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Animat
   shouldAnimate = shouldAnimate.shouldAnimate;
   const entering = shouldAnimate.entering;
   const exiting = shouldAnimate.exiting;
-  state = shouldAnimate.state;
+  const state = shouldAnimate.state;
   const cleanUp = shouldAnimate.cleanUp;
   const useReducedMotion = shouldAnimate.useReducedMotion;
   let sharedValue;

@@ -1,20 +1,20 @@
-// === Module 12214: GuildPowerupsCardFooter ===
+// === Module 12258: GuildPowerupsCardFooter ===
 
-// Module 12214 (GuildPowerupsCardFooter)
+// Module 12258 (GuildPowerupsCardFooter)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2597 from "module_2597" /* 2597 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4993 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 5001 */;
-import BoostGemIcon from "BoostGemIcon" /* 5027 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6662 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12190 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12215 */;
+import _modDef2600 from "module_2600" /* 2600 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6289 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6663 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 6867 */;
+import BoostGemIcon from "BoostGemIcon" /* 9409 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12234 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12259 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5091 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -80,7 +80,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerup
   if (cResult[1] !== dateString) {
     const intl = util.intl;
     const obj3 = { dateString: entitlementExpirationDateToStringDefault(dateString) };
-    const result = intl.formatToMarkdownString(_modDef2597["ol/ao/"], obj3);
+    const result = intl.formatToMarkdownString(_modDef2600["ol/ao/"], obj3);
     cResult[1] = dateString;
     cResult[2] = result;
     let tmp9 = result;
@@ -116,7 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerup
   const obj3 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
   const intl = util.intl;
   const obj2 = { size: "xs", color: nativeDefault.colors.STATUS_WARNING };
-  obj3.children = intl.formatToMarkdownString(_modDef2597["ol/ao/"], { dateString: entitlementExpirationDateToStringDefault(dateString.dateString) });
+  obj3.children = intl.formatToMarkdownString(_modDef2600["ol/ao/"], { dateString: entitlementExpirationDateToStringDefault(dateString.dateString) });
   items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);
@@ -138,7 +138,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerup
   if (cResult[1] !== removingAt) {
     const intl = util.intl;
     const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(removingAt) };
-    const formatToPlainStringResult = intl.formatToPlainString(_modDef2597["6e2ry1"], obj3);
+    const formatToPlainStringResult = intl.formatToPlainString(_modDef2600["6e2ry1"], obj3);
     cResult[1] = removingAt;
     cResult[2] = formatToPlainStringResult;
     let tmp9 = formatToPlainStringResult;
@@ -174,7 +174,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerup
   const obj3 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
   const intl = util.intl;
   const obj2 = { size: "xs", color: nativeDefault.colors.STATUS_WARNING };
-  obj3.children = intl.formatToPlainString(_modDef2597["6e2ry1"], { dateString: getGuildPowerupFormattedDateStringDefault(removingAt.removingAt) });
+  obj3.children = intl.formatToPlainString(_modDef2600["6e2ry1"], { dateString: getGuildPowerupFormattedDateStringDefault(removingAt.removingAt) });
   items[1] = React4(Text_Text.Text, obj3);
   obj.children = items;
   return hasOwnProperty(View, obj);

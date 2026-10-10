@@ -1,6 +1,6 @@
-// === Module 13456: LinkedGameOrgInvitesExperiment ===
+// === Module 13507: LinkedGameOrgInvitesExperiment ===
 
-// Module 13456 (LinkedGameOrgInvitesExperiment)
+// Module 13507 (LinkedGameOrgInvitesExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

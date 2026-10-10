@@ -1,19 +1,19 @@
-// === Module 15840: GameCommunityUpsellDevTools ===
+// === Module 15902: GameCommunityUpsellDevTools ===
 
-// Module 15840 (GameCommunityUpsellDevTools)
+// Module 15902 (GameCommunityUpsellDevTools)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13930 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15841 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13983 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15903 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollView: { flex: 1 }, section: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8 };
@@ -157,7 +157,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                                 }
                               }
                               obj5.trailing = tmp58;
-                              const tmp61 = closure_8(tmp(6186).TableRow, obj5);
+                              const tmp61 = closure_8(tmp(6179).TableRow, obj5);
                               cResult[48] = tmp18;
                               cResult[49] = tmp61;
                               let tmp59 = tmp61;
@@ -198,8 +198,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                                   return;
                                 }
                               }
-                              const tmp65 = closure_8(tmp(15167).RefreshIcon, {});
-                              const tmp66 = closure_8(tmp(6195).TableRowArrow, {});
+                              const tmp65 = closure_8(tmp(15229).RefreshIcon, {});
+                              const tmp66 = closure_8(tmp(6188).TableRowArrow, {});
                               class T {
                                 constructor() {
                                   obj = { guildsCount: closure_1_7.getPresentableUpsellGuilds().length, dismissedCount: closure_1_7.getDismissedGuildIds().size, lastFetchedAt: closure_1_7.getLastFetchedAt() };
@@ -235,7 +235,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                                 }
                               }
                               obj6.trailing = tmp64;
-                              const tmp68 = closure_8(tmp(6186).TableRow, obj6);
+                              const tmp68 = closure_8(tmp(6179).TableRow, obj6);
                               cResult[54] = Z;
                               cResult[55] = tmp68;
                             } else {
@@ -271,8 +271,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                                   return obj;
                                 }
                               }
-                              obj7.icon = closure_8(tmp(15167).RefreshIcon, {});
-                              obj7.trailing = closure_8(tmp(6195).TableRowArrow, {});
+                              obj7.icon = closure_8(tmp(15229).RefreshIcon, {});
+                              obj7.trailing = closure_8(tmp(6188).TableRowArrow, {});
                               const tmp71 = closure_8(tmp70, obj7);
                               cResult[56] = tmp71;
                               const tmp69 = tmp71;
@@ -342,7 +342,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                             const obj9 = { title: "Actions", hasIcons: true, children: null };
                             const items3 = [tmp59, tmp67, tmp69];
                             obj9.children = items3;
-                            const tmp74 = closure_9(tmp(6269).TableRowGroup, obj9);
+                            const tmp74 = closure_9(tmp(6264).TableRowGroup, obj9);
                             cResult[57] = tmp59;
                             cResult[58] = tmp67;
                             cResult[59] = tmp74;
@@ -364,7 +364,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
                       const obj11 = { title: "Store State", hasIcons: false, children: null };
                       const items4 = [tmp41, tmp45, tmp48];
                       obj11.children = items4;
-                      const tmp53 = closure_9(tmp(6269).TableRowGroup, obj11);
+                      const tmp53 = closure_9(tmp(6264).TableRowGroup, obj11);
                       cResult[39] = tmp41;
                       cResult[40] = tmp45;
                       cResult[41] = tmp48;
@@ -402,7 +402,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
       }
     }
   }
-  const entries = Object.entries(tmp(15842).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
+  const entries = Object.entries(tmp(15904).DETECTABLE_GAME_TO_APPLICATION_ID_MAP);
   const mapped = entries.map((item) => {
     const tmp = _slicedToArray(item, 2);
     const first = tmp[0];
@@ -501,7 +501,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
         return;
       }
     }
-    const tmp32 = closure_8(tmp(6186).TableRow, { label: "No games configured", subLabel: "MULTI_GUILD_GAME_CONFIGS is empty", disabled: true });
+    const tmp32 = closure_8(tmp(6179).TableRow, { label: "No games configured", subLabel: "MULTI_GUILD_GAME_CONFIGS is empty", disabled: true });
   } else {
     class Z {
       constructor() {
@@ -516,7 +516,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function MultiG
   cResult[6] = tmp4.container;
   cResult[7] = tmp4.scrollView;
   cResult[8] = tmp4.section;
-  cResult[9] = stateFromStores(6269).TableRowGroup;
+  cResult[9] = stateFromStores(6264).TableRowGroup;
   cResult[10] = closure_4;
   cResult[11] = closure_5;
   cResult[12] = closure_4;

@@ -1,10 +1,10 @@
-// === Module 7699: ManualReviewActionCreators ===
+// === Module 7716: ManualReviewActionCreators ===
 
-// Module 7699 (ManualReviewActionCreators)
+// Module 7716 (ManualReviewActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 5928 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 7511 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -32,7 +32,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_14 = async function _handleManualReviewCta() {
             let tmp23 = null == closure_128_0;
             if (!tmp23) {
               const _Date2 = Date;
-              tmp23 = Date.now() - __initData2 >= MINUTE;
+              tmp23 = Date.now() - map1 >= MINUTE;
             }
             if (tmp23) {
               if (obj8.isCurrentUserSuspended()) {
@@ -153,7 +153,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1085).Endpoints;
-const SafetyToastType = fn(7018).SafetyToastType;
+const SafetyToastType = fn(7019).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

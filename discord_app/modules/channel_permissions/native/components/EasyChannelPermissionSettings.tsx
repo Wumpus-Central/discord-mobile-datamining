@@ -1,23 +1,23 @@
-// === Module 17455: EasyChannelPermissionSettings ===
+// === Module 17527: EasyChannelPermissionSettings ===
 
-// Module 17455 (EasyChannelPermissionSettings)
+// Module 17527 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 587 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8587 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8588 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8604 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 10731 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8602 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8603 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 8620 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 10766 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17456 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 17528 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -35,7 +35,7 @@ const Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { marginTop: 16, flex: 1 }, adminWarning: null };
 let obj3 = { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.adminWarning = { marginTop: nativeDefault.space.PX_12 };
@@ -162,7 +162,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -179,13 +179,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(8587).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(8587);
+            const result = v2(8602).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(8602);
             const tmp21 = v2;
-            closure_128_0 = v2(8587).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(8602).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(8587);
+            const obj10 = v2(8602);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -195,7 +195,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
             if (!tmp7) {
               v2 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp21(8587).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
+              const obj4 = { value: tmp21(8602).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
               return obj4;
             }
             canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
@@ -218,12 +218,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj7 = { value: tmp2(8588).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj7 = { value: tmp2(8603).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj7;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -242,7 +242,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -263,7 +263,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
               if (!privateToggleState) {
                 c2 = 1;
                 dependencyMap = 1;
-                const obj6 = { value: tmp5(8589).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
+                const obj6 = { value: tmp5(8604).checkChattableChannelThresholdMetAfterChannelPermissionDeny(guild_id, constants.VIEW_CHANNEL), done: false };
                 return obj6;
               }
             }
@@ -277,7 +277,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
         const intl = tmp5(1126).intl;
         const string = intl.string;
@@ -288,7 +288,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
           stringResult = string(t["47gQYL"]);
         }
         closure_128_0 = stringResult;
-        closure_128_1 = tmp5(5418).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+        closure_128_1 = tmp5(5421).computeChannelName(closure_129_0, UserStore, RelationshipStore);
         let intl2 = tmp5(1126).intl;
         let onCancel = intl2.format;
         let show = tmp5(1126).t;
@@ -301,8 +301,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         }
         closure_128_2 = onCancelResult;
         closure_129_2(!closure_129_1);
-        const obj4 = tmp5(5418);
-        show = tmp2(5298).show;
+        const obj4 = tmp5(5421);
+        show = tmp2(5299).show;
         const obj9 = { title: closure_128_0, body: closure_128_2, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, onCancel: null, isDismissable: false };
         const intl3 = tmp5(1126).intl;
         obj9.cancelText = intl3.string(tmp5(1126).t["ETE/oC"]);
@@ -316,7 +316,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
         obj9.onCancel = onCancel;
         show(obj9);
         dependencyMap = 3;
-        const tmp42 = tmp2(5298);
+        const tmp42 = tmp2(5299);
       } catch (tmp54) {
         dependencyMap = tmp;
         throw tmp54;
@@ -416,10 +416,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       let tmp25Result = canEveryoneRoleResult1;
       if (canEveryoneRoleResult1) {
         const obj13 = { style: tmp.adminWarning, children: null };
-        const obj14 = { messageType: tmp2(tmp3[33]).HelpMessageTypes.WARNING, children: null };
+        const obj14 = { type: "warning", message: null, role: "status" };
         let intl4 = tmp2(tmp3[25]).intl;
-        obj14.children = intl4.string(tmp2(tmp3[25]).t["5f3HIC"]);
-        obj13.children = closure_23(tmp2(tmp3[33]).HelpMessage, obj14);
+        obj14.message = intl4.string(tmp2(tmp3[25]).t["5f3HIC"]);
+        obj13.children = closure_23(tmp2(tmp3[33]).InlineNotice, obj14);
         tmp25Result = closure_23(closure_7, obj13);
       }
       items3[1] = tmp25Result;
@@ -432,10 +432,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
       }
       if (tmp25Result2) {
         const obj15 = { style: tmp.adminWarning, children: null };
-        const obj16 = { messageType: tmp2(tmp3[33]).HelpMessageTypes.WARNING, children: null };
+        const obj16 = { type: "warning", message: null, role: "status" };
         const intl5 = tmp2(tmp3[25]).intl;
-        obj16.children = intl5.string(tmp2(tmp3[25]).t.ZAk4Q9);
-        obj15.children = closure_23(tmp2(tmp3[33]).HelpMessage, obj16);
+        obj16.message = intl5.string(tmp2(tmp3[25]).t.ZAk4Q9);
+        obj15.children = closure_23(tmp2(tmp3[33]).InlineNotice, obj16);
         tmp25Result2 = closure_23(closure_7, obj15);
       }
       items3[2] = tmp25Result2;
@@ -483,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
     first = cResult[0];
   }
   if (cResult[1] !== channelId) {
-    const fn = function v() {
+    const fn = function p() {
       return ChannelStore.getChannel(channelId);
     };
     cResult[1] = channelId;
@@ -496,12 +496,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
   const stateFromStores = channelId(first1[21]).useStateFromStores(first, tmp8);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ChannelSettingsPermissionsStore];
-    const fn2 = function f() {
-      return advancedMode.advancedMode;
-    };
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
     cResult[3] = items1;
-    cResult[4] = fn2;
-    let tmp10 = fn2;
+    cResult[4] = A;
+    let tmp10 = A;
     let tmp9 = items1;
   } else {
     tmp9 = cResult[3];
@@ -523,6 +525,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
   [first1, _slicedToArray] = noop.useState(BASIC);
   if (cResult[5] !== stateFromStores) {
     const result = stateFromStores(tmp2[22]).isPrivateGuildChannel(stateFromStores);
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
     cResult[5] = stateFromStores;
     cResult[6] = result;
     let tmp19 = result;
@@ -534,7 +541,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
   [r10079, tmp23] = noop.useState(tmp19);
   asyncGeneratorStep = tmp23;
   if (cResult[7] !== origin) {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -549,12 +556,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
       }
     }
     const items2 = [origin];
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
     cResult[7] = origin;
-    cResult[8] = B;
+    cResult[8] = W;
     cResult[9] = items2;
     let tmp25 = items2;
   } else {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -570,9 +582,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
     }
     tmp25 = cResult[9];
   }
-  const effect = noop.useEffect(B, tmp25);
+  const effect = noop.useEffect(W, tmp25);
   if (cResult[10] !== stateFromStores) {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -587,9 +599,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
       }
     }
     cResult[10] = stateFromStores;
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
     cResult[11] = tmp28;
   } else {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -605,7 +622,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
     }
   }
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -620,14 +637,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
       }
     }
     const stringResult = obj8.string(tmp(tmp2[25]).t["Mw/UDN"]);
-    const intl = tmp(tmp2[25]).intl;
-    const stringResult1 = intl.string(tmp(tmp2[25]).t["0a6awf"]);
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
+    const stringResult1 = obj9.string(tmp(tmp2[25]).t["0a6awf"]);
     cResult[12] = stringResult1;
     cResult[13] = stringResult;
     let tmp30 = stringResult;
     const tmp29 = stringResult1;
   } else {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -644,7 +665,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
     tmp30 = cResult[13];
   }
   if (cResult[14] !== stateFromStores) {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -658,10 +679,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
         return;
       }
     }
-    arr4[0] = tmp30;
-    arr4[1] = tmp29;
+    tmp34[0] = tmp30;
+    tmp34[1] = tmp29;
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
     if (stateFromStores != null) {
-      class B {
+      class W {
         constructor() {
           tmp = ChannelSettingsSections;
           obj = closure_1(closure_3[38]);
@@ -676,8 +702,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
         }
       }
     }
-    if (true !== undefined) {
-      class B {
+    if (true !== tmp35) {
+      class W {
         constructor() {
           tmp = ChannelSettingsSections;
           obj = closure_1(closure_3[38]);
@@ -692,9 +718,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
         }
       }
       cResult[14] = stateFromStores;
-      cResult[15] = arr4;
+      class A {
+        constructor() {
+          return closure_1_9.advancedMode;
+        }
+      }
     } else {
-      class B {
+      class W {
         constructor() {
           tmp = ChannelSettingsSections;
           obj = closure_1(closure_3[38]);
@@ -709,7 +739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
         }
       }
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-        class B {
+        class W {
           constructor() {
             tmp = ChannelSettingsSections;
             obj = closure_1(closure_3[38]);
@@ -723,11 +753,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
             return;
           }
         }
-        const stringResult2 = obj9.string(tmp(tmp2[25]).t.YIIUJ3);
+        const stringResult2 = obj10.string(tmp(tmp2[25]).t.YIIUJ3);
+        class A {
+          constructor() {
+            return closure_1_9.advancedMode;
+          }
+        }
         cResult[16] = stringResult2;
-        const tmp35 = stringResult2;
       } else {
-        class B {
+        class W {
           constructor() {
             tmp = ChannelSettingsSections;
             obj = closure_1(closure_3[38]);
@@ -742,10 +776,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
           }
         }
       }
-      arr4.push(tmp35);
+      class A {
+        constructor() {
+          return closure_1_9.advancedMode;
+        }
+      }
     }
   } else {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -760,8 +798,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
       }
     }
   }
-  if (cResult[17] !== arr4) {
-    class B {
+  if (cResult[17] !== tmp34) {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -775,10 +813,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
         return;
       }
     }
-    cResult[17] = arr4;
+    cResult[17] = tmp34;
+    class A {
+      constructor() {
+        return closure_1_9.advancedMode;
+      }
+    }
     cResult[18] = tmp39;
   } else {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);
@@ -794,7 +837,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EasyChan
     }
   }
   if (cResult[19] === tmp28) {
-    class B {
+    class W {
       constructor() {
         tmp = ChannelSettingsSections;
         obj = closure_1(closure_3[38]);

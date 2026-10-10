@@ -1,39 +1,39 @@
-// === Module 12427: GuildInvite ===
+// === Module 12471: GuildInvite ===
 
-// Module 12427 (GuildInvite)
+// Module 12471 (GuildInvite)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5370 */;
-import TableRow from "TableRow" /* 6186 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
-import GroupIcon from "GroupIcon" /* 8200 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8667 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8700 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 8746 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12387 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5371 */;
+import TableRow from "TableRow" /* 6179 */;
+import NavigatorHeader from "NavigatorHeader" /* 6200 */;
+import GroupIcon from "GroupIcon" /* 8216 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 8715 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 8762 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12431 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 8668 */;
-import GuildChannelStore from "GuildChannelStore" /* 4707 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8682 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 8683 */;
+import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 8697 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, FlatList: metroRequire, StyleSheet } = get_ActivityIndicator);
-let closure_7 = fn(8747).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(6660).CreateGuildModalStates;
+let closure_7 = fn(8763).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(6661).CreateGuildModalStates;
 const Constants = fn(1085);
 ({ AnalyticEvents: map1, AnalyticsSections: closure_14, InstantInviteSources: closure_15, Permissions: closure_16, SearchTypes: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(5091);
-let obj2 = { container: { marginTop: fn(6263).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerImage: { marginVertical: 16 }, linkContainer: { paddingHorizontal: 16, width: "100%" }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
-let obj3 = { marginTop: fn(6263).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
+const createStyles = fn(5092);
+let obj2 = { container: { marginTop: fn(6258).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" }, header: { marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 8, paddingHorizontal: 16, textAlign: "center" }, headerIllustration: { alignItems: "center", marginTop: 8, marginBottom: -32 }, linkContainer: { paddingHorizontal: 16, width: "100%", zIndex: 1 }, linkButton: null, linkButtonIcon: null, inviteDetail: null, shareButton: null, suggestionsContainer: null, friendIcon: null, suggestionRowsContainer: null, separator: null };
+let obj3 = { marginTop: fn(6258).NAV_BAR_HEIGHT, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center" };
 obj2.linkButton = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 let obj4 = { marginTop: 16, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, padding: 12, justifyContent: "space-between" };
 obj2.linkButtonIcon = { flexShrink: 0, marginLeft: 8, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -134,50 +134,57 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildI
         };
         cResult[7] = tmp2.separator;
         cResult[8] = fn;
-        let tmp9 = fn;
+        let tmp10 = fn;
       } else {
-        tmp9 = cResult[8];
+        tmp10 = cResult[8];
       }
       const _Symbol = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
-          constructor(arg0) {
-            return invite.item.id;
-          }
-        }
-        cResult[9] = E;
+        const fn2 = function p(item) {
+          return item.item.id;
+        };
+        cResult[9] = fn2;
+        let tmp12 = fn2;
       } else {
-        class E {
-          constructor(arg0) {
-            return invite.item.id;
-          }
-        }
+        tmp12 = cResult[9];
       }
       if (cResult[10] === tmp3) {
-        class E {
-          constructor(arg0) {
-            return invite.item.id;
+        if (cResult[11] === tmp5) {
+          if (cResult[12] === tmp2.suggestionRowsContainer) {
+            if (cResult[13] === tmp6) {
+              if (cResult[14] === tmp10) {
+                let tmp13 = cResult[15];
+              }
+              if (cResult[16] === tmp2.suggestionsContainer) {
+                if (cResult[17] === tmp13) {
+                  let tmp17 = cResult[18];
+                }
+                return tmp17;
+              }
+              const obj2 = { style: tmp2.suggestionsContainer, children: tmp13 };
+              const tmp20 = closure_18(closure_5, obj2);
+              cResult[16] = tmp2.suggestionsContainer;
+              cResult[17] = tmp13;
+              cResult[18] = tmp20;
+              tmp17 = tmp20;
+            }
           }
         }
       }
-      const obj2 = { data: tmp3, renderItem: tmp5, contentContainerStyle: tmp2.suggestionRowsContainer, ListFooterComponent: tmp6, ItemSeparatorComponent: tmp9, keyExtractor: E };
-      const tmp15 = closure_18(closure_6, obj2);
+      const obj3 = { data: tmp3, renderItem: tmp5, contentContainerStyle: tmp2.suggestionRowsContainer, ListFooterComponent: tmp6, ItemSeparatorComponent: tmp10, keyExtractor: tmp12 };
+      const tmp16 = closure_18(closure_6, obj3);
       cResult[10] = tmp3;
       cResult[11] = tmp5;
       cResult[12] = tmp2.suggestionRowsContainer;
       cResult[13] = tmp6;
-      cResult[14] = tmp9;
-      cResult[15] = tmp15;
+      cResult[14] = tmp10;
+      cResult[15] = tmp16;
+      tmp13 = tmp16;
     }
     let tmp7 = null;
     if (suggestions.length > 6) {
-      class E {
-        constructor(arg0) {
-          return invite.item.id;
-        }
-      }
-      const obj3 = { openInviteSheet };
-      tmp7 = closure_18(closure_21, obj3);
+      const obj4 = { openInviteSheet };
+      tmp7 = closure_18(closure_21, obj4);
     }
     cResult[4] = openInviteSheet;
     cResult[5] = suggestions.length;
@@ -291,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
   const tmpResult5 = onClose(navigation[23]);
   stateFromStores1 = onClose(navigation[23]).useStateFromStores(tmp15, tmp16);
   if (cResult[4] !== isScreenReaderEnabled) {
-    class M {
+    class P {
       constructor() {
         tmp = closure_3;
         if (closure_3) {
@@ -312,9 +319,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       }
     }
     cResult[4] = isScreenReaderEnabled;
-    cResult[5] = M;
+    cResult[5] = P;
   } else {
-    class M {
+    class P {
       constructor() {
         tmp = closure_3;
         if (closure_3) {
@@ -336,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
     }
   }
   if (cResult[6] === stateFromStores) {
-    class M {
+    class P {
       constructor() {
         tmp = closure_3;
         if (closure_3) {
@@ -356,10 +363,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
         return;
       }
     }
-    const effect = obj4.useEffect(M, items4);
+    const effect = obj4.useEffect(P, items4);
     const _Symbol = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-      class M {
+      class P {
         constructor() {
           tmp = closure_3;
           if (closure_3) {
@@ -381,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       }
       cResult[9] = tmp24;
     } else {
-      class M {
+      class P {
         constructor() {
           tmp = closure_3;
           if (closure_3) {
@@ -430,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
     const tmp26 = stateFromStores();
     CreateInviteModalStore = tmp26;
     if (cResult[10] !== stateFromStores1) {
-      class M {
+      class P {
         constructor() {
           tmp = closure_3;
           if (closure_3) {
@@ -453,7 +460,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       cResult[10] = stateFromStores1;
       cResult[11] = tmp28;
     } else {
-      class M {
+      class P {
         constructor() {
           tmp = closure_3;
           if (closure_3) {
@@ -476,7 +483,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
     }
     require("useMountEffect")(tmp28);
     if (cResult[12] === tmp26) {
-      class M {
+      class P {
         constructor() {
           tmp = closure_3;
           if (closure_3) {
@@ -498,7 +505,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       }
       const effect1 = obj4.useEffect(Y, tmp32);
       if (cResult[16] === first) {
-        class M {
+        class P {
           constructor() {
             tmp = closure_3;
             if (closure_3) {
@@ -776,9 +783,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       items8[1] = closure_18(tmp2(tmp3[33]).Text, obj8);
       let tmp29Result = !tmp20;
       if (!tmp20) {
-        const obj9 = { source: tmp13(tmp3[35]), resizeMode: "contain", style: tmp.headerImage };
-        tmp29Result = closure_18(tmp13(tmp3[34]), obj9);
-        const tmp13Result = tmp13(tmp3[34]);
+        const obj9 = { style: tmp.headerIllustration, children: closure_18(tmp2(tmp3[34]).HelloWumpusSpotIllustration, { width: 252, accessible: false }) };
+        tmp29Result = closure_18(first, obj9);
       }
       items8[2] = tmp29Result;
       const obj10 = { style: tmp.linkContainer, children: null };
@@ -791,10 +797,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
       };
       const obj12 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: { flexShrink: 1 }, children: tmp17Result };
       const items9 = [closure_18(tmp2(tmp3[33]).Text, obj12), ];
-      const obj13 = { source: tmp13(tmp3[37]), style: tmp.linkButtonIcon };
-      items9[1] = closure_18(tmp2(tmp3[36]).Icon, obj13);
+      const obj13 = { source: tmp13(tmp3[36]), style: tmp.linkButtonIcon };
+      items9[1] = closure_18(tmp2(tmp3[35]).Icon, obj13);
       obj11.children = items9;
-      const items10 = [closure_19(tmp2(tmp3[38]).PressableOpacity, obj11), , ];
+      const items10 = [closure_19(tmp2(tmp3[37]).PressableOpacity, obj11), , ];
       const obj14 = { style: tmp.inviteDetail, children: null };
       const obj15 = {
         channel: stateFromStores1,
@@ -807,20 +813,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildInv
             },
         source: constants2.GUILD_CREATE
       };
-      obj14.children = closure_18(tmp13(tmp3[39]), obj15);
+      obj14.children = closure_18(tmp13(tmp3[38]), obj15);
       items10[1] = closure_18(first, obj14);
       const obj16 = { style: tmp.shareButton, children: null };
       const obj17 = { text: null, onPress: null };
       const intl4 = tmp2(tmp3[18]).intl;
       obj17.text = intl4.string(tmp2(tmp3[18]).t.Ej3B3Y);
       obj17.onPress = callback1;
-      obj16.children = closure_18(tmp2(tmp3[40]).Button, obj17);
+      obj16.children = closure_18(tmp2(tmp3[39]).Button, obj17);
       items10[2] = closure_18(first, obj16);
       obj10.children = items10;
       items8[3] = closure_19(first, obj10);
       items8[4] = tmp27;
       rect.children = items8;
-      return closure_19(tmp2(tmp3[41]).SafeAreaPaddingView, rect);
+      return closure_19(tmp2(tmp3[40]).SafeAreaPaddingView, rect);
     }
   }
   return null;

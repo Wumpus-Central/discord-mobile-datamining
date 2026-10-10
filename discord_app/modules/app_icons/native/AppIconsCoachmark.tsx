@@ -1,22 +1,22 @@
-// === Module 17564: AppIconsCoachmark ===
+// === Module 17636: AppIconsCoachmark ===
 
-// Module 17564 (AppIconsCoachmark)
+// Module 17636 (AppIconsCoachmark)
 import nativeDefault from "native" /* 587 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import _modDef9508 from "module_9508" /* 9508 */;
-import AppIconUtils from "AppIconUtils" /* 13672 */;
-import _modDef17565 from "module_17565" /* 17565 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import _modDef9537 from "module_9537" /* 9537 */;
+import AppIconUtils from "AppIconUtils" /* 13724 */;
+import _modDef17637 from "module_17637" /* 17637 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { padding: nativeDefault.space.PX_16, paddingBottom: 0 }, info: { alignItems: "center" }, image: { alignSelf: "center", marginBottom: 20 }, nitroWheel: { marginRight: 8 }, titleContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, footer: null };
 let obj3 = { padding: nativeDefault.space.PX_16, paddingBottom: 0 };
 obj2.footer = { marginTop: 20, gap: nativeDefault.space.PX_8 };
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    let obj2 = { source: _modDef17565, style: tmp4.image };
+    let obj2 = { source: _modDef17637, style: tmp4.image };
     const tmp19 = closure_7(FastImageDefault, obj2);
     cResult[10] = tmp4.image;
     cResult[11] = tmp19;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         return;
       }
     }
-    const obj4 = { source: _modDef9508, size: tmp(1200).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
+    const obj4 = { source: _modDef9537, size: tmp(1200).IconSizes.MEDIUM, style: tmp4.nitroWheel, disableColor: true };
     const tmp22 = closure_7(tmp(1200).Icon, obj4);
     cResult[12] = tmp4.nitroWheel;
     cResult[13] = tmp22;
@@ -190,7 +190,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
     const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp(1126).intl;
     obj5.children = intl.string(tmp(1126).t.EfA4Cq);
-    const tmp24 = closure_7(tmp(5087).Text, obj5);
+    const tmp24 = closure_7(tmp(5088).Text, obj5);
     cResult[14] = tmp24;
     const tmp23 = tmp24;
   } else {
@@ -306,7 +306,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
         cResult[27] = tmp36;
       }
       const obj7 = { variant: "text-md/normal", color: "text-default", style: tmp4.subtitle, children: tmp27 };
-      const tmp32 = closure_7(tmp(5087).Text, obj7);
+      const tmp32 = closure_7(tmp(5088).Text, obj7);
       cResult[20] = tmp4.subtitle;
       cResult[21] = tmp27;
       cResult[22] = tmp32;
@@ -343,15 +343,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
   const obj4 = { style: tmp.info, children: null };
   const obj5 = { source: null, style: null };
   const isPremiumResult = PremiumUtilsDefault.isPremium(stateFromStores);
-  obj5.source = _modDef17565;
+  obj5.source = _modDef17637;
   obj5.style = tmp.image;
   const items2 = [closure_7(FastImageDefault, obj5), , ];
   const obj6 = { style: tmp.titleContainer, children: null };
-  const items3 = [closure_7(markAsDismissed(1200).Icon, { source: _modDef9508, size: markAsDismissed(1200).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
+  const items3 = [closure_7(markAsDismissed(1200).Icon, { source: _modDef9537, size: markAsDismissed(1200).IconSizes.MEDIUM, style: tmp.nitroWheel, disableColor: true }), ];
   const obj8 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = markAsDismissed(1126).intl;
   obj8.children = intl.string(markAsDismissed(1126).t.EfA4Cq);
-  items3[1] = closure_7(markAsDismissed(5087).Text, obj8);
+  items3[1] = closure_7(markAsDismissed(5088).Text, obj8);
   obj6.children = items3;
   items2[1] = closure_8(View, obj6);
   const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
@@ -364,7 +364,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
     stringResult = string(t.D0XzaS);
   }
   obj9.children = stringResult;
-  items2[2] = closure_7(markAsDismissed(5087).Text, obj9);
+  items2[2] = closure_7(markAsDismissed(5088).Text, obj9);
   obj4.children = items2;
   const items4 = [closure_8(View, obj4), ];
   const obj10 = { style: tmp.footer, children: null };
@@ -378,14 +378,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppIcons
     }
     const result = AppIconUtils.navigateToAppIconSettings();
   };
-  const items5 = [closure_7(markAsDismissed(5376).Button, obj11), ];
+  const items5 = [closure_7(markAsDismissed(5379).Button, obj11), ];
   const obj12 = { variant: "secondary", text: null, onPress: null };
   const intl4 = tmp2(1126).intl;
   obj12.text = intl4.string(markAsDismissed(1126).t.iSrIIZ);
   obj12.onPress = callback;
-  items5[1] = closure_7(markAsDismissed(5376).Button, obj12);
+  items5[1] = closure_7(markAsDismissed(5379).Button, obj12);
   obj10.children = items5;
   items4[1] = closure_8(View, obj10);
   obj3.children = items4;
-  return closure_8(markAsDismissed(6836).BottomSheet, obj3);
+  return closure_8(markAsDismissed(6839).BottomSheet, obj3);
 });

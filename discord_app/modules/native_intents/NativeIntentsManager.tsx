@@ -1,21 +1,21 @@
-// === Module 18547: NativeIntentsManager ===
+// === Module 18621: NativeIntentsManager ===
 
-// Module 18547 (NativeIntentsManager)
+// Module 18621 (NativeIntentsManager)
 import GlobalUtils from "GlobalUtils" /* 1388 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import useChannelName from "useChannelName" /* 5418 */;
-import getChannelIcon from "getChannelIcon" /* 13103 */;
-import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 18548 */;
-import IntentsBindingsDefault from "IntentsBindings" /* 18549 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import useChannelName from "useChannelName" /* 5421 */;
+import getChannelIcon from "getChannelIcon" /* 13150 */;
+import NativeIntentsExperimentDefault from "NativeIntentsExperiment" /* 18622 */;
+import IntentsBindingsDefault from "IntentsBindings" /* 18623 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 function indexingEnabled() {
@@ -64,7 +64,7 @@ function makeSearchItem(channel, guild) {
   if (id == null) {
     id = closure_1_10;
   }
-  const CHANNELResult = state.CHANNEL(id, channel.id);
+  const CHANNELResult = closure_1_14.CHANNEL(id, channel.id);
   const obj3 = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: sum, displayName: sum, thumbnailURL: null, rankingHint: null, keywords: null, alternateNames: null, isUpdate: null };
   const channelIconURL = getChannelIcon.getChannelIconURL(channel, 128, false);
   let startsWithResult;
@@ -116,7 +116,7 @@ function makeGuildDomain(guild1) {
   if (flag === undefined) {
     flag = false;
   }
-  const CHANNELResult = state.CHANNEL(guild1.id);
+  const CHANNELResult = closure_1_14.CHANNEL(guild1.id);
   const obj = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: guild1.name, displayName: guild1.name, alternateNames: null, rankingHint: null };
   const items = ["*" + guild1.name];
   obj.alternateNames = items;
@@ -201,7 +201,7 @@ function setChannelActivity(channelId) {
       const set = new Set(items);
       const items3 = [];
       HermesBuiltin.arraySpread(set, 0);
-      const CHANNELResult = state.CHANNEL(channel.guild_id, channel.id);
+      const CHANNELResult = closure_1_14.CHANNEL(channel.guild_id, channel.id);
       const obj4 = { webpageURL: null, relatedUniqueIdentifier: null, eligibleForHandoff: true, eligibleForSearch: true, title: null, keywords: null, displayName: null, type: "com.discord.view-channel" };
       const _HermesInternal2 = HermesInternal;
       obj4.webpageURL = "" + constants2.BASE_URL + CHANNELResult;

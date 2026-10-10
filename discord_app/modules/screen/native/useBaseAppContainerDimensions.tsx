@@ -1,6 +1,6 @@
-// === Module 4942: useBaseAppContainerDimensions ===
+// === Module 4981: useBaseAppContainerDimensions ===
 
-// Module 4942 (useBaseAppContainerDimensions)
+// Module 4981 (useBaseAppContainerDimensions)
 import c from "c" /* 576 */;
 import useWindowDimensions from "useWindowDimensions" /* 1497 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1631 */;

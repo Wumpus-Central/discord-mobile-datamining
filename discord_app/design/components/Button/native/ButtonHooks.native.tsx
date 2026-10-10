@@ -1,19 +1,19 @@
-// === Module 5382: ButtonHooks ===
+// === Module 5385: ButtonHooks ===
 
-// Module 5382 (ButtonHooks)
+// Module 5385 (ButtonHooks)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import useToken from "useToken" /* 4779 */;
-import native from "native" /* 4788 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import shared from "shared" /* 4930 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import spring from "spring" /* 5375 */;
-import Icon from "Icon" /* 5378 */;
-import springPresets from "springPresets" /* 5379 */;
-import ButtonConstants from "ButtonConstants" /* 5381 */;
-import useFontScale from "useFontScale" /* 5383 */;
+import useToken from "useToken" /* 4818 */;
+import native from "native" /* 4827 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import shared from "shared" /* 4969 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import spring from "spring" /* 5378 */;
+import Icon from "Icon" /* 5381 */;
+import springPresets from "springPresets" /* 5382 */;
+import ButtonConstants from "ButtonConstants" /* 5384 */;
+import useFontScale from "useFontScale" /* 5386 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -136,9 +136,9 @@ function getButtonColorTokens(arg0) {
   }
 }
 let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(5091);
+createStyles = fn(5092);
 const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileThemedButtonStyles(arg0) {
@@ -214,7 +214,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
             tmp33 = cResult[13];
           }
           if (cResult[14] !== tmp31) {
-            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "r" };
+            const obj5 = { backgroundColor: tmp31, borderColor: tmp33, color: "Array" };
             cResult[14] = tmp31;
             cResult[15] = obj5;
             let tmp35 = obj5;
@@ -247,7 +247,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
                 tmp18 = cResult[23];
               }
               if (cResult[24] !== tmp16) {
-                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "r" };
+                const obj6 = { backgroundColor: tmp16, borderColor: tmp18, color: "Array" };
                 cResult[24] = tmp16;
                 cResult[25] = obj6;
                 let tmp20 = obj6;
@@ -325,7 +325,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      const obj9 = { backgroundColor: null, borderColor: null, color: "r" };
+      const obj9 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
       obj9.backgroundColor = items2;
       const items3 = [c4, c4];
@@ -346,7 +346,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
       } else {
         darkenColorResult1 = obj3.setColorOpacity("white", 0.2);
       }
-      const obj11 = { backgroundColor: null, borderColor: null, color: "r" };
+      const obj11 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
       obj11.backgroundColor = items4;
       const items5 = [c4, c4];
@@ -359,7 +359,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useProfileTh
 });
 let closure_7 = tmp2;
 fn(558);
-createStyles = fn(5091);
+createStyles = fn(5092);
 const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonTextColorStyles(arg0) {

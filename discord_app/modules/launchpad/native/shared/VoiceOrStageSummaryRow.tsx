@@ -1,18 +1,18 @@
-// === Module 17871: VoiceOrStageSummaryRow ===
+// === Module 17943: VoiceOrStageSummaryRow ===
 
-// Module 17871 (VoiceOrStageSummaryRow)
+// Module 17943 (VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import _modDef17277 from "module_17277" /* 17277 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17282 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import _modDef17349 from "module_17349" /* 17349 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17354 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: { flexDirection: "row", alignItems: "center", marginLeft: -2 }, overflowCircle: null, wrapper: null, badge: null, audienceBadge: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", height, width: height };
@@ -289,10 +289,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj4.style = items3;
-    let obj5 = { size: max(1200).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef17277 };
+    let obj5 = { size: max(1200).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef17349 };
     const items4 = [closure_4(max(1200).Icon, obj5), ];
     let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-    items4[1] = closure_4(max(5087).Text, obj6);
+    items4[1] = closure_4(max(5088).Text, obj6);
     obj4.children = items4;
     obj3.children = closure_5(tmp6, obj4);
     tmp8Result = tmp8(tmp6, obj3);

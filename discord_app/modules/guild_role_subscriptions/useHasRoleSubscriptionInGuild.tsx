@@ -1,10 +1,10 @@
-// === Module 6948: useHasRoleSubscriptionInGuild ===
+// === Module 6954: useHasRoleSubscriptionInGuild ===
 
-// Module 6948 (useHasRoleSubscriptionInGuild)
+// Module 6954 (useHasRoleSubscriptionInGuild)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 

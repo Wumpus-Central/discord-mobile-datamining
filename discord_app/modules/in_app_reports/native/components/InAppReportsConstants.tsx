@@ -1,6 +1,6 @@
-// === Module 7710: InAppReportsConstants ===
+// === Module 7727: InAppReportsConstants ===
 
-// Module 7710 (InAppReportsConstants)
+// Module 7727 (InAppReportsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsConstants.tsx");

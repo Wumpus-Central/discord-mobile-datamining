@@ -1,11 +1,11 @@
-// === Module 17986: GuildRoomManager ===
+// === Module 18058: GuildRoomManager ===
 
-// Module 17986 (GuildRoomManager)
+// Module 18058 (GuildRoomManager)
 import GuildRoomActionCreators from "GuildRoomActionCreators" /* 7446 */;
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7479 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildRoomStore from "GuildRoomStore" /* 7448 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 const channelId = null;

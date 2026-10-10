@@ -1,25 +1,25 @@
-// === Module 10600: GiftCodeRedeemSuccess ===
+// === Module 10634: GiftCodeRedeemSuccess ===
 
-// Module 10600 (GiftCodeRedeemSuccess)
+// Module 10634 (GiftCodeRedeemSuccess)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1993 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5630 */;
-import _mod5742 from "module_5742" /* 5742 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
-import GameIcon from "GameIcon" /* 6858 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6924 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 8981 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9009 */;
-import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10476 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10592 */;
-import NameplatePreview from "NameplatePreview" /* 10593 */;
-import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 10594 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5633 */;
+import _mod5745 from "module_5745" /* 5745 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+import GameIcon from "GameIcon" /* 6861 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 9000 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9028 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 10510 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10626 */;
+import NameplatePreview from "NameplatePreview" /* 10627 */;
+import GiftBoxAnimationDefault from "GiftBoxAnimation" /* 10628 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6094 */;
+import SKUStore from "SKUStore" /* 6087 */;
 
 const GameIconDefault = GameIcon;
 
@@ -28,7 +28,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 }, nameplateContainer: null, bundleContainer: null, bundlePreview: null, header: null, message: null, footer: null, gameItemCard: null };
 let obj3 = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.nameplateContainer = { width: "100%", paddingTop: nativeDefault.space.PX_24 };
@@ -71,11 +71,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   let obj = giftCode(576);
   const stateFromStores = giftCode(504).useStateFromStores(first, tmp7);
   let tmpResult = giftCode(504);
-  const getOrFetchSubscriptionPlan = giftCode(10468).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-  const tmpResult7 = giftCode(10468);
-  const getOrFetchApplication = giftCode(6854).useGetOrFetchApplication(giftCode.applicationId);
-  const tmpResult8 = giftCode(6854);
-  const tmpResult9 = giftCode(10472);
+  const getOrFetchSubscriptionPlan = giftCode(10502).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+  const tmpResult7 = giftCode(10502);
+  const getOrFetchApplication = giftCode(6857).useGetOrFetchApplication(giftCode.applicationId);
+  const tmpResult8 = giftCode(6857);
+  const tmpResult9 = giftCode(10506);
   let skuId = null;
   if (tmpResult10.isCollectiblesGiftCode(giftCode)) {
     skuId = giftCode.skuId;
@@ -104,8 +104,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   } else {
     tmp15 = cResult[4];
   }
-  tmpResult10 = giftCode(7269);
-  const shopProductItems = giftCode(8279).useShopProductItems(tmp15);
+  tmpResult10 = giftCode(7275);
+  const shopProductItems = giftCode(8295).useShopProductItems(tmp15);
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
   firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstNameplate = shopProductItems.firstNameplate;
@@ -129,8 +129,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   } else {
     tmp20 = cResult[8];
   }
-  const tmpResult11 = giftCode(8279);
-  const handleUseNow1 = giftCode(10601).useHandleUseNow(tmp20);
+  const tmpResult11 = giftCode(8295);
+  const handleUseNow1 = giftCode(10635).useHandleUseNow(tmp20);
   const handleUseNow = handleUseNow1.handleUseNow;
   const canUseNow = handleUseNow1.canUseNow;
   const isApplying = handleUseNow1.isApplying;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
                                                                 let obj5 = { bottom: true, style: container, children: null };
                                                                 const items1 = [tmp35, tmp41];
                                                                 obj5.children = items1;
-                                                                const tmp47 = firstAvatarDecoration(tmp(6810).SafeAreaPaddingView, obj5);
+                                                                const tmp47 = firstAvatarDecoration(tmp(6813).SafeAreaPaddingView, obj5);
                                                                 cResult[61] = tmp4.container;
                                                                 cResult[62] = tmp35;
                                                                 cResult[63] = tmp41;
@@ -446,7 +446,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
       }
       return otherwiseResult;
     }
-    const match = _mod5742.match(first1);
+    const match = _mod5745.match(first1);
     const obj7 = { type: CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION };
     const withResult = match.with({ type: CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION }, (avatarDecoration) => {
       let avatarSource;
@@ -496,11 +496,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   const items = [SKUStore];
   const stateFromStores = giftCode(504).useStateFromStores(items, () => SKUStore.get(giftCode.skuId));
   let obj = giftCode(504);
-  const getOrFetchSubscriptionPlan = giftCode(10468).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-  const obj2 = giftCode(10468);
-  const getOrFetchApplication = giftCode(6854).useGetOrFetchApplication(giftCode.applicationId);
-  const obj3 = giftCode(6854);
-  const obj4 = giftCode(10472);
+  const getOrFetchSubscriptionPlan = giftCode(10502).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+  const obj2 = giftCode(10502);
+  const getOrFetchApplication = giftCode(6857).useGetOrFetchApplication(giftCode.applicationId);
+  const obj3 = giftCode(6857);
+  const obj4 = giftCode(10506);
   let skuId = null;
   if (obj5.isCollectiblesGiftCode(giftCode)) {
     skuId = giftCode.skuId;
@@ -514,24 +514,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
   if (product != null) {
     type = product.type;
   }
-  obj5 = giftCode(7269);
+  obj5 = giftCode(7275);
   let tmp10 = product;
   if (product == null) {
     const obj6 = { items: [] };
     tmp10 = obj6;
   }
-  const shopProductItems = giftCode(8279).useShopProductItems(tmp10);
+  const shopProductItems = giftCode(8295).useShopProductItems(tmp10);
   ({ firstAvatarDecoration, firstProfileEffect, firstNameplate } = shopProductItems);
-  const tmp2Result = giftCode(8279);
+  const tmp2Result = giftCode(8295);
   let tmp12 = product;
   if (product == null) {
     const obj7 = { skuId: "", type: tmp2(1993).CollectiblesItemType.BUNDLE, items: [] };
     tmp12 = obj7;
   }
-  const handleUseNow1 = giftCode(10601).useHandleUseNow({ product: tmp12 });
+  const handleUseNow1 = giftCode(10635).useHandleUseNow({ product: tmp12 });
   const isApplying = handleUseNow1.isApplying;
   ({ handleUseNow, canUseNow } = handleUseNow1);
-  const tmp2Result6 = giftCode(10601);
+  const tmp2Result6 = giftCode(10635);
   [tmp15, c3] = noop.useState();
   const callback = noop.useCallback((nativeEvent) => {
     ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);
@@ -551,14 +551,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
       if (tmp2Result7.isGameItemSKU(stateFromStores)) {
         const obj10 = { style: tmp.gameItemCard, children: null };
         const obj11 = { sku: stateFromStores };
-        obj10.children = closure_8(user(9009), obj11);
+        obj10.children = closure_8(user(9028), obj11);
         let tmp24Result = closure_8(closure_5, obj10);
       } else {
-        const obj12 = { game: getOrFetchApplication, size: tmp2(6858).GameIconSizes.LARGE, skuId: giftCode.skuId };
-        tmp24Result = closure_8(user(6858), obj12);
-        const tmp26 = user(6858);
+        const obj12 = { game: getOrFetchApplication, size: tmp2(6861).GameIconSizes.LARGE, skuId: giftCode.skuId };
+        tmp24Result = closure_8(user(6861), obj12);
+        const tmp26 = user(6861);
       }
-      tmp2Result7 = tmp2(6924);
+      tmp2Result7 = tmp2(6930);
     }
   }
   if (type === giftCode(1993).CollectiblesItemType.BUNDLE) {
@@ -568,7 +568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
       let tmp20Result = null != tmp15;
       if (tmp20Result) {
         const obj15 = { deco: firstAvatarDecoration, pfx: firstProfileEffect, nameplate: firstNameplate, previewAssets: product.previewAssets, disableStaticBackground: true, size: "large", targetSize: tmp15 };
-        tmp20Result = closure_8(user(8981), obj15);
+        tmp20Result = closure_8(user(9000), obj15);
       }
       obj14.children = tmp20Result;
       obj13.children = closure_8(closure_5, obj14);
@@ -579,13 +579,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
       const obj16 = { variant: "heading-xl/bold", style: tmp.header, accessibilityRole: "header", children: null };
       const intl4 = tmp2(1126).intl;
       obj16.children = intl4.string(tmp2(1126).t["+BNMcF"]);
-      let tmp31 = closure_8(tmp2(5087).Text, obj16);
+      let tmp31 = closure_8(tmp2(5088).Text, obj16);
     } else {
       if (tmp2Result8.isGameItemSKU(stateFromStores)) {
         const obj17 = { variant: "heading-xl/bold", style: tmp.header, accessibilityRole: "header", children: null };
         const intl3 = tmp2(1126).intl;
         obj17.children = intl3.string(tmp2(1126).t["5glWta"]);
-        tmp31 = closure_8(tmp2(5087).Text, obj17);
+        tmp31 = closure_8(tmp2(5088).Text, obj17);
       } else {
         if (giftCode.isSubscription) {
           if (null != getOrFetchSubscriptionPlan) {
@@ -593,17 +593,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
             const intl2 = tmp2(1126).intl;
             const obj19 = { skuName: stateFromStores.name };
             obj18.children = intl2.format(tmp2(1126).t["1C2BG/"], obj19);
-            tmp31 = closure_8(tmp2(5087).Text, obj18);
+            tmp31 = closure_8(tmp2(5088).Text, obj18);
           }
         }
         if (null != first) {
           const obj20 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.header, accessibilityRole: "header", children: null };
           const intl = tmp2(1126).intl;
           obj20.children = intl.string(tmp2(1126).t.IMffmm);
-          tmp31 = closure_8(tmp2(5087).Text, obj20);
+          tmp31 = closure_8(tmp2(5088).Text, obj20);
         }
       }
-      tmp2Result8 = tmp2(6924);
+      tmp2Result8 = tmp2(6930);
     }
     items1[1] = tmp31;
     if (tmp2Result9.isGameItemSKU(stateFromStores)) {
@@ -619,7 +619,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
         }
         const obj22 = { skuName: str2, applicationName: getOrFetchApplication.name };
         obj21.children = intl7.formatToPlainString(tmp2(1126).t.W2znvX, obj22);
-        let tmp36Result = closure_8(tmp2(5087).Text, obj21);
+        let tmp36Result = closure_8(tmp2(5088).Text, obj21);
         let tmp36 = closure_8;
       }
       items1[2] = tmp36Result;
@@ -639,19 +639,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
         obj23.children = tmp36(tmp44, obj25);
         items2[1] = tmp36(closure_5, obj23);
         obj8.children = items2;
-        return closure_9(tmp2(6810).SafeAreaPaddingView, obj8);
+        return closure_9(tmp2(6813).SafeAreaPaddingView, obj8);
       }
       obj25 = { text: null, size: "md", onPress: null };
       const intl8 = tmp2(1126).intl;
       obj25.text = intl8.string(tmp2(1126).t["NX+WJN"]);
-      obj25.onPress = user(5941).pop;
+      obj25.onPress = user(5934).pop;
     }
     if (giftCode.isSubscription) {
       if (null != getOrFetchSubscriptionPlan) {
-        const obj26 = { variant: "text-md/medium", style: tmp.message, children: tmp2(5630).getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) };
-        tmp36Result = closure_8(tmp2(5087).Text, obj26);
+        const obj26 = { variant: "text-md/medium", style: tmp.message, children: tmp2(5633).getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan) };
+        tmp36Result = closure_8(tmp2(5088).Text, obj26);
         tmp36 = closure_8;
-        const tmp2Result10 = tmp2(5630);
+        const tmp2Result10 = tmp2(5633);
       }
     }
     tmp36 = closure_8;
@@ -671,11 +671,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftCode
     }
     const intl5 = tmp2(1126).intl;
     formatToPlainStringResult = intl5.string(tmp2(1126).t["5ayf7w"]);
-    tmp2Result9 = tmp2(6924);
+    tmp2Result9 = tmp2(6930);
   }
   const tmp14 = _slicedToArray(noop.useState(), 2);
-  const match = giftCode(5742).match(first);
-  const str = giftCode(5742);
+  const match = giftCode(5745).match(first);
+  const str = giftCode(5745);
   const obj29 = { type: giftCode(1993).CollectiblesItemType.AVATAR_DECORATION };
   const withResult = match.with({ type: giftCode(1993).CollectiblesItemType.AVATAR_DECORATION }, (avatarDecoration) => {
     let avatarSource;

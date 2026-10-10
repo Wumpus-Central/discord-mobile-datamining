@@ -1,23 +1,23 @@
-// === Module 17096: ConjurePlanWidget ===
+// === Module 17165: ConjurePlanWidget ===
 
-// Module 17096 (ConjurePlanWidget)
+// Module 17165 (ConjurePlanWidget)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7319 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8351 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 13192 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7325 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8367 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 13242 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl = util.intl;
-    obj3.children = intl.string(_modDef3827.ove4zH);
+    obj3.children = intl.string(_modDef3849.ove4zH);
     const tmp19 = hasOwnProperty(Text_Text.Text, obj3);
     cResult[4] = tmp19;
     let tmp17 = tmp19;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
             const intl2 = util.intl;
-            obj4.children = intl2.string(_modDef3827.XcIrHx);
+            obj4.children = intl2.string(_modDef3849.XcIrHx);
             const tmp26 = hasOwnProperty(Text_Text.Text, obj4);
             cResult[13] = tmp26;
             let tmp24 = tmp26;
@@ -127,16 +127,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const obj2 = { direction: "vertical", spacing: 4, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl = applicationId(1126).intl;
-  obj3.children = intl.string(_modDef3827.ove4zH);
-  const items2 = [closure_5(applicationId(5087).Text, obj3), , ];
+  obj3.children = intl.string(_modDef3849.ove4zH);
+  const items2 = [closure_5(applicationId(5088).Text, obj3), , ];
   const obj4 = { userId: stateFromStores, widget: memo, rendererProps: applicationId.rendererProps, cardStyle: null };
   const items3 = [tmp2.card, tmp.card];
   obj4.cardStyle = items3;
   items2[1] = closure_5(UserProfileApplicationWidgetCardDefault, obj4);
   const obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl2 = applicationId(1126).intl;
-  obj5.children = intl2.string(_modDef3827.XcIrHx);
-  items2[2] = closure_5(applicationId(5087).Text, obj5);
+  obj5.children = intl2.string(_modDef3849.XcIrHx);
+  items2[2] = closure_5(applicationId(5088).Text, obj5);
   obj2.children = items2;
-  return closure_6(applicationId(5374).Stack, obj2);
+  return closure_6(applicationId(5377).Stack, obj2);
 });

@@ -1,22 +1,22 @@
-// === Module 14932: useAccountStandingStatusLabel ===
+// === Module 14991: useAccountStandingStatusLabel ===
 
-// Module 14932 (useAccountStandingStatusLabel)
+// Module 14991 (useAccountStandingStatusLabel)
 import c from "c" /* 576 */;
-import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11428 */;
-import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11462 */;
-import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14933 */;
+import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11473 */;
+import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11507 */;
+import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14992 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const util = tmp(1126);
-const SafetyHubAccountStandingLabels = tmp(14934);
+const SafetyHubAccountStandingLabels = tmp(14993);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
 export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountStandingStatusLabel() {
   let tmp = require;
   let formatToPlainStringResult = dependencyMap;
   const cResult = c.c(5);
-  state = useSafetyHubAccountStanding.useSafetyHubAccountStanding();
+  let state = useSafetyHubAccountStanding.useSafetyHubAccountStanding();
   const safetyHubInitialized = useSafetyHubInitialized.useSafetyHubInitialized();
   const safetyHubFetchError = useSafetyHubFetchError.useSafetyHubFetchError();
   if (safetyHubInitialized) {

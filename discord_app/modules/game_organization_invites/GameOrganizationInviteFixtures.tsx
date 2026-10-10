@@ -1,6 +1,6 @@
-// === Module 18037: GameOrganizationInviteFixtures ===
+// === Module 18109: GameOrganizationInviteFixtures ===
 
-// Module 18037 (GameOrganizationInviteFixtures)
+// Module 18109 (GameOrganizationInviteFixtures)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_organization_invites/GameOrganizationInviteFixtures.tsx");

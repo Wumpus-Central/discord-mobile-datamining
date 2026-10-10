@@ -1,16 +1,16 @@
-// === Module 17497: PinsScreen ===
+// === Module 17569: PinsScreen ===
 
-// Module 17497 (PinsScreen)
+// Module 17569 (PinsScreen)
 import nativeDefault from "native" /* 587 */;
-import messages_PinsScreenDefault from "messages/PinsScreen" /* 17353 */;
+import messages_PinsScreenDefault from "messages/PinsScreen" /* 17425 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = fn;
 const View = fn(17).View;
-const SearchTabs = fn(9285).SearchTabs;
+const SearchTabs = fn(9312).SearchTabs;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -47,7 +47,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = channelId(1506);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp6);
   const tmpResult = channelId(504);
-  const channelDetailsSearchContext = channelId(11951).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(11995).useChannelDetailsSearchContext(channelId, stateFromStores);
   const tmp9 = closure_7();
   if (cResult[3] !== channelDetailsSearchContext) {
     const obj3 = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
@@ -70,7 +70,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[7] = tmp16;
   tmp15 = tmp16;
   const obj4 = { style: tmp9.container, children: tmp10 };
-  const tmpResult2 = channelId(11951);
+  const tmpResult2 = channelId(11995);
 }) : (function PinsScreen() {
   channelId = channelId(1506).useRoute().params.channelId;
   const obj = channelId(1506);
@@ -84,7 +84,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(11951).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(11995).useChannelDetailsSearchContext(channelId, stateFromStores);
   const obj4 = { style: closure_7().container, children: jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS }) };
   return <View style={closure_7().container}>{jsx(messages_PinsScreenDefault, { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS })}</View>;
 }));

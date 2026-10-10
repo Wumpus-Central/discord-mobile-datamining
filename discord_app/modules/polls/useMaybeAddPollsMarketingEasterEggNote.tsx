@@ -1,10 +1,10 @@
-// === Module 9516: useMaybeAddPollsMarketingEasterEggNote ===
+// === Module 9545: useMaybeAddPollsMarketingEasterEggNote ===
 
-// Module 9516 (useMaybeAddPollsMarketingEasterEggNote)
+// Module 9545 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

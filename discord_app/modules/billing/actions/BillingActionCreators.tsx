@@ -1,18 +1,18 @@
-// === Module 5721: actions/BillingActionCreators ===
+// === Module 5724: actions/BillingActionCreators ===
 
-// Module 5721 (actions/BillingActionCreators)
+// Module 5724 (actions/BillingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import _modDef4661 from "module_4661" /* 4661 */;
-import PremiumUtils from "PremiumUtils" /* 4728 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5722 */;
-import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators" /* 5733 */;
-import HandleConfirmPaymentRegistry from "HandleConfirmPaymentRegistry" /* 5740 */;
+import _modDef4702 from "module_4702" /* 4702 */;
+import PremiumUtils from "PremiumUtils" /* 4769 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5725 */;
+import BillingPaymentGatewayActionCreators from "BillingPaymentGatewayActionCreators" /* 5736 */;
+import HandleConfirmPaymentRegistry from "HandleConfirmPaymentRegistry" /* 5743 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 4732 */;
-import BillingInfoStore from "BillingInfoStore" /* 4730 */;
-import SubscriptionStore from "SubscriptionStore" /* 4734 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 4773 */;
+import BillingInfoStore from "BillingInfoStore" /* 4771 */;
+import SubscriptionStore from "SubscriptionStore" /* 4775 */;
 
 require = fn;
 let closure_20 = async function _deletePaymentSource(arg0) {
@@ -26,7 +26,7 @@ let closure_20 = async function _deletePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -74,7 +74,7 @@ let closure_20 = async function _deletePaymentSource(arg0) {
         closure_130_1(closure_130_2[8]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp30) {
       closure_3 = tmp30;
@@ -104,7 +104,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ let closure_21 = async function _updatePaymentSource(arg0, arg1) {
           closure_131_1(closure_131_2[8]).dispatch(obj13);
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp28) {
         closure_4 = tmp28;
@@ -191,7 +191,7 @@ let closure_22 = async function _fetchPaymentSources() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -206,23 +206,22 @@ let closure_22 = async function _fetchPaymentSources() {
           return obj3;
         } else {
           closure_1 = tmp3;
-          const request = tmp7;
+          closure_0 = tmp7;
           closure_128_0 = undefined;
-          closure_128_1 = undefined;
           if (BillingInfoStore.isPaymentSourceFetching) {
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             c3 = 1;
             const HTTP = HTTPUtils.HTTP;
             const obj4 = { url: constants.BILLING_PAYMENT_SOURCES, oldFormErrors: true, rejectWithError: false };
             value = HTTP.get(obj4);
-            closure_128_0 = value;
-            DispatcherDefault.wait(() => closure_1(closure_2[8]).dispatch({ type: "BILLING_PAYMENT_SOURCES_FETCH_START", request }));
+            const obj6 = { type: "BILLING_PAYMENT_SOURCES_FETCH_START", request: value };
+            DispatcherDefault.dispatch(obj6);
             c4 = 2;
             c5 = 1;
-            const obj6 = { value, done: false };
-            return obj6;
+            const obj8 = { value, done: false };
+            return obj8;
           }
         }
       } else if (1 === tmp7) {
@@ -236,16 +235,16 @@ let closure_22 = async function _fetchPaymentSources() {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
+        const obj9 = { value, done: true };
+        return obj9;
       } else {
-        closure_128_1 = value;
-        const obj9 = { type: "BILLING_PAYMENT_SOURCES_FETCH_SUCCESS", paymentSources: closure_128_1.body };
-        closure_129_1(closure_129_2[8]).dispatch(obj9);
+        closure_128_0 = value;
+        const obj10 = { type: "BILLING_PAYMENT_SOURCES_FETCH_SUCCESS", paymentSources: closure_128_0.body };
+        closure_129_1(closure_129_2[8]).dispatch(obj10);
         c3 = 0;
         c5 = 3;
-        const obj10 = { value: closure_128_1, done: true };
-        return obj10;
+        const obj11 = { value: closure_128_0, done: true };
+        return obj11;
       }
     } catch (tmp26) {
       closure_2 = tmp26;
@@ -269,7 +268,7 @@ let closure_23 = async function _fetchPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -344,7 +343,7 @@ let closure_24 = async function _fetchWalletInformation() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -440,7 +439,7 @@ let closure_27 = async function _fetchPayments() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -533,7 +532,7 @@ let closure_28 = async function _fetchSubscriptions() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -551,21 +550,19 @@ let closure_28 = async function _fetchSubscriptions() {
           closure_0 = tmp5;
           closure_128_0 = undefined;
           closure_128_1 = undefined;
-          DispatcherDefault.wait(() => {
-            closure_1_1(closure_1_2[8]).dispatch({ type: "BILLING_SUBSCRIPTION_FETCH_START" });
-          });
+          DispatcherDefault.dispatch({ type: "BILLING_SUBSCRIPTION_FETCH_START" });
           c3 = 1;
           let FULL_RESYNC = constants2.ADD_PERKS_IF_DETECTED;
           lastLazyPerkSync = lastLazyPerkSync.getLastLazyPerkSync();
           closure_128_0 = lastLazyPerkSync;
           let tmp36 = null == lastLazyPerkSync;
           if (!tmp36) {
-            tmp36 = _modDef4661().diff(lastLazyPerkSync, "hours") >= 1;
-            const obj6 = _modDef4661();
+            tmp36 = _modDef4702().diff(lastLazyPerkSync, "hours") >= 1;
+            const obj6 = _modDef4702();
           }
           if (tmp36) {
             FULL_RESYNC = constants2.FULL_RESYNC;
-            closure_128_0 = _modDef4661();
+            closure_128_0 = _modDef4702();
           }
           const HTTP = HTTPUtils.HTTP;
           const request = { url: constants.BILLING_SUBSCRIPTIONS, oldFormErrors: true, rejectWithError: false, query: null };
@@ -618,9 +615,7 @@ let closure_28 = async function _fetchSubscriptions() {
 };
 let closure_29 = async function _getPerksRelevance() {
   closure_1 = tmp3;
-  DispatcherDefault.wait(() => {
-    closure_1_1(closure_1_2[8]).dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_START" });
-  });
+  DispatcherDefault.dispatch({ type: "BILLING_PERKS_RELEVANCE_FETCH_START" });
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: constants.BILLING_PERKS_RELEVANCE, rejectWithError: true });
   if (1 === tmp7) {
@@ -641,9 +636,7 @@ let closure_29 = async function _getPerksRelevance() {
 };
 let closure_30 = async function _fetchMostRecentSubscription() {
   closure_1 = tmp3;
-  DispatcherDefault.wait(() => {
-    closure_1_1(closure_1_2[8]).dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
-  });
+  DispatcherDefault.dispatch({ type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START" });
   const HTTP = HTTPUtils.HTTP;
   const request = { url: constants.BILLING_SUBSCRIPTIONS, query: { include_inactive: true, limit: 2, exclude_unpaid_statuses: true, subscription_type: constants2.PREMIUM }, oldFormErrors: true, rejectWithError: true };
   await HTTP.get(request);
@@ -674,7 +667,7 @@ let closure_31 = async function _createSubscription(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -884,7 +877,7 @@ let closure_32 = async function _payInvoiceManually(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1088,7 +1081,7 @@ let closure_35 = async function _cancelSubscription(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1174,7 +1167,7 @@ let closure_37 = async function _updateSubscription(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1365,7 +1358,7 @@ let closure_38 = async function _voidPendingPayment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1395,7 +1388,7 @@ let closure_38 = async function _voidPendingPayment(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp9) {
       c1 = tmp;
@@ -1414,7 +1407,7 @@ let closure_39 = async function _fetchIpCountryCode() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1429,7 +1422,7 @@ let closure_39 = async function _fetchIpCountryCode() {
           return obj3;
         } else {
           closure_2 = tmp3;
-          const request = tmp7;
+          closure_1 = tmp7;
           closure_129_0 = undefined;
           let flag = closure_0;
           if (closure_0 === undefined) {
@@ -1463,42 +1456,43 @@ let closure_39 = async function _fetchIpCountryCode() {
           const HTTP = closure_130_0(closure_130_2[9]).HTTP;
           const obj7 = { url: closure_130_10.BILLING_COUNTRY_CODE, rejectWithError: false };
           closure_129_1 = HTTP.get(obj7);
-          closure_130_1(closure_130_2[8]).wait(() => request(closure_2[8]).dispatch({ type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request }));
+          const obj8 = { type: "BILLING_IP_COUNTRY_CODE_FETCH_START", request: closure_129_1 };
+          closure_130_1(closure_130_2[8]).dispatch(obj8);
           c5 = 3;
           c6 = 1;
-          const obj8 = { value: closure_129_1, done: false };
-          return obj8;
+          const obj10 = { value: closure_129_1, done: false };
+          return obj10;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_4 = closure_3;
         closure_130_1(closure_130_2[8]).dispatch({ type: "BILLING_IP_COUNTRY_CODE_FAILURE" });
         c6 = 3;
-        const obj10 = { value: closure_129_4, done: true };
-        return obj10;
+        const obj11 = { value: closure_129_4, done: true };
+        return obj11;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
+        const obj12 = { value, done: true };
+        return obj12;
       } else {
         closure_129_2 = value;
         country_code = closure_129_2.body.country_code;
-        const obj12 = { type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: country_code };
-        closure_130_1(closure_130_2[8]).dispatch(obj12);
+        const obj13 = { type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: country_code };
+        closure_130_1(closure_130_2[8]).dispatch(obj13);
         c4 = 0;
         c6 = 3;
-        const obj13 = { value: closure_129_2, done: true };
-        return obj13;
+        const obj14 = { value: closure_129_2, done: true };
+        return obj14;
       }
-    } catch (tmp34) {
-      closure_3 = tmp34;
+    } catch (tmp35) {
+      closure_3 = tmp35;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp34;
+        throw tmp35;
       } else {
         c5 = tmp;
       }
@@ -1516,7 +1510,7 @@ let closure_40 = async function _fetchIpLocation() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1531,7 +1525,7 @@ let closure_40 = async function _fetchIpLocation() {
           return obj4;
         } else {
           closure_2 = tmp3;
-          const request = tmp7;
+          closure_1 = tmp7;
           closure_129_0 = undefined;
           let flag = closure_0;
           if (closure_0 === undefined) {
@@ -1566,51 +1560,52 @@ let closure_40 = async function _fetchIpLocation() {
           const HTTP = closure_130_0(closure_130_2[9]).HTTP;
           const obj8 = { url: closure_130_10.BILLING_LOCATION, rejectWithError: false };
           closure_129_1 = HTTP.get(obj8);
-          closure_130_1(closure_130_2[8]).wait(() => request(closure_2[8]).dispatch({ type: "BILLING_IP_LOCATION_FETCH_START", request }));
+          const obj10 = { type: "BILLING_IP_LOCATION_FETCH_START", request: closure_129_1 };
+          closure_130_1(closure_130_2[8]).dispatch(obj10);
           c5 = 3;
           c6 = 1;
-          const obj10 = { value: closure_129_1, done: false };
-          return obj10;
+          const obj11 = { value: closure_129_1, done: false };
+          return obj11;
         }
       } else if (2 === tmp7) {
         c4 = 0;
         closure_129_5 = closure_3;
-        const obj11 = { error_message: closure_129_5.message };
-        closure_130_1(closure_130_2[19]).track(closure_130_9.BILLING_IP_LOCATION_FETCH_ERROR, obj11);
+        const obj12 = { error_message: closure_129_5.message };
+        closure_130_1(closure_130_2[19]).track(closure_130_9.BILLING_IP_LOCATION_FETCH_ERROR, obj12);
         const obj3 = closure_130_1(closure_130_2[19]);
         closure_130_1(closure_130_2[8]).dispatch({ type: "BILLING_IP_LOCATION_FAILURE" });
         c6 = 3;
-        const obj12 = { value: closure_129_5, done: true };
-        return obj12;
+        const obj13 = { value: closure_129_5, done: true };
+        return obj13;
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
         closure_129_2 = value;
         country_code = closure_129_2.body.country_code;
         subdivision_code = closure_129_2.body.subdivision_code;
-        const obj15 = { type: "BILLING_SET_IP_LOCATION", location: null };
-        const obj16 = { countryCode: country_code, subdivisionCode: subdivision_code };
-        obj15.location = obj16;
-        closure_130_1(closure_130_2[8]).dispatch(obj15);
-        const obj14 = closure_130_1(closure_130_2[8]);
-        const obj18 = { type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: country_code };
-        closure_130_1(closure_130_2[8]).dispatch(obj18);
+        const obj16 = { type: "BILLING_SET_IP_LOCATION", location: null };
+        const obj17 = { countryCode: country_code, subdivisionCode: subdivision_code };
+        obj16.location = obj17;
+        closure_130_1(closure_130_2[8]).dispatch(obj16);
+        const obj15 = closure_130_1(closure_130_2[8]);
+        const obj19 = { type: "BILLING_SET_IP_COUNTRY_CODE", countryCode: country_code };
+        closure_130_1(closure_130_2[8]).dispatch(obj19);
         c4 = 0;
         c6 = 3;
         const obj = { value: closure_129_2, done: true };
         return obj;
       }
-    } catch (tmp32) {
-      closure_3 = tmp32;
+    } catch (tmp33) {
+      closure_3 = tmp33;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp32;
+        throw tmp33;
       } else {
         c5 = tmp;
       }
@@ -1634,7 +1629,7 @@ let closure_41 = async function _redeemReactivationOffer(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1690,7 +1685,7 @@ let closure_41 = async function _redeemReactivationOffer(arg0, arg1) {
           closure_131_1(closure_131_2[8]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp30) {
         closure_4 = tmp30;
@@ -1720,7 +1715,7 @@ let closure_42 = async function _redeemUserDiscountOffer(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1769,7 +1764,7 @@ let closure_42 = async function _redeemUserDiscountOffer(arg0) {
           closure_130_1(closure_130_2[8]).dispatch(obj7);
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp29) {
         closure_3 = tmp29;
@@ -1786,7 +1781,7 @@ let closure_42 = async function _redeemUserDiscountOffer(arg0) {
 let closure_3 = ["line1", "line2", "postalCode"];
 let Constants = fn(1085);
 ({ AnalyticEvents: closure_9, Endpoints: c10, PaymentGateways: closure_11, REDIRECTED_PAYMENT_SOURCES: closure_12, SubscriptionStatusTypes: map1 } = Constants);
-const UserLazyPerkSyncLevels = fn(4739).UserLazyPerkSyncLevels;
+const UserLazyPerkSyncLevels = fn(4780).UserLazyPerkSyncLevels;
 Constants = fn(1096);
 ({ ADYEN_PAYMENT_SOURCES: closure_15, CurrencyCodes: closure_16, PaymentStatusTypes: closure_17, PREPAID_PAYMENT_SOURCES: closure_18, SubscriptionTypes: closure_19 } = Constants);
 const size = fn(2);

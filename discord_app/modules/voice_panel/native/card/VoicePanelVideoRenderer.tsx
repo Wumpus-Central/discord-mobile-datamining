@@ -1,14 +1,14 @@
-// === Module 17734: VoicePanelVideoRenderer ===
+// === Module 17806: VoicePanelVideoRenderer ===
 
-// Module 17734 (VoicePanelVideoRenderer)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4811 */;
-import timing from "timing" /* 5092 */;
-import spring from "spring" /* 5375 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9550 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10339 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 10861 */;
-import VideoActionCreators from "VideoActionCreators" /* 17619 */;
+// Module 17806 (VoicePanelVideoRenderer)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4850 */;
+import timing from "timing" /* 5093 */;
+import spring from "spring" /* 5378 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9579 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10372 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 10899 */;
+import VideoActionCreators from "VideoActionCreators" /* 17691 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,12 +16,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11926);
+const VoicePanelConstants = fn(11970);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17668).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(11927).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17740).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(11971).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 50;
@@ -45,7 +45,7 @@ function getScaleChangeWithOverscroll(arg0, arg1, arg2) {
 getScaleChangeWithOverscroll.__closure = { MIN_OVERSCROLL: 0.1, OVERSCOLL_INTENSITY_FACTOR: 5 };
 getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = { code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}" };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_22 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", alignItems: "center", justifyContent: "center" }, animatedWrapperStyles: { position: "absolute" }, video: { width: "100%", height: "100%" }, spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -16, marginLeft: -16, height: 32, width: 32 } });
 let closure_23 = { code: "function VoicePanelVideoRendererTsx2(){const{containerLayout,videoDimensions}=this.__closure;return Math.max(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
 let __initData = { code: "function VoicePanelVideoRendererTsx3(){const{containerLayout,videoDimensions}=this.__closure;return Math.min(containerLayout.get().width/videoDimensions.get().width,containerLayout.get().height/videoDimensions.get().height);}" };
@@ -1198,7 +1198,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGes
     } else {
       value3 = sharedValue1.get();
       const result = value3 * sharedValue.get();
-      const value4 = sharedValue2.get();
+      value4 = sharedValue2.get();
       const result1 = value4 * sharedValue.get();
       if (result >= -50) {
         if (result <= c13) {
@@ -1291,7 +1291,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGes
     let tmp3 = id === id;
     if (tmp3) {
       value3 = derivedValue2.get();
-      let value4 = !value3;
+      value4 = !value3;
       if (value3) {
         value4 = sharedValue6.get();
       }
@@ -1631,7 +1631,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGes
       if (closure_1_21.get()) {
         const result = changeY.changeY * sharedValue4;
         value = sharedValue.get();
-        const value4 = sharedValue.get();
+        value4 = sharedValue.get();
         if (typeof sharedValue6 === "function") {
           const sum = 1 + result;
           let sum1 = sum;

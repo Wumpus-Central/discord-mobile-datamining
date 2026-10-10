@@ -1,23 +1,23 @@
-// === Module 17110: FrogIllocon ===
+// === Module 17179: FrogIllocon ===
 
-// Module 17110 (FrogIllocon)
+// Module 17179 (FrogIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import assetHelpers from "assetHelpers" /* 6277 */;
-import _modDef17111 from "module_17111" /* 17111 */;
-import _modDef17112 from "module_17112" /* 17112 */;
-import _modDef17113 from "module_17113" /* 17113 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import assetHelpers from "assetHelpers" /* 6272 */;
+import _modDef17180 from "module_17180" /* 17180 */;
+import _modDef17181 from "module_17181" /* 17181 */;
+import _modDef17182 from "module_17182" /* 17182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17111 }, 3: null };
-const obj2 = { uri: _modDef17111 };
-obj[2] = { uri: _modDef17112 };
-const obj3 = { uri: _modDef17112 };
-obj[3] = { uri: _modDef17113 };
+let obj = { 1: null, 2: { uri: _modDef17180 }, 3: null };
+const obj2 = { uri: _modDef17180 };
+obj[2] = { uri: _modDef17181 };
+const obj3 = { uri: _modDef17181 };
+obj[3] = { uri: _modDef17182 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17113 };
+const obj4 = { uri: _modDef17182 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/FrogIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const FrogIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6277).getAssetSource(obj);
+  obj.source = num(6272).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

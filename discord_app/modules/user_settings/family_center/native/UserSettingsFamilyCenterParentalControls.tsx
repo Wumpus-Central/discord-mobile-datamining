@@ -1,10 +1,10 @@
-// === Module 15126: UserSettingsFamilyCenterParentalControls ===
+// === Module 15187: UserSettingsFamilyCenterParentalControls ===
 
-// Module 15126 (UserSettingsFamilyCenterParentalControls)
+// Module 15187 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2565 from "module_2565" /* 2565 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7254 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,10 +14,10 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const FamilyCenterSubPages = fn(7253).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7259).FamilyCenterSubPages;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { display: "flex", flex: 1 }, segmentedControlContainer: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, content: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { paddingBottom: nativeDefault.space.PX_16 };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                   }
                   return;
                 }
-                setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
                 return;
               }
             }
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
                   return;
                 }
               }
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
                   return;
                 }
               }
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
                   return;
                 }
               }
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
                   return;
                 }
               }
@@ -348,7 +348,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
                     }
                     return;
                   }
-                  setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                  setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
                   return;
                 }
               }
@@ -392,7 +392,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
             }
             return;
           }
-          setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+          setOptionsResult1 = closure_0.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
           return;
         }
       }
@@ -488,7 +488,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
       if (null != id) {
         let obj = { title: null, headerRight: null };
         let intl = util.intl;
-        obj.title = intl.string(_modDef2565["1Op+NP"]);
+        obj.title = intl.string(_modDef2568["1Op+NP"]);
         let fn;
         if (!closure_5) {
           fn = (arg0) => {
@@ -506,7 +506,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FamilyCe
         stackNavigation.setOptions(obj);
       }
     }
-    stackNavigation.setOptions({ title: "Array", headerRight: "Set" });
+    stackNavigation.setOptions({ title: "backgroundColor", headerRight: "IconComponent" });
   }, items1);
   const obj4 = { label: null, id: null, page: null };
   let intl = tmp2(tmp3[16]).intl;

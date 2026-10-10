@@ -1,8 +1,8 @@
 // === Module 7433: VideoStreamStats ===
 
 // Module 7433 (VideoStreamStats)
-import TimeUtils from "TimeUtils" /* 5120 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5270 */;
+import TimeUtils from "TimeUtils" /* 5121 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5271 */;
 
 require = fn;
 const StreamLayouts = fn(1085).StreamLayouts;
@@ -26,7 +26,7 @@ class VideoStreamStats {
       _layoutBuckets[_lastLayout] = _layoutBuckets[_lastLayout] + arg1;
     };
     obj._sampleStats = function _sampleStats() {
-      state = ApplicationStreamingSettingsStore.getState();
+      const state = ApplicationStreamingSettingsStore.getState();
       obj._streamSettingsChanged = state.resolution !== obj._targetResolution || tmp2 !== obj._targetFPS;
     };
     obj._isSender = fn;
@@ -39,7 +39,7 @@ class VideoStreamStats {
 }
 const prototype = VideoStreamStats.prototype;
 prototype["start"] = function start() {
-  state = ApplicationStreamingSettingsStore.getState();
+  const state = ApplicationStreamingSettingsStore.getState();
   ({ resolution: this._targetResolution, fps: this._targetFPS } = state);
   const _statInterval = this._statInterval;
   _statInterval.start(1000, this._sampleStats);

@@ -1,6 +1,6 @@
-// === Module 10607: UserProfileWYSIWYGEditingExperiment ===
+// === Module 10641: UserProfileWYSIWYGEditingExperiment ===
 
-// Module 10607 (UserProfileWYSIWYGEditingExperiment)
+// Module 10641 (UserProfileWYSIWYGEditingExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

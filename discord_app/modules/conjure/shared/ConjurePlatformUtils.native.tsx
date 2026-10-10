@@ -1,18 +1,18 @@
-// === Module 11371: ConjurePlatformUtils ===
+// === Module 11413: ConjurePlatformUtils ===
 
-// Module 11371 (ConjurePlatformUtils)
+// Module 11413 (ConjurePlatformUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9207 */;
-import ApplicationUtils from "ApplicationUtils" /* 10788 */;
-import PushNotificationDefault from "PushNotification" /* 10991 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 11373 */;
-import conjurePreviewCall from "conjurePreviewCall" /* 11375 */;
-import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 11377 */;
-import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 11378 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 11381 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9234 */;
+import ApplicationUtils from "ApplicationUtils" /* 10862 */;
+import PushNotificationDefault from "PushNotification" /* 11031 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 11415 */;
+import conjurePreviewCall from "conjurePreviewCall" /* 11417 */;
+import conjurePreviewControlLease2 from "conjurePreviewControlLease" /* 11419 */;
+import conjurePreviewNativeSurfaces from "conjurePreviewNativeSurfaces" /* 11420 */;
+import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 11423 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 10617 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 10651 */;
 
 const require = globalThis.__r;
 
@@ -220,7 +220,7 @@ let closure_14 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -374,7 +374,7 @@ let closure_16 = async function _inspectConjurePreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -453,7 +453,7 @@ let closure_17 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -620,12 +620,12 @@ let closure_17 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const isLaunched = fn(10767).isLaunched;
-const LocalNotificationTypes = fn(11372).LocalNotificationTypes;
-let items = [fn(8441).OAuth2Scopes.BOT, fn(8441).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const isLaunched = fn(10802).isLaunched;
+const LocalNotificationTypes = fn(11414).LocalNotificationTypes;
+let items = [fn(8457).OAuth2Scopes.BOT, fn(8457).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c15 = 0;
 let c18 = 0;
-const conjurePreviewControlLease = fn(11377);
+const conjurePreviewControlLease = fn(11419);
 let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -719,7 +719,7 @@ let result = conjurePreviewControlLease.subscribeConjureControlReleased((arg0) =
     const obj5 = require("WebView");
   }
 });
-const conjurePreviewOperationSurfaces = fn(11380);
+const conjurePreviewOperationSurfaces = fn(11422);
 let closure_19 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = ConjureProjectStore.getProject(arg0);
   let prop;
@@ -728,14 +728,14 @@ let closure_19 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
   }
   let tmp3 = null;
   if (null != prop) {
-    const conjureBuilderPreviewFrame = iframeId(11373).getConjureBuilderPreviewFrame(prop);
+    const conjureBuilderPreviewFrame = iframeId(11415).getConjureBuilderPreviewFrame(prop);
     let tmp7 = null;
     if (null != conjureBuilderPreviewFrame) {
       const obj3 = { applicationId: prop, launched: isLaunched(conjureBuilderPreviewFrame) };
       tmp7 = obj3;
     }
     tmp3 = tmp7;
-    const obj2 = iframeId(11373);
+    const obj2 = iframeId(11415);
   }
   let launched;
   if (tmp3 != null) {
@@ -756,13 +756,13 @@ let closure_19 = conjurePreviewOperationSurfaces.createPreviewOperationSurfaces(
     }
     let tmp12 = null;
     if (null != prop1) {
-      const conjureBuilderPreviewFrame1 = iframeId(11373).getConjureBuilderPreviewFrame(prop1);
+      const conjureBuilderPreviewFrame1 = iframeId(11415).getConjureBuilderPreviewFrame(prop1);
       iframeId = null;
       if (isLaunched(conjureBuilderPreviewFrame1)) {
         iframeId = conjureBuilderPreviewFrame1.data.iframeId;
       }
       tmp12 = iframeId;
-      const obj5 = iframeId(11373);
+      const obj5 = iframeId(11415);
     }
     iframeId = tmp12;
     const obj6 = {

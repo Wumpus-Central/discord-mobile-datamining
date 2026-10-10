@@ -1,13 +1,13 @@
-// === Module 7217: MemberSafetySupplementalUtils ===
+// === Module 7223: MemberSafetySupplementalUtils ===
 
-// Module 7217 (MemberSafetySupplementalUtils)
+// Module 7223 (MemberSafetySupplementalUtils)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import shared from "shared" /* 4930 */;
-import useThemeDefault from "useTheme" /* 4992 */;
-import PlatformsDefault from "Platforms" /* 5760 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7218 */;
+import shared from "shared" /* 4969 */;
+import useThemeDefault from "useTheme" /* 5031 */;
+import PlatformsDefault from "Platforms" /* 5763 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7224 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -38,7 +38,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

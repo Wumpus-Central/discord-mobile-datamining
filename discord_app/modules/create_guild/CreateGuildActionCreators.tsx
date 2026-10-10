@@ -1,8 +1,8 @@
-// === Module 11972: create_guild/CreateGuildActionCreators ===
+// === Module 12016: create_guild/CreateGuildActionCreators ===
 
-// Module 11972 (create_guild/CreateGuildActionCreators)
+// Module 12016 (create_guild/CreateGuildActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5945 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -22,7 +22,7 @@ let closure_5 = async function _createGuildFromTemplate() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

@@ -1,11 +1,11 @@
-// === Module 15125: FamilyCenterSettingParentalControlsSetting ===
+// === Module 15186: FamilyCenterSettingParentalControlsSetting ===
 
-// Module 15125 (FamilyCenterSettingParentalControlsSetting)
+// Module 15186 (FamilyCenterSettingParentalControlsSetting)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
-import _modDef2565 from "module_2565" /* 2565 */;
-import SettingsConstants from "SettingsConstants" /* 7974 */;
-import SettingBuilders from "SettingBuilders" /* 10629 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import SettingsConstants from "SettingsConstants" /* 7992 */;
+import SettingBuilders from "SettingBuilders" /* 10663 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2565.ahKIJO);
+    return intl.string(_modDef2568.ahKIJO);
   },
   parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER,
   unsearchable: true,

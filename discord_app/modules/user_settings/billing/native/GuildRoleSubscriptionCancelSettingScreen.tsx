@@ -1,9 +1,9 @@
-// === Module 15433: GuildRoleSubscriptionCancelSettingScreen ===
+// === Module 15495: GuildRoleSubscriptionCancelSettingScreen ===
 
-// Module 15433 (GuildRoleSubscriptionCancelSettingScreen)
+// Module 15495 (GuildRoleSubscriptionCancelSettingScreen)
 import c from "c" /* 576 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6681 */;
-import UserSettingsGuildRoleSubscriptionsCancelDefault from "UserSettingsGuildRoleSubscriptionsCancel" /* 15434 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6682 */;
+import UserSettingsGuildRoleSubscriptionsCancelDefault from "UserSettingsGuildRoleSubscriptionsCancel" /* 15496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,17 +1,17 @@
-// === Module 10649: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 10683: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 10649 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 10683 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import _modDef3697 from "module_3697" /* 3697 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6854 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6924 */;
-import StorefrontUtils from "StorefrontUtils" /* 6929 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7870 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 10650 */;
+import _modDef3719 from "module_3719" /* 3719 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
+import StorefrontUtils from "StorefrontUtils" /* 6935 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 10684 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import SKUStore from "SKUStore" /* 6094 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import SKUStore from "SKUStore" /* 6087 */;
 
 const require = globalThis.__r;
 
@@ -78,7 +78,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3697.BKf0MM);
+              stringResult = string(_modDef3719.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -201,5 +201,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
     const items = [...new Set(found.map((applicationId) => applicationId.applicationId))];
     return items;
   }, items2);
-  memo(6854)(stateFromStoresArray);
+  memo(6857)(stateFromStoresArray);
 });

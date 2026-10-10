@@ -1,17 +1,17 @@
-// === Module 12452: HubEmailConnectionDescriptionActionsheet ===
+// === Module 12499: HubEmailConnectionDescriptionActionsheet ===
 
-// Module 12452 (HubEmailConnectionDescriptionActionsheet)
+// Module 12499 (HubEmailConnectionDescriptionActionsheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

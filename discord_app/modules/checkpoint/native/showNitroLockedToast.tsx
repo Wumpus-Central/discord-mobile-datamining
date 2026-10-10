@@ -1,18 +1,18 @@
-// === Module 15956: showNitroLockedToast ===
+// === Module 16018: showNitroLockedToast ===
 
-// Module 15956 (showNitroLockedToast)
+// Module 16018 (showNitroLockedToast)
 import util from "util" /* 1126 */;
-import _modDef3115 from "module_3115" /* 3115 */;
-import ToastUtils from "ToastUtils" /* 4767 */;
+import _modDef3118 from "module_3118" /* 3118 */;
+import ToastUtils from "ToastUtils" /* 4808 */;
 
 require = fn;
 let obj = {};
-obj[fn(5458).CheckpointTrait.FACE] = _modDef3115["4IdR/H"];
-obj[fn(5458).CheckpointTrait.OUTFIT] = _modDef3115.NuujPd;
-obj[fn(5458).CheckpointTrait.HAT] = _modDef3115.o1Zign;
-obj[fn(5458).CheckpointTrait.WEARABLE] = _modDef3115.C0CzoH;
-obj[fn(5458).CheckpointTrait.AURA] = _modDef3115["+9TbTS"];
-obj[fn(5458).CheckpointTrait.SHOES] = _modDef3115.sTG4TS;
+obj[fn(5461).CheckpointTrait.FACE] = _modDef3118["4IdR/H"];
+obj[fn(5461).CheckpointTrait.OUTFIT] = _modDef3118.NuujPd;
+obj[fn(5461).CheckpointTrait.HAT] = _modDef3118.o1Zign;
+obj[fn(5461).CheckpointTrait.WEARABLE] = _modDef3118.C0CzoH;
+obj[fn(5461).CheckpointTrait.AURA] = _modDef3118["+9TbTS"];
+obj[fn(5461).CheckpointTrait.SHOES] = _modDef3118.sTG4TS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");
 

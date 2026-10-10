@@ -1,15 +1,15 @@
-// === Module 5371: useBackPressHandler ===
+// === Module 5372: useBackPressHandler ===
 
-// Module 5371 (useBackPressHandler)
+// Module 5372 (useBackPressHandler)
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import KeyCommands from "KeyCommands" /* 5372 */;
+import KeyCommands from "KeyCommands" /* 5373 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
+const BackPressTracking = tmp(5375);
 require = fn;
-get_ActivityIndicator = fn(17);
-({ BackHandler: c3, NativeModules: closure_4 } = get_ActivityIndicator);
+const NativeModules = fn(17).NativeModules;
 const ReactCompilerGating = fn(558);
 function subscribeToBackPress(onKeyCommand) {
   const obj = KeyCommands;
@@ -19,7 +19,7 @@ function subscribeToBackPress(onKeyCommand) {
   if (obj3.isIOS()) {
     return subscribeKeyCommandResult;
   } else {
-    closure_1 = React3.addEventListener("hardwareBackPress", onKeyCommand);
+    closure_1 = BackPressTracking.addBackPressListener(onKeyCommand);
     return () => {
       closure_1.remove();
       fn2();
@@ -53,11 +53,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBackP
         const obj2 = { input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand: fn };
         let fn2 = KeyCommands.subscribeKeyCommand(obj2);
         if (!obj3.isIOS()) {
-          closure_1 = React3.addEventListener("hardwareBackPress", fn);
+          closure_1 = BackPressTracking.addBackPressListener(fn);
           fn2 = () => {
             closure_1.remove();
             fn2();
           };
+          const tmpResult = BackPressTracking;
         }
         return fn2;
       }
@@ -90,11 +91,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBackP
       const obj2 = { input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand: fn };
       let fn2 = KeyCommands.subscribeKeyCommand(obj2);
       if (!obj3.isIOS()) {
-        closure_1 = React3.addEventListener("hardwareBackPress", fn);
+        closure_1 = BackPressTracking.addBackPressListener(fn);
         fn2 = () => {
           closure_1.remove();
           fn2();
         };
+        const tmpResult = BackPressTracking;
       }
       return fn2;
     }
@@ -103,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBackP
 export { subscribeToBackPress };
 export const BackPressHandler = {
   minimize() {
-    MinimizeApp = MinimizeApp.MinimizeApp;
+    const MinimizeApp = NativeModules.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;
   }

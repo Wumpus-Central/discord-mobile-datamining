@@ -1,11 +1,11 @@
-// === Module 9608: ChatGDMCustomize ===
+// === Module 9637: ChatGDMCustomize ===
 
-// Module 9608 (ChatGDMCustomize)
+// Module 9637 (ChatGDMCustomize)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
@@ -14,7 +14,7 @@ const MAX_CHANNEL_NAME_LENGTH = fn(1085).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj.iconUploader = { marginTop: nativeDefault.space.PX_24, alignSelf: "center" };
@@ -138,7 +138,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -187,11 +187,11 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
               }
               closure_129_9(retry_after1);
             } else {
-              const obj6 = { key: "GCM_ERROR_GENERIC", IconComponent: channelId(tmp51[18]).CircleErrorIcon, content: null };
+              const obj6 = { text: null, variant: "critical" };
               const intl2 = channelId(tmp51[16]).intl;
               const obj8 = { code: closure_128_0.status };
-              obj6.content = intl2.formatToPlainString(channelId(tmp51[16]).t.r477WB, obj8);
-              tmp4(tmp51[17]).open(obj6);
+              obj6.text = intl2.formatToPlainString(channelId(tmp51[16]).t.r477WB, obj8);
+              tmp4(tmp51[17]).open("GCM_ERROR_GENERIC", obj6);
               const obj11 = tmp4(tmp51[17]);
             }
             c3 = 0;
@@ -272,15 +272,15 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
     let obj6 = { paddingHorizontal: tmp2(tmp3[8]).space.PX_16, paddingBottom: onFinish(stateFromStores[9])({ includeKeyboardHeight: true }).insets.bottom };
     obj4.contentContainerStyle = obj6;
     const obj7 = { style: tmp.iconUploader, onUpload: tmp13, icon: tmp15, makeURL: memo.makeURL, disabled: !tmp19 };
-    const items5 = [c10(tmp2(tmp3[19]), obj7), , , , ];
+    const items5 = [c10(tmp2(tmp3[18]), obj7), , , , ];
     let tmp46Result = null;
     if (tmp20) {
       let obj8 = { onPress: memo.clear, accessibilityRole: "button", children: null };
       let obj9 = { style: tmp.iconClear, variant: "text-sm/semibold", color: "text-link", children: null };
       let intl = tmp4(tmp3[16]).intl;
       obj9.children = intl.string(tmp4(tmp3[16]).t["uY+Nk/"]);
-      obj8.children = tmp46(tmp4(tmp3[21]).Text, obj9);
-      tmp46Result = tmp46(tmp4(tmp3[20]).PressableOpacity, obj8);
+      obj8.children = tmp46(tmp4(tmp3[20]).Text, obj9);
+      tmp46Result = tmp46(tmp4(tmp3[19]).PressableOpacity, obj8);
     }
     items5[1] = tmp46Result;
     let obj10 = { style: tmp.textInput, children: null };
@@ -292,7 +292,7 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
     obj11.maxLength = maxLength;
     obj11.onChange = tmp8[1];
     obj11.disabled = tmp28;
-    obj10.children = c10(tmp4(tmp3[22]).TextInput, obj11);
+    obj10.children = c10(tmp4(tmp3[21]).TextInput, obj11);
     items5[2] = c10(hasUnsavedChanges, obj10);
     let obj12 = { onPress: callback1, text: null, variant: null, disabled: null, loading: null };
     const intl3 = tmp4(tmp3[16]).intl;
@@ -309,21 +309,21 @@ export default noop.memo(function ChatGDMCustomize(channelId) {
     }
     obj12.disabled = tmp37;
     obj12.loading = tmp28;
-    items5[3] = c10(tmp4(tmp3[23]).Button, obj12);
+    items5[3] = c10(tmp4(tmp3[22]).Button, obj12);
     let tmp44Result = null;
     if (null != first2) {
       let obj13 = { style: tmp.rateLimitedContainer, children: null };
       const obj14 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
       const intl4 = tmp4(tmp3[16]).intl;
       obj14.children = intl4.string(tmp4(tmp3[16]).t.Whhv4w);
-      const items6 = [tmp46(tmp4(tmp3[21]).Text, obj14), ];
+      const items6 = [tmp46(tmp4(tmp3[20]).Text, obj14), ];
       const obj15 = { style: tmp.rateLimitedText, deadline: null };
       const _Date = Date;
       obj15.deadline = Date.now() + 1000 * first2;
-      items6[1] = tmp46(tmp2(tmp3[24]), obj15);
+      items6[1] = tmp46(tmp2(tmp3[23]), obj15);
       obj13.children = items6;
       tmp44Result = tmp44(tmp34, obj13);
-      const tmp2Result2 = tmp2(tmp3[24]);
+      const tmp2Result2 = tmp2(tmp3[23]);
     }
     items5[4] = tmp44Result;
     obj4.children = items5;

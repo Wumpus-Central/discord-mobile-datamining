@@ -1,8 +1,8 @@
-// === Module 17097: ConjureTimelineTree ===
+// === Module 17166: ConjureTimelineTree ===
 
-// Module 17097 (ConjureTimelineTree)
+// Module 17166 (ConjureTimelineTree)
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
+import _modDef3849 from "module_3849" /* 3849 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -61,7 +61,7 @@ function buildTimelineTree(steps, arg1) {
       }
     }
     if (null != taskId) {
-      let value4 = map.get(taskId);
+      value4 = map.get(taskId);
       if (null == value4) {
         const obj7 = { taskId, task: null, steps: null };
         const obj8 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], browserSessions: [], attachments: [], touched: 0, segment };
@@ -79,7 +79,7 @@ function buildTimelineTree(steps, arg1) {
   }
   let items = [];
   const map = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   let sum1 = 0;
   const segmentOf = scanTurnColumn(steps).segmentOf;
   scanTurnColumn = (function cancelledLaneIds(steps) {
@@ -458,7 +458,7 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { healthcheck_failed: _modDef3827.iwOTgo, preview_ready: _modDef3827.okkgSB, working: _modDef3827.t8skVB, error: _modDef3827.avt0ax };
+let obj = { healthcheck_failed: _modDef3849.iwOTgo, preview_ready: _modDef3849.okkgSB, working: _modDef3849.t8skVB, error: _modDef3849.avt0ax };
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 const size = fn(2);
@@ -476,26 +476,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (t8skVB == null) {
-    t8skVB = _modDef3827.t8skVB;
+    t8skVB = _modDef3849.t8skVB;
   }
   return intl.string(t8skVB);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3827.jTwZFY);
+    return intl5.string(_modDef3849.jTwZFY);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3827.keYz9o);
+    return intl4.string(_modDef3849.keYz9o);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3827["RoY/lg"]);
+    return intl3.string(_modDef3849["RoY/lg"]);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3827["HZw/I/"]);
+    return intl2.string(_modDef3849["HZw/I/"]);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3827.sf2UHL);
+    return intl.string(_modDef3849.sf2UHL);
   }
 };
 export { buildTimelineTree };

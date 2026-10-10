@@ -1,22 +1,22 @@
-// === Module 12484: ForumTagFilterActionSheet ===
+// === Module 12531: ForumTagFilterActionSheet ===
 
-// Module 12484 (ForumTagFilterActionSheet)
+// Module 12531 (ForumTagFilterActionSheet)
 import initialize from "initialize" /* 504 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import EmojiDefault from "Emoji" /* 6816 */;
-import Tracking from "Tracking" /* 7885 */;
+import EmojiDefault from "Emoji" /* 6819 */;
+import Tracking from "Tracking" /* 7903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
 
 require = fn;
-const ForumChannelStore = fn(11629);
+const ForumChannelStore = fn(11675);
 ({ useForumChannelStore: metroRequire, useForumChannelStoreApi: closure_7 } = ForumChannelStore);
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
 const jsx = fn(21).jsx;
 let c12 = 18;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_13 = createStyles.createStyles({ emoji: { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" }, imageEmoji: { height: 18, width: 18 }, textEmoji: { fontSize: 14, lineHeight: 20 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -367,7 +367,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   channel = channel.channel;
   first = undefined;
   _slicedToArray = undefined;
-  state = closure_7();
+  let state = closure_7();
   [first, _slicedToArray] = noop.useState(new Set(closure_6(channel.id).tagFilter));
   let set = new Set(closure_6(channel.id).tagFilter);
   const unmountEffect = channel(first[10]).useUnmountEffect(() => {

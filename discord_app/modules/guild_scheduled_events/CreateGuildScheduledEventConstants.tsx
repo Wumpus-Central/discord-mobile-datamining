@@ -1,6 +1,6 @@
-// === Module 8505: CreateGuildScheduledEventConstants ===
+// === Module 8521: CreateGuildScheduledEventConstants ===
 
-// Module 8505 (CreateGuildScheduledEventConstants)
+// Module 8521 (CreateGuildScheduledEventConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/CreateGuildScheduledEventConstants.tsx");

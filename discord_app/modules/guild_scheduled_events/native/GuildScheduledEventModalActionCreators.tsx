@@ -1,29 +1,28 @@
-// === Module 8518: guild_scheduled_events/GuildScheduledEventModalActionCreators ===
+// === Module 8534: guild_scheduled_events/GuildScheduledEventModalActionCreators ===
 
-// Module 8518 (guild_scheduled_events/GuildScheduledEventModalActionCreators)
+// Module 8534 (guild_scheduled_events/GuildScheduledEventModalActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1126 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ToastUtils from "ToastUtils" /* 4767 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import _modDef5009 from "module_5009" /* 5009 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import useAlertStore from "useAlertStore" /* 5300 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
-import ClipboardUtils from "ClipboardUtils" /* 6879 */;
-import ReportModals from "ReportModals" /* 7704 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8502 */;
-import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 8508 */;
-import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 8515 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8667 */;
-import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 8753 */;
+import ToastUtils from "ToastUtils" /* 4808 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import useAlertStore from "useAlertStore" /* 5301 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+import ClipboardUtils from "ClipboardUtils" /* 6885 */;
+import ReportModals from "ReportModals" /* 7721 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8518 */;
+import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 8524 */;
+import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 8531 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 8682 */;
+import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 8769 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildChannelStore from "GuildChannelStore" /* 4707 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6061 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6054 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +30,7 @@ require = fn;
 function openCreateOrEditGuildEventModal(guild, arg1) {
   ({ guildEvent, onClose: require, recurrenceId } = arg1);
   function handleClose() {
-    ModalActionCreatorsDefault.popWithKey(__initData2);
+    ModalActionCreatorsDefault.popWithKey(map1);
     if (_require != null) {
       _require();
     }
@@ -39,11 +38,11 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
   if (null != recurrenceId) {
     _modDef38(null != guildEvent, "recurrence editing requires a guild event");
     const obj3 = { guildEvent, recurrenceId, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8519, dependencyMap.paths), obj3, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8535, dependencyMap.paths), obj3, closure_13);
   } else {
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     const obj5 = { guild, targetChannel: tmp, initialGuildEvent: guildEvent, onCloseModal: handleClose };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8553, dependencyMap.paths), obj5, closure_13);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8569, dependencyMap.paths), obj5, closure_13);
   }
 }
 let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
@@ -57,7 +56,7 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -94,11 +93,11 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
         }
         if (!tmp10) {
           const obj7 = { eventId: closure_130_0.id, event: closure_130_0, recurrenceId: closure_130_1 };
-          const result = closure_131_0(closure_131_2[33]).openGuildEventDetails(obj7);
-          const obj = closure_131_0(closure_131_2[33]);
+          const result = closure_131_0(closure_131_2[32]).openGuildEventDetails(obj7);
+          const obj = closure_131_0(closure_131_2[32]);
         }
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp23) {
       c5 = tmp;
@@ -106,11 +105,11 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let GuildScheduledEventStore = fn(6061);
+let GuildScheduledEventStore = fn(6054);
 ({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-let closure_12 = fn(2070).GuildScheduledEventUserResponses;
-const GuildEventModalConstants = fn(8498);
+let closure_12 = fn(2071).GuildScheduledEventUserResponses;
+const GuildEventModalConstants = fn(8514);
 ({ CREATE_GUILD_EVENT_MODAL_KEY: map1, GUILD_EVENTS_LIST_ACTION_SHEET_KEY: closure_14, START_EVENT_MODAL_KEY: closure_15 } = GuildEventModalConstants);
 const Constants = fn(1085);
 ({ InstantInviteSources: closure_16, Permissions: closure_17, Routes: closure_18 } = Constants);
@@ -120,14 +119,14 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/G
 
 export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(guild) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8636, dependencyMap.paths), state, { guild });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8652, dependencyMap.paths), closure_1_14, { guild });
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
-  ActionSheetActionCreatorsDefault.hideActionSheet(state);
+  ActionSheetActionCreatorsDefault.hideActionSheet(closure_1_14);
 };
 export const openStartGuildEventModal = function openStartGuildEventModal(event, recurrenceId, onCloseActionSheet) {
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8655, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet }, closure_1_15);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8665, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet }, value2);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(eventId, guildId, recurrenceId) {
   const lazyResult = noop.lazy(() => event(paths[14])(paths[19], paths.paths));
@@ -158,7 +157,7 @@ export const updateRsvp = function updateRsvp(id, recurrenceId, guildId, arg3) {
         obj3.text = intl.string(id(stringResult[23]).t.osvXlf);
         obj3.icon = id(stringResult[24]).CalendarIcon;
       }
-      closure_1(dependencyMap[22]).openMana(str, obj3);
+      closure_1(dependencyMap[22]).open(str, obj3);
       const obj = closure_1(dependencyMap[22]);
     }
   });
@@ -196,7 +195,7 @@ export const handleGuildScheduledEventRsvp = function handleGuildScheduledEventR
             obj3.text = intl.string(id(stringResult[23]).t.osvXlf);
             obj3.icon = id(stringResult[24]).CalendarIcon;
           }
-          closure_1(dependencyMap[22]).openMana(str, obj3);
+          closure_1(dependencyMap[22]).open(str, obj3);
           const obj = closure_1(dependencyMap[22]);
         }
       });
@@ -245,11 +244,10 @@ export const openShareEvent = function openShareEvent(event, id) {
       }
     }
   } else {
-    const obj5 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
+    const obj5 = { text: null, variant: "critical" };
     const intl = util.intl;
-    obj5.content = intl.string(util.t.fEptJP);
-    obj5.icon = _modDef5009;
-    ToastActionCreatorsDefault.open(obj5);
+    obj5.text = intl.string(util.t.fEptJP);
+    ToastActionCreatorsDefault.open("ERROR_OCCURRED_TRY_AGAIN", obj5);
   }
 };
 export const transitionToEventDetailsFromInvite = function transitionToEventDetailsFromInvite() {
@@ -326,7 +324,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                         obj3.text = intl.string(id(stringResult[23]).t.osvXlf);
                         obj3.icon = id(stringResult[24]).CalendarIcon;
                       }
-                      closure_1(dependencyMap[22]).openMana(str, obj3);
+                      closure_1(dependencyMap[22]).open(str, obj3);
                       const obj = closure_1(dependencyMap[22]);
                     }
                   });
@@ -358,7 +356,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
             obj2.label = intl2.string(tmp3(tmp4[23]).t.cK1GGY);
             obj2.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideAllActionSheets();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8655, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet: "r" }, closure_2_15);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8665, dependencyMap.paths), { event, recurrenceId, onCloseActionSheet: "Array" }, value2);
             };
             items.push(obj2);
           }
@@ -430,7 +428,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
               onPress() {
                           ({ id, guild_id } = closure_0);
                           const lazyResult = noop.lazy(() => event(paths[14])(paths[19], paths.paths));
-                          useAlertStore.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="r" />);
+                          useAlertStore.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="Array" />);
                         }
             };
             items.push(obj7);
@@ -484,7 +482,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
         };
         items.push(obj11);
       }
-      const DeveloperMode = tmp3(tmp4[38]).DeveloperMode;
+      const DeveloperMode = tmp3(tmp4[37]).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         const obj12 = { label: null, onPress: null };
         const intl15 = tmp3(tmp4[23]).intl;
@@ -504,7 +502,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
         }
         let tidaWebformEnabled = require("TidaWebformExperiment").getCurrentConfig({ location: "showGuildEventModeratorActionSheet" }).tidaWebformEnabled;
         const obj16 = require("TidaWebformExperiment");
-        const tmp32 = require("getGuildEventImage")(event, tmp3(tmp4[40]).getWindowDimensions().width);
+        const tmp32 = require("getGuildEventImage")(event, tmp3(tmp4[39]).getWindowDimensions().width);
         closure_5 = tmp32;
         if (tidaWebformEnabled) {
           tidaWebformEnabled = null != tmp32;
@@ -519,11 +517,11 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
           };
           items.push(obj14);
         }
-        const tmp3Result3 = tmp3(tmp4[40]);
+        const tmp3Result3 = tmp3(tmp4[39]);
       }
       const obj15 = { key: "GuildEvent", stackingBehavior: "stack", options: items, hasIcons: false };
-      const result1 = tmp3(tmp4[42]).showSimpleActionSheet(obj15);
-      const tmp3Result4 = tmp3(tmp4[42]);
+      const result1 = tmp3(tmp4[41]).showSimpleActionSheet(obj15);
+      const tmp3Result4 = tmp3(tmp4[41]);
     }
   }
   if (null != tmp7) {

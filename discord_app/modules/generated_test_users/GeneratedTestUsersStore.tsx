@@ -1,6 +1,6 @@
-// === Module 15809: GeneratedTestUsersStore ===
+// === Module 15871: GeneratedTestUsersStore ===
 
-// Module 15809 (GeneratedTestUsersStore)
+// Module 15871 (GeneratedTestUsersStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserRecord from "UserRecord" /* 1404 */;
@@ -31,7 +31,7 @@ prototype["initialize"] = function initialize(pools) {
     if (null != pools.users) {
       const _Map2 = Map;
       const _Object2 = Object;
-      const map1 = new Map(Object.entries(pools.users));
+      map1 = new Map(Object.entries(pools.users));
       closure_1.users = map1;
     }
   }

@@ -1,13 +1,13 @@
-// === Module 12057: TimestampSearchHeader ===
+// === Module 12101: TimestampSearchHeader ===
 
-// Module 12057 (TimestampSearchHeader)
+// Module 12101 (TimestampSearchHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ClockIcon from "ClockIcon" /* 5050 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Form from "Form" /* 8563 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10480 */;
+import ClockIcon from "ClockIcon" /* 5051 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Form from "Form" /* 8579 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10514 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let c6 = "text-sm/semibold";
 let c7 = "text-sm/medium";
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND }, headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 12 }, icon: { marginRight: 12 }, description: { paddingHorizontal: 16, paddingBottom: 12 }, divider: null };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };

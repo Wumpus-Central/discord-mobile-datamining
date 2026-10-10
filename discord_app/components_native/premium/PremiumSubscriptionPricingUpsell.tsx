@@ -1,17 +1,17 @@
-// === Module 13752: PremiumSubscriptionPricingUpsell ===
+// === Module 13804: PremiumSubscriptionPricingUpsell ===
 
-// Module 13752 (PremiumSubscriptionPricingUpsell)
+// Module 13804 (PremiumSubscriptionPricingUpsell)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13616 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13668 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 import UserStore from "UserStore" /* 1390 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4733 */;
-import SubscriptionStore from "SubscriptionStore" /* 4734 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4774 */;
+import SubscriptionStore from "SubscriptionStore" /* 4775 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
 require = fn;
 const View = fn(17).View;
@@ -20,7 +20,7 @@ const PremiumConstants = fn(1392);
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_21 = createStyles.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function PricingSubheadingCopy() {
@@ -43,7 +43,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp5, T);
   if (cResult[2] !== stateFromStores) {
-    const hasBoostDiscountResult = stateFromStores2(4728).hasBoostDiscount(stateFromStores);
+    const hasBoostDiscountResult = stateFromStores2(4769).hasBoostDiscount(stateFromStores);
     class T {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -51,7 +51,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
     }
     cResult[2] = stateFromStores;
     cResult[3] = hasBoostDiscountResult;
-    const obj3 = stateFromStores2(4728);
+    const obj3 = stateFromStores2(4769);
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [LocaleStore];
@@ -140,7 +140,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -161,7 +161,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -176,7 +176,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -185,11 +185,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
     class V {
       constructor() {
         items = [, , , , ];
-        items[0] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_GUILD_1_MONTHLY);
-        items[1] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_MONTHLY);
-        items[2] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY);
-        items[3] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_YEARLY);
-        items[4] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY);
+        items[0] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_GUILD_1_MONTHLY);
+        items[1] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_MONTHLY);
+        items[2] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY);
+        items[3] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_YEARLY);
+        items[4] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY);
         return items;
       }
     }
@@ -204,7 +204,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -221,7 +221,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -236,7 +236,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -248,7 +248,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
             tmp = closure_1;
             tmp2 = closure_2;
             obj = closure_1(closure_2[17]);
-            waitResult = obj.wait(() => { ... });
+            products = obj.loadProducts();
           }
           return;
         }
@@ -262,7 +262,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -271,11 +271,11 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
     class V {
       constructor() {
         items = [, , , , ];
-        items[0] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_GUILD_1_MONTHLY);
-        items[1] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_MONTHLY);
-        items[2] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY);
-        items[3] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_YEARLY);
-        items[4] = closure_1_10.getProduct(closure_0(closure_2[19]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY);
+        items[0] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_GUILD_1_MONTHLY);
+        items[1] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_MONTHLY);
+        items[2] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY);
+        items[3] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_YEARLY);
+        items[4] = closure_1_10.getProduct(closure_0(closure_2[18]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY);
         return items;
       }
     }
@@ -289,7 +289,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           tmp = closure_1;
           tmp2 = closure_2;
           obj = closure_1(closure_2[17]);
-          waitResult = obj.wait(() => { ... });
+          products = obj.loadProducts();
         }
         return;
       }
@@ -322,7 +322,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
   });
   const effect = noop.useEffect(() => {
     if (!IAPStore.isReady()) {
-      closure_1(str3[17]).wait(() => closure_1_1(str3[18]).loadProducts());
+      const products = closure_1(str3[17]).loadProducts();
       const obj = closure_1(str3[17]);
     }
   }, []);
@@ -330,7 +330,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
   const items4 = [IAPStore];
   const obj7 = require("initialize");
   [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(require("initialize").useStateFromStoresArray(items4, () => {
-    const items = [IAPStore.getProduct(closure_0(str3[19]).ProductIds.PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[19]).ProductIds.PREMIUM_TIER_2_MONTHLY), IAPStore.getProduct(closure_0(str3[19]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[19]).ProductIds.PREMIUM_TIER_2_YEARLY), IAPStore.getProduct(closure_0(str3[19]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
+    const items = [IAPStore.getProduct(closure_0(str3[18]).ProductIds.PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[18]).ProductIds.PREMIUM_TIER_2_MONTHLY), IAPStore.getProduct(closure_0(str3[18]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), IAPStore.getProduct(closure_0(str3[18]).ProductIds.PREMIUM_TIER_2_YEARLY), IAPStore.getProduct(closure_0(str3[18]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
     return items;
   }), 5);
   if (stateFromStores2 == null) {
@@ -382,37 +382,37 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
             tmp22 = price;
           }
         }
-        const tmp2Result = tmp2(tmp3[21]);
+        const tmp2Result = tmp2(tmp3[20]);
         let result = diff1;
         if (tmp25) {
-          result = tmp2(tmp3[22]).convertToMajorCurrencyUnits(diff1, CurrencyCodes.USD);
-          const tmp2Result10 = tmp2(tmp3[22]);
+          result = tmp2(tmp3[21]).convertToMajorCurrencyUnits(diff1, CurrencyCodes.USD);
+          const tmp2Result10 = tmp2(tmp3[21]);
         }
-        tmp25 = tmp2(tmp3[21]).isAndroid() && null != diff1;
-        const tmp2Result11 = tmp2(tmp3[21]);
+        tmp25 = tmp2(tmp3[20]).isAndroid() && null != diff1;
+        const tmp2Result11 = tmp2(tmp3[20]);
         let result1 = tmp22;
         if (tmp28) {
-          result1 = tmp2(tmp3[22]).convertToMajorCurrencyUnits(tmp22, CurrencyCodes.USD);
-          const tmp2Result12 = tmp2(tmp3[22]);
+          result1 = tmp2(tmp3[21]).convertToMajorCurrencyUnits(tmp22, CurrencyCodes.USD);
+          const tmp2Result12 = tmp2(tmp3[21]);
         }
         str2 = "...";
         str3 = "...";
         if (null != result) {
-          const tmp2Result13 = tmp2(tmp3[23]);
-          str3 = tmp2Result13.formatRate(tmp2(tmp3[23]).formatPrice(result, formatted, { convertToMajorUnits: false }), interval, intervalCount);
-          const tmp2Result14 = tmp2(tmp3[23]);
+          const tmp2Result13 = tmp2(tmp3[22]);
+          str3 = tmp2Result13.formatRate(tmp2(tmp3[22]).formatPrice(result, formatted, { convertToMajorUnits: false }), interval, intervalCount);
+          const tmp2Result14 = tmp2(tmp3[22]);
         }
         if (null != result1) {
-          const tmp2Result15 = tmp2(tmp3[23]);
-          str2 = tmp2Result15.formatRate(tmp2(tmp3[23]).formatPrice(result1, formatted, { convertToMajorUnits: false }), interval, intervalCount);
-          const tmp2Result16 = tmp2(tmp3[23]);
+          const tmp2Result15 = tmp2(tmp3[22]);
+          str2 = tmp2Result15.formatRate(tmp2(tmp3[22]).formatPrice(result1, formatted, { convertToMajorUnits: false }), interval, intervalCount);
+          const tmp2Result16 = tmp2(tmp3[22]);
         }
         if (result !== result1) {
           const obj9 = { style: tmp.cardText, accessibilityLabel: null, variant: "text-md/medium", children: null };
-          const intl2 = tmp2(tmp3[24]).intl;
+          const intl2 = tmp2(tmp3[23]).intl;
           const obj10 = { price: str3, originalPrice: str2 };
-          obj9.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[24]).t.lEIwDw, obj10);
-          const intl3 = tmp2(tmp3[24]).intl;
+          obj9.accessibilityLabel = intl2.formatToPlainString(tmp2(tmp3[23]).t.lEIwDw, obj10);
+          const intl3 = tmp2(tmp3[23]).intl;
           const obj11 = {
             price: str3,
             originalPrice: str2,
@@ -425,28 +425,28 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
                       return tmp;
                     }
           };
-          obj9.children = intl3.format(tmp2(tmp3[24]).t.eRSsbf, obj11);
+          obj9.children = intl3.format(tmp2(tmp3[23]).t.eRSsbf, obj11);
           let obj12 = obj9;
         } else {
           obj12 = { style: tmp.cardText, variant: "text-md/medium", children: null };
-          const intl = tmp2(tmp3[24]).intl;
+          const intl = tmp2(tmp3[23]).intl;
           const obj13 = { price: str3 };
-          obj12.children = intl.format(tmp2(tmp3[24]).t.Mmf63F, obj13);
+          obj12.children = intl.format(tmp2(tmp3[23]).t.Mmf63F, obj13);
         }
-        const tmp31Result = closure_18(tmp2(tmp3[20]).Text, obj12);
-        tmp28 = tmp2(tmp3[21]).isAndroid() && null != tmp22;
+        const tmp31Result = closure_18(tmp2(tmp3[19]).Text, obj12);
+        tmp28 = tmp2(tmp3[20]).isAndroid() && null != tmp22;
         if (tmp5Result.hasFreeBoosts(stateFromStores)) {
           if (hasBoostDiscountResult) {
             if (tmp5Result3.isPremium(stateFromStores, closure_14.TIER_2)) {
               const obj14 = { children: null };
               const obj15 = { style: tmp.cardText, variant: "text-md/medium", children: null };
-              const intl5 = tmp2(tmp3[24]).intl;
-              const obj16 = { freeSubscriptionCount, discountPercent: tmp2(tmp3[25]).formatPercent(stateFromStores1, closure_17 / 100) };
-              obj15.children = intl5.format(tmp2(tmp3[24]).t["ZikTt+"], obj16);
-              const items5 = [closure_18(tmp2(tmp3[20]).Text, obj15), tmp31Result];
+              const intl5 = tmp2(tmp3[23]).intl;
+              const obj16 = { freeSubscriptionCount, discountPercent: tmp2(tmp3[24]).formatPercent(stateFromStores1, closure_17 / 100) };
+              obj15.children = intl5.format(tmp2(tmp3[23]).t["ZikTt+"], obj16);
+              const items5 = [closure_18(tmp2(tmp3[19]).Text, obj15), tmp31Result];
               obj14.children = items5;
               let tmp34 = closure_20(closure_19, obj14);
-              const tmp2Result17 = tmp2(tmp3[25]);
+              const tmp2Result17 = tmp2(tmp3[24]);
             }
             return tmp34;
           }
@@ -457,13 +457,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Pricin
           if (tmp5Result4.isPremium(stateFromStores, closure_14.TIER_1)) {
             const obj17 = { children: null };
             const obj18 = { style: tmp.cardText, variant: "text-md/medium", children: null };
-            const intl4 = tmp2(tmp3[24]).intl;
-            const obj19 = { discountPercent: tmp2(tmp3[25]).formatPercent(stateFromStores1, closure_17 / 100) };
-            obj18.children = intl4.format(tmp2(tmp3[24]).t.XVMAKU, obj19);
-            const items6 = [closure_18(tmp2(tmp3[20]).Text, obj18), tmp31Result];
+            const intl4 = tmp2(tmp3[23]).intl;
+            const obj19 = { discountPercent: tmp2(tmp3[24]).formatPercent(stateFromStores1, closure_17 / 100) };
+            obj18.children = intl4.format(tmp2(tmp3[23]).t.XVMAKU, obj19);
+            const items6 = [closure_18(tmp2(tmp3[19]).Text, obj18), tmp31Result];
             obj17.children = items6;
             tmp34 = closure_20(closure_19, obj17);
-            const tmp2Result18 = tmp2(tmp3[25]);
+            const tmp2Result18 = tmp2(tmp3[24]);
           }
           tmp5Result4 = tmp5(tmp3[15]);
         }

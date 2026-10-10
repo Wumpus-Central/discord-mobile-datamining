@@ -1,17 +1,17 @@
-// === Module 17406: FriendRequestsSettingsScreen ===
+// === Module 17478: FriendRequestsSettingsScreen ===
 
-// Module 17406 (FriendRequestsSettingsScreen)
+// Module 17478 (FriendRequestsSettingsScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10196 */;
-import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 17407 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10225 */;
+import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 17479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1, paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

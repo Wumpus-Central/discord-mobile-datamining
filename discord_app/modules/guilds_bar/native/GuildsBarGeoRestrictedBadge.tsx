@@ -1,20 +1,20 @@
-// === Module 16712: GuildsBarGeoRestrictedBadge ===
+// === Module 16782: GuildsBarGeoRestrictedBadge ===
 
-// Module 16712 (GuildsBarGeoRestrictedBadge)
+// Module 16782 (GuildsBarGeoRestrictedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef5011 from "module_5011" /* 5011 */;
-import FastImageDefault from "FastImage" /* 6163 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import _modDef15208 from "module_15208" /* 15208 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { badgeImageContainer: null, badgeImage: null };
 let size = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, backgroundColor: nativeDefault.colors.STATUS_WARNING_BACKGROUND, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj.badgeImageContainer = size;
-const size1 = { height: 16, width: 16, opacity: fn(5976).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
+const size1 = { height: 16, width: 16, opacity: fn(5969).DARK_1_LIGHT_08, tintColor: nativeDefault.colors.BLACK };
 obj.badgeImage = size1;
 let closure_5 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -30,8 +30,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp4 = cResult[2];
     }
     if (cResult[3] !== tmp3.badgeImage) {
-      const obj2 = { source: _modDef5011, style: tmp3.badgeImage };
-      const tmp9 = jsx(FastImageDefault, { source: _modDef5011, style: tmp3.badgeImage });
+      const obj2 = { source: _modDef15208, style: tmp3.badgeImage };
+      const tmp9 = jsx(FastImageDefault, { source: _modDef15208, style: tmp3.badgeImage });
       cResult[3] = tmp3.badgeImage;
       cResult[4] = tmp9;
       let tmp5 = tmp9;
@@ -61,7 +61,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = { style: null, pointerEvents: "none", children: null };
   const items = [tmp.badgeImageContainer, style.style];
   obj.style = items;
-  const obj2 = { source: _modDef5011, style: tmp.badgeImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef5011, style: tmp.badgeImage });
+  const obj2 = { source: _modDef15208, style: tmp.badgeImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef15208, style: tmp.badgeImage });
   return <View style={null} pointerEvents="none">{null}</View>;
 }));

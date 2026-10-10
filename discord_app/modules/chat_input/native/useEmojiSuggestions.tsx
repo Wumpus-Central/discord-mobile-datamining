@@ -1,13 +1,13 @@
-// === Module 12095: useEmojiSuggestions ===
+// === Module 12139: useEmojiSuggestions ===
 
-// Module 12095 (useEmojiSuggestions)
+// Module 12139 (useEmojiSuggestions)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import EmojiTypes from "EmojiTypes" /* 4726 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5977 */;
+import EmojiTypes from "EmojiTypes" /* 4767 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5970 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
 
 require = fn;
 function trimSurroundingPunctuation(wordSpan) {
@@ -100,8 +100,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj3;
   }
 }
-const LoadState = fn(5994).LoadState;
-const EnglishEmojiSuggestionsConstants = fn(12096);
+const LoadState = fn(5987).LoadState;
+const EnglishEmojiSuggestionsConstants = fn(12140);
 ({ QUERY_DENYLIST: closure_7, SHORT_QUERY_ALLOWLIST: closure_8 } = EnglishEmojiSuggestionsConstants);
 const EmojiIntention = fn(1393).EmojiIntention;
 const re10 = /(\S+)\s$/;

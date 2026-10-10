@@ -1,10 +1,10 @@
-// === Module 12824: VideoDenyIcon ===
+// === Module 12871: VideoDenyIcon ===
 
-// Module 12824 (VideoDenyIcon)
+// Module 12871 (VideoDenyIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod12825 from "module_12825" /* 12825 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod12872 from "module_12872" /* 12872 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const VideoDenyIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12825;
+    const tmpResult = _mod12872;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const VideoDenyIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12825, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12872, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,19 +1,19 @@
-// === Module 12460: HubEmailConnectionGuildSelectSearch ===
+// === Module 12507: HubEmailConnectionGuildSelectSearch ===
 
-// Module 12460 (HubEmailConnectionGuildSelectSearch)
+// Module 12507 (HubEmailConnectionGuildSelectSearch)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import useNavigation from "useNavigation" /* 1503 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6101 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
-import SearchBarNavDefault from "SearchBarNav" /* 7081 */;
-import HubActionCreatorsDefault from "HubActionCreators" /* 12447 */;
-import _modDef12461 from "module_12461" /* 12461 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6094 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import NavigatorHeader from "NavigatorHeader" /* 6200 */;
+import SearchBarNavDefault from "SearchBarNav" /* 7087 */;
+import HubActionCreatorsDefault from "HubActionCreators" /* 12494 */;
+import _modDef12508 from "module_12508" /* 12508 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,10 +23,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12433).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12480).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { scrollContainer: { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, fauxHeader: { paddingHorizontal: 0 }, emptyWrapper: { flex: 1, alignItems: "center", justifyContent: "center", marginTop: 64, paddingHorizontal: 16 }, emptyStateImage: { marginBottom: 24 }, emptyStateTitle: { marginBottom: 4, textAlign: "center" }, error: null };
 let obj3 = { flex: 1, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.error = { color: nativeDefault.unsafe_rawColors.RED_400, alignSelf: "center", fontSize: 14, marginBottom: 8 };
@@ -36,7 +36,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyS
   const cResult = c.c(9);
   const tmp4 = closure_12();
   if (cResult[0] !== tmp4.emptyStateImage) {
-    const obj2 = { style: tmp4.emptyStateImage, source: _modDef12461 };
+    const obj2 = { style: tmp4.emptyStateImage, source: _modDef12508 };
     const tmp9 = options(FastImageDefault, obj2);
     cResult[0] = tmp4.emptyStateImage;
     cResult[1] = tmp9;
@@ -81,7 +81,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyS
 }) : (function EmptyState() {
   const tmp = closure_12();
   const obj = { style: tmp.emptyWrapper, children: null };
-  const obj2 = { style: tmp.emptyStateImage, source: _modDef12461 };
+  const obj2 = { style: tmp.emptyStateImage, source: _modDef12508 };
   const items = [options(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -154,7 +154,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -186,7 +186,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
                 if (2 === tmp8) {
                   c3 = 1;
                   closure_128_0 = closure_2;
-                  const aPIError = new id(5632).APIError(closure_128_0);
+                  const aPIError = new id(5635).APIError(closure_128_0);
                   v3(aPIError);
                   c3 = 0;
                   closure_1_7(false);

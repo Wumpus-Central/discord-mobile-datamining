@@ -1,13 +1,13 @@
-// === Module 5052: BrowserManager ===
+// === Module 5053: BrowserManager ===
 
-// Module 5052 (BrowserManager)
+// Module 5053 (BrowserManager)
 import c from "c" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import PlatformUtils2 from "PlatformUtils" /* 1382 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import LinkingDefault from "Linking" /* 4765 */;
-import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5053 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5054 */;
+import LinkingDefault from "Linking" /* 4806 */;
+import NativeBrowserManagerModule from "NativeBrowserManagerModule" /* 5054 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 5055 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const NativeBrowserManagerModuleDefault = NativeBrowserManagerModule;
@@ -24,7 +24,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -55,7 +55,7 @@ let closure_8 = async function _browserManagerClearWebsiteData() {
         return obj;
       }
       c0 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     } catch (tmp8) {
       c0 = tmp;
       throw tmp8;

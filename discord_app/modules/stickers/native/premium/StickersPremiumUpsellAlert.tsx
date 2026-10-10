@@ -1,19 +1,19 @@
-// === Module 9754: StickersPremiumUpsellAlert ===
+// === Module 9783: StickersPremiumUpsellAlert ===
 
-// Module 9754 (StickersPremiumUpsellAlert)
+// Module 9783 (StickersPremiumUpsellAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Pressables from "Pressables" /* 6191 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9366 */;
-import _modDef9755 from "module_9755" /* 9755 */;
-import _modDef9756 from "module_9756" /* 9756 */;
-import _modDef9757 from "module_9757" /* 9757 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Pressables from "Pressables" /* 6184 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9393 */;
+import _modDef9784 from "module_9784" /* 9784 */;
+import _modDef9785 from "module_9785" /* 9785 */;
+import _modDef9786 from "module_9786" /* 9786 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -26,7 +26,7 @@ const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let items = [
   {
-    icon: _modDef9755,
+    icon: _modDef9784,
     description() {
       const intl = util.intl;
       return intl.string(util.t.uAfKTe);
@@ -37,7 +37,7 @@ let items = [
 
 ];
 let obj = {
-  icon: _modDef9755,
+  icon: _modDef9784,
   description() {
     const intl = util.intl;
     return intl.string(util.t.uAfKTe);
@@ -45,31 +45,31 @@ let obj = {
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_PURPLE
 };
 items[1] = {
-  icon: _modDef9756,
+  icon: _modDef9785,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 let obj2 = {
-  icon: _modDef9756,
+  icon: _modDef9785,
   description() {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.aVSVBO, { numFreeGuildSubscriptions });
   }
 };
 items[2] = {
-  icon: _modDef9757,
+  icon: _modDef9786,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
   },
   color: nativeDefault.unsafe_rawColors.PREMIUM_PERK_GREEN
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj5 = { alert: { paddingTop: 18 }, shortHeightAlert: { height: 500 }, content: { alignItems: "center" }, closeContainer: { flexDirection: "row-reverse", width: "100%", marginBottom: 16 }, description: { textAlign: "center", lineHeight: 20 }, perks: null, perkRow: null, lastPerkRow: null, perkIcon: null, perkText: null, imageHeader: null };
 let obj3 = {
-  icon: _modDef9757,
+  icon: _modDef9786,
   description() {
     const intl = util.intl;
     return intl.string(util.t.pqHIf7);
@@ -126,7 +126,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerkRo
             const obj2 = { style: tmp6, children: null };
             items = [tmp9, tmp14];
             obj2.children = items;
-            const tmp20 = state(React4, obj2);
+            const tmp20 = closure_1_14(React4, obj2);
             cResult[13] = tmp6;
             cResult[14] = tmp9;
             cResult[15] = tmp14;
@@ -134,7 +134,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerkRo
             tmp17 = tmp20;
           }
           const obj3 = { style: tmp4.perkText, variant: "text-md/medium", color: "interactive-text-active", children: tmp12 };
-          const tmp16 = __initData2(Text_Text.Text, obj3);
+          const tmp16 = map1(Text_Text.Text, obj3);
           cResult[10] = tmp4.perkText;
           cResult[11] = tmp12;
           cResult[12] = tmp16;
@@ -143,7 +143,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerkRo
       }
     }
     const obj4 = { style: tmp4.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color };
-    const tmp11 = __initData2(native.Icon, obj4);
+    const tmp11 = map1(native.Icon, obj4);
     cResult[3] = perk.color;
     cResult[4] = perk.icon;
     cResult[5] = tmp4.perkIcon;
@@ -166,9 +166,9 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function PerkRo
   }
   const obj = { style: items, children: null };
   items[1] = lastPerkRow;
-  const items1 = [__initData2(native.Icon, { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color }), __initData2(Text_Text.Text, { style: tmp.perkText, variant: "text-md/medium", color: "interactive-text-active", children: perk.description() })];
+  const items1 = [map1(native.Icon, { style: tmp.perkIcon, source: perk.icon, disableColor: null == perk.color, color: perk.color }), map1(Text_Text.Text, { style: tmp.perkText, variant: "text-md/medium", color: "interactive-text-active", children: perk.description() })];
   obj.children = items1;
-  return state(React4, obj);
+  return closure_1_14(React4, obj);
 });
 ReactCompilerGating = fn(558);
 let obj7 = { paddingVertical: 10, borderBottomColor: nativeDefault.unsafe_rawColors.PRIMARY_560, borderBottomWidth: 1, flexDirection: "row", alignItems: "center" };
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function s() {
       if (!ready.isReady()) {
-        analyticsLocations(dependencyMap[16]).wait(() => analyticsLocations(closure_1_2[17]).loadProducts());
+        const products = analyticsLocations(dependencyMap[16]).loadProducts();
         const obj = analyticsLocations(dependencyMap[16]);
       }
     };
@@ -195,11 +195,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     [tmp5, tmp6] = cResult;
   }
   const effect = noop.useEffect(tmp5, tmp6);
-  const tmp9 = analyticsLocations(9369)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp9 = analyticsLocations(9396)(closure_10.PREMIUM_MONTH_TIER_2);
   if (tmp9 != null) {
     const priceString = tmp9.priceString;
   }
-  analyticsLocations = tmp8(6848)().analyticsLocations;
+  analyticsLocations = tmp8(6851)().analyticsLocations;
   if (cResult[2] === analyticsLocation) {
     if (cResult[3] === analyticsLocations) {
       let tmp10 = cResult[4];
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       }
       const _Symbol3 = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { source: tmp8(5010) };
+        let obj2 = { source: tmp8(7728) };
         const tmp19 = closure_13(analyticsLocation(1200).Icon, obj2);
         cResult[10] = tmp19;
         let tmp17 = tmp19;
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
       }
       if (cResult[11] !== onClose) {
         let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: tmp17 };
-        const tmp22 = closure_13(analyticsLocation(6191).PressableOpacity, obj3);
+        const tmp22 = closure_13(analyticsLocation(6184).PressableOpacity, obj3);
         cResult[11] = onClose;
         cResult[12] = tmp22;
         let tmp20 = tmp22;
@@ -263,12 +263,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
           tmp27 = cResult[16];
         }
         if (cResult[17] !== tmp4.imageHeader) {
-          const obj4 = { source: tmp8(9758), style: tmp4.imageHeader };
-          const tmp31 = closure_13(tmp8(6163), obj4);
+          const obj4 = { source: tmp8(9787), style: tmp4.imageHeader };
+          const tmp31 = closure_13(tmp8(6156), obj4);
           cResult[17] = tmp4.imageHeader;
           cResult[18] = tmp31;
           let tmp28 = tmp31;
-          const tmp8Result = tmp8(6163);
+          const tmp8Result = tmp8(6156);
         } else {
           tmp28 = cResult[18];
         }
@@ -328,7 +328,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
                 const obj7 = { cancelText: tmp11, confirmColor: analyticsLocation(1200).ButtonColors.GREEN, confirmText: tmp13, onConfirm: tmp10, onClose, onCancel: onClose, style: tmp16, children: null };
                 const items1 = [tmp23, tmp45];
                 obj7.children = items1;
-                const tmp54 = closure_14(tmp8(5395), obj7);
+                const tmp54 = closure_14(tmp8(5398), obj7);
                 cResult[32] = onClose;
                 cResult[33] = tmp10;
                 cResult[34] = tmp23;
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
                 cResult[36] = tmp16;
                 cResult[37] = tmp54;
                 tmp51 = tmp54;
-                const tmp8Result2 = tmp8(5395);
+                const tmp8Result2 = tmp8(5398);
               }
             }
           }
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
           tmp45 = tmp50;
         }
         const obj10 = { style: tmp4.description, variant: "text-md/medium", children: tmp32 };
-        const tmp37 = closure_13(analyticsLocation(5087).Text, obj10);
+        const tmp37 = closure_13(analyticsLocation(5088).Text, obj10);
         cResult[21] = tmp4.description;
         cResult[22] = tmp32;
         cResult[23] = tmp37;
@@ -394,16 +394,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   const tmp = closure_16();
   const effect = noop.useEffect(() => {
     if (!ready.isReady()) {
-      analyticsLocations(dependencyMap[16]).wait(() => analyticsLocations(closure_1_2[17]).loadProducts());
+      const products = analyticsLocations(dependencyMap[16]).loadProducts();
       const obj = analyticsLocations(dependencyMap[16]);
     }
   }, []);
-  const tmp5 = analyticsLocations(9369)(closure_10.PREMIUM_MONTH_TIER_2);
+  const tmp5 = analyticsLocations(9396)(closure_10.PREMIUM_MONTH_TIER_2);
   let priceString;
   if (tmp5 != null) {
     priceString = tmp5.priceString;
   }
-  analyticsLocations = tmp3(6848)().analyticsLocations;
+  analyticsLocations = tmp3(6851)().analyticsLocations;
   let obj = { cancelText: null, confirmColor: null, confirmText: null, onConfirm: null, onClose: null, onCancel: null, style: null, children: null };
   const intl = util.intl;
   obj.cancelText = intl.string(util.t.f3Pet9);
@@ -431,8 +431,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   obj.style = items;
   let obj2 = { style: tmp.closeContainer, children: null };
   let obj3 = { accessibilityRole: "button", accessibilityLabel: "close", onPress: onClose, children: null };
-  const tmp3Result = analyticsLocations(5395);
-  obj3.children = closure_13(native.Icon, { source: analyticsLocations(5010) });
+  const tmp3Result = analyticsLocations(5398);
+  obj3.children = closure_13(native.Icon, { source: analyticsLocations(7728) });
   obj2.children = closure_13(Pressables.PressableOpacity, obj3);
   const items1 = [closure_13(closure_4, obj2), ];
   const obj5 = {
@@ -443,10 +443,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
     children: null
   };
   const obj6 = { source: null, style: null };
-  const obj4 = { source: analyticsLocations(5010) };
-  obj6.source = analyticsLocations(9758);
+  const obj4 = { source: analyticsLocations(7728) };
+  obj6.source = analyticsLocations(9787);
   obj6.style = tmp.imageHeader;
-  const items2 = [closure_13(analyticsLocations(6163), obj6), , ];
+  const items2 = [closure_13(analyticsLocations(6156), obj6), , ];
   const obj7 = { style: tmp.description, variant: "text-md/medium", children: null };
   const intl3 = util.intl;
   if (priceString == null) {
@@ -455,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Stickers
   const obj8 = { children: null };
   obj7.children = intl3.format(util.t.TBsJfQ, { monthlyPrice: priceString });
   items2[1] = closure_13(Text_Text.Text, obj7);
-  const tmp3Result2 = analyticsLocations(6163);
+  const tmp3Result2 = analyticsLocations(6156);
   items2[2] = closure_13(closure_4, { style: tmp.perks, children: items.map((perk, index) => closure_1_13(closure_1_17, { perk, isLastPerk: index === length.length - 1 }, index)) });
   obj5.children = items2;
   obj8.children = closure_14(closure_4, obj5);

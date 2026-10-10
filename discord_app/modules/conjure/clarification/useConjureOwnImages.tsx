@@ -1,7 +1,7 @@
-// === Module 17170: useConjureOwnImages ===
+// === Module 17240: useConjureOwnImages ===
 
-// Module 17170 (useConjureOwnImages)
-import _modDef3827 from "module_3827" /* 3827 */;
+// Module 17240 (useConjureOwnImages)
+import _modDef3849 from "module_3849" /* 3849 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -40,7 +40,7 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-const ConjureConnectionStore = fn(13164);
+const ConjureConnectionStore = fn(13213);
 ({ deleteStagedAttachment: metroRequire, importAttachmentFromUrl: closure_7 } = ConjureConnectionStore);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/clarification/useConjureOwnImages.tsx");
@@ -73,7 +73,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
   [first1, closure_6] = first1.useState({});
   [first2, closure_8] = first1.useState({});
   let intl = require("util").intl;
-  const stringResult = intl.string(_modDef3827.wTsP5l);
+  const stringResult = intl.string(_modDef3849.wTsP5l);
   let items = [first];
   const items1 = [first1, first, first2];
   const callback = first1.useCallback((arg0) => {
@@ -235,7 +235,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               { attachment: null }.attachment = errorText;
               closure_1_4((arg0) => {
                 if (null != arg0[closure_0]) {
-                  closure_6(id, tmp2.attachment.id).catch(/* F157192 */ function() { ... });
+                  closure_6(id, tmp2.attachment.id).catch(/* F157646 */ function() { ... });
                   const promise = closure_6(id, tmp2.attachment.id);
                 }
                 obj = {};
@@ -276,7 +276,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
             const obj = { busy: null, error: null };
             const obj2 = { source: "upload", text: null };
             const intl = id(1126).intl;
-            obj2.text = intl.string(closure_1(3827)["kUw/b1"]);
+            obj2.text = intl.string(closure_1(3849)["kUw/b1"]);
             obj.error = obj2;
             return closure_1_6((arg0) => {
               obj = {};
@@ -297,7 +297,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
           return first2(id, arg0).then((attachment) => {
             closure_1_4((arg0) => {
               if (null != arg0[closure_0]) {
-                closure_6(id, tmp2.attachment.id).catch(/* F157192 */ function() { ... });
+                closure_6(id, tmp2.attachment.id).catch(/* F157646 */ function() { ... });
                 const promise = closure_6(id, tmp2.attachment.id);
               }
               obj = {};
@@ -349,7 +349,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
               return false;
             }
             const intl = id(1126).intl;
-            message = intl.string(closure_1(3827).l79PMc);
+            message = intl.string(closure_1(3849).l79PMc);
           });
         };
         return obj;

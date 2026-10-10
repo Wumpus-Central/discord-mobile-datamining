@@ -1,13 +1,13 @@
-// === Module 17322: SmartSearchExpandButton ===
+// === Module 17394: SmartSearchExpandButton ===
 
-// Module 17322 (SmartSearchExpandButton)
+// Module 17394 (SmartSearchExpandButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef4053 from "module_4053" /* 4053 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10498 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13790 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 17321 */;
+import _modDef4075 from "module_4075" /* 4075 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10532 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13842 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 17393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" }, pill: { height: nativeDefault.space.PX_32, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, backgroundColor, alignItems: "center", justifyContent: "center" }, surface: null };
   const obj3 = {};
@@ -41,7 +41,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[0] !== isCollapsed) {
     const intl = util.intl;
-    const tmp9 = _modDef4053;
+    const tmp9 = _modDef4075;
     const stringResult = intl.string(isCollapsed ? tmp9.NuTbB9 : tmp9.FKLBbW);
     cResult[0] = isCollapsed;
     cResult[1] = stringResult;
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
   const obj3 = { style: tmp3.pill, hitSlop: rect, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl = util.intl;
-  const tmp9 = _modDef4053;
+  const tmp9 = _modDef4075;
   if (isCollapsed) {
     let FKLBbW = tmp9.NuTbB9;
     let tmp10 = importDefault;

@@ -1,23 +1,23 @@
-// === Module 13484: InAppReportsWidgetPreviewElement ===
+// === Module 13535: InAppReportsWidgetPreviewElement ===
 
-// Module 13484 (InAppReportsWidgetPreviewElement)
+// Module 13535 (InAppReportsWidgetPreviewElement)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6661 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7316 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7320 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8351 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 13177 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6662 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7322 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7326 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8367 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 13227 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfilePersonalWidgetCardDefault = tmp5(13300);
+const UserProfilePersonalWidgetCardDefault = tmp5(13350);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: { backgroundColor: nativeDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

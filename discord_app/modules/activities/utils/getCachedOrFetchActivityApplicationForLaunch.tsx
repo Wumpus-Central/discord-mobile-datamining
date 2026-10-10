@@ -1,11 +1,11 @@
-// === Module 10794: getCachedOrFetchActivityApplicationForLaunch ===
+// === Module 10868: getCachedOrFetchActivityApplicationForLaunch ===
 
-// Module 10794 (getCachedOrFetchActivityApplicationForLaunch)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10778 */;
+// Module 10868 (getCachedOrFetchActivityApplicationForLaunch)
+import fetchShelf from "fetchShelf" /* 10848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 let closure_7 = async function _getCachedOrFetchActivityApplicationForLaunch() {
@@ -20,7 +20,7 @@ let closure_7 = async function _getCachedOrFetchActivityApplicationForLaunch() {
   if (channel != null) {
     const guild_id = channel.guild_id;
   }
-  await EmbeddedActivitiesActionCreators.fetchShelf({ guildId: guild_id });
+  await fetchShelf.fetchShelf({ guildId: guild_id });
   closure_130_1 = value;
   const activityConfigs = closure_130_1.activityConfigs;
   const applications = closure_130_1.applications;

@@ -1,17 +1,17 @@
-// === Module 16160: CollectiblesShopOrbsPage ===
+// === Module 16227: CollectiblesShopOrbsPage ===
 
-// Module 16160 (CollectiblesShopOrbsPage)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8284 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 16124 */;
+// Module 16227 (CollectiblesShopOrbsPage)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8300 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 16192 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7257 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
 
 require = fn;
 const View = fn(17).View;
 const constants = fn(1087).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({ container: { display: "flex", flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 16973: ConjureArchivePicker ===
+// === Module 17041: ConjureArchivePicker ===
 
-// Module 16973 (ConjureArchivePicker)
+// Module 17041 (ConjureArchivePicker)
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import ConjureTypes from "ConjureTypes" /* 6940 */;
-import FilePickerUtils from "FilePickerUtils" /* 12748 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import ConjureTypes from "ConjureTypes" /* 6946 */;
+import FilePickerUtils from "FilePickerUtils" /* 12795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -50,7 +50,7 @@ let closure_9 = async function _sendConjureArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_9 = async function _sendConjureArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp21) {
       c6 = tmp;
@@ -95,7 +95,7 @@ let closure_9 = async function _sendConjureArchiveImport(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(13164);
+const ConjureConnectionStore = fn(13213);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty, uploadAttachmentBytes: metroRequire } = ConjureConnectionStore);
 let closure_7 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
@@ -118,7 +118,7 @@ export const describeConjureArchiveRejection = function describeConjureArchiveRe
     const obj2 = { size: null };
     const tmpResult = ConjureTypes;
     obj2.size = tmpResult.formatConjureAttachmentLimit(ConjureTypes.conjureAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3827.ThxcOX, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3849.ThxcOX, obj2);
     const tmpResult2 = ConjureTypes;
   }
   return formatToPlainStringResult;

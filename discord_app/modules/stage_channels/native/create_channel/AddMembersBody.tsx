@@ -1,19 +1,19 @@
-// === Module 8618: AddMembersBody ===
+// === Module 8634: AddMembersBody ===
 
-// Module 8618 (AddMembersBody)
+// Module 8634 (AddMembersBody)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
-import RegexUtilsDefault from "RegexUtils" /* 5075 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import GuildUtilsDefault from "GuildUtils" /* 6103 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8587 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
+import RegexUtilsDefault from "RegexUtils" /* 5076 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import GuildUtilsDefault from "GuildUtils" /* 6096 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8602 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -55,7 +55,7 @@ const ChannelPermissionsConstants = fn(7489);
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { inputContainer: { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 }, inputDescContainer: null, inputDescText: null, tagRoleColor: null, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };
 obj2.inputDescContainer = { flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12 };
@@ -155,12 +155,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(6305).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(6306).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(6305).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(6306).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -178,7 +178,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (tmp) {
       substr = str.slice(1);
     }
-    const members = GuildUtilsDefault.requestMembers(guild.id, substr, state);
+    const members = GuildUtilsDefault.requestMembers(guild.id, substr, closure_2_14);
     closure_7(str);
     closure_5(tmp);
   };
@@ -189,22 +189,22 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj9.children = closure_16(pendingAdditions(8609), obj10);
+  obj9.children = closure_16(pendingAdditions(8625), obj10);
   const items5 = [closure_16(closure_7, obj9), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
     const obj11 = { style: tmp3.inputDescContainer, children: null };
     const obj12 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
-    obj11.children = closure_16(guild(5087).Text, obj12);
+    obj11.children = closure_16(guild(5088).Text, obj12);
     tmp27Result = closure_16(tmp28, obj11);
   }
   items5[1] = tmp27Result;
   if (canEveryoneRoleResult) {
     const obj13 = { style: tmp3.adminWarning, children: null };
-    const obj14 = { messageType: guild(1200).HelpMessageTypes.WARNING, children: null };
+    const obj14 = { type: "warning", message: null, role: "status" };
     const intl4 = guild(1126).intl;
-    obj14.children = intl4.string(guild(1126).t["5f3HIC"]);
-    obj13.children = closure_16(guild(1200).HelpMessage, obj14);
+    obj14.message = intl4.string(guild(1126).t["5f3HIC"]);
+    obj13.children = closure_16(guild(7567).InlineNotice, obj14);
     canEveryoneRoleResult = closure_16(tmp28, obj13);
   }
   items5[2] = canEveryoneRoleResult;
@@ -212,7 +212,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj15 = { children: null };
-        const obj16 = { Illustration: guild(8614).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj16 = { Illustration: guild(8630).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1126).intl;
         const obj17 = { query: str };
@@ -227,8 +227,8 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj19 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(8609);
-  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(587).space.PX_16, paddingBottom: pendingAdditions(587).space.PX_16 + pendingAdditions(6663)(obj).insets.bottom };
+  const tmp4Result = pendingAdditions(8625);
+  obj19.contentContainerStyle = { paddingHorizontal: pendingAdditions(587).space.PX_16, paddingBottom: pendingAdditions(587).space.PX_16 + pendingAdditions(6664)(obj).insets.bottom };
   obj19.renderItem = function renderItem(item) {
     item = item.item;
     ({ index, section } = item);
@@ -302,11 +302,11 @@ export default function AddMembersBody(pendingAdditions) {
     let tmp2 = null;
     if (section.section.data.length > 0) {
       const obj = { style: sectionRowWrapper.sectionRowWrapper, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: tmp };
-      tmp2 = value2(Text_Text.Text, obj);
+      tmp2 = value3(Text_Text.Text, obj);
     }
     return tmp2;
   };
   obj19.sections = items3;
   tmp27Result2 = closure_16(BottomSheetSectionList, obj19);
-  const obj20 = { paddingHorizontal: pendingAdditions(587).space.PX_16, paddingBottom: pendingAdditions(587).space.PX_16 + pendingAdditions(6663)(obj).insets.bottom };
+  const obj20 = { paddingHorizontal: pendingAdditions(587).space.PX_16, paddingBottom: pendingAdditions(587).space.PX_16 + pendingAdditions(6664)(obj).insets.bottom };
 };

@@ -1,18 +1,18 @@
-// === Module 17209: ConjureHistoryState ===
+// === Module 17290: ConjureHistoryState ===
 
-// Module 17209 (ConjureHistoryState)
+// Module 17290 (ConjureHistoryState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { placeholder: { alignItems: "center", gap: nativeDefault.space.PX_4, padding: nativeDefault.space.PX_24 } };
 let closure_6 = createStyles.createStyles(obj2);
 fn(558);
@@ -72,7 +72,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHisto
     let stringResult = emptyBody;
     if (tmp5) {
       const intl2 = util.intl;
-      stringResult = intl2.string(_modDef3827["8SErdg"]);
+      stringResult = intl2.string(_modDef3849["8SErdg"]);
     }
     cResult[5] = emptyBody;
     cResult[6] = tmp5;
@@ -82,7 +82,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHisto
   let stringResult1 = emptyTitle;
   if ("failed" === state.state.status) {
     const intl = util.intl;
-    stringResult1 = intl.string(_modDef3827.h1SE6R);
+    stringResult1 = intl.string(_modDef3849.h1SE6R);
   }
   cResult[0] = emptyTitle;
   cResult[1] = "failed" === state.state.status;
@@ -98,12 +98,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHisto
   obj.accessibilityRole = str;
   if ("failed" === state.state.status) {
     const intl = util.intl;
-    emptyTitle = intl.string(_modDef3827.h1SE6R);
+    emptyTitle = intl.string(_modDef3849.h1SE6R);
   }
   const items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: emptyTitle }), ];
   if ("failed" === state.state.status) {
     const intl2 = util.intl;
-    emptyBody = intl2.string(_modDef3827["8SErdg"]);
+    emptyBody = intl2.string(_modDef3849["8SErdg"]);
   }
   items[1] = React4(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", children: emptyBody });
   obj.children = items;
@@ -127,7 +127,7 @@ export const ConjureHistoryNotice = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl2 = util.intl;
-          obj2.children = intl2.string(_modDef3827.V7Ri8H);
+          obj2.children = intl2.string(_modDef3849.V7Ri8H);
           const tmp7 = React4(Text_Text.Text, obj2);
           cResult[1] = tmp7;
         }
@@ -137,7 +137,7 @@ export const ConjureHistoryNotice = ReactCompilerGating.isReactCompilerEnabled()
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
       intl = util.intl;
-      stringResult = intl.string(_modDef3827.h1SE6R);
+      stringResult = intl.string(_modDef3849.h1SE6R);
       obj3.children = stringResult;
       const tmp13 = React4(Text_Text.Text, obj3);
       cResult[0] = tmp13;
@@ -153,12 +153,12 @@ export const ConjureHistoryNotice = ReactCompilerGating.isReactCompilerEnabled()
   } else if ("failed" === state.status) {
     const obj2 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
     const intl2 = util.intl;
-    obj2.children = intl2.string(_modDef3827.h1SE6R);
+    obj2.children = intl2.string(_modDef3849.h1SE6R);
     let tmp = React4(Text_Text.Text, obj2);
   } else if (state.truncated) {
     const obj = { variant: "text-xs/normal", color: "text-muted", children: null };
     const intl = util.intl;
-    obj.children = intl.string(_modDef3827.V7Ri8H);
+    obj.children = intl.string(_modDef3849.V7Ri8H);
     tmp = React4(Text_Text.Text, obj);
   }
 });

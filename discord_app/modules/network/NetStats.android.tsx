@@ -1,15 +1,15 @@
-// === Module 7175: NetStats ===
+// === Module 7181: NetStats ===
 
-// Module 7175 (NetStats)
+// Module 7181 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import configure from "configure" /* 1483 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4944 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5289 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4983 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5290 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7176 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7182 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import NetworkUtils_mod from "utils/NetworkUtils" /* 1482 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
@@ -158,7 +158,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -226,7 +226,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

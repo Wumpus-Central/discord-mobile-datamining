@@ -1,6 +1,6 @@
-// === Module 9149: hooks/QuestHooks ===
+// === Module 9170: hooks/QuestHooks ===
 
-// Module 9149 (hooks/QuestHooks)
+// Module 9170 (hooks/QuestHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -9,47 +9,47 @@ import MurmurHashV3Default from "MurmurHashV3" /* 1264 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import PremiumUtils from "PremiumUtils" /* 4728 */;
-import shared from "shared" /* 4930 */;
-import _mod5742 from "module_5742" /* 5742 */;
-import QuestTypes from "QuestTypes" /* 5982 */;
-import AdCreativeType from "AdCreativeType" /* 5986 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5987 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6078 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6854 */;
-import QuestDataUtils from "QuestDataUtils" /* 7380 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7390 */;
-import AnalyticsActions from "AnalyticsActions" /* 7400 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7404 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7406 */;
-import QuestType from "QuestType" /* 7408 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7409 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
+import PremiumUtils from "PremiumUtils" /* 4769 */;
+import shared from "shared" /* 4969 */;
+import _mod5745 from "module_5745" /* 5745 */;
+import QuestTypes from "QuestTypes" /* 5975 */;
+import AdCreativeType from "AdCreativeType" /* 5979 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5980 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6071 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6857 */;
+import QuestDataUtils from "QuestDataUtils" /* 7386 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7396 */;
+import AnalyticsActions from "AnalyticsActions" /* 7406 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7410 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7412 */;
+import QuestType from "QuestType" /* 7414 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7415 */;
 import QualtricsActionCreators from "QualtricsActionCreators" /* 7470 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 7477 */;
-import apexExperiment from "apexExperiment" /* 9140 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9142 */;
-import QuestActionCreators from "QuestActionCreators" /* 9150 */;
-import AssetUtils from "AssetUtils" /* 9157 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 9162 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9165 */;
-import RenewableEndDateSortExperimentDefault from "RenewableEndDateSortExperiment" /* 9173 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9176 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10472 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 12916 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 12919 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 12920 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 12921 */;
+import apexExperiment from "apexExperiment" /* 9161 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 9163 */;
+import QuestActionCreators from "QuestActionCreators" /* 9171 */;
+import AssetUtils from "AssetUtils" /* 9184 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 9189 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9192 */;
+import RenewableEndDateSortExperimentDefault from "RenewableEndDateSortExperiment" /* 9200 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9203 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10506 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 12964 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 12967 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 12968 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 12969 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7381 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7387 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
 import UserStore from "UserStore" /* 1390 */;
-import BountyStore from "BountyStore" /* 7383 */;
-import QuestStore from "QuestStore" /* 7384 */;
+import BountyStore from "BountyStore" /* 7389 */;
+import QuestStore from "QuestStore" /* 7390 */;
 
 const require = globalThis.__r;
 
@@ -575,8 +575,8 @@ function isQuestHiddenFromQuestHome(userStatus) {
   }
   return isQuestExpiredResult;
 }
-const useConsoleQuestUIStore = fn(7385).useConsoleQuestUIStore;
-const QuestConstants = fn(5979);
+const useConsoleQuestUIStore = fn(7391).useConsoleQuestUIStore;
+const QuestConstants = fn(5972);
 ({ QuestTaskPlatform: closure_14, QuestsExperimentLocations: closure_15, MEMBER_LIST_SOCIAL_ENTRY_POINT_ALLOWED_TASK_TYPES: closure_16, QuestHomeSortMethods: closure_17, SORTED_QUEST_HOME_FILTER_GROUPS: closure_18, TaskFilterTypes: closure_19, RewardFilterTypes: closure_20, MOBILE_ORBS_INTRO_QUEST_ID: closure_21, ORBS_INTRO_QUEST_ID: closure_22, QuestVariants: closure_23 } = QuestConstants);
 const Constants = fn(1085);
 ({ HelpdeskArticles: closure_24, PlatformTypes: closure_25, ThemeTypes: closure_26, AnalyticEvents: closure_27 } = Constants);
@@ -653,10 +653,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuests(ar
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const isEligibleForQuests = tmp(9144).getIsEligibleForQuests();
+    const isEligibleForQuests = tmp(9165).getIsEligibleForQuests();
     cResult[8] = isEligibleForQuests;
     let tmp19 = isEligibleForQuests;
-    const tmpResult6 = tmp(9144);
+    const tmpResult6 = tmp(9165);
   } else {
     tmp19 = cResult[8];
   }
@@ -787,7 +787,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuests(ar
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(9144).getIsEligibleForQuests();
+  isEligibleForQuests = obj(9165).getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
     const fetchPolicy = obj.fetchPolicy;
@@ -814,7 +814,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuests(ar
         obj = QuestActionCreators;
         const currentQuests = obj.fetchCurrentQuests();
         if (obj2.isMac()) {
-          state = DiscordAppStateDefault.getState();
+          const state = DiscordAppStateDefault.getState();
         }
         obj2 = PlatformUtils;
       }
@@ -1645,11 +1645,11 @@ let tmp17 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsQuestP
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   if (cResult[3] !== id) {
-    const result = tmp(12916).isVideoQuestProgressing(id);
+    const result = tmp(12964).isVideoQuestProgressing(id);
     cResult[3] = id;
     cResult[4] = result;
     let tmp8 = result;
-    const tmpResult2 = tmp(12916);
+    const tmpResult2 = tmp(12964);
   } else {
     tmp8 = cResult[4];
   }
@@ -2007,7 +2007,7 @@ let tmp21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConnecte
   quest = quest.quest;
   ({ questContent: importDefault, sourceQuestContent: dependencyMap } = quest);
   closure_3 = closure_56({ quest });
-  closure_4 = quest(9174).useGetQuestImpressionId();
+  closure_4 = quest(9201).useGetQuestImpressionId();
   return () => {
     const obj = QuestPlatformUtils;
     if (closure_3) {
@@ -2253,23 +2253,23 @@ let tmp24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestPre
   let items = [arg0];
   return noop.useMemo(() => ({
     handleComplete() {
-      return closure_0(9150).completeQuestPreview(closure_1_0);
+      return closure_0(9171).completeQuestPreview(closure_1_0);
     },
     handleProgress(random) {
-      return closure_0(9150).completeQuestPreview(closure_1_0, random);
+      return closure_0(9171).completeQuestPreview(closure_1_0, random);
     },
     handleResetStatusClick() {
-      return closure_0(9150).resetQuestPreviewStatus(closure_1_0);
+      return closure_0(9171).resetQuestPreviewStatus(closure_1_0);
     },
     handleResetDismissibilityClick() {
-      return closure_0(9150).resetQuestDismissibilityStatus(closure_1_0);
+      return closure_0(9171).resetQuestDismissibilityStatus(closure_1_0);
     },
     handleOverridePreviewClick(placement) {
-      return closure_0(9150).overrideQuestForPlacement(placement, closure_1_0);
+      return closure_0(9171).overrideQuestForPlacement(placement, closure_1_0);
     },
     handleResetHasBeenSeenClick() {
       const items = [closure_1_0];
-      return closure_0(9150).markAdContentUnseen(closure_0(5986).AdCreativeType.QUEST, items);
+      return closure_0(9171).markAdContentUnseen(closure_0(5979).AdCreativeType.QUEST, items);
     }
   }), items);
 });
@@ -2469,11 +2469,11 @@ const tmp31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTaskPl
   const obj2 = require("c");
   [tmp4, r10016] = closure_58(id.id);
   if (cResult[0] !== id) {
-    const result = withResult16(9176).supportedTaskPlatforms(id);
+    const result = withResult16(9203).supportedTaskPlatforms(id);
     cResult[0] = id;
     cResult[1] = result;
     obj3 = result;
-    const withResult16Result = withResult16(9176);
+    const withResult16Result = withResult16(9203);
   } else {
     obj3 = cResult[1];
   }
@@ -2656,42 +2656,42 @@ const tmp31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTaskPl
         }
       }
     }
-    const match = withResult16(5742).match(first1);
-    const str2 = withResult16(5742);
+    const match = withResult16(5745).match(first1);
+    const str2 = withResult16(5745);
     const obj = { taskType: null };
-    PLAY_ON_DESKTOP = withResult16(5987).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
+    PLAY_ON_DESKTOP = withResult16(5980).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
     obj.taskType = PLAY_ON_DESKTOP;
     const withResult = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP);
     const obj4 = { taskType: null };
-    PLAY_ACTIVITY = withResult16(5987).FirstPartyQuestTaskTypes.PLAY_ACTIVITY;
+    PLAY_ACTIVITY = withResult16(5980).FirstPartyQuestTaskTypes.PLAY_ACTIVITY;
     obj4.taskType = PLAY_ACTIVITY;
     const withResult1 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY);
     const obj5 = { taskType: null };
-    WATCH_VIDEO = withResult16(5987).FirstPartyQuestTaskTypes.WATCH_VIDEO;
+    WATCH_VIDEO = withResult16(5980).FirstPartyQuestTaskTypes.WATCH_VIDEO;
     obj5.taskType = WATCH_VIDEO;
     const withResult2 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO);
     const obj6 = { taskType: null };
-    WATCH_VIDEO_ON_MOBILE = withResult16(5987).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE;
+    WATCH_VIDEO_ON_MOBILE = withResult16(5980).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE;
     obj6.taskType = WATCH_VIDEO_ON_MOBILE;
     const withResult3 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE);
     const obj7 = { taskType: null };
-    STREAM_ON_DESKTOP = withResult16(5987).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
+    STREAM_ON_DESKTOP = withResult16(5980).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
     obj7.taskType = STREAM_ON_DESKTOP;
     const withResult4 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE).with(obj6, STREAM_ON_DESKTOP);
     const obj8 = { taskType: null };
-    PLAY_ON_XBOX = withResult16(5987).FirstPartyQuestTaskTypes.PLAY_ON_XBOX;
+    PLAY_ON_XBOX = withResult16(5980).FirstPartyQuestTaskTypes.PLAY_ON_XBOX;
     obj8.taskType = PLAY_ON_XBOX;
     const withResult5 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE).with(obj6, STREAM_ON_DESKTOP).with(obj7, PLAY_ON_XBOX);
     const obj9 = { taskType: null };
-    PLAY_ON_PLAYSTATION = withResult16(5987).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION;
+    PLAY_ON_PLAYSTATION = withResult16(5980).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION;
     obj9.taskType = PLAY_ON_PLAYSTATION;
     const withResult6 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE).with(obj6, STREAM_ON_DESKTOP).with(obj7, PLAY_ON_XBOX).with(obj8, PLAY_ON_PLAYSTATION);
     const obj10 = { taskType: null };
-    ACHIEVEMENT_IN_GAME = withResult16(5987).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME;
+    ACHIEVEMENT_IN_GAME = withResult16(5980).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME;
     obj10.taskType = ACHIEVEMENT_IN_GAME;
     const withResult7 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE).with(obj6, STREAM_ON_DESKTOP).with(obj7, PLAY_ON_XBOX).with(obj8, PLAY_ON_PLAYSTATION).with(obj9, ACHIEVEMENT_IN_GAME);
     const obj11 = { taskType: null };
-    ACHIEVEMENT_IN_ACTIVITY = withResult16(5987).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY;
+    ACHIEVEMENT_IN_ACTIVITY = withResult16(5980).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY;
     obj11.taskType = ACHIEVEMENT_IN_ACTIVITY;
     const withResult8 = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE).with(obj6, STREAM_ON_DESKTOP).with(obj7, PLAY_ON_XBOX).with(obj8, PLAY_ON_PLAYSTATION).with(obj9, ACHIEVEMENT_IN_GAME).with(obj10, ACHIEVEMENT_IN_ACTIVITY);
     const exhaustiveResult = match.with({ percentComplete: 0 }, PLAY_ON_DESKTOP).with(obj, PLAY_ACTIVITY).with(obj4, WATCH_VIDEO).with(obj5, WATCH_VIDEO_ON_MOBILE).with(obj6, STREAM_ON_DESKTOP).with(obj7, PLAY_ON_XBOX).with(obj8, PLAY_ON_PLAYSTATION).with(obj9, ACHIEVEMENT_IN_GAME).with(obj10, ACHIEVEMENT_IN_ACTIVITY).with(obj11, F).exhaustive();
@@ -2834,9 +2834,9 @@ const tmp31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTaskPl
         }
       }
       const obj12 = { lastPlatformProgress: tmp14, currentProgressingPlatform: CONSOLE, selectedPlatform: tmp4 };
-      const match1 = withResult16(5742).match(obj12);
+      const match1 = withResult16(5745).match(obj12);
       const obj13 = { currentProgressingPlatform: constants.CONSOLE };
-      const str4 = withResult16(5742);
+      const str4 = withResult16(5745);
       const obj14 = { currentProgressingPlatform: null };
       DESKTOP = constants.DESKTOP;
       obj14.currentProgressingPlatform = DESKTOP;
@@ -2894,7 +2894,7 @@ const tmp31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTaskPl
   let obj = memo1;
   const tmp6 = closure_48(id);
   memo1 = memo1.useMemo(() => {
-    const match = _mod5742.match(closure_1);
+    const match = _mod5745.match(closure_1);
     const withResult = match.with({ percentComplete: 0 }, () => null);
     const obj = { taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP };
     const withResult1 = withResult.with({ taskType: FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP }, () => constants.DESKTOP);
@@ -2926,21 +2926,21 @@ const tmp31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTaskPl
   const items2 = [hasItem1, hasItem, memo1, DESKTOP, selectedPlatform];
   const items3 = [
     obj.useMemo(() => {
-      const match = _mod5742.match({ lastPlatformProgress: memo1, currentProgressingPlatform: DESKTOP, selectedPlatform });
+      const match = _mod5745.match({ lastPlatformProgress: memo1, currentProgressingPlatform: DESKTOP, selectedPlatform });
       const obj = { lastPlatformProgress: memo1, currentProgressingPlatform: DESKTOP, selectedPlatform };
       const obj2 = { currentProgressingPlatform: constants.CONSOLE };
       obj3 = { currentProgressingPlatform: constants.DESKTOP };
-      const withResult = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE);
+      const withResult = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE);
       const obj4 = { currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE };
-      const withResult1 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP);
+      const withResult1 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP);
       const obj5 = { currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP };
-      const withResult2 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE);
+      const withResult2 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE);
       const obj6 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE };
-      const withResult3 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP);
+      const withResult3 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP);
       const obj7 = { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP };
-      const withResult4 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE);
-      const withResult5 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP);
-      return match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => id(5982).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => id(5982).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
+      const withResult4 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE);
+      const withResult5 = match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP);
+      return match.with({ currentProgressingPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.CONSOLE }, () => id(5975).TaskPlatformScreen.CONSOLE).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: constants.DESKTOP }, () => id(5975).TaskPlatformScreen.DESKTOP).with({ currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null }, () => {
         if (hasItem1) {
           if (hasItem) {
             let SELECT = closure_0(first[48]).TaskPlatformScreen.SELECT;
@@ -3546,14 +3546,14 @@ const tmp36 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCospon
   } else if (DARK != null) {
     if (cResult[4] === stateFromStores) {
     }
-    questAsset = tmp(9157).getQuestAsset(stateFromStores, tmp(9157).QuestAssetType.COSPONSOR_LOGO_TYPE, DARK);
+    questAsset = tmp(9184).getQuestAsset(stateFromStores, tmp(9184).QuestAssetType.COSPONSOR_LOGO_TYPE, DARK);
     cResult[4] = stateFromStores;
     cResult[5] = DARK;
     cResult[6] = questAsset;
-    const tmpResult3 = tmp(9157);
+    const tmpResult3 = tmp(9184);
   } else {
-    tmp(4930).isThemeDark(tmp9) ? constants3.DARK : constants3.LIGHT;
-    const tmpResult4 = tmp(4930);
+    tmp(4969).isThemeDark(tmp9) ? constants3.DARK : constants3.LIGHT;
+    const tmpResult4 = tmp(4969);
   }
   const tmpResult = require("initialize");
 }) : (function useCosponsoredLogotypeAsset(arg0, arg1) {
@@ -4264,7 +4264,7 @@ export const useQuestForMemberListSocialEntryPoint = function useQuestForMemberL
   const stateFromStores = require("initialize").useStateFromStores(items, () => quests.quests);
   const items1 = [arg0, stateFromStores, closure_54(Array.from(stateFromStores.values()))];
   const memo = noop.useMemo(() => {
-    const result = utils_QuestUtils.filterQuestsForSocialEntrypoints(stateFromStores, value2);
+    const result = utils_QuestUtils.filterQuestsForSocialEntrypoints(stateFromStores, value3);
     return QuestMatchingUtils.getQuestsFromActivities(result, closure_0);
   }, items1);
   let tmp2 = null;
@@ -4292,7 +4292,7 @@ export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQues
   closure_6 = tmp4;
   const items1 = [questId];
   const callback = noop.useCallback((arg0) => {
-    state = useConsoleQuestUIStore.getState();
+    const state = useConsoleQuestUIStore.getState();
     return state.setErrorHints(questId, arg0);
   }, items1);
   const items2 = [stateFromStores, tmp4, questId];
@@ -4312,7 +4312,7 @@ export const useManuallyStartConsoleQuest = function useManuallyStartConsoleQues
         obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -4448,7 +4448,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -4470,13 +4470,13 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
                 if (arr.length > 0) {
                   c1 = 3;
                   c4 = 1;
-                  const obj6 = { value: previewAdCreativeIds(12923).fetchBountyPreview(arr, previewAdCreativeIds(5982).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+                  const obj6 = { value: previewAdCreativeIds(12971).fetchBountyPreview(arr, previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
                   return obj6;
                 }
               }
               c1 = 2;
               c4 = 1;
-              const obj7 = { value: previewAdCreativeIds(12923).fetchQuestHomeBounties(previewAdCreativeIds(5982).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
+              const obj7 = { value: previewAdCreativeIds(12971).fetchQuestHomeBounties(previewAdCreativeIds(5975).AdPlacement.VIDEO_MODAL_MOBILE), done: false };
               return obj7;
             }
           } else if (1 === tmp7) {
@@ -4516,7 +4516,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(arg0
               v0(false);
             }
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp34) {
           closure_2 = tmp34;

@@ -1,6 +1,6 @@
-// === Module 4697: GuildLeaderboardTypes ===
+// === Module 4738: GuildLeaderboardTypes ===
 
-// Module 4697 (GuildLeaderboardTypes)
+// Module 4738 (GuildLeaderboardTypes)
 import size from "module_2" /* 2 */;
 
 const GamingLeaderboardStat = { GAMING_LEADERBOARD_STAT_UNSPECIFIED: 0, [0]: "GAMING_LEADERBOARD_STAT_UNSPECIFIED", GAMING_LEADERBOARD_STAT_HOURS_PLAYED: 1, [1]: "GAMING_LEADERBOARD_STAT_HOURS_PLAYED", GAMING_LEADERBOARD_STAT_DAYS_PLAYED: 2, [2]: "GAMING_LEADERBOARD_STAT_DAYS_PLAYED", GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED: 3, [3]: "GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED" };
@@ -28,14 +28,17 @@ export const parseGuildSpaceLeaderboardMessageData = function parseGuildSpaceLea
                 if (leaderboard.stat !== obj.GAMING_LEADERBOARD_STAT_UNSPECIFIED) {
                   tmp = null;
                   if (leaderboard.stat in tmp3) {
-                    obj = { event: null, stat: null, userId: null, secondaryUserId: null, value: null };
+                    obj = { event: null, stat: null, userId: null, secondaryUserId: null, value: null, secondaryValue: null };
                     ({ event: obj.event, stat: obj.stat, user_id: obj.userId, secondary_user_id } = leaderboard);
                     if (secondary_user_id == null) {
                       secondary_user_id = null;
                     }
                     obj.secondaryUserId = secondary_user_id;
                     obj.value = leaderboard.value;
-                    tmp = obj;
+                    if (null == leaderboard.secondary_value) {
+                      obj.secondaryValue = leaderboard.value;
+                    }
+                    const secondary_value = leaderboard.secondary_value;
                   }
                 }
               }

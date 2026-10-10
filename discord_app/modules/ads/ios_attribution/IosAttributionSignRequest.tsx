@@ -1,6 +1,6 @@
-// === Module 12915: IosAttributionSignRequest ===
+// === Module 12963: IosAttributionSignRequest ===
 
-// Module 12915 (IosAttributionSignRequest)
+// Module 12963 (IosAttributionSignRequest)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _fetchIosAttributionSignedPayloads(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

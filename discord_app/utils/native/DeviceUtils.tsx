@@ -1,6 +1,6 @@
-// === Module 5067: DeviceUtils ===
+// === Module 5068: DeviceUtils ===
 
-// Module 5067 (DeviceUtils)
+// Module 5068 (DeviceUtils)
 import Storage3 from "Storage" /* 510 */;
 import NativeDeviceModule from "NativeDeviceModule" /* 1366 */;
 

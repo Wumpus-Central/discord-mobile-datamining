@@ -1,17 +1,17 @@
-// === Module 10291: showFavoritesGuildAddedToast ===
+// === Module 10324: showFavoritesGuildAddedToast ===
 
-// Module 10291 (showFavoritesGuildAddedToast)
+// Module 10324 (showFavoritesGuildAddedToast)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import StarIcon from "StarIcon" /* 9523 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import StarIcon from "StarIcon" /* 9552 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/favorites/utils/showFavoritesGuildAddedToast.native.tsx");
 
 export default function showFavoritesGuildAddedToast() {
-  const obj2 = { key: "FAVORITE_ADDED", content: null, IconComponent: null };
+  const obj2 = { text: null, icon: null };
   const intl = util.intl;
-  obj2.content = intl.string(util.t["4tSWQg"]);
-  obj2.IconComponent = StarIcon.StarIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.text = intl.string(util.t["4tSWQg"]);
+  obj2.icon = StarIcon.StarIcon;
+  ToastActionCreatorsDefault.open("FAVORITE_ADDED", obj2);
 };

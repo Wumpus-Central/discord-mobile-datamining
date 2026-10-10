@@ -1,13 +1,13 @@
-// === Module 8300: BadgeDirectoryStore ===
+// === Module 8316: BadgeDirectoryStore ===
 
-// Module 8300 (BadgeDirectoryStore)
+// Module 8316 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import privDefault from "priv" /* 1457 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8301 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8305 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8317 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8321 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -207,7 +207,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
     const result = closure_5.set(userId, peekResult);
-    const map1 = new Map(badges.map((badge_id) => {
+    map1 = new Map(badges.map((badge_id) => {
       const items = [badge_id.badge_id, badge_id];
       return items;
     }));

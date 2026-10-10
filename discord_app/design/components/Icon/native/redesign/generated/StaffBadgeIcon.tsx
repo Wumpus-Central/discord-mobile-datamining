@@ -1,10 +1,10 @@
-// === Module 15796: StaffBadgeIcon ===
+// === Module 15858: StaffBadgeIcon ===
 
-// Module 15796 (StaffBadgeIcon)
+// Module 15858 (StaffBadgeIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod15797 from "module_15797" /* 15797 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod15859 from "module_15859" /* 15859 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const StaffBadgeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod15797;
+    const tmpResult = _mod15859;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const StaffBadgeIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15797, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15859, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

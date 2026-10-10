@@ -1,32 +1,32 @@
-// === Module 15999: DevToolsComponentsTestingScreen ===
+// === Module 16061: DevToolsComponentsTestingScreen ===
 
-// Module 15999 (DevToolsComponentsTestingScreen)
+// Module 16061 (DevToolsComponentsTestingScreen)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 1998 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import Card from "Card" /* 6188 */;
-import ComponentStateContext from "ComponentStateContext" /* 8233 */;
-import StringSelectActionComponentDefault from "StringSelectActionComponent" /* 16000 */;
-import SearchableSelectActionComponentDefault from "SearchableSelectActionComponent" /* 16003 */;
-import TextDisplayComponentDefault from "TextDisplayComponent" /* 16004 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import Card from "Card" /* 6181 */;
+import ComponentStateContext from "ComponentStateContext" /* 8249 */;
+import StringSelectActionComponentDefault from "StringSelectActionComponent" /* 16062 */;
+import SearchableSelectActionComponentDefault from "SearchableSelectActionComponent" /* 16065 */;
+import TextDisplayComponentDefault from "TextDisplayComponent" /* 16066 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 let closure_9 = createStyles.createStyles(obj2);
-const InteractionComponentUtils = fn(5433);
+const InteractionComponentUtils = fn(5436);
 let obj6 = { type: fn(1998).ComponentType.STRING_SELECT, custom_id: "test", max_values: 1, min_values: 1, placeholder: "Choose...", options: null };
 let items = [{ label: "test with a long label", value: "test" }, { label: "test 2 with a long label", value: "test2", description: "with description!" }, { label: "star with a long label", value: "star", emoji: { name: "\u2B50" } }, { label: "advaith", value: "advaith", emoji: { id: "889887673425199124", name: "advaith_anim", animated: true } }];
 obj6.options = items;
@@ -53,7 +53,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
       if (cResult[2] === type) {
         let tmp7 = cResult[3];
       }
-      state = ComponentStateContext.useComponentState(tmp7).state;
+      const state = ComponentStateContext.useComponentState(tmp7).state;
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { gap: 8 };
@@ -208,7 +208,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
   obj.type = type;
   obj.id = String(type);
   const tmp = _slicedToArray(noop.useState(false), 2);
-  state = ComponentStateContext.useComponentState(obj).state;
+  let state = ComponentStateContext.useComponentState(obj).state;
   const obj3 = { style: { gap: 8 }, children: null };
   const items = [React5(Text_Text.Text, { variant: "heading-lg/medium", children: children.title }), , , ];
   if (obj.type === Server.ComponentType.STRING_SELECT) {

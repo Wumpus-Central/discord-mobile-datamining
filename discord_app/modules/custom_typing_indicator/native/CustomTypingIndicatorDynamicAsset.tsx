@@ -1,7 +1,7 @@
-// === Module 11601: CustomTypingIndicatorDynamicAsset ===
+// === Module 11647: CustomTypingIndicatorDynamicAsset ===
 
-// Module 11601 (CustomTypingIndicatorDynamicAsset)
-import FastImageDefault from "FastImage" /* 6163 */;
+// Module 11647 (CustomTypingIndicatorDynamicAsset)
+import FastImageDefault from "FastImage" /* 6156 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles((width, gap) => {
   const obj = { emojiRow: { flexDirection: "row", gap }, emoji: { width, height: width }, text: { flexShrink: 1 } };
   return obj;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
                     const obj2 = { direction: "horizontal", spacing, align: "center", justify: "flex-start", style, children: null };
                     const items = [tmp10, tmp17];
                     obj2.children = items;
-                    const tmp22 = closure_5(tmp(5374).Stack, obj2);
+                    const tmp22 = closure_5(tmp(5377).Stack, obj2);
                     cResult[20] = spacing;
                     cResult[21] = style;
                     cResult[22] = tmp10;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
               }
             }
             const obj3 = { variant: textVariant, color: textColor, lineClamp, includeFontPadding: true, style: tmp14, children: tmp15 };
-            const tmp19 = closure_4(tmp(5087).Text, obj3);
+            const tmp19 = closure_4(tmp(5088).Text, obj3);
             cResult[14] = lineClamp;
             cResult[15] = tmp14;
             cResult[16] = tmp15;
@@ -84,12 +84,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CustomTy
           }
           const intl = tmp(1126).intl;
           const obj4 = { name };
-          const formatResult = intl.format(tmp(11595).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
+          const formatResult = intl.format(tmp(11641).getCustomTypingIndicatorSuggestionWithNameMessage(suggestion), obj4);
           cResult[11] = name;
           cResult[12] = suggestion;
           cResult[13] = formatResult;
           tmp15 = formatResult;
-          const tmpResult = tmp(11595);
+          const tmpResult = tmp(11641);
         }
         const items1 = [tmp4Result.text, textStyle];
         cResult[8] = tmp4Result.text;

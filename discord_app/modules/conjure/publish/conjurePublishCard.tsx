@@ -1,7 +1,7 @@
-// === Module 17153: conjurePublishCard ===
+// === Module 17223: conjurePublishCard ===
 
-// Module 17153 (conjurePublishCard)
-import _modDef3827 from "module_3827" /* 3827 */;
+// Module 17223 (conjurePublishCard)
+import _modDef3849 from "module_3849" /* 3849 */;
 import size from "module_2" /* 2 */;
 
 const weakMap = new WeakMap();
@@ -11,7 +11,7 @@ export const isConjurePublishCtaVisible = function isConjurePublishCtaVisible(pu
   let tmp = null != publish;
   if (tmp) {
     const status = publish.status;
-    state = undefined;
+    let state;
     if (status != null) {
       state = status.state;
     }
@@ -52,22 +52,24 @@ export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
   return tmp;
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
-  if (notice.update) {
+  if (true === notice.channel_skipped) {
+    return _modDef3849.ev23Cw;
+  } else if (notice.update) {
     const surface = notice.surface;
     if ("bot" === surface) {
-      return _modDef3827.zfpeIL;
+      return _modDef3849.zfpeIL;
     } else if ("widget" === surface) {
-      return _modDef3827.DxCfTh;
+      return _modDef3849.DxCfTh;
     } else if ("automod" === surface) {
-      return _modDef3827["8ytGC3"];
+      return _modDef3849["8ytGC3"];
     } else {
-      return _modDef3827.WSmpBT;
+      return _modDef3849.WSmpBT;
     }
   } else {
     if (null == arg1) {
-      let MOrR29 = _modDef3827.MOrR29;
+      let MOrR29 = _modDef3849.MOrR29;
     } else {
-      MOrR29 = _modDef3827["/npn7F"];
+      MOrR29 = _modDef3849["/npn7F"];
     }
     return MOrR29;
   }

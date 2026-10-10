@@ -1,16 +1,16 @@
-// === Module 15366: QuestEmbedPreview ===
+// === Module 15428: QuestEmbedPreview ===
 
-// Module 15366 (QuestEmbedPreview)
+// Module 15428 (QuestEmbedPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CodedLink from "CodedLink" /* 5076 */;
-import RowGeneratorDefault from "RowGenerator" /* 7728 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9165 */;
-import ChatItemDefault from "ChatItem" /* 9346 */;
-import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 15365 */;
+import CodedLink from "CodedLink" /* 5077 */;
+import RowGeneratorDefault from "RowGenerator" /* 7746 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9192 */;
+import ChatItemDefault from "ChatItem" /* 9373 */;
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 15427 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4720 */;
+import MessageRecord from "MessageRecord" /* 4761 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -132,9 +132,9 @@ export const QuestEmbedPreview = ReactCompilerGating.isReactCompilerEnabled() ? 
     const intl = tmp2(1126).intl;
     obj2.title = intl.string(tmp2(1126).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9346), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(15365), { title: null, children: null });
-    const tmp9 = stateFromStores(15365);
+    obj2.children = jsx(stateFromStores(9373), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
+    tmp6 = jsx(stateFromStores(15427), { title: null, children: null });
+    const tmp9 = stateFromStores(15427);
   }
   return tmp6;
 });

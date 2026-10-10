@@ -1,23 +1,23 @@
-// === Module 16400: MessagesItemHappeningNow ===
+// === Module 16470: MessagesItemHappeningNow ===
 
-// Module 16400 (MessagesItemHappeningNow)
+// Module 16470 (MessagesItemHappeningNow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4779 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8998 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11849 */;
-import HappeningNowDefault from "HappeningNow" /* 16401 */;
+import useToken from "useToken" /* 4818 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 9017 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11893 */;
+import HappeningNowDefault from "HappeningNow" /* 16471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15504);
+const HappeningNowConstants = fn(15566);
 ({ HAPPENING_NOW_CARD_HEIGHT: closure_4, HappeningNowItem } = HappeningNowConstants);
 const jsx = fn(21).jsx;
 const items = [, , , , , , ];
 ({ LIVE_GUILD_STAGE: arr[0], VOICES: arr[1], EMBEDDED_ACTIVITY: arr[2], STREAMS: arr[3], ACTIVITIES: arr[4], USER_CUSTOM_STATUS: arr[5], USER: arr[6] } = HappeningNowItem);
 const set = new Set(items);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles((height) => {
   const obj = { container: { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" } };
   return obj;

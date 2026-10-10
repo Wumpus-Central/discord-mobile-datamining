@@ -1,31 +1,31 @@
-// === Module 6845: GuildOnboardingConnectionPrompt ===
+// === Module 6848: GuildOnboardingConnectionPrompt ===
 
-// Module 6845 (GuildOnboardingConnectionPrompt)
+// Module 6848 (GuildOnboardingConnectionPrompt)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 6784 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6791 */;
-import ConnectionCardDefault from "ConnectionCard" /* 6846 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 6787 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6794 */;
+import ConnectionCardDefault from "ConnectionCard" /* 6849 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6155 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6793 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5758 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6785 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6148 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6796 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5761 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6788 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(6786).OnboardingConnectionType;
-let closure_12 = fn(6782).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(6789).OnboardingConnectionType;
+let closure_12 = fn(6785).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6263).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6263).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(5092);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6258).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6258).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.scrollContainer = { display: "flex", flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { display: "flex", flexGrow: 1, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.header = { marginBottom: nativeDefault.space.PX_24 };
@@ -546,7 +546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildOnb
       style: tmp.connectionsList,
       children: stateFromStores.map((connection, index) => {
           const obj = { connection, guildId, location: AnalyticsLocationDefault.GUILD_ONBOARDING };
-          return state(ConnectionCardDefault, obj, index);
+          return closure_2_14(ConnectionCardDefault, obj, index);
         })
     };
     items13[1] = closure_14(ref, obj17);

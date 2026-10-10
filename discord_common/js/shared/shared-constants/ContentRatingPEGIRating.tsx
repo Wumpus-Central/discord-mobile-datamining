@@ -1,6 +1,6 @@
-// === Module 6055: ContentRatingPEGIRating ===
+// === Module 6048: ContentRatingPEGIRating ===
 
-// Module 6055 (ContentRatingPEGIRating)
+// Module 6048 (ContentRatingPEGIRating)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set([1, 2, 3, 4, 5]), IS_ADULT_ONLY: null };

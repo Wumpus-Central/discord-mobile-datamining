@@ -1,15 +1,15 @@
-// === Module 12854: Checkbox ===
+// === Module 12901: Checkbox ===
 
-// Module 12854 (Checkbox)
+// Module 12901 (Checkbox)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4793 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import FormCheckbox from "FormCheckbox" /* 6184 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import FormCheckbox from "FormCheckbox" /* 6177 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5091 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

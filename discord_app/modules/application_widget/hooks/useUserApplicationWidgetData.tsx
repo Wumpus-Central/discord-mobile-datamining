@@ -1,22 +1,22 @@
-// === Module 17011: useUserApplicationWidgetData ===
+// === Module 17078: useUserApplicationWidgetData ===
 
-// Module 17011 (useUserApplicationWidgetData)
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7319 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 13293 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 13294 */;
+// Module 17078 (useUserApplicationWidgetData)
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7325 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 13343 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 13344 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 13292 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
-import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11384 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 13342 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
+import ApplicationWidgetConfigStore from "ApplicationWidgetConfigStore" /* 11429 */;
 
 const require = globalThis.__r;
 
 require = fn;
-fn(13292).FetchState;
-const FetchState = fn(11384).FetchState;
+fn(13342).FetchState;
+const FetchState = fn(11429).FetchState;
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useApplicationWidgetConfig(arg0) {
   _require = arg0;

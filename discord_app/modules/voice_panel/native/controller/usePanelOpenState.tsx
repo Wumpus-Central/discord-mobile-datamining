@@ -1,16 +1,16 @@
-// === Module 17834: usePanelOpenState ===
+// === Module 17906: usePanelOpenState ===
 
-// Module 17834 (usePanelOpenState)
+// Module 17906 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoicePanelStore from "VoicePanelStore" /* 6081 */;
+import VoicePanelStore from "VoicePanelStore" /* 6074 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoicePanelModes = fn(11926).VoicePanelModes;
+const VoicePanelModes = fn(11970).VoicePanelModes;
 const Constants = fn(1085);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
   dependencyMap = arg2;
   const cResult = require("c").c(11);
   function doCloseChannel() {
-    state = VoicePanelStore.getState();
+    const state = VoicePanelStore.getState();
     return state.closeChannel(closure_0);
   }
   let obj = require("c");
@@ -106,9 +106,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
               if (first !== pathname.pathname) {
                 closure_1_6(tmp);
                 const obj2 = { path: null };
-                const RouteParam = closure_0(4918).RouteParam;
-                const obj = closure_0(4905);
-                const RouteParam2 = closure_0(4918).RouteParam;
+                const RouteParam = closure_0(4957).RouteParam;
+                const obj = closure_0(4944);
+                const RouteParam2 = closure_0(4957).RouteParam;
                 obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
                 const matchPathResult = obj.matchPath(pathname.pathname, obj2);
                 const guildIdResult = RouteParam.guildId();
@@ -118,10 +118,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
                     tmp2 = matchPathResult.params.channelId === closure_0;
                   }
                   if (!tmp2) {
-                    closure_1(10770)();
+                    closure_1(10805)();
                   }
                 }
-                obj3 = closure_0(11152);
+                obj3 = closure_0(11193);
               }
             });
             return () => {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
           dependencyMap(tmp5.PIP);
         }
       } else {
-        state = first.getState();
+        const state = first.getState();
         state.closeChannel(componentActionOpen);
       }
     }
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
   closure_1 = arg1;
   dependencyMap = arg2;
   function doCloseChannel() {
-    state = VoicePanelStore.getState();
+    const state = VoicePanelStore.getState();
     return state.closeChannel(closure_0);
   }
   class E {
@@ -259,7 +259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
           dependencyMap(tmp5.PIP);
         }
       } else {
-        state = first.getState();
+        const state = first.getState();
         state.closeChannel(componentActionOpen);
       }
     }
@@ -274,18 +274,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = connected(doCloseChannel.useState(() => closure_1(11159).getHistory().location.pathname), 2);
+  const tmp3 = connected(doCloseChannel.useState(() => closure_1(11200).getHistory().location.pathname), 2);
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(11159).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(11200).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         const obj2 = { path: null };
-        const RouteParam = closure_0(4918).RouteParam;
-        const obj = closure_0(4905);
-        const RouteParam2 = closure_0(4918).RouteParam;
+        const RouteParam = closure_0(4957).RouteParam;
+        const obj = closure_0(4944);
+        const RouteParam2 = closure_0(4957).RouteParam;
         obj2.path = closure_2_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj2);
         const guildIdResult = RouteParam.guildId();
@@ -295,10 +295,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePanel
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(10770)();
+            closure_1(10805)();
           }
         }
-        obj3 = closure_0(11152);
+        obj3 = closure_0(11193);
       }
     });
     return () => {

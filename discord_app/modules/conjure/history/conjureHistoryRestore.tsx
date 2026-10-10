@@ -1,7 +1,7 @@
-// === Module 17049: conjureHistoryRestore ===
+// === Module 17117: conjureHistoryRestore ===
 
-// Module 17049 (conjureHistoryRestore)
-import conjureDatabaseLock from "conjureDatabaseLock" /* 17050 */;
+// Module 17117 (conjureHistoryRestore)
+import conjureDatabaseLock from "conjureDatabaseLock" /* 17118 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -24,7 +24,7 @@ let closure_7 = async function _runConjureDataRewind() {
   }
   return value;
 };
-const restoreDatabaseToPoint = fn(13164).restoreDatabaseToPoint;
+const restoreDatabaseToPoint = fn(13213).restoreDatabaseToPoint;
 let closure_5 = { ok: false, code: "failed", message: "" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/history/conjureHistoryRestore.tsx");

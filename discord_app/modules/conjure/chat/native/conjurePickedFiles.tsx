@@ -1,11 +1,11 @@
-// === Module 17174: conjurePickedFiles ===
+// === Module 17244: conjurePickedFiles ===
 
-// Module 17174 (conjurePickedFiles)
-import UploadDefault from "Upload" /* 7739 */;
-import UploadPlatform from "UploadPlatform" /* 7740 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7750 */;
-import ImagePickerDefault from "ImagePicker" /* 7751 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17175 */;
+// Module 17244 (conjurePickedFiles)
+import UploadDefault from "Upload" /* 7757 */;
+import UploadPlatform from "UploadPlatform" /* 7758 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7768 */;
+import ImagePickerDefault from "ImagePicker" /* 7769 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 17245 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_4 = async function _pickConjurePhotos() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -129,7 +129,7 @@ let closure_7 = async function _uploadConjurePickedFile(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

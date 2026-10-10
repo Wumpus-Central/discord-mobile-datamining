@@ -1,14 +1,14 @@
-// === Module 11016: GoLiveAutoQualityExperiment ===
+// === Module 11056: GoLiveAutoQualityExperiment ===
 
-// Module 11016 (GoLiveAutoQualityExperiment)
+// Module 11056 (GoLiveAutoQualityExperiment)
 import Storage3 from "Storage" /* 510 */;
 import StreamActionCreators from "StreamActionCreators" /* 7443 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5270 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5271 */;
 import ApexExperiment from "apex/ApexExperiment" /* 1454 */;
 
 require = fn;
-const ApplicationStreamPresets = fn(5211).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(5212).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 const obj2 = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -68,7 +68,7 @@ export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
   }
   if (closure_6.getConfig({ location: "maybeMigrateToAutoQuality" }).migrateAutoQuality) {
     if (tmp4 < 1) {
-      state = ApplicationStreamingSettingsStore.getState();
+      const state = ApplicationStreamingSettingsStore.getState();
       if (state.preset !== ApplicationStreamPresets.PRESET_CUSTOM) {
         const obj = { preset: tmp9.PRESET_AUTO, resolution: null, frameRate: null, soundshareEnabled: null, noTrack: true };
         ({ resolution: obj2.resolution, fps: obj2.frameRate, soundshareEnabled: obj2.soundshareEnabled } = state);

@@ -1,12 +1,12 @@
-// === Module 13672: AppIconUtils ===
+// === Module 13724: AppIconUtils ===
 
-// Module 13672 (AppIconUtils)
+// Module 13724 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1628 */;
-import useMountEffectDefault from "useMountEffect" /* 5393 */;
-import openUserSettings from "openUserSettings" /* 7087 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 13673 */;
+import useMountEffectDefault from "useMountEffect" /* 5396 */;
+import openUserSettings from "openUserSettings" /* 7093 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 13725 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -35,7 +35,7 @@ let closure_14 = async function _fetchCurrentAppIcon() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -99,10 +99,10 @@ let closure_16 = async function _setAppIcon(arg0) {
   if (1 === tmp8) {
     c5 = 0;
     closure_130_2 = closure_4;
-    const obj7 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+    const obj7 = { text: null };
     const intl = closure_131_0(closure_131_2[15]).intl;
-    obj7.content = intl.string(closure_131_0(closure_131_2[15]).t["c76eo/"]);
-    closure_131_1(closure_131_2[14]).open(obj7);
+    obj7.text = intl.string(closure_131_0(closure_131_2[15]).t["c76eo/"]);
+    closure_131_1(closure_131_2[14]).open("APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", obj7);
     const _HermesInternal = HermesInternal;
     closure_131_12.warn("Error changing users app icon: " + closure_130_2);
     c7 = 3;
@@ -125,7 +125,7 @@ let closure_16 = async function _setAppIcon(arg0) {
   }
   return value;
 };
-const AppIconConstants = fn(9439);
+const AppIconConstants = fn(9468);
 ({ getDefaultIcon: metroRequire, getOfficialAlternateIcons: closure_7, getLimitedAlternateIcons: closure_8 } = AppIconConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, UserSettingsSections: c10 } = Constants);
@@ -148,7 +148,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -180,7 +180,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
             closure_128_0 = value;
             tmp2(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -216,7 +216,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
   } else {
     tmp6 = cResult[1];
   }
-  first(5393)(tmp6);
+  first(5396)(tmp6);
   return tmp3[0];
 }) : (function useCurrentAppIcon() {
   const tmp = _slicedToArray(noop.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT), 2);
@@ -232,7 +232,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -265,7 +265,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
           closure_128_0 = value;
           closure_129_0(closure_128_0);
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp12) {
         c3 = tmp;
@@ -327,10 +327,10 @@ export const useAppIcons = ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (1 === tmp7) {
         c4 = 0;
         closure_129_3 = closure_3;
-        const obj7 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+        const obj7 = { text: null };
         const intl = closure_0(tmp3[15]).intl;
-        obj7.content = intl.string(closure_0(tmp3[15]).t["c76eo/"]);
-        require("ToastActionCreators").open(obj7);
+        obj7.text = intl.string(closure_0(tmp3[15]).t["c76eo/"]);
+        require("ToastActionCreators").open("APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", obj7);
         const _HermesInternal = HermesInternal;
         logger.warn("Error fetching available app icons: " + closure_129_3);
         c6 = 3;
@@ -423,10 +423,10 @@ export const useAppIcons = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     if (1 === tmp7) {
       c4 = 0;
       closure_129_3 = closure_3;
-      const obj7 = { key: "APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", content: null };
+      const obj7 = { text: null };
       const intl = closure_0(tmp3[15]).intl;
-      obj7.content = intl.string(closure_0(tmp3[15]).t["c76eo/"]);
-      closure_1(tmp3[14]).open(obj7);
+      obj7.text = intl.string(closure_0(tmp3[15]).t["c76eo/"]);
+      closure_1(tmp3[14]).open("APP_ICON_LOGS_ERROR_MESSAGE_GENERIC", obj7);
       const _HermesInternal = HermesInternal;
       logger.warn("Error fetching available app icons: " + closure_129_3);
       let v3 = 3;

@@ -1,19 +1,19 @@
-// === Module 18375: WarningNotice ===
+// === Module 18449: WarningNotice ===
 
-// Module 18375 (WarningNotice)
+// Module 18449 (WarningNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef5008 from "module_5008" /* 5008 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import FastImageDefault from "FastImage" /* 6163 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import _modDef13878 from "module_13878" /* 13878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 }, horizontalContainer: { flexDirection: "row", alignItems: "center" }, message: { flex: 1, marginStart: 10, textAlignVertical: "center" }, actionButtonWrapper: { marginTop: 24, alignSelf: "center", width: "100%" }, containerYellow: null, textYellow: null, alertIcon: null };
 let obj3 = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
 obj2.containerYellow = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: nativeDefault.colors.STATUS_WARNING };
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WarningN
         let tmp5 = cResult[3];
       }
       if (cResult[4] !== tmp4.alertIcon) {
-        const obj2 = { style: tmp4.alertIcon, source: _modDef5008 };
+        const obj2 = { style: tmp4.alertIcon, source: _modDef13878 };
         const tmp10 = React4(FastImageDefault, obj2);
         cResult[4] = tmp4.alertIcon;
         cResult[5] = tmp10;
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function WarningN
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   const obj2 = { style: tmp.horizontalContainer, children: null };
-  const obj3 = { style: tmp.alertIcon, source: _modDef5008 };
+  const obj3 = { style: tmp.alertIcon, source: _modDef13878 };
   const items1 = [React4(FastImageDefault, obj3), ];
   const obj4 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [, ];

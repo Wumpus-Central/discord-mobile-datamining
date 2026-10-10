@@ -1,23 +1,23 @@
-// === Module 17362: SearchAutocompleteStore ===
+// === Module 17434: SearchAutocompleteStore ===
 
-// Module 17362 (SearchAutocompleteStore)
+// Module 17434 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import _modDef5201 from "module_5201" /* 5201 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5977 */;
-import GuildUtilsDefault from "GuildUtils" /* 6103 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 8688 */;
-import SearchUtils from "SearchUtils" /* 11997 */;
-import SearchTokens from "SearchTokens" /* 11998 */;
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 12001 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
-import StreamerModeStore from "StreamerModeStore" /* 4924 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import _modDef5202 from "module_5202" /* 5202 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5970 */;
+import GuildUtilsDefault from "GuildUtils" /* 6096 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 8703 */;
+import SearchUtils from "SearchUtils" /* 12041 */;
+import SearchTokens from "SearchTokens" /* 12042 */;
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 12045 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
+import StreamerModeStore from "StreamerModeStore" /* 4963 */;
 import UserStore from "UserStore" /* 1390 */;
-import SelectedSearchContextStore from "SelectedSearchContextStore" /* 12000 */;
+import SelectedSearchContextStore from "SelectedSearchContextStore" /* 12044 */;
 
 const SearchTokensDefault = SearchTokens;
 
@@ -76,7 +76,7 @@ function handleUserSearchResults(searchContext, results) {
         ({ query, cursorScope } = value3);
         let tmp10 = getAutocompleteList(searchContext, mode, tokens);
         const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
-        let value4 = map1.get(searchContextId1);
+        value4 = map1.get(searchContextId1);
         if (value4 == null) {
           const obj4 = { results: [], context: UserSearchManagerDefault.getUserSearchContext(handleUserSearchResults.bind(null, searchContext)) };
           value4 = obj4;
@@ -221,7 +221,7 @@ function rebuildAutocompleteResults(c14) {
 const Constants = fn(1085);
 ({ SearchPopoutModes: c10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6099).AutocompleterResultTypes;
+fn(6092).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -253,7 +253,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef5201(c14, searchContext)) {
+    if (!_modDef5202(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -261,7 +261,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef5201(c14, searchContext)) {
+    if (!_modDef5202(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -275,7 +275,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
         let flag = false;
       }
       const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
-      let value4 = map1.get(searchContextId1);
+      value4 = map1.get(searchContextId1);
       if (value4 == null) {
         const obj6 = { results: [], context: UserSearchManagerDefault.getUserSearchContext(handleUserSearchResults.bind(null, searchContext)) };
         value4 = obj6;

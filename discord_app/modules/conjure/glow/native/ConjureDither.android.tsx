@@ -1,9 +1,9 @@
-// === Module 17194: ConjureDither ===
+// === Module 17266: ConjureDither ===
 
-// Module 17194 (ConjureDither)
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
-import inlineStyles from "inlineStyles" /* 7559 */;
-import _mod17195 from "module_17195" /* 17195 */;
+// Module 17266 (ConjureDither)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
+import inlineStyles from "inlineStyles" /* 7576 */;
+import _mod17267 from "module_17267" /* 17267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -167,7 +167,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function BandPi
                                   }
                                   const BLOBS = tmp(tmp2[5]).BLOBS;
                                   const mapped = BLOBS.map((peak, index) => {
-                                    const blobReachResult = _mod17195.blobReach(peak.peak, peak.radius, bound);
+                                    const blobReachResult = _mod17267.blobReach(peak.peak, peak.radius, bound);
                                     if (blobReachResult <= 0) {
                                       return null;
                                     } else {
@@ -212,10 +212,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function BandPi
                         const mapped1 = BLOBS1.map((peak, index) => {
                           const obj = { id: "blob-" + combined3 + "-" + index, children: null };
                           const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-                          const obj3 = _mod17195;
+                          const obj3 = _mod17267;
                           ({ peak, radius } = peak);
-                          const blobReachResult = _mod17195.blobReach(peak, radius, closure_6 + _mod17195.FADE_HALF);
-                          obj2.offset = obj3.isoStop(blobReachResult, _mod17195.blobReach(peak.peak, peak.radius, bound));
+                          const blobReachResult = _mod17267.blobReach(peak, radius, closure_6 + _mod17267.FADE_HALF);
+                          obj2.offset = obj3.isoStop(blobReachResult, _mod17267.blobReach(peak.peak, peak.radius, bound));
                           items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
                           obj.children = items;
                           return React5(inlineStyles.RadialGradient, obj, index);
@@ -345,7 +345,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function BandPi
   const size1 = { id: "cells-" + combined, patternUnits: "userSpaceOnUse", width: state(height[5]).TILE, height: state(height[5]).TILE, children: null };
   const tmp8 = width(height[6]);
   size1.children = state(height[5]).TILES[band].map((item) => {
-    const size = { x: item.x, y: item.y, width: _mod17195.CELL, height: _mod17195.CELL, rx: _mod17195.CORNER, fill, fillOpacity };
+    const size = { x: item.x, y: item.y, width: _mod17267.CELL, height: _mod17267.CELL, rx: _mod17267.CORNER, fill, fillOpacity };
     return timestampProducer(inlineStyles.Rect, size, "" + item.x + "-" + item.y);
   });
   items = [bound(state(height[6]).Pattern, size1), , , ];
@@ -361,10 +361,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function BandPi
   items[2] = BLOBS.map((peak, index) => {
     const obj = { id: "blob-" + combined + "-" + index, children: null };
     const obj2 = { offset: null, stopColor: "#fff", stopOpacity: 1 };
-    const obj3 = _mod17195;
+    const obj3 = _mod17267;
     ({ peak, radius } = peak);
-    const blobReachResult = _mod17195.blobReach(peak, radius, closure_5 + _mod17195.FADE_HALF);
-    obj2.offset = obj3.isoStop(blobReachResult, _mod17195.blobReach(peak.peak, peak.radius, bound));
+    const blobReachResult = _mod17267.blobReach(peak, radius, closure_5 + _mod17267.FADE_HALF);
+    obj2.offset = obj3.isoStop(blobReachResult, _mod17267.blobReach(peak.peak, peak.radius, bound));
     items = [timestampProducer(inlineStyles.Stop, obj2), timestampProducer(inlineStyles.Stop, { offset: 1, stopColor: "#fff", stopOpacity: 0 })];
     obj.children = items;
     return React5(inlineStyles.RadialGradient, obj, index);
@@ -381,7 +381,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function BandPi
   const items2 = [tmp9Result, ];
   const BLOBS1 = tmp(tmp2[5]).BLOBS;
   items2[1] = BLOBS1.map((peak, index) => {
-    const blobReachResult = _mod17195.blobReach(peak.peak, peak.radius, bound);
+    const blobReachResult = _mod17267.blobReach(peak.peak, peak.radius, bound);
     if (blobReachResult <= 0) {
       return null;
     } else {
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
       value = sharedValue1.get();
       value3 = sharedValue2.get();
       const result = sharedValue1.set(value + (value3 - sharedValue1.get()) * diff);
-      const value4 = sharedValue.get();
+      value4 = sharedValue.get();
       const result1 = bound / c9 * 2 * Math.PI;
       const result2 = sharedValue.set(value4 + result1 * sharedValue1.get());
     };
@@ -586,7 +586,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureD
     value = sharedValue1.get();
     value3 = sharedValue2.get();
     const result = sharedValue1.set(value + (value3 - sharedValue1.get()) * diff);
-    const value4 = sharedValue.get();
+    value4 = sharedValue.get();
     const result1 = bound / c9 * 2 * Math.PI;
     const result2 = sharedValue.set(value4 + result1 * sharedValue1.get());
   };

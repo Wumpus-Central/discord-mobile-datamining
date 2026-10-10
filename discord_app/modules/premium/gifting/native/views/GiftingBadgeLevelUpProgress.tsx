@@ -1,21 +1,21 @@
-// === Module 12679: GiftingBadgeLevelUpProgress ===
+// === Module 12726: GiftingBadgeLevelUpProgress ===
 
-// Module 12679 (GiftingBadgeLevelUpProgress)
+// Module 12726 (GiftingBadgeLevelUpProgress)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef2661 from "module_2661" /* 2661 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10070 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10076 */;
+import _modDef2664 from "module_2664" /* 2664 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10099 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10105 */;
 import noop from "module_19" /* 19 */;
 
 const util = format(1126);
-const Text_Text = format(5087);
+const Text_Text = format(5088);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8300).getSingleRequirementThreshold;
+let closure_4 = fn(8316).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { gap: nativeDefault.space.PX_4, width: "100%" }, barRow: null, progressBarTrack: null, progressBarFill: null, labels: null };
 let obj3 = { gap: nativeDefault.space.PX_4, width: "100%" };
 obj2.barRow = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
                   intl = util.intl;
                   format = intl.format;
                   const obj9 = { count: progress, threshold: tmp18 };
-                  formatResult = format(_modDef2661.iIpfQe, obj9);
+                  formatResult = format(_modDef2664.iIpfQe, obj9);
                   cResult[6] = tmp4;
                   cResult[7] = newTier;
                   cResult[8] = tmp6;
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
   const obj10 = { style: tmp.labels, children: null };
   const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = util.intl;
-  obj11.children = intl.format(_modDef2661.iIpfQe, { count: progress, threshold: tmp7 });
+  obj11.children = intl.format(_modDef2664.iIpfQe, { count: progress, threshold: tmp7 });
   obj10.children = hasOwnProperty(Text_Text.Text, obj11);
   items3[1] = hasOwnProperty(View, obj10);
   obj3.children = items3;

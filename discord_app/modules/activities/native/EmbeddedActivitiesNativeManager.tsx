@@ -1,21 +1,20 @@
-// === Module 14721: EmbeddedActivitiesNativeManager ===
+// === Module 14775: EmbeddedActivitiesNativeManager ===
 
-// Module 14721 (EmbeddedActivitiesNativeManager)
+// Module 14775 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import _modDef5006 from "module_5006" /* 5006 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 5295 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5299 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10778 */;
-import activityWebViewController from "activityWebViewController" /* 10888 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 14722 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 14723 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 5296 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10853 */;
+import activityWebViewController from "activityWebViewController" /* 10928 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 14776 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 14777 */;
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
@@ -120,11 +119,10 @@ prototype["showErrorModal"] = function showErrorModal(reason) {
   actions_AlertActionCreatorsDefault.show(obj2);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  const obj2 = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
+  const obj2 = { text: null, variant: "success" };
   const intl = util.intl;
-  obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef5006;
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.text = intl.string(util.t.JfA7IK);
+  ToastActionCreatorsDefault.open("EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", obj2);
 };
 prototype["leaveActivity"] = function leaveActivity(arg0) {
   const self = this;

@@ -1,10 +1,10 @@
-// === Module 15283: QuestDockStore ===
+// === Module 15345: QuestDockStore ===
 
-// Module 15283 (QuestDockStore)
+// Module 15345 (QuestDockStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import QuestConstants from "QuestConstants" /* 5979 */;
-import QuestDockUtils from "QuestDockUtils" /* 15284 */;
+import QuestConstants from "QuestConstants" /* 5972 */;
+import QuestDockUtils from "QuestDockUtils" /* 15346 */;
 import size from "module_2" /* 2 */;
 
 const QuestDockMode = QuestConstants.QuestDockMode;

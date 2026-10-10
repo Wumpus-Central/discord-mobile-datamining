@@ -1,15 +1,15 @@
-// === Module 8791: SecureFramesVerifiedStore ===
+// === Module 8810: SecureFramesVerifiedStore ===
 
-// Module 8791 (SecureFramesVerifiedStore)
+// Module 8810 (SecureFramesVerifiedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5136 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 8809 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5137 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 8828 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7428 */;
-import TransientKeyStore from "TransientKeyStore" /* 8792 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 8793 */;
+import TransientKeyStore from "TransientKeyStore" /* 8811 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 8812 */;
 
 require = fn;
 function computeCallVerification() {

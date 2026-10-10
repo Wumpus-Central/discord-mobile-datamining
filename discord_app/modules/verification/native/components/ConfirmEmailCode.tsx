@@ -1,6 +1,6 @@
-// === Module 6288: ConfirmEmailCode ===
+// === Module 6283: ConfirmEmailCode ===
 
-// Module 6288 (ConfirmEmailCode)
+// Module 6283 (ConfirmEmailCode)
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -10,11 +10,11 @@ import UserStore from "UserStore" /* 1390 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6204);
+const ChangeEmailStore = fn(6199);
 ({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: null, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.input = { marginTop: nativeDefault.space.PX_24 };
@@ -52,7 +52,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -150,7 +150,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
         closure_128_1 = tmp33;
         const anyErrorMessage = new tmp3(tmp33[10])(closure_128_1).getAnyErrorMessage();
         if (null != anyErrorMessage) {
-          tmp3(tmp33[15]).open({ key: "CONFIRM_EMAIL_ERROR", content: anyErrorMessage });
+          tmp3(tmp33[15]).open("CONFIRM_EMAIL_ERROR", { text: anyErrorMessage });
           tmp3(tmp33[15]);
         }
         c5 = 3;
@@ -159,10 +159,10 @@ export default function ConfirmEmailCode(onFormSubmit) {
         c5 = 3;
         throw value;
       } else if (arg0 !== 2) {
-        const obj8 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
+        const obj8 = { text: null };
         const intl = onFormSubmit(tmp33[12]).intl;
-        obj8.content = intl.string(onFormSubmit(tmp33[12]).t["84yeoz"]);
-        tmp3(tmp33[15]).open(obj8);
+        obj8.text = intl.string(onFormSubmit(tmp33[12]).t["84yeoz"]);
+        tmp3(tmp33[15]).open("USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", obj8);
         c3 = 0;
         tmp3(tmp33[15]);
       }

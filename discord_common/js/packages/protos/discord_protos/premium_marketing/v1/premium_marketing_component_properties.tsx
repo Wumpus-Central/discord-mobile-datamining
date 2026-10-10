@@ -1,37 +1,38 @@
-// === Module 9104: premium_marketing_component_properties ===
+// === Module 9124: premium_marketing_component_properties ===
 
-// Module 9104 (premium_marketing_component_properties)
+// Module 9124 (premium_marketing_component_properties)
 import _mod1210 from "module_1210" /* 1210 */;
-import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9105 */;
-import premium_tab from "premium_tab" /* 9109 */;
-import marketing_page_banner from "marketing_page_banner" /* 9110 */;
-import payment_modal_banner from "payment_modal_banner" /* 9111 */;
-import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9112 */;
-import gift_icon from "gift_icon" /* 9113 */;
-import gift_icon_coachmark from "gift_icon_coachmark" /* 9115 */;
-import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9117 */;
-import gift_customization_banner from "gift_customization_banner" /* 9118 */;
-import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9119 */;
-import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9120 */;
-import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9121 */;
-import premium_tab_tooltip from "premium_tab_tooltip" /* 9122 */;
-import premium_tab_popover from "premium_tab_popover" /* 9123 */;
-import nagbar from "nagbar" /* 9124 */;
-import plan_select_card_banner from "plan_select_card_banner" /* 9125 */;
-import billing_settings_banner from "billing_settings_banner" /* 9126 */;
-import shop_nagbar from "shop_nagbar" /* 9127 */;
-import admin_editor_test_component from "admin_editor_test_component" /* 9128 */;
-import guild_header_coachmark from "guild_header_coachmark" /* 9129 */;
-import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9130 */;
-import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9131 */;
-import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9132 */;
+import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 9125 */;
+import premium_tab from "premium_tab" /* 9129 */;
+import marketing_page_banner from "marketing_page_banner" /* 9130 */;
+import payment_modal_banner from "payment_modal_banner" /* 9131 */;
+import mobile_bottom_sheet from "mobile_bottom_sheet" /* 9132 */;
+import gift_icon from "gift_icon" /* 9133 */;
+import gift_icon_coachmark from "gift_icon_coachmark" /* 9135 */;
+import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 9137 */;
+import gift_customization_banner from "gift_customization_banner" /* 9138 */;
+import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 9139 */;
+import gift_reminder_nagbar from "gift_reminder_nagbar" /* 9140 */;
+import gift_reminder_coachmark from "gift_reminder_coachmark" /* 9141 */;
+import premium_tab_tooltip from "premium_tab_tooltip" /* 9142 */;
+import premium_tab_popover from "premium_tab_popover" /* 9143 */;
+import nagbar from "nagbar" /* 9144 */;
+import plan_select_card_banner from "plan_select_card_banner" /* 9145 */;
+import billing_settings_banner from "billing_settings_banner" /* 9146 */;
+import shop_nagbar from "shop_nagbar" /* 9147 */;
+import admin_editor_test_component from "admin_editor_test_component" /* 9148 */;
+import guild_header_coachmark from "guild_header_coachmark" /* 9149 */;
+import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 9150 */;
+import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 9151 */;
+import guild_boost_tab_banner from "guild_boost_tab_banner" /* 9152 */;
+import shop_tab_tooltip from "shop_tab_tooltip" /* 9153 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const MessageType = fn(1210).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , ];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , ];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -222,25 +223,34 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
             return require("guild_boost_checkout_banner").GuildBoostCheckoutBanner;
           }
     };
-    obj = { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[23]).GuildBoostMarketingPageBanner;
-      }
-    }
-    obj.T = T;
-    items[22] = obj;
-    items[23] = {
-      no: 26,
-      name: "guild_boost_tab_banner",
+    items[22] = {
+      no: 25,
+      name: "guild_boost_marketing_page_banner",
       kind: "message",
       oneof: "properties",
       T() {
-            return require("guild_boost_tab_banner").GuildBoostTabBanner;
+            return require("guild_boost_marketing_page_banner").GuildBoostMarketingPageBanner;
           }
     };
-    items[24] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[25] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 26, name: "guild_boost_tab_banner", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[24]).GuildBoostTabBanner;
+      }
+    }
+    obj.T = T;
+    items[23] = obj;
+    items[24] = {
+      no: 27,
+      name: "shop_tab_tooltip",
+      kind: "message",
+      oneof: "properties",
+      T() {
+            return require("shop_tab_tooltip").ShopTabTooltip;
+          }
+    };
+    items[25] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[26] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
@@ -411,13 +421,19 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
     const joined22 = GuildBoostTabBanner.internalBinaryWrite(properties.properties.guildBoostTabBanner, tag.tag(26, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult22 = GuildBoostTabBanner.internalBinaryWrite(properties.properties.guildBoostTabBanner, tag.tag(26, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
+  if ("shopTabTooltip" === properties.properties.oneofKind) {
+    const ShopTabTooltip = shop_tab_tooltip.ShopTabTooltip;
+    const tagResult24 = tag.tag(27, _mod1210.WireType.LengthDelimited);
+    const joined23 = ShopTabTooltip.internalBinaryWrite(properties.properties.shopTabTooltip, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult23 = ShopTabTooltip.internalBinaryWrite(properties.properties.shopTabTooltip, tag.tag(27, _mod1210.WireType.LengthDelimited).fork(), writeUnknownFields);
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1210.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult24 = tag.tag(3, _mod1210.WireType.LengthDelimited);
+    const tagResult25 = tag.tag(3, _mod1210.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1210.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult25 = tag.tag(18, _mod1210.WireType.Varint);
+    const tagResult26 = tag.tag(18, _mod1210.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

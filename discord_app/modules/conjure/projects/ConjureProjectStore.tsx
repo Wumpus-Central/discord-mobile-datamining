@@ -1,10 +1,10 @@
-// === Module 10617: ConjureProjectStore ===
+// === Module 10651: ConjureProjectStore ===
 
-// Module 10617 (ConjureProjectStore)
+// Module 10651 (ConjureProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureTypes from "ConjureTypes" /* 6940 */;
-import ConjureSequencedBuffer from "ConjureSequencedBuffer" /* 10618 */;
+import ConjureTypes from "ConjureTypes" /* 6946 */;
+import ConjureSequencedBuffer from "ConjureSequencedBuffer" /* 10652 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -57,7 +57,7 @@ function handleHistoryLoadSettle(status) {
     }
     const result1 = value.set(scope, obj2);
   } else {
-    const value4 = map7.get(projectId);
+    value4 = map7.get(projectId);
     let value5;
     if (value4 != null) {
       value5 = value4.get(scope);
@@ -407,7 +407,7 @@ obj = {
       str = str2;
     }
     value = map2.get(projectId);
-    state = undefined;
+    let state;
     if (value != null) {
       state = value.state;
     }

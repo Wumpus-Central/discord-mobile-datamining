@@ -1,18 +1,18 @@
-// === Module 8960: useWishlistHooks ===
+// === Module 8979: useWishlistHooks ===
 
-// Module 8960 (useWishlistHooks)
+// Module 8979 (useWishlistHooks)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8968 */;
-import useDisplayProfileSocialLayerStorefrontApplicationIdsDefault from "useDisplayProfileSocialLayerStorefrontApplicationIds" /* 8975 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8987 */;
+import useDisplayProfileSocialLayerStorefrontApplicationIdsDefault from "useDisplayProfileSocialLayerStorefrontApplicationIds" /* 8994 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1390 */;
-import WishlistStore from "WishlistStore" /* 8961 */;
+import WishlistStore from "WishlistStore" /* 8980 */;
 
 require = fn;
 function getUserWishlistKey(userId, arg1) {
@@ -26,7 +26,7 @@ function getUserWishlistKey(userId, arg1) {
   return combined;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(8962).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8981).getWishlistSkuIds;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFetchWishlist(wishlistId) {
@@ -833,7 +833,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldSho
       let tmp17 = cResult[11];
     }
     const wishlist = closure_12(tmp17).wishlist;
-    giftRecipient(8980);
+    giftRecipient(8999);
     let flag2 = false;
     if (true === isGift) {
       flag2 = false;

@@ -1,6 +1,6 @@
-// === Module 18011: openInteractionIframeModal ===
+// === Module 18083: openInteractionIframeModal ===
 
-// Module 18011 (openInteractionIframeModal)
+// Module 18083 (openInteractionIframeModal)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -30,7 +30,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
       } else {
         require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[3], paths.paths), closure_0, React4);
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp10) {
       c1 = tmp;
@@ -38,7 +38,7 @@ let closure_5 = async function _openInteractionIframeModal(arg0) {
     }
   }
 };
-let closure_4 = fn(18012).INTERACTION_IFRAME_MODAL_KEY;
+let closure_4 = fn(18084).INTERACTION_IFRAME_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 

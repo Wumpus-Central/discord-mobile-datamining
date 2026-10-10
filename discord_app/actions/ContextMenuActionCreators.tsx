@@ -1,6 +1,6 @@
-// === Module 6135: ContextMenuActionCreators ===
+// === Module 6128: ContextMenuActionCreators ===
 
-// Module 6135 (ContextMenuActionCreators)
+// Module 6128 (ContextMenuActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -99,7 +99,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     contextMenu.rect = dOMRect;
-    let APP = contextMenu(6136).getCurrentlyInteractingAppContext();
+    let APP = contextMenu(6129).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
@@ -117,18 +117,18 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     if (enableSpellCheck) {
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          importDefault = tmp16(6138).addResultListener(function handler() {
+          importDefault = tmp16(6131).addResultListener(function handler() {
             closure_1();
             contextMenu = DispatcherDefault;
             contextMenu.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu });
           });
-          const tmp16Result2 = tmp16(6138);
+          const tmp16Result2 = tmp16(6131);
         }
       }
       tmp16Result = tmp16(1382);
     }
     stopPropagation.preventDefault();
-    const obj3 = contextMenu(6136);
+    const obj3 = contextMenu(6129);
     const obj4 = { type: "CONTEXT_MENU_OPEN", contextMenu };
     DispatcherDefault.dispatch(obj4);
   } else {

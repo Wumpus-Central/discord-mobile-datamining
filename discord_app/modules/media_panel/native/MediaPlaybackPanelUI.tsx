@@ -1,37 +1,37 @@
-// === Module 17838: MediaPlaybackPanelUI ===
+// === Module 17910: MediaPlaybackPanelUI ===
 
-// Module 17838 (MediaPlaybackPanelUI)
+// Module 17910 (MediaPlaybackPanelUI)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1497 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import timing from "timing" /* 5092 */;
-import timingPresets from "timingPresets" /* 5095 */;
-import spring from "spring" /* 5375 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
-import LayerScope from "LayerScope" /* 6842 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9550 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10339 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17634 */;
-import useMorphablePanelGesture from "useMorphablePanelGesture" /* 17636 */;
-import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17837 */;
-import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 17839 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import timing from "timing" /* 5093 */;
+import timingPresets from "timingPresets" /* 5096 */;
+import spring from "spring" /* 5378 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
+import LayerScope from "LayerScope" /* 6845 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9579 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10372 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17706 */;
+import useMorphablePanelGesture from "useMorphablePanelGesture" /* 17708 */;
+import MediaPlaybackPanelStateContextDefault from "MediaPlaybackPanelStateContext" /* 17909 */;
+import MediaPlaybackPipDefault from "MediaPlaybackPip" /* 17911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10929 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 10969 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const useMorphablePanelGestureDefault = useMorphablePanelGesture;
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14728);
+const MediaPlaybackPanelConstants = fn(14782);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(11927).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(11926).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(11971).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(11970).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { wrapperAnimationPresets: { opacity: 0 }, wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 }, mask: null, maskElevation: null, maskEmptyElevation: null, content: null };
 const rect = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, overflow: "hidden", borderWidth: 1, borderRadius: nativeDefault.radii.xl, borderColor: nativeDefault.colors.CHAT_BORDER };
 obj2.mask = rect;
@@ -238,13 +238,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return size;
         }
       }
-      const obj10 = { withTiming: tmp(5092).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp(5095).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp(5375).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: canShowPIP, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
+      const obj10 = { withTiming: tmp(5093).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp(5096).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp(5378).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: canShowPIP, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
       X.__closure = obj10;
       X.__workletHash = 12784426477772;
       X.__initData = __initData2;
-      const animatedStyle = tmp(4811).useAnimatedStyle(X);
+      const animatedStyle = tmp(4850).useAnimatedStyle(X);
       xl = nativeDefault.radii.xl;
-      let tmpResult = tmp(4811);
+      let tmpResult = tmp(4850);
       class V {
         constructor() {
           obj = { borderRadius: null };
@@ -254,11 +254,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return obj;
         }
       }
-      const obj11 = { withSpring: tmp(5375).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue2, maskElevationStyles: maskElevation };
+      const obj11 = { withSpring: tmp(5378).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue2, maskElevationStyles: maskElevation };
       V.__closure = obj11;
       V.__workletHash = 16028964429799;
       V.__initData = __initData3;
-      const animatedStyle1 = tmp(4811).useAnimatedStyle(V);
+      const animatedStyle1 = tmp(4850).useAnimatedStyle(V);
       if (cResult[0] === tmp4.wrapper) {
         if (cResult[1] === tmp4.wrapperAnimationPresets) {
           if (cResult[2] === animatedStyle) {
@@ -373,7 +373,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
       cResult[2] = animatedStyle;
       cResult[3] = items2;
       tmp25 = items2;
-      let tmpResult2 = tmp(4811);
+      let tmpResult2 = tmp(4850);
     }
   }
   maskEmptyElevation = tmp4.maskEmptyElevation;
@@ -565,13 +565,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return size;
         }
       }
-      const obj10 = { withTiming: tmp7(5092).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp7(5095).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp7(5375).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: pipAvoidanceSpecs, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
+      const obj10 = { withTiming: tmp7(5093).withTiming, wrapperOpacity: sharedValue2, timingFast: tmp7(5096).timingFast, animateWrapperTranslation: sharedValue3, withSpring: tmp7(5378).withSpring, wrapperTranslationX: sharedValue, MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: pipAvoidanceSpecs, wrapperTranslationY: sharedValue1, wrapperDimensions, wrapperElevationStyles: maskEmptyElevation };
       L.__closure = obj10;
       L.__workletHash = 15678797521625;
       L.__initData = __initData8;
-      const animatedStyle = tmp7(4811).useAnimatedStyle(L);
+      const animatedStyle = tmp7(4850).useAnimatedStyle(L);
       const xl = nativeDefault.radii.xl;
-      const tmp7Result = tmp7(4811);
+      const tmp7Result = tmp7(4850);
       class X {
         constructor() {
           obj = { borderRadius: null };
@@ -581,11 +581,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWra
           return obj;
         }
       }
-      const obj11 = { withSpring: tmp7(5375).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue1, maskElevationStyles: maskElevation };
+      const obj11 = { withSpring: tmp7(5378).withSpring, borderRadius: xl, BORDER_RADIUS_PHYSICS: sharedValue1, maskElevationStyles: maskElevation };
       X.__closure = obj11;
       X.__workletHash = 17303815726802;
       X.__initData = __initData9;
-      const animatedStyle1 = tmp7(4811).useAnimatedStyle(X);
+      const animatedStyle1 = tmp7(4850).useAnimatedStyle(X);
       let items = [animatedStyle, , ];
       ({ wrapper: arr[1], wrapperAnimationPresets: arr[2] } = tmp);
       const items1 = [

@@ -1,8 +1,8 @@
-// === Module 17851: useLaunchPadPullTabMinimized ===
+// === Module 17923: useLaunchPadPullTabMinimized ===
 
-// Module 17851 (useLaunchPadPullTabMinimized)
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 10986 */;
+// Module 17923 (useLaunchPadPullTabMinimized)
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 11026 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let ReactCompilerGating = fn(558);
 let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMinimizedDuringScroll() {
   const cResult = sharedValue(576).c(3);
   const obj = sharedValue(576);
-  sharedValue = sharedValue(4811).useSharedValue(false);
+  sharedValue = sharedValue(4850).useSharedValue(false);
   if (cResult[0] !== sharedValue) {
     const fn = function t() {
       closure_0 = -1;
@@ -56,7 +56,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsMi
   const effect = noop.useEffect(tmp3, tmp4);
   return sharedValue;
 }) : (function useIsMinimizedDuringScroll() {
-  sharedValue = sharedValue(4811).useSharedValue(false);
+  sharedValue = sharedValue(4850).useSharedValue(false);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     closure_0 = -1;

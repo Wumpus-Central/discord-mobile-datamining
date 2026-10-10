@@ -1,14 +1,14 @@
-// === Module 10773: getURLForApplication ===
+// === Module 10808: getURLForApplication ===
 
-// Module 10773 (getURLForApplication)
-import TestModeStore from "TestModeStore" /* 9047 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9046 */;
+// Module 10808 (getURLForApplication)
+import TestModeStore from "TestModeStore" /* 9066 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 9065 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 
 export default function getURLForApplication(arg0) {
-  state = DeveloperActivityShelfStore.getState();
+  const state = DeveloperActivityShelfStore.getState();
   let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
     useActivityUrlOverride = null != state.activityUrlOverride;
@@ -59,7 +59,7 @@ export const getNonTestModeUrlForApplication = function getNonTestModeUrlForAppl
   }
 };
 export const isUsingDevShelfActivityUrlOverride = function isUsingDevShelfActivityUrlOverride() {
-  state = DeveloperActivityShelfStore.getState();
+  const state = DeveloperActivityShelfStore.getState();
   let useActivityUrlOverride = state.useActivityUrlOverride;
   if (useActivityUrlOverride) {
     useActivityUrlOverride = null != state.activityUrlOverride;

@@ -1,23 +1,23 @@
-// === Module 17172: clarification/ConjureImageOptions ===
+// === Module 17242: clarification/ConjureImageOptions ===
 
-// Module 17172 (clarification/ConjureImageOptions)
+// Module 17242 (clarification/ConjureImageOptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4793 */;
-import TrashIcon from "TrashIcon" /* 5048 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import FormCheckbox from "FormCheckbox" /* 6184 */;
-import Card from "Card" /* 6188 */;
-import FormRadio from "FormRadio" /* 6270 */;
-import IconButton from "IconButton" /* 8114 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 8192 */;
-import openMediaModal from "openMediaModal" /* 8370 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 17073 */;
-import ConjureImageOptions from "ConjureImageOptions" /* 17169 */;
-import MaximizeIcon2 from "MaximizeIcon" /* 17173 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
+import TrashIcon from "TrashIcon" /* 5049 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import FormCheckbox from "FormCheckbox" /* 6177 */;
+import Card from "Card" /* 6181 */;
+import FormRadio from "FormRadio" /* 6265 */;
+import IconButton from "IconButton" /* 7573 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 8208 */;
+import openMediaModal from "openMediaModal" /* 8386 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 17141 */;
+import ConjureImageOptions from "ConjureImageOptions" /* 17239 */;
+import MaximizeIcon2 from "MaximizeIcon" /* 17243 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,12 +27,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const getAttachmentUrl = fn(13164).getAttachmentUrl;
+const getAttachmentUrl = fn(13213).getAttachmentUrl;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 1024;
 let c12 = 104;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { row: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, own: null, galleryContent: null, rowTile: null, card: null, ring: null, ringSelected: null, frame: null, frameInert: null, image: null, broken: null, brokenText: null, indicator: null, caption: null, view: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.own = { marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8, alignItems: "flex-start" };
@@ -88,7 +88,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
       const _Symbol2 = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3827.lhgD88);
+        const stringResult = intl.string(_modDef3849.lhgD88);
         cResult[4] = stringResult;
         let tmp21 = stringResult;
       } else {
@@ -205,7 +205,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
     const items1 = [options(ImageWarningIcon.ImageWarningIcon, obj4), ];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", style: tmp.brokenText, children: null };
     const intl = util.intl;
-    obj5.children = intl.string(_modDef3827.lhgD88);
+    obj5.children = intl.string(_modDef3849.lhgD88);
     items1[1] = options(Text_Text.Text, obj5);
     obj3.children = items1;
     obj2.children = collapsed(React5, obj3);
@@ -260,7 +260,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3827["4/eeDD"]);
+        const stringResult = intl.string(_modDef3849["4/eeDD"]);
         cResult[6] = stringResult;
         let tmp11 = stringResult;
       } else {
@@ -280,7 +280,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
                   if (cResult[18] !== option.label) {
                     const intl2 = util.intl;
                     const obj2 = { answer: option.label };
-                    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3827.AQbxhf, obj2);
+                    const formatToPlainStringResult = intl2.formatToPlainString(_modDef3849.AQbxhf, obj2);
                     cResult[18] = option.label;
                     cResult[19] = formatToPlainStringResult;
                   }
@@ -447,7 +447,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
                         return;
                       }
                     }
-                    tmp31[1] = intl3.string(_modDef3827.HQEXJM);
+                    tmp31[1] = intl3.string(_modDef3849.HQEXJM);
                     const items = [tmp31];
                     let tmp28 = items;
                   } else {
@@ -588,11 +588,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
   obj6.onPress = fn;
   ({ accessibilityRole: obj5.accessibilityRole, accessibilityState: obj5.accessibilityState } = radioA11yNative);
   const intl2 = util.intl;
-  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef3827.AQbxhf, { answer: option.label });
+  obj6.accessibilityLabel = intl2.formatToPlainString(_modDef3849.AQbxhf, { answer: option.label });
   if (null != onRemove) {
     const obj8 = { name: "remove", label: null };
     const intl3 = util.intl;
-    obj8.label = intl3.string(_modDef3827.HQEXJM);
+    obj8.label = intl3.string(_modDef3849.HQEXJM);
     const items1 = [obj8];
     let tmp11 = items1;
   } else if (null != option.image) {
@@ -658,7 +658,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
           obj16.onPress = onRemove;
           const intl4 = util.intl;
           const obj17 = { answer: option.label };
-          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef3827.JGjZMs, obj17);
+          obj16.accessibilityLabel = intl4.formatToPlainString(_modDef3849.JGjZMs, obj17);
           obj14.children = tmp12(IconButton.IconButton, obj16);
           tmp12Result = tmp12(React5, obj14);
         }
@@ -679,7 +679,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function ImageO
   obj18.children = tmp12Result3;
   tmp12(React5, obj18);
   const obj7 = { answer: option.label };
-  stringResult = intl.string(_modDef3827["4/eeDD"]);
+  stringResult = intl.string(_modDef3849["4/eeDD"]);
 });
 ReactCompilerGating = fn(558);
 let obj13 = { position: "absolute", end: nativeDefault.space.PX_8 };
@@ -888,7 +888,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
                                     const obj2 = { value, done: true };
                                     return obj2;
                                   } else {
-                                    return { value: "IconComponent", done: null };
+                                    return { value: "IconComponent", done: "+51" };
                                   }
                                 } else {
                                   try {
@@ -925,7 +925,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
                                         const obj = tmp2(disabled[25]);
                                       }
                                       c3 = 3;
-                                      return { value: "IconComponent", done: null };
+                                      return { value: "IconComponent", done: "+51" };
                                     }
                                   } catch (tmp16) {
                                     c3 = tmp;
@@ -1269,7 +1269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1288,7 +1288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp2(17174).pickConjurePhotos("photo", 1), done: false };
+            const obj5 = { value: tmp2(17244).pickConjurePhotos("photo", 1), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -1302,11 +1302,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureI
           closure_128_0 = value;
           closure_128_1 = own(closure_128_0, 1)[0];
           if (null != closure_128_1) {
-            closure_129_4.onUpload(tmp2(17174).uploadConjurePickedFile(closure_129_0, closure_128_1));
-            const obj = tmp2(17174);
+            closure_129_4.onUpload(tmp2(17244).uploadConjurePickedFile(closure_129_0, closure_128_1));
+            const obj = tmp2(17244);
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp16) {
         c3 = tmp;

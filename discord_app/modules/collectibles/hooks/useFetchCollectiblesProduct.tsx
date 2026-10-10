@@ -1,10 +1,10 @@
-// === Module 10472: useFetchCollectiblesProduct ===
+// === Module 10506: useFetchCollectiblesProduct ===
 
-// Module 10472 (useFetchCollectiblesProduct)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7256 */;
+// Module 10506 (useFetchCollectiblesProduct)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7262 */;
 import _slicedToArray from "module_32" /* 32 */;
-import SKUStore from "SKUStore" /* 6094 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7257 */;
+import SKUStore from "SKUStore" /* 6087 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
 
 const require = globalThis.__r;
 

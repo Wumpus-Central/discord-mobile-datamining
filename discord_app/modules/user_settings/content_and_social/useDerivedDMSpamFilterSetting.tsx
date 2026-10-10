@@ -1,12 +1,12 @@
-// === Module 15036: useDerivedDMSpamFilterSetting ===
+// === Module 15095: useDerivedDMSpamFilterSetting ===
 
-// Module 15036 (useDerivedDMSpamFilterSetting)
+// Module 15095 (useDerivedDMSpamFilterSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5919 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6991 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6997 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;

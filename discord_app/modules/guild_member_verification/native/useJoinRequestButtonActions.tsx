@@ -1,12 +1,12 @@
-// === Module 12330: useJoinRequestButtonActions ===
+// === Module 12374: useJoinRequestButtonActions ===
 
-// Module 12330 (useJoinRequestButtonActions)
+// Module 12374 (useJoinRequestButtonActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
@@ -26,10 +26,10 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
   const submitting = tmp[0];
   closure_7 = tmp[1];
   const onError = joinRequestId.useCallback(() => {
-    const obj2 = { key: "JOIN_REQUEST_ERROR", content: null };
+    const obj2 = { text: null };
     const intl = joinRequest(onDismiss[6]).intl;
-    obj2.content = intl.string(joinRequest(onDismiss[6]).t.R0RpRX);
-    interviewChannelId(onDismiss[5]).open(obj2);
+    obj2.text = intl.string(joinRequest(onDismiss[6]).t.R0RpRX);
+    interviewChannelId(onDismiss[5]).open("JOIN_REQUEST_ERROR", obj2);
   }, []);
   const items = [guildId, joinRequestId, interviewChannelId, onError, submitting, userId];
   let obj2 = { approveRequest: null, rejectRequest: null, submitting: null, handleOpenInterview: null };
@@ -44,7 +44,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -169,7 +169,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -218,7 +218,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             const obj10 = { text: null, variant: "success" };
             const intl = tmp4(tmp52[6]).intl;
             obj10.text = intl.string(tmp4(tmp52[6]).t.WXHcq5);
-            v3(tmp52[5]).openMana("JOIN_REQUEST_APPROVE", obj10);
+            v3(tmp52[5]).open("JOIN_REQUEST_APPROVE", obj10);
             c3 = 1;
             const obj = v3(tmp52[5]);
           }
@@ -259,8 +259,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12331, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(12331, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12375, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(12375, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

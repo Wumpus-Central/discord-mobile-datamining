@@ -1,15 +1,15 @@
-// === Module 17924: VoicePermissionManager ===
+// === Module 17996: VoicePermissionManager ===
 
-// Module 17924 (VoicePermissionManager)
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5413 */;
+// Module 17996 (VoicePermissionManager)
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5416 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7499 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5955 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 5113 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5948 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 5114 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 const InputModes = fn(1085).InputModes;

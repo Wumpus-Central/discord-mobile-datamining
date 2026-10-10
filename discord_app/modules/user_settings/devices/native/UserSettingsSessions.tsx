@@ -1,22 +1,22 @@
-// === Module 15145: UserSettingsSessions ===
+// === Module 15206: UserSettingsSessions ===
 
-// Module 15145 (UserSettingsSessions)
+// Module 15206 (UserSettingsSessions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef5010 from "module_5010" /* 5010 */;
-import _modDef5011 from "module_5011" /* 5011 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6640 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6678 */;
-import ScreenIcon from "ScreenIcon" /* 9076 */;
-import _modDef11136 from "module_11136" /* 11136 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15146 */;
-import _modDef15147 from "module_15147" /* 15147 */;
-import VrHeadsetIcon from "VrHeadsetIcon" /* 15148 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6641 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6679 */;
+import _modDef7728 from "module_7728" /* 7728 */;
+import ScreenIcon from "ScreenIcon" /* 9096 */;
+import _modDef11176 from "module_11176" /* 11176 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 15207 */;
+import _modDef15208 from "module_15208" /* 15208 */;
+import _modDef15209 from "module_15209" /* 15209 */;
+import VrHeadsetIcon from "VrHeadsetIcon" /* 15210 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import TextStyles from "TextStyles" /* 5903 */;
+import TextStyles from "TextStyles" /* 5906 */;
 
 require = fn;
 function getOsDetails(text) {
@@ -31,15 +31,15 @@ function getOsDetails(text) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              const obj2 = { text, iconSource: _modDef11136, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
+              const obj2 = { text, iconSource: _modDef11176, IconComponent: VrHeadsetIcon.VrHeadsetIcon };
               return obj2;
             } else {
-              const obj = { text, iconSource: _modDef15147, IconComponent: ScreenIcon.ScreenIcon };
+              const obj = { text, iconSource: _modDef15209, IconComponent: ScreenIcon.ScreenIcon };
               return obj;
             }
           }
         }
-        const obj3 = { text, iconSource: _modDef11136, IconComponent: MobilePhoneIcon.MobilePhoneIcon };
+        const obj3 = { text, iconSource: _modDef11176, IconComponent: MobilePhoneIcon.MobilePhoneIcon };
         return obj3;
       }
     }
@@ -47,7 +47,7 @@ function getOsDetails(text) {
   const obj4 = { text: null, iconSource: null, IconComponent: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.cDHCNY);
-  obj4.iconSource = _modDef15147;
+  obj4.iconSource = _modDef15209;
   obj4.IconComponent = ScreenIcon.ScreenIcon;
   return obj4;
 }
@@ -57,7 +57,7 @@ const Constants = fn(1085);
 ({ UserSettingsSections: closure_9, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { description: { paddingHorizontal: 16, paddingTop: 8, marginBottom: 8 }, detailsText: null, container: null, loading: null, sessionInfo: null, sessionInfoRow: null, sessionInfoRowSpacing: null, logoutButton: null, list: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_DEFAULT, 14));
@@ -76,7 +76,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const cResult = otherSessions(576).c(31);
   const tmp4 = closure_13();
   const obj = otherSessions(576);
-  let authSessions = otherSessions(14978).useAuthSessions();
+  let authSessions = otherSessions(15037).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -90,7 +90,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const obj2 = otherSessions(14978);
+  const obj2 = otherSessions(15037);
   const stateFromStores = otherSessions(504).useStateFromStores(tmp6, tmp7);
   const tmp10 = _slicedToArray(noop.useState(false), 2);
   closure_1 = tmp10[1];
@@ -155,7 +155,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
     }
     if (cResult[10] !== tmp16) {
       const obj6 = { title: tmp14, hasIcons: true, children: tmp16 };
-      const tmp22 = closure_10(otherSessions(6269).TableRowGroup, obj6);
+      const tmp22 = closure_10(otherSessions(6264).TableRowGroup, obj6);
       cResult[10] = tmp16;
       cResult[11] = tmp22;
       let tmp20 = tmp22;
@@ -181,7 +181,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
           obj7.onPress = function onPress() {
             return AuthSessionsActionCreators.logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
           };
-          tmp32 = closure_10(otherSessions(6186).TableRow, obj7);
+          tmp32 = closure_10(otherSessions(6179).TableRow, obj7);
         }
         cResult[15] = otherSessions;
         cResult[16] = tmp32;
@@ -201,7 +201,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
       const obj8 = { spacing: 24, style: tmp4.list, children: null };
       const items2 = [tmp20, tmp24, tmp31];
       obj8.children = items2;
-      const tmp36 = closure_11(otherSessions(5374).Stack, obj8);
+      const tmp36 = closure_11(otherSessions(5377).Stack, obj8);
       cResult[17] = tmp4.list;
       cResult[18] = tmp20;
       cResult[19] = tmp24;
@@ -215,7 +215,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
       obj9.title = intl2.string(otherSessions(1126).t.xx1MWc);
       const items3 = [otherSessions.map((session) => closure_1_10(closure_1_15, { session }, session.id_hash)), closure_10(closure_16, {})];
       obj9.children = items3;
-      let tmp26 = closure_11(otherSessions(6269).TableRowGroup, obj9);
+      let tmp26 = closure_11(otherSessions(6264).TableRowGroup, obj9);
     } else {
       let mfaEnabled1;
       if (stateFromStores != null) {
@@ -243,7 +243,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   }
   if (cResult[23] !== tmp4.description) {
     const obj10 = { variant: "text-sm/medium", style: description, children: tmp46 };
-    const tmp50 = closure_10(otherSessions(5087).Text, obj10);
+    const tmp50 = closure_10(otherSessions(5088).Text, obj10);
     cResult[23] = tmp4.description;
     cResult[24] = tmp50;
     let tmp48 = tmp50;
@@ -270,7 +270,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const obj12 = { bottom: true, children: null };
   const items4 = [tmp48, tmp34];
   obj12.children = items4;
-  const tmp52 = closure_11(otherSessions(6810).SafeAreaPaddingView, obj12);
+  const tmp52 = closure_11(otherSessions(6813).SafeAreaPaddingView, obj12);
   cResult[25] = tmp34;
   cResult[26] = tmp48;
   cResult[27] = tmp52;
@@ -278,9 +278,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
   const tmpResult = otherSessions(504);
 }) : (function UserSettingsSessions() {
   const tmp = closure_13();
-  let authSessions = otherSessions(14978).useAuthSessions();
+  let authSessions = otherSessions(15037).useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  const obj = otherSessions(14978);
+  const obj = otherSessions(15037);
   const items = [UserStore];
   const stateFromStores = otherSessions(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = otherSessions(504);
@@ -311,14 +311,14 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
       tmp21Result = closure_10(closure_15, obj6);
     }
     obj5.children = tmp21Result;
-    const items1 = [closure_10(otherSessions(6269).TableRowGroup, obj5), , ];
+    const items1 = [closure_10(otherSessions(6264).TableRowGroup, obj5), , ];
     if (otherSessions.length > 0) {
       const obj7 = { title: null, hasIcons: true, children: null };
       const intl = otherSessions(1126).intl;
       obj7.title = intl.string(otherSessions(1126).t.xx1MWc);
       const items2 = [otherSessions.map((session) => closure_1_10(closure_1_15, { session }, session.id_hash)), closure_10(closure_16, {})];
       obj7.children = items2;
-      let tmp20Result = closure_11(otherSessions(6269).TableRowGroup, obj7);
+      let tmp20Result = closure_11(otherSessions(6264).TableRowGroup, obj7);
     } else {
       let mfaEnabled;
       if (stateFromStores != null) {
@@ -337,20 +337,20 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserSe
       obj8.onPress = function onPress() {
         return AuthSessionsActionCreators.logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
       };
-      tmp21Result2 = closure_10(otherSessions(6186).TableRow, obj8);
+      tmp21Result2 = closure_10(otherSessions(6179).TableRow, obj8);
     }
     items1[2] = tmp21Result2;
     obj4.children = items1;
-    tmp20Result2 = closure_11(otherSessions(5374).Stack, obj4);
+    tmp20Result2 = closure_11(otherSessions(5377).Stack, obj4);
   }
   const obj9 = { style: tmp.container, children: null };
   const obj10 = { bottom: true, children: null };
   const obj11 = { variant: "text-sm/medium", style: tmp.description, children: null };
   const intl4 = otherSessions(1126).intl;
   obj11.children = intl4.string(otherSessions(1126).t.zZp618);
-  const items3 = [closure_10(otherSessions(5087).Text, obj11), tmp20Result2];
+  const items3 = [closure_10(otherSessions(5088).Text, obj11), tmp20Result2];
   obj10.children = items3;
-  obj9.children = closure_11(otherSessions(6810).SafeAreaPaddingView, obj10);
+  obj9.children = closure_11(otherSessions(6813).SafeAreaPaddingView, obj10);
   return closure_10(closure_7, obj9);
 });
 fn(558);
@@ -399,7 +399,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
             }
             if (cResult[15] !== arr[0]) {
               const obj2 = { variant: "text-md/semibold", children: arr[0] };
-              const tmp25 = closure_10(tmp(5087).Text, obj2);
+              const tmp25 = closure_10(tmp(5088).Text, obj2);
               cResult[15] = arr[0];
               cResult[16] = tmp25;
               let tmp23 = tmp25;
@@ -449,7 +449,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
                                     }
                                   }
                                   const obj3 = { icon: tmp39, label: tmp35, subLabel: tmp50, trailing: tmp19 };
-                                  const tmp56 = closure_10(tmp(6186).TableRow, obj3);
+                                  const tmp56 = closure_10(tmp(6179).TableRow, obj3);
                                   cResult[42] = tmp19;
                                   cResult[43] = tmp35;
                                   cResult[44] = tmp50;
@@ -471,7 +471,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
                             if (tmp47) {
                               const obj5 = { style: tmp4.sessionInfoRow, children: null };
                               const obj6 = { variant: "text-xs/medium", color: "text-subtle", style: tmp4.detailsText, children: tmp10 };
-                              obj5.children = closure_10(tmp(5087).Text, obj6);
+                              obj5.children = closure_10(tmp(5088).Text, obj6);
                               tmp47 = closure_10(closure_6, obj5);
                             }
                             cResult[35] = tmp10;
@@ -485,7 +485,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
                         if (tmp43) {
                           const obj7 = { style: tmp4.sessionInfoRow, children: null };
                           const obj8 = { variant: "text-xs/medium", color: "text-subtle", style: tmp4.detailsText, children: _location };
-                          obj7.children = closure_10(tmp(5087).Text, obj8);
+                          obj7.children = closure_10(tmp(5088).Text, obj8);
                           tmp43 = closure_10(closure_6, obj7);
                         }
                         cResult[31] = _location;
@@ -495,7 +495,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
                         tmp42 = tmp43;
                       }
                       const obj9 = { source: tmp9, IconComponent: tmp8 };
-                      const tmp41 = closure_10(tmp(6186).TableRow.Icon, obj9);
+                      const tmp41 = closure_10(tmp(6179).TableRow.Icon, obj9);
                       cResult[28] = tmp8;
                       cResult[29] = tmp9;
                       cResult[30] = tmp41;
@@ -524,9 +524,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
             if (tmp27) {
               const obj12 = { children: null };
               const obj13 = { variant: "text-md/semibold", accessibilityLabel: ",", style: tmp4.sessionInfoRowSpacing, children: "\u00B7" };
-              const items2 = [closure_10(tmp(5087).Text, obj13), ];
+              const items2 = [closure_10(tmp(5088).Text, obj13), ];
               const obj14 = { variant: "text-md/semibold", children: arr[1] };
-              items2[1] = closure_10(tmp(5087).Text, obj14);
+              items2[1] = closure_10(tmp(5088).Text, obj14);
               obj12.children = items2;
               tmp27 = closure_11(closure_12, obj12);
             }
@@ -546,9 +546,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
             return AuthSessionsActionCreators.logOutSessions(session.id_hash);
           };
           obj15.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-          const obj16 = { style: tmp4.logoutButton, source: _modDef5010 };
+          const obj16 = { style: tmp4.logoutButton, source: _modDef7728 };
           obj15.children = closure_10(tmp(1200).Icon, obj16);
-          tmp20 = closure_10(tmp(6191).PressableOpacity, obj15);
+          tmp20 = closure_10(tmp(6184).PressableOpacity, obj15);
         }
         cResult[11] = current;
         cResult[12] = session.id_hash;
@@ -590,8 +590,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   }
   let formatDateResult = null;
   if (!current) {
-    formatDateResult = tmp(14978).formatDate(session.approx_last_used_time);
-    const tmpResult = tmp(14978);
+    formatDateResult = tmp(15037).formatDate(session.approx_last_used_time);
+    const tmpResult = tmp(15037);
   }
   cResult[8] = current;
   cResult[9] = session.approx_last_used_time;
@@ -628,8 +628,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   let formatDateResult = null;
   ({ text, iconSource, IconComponent } = getOsDetails(os));
   if (!current) {
-    formatDateResult = session(14978).formatDate(session.approx_last_used_time);
-    const obj = session(14978);
+    formatDateResult = session(15037).formatDate(session.approx_last_used_time);
+    const obj = session(15037);
   }
   const items = [text, platform];
   const found = items.filter(session(1388).isNotNullish);
@@ -642,20 +642,20 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
       return AuthSessionsActionCreators.logOutSessions(session.id_hash);
     };
     obj2.hitSlop = { top: 5, left: 5, bottom: 5, right: 5 };
-    const obj3 = { style: tmp.logoutButton, source: _modDef5010 };
+    const obj3 = { style: tmp.logoutButton, source: _modDef7728 };
     obj2.children = closure_10(tmp11(1200).Icon, obj3);
-    tmp13 = closure_10(tmp11(6191).PressableOpacity, obj2);
+    tmp13 = closure_10(tmp11(6184).PressableOpacity, obj2);
   }
   const obj4 = { style: tmp.sessionInfo, accessible: true, children: null };
   const obj5 = { style: tmp.sessionInfoRow, children: null };
-  const items1 = [closure_10(session(5087).Text, { variant: "text-md/semibold", children: found[0] }), ];
+  const items1 = [closure_10(session(5088).Text, { variant: "text-md/semibold", children: found[0] }), ];
   let tmp18Result = found.length > 1;
   if (tmp18Result) {
     const obj7 = { children: null };
     const obj8 = { variant: "text-md/semibold", accessibilityLabel: ",", style: tmp.sessionInfoRowSpacing, children: "\u00B7" };
-    const items2 = [closure_10(tmp11(5087).Text, obj8), ];
+    const items2 = [closure_10(tmp11(5088).Text, obj8), ];
     const obj9 = { variant: "text-md/semibold", children: found[1] };
-    items2[1] = closure_10(tmp11(5087).Text, obj9);
+    items2[1] = closure_10(tmp11(5088).Text, obj9);
     obj7.children = items2;
     tmp18Result = closure_11(closure_12, obj7);
   }
@@ -664,12 +664,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   obj4.children = closure_11(closure_6, obj5);
   const obj6 = { variant: "text-md/semibold", children: found[0] };
   const tmp5Result = getOsDetails(os);
-  const obj10 = { icon: closure_10(session(6186).TableRow.Icon, { source: iconSource, IconComponent }), label: closure_10(closure_6, obj4), subLabel: null, trailing: null };
+  const obj10 = { icon: closure_10(session(6179).TableRow.Icon, { source: iconSource, IconComponent }), label: closure_10(closure_6, obj4), subLabel: null, trailing: null };
   let tmp16Result3 = null != _location;
   if (tmp16Result3) {
     const obj11 = { style: tmp.sessionInfoRow, children: null };
     const obj12 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.detailsText, children: _location };
-    obj11.children = closure_10(tmp11(5087).Text, obj12);
+    obj11.children = closure_10(tmp11(5088).Text, obj12);
     tmp16Result3 = closure_10(closure_6, obj11);
   }
   const items3 = [tmp16Result3, ];
@@ -677,13 +677,13 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Sessio
   if (tmp16Result4) {
     const obj13 = { style: tmp.sessionInfoRow, children: null };
     const obj14 = { variant: "text-xs/medium", color: "text-subtle", style: tmp.detailsText, children: formatDateResult };
-    obj13.children = closure_10(tmp11(5087).Text, obj14);
+    obj13.children = closure_10(tmp11(5088).Text, obj14);
     tmp16Result4 = closure_10(closure_6, obj13);
   }
   items3[1] = tmp16Result4;
   obj10.subLabel = closure_11(closure_6, { accessible: true, children: items3 });
   obj10.trailing = tmp13;
-  return closure_10(session(6186).TableRow, obj10);
+  return closure_10(session(6179).TableRow, obj10);
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function UnknownLegacySessionsInfo() {
@@ -691,8 +691,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   const obj = navigation(576);
   navigation = navigation(1503).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "translucent", source: _modDef5011 };
-    const tmp9 = closure_10(tmp(6186).TableRow.Icon, obj3);
+    const obj3 = { variant: "translucent", source: _modDef15208 };
+    const tmp9 = closure_10(tmp(6179).TableRow.Icon, obj3);
     const intl = tmp(1126).intl;
     const stringResult = intl.string(tmp(1126).t.iUa0sn);
     cResult[0] = tmp9;
@@ -719,7 +719,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   }
   if (cResult[4] !== tmp11) {
     const obj5 = { icon: tmp5, label: tmp6, subLabel: tmp11 };
-    const tmp15 = closure_10(tmp(6186).TableRow, obj5);
+    const tmp15 = closure_10(tmp(6179).TableRow, obj5);
     cResult[4] = tmp11;
     cResult[5] = tmp15;
     let tmp13 = tmp15;
@@ -731,7 +731,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unknow
   _require = require("useNavigation").useNavigation();
   const obj2 = { icon: null, label: null, subLabel: null };
   const obj = require("useNavigation");
-  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef5011 });
+  obj2.icon = closure_10(require("TableRow").TableRow.Icon, { variant: "translucent", source: _modDef15208 });
   const intl = require("util").intl;
   obj2.label = intl.string(require("util").t.iUa0sn);
   const intl2 = require("util").intl;

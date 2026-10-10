@@ -1,28 +1,28 @@
-// === Module 14853: UserProfileEditingAccessibilityUtils ===
+// === Module 14912: UserProfileEditingAccessibilityUtils ===
 
-// Module 14853 (UserProfileEditingAccessibilityUtils)
+// Module 14912 (UserProfileEditingAccessibilityUtils)
 import util from "util" /* 1126 */;
-import _modDef2955 from "module_2955" /* 2955 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6677 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10234 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14792 */;
+import _modDef2958 from "module_2958" /* 2958 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6678 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10265 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 14848 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileEditingAccessibilityUtils.tsx");
 
-export const getDisplayNameStyleAccessibleValue = function getDisplayNameStyleAccessibleValue(stateFromStores) {
-  if (null == stateFromStores) {
+export const getDisplayNameStyleAccessibleValue = function getDisplayNameStyleAccessibleValue(displayNameStyles) {
+  if (null == displayNameStyles) {
     const intl2 = util.intl;
     return intl2.string(util.t["3Xph0/"]);
   } else {
     const intl3 = util.intl;
     const intl4 = util.intl;
-    let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[stateFromStores.effectId];
+    let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[displayNameStyles.effectId];
     if (OpWJ3f == null) {
-      OpWJ3f = _modDef2955.OpWJ3f;
+      OpWJ3f = _modDef2958.OpWJ3f;
     }
-    const colors = stateFromStores.colors;
-    const stringResult = intl3.string(getDisplayNameStylesFontNameDefault(stateFromStores.fontId));
+    const colors = displayNameStyles.colors;
+    const stringResult = intl3.string(getDisplayNameStylesFontNameDefault(displayNameStyles.fontId));
     const mapped = colors.map((item) => "#" + item.toString(16).padStart(6, "0"));
     const joined = mapped.join(", ");
     const intl = util.intl;

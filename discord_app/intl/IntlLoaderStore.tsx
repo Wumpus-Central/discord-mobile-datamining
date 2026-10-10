@@ -1,12 +1,12 @@
-// === Module 2129: IntlLoaderStore ===
+// === Module 2130: IntlLoaderStore ===
 
-// Module 2129 (IntlLoaderStore)
+// Module 2130 (IntlLoaderStore)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2130 from "module_2130" /* 2130 */;
-import bg from "bg" /* 4153 */;
-import formatjs from "formatjs" /* 4628 */;
-import moment from "moment" /* 4659 */;
+import _modDef2131 from "module_2131" /* 2131 */;
+import bg from "bg" /* 4194 */;
+import formatjs from "formatjs" /* 4669 */;
+import moment from "moment" /* 4700 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import module_1902 from "module_1902" /* 1902 */;
 
@@ -22,7 +22,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -74,7 +74,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2140).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2141).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -100,7 +100,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   return obj;
                 } else {
                   dependencyMap = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp11) {
                 dependencyMap = tmp;
@@ -159,7 +159,7 @@ let closure_6 = async function _setAppLocale(arg0) {
       } else {
         closure_129_1.setLoadingSucceeded(closure_129_0);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp10) {
       c3 = tmp;
@@ -178,7 +178,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -204,7 +204,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2130);
+            state.setLocaleData(_modDef2131);
             c3 = 3;
           }
         }
@@ -235,7 +235,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -266,7 +266,7 @@ let closure_8 = async function _loadFormatJsLocale(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     } catch (tmp10) {
       c1 = tmp;
       throw tmp10;
@@ -285,7 +285,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -336,7 +336,7 @@ let closure_9 = async function _setMomentLocale(arg0) {
       closure_129_1.push("en-US");
       closure_130_0(closure_130_2[10]).locale(closure_129_1);
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     } catch (tmp26) {
       c4 = tmp;
       throw tmp26;
@@ -350,14 +350,14 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "backgroundColor",
-    localeData: _modDef2130,
+    error: "color",
+    localeData: _modDef2131,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "backgroundColor" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "color" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -409,13 +409,13 @@ export const useLocaleData = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   let tmp4 = withEqualityFn(first);
   if (tmp4 == null) {
-    tmp4 = _modDef2130;
+    tmp4 = _modDef2131;
   }
   return tmp4;
 }) : (function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2130;
+    tmp = _modDef2131;
   }
   return tmp;
 });

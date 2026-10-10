@@ -1,6 +1,6 @@
-// === Module 14331: ThumbnailImage ===
+// === Module 14385: ThumbnailImage ===
 
-// Module 14331 (ThumbnailImage)
+// Module 14385 (ThumbnailImage)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -9,7 +9,7 @@ let _default = fn(17).Image;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1382);
 if (PlatformUtils.isAndroid()) {
-  _default = fn(14332).default;
+  _default = fn(14386).default;
 }
 const ReactCompilerGating = fn(558);
 const size = fn(2);

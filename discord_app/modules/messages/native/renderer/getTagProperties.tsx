@@ -1,12 +1,12 @@
-// === Module 8044: getTagProperties ===
+// === Module 8062: getTagProperties ===
 
-// Module 8044 (getTagProperties)
+// Module 8062 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1126 */;
-import MessageConstants from "MessageConstants" /* 5084 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8045 */;
-import isCrosspostDefault from "isCrosspost" /* 8047 */;
-import _modDef8049 from "module_8049" /* 8049 */;
+import MessageConstants from "MessageConstants" /* 5085 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8063 */;
+import isCrosspostDefault from "isCrosspost" /* 8065 */;
+import _modDef8067 from "module_8067" /* 8067 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8049).uri;
+            uri = Image.resolveAssetSource(_modDef8067).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "body", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: true, opTagBackgroundColor: true };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "bm", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: true, opTagBackgroundColor: true };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

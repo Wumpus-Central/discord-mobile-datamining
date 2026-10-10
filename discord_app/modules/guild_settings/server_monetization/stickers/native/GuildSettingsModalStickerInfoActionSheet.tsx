@@ -1,11 +1,11 @@
-// === Module 18249: GuildSettingsModalStickerInfoActionSheet ===
+// === Module 18323: GuildSettingsModalStickerInfoActionSheet ===
 
-// Module 18249 (GuildSettingsModalStickerInfoActionSheet)
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 18242 */;
+// Module 18323 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 18316 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6037 */;
+import StickersStore from "StickersStore" /* 6030 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -49,7 +49,7 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
             c3 = 2;
             v3 = 3;
             c4 = 1;
-            const obj6 = { value: tmp4(tmp39[7]).deleteGuildSticker(tmp34), done: false };
+            const obj6 = { value: tmp4(tmp37[7]).deleteGuildSticker(tmp32), done: false };
             return obj6;
           } else {
             c4 = 3;
@@ -57,11 +57,11 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            const obj7 = { key: "IMAGE_PICKER_ERROR", IconComponent: tmp4(tmp39[9]).CircleErrorIcon, content: null };
-            const intl = tmp4(tmp39[10]).intl;
-            obj7.content = intl.string(tmp4(tmp39[10]).t["5NMPSS"]);
-            v3(tmp39[8]).open(obj7);
-            const obj2 = v3(tmp39[8]);
+            const obj7 = { text: null, variant: "critical" };
+            const intl = tmp4(tmp37[9]).intl;
+            obj7.text = intl.string(tmp4(tmp37[9]).t["5NMPSS"]);
+            v3(tmp37[8]).open("IMAGE_PICKER_ERROR", obj7);
+            const obj2 = v3(tmp37[8]);
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -80,12 +80,12 @@ export default noop.memo(function GuildSettingsModalStickerInfoActionSheet(arg0)
         }
         c3 = 0;
         closure_128_4(false);
-        throw tmp39;
-      } catch (tmp39) {
+        throw tmp37;
+      } catch (tmp37) {
         if (tmp5 === c3) {
           c4 = tmp3;
-          throw tmp39;
-        } else if (tmp2 === tmp41) {
+          throw tmp37;
+        } else if (tmp2 === tmp39) {
           v3 = tmp2;
         } else {
           v3 = tmp;

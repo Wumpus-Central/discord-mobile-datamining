@@ -1,8 +1,8 @@
-// === Module 13355: useTrackPdpClick ===
+// === Module 13405: useTrackPdpClick ===
 
-// Module 13355 (useTrackPdpClick)
+// Module 13405 (useTrackPdpClick)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,18 +1,18 @@
-// === Module 15163: OneWayToTwoWayLinkUpsell ===
+// === Module 15225: OneWayToTwoWayLinkUpsell ===
 
-// Module 15163 (OneWayToTwoWayLinkUpsell)
+// Module 15225 (OneWayToTwoWayLinkUpsell)
 import nativeDefault from "native" /* 587 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 9983 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10012 */;
 import noop from "module_19" /* 19 */;
-import TextStyles_mod from "TextStyles" /* 5903 */;
+import TextStyles_mod from "TextStyles" /* 5906 */;
 
 const require = fn;
 const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, margin: 16, padding: 12, borderRadius: nativeDefault.radii.sm }, header: { flexDirection: "row", marginBottom: 4, alignItems: "center" }, titleContainer: { flexGrow: 1, flexShrink: 1 }, title: null, body: null, newContainer: null, reconnectButton: null };
 let TextStyles = TextStyles_mod;
 const merged = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.TEXT_DEFAULT, 16));
@@ -120,7 +120,7 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
               }
               if (cResult[17] !== onPress) {
                 const obj3 = { text: tmp23, onPress };
-                const tmp27 = closure_6(newIndicatorDismissibleContent(5376).Button, obj3);
+                const tmp27 = closure_6(newIndicatorDismissibleContent(5379).Button, obj3);
                 cResult[17] = onPress;
                 cResult[18] = tmp27;
                 let tmp25 = tmp27;
@@ -160,7 +160,7 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
               tmp28 = tmp31;
             }
             const obj6 = { style: tmp4.body, variant: "text-sm/medium", children: body };
-            const tmp21 = closure_6(newIndicatorDismissibleContent(5087).Text, obj6);
+            const tmp21 = closure_6(newIndicatorDismissibleContent(5088).Text, obj6);
             cResult[13] = body;
             cResult[14] = tmp4.body;
             cResult[15] = tmp21;
@@ -188,7 +188,7 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
     cResult[8] = tmp14;
     tmp11 = tmp14;
   }
-  const tmp10 = closure_6(newIndicatorDismissibleContent(5087).Text, { style: tmp4.title, variant: "text-md/semibold", children: title });
+  const tmp10 = closure_6(newIndicatorDismissibleContent(5088).Text, { style: tmp4.title, variant: "text-md/semibold", children: title });
   cResult[2] = tmp4.title;
   cResult[3] = title;
   cResult[4] = tmp10;
@@ -215,17 +215,17 @@ export const OneWayToTwoWayLinkUpsell = ReactCompilerGating.isReactCompilerEnabl
   };
   const items = [newIndicatorDismissibleContent];
   obj4.contentTypes = items;
-  const items1 = [closure_6(SelectedDismissibleContentDefault, obj4), closure_6(newIndicatorDismissibleContent(5087).Text, { style: tmp.title, variant: "text-md/semibold", children: title })];
+  const items1 = [closure_6(SelectedDismissibleContentDefault, obj4), closure_6(newIndicatorDismissibleContent(5088).Text, { style: tmp.title, variant: "text-md/semibold", children: title })];
   obj3.children = items1;
   const items2 = [closure_7(View, obj3), img];
   obj2.children = items2;
-  const items3 = [closure_7(View, obj2), closure_6(newIndicatorDismissibleContent(5087).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
+  const items3 = [closure_7(View, obj2), closure_6(newIndicatorDismissibleContent(5088).Text, { style: tmp.body, variant: "text-sm/medium", children: body }), ];
   const obj7 = { style: tmp.reconnectButton, children: null };
   const obj8 = { text: null, onPress: null };
   const intl = newIndicatorDismissibleContent(1126).intl;
   obj8.text = intl.string(newIndicatorDismissibleContent(1126).t.vD60Pv);
   obj8.onPress = onPress;
-  obj7.children = closure_6(newIndicatorDismissibleContent(5376).Button, obj8);
+  obj7.children = closure_6(newIndicatorDismissibleContent(5379).Button, obj8);
   items3[2] = closure_6(View, obj7);
   obj.children = items3;
   return closure_7(View, obj);

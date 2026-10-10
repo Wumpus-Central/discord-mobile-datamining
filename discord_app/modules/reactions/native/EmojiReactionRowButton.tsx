@@ -1,28 +1,28 @@
-// === Module 12782: EmojiReactionRowButton ===
+// === Module 12829: EmojiReactionRowButton ===
 
-// Module 12782 (EmojiReactionRowButton)
+// Module 12829 (EmojiReactionRowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import EmojiTypes from "EmojiTypes" /* 4726 */;
-import shared from "shared" /* 4930 */;
-import Pressables from "Pressables" /* 6191 */;
-import EmojiDefault from "Emoji" /* 6816 */;
-import ReactionIcon from "ReactionIcon" /* 8941 */;
+import EmojiTypes from "EmojiTypes" /* 4767 */;
+import shared from "shared" /* 4969 */;
+import Pressables from "Pressables" /* 6184 */;
+import EmojiDefault from "Emoji" /* 6819 */;
+import ReactionIcon from "ReactionIcon" /* 8960 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Platform = fn(17).Platform;
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = { emojiContainer: null };
   const size = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj.emojiContainer = size;
   return obj;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_7 = createStyles.createStyles((width, fontSize, lineHeight) => {
   const obj = { emojiImage: { width, height: width }, emojiText: null };
   const size = { lineHeight, fontSize, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: lineHeight, height: lineHeight };

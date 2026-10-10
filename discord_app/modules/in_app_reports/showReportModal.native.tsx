@@ -1,7 +1,7 @@
-// === Module 7706: showReportModal ===
+// === Module 7723: showReportModal ===
 
-// Module 7706 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
+// Module 7723 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

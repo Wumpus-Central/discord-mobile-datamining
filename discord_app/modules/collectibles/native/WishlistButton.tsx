@@ -1,17 +1,17 @@
-// === Module 9022: WishlistButton ===
+// === Module 9041: WishlistButton ===
 
-// Module 9022 (WishlistButton)
+// Module 9041 (WishlistButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import native from "native" /* 4788 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import spring from "spring" /* 5375 */;
-import springPresets from "springPresets" /* 5379 */;
-import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8953 */;
-import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 8954 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 9025 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import native from "native" /* 4827 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import spring from "spring" /* 5378 */;
+import springPresets from "springPresets" /* 5382 */;
+import CollectiblesWishlistUtils from "CollectiblesWishlistUtils" /* 8972 */;
+import useWishlistNUXActionSheetDefault from "useWishlistNUXActionSheet" /* 8973 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 9044 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -29,11 +29,11 @@ const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let obj = { duration: 400, easing: null };
-const Easing = fn(4811).Easing;
+const Easing = fn(4850).Easing;
 obj.easing = Easing.bezier(0.67, 0, 0.26, 1);
-let obj2 = { sm: fn(5381).SMALL_BUTTON_HEIGHT, md: fn(5381).MEDIUM_BUTTON_HEIGHT };
+let obj2 = { sm: fn(5384).SMALL_BUTTON_HEIGHT, md: fn(5384).MEDIUM_BUTTON_HEIGHT };
 const dependencyMap2 = { sm: "sm", md: "md" };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_20 = createStyles.createStyles((arg0) => {
   obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
   const size = { width: obj2[arg0], height: obj2[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, borderWidth: 1, borderColor: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
@@ -190,11 +190,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             tmp15 = closure_1;
             tmp16 = closure_2;
             obj = closure_1(closure_2[20]);
-            obj1 = { key: "WISHLIST_DISABLED", content: null };
+            obj1 = { text: null };
             tmp17 = closure_0;
             intl = closure_0(closure_2[21]).intl;
-            obj1.content = intl.string(closure_0(closure_2[21]).t["50TX9k"]);
-            openResult = obj.open(obj1);
+            obj1.text = intl.string(closure_0(closure_2[21]).t["50TX9k"]);
+            str = "WISHLIST_DISABLED";
+            openResult = obj.open("WISHLIST_DISABLED", obj1);
           } else {
             tmp = busy;
             if (!busy) {
@@ -289,10 +290,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
   const items1 = [isWishlisted, first, sharedValue];
   const callback = obj3.useCallback(() => {
     if (disabled) {
-      obj2 = { key: "WISHLIST_DISABLED", content: null };
+      obj2 = { text: null };
       const intl = util.intl;
-      obj2.content = intl.string(util.t["50TX9k"]);
-      ToastActionCreatorsDefault.open(obj2);
+      obj2.text = intl.string(util.t["50TX9k"]);
+      ToastActionCreatorsDefault.open("WISHLIST_DISABLED", obj2);
     } else if (!busy) {
       if (onTrackPress == null) {
         let tmp7 = isWishlisted;
@@ -592,10 +593,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
       asyncGeneratorStep = tmp26;
       const _Symbol2 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function x() {
-          ToastActionCreatorsDefault.open({ key: "WISHLIST_ERROR", content });
+        const fn = function x() {
+          ToastActionCreatorsDefault.open("WISHLIST_ERROR", { text });
         };
-        cResult[17] = fn2;
+        cResult[17] = fn;
         class I {
           constructor() {
             return closure_1_11.getId();
@@ -610,7 +611,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             if (cResult[21] === tmp8) {
               let tmp28 = cResult[22];
             }
-            const wishlistButtonState = tmp(9013).useWishlistButtonState(tmp28);
+            const wishlistButtonState = tmp(9032).useWishlistButtonState(tmp28);
             class I {
               constructor() {
                 return closure_1_11.getId();
@@ -667,7 +668,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
                   obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -706,7 +707,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp12) {
                   c0 = tmp;
@@ -730,7 +731,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
             cResult[26] = tmp5;
             cResult[27] = t10;
             tmp31 = t10;
-            const tmpResult4 = tmp(9013);
+            const tmpResult4 = tmp(9032);
           }
         }
       }
@@ -743,16 +744,21 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
       tmp28 = obj3;
     }
   }
-  const fn = function k() {
-    if (shouldShowWishlistNUXActionSheet) {
-      showWishlistNUXActionSheet(closure_2);
+  class B {
+    constructor() {
+      if (closure_3) {
+        tmp = closure_4;
+        tmp2 = closure_2;
+        tmp3 = closure_4(closure_2);
+      }
+      return;
     }
-  };
+  }
   cResult[12] = product;
   cResult[13] = shouldShowWishlistNUXActionSheet;
   cResult[14] = showWishlistNUXActionSheet;
-  cResult[15] = fn;
-  tmp24 = fn;
+  cResult[15] = B;
+  tmp24 = B;
   const tmpResult3 = require("initialize");
 }) : (function WishlistButton(skuId) {
   const product = skuId.product;
@@ -783,7 +789,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function WishlistButt
   c5 = stringResult;
   const items3 = [stringResult];
   const callback1 = noop.useCallback(() => {
-    ToastActionCreatorsDefault.open({ key: "WISHLIST_ERROR", content });
+    ToastActionCreatorsDefault.open("WISHLIST_ERROR", { text });
   }, items3);
   const formatToPlainStringResult = intl.formatToPlainString(require("util").t["7kFjeK"], { productName: product.name });
   const wishlistButtonState = require("useWishlistButtonState").useWishlistButtonState({ userId: stateFromStores, skuId: skuId.skuId, onAddSuccess: callback, onError: callback1, skipAddAnnouncement: shouldShowWishlistNUXActionSheet });
@@ -846,7 +852,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
     }
     obj2 = { skuId, product: tmp6, disabled: !tmp10, onTrackPress: tmp4 };
     const merged = Object.assign(tmp5);
-    const tmp19 = closure_1_15(closure_30, obj2);
+    const tmp19 = value2(closure_30, obj2);
     cResult[6] = tmp4;
     cResult[7] = tmp5;
     cResult[8] = tmp6;
@@ -864,7 +870,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   if (!obj.useProductPurchaseState(selectedProduct).isPurchased) {
     obj2 = { skuId: selectedProduct.skuId, product: selectedProduct, disabled: !tmp4, onTrackPress: selectedProduct.onTrackPress };
     const merged1 = Object.assign(merged);
-    tmp = closure_1_15(closure_30, obj2);
+    tmp = value2(closure_30, obj2);
   }
   return tmp;
 });

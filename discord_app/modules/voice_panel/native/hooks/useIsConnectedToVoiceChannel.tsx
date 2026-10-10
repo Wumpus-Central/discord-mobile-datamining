@@ -1,9 +1,9 @@
-// === Module 17652: useIsConnectedToVoiceChannel ===
+// === Module 17724: useIsConnectedToVoiceChannel ===
 
-// Module 17652 (useIsConnectedToVoiceChannel)
+// Module 17724 (useIsConnectedToVoiceChannel)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 
 const require = globalThis.__r;
 
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCon
       } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
         return true;
       } else {
-        state = RTCConnectionStore.getState();
+        const state = RTCConnectionStore.getState();
         if (RTCConnectionStates.DISCONNECTED !== state) {
           if (RTCConnectionStates.NO_ROUTE !== state) {
             return true;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCon
     } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
       return true;
     } else {
-      state = RTCConnectionStore.getState();
+      const state = RTCConnectionStore.getState();
       if (RTCConnectionStates.DISCONNECTED !== state) {
         if (RTCConnectionStates.NO_ROUTE !== state) {
           return true;

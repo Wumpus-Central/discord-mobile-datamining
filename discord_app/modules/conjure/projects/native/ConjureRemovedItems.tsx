@@ -1,35 +1,38 @@
-// === Module 11387: ConjureRemovedItems ===
+// === Module 11432: ConjureRemovedItems ===
 
-// Module 11387 (ConjureRemovedItems)
+// Module 11432 (ConjureRemovedItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef3827 from "module_3827" /* 3827 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6183 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import FolderIcon from "FolderIcon" /* 8185 */;
-import AppsIcon from "AppsIcon" /* 8217 */;
-import BotTagDefault from "BotTag" /* 8750 */;
-import RobotIcon from "RobotIcon" /* 11388 */;
+import _modDef3849 from "module_3849" /* 3849 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4832 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6176 */;
+import FormCheckbox from "FormCheckbox" /* 6177 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import FolderIcon from "FolderIcon" /* 8201 */;
+import AppsIcon from "AppsIcon" /* 8233 */;
+import BotTagDefault from "BotTag" /* 8766 */;
+import RobotIcon from "RobotIcon" /* 11433 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const View = fn(17).View;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
-let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 } };
-let closure_7 = createStyles.createStyles(obj2);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(5092);
+let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 }, optionalLabel: { flex: 1 } };
+let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemIcon(kind) {
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemIcon(kind) {
   const cResult = c.c(3);
   kind = kind.kind;
   if ("channel" === kind) {
     const _Symbol3 = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp15 = hasOwnProperty(AppsIcon.AppsIcon, { size: "sm", color: "text-subtle" });
+      const tmp15 = timestampProducer(AppsIcon.AppsIcon, { size: "sm", color: "text-subtle" });
       cResult[0] = tmp15;
       let first = tmp15;
     } else {
@@ -39,7 +42,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemIco
   } else if ("app" === kind) {
     const _Symbol2 = Symbol;
     if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp11 = hasOwnProperty(RobotIcon.RobotIcon, { size: "sm", color: "text-subtle" });
+      const tmp11 = timestampProducer(RobotIcon.RobotIcon, { size: "sm", color: "text-subtle" });
       cResult[1] = tmp11;
       let tmp9 = tmp11;
     } else {
@@ -49,7 +52,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemIco
   } else if ("project" === kind) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp7 = hasOwnProperty(FolderIcon.FolderIcon, { size: "sm", color: "text-subtle" });
+      const tmp7 = timestampProducer(FolderIcon.FolderIcon, { size: "sm", color: "text-subtle" });
       cResult[2] = tmp7;
       let tmp5 = tmp7;
     } else {
@@ -60,18 +63,18 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemIco
 }) : (function ItemIcon(kind) {
   kind = kind.kind;
   if ("channel" === kind) {
-    return hasOwnProperty(AppsIcon.AppsIcon, { size: "sm", color: "text-subtle" });
+    return timestampProducer(AppsIcon.AppsIcon, { size: "sm", color: "text-subtle" });
   } else if ("app" === kind) {
-    return hasOwnProperty(RobotIcon.RobotIcon, { size: "sm", color: "text-subtle" });
+    return timestampProducer(RobotIcon.RobotIcon, { size: "sm", color: "text-subtle" });
   } else if ("project" === kind) {
-    return hasOwnProperty(FolderIcon.FolderIcon, { size: "sm", color: "text-subtle" });
+    return timestampProducer(FolderIcon.FolderIcon, { size: "sm", color: "text-subtle" });
   }
 });
 ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemsBox(arg0) {
-  const cResult = c.c(11);
-  ({ items, dimmed } = arg0);
-  const tmp5 = closure_7();
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemsBox(arg0) {
+  const cResult = c.c(12);
+  ({ items, dimmed, children } = arg0);
+  const tmp5 = closure_8();
   let boxDimmed = null;
   if (tmp4) {
     boxDimmed = tmp5.boxDimmed;
@@ -83,11 +86,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemsBo
     if (cResult[3] !== items) {
       const _Symbol = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function b(kind) {
+        const fn = function o(kind) {
           const obj = { direction: "horizontal", spacing: 8, align: "center", children: null };
-          const items = [closure_1_5(closure_1_8, { kind: kind.kind }), closure_1_5(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: kind.label })];
+          const items = [closure_1_6(closure_1_9, { kind: kind.kind }), closure_1_6(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: kind.label })];
           obj.children = items;
-          return closure_1_6(Stack_Stack.Stack, obj, kind.key);
+          return closure_1_7(Stack_Stack.Stack, obj, kind.key);
         };
         cResult[5] = fn;
         let tmp10 = fn;
@@ -98,120 +101,275 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ItemsBo
       cResult[3] = items;
       cResult[4] = mapped;
     } else {
-      if (cResult[6] !== cResult[4]) {
-        const obj2 = { spacing: 8, children: tmp8 };
-        const tmp15 = hasOwnProperty(Stack_Stack.Stack, obj2);
-        cResult[6] = tmp8;
-        cResult[7] = tmp15;
-        let tmp13 = tmp15;
-      } else {
-        tmp13 = cResult[7];
-      }
-      if (cResult[8] === tmp7) {
-        if (cResult[9] === tmp13) {
-          let tmp16 = cResult[10];
+      if (cResult[6] === children) {
+        if (cResult[7] === tmp8) {
+          let tmp13 = cResult[8];
         }
-        return tmp16;
+        if (cResult[9] === tmp7) {
+          if (cResult[10] === tmp13) {
+            let tmp16 = cResult[11];
+          }
+          return tmp16;
+        }
+        const obj2 = { style: tmp7, children: tmp13 };
+        const tmp19 = timestampProducer(hasOwnProperty, obj2);
+        cResult[9] = tmp7;
+        cResult[10] = tmp13;
+        cResult[11] = tmp19;
+        tmp16 = tmp19;
       }
-      const obj3 = { style: tmp7, children: tmp13 };
-      const tmp19 = hasOwnProperty(View, obj3);
-      cResult[8] = tmp7;
-      cResult[9] = tmp13;
-      cResult[10] = tmp19;
-      tmp16 = tmp19;
+      const obj3 = { spacing: 8, children: null };
+      const items1 = [cResult[4], children];
+      obj3.children = items1;
+      const tmp15 = React5(Stack_Stack.Stack, obj3);
+      cResult[6] = children;
+      cResult[7] = cResult[4];
+      cResult[8] = tmp15;
+      tmp13 = tmp15;
     }
   }
-  const items1 = [tmp5.box, boxDimmed];
+  const items2 = [tmp5.box, boxDimmed];
   cResult[0] = tmp5.box;
   cResult[1] = boxDimmed;
-  cResult[2] = items1;
-  tmp7 = items1;
+  cResult[2] = items2;
+  tmp7 = items2;
   tmp4 = undefined !== dimmed && dimmed;
-}) : (function ItemsBox(arg0) {
-  ({ items, dimmed } = arg0);
+}) : (function ItemsBox(children) {
+  ({ items, dimmed } = children);
   if (dimmed === undefined) {
     dimmed = false;
   }
-  const tmp = closure_7();
+  const tmp = closure_8();
   const items1 = [tmp.box, ];
   let boxDimmed = null;
   if (dimmed) {
     boxDimmed = tmp.boxDimmed;
   }
-  let obj = {
-    style: items1,
-    children: hasOwnProperty(Stack_Stack.Stack, {
-      spacing: 8,
-      children: items.map((kind) => {
-        const obj = { direction: "horizontal", spacing: 8, align: "center", children: null };
-        const items = [closure_1_5(closure_1_8, { kind: kind.kind }), closure_1_5(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: kind.label })];
-        obj.children = items;
-        return closure_1_6(Stack_Stack.Stack, obj, kind.key);
-      })
-    })
-  };
+  let obj = { style: items1, children: null };
   items1[1] = boxDimmed;
-  return hasOwnProperty(View, obj);
+  const obj2 = { spacing: 8, children: null };
+  const items2 = [
+    items.map((kind) => {
+      const obj = { direction: "horizontal", spacing: 8, align: "center", children: null };
+      const items = [closure_1_6(closure_1_9, { kind: kind.kind }), closure_1_6(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: kind.label })];
+      obj.children = items;
+      return closure_1_7(Stack_Stack.Stack, obj, kind.key);
+    }),
+    children.children
+  ];
+  obj2.children = items2;
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return timestampProducer(hasOwnProperty, obj);
+});
+ReactCompilerGating = fn(558);
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function OptionalItemRow(onChange) {
+  const cResult = c.c(25);
+  ({ item, checked } = onChange);
+  onChange = onChange.onChange;
+  const disabled = onChange.disabled;
+  const tmp4 = closure_8();
+  if (cResult[0] === checked) {
+    if (cResult[1] === disabled) {
+      let tmp5 = cResult[2];
+    }
+    const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative(tmp5);
+    ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
+    let boxDimmed = null;
+    if (disabled) {
+      boxDimmed = tmp4.boxDimmed;
+    }
+    if (cResult[3] === checked) {
+      if (cResult[4] === onChange) {
+        let tmp8 = cResult[5];
+      }
+      if (cResult[6] !== item.kind) {
+        const obj2 = { kind: item.kind };
+        const tmp12 = timestampProducer(closure_9, obj2);
+        cResult[6] = item.kind;
+        cResult[7] = tmp12;
+        let tmp9 = tmp12;
+      } else {
+        tmp9 = cResult[7];
+      }
+      if (cResult[8] === item.label) {
+        if (cResult[9] === tmp4.optionalLabel) {
+          let tmp13 = cResult[10];
+        }
+        if (cResult[11] !== checked) {
+          const obj3 = { checked };
+          const tmp18 = timestampProducer(FormCheckbox.FormCheckbox, obj3);
+          cResult[11] = checked;
+          cResult[12] = tmp18;
+          let tmp16 = tmp18;
+        } else {
+          tmp16 = cResult[12];
+        }
+        if (cResult[13] === tmp9) {
+          if (cResult[14] === tmp13) {
+            if (cResult[15] === tmp16) {
+              let tmp19 = cResult[16];
+            }
+            if (cResult[17] === accessibilityRole) {
+              if (cResult[18] === accessibilityState) {
+                if (cResult[19] === disabled) {
+                  if (cResult[20] === item.label) {
+                    if (cResult[21] === boxDimmed) {
+                      if (cResult[22] === tmp8) {
+                        if (cResult[23] === tmp19) {
+                          let tmp22 = cResult[24];
+                        }
+                        return tmp22;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            const obj4 = { accessibilityRole, accessibilityState, accessibilityLabel: item.label, disabled, style: boxDimmed, onPress: tmp8, children: tmp19 };
+            const tmp25 = timestampProducer(React4, obj4);
+            cResult[17] = accessibilityRole;
+            cResult[18] = accessibilityState;
+            cResult[19] = disabled;
+            cResult[20] = item.label;
+            cResult[21] = boxDimmed;
+            cResult[22] = tmp8;
+            cResult[23] = tmp19;
+            cResult[24] = tmp25;
+            tmp22 = tmp25;
+          }
+        }
+        const obj5 = { direction: "horizontal", spacing: 8, align: "center", children: null };
+        const items = [tmp9, tmp13, tmp16];
+        obj5.children = items;
+        const tmp21 = React5(Stack_Stack.Stack, obj5);
+        cResult[13] = tmp9;
+        cResult[14] = tmp13;
+        cResult[15] = tmp16;
+        cResult[16] = tmp21;
+        tmp19 = tmp21;
+      }
+      const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.optionalLabel, children: item.label };
+      const tmp15 = timestampProducer(Text_Text.Text, obj6);
+      cResult[8] = item.label;
+      cResult[9] = tmp4.optionalLabel;
+      cResult[10] = tmp15;
+      tmp13 = tmp15;
+    }
+    const fn = function y() {
+      return onChange(!checked);
+    };
+    cResult[3] = checked;
+    cResult[4] = onChange;
+    cResult[5] = fn;
+    tmp8 = fn;
+    const tmpResult = useA11yRolesNative;
+  }
+  const obj7 = { checked, disabled };
+  cResult[0] = checked;
+  cResult[1] = disabled;
+  cResult[2] = obj7;
+  tmp5 = obj7;
+}) : (function OptionalItemRow(arg0) {
+  ({ item, checked } = arg0);
+  ({ onChange: importDefault, disabled } = arg0);
+  const tmp = closure_8();
+  const checkboxA11yNative = useA11yRolesNative.useCheckboxA11yNative({ checked, disabled });
+  const obj2 = { accessibilityRole: checkboxA11yNative.accessibilityRole, accessibilityState: checkboxA11yNative.accessibilityState, accessibilityLabel: item.label, disabled, style: null, onPress: null, children: null };
+  let boxDimmed = null;
+  if (disabled) {
+    boxDimmed = tmp.boxDimmed;
+  }
+  obj2.style = boxDimmed;
+  obj2.onPress = function onPress() {
+    return importDefault(!checked);
+  };
+  const obj3 = { direction: "horizontal", spacing: 8, align: "center", children: null };
+  const items = [timestampProducer(closure_9, { kind: item.kind }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", style: tmp.optionalLabel, children: item.label }), timestampProducer(FormCheckbox.FormCheckbox, { checked })];
+  obj3.children = items;
+  obj2.children = React5(Stack_Stack.Stack, obj3);
+  return timestampProducer(React4, obj2);
 });
 fn(558);
 let obj3 = { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemovedItems(items) {
-  const cResult = c.c(3);
-  items = items.items;
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemovedItems(arg0) {
+  const cResult = c.c(6);
+  ({ items, optionalItem } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef3827["+E2PqP"]);
-    const tmp7 = hasOwnProperty(Text_Text.Text, obj2);
+    obj2.children = intl.string(_modDef3849["+E2PqP"]);
+    const tmp7 = timestampProducer(Text_Text.Text, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
     first = cResult[0];
   }
-  if (cResult[1] !== items) {
-    const obj3 = { spacing: 8, children: null };
-    const items1 = [first, ];
-    const obj4 = { items };
-    items1[1] = hasOwnProperty(closure_9, obj4);
-    obj3.children = items1;
-    const tmp12 = timestampProducer(Stack_Stack.Stack, obj3);
-    cResult[1] = items;
-    cResult[2] = tmp12;
-    let tmp8 = tmp12;
+  if (cResult[1] !== optionalItem) {
+    let tmp9 = null;
+    if (null != optionalItem) {
+      const obj3 = {};
+      const merged = Object.assign(optionalItem);
+      tmp9 = timestampProducer(closure_11, obj3);
+    }
+    cResult[1] = optionalItem;
+    cResult[2] = tmp9;
+    let tmp8 = tmp9;
   } else {
     tmp8 = cResult[2];
   }
-  return tmp8;
+  if (cResult[3] === items) {
+    if (cResult[4] === tmp8) {
+      let tmp15 = cResult[5];
+    }
+    return tmp15;
+  }
+  const obj4 = { spacing: 8, children: null };
+  const items1 = [first, timestampProducer(closure_10, { items, children: tmp8 })];
+  obj4.children = items1;
+  const tmp16 = React5(Stack_Stack.Stack, obj4);
+  cResult[3] = items;
+  cResult[4] = tmp8;
+  cResult[5] = tmp16;
+  tmp15 = tmp16;
 }) : (function ConjureRemovedItems(items) {
-  const obj = { spacing: 8, children: null };
-  const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
+  const optionalItem = items.optionalItem;
+  const obj = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3827["+E2PqP"]);
-  items = [hasOwnProperty(Text_Text.Text, obj2), ];
-  items[1] = hasOwnProperty(closure_9, { items: items.items });
-  obj.children = items;
-  return timestampProducer(Stack_Stack.Stack, obj);
+  obj.children = intl.string(_modDef3849["+E2PqP"]);
+  items = [timestampProducer(Text_Text.Text, obj), ];
+  const obj2 = { items: items.items, children: null };
+  let tmp2Result = null;
+  if (null != optionalItem) {
+    const obj3 = {};
+    const merged = Object.assign(optionalItem);
+    tmp2Result = timestampProducer(closure_11, obj3);
+  }
+  const obj4 = { spacing: 8, children: null };
+  obj2.children = tmp2Result;
+  items[1] = timestampProducer(closure_10, obj2);
+  obj4.children = items;
+  return React5(Stack_Stack.Stack, obj4);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureRemovedItems.tsx");
 
-export default tmp3;
-export const formatWithAppTag = function formatWithAppTag(_87CtcA, targetAppName) {
+export default tmp4;
+export const formatWithAppTag = function formatWithAppTag(HmNT_r, targetAppName) {
   const intl = util.intl;
   const obj = { app: null };
   const obj2 = { children: null };
-  const items = [targetAppName, " ", hasOwnProperty(BotTagDefault, {})];
+  const items = [targetAppName, " ", timestampProducer(BotTagDefault, {})];
   obj2.children = items;
-  obj.app = timestampProducer(noop.Fragment, obj2, "app");
-  return intl.format(_87CtcA, obj);
+  obj.app = React5(noop.Fragment, obj2, "app");
+  return intl.format(HmNT_r, obj);
 };
 export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemoveEverythingField(arg0) {
   const cResult = c.c(10);
   ({ checked, onChange, items } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3827.gKA9tU);
+    const stringResult = intl.string(_modDef3849.gKA9tU);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -234,25 +392,25 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
       const obj2 = { spacing: 8, children: null };
       const items1 = [tmp7, tmp10];
       obj2.children = items1;
-      const tmp16 = timestampProducer(Stack_Stack.Stack, obj2);
+      const tmp16 = React5(Stack_Stack.Stack, obj2);
       cResult[7] = tmp7;
       cResult[8] = tmp10;
       cResult[9] = tmp16;
       tmp14 = tmp16;
     }
     const obj3 = { items, dimmed: !checked };
-    const tmp13 = hasOwnProperty(closure_9, obj3);
+    const tmp13 = timestampProducer(closure_10, obj3);
     cResult[4] = items;
     cResult[5] = !checked;
     cResult[6] = tmp13;
     tmp10 = tmp13;
   }
-  const tmp8 = hasOwnProperty(TableRowGroup.TableRowGroup, { hasIcons: false, children: hasOwnProperty(TableCheckboxRow.TableCheckboxRow, { label: first, checked, onPress: onChange }) });
+  const tmp8 = timestampProducer(TableRowGroup.TableRowGroup, { hasIcons: false, children: timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: first, checked, onPress: onChange }) });
   cResult[1] = checked;
   cResult[2] = onChange;
   cResult[3] = tmp8;
   tmp7 = tmp8;
-  const obj4 = { hasIcons: false, children: hasOwnProperty(TableCheckboxRow.TableCheckboxRow, { label: first, checked, onPress: onChange }) };
+  const obj4 = { hasIcons: false, children: timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: first, checked, onPress: onChange }) };
 }) : (function ConjureRemoveEverythingField(checked) {
   checked = checked.checked;
   ({ onChange, items } = checked);
@@ -260,11 +418,11 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
   const obj2 = { hasIcons: false, children: null };
   const obj3 = { label: null, checked: null, onPress: null };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef3827.gKA9tU);
+  obj3.label = intl.string(_modDef3849.gKA9tU);
   obj3.checked = checked;
   obj3.onPress = onChange;
-  obj2.children = hasOwnProperty(TableCheckboxRow.TableCheckboxRow, obj3);
-  const items1 = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2), hasOwnProperty(closure_9, { items, dimmed: !checked })];
+  obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);
+  const items1 = [timestampProducer(TableRowGroup.TableRowGroup, obj2), timestampProducer(closure_10, { items, dimmed: !checked })];
   obj.children = items1;
-  return timestampProducer(Stack_Stack.Stack, obj);
+  return React5(Stack_Stack.Stack, obj);
 });

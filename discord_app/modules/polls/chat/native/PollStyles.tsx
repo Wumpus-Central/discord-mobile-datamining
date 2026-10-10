@@ -1,15 +1,15 @@
-// === Module 11468: PollStyles ===
+// === Module 11513: PollStyles ===
 
-// Module 11468 (PollStyles)
-import _mod5742 from "module_5742" /* 5742 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11469 */;
-import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11470 */;
+// Module 11513 (PollStyles)
+import _mod5745 from "module_5745" /* 5745 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11514 */;
+import PollMessageChatDataTypes from "PollMessageChatDataTypes" /* 11515 */;
 import size from "module_2" /* 2 */;
 
 function normal(border, first1) {
   closure_0 = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-  const match = _mod5742.match(first1);
+  const match = _mod5745.match(first1);
   obj.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
   obj.answerBackground = border.colors.BACKGROUND_MOD_MUTED;
   obj.answerFill = border.colors.BACKGROUND_MOD_SUBTLE;
@@ -22,7 +22,7 @@ function normalVote(colors, first1) {
   if (typeof normal === "function") {
     const obj = {};
     const obj2 = { border: colors.colors.BORDER_SUBTLE, borderWidth: 1, fill: colors.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
-    const match = _mod5742.match(first1);
+    const match = _mod5745.match(first1);
     obj2.label = match.with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => colors.colors.WHITE).otherwise(() => colors.colors.TEXT_DEFAULT);
     obj2.answerBackground = colors.colors.BACKGROUND_MOD_MUTED;
     obj2.answerFill = colors.colors.BACKGROUND_MOD_SUBTLE;

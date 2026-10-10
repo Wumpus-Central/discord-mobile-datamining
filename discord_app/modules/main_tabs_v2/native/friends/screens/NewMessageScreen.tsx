@@ -1,38 +1,38 @@
-// === Module 17388: NewMessageScreen ===
+// === Module 17460: NewMessageScreen ===
 
-// Module 17388 (NewMessageScreen)
+// Module 17460 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import UserPlusIcon from "UserPlusIcon" /* 5034 */;
-import _modDef5035 from "module_5035" /* 5035 */;
-import timing from "timing" /* 5092 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import useMountEffectDefault from "useMountEffect" /* 5393 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6663 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6917 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10297 */;
-import _modDef10298 from "module_10298" /* 10298 */;
-import ChatViewDefault from "ChatView" /* 10329 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 10715 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 10717 */;
-import NoResultsDefault from "NoResults" /* 11530 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 12020 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 17331 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 17389 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 17390 */;
+import UserPlusIcon from "UserPlusIcon" /* 5032 */;
+import _modDef5033 from "module_5033" /* 5033 */;
+import timing from "timing" /* 5093 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import useMountEffectDefault from "useMountEffect" /* 5396 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6664 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6851 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6923 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10330 */;
+import _modDef10331 from "module_10331" /* 10331 */;
+import ChatViewDefault from "ChatView" /* 10362 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 10750 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 10752 */;
+import NoResultsDefault from "NoResults" /* 11576 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 12064 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 17403 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 17461 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 17462 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6916 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6922 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 
 const require = globalThis.__r;
 
@@ -106,7 +106,7 @@ let closure_24 = async function _findMatchingPrivateChannelId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -166,14 +166,14 @@ let closure_24 = async function _findMatchingPrivateChannelId(arg0) {
   }
 };
 const View = fn(17).View;
-const PrivateChannelRecord = fn(2068).PrivateChannelRecord;
-const UserRowModes = fn(10187).UserRowModes;
+const PrivateChannelRecord = fn(2069).PrivateChannelRecord;
+const UserRowModes = fn(10216).UserRowModes;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(5087).Text);
-const createStyles = fn(5091);
+let closure_19 = ReanimatedRexport.createAnimatedComponent(fn(5088).Text);
+const createStyles = fn(5092);
 let obj = { container: { flex: 1 }, background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, header: null, emptyContainer: null, emptyKeyboardView: null, addFriendsButtonContainer: null };
 const PlatformUtils = fn(1382);
 let str = "center";
@@ -195,7 +195,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
     const fn = function c() {
       function handleChannelCreate(channel) {
         channel = channel.channel;
-        if (channel.id !== handleChannelCreate(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (channel.id !== handleChannelCreate(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (channel.isPrivate()) {
             if (isPrivateChannelMatch(handleChannelCreate, channel)) {
               dependencyMap(findLocalMatchingPrivateChannelId(handleChannelCreate));
@@ -207,7 +207,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
         const channel = arg0;
         dependencyMap((arg0) => {
           let tmp = arg0;
-          if (arg0 !== handleChannelCreate(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+          if (arg0 !== handleChannelCreate(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
             let tmp3 = null;
             if (arg0 !== channel.channel.id) {
               tmp3 = arg0;
@@ -326,7 +326,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                 return () => {
                   const obj2 = { type: "CHANNEL_DELETE", channel: null };
                   const obj = first(584);
-                  obj2.channel = { id: length(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "code" };
+                  obj2.channel = { id: length(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "r", parent_id: "toCharArray$esjava$1" };
                   obj.dispatch(obj2);
                 };
               }
@@ -399,7 +399,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
               return () => {
                 const obj2 = { type: "CHANNEL_DELETE", channel: null };
                 const obj = first(584);
-                obj2.channel = { id: length(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "code" };
+                obj2.channel = { id: length(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "r", parent_id: "toCharArray$esjava$1" };
                 obj.dispatch(obj2);
               };
             }
@@ -448,7 +448,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
             return () => {
               const obj2 = { type: "CHANNEL_DELETE", channel: null };
               const obj = first(584);
-              obj2.channel = { id: length(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "code" };
+              obj2.channel = { id: length(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "r", parent_id: "toCharArray$esjava$1" };
               obj.dispatch(obj2);
             };
           }
@@ -495,7 +495,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -559,7 +559,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   const effect = noop.useEffect(() => {
     function handleChannelCreate(channel) {
       channel = channel.channel;
-      if (channel.id !== handleChannelCreate(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+      if (channel.id !== handleChannelCreate(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
         if (channel.isPrivate()) {
           if (isPrivateChannelMatch(handleChannelCreate, channel)) {
             dependencyMap(findLocalMatchingPrivateChannelId(handleChannelCreate));
@@ -571,7 +571,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
       const channel = arg0;
       dependencyMap((arg0) => {
         let tmp = arg0;
-        if (arg0 !== handleChannelCreate(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (arg0 !== handleChannelCreate(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           let tmp3 = null;
           if (arg0 !== channel.channel.id) {
             tmp3 = arg0;
@@ -604,7 +604,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -692,7 +692,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
         return () => {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
           const obj = first(584);
-          obj2.channel = { id: length(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "code" };
+          obj2.channel = { id: length(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "r", parent_id: "toCharArray$esjava$1" };
           obj.dispatch(obj2);
         };
       }
@@ -763,8 +763,8 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     obj2.maxHeight = timing.withTiming(num2);
     return obj2;
   };
-  let obj2 = numInGroup(4811);
-  fn.__closure = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5092).withTiming };
+  let obj2 = numInGroup(4850);
+  fn.__closure = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5093).withTiming };
   fn.__workletHash = 12426216833792;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -788,7 +788,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
   } else {
     if (cResult[4] !== title) {
       const obj5 = { title };
-      const tmp9 = closure_17(numInGroup(9270).GenericHeaderTitle, obj5);
+      const tmp9 = closure_17(numInGroup(9297).GenericHeaderTitle, obj5);
       cResult[4] = title;
       cResult[5] = tmp9;
       let tmp7 = tmp9;
@@ -848,13 +848,13 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     cResult[7] = diff;
     cResult[8] = stringResult;
   }
-  const obj3 = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5092).withTiming };
+  const obj3 = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5093).withTiming };
 }) : (function Header(recipientLimit) {
   ({ title, numInGroup } = recipientLimit);
   recipientLimit = recipientLimit.recipientLimit;
   const items = [recipientLimit, numInGroup];
   const memo = noop.useMemo(() => recipientLimit - (numInGroup + 1), items);
-  numInGroup(4811);
+  numInGroup(4850);
   const fn = function c() {
     let num = 0;
     if (numInGroup >= 5) {
@@ -869,16 +869,16 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     return obj2;
   };
   const tmp = closure_20();
-  fn.__closure = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5092).withTiming };
+  fn.__closure = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5093).withTiming };
   fn.__workletHash = 13552103795459;
   fn.__initData = __initData2;
   if (recipientLimit.usePersonLimitCopy) {
     let obj2 = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(17390), obj2);
+    return closure_17(recipientLimit(17462), obj2);
   } else {
     const obj3 = { style: tmp.header, children: null };
     const obj4 = { title };
-    const items1 = [closure_17(numInGroup(9270).GenericHeaderTitle, obj4), ];
+    const items1 = [closure_17(numInGroup(9297).GenericHeaderTitle, obj4), ];
     const obj5 = { style: tmp6, variant: "text-xs/medium", color: null, children: null };
     let str = "text-muted";
     if (0 === memo) {
@@ -899,7 +899,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     obj3.children = items1;
     return closure_18(View, obj3);
   }
-  let obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5092).withTiming };
+  let obj = { numInGroup, NUM_IN_GROUP_THRESHOLD: 5, withTiming: numInGroup(5093).withTiming };
 });
 ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPreview(channelId) {
@@ -933,7 +933,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPr
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { portal: tmp(1382).isAndroid() };
-      const tmp15 = closure_17(tmp(17033).PortalKeyboardRenderer, obj3);
+      const tmp15 = closure_17(tmp(17101).PortalKeyboardRenderer, obj3);
       cResult[6] = tmp15;
       let tmp13 = tmp15;
       const tmpResult = tmp(1382);
@@ -991,7 +991,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatPr
   const obj4 = { portal: null };
   const obj3 = { guildId, channelId, chatInputRef: noop.useRef(null), HACK_fixModalInteraction: true, alwaysRespectKeyboard: true, screenIndex: "new-message", secondaryTextFieldRef: tagListInputRef };
   obj4.portal = channelId(1382).isAndroid();
-  items1[1] = closure_17(channelId(17033).PortalKeyboardRenderer, obj4);
+  items1[1] = closure_17(channelId(17101).PortalKeyboardRenderer, obj4);
   obj2.children = items1;
   obj.children = closure_18(View, obj2);
   return closure_17(View, obj);
@@ -1088,7 +1088,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
               if (cResult[19] !== navigation) {
                 function ie(arg0) {
                   navigation.goBack();
-                  router_utils.transitionTo(value2.CHANNEL(guildId, arg0));
+                  router_utils.transitionTo(value3.CHANNEL(guildId, arg0));
                 }
                 cResult[19] = navigation;
                 cResult[20] = ie;
@@ -1356,7 +1356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } else {
                   try {
@@ -1521,8 +1521,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    enabled = tmp15(10714).isGroupDMNitroUpsellAudience(tmp18);
-    const tmp15Result = tmp15(10714);
+    enabled = tmp15(10749).isGroupDMNitroUpsellAudience(tmp18);
+    const tmp15Result = tmp15(10749);
   }
   const items2 = [navigation, selectedUserIds.length, tmp11, tmp14, result];
   const layoutEffect = obj.useLayoutEffect(() => {
@@ -1546,7 +1546,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
   const items3 = [navigation];
   navigateToChannel = obj.useCallback((arg0) => {
     navigation.goBack();
-    router_utils.transitionTo(value2.CHANNEL(guildId, arg0));
+    router_utils.transitionTo(value3.CHANNEL(guildId, arg0));
   }, items3);
   _require = insets(function*(arg0) {
     if (selectedUserIds === 2) {
@@ -1559,7 +1559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1660,7 +1660,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
       if (selectedUserIds.length > 0) {
         let FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp11;
         if (null == tmp11) {
-          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp15(6917).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+          FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = tmp15(6923).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
         }
         let obj2 = { channelId: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, navigateToChannel, tagListInputRef: ref };
         tmp26Result = closure_17(closure_30, obj2, tmp24);
@@ -1677,7 +1677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
     const items = [];
     if (constants) {
       if (stateFromStores) {
-        const obj = { icon: _modDef10298, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
+        const obj = { icon: _modDef10331, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["3hF1W4"]);
         obj.onPress = function onPress() {
@@ -1685,7 +1685,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
         };
         items.push(obj);
       }
-      const obj2 = { icon: _modDef5035, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+      const obj2 = { icon: _modDef5033, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
       const intl2 = util.intl;
       obj2.label = intl2.string(util.t["9nbDJx"]);
       obj2.onPress = function onPress() {
@@ -1697,7 +1697,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewMessa
   }, items6);
   const items8 = [navigation, tmp, insets.bottom];
   const memo1 = obj.useMemo(() => {
-    const obj = { icon: _modDef5035, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
+    const obj = { icon: _modDef5033, IconComponent: UserPlusIcon.UserPlusIcon, label: null, iconVariant: "default", onPress: null };
     const intl = util.intl;
     obj.label = intl.string(util.t["9nbDJx"]);
     obj.onPress = function onPress() {

@@ -1,9 +1,9 @@
-// === Module 17061: ConjureModeTabBar ===
+// === Module 17129: ConjureModeTabBar ===
 
-// Module 17061 (ConjureModeTabBar)
+// Module 17129 (ConjureModeTabBar)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4811 */;
-import spring from "spring" /* 5375 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4850 */;
+import spring from "spring" /* 5378 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 let c9 = 0.04;
 let closure_10 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 const TEXT_SPRING = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_12 = createStyles.createStyles((borderRadius, arg1) => {
   const obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + 4, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, indicatorContainer: { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" }, indicator: null, indicatorHidden: null, item: null, itemFirst: null, itemLast: null, label: null, labelText: null, prefix: null };
   const obj2 = { backgroundColor: nativeDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + 4, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
@@ -32,7 +32,7 @@ let closure_12 = createStyles.createStyles((borderRadius, arg1) => {
   obj.prefix = { flexShrink: 0 };
   return obj;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_13 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE });
 const __initData = { code: "function ConjureModeTabBarTsx1(){const{indicatorWidth}=this.__closure;return indicatorWidth.get();}" };
 const __initData2 = { code: "function ConjureModeTabBarTsx2(_,previous){const{previousIndicatorWidth}=this.__closure;if(previous!=null){previousIndicatorWidth.set(previous);}}" };

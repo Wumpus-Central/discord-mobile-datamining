@@ -1,16 +1,16 @@
-// === Module 6205: NavigatorHeader ===
+// === Module 6200: NavigatorHeader ===
 
-// Module 6205 (NavigatorHeader)
+// Module 6200 (NavigatorHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6206 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6209 */;
-import XSmallIcon from "XSmallIcon" /* 6212 */;
-import _mod6214 from "module_6214" /* 6214 */;
-import NavigatorConstants from "NavigatorConstants" /* 6263 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6201 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6204 */;
+import XSmallIcon from "XSmallIcon" /* 6207 */;
+import _mod6209 from "module_6209" /* 6209 */;
+import NavigatorConstants from "NavigatorConstants" /* 6258 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -23,10 +23,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" }, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
 let obj4 = {};
-let merged = Object.assign(fn(5087).TextStyleSheet["redesign/heading-18/bold"]);
+let merged = Object.assign(fn(5088).TextStyleSheet["redesign/heading-18/bold"]);
 obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 obj2.headerTitle = obj4;
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
@@ -101,7 +101,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseB
         }
       }
     }
-    tmp(6211).useNavigatorBackPressHandler(B);
+    tmp(6206).useNavigatorBackPressHandler(B);
     const _Symbol = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -152,12 +152,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseB
     obj2.displayMode = "minimal";
     obj2.backImage = tmp19;
     obj2.accessibilityLabel = tmp16;
-    const tmp25 = closure_10(tmp(6214).HeaderBackButton, obj2);
+    const tmp25 = closure_10(tmp(6209).HeaderBackButton, obj2);
     cResult[11] = tmp11;
     cResult[12] = tmp5;
     cResult[13] = tmp19;
     cResult[14] = tmp25;
-    const tmpResult2 = tmp(6211);
+    const tmpResult2 = tmp(6206);
   }
   if (tmp4 == null) {
     class B {
@@ -202,7 +202,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseB
     return collapsed(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_10(require("module_6214").HeaderBackButton, obj2);
+  return closure_10(require("module_6209").HeaderBackButton, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CustomHeaderBackButton(onPress) {
@@ -254,7 +254,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   obj2.onPress = tmp4;
   obj2.displayMode = "minimal";
   obj2.backImage = tmp11;
-  const tmp14 = closure_10(require("module_6214").HeaderBackButton, obj2);
+  const tmp14 = closure_10(require("module_6209").HeaderBackButton, obj2);
   cResult[6] = tmp4;
   cResult[7] = tmp5;
   cResult[8] = tmp14;
@@ -263,7 +263,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
 }) : (function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(6211).useNavigatorBackPressHandler(() => {
+  onPress(6206).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -276,7 +276,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   obj2.backImage = function backImage() {
     return closure_1_10(closure_1_13, {});
   };
-  return closure_10(onPress(6214).HeaderBackButton, obj2);
+  return closure_10(onPress(6209).HeaderBackButton, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextButton(arg0) {
@@ -342,7 +342,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     obj3.labelStyle = tmp14;
     obj3.backImage = tmp16;
     obj3.accessibilityLabel = tmp17;
-    const tmp23 = collapsed(_mod6214.HeaderBackButton, obj3);
+    const tmp23 = collapsed(_mod6209.HeaderBackButton, obj3);
     cResult[10] = tmp14;
     cResult[11] = tmp4;
     cResult[12] = tmp17;
@@ -376,7 +376,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return collapsed(_mod6214.HeaderBackButton, obj2);
+  return collapsed(_mod6209.HeaderBackButton, obj2);
 });
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function NavigatorHeader(arg0) {
@@ -555,7 +555,7 @@ export function getHeaderConditionalBackButton(callback1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -588,7 +588,7 @@ export function getHeaderConditionalBackButton(callback1) {
               }
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp10) {
           c2 = tmp;

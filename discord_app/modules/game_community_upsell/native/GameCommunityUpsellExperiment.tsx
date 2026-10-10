@@ -1,6 +1,6 @@
-// === Module 13933: GameCommunityUpsellExperiment ===
+// === Module 13986: GameCommunityUpsellExperiment ===
 
-// Module 13933 (GameCommunityUpsellExperiment)
+// Module 13986 (GameCommunityUpsellExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

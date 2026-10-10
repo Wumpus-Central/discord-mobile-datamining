@@ -1,6 +1,6 @@
-// === Module 8747: InstantInviteSendStateStore ===
+// === Module 8763: InstantInviteSendStateStore ===
 
-// Module 8747 (InstantInviteSendStateStore)
+// Module 8763 (InstantInviteSendStateStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ export const setSendState = function setSendState(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   useInstantInviteSendStates = arg2;
-  state = useInstantInviteSendStates.getState();
+  const state = useInstantInviteSendStates.getState();
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = {};
     const merged = Object.assign(closure_3);

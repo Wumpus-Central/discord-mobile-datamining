@@ -1,15 +1,15 @@
-// === Module 16483: useFavoritesGuildResetAction ===
+// === Module 16553: useFavoritesGuildResetAction ===
 
-// Module 16483 (useFavoritesGuildResetAction)
+// Module 16553 (useFavoritesGuildResetAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import FavoritesUtils from "FavoritesUtils" /* 2089 */;
-import _modDef3439 from "module_3439" /* 3439 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10278 */;
+import FavoritesUtils from "FavoritesUtils" /* 2090 */;
+import _modDef3442 from "module_3442" /* 3442 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10311 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3439.YkET6R);
+    const stringResult = intl.string(_modDef3442.YkET6R);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3439.ZzcwNk);
+    const stringResult1 = intl2.string(_modDef3442.ZzcwNk);
     cResult[1] = stringResult;
     cResult[2] = stringResult1;
     let tmp6 = stringResult1;
@@ -78,9 +78,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   }
   const obj2 = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = util.intl;
-  obj2.label = intl.string(_modDef3439.YkET6R);
+  obj2.label = intl.string(_modDef3442.YkET6R);
   const intl2 = util.intl;
-  obj2.subLabel = intl2.string(_modDef3439.ZzcwNk);
+  obj2.subLabel = intl2.string(_modDef3442.ZzcwNk);
   obj2.perform = callback;
   return obj2;
 });

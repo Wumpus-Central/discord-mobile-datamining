@@ -1,7 +1,7 @@
-// === Module 11665: PortalKeyboardConstants ===
+// === Module 11711: PortalKeyboardConstants ===
 
-// Module 11665 (PortalKeyboardConstants)
-import BottomSheetModal from "BottomSheetModal" /* 6305 */;
+// Module 11711 (PortalKeyboardConstants)
+import BottomSheetModal from "BottomSheetModal" /* 6306 */;
 import size from "module_2" /* 2 */;
 
 const keyboardAnimationConfigs = BottomSheetModal.getKeyboardAnimationConfigs("keyboard", 250);

@@ -1,14 +1,14 @@
-// === Module 13359: BundleProductDetailsActionSheetPreview ===
+// === Module 13409: BundleProductDetailsActionSheetPreview ===
 
-// Module 13359 (BundleProductDetailsActionSheetPreview)
+// Module 13409 (BundleProductDetailsActionSheetPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
-import useShopProductItems from "useShopProductItems" /* 8279 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 13361 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
+import useShopProductItems from "useShopProductItems" /* 8295 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 13411 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1087).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { previewContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 }, bundleThumbnail: null, selectedRing: null, bundleThumbnailRow: null, bundleContainer: null, bundleInfoContainer: null };
 let size = { width: 56, height: 56, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, overflow: "hidden" };
 obj2.bundleThumbnail = size;
@@ -444,7 +444,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
                                         const obj8 = { style: tmp25, children: null };
                                         const items2 = [tmp26, tmp56];
                                         obj8.children = items2;
-                                        const tmp63 = __initData2(collapsed, obj8);
+                                        const tmp63 = map1(collapsed, obj8);
                                         cResult[48] = tmp4.previewContainer;
                                         cResult[49] = tmp56;
                                         cResult[50] = tmp26;
@@ -455,7 +455,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
                                     const obj9 = { style: bundleContainer, children: null };
                                     const items3 = [tmp37, tmp52];
                                     obj9.children = items3;
-                                    const tmp59 = __initData2(collapsed, obj9);
+                                    const tmp59 = map1(collapsed, obj9);
                                     cResult[44] = tmp4.bundleContainer;
                                     cResult[45] = tmp37;
                                     cResult[46] = tmp52;
@@ -466,7 +466,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
                                 const obj10 = { style: tmp4.bundleInfoContainer, children: null };
                                 const items4 = [tmp41, tmp49];
                                 obj10.children = items4;
-                                const tmp55 = __initData2(collapsed, obj10);
+                                const tmp55 = map1(collapsed, obj10);
                                 cResult[40] = tmp4.bundleInfoContainer;
                                 cResult[41] = tmp41;
                                 cResult[42] = tmp49;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
                               const obj11 = { variant: "text-sm/medium", color: "text-default", children: null };
                               const items5 = [name, tmp45];
                               obj11.children = items5;
-                              const tmp51 = __initData2(Text_Text.Text, obj11);
+                              const tmp51 = map1(Text_Text.Text, obj11);
                               cResult[37] = name;
                               cResult[38] = tmp45;
                               cResult[39] = tmp51;
@@ -497,7 +497,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
                     const obj13 = { style: bundleInfoContainer, children: null };
                     const items6 = [tmp29, tmp34];
                     obj13.children = items6;
-                    const tmp40 = __initData2(collapsed, obj13);
+                    const tmp40 = map1(collapsed, obj13);
                     cResult[26] = tmp4.bundleInfoContainer;
                     cResult[27] = tmp29;
                     cResult[28] = tmp34;
@@ -610,7 +610,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
   obj6.children = intl.formatToPlainString(util.t["/0Yndu"], { num: items.length });
   items4[1] = __initData(Text_Text.Text, obj6);
   obj4.children = items4;
-  const items5 = [__initData2(collapsed, obj4), ];
+  const items5 = [map1(collapsed, obj4), ];
   const obj8 = { style: tmp.bundleInfoContainer, children: null };
   const items6 = [__initData(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress }), ];
   const items7 = [name, ];
@@ -622,11 +622,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BundlePr
     tmp20Result = __initData(Text_Text.Text, obj9);
   }
   items7[1] = tmp20Result;
-  items6[1] = __initData2(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
+  items6[1] = map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
   obj8.children = items6;
-  items5[1] = __initData2(collapsed, obj8);
+  items5[1] = map1(collapsed, obj8);
   obj3.children = items5;
-  items3[1] = __initData2(collapsed, obj3);
+  items3[1] = map1(collapsed, obj3);
   obj2.children = items3;
-  return __initData2(collapsed, obj2);
+  return map1(collapsed, obj2);
 });

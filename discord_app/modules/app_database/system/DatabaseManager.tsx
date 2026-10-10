@@ -1,11 +1,11 @@
-// === Module 2107: DatabaseManager ===
+// === Module 2108: DatabaseManager ===
 
-// Module 2107 (DatabaseManager)
+// Module 2108 (DatabaseManager)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Dispatcher2 from "Dispatcher" /* 584 */;
-import _mod2091 from "module_2091" /* 2091 */;
-import StartupDataAll from "StartupData" /* 2108 */;
+import _mod2092 from "module_2092" /* 2092 */;
+import StartupDataAll from "StartupData" /* 2109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -26,7 +26,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_8 = async function _trySpeculativelyOpenDatabaseAsync(arg0) {
           const _HermesInternal = HermesInternal;
           timestampProducer.verbose("speculatively opening " + tmp25);
           c4 = 1;
-          const Database = require("module_2091").Database;
+          const Database = require("module_2092").Database;
           c5 = 2;
           c6 = 1;
           const obj4 = { value: Database.open(tmp25), done: false };
@@ -165,7 +165,7 @@ prototype["carefullyOpenDatabase"] = function carefullyOpenDatabase(id) {
             }
           }
         })(50, () => {
-          const Database = _mod2091.Database;
+          const Database = _mod2092.Database;
           return Database.openSyncUnsafe(combined, { invalidateDisabledHandles: true });
         });
         const _HermesInternal3 = HermesInternal;
@@ -231,7 +231,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
   }
   let tmp3 = null == value;
   if (tmp3) {
-    tmp3 = stateResult !== _mod2091.DatabaseState.Open;
+    tmp3 = stateResult !== _mod2092.DatabaseState.Open;
   }
   if (tmp3) {
     self.remove(id);
@@ -270,7 +270,7 @@ function carefullySpeculativelyOpen(userId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

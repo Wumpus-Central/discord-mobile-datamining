@@ -1,18 +1,18 @@
-// === Module 16373: MessageRequestsButton ===
+// === Module 16440: MessageRequestsButton ===
 
-// Module 16373 (MessageRequestsButton)
+// Module 16440 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef5017 from "module_5017" /* 5017 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import IconButton from "IconButton" /* 8114 */;
-import IconActionButton from "IconActionButton" /* 12797 */;
-import _mod16374 from "module_16374" /* 16374 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import IconButton from "IconButton" /* 7573 */;
+import _modDef8752 from "module_8752" /* 8752 */;
+import IconActionButton from "IconActionButton" /* 12844 */;
+import _mod16441 from "module_16441" /* 16441 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import MessageRequestStore from "MessageRequestStore" /* 6062 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6063 */;
+import MessageRequestStore from "MessageRequestStore" /* 6055 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6056 */;
 
 const IconActionButtonDefault = IconActionButton;
 
@@ -21,7 +21,7 @@ let closure_3 = ["alternateVariant"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles({ buttonContainer: { position: "relative" } });
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageRequestCounts() {
@@ -103,7 +103,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function M
   const effect = noop.useEffect(tmp5, tmp6);
   if (cResult[3] !== color) {
     const obj3 = { ref, color, size: "sm", autoPlay: true };
-    const tmp10 = options(_mod16374.MessageRequestLottie, obj3);
+    const tmp10 = options(_mod16441.MessageRequestLottie, obj3);
     cResult[3] = color;
     cResult[4] = tmp10;
     let tmp8 = tmp10;
@@ -125,7 +125,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled() ? (function M
       }
     }
   }, items);
-  return options(_mod16374.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return options(_mod16441.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -241,7 +241,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
         return tmp18;
       }
     }
-    const obj5 = { source: _modDef5017, IconComponent, accessibilityLabel: tmp13, buttonText: tmp15, badge: str > 0, badgePosition: "right" };
+    const obj5 = { source: _modDef8752, IconComponent, accessibilityLabel: tmp13, buttonText: tmp15, badge: str > 0, badgePosition: "right" };
     const merged2 = Object.assign(tmp4);
     const tmp26 = options(IconActionButtonDefault, obj5);
     cResult[17] = tmp4;
@@ -286,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
       const merged2 = Object.assign(merged);
       tmp24 = options(IconButton.IconButton, obj4);
     }
-    const items = [tmp24, str > 0 && tmp27(tmp26(12797).ButtonBadge, { badgePosition: "right" })];
+    const items = [tmp24, str > 0 && tmp27(tmp26(12844).ButtonBadge, { badgePosition: "right" })];
     obj2.children = items;
     return collapsed(View, obj2);
   } else {
-    const obj = { source: _modDef5017, IconComponent, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj = { source: _modDef8752, IconComponent, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str2;

@@ -1,9 +1,9 @@
-// === Module 14113: sendGameOrganizationInvite ===
+// === Module 14168: sendGameOrganizationInvite ===
 
-// Module 14113 (sendGameOrganizationInvite)
+// Module 14168 (sendGameOrganizationInvite)
 import util from "util" /* 1126 */;
-import shared from "shared" /* 4930 */;
-import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 14114 */;
+import shared from "shared" /* 4969 */;
+import GameOrganizationInviteSendActionCreatorsDefault from "GameOrganizationInviteSendActionCreators" /* 14169 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -26,7 +26,7 @@ let closure_8 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -124,8 +124,8 @@ let closure_8 = async function _sendGameOrganizationInvite(arg0, arg1, arg2, arg
     }
   })();
 };
-const setSendState = fn(8747).setSendState;
-let closure_5 = fn(10452).GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE;
+const setSendState = fn(8763).setSendState;
+let closure_5 = fn(10485).GAME_ORGANIZATION_INVITE_TOO_MANY_INVITES_ERROR_CODE;
 const InviteSendStates = fn(7423).InviteSendStates;
 const map = new Map();
 const size = fn(2);

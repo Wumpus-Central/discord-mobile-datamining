@@ -1,6 +1,6 @@
-// === Module 10281: FavoritesGuildExperiment ===
+// === Module 10314: FavoritesGuildExperiment ===
 
-// Module 10281 (FavoritesGuildExperiment)
+// Module 10314 (FavoritesGuildExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

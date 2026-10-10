@@ -1,9 +1,9 @@
-// === Module 2119: GuildRoleRecord ===
+// === Module 2120: GuildRoleRecord ===
 
-// Module 2119 (GuildRoleRecord)
+// Module 2120 (GuildRoleRecord)
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
-import PlainRecord from "PlainRecord" /* 2079 */;
+import PlainRecord from "PlainRecord" /* 2080 */;
 import size from "module_2" /* 2 */;
 
 const TypeTag = PlainRecord.TypeTag;

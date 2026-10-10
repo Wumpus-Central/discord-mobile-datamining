@@ -1,6 +1,6 @@
-// === Module 6994: findComponentMedia ===
+// === Module 7000: findComponentMedia ===
 
-// Module 6994 (findComponentMedia)
+// Module 7000 (findComponentMedia)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/explicit_media_redaction/findComponentMedia.tsx");

@@ -1,39 +1,39 @@
-// === Module 11771: AppDetailContent ===
+// === Module 11815: AppDetailContent ===
 
-// Module 11771 (AppDetailContent)
+// Module 11815 (AppDetailContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5106 */;
-import TableRow from "TableRow" /* 6186 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7236 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7240 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9219 */;
-import AppLauncherContext from "AppLauncherContext" /* 10587 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11681 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11684 */;
-import CommandRowButtonDefault from "CommandRowButton" /* 11746 */;
-import BillIcon from "BillIcon" /* 11778 */;
-import ShopIcon from "ShopIcon" /* 11780 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5107 */;
+import TableRow from "TableRow" /* 6179 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7242 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7246 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9246 */;
+import AppLauncherContext from "AppLauncherContext" /* 10621 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11727 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 11730 */;
+import CommandRowButtonDefault from "CommandRowButton" /* 11791 */;
+import BillIcon from "BillIcon" /* 11822 */;
+import ShopIcon from "ShopIcon" /* 11824 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9220);
+const ApplicationCommandIndexStore = fn(9247);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1502);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let closure_12 = fn(5400).DISCOVERY_COMMANDS_QUERY_LIMIT;
+let closure_12 = fn(5403).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
-let obj2 = { headerSpacer: { height: fn(11772).EXPANDED_HEADER_HEIGHT - fn(11772).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
-let obj3 = { height: fn(11772).EXPANDED_HEADER_HEIGHT - fn(11772).SHEET_HANDLE_CONTAINER_HEIGHT };
+const createStyles = fn(5092);
+let obj2 = { headerSpacer: { height: fn(11816).EXPANDED_HEADER_HEIGHT - fn(11816).SHEET_HANDLE_CONTAINER_HEIGHT }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING }, commandsHeaderContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }, commandsHeaderTextContainer: { alignItems: "center", flexDirection: "row", gap: 8 }, viewContainerStyle: null, mainContainerStyle: null, monetizationDisclosureTextStyle: null, monetizationDisclosureContainerStyle: null, monetizationDisclosureStyle: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, noCommandsTextContainer: null };
+let obj3 = { height: fn(11816).EXPANDED_HEADER_HEIGHT - fn(11816).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, paddingHorizontal: 12, paddingVertical: 16 };
@@ -97,7 +97,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
         }
       }
       const obj4 = { label: tmp11, subLabel: tmp15, subLabelLineClamp: 1, start: tmp4, end: tmp5 };
-      const tmp21 = __initData2(TableRow.TableRow, obj4);
+      const tmp21 = map1(TableRow.TableRow, obj4);
       cResult[10] = tmp4;
       cResult[11] = tmp5;
       cResult[12] = tmp11;
@@ -108,7 +108,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
     const obj5 = { style: null };
     const items = [tmp6.loadingTextPlaceholderSmall, tmp14];
     obj5.style = items;
-    const tmp18 = __initData2(View, obj5);
+    const tmp18 = map1(View, obj5);
     cResult[7] = tmp6.loadingTextPlaceholderSmall;
     cResult[8] = tmp14;
     cResult[9] = tmp18;
@@ -117,7 +117,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
   const obj6 = { style: null };
   const items1 = [tmp6.loadingTextPlaceholder, tmp10];
   obj6.style = items1;
-  const tmp12 = __initData2(View, obj6);
+  const tmp12 = map1(View, obj6);
   cResult[2] = tmp6.loadingTextPlaceholder;
   cResult[3] = tmp10;
   cResult[4] = tmp12;
@@ -140,16 +140,16 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Placeh
   const items = [tmp.loadingTextPlaceholder, ];
   items[1] = { width: "" + placeholderWidth + "%" };
   obj4.style = items;
-  obj3.label = __initData2(View, obj4);
+  obj3.label = map1(View, obj4);
   const obj6 = { style: null };
   const items1 = [tmp.loadingTextPlaceholderSmall, ];
   const obj5 = { width: "" + placeholderWidth + "%" };
   items1[1] = { width: "" + placeholderWidth1 + "%" };
   obj6.style = items1;
-  obj3.subLabel = __initData2(View, obj6);
+  obj3.subLabel = map1(View, obj6);
   obj3.start = flag;
   obj3.end = flag2;
-  return __initData2(TableRow.TableRow, obj3);
+  return map1(TableRow.TableRow, obj3);
 });
 ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow(command) {
@@ -332,7 +332,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -374,7 +374,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
                     closure_129_0();
                   }
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp13) {
                 c3 = tmp;
@@ -459,7 +459,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -501,7 +501,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
               closure_129_0();
             }
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp13) {
           c3 = tmp;
@@ -544,7 +544,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow
     }
   }, items1);
   let obj2 = require("CommandRowButton");
-  return closure_13(tmp(6186).TableRow, {
+  return closure_13(tmp(6179).TableRow, {
     start: isFirstRow,
     end: isLastRow,
     label: command.displayName,
@@ -665,10 +665,10 @@ export default function AppDetailContent(context) {
     const type = item.type;
     if (obj10.PLACEHOLDER === type) {
       const obj2 = { isFirstRow: 0 === index, isLastRow: index === length.length - 1 };
-      return __initData2(closure_19, obj2);
+      return map1(closure_19, obj2);
     } else if (tmp.COMMAND === type) {
       const obj = { command: item.command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === commands.length - 1, context, onExecuteCommand: callback1, section: found, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW, installOnDemand, sectionName };
-      return __initData2(closure_20, obj);
+      return map1(closure_20, obj);
     } else {
       return null;
     }
@@ -683,30 +683,30 @@ export default function AppDetailContent(context) {
     let tmp6 = null;
     if (result) {
       const obj2 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items = [__initData2(BillIcon.BillIcon, { size: "sm", color: "icon-muted" }), ];
+      const items = [map1(BillIcon.BillIcon, { size: "sm", color: "icon-muted" }), ];
       const obj3 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t["5khEk8"]);
-      items[1] = __initData2(Text_Text.Text, obj3);
+      items[1] = map1(Text_Text.Text, obj3);
       obj2.children = items;
-      tmp6 = state(View, obj2);
+      tmp6 = closure_2_14(View, obj2);
     }
     let tmp11 = null;
     if (isAndroidResult) {
       const obj4 = { style: closure_7.monetizationDisclosureStyle, children: null };
-      const items1 = [__initData2(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" }), ];
+      const items1 = [map1(ShopIcon.ShopIcon, { size: "sm", color: "icon-muted" }), ];
       const obj5 = { style: closure_7.monetizationDisclosureTextStyle, variant: "text-xs/normal", color: "text-subtle", lineClamp: 1, children: null };
       const intl2 = util.intl;
       obj5.children = intl2.string(util.t["8z5B2U"]);
-      items1[1] = __initData2(Text_Text.Text, obj5);
+      items1[1] = map1(Text_Text.Text, obj5);
       obj4.children = items1;
-      tmp11 = state(View, obj4);
+      tmp11 = closure_2_14(View, obj4);
     }
     if (isAndroidResult) {
       const obj6 = { style: closure_7.monetizationDisclosureContainerStyle, children: null };
       const items2 = [tmp11, tmp6];
       obj6.children = items2;
-      let tmp16 = state(View, obj6);
+      let tmp16 = closure_2_14(View, obj6);
     } else {
       tmp16 = null;
     }

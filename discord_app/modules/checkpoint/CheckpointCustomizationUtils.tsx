@@ -1,14 +1,14 @@
-// === Module 15924: CheckpointCustomizationUtils ===
+// === Module 15986: CheckpointCustomizationUtils ===
 
-// Module 15924 (CheckpointCustomizationUtils)
+// Module 15986 (CheckpointCustomizationUtils)
 import util from "util" /* 1126 */;
-import _modDef3115 from "module_3115" /* 3115 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5435 */;
-import CheckpointTrait from "CheckpointTrait" /* 5458 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 5623 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 15917 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 15925 */;
-import CheckpointConstants from "CheckpointConstants" /* 5434 */;
+import _modDef3118 from "module_3118" /* 3118 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 5438 */;
+import CheckpointTrait from "CheckpointTrait" /* 5461 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 5626 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 15979 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 15987 */;
+import CheckpointConstants from "CheckpointConstants" /* 5437 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -24,7 +24,7 @@ function getAssetDescription(asset) {
     return stringResult;
   } else if (rarity === CheckpointTraitRarity.CheckpointTraitRarity.DEFAULT) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3115["4aaADG"]);
+    return intl4.string(_modDef3118["4aaADG"]);
   } else if (rarity === CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
     const intl3 = util.intl;
     if (asset.locked) {
@@ -33,20 +33,20 @@ function getAssetDescription(asset) {
               return arg0;
             }
       };
-      let formatToPlainStringResult = intl3.formatToPlainString(_modDef3115["3Wq/bk"], obj2);
+      let formatToPlainStringResult = intl3.formatToPlainString(_modDef3118["3Wq/bk"], obj2);
     } else {
-      formatToPlainStringResult = intl3.string(_modDef3115.sQ1bDT);
+      formatToPlainStringResult = intl3.string(_modDef3118.sQ1bDT);
     }
     return formatToPlainStringResult;
   } else {
-    let vX6Vdt = _modDef3115.mmlFSp;
-    let cbssIC = _modDef3115.PNMVaH;
+    let vX6Vdt = _modDef3118.mmlFSp;
+    let cbssIC = _modDef3118.PNMVaH;
     if (CheckpointTrait.CheckpointTrait.OUTFIT === trait) {
-      vX6Vdt = _modDef3115["7ycqkx"];
-      cbssIC = _modDef3115["stpl+C"];
+      vX6Vdt = _modDef3118["7ycqkx"];
+      cbssIC = _modDef3118["stpl+C"];
     } else if (CheckpointTrait.CheckpointTrait.SHOES === trait) {
-      vX6Vdt = _modDef3115.vX6Vdt;
-      cbssIC = _modDef3115.cbssIC;
+      vX6Vdt = _modDef3118.vX6Vdt;
+      cbssIC = _modDef3118.cbssIC;
     } else {
       const FACE = CheckpointTrait.CheckpointTrait.FACE;
     }
@@ -63,17 +63,17 @@ function getAssetDescription(asset) {
 }
 ({ CHECKPOINT_RARITY_LABEL_MESSAGES: c3, TRAIT_OPTION_HEIGHT, TRAIT_OPTION_WIDTH } = CheckpointConstants);
 const CheckpointCustomizationOption = { FACE: "face", OUTFIT: "outfit", OUTFIT_COLOR: "outfit_color", HAT: "hat", WEARABLE: "wearable", AURA: "aura", SHOES: "shoes", BASE: "base" };
-let obj2 = { [FACE]: _modDef3115.QQsnUi, [OUTFIT]: _modDef3115.R4kQz6, [OUTFIT_COLOR]: _modDef3115.Yzaoit, [HAT]: _modDef3115.ZUGgI7, [WEARABLE]: _modDef3115["KrhX/b"], [AURA]: _modDef3115["35nXwl"], [SHOES]: _modDef3115["Yt3O/L"], [BASE]: _modDef3115.bbQzr1 };
+let obj2 = { [FACE]: _modDef3118.QQsnUi, [OUTFIT]: _modDef3118.R4kQz6, [OUTFIT_COLOR]: _modDef3118.Yzaoit, [HAT]: _modDef3118.ZUGgI7, [WEARABLE]: _modDef3118["KrhX/b"], [AURA]: _modDef3118["35nXwl"], [SHOES]: _modDef3118["Yt3O/L"], [BASE]: _modDef3118.bbQzr1 };
 ({ FACE, OUTFIT, OUTFIT_COLOR, HAT, WEARABLE, AURA, SHOES, BASE } = CheckpointCustomizationOption);
 const obj3 = { [FACE2]: CheckpointTrait.CheckpointTrait.FACE, [OUTFIT2]: CheckpointTrait.CheckpointTrait.OUTFIT, [OUTFIT_COLOR2]: CheckpointTrait.CheckpointTrait.OUTFIT, [HAT2]: CheckpointTrait.CheckpointTrait.HAT, [WEARABLE2]: CheckpointTrait.CheckpointTrait.WEARABLE, [AURA2]: CheckpointTrait.CheckpointTrait.AURA, [SHOES2]: CheckpointTrait.CheckpointTrait.SHOES, [BASE2]: CheckpointTrait.CheckpointTrait.BASE };
 ({ FACE: FACE2, OUTFIT: OUTFIT2, OUTFIT_COLOR: OUTFIT_COLOR2, HAT: HAT2, WEARABLE: WEARABLE2, AURA: AURA2, SHOES: SHOES2, BASE: BASE2 } = CheckpointCustomizationOption);
 const obj4 = { [CheckpointNavigation.CheckpointCharacterStage.FACE]: CheckpointCustomizationOption.FACE, [CheckpointNavigation.CheckpointCharacterStage.OUTFIT]: CheckpointCustomizationOption.OUTFIT, [CheckpointNavigation.CheckpointCharacterStage.HEADWEAR]: CheckpointCustomizationOption.HAT, [CheckpointNavigation.CheckpointCharacterStage.SHOES]: CheckpointCustomizationOption.SHOES, [CheckpointNavigation.CheckpointCharacterStage.WEARABLE]: CheckpointCustomizationOption.WEARABLE, [CheckpointNavigation.CheckpointCharacterStage.AURA]: CheckpointCustomizationOption.AURA };
 const obj5 = {};
-obj5[CheckpointTrait.CheckpointTrait.OUTFIT] = _modDef3115.kcAWvo;
-obj5[CheckpointTrait.CheckpointTrait.HAT] = _modDef3115.RYvRmE;
-obj5[CheckpointTrait.CheckpointTrait.WEARABLE] = _modDef3115.lbzScK;
-obj5[CheckpointTrait.CheckpointTrait.AURA] = _modDef3115.mRPtBV;
-obj5[CheckpointTrait.CheckpointTrait.SHOES] = _modDef3115.KHsJlD;
+obj5[CheckpointTrait.CheckpointTrait.OUTFIT] = _modDef3118.kcAWvo;
+obj5[CheckpointTrait.CheckpointTrait.HAT] = _modDef3118.RYvRmE;
+obj5[CheckpointTrait.CheckpointTrait.WEARABLE] = _modDef3118.lbzScK;
+obj5[CheckpointTrait.CheckpointTrait.AURA] = _modDef3118.mRPtBV;
+obj5[CheckpointTrait.CheckpointTrait.SHOES] = _modDef3118.KHsJlD;
 let items = [1, 1];
 let items1 = [items, , , , ];
 let items2 = [TRAIT_OPTION_WIDTH - 1 - 16, 1];
@@ -115,7 +115,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
     tmp5 = _require;
     CHECKPOINT_OUTFIT_COLOR_OPTION_NAMES = require("CheckpointTraitOptionNames").CHECKPOINT_TRAIT_OPTION_NAMES[tmp4];
   }
-  dependencyMap = tmp5(15925).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
+  dependencyMap = tmp5(15987).CHECKPOINT_TRAIT_OPTION_ASSETS[tmp4];
   return arr.map((optionId) => {
     trait = optionId;
     const obj = {
@@ -129,7 +129,7 @@ export const getTraitOptions = function getTraitOptions(OUTFIT) {
         }
         return str;
       },
-      rarity: trait(15925).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
+      rarity: trait(15987).CHECKPOINT_TRAIT_OPTION_TO_RARITY[trait][optionId],
       asset: null
     };
     let layer;

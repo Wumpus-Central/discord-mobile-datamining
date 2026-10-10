@@ -1,9 +1,9 @@
-// === Module 11381: restartConjureAppFrames ===
+// === Module 11423: restartConjureAppFrames ===
 
-// Module 11381 (restartConjureAppFrames)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10769 */;
-import leaveFrame from "leaveFrame" /* 10811 */;
-import FramesStore from "FramesStore" /* 10772 */;
+// Module 11423 (restartConjureAppFrames)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
+import leaveFrame from "leaveFrame" /* 10821 */;
+import FramesStore from "FramesStore" /* 10807 */;
 
 require = fn;
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 16370: useDrawerState ===
+// === Module 16437: useDrawerState ===
 
-// Module 16370 (useDrawerState)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
+// Module 16437 (useDrawerState)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -33,7 +33,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     const fn2 = function l() {
       if (handleStateChange) {
         handleStateChange = function handleStateChange(data) {
-          state = data.data.state;
+          const state = data.data.state;
           let tmp;
           if (state != null) {
             const routes = state.routes;
@@ -76,7 +76,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const fn = function u() {
     if (closure_0) {
-      state = navigation.getState();
+      const state = navigation.getState();
       let tmp6;
       if (state != null) {
         const routes = state.routes;
@@ -119,7 +119,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   navigation = flag(navigation[4]).useNavigation();
   const tmp2 = _slicedToArray(noop.useState(() => {
     if (flag) {
-      state = navigation.getState();
+      const state = navigation.getState();
       let tmp6;
       if (state != null) {
         const routes = state.routes;
@@ -151,7 +151,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const items = [navigation, flag];
   const effect = noop.useEffect(() => {
     function handleStateChange(data) {
-      state = data.data.state;
+      const state = data.data.state;
       let tmp;
       if (state != null) {
         const routes = state.routes;

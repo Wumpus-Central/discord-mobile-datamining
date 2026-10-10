@@ -1,6 +1,6 @@
-// === Module 7806: DiscordImagePng ===
+// === Module 7824: DiscordImagePng ===
 
-// Module 7806 (DiscordImagePng)
+// Module 7824 (DiscordImagePng)
 import decodeImageDefault from "decodeImage" /* 1996 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -62,7 +62,7 @@ prototype["hasSrgbIccProfile"] = function hasSrgbIccProfile() {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {

@@ -1,12 +1,12 @@
-// === Module 13009: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 13056: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 13009 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 13056 (MediaViewerOverlayButtonFavoriteGIF)
 import util from "util" /* 1126 */;
 import frecency_user_settings from "frecency_user_settings" /* 1245 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9706 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 9708 */;
-import GifIcon from "GifIcon" /* 9722 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 9735 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 9737 */;
+import GifIcon from "GifIcon" /* 9751 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -96,11 +96,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (isFavoriteGIF) {
       GIFPickerActionCreators.removeFavoriteGIF(uri);
       const tmpResult = GIFPickerActionCreators;
-      const obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+      const obj = { text: null, icon: null };
       const intl2 = util.intl;
-      obj.content = intl2.string(util.t.in1rga);
-      obj.IconComponent = GifIcon.GifIcon;
-      ToastActionCreatorsDefault.open(obj);
+      obj.text = intl2.string(util.t.in1rga);
+      obj.icon = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open("REMOVED_FROM_FAVORITES", obj);
     } else {
       ({ embedProviderName: obj2.providerName, thumbnail: obj2.thumbnail } = source);
       const gIFThumbnailForFavorite = GIFPickerUtils.getGIFThumbnailForFavorite({ providerName: null, thumbnail: null });
@@ -111,11 +111,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const GIFType = frecency_user_settings.GIFType;
       size.format = source.isGIFV ? GIFType.VIDEO : GIFType.IMAGE;
       GIFPickerActionCreators.addFavoriteGIF(size);
-      const obj7 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+      const obj7 = { text: null, icon: null };
       const intl = util.intl;
-      obj7.content = intl.string(util.t.okQonm);
-      obj7.IconComponent = GifIcon.GifIcon;
-      ToastActionCreatorsDefault.open(obj7);
+      obj7.text = intl.string(util.t.okQonm);
+      obj7.icon = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open("ADDED_TO_FAVORITES", obj7);
     }
   };
   cResult[2] = isFavoriteGIF;
@@ -147,11 +147,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (isFavoriteGIF) {
       GIFPickerActionCreators.removeFavoriteGIF(uri);
       const tmpResult = GIFPickerActionCreators;
-      const obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+      const obj = { text: null, icon: null };
       const intl2 = util.intl;
-      obj.content = intl2.string(util.t.in1rga);
-      obj.IconComponent = GifIcon.GifIcon;
-      ToastActionCreatorsDefault.open(obj);
+      obj.text = intl2.string(util.t.in1rga);
+      obj.icon = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open("REMOVED_FROM_FAVORITES", obj);
     } else {
       ({ embedProviderName: obj2.providerName, thumbnail: obj2.thumbnail } = source);
       const gIFThumbnailForFavorite = GIFPickerUtils.getGIFThumbnailForFavorite({ providerName: null, thumbnail: null });
@@ -162,11 +162,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const GIFType = frecency_user_settings.GIFType;
       size.format = source.isGIFV ? GIFType.VIDEO : GIFType.IMAGE;
       GIFPickerActionCreators.addFavoriteGIF(size);
-      const obj7 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+      const obj7 = { text: null, icon: null };
       const intl = util.intl;
-      obj7.content = intl.string(util.t.okQonm);
-      obj7.IconComponent = GifIcon.GifIcon;
-      ToastActionCreatorsDefault.open(obj7);
+      obj7.text = intl.string(util.t.okQonm);
+      obj7.icon = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open("ADDED_TO_FAVORITES", obj7);
     }
   }, items);
   const obj2 = source(isFavoriteGIF[4]);

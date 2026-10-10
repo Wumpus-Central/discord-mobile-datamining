@@ -1,10 +1,10 @@
-// === Module 18371: useGuildApplication ===
+// === Module 18445: useGuildApplication ===
 
-// Module 18371 (useGuildApplication)
+// Module 18445 (useGuildApplication)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ export default function useGuildApplication(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

@@ -1,11 +1,11 @@
-// === Module 7089: GuildBoostingMarketingOverview ===
+// === Module 7095: GuildBoostingMarketingOverview ===
 
-// Module 7089 (GuildBoostingMarketingOverview)
+// Module 7095 (GuildBoostingMarketingOverview)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7110 */;
+import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta" /* 7116 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_13 = createStyles.createStyles({ wrapper: { paddingBottom: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -235,11 +235,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
     obj.track(constants.MODAL_DISMISSED, { type: constants2.PREMIUM_GUILD_USER_MODAL, location_stack, guild_id, duration_open_ms: Date.now() - closure_1_9 });
   }, items3);
   const effect1 = obj4.useEffect(() => {
-    guildBoostSlots(stateFromStores[18]).wait(() => {
-      const premiumSubscriptionPlans = guildId(6953).fetchPremiumSubscriptionPlans();
-      const obj = guildId(6953);
-      const paymentSources = guildId(5721).fetchPaymentSources();
-    });
+    const premiumSubscriptionPlans = guildId(stateFromStores[18]).fetchPremiumSubscriptionPlans();
+    const obj = guildId(stateFromStores[18]);
+    const paymentSources = guildId(stateFromStores[19]).fetchPaymentSources();
   }, []);
   let tmp18 = null;
   if (null != stateFromStores) {
@@ -274,18 +272,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildBoo
       fractionalPremiumInfo: tmp12,
       premiumGroupRole: UNSPECIFIED
     };
-    const items4 = [closure_10(tmp8(tmp3[22]), obj5), , , , , ];
+    const items4 = [closure_10(tmp8(tmp3[21]), obj5), , , , , ];
     const obj6 = { guild: stateFromStores };
-    items4[1] = closure_10(tmp8(tmp3[23]), obj6);
+    items4[1] = closure_10(tmp8(tmp3[22]), obj6);
     const obj7 = { guild: stateFromStores };
-    items4[2] = closure_10(tmp8(tmp3[24]), obj7);
-    items4[3] = closure_10(tmp8(tmp3[25]), {});
-    items4[4] = closure_10(tmp8(tmp3[26]), {});
-    items4[5] = closure_10(tmp8(tmp3[27]), {});
+    items4[2] = closure_10(tmp8(tmp3[23]), obj7);
+    items4[3] = closure_10(tmp8(tmp3[24]), {});
+    items4[4] = closure_10(tmp8(tmp3[25]), {});
+    items4[5] = closure_10(tmp8(tmp3[26]), {});
     obj3.children = items4;
     const items5 = [closure_11(closure_5, obj3), ];
     const obj8 = { guild: stateFromStores, previousGuildSubscriptionSlot: first, isVisible: tmp9[0], fractionalPremiumState: tmp12.fractionalState, premiumGroupRole: UNSPECIFIED };
-    items5[1] = closure_10(tmp8(tmp3[21]), obj8);
+    items5[1] = closure_10(tmp8(tmp3[20]), obj8);
     obj2.children = items5;
     tmp18 = closure_11(closure_12, obj2);
   }

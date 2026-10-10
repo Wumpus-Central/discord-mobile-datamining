@@ -1,6 +1,6 @@
-// === Module 14634: FrecencySettingsMigrations ===
+// === Module 14688: FrecencySettingsMigrations ===
 
-// Module 14634 (FrecencySettingsMigrations)
+// Module 14688 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -124,7 +124,7 @@ let items = [
           obj = { usageHistory: {}, favorites: [] };
         }
       ];
-      state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
+      const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -162,7 +162,7 @@ let items = [
           return { usageHistory };
         }
       ];
-      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -276,7 +276,7 @@ let items = [
     version: 7,
     run(applicationCommandFrecency) {
       const PersistedStore = initializeDefault.PersistedStore;
-      state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
+      const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
       } else {
@@ -300,7 +300,7 @@ let items = [
     run(arg0) {
       closure_0 = arg0;
       const PersistedStore = initializeDefault.PersistedStore;
-      state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
+      const state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
       } else {

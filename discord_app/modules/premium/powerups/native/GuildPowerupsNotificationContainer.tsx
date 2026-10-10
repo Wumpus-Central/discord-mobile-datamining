@@ -1,18 +1,18 @@
-// === Module 12247: GuildPowerupsNotificationContainer ===
+// === Module 12291: GuildPowerupsNotificationContainer ===
 
-// Module 12247 (GuildPowerupsNotificationContainer)
+// Module 12291 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2597 from "module_2597" /* 2597 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6662 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12248 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12249 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12252 */;
+import _modDef2600 from "module_2600" /* 2600 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6663 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12292 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12293 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12296 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 5091 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef2597["3FRirU"]);
+    const stringResult = intl.string(_modDef2600["3FRirU"]);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     }
     obj3.variant = str2;
     const intl = util.intl;
-    obj3.children = intl.string(_modDef2597["3FRirU"]);
+    obj3.children = intl.string(_modDef2600["3FRirU"]);
     const items = [React4(Text_Text.Text, obj3), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {

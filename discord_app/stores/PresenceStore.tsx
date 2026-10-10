@@ -1,12 +1,12 @@
-// === Module 5107: PresenceStore ===
+// === Module 5108: PresenceStore ===
 
-// Module 5107 (PresenceStore)
+// Module 5108 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1355 from "module_1355" /* 1355 */;
-import hasRichActivityDefault from "hasRichActivity" /* 5108 */;
+import hasRichActivityDefault from "hasRichActivity" /* 5109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -184,7 +184,7 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      const map1 = new Map(reversed1.map((party) => {
+      map1 = new Map(reversed1.map((party) => {
         party = party.party;
         let id;
         if (party != null) {

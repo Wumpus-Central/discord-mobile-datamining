@@ -1,11 +1,11 @@
-// === Module 15184: PremiumManageSubscriptionsSetting ===
+// === Module 15246: PremiumManageSubscriptionsSetting ===
 
-// Module 15184 (PremiumManageSubscriptionsSetting)
+// Module 15246 (PremiumManageSubscriptionsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4728 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7130 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10460 */;
+import PremiumUtils from "PremiumUtils" /* 4769 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7136 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 10494 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowManageSubscriptionsSetting() {
   const cResult = c.c(1);
   let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
@@ -68,7 +68,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(15185).SubscriptionIcon,
+  IconComponent: fn(15247).SubscriptionIcon,
   usePreNavigationAction: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useShowManageSubscriptionsSetting() {
     const cResult = c.c(1);

@@ -1,19 +1,19 @@
-// === Module 10654: MediaModalOverlayAltTextSheet ===
+// === Module 10688: MediaModalOverlayAltTextSheet ===
 
-// Module 10654 (MediaModalOverlayAltTextSheet)
+// Module 10688 (MediaModalOverlayAltTextSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 8310 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 10655 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 8326 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 10689 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 } };
 let closure_3 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

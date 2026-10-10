@@ -1,6 +1,6 @@
-// === Module 12453: HubEmailConnectionWaitlist ===
+// === Module 12500: HubEmailConnectionWaitlist ===
 
-// Module 12453 (HubEmailConnectionWaitlist)
+// Module 12500 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: { fontFamily: fn(1085).Fonts.PRIMARY_BOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 16 }, redesignButton: { paddingHorizontal: 16, width: "100%" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -29,12 +29,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
     }
     const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
     if (cResult[4] !== tmp4.header) {
-      const obj3 = { source: navigation(12454), style: tmp4.header };
-      const tmp14 = closure_5(navigation(6163), obj3);
+      const obj3 = { source: navigation(12501), style: tmp4.header };
+      const tmp14 = closure_5(navigation(6156), obj3);
       cResult[4] = tmp4.header;
       cResult[5] = tmp14;
       let tmp10 = tmp14;
-      const tmp13 = navigation(6163);
+      const tmp13 = navigation(6156);
     } else {
       tmp10 = cResult[5];
     }
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
       }
       if (cResult[15] !== onClose) {
         const obj6 = { size: "lg", text: tmp26, onPress: onClose };
-        const tmp30 = closure_5(onClose(5376).Button, obj6);
+        const tmp30 = closure_5(onClose(5379).Button, obj6);
         cResult[15] = onClose;
         cResult[16] = tmp30;
         let tmp28 = tmp30;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
       tmp31 = tmp34;
     }
     const obj9 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp21 };
-    const tmp25 = closure_5(onClose(5087).Text, obj9);
+    const tmp25 = closure_5(onClose(5088).Text, obj9);
     cResult[11] = tmp4.description;
     cResult[12] = tmp21;
     cResult[13] = tmp25;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         const intl = onClose(1126).intl;
         obj.text = intl.string(onClose(1126).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7082).HeaderActionButton, obj);
+        return closure_2_5(onClose(7088).HeaderActionButton, obj);
       }
     });
   };
@@ -161,16 +161,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         const intl = onClose(1126).intl;
         obj.text = intl.string(onClose(1126).t.cpT0Cq);
         obj.onPress = onPress;
-        return closure_2_5(onClose(7082).HeaderActionButton, obj);
+        return closure_2_5(onClose(7088).HeaderActionButton, obj);
       }
     });
   }, items);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { source: null, style: null };
   let obj = onClose(1503);
-  obj3.source = navigation(12454);
+  obj3.source = navigation(12501);
   obj3.style = tmp.header;
-  const items1 = [closure_5(navigation(6163), obj3), , , ];
+  const items1 = [closure_5(navigation(6156), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1126).intl;
   obj4.children = intl.string(onClose(1126).t.OaloU5);
@@ -178,13 +178,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const obj5 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = onClose(1126).intl;
   obj5.children = intl2.format(onClose(1126).t.Rs7MXJ, { school: school.school });
-  items1[2] = closure_5(onClose(5087).Text, obj5);
+  items1[2] = closure_5(onClose(5088).Text, obj5);
   const obj6 = { style: tmp.redesignButton, children: null };
   const obj7 = { size: "lg", text: null, onPress: null };
   const intl3 = onClose(1126).intl;
   obj7.text = intl3.string(onClose(1126).t.i4jeWR);
   obj7.onPress = onClose;
-  obj6.children = closure_5(onClose(5376).Button, obj7);
+  obj6.children = closure_5(onClose(5379).Button, obj7);
   items1[3] = closure_5(View, obj6);
   obj2.children = items1;
   return closure_6(View, obj2);

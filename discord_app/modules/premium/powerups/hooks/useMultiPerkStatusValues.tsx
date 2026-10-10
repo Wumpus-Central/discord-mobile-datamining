@@ -1,11 +1,11 @@
-// === Module 12265: useMultiPerkStatusValues ===
+// === Module 12309: useMultiPerkStatusValues ===
 
-// Module 12265 (useMultiPerkStatusValues)
+// Module 12309 (useMultiPerkStatusValues)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2597 from "module_2597" /* 2597 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4969 */;
-import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12192 */;
+import _modDef2600 from "module_2600" /* 2600 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 5008 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12236 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMulti
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { type: "active", statusText: null };
         const intl = util.intl;
-        obj4.statusText = intl.string(_modDef2597.FFLkmx);
+        obj4.statusText = intl.string(_modDef2600.FFLkmx);
         cResult[8] = obj4;
       }
     }
@@ -327,7 +327,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMulti
     } else if (someResult) {
       const obj3 = { type: "active", statusText: null };
       const intl = util.intl;
-      obj3.statusText = intl.string(_modDef2597.FFLkmx);
+      obj3.statusText = intl.string(_modDef2600.FFLkmx);
       tmp4 = obj3;
     }
     const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {

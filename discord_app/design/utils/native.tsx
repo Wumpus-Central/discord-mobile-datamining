@@ -1,10 +1,10 @@
-// === Module 4781: native ===
+// === Module 4820: native ===
 
-// Module 4781 (native)
-import getNodeText from "getNodeText" /* 4782 */;
-import mergeProps from "mergeProps" /* 4784 */;
-import useFocus from "useFocus" /* 4785 */;
-import themes from "themes" /* 4786 */;
+// Module 4820 (native)
+import getNodeText from "getNodeText" /* 4821 */;
+import mergeProps from "mergeProps" /* 4823 */;
+import useFocus from "useFocus" /* 4824 */;
+import themes from "themes" /* 4825 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/native.tsx");

@@ -1,30 +1,29 @@
-// === Module 18300: GuildSettingsRoleMembers ===
+// === Module 18374: GuildSettingsRoleMembers ===
 
-// Module 18300 (GuildSettingsRoleMembers)
+// Module 18374 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 2000 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import _modDef5008 from "module_5008" /* 5008 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8621 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 8637 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6814 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6817 */;
 
 require = fn;
 function onMembersLoadFail() {
-  const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef5008, content: null };
+  const obj2 = { text: null, variant: "critical" };
   const intl = util.intl;
-  obj2.content = intl.string(util.t.fEptJP);
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.text = intl.string(util.t.fEptJP);
+  ToastActionCreatorsDefault.open("ERROR_OCCURRED_TRY_AGAIN", obj2);
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 }, containerSearchBar: null, missingMembers: null, missingMembersText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 obj2.containerSearchBar = { paddingBottom: nativeDefault.space.PX_12 };
@@ -48,48 +47,47 @@ export default function GuildSettingsRoleMembers(guild) {
   const tmp2 = formatted(found.useState(""), 2);
   formatted = str.trim().toLowerCase();
   const str2 = str.trim();
-  const queryGuildMembers = guild(locked[11]).useQueryGuildMembers(guild.id, formatted);
-  let obj = guild(locked[11]);
-  const guildRoleMembers = guild(locked[11]).useGuildRoleMembers(guild.id, role.id, onMembersLoadFail);
+  const queryGuildMembers = guild(locked[10]).useQueryGuildMembers(guild.id, formatted);
+  let obj = guild(locked[10]);
+  const guildRoleMembers = guild(locked[10]).useGuildRoleMembers(guild.id, role.id, onMembersLoadFail);
   found = guildRoleMembers.filter((name) => {
     formatted = name.name.toLowerCase();
     return formatted.includes(formatted);
   });
-  let obj2 = guild(locked[11]);
-  let obj3 = guild(locked[12]);
+  let obj2 = guild(locked[10]);
+  let obj3 = guild(locked[11]);
   const subscribeGuildMembers = obj3.useSubscribeGuildMembers({ [guild.id]: guildRoleMembers.map((id) => id.id) }, "GuildSettingsRoleMembers");
   const obj4 = { [guild.id]: guildRoleMembers.map((id) => id.id) };
   let items = [closure_6];
   const items1 = [guild.id, role.id];
   const items2 = [guild.id, , ];
   ({ id: arr5[1], name: arr5[2] } = role);
-  const obj5 = guild(locked[13]);
+  const obj5 = guild(locked[12]);
   const callback = found.useCallback((name, arr) => {
     found = arr.filter((item) => item !== found.id);
     if (found.length !== arr.length) {
       let obj2 = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, confirmColor: null };
-      let intl = guild(locked[10]).intl;
-      obj2.title = intl.string(guild(locked[10]).t["7sFNfW"]);
-      const intl2 = guild(locked[10]).intl;
+      let intl = guild(locked[9]).intl;
+      obj2.title = intl.string(guild(locked[9]).t["7sFNfW"]);
+      const intl2 = guild(locked[9]).intl;
       const obj3 = { username: name.name, roleName: found.name };
-      obj2.body = intl2.format(guild(locked[10]).t.scORUv, obj3);
-      const intl3 = guild(locked[10]).intl;
-      obj2.cancelText = intl3.string(guild(locked[10]).t["ETE/oC"]);
-      const intl4 = guild(locked[10]).intl;
-      obj2.confirmText = intl4.string(guild(locked[10]).t.N86XcP);
+      obj2.body = intl2.format(guild(locked[9]).t.scORUv, obj3);
+      const intl3 = guild(locked[9]).intl;
+      obj2.cancelText = intl3.string(guild(locked[9]).t["ETE/oC"]);
+      const intl4 = guild(locked[9]).intl;
+      obj2.confirmText = intl4.string(guild(locked[9]).t.N86XcP);
       obj2.onConfirm = function onConfirm() {
         const items = [role.id];
         GuildSettingsActionCreatorsDefault.updateMemberRoles(guild.id, name.id, found, [], items).catch(() => {
-          const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
+          const obj2 = { text: null, variant: "critical" };
           const intl = name(1126).intl;
-          obj2.content = intl.string(name(1126).t.fEptJP);
-          obj2.icon = found(5008);
-          found(4768).open(obj2);
+          obj2.text = intl.string(name(1126).t.fEptJP);
+          found(4809).open("ERROR_OCCURRED_TRY_AGAIN", obj2);
         });
       };
-      obj2.confirmColor = guild(locked[16]).ButtonColors.RED;
-      role(locked[14]).show(obj2);
-      let obj = role(locked[14]);
+      obj2.confirmColor = guild(locked[15]).ButtonColors.RED;
+      role(locked[13]).show(obj2);
+      let obj = role(locked[13]);
     }
   }, items2);
   const items3 = [guild, role];
@@ -97,7 +95,7 @@ export default function GuildSettingsRoleMembers(guild) {
   const callback1 = found.useCallback(() => {
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(18279, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
+    obj2.openLazy(asyncRequireImpl(18353, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, { guild, role });
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;
@@ -112,19 +110,19 @@ export default function GuildSettingsRoleMembers(guild) {
     obj.userId = item.user.id;
     let tmpResult = null;
     if (!locked) {
-      const obj2 = { icon: closure_1_8(guild(locked[23]).CircleXIcon, {}), accessibilityLabel: null, accessibilityRole: "button", onPress: null, variant: "icon-only" };
-      const intl = guild(locked[10]).intl;
-      obj2.accessibilityLabel = intl.string(guild(locked[10]).t["7sFNfW"]);
+      const obj2 = { icon: closure_1_8(guild(locked[22]).CircleXIcon, {}), accessibilityLabel: null, accessibilityRole: "button", onPress: null, variant: "icon-only" };
+      const intl = guild(locked[9]).intl;
+      obj2.accessibilityLabel = intl.string(guild(locked[9]).t["7sFNfW"]);
       obj2.onPress = function onPress() {
         return callback(item, item.roles);
       };
-      tmpResult = closure_1_8(guild(locked[22]).IconButton, obj2);
+      tmpResult = closure_1_8(guild(locked[21]).IconButton, obj2);
     }
     obj.trailing = tmpResult;
-    return closure_1_8(role(locked[21]), obj, item.id);
+    return closure_1_8(role(locked[20]), obj, item.id);
   }, items4);
   const obj6 = { style: tmp.container, children: null };
-  const tmp9 = guild(locked[13]).useStateFromStores(items, () => {
+  const tmp9 = guild(locked[12]).useStateFromStores(items, () => {
     const roleMemberCount = GuildRoleMemberCountStore.getRoleMemberCount(guild.id);
     let num;
     if (roleMemberCount != null) {
@@ -135,17 +133,17 @@ export default function GuildSettingsRoleMembers(guild) {
     }
     return num;
   }, items1) > guildRoleMembers.length;
-  const items5 = [closure_8(callback, { style: tmp.containerSearchBar, children: closure_8(guild(locked[24]).SearchField, { onChange: tmp3 }) }), ];
+  const items5 = [closure_8(callback, { style: tmp.containerSearchBar, children: closure_8(guild(locked[23]).SearchField, { onChange: tmp3 }) }), ];
   const obj8 = { style: guild.contentContainerStyle, children: null };
   let tmp12Result = null;
   if (tmp9) {
     const obj9 = { style: tmp.missingMembers, children: null };
     const obj10 = { color: role(tmp6[7]).colors.TEXT_LINK, size: "md" };
-    const items6 = [closure_8(tmp5(tmp6[25]).CircleInformationIcon, obj10), ];
+    const items6 = [closure_8(tmp5(tmp6[24]).CircleInformationIcon, obj10), ];
     const obj11 = { style: tmp.missingMembersText, variant: "text-sm/medium", children: null };
-    let intl = tmp5(tmp6[10]).intl;
-    obj11.children = intl.string(tmp5(tmp6[10]).t.RQxHZ8);
-    items6[1] = closure_8(tmp5(tmp6[26]).Text, obj11);
+    let intl = tmp5(tmp6[9]).intl;
+    obj11.children = intl.string(tmp5(tmp6[9]).t.RQxHZ8);
+    items6[1] = closure_8(tmp5(tmp6[25]).Text, obj11);
     obj9.children = items6;
     tmp12Result = closure_9(tmp13, obj9);
   }
@@ -153,12 +151,12 @@ export default function GuildSettingsRoleMembers(guild) {
   let tmp14Result = null;
   if (!locked) {
     const obj12 = { arrow: true, label: null, icon: null, onPress: null, start: true, end: null };
-    let intl2 = tmp5(tmp6[10]).intl;
-    obj12.label = intl2.string(tmp5(tmp6[10]).t.ZYOK46);
-    obj12.icon = closure_8(tmp5(tmp6[28]).CirclePlusIcon, { size: "md" });
+    let intl2 = tmp5(tmp6[9]).intl;
+    obj12.label = intl2.string(tmp5(tmp6[9]).t.ZYOK46);
+    obj12.icon = closure_8(tmp5(tmp6[27]).CirclePlusIcon, { size: "md" });
     obj12.onPress = callback1;
     obj12.end = 0 === found.length;
-    tmp14Result = closure_8(tmp5(tmp6[27]).TableRow, obj12);
+    tmp14Result = closure_8(tmp5(tmp6[26]).TableRow, obj12);
   }
   items7[1] = tmp14Result;
   items7[2] = found.map((item, index) => closure_6({ item, index }));

@@ -1,6 +1,6 @@
-// === Module 12922: QuestHomeBountiesFeatureGateExperiment ===
+// === Module 12970: QuestHomeBountiesFeatureGateExperiment ===
 
-// Module 12922 (QuestHomeBountiesFeatureGateExperiment)
+// Module 12970 (QuestHomeBountiesFeatureGateExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

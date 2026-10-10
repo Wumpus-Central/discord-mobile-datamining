@@ -1,20 +1,20 @@
-// === Module 12763: AddImageDescriptionModal ===
+// === Module 12810: AddImageDescriptionModal ===
 
-// Module 12763 (AddImageDescriptionModal)
+// Module 12810 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9606 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 9635 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7889 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7907 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7237).DraftType;
+const DraftType = fn(7243).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, imageContainer: null, image: null, placeholderText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.imageContainer = { alignItems: "center", borderRadius: nativeDefault.radii.sm };
@@ -25,7 +25,7 @@ obj2.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDescription(id) {
-  const cResult = channelId(stateFromStores[9]).c(43);
+  const cResult = channelId(stateFromStores[9]).c(45);
   ({ source, channelId } = id);
   id = id.id;
   closure_12();
@@ -135,9 +135,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
             const obj2 = {};
             const merged = Object.assign(dependencyMap);
             obj2.description = ref.current;
-            id(9235).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-            const obj = id(9235);
-            id(12762).close();
+            id(9262).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+            const obj = id(9262);
+            id(12809).close();
           });
           let merged = Object.assign(arg0);
           return renderHeaderTextButton({});
@@ -220,9 +220,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
           const obj2 = {};
           const merged = Object.assign(dependencyMap);
           obj2.description = ref.current;
-          id(9235).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-          const obj = id(9235);
-          id(12762).close();
+          id(9262).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+          const obj = id(9262);
+          id(12809).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton({});
@@ -233,7 +233,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddDes
   const tmp2Result = channelId(stateFromStores[12]);
   obj4.contentContainerStyle = { padding: id(stateFromStores[7]).space.PX_16, paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16 };
   const obj6 = { style: tmp.imageContainer, children: null };
-  const obj7 = { style: null, source };
+  const obj7 = { style: null, source: { uri: source.uri } };
   const items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
   obj7.style = items4;
   obj6.children = closure_10(closure_6, obj7);

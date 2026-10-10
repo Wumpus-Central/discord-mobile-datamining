@@ -1,52 +1,52 @@
-// === Module 14798: CustomizeBadgesSheet ===
+// === Module 14854: CustomizeBadgesSheet ===
 
-// Module 14798 (CustomizeBadgesSheet)
+// Module 14854 (CustomizeBadgesSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5013 */;
-import HapticUtils from "HapticUtils" /* 5056 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import timing from "timing" /* 5092 */;
-import timingPresets from "timingPresets" /* 5095 */;
-import Card from "Card" /* 6188 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 6648 */;
-import EyeIcon from "EyeIcon" /* 6650 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8299 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8305 */;
-import native from "native" /* 8525 */;
-import ContextMenu from "ContextMenu" /* 9335 */;
-import ContextMenuState from "ContextMenuState" /* 9336 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 9337 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9366 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10535 */;
-import BadgeUtils from "BadgeUtils" /* 10544 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11529 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13314 */;
-import BadgeGrid from "BadgeGrid" /* 14799 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5046 */;
+import HapticUtils from "HapticUtils" /* 5057 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import timing from "timing" /* 5093 */;
+import timingPresets from "timingPresets" /* 5096 */;
+import Card from "Card" /* 6181 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6649 */;
+import EyeIcon from "EyeIcon" /* 6651 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8315 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8321 */;
+import native from "native" /* 8541 */;
+import ContextMenu from "ContextMenu" /* 9362 */;
+import ContextMenuState from "ContextMenuState" /* 9363 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 9364 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9393 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9394 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10569 */;
+import BadgeUtils from "BadgeUtils" /* 10578 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11575 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13364 */;
+import BadgeGrid from "BadgeGrid" /* 14855 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8284 */;
 import UserStore from "UserStore" /* 1390 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8300 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8316 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: closure_4 } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsObjects: closure_9, AnalyticsPages: c10, AnalyticsSections: closure_11 } = Constants);
-let closure_12 = fn(6837).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(6840).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 1.05;
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj = { gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 }, grid: null, upsell: null, upsellCard: null, upsellContent: null, upsellCta: null, upsellText: null, message: null, messageText: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj.grid = { position: "relative", width: "100%", marginTop: nativeDefault.space.PX_8 };
@@ -120,7 +120,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeV
               }
             }
             const obj2 = { items: tmp8, align: tmp9, disableGesture: true, triggerOnLongPress: true, children };
-            const tmp13 = state(ContextMenu.ContextMenu, obj2);
+            const tmp13 = closure_1_14(ContextMenu.ContextMenu, obj2);
             cResult[12] = children;
             cResult[13] = tmp8;
             cResult[14] = tmp9;
@@ -180,9 +180,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeV
   }
   obj2.align = str;
   obj2.children = children;
-  return state(ContextMenu.ContextMenu, obj2);
+  return closure_1_14(ContextMenu.ContextMenu, obj2);
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj10 = { position: { position: "absolute" }, fill: { flex: 1 }, card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 }, icon: null, name: null, indicator: null, iconHidden: null };
 let obj9 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
 obj10.icon = { marginBottom: nativeDefault.space.PX_12 };
@@ -201,7 +201,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj14 = { position: "absolute", start: 0, end: 0, bottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_12, textAlign: "center" };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14799).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14799).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14855).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14855).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 ReactCompilerGating = fn(558);
@@ -217,7 +217,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
     const _Symbol2 = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-      const tmp15 = state(CircleInformationIcon.CircleInformationIcon, obj2);
+      const tmp15 = closure_1_14(CircleInformationIcon.CircleInformationIcon, obj2);
       cResult[0] = tmp15;
       let first = tmp15;
     } else {
@@ -229,7 +229,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
       const _Symbol = Symbol;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-        const tmp10 = state(EyeSlashIcon2.EyeSlashIcon, obj3);
+        const tmp10 = closure_1_14(EyeSlashIcon2.EyeSlashIcon, obj3);
         cResult[1] = tmp10;
         let tmp7 = tmp10;
       } else {
@@ -275,7 +275,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
               const obj4 = { variant: "secondary", border: "none", radius: 16, style: tmp4.card, children: null };
               const items = [tmp18, tmp23, tmp26];
               obj4.children = items;
-              const tmp32 = closure_1_15(Card.Card, obj4);
+              const tmp32 = value2(Card.Card, obj4);
               cResult[15] = tmp4.card;
               cResult[16] = tmp18;
               cResult[17] = tmp23;
@@ -286,7 +286,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
             let tmp27 = null != tmp5;
             if (tmp27) {
               const obj5 = { style: tmp4.indicator, "aria-hidden": true, children: tmp5 };
-              tmp27 = state(React4, obj5);
+              tmp27 = closure_1_14(React4, obj5);
             }
             cResult[12] = tmp5;
             cResult[13] = tmp4.indicator;
@@ -295,7 +295,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
           }
         }
         const obj6 = { variant: "text-xs/medium", color: str3, lineClamp: 1, style: tmp4.name, "aria-hidden": true, children: badge.name };
-        const tmp25 = state(Text_Text.Text, obj6);
+        const tmp25 = closure_1_14(Text_Text.Text, obj6);
         cResult[8] = badge.name;
         cResult[9] = tmp4.name;
         cResult[10] = str3;
@@ -303,7 +303,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
         tmp23 = tmp25;
       }
       const obj7 = { badge, size: BadgeGrid.BADGE_TILE_ICON_SIZE, style: tmp17 };
-      const tmp22 = state(BadgeCatalogIconDefault, obj7);
+      const tmp22 = closure_1_14(BadgeCatalogIconDefault, obj7);
       cResult[5] = badge;
       cResult[6] = tmp17;
       cResult[7] = tmp22;
@@ -324,12 +324,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
   }
   if (badge.alwaysVisible) {
     const obj2 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-    let tmp2 = state(CircleInformationIcon.CircleInformationIcon, obj2);
+    let tmp2 = closure_1_14(CircleInformationIcon.CircleInformationIcon, obj2);
   } else {
     tmp2 = null;
     if (flag) {
       const obj = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-      tmp2 = state(EyeSlashIcon2.EyeSlashIcon, obj);
+      tmp2 = closure_1_14(EyeSlashIcon2.EyeSlashIcon, obj);
     }
   }
   const obj3 = { variant: "secondary", border: "none", radius: 16, style: tmp.card, children: null };
@@ -341,20 +341,20 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeT
   }
   items[1] = iconHidden;
   obj4.style = items;
-  const items1 = [state(BadgeCatalogIconDefault, obj4), , ];
+  const items1 = [closure_1_14(BadgeCatalogIconDefault, obj4), , ];
   let str = "text-default";
   if (flag) {
     str = "text-muted";
   }
-  items1[1] = state(Text_Text.Text, { variant: "text-xs/medium", color: str, lineClamp: 1, style: tmp.name, "aria-hidden": true, children: badge.name });
+  items1[1] = closure_1_14(Text_Text.Text, { variant: "text-xs/medium", color: str, lineClamp: 1, style: tmp.name, "aria-hidden": true, children: badge.name });
   let tmp14Result = null != tmp2;
   if (tmp14Result) {
     const obj6 = { style: tmp.indicator, "aria-hidden": true, children: tmp2 };
-    tmp14Result = state(React4, obj6);
+    tmp14Result = closure_1_14(React4, obj6);
   }
   items1[2] = tmp14Result;
   obj3.children = items1;
-  return closure_1_15(Card.Card, obj3);
+  return value2(Card.Card, obj3);
 });
 ReactCompilerGating = fn(558);
 let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FixedBadgeTile(badge) {
@@ -469,8 +469,8 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
               obj.onLongPress = fn;
               obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
               obj.style = style;
-              obj.children = state(closure_23, { badge, alwaysVisible });
-              return state(native.PressableScale, obj);
+              obj.children = closure_2_14(closure_23, { badge, alwaysVisible });
+              return closure_2_14(native.PressableScale, obj);
             }
             cResult[13] = alwaysVisible;
             cResult[14] = badge;
@@ -572,8 +572,8 @@ let closure_24 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       obj.onLongPress = fn;
       obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
       obj.style = items1;
-      obj.children = state(closure_23, { badge, alwaysVisible });
-      return state(native.PressableScale, obj);
+      obj.children = closure_2_14(closure_23, { badge, alwaysVisible });
+      return closure_2_14(native.PressableScale, obj);
     }
     let result = index % badge(alwaysVisible[13]).BADGE_GRID_COLUMNS;
     const _Math = Math;
@@ -1557,13 +1557,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     if (hiddenBadges.some((badge_id) => badge_id.badge_id === badge_id.badge_id)) {
       closure_18(badge_id);
     } else if (set.has(badge_id.badge_id)) {
-      const obj2 = { key: null, content: null };
       const _HermesInternal = HermesInternal;
-      obj2.key = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
+      const obj2 = { text: null };
+      const combined = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
       const intl = util.intl;
       const obj = ToastActionCreatorsDefault;
-      obj2.content = intl.string(BadgeUtils.getAlwaysVisibleCopy(badge_id.badge_id));
-      obj.open(obj2);
+      obj2.text = intl.string(BadgeUtils.getAlwaysVisibleCopy(badge_id.badge_id));
+      obj.open(combined, obj2);
     }
   });
   closure_20 = tmp2(tmp3[26])((badgeId) => {
@@ -1677,18 +1677,18 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     items17[1] = obj11;
     obj10.style = items17;
     const items18 = [
-      fixedBadges.map((badge, index) => state(closure_24, { badge, index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress }, badge.badge_id)),
+      fixedBadges.map((badge, index) => closure_2_14(closure_24, { badge, index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress }, badge.badge_id)),
       reorderableBadges.map((badge, index) => {
           if (stateFromStores1) {
             const obj2 = { badge, index: fixedBadges.length + index, tileSize: badgeTileSize, slotOffset: fixedBadges.length, isFirst: 0 === index, isLast: index === reorderableBadges.length - 1, alwaysVisible: set.has(badge.badge_id), orderShared: sharedValue, isDragActive: sharedValue1, scrollRef: animatedRef, scrollOffset: scrollViewOffset, autoScrollSpeed: sharedValue2, onCommitOrder, onSetHidden, onPress };
-            let tmpResult = state(closure_49, obj2, badge.badge_id);
+            let tmpResult = closure_2_14(closure_49, obj2, badge.badge_id);
           } else {
             const obj = { badge, index: fixedBadges.length + index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress, onSetHidden };
-            tmpResult = state(closure_24, obj, badge.badge_id);
+            tmpResult = closure_2_14(closure_24, obj, badge.badge_id);
           }
           return tmpResult;
         }),
-      hiddenBadges.map((badge, index) => state(closure_24, { badge, index: fixedBadges.length + reorderableBadges.length + index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress, onSetHidden }, badge.badge_id))
+      hiddenBadges.map((badge, index) => closure_2_14(closure_24, { badge, index: fixedBadges.length + reorderableBadges.length + index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress, onSetHidden }, badge.badge_id))
     ];
     obj10.children = items18;
     items16[1] = sharedValue(context, obj10);

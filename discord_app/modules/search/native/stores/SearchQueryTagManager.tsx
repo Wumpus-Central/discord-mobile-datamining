@@ -1,8 +1,8 @@
-// === Module 12005: SearchQueryTagManager ===
+// === Module 12049: SearchQueryTagManager ===
 
-// Module 12005 (SearchQueryTagManager)
-import TrackingConstants from "TrackingConstants" /* 9284 */;
-import SearchConstants from "SearchConstants" /* 9285 */;
+// Module 12049 (SearchQueryTagManager)
+import TrackingConstants from "TrackingConstants" /* 9311 */;
+import SearchConstants from "SearchConstants" /* 9312 */;
 import size from "module_2" /* 2 */;
 
 function isComplete(type) {

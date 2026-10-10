@@ -1,10 +1,10 @@
-// === Module 10641: ApexActionCreators ===
+// === Module 10675: ApexActionCreators ===
 
-// Module 10641 (ApexActionCreators)
+// Module 10675 (ApexActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import apex_ApexTypes from "apex/ApexTypes" /* 1456 */;
-import experiment from "experiment" /* 8128 */;
+import experiment from "experiment" /* 8144 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1259 */;
@@ -57,7 +57,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -143,7 +143,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

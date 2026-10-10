@@ -176,7 +176,7 @@ export const loadImage = function loadImage(url, bind) {
           let obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -224,7 +224,7 @@ export const loadImage = function loadImage(url, bind) {
                       let obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     }
                   } else {
                     try {
@@ -261,7 +261,7 @@ export const loadImage = function loadImage(url, bind) {
                               tmp.backoff = tmp7;
                             }
                             backoff = tmp.backoff;
-                            image.onerror = closure_2_4(/* F136844 */ function() { ... });
+                            image.onerror = closure_2_4(/* F137274 */ function() { ... });
                             image.onload = function onload() { ... };
                             image.src = backoff.url;
                           });

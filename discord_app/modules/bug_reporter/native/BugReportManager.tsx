@@ -1,10 +1,10 @@
-// === Module 12591: BugReportManager ===
+// === Module 12638: BugReportManager ===
 
-// Module 12591 (BugReportManager)
+// Module 12638 (BugReportManager)
 import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7505 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 const require = fn;
 function showNotification(uri) {
@@ -19,7 +19,7 @@ function showNotification(uri) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -62,7 +62,7 @@ function showNotification(uri) {
             }
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -85,7 +85,7 @@ function showNotification(uri) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -128,10 +128,10 @@ function showNotification(uri) {
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(12528).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(12528);
+            notificationDuration = tmp2(12575).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(12575);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(12530);
+            const obj6 = tmp3(12577);
             obj11.key = tmp2(1279).v4();
             obj11.image = closure_128_0;
             uri = undefined;
@@ -146,7 +146,7 @@ function showNotification(uri) {
             obj11.inAppNotificationId = tmp2(1279).v4();
             obj6.enqueueNotification(obj11);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -195,7 +195,7 @@ prototype["initBugReporter"] = function initBugReporter() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -252,7 +252,7 @@ prototype["initBugReporter"] = function initBugReporter() {
             })();
           }
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp13) {
         c3 = tmp;

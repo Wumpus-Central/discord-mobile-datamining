@@ -1,12 +1,12 @@
-// === Module 12249: useGuildPowerupExpiringNotificationsConfig ===
+// === Module 12293: useGuildPowerupExpiringNotificationsConfig ===
 
-// Module 12249 (useGuildPowerupExpiringNotificationsConfig)
+// Module 12293 (useGuildPowerupExpiringNotificationsConfig)
 import c from "c" /* 576 */;
-import _modDef2597 from "module_2597" /* 2597 */;
-import _modDef3019 from "module_3019" /* 3019 */;
-import Powerups from "Powerups" /* 4972 */;
-import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 12250 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12251 */;
+import _modDef2600 from "module_2600" /* 2600 */;
+import _modDef3022 from "module_3022" /* 3022 */;
+import Powerups from "Powerups" /* 5011 */;
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 12294 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 12295 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       let stringResult;
       if (arr2.length > 0) {
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef3019["B3OfL/"]);
+        stringResult = intl2.string(_modDef3022["B3OfL/"]);
       }
       cResult[1] = arr2.length;
       cResult[2] = stringResult;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             const _Symbol4 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
               intl = util.intl;
-              const stringResult1 = intl.string(_modDef3019.wiungr);
+              const stringResult1 = intl.string(_modDef3022.wiungr);
               cResult[13] = stringResult1;
               let tmp26 = stringResult1;
             } else {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const _Symbol3 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             const intl3 = util.intl;
-            const stringResult2 = intl3.string(_modDef2597.Sfr0Jw);
+            const stringResult2 = intl3.string(_modDef2600.Sfr0Jw);
             cResult[12] = stringResult2;
             let tmp22 = stringResult2;
           } else {
@@ -131,7 +131,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     let stringResult;
     if (arr2.length > 0) {
       const intl = util.intl;
-      stringResult = intl.string(_modDef3019["B3OfL/"]);
+      stringResult = intl.string(_modDef3022["B3OfL/"]);
     }
     const items = [];
     const arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
@@ -145,11 +145,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = util.intl;
-      items3.push(intl2.string(_modDef2597.Sfr0Jw));
+      items3.push(intl2.string(_modDef2600.Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = util.intl;
-      items3.push(intl3.string(_modDef3019.wiungr));
+      items3.push(intl3.string(_modDef3022.wiungr));
     }
     const obj2 = { shouldShow: tmp3, expiringPowerups: arr, expiringPowerupNames: items, warnings: items3 };
     return obj2;

@@ -1,18 +1,18 @@
-// === Module 17742: VoicePanelCTACardCallerDisconnected ===
+// === Module 17814: VoicePanelCTACardCallerDisconnected ===
 
-// Module 17742 (VoicePanelCTACardCallerDisconnected)
+// Module 17814 (VoicePanelCTACardCallerDisconnected)
 import nativeDefault from "native" /* 587 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
 let size = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.container = size;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/card/Voice
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelCTACardCallerDisconnected() {
   const cResult = channelId(576).c(35);
-  channelId = noop.useContext(first(11925)).channelId;
+  channelId = noop.useContext(first(11969)).channelId;
   const tmp5 = closure_10();
   if (cResult[0] !== channelId) {
     const channel = ChannelStore.getChannel(channelId);
@@ -98,7 +98,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                   }
                   if (cResult[22] !== tmp5.text) {
                     const obj2 = { style: text, variant: "heading-sm/semibold", color: "text-overlay-light", children: tmp41 };
-                    const tmp45 = closure_8(tmp(5087).Text, obj2);
+                    const tmp45 = closure_8(tmp(5088).Text, obj2);
                     cResult[22] = tmp5.text;
                     cResult[23] = tmp45;
                     let tmp43 = tmp45;
@@ -125,7 +125,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                         const obj3 = { style: tmp23, children: null };
                         const items1 = [tmp38, tmp50];
                         obj3.children = items1;
-                        const tmp55 = closure_9(tmp4(6168), obj3);
+                        const tmp55 = closure_9(tmp4(6161), obj3);
                         cResult[31] = tmp5.container;
                         cResult[32] = tmp50;
                         cResult[33] = tmp38;
@@ -136,7 +136,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const obj4 = { style: textContainer, children: null };
                     const items2 = [tmp43, tmp46];
                     obj4.children = items2;
-                    const tmp52 = closure_9(tmp4(6168), obj4);
+                    const tmp52 = closure_9(tmp4(6161), obj4);
                     cResult[27] = tmp5.textContainer;
                     cResult[28] = tmp43;
                     cResult[29] = tmp46;
@@ -149,7 +149,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const intl2 = tmp(1126).intl;
                     const obj6 = { username: tmp22 };
                     obj5.children = intl2.format(tmp(1126).t.kXrAqz, obj6);
-                    tmp48 = closure_8(tmp(5087).Text, obj5);
+                    tmp48 = closure_8(tmp(5088).Text, obj5);
                   }
                   cResult[24] = tmp5.text;
                   cResult[25] = tmp22;
@@ -160,7 +160,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj7 = { style: tmp5.avatarContainer, children: null };
               const items3 = [tmp24, tmp31];
               obj7.children = items3;
-              const tmp40 = closure_9(tmp4(6168), obj7);
+              const tmp40 = closure_9(tmp4(6161), obj7);
               cResult[17] = tmp5.avatarContainer;
               cResult[18] = tmp24;
               cResult[19] = tmp31;
@@ -173,7 +173,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         if (tmp34Result) {
           const obj8 = { style: tmp5.avatarWrapper, children: null };
           let tmp37 = tmp21;
-          const tmp4Result = tmp4(6168);
+          const tmp4Result = tmp4(6161);
           if (typeof tmp21 !== "number") {
             const obj9 = { uri: tmp21 };
             tmp37 = obj9;
@@ -182,9 +182,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const items4 = [, ];
           ({ avatar: arr4[0], disconnectedAvatar: arr4[1] } = tmp5);
           obj10.style = items4;
-          obj8.children = closure_8(tmp4(6163), obj10);
+          obj8.children = closure_8(tmp4(6156), obj10);
           tmp34Result = closure_8(tmp4Result, obj8);
-          const tmp4Result4 = tmp4(6163);
+          const tmp4Result4 = tmp4(6156);
         }
         cResult[12] = tmp21;
         cResult[13] = tmp5.avatar;
@@ -198,15 +198,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (tmp27Result) {
       const obj11 = { style: tmp5.avatarWrapper, children: null };
       let tmp30 = tmp20;
-      const tmp4Result5 = tmp4(6168);
+      const tmp4Result5 = tmp4(6161);
       if (typeof tmp20 !== "number") {
         const obj12 = { uri: tmp20 };
         tmp30 = obj12;
       }
       const obj13 = { source: tmp30, style: tmp5.avatar };
-      obj11.children = closure_8(tmp4(6163), obj13);
+      obj11.children = closure_8(tmp4(6156), obj13);
       tmp27Result = closure_8(tmp4Result5, obj11);
-      const tmp4Result6 = tmp4(6163);
+      const tmp4Result6 = tmp4(6156);
     }
     cResult[8] = tmp20;
     cResult[9] = tmp5.avatar;

@@ -1,6 +1,6 @@
-// === Module 14370: NativeFastConnectModule ===
+// === Module 14424: NativeFastConnectModule ===
 
-// Module 14370 (NativeFastConnectModule)
+// Module 14424 (NativeFastConnectModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

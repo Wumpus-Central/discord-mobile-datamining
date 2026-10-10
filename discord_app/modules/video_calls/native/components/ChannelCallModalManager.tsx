@@ -1,12 +1,12 @@
-// === Module 10927: ChannelCallModalManager ===
+// === Module 10967: ChannelCallModalManager ===
 
-// Module 10927 (ChannelCallModalManager)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 10967 (ChannelCallModalManager)
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
 import UserStore from "UserStore" /* 1390 */;
-import VoiceStateStore from "VoiceStateStore" /* 5112 */;
+import VoiceStateStore from "VoiceStateStore" /* 5113 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 
-let require = fn;
+require = fn;
 class ChannelCallModalManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -20,9 +20,7 @@ class ChannelCallModalManager extends tmp2 {
         isInChannelResult = VoiceStateStore.isInChannel(channel.id, currentUser.id);
       }
       if (tmp4) {
-        DispatcherDefault.wait(() => {
-          const result = applyArgumentsResult(dependencyMap[4]).dismissVoiceChannelScreens(channel);
-        });
+        const result = PrivateChannelCallUtils.dismissVoiceChannelScreens(channel);
         applyArgumentsResult.terminate();
       }
       applyArgumentsResult.inVoiceChannel = isInChannelResult;

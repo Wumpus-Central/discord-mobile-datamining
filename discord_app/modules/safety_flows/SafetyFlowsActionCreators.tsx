@@ -1,8 +1,8 @@
-// === Module 18555: SafetyFlowsActionCreators ===
+// === Module 18629: SafetyFlowsActionCreators ===
 
-// Module 18555 (SafetyFlowsActionCreators)
+// Module 18629 (SafetyFlowsActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1273 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5945 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5938 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -40,7 +40,7 @@ let closure_7 = async function _resendVerificationCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

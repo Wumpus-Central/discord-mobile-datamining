@@ -1,14 +1,14 @@
-// === Module 17154: conjureReminderSlot ===
+// === Module 17224: conjureReminderSlot ===
 
-// Module 17154 (conjureReminderSlot)
+// Module 17224 (conjureReminderSlot)
 import c from "c" /* 576 */;
-import useConjureWindowFocusedDefault from "useConjureWindowFocused" /* 16562 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 17042 */;
-import conjurePublishCard from "conjurePublishCard" /* 17153 */;
-import conjureIdeasOffer from "conjureIdeasOffer" /* 17155 */;
+import useConjureWindowFocusedDefault from "useConjureWindowFocused" /* 11426 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 17110 */;
+import conjurePublishCard from "conjurePublishCard" /* 17223 */;
+import conjureIdeasOffer from "conjureIdeasOffer" /* 17225 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 const require = globalThis.__r;
 
@@ -216,7 +216,7 @@ function nextReminderClockState(projectId, projectId2, now) {
     }
   }
 }
-const ConjureChatStore = fn(12948);
+const ConjureChatStore = fn(12996);
 ({ isStrandedSegment: metroRequire, turnSettled: closure_7 } = ConjureChatStore);
 let items = [60000, 180000, 600000];
 let c9 = 600000;
@@ -1230,7 +1230,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureRe
   let obj = require("c");
 }) : (function useConjureReminder(projectId, arr, draftHasText) {
   closure_0 = projectId;
-  const tmp = obj(17042)(projectId);
+  const tmp = obj(17110)(projectId);
   let diff = arr.length - 1;
   let tmp4 = null;
   if (0 <= diff) {
@@ -1287,8 +1287,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureRe
     bound = Math.max(atResult.created_at, num, num2);
   }
   obj.messageAt = bound;
-  obj.visible = obj(16562)();
-  const tmp2 = obj(16562)();
+  obj.visible = obj(11426)();
+  const tmp2 = obj(11426)();
   [tmp15, tmp16] = obj3.useState(() => {
     const timestamp = Date.now();
     obj = {};

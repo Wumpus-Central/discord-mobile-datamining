@@ -1,25 +1,25 @@
-// === Module 12457: HubEmailConnectionPinVerify ===
+// === Module 12504: HubEmailConnectionPinVerify ===
 
-// Module 12457 (HubEmailConnectionPinVerify)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import _modDef5017 from "module_5017" /* 5017 */;
-import HubJoinManagerDefault from "HubJoinManager" /* 12458 */;
+// Module 12504 (HubEmailConnectionPinVerify)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import EnvelopeIcon from "EnvelopeIcon" /* 6769 */;
+import HubJoinManagerDefault from "HubJoinManager" /* 12505 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 
-const require = fn;
-function presentResendToast(content) {
+require = fn;
+function presentResendToast(text) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef5017 });
+  obj.open("HUB_EMAIL_RESET", { text, icon: EnvelopeIcon.EnvelopeIcon });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles({ container: { alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center", marginBottom: 24 }, label: { textAlign: "center", marginBottom: 12 }, error: { alignSelf: "center", marginVertical: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
         guildId(onClose[12])();
       });
       return () => {
-        guildId(12458).terminate();
+        guildId(12505).terminate();
       };
     };
     const items = [onClose];
@@ -316,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
       require("navigateToLastChannel")();
     });
     return () => {
-      closure_1_1(12458).terminate();
+      closure_1_1(12505).terminate();
     };
   }, items);
   const obj = require("module_12");
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmail
   const obj4 = { source: null };
   const tmp5 = _slicedToArray(noop.useState(null), 2);
   const tmp7 = email;
-  obj4.source = require("module_12459");
+  obj4.source = require("module_12506");
   const items1 = [closure_8(require("FastImage"), obj4), , , , , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = email(onClose[14]).intl;

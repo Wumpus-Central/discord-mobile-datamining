@@ -1,11 +1,11 @@
-// === Module 16955: JoinRequestActionSheet ===
+// === Module 17023: JoinRequestActionSheet ===
 
-// Module 16955 (JoinRequestActionSheet)
-import isChangelogUserDefault from "isChangelogUser" /* 2113 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6125 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
+// Module 17023 (JoinRequestActionSheet)
+import isChangelogUserDefault from "isChangelogUser" /* 2114 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 6118 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import UserRecord from "UserRecord" /* 1404 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinRequestActionSheet(joinRequest) {
@@ -136,7 +136,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinReques
                       tmp8 = guildId;
                       num = 80;
                       tmp7 = closure_1(closure_2[23]);
-                      obj1 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, dispatchWait: true, guildId: null };
+                      obj1 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId: null };
                       obj1.guildId = guildId;
                       tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
                     }
@@ -209,7 +209,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinReques
                   tmp8 = guildId;
                   num = 80;
                   tmp7 = closure_1(closure_2[23]);
-                  obj1 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, dispatchWait: true, guildId: null };
+                  obj1 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId: null };
                   obj1.guildId = guildId;
                   tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
                 }
@@ -333,7 +333,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function JoinReques
       tmp = isNonUserBotResult;
     }
     if (!tmp) {
-      const obj2 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, dispatchWait: true, guildId };
+      const obj2 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId };
       maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(guildId, 80), obj2);
     }
   }, items5);

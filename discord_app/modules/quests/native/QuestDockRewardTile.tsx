@@ -1,17 +1,17 @@
-// === Module 12926: QuestDockRewardTile ===
+// === Module 12974: QuestDockRewardTile ===
 
-// Module 12926 (QuestDockRewardTile)
+// Module 12974 (QuestDockRewardTile)
 import nativeDefault from "native" /* 587 */;
-import AssetUtils from "AssetUtils" /* 9157 */;
+import AssetUtils from "AssetUtils" /* 9184 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { borderRadius: nativeDefault.radii.sm, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" }, video: { overflow: "hidden", height: "100%", width: "100%" }, image: { height: "100%", width: "100%" } };
   return obj;
@@ -107,12 +107,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const tmp11 = _slicedToArray(noop.useState("active" === closure_5.currentState), 2);
-  const scaledImageUrl = isAnimatedAsset(9157).getScaledImageUrl({ assetUrl, width, height });
+  const scaledImageUrl = isAnimatedAsset(9184).getScaledImageUrl({ assetUrl, width, height });
   cResult[7] = assetUrl;
   cResult[8] = height;
   cResult[9] = width;
   cResult[10] = scaledImageUrl;
-  const tmpResult4 = isAnimatedAsset(9157);
+  const tmpResult4 = isAnimatedAsset(9184);
 }) : (function QuestDockRewardTile(assetUrl) {
   assetUrl = assetUrl.assetUrl;
   const isAnimatedAsset = assetUrl.isAnimatedAsset;

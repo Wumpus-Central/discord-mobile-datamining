@@ -1,8 +1,8 @@
-// === Module 9064: OneDayFractionalNitroExperiment ===
+// === Module 9084: OneDayFractionalNitroExperiment ===
 
-// Module 9064 (OneDayFractionalNitroExperiment)
+// Module 9084 (OneDayFractionalNitroExperiment)
 import c from "c" /* 576 */;
-import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 9065 */;
+import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 9085 */;
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

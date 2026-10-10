@@ -1,11 +1,11 @@
-// === Module 13705: PremiumGroupActionCreators ===
+// === Module 13757: PremiumGroupActionCreators ===
 
-// Module 13705 (PremiumGroupActionCreators)
+// Module 13757 (PremiumGroupActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 13706 */;
+import SubscriptionGroupMemberRecord from "SubscriptionGroupMemberRecord" /* 13758 */;
 
 require = fn;
 let closure_7 = async function _fetchPremiumGroupMembership() {
@@ -19,7 +19,7 @@ let closure_7 = async function _fetchPremiumGroupMembership() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -138,7 +138,7 @@ let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ let closure_10 = async function _removeUserFromSubscriptionGroup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_11 = async function _fetchSubscriptionGroupMembers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -373,7 +373,7 @@ let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -455,7 +455,7 @@ let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

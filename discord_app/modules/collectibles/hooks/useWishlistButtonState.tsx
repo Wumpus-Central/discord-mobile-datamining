@@ -1,10 +1,10 @@
-// === Module 9013: useWishlistButtonState ===
+// === Module 9032: useWishlistButtonState ===
 
-// Module 9013 (useWishlistButtonState)
+// Module 9032 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ export const useWishlistButtonState = function useWishlistButtonState(onRemoveSu
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

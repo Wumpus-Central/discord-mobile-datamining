@@ -128,15 +128,15 @@ class VoiceConnection {
         closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
-    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(compareResult, arg1, arg2) {
+    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(map, arg1, arg2) {
       const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("prepareMLSCommitTransitionB64");
-      result(compareResult, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
+      result(map, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
-    obj.processMLSWelcome = function processMLSWelcome(compareResult, arg1, arg2) {
+    obj.processMLSWelcome = function processMLSWelcome(map, arg1, arg2) {
       const str = Buffer.from(arg1);
       const result = obj.boundConnectionMethod("processMLSWelcomeB64");
-      result(compareResult, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
+      result(map, Buffer.from(arg1).toString("base64"), obj.wrapRosterCallback(arg2));
     };
     obj.getMLSPairwiseFingerprint = function getMLSPairwiseFingerprint(arg0, arg1, arg2) {
       closure_0 = arg2;

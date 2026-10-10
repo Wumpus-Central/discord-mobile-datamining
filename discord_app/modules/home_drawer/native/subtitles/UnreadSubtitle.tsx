@@ -1,7 +1,7 @@
-// === Module 16690: UnreadSubtitle ===
+// === Module 16760: UnreadSubtitle ===
 
-// Module 16690 (UnreadSubtitle)
-import Text_Text from "Text/Text" /* 5087 */;
+// Module 16760 (UnreadSubtitle)
+import Text_Text from "Text/Text" /* 5088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   const cResult = subtitleStyles(576).c(16);
   ({ guild, channel, channelName, count } = arg0);
   const obj = subtitleStyles(576);
-  subtitleStyles = subtitleStyles(16688).useSubtitleStyles();
+  subtitleStyles = subtitleStyles(16758).useSubtitleStyles();
   if (cResult[0] === channel) {
     if (cResult[1] === guild) {
       let tmp5 = cResult[2];
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
         channelName,
         count: diff,
         labelHook(children, id) {
-              return jsx(subtitleStyles(5087).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, id);
+              return jsx(subtitleStyles(5088).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, id);
             },
         iconHook(arg0, key) {
               return <closure_1 key={key} size="xxs" color="icon-muted" style={subtitleStyles.unreadChannelIcon} />;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
               return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, key);
             },
         overflowHook(children, id) {
-              return jsx(subtitleStyles(5087).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
+              return jsx(subtitleStyles(5088).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
             }
       };
       const formatResult = intl2.format(tmp(1126).t.OqlmU6, obj4);
@@ -88,17 +88,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   }
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(8142).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(8142);
+    channelIconComponentWithGuild = tmp(8158).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(8158);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(8191).TextIcon;
+    channelIconComponentWithGuild = tmp(8207).TextIcon;
   }
   cResult[0] = channel;
   cResult[1] = guild;
   cResult[2] = channelIconComponentWithGuild;
   tmp5 = channelIconComponentWithGuild;
-  const obj2 = subtitleStyles(16688);
+  const obj2 = subtitleStyles(16758);
 }) : (function UnreadSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   let subtitleStyles;

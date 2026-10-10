@@ -1,11 +1,11 @@
-// === Module 16895: MainTabsContentScrim ===
+// === Module 16963: MainTabsContentScrim ===
 
-// Module 16895 (MainTabsContentScrim)
+// Module 16963 (MainTabsContentScrim)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import createStyles from "createStyles" /* 5091 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import createStyles from "createStyles" /* 5092 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -34,8 +34,8 @@ export const MainTabsContentScrim = ReactCompilerGating.isReactCompilerEnabled()
     obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  const obj2 = translateX(4811);
-  fn.__closure = { interpolate: translateX(4811).interpolate, translateX, maxWidth, Extrapolation: translateX(4811).Extrapolation };
+  const obj2 = translateX(4850);
+  fn.__closure = { interpolate: translateX(4850).interpolate, translateX, maxWidth, Extrapolation: translateX(4850).Extrapolation };
   fn.__workletHash = 7933670426250;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -48,12 +48,12 @@ export const MainTabsContentScrim = ReactCompilerGating.isReactCompilerEnabled()
   const obj4 = { style: null, pointerEvents: "none" };
   let items = [tmp3.scrim, animatedStyle];
   obj4.style = items;
-  const tmp6 = jsx(maxWidth(4811).View, { style: null, pointerEvents: "none" });
+  const tmp6 = jsx(maxWidth(4850).View, { style: null, pointerEvents: "none" });
   cResult[0] = animatedStyle;
   cResult[1] = tmp3.scrim;
   cResult[2] = tmp6;
   tmp5 = tmp6;
-  const obj3 = { interpolate: translateX(4811).interpolate, translateX, maxWidth, Extrapolation: translateX(4811).Extrapolation };
+  const obj3 = { interpolate: translateX(4850).interpolate, translateX, maxWidth, Extrapolation: translateX(4850).Extrapolation };
 }) : (function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
@@ -65,13 +65,13 @@ export const MainTabsContentScrim = ReactCompilerGating.isReactCompilerEnabled()
     obj.opacity = ReanimatedRexport.interpolate(value, items, [0, 0.5], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   };
-  let obj = translateX(4811);
-  fn.__closure = { interpolate: translateX(4811).interpolate, translateX, maxWidth, Extrapolation: translateX(4811).Extrapolation };
+  let obj = translateX(4850);
+  fn.__closure = { interpolate: translateX(4850).interpolate, translateX, maxWidth, Extrapolation: translateX(4850).Extrapolation };
   fn.__workletHash = 9902483670729;
   fn.__initData = __initData2;
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj3 = { style: null, pointerEvents: "none" };
   let items = [tmp.scrim, animatedStyle];
   obj3.style = items;
-  return jsx(maxWidth(4811).View, { style: null, pointerEvents: "none" });
+  return jsx(maxWidth(4850).View, { style: null, pointerEvents: "none" });
 });

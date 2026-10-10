@@ -1,14 +1,14 @@
-// === Module 15734: CommunityActivityAlertsSetting ===
+// === Module 15796: CommunityActivityAlertsSetting ===
 
-// Module 15734 (CommunityActivityAlertsSetting)
+// Module 15796 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10660 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10694 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasCommunityActivityAlertsSetting() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(7974).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7992).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);

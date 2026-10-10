@@ -1,26 +1,26 @@
-// === Module 17393: AddFriendsScreen ===
+// === Module 17465: AddFriendsScreen ===
 
-// Module 17393 (AddFriendsScreen)
+// Module 17465 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8480 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12354 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12358 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 17396 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 17398 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8496 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12398 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12402 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 17468 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 17470 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7340 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7346 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 function handleFindFriends() {
-  ContactSyncModalActionCreators.openContactSyncModal({}, __initData2.FRIENDS_ADD_FRIENDS_MODAL);
+  ContactSyncModalActionCreators.openContactSyncModal({}, map1.FRIENDS_ADD_FRIENDS_MODAL);
 }
 function handleShare() {
   const self = this;
@@ -58,14 +58,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(12378).Sections;
+const Sections = fn(12422).Sections;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-let ContactPermissions = fn(12356).ContactPermissions;
+let ContactPermissions = fn(12400).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1 }, inviteAppsContainerNonSticky: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 }, inviteAppsContentContainer: { paddingTop: 0, paddingBottom: 0, minWidth: "100%" }, emptyContainer: null, emptyActionContainer: null, loading: null };
 let obj3 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 obj2.emptyContainer = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -80,11 +80,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   let obj = require("c");
   const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
   if (cResult[0] !== contactSyncAccount) {
-    const isContactSyncEnabledResult = tmp(12358).isContactSyncEnabled(contactSyncAccount);
+    const isContactSyncEnabledResult = tmp(12402).isContactSyncEnabled(contactSyncAccount);
     cResult[0] = contactSyncAccount;
     cResult[1] = isContactSyncEnabledResult;
     let tmp5 = isContactSyncEnabledResult;
-    let tmpResult = tmp(12358);
+    let tmpResult = tmp(12402);
   } else {
     tmp5 = cResult[1];
   }
@@ -1104,9 +1104,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       });
       let obj = sourcePage(analyticsLocations[29]);
       return sourcePage(analyticsLocations[29]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-        const name = items1(4923).getName(user.user);
-        const obj = items1(4923);
-        return name.localeCompare(items1(4923).getName(user2.user));
+        const name = items1(4962).getName(user.user);
+        const obj = items1(4962);
+        return name.localeCompare(items1(4962).getName(user2.user));
       });
     }
     const items8 = [first4, first3];
@@ -1145,9 +1145,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = sourcePage(4923).getName(arg0);
-      const obj = sourcePage(4923);
-      return name.localeCompare(sourcePage(4923).getName(arg1));
+      const name = sourcePage(4962).getName(arg0);
+      const obj = sourcePage(4962);
+      return name.localeCompare(sourcePage(4962).getName(arg1));
     });
   };
   cResult[13] = first2;
@@ -1221,7 +1221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     }
   }, []);
   sourcePage(analyticsLocations[27])(() => {
-    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: __initData2.FRIENDS_ADD_FRIENDS_MODAL, source_page: sourcePage });
+    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: map1.FRIENDS_ADD_FRIENDS_MODAL, source_page: sourcePage });
   });
   let items = [navigation];
   const onPress = userRowWithSubLabelHeight1.useCallback(() => {
@@ -1262,9 +1262,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = sourcePage(4923).getName(arg0);
-      const obj = sourcePage(4923);
-      return name.localeCompare(sourcePage(4923).getName(arg1));
+      const name = sourcePage(4962).getName(arg0);
+      const obj = sourcePage(4962);
+      return name.localeCompare(sourcePage(4962).getName(arg1));
     });
   });
   let obj5 = navigation(analyticsLocations[31]);
@@ -1299,9 +1299,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AddFrien
     });
     let obj = sourcePage(analyticsLocations[29]);
     return sourcePage(analyticsLocations[29]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4923).getName(user.user);
-      const obj = items1(4923);
-      return name.localeCompare(items1(4923).getName(user2.user));
+      const name = items1(4962).getName(user.user);
+      const obj = items1(4962);
+      return name.localeCompare(items1(4962).getName(user2.user));
     });
   }, items4, memo1);
   let obj6 = navigation(analyticsLocations[31]);

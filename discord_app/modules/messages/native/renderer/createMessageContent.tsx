@@ -1,38 +1,38 @@
-// === Module 7864: createMessageContent ===
+// === Module 7882: createMessageContent ===
 
-// Module 7864 (createMessageContent)
+// Module 7882 (createMessageContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1126 */;
-import useChannelName from "useChannelName" /* 5418 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 5951 */;
-import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7306 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7729 */;
-import GuildTagConstants from "GuildTagConstants" /* 7869 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7870 */;
-import MessageCountUtils from "MessageCountUtils" /* 7871 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7872 */;
-import _modDef7873 from "module_7873" /* 7873 */;
-import transformMessageComponentsDefault from "transformMessageComponents" /* 8231 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4898 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7734 */;
-import InteractionStore from "InteractionStore" /* 7865 */;
-import LurkingStore from "LurkingStore" /* 4710 */;
-import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 7866 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6999 */;
+import useChannelName from "useChannelName" /* 5421 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 5944 */;
+import ReferencedMessageStore2 from "ReferencedMessageStore" /* 7312 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7747 */;
+import GuildTagConstants from "GuildTagConstants" /* 7887 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7888 */;
+import MessageCountUtils from "MessageCountUtils" /* 7889 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7890 */;
+import _modDef7891 from "module_7891" /* 7891 */;
+import transformMessageComponentsDefault from "transformMessageComponents" /* 8247 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4937 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7752 */;
+import InteractionStore from "InteractionStore" /* 7883 */;
+import LurkingStore from "LurkingStore" /* 4751 */;
+import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 7884 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7005 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
-import UploadStore from "UploadStore" /* 7868 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
+import UploadStore from "UploadStore" /* 7886 */;
 import UserStore from "UserStore" /* 1390 */;
-import MessageConstants from "MessageConstants" /* 5084 */;
+import MessageConstants from "MessageConstants" /* 5085 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -69,7 +69,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
                 const obj3 = { title: channelName, messageCountLabel: intl5, messageCountAccessibilityLabel: string2, messagePreviewString: null, archived: true, archivedIconUrl: null, backgroundColor: null };
                 const intl4 = util.intl;
                 obj3.messagePreviewString = intl4.string(util.t.ZTo4HS);
-                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7873);
+                obj3.archivedIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef7891);
                 obj3.backgroundColor = backgroundColor;
                 obj4 = obj3;
                 const tmp15Result2 = renderer_EmbedUtils;
@@ -213,7 +213,7 @@ function createMessageContent(message) {
       const obj8 = { message, theme: forcedTheme, reactions: items, roleStyle };
       const merged2 = Object.assign(tmp13(tmp3[41]).createSystemMessageContent(obj8));
       let systemMessageContent = obj7;
-      const tmp13Result62 = tmp13(tmp3[41]);
+      const tmp13Result64 = tmp13(tmp3[41]);
     } else {
       const obj9 = { message, theme: forcedTheme, reactions: items, roleStyle, isForumPost: null };
       let isForumPostResult;
@@ -222,7 +222,7 @@ function createMessageContent(message) {
       }
       obj9.isForumPost = isForumPostResult;
       systemMessageContent = tmp13(tmp3[41]).createSystemMessageContent(obj9);
-      const tmp13Result63 = tmp13(tmp3[41]);
+      const tmp13Result65 = tmp13(tmp3[41]);
     }
     return systemMessageContent;
   } else {
@@ -238,7 +238,7 @@ function createMessageContent(message) {
     const result = tmp13(tmp3[42]).isMessageNewerThanImprovedMarkdownEpoch(timestamp.valueOf());
     if (null != message2.content) {
       if ("" !== message2.content) {
-        const tmp13Result65 = tmp13(tmp3[43]);
+        const tmp13Result67 = tmp13(tmp3[43]);
         if (!forceHideSimpleEmbedContent) {
           let tmp23 = tmp7;
           if (tmp7) {
@@ -247,7 +247,7 @@ function createMessageContent(message) {
           forceHideSimpleEmbedContent = tmp23;
         }
         const tmp24 = null != channel1 && message.isFirstMessageInForumPost(channel1);
-        let parseMessageMarkupResult = tmp13Result65.parseMessageMarkup(message, message2, forceHideSimpleEmbedContent, isInlineReplyPreview, tmp24, result, result);
+        let parseMessageMarkupResult = tmp13Result67.parseMessageMarkup(message, message2, forceHideSimpleEmbedContent, isInlineReplyPreview, tmp24, result, result);
       }
       ({ content, hasSpoilerEmbeds } = parseMessageMarkupResult);
       let tmp33 = restrictedPreview;
@@ -259,7 +259,7 @@ function createMessageContent(message) {
         stringResult = tmp2(tmp3[44])(content);
       }
       enabledHarmTypesForMessage = tmp13(tmp3[45]).getEnabledHarmTypesForMessage(message);
-      const tmp13Result66 = tmp13(tmp3[45]);
+      const tmp13Result68 = tmp13(tmp3[45]);
       result1 = tmp13(tmp3[46]).shouldAgeVerifyForExplicitMedia();
       const ViewImageDescriptions = tmp13(tmp3[47]).ViewImageDescriptions;
       setting = ViewImageDescriptions.getSetting();
@@ -294,7 +294,7 @@ function createMessageContent(message) {
         const tmp2Result7 = tmp2(tmp3[48]);
       }
       const obj11 = { message, isSystemDM, channel, colors: tmp4 };
-      const tmp13Result67 = tmp13(tmp3[46]);
+      const tmp13Result69 = tmp13(tmp3[46]);
       ({ tagText, tagAccessibilityLabel, tagVerified, tagTextColor, tagBackgroundColor, tagType, tagIconUrl, opTagText, opTagTextColor, opTagBackgroundColor } = tmp2(tmp3[50])(obj11));
       const uploaderFileForMessageId = UploadStore.getUploaderFileForMessageId(message.id);
       const tmp42 = tmp2(tmp3[50])(obj11);
@@ -318,12 +318,12 @@ function createMessageContent(message) {
         const obj13 = { errorMessage: message4.errorMessage, colors: tmp4 };
         items2.push(tmp13(tmp3[51]).createAutomodBlockedMessageEmbed(obj13));
         tmp51 = items2;
-        const tmp13Result68 = tmp13(tmp3[51]);
+        const tmp13Result70 = tmp13(tmp3[51]);
       }
       tmp46 = message.state !== constants2.SEND_FAILED || message.isCommandType();
       const userAuthor = tmp13(tmp3[52]).getUserAuthor(message.author, channel);
       ({ guildMemberAvatar, guildMemberAvatarDecoration, iconRoleId } = userAuthor);
-      const tmp13Result69 = tmp13(tmp3[52]);
+      const tmp13Result71 = tmp13(tmp3[52]);
       if (message.isInteractionPlaceholder()) {
         if (null == message.author.avatar) {
           if (null == guildMemberAvatar) {
@@ -337,19 +337,19 @@ function createMessageContent(message) {
               let applicationIconSource = tmp2(tmp3[54]).getApplicationIconSource(obj15);
               const tmp2Result8 = tmp2(tmp3[54]);
             }
-            const ensureAvatarSourceResult = tmp13Result70.ensureAvatarSource(applicationIconSource);
+            const ensureAvatarSourceResult = tmp13Result72.ensureAvatarSource(applicationIconSource);
             if (null == guildMemberAvatarDecoration) {
               guildMemberAvatarDecoration = author.avatarDecoration;
             }
             const obj16 = { avatarDecoration: guildMemberAvatarDecoration, size: null };
-            const tmp13Result71 = tmp13(tmp3[54]);
+            const tmp13Result73 = tmp13(tmp3[54]);
             obj16.size = tmp13(tmp3[55]).getDecorationSizeForAvatarSize(tmp13(tmp3[56]).AvatarSizes.NORMAL);
             let member = null;
-            const avatarDecorationURL = tmp13Result71.getAvatarDecorationURL(obj16);
+            const avatarDecorationURL = tmp13Result73.getAvatarDecorationURL(obj16);
             if (null != guildId1) {
               member = GuildMemberStore.getMember(guildId1, author.id);
             }
-            const tmp13Result72 = tmp13(tmp3[55]);
+            const tmp13Result74 = tmp13(tmp3[55]);
             let prop;
             if (member != null) {
               prop = member.gamingLeaderboardData;
@@ -365,89 +365,105 @@ function createMessageContent(message) {
                 }
               }
             }
+            const tmp13Result75 = tmp13(tmp3[57]);
+            let prop1;
+            if (member != null) {
+              prop1 = member.gamingLeaderboardData;
+            }
+            const activeLeaderboardLeaderData = tmp13(tmp3[57]).getActiveLeaderboardLeaderData(prop1);
             if (null != tmp62) {
               const obj17 = { unicodeEmoji: "\u{1F3C6}", name: tmp13(tmp3[58]).LEADERBOARD_WINNER_ROLE_NAME_PREFIX + tmp13(tmp3[58]).encodeWinnerData(tmp62), size: 18, alt: null };
-              const tmp13Result74 = tmp13(tmp3[58]);
+              const tmp13Result77 = tmp13(tmp3[58]);
               obj17.alt = tmp13(tmp3[58]).getLeaderboardWinnerBadgeText(tmp62);
               let roleIcon = obj17;
-              const tmp13Result75 = tmp13(tmp3[58]);
+              const tmp13Result78 = tmp13(tmp3[58]);
+            } else if (null != activeLeaderboardLeaderData) {
+              const obj18 = { unicodeEmoji: tmp13(tmp3[58]).LEADERBOARD_LEADER_EMOJI, name: null, size: 18, alt: null };
+              let num = activeLeaderboardLeaderData.currentLeaderStat;
+              if (num == null) {
+                num = 0;
+              }
+              obj18.name = tmp13(tmp3[58]).LEADERBOARD_LEADER_ROLE_NAME_PREFIX + num;
+              obj18.alt = tmp13(tmp3[58]).getLeaderboardLeaderBadgeText(activeLeaderboardLeaderData);
+              roleIcon = obj18;
+              const tmp13Result79 = tmp13(tmp3[58]);
             } else if (null != iconRoleId) {
               if (null != guildId1) {
-                const obj18 = { guildId: guildId1, roleId: iconRoleId, size: 18 };
-                roleIcon = tmp13(tmp3[59]).getRoleIcon(obj18);
-                const tmp13Result76 = tmp13(tmp3[59]);
+                const obj19 = { guildId: guildId1, roleId: iconRoleId, size: 18 };
+                roleIcon = tmp13(tmp3[59]).getRoleIcon(obj19);
+                const tmp13Result80 = tmp13(tmp3[59]);
               }
             }
             if (message.hasFlag(constants3.SOURCE_MESSAGE_DELETED)) {
               const intl = tmp13(tmp3[29]).intl;
               stringResult = intl.string(tmp13(tmp3[29]).t.JOtgSw);
             }
-            const tmp13Result73 = tmp13(tmp3[57]);
+            const tmp13Result76 = tmp13(tmp3[57]);
             const messageAuthor = tmp13(tmp3[52]).getMessageAuthor(message);
             ({ nick, colorString, colorStrings } = messageAuthor);
             if (message.type === constants.INTERACTION_PREMIUM_UPSELL) {
               const intl2 = tmp13(tmp3[29]).intl;
-              const obj19 = { appName: nick };
-              stringResult = intl2.formatToPlainString(tmp13(tmp3[29]).t["u4A+xK"], obj19);
+              const obj20 = { appName: nick };
+              stringResult = intl2.formatToPlainString(tmp13(tmp3[29]).t["u4A+xK"], obj20);
             }
             if (message.type === constants.REPLY) {
               if (renderReplies) {
                 const messageByReference1 = ReferencedMessageStore.getMessageByReference(message.messageReference);
-                state = messageByReference1.state;
+                const state = messageByReference1.state;
                 if (ReferencedMessageState.LOADED === state) {
                   const message3 = messageByReference1.message;
                   const result2 = tmp13(tmp3[38]).maybeCreateSingleForwardForMessage(message3);
                   if (RelationshipStore.isBlockedForMessage(message3)) {
-                    const obj20 = { state: ReferencedMessageRowState.SYSTEM, content: null };
-                    const intl12 = tmp13(tmp3[29]).intl;
-                    obj20.content = intl12.string(tmp13(tmp3[29]).t.XAkOo2);
-                    let tmp66 = obj20;
-                  } else if (RelationshipStore.isIgnoredForMessage(message3)) {
                     const obj21 = { state: ReferencedMessageRowState.SYSTEM, content: null };
+                    const intl12 = tmp13(tmp3[29]).intl;
+                    obj21.content = intl12.string(tmp13(tmp3[29]).t.XAkOo2);
+                    let tmp68 = obj21;
+                  } else if (RelationshipStore.isIgnoredForMessage(message3)) {
+                    const obj22 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                     const intl11 = tmp13(tmp3[29]).intl;
-                    obj21.content = intl11.string(tmp13(tmp3[29]).t["G7p6v/"]);
-                    tmp66 = obj21;
+                    obj22.content = intl11.string(tmp13(tmp3[29]).t["G7p6v/"]);
+                    tmp68 = obj22;
                   } else {
-                    const obj22 = { message: message3, messageForward: result2, roleStyle, isFirst: true, isEditing: false, canShowImages: true, isSystemDM: false, isInlineReplyPreview: true, options: null };
-                    const obj23 = {};
+                    const obj23 = { message: message3, messageForward: result2, roleStyle, isFirst: true, isEditing: false, canShowImages: true, isSystemDM: false, isInlineReplyPreview: true, options: null };
+                    const obj24 = {};
                     const merged3 = Object.assign(options);
-                    obj23.renderReplies = false;
-                    obj22.options = obj23;
-                    const tmp78 = createMessageContent(obj22);
-                    if (null == tmp78) {
-                      const obj24 = { state: ReferencedMessageRowState.SYSTEM, content: null };
+                    obj24.renderReplies = false;
+                    obj23.options = obj24;
+                    const tmp80 = createMessageContent(obj23);
+                    if (null == tmp80) {
+                      const obj25 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                       const intl10 = tmp13(tmp3[29]).intl;
-                      obj24.content = intl10.string(tmp13(tmp3[29]).t["1i+hMi"]);
-                      tmp66 = obj24;
+                      obj25.content = intl10.string(tmp13(tmp3[29]).t["1i+hMi"]);
+                      tmp68 = obj25;
                     } else {
-                      if ("username" in tmp78) {
+                      if ("username" in tmp80) {
                         const messageAuthor1 = tmp13(tmp3[52]).getMessageAuthor(message3);
                         ({ nick: nick2, colorString: colorString2 } = messageAuthor1);
                         if (nick2 == null) {
                           nick2 = message3.author.username;
                         }
-                        tmp78.username = nick2;
+                        tmp80.username = nick2;
                         if (tmp21) {
-                          let colorString3 = tmp78.colorString;
+                          let colorString3 = tmp80.colorString;
                         } else {
                           colorString3 = shouldDisableInteractiveComponents(colorString2);
                           if (colorString3 == null) {
-                            colorString3 = tmp78.colorString;
+                            colorString3 = tmp80.colorString;
                           }
                         }
-                        tmp78.colorString = colorString3;
+                        tmp80.colorString = colorString3;
                         if (tmp2(tmp3[60])(message, message3)) {
-                          tmp78.username = `@${tmp78.username}`;
+                          tmp80.username = `@${tmp80.username}`;
                         }
-                        const tmp13Result79 = tmp13(tmp3[52]);
+                        const tmp13Result83 = tmp13(tmp3[52]);
                       }
                       const _Array = Array;
-                      let isArray = Array.isArray(tmp78.content);
+                      let isArray = Array.isArray(tmp80.content);
                       if (isArray) {
-                        isArray = 0 === tmp78.content.length;
+                        isArray = 0 === tmp80.content.length;
                       }
                       if (isArray) {
-                        tmp78.content = undefined;
+                        tmp80.content = undefined;
                       }
                       let message5;
                       if (result2 != null) {
@@ -458,7 +474,7 @@ function createMessageContent(message) {
                       }
                       if ("stickers" in message5) {
                         let messageStickers = tmp13(tmp3[33]).getMessageStickers(message5);
-                        const tmp13Result80 = tmp13(tmp3[33]);
+                        const tmp13Result84 = tmp13(tmp3[33]);
                       } else {
                         messageStickers = [];
                       }
@@ -474,14 +490,14 @@ function createMessageContent(message) {
                             }
                           }
                         }
-                        if (tmp13Result81.hasFlag(message5.flags, constants3.IS_VOICE_MESSAGE)) {
+                        if (tmp13Result85.hasFlag(message5.flags, constants3.IS_VOICE_MESSAGE)) {
                           const intl7 = tmp13(tmp3[29]).intl;
                           stringResult1 = intl7.string(tmp13(tmp3[29]).t["6bhHrc"]);
                         } else if (message5.type === constants.POLL_RESULT) {
                           stringResult1 = tmp13(tmp3[35]).getPollResultsReplyPreviewMobile(message5);
-                          const tmp13Result82 = tmp13(tmp3[35]);
+                          const tmp13Result86 = tmp13(tmp3[35]);
                         } else {
-                          if (tmp13Result83.hasFlag(message5.flags, constants3.IS_COMPONENTS_V2)) {
+                          if (tmp13Result87.hasFlag(message5.flags, constants3.IS_COMPONENTS_V2)) {
                             const intl6 = tmp13(tmp3[29]).intl;
                             stringResult1 = intl6.string(tmp13(tmp3[29]).t.Xxm5i3);
                           } else if ("" === message5.content) {
@@ -490,44 +506,44 @@ function createMessageContent(message) {
                           } else {
                             stringResult1 = null;
                           }
-                          tmp13Result83 = tmp13(tmp3[34]);
+                          tmp13Result87 = tmp13(tmp3[34]);
                         }
-                        tmp13Result81 = tmp13(tmp3[34]);
+                        tmp13Result85 = tmp13(tmp3[34]);
                       }
                       if (message3.type === constants.POLL_RESULT) {
-                        tmp78.content = stringResult1;
+                        tmp80.content = stringResult1;
                       }
-                      const obj25 = { state: ReferencedMessageRowState.LOADED, message: tmp78 };
-                      tmp66 = obj25;
+                      const obj26 = { state: ReferencedMessageRowState.LOADED, message: tmp80 };
+                      tmp68 = obj26;
                       if (null != stringResult1) {
-                        obj25.systemContent = stringResult1;
-                        tmp66 = obj25;
+                        obj26.systemContent = stringResult1;
+                        tmp68 = obj26;
                       }
                     }
                   }
-                  const tmp13Result78 = tmp13(tmp3[38]);
+                  const tmp13Result82 = tmp13(tmp3[38]);
                 } else if (ReferencedMessageState.NOT_LOADED === state) {
-                  const obj26 = { state: ReferencedMessageRowState.SYSTEM, content: null };
-                  const intl4 = tmp13(tmp3[29]).intl;
-                  obj26.content = intl4.string(tmp13(tmp3[29]).t["1i+hMi"]);
-                  tmp66 = obj26;
-                } else if (ReferencedMessageState.DELETED === state) {
                   const obj27 = { state: ReferencedMessageRowState.SYSTEM, content: null };
+                  const intl4 = tmp13(tmp3[29]).intl;
+                  obj27.content = intl4.string(tmp13(tmp3[29]).t["1i+hMi"]);
+                  tmp68 = obj27;
+                } else if (ReferencedMessageState.DELETED === state) {
+                  const obj28 = { state: ReferencedMessageRowState.SYSTEM, content: null };
                   const intl3 = tmp13(tmp3[29]).intl;
-                  obj27.content = intl3.string(tmp13(tmp3[29]).t.mE3KJN);
-                  tmp66 = obj27;
+                  obj28.content = intl3.string(tmp13(tmp3[29]).t.mE3KJN);
+                  tmp68 = obj28;
                 } else {
                   tmp13(tmp3[61]).assertNever(messageByReference1);
-                  const tmp13Result84 = tmp13(tmp3[61]);
+                  const tmp13Result88 = tmp13(tmp3[61]);
                 }
               }
             }
             if (renderThreadEmbeds) {
-              const tmp89 = createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6);
+              const tmp91 = createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, options, tmp6);
             }
-            const tmp13Result77 = tmp13(tmp3[52]);
+            const tmp13Result81 = tmp13(tmp3[52]);
             const interactionStatus = tmp13(tmp3[62]).createInteractionStatus(message, interaction);
-            const tmp13Result85 = tmp13(tmp3[62]);
+            const tmp13Result89 = tmp13(tmp3[62]);
             const useReducedMotion = AccessibilityStore.useReducedMotion;
             let parent_id;
             const result3 = tmp13(tmp3[63]).isMemberCommunicationDisabled(member);
@@ -545,33 +561,33 @@ function createMessageContent(message) {
                 channel2 = ChannelStore.getChannel(channel.parent_id);
               }
             }
-            const tmp13Result86 = tmp13(tmp3[63]);
-            const obj28 = { guildMember: member, channel: channel2, onlyChannelConnectionRoles: true };
-            const visibleConnectionsRole = tmp13(tmp3[64]).getVisibleConnectionsRole(obj28);
-            let tmp104 = tmp44;
+            const tmp13Result90 = tmp13(tmp3[63]);
+            const obj29 = { guildMember: member, channel: channel2, onlyChannelConnectionRoles: true };
+            const visibleConnectionsRole = tmp13(tmp3[64]).getVisibleConnectionsRole(obj29);
+            let tmp106 = tmp44;
             if (tmp44) {
-              tmp104 = 0 === message.attachments.length;
+              tmp106 = 0 === message.attachments.length;
             }
-            if (tmp104) {
-              tmp104 = null != uploaderFileForMessageId;
+            if (tmp106) {
+              tmp106 = null != uploaderFileForMessageId;
             }
-            if (tmp104) {
-              const obj29 = { uploaderFile: uploaderFileForMessageId, isFailedMessage: message.state === constants2.SEND_FAILED, shouldInlineAttachmentMedia: tmp10 };
-              let items3 = tmp2(tmp3[65])(obj29);
+            if (tmp106) {
+              const obj30 = { uploaderFile: uploaderFileForMessageId, isFailedMessage: message.state === constants2.SEND_FAILED, shouldInlineAttachmentMedia: tmp10 };
+              let items3 = tmp2(tmp3[65])(obj30);
             } else {
               items3 = [];
               if (renderAttachments) {
-                const obj30 = { attachments: message2.attachments, uploadAttachments: UploadStore.getUploadAttachments(message.nonce), shouldInlineAttachmentMedia: tmp10, gifAutoPlay, viewImageDescriptions: setting, useReducedMotion, shouldObscureSpoiler, themedBackgroundColor: tmp4.embedBackgroundColor, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, colors: tmp4 };
-                items3 = tmp2(tmp3[66])(obj30);
+                const obj31 = { attachments: message2.attachments, uploadAttachments: UploadStore.getUploadAttachments(message.nonce), shouldInlineAttachmentMedia: tmp10, gifAutoPlay, viewImageDescriptions: setting, useReducedMotion, shouldObscureSpoiler, themedBackgroundColor: tmp4.embedBackgroundColor, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, colors: tmp4 };
+                items3 = tmp2(tmp3[66])(obj31);
                 const tmp2Result9 = tmp2(tmp3[66]);
               }
             }
-            if (tmp104) {
+            if (tmp106) {
               if (message.state !== constants2.SEND_FAILED) {
                 const intl13 = tmp13(tmp3[29]).intl;
                 let stringResult2 = intl13.string(tmp13(tmp3[29]).t["yXY+5J"]);
               }
-              if (tmp104) {
+              if (tmp106) {
                 if (message.state !== constants2.SEND_FAILED) {
                   const intl14 = tmp13(tmp3[29]).intl;
                   let stringResult3 = intl14.string(tmp13(tmp3[29]).t["yXY+5J"]);
@@ -583,43 +599,43 @@ function createMessageContent(message) {
                   stringResult4 = intl15.string(tmp13(tmp3[29]).t.sWi5EU);
                 }
                 const isPollResult = message.isPoll();
-                let tmp112 = !isPollResult;
+                let tmp114 = !isPollResult;
                 if (isPollResult) {
-                  let tmp113 = !isInlineReplyPreview;
+                  let tmp115 = !isInlineReplyPreview;
                   if (!isInlineReplyPreview) {
-                    tmp113 = renderPolls;
+                    tmp115 = renderPolls;
                   }
-                  tmp112 = tmp113;
+                  tmp114 = tmp115;
                 }
-                if (!tmp112) {
-                  let tmp114 = null != stringResult;
-                  if (tmp114) {
-                    tmp114 = "" !== stringResult;
+                if (!tmp114) {
+                  let tmp116 = null != stringResult;
+                  if (tmp116) {
+                    tmp116 = "" !== stringResult;
                   }
-                  tmp112 = tmp114;
+                  tmp114 = tmp116;
                 }
-                if (!tmp112) {
+                if (!tmp114) {
                   stringResult4 = tmp13(tmp3[35]).getPollReplyPreview(message);
-                  const tmp13Result88 = tmp13(tmp3[35]);
+                  const tmp13Result92 = tmp13(tmp3[35]);
                 }
                 if (renderPolls) {
-                  const obj31 = { theme: forcedTheme, animateEmoji };
-                  const tmp115 = tmp2(tmp3[68])(message, undefined, obj31);
+                  const obj32 = { theme: forcedTheme, animateEmoji };
+                  const tmp117 = tmp2(tmp3[68])(message, undefined, obj32);
                 }
                 if (renderSharedClientTheme) {
                   const result4 = tmp13(tmp3[69]).formatSharedClientThemeData(message, ensureAvatarSourceResult, nick);
-                  const tmp13Result89 = tmp13(tmp3[69]);
+                  const tmp13Result93 = tmp13(tmp3[69]);
                 }
-                if (tmp13Result90.shouldDisplayGuildTag(author.id, tmp117)) {
+                if (tmp13Result94.shouldDisplayGuildTag(author.id, tmp119)) {
                   const userPrimaryGuild = tmp13(tmp3[70]).getUserPrimaryGuild(author.primaryGuild);
                   let guildTagBadgeUrl;
                   ({ guildId, tag } = userPrimaryGuild);
                   if (null != userPrimaryGuild.guildId) {
                     guildTagBadgeUrl = tmp13(tmp3[70]).getGuildTagBadgeUrl(userPrimaryGuild.guildId, userPrimaryGuild.badge, GuildTagBadgeSize.SIZE_12);
-                    const tmp13Result92 = tmp13(tmp3[70]);
+                    const tmp13Result96 = tmp13(tmp3[70]);
                   }
-                  const tmp118 = guildTagBadgeUrl;
-                  const tmp13Result91 = tmp13(tmp3[70]);
+                  const tmp120 = guildTagBadgeUrl;
+                  const tmp13Result95 = tmp13(tmp3[70]);
                 }
                 let linkedLobby;
                 if (channel != null) {
@@ -635,24 +651,24 @@ function createMessageContent(message) {
                       }
                       let applicationIconURL;
                       if (null != icon1) {
-                        ({ id: obj65.id, icon: obj65.icon } = application1);
+                        ({ id: obj68.id, icon: obj68.icon } = application1);
                         applicationIconURL = tmp2(tmp3[54]).getApplicationIconURL({ id: null, icon: null, size: 16 });
-                        const obj32 = { id: null, icon: null, size: 16 };
+                        const obj33 = { id: null, icon: null, size: 16 };
                         const tmp2Result10 = tmp2(tmp3[54]);
                       }
                       const additionalName = message.additionalName;
-                      const tmp125 = applicationIconURL;
+                      const tmp127 = applicationIconURL;
                     }
                   }
                 }
-                tmp117 = guildId1;
-                tmp13Result90 = tmp13(tmp3[70]);
-                let tmp130 = message2;
+                tmp119 = guildId1;
+                tmp13Result94 = tmp13(tmp3[70]);
+                let tmp132 = message2;
                 if (message2 == null) {
-                  tmp130 = message;
+                  tmp132 = message;
                 }
                 let str8 = message.applicationId;
-                const tmp13Result93 = tmp13(tmp3[34]);
+                const tmp13Result97 = tmp13(tmp3[34]);
                 if (str8 == null) {
                   str8 = "";
                 }
@@ -660,7 +676,7 @@ function createMessageContent(message) {
                 let hasFlagResult1 = null != application2;
                 if (hasFlagResult1) {
                   hasFlagResult1 = tmp13(tmp3[34]).hasFlag(message.flags, constants3.SENT_BY_SOCIAL_LAYER_INTEGRATION);
-                  const tmp13Result94 = tmp13(tmp3[34]);
+                  const tmp13Result98 = tmp13(tmp3[34]);
                 }
                 if (hasFlagResult1) {
                   const id = application2.id;
@@ -673,88 +689,88 @@ function createMessageContent(message) {
                 if (hasFlagResult2) {
                   guild = GuildStore.getGuild(guildId1);
                   if (null != guild) {
-                    if (tmp13Result95.isGuildOfficialMessagesEnabled(guild, "createMessageContent")) {
+                    if (tmp13Result99.isGuildOfficialMessagesEnabled(guild, "createMessageContent")) {
                       let officialMessageColor = guild.officialMessageColor;
                       if (officialMessageColor == null) {
                         officialMessageColor = closure_24;
                       }
-                      const officialMessageStyle = tmp99.officialMessageStyle;
+                      const officialMessageStyle = tmp101.officialMessageStyle;
                       const result5 = tmp13(tmp3[71]).showGuildOfficialMessageGradient(officialMessageStyle);
-                      let tmp141;
+                      let tmp143;
                       if (result5) {
-                        tmp141 = officialMessageColor | closure_26;
+                        tmp143 = officialMessageColor | closure_26;
                       }
-                      const tmp13Result96 = tmp13(tmp3[71]);
+                      const tmp13Result100 = tmp13(tmp3[71]);
                       let numResult;
-                      if (tmp13Result97.showGuildOfficialMessageTextColor(officialMessageStyle)) {
+                      if (tmp13Result101.showGuildOfficialMessageTextColor(officialMessageStyle)) {
                         const internal = tmp2(tmp3[72]).internal;
                         const semanticColor = internal.resolveSemanticColor(forcedTheme, tmp2(tmp3[72]).colors.BACKGROUND_BASE_LOWER);
-                        let num5 = 1;
-                        if (tmp99.desaturateUserColors) {
-                          num5 = tmp99.saturation;
+                        let num6 = 1;
+                        if (tmp101.desaturateUserColors) {
+                          num6 = tmp101.saturation;
                         }
-                        const tmp13Result98 = tmp13(tmp3[71]);
-                        let num6 = 0;
+                        const tmp13Result102 = tmp13(tmp3[71]);
+                        let num7 = 0;
                         if (result5) {
-                          num6 = closure_25;
+                          num7 = closure_25;
                         }
-                        const accessibleGuildOfficialTextColor = tmp13Result98.getAccessibleGuildOfficialTextColor(officialMessageColor, semanticColor, num5, num6);
+                        const accessibleGuildOfficialTextColor = tmp13Result102.getAccessibleGuildOfficialTextColor(officialMessageColor, semanticColor, num6, num7);
                         numResult = accessibleGuildOfficialTextColor.num();
                       }
                       const intl16 = tmp13(tmp3[29]).intl;
                       items4.push(intl16.string(tmp13(tmp3[29]).t.GzDTxY));
-                      const tmp137 = tmp141;
-                      tmp13Result97 = tmp13(tmp3[71]);
+                      const tmp139 = tmp143;
+                      tmp13Result101 = tmp13(tmp3[71]);
                     }
-                    tmp13Result95 = tmp13(tmp3[71]);
+                    tmp13Result99 = tmp13(tmp3[71]);
                   }
                 }
-                let obj73 = message2;
+                let obj76 = message2;
                 if (message2 == null) {
-                  obj73 = message;
+                  obj76 = message;
                 }
-                if (obj73.hasFlag(constants3.SUPPRESS_NOTIFICATIONS)) {
+                if (obj76.hasFlag(constants3.SUPPRESS_NOTIFICATIONS)) {
                   const intl17 = tmp13(tmp3[29]).intl;
                   items4.push(intl17.string(tmp13(tmp3[29]).t.t0MA8g));
                 }
                 if (items4.length > 0) {
                   const joined = items4.join(", ");
                 }
-                const hasFlagResult = tmp13(tmp3[34]).hasFlag(tmp130.flags, constants3.IS_VOICE_MESSAGE);
-                const obj33 = { id: null, channelId: null, guildId: null, flags: null, type: null, nonce: null, state: null, reactions: null, referencedMessage: null, threadEmbed: null, forwardInfo: null, mentioned: null, edited: null, editedTimestamp: null, editedColor: null, textColor: null, officialMessageColor: null, linkColor: null, tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: null, tagBackgroundColor: null, tagType: null, tagIconUrl: null, opTagText: null, opTagTextColor: null, opTagBackgroundColor: null, stateAccessibilityLabel: null, constrainedWidth: null, gifAutoPlay: null, animateEmoji: null, username: null, avatarURL: null, avatarDecorationURL: null, authorId: null, usernameColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, shouldShowRoleOnName: null, showLinkDecorations: null, forceRevealSpoilers: null, colorString: null, roleIcon: null, connectionsRoleTag: null, timestamp: null, timestampTooltip: null, timestampColor: null, timestampAccessibilityLabel: null, content: null, isEditing: null, renderContentOnly: null, surveyIndication: null, ephemeralIndication: null, interactionStatus: null, executedCommand: null, components: null, feedbackColor: null, highlightColor: null, embeds: null, giftCodes: null, codedLinks: null, activityInstanceEmbed: null, activityRichPresenceInviteEmbed: null, useAttachmentGridLayout: null, useAttachmentUploadPreview: null, attachments: null, attachmentsOpacity: null, stickers: null, communicationDisabled: null, isFirstForumPostMessage: null, postActions: null, isCurrentUserMessageAuthor: null, usingGradientTheme: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, postPreviewEmbeds: null, obscureLearnMoreLabel: null, safetyPolicyNoticeEmbed: null, pollData: null, sharedClientTheme: null, safetySystemNotificationEmbed: null };
-                ({ id: obj75.id, channel_id: obj75.channelId } = message);
+                const hasFlagResult = tmp13(tmp3[34]).hasFlag(tmp132.flags, constants3.IS_VOICE_MESSAGE);
+                const obj34 = { id: null, channelId: null, guildId: null, flags: null, type: null, nonce: null, state: null, reactions: null, referencedMessage: null, threadEmbed: null, forwardInfo: null, mentioned: null, edited: null, editedTimestamp: null, editedColor: null, textColor: null, officialMessageColor: null, linkColor: null, tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: null, tagBackgroundColor: null, tagType: null, tagIconUrl: null, opTagText: null, opTagTextColor: null, opTagBackgroundColor: null, stateAccessibilityLabel: null, constrainedWidth: null, gifAutoPlay: null, animateEmoji: null, username: null, avatarURL: null, avatarDecorationURL: null, authorId: null, usernameColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null, shouldShowRoleOnName: null, showLinkDecorations: null, forceRevealSpoilers: null, colorString: null, roleIcon: null, connectionsRoleTag: null, timestamp: null, timestampTooltip: null, timestampColor: null, timestampAccessibilityLabel: null, content: null, isEditing: null, renderContentOnly: null, surveyIndication: null, ephemeralIndication: null, interactionStatus: null, executedCommand: null, components: null, feedbackColor: null, highlightColor: null, embeds: null, giftCodes: null, codedLinks: null, activityInstanceEmbed: null, activityRichPresenceInviteEmbed: null, useAttachmentGridLayout: null, useAttachmentUploadPreview: null, attachments: null, attachmentsOpacity: null, stickers: null, communicationDisabled: null, isFirstForumPostMessage: null, postActions: null, isCurrentUserMessageAuthor: null, usingGradientTheme: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, postPreviewEmbeds: null, obscureLearnMoreLabel: null, safetyPolicyNoticeEmbed: null, pollData: null, sharedClientTheme: null, safetySystemNotificationEmbed: null };
+                ({ id: obj78.id, channel_id: obj78.channelId } = message);
                 const voiceChannelBadge = tmp13(tmp3[73]).createVoiceChannelBadge(message.author.id, guildId1);
-                obj33.guildId = guildId1;
-                let tmp155 = message2;
+                obj34.guildId = guildId1;
+                let tmp157 = message2;
                 if (message2 == null) {
-                  tmp155 = message;
+                  tmp157 = message;
                 }
-                obj33.flags = tmp155.flags;
-                obj33.type = message.type;
+                obj34.flags = tmp157.flags;
+                obj34.type = message.type;
                 if (null != message.nonce) {
                   if (typeof message.nonce !== "string") {
                     const _String = String;
                     let nonce = String(message.nonce);
                   }
-                  obj33.nonce = nonce;
-                  obj33.state = message.state;
-                  obj33.reactions = items;
-                  let tmp157;
+                  obj34.nonce = nonce;
+                  obj34.state = message.state;
+                  obj34.reactions = items;
+                  let tmp159;
                   if (!renderContentOnly) {
-                    tmp157 = tmp66;
+                    tmp159 = tmp68;
                   }
-                  obj33.referencedMessage = tmp157;
-                  obj33.threadEmbed = tmp89;
+                  obj34.referencedMessage = tmp159;
+                  obj34.threadEmbed = tmp91;
                   let forwardInfo;
                   if (null != messageForward) {
                     forwardInfo = messageForward.getForwardInfo();
                   }
-                  obj33.forwardInfo = forwardInfo;
+                  obj34.forwardInfo = forwardInfo;
                   let mentioned = !ignoreMentioned;
                   if (!ignoreMentioned) {
                     mentioned = message.mentioned;
                   }
-                  obj33.mentioned = mentioned;
+                  obj34.mentioned = mentioned;
                   let str12 = "";
                   if (message.isEdited()) {
                     str12 = "";
@@ -763,57 +779,57 @@ function createMessageContent(message) {
                       str12 = intl18.string(tmp13(tmp3[29]).t.C8sXIM);
                     }
                   }
-                  obj33.edited = str12;
+                  obj34.edited = str12;
                   let dateFormatResult;
                   if (message.isEdited()) {
                     if (!renderContentOnly) {
                       if (null != message.editedTimestamp) {
                         dateFormatResult = tmp13(tmp3[67]).dateFormat(message.editedTimestamp, "LLLL");
-                        const tmp13Result100 = tmp13(tmp3[67]);
+                        const tmp13Result104 = tmp13(tmp3[67]);
                       }
                     }
                   }
-                  obj33.editedTimestamp = dateFormatResult;
-                  obj33.editedColor = tmp4.editedColor;
+                  obj34.editedTimestamp = dateFormatResult;
+                  obj34.editedColor = tmp4.editedColor;
                   if (message.isUnsupported) {
                     let textColor = tmp4.unsupportedColor;
-                  } else if (null != tmp136) {
-                    textColor = 4278190080 | tmp136;
+                  } else if (null != tmp138) {
+                    textColor = 4278190080 | tmp138;
                   } else {
                     textColor = tmp4.textColor;
                   }
-                  obj33.textColor = textColor;
-                  obj33.officialMessageColor = tmp137;
-                  obj33.linkColor = tmp4.linkColor;
-                  obj33.tagText = tagText;
-                  obj33.tagAccessibilityLabel = tagAccessibilityLabel;
-                  obj33.tagVerified = tagVerified;
-                  obj33.tagTextColor = tagTextColor;
-                  obj33.tagBackgroundColor = tagBackgroundColor;
-                  obj33.tagType = tagType;
-                  obj33.tagIconUrl = tagIconUrl;
-                  obj33.opTagText = opTagText;
-                  obj33.opTagTextColor = opTagTextColor;
-                  obj33.opTagBackgroundColor = opTagBackgroundColor;
-                  obj33.stateAccessibilityLabel = joined;
-                  obj33.constrainedWidth = constrainedWidth;
-                  obj33.gifAutoPlay = gifAutoPlay;
-                  obj33.animateEmoji = animateEmoji;
+                  obj34.textColor = textColor;
+                  obj34.officialMessageColor = tmp139;
+                  obj34.linkColor = tmp4.linkColor;
+                  obj34.tagText = tagText;
+                  obj34.tagAccessibilityLabel = tagAccessibilityLabel;
+                  obj34.tagVerified = tagVerified;
+                  obj34.tagTextColor = tagTextColor;
+                  obj34.tagBackgroundColor = tagBackgroundColor;
+                  obj34.tagType = tagType;
+                  obj34.tagIconUrl = tagIconUrl;
+                  obj34.opTagText = opTagText;
+                  obj34.opTagTextColor = opTagTextColor;
+                  obj34.opTagBackgroundColor = opTagBackgroundColor;
+                  obj34.stateAccessibilityLabel = joined;
+                  obj34.constrainedWidth = constrainedWidth;
+                  obj34.gifAutoPlay = gifAutoPlay;
+                  obj34.animateEmoji = animateEmoji;
                   if (tmp21) {
                     nick = author.username;
                   }
-                  obj33.username = nick;
+                  obj34.username = nick;
                   let uri;
                   if (!tmp21) {
                     uri = ensureAvatarSourceResult.uri;
                   }
-                  obj33.avatarURL = uri;
-                  let tmp161 = null;
+                  obj34.avatarURL = uri;
+                  let tmp163 = null;
                   if (!tmp21) {
-                    tmp161 = avatarDecorationURL;
+                    tmp163 = avatarDecorationURL;
                   }
-                  obj33.avatarDecorationURL = tmp161;
-                  obj33.authorId = author.id;
+                  obj34.avatarDecorationURL = tmp163;
+                  obj34.authorId = author.id;
                   if (!tmp21) {
                     if ("username" === roleStyle) {
                       let defaultUsernameColor = shouldDisableInteractiveComponents(colorString);
@@ -821,29 +837,29 @@ function createMessageContent(message) {
                         defaultUsernameColor = tmp4.defaultUsernameColor;
                       }
                     }
-                    obj33.usernameColor = defaultUsernameColor;
-                    let tmp164 = null;
+                    obj34.usernameColor = defaultUsernameColor;
+                    let tmp166 = null;
                     if (!tmp21) {
-                      let tmp165Result = shouldDisableInteractiveComponents(colorString);
-                      if (tmp165Result == null) {
-                        tmp165Result = null;
+                      let tmp167Result = shouldDisableInteractiveComponents(colorString);
+                      if (tmp167Result == null) {
+                        tmp167Result = null;
                       }
-                      tmp164 = tmp165Result;
+                      tmp166 = tmp167Result;
                     }
-                    obj33.roleColor = tmp164;
+                    obj34.roleColor = tmp166;
                     let processColorStringsResult = null;
                     if (hasEnhancedRoleColors) {
                       processColorStringsResult = null;
                       if (!tmp21) {
                         processColorStringsResult = tmp13(tmp3[74]).processColorStrings(colorStrings);
-                        const tmp13Result101 = tmp13(tmp3[74]);
+                        const tmp13Result105 = tmp13(tmp3[74]);
                       }
                     }
-                    obj33.roleColors = processColorStringsResult;
-                    obj33.shouldShowRoleDot = "dot" === roleStyle;
-                    obj33.shouldShowRoleOnName = "username" === roleStyle;
-                    obj33.showLinkDecorations = AccessibilityStore.alwaysShowLinkDecorations;
-                    obj33.forceRevealSpoilers = !shouldObscureSpoiler;
+                    obj34.roleColors = processColorStringsResult;
+                    obj34.shouldShowRoleDot = "dot" === roleStyle;
+                    obj34.shouldShowRoleOnName = "username" === roleStyle;
+                    obj34.showLinkDecorations = AccessibilityStore.alwaysShowLinkDecorations;
+                    obj34.forceRevealSpoilers = !shouldObscureSpoiler;
                     if (tmp21) {
                       let defaultUsernameColor2 = tmp4.defaultUsernameColor;
                     } else {
@@ -852,147 +868,147 @@ function createMessageContent(message) {
                         defaultUsernameColor2 = tmp4.defaultUsernameColor;
                       }
                     }
-                    obj33.colorString = defaultUsernameColor2;
-                    let tmp170;
+                    obj34.colorString = defaultUsernameColor2;
+                    let tmp172;
                     if (!tmp21) {
-                      tmp170 = roleIcon;
+                      tmp172 = roleIcon;
                     }
-                    obj33.roleIcon = tmp170;
+                    obj34.roleIcon = tmp172;
                     let connectionsRoleTag;
                     if (null != visibleConnectionsRole) {
                       connectionsRoleTag = tmp13(tmp3[75]).createConnectionsRoleTag(visibleConnectionsRole);
-                      const tmp13Result102 = tmp13(tmp3[75]);
+                      const tmp13Result106 = tmp13(tmp3[75]);
                     }
-                    obj33.connectionsRoleTag = connectionsRoleTag;
-                    let tmp172;
+                    obj34.connectionsRoleTag = connectionsRoleTag;
+                    let tmp174;
                     if (!tmp21) {
-                      tmp172 = stringResult2;
+                      tmp174 = stringResult2;
                     }
-                    obj33.timestamp = tmp172;
+                    obj34.timestamp = tmp174;
                     let dateFormatResult1;
                     if (!tmp21) {
                       dateFormatResult1 = tmp13(tmp3[67]).dateFormat(message.timestamp, "LLLL");
-                      const tmp13Result103 = tmp13(tmp3[67]);
+                      const tmp13Result107 = tmp13(tmp3[67]);
                     }
-                    obj33.timestampTooltip = dateFormatResult1;
+                    obj34.timestampTooltip = dateFormatResult1;
                     let timestampColor;
                     if (!tmp21) {
                       timestampColor = tmp4.timestampColor;
                     }
-                    obj33.timestampColor = timestampColor;
-                    let tmp175;
+                    obj34.timestampColor = timestampColor;
+                    let tmp177;
                     if (!tmp21) {
-                      tmp175 = stringResult3;
+                      tmp177 = stringResult3;
                     }
-                    obj33.timestampAccessibilityLabel = tmp175;
-                    obj33.content = stringResult4;
-                    obj33.isEditing = isEditing;
-                    obj33.renderContentOnly = renderContentOnly;
+                    obj34.timestampAccessibilityLabel = tmp177;
+                    obj34.content = stringResult4;
+                    obj34.isEditing = isEditing;
+                    obj34.renderContentOnly = renderContentOnly;
                     let surveyIndication;
                     if (undefined !== pushFeedbackType) {
                       surveyIndication = tmp13(tmp3[76]).createSurveyIndication(message, forcedTheme, pushFeedbackType);
-                      const tmp13Result104 = tmp13(tmp3[76]);
+                      const tmp13Result108 = tmp13(tmp3[76]);
                     }
-                    obj33.surveyIndication = surveyIndication;
-                    obj33.ephemeralIndication = tmp13(tmp3[77]).createEphemeralIndication(message);
-                    obj33.interactionStatus = interactionStatus;
+                    obj34.surveyIndication = surveyIndication;
+                    obj34.ephemeralIndication = tmp13(tmp3[77]).createEphemeralIndication(message);
+                    obj34.interactionStatus = interactionStatus;
                     let executedCommand;
                     if (renderExecutedCommands) {
-                      const tmp13Result106 = tmp13(tmp3[78]);
-                      executedCommand = tmp13Result106.createExecutedCommand(message, channel, roleStyle, tmp6, tmp4.defaultUsernameColor);
+                      const tmp13Result110 = tmp13(tmp3[78]);
+                      executedCommand = tmp13Result110.createExecutedCommand(message, channel, roleStyle, tmp6, tmp4.defaultUsernameColor);
                     }
-                    obj33.executedCommand = executedCommand;
-                    let tmp183;
+                    obj34.executedCommand = executedCommand;
+                    let tmp185;
                     if (message2.components.length > 0) {
                       if (renderComponents) {
-                        const obj34 = { message, guildId: guildId1, interaction, shouldDisableInteractiveComponents, shouldShowMedia: tmp5, shouldObscureSpoiler, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, shouldShowMosaicMediaDescriptions: setting, shouldAutoPlayGifs: gifAutoPlay, colors: tmp4 };
-                        tmp183 = tmp2(tmp3[49])(obj34, message2.components);
+                        const obj35 = { message, guildId: guildId1, interaction, shouldDisableInteractiveComponents, shouldShowMedia: tmp5, shouldObscureSpoiler, enabledContentHarmTypeFlags: enabledHarmTypesForMessage, shouldAgeVerify: result1, shouldShowMosaicMediaDescriptions: setting, shouldAutoPlayGifs: gifAutoPlay, colors: tmp4 };
+                        tmp185 = tmp2(tmp3[49])(obj35, message2.components);
                       }
                     }
-                    obj33.components = tmp183;
-                    let num9 = 0;
-                    if (!renderContentOnly) {
-                      num9 = tmp4.feedbackColor;
-                    }
-                    obj33.feedbackColor = num9;
+                    obj34.components = tmp185;
                     let num10 = 0;
                     if (!renderContentOnly) {
-                      num10 = tmp4.highlightColor;
+                      num10 = tmp4.feedbackColor;
                     }
-                    obj33.highlightColor = num10;
-                    obj33.embeds = tmp51;
+                    obj34.feedbackColor = num10;
+                    let num11 = 0;
+                    if (!renderContentOnly) {
+                      num11 = tmp4.highlightColor;
+                    }
+                    obj34.highlightColor = num11;
+                    obj34.embeds = tmp51;
                     if (renderGiftCode) {
                       let giftCodeEmbed = tmp13(tmp3[79]).createGiftCodeEmbed(message, forcedTheme);
-                      const tmp13Result107 = tmp13(tmp3[79]);
+                      const tmp13Result111 = tmp13(tmp3[79]);
                     } else {
                       giftCodeEmbed = [];
                     }
-                    obj33.giftCodes = giftCodeEmbed;
+                    obj34.giftCodes = giftCodeEmbed;
                     if (renderCodedLinks) {
-                      const tmp13Result108 = tmp13(tmp3[80]);
-                      let codedLinkEmbeds = tmp13Result108.createCodedLinkEmbeds(message, message2, channel, tmp6);
+                      const tmp13Result112 = tmp13(tmp3[80]);
+                      let codedLinkEmbeds = tmp13Result112.createCodedLinkEmbeds(message, message2, channel, tmp6);
                     } else {
                       codedLinkEmbeds = [];
                     }
-                    obj33.codedLinks = codedLinkEmbeds;
+                    obj34.codedLinks = codedLinkEmbeds;
                     let activityInstanceEmbed;
                     if (renderActivityInstanceEmbed) {
                       activityInstanceEmbed = tmp13(tmp3[81]).createActivityInstanceEmbed(message);
-                      const tmp13Result109 = tmp13(tmp3[81]);
+                      const tmp13Result113 = tmp13(tmp3[81]);
                     }
-                    obj33.activityInstanceEmbed = activityInstanceEmbed;
+                    obj34.activityInstanceEmbed = activityInstanceEmbed;
                     let activityRichPresenceInviteEmbed;
                     if (renderActivityInviteEmbed) {
                       activityRichPresenceInviteEmbed = tmp13(tmp3[82]).createActivityRichPresenceInviteEmbed(message, channel);
-                      const tmp13Result110 = tmp13(tmp3[82]);
+                      const tmp13Result114 = tmp13(tmp3[82]);
                     }
-                    obj33.activityRichPresenceInviteEmbed = activityRichPresenceInviteEmbed;
+                    obj34.activityRichPresenceInviteEmbed = activityRichPresenceInviteEmbed;
                     if (tmp10) {
                       if (renderAttachments) {
                         renderAttachments = 0 !== message2.attachments.length || 0 !== message2.embeds.length;
-                        const tmp191 = 0 !== message2.attachments.length || 0 !== message2.embeds.length;
+                        const tmp193 = 0 !== message2.attachments.length || 0 !== message2.embeds.length;
                       }
                       if (!renderAttachments) {
                         renderAttachments = tmp44;
                       }
                       tmp10 = renderAttachments;
                     }
-                    obj33.useAttachmentGridLayout = tmp10;
-                    obj33.useAttachmentUploadPreview = tmp44;
-                    obj33.attachments = items3;
-                    let num12 = 1;
+                    obj34.useAttachmentGridLayout = tmp10;
+                    obj34.useAttachmentUploadPreview = tmp44;
+                    obj34.attachments = items3;
+                    let num13 = 1;
                     if (tmp44) {
-                      num12 = 1;
+                      num13 = 1;
                       if (message.state === constants2.SEND_FAILED) {
-                        num12 = 0.2;
+                        num13 = 0.2;
                       }
                     }
-                    obj33.attachmentsOpacity = num12;
+                    obj34.attachmentsOpacity = num13;
                     if (restrictedPreview) {
                       let items5 = [];
                     } else {
-                      const obj35 = { message: message2, animateStickersSetting: null, isUserInteracting: null };
+                      const obj36 = { message: message2, animateStickersSetting: null, isUserInteracting: null };
                       const AnimateStickers = tmp13(tmp3[47]).AnimateStickers;
-                      obj35.animateStickersSetting = AnimateStickers.getSetting();
-                      obj35.isUserInteracting = message.id === animatingStickerMessageId;
-                      items5 = tmp2(tmp3[83])(obj35);
+                      obj36.animateStickersSetting = AnimateStickers.getSetting();
+                      obj36.isUserInteracting = message.id === animatingStickerMessageId;
+                      items5 = tmp2(tmp3[83])(obj36);
                       const tmp2Result11 = tmp2(tmp3[83]);
                     }
-                    obj33.stickers = items5;
+                    obj34.stickers = items5;
                     if (renderCommunicationDisabled) {
                       renderCommunicationDisabled = result3;
                     }
-                    obj33.communicationDisabled = renderCommunicationDisabled;
+                    obj34.communicationDisabled = renderCommunicationDisabled;
                     let isForumPostResult1;
                     if (channel != null) {
                       isForumPostResult1 = channel.isForumPost();
                     }
-                    obj33.isFirstForumPostMessage = isForumPostResult1 && message.id === message.channel_id;
+                    obj34.isFirstForumPostMessage = isForumPostResult1 && message.id === message.channel_id;
                     let isForumPostResult2;
                     if (channel != null) {
                       isForumPostResult2 = channel.isForumPost();
                     }
-                    let tmp195;
+                    let tmp197;
                     if (isForumPostResult2) {
                       if (renderForumPostActions) {
                         let forumPostActions;
@@ -1014,94 +1030,94 @@ function createMessageContent(message) {
                               if (null != emojiId) {
                                 usableCustomEmojiById = enabledHarmTypesForMessage.getUsableCustomEmojiById(defaultReactionEmoji.emojiId);
                               }
-                              const obj36 = { defaultReactionEmoji, customGuildEmoji: usableCustomEmojiById };
-                              defaultReaction = tmp13(tmp3[32]).createDefaultReaction(obj36);
-                              const tmp13Result111 = tmp13(tmp3[32]);
+                              const obj37 = { defaultReactionEmoji, customGuildEmoji: usableCustomEmojiById };
+                              defaultReaction = tmp13(tmp3[32]).createDefaultReaction(obj37);
+                              const tmp13Result115 = tmp13(tmp3[32]);
                             }
                             const hasJoinedResult = JoinedThreadsStore.hasJoined(message.channel_id);
                             const shouldDisplayPromptResult = MediaPostSharePromptStore.shouldDisplayPrompt(channel.id);
-                            const obj37 = { isFollowing: hasJoinedResult, hasReactions: 0 !== message.reactions.length, defaultReaction, showMediaPostSharePrompt: shouldDisplayPromptResult };
-                            forumPostActions = tmp13(tmp3[32]).createForumPostActions(obj37);
-                            const tmp13Result112 = tmp13(tmp3[32]);
+                            const obj38 = { isFollowing: hasJoinedResult, hasReactions: 0 !== message.reactions.length, defaultReaction, showMediaPostSharePrompt: shouldDisplayPromptResult };
+                            forumPostActions = tmp13(tmp3[32]).createForumPostActions(obj38);
+                            const tmp13Result116 = tmp13(tmp3[32]);
                           }
                         }
-                        tmp195 = forumPostActions;
+                        tmp197 = forumPostActions;
                       }
                     }
-                    obj33.postActions = tmp195;
-                    obj33.isCurrentUserMessageAuthor = message.author.id === id1;
-                    obj33.usingGradientTheme = null != guildId1.gradientPreset;
-                    const tmp13Result105 = tmp13(tmp3[77]);
-                    obj33.swipeToReplyIconUrl = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[84]));
-                    const tmp13Result113 = tmp13(tmp3[30]);
-                    obj33.swipeToEditIconUrl = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[85]));
+                    obj34.postActions = tmp197;
+                    obj34.isCurrentUserMessageAuthor = message.author.id === id1;
+                    obj34.usingGradientTheme = null != guildId1.gradientPreset;
+                    const tmp13Result109 = tmp13(tmp3[77]);
+                    obj34.swipeToReplyIconUrl = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[84]));
+                    const tmp13Result117 = tmp13(tmp3[30]);
+                    obj34.swipeToEditIconUrl = tmp13(tmp3[30]).getAssetUriForEmbed(tmp2(tmp3[85]));
                     if (tmp7) {
                       let postPreviewEmbeds = tmp13(tmp3[86]).createPostPreviewEmbeds(message, roleStyle, useReducedMotion);
-                      const tmp13Result115 = tmp13(tmp3[86]);
+                      const tmp13Result119 = tmp13(tmp3[86]);
                     } else {
                       postPreviewEmbeds = [];
                     }
-                    obj33.postPreviewEmbeds = postPreviewEmbeds;
+                    obj34.postPreviewEmbeds = postPreviewEmbeds;
                     const intl19 = tmp13(tmp3[29]).intl;
-                    obj33.obscureLearnMoreLabel = intl19.string(tmp13(tmp3[29]).t["2aXnfa"]);
-                    const tmp13Result114 = tmp13(tmp3[30]);
-                    obj33.safetyPolicyNoticeEmbed = tmp13(tmp3[87]).createSafetyPolicyNoticeEmbed(message);
-                    obj33.pollData = tmp115;
-                    obj33.sharedClientTheme = result4;
-                    const tmp13Result116 = tmp13(tmp3[87]);
-                    obj33.safetySystemNotificationEmbed = tmp13(tmp3[88]).createSafetySystemNotificationEmbed(message);
-                    const tmp13Result117 = tmp13(tmp3[88]);
+                    obj34.obscureLearnMoreLabel = intl19.string(tmp13(tmp3[29]).t["2aXnfa"]);
+                    const tmp13Result118 = tmp13(tmp3[30]);
+                    obj34.safetyPolicyNoticeEmbed = tmp13(tmp3[87]).createSafetyPolicyNoticeEmbed(message);
+                    obj34.pollData = tmp117;
+                    obj34.sharedClientTheme = result4;
+                    const tmp13Result120 = tmp13(tmp3[87]);
+                    obj34.safetySystemNotificationEmbed = tmp13(tmp3[88]).createSafetySystemNotificationEmbed(message);
+                    const tmp13Result121 = tmp13(tmp3[88]);
                     const merged4 = Object.assign(tmp13(tmp3[89]).createCtaButtons(message.id, message.channel_id, tmp4));
                     let embedBackgroundColor;
                     if (hasFlagResult) {
                       embedBackgroundColor = tmp4.embedBackgroundColor;
                     }
-                    obj33.audioAttachmentBackgroundColor = embedBackgroundColor;
-                    const tmp13Result118 = tmp13(tmp3[89]);
-                    obj33.accessibilityActions = tmp13(tmp3[90]).createMessageAccessibilityActions(message, channel);
-                    obj33.clanTagGuildId = guildId;
-                    obj33.clanTag = tag;
-                    obj33.clanBadgeUrl = tmp118;
-                    obj33.lobbyAdditionalName = additionalName;
-                    obj33.lobbyTagIconUrl = tmp125;
-                    obj33.isFirst = isFirst;
-                    obj33.gameApplicationId = id;
+                    obj34.audioAttachmentBackgroundColor = embedBackgroundColor;
+                    const tmp13Result122 = tmp13(tmp3[89]);
+                    obj34.accessibilityActions = tmp13(tmp3[90]).createMessageAccessibilityActions(message, channel);
+                    obj34.clanTagGuildId = guildId;
+                    obj34.clanTag = tag;
+                    obj34.clanBadgeUrl = tmp120;
+                    obj34.lobbyAdditionalName = additionalName;
+                    obj34.lobbyTagIconUrl = tmp127;
+                    obj34.isFirst = isFirst;
+                    obj34.gameApplicationId = id;
                     let type;
                     if (channel != null) {
                       type = channel.type;
                     }
-                    obj33.isAnnouncementChannel = type === constants4.GUILD_ANNOUNCEMENT;
-                    const tmp13Result119 = tmp13(tmp3[90]);
-                    obj33.displayNameStyles = tmp13(tmp3[91]).createDisplayNameStylesMobile(message.author, member);
-                    obj33.voiceChannelBadge = voiceChannelBadge;
-                    return obj33;
+                    obj34.isAnnouncementChannel = type === constants4.GUILD_ANNOUNCEMENT;
+                    const tmp13Result123 = tmp13(tmp3[90]);
+                    obj34.displayNameStyles = tmp13(tmp3[91]).createDisplayNameStylesMobile(message.author, member);
+                    obj34.voiceChannelBadge = voiceChannelBadge;
+                    return obj34;
                   }
                   defaultUsernameColor = tmp4.defaultUsernameColor;
                 }
                 nonce = message.nonce;
-                const tmp13Result99 = tmp13(tmp3[73]);
+                const tmp13Result103 = tmp13(tmp3[73]);
               }
               stringResult3 = tmp13(tmp3[67]).accessibilityLabelCalendarFormat(message.timestamp);
-              const tmp13Result121 = tmp13(tmp3[67]);
+              const tmp13Result125 = tmp13(tmp3[67]);
             }
-            const tmp13Result87 = tmp13(tmp3[64]);
+            const tmp13Result91 = tmp13(tmp3[64]);
             stringResult2 = tmp13(tmp3[67]).calendarFormat(message.timestamp, true, timestampHourCycle);
-            const tmp13Result122 = tmp13(tmp3[67]);
+            const tmp13Result126 = tmp13(tmp3[67]);
           }
         }
       }
       if (null != guildMemberAvatar) {
         if (null != guildId1) {
-          const obj38 = { userId: author.id, avatar: guildMemberAvatar, guildId: guildId1 };
-          applicationIconSource = tmp2(tmp3[54]).getGuildMemberAvatarSource(obj38, author);
+          const obj39 = { userId: author.id, avatar: guildMemberAvatar, guildId: guildId1 };
+          applicationIconSource = tmp2(tmp3[54]).getGuildMemberAvatarSource(obj39, author);
           const tmp2Result12 = tmp2(tmp3[54]);
         }
       }
       applicationIconSource = author.getAvatarSource(undefined);
-      tmp13Result70 = tmp13(tmp3[53]);
+      tmp13Result72 = tmp13(tmp3[53]);
     }
     parseMessageMarkupResult = { content: "Symbol", hasSpoilerEmbeds: "none", hasBailedAst: "URL" };
-    const tmp13Result64 = tmp13(tmp3[42]);
+    const tmp13Result66 = tmp13(tmp3[42]);
   }
   const obj4 = message(tmp3[37]);
 }

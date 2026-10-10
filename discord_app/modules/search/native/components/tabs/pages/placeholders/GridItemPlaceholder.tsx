@@ -1,6 +1,6 @@
-// === Module 17268: GridItemPlaceholder ===
+// === Module 17340: GridItemPlaceholder ===
 
-// Module 17268 (GridItemPlaceholder)
+// Module 17340 (GridItemPlaceholder)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { imageContainer: { flex: 1, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_4 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

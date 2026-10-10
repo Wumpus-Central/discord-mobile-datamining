@@ -1,11 +1,11 @@
-// === Module 14818: useNameplateSections ===
+// === Module 14874: useNameplateSections ===
 
-// Module 14818 (useNameplateSections)
+// Module 14874 (useNameplateSections)
 import util from "util" /* 1126 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7269 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7275 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7257 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7272 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7279 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  let nameplates = stateFromStores(7269).getNameplates(stateFromStores, tmp12);
+  let nameplates = stateFromStores(7275).getNameplates(stateFromStores, tmp12);
   if (cResult[10] === tmp13) {
     if (cResult[11] === stateFromStores) {
       let tmp17 = cResult[12];
@@ -285,7 +285,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
   cResult[11] = stateFromStores;
   cResult[12] = M;
   tmp17 = M;
-  const tmpResult4 = stateFromStores(7269);
+  const tmpResult4 = stateFromStores(7275);
 }) : (function useNameplateSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useNamep
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(13396)(useMemo(() => {
+  return first(13446)(useMemo(() => {
     let obj = CollectiblesUtils;
     const nameplates = obj.getNameplates(stateFromStores, first);
     const reduced = nameplates.reduce((premium_purchase, skuId) => {

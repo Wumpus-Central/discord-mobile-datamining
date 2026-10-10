@@ -1,14 +1,14 @@
-// === Module 7539: AgeVerificationExpressiveV2Modal ===
+// === Module 7548: AgeVerificationExpressiveV2Modal ===
 
-// Module 7539 (AgeVerificationExpressiveV2Modal)
+// Module 7548 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 587 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5906 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
-import NavigatorHeader from "NavigatorHeader" /* 6205 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5909 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
+import NavigatorHeader from "NavigatorHeader" /* 6200 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7527 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7528 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 7530 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 7531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -61,7 +61,7 @@ function MethodsScreen(onClose) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -247,26 +247,26 @@ function MethodsScreen(onClose) {
     items7[1] = closure_10(tmp2(tmp3[28]).Stack, obj14);
     obj13.children = items7;
     const items9 = [closure_10(tmp2(tmp3[28]).Stack, obj13), , , ];
-    let tmp19Result6 = loading;
+    let tmp19Result7 = loading;
     if (loading) {
       const obj15 = { align: "center", justify: "center", style: tmp.loadingContainer, children: tmp19(initiateAgeVerificationV2, { size: "large" }) };
-      tmp19Result6 = tmp19(tmp2(tmp3[28]).Stack, obj15);
+      tmp19Result7 = tmp19(tmp2(tmp3[28]).Stack, obj15);
     }
-    items9[1] = tmp19Result6;
+    items9[1] = tmp19Result7;
     let tmp20Result = !loading;
     if (!loading) {
-      let tmp19Result7 = tmp6;
+      let tmp19Result8 = tmp6;
       if (tmp6) {
-        tmp19Result7 = null != outageBannerMessage;
+        tmp19Result8 = null != outageBannerMessage;
       }
-      if (tmp19Result7) {
-        const obj16 = { messageType: tmp2(tmp3[33]).HelpMessageTypes.WARNING, children: outageBannerMessage };
-        tmp19Result7 = tmp19(tmp2(tmp3[33]).HelpMessage, obj16);
+      if (tmp19Result8) {
+        const obj16 = { type: "warning", message: outageBannerMessage, role: "status" };
+        tmp19Result8 = tmp19(tmp2(tmp3[33]).InlineNotice, obj16);
       }
-      const items10 = [tmp19Result7, , ];
+      const items10 = [tmp19Result8, , ];
       if (tmp6) {
         items10[1] = !tmp6;
-        let tmp19Result8 = tmp6;
+        let tmp19Result9 = tmp6;
         if (tmp6) {
           const obj17 = {
             hasIcons: true,
@@ -294,15 +294,15 @@ function MethodsScreen(onClose) {
                       }
                       if (null != KeyIcon) {
                         const obj = { IconComponent: KeyIcon, variant: "secondary" };
-                        let tmp4 = _undefined(tmp(onComplete[38]).TableRow.Icon, obj);
+                        let tmp4 = _undefined(tmp(onComplete[37]).TableRow.Icon, obj);
                         let tmp5 = _undefined;
                       } else if (null != children.icon) {
                         const obj2 = { icon: children.icon };
-                        tmp4 = _undefined(onClose(onComplete[39]), obj2);
+                        tmp4 = _undefined(onClose(onComplete[38]), obj2);
                         tmp5 = _undefined;
                       } else {
-                        const obj3 = { IconComponent: tmp(onComplete[40]).UnknownGameIcon, variant: "secondary" };
-                        tmp4 = _undefined(tmp(onComplete[38]).TableRow.Icon, obj3);
+                        const obj3 = { IconComponent: tmp(onComplete[39]).UnknownGameIcon, variant: "secondary" };
+                        tmp4 = _undefined(tmp(onComplete[37]).TableRow.Icon, obj3);
                         tmp5 = _undefined;
                       }
                       const combined = "" + children.method + "-" + children.vendor;
@@ -310,7 +310,7 @@ function MethodsScreen(onClose) {
                         let tmp5Result = tmp5(initiateAgeVerificationV2, {});
                       } else {
                         const obj4 = { size: "md", color: onClose(onComplete[16]).colors.INTERACTIVE_ICON_DEFAULT };
-                        tmp5Result = tmp5(tmp(onComplete[41]).ChevronSmallRightIcon, obj4);
+                        tmp5Result = tmp5(tmp(onComplete[40]).ChevronSmallRightIcon, obj4);
                       }
                       const obj5 = { trailing: tmp5Result, disabled: null != c8, icon: tmp4, label: children.title, subLabel: null, onPress: null };
                       const items = [tmp5(closure_0(onComplete[30]).Text, { variant: "text-sm/normal", color: "text-muted", children: children.description }), ];
@@ -324,46 +324,56 @@ function MethodsScreen(onClose) {
                       obj5.onPress = function onPress() {
                         return closure_10(closure_0, combined);
                       };
-                      return tmp5(closure_0(onComplete[38]).TableRow, obj5, combined);
+                      return tmp5(closure_0(onComplete[37]).TableRow, obj5, combined);
                     })
           };
-          tmp19Result8 = tmp19(tmp2(tmp3[37]).TableRowGroup, obj17);
+          tmp19Result9 = tmp19(tmp2(tmp3[36]).TableRowGroup, obj17);
         }
         const obj18 = { direction: "vertical", spacing: 12, children: null };
-        items10[2] = tmp19Result8;
+        items10[2] = tmp19Result9;
         obj18.children = items10;
         tmp20Result = tmp20(tmp2(tmp3[28]).Stack, obj18);
       } else {
         const obj19 = { style: tmp.emptyContainer, children: null };
-        let obj20 = { messageType: tmp2(tmp3[33]).HelpMessageTypes.ERROR, button: null, children: null };
-        const obj21 = { variant: "secondary", size: "sm", text: null, onPress: null };
-        const intl = tmp2(tmp3[35]).intl;
-        obj21.text = intl.string(onClose(tmp3[36]).hDvmYP);
-        obj21.onPress = refetch;
-        obj20.button = tmp19(tmp2(tmp3[34]).Button, obj21);
-        const intl2 = tmp2(tmp3[35]).intl;
-        const tmp29 = onClose(tmp3[36]);
-        obj20.children = intl2.string(error ? tmp29.Bkmk4Y : tmp29.cR6336);
-        obj20 = tmp19(tmp2(tmp3[33]).HelpMessage, obj20);
-        obj19.children = obj20;
+        let string = tmp2(tmp3[34]).intl;
+        let string2 = string.string;
+        let intl = onClose;
+        let tmp19Result10 = onClose(tmp3[35]);
+        if (error) {
+          let cR6336 = tmp19Result10.Bkmk4Y;
+          let tmp29 = intl;
+        } else {
+          cR6336 = tmp19Result10.cR6336;
+          tmp29 = intl;
+        }
+        const obj20 = { type: "critical", message: string2(cR6336), role: "alert", action: null };
+        const obj21 = { text: null, onClick: null };
+        intl = tmp2(tmp3[34]).intl;
+        string = intl.string;
+        string2 = string(tmp29(tmp3[35]).hDvmYP);
+        obj21.text = string2;
+        obj21.onClick = refetch;
+        obj20.action = obj21;
+        tmp19Result10 = tmp19(tmp2(tmp3[33]).InlineNotice, obj20);
+        obj19.children = tmp19Result10;
         tmp19(tmp2(tmp3[28]).Stack, obj19);
       }
     }
     items9[2] = tmp20Result;
-    let tmp19Result10 = !loading;
+    let tmp19Result12 = !loading;
     if (!loading) {
-      tmp19Result10 = tmp6;
+      tmp19Result12 = tmp6;
     }
-    if (tmp19Result10) {
-      tmp19Result10 = null != footerMessage;
+    if (tmp19Result12) {
+      tmp19Result12 = null != footerMessage;
     }
-    if (tmp19Result10) {
+    if (tmp19Result12) {
       const obj22 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.footer, children: footerMessage };
-      tmp19Result10 = tmp19(tmp2(tmp3[30]).Text, obj22);
+      tmp19Result12 = tmp19(tmp2(tmp3[30]).Text, obj22);
     }
     const obj23 = { children: null };
     const obj24 = { children: null };
-    items9[3] = tmp19Result10;
+    items9[3] = tmp19Result12;
     obj10.children = items9;
     obj24.children = closure_10(tmp2(tmp3[28]).Stack, obj10);
     obj23.children = tmp19(tmp2(tmp3[27]).ModalContent, obj24);
@@ -373,11 +383,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(5915).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(5917).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: null, emptyContainer: null, footer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 obj2.loadingContainer = { marginTop: nativeDefault.space.PX_24 };
@@ -464,7 +474,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
             }
           }
           const obj2 = { screens: tmp7, initialRouteName: constants.METHODS, headerBackTitle: tmp12 };
-          const tmp16 = closure_9(tmp(6686).Navigator, obj2);
+          const tmp16 = closure_9(tmp(6687).Navigator, obj2);
           cResult[10] = tmp7;
           cResult[11] = tmp16;
           const tmp14 = tmp16;
@@ -486,7 +496,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   closure_129_2 = onClose;
   closure_129_3 = onComplete;
   function closeModal() {
-    onClose(onComplete[42]).pop();
+    onClose(onComplete[41]).pop();
     closure_2();
   }
   closure_129_4 = closeModal;
@@ -500,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     render: null
   };
   const obj = entryPoint(576);
-  obj4.headerLeft = entryPoint(6205).getHeaderCloseButton(closeModal);
+  obj4.headerLeft = entryPoint(6200).getHeaderCloseButton(closeModal);
   obj4.render = function render(arg0, navigation) {
     return closure_2_9(MethodsScreen, { entryPoint, navigation, onClose: closeModal, onComplete, modalSessionId });
   };
@@ -513,10 +523,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     headerLeft: null,
     render: null
   };
-  const tmpResult4 = entryPoint(6205);
-  obj5.headerLeft = entryPoint(6205).getHeaderBackButton();
+  const tmpResult4 = entryPoint(6200);
+  obj5.headerLeft = entryPoint(6200).getHeaderBackButton();
   obj5.render = function render() {
-    return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, onComplete, modalSessionId });
+    return closure_2_9(onClose(onComplete[43]), { onClose: closeModal, onComplete, modalSessionId });
   };
   obj3[constants.GOOGLE_WALLET_VERIFICATION] = obj5;
   const obj6 = {
@@ -527,10 +537,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     headerLeft: null,
     render: null
   };
-  const tmpResult5 = entryPoint(6205);
-  obj6.headerLeft = entryPoint(6205).getHeaderBackButton();
+  const tmpResult5 = entryPoint(6200);
+  obj6.headerLeft = entryPoint(6200).getHeaderBackButton();
   obj6.render = function render() {
-    return closure_2_9(onClose(onComplete[45]), { onClose: closeModal, modalSessionId });
+    return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, modalSessionId });
   };
   obj3[constants.APP_STORE_VERIFICATION] = obj6;
   cResult[1] = entryPoint;
@@ -539,21 +549,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
   cResult[4] = tmp4;
   cResult[5] = obj3;
   tmp7 = obj3;
-  const tmpResult6 = entryPoint(6205);
+  const tmpResult6 = entryPoint(6200);
 }) : (function AgeVerificationExpressiveV2Modal(entryPoint) {
   entryPoint = entryPoint.entryPoint;
   const onClose = entryPoint.onClose;
   const onComplete = entryPoint.onComplete;
   const tmp = closure_11();
   closure_3 = tmp;
-  const memo = noop.useMemo(() => entryPoint(onComplete[48]).v4(), []);
+  const memo = noop.useMemo(() => entryPoint(onComplete[47]).v4(), []);
   const items = [tmp, memo, entryPoint, onClose, onComplete];
   const items1 = [memo, entryPoint];
   const memo1 = noop.useMemo(() => {
     const modalSessionId = memo;
     closure_2 = onClose;
     function closeModal() {
-      onClose(onComplete[42]).pop();
+      onClose(onComplete[41]).pop();
       closure_2();
     }
     const obj = {};
@@ -578,7 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     };
     obj4.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj4.render = function render() {
-      return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, onComplete, modalSessionId });
+      return closure_2_9(onClose(onComplete[43]), { onClose: closeModal, onComplete, modalSessionId });
     };
     obj[constants.GOOGLE_WALLET_VERIFICATION] = obj4;
     const obj6 = {
@@ -591,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     };
     obj6.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj6.render = function render() {
-      return closure_2_9(onClose(onComplete[45]), { onClose: closeModal, modalSessionId });
+      return closure_2_9(onClose(onComplete[44]), { onClose: closeModal, modalSessionId });
     };
     obj[constants.APP_STORE_VERIFICATION] = obj6;
     return obj;
@@ -600,7 +610,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeVerif
     const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalViewed(memo, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.EXPRESSIVE_V2, entryPoint);
   }, items1);
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
-  const intl = entryPoint(onComplete[35]).intl;
-  obj.headerBackTitle = intl.string(entryPoint(onComplete[35]).t["13/7kX"]);
-  return closure_9(entryPoint(onComplete[49]).Navigator, obj);
+  const intl = entryPoint(onComplete[34]).intl;
+  obj.headerBackTitle = intl.string(entryPoint(onComplete[34]).t["13/7kX"]);
+  return closure_9(entryPoint(onComplete[48]).Navigator, obj);
 });

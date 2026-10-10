@@ -1,6 +1,6 @@
-// === Module 6164: FastImageNativeComponent ===
+// === Module 6157: FastImageNativeComponent ===
 
-// Module 6164 (FastImageNativeComponent)
+// Module 6157 (FastImageNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
 import weakSet from "weakSet" /* 106 */;

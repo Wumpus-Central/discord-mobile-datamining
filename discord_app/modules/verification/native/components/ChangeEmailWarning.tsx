@@ -1,6 +1,6 @@
-// === Module 6272: ChangeEmailWarning ===
+// === Module 6267: ChangeEmailWarning ===
 
-// Module 6272 (ChangeEmailWarning)
+// Module 6267 (ChangeEmailWarning)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
@@ -10,11 +10,11 @@ import UserStore from "UserStore" /* 1390 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(6265).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const hcArticle = fn(6260).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" }, title: null, body: null, buttonContainer: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj2.title = { marginTop: nativeDefault.space.PX_16 };
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
     } else {
       const _Symbol6 = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = closure_9(tmp(6273).TrafficConeSpotIllustration, {});
+        const tmp15 = closure_9(tmp(6268).TrafficConeSpotIllustration, {});
         cResult[5] = tmp15;
         let tmp13 = tmp15;
       } else {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       }
       if (cResult[7] !== tmp4.title) {
         const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 };
-        const tmp20 = closure_9(tmp(5087).Text, obj3);
+        const tmp20 = closure_9(tmp(5088).Text, obj3);
         cResult[7] = tmp4.title;
         cResult[8] = tmp20;
         let tmp18 = tmp20;
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
         }
         if (cResult[15] !== tmp11) {
           const obj5 = { size: "md", variant: "tertiary", text: tmp29, onPress: tmp11, shrink: true };
-          const tmp33 = closure_9(tmp(5376).Button, obj5);
+          const tmp33 = closure_9(tmp(5379).Button, obj5);
           cResult[15] = tmp11;
           cResult[16] = tmp33;
           let tmp31 = tmp33;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
           obj6.onPress = function onPress() {
             return navigation(dependencyMap[18]).close();
           };
-          const tmp36 = closure_9(tmp(5376).Button, obj6);
+          const tmp36 = closure_9(tmp(5379).Button, obj6);
           cResult[17] = tmp36;
           let tmp34 = tmp36;
         } else {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       const obj10 = { style: tmp4.body, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
       const items3 = [tmp21, "\n\n", tmp24];
       obj10.children = items3;
-      const tmp28 = closure_10(tmp(5087).Text, obj10);
+      const tmp28 = closure_10(tmp(5088).Text, obj10);
       cResult[11] = tmp4.body;
       cResult[12] = tmp21;
       cResult[13] = tmp28;
@@ -200,11 +200,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(6273).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [closure_9(tmp2(6268).TrafficConeSpotIllustration, {}), , , ];
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1126).intl;
     obj5.children = intl.string(tmp2(1126).t.hhR7gX);
-    items2[1] = closure_9(tmp2(5087).Text, obj5);
+    items2[1] = closure_9(tmp2(5088).Text, obj5);
     const obj6 = { style: tmp.body, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
     const intl2 = tmp2(1126).intl;
     const obj7 = { hcArticle };
@@ -212,20 +212,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
     const intl3 = tmp2(1126).intl;
     items3[2] = intl3.string(tmp2(1126).t["3LW10C"]);
     obj6.children = items3;
-    items2[2] = closure_10(tmp2(5087).Text, obj6);
+    items2[2] = closure_10(tmp2(5088).Text, obj6);
     const obj8 = { style: tmp.buttonContainer, children: null };
     const obj9 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
     const intl4 = tmp2(1126).intl;
     obj9.text = intl4.string(tmp2(1126).t.rwTBFs);
     obj9.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5376).Button, obj9), ];
+    const items4 = [closure_9(tmp2(5379).Button, obj9), ];
     const obj10 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
     const intl5 = tmp2(1126).intl;
     obj10.text = intl5.string(tmp2(1126).t["ETE/oC"]);
     obj10.onPress = function onPress() {
       return navigation(dependencyMap[18]).close();
     };
-    items4[1] = closure_9(tmp2(5376).Button, obj10);
+    items4[1] = closure_9(tmp2(5379).Button, obj10);
     obj8.children = items4;
     items2[3] = closure_10(closure_4, obj8);
     obj4.children = items2;

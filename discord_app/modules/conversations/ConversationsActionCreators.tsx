@@ -1,17 +1,17 @@
-// === Module 9310: ConversationsActionCreators ===
+// === Module 9337: ConversationsActionCreators ===
 
-// Module 9310 (ConversationsActionCreators)
+// Module 9337 (ConversationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7172 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
 import QualtricsActionCreatorsDefault from "QualtricsActionCreators" /* 7470 */;
 import SurveyActionTypes from "SurveyActionTypes" /* 7477 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9313 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9340 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7307 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7312 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 9311 */;
-import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 9312 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7313 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7318 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9338 */;
+import TopicalNavigationSurveyStore from "TopicalNavigationSurveyStore" /* 9339 */;
 
 require = fn;
 let closure_10 = async function _fetchChannelConversations(arg0) {
@@ -132,7 +132,7 @@ let closure_11 = async function _fetchConversation(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -215,7 +215,7 @@ let closure_13 = async function _fetchConversationMessages() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -256,7 +256,7 @@ let closure_13 = async function _fetchConversationMessages() {
               }
               if (isFullyHydratedResult) {
                 c8 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               if (tmp18) {
@@ -266,7 +266,7 @@ let closure_13 = async function _fetchConversationMessages() {
               }
               if (null != hydratedMessages) {
                 c8 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             }
             if (tmp18) {
@@ -321,7 +321,7 @@ let closure_13 = async function _fetchConversationMessages() {
     }
   })();
 };
-const FETCH_LIMIT = fn(7309).FETCH_LIMIT;
+const FETCH_LIMIT = fn(7315).FETCH_LIMIT;
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");

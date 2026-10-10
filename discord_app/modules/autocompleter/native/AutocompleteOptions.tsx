@@ -1,29 +1,29 @@
-// === Module 9770: AutocompleteOptions ===
+// === Module 9799: AutocompleteOptions ===
 
-// Module 9770 (AutocompleteOptions)
+// Module 9799 (AutocompleteOptions)
 import util from "util" /* 1126 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5977 */;
-import StickersActionCreators from "StickersActionCreators" /* 9729 */;
-import executeCommandDefault from "executeCommand" /* 9772 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7902 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7903 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8219 */;
-import StickersStore from "StickersStore" /* 6037 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5970 */;
+import StickersActionCreators from "StickersActionCreators" /* 9758 */;
+import executeCommandDefault from "executeCommand" /* 9801 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7920 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7921 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8235 */;
+import StickersStore from "StickersStore" /* 6030 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(5401);
+const ChannelAutocompleteConstants = fn(5404);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(9771).AutocompleteTypes;
+const AutocompleteTypes = fn(9800).AutocompleteTypes;
 const EmojiConstants = fn(1393);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(5400).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
+const executeCommand = apply.debounce(executeCommandDefault, fn(5403).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, { leading: true, trailing: true });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteOptions.tsx");
 
@@ -243,7 +243,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         const isPrivateResult = channel.isPrivate();
         let matchSentinelResult = !isPrivateResult;
         if (!isPrivateResult) {
-          matchSentinelResult = AutocompleteUtilsDefault.matchSentinel(arg0, arg1, state);
+          matchSentinelResult = AutocompleteUtilsDefault.matchSentinel(arg0, arg1, closure_2_14);
         }
         return matchSentinelResult;
       }
@@ -277,7 +277,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(7040).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(7046).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }
@@ -335,7 +335,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       matches(arg0, arg1, arg2) {
         let tmp = 0 === arg2;
         if (tmp) {
-          tmp = arg0 === closure_2_15;
+          tmp = arg0 === value2;
         }
         if (tmp) {
           let tmp4 = flag;
@@ -357,7 +357,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           tmp = 0 === arg2;
         }
         if (tmp) {
-          tmp = arg0 === closure_2_15;
+          tmp = arg0 === value2;
         }
         if (tmp) {
           tmp = 0 === arg1.length;

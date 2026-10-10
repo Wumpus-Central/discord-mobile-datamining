@@ -1,6 +1,6 @@
-// === Module 14727: MediaPlayerManager ===
+// === Module 14781: MediaPlayerManager ===
 
-// Module 14727 (MediaPlayerManager)
+// Module 14781 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 6074 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7172 */;
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 6067 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import VoicePanelStore from "VoicePanelStore" /* 6081 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import MessageStore from "MessageStore" /* 5429 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import VoicePanelStore from "VoicePanelStore" /* 6074 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import MessageStore from "MessageStore" /* 5432 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14728 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14782 */;
 import module_570 from "module_570" /* 570 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 import size from "module_2" /* 2 */;
@@ -41,12 +41,12 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Set",
-    showPip: 2422,
+    showPip: -1.5,
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 2425
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });
@@ -179,7 +179,7 @@ prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   });
 };
 prototype["handleVoicePanelStateUpdated"] = function handleVoicePanelStateUpdated() {
-  state = VoicePanelStore.getState();
+  const state = VoicePanelStore.getState();
   let result = state.isVoicePanelFullscreen();
   if (!result) {
     result = state.voicePanelsPIP.size > 0;
@@ -207,7 +207,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
       id = source.id;
     }
     closure_16.verbose("Playback rate changed to " + _require + ": " + id);
-    state = obj.getState();
+    const state = obj.getState();
     ({ activeMediaPlayerSource, isPlaying, wasPipClosedByUser } = state);
     if (tmp9(activeMediaPlayerSource, source)) {
       const obj2 = { rate: _require, isPlaying: 0 !== _require, wasPipClosedByUser: null };
@@ -234,7 +234,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
 prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlayerPlaybackProgressUpdated(arg0) {
   ({ source: require, time: importDefault, duration: dependencyMap } = arg0);
   ReactBatchUpdates.batchUpdates(() => {
-    state = obj.getState();
+    const state = obj.getState();
     if (tmp2(state.activeMediaPlayerSource, _require)) {
       const currentlyDisplayedChannelId = state.currentlyDisplayedChannelId;
       if (state.showPip) {
@@ -243,7 +243,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
           const obj2 = { time, duration: dependencyMap, isCompleted: null };
           let flag;
           if (dependencyMap > 0) {
-            flag = dependencyMap - time <= __initData2;
+            flag = dependencyMap - time <= map1;
           }
           if (flag == null) {
             flag = false;
@@ -279,7 +279,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
   source = source.source;
   source(1272).batchUpdates(() => {
     let id;
-    state = obj.getState();
+    const state = obj.getState();
     if (source != null) {
       id = source.id;
     }
@@ -390,7 +390,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
 };
 function updateDisplayState() {
   ReactBatchUpdates.batchUpdates(() => {
-    state = useMediaPlayerManagerStore.getState();
+    const state = useMediaPlayerManagerStore.getState();
     ({ displayedMediaItemIdsPerChannel, activeMediaPlayerSource } = state);
     if (undefined === activeMediaPlayerSource) {
       activeMediaPlayerSource = {};
@@ -478,6 +478,6 @@ export default updateDisplayState1;
 export { useMediaPlayerManagerStore };
 export const isPlaybackComplete = function isPlaybackComplete(duration) {
   if (duration.duration > 0) {
-    return duration.duration - duration.time <= __initData2;
+    return duration.duration - duration.time <= map1;
   }
 };

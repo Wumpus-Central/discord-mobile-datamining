@@ -1,11 +1,13 @@
-// === Module 5055: ActionSheetActionCreators ===
+// === Module 5056: ActionSheetActionCreators ===
 
-// Module 5055 (ActionSheetActionCreators)
+// Module 5056 (ActionSheetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1894 */;
+import HapticUtils from "HapticUtils" /* 5057 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5058 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4761 */;
+import ActionSheetStore from "ActionSheetStore" /* 4802 */;
 
 require = fn;
 let closure_3 = ["impressionName", "impressionProperties", "backdropKind", "disableHapticOnOpen", "appEntryKey"];
@@ -14,35 +16,27 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetActionCreators.tsx");
 
 export default {
-  openLazy(promise, arg1, arg2, arg3) {
-    closure_0 = arg1;
+  openLazy(promise, key, arg2, stackingBehavior) {
     closure_1 = arg2;
-    closure_2 = arg3;
     if (promise instanceof Promise) {
       let nextPromise = promise.then((result) => result.default);
     } else {
       nextPromise = promise();
     }
     nextPromise.then((result) => {
-      let obj = key;
-      if (key == null) {
+      let obj = closure_1;
+      if (closure_1 == null) {
         obj = {};
       }
       ({ impressionName, impressionProperties, backdropKind, disableHapticOnOpen, appEntryKey } = obj);
       const merged = Object.assign(_objectWithoutProperties(obj, closure_3));
-      const content = <result />;
-      const stackingBehavior = impressionName;
-      DispatcherDefault.wait(() => {
-        if (!disableHapticOnOpen) {
-          const result = content(impressionName[5]).triggerHapticFeedback(key(impressionName[6]).IMPACT_LIGHT);
-          const obj = content(impressionName[5]);
-        }
-        const result1 = content(impressionName[7]).dismissGlobalKeyboard();
-        const obj2 = content(impressionName[7]);
-        key(impressionName[4]).dispatch({ type: "SHOW_ACTION_SHEET", content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey });
-        const obj3 = key(impressionName[4]);
-        const obj4 = { type: "SHOW_ACTION_SHEET", content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey };
-      });
+      if (!disableHapticOnOpen) {
+        result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+      }
+      const obj2 = {};
+      const tmp2 = <result />;
+      const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
+      DispatcherDefault.dispatch({ type: "SHOW_ACTION_SHEET", content: tmp2, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey });
     });
   },
   hideActionSheet(key) {
@@ -64,17 +58,11 @@ export default {
 };
 export const ACTION_SHEET_HEIGHT_HALF = "start";
 export const ACTION_SHEET_HEIGHT_EXPANDED = "expanded";
-export const showActionSheet = function showActionSheet(arg0) {
-  ({ content: require, key: importDefault, impressionName: dependencyMap, impressionProperties: closure_3, backdropKind: _objectWithoutProperties, stackingBehavior: ActionSheetStore, disableHapticOnOpen: jsx, appEntryKey: closure_7 } = arg0);
-  DispatcherDefault.wait(() => {
-    if (!disableHapticOnOpen) {
-      const result = content(impressionName[5]).triggerHapticFeedback(key(impressionName[6]).IMPACT_LIGHT);
-      const obj = content(impressionName[5]);
-    }
-    const result1 = content(impressionName[7]).dismissGlobalKeyboard();
-    const obj2 = content(impressionName[7]);
-    key(impressionName[4]).dispatch({ type: "SHOW_ACTION_SHEET", content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey });
-    const obj3 = key(impressionName[4]);
-    const obj4 = { type: "SHOW_ACTION_SHEET", content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey };
-  });
+export const showActionSheet = function showActionSheet(disableHapticOnOpen) {
+  ({ content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey } = disableHapticOnOpen);
+  if (!disableHapticOnOpen.disableHapticOnOpen) {
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+  }
+  const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
+  DispatcherDefault.dispatch({ type: "SHOW_ACTION_SHEET", content, key, impressionName, impressionProperties, backdropKind, stackingBehavior, appEntryKey });
 };

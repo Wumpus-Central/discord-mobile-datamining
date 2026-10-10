@@ -1,6 +1,6 @@
-// === Module 9137: MarketingComponentPlatform ===
+// === Module 9158: MarketingComponentPlatform ===
 
-// Module 9137 (MarketingComponentPlatform)
+// Module 9158 (MarketingComponentPlatform)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/MarketingComponentPlatform.tsx");

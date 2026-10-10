@@ -1,18 +1,18 @@
-// === Module 15774: CopyClientInfoSetting ===
+// === Module 15836: CopyClientInfoSetting ===
 
-// Module 15774 (CopyClientInfoSetting)
+// Module 15836 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4767 */;
-import CopyIcon from "CopyIcon" /* 5044 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import DeviceUtils from "DeviceUtils" /* 5067 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6835 */;
-import ClipboardUtils from "ClipboardUtils" /* 6879 */;
-import ActionSheetRow from "ActionSheetRow" /* 6888 */;
-import ActionSheet from "ActionSheet" /* 6892 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11300 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 10450 */;
+import ToastUtils from "ToastUtils" /* 4808 */;
+import CopyIcon from "CopyIcon" /* 5042 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import DeviceUtils from "DeviceUtils" /* 5068 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6838 */;
+import ClipboardUtils from "ClipboardUtils" /* 6885 */;
+import ActionSheetRow from "ActionSheetRow" /* 6894 */;
+import ActionSheet from "ActionSheet" /* 6898 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11341 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 10483 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1381 */;
 
 require = fn;
@@ -328,14 +328,14 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6120).ClipboardListIcon,
+  IconComponent: fn(6113).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
   },

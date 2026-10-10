@@ -1,6 +1,6 @@
-// === Module 5472: ? ===
+// === Module 5475: ? ===
 
-// Module 5472
+// Module 5475
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/x_ray.png.js");

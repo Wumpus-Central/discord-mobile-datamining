@@ -1,48 +1,48 @@
-// === Module 11006: ChannelCallActionBar ===
+// === Module 11046: ChannelCallActionBar ===
 
-// Module 11006 (ChannelCallActionBar)
+// Module 11046 (ChannelCallActionBar)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5105 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 5897 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6848 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import useIsRemoteDefault from "useIsRemote" /* 6966 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5106 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 5900 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6851 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import useIsRemoteDefault from "useIsRemote" /* 6972 */;
 import StreamActionCreators from "StreamActionCreators" /* 7443 */;
-import CallsUtils from "CallsUtils" /* 8768 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 10324 */;
-import CallBarActionAll from "CallBarAction" /* 10831 */;
-import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 10834 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10839 */;
-import CameraLottie from "CameraLottie" /* 11008 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11012 */;
-import _modDef11027 from "module_11027" /* 11027 */;
-import _modDef11028 from "module_11028" /* 11028 */;
-import _modDef11029 from "module_11029" /* 11029 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11031 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 11061 */;
-import DisconnectRemoteButton from "DisconnectRemoteButton" /* 11089 */;
+import CallsUtils from "CallsUtils" /* 8785 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 10357 */;
+import CallBarActionAll from "CallBarAction" /* 10841 */;
+import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 10844 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 10851 */;
+import CameraLottie from "CameraLottie" /* 11048 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 11052 */;
+import _modDef11067 from "module_11067" /* 11067 */;
+import _modDef11068 from "module_11068" /* 11068 */;
+import _modDef11069 from "module_11069" /* 11069 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 11071 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 11101 */;
+import DisconnectRemoteButton from "DisconnectRemoteButton" /* 11129 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
-import GameConsoleStore from "GameConsoleStore" /* 5110 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5894 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
+import GameConsoleStore from "GameConsoleStore" /* 5111 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 5897 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10821 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 10831 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
 require = fn;
 let View = fn(17).View;
-const ParticipantTypes = fn(5114).ParticipantTypes;
-const Features = fn(5116).Features;
+const ParticipantTypes = fn(5115).ParticipantTypes;
+const Features = fn(5117).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5091);
-let obj2 = { container: { height: fn(10830).CALL_ACTION_BAR_HEIGHT, justifyContent: "center", alignItems: "center", flexDirection: "row" }, containerForFiveButtonLayout: null };
-let obj3 = { height: fn(10830).CALL_ACTION_BAR_HEIGHT, justifyContent: "center", alignItems: "center", flexDirection: "row" };
-obj2.containerForFiveButtonLayout = { height: fn(10830).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT, paddingHorizontal: 16, paddingTop: fn(10830).FIVE_BUTTON_CONTAINER_PADDING_TOP, paddingBottom: fn(10830).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM, justifyContent: "center", flexDirection: "row" };
+const createStyles = fn(5092);
+let obj2 = { container: { height: fn(10840).CALL_ACTION_BAR_HEIGHT, justifyContent: "center", alignItems: "center", flexDirection: "row" }, containerForFiveButtonLayout: null };
+let obj3 = { height: fn(10840).CALL_ACTION_BAR_HEIGHT, justifyContent: "center", alignItems: "center", flexDirection: "row" };
+obj2.containerForFiveButtonLayout = { height: fn(10840).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT, paddingHorizontal: 16, paddingTop: fn(10840).FIVE_BUTTON_CONTAINER_PADDING_TOP, paddingBottom: fn(10840).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM, justifyContent: "center", flexDirection: "row" };
 let closure_18 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoButton(channel) {
@@ -224,7 +224,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoButton(
       str = "mute";
     }
     obj.animation = str;
-    return closure_2_15(CameraLottie.CameraLottie, obj);
+    return value2(CameraLottie.CameraLottie, obj);
   }, items3);
   const callback = stateFromStores2.useCallback((channel) => {
     CallsUtils.handleToggleVideo(channel);
@@ -300,7 +300,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScreenshareB
       }
     }
     const obj2 = { appearsDisabled: !isFeatureEnabled, source: imgSource, isActive, accessibilityLabel: tmp8, onPress: tmp5, isSmallSize };
-    const tmp13 = closure_1_15(CallBarActionAll.ToggledActionButton, obj2);
+    const tmp13 = value2(CallBarActionAll.ToggledActionButton, obj2);
     cResult[4] = imgSource;
     cResult[5] = isActive;
     cResult[6] = isSmallSize;
@@ -333,7 +333,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScreenshareB
   obj.accessibilityLabel = intl.string(util.t.XF1nZz);
   obj.onPress = onPress;
   obj.isSmallSize = isSmallSize;
-  return closure_1_15(CallBarActionAll.ToggledActionButton, obj);
+  return value2(CallBarActionAll.ToggledActionButton, obj);
 });
 let closure_20 = tmp4;
 ReactCompilerGating = fn(558);
@@ -370,7 +370,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
         }
       }
       const obj4 = { isActive: isAudioRouteEnabled, source: routeSource, onPress: tmp6, accessibilityLabel: tmp8, isSmallSize };
-      const tmp13 = closure_1_15(CallBarActionAll.ToggledActionButton, obj4);
+      const tmp13 = value2(CallBarActionAll.ToggledActionButton, obj4);
       cResult[5] = isAudioRouteEnabled;
       cResult[6] = isSmallSize;
       cResult[7] = routeSource;
@@ -405,7 +405,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AudioRouteBu
   const intl = util.intl;
   obj3.accessibilityLabel = intl.string(util.t["A/Ly/2"]);
   obj3.isSmallSize = channel.isSmallSize;
-  return closure_1_15(CallBarActionAll.ToggledActionButton, obj3);
+  return value2(CallBarActionAll.ToggledActionButton, obj3);
 });
 let closure_21 = tmp5;
 ReactCompilerGating = fn(558);
@@ -438,15 +438,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function DisconnectCa
     return tmp7;
   }
   const obj = channel(576);
-  const tmp8 = closure_15(CallBarActionAll.PrimaryActionButton, { source: _modDef11027, accessibilityLabel: first, isSmallSize, onPress: tmp6 });
+  const tmp8 = closure_15(CallBarActionAll.PrimaryActionButton, { source: _modDef11067, accessibilityLabel: first, isSmallSize, onPress: tmp6 });
   cResult[3] = isSmallSize;
   cResult[4] = tmp6;
   cResult[5] = tmp8;
   tmp7 = tmp8;
-  const obj2 = { source: _modDef11027, accessibilityLabel: first, isSmallSize, onPress: tmp6 };
+  const obj2 = { source: _modDef11067, accessibilityLabel: first, isSmallSize, onPress: tmp6 };
 }) : (function DisconnectCallButton(channel) {
   channel = channel.channel;
-  const obj = { source: _modDef11027, accessibilityLabel: null, isSmallSize: null, onPress: null };
+  const obj = { source: _modDef11067, accessibilityLabel: null, isSmallSize: null, onPress: null };
   const intl = channel(1126).intl;
   obj.accessibilityLabel = intl.string(channel(1126).t["6vrfgt"]);
   obj.isSmallSize = channel.isSmallSize;
@@ -616,12 +616,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DisconnectSt
           return;
         }
       }
-      tmp2 = stateFromStores(11028);
+      tmp2 = stateFromStores(11068);
       tmp19[0] = tmp2;
       tmp19[1] = tmp13;
       tmp19[2] = isSmallSize;
       tmp19[3] = N;
-      const tmp21 = closure_15(stateFromStores1(10831).PrimaryActionButton, tmp19);
+      const tmp21 = closure_15(stateFromStores1(10841).PrimaryActionButton, tmp19);
       cResult[10] = isSmallSize;
       cResult[11] = N;
       cResult[12] = tmp21;
@@ -669,7 +669,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DisconnectSt
   });
   let tmp4 = null;
   if (null != stateFromStores) {
-    const obj3 = { source: _modDef11028, accessibilityLabel: null, isSmallSize: null, onPress: null };
+    const obj3 = { source: _modDef11068, accessibilityLabel: null, isSmallSize: null, onPress: null };
     const intl = tmp(1126).intl;
     obj3.accessibilityLabel = intl.string(tmp(1126).t.q3O3J8);
     obj3.isSmallSize = channel.isSmallSize;
@@ -678,7 +678,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function DisconnectSt
       const obj2 = StreamActionCreators;
       obj2.stopStream(StreamKeyUtils.encodeStreamKey(stateFromStores));
     };
-    tmp4 = closure_15(stateFromStores(10831).PrimaryActionButton, obj3);
+    tmp4 = closure_15(stateFromStores(10841).PrimaryActionButton, obj3);
   }
   return tmp4;
 });
@@ -716,8 +716,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function LeaveA
     tmp5 = cResult[1];
   }
   if (cResult[2] !== isSmallSize) {
-    let obj2 = { accessibilityLabel: tmp5, onPress: first, source: _modDef11029, isSmallSize };
-    const tmp11 = closure_1_15(CallBarActionAll.PrimaryActionButton, obj2);
+    let obj2 = { accessibilityLabel: tmp5, onPress: first, source: _modDef11069, isSmallSize };
+    const tmp11 = value2(CallBarActionAll.PrimaryActionButton, obj2);
     cResult[2] = isSmallSize;
     cResult[3] = tmp11;
     let tmp7 = tmp11;
@@ -743,9 +743,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function LeaveA
     obj2.applicationId = applicationId;
     const result = require("leaveEmbeddedActivity").leaveEmbeddedActivity(obj2);
   };
-  obj.source = _modDef11029;
+  obj.source = _modDef11069;
   obj.isSmallSize = isSmallSize.isSmallSize;
-  return closure_1_15(CallBarActionAll.PrimaryActionButton, obj);
+  return value2(CallBarActionAll.PrimaryActionButton, obj);
 });
 let obj11 = { NONE: 0, [0]: "NONE", SCREEN_SHARE_START: 1, [1]: "SCREEN_SHARE_START", SCREEN_SHARE_END: 2, [2]: "SCREEN_SHARE_END", AUDIO_ROUTE: 3, [3]: "AUDIO_ROUTE" };
 ReactCompilerGating = fn(558);
@@ -855,7 +855,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
   const cResult = channel(576).c(15);
   channel = channel.channel;
   const obj = channel(576);
-  const isConnectedToVoiceChannel = channel(10324).useIsConnectedToVoiceChannel(channel);
+  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, AuthenticationStore];
     cResult[0] = items;
@@ -906,7 +906,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
       }
     }
   }
-  const obj2 = channel(10324);
+  const obj2 = channel(10357);
   const stateFromStores = channel(504).useStateFromStores(first, S);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
@@ -1084,8 +1084,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
   const tmpResult6 = channel(504);
 }) : (function useActionBarPrimaryButtons(channel) {
   channel = channel.channel;
-  const isConnectedToVoiceChannel = channel(10324).useIsConnectedToVoiceChannel(channel);
-  const obj = channel(10324);
+  const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+  const obj = channel(10357);
   const items = [ChannelRTCStore, AuthenticationStore];
   closure_1 = channel(504).useStateFromStores(items, () => {
     const selectedParticipant = ChannelRTCStore.getSelectedParticipant(channel.id);
@@ -1160,7 +1160,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActionBa
 });
 let closure_30 = tmp11;
 ReactCompilerGating = fn(558);
-let obj4 = { height: fn(10830).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT, paddingHorizontal: 16, paddingTop: fn(10830).FIVE_BUTTON_CONTAINER_PADDING_TOP, paddingBottom: fn(10830).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM, justifyContent: "center", flexDirection: "row" };
+let obj4 = { height: fn(10840).FIVE_BUTTON_LAYOUT_ACTION_BAR_HEIGHT, paddingHorizontal: 16, paddingTop: fn(10840).FIVE_BUTTON_CONTAINER_PADDING_TOP, paddingBottom: fn(10840).FIVE_BUTTON_CONTAINER_PADDING_BOTTOM, justifyContent: "center", flexDirection: "row" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallActionBar.tsx");
 
@@ -1208,14 +1208,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
                   return tmp38;
                 }
                 const obj4 = { value: analyticsLocations, children: tmp34 };
-                const tmp40 = closure_1_15(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
+                const tmp40 = value2(useAnalyticsLocations.AnalyticsLocationProvider, obj4);
                 cResult[14] = analyticsLocations;
                 cResult[15] = tmp34;
                 cResult[16] = tmp40;
                 tmp38 = tmp40;
               }
               const obj5 = { pointerEvents: "box-none", style: tmp14, children: cResult[10] };
-              const tmp37 = closure_1_15(View, obj5);
+              const tmp37 = value2(View, obj5);
               cResult[11] = tmp14;
               cResult[12] = cResult[10];
               cResult[13] = tmp37;
@@ -1228,17 +1228,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
   }
   if (undefined !== shouldShowConnectingScreen && shouldShowConnectingScreen) {
     const obj6 = { channel };
-    let tmp16Result = closure_1_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj6);
+    let tmp16Result = value2(ChannelCallConnectingScreen.CallConnectingActionBar, obj6);
   } else {
     let tmp18 = null;
     if (!tmp7) {
       const obj7 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp18 = closure_1_15(closure_19, obj7);
+      tmp18 = value2(closure_19, obj7);
     }
     const items = [tmp18, , , ];
     if (obj11.AUDIO_ROUTE === tmp9) {
       const obj8 = { isSmallSize: isFiveButtonLayout, channel };
-      let tmp22 = closure_1_15(closure_21, obj8);
+      let tmp22 = value2(closure_21, obj8);
     } else {
       if (tmp21.SCREEN_SHARE_START !== tmp9) {
         if (tmp21.SCREEN_SHARE_END !== tmp9) {
@@ -1247,31 +1247,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
         }
       }
       const obj9 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp22 = closure_1_15(closure_20, obj9);
+      tmp22 = value2(closure_20, obj9);
     }
     items[1] = tmp22;
     const obj10 = { channel, isSmallSize: isFiveButtonLayout };
-    items[2] = closure_1_15(ChannelCallMicButton.ChannelCallMicButton, obj10);
+    items[2] = value2(ChannelCallMicButton.ChannelCallMicButton, obj10);
     if (obj14.END_REMOTE === tmp11) {
       obj11 = { channel, isSmallSize: isFiveButtonLayout };
-      let tmp27Result = closure_1_15(DisconnectRemoteButton.DisconnectRemoteButton, obj11);
+      let tmp27Result = value2(DisconnectRemoteButton.DisconnectRemoteButton, obj11);
     } else if (tmp28.END_STREAM === tmp11) {
       const obj12 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp27Result = closure_1_15(closure_23, obj12);
+      tmp27Result = value2(closure_23, obj12);
     } else if (tmp28.END_ACTIVITY === tmp11) {
       const obj13 = { isSmallSize: isFiveButtonLayout };
-      tmp27Result = closure_1_15(closure_24, obj13);
+      tmp27Result = value2(closure_24, obj13);
     } else {
       tmp27Result = null;
       if (tmp28.END_CALL === tmp11) {
         obj14 = { channel, isSmallSize: isFiveButtonLayout };
-        tmp27Result = closure_1_15(closure_22, obj14);
+        tmp27Result = value2(closure_22, obj14);
       }
     }
     const obj15 = { children: null };
     items[3] = tmp27Result;
     obj15.children = items;
-    tmp16Result = constants(value2, obj15);
+    tmp16Result = constants(value3, obj15);
   }
   cResult[4] = channel;
   cResult[5] = isFiveButtonLayout;
@@ -1296,17 +1296,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
   const obj3 = { pointerEvents: "box-none", style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container, children: null };
   if (shouldShowConnectingScreen) {
     const obj4 = { channel };
-    let tmp11Result = closure_1_15(ChannelCallConnectingScreen.CallConnectingActionBar, obj4);
+    let tmp11Result = value2(ChannelCallConnectingScreen.CallConnectingActionBar, obj4);
   } else {
     let tmp9Result4 = null;
     if (!tmp3) {
       const obj5 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp9Result4 = closure_1_15(closure_19, obj5);
+      tmp9Result4 = value2(closure_19, obj5);
     }
     const items = [tmp9Result4, , , ];
     if (obj11.AUDIO_ROUTE === tmp4) {
       const obj6 = { isSmallSize: isFiveButtonLayout, channel };
-      let tmp9Result5 = closure_1_15(closure_21, obj6);
+      let tmp9Result5 = value2(closure_21, obj6);
     } else {
       if (tmp15.SCREEN_SHARE_START !== tmp4) {
         if (tmp15.SCREEN_SHARE_END !== tmp4) {
@@ -1315,35 +1315,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelC
         }
       }
       const obj7 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp9Result5 = closure_1_15(closure_20, obj7);
+      tmp9Result5 = value2(closure_20, obj7);
     }
     items[1] = tmp9Result5;
     const obj8 = { channel, isSmallSize: isFiveButtonLayout };
-    items[2] = closure_1_15(ChannelCallMicButton.ChannelCallMicButton, obj8);
+    items[2] = value2(ChannelCallMicButton.ChannelCallMicButton, obj8);
     if (obj14.END_REMOTE === tmp5) {
       const obj9 = { channel, isSmallSize: isFiveButtonLayout };
-      let tmp9Result6 = closure_1_15(DisconnectRemoteButton.DisconnectRemoteButton, obj9);
+      let tmp9Result6 = value2(DisconnectRemoteButton.DisconnectRemoteButton, obj9);
     } else if (obj14.END_STREAM === tmp5) {
       const obj10 = { channel, isSmallSize: isFiveButtonLayout };
-      tmp9Result6 = closure_1_15(closure_23, obj10);
+      tmp9Result6 = value2(closure_23, obj10);
     } else if (obj14.END_ACTIVITY === tmp5) {
       obj11 = { isSmallSize: isFiveButtonLayout };
-      tmp9Result6 = closure_1_15(closure_24, obj11);
+      tmp9Result6 = value2(closure_24, obj11);
     } else {
       tmp9Result6 = null;
       if (obj14.END_CALL === tmp5) {
         const obj12 = { channel, isSmallSize: isFiveButtonLayout };
-        tmp9Result6 = closure_1_15(closure_22, obj12);
+        tmp9Result6 = value2(closure_22, obj12);
       }
     }
     const obj13 = { children: null };
     items[3] = tmp9Result6;
     obj13.children = items;
-    tmp11Result = constants(value2, obj13);
+    tmp11Result = constants(value3, obj13);
   }
   obj3.children = tmp11Result;
-  obj2.children = closure_1_15(View, obj3);
-  return closure_1_15(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
+  obj2.children = value2(View, obj3);
+  return value2(useAnalyticsLocations.AnalyticsLocationProvider, obj2);
 });
 export const VideoButton = tmp3;
 export const ScreenshareButton = tmp4;

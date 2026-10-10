@@ -1,31 +1,31 @@
-// === Module 5399: MarkupRules ===
+// === Module 5402: MarkupRules ===
 
-// Module 5399 (MarkupRules)
+// Module 5402 (MarkupRules)
 import util from "util" /* 1126 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2121 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 5402 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5405 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5406 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 5407 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5408 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5409 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5422 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5424 */;
-import MarkupListRuleDefault from "MarkupListRule" /* 8112 */;
-import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8113 */;
-import TimestampUtils from "TimestampUtils" /* 8139 */;
-import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8141 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 13980 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2122 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 5405 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5408 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5409 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 5410 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5411 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5412 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5425 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5427 */;
+import MarkupListRuleDefault from "MarkupListRule" /* 8130 */;
+import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 8131 */;
+import TimestampUtils from "TimestampUtils" /* 8155 */;
+import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 8157 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 14034 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildRoleStore from "GuildRoleStore" /* 2118 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildRoleStore from "GuildRoleStore" /* 2119 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 import t_mod from "module_1949" /* 1949 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5398 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5401 */;
 import "module_12";
 import apply_mod from "module_12" /* 12 */;
 
@@ -217,14 +217,14 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
 }
 const Constants = fn(1085);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5400).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5401).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5403).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5404).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
 const re17 = /^ *> ?/gm;
 const re18 = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-const regExp = new RegExp(fn(5086).ANSI_CONTROL_SEQUENCE_RE, "g");
+const regExp = new RegExp(fn(5087).ANSI_CONTROL_SEQUENCE_RE, "g");
 let obj = { newline: t.defaultRules.newline, paragraph: t.defaultRules.paragraph, escape: null, blockQuote: null, link: null, autolink: null, mailto: null, tel: null, url: null, strong: null, em: null, u: null, br: null, text: null, inlineCode: null, emoticon: null, codeBlock: null, roleMention: null, mention: null, silentPrefix: null, channelMention: null, channelOrMessageUrl: null, mediaPostLink: null, attachmentLink: null, commandMention: null, timestampMentionInput: null, gameMention: null, emoji: null, soundboard: null, customEmoji: null, timestamp: null, s: null, spoiler: null, staticRouteLink: null, heading: null, list: null, subtext: null };
 let obj2 = {};
 let merged = Object.assign(t.defaultRules.escape);

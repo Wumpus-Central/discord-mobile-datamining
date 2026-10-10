@@ -1,14 +1,14 @@
-// === Module 16592: IAPUpsellActionSheet ===
+// === Module 16659: IAPUpsellActionSheet ===
 
-// Module 16592 (IAPUpsellActionSheet)
+// Module 16659 (IAPUpsellActionSheet)
 import router_utils from "router_utils" /* 1112 */;
 import util from "util" /* 1126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Routes = fn(1085).Routes;
-const StaticChannelRoute = fn(2071).StaticChannelRoute;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const StaticChannelRoute = fn(2072).StaticChannelRoute;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -47,13 +47,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IAPUpsel
       }
       return tmp12;
     }
-    const obj2 = { imageSource: markAsDismissed(16594), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
-    const tmp16 = jsx(markAsDismissed(16593), { imageSource: markAsDismissed(16594), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
+    const obj2 = { imageSource: markAsDismissed(16661), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed };
+    const tmp16 = jsx(markAsDismissed(16660), { imageSource: markAsDismissed(16661), header: tmp6, body: tmp7, cta: tmp8, onCTAPress: tmp4, markAsDismissed });
     cResult[6] = tmp4;
     cResult[7] = markAsDismissed;
     cResult[8] = tmp16;
     tmp12 = tmp16;
-    const tmp15 = markAsDismissed(16593);
+    const tmp15 = markAsDismissed(16660);
   }
   function handleCTAPress() {
     router_utils.transitionTo(Routes.CHANNEL(guildId, StaticChannelRoute.ROLE_SUBSCRIPTIONS));
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IAPUpsel
   const obj = guildId(576);
 }) : (function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
-  const obj = { imageSource: markAsDismissed(16594), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
+  const obj = { imageSource: markAsDismissed(16661), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   const intl = util.intl;
   obj.header = intl.string(util.t.rBw4cE);
   const intl2 = util.intl;
@@ -78,5 +78,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function IAPUpsel
     markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
   obj.markAsDismissed = markAsDismissed;
-  return jsx(markAsDismissed(16593), { imageSource: markAsDismissed(16594), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
+  return jsx(markAsDismissed(16660), { imageSource: markAsDismissed(16661), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 });

@@ -1,6 +1,6 @@
-// === Module 12897: AppStoreMetadataActionCreators ===
+// === Module 12944: AppStoreMetadataActionCreators ===
 
-// Module 12897 (AppStoreMetadataActionCreators)
+// Module 12944 (AppStoreMetadataActionCreators)
 import DurationsDefault from "Durations" /* 1102 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import Dispatcher from "Dispatcher" /* 584 */;
@@ -43,7 +43,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
     if (null != value3) {
       return value3;
     } else {
-      const value4 = map3.get(combined);
+      value4 = map3.get(combined);
       if (null != value4) {
         let _Date = Date;
         if (Date.now() < value4.retryAt) {
@@ -61,7 +61,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {

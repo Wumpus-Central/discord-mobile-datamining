@@ -1,10 +1,10 @@
-// === Module 6044: VideoStreamStore ===
+// === Module 6037: VideoStreamStore ===
 
-// Module 6044 (VideoStreamStore)
+// Module 6037 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 5116 */;
+import Constants2 from "Constants" /* 5117 */;
 import size from "module_2" /* 2 */;
 
 function makeTimeoutKey(arg0, arg1) {

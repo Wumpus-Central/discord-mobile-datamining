@@ -1,6 +1,6 @@
-// === Module 11927: MorphablePanelConstants ===
+// === Module 11971: MorphablePanelConstants ===
 
-// Module 11927 (MorphablePanelConstants)
+// Module 11971 (MorphablePanelConstants)
 import PlatformUtils_mod from "PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;
 

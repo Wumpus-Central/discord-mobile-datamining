@@ -1,15 +1,15 @@
-// === Module 18018: JankSessionManager ===
+// === Module 18090: JankSessionManager ===
 
-// Module 18018 (JankSessionManager)
+// Module 18090 (JankSessionManager)
 import LoggerDefault from "Logger" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 1363 */;
-import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 16350 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 16357 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18019 */;
-import JankNavigationReporterDefault from "JankNavigationReporter" /* 18020 */;
-import attachJankPanelReportersDefault from "attachJankPanelReporters" /* 18021 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7176 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 16417 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 16424 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 18091 */;
+import JankNavigationReporterDefault from "JankNavigationReporter" /* 18092 */;
+import attachJankPanelReportersDefault from "attachJankPanelReporters" /* 18093 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7182 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 const Constants = fn(1085);
@@ -57,14 +57,14 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
     tmp._isDelivering = true;
-    const pendingReports = self(18019).getPendingReports();
-    let obj = self(18019);
+    const pendingReports = self(18091).getPendingReports();
+    let obj = self(18091);
     const nextPromise = pendingReports.then((arr) => {
       closure_0 = arr;
       if (0 !== arr.length) {
         const result = AnalyticsTrackingStore.submitEventsImmediately(arr.flatMap((screens) => {
           obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-          let merged = Object.assign(screens(7190).getDeviceMetadata());
+          let merged = Object.assign(screens(7196).getDeviceMetadata());
           ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count, totalFrameTimeMs: obj2.total_frame_time_ms, jankFrameTimeMs: obj2.jank_frame_time_ms, screensOverCap: obj2.screens_over_cap } = screens);
           obj.properties = {};
           const items = [obj];
@@ -74,7 +74,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           }
           HermesBuiltin.arraySpread(screens.map((item) => {
             obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
-            const merged = Object.assign(screens(7190).getDeviceMetadata());
+            const merged = Object.assign(screens(7196).getDeviceMetadata());
             ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, sessionStartMs: obj2.session_start_ms } = screens);
             ({ screen: obj2.screen, transitionFrameCount: obj2.transition_frame_count, transitionJankFrameCount: obj2.transition_jank_frame_count, transitionJankFrameTimeMs: obj2.transition_jank_frame_time_ms, transitionTotalFrameTimeMs: obj2.transition_total_frame_time_ms, transitionTimeoutCount: obj2.transition_timeout_count, steadyFrameCount: obj2.steady_frame_count, steadyJankFrameCount: obj2.steady_jank_frame_count, steadyJankFrameTimeMs: obj2.steady_jank_frame_time_ms, steadyTotalFrameTimeMs: obj2.steady_total_frame_time_ms } = item);
             obj.properties = {};
@@ -92,7 +92,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
       if (0 !== arr.length) {
         const result = AnalyticsTrackingStore.submitEventsImmediately(arr.flatMap((screens) => {
           obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-          let merged = Object.assign(screens(7190).getDeviceMetadata());
+          let merged = Object.assign(screens(7196).getDeviceMetadata());
           ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count, totalFrameTimeMs: obj2.total_frame_time_ms, jankFrameTimeMs: obj2.jank_frame_time_ms, screensOverCap: obj2.screens_over_cap } = screens);
           obj.properties = {};
           const items = [obj];
@@ -102,7 +102,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           }
           HermesBuiltin.arraySpread(screens.map((item) => {
             obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
-            const merged = Object.assign(screens(7190).getDeviceMetadata());
+            const merged = Object.assign(screens(7196).getDeviceMetadata());
             ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, sessionStartMs: obj2.session_start_ms } = screens);
             ({ screen: obj2.screen, transitionFrameCount: obj2.transition_frame_count, transitionJankFrameCount: obj2.transition_jank_frame_count, transitionJankFrameTimeMs: obj2.transition_jank_frame_time_ms, transitionTotalFrameTimeMs: obj2.transition_total_frame_time_ms, transitionTimeoutCount: obj2.transition_timeout_count, steadyFrameCount: obj2.steady_frame_count, steadyJankFrameCount: obj2.steady_jank_frame_count, steadyJankFrameTimeMs: obj2.steady_jank_frame_time_ms, steadyTotalFrameTimeMs: obj2.steady_total_frame_time_ms } = item);
             obj.properties = {};
@@ -124,7 +124,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
       if (0 !== arr.length) {
         const result = AnalyticsTrackingStore.submitEventsImmediately(arr.flatMap((screens) => {
           obj = { type: constants.ANDROID_JANK_SESSION, properties: null };
-          let merged = Object.assign(screens(7190).getDeviceMetadata());
+          let merged = Object.assign(screens(7196).getDeviceMetadata());
           ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, releaseChannel: obj2.captured_release_channel, sessionStartMs: obj2.session_start_ms, totalFrameCount: obj2.total_frame_count, jankFrameCount: obj2.jank_frame_count, totalFrameTimeMs: obj2.total_frame_time_ms, jankFrameTimeMs: obj2.jank_frame_time_ms, screensOverCap: obj2.screens_over_cap } = screens);
           obj.properties = {};
           const items = [obj];
@@ -134,7 +134,7 @@ prototype["deliverPendingSessions"] = function deliverPendingSessions() {
           }
           HermesBuiltin.arraySpread(screens.map((item) => {
             obj = { type: constants.ANDROID_JANK_SCREEN, properties: null };
-            const merged = Object.assign(screens(7190).getDeviceMetadata());
+            const merged = Object.assign(screens(7196).getDeviceMetadata());
             ({ schemaVersion: obj2.schema_version, sessionId: obj2.jank_session_id, appVersionCode: obj2.captured_app_version_code, sessionStartMs: obj2.session_start_ms } = screens);
             ({ screen: obj2.screen, transitionFrameCount: obj2.transition_frame_count, transitionJankFrameCount: obj2.transition_jank_frame_count, transitionJankFrameTimeMs: obj2.transition_jank_frame_time_ms, transitionTotalFrameTimeMs: obj2.transition_total_frame_time_ms, transitionTimeoutCount: obj2.transition_timeout_count, steadyFrameCount: obj2.steady_frame_count, steadyJankFrameCount: obj2.steady_jank_frame_count, steadyJankFrameTimeMs: obj2.steady_jank_frame_time_ms, steadyTotalFrameTimeMs: obj2.steady_total_frame_time_ms } = item);
             obj.properties = {};

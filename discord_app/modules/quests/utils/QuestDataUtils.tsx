@@ -1,15 +1,15 @@
-// === Module 7380: QuestDataUtils ===
+// === Module 7386: QuestDataUtils ===
 
-// Module 7380 (QuestDataUtils)
+// Module 7386 (QuestDataUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import FlagUtils from "FlagUtils" /* 1403 */;
-import QuestTypes from "QuestTypes" /* 5982 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7382 */;
-import QuestExpirationUtils from "QuestExpirationUtils" /* 7390 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7381 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
-import BountyStore from "BountyStore" /* 7383 */;
-import QuestStore from "QuestStore" /* 7384 */;
+import QuestTypes from "QuestTypes" /* 5975 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7388 */;
+import QuestExpirationUtils from "QuestExpirationUtils" /* 7396 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7387 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
+import BountyStore from "BountyStore" /* 7389 */;
+import QuestStore from "QuestStore" /* 7390 */;
 
 require = fn;
 function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) {
@@ -55,17 +55,17 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, item) 
     }
   }
 }
-const QuestConstants = fn(5979);
+const QuestConstants = fn(5972);
 ({ DismissibleQuestContentFlags: closure_7, BILLABLE_PLACEMENTS: closure_8, NON_BILLABLE_CREATIVE_TYPES: closure_9, EMPTY_AD_DECISION_DATA: c10 } = QuestConstants);
 let c11 = 2592000000;
 let obj = {};
-obj[fn(5982).QuestContent.QUEST_BAR] = fn(5982).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(5982).QuestContent.QUEST_BAR_V2] = fn(5982).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-obj[fn(5982).QuestContent.QUEST_BAR_MOBILE] = fn(5982).AdPlacement.MOBILE_HOME_DOCK_AREA;
-obj[fn(5982).QuestContent.QUEST_HOME_HERO] = fn(5982).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5982).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5982).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-obj[fn(5982).QuestContent.VIDEO_MODAL_MOBILE] = fn(5982).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(5982).AdPlacement.VIDEO_MODAL_MOBILE];
+obj[fn(5975).QuestContent.QUEST_BAR] = fn(5975).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(5975).QuestContent.QUEST_BAR_V2] = fn(5975).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+obj[fn(5975).QuestContent.QUEST_BAR_MOBILE] = fn(5975).AdPlacement.MOBILE_HOME_DOCK_AREA;
+obj[fn(5975).QuestContent.QUEST_HOME_HERO] = fn(5975).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5975).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5975).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+obj[fn(5975).QuestContent.VIDEO_MODAL_MOBILE] = fn(5975).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(5975).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
@@ -89,7 +89,7 @@ export const findQuestOrReplacement = function findQuestOrReplacement(scrollToQu
       return items;
     }));
   }
-  let map1 = excludedQuests;
+  map1 = excludedQuests;
   if (Array.isArray(excludedQuests)) {
     const _Map2 = Map;
     map1 = new Map(excludedQuests.map((id) => {
@@ -106,7 +106,7 @@ export const findQuestOrReplacement = function findQuestOrReplacement(scrollToQu
     if (value3 != null) {
       replacementId = value3.replacementId;
     }
-    let value4;
+    value4 = undefined;
     if (null != replacementId) {
       value4 = map.get(replacementId);
     }

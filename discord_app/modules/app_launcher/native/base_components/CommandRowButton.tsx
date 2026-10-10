@@ -1,15 +1,15 @@
-// === Module 11746: CommandRowButton ===
+// === Module 11791: CommandRowButton ===
 
-// Module 11746 (CommandRowButton)
+// Module 11791 (CommandRowButton)
 import c from "c" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const util = TableRowArrow(1126);
-const SendMessageIcon = TableRowArrow(5042);
-const components_Button_Button = TableRowArrow(5376);
-const TableRowArrow2 = TableRowArrow(6195);
+const SendMessageIcon = TableRowArrow(5040);
+const components_Button_Button = TableRowArrow(5379);
+const TableRowArrow2 = TableRowArrow(6188);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -86,7 +86,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -106,11 +106,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             }
             c3 = 1;
             const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            const obj2 = tmp3(9219);
-            obj6.optionValues = tmp3(11621).parseOptionValuesForSend(commandContext.channel, command, {});
+            const obj2 = tmp3(9246);
+            obj6.optionValues = tmp3(11667).parseOptionValuesForSend(commandContext.channel, command, {});
             obj6.context = commandContext;
             obj6.sectionName = sectionName;
-            obj6.commandOrigin = tmp3(7240).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj6.commandOrigin = tmp3(7246).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };
@@ -136,7 +136,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           c3 = 0;
           closure_128_5(false);
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp27) {
         closure_2 = tmp27;

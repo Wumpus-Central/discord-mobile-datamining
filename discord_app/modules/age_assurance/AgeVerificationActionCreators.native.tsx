@@ -2,13 +2,13 @@
 
 // Module 7497 (AgeVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LinkingDefault from "Linking" /* 4765 */;
-import useAlertStore from "useAlertStore" /* 5300 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7017 */;
-import ManualReviewDecidedTeenAlertModalDefault from "ManualReviewDecidedTeenAlertModal" /* 7695 */;
-import ManualReviewPendingAlertModalDefault from "ManualReviewPendingAlertModal" /* 7697 */;
-import ManualReviewFallbackAlertModalDefault from "ManualReviewFallbackAlertModal" /* 7698 */;
+import LinkingDefault from "Linking" /* 4806 */;
+import useAlertStore from "useAlertStore" /* 5301 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7025 */;
+import ManualReviewDecidedTeenAlertModalDefault from "ManualReviewDecidedTeenAlertModal" /* 7712 */;
+import ManualReviewPendingAlertModalDefault from "ManualReviewPendingAlertModal" /* 7714 */;
+import ManualReviewFallbackAlertModalDefault from "ManualReviewFallbackAlertModal" /* 7715 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -43,10 +43,10 @@ function openIncodeAgeVerificationModal(arg0) {
       await tmp3(7499).requestPermission(constants.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        tmp3(7017).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
+        tmp3(7025).showFailedToast(constants2.TIGGER_PAWTECT_ERROR);
         closure_129_0();
         c4 = 3;
-        tmp3(7017);
+        tmp3(7025);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
@@ -59,7 +59,7 @@ function openIncodeAgeVerificationModal(arg0) {
           const v3 = 3;
           c4 = 1;
           return {
-            value: tmp3(5941).pushLazy(v3(async () => {
+            value: tmp3(5934).pushLazy(v3(async () => {
                   await tmp2(paths[10])(paths[9], paths.paths);
                   closure_128_0 = value.default;
                   return () => closure_3_15(closure_1_0, { webviewUrl, onClose, onComplete });
@@ -175,11 +175,11 @@ function showManualReviewFallbackModal(AUTOMATED_UNDERAGE_APPEALS, arg1) {
     const obj = require("useAlertStore");
   }
 }
-const AgeVerificationConstants = fn(5915);
+const AgeVerificationConstants = fn(5917);
 ({ AGE_VERIFICATION_MODAL_KEY: hasOwnProperty, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: metroRequire, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: closure_7, MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY: closure_8, MANUAL_REVIEW_FALLBACK_ALERT_KEY: closure_9, MANUAL_REVIEW_PENDING_ALERT_KEY: c10, VerificationVendorName: closure_11 } = AgeVerificationConstants);
 let closure_12 = fn(7498).AGE_VERIFICATION_INCODE_PATH;
 const NativePermissionTypes = fn(7482).NativePermissionTypes;
-const SafetyToastType = fn(7018).SafetyToastType;
+const SafetyToastType = fn(7019).SafetyToastType;
 const jsx = fn(21).jsx;
 let c18 = false;
 const size = fn(2);
@@ -194,16 +194,16 @@ export default {
     let prop;
     UserStore = undefined;
     if (obj.isMetaQuest()) {
-      tmp(5300).openAlert(closure_7, jsx(onClose(7529), {}), onClose);
-      const tmpResult = tmp(5300);
+      tmp(5301).openAlert(closure_7, jsx(onClose(7532), {}), onClose);
+      const tmpResult = tmp(5301);
     } else {
-      let isAgeVerifiedResult = tmp(5906).isAgeVerified();
+      let isAgeVerifiedResult = tmp(5909).isAgeVerified();
       if (isAgeVerifiedResult) {
-        isAgeVerifiedResult = tmp(5919).hasAgeGatedFeatures();
-        const tmpResult7 = tmp(5919);
+        isAgeVerifiedResult = tmp(5921).hasAgeGatedFeatures();
+        const tmpResult7 = tmp(5921);
       }
       dependencyMap = isAgeVerifiedResult;
-      const tmpResult6 = tmp(5906);
+      const tmpResult6 = tmp(5909);
       if (tmpResult8.isAgeVerificationIncodeEnabled(entryPoint)) {
         const currentUser = UserStore.getCurrentUser();
         prop = undefined;
@@ -246,7 +246,7 @@ export default {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -264,7 +264,7 @@ export default {
                     entryPoint = tmp4;
                     dependencyMap = 1;
                     v3 = 1;
-                    const obj5 = { value: entryPoint(7533).shouldShowManualReviewFallback(entryPoint), done: false };
+                    const obj5 = { value: entryPoint(7541).shouldShowManualReviewFallback(entryPoint), done: false };
                     return obj5;
                   }
                 } else if (arg0 === 1) {
@@ -278,7 +278,7 @@ export default {
                   if (value) {
                     showManualReviewFallbackModal(closure_129_0, closure_129_1);
                   } else {
-                    onClose(5941).pushLazy(v3(function*() {
+                    onClose(5934).pushLazy(v3(function*() {
                       yield tmp2(paths[10])(paths[26], paths.paths);
                       closure_128_0 = value.default;
                       return () => closure_3_15(closure_1_0, {
@@ -292,7 +292,7 @@ export default {
                         }
                       });
                     }), {}, closure_1_6);
-                    const obj = onClose(5941);
+                    const obj = onClose(5934);
                   }
                   v3 = 3;
                 }
@@ -303,18 +303,18 @@ export default {
             }
           })();
         } else {
-          UserStore = tmp(7683).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
-          const tmpResult10 = tmp(7683);
-          onClose(5941).pushLazy(prop(function*() {
+          UserStore = tmp(7700).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
+          const tmpResult10 = tmp(7700);
+          onClose(5934).pushLazy(prop(function*() {
             yield tmp2(paths[10])(paths[28], paths.paths);
             closure_128_0 = value.default;
             return () => <closure_1_0 entryPoint={entryPoint} isRetry={isRetry} useEmbeddedMethods={useEmbeddedMethods} />;
           }), {}, closure_6);
-          const obj7 = onClose(5941);
+          const obj7 = onClose(5934);
         }
-        tmpResult9 = tmp(7532);
+        tmpResult9 = tmp(7535);
       }
-      tmpResult8 = tmp(7530);
+      tmpResult8 = tmp(7533);
     }
     obj = entryPoint(1628);
   },

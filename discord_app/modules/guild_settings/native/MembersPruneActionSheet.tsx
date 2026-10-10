@@ -1,18 +1,18 @@
-// === Module 16950: MembersPruneActionSheet ===
+// === Module 17018: MembersPruneActionSheet ===
 
-// Module 16950 (MembersPruneActionSheet)
+// Module 17018 (MembersPruneActionSheet)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6961 */;
-import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 16952 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6967 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 17020 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
-const PrunePreviewStore = fn(16951);
+const PrunePreviewStore = fn(17019);
 ({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

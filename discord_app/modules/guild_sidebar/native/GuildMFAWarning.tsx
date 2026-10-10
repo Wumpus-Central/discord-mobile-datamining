@@ -1,15 +1,15 @@
-// === Module 16542: GuildMFAWarning ===
+// === Module 16612: GuildMFAWarning ===
 
-// Module 16542 (GuildMFAWarning)
+// Module 16612 (GuildMFAWarning)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import Pressables from "Pressables" /* 6191 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10480 */;
-import _modDef16543 from "module_16543" /* 16543 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import Pressables from "Pressables" /* 6184 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10514 */;
+import _modDef16613 from "module_16613" /* 16613 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ let closure_9 = async function _handlePress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_9 = async function _handlePress() {
         closure_128_0 = value.default;
         closure_129_1(closure_129_2[9]).openURL(closure_128_0.getArticleURL(closure_129_4.SETTING_UP_TWO_FACTOR));
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp17) {
       c3 = tmp;
@@ -80,7 +80,7 @@ const Constants = fn(1085);
 ({ HelpdeskArticles: closure_4, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" }, MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 }, MFAWarningLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 obj2.MFAWarningLink = { color: nativeDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildMFA
   const cResult = c.c(10);
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.MFAWarningIcon) {
-    const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16543 };
+    const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16613 };
     const tmp9 = hasOwnProperty(FastImageDefault, obj2);
     cResult[0] = tmp4.MFAWarningIcon;
     cResult[1] = tmp9;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildMFA
 }) : (function GuildMFAWarning() {
   const tmp = closure_7();
   const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef16543 };
+  const obj2 = { style: tmp.MFAWarningIcon, source: _modDef16613 };
   const items = [hasOwnProperty(FastImageDefault, obj2), ];
   const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = util.intl;

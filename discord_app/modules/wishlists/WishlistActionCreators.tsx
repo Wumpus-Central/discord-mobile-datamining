@@ -1,16 +1,16 @@
-// === Module 8968: WishlistActionCreators ===
+// === Module 8987: WishlistActionCreators ===
 
-// Module 8968 (WishlistActionCreators)
+// Module 8987 (WishlistActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import StorefrontUtils from "StorefrontUtils" /* 6929 */;
+import StorefrontUtils from "StorefrontUtils" /* 6935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
 import UserStore from "UserStore" /* 1390 */;
-import BillingInfoStore from "BillingInfoStore" /* 4730 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6925 */;
-import WishlistRecord from "WishlistRecord" /* 8962 */;
+import BillingInfoStore from "BillingInfoStore" /* 4771 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6931 */;
+import WishlistRecord from "WishlistRecord" /* 8981 */;
 
 require = fn;
 function extraWishlistParams() {
@@ -44,7 +44,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(8962).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8981).getWishlistSkuIds;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
@@ -114,7 +114,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -243,7 +243,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -341,7 +341,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

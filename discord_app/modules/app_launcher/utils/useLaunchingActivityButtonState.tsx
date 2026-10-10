@@ -1,9 +1,9 @@
-// === Module 11783: useLaunchingActivityButtonState ===
+// === Module 11827: useLaunchingActivityButtonState ===
 
-// Module 11783 (useLaunchingActivityButtonState)
+// Module 11827 (useLaunchingActivityButtonState)
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
-import FramesStore from "FramesStore" /* 10772 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
+import FramesStore from "FramesStore" /* 10807 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunc
       if (cResult[6] !== applicationId) {
         const fn2 = function b() {
           const mainFrame = FramesStore.getMainFrame();
-          state = undefined;
+          let state;
           if (mainFrame != null) {
             state = mainFrame.state;
           }
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useLaunc
   const items1 = [FramesStore];
   let stateFromStores1 = applicationId(onSubmissionComplete[6]).useStateFromStores(items1, () => {
     const mainFrame = FramesStore.getMainFrame();
-    state = undefined;
+    let state;
     if (mainFrame != null) {
       state = mainFrame.state;
     }

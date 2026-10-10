@@ -1,11 +1,11 @@
-// === Module 12726: createUseCollectiblesShopStyles ===
+// === Module 12773: createUseCollectiblesShopStyles ===
 
-// Module 12726 (createUseCollectiblesShopStyles)
+// Module 12773 (createUseCollectiblesShopStyles)
 import useStateFromStores from "useStateFromStores" /* 573 */;
-import tinycolorDefault from "tinycolor" /* 7267 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8339 */;
+import tinycolorDefault from "tinycolor" /* 7273 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8355 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 const size = fn(2);

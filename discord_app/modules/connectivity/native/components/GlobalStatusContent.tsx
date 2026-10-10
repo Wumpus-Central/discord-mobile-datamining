@@ -1,30 +1,30 @@
-// === Module 10989: GlobalStatusContent ===
+// === Module 11029: GlobalStatusContent ===
 
-// Module 10989 (GlobalStatusContent)
+// Module 11029 (GlobalStatusContent)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import useThemeDefault from "useTheme" /* 4992 */;
-import StatusBarDefault from "StatusBar" /* 10327 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 10815 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10837 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 10982 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 10985 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 10990 */;
+import useThemeDefault from "useTheme" /* 5031 */;
+import StatusBarDefault from "StatusBar" /* 10360 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 10825 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 10849 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11022 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11025 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11030 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
-import SessionsStore from "SessionsStore" /* 5111 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
+import SessionsStore from "SessionsStore" /* 5112 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(10984).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11024).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1085).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -123,11 +123,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
   const tmp5Result = useCanSpeakInChannelDefault;
   const tmp23 = useThemeDefault();
   if (cResult[6] !== tmp23) {
-    const isThemeDarkResult = tmp(4930).isThemeDark(tmp23);
+    const isThemeDarkResult = tmp(4969).isThemeDark(tmp23);
     cResult[6] = tmp23;
     cResult[7] = isThemeDarkResult;
     let tmp24 = isThemeDarkResult;
-    const tmpResult5 = tmp(4930);
+    const tmpResult5 = tmp(4969);
   } else {
     tmp24 = cResult[7];
   }
@@ -145,12 +145,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
               }
               tmp22 = tmp5ResultResult;
             }
-            const isScreenLandscape = tmp(8310).useIsScreenLandscape();
+            const isScreenLandscape = tmp(8326).useIsScreenLandscape();
             if (cResult[15] !== isScreenLandscape) {
               let isModalOpenResult = isScreenLandscape;
               if (isScreenLandscape) {
-                isModalOpenResult = tmp(4937).isModalOpen(ChannelCallModalDefault);
-                const tmpResult7 = tmp(4937);
+                isModalOpenResult = tmp(4976).isModalOpen(ChannelCallModalDefault);
+                const tmpResult7 = tmp(4976);
               }
               if (isModalOpenResult) {
                 isModalOpenResult = tmp(1382).isAndroid();
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
             cResult[18] = num11;
             cResult[19] = obj4;
             tmp33 = obj4;
-            const tmpResult6 = tmp(8310);
+            const tmpResult6 = tmp(8326);
           }
         }
       }
@@ -323,8 +323,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4937).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(4937);
+    isScreenLandscape = tmp5(4976).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(4976);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1382).isAndroid();

@@ -1,19 +1,19 @@
-// === Module 16729: usePrivateProfileCoachmarkProps ===
+// === Module 16799: usePrivateProfileCoachmarkProps ===
 
-// Module 16729 (usePrivateProfileCoachmarkProps)
+// Module 16799 (usePrivateProfileCoachmarkProps)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import openUserSettings from "openUserSettings" /* 7087 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 16730 */;
+import openUserSettings from "openUserSettings" /* 7093 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 16800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrivateProfileCoachmarkImage() {
@@ -47,7 +47,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
   const cResult = markAsDismissed(576).c(15);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const obj = markAsDismissed(576);
-  let userIsTeen = markAsDismissed(7719).useUserIsTeen();
+  let userIsTeen = markAsDismissed(7737).useUserIsTeen();
   const ProfileVisibility = markAsDismissed(2041).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
   if (userIsTeen) {
@@ -156,7 +156,7 @@ export const usePrivateProfileCoachmarkProps = ReactCompilerGating.isReactCompil
     }
     obj4.string(tmp(1126).t["6hEfm1"]);
   }
-  const obj2 = markAsDismissed(7719);
+  const obj2 = markAsDismissed(7737);
 }) : (function usePrivateProfileCoachmarkProps(visibleContent) {
   visibleContent = visibleContent.visibleContent;
   const markAsDismissed = visibleContent.markAsDismissed;

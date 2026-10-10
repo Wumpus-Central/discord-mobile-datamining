@@ -1,36 +1,36 @@
-// === Module 12537: MessagePreviewText ===
+// === Module 12584: MessagePreviewText ===
 
-// Module 12537 (MessagePreviewText)
+// Module 12584 (MessagePreviewText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useMessageAuthor from "useMessageAuthor" /* 5624 */;
-import FastImageDefault from "FastImage" /* 6163 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6995 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9286 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12528 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12538 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 12539 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12540 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 12543 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12544 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useMessageAuthor from "useMessageAuthor" /* 5627 */;
+import FastImageDefault from "FastImage" /* 6156 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7001 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 9313 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12575 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12585 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12586 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12587 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 12590 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12591 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
 const View = fn(17).View;
-const InAppNotificationConstants = fn(12529);
+const InAppNotificationConstants = fn(12576);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
 const Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 const PlatformUtils = fn(1383);
 let obj3 = { italic: { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC } };
 let closure_10 = createStyles.createStyles(obj3);
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj6 = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
 let obj4 = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
 obj6.embedContainer = { borderRadius: nativeDefault.radii.sm, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };

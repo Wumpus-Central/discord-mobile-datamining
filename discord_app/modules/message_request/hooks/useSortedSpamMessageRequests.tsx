@@ -1,10 +1,10 @@
-// === Module 17527: useSortedSpamMessageRequests ===
+// === Module 17599: useSortedSpamMessageRequests ===
 
-// Module 17527 (useSortedSpamMessageRequests)
+// Module 17599 (useSortedSpamMessageRequests)
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 import UserStore from "UserStore" /* 1390 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6063 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6056 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);

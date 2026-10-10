@@ -1,6 +1,6 @@
-// === Module 5486: ? ===
+// === Module 5489: ? ===
 
-// Module 5486
+// Module 5489
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/shoes/snow_shoes.png.js");

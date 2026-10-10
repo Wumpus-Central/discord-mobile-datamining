@@ -1,16 +1,16 @@
-// === Module 17053: useConjureHistoryData ===
+// === Module 17121: useConjureHistoryData ===
 
-// Module 17053 (useConjureHistoryData)
+// Module 17121 (useConjureHistoryData)
 import c from "c" /* 576 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 17048 */;
-import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 17054 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 17116 */;
+import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 17122 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConjureConnectionStore = fn(13164);
+const ConjureConnectionStore = fn(13213);
 ({ fetchDatabaseRestorePoints: closure_4, fetchDatabaseRestoreWindow: hasOwnProperty, fetchVersionHistory: metroRequire } = ConjureConnectionStore);
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHistoryLoad(arg0) {
@@ -139,7 +139,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHist
   }, []);
   if (null != tmp3) {
     if (tmp3.load === arg0) {
-      state = tmp3.state;
+      const state = tmp3.state;
     }
     let obj = { state: { status: "loading" }, retry: callback, refresh: tmp6 };
     return obj;
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
             if (cResult[19] === tmp12Result) {
               if (cResult[20] === tmp12Result3) {
                 if (cResult[21] === tmp12Result4) {
-                  state = tmp13.state;
+                  let state = tmp13.state;
                   if (cResult[27] === state.data) {
                     if (cResult[28] === state.status) {
                       let tmp25 = cResult[29];
@@ -716,7 +716,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     refresh2();
     refresh3();
   }, items5);
-  state = tmp2.state;
+  let state = tmp2.state;
   const items6 = [state];
   const mapped = memo.map((environment) => {
     const obj = { environment, backups: null };

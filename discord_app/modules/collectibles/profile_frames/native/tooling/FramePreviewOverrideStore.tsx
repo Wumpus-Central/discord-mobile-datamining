@@ -1,9 +1,9 @@
-// === Module 8313: FramePreviewOverrideStore ===
+// === Module 8329: FramePreviewOverrideStore ===
 
-// Module 8313 (FramePreviewOverrideStore)
+// Module 8329 (FramePreviewOverrideStore)
 import LoggerDefault from "Logger" /* 3 */;
 import NativeFileModuleDefault from "NativeFileModule" /* 1162 */;
-import FileManagerUtils from "FileManagerUtils" /* 8315 */;
+import FileManagerUtils from "FileManagerUtils" /* 8331 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -54,7 +54,7 @@ let closure_11 = async function _buildOverride(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {
@@ -222,7 +222,7 @@ let closure_11 = async function _buildOverride(arg0) {
   })();
 };
 const Image = fn(17).Image;
-const FrameOverrideConstants = fn(8314);
+const FrameOverrideConstants = fn(8330);
 ({ MANIFEST_NAME: hasOwnProperty, OVERRIDE_DIR: metroRequire } = FrameOverrideConstants);
 let closure_7 = new LoggerDefault("FramePreviewOverrideStore");
 let closure_8 = 0;
@@ -245,7 +245,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -292,7 +292,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
           closure_128_5 = closure_2;
           if (closure_128_1()) {
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             const _Error = Error;
             if (closure_128_5 instanceof Error) {
@@ -320,7 +320,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
             if (closure_128_1()) {
               c3 = 0;
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else if (null == closure_128_2) {
               closure_129_0({ status: "error", error: "No frame on device. Ask Cap to push one (or run pushFrameOverride.mjs)." });
               c3 = 0;
@@ -364,7 +364,7 @@ export const useFramePreviewOverrideStore = module_570.create((arg0) => {
           }
           c3 = 0;
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp44) {
         closure_2 = tmp44;

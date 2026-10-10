@@ -1,6 +1,6 @@
-// === Module 11730: useClickOnHomeActivityOpensAppDetails ===
+// === Module 11775: useClickOnHomeActivityOpensAppDetails ===
 
-// Module 11730 (useClickOnHomeActivityOpensAppDetails)
+// Module 11775 (useClickOnHomeActivityOpensAppDetails)
 import UserSettings from "UserSettings" /* 2041 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

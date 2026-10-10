@@ -1,9 +1,9 @@
-// === Module 15528: useLatestChannelMessage ===
+// === Module 15590: useLatestChannelMessage ===
 
-// Module 15528 (useLatestChannelMessage)
-import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15529 */;
+// Module 15590 (useLatestChannelMessage)
+import MessagePreviewManagerDefault from "MessagePreviewManager" /* 15591 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13935 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13988 */;
 
 const require = globalThis.__r;
 

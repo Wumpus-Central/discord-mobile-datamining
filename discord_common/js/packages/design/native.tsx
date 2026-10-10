@@ -1,10 +1,10 @@
-// === Module 4788: native ===
+// === Module 4827: native ===
 
-// Module 4788 (native)
-import ManaContext from "ManaContext" /* 4854 */;
-import GraphicTypes from "GraphicTypes" /* 4896 */;
+// Module 4827 (native)
+import ManaContext from "ManaContext" /* 4893 */;
+import GraphicTypes from "GraphicTypes" /* 4935 */;
 import size from "module_2" /* 2 */;
-import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4796 */;
+import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4835 */;
 
 const require = globalThis.__r;
 
@@ -65,8 +65,8 @@ for (const key10071 in require("ThemeContextFlags")) {
   arg5[key10071] = require("ThemeContextFlags")[key10071];
   continue;
 }
-for (const key10075 in require("module_4803")) {
-  arg5[key10075] = require("module_4803")[key10075];
+for (const key10075 in require("module_4842")) {
+  arg5[key10075] = require("module_4842")[key10075];
   continue;
 }
 for (const key10079 in require("Colors")) {

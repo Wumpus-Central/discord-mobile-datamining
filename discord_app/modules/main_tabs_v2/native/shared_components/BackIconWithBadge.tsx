@@ -1,24 +1,24 @@
-// === Module 16770: BackIconWithBadge ===
+// === Module 16840: BackIconWithBadge ===
 
-// Module 16770 (BackIconWithBadge)
+// Module 16840 (BackIconWithBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1383 */;
-import XLargeIcon from "XLargeIcon" /* 4996 */;
-import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6209 */;
-import XSmallIcon from "XSmallIcon" /* 6212 */;
-import ClipView from "ClipView" /* 8997 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16761 */;
+import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6204 */;
+import XSmallIcon from "XSmallIcon" /* 6207 */;
+import ClipView from "ClipView" /* 9016 */;
+import XLargeIcon from "XLargeIcon" /* 10258 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16831 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6084 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6077 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -116,7 +116,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function IconWit
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16761)().value;
+    num2 = memo(16831)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -153,7 +153,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function IconWit
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(8997), obj4), ];
+  const items5 = [closure_6(tmp5(9016), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
@@ -174,7 +174,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function SettingsLe
   const cResult = c.c(5);
   ({ navigation, includeNotificationsCount } = arg0);
   if (cResult[0] !== navigation) {
-    state = navigation.getState();
+    const state = navigation.getState();
     cResult[0] = navigation;
     cResult[1] = state;
     let tmp4 = state;

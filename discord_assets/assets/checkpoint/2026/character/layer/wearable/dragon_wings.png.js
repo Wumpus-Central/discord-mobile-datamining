@@ -1,6 +1,6 @@
-// === Module 5607: ? ===
+// === Module 5610: ? ===
 
-// Module 5607
+// Module 5610
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/dragon_wings.png.js");

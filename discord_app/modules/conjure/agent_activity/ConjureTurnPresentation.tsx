@@ -1,7 +1,7 @@
-// === Module 17164: ConjureTurnPresentation ===
+// === Module 17234: ConjureTurnPresentation ===
 
-// Module 17164 (ConjureTurnPresentation)
-import ConjureTimelineTree from "ConjureTimelineTree" /* 17097 */;
+// Module 17234 (ConjureTurnPresentation)
+import ConjureTimelineTree from "ConjureTimelineTree" /* 17166 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTurnPresentation.tsx");
@@ -22,7 +22,10 @@ export const resolveAttachmentHost = function resolveAttachmentHost(hasAttachmen
   return str;
 };
 export const resolveTurnPresentation = function resolveTurnPresentation(hasAttachments) {
-  ({ steps, content, hasProposal } = hasAttachments);
+  ({ steps, content, hasProposal, hasLiveClarification } = hasAttachments);
+  if (hasLiveClarification === undefined) {
+    hasLiveClarification = false;
+  }
   c0 = undefined;
   const streamedContentResult = ConjureTimelineTree.streamedContent(steps);
   const found = streamedContentResult.filter((type) => "message" === type.type);
@@ -53,6 +56,9 @@ export const resolveTurnPresentation = function resolveTurnPresentation(hasAttac
   const found2 = found1.filter((type) => "message" === type.type);
   let tmp10 = !hasProposal;
   if (!hasProposal) {
+    tmp10 = !hasLiveClarification;
+  }
+  if (tmp10) {
     tmp10 = "" !== content.trim();
   }
   const obj2 = { streamed: found1, lastStreamedMessage: found2.at(-1), replyKey: null, showsClosingMessage: null, closingContent: null, attachmentsHost: null };

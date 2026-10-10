@@ -1,6 +1,6 @@
-// === Module 16900: HideCoveredChannelsExperiment ===
+// === Module 16968: HideCoveredChannelsExperiment ===
 
-// Module 16900 (HideCoveredChannelsExperiment)
+// Module 16968 (HideCoveredChannelsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1453 */;
 import size from "module_2" /* 2 */;
 

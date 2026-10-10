@@ -1,17 +1,17 @@
-// === Module 10988: GlobalStatusIndicator ===
+// === Module 11028: GlobalStatusIndicator ===
 
-// Module 10988 (GlobalStatusIndicator)
+// Module 11028 (GlobalStatusIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7481 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 10983 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 11023 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4761 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
-import NativeMenuStore from "NativeMenuStore" /* 9664 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5109 */;
+import ActionSheetStore from "ActionSheetStore" /* 4802 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
+import NativeMenuStore from "NativeMenuStore" /* 9693 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5110 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSt
           const obj2 = { children: null };
           const items3 = [tmp19, tmp21];
           obj2.children = items3;
-          const tmp25 = state(__initData2, obj2);
+          const tmp25 = closure_1_14(map1, obj2);
           cResult[14] = tmp19;
           cResult[15] = tmp21;
           cResult[16] = tmp25;
@@ -599,7 +599,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalSt
       tmp3Result = __initData(closure_16, obj2);
     }
     children[1] = tmp3Result;
-    return state(__initData2, { children });
+    return closure_2_14(map1, { children });
   }, items2);
 });
 export const useGlobalStatusIndicatorHeightSharedValue = tmp5;

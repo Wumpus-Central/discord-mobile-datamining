@@ -1,17 +1,17 @@
-// === Module 15905: PasskeyUpsellPromoSheet ===
+// === Module 15967: PasskeyUpsellPromoSheet ===
 
-// Module 15905 (PasskeyUpsellPromoSheet)
-import FastImageDefault from "FastImage" /* 6163 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6629 */;
-import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 15904 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 15907 */;
+// Module 15967 (PasskeyUpsellPromoSheet)
+import FastImageDefault from "FastImage" /* 6156 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6630 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 15966 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 15969 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -21,7 +21,7 @@ let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPr
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function PasswordlessUpsellPromoSheet() {
   const cResult = require("c").c(8);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { source: tmp(15906), style: { height: 190, width: 220, resizeMode: "contain" } };
+    let obj2 = { source: tmp(15968), style: { height: 190, width: 220, resizeMode: "contain" } };
     const tmp8 = closure_6(FastImageDefault, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Password
               const intl = ref(1126).intl;
               obj3.name = intl.string(ref(1126).t["8H5RmH"]);
               obj2.params = obj3;
-              ref(7087).openUserSettings(obj2);
+              ref(7093).openUserSettings(obj2);
             }
         };
         NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Password
       let obj3 = { size: "lg", onPress: tmp9, text: null };
       const intl3 = tmp(1126).intl;
       obj3.text = intl3.string(tmp(1126).t.NIFmCJ);
-      const tmp19 = closure_6(tmp(5376).Button, obj3);
+      const tmp19 = closure_6(tmp(5379).Button, obj3);
       cResult[6] = tmp19;
       let tmp17 = tmp19;
     } else {
@@ -109,10 +109,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Password
       const obj6 = { size: "lg", variant: "secondary", onPress: tmp10, text: null };
       const intl4 = tmp(1126).intl;
       obj6.text = intl4.string(tmp(1126).t["7J6/nG"]);
-      items[1] = closure_6(tmp(5376).Button, obj6);
+      items[1] = closure_6(tmp(5379).Button, obj6);
       obj5.children = items;
-      obj4.actions = closure_7(tmp(5965).ButtonGroup, obj5);
-      const tmp23 = closure_6(tmp(10290).PromoSheet, obj4);
+      obj4.actions = closure_7(tmp(5958).ButtonGroup, obj5);
+      const tmp23 = closure_6(tmp(10323).PromoSheet, obj4);
       cResult[7] = tmp23;
       let tmp20 = tmp23;
     } else {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Password
   }
   let obj = require("c");
 }) : (function PasswordlessUpsellPromoSheet() {
-  let obj = { source: require("module_15906"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  let obj = { source: require("module_15968"), style: { height: 190, width: 220, resizeMode: "contain" } };
   _require = noop.useRef(false);
   let obj2 = { illustration: closure_6(FastImageDefault, obj), title: null, description: null, onDismiss: null, actions: null };
   let intl = require("util").intl;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Password
               const intl = ref(1126).intl;
               obj3.name = intl.string(ref(1126).t["8H5RmH"]);
               obj2.params = obj3;
-              ref(7087).openUserSettings(obj2);
+              ref(7093).openUserSettings(obj2);
             }
         };
         NativeCeremoniesDefault.registerPasskey(obj4).catch(() => {

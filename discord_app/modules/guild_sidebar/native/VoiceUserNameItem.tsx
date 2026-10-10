@@ -1,13 +1,13 @@
-// === Module 16465: VoiceUserNameItem ===
+// === Module 16535: VoiceUserNameItem ===
 
-// Module 16465 (VoiceUserNameItem)
+// Module 16535 (VoiceUserNameItem)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 5625 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 8834 */;
-import VoiceGuildTagDefault from "VoiceGuildTag" /* 16466 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 5628 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 8853 */;
+import VoiceGuildTagDefault from "VoiceGuildTag" /* 16536 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

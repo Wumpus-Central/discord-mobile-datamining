@@ -1,6 +1,6 @@
-// === Module 9260: ? ===
+// === Module 9287: ? ===
 
-// Module 9260
+// Module 9287
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StickersSpotIllustration-1x.png.js");

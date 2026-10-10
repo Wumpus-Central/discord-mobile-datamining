@@ -2,7 +2,7 @@
 
 // Module 7426 (isEmbeddedActivity)
 import Constants from "Constants" /* 1085 */;
-import hasFlagDefault from "hasFlag" /* 7006 */;
+import hasFlagDefault from "hasFlag" /* 7012 */;
 import size from "module_2" /* 2 */;
 
 const ActivityFlags = Constants.ActivityFlags;

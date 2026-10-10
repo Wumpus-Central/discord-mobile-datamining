@@ -1,25 +1,25 @@
-// === Module 9992: UploadPreviewActionSheet ===
+// === Module 10021: UploadPreviewActionSheet ===
 
-// Module 9992 (UploadPreviewActionSheet)
+// Module 10021 (UploadPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7750 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9235 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 9993 */;
-import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 12762 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7768 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9262 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10022 */;
+import AddImageDescriptionModalActionCreatorsDefault from "AddImageDescriptionModalActionCreators" /* 12809 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const DraftType = fn(7237).DraftType;
+const DraftType = fn(7243).DraftType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(6837).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6840).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { contentContainer: { padding: 16 }, imageWrap: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" }, imageContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, width: "100%" };
 obj2.imageContainer = { overflow: "hidden", alignSelf: "center", borderRadius: nativeDefault.radii.md - nativeDefault.space.PX_4 };
@@ -237,9 +237,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
       }
     }).catch((error) => {
       if ("E_PICKER_CANCELLED" !== error.code) {
-        const obj2 = { key: "CROP_ERROR", IconComponent: width(5001).CircleErrorIcon, content: error.message };
-        height(4768).open(obj2);
-        const obj = height(4768);
+        const obj2 = { text: error.message, variant: "critical" };
+        height(onRemove[21]).open("CROP_ERROR", obj2);
+        const obj = height(onRemove[21]);
       }
     });
   }, items3);
@@ -255,9 +255,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
   if (!(undefined !== isThumbnail && isThumbnail)) {
     tmp14 = !onAdd.disableSpoiler;
   }
-  let tmp22Result11 = tmp3(tmp4[24])(channelId, upload);
+  let tmp22Result11 = tmp3(tmp4[23])(channelId, upload);
   const tmp5 = onEdit(onRemove[11]);
-  const tmp16 = onEdit(onRemove[25])(channelId, upload);
+  const tmp16 = onEdit(onRemove[24])(channelId, upload);
   [tmp18, c11] = channelId(noop.useState(undefined), 2);
   let sum2;
   if (null != tmp18) {
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
     },
     children: null
   };
-  const items5 = [width(onAdd(onRemove[26]).Text, { variant: "text-md/semibold", children: item.filename }), , , ];
+  const items5 = [width(onAdd(onRemove[25]).Text, { variant: "text-md/semibold", children: item.filename }), , , ];
   const obj7 = { style: tmp.imageWrap, children: null };
   const obj8 = { style: null, children: null };
   const items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
         obj9.style = size1;
         const obj10 = { uri: item.uri };
         obj9.source = obj10;
-        let tmp22Result = tmp22(tmp6(tmp4[28]).VideoComponent, obj9);
+        let tmp22Result = tmp22(tmp6(tmp4[27]).VideoComponent, obj9);
       }
       const items7 = [tmp22Result, ];
       let tmp22Result7 = null != memo;
@@ -305,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
       }
       if (tmp22Result7) {
         const obj11 = { label: memo };
-        tmp22Result7 = tmp22(tmp6(tmp4[29]).Caption, obj11);
+        tmp22Result7 = tmp22(tmp6(tmp4[28]).Caption, obj11);
       }
       items7[1] = tmp22Result7;
       obj8.children = items7;
@@ -318,47 +318,47 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
           }
           items5[2] = tmp23Result;
           if (null != onRemove) {
-            const obj13 = { icon: tmp22(tmp6(tmp4[40]).TrashIcon, { size: "sm", color: "control-primary-text-default" }), text: null, onPress: null, variant: "destructive" };
-            const intl6 = tmp6(tmp4[34]).intl;
-            obj13.text = intl6.string(tmp6(tmp4[34]).t["40jBO/"]);
+            const obj13 = { icon: tmp22(tmp6(tmp4[39]).TrashIcon, { size: "sm", color: "control-primary-text-default" }), text: null, onPress: null, variant: "destructive" };
+            const intl6 = tmp6(tmp4[33]).intl;
+            obj13.text = intl6.string(tmp6(tmp4[33]).t["40jBO/"]);
             obj13.onPress = callback;
-            let tmp22Result8 = tmp22(tmp6(tmp4[39]).Button, obj13);
+            let tmp22Result8 = tmp22(tmp6(tmp4[38]).Button, obj13);
           } else {
             tmp22Result8 = null;
             if (null != onAdd) {
-              const obj14 = { icon: tmp22(tmp6(tmp4[32]).ImageFileIcon, { size: "sm", color: "control-primary-text-default" }), text: null, onPress: null };
-              const intl5 = tmp6(tmp4[34]).intl;
-              obj14.text = intl5.string(tmp6(tmp4[34]).t.s7oPyG);
+              const obj14 = { icon: tmp22(tmp6(tmp4[31]).ImageFileIcon, { size: "sm", color: "control-primary-text-default" }), text: null, onPress: null };
+              const intl5 = tmp6(tmp4[33]).intl;
+              obj14.text = intl5.string(tmp6(tmp4[33]).t.s7oPyG);
               obj14.onPress = callback1;
-              tmp22Result8 = tmp22(tmp6(tmp4[39]).Button, obj14);
+              tmp22Result8 = tmp22(tmp6(tmp4[38]).Button, obj14);
             }
           }
           items5[3] = tmp22Result8;
           obj5.children = items5;
-          obj3.children = tmp23(tmp6(tmp4[41]).Stack, obj5);
-          obj2.children = tmp22(tmp6(tmp4[42]).BottomSheetScrollView, obj3);
-          return tmp22(tmp6(tmp4[43]).BottomSheet, obj2);
+          obj3.children = tmp23(tmp6(tmp4[40]).Stack, obj5);
+          obj2.children = tmp22(tmp6(tmp4[41]).BottomSheetScrollView, obj3);
+          return tmp22(tmp6(tmp4[42]).BottomSheet, obj2);
         }
       }
       let tmp22Result9 = null;
       if (tmp13) {
         const obj15 = {
-          icon: tmp22(tmp6(tmp4[32]).ImageFileIcon, {}),
+          icon: tmp22(tmp6(tmp4[31]).ImageFileIcon, {}),
           onPress() {
                   return AddImageDescriptionModalActionCreatorsDefault.open({ source: item, channelId, id });
                 },
           label: null,
           arrow: true
         };
-        const intl = tmp6(tmp4[34]).intl;
-        obj15.label = intl.string(tmp6(tmp4[34]).t["5S2AK+"]);
-        tmp22Result9 = tmp22(tmp6(tmp4[31]).TableRow, obj15);
+        const intl = tmp6(tmp4[33]).intl;
+        obj15.label = intl.string(tmp6(tmp4[33]).t["5S2AK+"]);
+        tmp22Result9 = tmp22(tmp6(tmp4[30]).TableRow, obj15);
       }
       const items8 = [tmp22Result9, , , ];
       let tmp22Result10 = null;
       if (tmp14) {
         const obj16 = {
-          icon: tmp22(tmp6(tmp4[36]).SpoilerIcon, {}),
+          icon: tmp22(tmp6(tmp4[35]).SpoilerIcon, {}),
           onPress: function markSpoiler() {
                   ActionSheetActionCreatorsDefault.hideActionSheet();
                   UploadAttachmentActionCreatorsDefault.update(channelId, id, DraftType.ChannelMessage, { spoiler: !spoiler });
@@ -366,35 +366,35 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UploadPr
           label: null,
           checked: null
         };
-        const intl2 = tmp6(tmp4[34]).intl;
-        obj16.label = intl2.string(tmp6(tmp4[34]).t["gsI+xC"]);
+        const intl2 = tmp6(tmp4[33]).intl;
+        obj16.label = intl2.string(tmp6(tmp4[33]).t["gsI+xC"]);
         obj16.checked = spoiler;
-        tmp22Result10 = tmp22(tmp6(tmp4[35]).TableCheckboxRow, obj16);
+        tmp22Result10 = tmp22(tmp6(tmp4[34]).TableCheckboxRow, obj16);
       }
       items8[1] = tmp22Result10;
       if (tmp22Result11) {
-        const obj17 = { icon: tmp22(tmp6(tmp4[37]).ImageIcon, {}), label: null, onPress: null, checked: null };
-        const intl3 = tmp6(tmp4[34]).intl;
-        obj17.label = intl3.string(tmp6(tmp4[34]).t.ews2pj);
+        const obj17 = { icon: tmp22(tmp6(tmp4[36]).ImageIcon, {}), label: null, onPress: null, checked: null };
+        const intl3 = tmp6(tmp4[33]).intl;
+        obj17.label = intl3.string(tmp6(tmp4[33]).t.ews2pj);
         obj17.onPress = tmp16;
         obj17.checked = tmp2;
-        tmp22Result11 = tmp22(tmp6(tmp4[35]).TableCheckboxRow, obj17);
+        tmp22Result11 = tmp22(tmp6(tmp4[34]).TableCheckboxRow, obj17);
       }
       items8[2] = tmp22Result11;
       let tmp22Result12 = null;
       if (isImage) {
-        const obj18 = { icon: tmp22(tmp6(tmp4[38]).PencilSparkleIcon, {}), onPress: callback2, label: null, arrow: true };
-        const intl4 = tmp6(tmp4[34]).intl;
-        obj18.label = intl4.string(tmp6(tmp4[34]).t.b0y3DL);
-        tmp22Result12 = tmp22(tmp6(tmp4[31]).TableRow, obj18);
+        const obj18 = { icon: tmp22(tmp6(tmp4[37]).PencilSparkleIcon, {}), onPress: callback2, label: null, arrow: true };
+        const intl4 = tmp6(tmp4[33]).intl;
+        obj18.label = intl4.string(tmp6(tmp4[33]).t.b0y3DL);
+        tmp22Result12 = tmp22(tmp6(tmp4[30]).TableRow, obj18);
       }
       const obj19 = { hasIcons: true, children: null };
       items8[3] = tmp22Result12;
       obj19.children = items8;
-      tmp23Result = tmp23(tmp6(tmp4[30]).TableRowGroup, obj19);
+      tmp23Result = tmp23(tmp6(tmp4[29]).TableRowGroup, obj19);
     }
   }
-  tmp22Result = tmp22(closure_5, { style: { width: size.width, height: size.height }, source: item });
-  const obj20 = { style: { width: size.width, height: size.height }, source: item };
-  tmp6Result = onAdd(onRemove[27]);
+  tmp22Result = tmp22(closure_5, { style: { width: size.width, height: size.height }, source: { uri: item.uri } });
+  const obj20 = { style: { width: size.width, height: size.height }, source: { uri: item.uri } };
+  tmp6Result = onAdd(onRemove[26]);
 });

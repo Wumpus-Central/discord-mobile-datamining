@@ -1,11 +1,11 @@
-// === Module 10120: PremiumGiftWishlistBanner ===
+// === Module 10149: PremiumGiftWishlistBanner ===
 
-// Module 10120 (PremiumGiftWishlistBanner)
+// Module 10149 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
-import useWishlistHooks from "useWishlistHooks" /* 8960 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10125 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
+import useWishlistHooks from "useWishlistHooks" /* 8979 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10154 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,17 +14,17 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let constants = fn(6925).WishlistRecommendationReason;
+let constants = fn(6931).WishlistRecommendationReason;
 const PremiumConstants = fn(1392);
 ({ GiftingOrigin: closure_8, PremiumSubscriptionSKUToPremiumType: closure_9 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, SKUProductLines: closure_11 } = Constants);
 let closure_12 = fn(1087).CollectiblesMobileShopScreen;
-const UserProfileSections = fn(8291).UserProfileSections;
+const UserProfileSections = fn(8307).UserProfileSections;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_18 = createStyles.createStyles((width, height) => {
   const obj = { title: { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 }, subtitle: null, placeholderRow: null, placeholder: null, wishlistItemShadow: null };
   const obj2 = { marginBottom: nativeDefault.space.PX_4, paddingHorizontal: PX_16 };
@@ -219,7 +219,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                                   obj5 = { length: null };
                                   WISHLIST_IN_DM_LENGTH_MOBILE = tmp(WISHLIST_IN_DM_LENGTH_MOBILE[14]).WISHLIST_IN_DM_LENGTH_MOBILE;
                                   obj5.length = WISHLIST_IN_DM_LENGTH_MOBILE;
-                                  obj4.children = _Array.from(obj5, (arg0, arg1) => state(timestampProducer, { style: constants3.placeholder }, arg1));
+                                  obj4.children = _Array.from(obj5, (arg0, arg1) => closure_2_14(timestampProducer, { style: constants3.placeholder }, arg1));
                                   let tmp39Result = closure_14(analyticsLocations, obj4);
                                 } else {
                                   let obj7 = { horizontal: true, showsHorizontalScrollIndicator: false, snapToInterval: null, snapToAlignment: "start", decelerationRate: "fast", nestedScrollEnabled: true, contentContainerStyle: null, children: null };
@@ -395,7 +395,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         }
                       } else {
                         try {
@@ -454,10 +454,10 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                                     }
                                   }
                                   const openShopGiftModalResult = openShopGiftModal(items1[23]);
-                                  const obj7 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
+                                  const obj7 = { text: null };
                                   const intl = openShopGiftModal(items1[25]).intl;
-                                  obj7.content = intl.string(openShopGiftModal(items1[25]).t["rTU7/z"]);
-                                  num3 = size(items1[24]).open(obj7);
+                                  obj7.text = intl.string(openShopGiftModal(items1[25]).t["rTU7/z"]);
+                                  num3 = size(items1[24]).open("WISHLIST_ITEM_PRESS_ERROR", obj7);
                                   const tmp24Result = size(items1[24]);
                                 } else {
                                   const obj8 = { skuId: id.id, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null };
@@ -710,7 +710,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -769,10 +769,10 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
                     }
                   }
                   const openShopGiftModalResult = openShopGiftModal(items1[23]);
-                  const obj7 = { key: "WISHLIST_ITEM_PRESS_ERROR", content: null };
+                  const obj7 = { text: null };
                   const intl = openShopGiftModal(items1[25]).intl;
-                  obj7.content = intl.string(openShopGiftModal(items1[25]).t["rTU7/z"]);
-                  num3 = size(items1[24]).open(obj7);
+                  obj7.text = intl.string(openShopGiftModal(items1[25]).t["rTU7/z"]);
+                  num3 = size(items1[24]).open("WISHLIST_ITEM_PRESS_ERROR", obj7);
                   const tmp24Result = size(items1[24]);
                 } else {
                   const obj8 = { skuId: id.id, analyticsLocations: null, lockedRecipientUser: null, giftingOrigin: null };
@@ -850,7 +850,7 @@ export const PremiumGiftWishlistBanner = ReactCompilerGating.isReactCompilerEnab
       let obj8 = { style: tmp12.placeholderRow, children: null };
       let _Array = Array;
       let obj9 = { length: WISHLIST_IN_DM_LENGTH_MOBILE };
-      obj8.children = Array.from(obj9, (arg0, arg1) => state(timestampProducer, { style: closure_14.placeholder }, arg1));
+      obj8.children = Array.from(obj9, (arg0, arg1) => closure_2_14(timestampProducer, { style: closure_14.placeholder }, arg1));
       let tmp17Result = tmp19(tmp18, obj8);
     } else {
       const obj10 = { horizontal: true, showsHorizontalScrollIndicator: false, snapToInterval: tmp(tmp19Result3[13]).COLLECTIBLES_SHOP_CARD_WIDTH + PX_16, snapToAlignment: "start", decelerationRate: "fast", nestedScrollEnabled: true, contentContainerStyle: null, children: null };

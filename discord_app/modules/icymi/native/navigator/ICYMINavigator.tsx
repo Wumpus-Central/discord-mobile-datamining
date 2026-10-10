@@ -1,8 +1,8 @@
-// === Module 16817: ICYMINavigator ===
+// === Module 16887: ICYMINavigator ===
 
-// Module 16817 (ICYMINavigator)
+// Module 16887 (ICYMINavigator)
 import jsxProd from "jsxProd" /* 21 */;
-import NativeStackNavigator from "NativeStackNavigator" /* 9317 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 9344 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ const result = size.fileFinishedImporting("modules/icymi/native/navigator/ICYMIN
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINavigator() {
   const cResult = accessibilityNativeStackOptions(576).c(6);
   const obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6686).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(6687).useAccessibilityNativeStackOptions();
   if (cResult[0] !== accessibilityNativeStackOptions) {
     const fn = function n() {
       const merged = Object.assign(accessibilityNativeStackOptions);
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINav
     const obj3 = {
       name: "icymi-screen",
       getComponent() {
-          return accessibilityNativeStackOptions(16818).ICYMITab;
+          return accessibilityNativeStackOptions(16888).ICYMITab;
         }
     };
     const tmp7 = closure_2(closure_4.Screen, obj3);
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINav
     const obj4 = {
       name: "notifications-screen",
       getComponent() {
-          return accessibilityNativeStackOptions(16768).ThemedNotificationsModal;
+          return accessibilityNativeStackOptions(16838).ThemedNotificationsModal;
         }
     };
     const tmp11 = closure_2(closure_4.Screen, obj4);
@@ -79,13 +79,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMINav
     closure_2(closure_4.Screen, {
       name: "icymi-screen",
       getComponent() {
-        return closure_0(16818).ICYMITab;
+        return closure_0(16888).ICYMITab;
       }
     }),
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(16768).ThemedNotificationsModal;
+        return closure_0(16838).ThemedNotificationsModal;
       }
     })
   ];

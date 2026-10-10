@@ -1,9 +1,9 @@
-// === Module 10941: SoundpackStore ===
+// === Module 10981: SoundpackStore ===
 
-// Module 10941 (SoundpackStore)
+// Module 10981 (SoundpackStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 10942 */;
+import Constants from "Constants" /* 10982 */;
 import size from "module_2" /* 2 */;
 
 const Soundpacks = Constants.Soundpacks;

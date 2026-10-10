@@ -1,22 +1,22 @@
-// === Module 16828: ItemDetailsActionSheet ===
+// === Module 16898: ItemDetailsActionSheet ===
 
-// Module 16828 (ItemDetailsActionSheet)
+// Module 16898 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
-import useChannelNameDefault from "useChannelName" /* 5418 */;
-import GuildIcon from "GuildIcon" /* 6165 */;
-import TableRow from "TableRow" /* 6186 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6207 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import ActionSheet from "ActionSheet" /* 6892 */;
-import ICYMIUtils from "ICYMIUtils" /* 8454 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10435 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16829 */;
+import useChannelNameDefault from "useChannelName" /* 5421 */;
+import GuildIcon from "GuildIcon" /* 6158 */;
+import TableRow from "TableRow" /* 6179 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6202 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import ActionSheet from "ActionSheet" /* 6898 */;
+import ICYMIUtils from "ICYMIUtils" /* 8470 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 10468 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16899 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import ICYMIStore from "ICYMIStore" /* 8437 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import ICYMIStore from "ICYMIStore" /* 8453 */;
 
 const GuildIconDefault = GuildIcon;
 
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

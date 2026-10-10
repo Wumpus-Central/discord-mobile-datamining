@@ -1,24 +1,24 @@
-// === Module 5931: AgeGateUtils ===
+// === Module 5924: AgeGateUtils ===
 
-// Module 5931 (AgeGateUtils)
+// Module 5924 (AgeGateUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AgeGateConstants from "AgeGateConstants" /* 1110 */;
 import util from "util" /* 1126 */;
-import GuildRecord from "GuildRecord" /* 2082 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5905 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5906 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5918 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5919 */;
-import getTinyBroncoWarningDescriptions2 from "getTinyBroncoWarningDescriptions" /* 5933 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 5936 */;
-import NSFWContentGate from "NSFWContentGate" /* 5950 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5932 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildRecord from "GuildRecord" /* 2083 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
+import shouldAgeVerifyForAgeGate2 from "shouldAgeVerifyForAgeGate" /* 5908 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5909 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5920 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
+import getTinyBroncoWarningDescriptions2 from "getTinyBroncoWarningDescriptions" /* 5926 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 5929 */;
+import NSFWContentGate from "NSFWContentGate" /* 5943 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5925 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -527,7 +527,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsChannel
   const tmpResult = require("initialize");
   const stateFromStores1 = require("initialize").useStateFromStores(tmp11, tmp12);
   const tmpResult4 = require("initialize");
-  let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(tmp(5918).AgeGatedFeature.AGE_GATED_SPACES);
+  let isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(tmp(5920).AgeGatedFeature.AGE_GATED_SPACES);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [];
     class S {

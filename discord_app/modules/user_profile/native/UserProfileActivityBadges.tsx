@@ -1,21 +1,21 @@
-// === Module 13076: UserProfileActivityBadges ===
+// === Module 13123: UserProfileActivityBadges ===
 
-// Module 13076 (UserProfileActivityBadges)
+// Module 13123 (UserProfileActivityBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7426 */;
-import GroupIcon from "GroupIcon" /* 8200 */;
-import AppsIcon2 from "AppsIcon" /* 8217 */;
-import utils from "utils" /* 8255 */;
-import GameControllerIcon from "GameControllerIcon" /* 9184 */;
-import TvIcon from "TvIcon" /* 10212 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10217 */;
-import MusicIcon from "MusicIcon" /* 10218 */;
-import TopicsIcon from "TopicsIcon" /* 10742 */;
-import HourglassIcon from "HourglassIcon" /* 13077 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13080 */;
-import Badges from "Badges" /* 13081 */;
+import GroupIcon from "GroupIcon" /* 8216 */;
+import AppsIcon2 from "AppsIcon" /* 8233 */;
+import utils from "utils" /* 8271 */;
+import GameControllerIcon from "GameControllerIcon" /* 9211 */;
+import TvIcon from "TvIcon" /* 10241 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10246 */;
+import MusicIcon from "MusicIcon" /* 10247 */;
+import TopicsIcon from "TopicsIcon" /* 10777 */;
+import HourglassIcon from "HourglassIcon" /* 13124 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13127 */;
+import Badges from "Badges" /* 13128 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1085).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 fn(558);
 let ReactCompilerGating = fn(558);

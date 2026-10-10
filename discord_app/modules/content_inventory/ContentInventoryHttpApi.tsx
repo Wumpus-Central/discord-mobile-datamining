@@ -1,6 +1,6 @@
-// === Module 13309: ContentInventoryHttpApi ===
+// === Module 13359: ContentInventoryHttpApi ===
 
-// Module 13309 (ContentInventoryHttpApi)
+// Module 13359 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -17,7 +17,7 @@ let closure_6 = async function _getMyContentInventory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -118,7 +118,7 @@ let closure_7 = async function _getContentInventoryOutbox() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -248,7 +248,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -293,7 +293,7 @@ let closure_9 = async function _postTrackToContentInventory() {
         } else {
           c5 = 0;
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp19) {
         closure_4 = tmp19;
@@ -307,7 +307,7 @@ let closure_9 = async function _postTrackToContentInventory() {
     }
   })();
 };
-const ContentInventoryFeedKey = fn(8453).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8469).ContentInventoryFeedKey;
 const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");

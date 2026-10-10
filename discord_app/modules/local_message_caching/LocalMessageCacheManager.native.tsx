@@ -1,19 +1,21 @@
-// === Module 14741: LocalMessageCacheManager ===
+// === Module 14796: LocalMessageCacheManager ===
 
-// Module 14741 (LocalMessageCacheManager)
+// Module 14796 (LocalMessageCacheManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _modDef4661 from "module_4661" /* 4661 */;
-import DateUtils from "DateUtils" /* 4752 */;
-import UploadActionCreatorsDefault from "UploadActionCreators" /* 10748 */;
+import _modDef4702 from "module_4702" /* 4702 */;
+import DateUtils from "DateUtils" /* 4793 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7178 */;
+import createMessageDefault from "createMessage" /* 9811 */;
+import UploadActionCreatorsDefault from "UploadActionCreators" /* 10783 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4720 */;
+import MessageRecord from "MessageRecord" /* 4761 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import MessageStore from "MessageStore" /* 5429 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import MessageStore from "MessageStore" /* 5432 */;
 import LifecycleManager from "LifecycleManager" /* 2002 */;
 
 require = fn;
@@ -42,8 +44,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, c7) {
   if (null != arg0) {
-    const tmp4 = _modDef4661();
-    const tmp5 = _modDef4661(arg0);
+    const tmp4 = _modDef4702();
+    const tmp5 = _modDef4702(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, c7);
   } else {
     return false;
@@ -52,16 +54,14 @@ function messageTimestampIsInInterval(arg0, c7) {
 function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
-  const tmp3 = file(9782)({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
-  const id = tmp3;
+  const tmp3 = createMessageDefault({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
   ({ timestamp: tmp3.timestamp, file } = channel_id);
-  file(7172).receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
+  MessageActionCreatorsDefault.receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
   if (null != file) {
-    file(584).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
-    const tmpResult = file(584);
+    UploadActionCreatorsDefault.restoreFailedUpload(tmp3.id, file);
+    const tmpResult = UploadActionCreatorsDefault;
   }
   const obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const obj2 = file(7172);
   const obj3 = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
 }
 function resumeSendingMessage() {
@@ -96,7 +96,7 @@ let closure_24 = async function _resumeSendingMessage(arg0) {
       c1 = undefined;
     }
     closure_130_3 = c1;
-    await require("asyncRequireImpl")(paths[17], paths.paths);
+    await require("asyncRequireImpl")(paths[16], paths.paths);
     const merged = Object.assign(closure_130_0);
     value.default(closure_130_2, new closure_131_5({}), closure_130_3, closure_130_1);
     return true;
@@ -113,7 +113,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -135,7 +135,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
           closure_134_2 = undefined;
           closure_134_3 = undefined;
           let timestamp;
-          state = undefined;
+          let state;
           c8 = 1;
           c9 = 1;
           const obj4 = { value: getAllCachedMessages(), done: false };
@@ -243,7 +243,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1085).MessageStates;
-const MutexUtils = fn(14742);
+const MutexUtils = fn(14797);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -320,7 +320,7 @@ class LocalMessageCacheManager extends tmp3 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -339,7 +339,7 @@ class LocalMessageCacheManager extends tmp3 {
                 closure_134_1 = undefined;
                 closure_134_2 = undefined;
                 let channel_id;
-                state = undefined;
+                let state;
                 c9 = 1;
                 c10 = 1;
                 const obj4 = { value: getAllCachedMessages(), done: false };
@@ -367,7 +367,7 @@ class LocalMessageCacheManager extends tmp3 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       }
                     } else {
                       try {
@@ -387,7 +387,7 @@ class LocalMessageCacheManager extends tmp3 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -400,7 +400,7 @@ class LocalMessageCacheManager extends tmp3 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -642,7 +642,7 @@ class LocalMessageCacheManager extends tmp3 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -683,7 +683,7 @@ class LocalMessageCacheManager extends tmp3 {
               return obj;
             }
             c1 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -908,7 +908,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {
@@ -959,12 +959,12 @@ prototype["_initialize"] = function _initialize() {
                 let obj4 = values(584);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(5749);
+                let obj9 = values(5752);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

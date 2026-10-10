@@ -1,11 +1,11 @@
-// === Module 8327: StorefrontProductActionCreators ===
+// === Module 8343: StorefrontProductActionCreators ===
 
-// Module 8327 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8329 */;
+// Module 8343 (StorefrontProductActionCreators)
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8345 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8328 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7277 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8344 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7284 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -19,7 +19,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

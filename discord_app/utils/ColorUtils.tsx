@@ -1,10 +1,10 @@
-// === Module 4928: ColorUtils ===
+// === Module 4967: ColorUtils ===
 
-// Module 4928 (ColorUtils)
+// Module 4967 (ColorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1126 */;
-import utils_ColorDefault from "utils/Color" /* 4929 */;
+import utils_ColorDefault from "utils/Color" /* 4968 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -296,9 +296,9 @@ function hexWithOpacity(color, overlayOpacity) {
 hexWithOpacity.__closure = {};
 hexWithOpacity.__workletHash = 1677228068105;
 hexWithOpacity.__initData = { code: "function hexWithOpacity_ColorUtilsTsx1(color,value){if(color.length===7){const alpha=value*255|0;return color+alpha.toString(16).padStart(2,'0').toUpperCase();}const hex=color.charAt(0)==='#'?color.slice(1):color;let r;let g;let b;let a;switch(hex.length){case 3:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);r+=r;g+=g;b+=b;a=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+a;case 4:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);a=hex.charAt(3);r+=r;g+=g;b+=b;a+=a;const alpha4=parseInt(a,16)/255*value;const alpha4Hex=(alpha4*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+alpha4Hex;case 6:const alpha6=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+hex+alpha6;case 8:const baseColor='#'+hex.slice(0,6);const existingAlpha=parseInt(hex.slice(6),16)/255;const alpha8=(existingAlpha*value*255|0).toString(16).padStart(2,'0').toUpperCase();return baseColor+alpha8;default:throw new Error('Invalid hex color format');}}" };
-function hexToRgbaString(colorHex, opacity) {
+function hexToRgbaString(tmpResult13, opacity) {
   let tmp = opacity;
-  const tmp2 = _slicedToArray(_modDef683(colorHex).rgba(), 4);
+  const tmp2 = _slicedToArray(_modDef683(tmpResult13).rgba(), 4);
   [tmp3, tmp4, tmp5] = tmp2;
   if (opacity == null) {
     tmp = tmp2[3];

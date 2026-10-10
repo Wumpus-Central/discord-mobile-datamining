@@ -1,7 +1,7 @@
-// === Module 14023: ActivateDeviceModal ===
+// === Module 14078: ActivateDeviceModal ===
 
-// Module 14023 (ActivateDeviceModal)
-import _modDef5010 from "module_5010" /* 5010 */;
+// Module 14078 (ActivateDeviceModal)
+import _modDef7728 from "module_7728" /* 7728 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,16 +25,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
           return null;
         },
       headerLeft() {
-          const obj = { source: _modDef5010, onPress: onClose, accessibilityLabel: null };
+          const obj = { source: _modDef7728, onPress: onClose, accessibilityLabel: null };
           const intl = userCode(1126).intl;
           obj.accessibilityLabel = intl.string(userCode(1126).t.cpT0Cq);
-          return jsx(userCode(7082).HeaderActionButton, { source: _modDef5010, onPress: onClose, accessibilityLabel: null });
+          return jsx(userCode(7088).HeaderActionButton, { source: _modDef7728, onPress: onClose, accessibilityLabel: null });
         },
       headerRight() {
           return null;
         },
       render() {
-          return jsx(userCode(14024).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(14079).ActivateDevice, { onClose, prefilledUserCode });
         }
     };
     obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
   }
   if (cResult[3] !== tmp4) {
     const obj4 = { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 };
-    const tmp11 = jsx(tmp(6686).Navigator, { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 });
+    const tmp11 = jsx(tmp(6687).Navigator, { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 });
     cResult[3] = tmp4;
     cResult[4] = tmp11;
     let tmp8 = tmp11;
@@ -77,16 +77,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
           return null;
         },
         headerLeft() {
-          const obj = { source: _modDef5010, onPress: onClose, accessibilityLabel: null };
+          const obj = { source: _modDef7728, onPress: onClose, accessibilityLabel: null };
           const intl = userCode(1126).intl;
           obj.accessibilityLabel = intl.string(userCode(1126).t.cpT0Cq);
-          return jsx(userCode(7082).HeaderActionButton, { source: _modDef5010, onPress: onClose, accessibilityLabel: null });
+          return jsx(userCode(7088).HeaderActionButton, { source: _modDef7728, onPress: onClose, accessibilityLabel: null });
         },
         headerRight() {
           return null;
         },
         render() {
-          return jsx(userCode(14024).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(14079).ActivateDevice, { onClose, prefilledUserCode });
         }
       }
     };
@@ -94,5 +94,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
   let intl = userCode(1126).intl;
   obj.headerBackTitle = intl.string(userCode(1126).t["13/7kX"]);
-  return jsx(userCode(6686).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
+  return jsx(userCode(6687).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
 });

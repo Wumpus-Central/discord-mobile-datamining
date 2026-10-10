@@ -1,7 +1,7 @@
-// === Module 4791: useBadgeTextVariant ===
+// === Module 4830: useBadgeTextVariant ===
 
-// Module 4791 (useBadgeTextVariant)
-import ThemeContext from "ThemeContext" /* 4792 */;
+// Module 4830 (useBadgeTextVariant)
+import ThemeContext from "ThemeContext" /* 4831 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

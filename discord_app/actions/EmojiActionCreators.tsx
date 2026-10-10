@@ -1,19 +1,19 @@
-// === Module 9517: EmojiActionCreators ===
+// === Module 9546: EmojiActionCreators ===
 
-// Module 9517 (EmojiActionCreators)
+// Module 9546 (EmojiActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import wrappers from "wrappers" /* 1240 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 6001 */;
-import InlineUploaderDefault from "InlineUploader" /* 6670 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5994 */;
+import InlineUploaderDefault from "InlineUploader" /* 6671 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5972 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5965 */;
 
 const require = globalThis.__r;
 
@@ -29,7 +29,7 @@ let closure_10 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

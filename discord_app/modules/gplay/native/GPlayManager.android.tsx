@@ -1,17 +1,17 @@
-// === Module 10035: GPlayManager ===
+// === Module 10064: GPlayManager ===
 
-// Module 10035 (GPlayManager)
+// Module 10064 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5721 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9372 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5724 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9399 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 7133 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 7139 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SubscriptionStore from "SubscriptionStore" /* 4734 */;
-import IAPStore from "IAPStore" /* 7125 */;
+import SubscriptionStore from "SubscriptionStore" /* 4775 */;
+import IAPStore from "IAPStore" /* 7131 */;
 
 require = fn;
 function handleConnectionStateUpdated(connectionState) {
@@ -55,7 +55,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -100,7 +100,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
               return obj6;
             } else if (closure_131_11.isPurchasingProduct(purchase2.productId)) {
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else {
               closure_130_1 = closure_131_12.getState().analyticsByProductId[purchase2.productId];
               giftOptionsForKey = closure_131_25[purchase2.productId];
@@ -146,7 +146,7 @@ let closure_35 = async function _handlePurchaseUpdated(arg0) {
                 const obj17 = { type: "GPLAY_VERIFICATION_END", productId: purchase2.productId };
                 closure_131_1(closure_131_2[17]).dispatch(obj17);
                 c7 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               } else {
                 c6 = 7;
                 c7 = 1;
@@ -437,7 +437,7 @@ let closure_38 = async function _executePendingDowngrade() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -566,7 +566,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -623,7 +623,7 @@ let closure_41 = async function _fetchAndAlertActiveSubscription() {
             });
           });
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       }
     } catch (tmp24) {
@@ -643,7 +643,7 @@ function handleAppStateUpdated() {
   return applyArgumentsResult;
 }
 let closure_43 = async function _handleAppStateUpdated(arg0) {
-  state = arg0;
+  let state = arg0;
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -658,7 +658,7 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -735,14 +735,14 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(7134);
+const PremiumPlanPurchasedStore = fn(7140);
 ({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9373).useGPlayAnalyticsStore;
-let Constants = fn(7126);
+const useGPlayAnalyticsStore = fn(9400).useGPlayAnalyticsStore;
+let Constants = fn(7132);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
 Constants = fn(1085);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(5070).OrderStatus;
+const OrderStatus = fn(5071).OrderStatus;
 const SubscriptionPlanInfo = fn(1392).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");
@@ -753,7 +753,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(7120).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(7126).ProductIds.PREMIUM_TIER_2_MONTHLY];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
 

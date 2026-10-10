@@ -1,30 +1,30 @@
-// === Module 12256: GuildPowerupsLevelCard ===
+// === Module 12300: GuildPowerupsLevelCard ===
 
-// Module 12256 (GuildPowerupsLevelCard)
+// Module 12300 (GuildPowerupsLevelCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BoostGemIcon from "BoostGemIcon" /* 5027 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import LinearGradientDefault from "LinearGradient" /* 5388 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6662 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12192 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12209 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12214 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12217 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12258 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12259 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import LinearGradientDefault from "LinearGradient" /* 5391 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6663 */;
+import BoostGemIcon from "BoostGemIcon" /* 9409 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12236 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12253 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12258 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12261 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12302 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(4969);
+const GuildPowerupsConstants = fn(5008);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1085);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(12257).TIER_CARDS;
+const TIER_CARDS = fn(12301).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { cardContainer: { flex: 1 }, card: { padding: 0, overflow: "hidden", flex: 1 }, progressContainer: { marginVertical: nativeDefault.space.PX_24, position: "relative" }, progress: null, progressStart: null, progressEnd: null, boostContainerBackground: null, boostContainer: null, boostContainerActive: null, boostContainerInactive: null, contentContainer: null, perkRowContainer: null, perkRow: null, perkRowStyle: null, perkText: null, footerContainer: null };
 let obj3 = { marginVertical: nativeDefault.space.PX_24, position: "relative" };
 obj2.progress = { height: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -418,7 +418,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPowerup
   }
   obj4.variant = str;
   const intl = index(tmp3[16]).intl;
-  obj4.children = intl.string(require("module_2597").nIj3LZ);
+  obj4.children = intl.string(require("module_2600").nIj3LZ);
   obj3.children = closure_10(index(manaTypeConsolidationExperiment[15]).Text, obj4);
   items1[1] = closure_10(iconColor, obj3);
   obj2.children = items1;

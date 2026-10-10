@@ -1,8 +1,8 @@
-// === Module 13551: uploadMessageAttachments ===
+// === Module 13602: uploadMessageAttachments ===
 
-// Module 13551 (uploadMessageAttachments)
+// Module 13602 (uploadMessageAttachments)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UploadStore from "UploadStore" /* 7868 */;
+import UploadStore from "UploadStore" /* 7886 */;
 
 const require = fn;
 let closure_6 = async function _uploadMessageAttachments(arg0) {
@@ -16,7 +16,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -55,7 +55,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           return obj5;
         } else if (closure_131_5.has(closure_130_2)) {
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } else {
           const tmp16 = new closure_131_1(closure_131_2[2])();
           closure_130_5 = tmp16;

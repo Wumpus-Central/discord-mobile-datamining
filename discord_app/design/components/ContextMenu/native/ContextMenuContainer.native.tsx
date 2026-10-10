@@ -1,9 +1,9 @@
-// === Module 14197: ContextMenuContainer ===
+// === Module 14252: ContextMenuContainer ===
 
-// Module 14197 (ContextMenuContainer)
-import OverlayViewDefault from "OverlayView" /* 5305 */;
-import Dialog from "Dialog" /* 5357 */;
-import ContextMenuPopout from "ContextMenuPopout" /* 14198 */;
+// Module 14252 (ContextMenuContainer)
+import OverlayViewDefault from "OverlayView" /* 5306 */;
+import Dialog from "Dialog" /* 5358 */;
+import ContextMenuPopout from "ContextMenuPopout" /* 14253 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ function getItemKey(key) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { overlayView: null, wrapperView: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -111,7 +111,7 @@ export const ContextMenuContainer = ReactCompilerGating.isReactCompilerEnabled()
           return tmp19;
         }
         const obj3 = { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey };
-        const tmp23 = jsx(tmp(4788).TransitionGroup, { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey });
+        const tmp23 = jsx(tmp(4827).TransitionGroup, { wrapChildren: tmp18, items: tmp6, renderItem, getItemKey });
         cResult[10] = tmp6;
         cResult[11] = tmp18;
         cResult[12] = tmp23;

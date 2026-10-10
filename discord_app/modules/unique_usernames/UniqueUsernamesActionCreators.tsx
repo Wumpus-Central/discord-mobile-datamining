@@ -1,6 +1,6 @@
-// === Module 14905: UniqueUsernamesActionCreators ===
+// === Module 14964: UniqueUsernamesActionCreators ===
 
-// Module 14905 (UniqueUsernamesActionCreators)
+// Module 14964 (UniqueUsernamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

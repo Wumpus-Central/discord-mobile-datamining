@@ -1,20 +1,20 @@
-// === Module 17861: UnreadBadge ===
+// === Module 17933: UnreadBadge ===
 
-// Module 17861 (UnreadBadge)
+// Module 17933 (UnreadBadge)
 import c from "c" /* 576 */;
-import useFontScale from "useFontScale" /* 5383 */;
-import Badge from "Badge" /* 9275 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 17282 */;
+import useFontScale from "useFontScale" /* 5386 */;
+import Badge from "Badge" /* 9302 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 17354 */;
 import noop from "module_19" /* 19 */;
 
 const BadgeDefault = Badge;
 
 require = fn;
 const View = fn(17).View;
-const MUTED_OPACITY_CONTENT = fn(11713).MUTED_OPACITY_CONTENT;
-const UnreadSetting = fn(5974).UnreadSetting;
+const MUTED_OPACITY_CONTENT = fn(11758).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);

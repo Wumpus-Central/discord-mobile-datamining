@@ -1,17 +1,17 @@
-// === Module 12681: CollectiblesWishlistItemCard ===
+// === Module 12728: CollectiblesWishlistItemCard ===
 
-// Module 12681 (CollectiblesWishlistItemCard)
-import SKUPreview from "SKUPreview" /* 8956 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8957 */;
+// Module 12728 (CollectiblesWishlistItemCard)
+import SKUPreview from "SKUPreview" /* 8975 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8976 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import SentGiftsStore from "SentGiftsStore" /* 12682 */;
+import SentGiftsStore from "SentGiftsStore" /* 12729 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId", "size"];
-let closure_6 = fn(7261).transformSKUToCollectiblesItem;
+let closure_6 = fn(7267).transformSKUToCollectiblesItem;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -70,11 +70,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
     }
     const stateFromStores = tmp(504).useStateFromStores(tmp14, tmp16, tmp17);
     if (cResult[12] !== tmp6) {
-      const productNameAndTypeFromSku = tmp(8953).getProductNameAndTypeFromSku(tmp6);
+      const productNameAndTypeFromSku = tmp(8972).getProductNameAndTypeFromSku(tmp6);
       cResult[12] = tmp6;
       cResult[13] = productNameAndTypeFromSku;
       let tmp19 = productNameAndTypeFromSku;
-      const tmpResult2 = tmp(8953);
+      const tmpResult2 = tmp(8972);
     } else {
       tmp19 = cResult[13];
     }
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
         cResult[25] = tmp32;
         tmp25 = tmp32;
       }
-      OWNED = tmp(8957).WishlistItemCardOverlay.OWNED;
+      OWNED = tmp(8976).WishlistItemCardOverlay.OWNED;
     }
     const fn = function _() {
       let tmp2 = null;

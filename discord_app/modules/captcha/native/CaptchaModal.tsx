@@ -1,27 +1,27 @@
-// === Module 17889: CaptchaModal ===
+// === Module 17961: CaptchaModal ===
 
-// Module 17889 (CaptchaModal)
+// Module 17961 (CaptchaModal)
 import util from "util" /* 1126 */;
 import Link from "Link" /* 1504 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import Stack_Stack from "Stack/Stack" /* 5374 */;
-import components_Button_Button from "components/Button/Button" /* 5376 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5724 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6836 */;
-import RegistrationUtils from "RegistrationUtils" /* 16289 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 17891 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17894 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import Stack_Stack from "Stack/Stack" /* 5377 */;
+import components_Button_Button from "components/Button/Button" /* 5379 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5727 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6839 */;
+import RegistrationUtils from "RegistrationUtils" /* 16356 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 17963 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17966 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(16281).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(16282);
+let closure_6 = fn(16348).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(16349);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CaptchaM
   const tmp = close;
   const tmp3 = onReject;
   const navigation = onCaptchaVerify(close[9]).useNavigation();
-  state = navigation.getState();
+  let state = navigation.getState();
   let name;
   if (state != null) {
     let first = state.routes[0];
@@ -167,11 +167,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CaptchaM
 }) : (function CaptchaModal(arg0) {
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  const tmp2 = closure_11(onReject(6624)());
+  const tmp2 = closure_11(onReject(6625)());
   const navigation = Link.useNavigation();
   const items = [navigation];
   const memo = noop.useMemo(() => {
-    state = navigation.getState();
+    const state = navigation.getState();
     let name;
     if (state != null) {
       const first = state.routes[0];
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CaptchaM
     }
     return str;
   }, items);
-  closure_9 = onReject(17890)({ onReject, analyticsType: memo });
+  closure_9 = onReject(17962)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);

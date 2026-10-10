@@ -1,8 +1,8 @@
-// === Module 15908: UserSettingsJSError ===
+// === Module 15970: UserSettingsJSError ===
 
-// Module 15908 (UserSettingsJSError)
+// Module 15970 (UserSettingsJSError)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5087 */;
+import Text_Text from "Text/Text" /* 5088 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

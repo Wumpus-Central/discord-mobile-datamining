@@ -1,9 +1,10 @@
-// === Module 7168: ReferralTrialStore ===
+// === Module 7174: ReferralTrialStore ===
 
-// Module 7168 (ReferralTrialStore)
+// Module 7174 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7169 */;
+import MessageTypes from "MessageTypes" /* 1101 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7175 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -14,7 +15,7 @@ function handleLoadMessages(messages) {
   messages = messages.messages;
   const item = messages.forEach((type) => {
     let content = null;
-    if (type.type === content(1101).MessageTypes.PREMIUM_REFERRAL) {
+    if (type.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
       content = type.content;
     }
     if (null != content) {
@@ -24,34 +25,32 @@ function handleLoadMessages(messages) {
       }
       if (!hasItem) {
         set.add(content);
-        closure_1(584).wait(() => {
-          const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
-          return referralTrialOffer.catch(NOOP_NULL);
-        });
-        const obj = closure_1(584);
+        const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
+        referralTrialOffer.catch(NOOP_NULL);
+        const tmpResult = ReferralTrialActionCreators;
       }
     }
     return false;
   });
 }
 const NOOP_NULL = fn(1085).NOOP_NULL;
-let c5 = null;
+let c4 = null;
 let set = new Set();
 let map = new Map();
-let c8 = false;
+let c7 = false;
 let set1 = new Set();
 let set2 = new Set();
 let map1 = new Map();
 map = map1;
-let c12 = 0;
-let c13 = null;
-let closure_14 = [];
-let c15 = false;
-let c16 = 0;
+let c11 = 0;
+let c12 = null;
+let closure_13 = [];
+let c14 = false;
+let c15 = 0;
+let c16 = false;
 let c17 = false;
-let c18 = false;
+let c18 = null;
 let c19 = null;
-let c20 = null;
 const Store = initializeDefault.Store;
 class ReferralTrialStore extends Store {
 }
@@ -62,15 +61,15 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, emitChanges);
 };
 prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRemaining() {
-  let tmp = null == c5;
+  let tmp = null == c4;
   if (tmp) {
-    tmp = !c8;
+    tmp = !c7;
   }
   if (tmp) {
-    tmp = c12 < 6;
+    tmp = c11 < 6;
   }
   if (tmp) {
-    let tmp5 = null == c13;
+    let tmp5 = null == c12;
     if (!tmp5) {
       const _Date = Date;
       tmp5 = tmp4 < Date.now();
@@ -94,14 +93,14 @@ prototype["getReferralsRemaining"] = function getReferralsRemaining() {
     const self = this;
     const result = this.checkAndFetchReferralsRemaining();
   }
-  return c5;
+  return c4;
 };
 prototype["getSentUserIds"] = function getSentUserIds() {
   const result = this.checkAndFetchReferralsRemaining();
   return Array.from(set.values());
 };
 prototype["isFetchingReferralsRemaining"] = function isFetchingReferralsRemaining() {
-  return c8;
+  return c7;
 };
 prototype["getRelevantUserTrialOffer"] = function getRelevantUserTrialOffer(referralTrialOfferId) {
   return map.get(referralTrialOfferId);
@@ -110,22 +109,22 @@ prototype["isResolving"] = function isResolving(arg0) {
   return set1.has(arg0);
 };
 prototype["getEligibleUsers"] = function getEligibleUsers() {
-  return closure_14;
+  return closure_13;
 };
 prototype["getFetchingEligibleUsers"] = function getFetchingEligibleUsers() {
-  return c15;
+  return c14;
 };
 prototype["getNextIndexOfEligibleUsers"] = function getNextIndexOfEligibleUsers() {
-  return c16;
+  return c15;
 };
 prototype["getIsEligibleToSendReferrals"] = function getIsEligibleToSendReferrals() {
-  return c17;
+  return c16;
 };
 prototype["getHasEligibleFriends"] = function getHasEligibleFriends() {
-  return c18;
+  return c17;
 };
 prototype["getRefreshAt"] = function getRefreshAt() {
-  return c19;
+  return c18;
 };
 prototype["getAllRelevantReferralTrialOffers"] = function getAllRelevantReferralTrialOffers() {
   return Array.from(map.values());
@@ -134,65 +133,62 @@ prototype["getRecipientStatus"] = function getRecipientStatus() {
   return map1;
 };
 prototype["getReminderStateId"] = function getReminderStateId() {
-  return c20;
+  return c19;
 };
 ReferralTrialStore.displayName = "ReferralTrialStore";
 const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
-    if (!c8) {
-      const referralsRemaining = userTrialOfferId(7169).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7169);
+    if (!c7) {
+      const referralsRemaining = ReferralTrialActionCreators.fetchReferralsRemaining();
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
-      DispatcherDefault.wait(() => {
-        const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(userTrialOfferId);
-        return referralTrialOffer.catch(NOOP_NULL);
-      });
+      const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(userTrialOfferId);
+      referralTrialOffer.catch(NOOP_NULL);
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function handleReferralsRemainingFetchStart(arg0) {
     if (arg0 == null) {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
-      c19 = null;
-      c8 = true;
+      c18 = null;
+      c7 = true;
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function handleReferralsRemainingFetchSuccess(has_eligible_friends) {
-    c17 = true;
+    c16 = true;
     has_eligible_friends = has_eligible_friends.has_eligible_friends;
-    c8 = false;
+    c7 = false;
     const referrals_remaining = has_eligible_friends.referrals_remaining;
     ({ refresh_at, recipient_status, reminder_state_id } = has_eligible_friends);
     new Set(has_eligible_friends.sent_user_ids);
-    c19 = refresh_at;
-    c20 = reminder_state_id;
-    c12 = 0;
-    c13 = null;
+    c18 = refresh_at;
+    c19 = reminder_state_id;
+    c11 = 0;
+    c12 = null;
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function handleReferralsRemainingFetchFail(arg0) {
     if (arg0 == null) {
       throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
+      c16 = false;
       c17 = false;
-      c18 = false;
-      c19 = null;
-      c8 = false;
-      const sum = c12 + 1;
-      c12 = sum;
+      c18 = null;
+      c7 = false;
+      const sum = c11 + 1;
+      c11 = sum;
       if (sum <= 3) {
         const _Math2 = Math;
-        let result = 1000 * Math.pow(2, c12);
+        let result = 1000 * Math.pow(2, c11);
       } else {
         const _Math = Math;
-        result = 8000 * Math.pow(4, c12 - 3);
+        result = 8000 * Math.pow(4, c11 - 3);
       }
       const _Date = Date;
       const _Math3 = Math;
       const timestamp = Date.now();
-      c13 = timestamp + Math.min(300000, result);
+      c12 = timestamp + Math.min(300000, result);
     }
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function handleCreateReferralSuccess(userTrialOffer) {
@@ -223,20 +219,20 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
     set2.add(userTrialOfferId);
   },
   REFERRALS_FETCH_ELIGIBLE_USER_START: function handleReferralsFetchEligibleUsersStart() {
-    c15 = true;
+    c14 = true;
   },
   REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function handleReferralsFetchEligibleUsersSuccess(arg0) {
-    c15 = false;
-    ({ users: closure_14, nextIndex: c16 } = arg0);
+    c14 = false;
+    ({ users: closure_13, nextIndex: c15 } = arg0);
   },
   REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function handleReferralsFetchEligibleUsersFail() {
-    c15 = false;
+    c14 = false;
   },
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   MESSAGE_CREATE: function handleMessage(message) {
     message = message.message;
     let content = null;
-    if (message.type === content(1101).MessageTypes.PREMIUM_REFERRAL) {
+    if (message.type === MessageTypes.MessageTypes.PREMIUM_REFERRAL) {
       content = message.content;
     }
     if (null != content) {
@@ -246,31 +242,30 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
       }
       if (!hasItem) {
         set1.add(content);
-        DispatcherDefault.wait(() => {
-          const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
-          return referralTrialOffer.catch(NOOP_NULL);
-        });
+        const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
+        referralTrialOffer.catch(NOOP_NULL);
+        const tmpResult = ReferralTrialActionCreators;
       }
     }
   },
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   LOGOUT: function handleReset() {
-    c5 = null;
+    c4 = null;
     set = new Set();
-    c8 = false;
+    c7 = false;
     set1 = new Set();
     set2 = new Set();
     map = new Map();
-    c12 = 0;
-    c13 = null;
-    closure_14 = [];
-    c15 = false;
-    c16 = 0;
+    c11 = 0;
+    c12 = null;
+    closure_13 = [];
+    c14 = false;
+    c15 = 0;
+    c16 = false;
     c17 = false;
-    c18 = false;
-    c19 = null;
+    c18 = null;
     map1 = new Map();
-    c20 = null;
+    c19 = null;
   }
 });
 const size = fn(2);

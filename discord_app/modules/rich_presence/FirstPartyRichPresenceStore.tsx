@@ -1,11 +1,11 @@
-// === Module 10615: FirstPartyRichPresenceStore ===
+// === Module 10649: FirstPartyRichPresenceStore ===
 
-// Module 10615 (FirstPartyRichPresenceStore)
+// Module 10649 (FirstPartyRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1355 from "module_1355" /* 1355 */;
-import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 10619 */;
-import ConjureRichPresenceStore from "ConjureRichPresenceStore" /* 10616 */;
+import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 10653 */;
+import ConjureRichPresenceStore from "ConjureRichPresenceStore" /* 10650 */;
 
 function updateActivities() {
   items = [];

@@ -1,13 +1,13 @@
-// === Module 10457: GiftCodeActionCreators ===
+// === Module 10491: GiftCodeActionCreators ===
 
-// Module 10457 (GiftCodeActionCreators)
+// Module 10491 (GiftCodeActionCreators)
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4751 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 10458 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4792 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 10492 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5437 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7257 */;
+import ApplicationStore from "ApplicationStore" /* 5440 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
 
 require = fn;
 function resolveGiftCode() {
@@ -31,7 +31,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -209,11 +209,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(7265).isUnknownCollectiblesItemRecord;
+let closure_6 = fn(7271).isUnknownCollectiblesItemRecord;
 const Constants = fn(1085);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1392).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(10459).default);
+const merged = Object.assign(fn(10493).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

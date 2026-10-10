@@ -1,6 +1,6 @@
-// === Module 9205: ApplicationFlagUtils ===
+// === Module 9232: ApplicationFlagUtils ===
 
-// Module 9205 (ApplicationFlagUtils)
+// Module 9232 (ApplicationFlagUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import ApplicationRecord from "ApplicationRecord" /* 2022 */;
 

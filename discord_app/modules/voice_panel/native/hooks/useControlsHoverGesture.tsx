@@ -1,13 +1,13 @@
-// === Module 17671: useControlsHoverGesture ===
+// === Module 17743: useControlsHoverGesture ===
 
-// Module 17671 (useControlsHoverGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6333 */;
+// Module 17743 (useControlsHoverGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6334 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VoicePanelModes = fn(11926).VoicePanelModes;
-const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
+const VoicePanelModes = fn(11970).VoicePanelModes;
+const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
 let c6 = 500;
 const __initData = { code: "function useControlsHoverGestureTsx1(){const{connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout}=this.__closure;if(!connected.get()){return;}if(mode.get()!==VoicePanelModes.PANEL){return;}const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){runOnJS(showControls)();return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS){return;}lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();}" };
 let closure_8 = { code: "function useControlsHoverGestureTsx2(){const{connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout}=this.__closure;if(!connected.get())return;if(mode.get()!==VoicePanelModes.PANEL)return;const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){runOnJS(showControls)();return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS)return;lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();}" };

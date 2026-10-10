@@ -1,16 +1,16 @@
-// === Module 18004: TextInputActionComponent ===
+// === Module 18076: TextInputActionComponent ===
 
-// Module 18004 (TextInputActionComponent)
+// Module 18076 (TextInputActionComponent)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const Server = Input(1998);
-const Input2 = Input(6291);
-const TextField2 = Input(6294);
-const TextAreaField2 = Input(6771);
-const ComponentStateContext = Input(8233);
-const InteractionModalUtils = Input(18001);
+const Input2 = Input(6286);
+const TextField2 = Input(6292);
+const TextAreaField2 = Input(6774);
+const ComponentStateContext = Input(8249);
+const InteractionModalUtils = Input(18073);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -29,7 +29,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp3 = cResult[2];
     }
     const componentState = ComponentStateContext.useComponentState(type, tmp3);
-    state = componentState.state;
+    const state = componentState.state;
     const executeStateUpdate = componentState.executeStateUpdate;
     const error = componentState.error;
     const InputResult = ComponentStateContext;
@@ -245,7 +245,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const isFirstTextInputInModal = InteractionModalUtils.useIsFirstTextInputInModal(type.id);
   const obj3 = { placeholder, maxLength, status: null, defaultValue: null, onChange: null, autoFocus: null, clearable: true };
   let str = "default";
-  state = noop.useState(() => {
+  const state = noop.useState(() => {
     type = undefined;
     if (_slicedToArray != null) {
       type = _slicedToArray.type;

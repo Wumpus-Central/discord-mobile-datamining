@@ -1,9 +1,9 @@
-// === Module 8822: useSecureFramesUserVerifiedKeysCount ===
+// === Module 8841: useSecureFramesUserVerifiedKeysCount ===
 
-// Module 8822 (useSecureFramesUserVerifiedKeysCount)
-import _mod8794 from "module_8794" /* 8794 */;
+// Module 8841 (useSecureFramesUserVerifiedKeysCount)
+import _mod8813 from "module_8813" /* 8813 */;
 import noop from "module_19" /* 19 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 8793 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 8812 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -51,10 +51,10 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
   } else if (cResult[0] !== keyToOmit) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(keyToOmit);
-    const serializeKeyResult = tmp(8794).serializeKey(uint8Array);
+    const serializeKeyResult = tmp(8813).serializeKey(uint8Array);
     cResult[0] = keyToOmit;
     cResult[1] = serializeKeyResult;
-    const tmpResult2 = tmp(8794);
+    const tmpResult2 = tmp(8813);
   }
   const obj = userId(576);
 }) : (function useSecureFramesUserVerifiedKeysCount(userId) {
@@ -68,7 +68,7 @@ export const useSecureFramesUserVerifiedKeysCount = ReactCompilerGating.isReactC
     } else {
       const _Uint8Array = Uint8Array;
       const uint8Array = new Uint8Array(keyToOmit);
-      return _mod8794.serializeKey(uint8Array);
+      return _mod8813.serializeKey(uint8Array);
     }
   }, items);
   const items1 = [VerifiedKeyStore];

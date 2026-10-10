@@ -1,14 +1,15 @@
-// === Module 11595: CustomTypingIndicatorUtils ===
+// === Module 11641: CustomTypingIndicatorUtils ===
 
-// Module 11595 (CustomTypingIndicatorUtils)
+// Module 11641 (CustomTypingIndicatorUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import user2 from "user" /* 1398 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1411 */;
-import _modDef3829 from "module_3829" /* 3829 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4723 */;
-import EmojiStore from "EmojiStore" /* 5994 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import SortedGuildStore from "SortedGuildStore" /* 5970 */;
+import _modDef3851 from "module_3851" /* 3851 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4764 */;
+import EmojiStore from "EmojiStore" /* 5987 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8284 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import SortedGuildStore from "SortedGuildStore" /* 5963 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -17,23 +18,23 @@ require = fn;
 const Permissions = fn(1085).Permissions;
 const EmojiIntention = fn(1393).EmojiIntention;
 let obj = {};
-obj[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3829["6Cdy4a"];
-obj[fn(1398).TypingSuggestion.YAPPING] = _modDef3829.E5VRaj;
-obj[fn(1398).TypingSuggestion.VENTING] = _modDef3829.xmxdPC;
-obj[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3829["qGaH/9"];
-obj[fn(1398).TypingSuggestion.BARKING] = _modDef3829.M282uk;
-obj[fn(1398).TypingSuggestion.BABBLING] = _modDef3829.myNZDT;
-obj[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3829.F7RLTP;
-obj[fn(1398).TypingSuggestion.MEOWING] = _modDef3829.EfxyQI;
+obj[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3851["6Cdy4a"];
+obj[fn(1398).TypingSuggestion.YAPPING] = _modDef3851.E5VRaj;
+obj[fn(1398).TypingSuggestion.VENTING] = _modDef3851.xmxdPC;
+obj[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3851["qGaH/9"];
+obj[fn(1398).TypingSuggestion.BARKING] = _modDef3851.M282uk;
+obj[fn(1398).TypingSuggestion.BABBLING] = _modDef3851.myNZDT;
+obj[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3851.F7RLTP;
+obj[fn(1398).TypingSuggestion.MEOWING] = _modDef3851.EfxyQI;
 let obj2 = {};
-obj2[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3829.kh4K4F;
-obj2[fn(1398).TypingSuggestion.YAPPING] = _modDef3829.m9AeqG;
-obj2[fn(1398).TypingSuggestion.VENTING] = _modDef3829["SZ0/Qu"];
-obj2[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3829.N8cWE8;
-obj2[fn(1398).TypingSuggestion.BARKING] = _modDef3829.L5aWEN;
-obj2[fn(1398).TypingSuggestion.BABBLING] = _modDef3829.AoBaEw;
-obj2[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3829["3hOLod"];
-obj2[fn(1398).TypingSuggestion.MEOWING] = _modDef3829["0Z9/o9"];
+obj2[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3851.kh4K4F;
+obj2[fn(1398).TypingSuggestion.YAPPING] = _modDef3851.m9AeqG;
+obj2[fn(1398).TypingSuggestion.VENTING] = _modDef3851["SZ0/Qu"];
+obj2[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3851.N8cWE8;
+obj2[fn(1398).TypingSuggestion.BARKING] = _modDef3851.L5aWEN;
+obj2[fn(1398).TypingSuggestion.BABBLING] = _modDef3851.AoBaEw;
+obj2[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3851["3hOLod"];
+obj2[fn(1398).TypingSuggestion.MEOWING] = _modDef3851["0Z9/o9"];
 let items = [fn(1398).TypingSuggestion.UNSPECIFIED, fn(1398).TypingSuggestion.YAPPING, fn(1398).TypingSuggestion.VENTING, fn(1398).TypingSuggestion.OVERSHARING, fn(1398).TypingSuggestion.BARKING, fn(1398).TypingSuggestion.BABBLING, fn(1398).TypingSuggestion.DAYDREAMING, fn(1398).TypingSuggestion.MEOWING];
 let items1 = [fn(1398).TypingIndicatorAnimation.PULSE, fn(1398).TypingIndicatorAnimation.RING, fn(1398).TypingIndicatorAnimation.WAVE];
 const ReactCompilerGating = fn(558);
@@ -89,10 +90,18 @@ export function getCustomTypingIndicatorSuggestionPresets() {
   return items;
 }
 export const getCustomTypingIndicatorSuggestionMessage = function getCustomTypingIndicatorSuggestionMessage(typingSuggestion) {
-  return obj[typingSuggestion];
+  let tmp2 = obj[typingSuggestion];
+  if (tmp2 == null) {
+    tmp2 = tmp[user2.TypingSuggestion.UNSPECIFIED];
+  }
+  return tmp2;
 };
 export const getCustomTypingIndicatorSuggestionWithNameMessage = function getCustomTypingIndicatorSuggestionWithNameMessage(suggestion) {
-  return obj2[suggestion];
+  let tmp2 = obj2[suggestion];
+  if (tmp2 == null) {
+    tmp2 = tmp[user2.TypingSuggestion.UNSPECIFIED];
+  }
+  return tmp2;
 };
 export const getRandomCustomTypingIndicatorSuggestion = function getRandomCustomTypingIndicatorSuggestion() {
   return items[Math.floor(Math, Math.random(Math) * items.length)];

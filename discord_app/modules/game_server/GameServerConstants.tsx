@@ -1,8 +1,8 @@
-// === Module 4970: GameServerConstants ===
+// === Module 5009: GameServerConstants ===
 
-// Module 4970 (GameServerConstants)
+// Module 5009 (GameServerConstants)
 import UserStoreConstants from "UserStoreConstants" /* 1402 */;
-import GameServerProviderType from "GameServerProviderType" /* 4971 */;
+import GameServerProviderType from "GameServerProviderType" /* 5010 */;
 import size from "module_2" /* 2 */;
 
 const obj = { SELECT_GAME: "select-game", SERVER_SETTINGS: "server-settings" };

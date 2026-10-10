@@ -1,6 +1,6 @@
-// === Module 4799: TransitionGroup/TransitionGroup ===
+// === Module 4838: TransitionGroup/TransitionGroup ===
 
-// Module 4799 (TransitionGroup/TransitionGroup)
+// Module 4838 (TransitionGroup/TransitionGroup)
 import c from "c" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -88,7 +88,7 @@ class TransitionGroup {
             set.delete(tmp2);
           }
           if (value.state === map.YEETED) {
-            state = map.ENTERED;
+            let state = map.ENTERED;
           } else {
             state = value.state;
           }

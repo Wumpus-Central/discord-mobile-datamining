@@ -1,13 +1,13 @@
-// === Module 12483: ForumDisplaySettingsActionSheet ===
+// === Module 12530: ForumDisplaySettingsActionSheet ===
 
-// Module 12483 (ForumDisplaySettingsActionSheet)
-import Tracking from "Tracking" /* 7885 */;
+// Module 12530 (ForumDisplaySettingsActionSheet)
+import Tracking from "Tracking" /* 7903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 require = fn;
-const ForumChannelStore = fn(11629);
+const ForumChannelStore = fn(11675);
 ({ useForumChannelStoreApi: metroRequire, useForumChannelStore: closure_7 } = ForumChannelStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -790,7 +790,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumDis
         obj6.forumLayout = forumLayout;
         const result1 = Tracking.trackForumLayoutUpdated(obj6);
       }
-      state = closure_4.getState();
+      const state = closure_4.getState();
       state.setLayoutType(channelId, forumLayout);
       const state1 = closure_4.getState();
       state1.setSortOrder(channelId, sortOrder);

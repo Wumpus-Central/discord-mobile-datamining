@@ -1,19 +1,20 @@
-// === Module 9706: GIFPickerActionCreators ===
+// === Module 9735: GIFPickerActionCreators ===
 
-// Module 9706 (GIFPickerActionCreators)
+// Module 9735 (GIFPickerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1126 */;
 import frecency_user_settings from "frecency_user_settings" /* 1245 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
+import v1 from "v1" /* 1279 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
 import URLUtilsDefault from "URLUtils" /* 1384 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5298 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9290 */;
-import GifProvider from "GifProvider" /* 9707 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 9708 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 9705 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5299 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9317 */;
+import GifProvider from "GifProvider" /* 9736 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 9737 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 9734 */;
 import apply from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -169,14 +170,11 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1279);
-  replaced = replaced(1279).v4().replace(closure_12, "");
-  const str = replaced(1279).v4();
+  const replaced = v1.v4().replace(re12, "");
+  const str = v1.v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, { search_type: constants3.GIF, load_id: replaced });
   const obj3 = { search_type: constants3.GIF, load_id: replaced };
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: replaced });
-  });
+  DispatcherDefault.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: replaced });
 };
 export const fetchTrending = function fetchTrending() {
   const HTTP = HTTPUtils.HTTP;

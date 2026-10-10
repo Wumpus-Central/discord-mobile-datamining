@@ -1,9 +1,9 @@
-// === Module 15141: UserSettingsAuthedAppPermissions ===
+// === Module 15202: UserSettingsAuthedAppPermissions ===
 
-// Module 15141 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 5087 */;
-import disclosures2 from "disclosures" /* 9201 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15135 */;
+// Module 15202 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 5088 */;
+import disclosures2 from "disclosures" /* 9228 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 15196 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -151,8 +151,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       children[2] = items.map((children, index) => {
         const obj = { style: items.permissionContainer, children: null };
         items = [, ];
-        items[0] = closure_2_5(items(4993).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(587).colors.STATUS_POSITIVE });
-        items[1] = closure_2_5(items(5087).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
+        items[0] = closure_2_5(items(6867).CircleCheckIcon, { style: items.permissionIcon, size: "xs", color: c1(587).colors.STATUS_POSITIVE });
+        items[1] = closure_2_5(items(5088).Text, { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children });
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });

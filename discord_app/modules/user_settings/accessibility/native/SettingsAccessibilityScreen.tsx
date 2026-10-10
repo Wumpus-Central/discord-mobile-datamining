@@ -1,18 +1,18 @@
-// === Module 15539: SettingsAccessibilityScreen ===
+// === Module 15601: SettingsAccessibilityScreen ===
 
-// Module 15539 (SettingsAccessibilityScreen)
+// Module 15601 (SettingsAccessibilityScreen)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import useNavigation from "useNavigation" /* 1503 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2127 */;
-import _modDef2955 from "module_2955" /* 2955 */;
-import openUserSettings from "openUserSettings" /* 7087 */;
-import SettingBuilders from "SettingBuilders" /* 10629 */;
-import SettingLayoutDefault from "SettingLayout" /* 14883 */;
-import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 15540 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2128 */;
+import _modDef2958 from "module_2958" /* 2958 */;
+import openUserSettings from "openUserSettings" /* 7093 */;
+import SettingBuilders from "SettingBuilders" /* 10663 */;
+import SettingLayoutDefault from "SettingLayout" /* 14942 */;
+import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 15602 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 2042 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
   obj5.settings = items3;
   const intl3 = util.intl;
-  obj5.subLabel = intl3.format(_modDef2955.L8U56h, {
+  obj5.subLabel = intl3.format(_modDef2958.L8U56h, {
     onClickOpenModal() {
       openUserSettings.openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
         closure_1_0(closure_1_2[10]).runAfterInteractions(() => {
@@ -141,7 +141,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   items1[13] = obj20;
   return items1.filter((item) => null != item);
 }
-const MobileUserSettings = fn(7974).MobileUserSettings;
+const MobileUserSettings = fn(7992).MobileUserSettings;
 const Constants = fn(1085);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;

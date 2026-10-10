@@ -1,6 +1,6 @@
-// === Module 15686: TimestampHourCycleSetting ===
+// === Module 15748: TimestampHourCycleSetting ===
 
-// Module 15686 (TimestampHourCycleSetting)
+// Module 15748 (TimestampHourCycleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1209 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDMsMessagePreviewsOptions() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -59,7 +59,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(7974).MobileUserSettings.APPEARANCE,
+  parent: fn(7992).MobileUserSettings.APPEARANCE,
   useValue: fn(2041).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
@@ -109,7 +109,7 @@ const radio = SettingBuilders.createRadio({
       return items;
     }, []);
   }),
-  usePredicate: fn(4755).supportsSystemDateFormatter
+  usePredicate: fn(4796).supportsSystemDateFormatter
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/TimestampHourCycleSetting.tsx");

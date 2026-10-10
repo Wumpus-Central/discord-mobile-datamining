@@ -1,18 +1,18 @@
-// === Module 14212: ModalStepIndicator ===
+// === Module 14267: ModalStepIndicator ===
 
-// Module 14212 (ModalStepIndicator)
+// Module 14267 (ModalStepIndicator)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import _modDef2141 from "module_2141" /* 2141 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import spring from "spring" /* 5375 */;
+import _modDef2142 from "module_2142" /* 2142 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import spring from "spring" /* 5378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
 const __initData = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
 const __initData2 = { code: "function ModalStepIndicatorNativeTsx2(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
@@ -211,7 +211,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled() ?
               const _Symbol = Symbol;
               if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl = util.intl;
-                const stringResult = intl.string(_modDef2141.KUwsC0);
+                const stringResult = intl.string(_modDef2142.KUwsC0);
                 cResult[11] = stringResult;
                 let tmp7 = stringResult;
               } else {
@@ -278,12 +278,12 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled() ?
       return <View style={tmp.container}>{items}</View>;
     } else {
       const intl = util.intl;
-      const obj4 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: intl.string(_modDef2141.KUwsC0), accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
+      const obj4 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: intl.string(_modDef2142.KUwsC0), accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
       const range = { min: 1, max: totalSteps, now: currentStep + 1 };
       obj4.accessibilityValue = range;
       obj4.style = tmp.container;
       obj4.children = items;
-      return <View accessible accessibilityRole="progressbar" accessibilityLabel={intl.string(_modDef2141.KUwsC0)} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
+      return <View accessible accessibilityRole="progressbar" accessibilityLabel={intl.string(_modDef2142.KUwsC0)} accessibilityValue={null} importantForAccessibility="yes" style={null}>{null}</View>;
     }
   }
 });

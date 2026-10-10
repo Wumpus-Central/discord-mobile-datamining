@@ -1,21 +1,21 @@
-// === Module 7248: NewChannelsStore ===
+// === Module 7254: NewChannelsStore ===
 
-// Module 7248 (NewChannelsStore)
+// Module 7254 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import NSFWContentGate from "NSFWContentGate" /* 5950 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6070 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6796 */;
+import NSFWContentGate from "NSFWContentGate" /* 5943 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6063 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6799 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildChannelStore from "GuildChannelStore" /* 4707 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import ReadStateStore from "ReadStateStore" /* 6042 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5973 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildChannelStore from "GuildChannelStore" /* 4748 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import ReadStateStore from "ReadStateStore" /* 6035 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5966 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
@@ -42,7 +42,6 @@ function seedCommunityBaseline() {
   return false;
 }
 function maybeAckViewedChannel(guildId, channelId) {
-  closure_0 = channelId;
   let tmp = null != obj && null != channelId && obj.has(channelId);
   if (tmp) {
     guild = GuildStore.getGuild(guildId);
@@ -68,11 +67,9 @@ function maybeAckViewedChannel(guildId, channelId) {
     tmp = 0 === ReadStateStore.getMentionCount(channelId);
   }
   if (tmp) {
-    DispatcherDefault.wait(() => {
-      const obj = ReadStateActionCreators;
-      const obj2 = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
-      return obj.ack(closure_0, obj2, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(closure_0));
-    });
+    const obj3 = ReadStateActionCreators;
+    const obj2 = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
+    obj3.ack(channelId, obj2, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(channelId));
   }
 }
 function initializeNewChannels(guildId) {
@@ -128,7 +125,7 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4748).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

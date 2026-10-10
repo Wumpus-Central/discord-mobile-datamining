@@ -1,11 +1,11 @@
-// === Module 17681: useStableParticipant ===
+// === Module 17753: useStableParticipant ===
 
-// Module 17681 (useStableParticipant)
+// Module 17753 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import NicknameUtils from "NicknameUtils" /* 5406 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6060 */;
-import participantHasVideoDefault from "participantHasVideo" /* 10866 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import NicknameUtils from "NicknameUtils" /* 5409 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6053 */;
+import participantHasVideoDefault from "participantHasVideo" /* 10904 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 2012 */;
 import UserStore from "UserStore" /* 1390 */;
@@ -24,7 +24,7 @@ function areStableParticipantsEqual(arg0, arg1) {
   }
   return tmp;
 }
-const ParticipantTypes = fn(5114).ParticipantTypes;
+const ParticipantTypes = fn(5115).ParticipantTypes;
 const ReactCompilerGating = fn(558);
 function isStableStreamParticipant(participant) {
   let type;

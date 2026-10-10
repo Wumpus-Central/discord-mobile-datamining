@@ -1,17 +1,17 @@
-// === Module 7906: EmojiUtilsPlatformed ===
+// === Module 7924: EmojiUtilsPlatformed ===
 
-// Module 7906 (EmojiUtilsPlatformed)
+// Module 7924 (EmojiUtilsPlatformed)
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1899 */;
-import DeviceUtils from "DeviceUtils" /* 5067 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7907 */;
-import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7946 */;
+import DeviceUtils from "DeviceUtils" /* 5068 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7925 */;
+import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7964 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4724 */;
-import MemoizerUtils from "MemoizerUtils" /* 7951 */;
+import defaultImageSrcGenerator from "defaultImageSrcGenerator" /* 4765 */;
+import MemoizerUtils from "MemoizerUtils" /* 7969 */;
 
 require = fn;
 function getURL(name) {
@@ -40,7 +40,7 @@ let closure_8 = async function _getEmojiColors(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

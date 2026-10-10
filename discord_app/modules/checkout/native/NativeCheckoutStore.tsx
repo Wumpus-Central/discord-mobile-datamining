@@ -1,18 +1,18 @@
-// === Module 7137: NativeCheckoutStore ===
+// === Module 7143: NativeCheckoutStore ===
 
-// Module 7137 (NativeCheckoutStore)
+// Module 7143 (NativeCheckoutStore)
 import _mod1267 from "module_1267" /* 1267 */;
-import _mod4692 from "module_4692" /* 4692 */;
-import OrderActionCreators from "OrderActionCreators" /* 6938 */;
-import ContextUtilsDefault from "ContextUtils" /* 7141 */;
-import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7142 */;
+import _mod4733 from "module_4733" /* 4733 */;
+import OrderActionCreators from "OrderActionCreators" /* 6944 */;
+import ContextUtilsDefault from "ContextUtils" /* 7147 */;
+import payments_OrderActionCreators from "payments/OrderActionCreators" /* 7148 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 7138 */;
+import OrderRecord from "OrderRecord" /* 7144 */;
 
 require = fn;
-const OrderStatus = fn(5070).OrderStatus;
+const OrderStatus = fn(5071).OrderStatus;
 [exports.NativeCheckoutStoreContext, closure_7] = ContextUtilsDefault();
 let context = noop.createContext("unset_context");
 const ReactCompilerGating = fn(558);
@@ -22,20 +22,20 @@ let result = size.fileFinishedImporting("modules/checkout/native/NativeCheckoutS
 export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = ReactCompilerGating.isReactCompilerEnabled() ? (function useNativeCheckoutStore(cResult, shallow) {
   if (undefined === shallow) {
-    shallow = _mod4692.shallow;
+    shallow = _mod4733.shallow;
   }
   const tmp3 = closure_7();
   return _mod1267.useStoreWithEqualityFn(tmp3, cResult, shallow);
 }) : (function useNativeCheckoutStore(cResult) {
   if (shallow === undefined) {
-    shallow = _mod4692.shallow;
+    shallow = _mod4733.shallow;
   }
   const tmp3 = closure_7();
   return _mod1267.useStoreWithEqualityFn(tmp3, cResult, shallow);
 });
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(cResult) {
   if (shallow === undefined) {
-    shallow = _mod4692.shallow;
+    shallow = _mod4733.shallow;
   }
   context = noop.useContext(context);
   let storeWithEqualityFn = null;
@@ -103,7 +103,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -198,7 +198,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -340,7 +340,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -453,7 +453,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -525,7 +525,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             c4 = 0;
             closure_130_0({ isCreateOrderLoading: false });
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp42) {
           closure_3 = tmp42;
@@ -561,7 +561,7 @@ export const createNativeStore = function createNativeStore(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -632,7 +632,7 @@ export const createNativeStore = function createNativeStore(arg0) {
             c3 = 0;
             closure_129_0({ isCreateOrderLoading: false });
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp41) {
           closure_2 = tmp41;
@@ -675,5 +675,5 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = runRevertOrderToDraft;
     return obj;
-  }, _mod4692.shallow);
+  }, _mod4733.shallow);
 };

@@ -1,7 +1,7 @@
-// === Module 10835: useIsActivitiesAvailableInShelf ===
+// === Module 10845: useIsActivitiesAvailableInShelf ===
 
-// Module 10835 (useIsActivitiesAvailableInShelf)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10778 */;
+// Module 10845 (useIsActivitiesAvailableInShelf)
+import fetchShelf from "fetchShelf" /* 10848 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAct
   const cResult = require("c").c(8);
   let obj = require("c");
   const isActivitiesEnabledForCurrentPlatform = require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
-  const tmp3 = isActivitiesEnabledForCurrentPlatform(10836)(arg1);
+  const tmp3 = isActivitiesEnabledForCurrentPlatform(10847)(arg1);
   if (cResult[0] === guildId) {
     if (cResult[1] === tmp3) {
       let tmp4 = cResult[2];
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAct
       }
       if (tmp) {
         const obj2 = { guildId };
-        const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+        const shelf = fetchShelf.fetchShelf(obj2);
       }
     };
     const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp4];
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsAct
     }
     if (tmp) {
       const obj2 = { guildId };
-      const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+      const shelf = fetchShelf.fetchShelf(obj2);
     }
   }, items);
   if (tmp3) {

@@ -1,13 +1,13 @@
-// === Module 16901: useMainTabsChannelScreenStyles ===
+// === Module 16969: useMainTabsChannelScreenStyles ===
 
-// Module 16901 (useMainTabsChannelScreenStyles)
+// Module 16969 (useMainTabsChannelScreenStyles)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -50,7 +50,7 @@ export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompile
       num3 = elevation.elevation;
     }
     obj3.elevation = num3;
-    let value4;
+    value4 = undefined;
     if (isCompletelyCovered != null) {
       value4 = isCompletelyCovered.get();
     }
@@ -107,7 +107,7 @@ export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompile
       num3 = elevation.elevation;
     }
     obj3.elevation = num3;
-    let value4;
+    value4 = undefined;
     if (isCompletelyCovered != null) {
       value4 = isCompletelyCovered.get();
     }

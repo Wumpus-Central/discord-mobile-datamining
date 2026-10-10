@@ -1,15 +1,15 @@
-// === Module 4899: DismissibleContentUnsafeUtils ===
+// === Module 4938: DismissibleContentUnsafeUtils ===
 
-// Module 4899 (DismissibleContentUnsafeUtils)
+// Module 4938 (DismissibleContentUnsafeUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2048 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 2050 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 2055 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4921 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 2056 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1244 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
 
 const require = globalThis.__r;
 
@@ -134,7 +134,7 @@ let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -261,7 +261,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
       } else {
         const result1 = closure_132_0(closure_132_2[6]).markDismissibleContentAsDismissedPostProcessing(closure_131_0, closure_131_1);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp13) {
       c6 = tmp;
@@ -286,7 +286,7 @@ let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleConten
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -326,7 +326,7 @@ let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleConten
         } else {
           const result1 = closure_133_0(closure_133_2[6]).markDismissibleContentAsDismissedPostProcessing(closure_132_0, closure_132_1);
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp13) {
         c7 = tmp;

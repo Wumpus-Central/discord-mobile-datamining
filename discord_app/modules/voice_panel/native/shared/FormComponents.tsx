@@ -1,29 +1,29 @@
-// === Module 8779: FormComponents ===
+// === Module 8796: FormComponents ===
 
-// Module 8779 (FormComponents)
+// Module 8796 (FormComponents)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
-import UserUtils from "UserUtils" /* 4923 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import NativeViewDefault from "NativeView" /* 6168 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7010 */;
+import UserUtils from "UserUtils" /* 4962 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import NativeViewDefault from "NativeView" /* 6161 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7016 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7425 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 8780 */;
-import GuildTagDefault from "GuildTag" /* 8839 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 12971 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 8797 */;
+import GuildTagDefault from "GuildTag" /* 8858 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 13018 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5107 */;
+import PresenceStore from "PresenceStore" /* 5108 */;
 
 require = fn;
 let closure_3 = ["style"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: { marginLeft: 8, padding: 6, backgroundColor: nativeDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: nativeDefault.radii.round }, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.icon = size;

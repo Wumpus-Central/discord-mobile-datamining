@@ -1,15 +1,15 @@
-// === Module 9591: handleNSFWGuildInvite ===
+// === Module 9620: handleNSFWGuildInvite ===
 
-// Module 9591 (handleNSFWGuildInvite)
+// Module 9620 (handleNSFWGuildInvite)
 import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import GuildRecord from "GuildRecord" /* 2082 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5919 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 5934 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 5935 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9592 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9593 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import GuildRecord from "GuildRecord" /* 2083 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 5927 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 5928 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9621 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9622 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

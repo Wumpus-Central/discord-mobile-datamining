@@ -1,7 +1,7 @@
-// === Module 17465: useGuildEligibleForStageChannels ===
+// === Module 17537: useGuildEligibleForStageChannels ===
 
-// Module 17465 (useGuildEligibleForStageChannels)
-import GuildStore from "GuildStore" /* 2086 */;
+// Module 17537 (useGuildEligibleForStageChannels)
+import GuildStore from "GuildStore" /* 2087 */;
 
 const require = globalThis.__r;
 

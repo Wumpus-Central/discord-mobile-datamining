@@ -1,8 +1,8 @@
-// === Module 8378: useStateFromSharedValue ===
+// === Module 8394: useStateFromSharedValue ===
 
-// Module 8378 (useStateFromSharedValue)
+// Module 8394 (useStateFromSharedValue)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,12 +57,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLis
         closure_0 = arg1;
         addListener.addListener(arg0, (arg0) => set(dependencyMap[5]).runOnJS(closure_0)(arg0));
       };
-      const obj4 = { runOnJS: closure_0(4811).runOnJS };
+      const obj4 = { runOnJS: closure_0(4850).runOnJS };
       fn.__closure = obj4;
       fn.__workletHash = 580393174787;
       fn.__initData = __initData;
-      closure_0(4811).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-      const obj3 = closure_0(4811);
+      closure_0(4850).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = closure_0(4850);
     }
     return () => {
       const listeners = set.listeners;
@@ -121,14 +121,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLis
       const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(4811).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(4850).runOnJS(closure_0)(arg0));
       };
-      const obj4 = { runOnJS: closure_0(4811).runOnJS };
+      const obj4 = { runOnJS: closure_0(4850).runOnJS };
       fn.__closure = obj4;
       fn.__workletHash = 4734743082561;
       fn.__initData = __initData;
-      closure_0(4811).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-      const obj3 = closure_0(4811);
+      closure_0(4850).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = closure_0(4850);
     }
     return () => {
       const listeners = set.listeners;

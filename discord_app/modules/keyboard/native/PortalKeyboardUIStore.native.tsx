@@ -1,9 +1,9 @@
-// === Module 4949: PortalKeyboardUIStore ===
+// === Module 4988: PortalKeyboardUIStore ===
 
-// Module 4949 (PortalKeyboardUIStore)
+// Module 4988 (PortalKeyboardUIStore)
 import v1 from "v1" /* 1279 */;
-import ZustandStore from "ZustandStore" /* 4950 */;
-import PortalKeyboard from "PortalKeyboard" /* 4952 */;
+import ZustandStore from "ZustandStore" /* 4989 */;
+import PortalKeyboard from "PortalKeyboard" /* 4991 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ keyboard: null, state: PortalKeyboard.PortalKeyboardState.EMPTY, renderers: [] }));
@@ -98,7 +98,7 @@ export const closePortalKeyboard = function closePortalKeyboard() {
   zustandStore.setState({ state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null });
 };
 export const closePortalKeyboardIfUnhandled = function closePortalKeyboardIfUnhandled() {
-  state = zustandStore.getState();
+  const state = zustandStore.getState();
   const keyboard = state.keyboard;
   let tmp3 = null == keyboard;
   if (tmp3) {

@@ -1,7 +1,7 @@
-// === Module 11399: BanConfirmModal ===
+// === Module 11444: BanConfirmModal ===
 
-// Module 11399 (BanConfirmModal)
-import BanConfirmDefault from "BanConfirm" /* 11390 */;
+// Module 11444 (BanConfirmModal)
+import BanConfirmDefault from "BanConfirm" /* 11435 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

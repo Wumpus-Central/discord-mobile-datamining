@@ -1,7 +1,7 @@
-// === Module 9053: Stripe3DSChallenge ===
+// === Module 9072: Stripe3DSChallenge ===
 
-// Module 9053 (Stripe3DSChallenge)
-import StripeUtils from "StripeUtils" /* 5736 */;
+// Module 9072 (Stripe3DSChallenge)
+import StripeUtils from "StripeUtils" /* 5739 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -46,7 +46,7 @@ let closure_5 = async function _confirmCardPayment(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -83,7 +83,7 @@ let closure_5 = async function _confirmCardPayment(arg0) {
           throw error;
         } else {
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       }
     } catch (tmp19) {

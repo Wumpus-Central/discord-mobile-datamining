@@ -1,7 +1,7 @@
-// === Module 13778: useResettingValue ===
+// === Module 13830: useResettingValue ===
 
-// Module 13778 (useResettingValue)
-import useInitialValueDefault from "useInitialValue" /* 6176 */;
+// Module 13830 (useResettingValue)
+import useInitialValueDefault from "useInitialValue" /* 6169 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useReset
   [tmp4, dependencyMap] = closure_4(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
-      const timeout = new closure_0(2059).Timeout();
+      const timeout = new closure_0(2060).Timeout();
       return timeout;
     };
     cResult[0] = fn;
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useReset
   const tmp = _slicedToArray(closure_4(arg0), 2);
   dependencyMap = tmp[1];
   const tmp2 = useInitialValueDefault(() => {
-    const timeout = new closure_0(2059).Timeout();
+    const timeout = new closure_0(2060).Timeout();
     return timeout;
   });
   _slicedToArray = tmp2;

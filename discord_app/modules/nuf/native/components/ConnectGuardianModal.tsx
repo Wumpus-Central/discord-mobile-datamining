@@ -1,6 +1,6 @@
-// === Module 18078: ConnectGuardianModal ===
+// === Module 18152: ConnectGuardianModal ===
 
-// Module 18078 (ConnectGuardianModal)
+// Module 18152 (ConnectGuardianModal)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
@@ -8,10 +8,10 @@ import noop from "module_19" /* 19 */;
 const require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const FamilyCenterAction = fn(7253).FamilyCenterAction;
+const FamilyCenterAction = fn(7259).FamilyCenterAction;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, centered: null, header: null, title: null, description: null, cardSection: null, scanPrompt: null, grow: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.centered = { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
   onComplete = route.route.params.onComplete;
   const tmp4 = closure_9();
   let obj = onComplete(576);
-  const connectGuardianGate = onComplete(18079).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(18153).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   if (cResult[0] === connectGuardianGate.state) {
     if (cResult[1] === onComplete) {
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
         }
         const _Symbol4 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp60 = closure_7(tmp(6160).ActivityIndicator, {});
+          const tmp60 = closure_7(tmp(6153).ActivityIndicator, {});
           cResult[7] = tmp60;
           let tmp58 = tmp60;
         } else {
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
       ({ container, header, title } = tmp4);
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(tmp5(2565).ITlV6p);
+        const stringResult = intl.string(tmp5(2568).ITlV6p);
         cResult[10] = stringResult;
         let tmp10 = stringResult;
       } else {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
       }
       if (cResult[11] !== tmp4.title) {
         const obj5 = { style: title, variant: "heading-xl/bold", color: "text-default", children: tmp10 };
-        const tmp14 = closure_7(tmp(5087).Text, obj5);
+        const tmp14 = closure_7(tmp(5088).Text, obj5);
         cResult[11] = tmp4.title;
         cResult[12] = tmp14;
         let tmp12 = tmp14;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
       const _Symbol = Symbol;
       if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = tmp(1126).intl;
-        const formatResult = intl2.format(tmp5(2565).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+        const formatResult = intl2.format(tmp5(2568).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
         cResult[13] = formatResult;
         let tmp15 = formatResult;
       } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
             ({ cardSection, scanPrompt } = tmp4);
             if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = tmp(1126).intl;
-              const stringResult1 = intl3.string(tmp5(2565).Mi60fm);
+              const stringResult1 = intl3.string(tmp5(2568).Mi60fm);
               cResult[21] = stringResult1;
               let tmp24 = stringResult1;
             } else {
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
             }
             if (cResult[22] !== tmp4.scanPrompt) {
               const obj6 = { style: scanPrompt, variant: "text-md/semibold", color: "text-default", children: tmp24 };
-              const tmp28 = closure_7(tmp(5087).Text, obj6);
+              const tmp28 = closure_7(tmp(5088).Text, obj6);
               cResult[22] = tmp4.scanPrompt;
               cResult[23] = tmp28;
               let tmp26 = tmp28;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
                                                   return tmpResult;
                                                 }
                         };
-                        const tmp47 = closure_7(tmp(5376).Button, obj10);
+                        const tmp47 = closure_7(tmp(5379).Button, obj10);
                         cResult[40] = onComplete;
                         cResult[41] = tmp47;
                         let tmp45 = tmp47;
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
               }
             }
             ({ linkCode: obj8.linkCode, expiresAt: obj8.expiresAt, refresh: obj8.onRefresh } = connectGuardianGate);
-            const tmp31 = closure_7(tmp(15078).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+            const tmp31 = closure_7(tmp(15137).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
             cResult[24] = connectGuardianGate.expiresAt;
             cResult[25] = connectGuardianGate.linkCode;
             cResult[26] = connectGuardianGate.refresh;
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
         tmp20 = tmp23;
       }
       const obj27 = { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: tmp15 };
-      const tmp19 = closure_7(tmp(5087).Text, obj27);
+      const tmp19 = closure_7(tmp(5088).Text, obj27);
       cResult[14] = tmp4.description;
       cResult[15] = tmp15;
       cResult[16] = tmp19;
@@ -296,11 +296,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
   cResult[3] = items5;
   tmp8 = items5;
   tmp7 = fn;
-  let obj2 = onComplete(18079);
+  let obj2 = onComplete(18153);
 }) : (function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  const connectGuardianGate = onComplete(18079).useConnectGuardianGate();
+  const connectGuardianGate = onComplete(18153).useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
   const effect = noop.useEffect(() => {
@@ -322,28 +322,28 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
     const items1 = [, ];
     ({ container: arr2[0], centered: arr2[1] } = tmp);
     obj2.style = items1;
-    obj2.children = closure_7(tmp4(6160).ActivityIndicator, {});
+    obj2.children = closure_7(tmp4(6153).ActivityIndicator, {});
     let tmp9 = closure_7(View, obj2);
   } else {
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.header, children: null };
     const obj5 = { style: tmp.title, variant: "heading-xl/bold", color: "text-default", children: null };
     const intl = tmp4(1126).intl;
-    obj5.children = intl.string(tmp2(2565).ITlV6p);
-    const items2 = [closure_7(tmp4(5087).Text, obj5), ];
+    obj5.children = intl.string(tmp2(2568).ITlV6p);
+    const items2 = [closure_7(tmp4(5088).Text, obj5), ];
     const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp4(1126).intl;
-    obj6.children = intl2.format(tmp2(2565).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
-    items2[1] = closure_7(tmp4(5087).Text, obj6);
+    obj6.children = intl2.format(tmp2(2568).F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+    items2[1] = closure_7(tmp4(5088).Text, obj6);
     obj4.children = items2;
     const items3 = [closure_8(View, obj4), , , ];
     const obj7 = { style: tmp.cardSection, children: null };
     const obj8 = { style: tmp.scanPrompt, variant: "text-md/semibold", color: "text-default", children: null };
     const intl3 = tmp4(1126).intl;
-    obj8.children = intl3.string(tmp2(2565).Mi60fm);
-    const items4 = [closure_7(tmp4(5087).Text, obj8), ];
+    obj8.children = intl3.string(tmp2(2568).Mi60fm);
+    const items4 = [closure_7(tmp4(5088).Text, obj8), ];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(15078).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
+    items4[1] = closure_7(tmp4(15137).ConnectGuardianCard, { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null });
     obj7.children = items4;
     items3[1] = closure_8(View, obj7);
     const obj11 = { style: tmp.grow };
@@ -363,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
       }
       return tmpResult;
     };
-    obj12.children = closure_7(tmp4(5376).Button, obj25);
+    obj12.children = closure_7(tmp4(5379).Button, obj25);
     items3[3] = closure_7(View, obj12);
     obj3.children = items3;
     tmp9 = closure_8(View, obj3);

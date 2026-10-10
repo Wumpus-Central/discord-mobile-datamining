@@ -1,9 +1,9 @@
-// === Module 17323: SuggestedSearchSkeleton ===
+// === Module 17395: SuggestedSearchSkeleton ===
 
-// Module 17323 (SuggestedSearchSkeleton)
+// Module 17395 (SuggestedSearchSkeleton)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import timing from "timing" /* 5092 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import timing from "timing" /* 5093 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -12,18 +12,18 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
-let obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9285).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
+const createStyles = fn(5092);
+let obj2 = { row: { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9312).SEARCH_ROW_TAP_STATE_PADDING }, icon: null, labels: null, line: null };
 let size = { width: 18, height: 18, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginRight: nativeDefault.space.PX_12 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(11992).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(12036).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = { height: 16, width: "72%", borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.line = size1;
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = { code: "function SuggestedSearchSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const __initData2 = { code: "function SuggestedSearchSkeletonTsx2(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9285).SEARCH_ROW_TAP_STATE_PADDING };
+let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: fn(9312).SEARCH_ROW_TAP_STATE_PADDING };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx");
 
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suggeste
   const tmp4 = closure_7();
   let obj = sharedValue(576);
   const tmp = sharedValue;
-  sharedValue = sharedValue(4811).useSharedValue(0.4);
+  sharedValue = sharedValue(4850).useSharedValue(0.4);
   if (cResult[0] !== sharedValue) {
     const fn = function o() {
       const obj = ReanimatedRexport;
@@ -49,14 +49,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suggeste
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  const obj2 = sharedValue(4811);
+  const obj2 = sharedValue(4850);
   const fn2 = function p() {
     return { opacity: sharedValue.get() };
   };
   fn2.__closure = { opacity: sharedValue };
   fn2.__workletHash = 9760194902231;
   fn2.__initData = __initData;
-  const animatedStyle = tmp(4811).useAnimatedStyle(fn2);
+  const animatedStyle = tmp(4850).useAnimatedStyle(fn2);
   if (cResult[3] === animatedStyle) {
     if (cResult[4] === tmp4.row) {
       let tmp10 = cResult[5];
@@ -113,23 +113,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Suggeste
   cResult[4] = tmp4.row;
   cResult[5] = items2;
   tmp10 = items2;
-  const tmpResult = tmp(4811);
+  const tmpResult = tmp(4850);
 }) : (function SuggestedSearchSkeleton() {
   const tmp = closure_7();
-  sharedValue = sharedValue(4811).useSharedValue(0.4);
+  sharedValue = sharedValue(4850).useSharedValue(0.4);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 700 }), -1, true));
   }, items);
-  let obj = sharedValue(4811);
+  let obj = sharedValue(4850);
   const fn = function s() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 16042492079220;
   fn.__initData = __initData2;
-  const animatedStyle = sharedValue(4811).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4850).useAnimatedStyle(fn);
   const obj3 = { style: null, "aria-hidden": true, children: null };
   const items1 = [tmp.row, animatedStyle];
   obj3.style = items1;

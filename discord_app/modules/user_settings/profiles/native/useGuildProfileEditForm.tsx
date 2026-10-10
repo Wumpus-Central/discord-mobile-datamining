@@ -1,13 +1,13 @@
-// === Module 14863: useGuildProfileEditForm ===
+// === Module 14922: useGuildProfileEditForm ===
 
-// Module 14863 (useGuildProfileEditForm)
+// Module 14922 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8268 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import SortedGuildStore from "SortedGuildStore" /* 5970 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8284 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import SortedGuildStore from "SortedGuildStore" /* 5963 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
-const IGNORE_GUILD_IDS = fn(8268).IGNORE_GUILD_IDS;
+const IGNORE_GUILD_IDS = fn(8284).IGNORE_GUILD_IDS;
 let FormStates = fn(1085).FormStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       const fn = function x() {
         return function cleanup() {
           closure_1_13.cancel();
-          pendingAvatar(pendingNickname[14]).wait(closure_0(pendingNickname[15]).resetAllPending);
+          closure_0(pendingNickname[14]).resetAllPending();
         };
       };
       const items3 = [tmp22];
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       tmp24 = cResult[11];
     }
     const effect = selectedGuild.useEffect(tmp23, tmp24);
-    const tmp28 = pendingAvatar(tmp2[16])();
+    const tmp28 = pendingAvatar(tmp2[15])();
     FormStates = tmp28;
     const _Symbol2 = Symbol;
     if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
@@ -291,14 +291,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       pendingNickname = tmp3;
       if (!closure_1_15) {
         if (null != c0) {
-          const guildMemberChangesForUpdateRequest = closure_0(pendingNickname[17]).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
+          const guildMemberChangesForUpdateRequest = closure_0(pendingNickname[16]).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
           closure_130_0 = guildMemberChangesForUpdateRequest;
-          closure_0(pendingNickname[17]);
+          closure_0(pendingNickname[16]);
           let id;
           if (user != null) {
             id = user.id;
           }
-          const profileChangesForUpdateRequest = closure_0(pendingNickname[17]).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
+          const profileChangesForUpdateRequest = closure_0(pendingNickname[16]).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
           closure_130_2 = true;
           closure_130_3 = false;
           const _Object = Object;
@@ -309,9 +309,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             }
             pendingBio = 1;
             pendingPronouns = 1;
-            return { value: closure_0(pendingNickname[15]).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+            return { value: closure_0(pendingNickname[14]).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
           }
-          closure_0(pendingNickname[17]);
+          closure_0(pendingNickname[16]);
         }
       }
       yield "IconComponent";
@@ -333,8 +333,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                 assetOrigin = pendingAvatar.assetOrigin;
               }
               obj12.avatarAssetOrigin = assetOrigin;
-              const result = closure_0(pendingNickname[18]).trackUserAvatarUpdated(obj12);
-              closure_0(pendingNickname[18]);
+              const result = closure_0(pendingNickname[17]).trackUserAvatarUpdated(obj12);
+              closure_0(pendingNickname[17]);
             }
           } else {
             let avatar;
@@ -345,9 +345,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               }
             }
             if (null != avatar) {
-              const result1 = closure_0(pendingNickname[19]).showGenericGuildProfileUpdateFailureToast(closure_130_4.body.avatar);
+              const result1 = closure_0(pendingNickname[18]).showGenericGuildProfileUpdateFailureToast(closure_130_4.body.avatar);
               closure_130_3 = true;
-              closure_0(pendingNickname[19]);
+              closure_0(pendingNickname[18]);
             }
           }
           let tmp42 = closure_130_2;
@@ -377,12 +377,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           ok1 = closure_130_8.ok;
         }
         if (!ok1) {
-          const aPIError = new closure_0(pendingNickname[21]).APIError(closure_130_8);
+          const aPIError = new closure_0(pendingNickname[20]).APIError(closure_130_8);
           const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
           if (null != firstFieldErrorMessage) {
-            const result2 = closure_0(pendingNickname[19]).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
+            const result2 = closure_0(pendingNickname[18]).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
             closure_130_3 = true;
-            closure_0(pendingNickname[19]);
+            closure_0(pendingNickname[18]);
           }
         }
         let tmp24 = closure_130_2;
@@ -404,9 +404,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         tmp54 = closure_130_3;
       }
       if (!tmp54) {
-        const intl = closure_0(pendingNickname[22]).intl;
-        const result3 = closure_0(pendingNickname[19]).showGenericGuildProfileUpdateFailureToast(intl.string(closure_0(pendingNickname[22]).t.s35OuK));
-        closure_0(pendingNickname[19]);
+        const intl = closure_0(pendingNickname[21]).intl;
+        const result3 = closure_0(pendingNickname[18]).showGenericGuildProfileUpdateFailureToast(intl.string(closure_0(pendingNickname[21]).t.s35OuK));
+        closure_0(pendingNickname[18]);
       }
       if (closure_130_2) {
         tmp22.delay();
@@ -512,17 +512,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   let merged = Object.assign(guildAutomodProfileQuarantineErrors);
   const merged1 = Object.assign(stateFromStoresObject.errors);
   memo = selectedGuild.useMemo(() => {
-    const delayedCall = new stateFromStores(pendingNickname[13]).DelayedCall(200, () => {
-      pendingAvatar(584).wait(stateFromStores(10608).resetAllPending);
-    });
+    const delayedCall = new stateFromStores(pendingNickname[13]).DelayedCall(200, stateFromStores(pendingNickname[14]).resetAllPending);
     return delayedCall;
   }, []);
   const items3 = [memo];
   const effect = selectedGuild.useEffect(() => function cleanup() {
     memo.cancel();
-    pendingAvatar(pendingNickname[14]).wait(stateFromStores(pendingNickname[15]).resetAllPending);
+    stateFromStores(pendingNickname[14]).resetAllPending();
   }, items3);
-  FormStates = pendingAvatar(tmp2[16])();
+  FormStates = pendingAvatar(tmp2[15])();
   const obj4 = {};
   const obj6 = selectedGuild;
   const tmpResult = stateFromStores(pendingNickname[11]);
@@ -556,14 +554,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       closure_3 = tmp2;
       if (!closure_15) {
         if (null != stateFromStores) {
-          const guildMemberChangesForUpdateRequest = stateFromStores(tmp3[17]).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
+          const guildMemberChangesForUpdateRequest = stateFromStores(tmp3[16]).getGuildMemberChangesForUpdateRequest({ pendingAvatar, pendingNickname, pendingAvatarDecoration, pendingNameplate, pendingDisplayNameStyles });
           closure_130_0 = guildMemberChangesForUpdateRequest;
-          stateFromStores(tmp3[17]);
+          stateFromStores(tmp3[16]);
           let id;
           if (selectedGuild != null) {
             id = selectedGuild.id;
           }
-          const profileChangesForUpdateRequest = stateFromStores(tmp3[17]).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
+          const profileChangesForUpdateRequest = stateFromStores(tmp3[16]).getProfileChangesForUpdateRequest({ pendingBanner, pendingBio, pendingPronouns, pendingThemeColors, pendingProfileEffect, pendingProfileFrame }, id);
           closure_130_2 = true;
           closure_130_3 = false;
           const _Object = Object;
@@ -574,9 +572,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             }
             c4 = 1;
             let v1 = 1;
-            return { value: stateFromStores(tmp3[15]).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
+            return { value: stateFromStores(tmp3[14]).saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest), done: false };
           }
-          stateFromStores(tmp3[17]);
+          stateFromStores(tmp3[16]);
         }
       }
       yield "IconComponent";
@@ -598,8 +596,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                 assetOrigin = closure_131_1.assetOrigin;
               }
               obj12.avatarAssetOrigin = assetOrigin;
-              const result = stateFromStores(tmp3[18]).trackUserAvatarUpdated(obj12);
-              stateFromStores(tmp3[18]);
+              const result = stateFromStores(tmp3[17]).trackUserAvatarUpdated(obj12);
+              stateFromStores(tmp3[17]);
             }
           } else {
             let avatar;
@@ -610,9 +608,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
               }
             }
             if (null != avatar) {
-              const result1 = stateFromStores(tmp3[19]).showGenericGuildProfileUpdateFailureToast(closure_130_4.body.avatar);
+              const result1 = stateFromStores(tmp3[18]).showGenericGuildProfileUpdateFailureToast(closure_130_4.body.avatar);
               closure_130_3 = true;
-              stateFromStores(tmp3[19]);
+              stateFromStores(tmp3[18]);
             }
           }
           let tmp42 = closure_130_2;
@@ -642,12 +640,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           ok1 = closure_130_8.ok;
         }
         if (!ok1) {
-          const aPIError = new stateFromStores(tmp3[21]).APIError(closure_130_8);
+          const aPIError = new stateFromStores(tmp3[20]).APIError(closure_130_8);
           const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
           if (null != firstFieldErrorMessage) {
-            const result2 = stateFromStores(tmp3[19]).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
+            const result2 = stateFromStores(tmp3[18]).showGenericGuildProfileUpdateFailureToast(firstFieldErrorMessage);
             closure_130_3 = true;
-            stateFromStores(tmp3[19]);
+            stateFromStores(tmp3[18]);
           }
         }
         let tmp24 = closure_130_2;
@@ -669,9 +667,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         tmp54 = closure_130_3;
       }
       if (!tmp54) {
-        const intl = stateFromStores(tmp3[22]).intl;
-        const result3 = stateFromStores(tmp3[19]).showGenericGuildProfileUpdateFailureToast(intl.string(stateFromStores(tmp3[22]).t.s35OuK));
-        stateFromStores(tmp3[19]);
+        const intl = stateFromStores(tmp3[21]).intl;
+        const result3 = stateFromStores(tmp3[18]).showGenericGuildProfileUpdateFailureToast(intl.string(stateFromStores(tmp3[21]).t.s35OuK));
+        stateFromStores(tmp3[18]);
       }
       if (closure_130_2) {
         closure_131_13.delay();
@@ -680,7 +678,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     }), items5),
     isDisabled: tmp15,
     isSubmitting: stateFromStores1,
-    resetPending: stateFromStores(pendingNickname[15]).resetAllPending
+    resetPending: stateFromStores(pendingNickname[14]).resetAllPending
   };
   items5[13] = id1;
   items5[14] = memo;

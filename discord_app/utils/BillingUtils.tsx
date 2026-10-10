@@ -1,10 +1,10 @@
-// === Module 4743: BillingUtils ===
+// === Module 4784: BillingUtils ===
 
-// Module 4743 (BillingUtils)
+// Module 4784 (BillingUtils)
 import SentryUtilsDefault from "SentryUtils" /* 1255 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import BraintreeUtils from "BraintreeUtils" /* 4744 */;
-import BillingErrorDefault from "BillingError" /* 4750 */;
+import BraintreeUtils from "BraintreeUtils" /* 4785 */;
+import BillingErrorDefault from "BillingError" /* 4791 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

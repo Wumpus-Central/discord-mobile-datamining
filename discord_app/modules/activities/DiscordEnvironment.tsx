@@ -1,30 +1,12 @@
-// === Module 10886: DiscordEnvironment ===
+// === Module 10926: DiscordEnvironment ===
 
-// Module 10886 (DiscordEnvironment)
+// Module 10926 (DiscordEnvironment)
 import UserSettings from "UserSettings" /* 2041 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 import ThemeStore from "ThemeStore" /* 1205 */;
 
 require = fn;
-const UIDensityConstants = fn(10887);
-({ RESPONSIVE_DENSITY_FALLBACK: closure_4, RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty, resolveUIDensity: metroRequire } = UIDensityConstants);
-const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false });
-let closure_8 = ["custom-theme-background", "custom-client-theme"];
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/activities/DiscordEnvironment.tsx");
-
-export const DEFAULT_DISCORD_ENVIRONMENT = frozen;
-export function getDiscordBaseTheme(arg0) {
-  if ("light" !== arg0) {
-    if ("midnight" !== arg0) {
-      if ("darker" !== arg0) {
-        return "dark";
-      }
-    }
-  }
-  return arg0;
-}
-export const getDiscordCustomTheme = function getDiscordCustomTheme() {
+function getDiscordCustomTheme() {
   if (typeof document !== "undefined") {
     const _window = window;
     if (typeof window !== "undefined") {
@@ -46,13 +28,36 @@ export const getDiscordCustomTheme = function getDiscordCustomTheme() {
             obj[itemResult] = str.trim();
           }
         }
+        const trimmed = computedStyle.getPropertyValue("--background-gradient-chat").trim();
+        if ("" !== trimmed) {
+          obj["--background-gradient-chat"] = trimmed;
+        }
         const obj2 = { classNames: found, variables: obj };
         return obj2;
       }
     }
   }
   return null;
-};
+}
+const UIDensityConstants = fn(10927);
+({ RESPONSIVE_DENSITY_FALLBACK: closure_4, RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty, resolveUIDensity: metroRequire } = UIDensityConstants);
+const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false });
+let closure_8 = ["custom-theme-background", "custom-client-theme"];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/DiscordEnvironment.tsx");
+
+export const DEFAULT_DISCORD_ENVIRONMENT = frozen;
+export function getDiscordBaseTheme(arg0) {
+  if ("light" !== arg0) {
+    if ("midnight" !== arg0) {
+      if ("darker" !== arg0) {
+        return "dark";
+      }
+    }
+  }
+  return arg0;
+}
+export { getDiscordCustomTheme };
 export const getDiscordUIDensity = function getDiscordUIDensity() {
   if (typeof window !== "undefined") {
     const _window2 = window;
@@ -91,47 +96,19 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
       }
     }
   }
-  const obj = { baseTheme: str, customTheme: null, uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null };
-  let tmp = null;
-  if (typeof document !== "undefined") {
-    const _window2 = window;
-    tmp = null;
-    if (typeof window !== "undefined") {
-      const _document = document;
-      const found = closure_8.filter((item) => {
-        const classList = documentElement.classList;
-        return classList.contains(item);
-      });
-      tmp = null;
-      if (0 !== found.length) {
-        const _window3 = window;
-        const computedStyle = window.getComputedStyle(documentElement);
-        const obj2 = {};
-        for (let num = 0; num < computedStyle.length; num = num + 1) {
-          let itemResult = computedStyle.item(num);
-          if (itemResult.startsWith("--custom-")) {
-            let str4 = computedStyle.getPropertyValue(itemResult);
-            obj2[itemResult] = str4.trim();
-          }
-        }
-        const obj3 = { classNames: found, variables: obj2 };
-        tmp = obj3;
-      }
-    }
-  }
-  obj.customTheme = tmp;
+  const obj = { baseTheme: str, customTheme: getDiscordCustomTheme(), uiDensity: null, messageDisplayCompact: null, fontScale: null, reducedMotion: null, highContrast: null, forcedColors: null, underlineLinks: null };
   if (typeof window !== "undefined") {
-    const _window4 = window;
+    const _window2 = window;
     if (typeof window.matchMedia === "function") {
       const _window = window;
-      let str5 = "compact";
+      let str4 = "compact";
       if (window.matchMedia(hasOwnProperty).matches) {
-        str5 = "cozy";
+        str4 = "cozy";
       }
-      let tmp3 = str5;
+      let tmp = str4;
     }
     const UIDensitySetting = UserSettings.UIDensitySetting;
-    obj.uiDensity = timestampProducer(UIDensitySetting.getSetting(), tmp3);
+    obj.uiDensity = timestampProducer(UIDensitySetting.getSetting(), tmp);
     const MessageDisplayCompact = UserSettings.MessageDisplayCompact;
     obj.messageDisplayCompact = MessageDisplayCompact.getSetting();
     const fontScale = AccessibilityStore.fontScale;
@@ -147,7 +124,7 @@ export const getDiscordEnvironment = function getDiscordEnvironment(useReducedMo
     ({ isHighContrastModeEnabled: obj.highContrast, useForcedColors: obj.forcedColors, alwaysShowLinkDecorations: obj.underlineLinks } = AccessibilityStore);
     return obj;
   }
-  tmp3 = React4;
+  tmp = React4;
 };
 export const getDiscordEnvQueryParams = function getDiscordEnvQueryParams() {
   const theme = ThemeStore.theme;

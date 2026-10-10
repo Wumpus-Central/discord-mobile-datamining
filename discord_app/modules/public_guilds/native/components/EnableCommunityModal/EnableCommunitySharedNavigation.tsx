@@ -1,9 +1,9 @@
-// === Module 18332: EnableCommunitySharedNavigation ===
+// === Module 18406: EnableCommunitySharedNavigation ===
 
-// Module 18332 (EnableCommunitySharedNavigation)
-import DispatcherDefault from "Dispatcher" /* 584 */;
+// Module 18406 (EnableCommunitySharedNavigation)
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 18404 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 8622 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 8638 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 let GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, height: "100%" }, modal: { height: "100%", flex: 1, justifyContent: "space-between" }, button: { flexGrow: 0, paddingLeft: 16, paddingTop: 16, paddingRight: 16 } });
 let obj2 = { STEP_1: "STEP_1", STEP_2: "STEP_2", STEP_3: "STEP_3" };
 const ReactCompilerGating = fn(558);
@@ -90,7 +90,7 @@ export const EnableCommunityModalScreen = ReactCompilerGating.isReactCompilerEna
               return closure_6.getProps();
             }
           }
-          const tmp45 = closure_8(tmp(tmp2[14]).SceneLoadingIndicator, {});
+          const tmp45 = closure_8(tmp(tmp2[13]).SceneLoadingIndicator, {});
         }
         class E {
           constructor() {
@@ -128,8 +128,8 @@ export const EnableCommunityModalScreen = ReactCompilerGating.isReactCompilerEna
               if (cResult[21] !== buttonText) {
                 let stringResult = buttonText;
                 if (buttonText == null) {
-                  const intl = tmp(tmp2[15]).intl;
-                  stringResult = intl.string(tmp(tmp2[15]).t.PDTjLN);
+                  const intl = tmp(tmp2[14]).intl;
+                  stringResult = intl.string(tmp(tmp2[14]).t.PDTjLN);
                 }
                 class E {
                   constructor() {
@@ -182,7 +182,7 @@ export const EnableCommunityModalScreen = ReactCompilerGating.isReactCompilerEna
                     tmp38[1] = tmp4.modal;
                     const items1 = [tmp24, tmp33];
                     tmp38[2] = items1;
-                    const tmp39 = closure_9(tmp(tmp2[17]).SafeAreaPaddingView, tmp38);
+                    const tmp39 = closure_9(tmp(tmp2[16]).SafeAreaPaddingView, tmp38);
                     cResult[30] = tmp4.modal;
                     cResult[31] = tmp24;
                     cResult[32] = tmp33;
@@ -203,7 +203,7 @@ export const EnableCommunityModalScreen = ReactCompilerGating.isReactCompilerEna
                 }
               }
               const obj6 = { variant: "primary", grow: true, text: tmp28, onPress: tmp22, disabled: disableNextStep };
-              const tmp32 = closure_8(tmp(tmp2[16]).Button, obj6);
+              const tmp32 = closure_8(tmp(tmp2[15]).Button, obj6);
               cResult[23] = disableNextStep;
               cResult[24] = tmp22;
               cResult[25] = tmp28;
@@ -298,7 +298,7 @@ export const EnableCommunityModalScreen = ReactCompilerGating.isReactCompilerEna
   const items2 = [hasItem];
   const effect1 = guild.useEffect(() => {
     if (hasItem) {
-      DispatcherDefault.wait(() => closure_1_1(headerRef[13]).close());
+      EnableCommunityModalActionCreatorsDefault.close();
     }
   }, items2);
   if (null == guild) {

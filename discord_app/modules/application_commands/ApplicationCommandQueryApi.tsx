@@ -1,17 +1,17 @@
-// === Module 9778: ApplicationCommandQueryApi ===
+// === Module 9807: ApplicationCommandQueryApi ===
 
-// Module 9778 (ApplicationCommandQueryApi)
+// Module 9807 (ApplicationCommandQueryApi)
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7236 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7240 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9226 */;
-import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9228 */;
-import CommandPermissionUtils from "CommandPermissionUtils" /* 9779 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7242 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7246 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 9253 */;
+import ApplicationCommandBuiltIns from "ApplicationCommandBuiltIns" /* 9255 */;
+import CommandPermissionUtils from "CommandPermissionUtils" /* 9808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9220 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 9247 */;
 
 const require = globalThis.__r;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
@@ -55,10 +55,10 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9220);
+let ApplicationCommandIndexStore = fn(9247);
 ({ useContextIndexState: metroRequire, useDiscoveryState: closure_7, useQueryState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5400).BuiltInSectionId;
+const BuiltInSectionId = fn(5403).BuiltInSectionId;
 const NOOP = fn(1085).NOOP;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -240,7 +240,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDiscovery
               cResult[33] = items3;
               tmp37 = items3;
             } else {
-              const tmp53 = tmp(9228).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+              const tmp53 = tmp(9255).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
               const _Symbol2 = Symbol;
               if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                 const items4 = [tmp53];
@@ -818,14 +818,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuery(arg
     tmp10 = descriptors;
   }, items1);
 });
-obj6.type = fn(7240).ApplicationCommandSectionType.APPLICATION;
+obj6.type = fn(7246).ApplicationCommandSectionType.APPLICATION;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "toCharArray$esjava$1", command: "T", section: "code" };
+    return { application: "Array", command: "code", section: "ip" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -872,7 +872,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "toCharArray$esjava$1", command: "T", section: "code" };
+    return { application: "Array", command: "code", section: "ip" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -1013,7 +1013,7 @@ export const useCommand = function useCommand(cResult, commandId) {
         }
       }
     }
-    return { command: "Array", application: "Set" };
+    return { command: "backgroundColor", application: "IconComponent" };
   }, items);
 };
 export const useCommandsForApplication = tmp6;

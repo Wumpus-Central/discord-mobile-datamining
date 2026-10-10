@@ -1,6 +1,6 @@
-// === Module 13609: BillingInformation ===
+// === Module 13661: BillingInformation ===
 
-// Module 13609 (BillingInformation)
+// Module 13661 (BillingInformation)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   }
   const fractionalPremiumInfo = tmp5.fractionalPremiumInfo;
   let obj = require("c");
-  const appleSubscriptionOwnership = gknRR3(13602).useAppleSubscriptionOwnership(isPurchasedViaApple);
+  const appleSubscriptionOwnership = gknRR3(13653).useAppleSubscriptionOwnership(isPurchasedViaApple);
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
@@ -61,7 +61,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                               const obj3 = { value, done: true };
                               return obj3;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "+51" };
                             }
                           } else {
                             try {
@@ -89,7 +89,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                                 return obj;
                               } else {
                                 v3 = 3;
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "+51" };
                               }
                             } catch (tmp7) {
                               v3 = tmp;
@@ -131,7 +131,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
         }
       }
     }
-    const gknRR3Result2 = gknRR3(4728);
+    const gknRR3Result2 = gknRR3(4769);
     const billingInformationString = gknRR3Result2.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp3, tmp4, fractionalPremiumInfo);
     cResult[2] = fractionalPremiumInfo;
     cResult[3] = tmp3;
@@ -141,7 +141,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
     cResult[7] = billingInformationString;
     tmp6 = billingInformationString;
   }
-  const gknRR3Result = gknRR3(13602);
+  const gknRR3Result = gknRR3(13653);
 }) : (function useBillingInformationNative(isPurchasedViaApple, subscriptionPeriodStart, arg2) {
   let tmp = arg2;
   if (arg2 === undefined) {
@@ -160,7 +160,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4728);
+    const tmp2Result = tmp2(4769);
     const billingInformationString = tmp2Result.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     if (tmp2Result2.isIOS()) {
@@ -183,7 +183,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -211,7 +211,7 @@ export const useBillingInformationNative = ReactCompilerGating.isReactCompilerEn
                     return obj;
                   } else {
                     v3 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp7) {
                   v3 = tmp;

@@ -1,10 +1,10 @@
-// === Module 14864: useTabSelectedGuildId ===
+// === Module 14923: useTabSelectedGuildId ===
 
-// Module 14864 (useTabSelectedGuildId)
+// Module 14923 (useTabSelectedGuildId)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
-import SortedGuildStore from "SortedGuildStore" /* 5970 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import SortedGuildStore from "SortedGuildStore" /* 5963 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

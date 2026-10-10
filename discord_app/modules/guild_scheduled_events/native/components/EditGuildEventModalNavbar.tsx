@@ -1,15 +1,15 @@
-// === Module 8521: EditGuildEventModalNavbar ===
+// === Module 8537: EditGuildEventModalNavbar ===
 
-// Module 8521 (EditGuildEventModalNavbar)
+// Module 8537 (EditGuildEventModalNavbar)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1388 */;
-import _modDef5010 from "module_5010" /* 5010 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6661 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6810 */;
-import HeaderActionButton from "HeaderActionButton" /* 7082 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 8503 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6662 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
+import HeaderActionButton from "HeaderActionButton" /* 7088 */;
+import _modDef7728 from "module_7728" /* 7728 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 8519 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
                         cResult[32] = tmp44;
                         tmp41 = tmp44;
                       }
-                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef5010, style: tmp4.rightButton };
+                      const obj5 = { accessibilityLabel: tmp35, onPress: onClose, source: _modDef7728, style: tmp4.rightButton };
                       const tmp40 = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj5);
                       cResult[27] = onClose;
                       cResult[28] = tmp4.rightButton;
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
   const intl2 = util.intl;
   obj6.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj6.onPress = screen.onClose;
-  obj6.source = _modDef5010;
+  obj6.source = _modDef7728;
   obj6.style = tmp.rightButton;
   obj5.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj6);
   items1[2] = hasOwnProperty(View, obj5);

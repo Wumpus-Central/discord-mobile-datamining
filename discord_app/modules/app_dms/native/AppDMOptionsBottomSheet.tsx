@@ -1,19 +1,19 @@
-// === Module 12820: AppDMOptionsBottomSheet ===
+// === Module 12867: AppDMOptionsBottomSheet ===
 
-// Module 12820 (AppDMOptionsBottomSheet)
+// Module 12867 (AppDMOptionsBottomSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5055 */;
-import openUserSettings from "openUserSettings" /* 7087 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5056 */;
+import openUserSettings from "openUserSettings" /* 7093 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6793 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6796 */;
 
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

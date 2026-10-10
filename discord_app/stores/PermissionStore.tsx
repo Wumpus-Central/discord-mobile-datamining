@@ -1,22 +1,22 @@
-// === Module 4709: PermissionStore ===
+// === Module 4750: PermissionStore ===
 
-// Module 4709 (PermissionStore)
+// Module 4750 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2078 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4717 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4718 */;
-import ImpersonateStore from "ImpersonateStore" /* 2117 */;
-import LurkingStore from "LurkingStore" /* 4710 */;
-import StageInstanceStore from "StageInstanceStore" /* 2069 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4711 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2079 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4758 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4759 */;
+import ImpersonateStore from "ImpersonateStore" /* 2118 */;
+import LurkingStore from "LurkingStore" /* 4751 */;
+import StageInstanceStore from "StageInstanceStore" /* 2070 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4752 */;
 import UserRecord from "UserRecord" /* 1404 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
-import GuildStore from "GuildStore" /* 2086 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
+import GuildStore from "GuildStore" /* 2087 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(2068);
+const ChannelRecord = fn(2069);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(2082);
+const GuildRecord = fn(2083);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1085).Permissions;
-let closure_18 = fn(4713).MemberSafetyPagePermissions;
+let closure_18 = fn(4754).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

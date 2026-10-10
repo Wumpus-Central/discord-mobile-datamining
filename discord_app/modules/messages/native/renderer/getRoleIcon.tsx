@@ -1,8 +1,8 @@
-// === Module 8030: getRoleIcon ===
+// === Module 8048: getRoleIcon ===
 
-// Module 8030 (getRoleIcon)
+// Module 8048 (getRoleIcon)
 import util from "util" /* 1126 */;
-import useRoleIconProps from "useRoleIconProps" /* 6876 */;
+import useRoleIconProps from "useRoleIconProps" /* 6882 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/getRoleIcon.tsx");

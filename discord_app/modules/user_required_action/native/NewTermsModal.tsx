@@ -1,18 +1,18 @@
-// === Module 18147: NewTermsModal ===
+// === Module 18221: NewTermsModal ===
 
-// Module 18147 (NewTermsModal)
+// Module 18221 (NewTermsModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1631 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5937 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 6884 */;
-import _modDef8654 from "module_8654" /* 8654 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 8660 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8952 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 5930 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 6890 */;
+import _modDef8664 from "module_8664" /* 8664 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 8673 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8971 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2058 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2059 */;
 
 const require = globalThis.__r;
 
@@ -38,7 +38,7 @@ const Constants = fn(1085);
 ({ MarketingURLs: c10, UserRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" }, scrollView: { flex: 1 }, container: null, description: null, agreementDescription: null, navbarRight: null, stickyFooter: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
             closure_128_0 = value;
             tmp5(closure_128_0);
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp15) {
           c3 = tmp;
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           let obj5 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/bold", children: null };
           const intl = tmp(1126).intl;
           obj5.children = intl.string(tmp(1126).t["7glvXu"]);
-          const tmp24 = closure_12(tmp(5087).Text, obj5);
+          const tmp24 = closure_12(tmp(5088).Text, obj5);
           cResult[12] = tmp24;
           let tmp22 = tmp24;
         } else {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         }
         if (cResult[14] !== tmp4.description) {
           const obj7 = { variant: "text-md/normal", style: tmp4.description, children: tmp25 };
-          const tmp30 = closure_12(tmp(5087).Text, obj7);
+          const tmp30 = closure_12(tmp(5088).Text, obj7);
           cResult[14] = tmp4.description;
           cResult[15] = tmp30;
           let tmp28 = tmp30;
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const intl3 = tmp(1126).intl;
           const obj9 = { url: constants.TERMS };
           obj8.children = intl3.format(tmp(1126).t.iw0hFi, obj9);
-          const tmp34 = closure_12(tmp(5087).Text, obj8);
+          const tmp34 = closure_12(tmp(5088).Text, obj8);
           cResult[16] = tmp34;
           let tmp31 = tmp34;
         } else {
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const intl4 = tmp(1126).intl;
           const obj11 = { url: constants.PAID_TERMS };
           obj10.children = intl4.format(tmp(1126).t["36klnD"], obj11);
-          const tmp38 = closure_12(tmp(5087).Text, obj10);
+          const tmp38 = closure_12(tmp(5088).Text, obj10);
           cResult[17] = tmp38;
           let tmp35 = tmp38;
         } else {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const intl5 = tmp(1126).intl;
           const obj13 = { url: constants.PRIVACY };
           obj12.children = intl5.format(tmp(1126).t.TquFBF, obj13);
-          const tmp42 = closure_12(tmp(5087).Text, obj12);
+          const tmp42 = closure_12(tmp(5088).Text, obj12);
           cResult[18] = tmp42;
           let tmp39 = tmp42;
         } else {
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           const intl6 = tmp(1126).intl;
           const obj15 = { url: constants.GUIDELINES };
           obj14.children = intl6.format(tmp(1126).t.ia96Tb, obj15);
-          const tmp46 = closure_12(tmp(5087).Text, obj14);
+          const tmp46 = closure_12(tmp(5088).Text, obj14);
           cResult[19] = tmp46;
           let tmp43 = tmp46;
         } else {
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         }
         if (cResult[21] !== tmp4.agreementDescription) {
           const obj16 = { variant: "text-md/normal", style: tmp4.agreementDescription, children: tmp47 };
-          const tmp51 = closure_12(tmp(5087).Text, obj16);
+          const tmp51 = closure_12(tmp(5088).Text, obj16);
           cResult[21] = tmp4.agreementDescription;
           cResult[22] = tmp51;
           let tmp49 = tmp51;
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
               }
               if (cResult[29] !== tmp11) {
                 const obj17 = { loading: tmp11, onPress: tmp15, text: tmp57 };
-                const tmp61 = closure_12(tmp(5376).Button, obj17);
+                const tmp61 = closure_12(tmp(5379).Button, obj17);
                 cResult[29] = tmp11;
                 cResult[30] = tmp61;
                 let tmp59 = tmp61;
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
                     cResult[47] = tmp78;
                     tmp75 = tmp78;
                   }
-                  const obj20 = { style: tmp67, source: _modDef8654, color: tmp4.navbarRight.tintColor, onPress: handleMoreActions, accessibilityRole: "button", accessibilityLabel: tmp68 };
+                  const obj20 = { style: tmp67, source: _modDef8664, color: tmp4.navbarRight.tintColor, onPress: handleMoreActions, accessibilityRole: "button", accessibilityLabel: tmp68 };
                   const tmp74 = closure_12(TouchableHitBoxDefault, obj20);
                   cResult[40] = tmp4.navbarRight.tintColor;
                   cResult[41] = tmp67;
@@ -406,7 +406,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(6211).useNavigatorBackPressHandler(memo(5371).BackPressHandler.minimize);
+  memo(6206).useNavigatorBackPressHandler(memo(5372).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -418,7 +418,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -450,7 +450,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
           closure_128_0 = value;
           closure_129_1(closure_128_0);
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp15) {
         c3 = tmp;
@@ -459,7 +459,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     }
   }), []);
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(6211);
+  let obj = memo(6206);
   obj2.type = memo(1273).ImpressionTypes.VIEW;
   obj2.name = memo(1273).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
@@ -477,36 +477,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     const obj7 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/bold", children: null };
     const intl = tmp6(1126).intl;
     obj7.children = intl.string(tmp6(1126).t["7glvXu"]);
-    const items1 = [closure_12(tmp6(5087).Text, obj7), , , , , , ];
+    const items1 = [closure_12(tmp6(5088).Text, obj7), , , , , , ];
     const obj8 = { variant: "text-md/normal", style: tmp.description, children: null };
     const intl2 = tmp6(1126).intl;
     const obj9 = { url: constants.TERMS_SUMMARY };
     obj8.children = intl2.format(tmp6(1126).t.CN0Hvb, obj9);
-    items1[1] = closure_12(tmp6(5087).Text, obj8);
+    items1[1] = closure_12(tmp6(5088).Text, obj8);
     const obj10 = { variant: "text-md/normal", children: null };
     const intl3 = tmp6(1126).intl;
     const obj11 = { url: constants.TERMS };
     obj10.children = intl3.format(tmp6(1126).t.iw0hFi, obj11);
-    items1[2] = closure_12(tmp6(5087).Text, obj10);
+    items1[2] = closure_12(tmp6(5088).Text, obj10);
     const obj12 = { variant: "text-md/normal", children: null };
     const intl4 = tmp6(1126).intl;
     const obj13 = { url: constants.PAID_TERMS };
     obj12.children = intl4.format(tmp6(1126).t["36klnD"], obj13);
-    items1[3] = closure_12(tmp6(5087).Text, obj12);
+    items1[3] = closure_12(tmp6(5088).Text, obj12);
     const obj14 = { variant: "text-md/normal", children: null };
     const intl5 = tmp6(1126).intl;
     const obj15 = { url: constants.PRIVACY };
     obj14.children = intl5.format(tmp6(1126).t.TquFBF, obj15);
-    items1[4] = closure_12(tmp6(5087).Text, obj14);
+    items1[4] = closure_12(tmp6(5088).Text, obj14);
     const obj16 = { variant: "text-md/normal", children: null };
     const intl6 = tmp6(1126).intl;
     const obj17 = { url: constants.GUIDELINES };
     obj16.children = intl6.format(tmp6(1126).t.ia96Tb, obj17);
-    items1[5] = closure_12(tmp6(5087).Text, obj16);
+    items1[5] = closure_12(tmp6(5088).Text, obj16);
     const obj18 = { variant: "text-md/normal", style: tmp.agreementDescription, children: null };
     const intl7 = tmp6(1126).intl;
     obj18.children = intl7.string(tmp6(1126).t["+USXQE"]);
-    items1[6] = closure_12(tmp6(5087).Text, obj18);
+    items1[6] = closure_12(tmp6(5088).Text, obj18);
     obj6.children = items1;
     const items2 = [closure_13(closure_8, obj6), , ];
     const obj19 = { style: tmp.stickyFooter, children: null };
@@ -521,22 +521,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     };
     const intl8 = tmp6(1126).intl;
     obj20.text = intl8.string(tmp6(1126).t["+TBKL1"]);
-    obj19.children = closure_12(tmp6(5376).Button, obj20);
+    obj19.children = closure_12(tmp6(5379).Button, obj20);
     items2[1] = closure_12(closure_6, obj19);
     const obj21 = { style: null, source: null, color: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null };
     const items3 = [tmp.navbarRight, ];
     const obj41 = { top };
     items3[1] = obj41;
     obj21.style = items3;
-    obj21.source = tmp2(8654);
+    obj21.source = tmp2(8664);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
     const intl9 = tmp6(1126).intl;
     obj21.accessibilityLabel = intl9.string(tmp6(1126).t["UKOtz+"]);
-    items2[2] = closure_12(tmp2(8660), obj21);
+    items2[2] = closure_12(tmp2(8673), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);
-    const tmp2Result = tmp2(8660);
+    const tmp2Result = tmp2(8673);
   }
   return tmp10;
 });

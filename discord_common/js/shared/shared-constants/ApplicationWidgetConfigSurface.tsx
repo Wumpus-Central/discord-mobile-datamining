@@ -1,6 +1,6 @@
-// === Module 13278: ApplicationWidgetConfigSurface ===
+// === Module 13328: ApplicationWidgetConfigSurface ===
 
-// Module 13278 (ApplicationWidgetConfigSurface)
+// Module 13328 (ApplicationWidgetConfigSurface)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationWidgetConfigSurface.tsx");

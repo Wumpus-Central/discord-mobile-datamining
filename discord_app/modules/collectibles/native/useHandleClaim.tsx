@@ -1,6 +1,6 @@
-// === Module 13388: useHandleClaim ===
+// === Module 13438: useHandleClaim ===
 
-// Module 13388 (useHandleClaim)
+// Module 13438 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -30,26 +30,26 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   _require = asyncGeneratorStep(async () => {
     const product = tmp3;
-    await product(7256).claimPremiumCollectiblesProduct(product.skuId);
+    await product(7262).claimPremiumCollectiblesProduct(product.skuId);
     if (1 === tmp7) {
       c3 = 0;
-      const obj7 = { key: "collectible shop claim error", content: null };
+      const obj7 = { text: null };
       const intl = product(1126).intl;
-      obj7.content = intl.string(product(1126).t.CKsXk3);
-      stageCollectibleChangeForEditProfile(4768).open(obj7);
+      obj7.text = intl.string(product(1126).t.CKsXk3);
+      stageCollectibleChangeForEditProfile(4809).open("collectible shop claim error", obj7);
       c4 = 3;
-      stageCollectibleChangeForEditProfile(4768);
+      stageCollectibleChangeForEditProfile(4809);
     } else if (arg0 === 1) {
       c4 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      stageCollectibleChangeForEditProfile(5055).hideAllActionSheets();
-      stageCollectibleChangeForEditProfile(5055);
-      stageCollectibleChangeForEditProfile(12723).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
-      stageCollectibleChangeForEditProfile(12723);
-      const collectiblesPurchases = product(7256).fetchCollectiblesPurchases();
+      stageCollectibleChangeForEditProfile(5056).hideAllActionSheets();
+      stageCollectibleChangeForEditProfile(5056);
+      stageCollectibleChangeForEditProfile(12770).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
+      stageCollectibleChangeForEditProfile(12770);
+      const collectiblesPurchases = product(7262).fetchCollectiblesPurchases();
       c3 = 0;
-      product(7256);
+      product(7262);
     }
     return value;
   });
@@ -77,10 +77,10 @@ export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     await tmp3(tmp20[4]).claimPremiumCollectiblesProduct(product.skuId);
     if (1 === tmp7) {
       c3 = 0;
-      const obj7 = { key: "collectible shop claim error", content: null };
+      const obj7 = { text: null };
       const intl = tmp3(tmp20[8]).intl;
-      obj7.content = intl.string(tmp3(tmp20[8]).t.CKsXk3);
-      v2(tmp20[7]).open(obj7);
+      obj7.text = intl.string(tmp3(tmp20[8]).t.CKsXk3);
+      v2(tmp20[7]).open("collectible shop claim error", obj7);
       c4 = 3;
       v2(tmp20[7]);
     } else if (arg0 === 1) {

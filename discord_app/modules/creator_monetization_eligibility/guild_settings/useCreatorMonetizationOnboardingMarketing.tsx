@@ -1,7 +1,7 @@
-// === Module 18408: useCreatorMonetizationOnboardingMarketing ===
+// === Module 18482: useCreatorMonetizationOnboardingMarketing ===
 
-// Module 18408 (useCreatorMonetizationOnboardingMarketing)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 18377 */;
+// Module 18482 (useCreatorMonetizationOnboardingMarketing)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 18451 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = tmp45;
-            const aPIError = new closure_0(5632).APIError(closure_129_1);
+            const aPIError = new closure_0(5635).APIError(closure_129_1);
             tmp4(aPIError);
             c4 = 0;
             closure_1(false);

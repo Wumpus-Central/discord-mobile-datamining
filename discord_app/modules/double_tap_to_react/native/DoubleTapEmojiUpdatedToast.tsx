@@ -1,12 +1,12 @@
-// === Module 9410: DoubleTapEmojiUpdatedToast ===
+// === Module 9439: DoubleTapEmojiUpdatedToast ===
 
-// Module 9410 (DoubleTapEmojiUpdatedToast)
+// Module 9439 (DoubleTapEmojiUpdatedToast)
 import util from "util" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4789 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5361 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4828 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5362 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
 
 require = fn;
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
@@ -74,7 +74,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
       }
     }
     obj4.icon = obj9;
-    ToastActionCreatorsDefault.openMana("DEFAULT_REACTION_EMOJI_UPDATED", obj4);
+    ToastActionCreatorsDefault.open("DEFAULT_REACTION_EMOJI_UPDATED", obj4);
   }
   obj = useIsScreenReaderEnabled;
 };

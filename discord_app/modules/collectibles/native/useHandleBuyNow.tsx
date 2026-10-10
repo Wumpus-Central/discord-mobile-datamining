@@ -1,6 +1,6 @@
-// === Module 13393: useHandleBuyNow ===
+// === Module 13443: useHandleBuyNow ===
 
-// Module 13393 (useHandleBuyNow)
+// Module 13443 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -26,7 +26,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -42,7 +42,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7256).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7262).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -54,12 +54,12 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5055).hideAllActionSheets();
-          const obj = v1(5055);
+          v1(5056).hideAllActionSheets();
+          const obj = v1(5056);
           const obj8 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_2 };
-          v1(12723).open(obj8);
+          v1(12770).open(obj8);
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -69,7 +69,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(12662)({
+  const tmp3 = onBuySettled(12709)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -107,7 +107,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -155,10 +155,10 @@ function useHandleBuyNow(product) {
           obj9.tags = obj11;
           const result = product(tmp55[11]).captureBillingException(closure_128_0, obj9);
           const obj4 = product(tmp55[11]);
-          const obj12 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
+          const obj12 = { text: null };
           const intl = product(tmp55[13]).intl;
-          obj12.content = intl.string(product(tmp55[13]).t["rTU7/z"]);
-          tmp4(tmp55[12]).open(obj12);
+          obj12.text = intl.string(product(tmp55[13]).t["rTU7/z"]);
+          tmp4(tmp55[12]).open("SHOP_ITEM_HANDOFF_ERROR", obj12);
           if (closure_129_1 != null) {
             closure_129_1();
           }

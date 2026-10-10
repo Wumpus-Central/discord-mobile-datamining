@@ -1,6 +1,6 @@
-// === Module 7373: activityBookmarkUtils ===
+// === Module 7379: activityBookmarkUtils ===
 
-// Module 7373 (activityBookmarkUtils)
+// Module 7379 (activityBookmarkUtils)
 import URLUtilsDefault from "URLUtils" /* 1384 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ export const extractActivityBookmarkParams = function extractActivityBookmarkPar
     value3 = searchParams2.get("custom_id");
   }
   obj2.customId = value3;
-  let value4;
+  value4 = undefined;
   if (toURLSafeResult != null) {
     const searchParams3 = toURLSafeResult.searchParams;
     value4 = searchParams3.get("link_id");

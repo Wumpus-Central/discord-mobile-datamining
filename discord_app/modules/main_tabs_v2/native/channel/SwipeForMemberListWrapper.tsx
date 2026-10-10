@@ -1,19 +1,19 @@
-// === Module 17236: SwipeForMemberListWrapper ===
+// === Module 17308: SwipeForMemberListWrapper ===
 
-// Module 17236 (SwipeForMemberListWrapper)
+// Module 17308 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4937 */;
-import RootNavigationRef from "RootNavigationRef" /* 4938 */;
-import useChatLayout from "useChatLayout" /* 4940 */;
-import ChatInputUtils from "ChatInputUtils" /* 4946 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import useMountEffect from "useMountEffect" /* 5393 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 16357 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16749 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4976 */;
+import RootNavigationRef from "RootNavigationRef" /* 4977 */;
+import useChatLayout from "useChatLayout" /* 4979 */;
+import ChatInputUtils from "ChatInputUtils" /* 4985 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import useMountEffect from "useMountEffect" /* 5396 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 16424 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,9 +24,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9283);
+const ChannelDetailsStore = fn(9310);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9271).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9298).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -34,7 +34,7 @@ const jsxProd = fn(21);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let c16 = 150;
 let context = noop.createContext(undefined);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, onyxBorder: null, onyxRightOverflow: null };
 let tmp6 = new LoggerDefault("SwipeForMemberListWrapper");
 obj.memberListPreview = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

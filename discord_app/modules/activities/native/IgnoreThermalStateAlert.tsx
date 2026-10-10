@@ -1,8 +1,8 @@
-// === Module 10840: IgnoreThermalStateAlert ===
+// === Module 10852: IgnoreThermalStateAlert ===
 
-// Module 10840 (IgnoreThermalStateAlert)
-import common_AlertDefault from "common/Alert" /* 5395 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10778 */;
+// Module 10852 (IgnoreThermalStateAlert)
+import common_AlertDefault from "common/Alert" /* 5398 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 10853 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 let closure_3 = ["onConfirm"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -72,7 +72,7 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   }
   if (cResult[8] !== tmp9.header) {
     const obj2 = { style: tmp9.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = closure_5(tmp(5087).Text, obj2);
+    const tmp19 = closure_5(tmp(5088).Text, obj2);
     cResult[8] = tmp9.header;
     cResult[9] = tmp19;
     let tmp17 = tmp19;
@@ -89,7 +89,7 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   }
   if (cResult[11] !== tmp9.text) {
     const obj3 = { style: tmp9.text, variant: "text-md/medium", children: tmp20 };
-    const tmp24 = closure_5(tmp(5087).Text, obj3);
+    const tmp24 = closure_5(tmp(5088).Text, obj3);
     cResult[11] = tmp9.text;
     cResult[12] = tmp24;
     let tmp22 = tmp24;
@@ -140,11 +140,11 @@ export const IgnoreThermalStateAlert = ReactCompilerGating.isReactCompilerEnable
   const obj2 = { style: tmp2.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1126).intl;
   obj2.children = intl3.string(onConfirm(1126).t.v5X4fZ);
-  const items = [closure_5(onConfirm(5087).Text, obj2), ];
+  const items = [closure_5(onConfirm(5088).Text, obj2), ];
   const obj3 = { style: tmp2.text, variant: "text-md/medium", children: null };
   const intl4 = onConfirm(1126).intl;
   obj3.children = intl4.string(onConfirm(1126).t.VOgTjy);
-  items[1] = closure_5(onConfirm(5087).Text, obj3);
+  items[1] = closure_5(onConfirm(5088).Text, obj3);
   obj.children = items;
   return closure_6(common_AlertDefault, obj);
 });

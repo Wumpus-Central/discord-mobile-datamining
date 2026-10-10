@@ -1,18 +1,18 @@
-// === Module 7709: InAppReportModal ===
+// === Module 7726: InAppReportModal ===
 
-// Module 7709 (InAppReportModal)
+// Module 7726 (InAppReportModal)
 import util from "util" /* 1126 */;
-import Navigator from "Navigator" /* 6686 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 7082 */;
-import showReportModal from "showReportModal" /* 7706 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7708 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7723 */;
+import Navigator from "Navigator" /* 6687 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 7088 */;
+import showReportModal from "showReportModal" /* 7723 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 7725 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7741 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(7710).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(7727).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -56,7 +56,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = noop.useState([]);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = noop.useState([]);
-  menu(5393)(() => {
+  menu(5396)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -72,7 +72,7 @@ export default function InAppReportModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -123,7 +123,7 @@ export default function InAppReportModal(arg0) {
               addOnCloseCallback(closure_2);
             }
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp32) {
           c4 = tmp;
@@ -177,7 +177,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-            const obj = { source: menu(5010), onPress, accessibilityLabel: null };
+            const obj = { source: menu(7728), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
             return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

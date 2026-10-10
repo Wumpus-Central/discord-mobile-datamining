@@ -1,32 +1,32 @@
-// === Module 15135: UserSettingsAuthedApps ===
+// === Module 15196: UserSettingsAuthedApps ===
 
-// Module 15135 (UserSettingsAuthedApps)
+// Module 15196 (UserSettingsAuthedApps)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import TableRowGroup from "TableRowGroup" /* 6269 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6678 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6682 */;
-import applications from "applications" /* 9202 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import TableRowGroup from "TableRowGroup" /* 6264 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6679 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6683 */;
+import applications from "applications" /* 9229 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6793 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6796 */;
 
 const require = globalThis.__r;
 
-const CircleInformationIcon = GlobeEarthIcon(5013);
-const GlobeEarthIcon2 = GlobeEarthIcon(9083);
-const EmbedIcon = GlobeEarthIcon(12856);
+const CircleInformationIcon = GlobeEarthIcon(5046);
+const GlobeEarthIcon2 = GlobeEarthIcon(9103);
+const EmbedIcon = GlobeEarthIcon(12903);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(6793).FetchState;
+const FetchState = fn(6796).FetchState;
 const Constants = fn(1085);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 }, headerDescription: { marginTop: 12 }, appListHeader: { marginTop: 24 } };
 let closure_15 = createStyles.createStyles(obj2);
 fn(558);
@@ -749,7 +749,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     obj5.children = closure_2_11(TableRowGroup.TableRowGroupTitle, obj6);
     items1[1] = closure_2_11(React4, obj5);
     obj.children = items1;
-    return __initData(__initData2, obj);
+    return __initData(map1, obj);
   }
   cResult[3] = tmp4.appListHeader;
   cResult[4] = tmp4.headerDescription;
@@ -807,7 +807,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         obj5.children = closure_2_11(TableRowGroup.TableRowGroupTitle, obj6);
         items1[1] = closure_2_11(React4, obj5);
         obj.children = items1;
-        return __initData(__initData2, obj);
+        return __initData(map1, obj);
       }
       if (0 === appAuthTokens.length) {
         let obj4 = { style: tmp.emptyContainer, children: null };

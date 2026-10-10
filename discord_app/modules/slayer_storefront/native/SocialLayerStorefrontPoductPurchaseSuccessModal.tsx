@@ -1,36 +1,36 @@
-// === Module 12654: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 12701: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 12654 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 12701 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
-import _modDef3697 from "module_3697" /* 3697 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import UserUtilsDefault from "UserUtils" /* 4923 */;
-import HapticUtils from "HapticUtils" /* 5056 */;
-import timing from "timing" /* 5092 */;
-import spring from "spring" /* 5375 */;
-import XSmallIcon from "XSmallIcon" /* 6212 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6924 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10126 */;
+import _modDef3719 from "module_3719" /* 3719 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import UserUtilsDefault from "UserUtils" /* 4962 */;
+import HapticUtils from "HapticUtils" /* 5057 */;
+import timing from "timing" /* 5093 */;
+import spring from "spring" /* 5378 */;
+import XSmallIcon from "XSmallIcon" /* 6207 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6930 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10155 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
-import SKUStore from "SKUStore" /* 6094 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import SKUStore from "SKUStore" /* 6087 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(6927).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(6933).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -65,7 +65,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 const obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -620,7 +620,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function Purcha
     const obj17 = {
       onPress: onClose,
       backImage() {
-          return state(XSmallIcon.XSmallIcon, { size: "lg", style: closure_1.closeButtonIcon });
+          return closure_2_14(XSmallIcon.XSmallIcon, { size: "lg", style: closure_1.closeButtonIcon });
         },
       accessibilityLabel: null,
       displayMode: "minimal"
@@ -1083,7 +1083,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLayerS
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3697.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3719.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

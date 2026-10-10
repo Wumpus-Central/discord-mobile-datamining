@@ -1,6 +1,6 @@
-// === Module 12333: NonRecycledViewNativeComponent ===
+// === Module 12377: NonRecycledViewNativeComponent ===
 
-// Module 12333 (NonRecycledViewNativeComponent)
+// Module 12377 (NonRecycledViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

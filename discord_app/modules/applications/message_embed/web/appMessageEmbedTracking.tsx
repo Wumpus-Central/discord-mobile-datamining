@@ -1,6 +1,6 @@
-// === Module 7375: appMessageEmbedTracking ===
+// === Module 7381: appMessageEmbedTracking ===
 
-// Module 7375 (appMessageEmbedTracking)
+// Module 7381 (appMessageEmbedTracking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,11 +25,11 @@ export { trackAppEmbedViewed };
 export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAppEmbedViewed(id) {
   const cResult = require("c").c(4);
   if (cResult[0] !== id) {
-    const result = tmp(7376).trackingConfigWithDefaults(id);
+    const result = tmp(7382).trackingConfigWithDefaults(id);
     cResult[0] = id;
     cResult[1] = result;
     let tmp4 = result;
-    const tmpResult = tmp(7376);
+    const tmpResult = tmp(7382);
   } else {
     tmp4 = cResult[1];
   }

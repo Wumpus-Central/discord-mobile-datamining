@@ -1,10 +1,10 @@
-// === Module 9091: TwitchNeutralIcon ===
+// === Module 9111: TwitchNeutralIcon ===
 
-// Module 9091 (TwitchNeutralIcon)
+// Module 9111 (TwitchNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod9092 from "module_9092" /* 9092 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod9112 from "module_9112" /* 9112 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const TwitchNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9092;
+    const tmpResult = _mod9112;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const TwitchNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9092, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9112, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

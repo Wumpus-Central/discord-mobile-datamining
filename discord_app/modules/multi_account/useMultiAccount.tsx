@@ -1,15 +1,15 @@
-// === Module 16286: useMultiAccount ===
+// === Module 16353: useMultiAccount ===
 
-// Module 16286 (useMultiAccount)
+// Module 16353 (useMultiAccount)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DispatcherDefault from "Dispatcher" /* 584 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12129 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
-import MultiAccountStore from "MultiAccountStore" /* 12081 */;
+import MultiAccountStore from "MultiAccountStore" /* 12125 */;
 
 require = fn;
-const MultiAccountTokenStatus = fn(12081).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12125).MultiAccountTokenStatus;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
@@ -47,10 +47,8 @@ export const useMultiAccountUsers = ReactCompilerGating.isReactCompilerEnabled()
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     class U {
       constructor() {
-        obj = closure_1_1(closure_1_3[6]);
-        waitResult = obj.wait(() => {
-          const result = closure_1_2(closure_1_3[7]).validateMultiAccountTokens();
-        });
+        obj = closure_1_1(closure_1_2[6]);
+        result = obj.validateMultiAccountTokens();
         return;
       }
     }
@@ -61,10 +59,8 @@ export const useMultiAccountUsers = ReactCompilerGating.isReactCompilerEnabled()
   } else {
     class U {
       constructor() {
-        obj = closure_1_1(closure_1_3[6]);
-        waitResult = obj.wait(() => {
-          const result = closure_1_2(closure_1_3[7]).validateMultiAccountTokens();
-        });
+        obj = closure_1_1(closure_1_2[6]);
+        result = obj.validateMultiAccountTokens();
         return;
       }
     }
@@ -93,9 +89,7 @@ export const useMultiAccountUsers = ReactCompilerGating.isReactCompilerEnabled()
     const obj5 = { isLoading: users.getIsValidatingUsers(), multiAccountUsers: users };
   });
   const effect = noop.useEffect(() => {
-    DispatcherDefault.wait(() => {
-      const result = closure_1_2(closure_1_3[7]).validateMultiAccountTokens();
-    });
+    const result = MultiAccountActionCreatorsAll.validateMultiAccountTokens();
   }, []);
   return stateFromStoresObject;
 });

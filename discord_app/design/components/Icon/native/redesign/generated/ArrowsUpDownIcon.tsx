@@ -1,10 +1,10 @@
-// === Module 11793: ArrowsUpDownIcon ===
+// === Module 11837: ArrowsUpDownIcon ===
 
-// Module 11793 (ArrowsUpDownIcon)
+// Module 11837 (ArrowsUpDownIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 4778 */;
-import _mod11794 from "module_11794" /* 11794 */;
+import BaseIconImage from "BaseIconImage" /* 4817 */;
+import _mod11838 from "module_11838" /* 11838 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ArrowsUpDownIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11794;
+    const tmpResult = _mod11838;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ArrowsUpDownIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11794, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11838, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

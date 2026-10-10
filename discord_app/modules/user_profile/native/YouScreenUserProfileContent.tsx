@@ -1,54 +1,54 @@
-// === Module 17423: YouScreenUserProfileContent ===
+// === Module 17495: YouScreenUserProfileContent ===
 
-// Module 17423 (YouScreenUserProfileContent)
+// Module 17495 (YouScreenUserProfileContent)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
 import dismissible_content from "dismissible_content" /* 2049 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7093 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8351 */;
-import UserProfileAvatarDefault from "UserProfileAvatar" /* 8365 */;
-import FormDividerDefault from "FormDivider" /* 8567 */;
-import tracking_Tracking from "tracking/Tracking" /* 9145 */;
-import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10485 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10497 */;
-import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10537 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10578 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11593 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 13065 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 13122 */;
-import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 13135 */;
-import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 13138 */;
-import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 13139 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13160 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 13161 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 13177 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13306 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13321 */;
-import UserProfileConnections from "UserProfileConnections" /* 13324 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13329 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13334 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 14791 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15984 */;
-import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16735 */;
-import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 17430 */;
-import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17432 */;
-import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17434 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7099 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8367 */;
+import UserProfileAvatarDefault from "UserProfileAvatar" /* 8381 */;
+import FormDividerDefault from "FormDivider" /* 8583 */;
+import tracking_Tracking from "tracking/Tracking" /* 9166 */;
+import getRandomCustomStatusPromptDefault from "getRandomCustomStatusPrompt" /* 10519 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10531 */;
+import BadgeManagementExperiment from "BadgeManagementExperiment" /* 10571 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10612 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11639 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 13112 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 13171 */;
+import useBadgeDirectoryNuxCoachmarkVariant from "useBadgeDirectoryNuxCoachmarkVariant" /* 13184 */;
+import useBadgeDirectoryNuxEntryPoint from "useBadgeDirectoryNuxEntryPoint" /* 13187 */;
+import BadgeDirectoryNuxCoachmarkDefault from "BadgeDirectoryNuxCoachmark" /* 13188 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 13209 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 13210 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 13227 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 13356 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 13371 */;
+import UserProfileConnections from "UserProfileConnections" /* 13374 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 13379 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 13384 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 14847 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 16046 */;
+import showYouAccountActionSheet from "showYouAccountActionSheet" /* 16805 */;
+import useOwnsAnyBadgeDefault from "useOwnsAnyBadge" /* 17502 */;
+import YouExpiringTrialOfferCardDefault from "YouExpiringTrialOfferCard" /* 17504 */;
+import UserProfileYourFriendsCardDefault from "UserProfileYourFriendsCard" /* 17506 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5756 */;
-import UserProfileStore from "UserProfileStore" /* 7314 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5759 */;
+import UserProfileStore from "UserProfileStore" /* 7320 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const useIsContentShown = fn(2056).useIsContentShown;
-let UserProfileSections = fn(8291).UserProfileSections;
-let UserProfileThemeTypes = fn(6898).UserProfileThemeTypes;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
-let closure_13 = fn(14761).UserProfileEditAutoFocusElement;
+const useIsContentShown = fn(2057).useIsContentShown;
+let UserProfileSections = fn(8307).UserProfileSections;
+let UserProfileThemeTypes = fn(6904).UserProfileThemeTypes;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
+let closure_13 = fn(14816).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -80,7 +80,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAva
     obj2.importantForAccessibility = "no-hide-descendants";
     obj2.accessibilityElementsHidden = tmp5;
     obj2.accessible = !tmp5;
-    const tmp8Result = state(UserProfileAvatarDefault, obj2);
+    const tmp8Result = closure_1_14(UserProfileAvatarDefault, obj2);
     cResult[2] = arg0;
     cResult[3] = tmp8Result;
     let tmp7 = tmp8Result;
@@ -102,7 +102,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouAva
   obj2.importantForAccessibility = "no-hide-descendants";
   obj2.accessibilityElementsHidden = isAndroidResult;
   obj2.accessible = !isAndroidResult;
-  return state(UserProfileAvatarDefault, obj2);
+  return closure_1_14(UserProfileAvatarDefault, obj2);
 });
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouScreenCardStyle(backgroundColor, borderColor) {
@@ -141,8 +141,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
   const tmp4 = UserProfileSharedStylesDefault();
   const tmp5 = closure_18(containerBackground, containerBorderColor);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp9 = state(UserProfileWidgetsBoardEditNoticeDefault, {});
-    const tmp10 = state(ConjureCustomWidgetAddOptionDefault, {});
+    const tmp9 = closure_1_14(UserProfileWidgetsBoardEditNoticeDefault, {});
+    const tmp10 = closure_1_14(ConjureCustomWidgetAddOptionDefault, {});
     cResult[0] = tmp9;
     cResult[1] = tmp10;
     tmp6 = tmp9;
@@ -164,14 +164,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
       const obj2 = { style: tmp4.profileContent, children: null };
       const items = [tmp6, tmp7, tmp12];
       obj2.children = items;
-      const tmp17 = closure_1_15(params, obj2);
+      const tmp17 = value2(params, obj2);
       cResult[6] = tmp4.profileContent;
       cResult[7] = tmp12;
       cResult[8] = tmp17;
       tmp14 = tmp17;
     }
   }
-  const tmp13 = state(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp5 });
+  const tmp13 = closure_1_14(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp5 });
   cResult[2] = tmp5;
   cResult[3] = activeSection === UserProfileSections.WIDGETS;
   cResult[4] = userId;
@@ -181,11 +181,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
   ({ userId, activeSection, containerBackground, containerBorderColor } = arg0);
   const obj = { style: UserProfileSharedStylesDefault().profileContent, children: null };
   const tmp = UserProfileSharedStylesDefault();
-  const items = [state(UserProfileWidgetsBoardEditNoticeDefault, {}), state(ConjureCustomWidgetAddOptionDefault, {}), ];
+  const items = [closure_1_14(UserProfileWidgetsBoardEditNoticeDefault, {}), closure_1_14(ConjureCustomWidgetAddOptionDefault, {}), ];
   const tmp2 = closure_18(containerBackground, containerBorderColor);
-  items[2] = state(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: closure_18(containerBackground, containerBorderColor) });
+  items[2] = closure_1_14(UserProfileWidgetsBoardDefault, { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: closure_18(containerBackground, containerBorderColor) });
   obj.children = items;
-  return closure_1_15(params, obj);
+  return value2(params, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScreenActivityTabContainer(arg0) {
@@ -208,14 +208,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
         return tmp10;
       }
       const obj2 = { style: tmp6, children: tmp7 };
-      const tmp13 = state(params, obj2);
+      const tmp13 = closure_1_14(params, obj2);
       cResult[6] = tmp6;
       cResult[7] = tmp7;
       cResult[8] = tmp13;
       tmp10 = tmp13;
     }
     const obj3 = { user, currentUser: user, cardStyle: tmp5 };
-    const tmp9 = state(UserProfileActivityTabDefault, obj3);
+    const tmp9 = closure_1_14(UserProfileActivityTabDefault, obj3);
     cResult[3] = tmp5;
     cResult[4] = user;
     cResult[5] = tmp9;
@@ -235,8 +235,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
   ({ cards: arr[0], profileContent: arr[1] } = UserProfileSharedStylesDefault());
   obj.style = items;
   const tmp = UserProfileSharedStylesDefault();
-  obj.children = state(UserProfileActivityTabDefault, { user, currentUser: user, cardStyle: closure_18(containerBackground, containerBorderColor) });
-  return state(params, obj);
+  obj.children = closure_1_14(UserProfileActivityTabDefault, { user, currentUser: user, cardStyle: closure_18(containerBackground, containerBorderColor) });
+  return closure_1_14(params, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSection(navigateToProfileCustomization) {
@@ -566,7 +566,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
                                       const obj5 = { style: tmp30, children: null };
                                       const items = [tmp31, tmp38, tmp42];
                                       obj5.children = items;
-                                      const tmp49 = closure_1_15(params, obj5);
+                                      const tmp49 = value2(params, obj5);
                                       cResult[31] = tmp30;
                                       cResult[32] = tmp31;
                                       cResult[33] = tmp38;
@@ -577,7 +577,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
                                   }
                                 }
                                 const obj6 = { navigateToProfileCustomization, isProfileLoaded, visibleContent: tmp26, markAsDismissed: tmp27 };
-                                const tmp45 = state(closure_21, obj6);
+                                const tmp45 = closure_1_14(closure_21, obj6);
                                 cResult[26] = isProfileLoaded;
                                 cResult[27] = tmp27;
                                 cResult[28] = navigateToProfileCustomization;
@@ -591,7 +591,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
                         let tmp40 = null != badgeDirectoryNuxCoachmarkVariant.variantProps;
                         if (tmp40) {
                           const obj7 = { targetRef: entryPointRef, userId: id, variantProps: badgeDirectoryNuxCoachmarkVariant.variantProps, visible: tmp28, markAsDismissed: tmp27 };
-                          tmp40 = state(BadgeDirectoryNuxCoachmarkDefault, obj7);
+                          tmp40 = closure_1_14(BadgeDirectoryNuxCoachmarkDefault, obj7);
                         }
                         cResult[20] = badgeDirectoryNuxCoachmarkVariant.variantProps;
                         cResult[21] = entryPointRef;
@@ -606,7 +606,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
                     const merged = Object.assign(primaryInfoProps);
                     obj8.badgeDirectoryEntryPointRef = entryPointRef;
                     obj8.onOpenBadgeDirectory = onOpenBadgeDirectory;
-                    const tmp37 = state(UserProfilePrimaryInfoDefault, obj8);
+                    const tmp37 = closure_1_14(UserProfilePrimaryInfoDefault, obj8);
                     cResult[16] = entryPointRef;
                     cResult[17] = onOpenBadgeDirectory;
                     cResult[18] = primaryInfoProps;
@@ -761,16 +761,16 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function YouScr
   const merged = Object.assign(primaryInfoProps);
   obj6.badgeDirectoryEntryPointRef = entryPointRef;
   obj6.onOpenBadgeDirectory = badgeDirectoryNuxEntryPoint.onOpenBadgeDirectory;
-  const items2 = [state(UserProfilePrimaryInfoDefault, obj6), , ];
+  const items2 = [closure_1_14(UserProfilePrimaryInfoDefault, obj6), , ];
   let tmp27Result = null != badgeDirectoryNuxCoachmarkVariant.variantProps;
   if (tmp27Result) {
     const obj7 = { targetRef: entryPointRef, userId: id, variantProps: badgeDirectoryNuxCoachmarkVariant.variantProps, visible: tmp23, markAsDismissed: tmp22 };
-    tmp27Result = state(BadgeDirectoryNuxCoachmarkDefault, obj7);
+    tmp27Result = closure_1_14(BadgeDirectoryNuxCoachmarkDefault, obj7);
   }
   items2[1] = tmp27Result;
-  items2[2] = state(closure_21, { navigateToProfileCustomization: navigateToProfileCustomization.navigateToProfileCustomization, isProfileLoaded, visibleContent: tmp21, markAsDismissed: tmp22 });
+  items2[2] = closure_1_14(closure_21, { navigateToProfileCustomization: navigateToProfileCustomization.navigateToProfileCustomization, isProfileLoaded, visibleContent: tmp21, markAsDismissed: tmp22 });
   obj5.children = items2;
-  return closure_1_15(params, obj5);
+  return value2(params, obj5);
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -1179,36 +1179,36 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
     const items1 = [, ];
     ({ cards: arr2[0], profileContent: arr2[1] } = closure_5);
     obj2.style = items1;
-    const items2 = [state(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , , ];
+    const items2 = [closure_2_14(YouExpiringTrialOfferCardDefault, { navigateToPremium, style: items }), , , , , , , , , ];
     let tmp3Result = !shouldShowExpiringTrialOfferCard;
     if (!shouldShowExpiringTrialOfferCard) {
       const obj4 = { navigateToPremium, navigateToShop, hasCustomProfileTheme };
-      tmp3Result = state(UserProfileDismissibleUpsellsDefault, obj4);
+      tmp3Result = closure_2_14(UserProfileDismissibleUpsellsDefault, obj4);
     }
     items2[1] = tmp3Result;
     let tmp3Result2 = enabled;
     if (enabled) {
-      tmp3Result2 = state(BalanceWidgetMenuDefault, {});
+      tmp3Result2 = closure_2_14(BalanceWidgetMenuDefault, {});
     }
     items2[2] = tmp3Result2;
-    items2[3] = state(UserProfileActivityDefault, { user, currentUser: user, style: items });
-    items2[4] = state(UserProfileAboutMeCardDefault, { userId: user.id, displayProfile });
-    items2[5] = state(FormDividerDefault, {});
-    items2[6] = state(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
-    items2[7] = state(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
-    items2[8] = state(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
-    items2[9] = state(UserProfileNoteDefault, { userId: user.id });
+    items2[3] = closure_2_14(UserProfileActivityDefault, { user, currentUser: user, style: items });
+    items2[4] = closure_2_14(UserProfileAboutMeCardDefault, { userId: user.id, displayProfile });
+    items2[5] = closure_2_14(FormDividerDefault, {});
+    items2[6] = closure_2_14(UserProfileConnections.UserProfileAccountConnectionsCard, { userId: user.id });
+    items2[7] = closure_2_14(UserProfileConnections.UserProfileApplicationRoleConnectionsCard, { userId: user.id });
+    items2[8] = closure_2_14(UserProfileYourFriendsCardDefault, { userId: user.id, navigateToFriends });
+    items2[9] = closure_2_14(UserProfileNoteDefault, { userId: user.id });
     obj2.children = items2;
-    return closure_2_15(params, obj2);
+    return value2(params, obj2);
   }, items6);
   const items7 = [tmp3.profileContent, stateFromStores1, pageWidth, activeProfileTabSection === UserProfileSections.WISHLIST, user.id];
   callback5 = obj6.useCallback(() => {
     const obj = { style: closure_5.profileContent, children: null };
     if (null == stateFromStores1) {
-      let tmp4Result = state(UserProfileWishlistGrid.WishlistEmptyState, {});
-      let tmp4 = state;
+      let tmp4Result = closure_2_14(UserProfileWishlistGrid.WishlistEmptyState, {});
+      let tmp4 = closure_2_14;
     } else {
-      tmp4 = state;
+      tmp4 = closure_2_14;
       const obj2 = { wishlistId: stateFromStores1, containerWidth: null, isVisible: null };
       let tmp8;
       if (first > 0) {
@@ -1227,14 +1227,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
     obj3.containerWidth = tmp15;
     items[1] = tmp4(UserProfileWishlistSuggestionsGridDefault, obj3);
     obj.children = items;
-    return closure_2_15(params, obj);
+    return value2(params, obj);
   }, items7);
   const items8 = [callback4, callback5, handlePageContentSize, tmp20, isRecentActivityMobileEnabled, boardTabIndex, activityTabIndex, wishlistTabIndex, user, activeProfileTabSection, containerBackground, containerBorderColor];
   const memo = obj6.useMemo(() => {
     const obj = { id: "main", label: null, page: null };
     const intl = util.intl;
     obj.label = intl.string(util.t.LXw470);
-    obj.page = state(hasOwnProperty, {
+    obj.page = closure_2_14(hasOwnProperty, {
       scrollEnabled: false,
       onContentSizeChange(arg0, arg1) {
         return handlePageContentSize(0, arg0, arg1);
@@ -1254,8 +1254,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
         children: null
       };
       const obj5 = { userId: user.id, activeSection: activeProfileTabSection, containerBackground, containerBorderColor };
-      obj4.children = state(closure_19, obj5);
-      obj3.page = state(hasOwnProperty, obj4, boardTabIndex);
+      obj4.children = closure_2_14(closure_19, obj5);
+      obj3.page = closure_2_14(hasOwnProperty, obj4, boardTabIndex);
       items.push(obj3);
     }
     if (isRecentActivityMobileEnabled) {
@@ -1270,8 +1270,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
         children: null
       };
       const obj8 = { user, containerBackground, containerBorderColor };
-      obj7.children = state(closure_20, obj8);
-      obj6.page = state(hasOwnProperty, obj7, activityTabIndex);
+      obj7.children = closure_2_14(closure_20, obj8);
+      obj6.page = closure_2_14(hasOwnProperty, obj7, activityTabIndex);
       items.push(obj6);
     }
     const obj9 = { id: "wishlist", label: null, page: null };
@@ -1284,7 +1284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function YouScree
       },
       children: callback4()
     };
-    obj9.page = state(hasOwnProperty, {
+    obj9.page = closure_2_14(hasOwnProperty, {
       scrollEnabled: false,
       onContentSizeChange(arg0, arg1) {
         return handlePageContentSize(wishlistTabIndex, arg0, arg1);

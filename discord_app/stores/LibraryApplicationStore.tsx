@@ -1,12 +1,12 @@
-// === Module 7106: LibraryApplicationStore ===
+// === Module 7112: LibraryApplicationStore ===
 
-// Module 7106 (LibraryApplicationStore)
+// Module 7112 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtilsAll from "FlagUtils" /* 1403 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7108 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7107 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7114 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7113 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -60,7 +60,7 @@ prototype["initialize"] = function initialize() {
     if (null == value.activeLibraryApplicationBranchIds) {
       const Storage4 = Storage6.Storage;
       const Storage5 = Storage6.Storage;
-      let value4 = Storage5.get(LibraryApplicationStore);
+      value4 = Storage5.get(LibraryApplicationStore);
       if (value4 == null) {
         value4 = {};
       }

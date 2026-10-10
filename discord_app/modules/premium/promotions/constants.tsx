@@ -1,9 +1,9 @@
-// === Module 9133: constants ===
+// === Module 9154: constants ===
 
-// Module 9133 (constants)
+// Module 9154 (constants)
 import size from "module_2" /* 2 */;
 
-const items = ["logitech", "call_of_duty", "youtube"];
+const items = ["logitech", "call_of_duty", "youtube", "best_buy"];
 const items1 = ["logitech", "steelseries"];
 const result = size.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
@@ -17,5 +17,6 @@ export const XBOX_PARTNER_ID = "xbox";
 export const YOUTUBE_PARTNER_ID = "youtube";
 export const RIOT_PARTNER_ID = "riot";
 export const RUST_PARTNER_ID = "rust";
+export const BEST_BUY_PARTNER_ID = "best_buy";
 export const DEDICATED_SURFACE_PARTNER_IDS = new Set(items);
 export const RECURRING_3P_PARTNER_ORDER = items1;

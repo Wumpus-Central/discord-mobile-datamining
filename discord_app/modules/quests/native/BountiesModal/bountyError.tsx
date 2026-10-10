@@ -1,13 +1,12 @@
-// === Module 15216: bountyError ===
+// === Module 15278: bountyError ===
 
-// Module 15216 (bountyError)
+// Module 15278 (bountyError)
 import util from "util" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4768 */;
-import _modDef5008 from "module_5008" /* 5008 */;
-import BountiesModalConstants from "BountiesModalConstants" /* 15202 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4809 */;
+import BountiesModalConstants from "BountiesModalConstants" /* 15264 */;
 import size from "module_2" /* 2 */;
 
-const toastDurationMs = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
+const duration = BountiesModalConstants.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
 const set = new Set([260021]);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/bountyError.tsx");
 
@@ -25,8 +24,8 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       if (null != message1) {
         let message = code.message;
       }
-      const obj2 = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: message, icon: _modDef5008, toastDurationMs };
-      obj.open(obj2);
+      const obj2 = { text: message, variant: "critical", duration };
+      obj.open("QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", obj2);
     }
   }
   const intl = util.intl;

@@ -1,8 +1,8 @@
-// === Module 18008: RadioGroupActionComponent ===
+// === Module 18080: RadioGroupActionComponent ===
 
-// Module 18008 (RadioGroupActionComponent)
-import spring from "spring" /* 5375 */;
-import springPresets from "springPresets" /* 5379 */;
+// Module 18080 (RadioGroupActionComponent)
+import spring from "spring" /* 5378 */;
+import springPresets from "springPresets" /* 5382 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -219,7 +219,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp5 = obj3;
   }
   const componentState = type(required[4]).useComponentState(type, tmp5);
-  state = componentState.state;
+  const state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
   const memo1 = ref.useMemo(() => {

@@ -1,9 +1,9 @@
-// === Module 8635: EditGuildScheduledEventResetWarningAlert ===
+// === Module 8651: EditGuildScheduledEventResetWarningAlert ===
 
-// Module 8635 (EditGuildScheduledEventResetWarningAlert)
+// Module 8651 (EditGuildScheduledEventResetWarningAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import common_AlertDefault from "common/Alert" /* 5395 */;
+import common_AlertDefault from "common/Alert" /* 5398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

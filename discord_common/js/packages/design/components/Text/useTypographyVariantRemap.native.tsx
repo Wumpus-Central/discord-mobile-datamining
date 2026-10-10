@@ -1,9 +1,9 @@
-// === Module 5097: useTypographyVariantRemap ===
+// === Module 5098: useTypographyVariantRemap ===
 
-// Module 5097 (useTypographyVariantRemap)
+// Module 5098 (useTypographyVariantRemap)
 import c from "c" /* 576 */;
-import ThemeContext from "ThemeContext" /* 4792 */;
-import typographyVariantRemap from "typographyVariantRemap" /* 5098 */;
+import ThemeContext from "ThemeContext" /* 4831 */;
+import typographyVariantRemap from "typographyVariantRemap" /* 5099 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

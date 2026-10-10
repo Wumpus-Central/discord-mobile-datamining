@@ -1,12 +1,12 @@
-// === Module 12609: SavedMessageUtils ===
+// === Module 12656: SavedMessageUtils ===
 
-// Module 12609 (SavedMessageUtils)
+// Module 12656 (SavedMessageUtils)
 import util from "util" /* 1126 */;
-import _modDef4661 from "module_4661" /* 4661 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
+import _modDef4702 from "module_4702" /* 4702 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -77,11 +77,11 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
             if (null == closure_130_2.recipients) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else if (closure_130_2.recipients.length > 1) {
               c5 = 0;
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else {
               const recipients = closure_130_2.recipients;
               c6 = 3;
@@ -107,7 +107,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
         }
         closure_131_1(closure_131_2[11])(closure_131_8.CHANNEL(guildId, closure_130_0.saveData.channelId, closure_130_0.saveData.messageId), { openChannel: true });
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp30) {
         closure_4 = tmp30;
         if (tmp4 === c5) {
@@ -120,7 +120,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(2068).UnknownChannelRecord;
+const UnknownChannelRecord = fn(2069).UnknownChannelRecord;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
@@ -154,7 +154,7 @@ export const useDueInString = function useDueInString(arg0) {
     const obj2 = { duration: null };
     const time = dueAt.getTime();
     tmp9 = obj;
-    obj2.duration = _modDef4661.duration(time - now.getTime(), "millisecond").humanize();
+    obj2.duration = _modDef4702.duration(time - now.getTime(), "millisecond").humanize();
     obj.dueInText = intl.formatToPlainString(H4gnX9, obj2);
     obj.isOverdue = now > dueAt;
     return obj;

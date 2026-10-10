@@ -1,19 +1,19 @@
-// === Module 17916: AgeVerificationManager ===
+// === Module 17988: AgeVerificationManager ===
 
-// Module 17916 (AgeVerificationManager)
+// Module 17988 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import Server from "Server" /* 1998 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5749 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5906 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5918 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5919 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7699 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import MessageStore from "MessageStore" /* 5429 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5752 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5920 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 7716 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 11523 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import MessageStore from "MessageStore" /* 5432 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6804 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6807 */;
 
 require = fn;
 function handleMessageCreate(channelId) {
@@ -37,7 +37,7 @@ function handleMessageCreate(channelId) {
         if (first1 != null) {
           const fields = first1.fields;
           if (fields != null) {
-            found = fields.find((rawName) => rawName.rawName === AgeVerificationUtils.AgeVerificationSystemNotificationEmbedKeys.CONTENT_TYPE);
+            found = fields.find((rawName) => rawName.rawName === AgeVerificationSystemNotificationUtils.AgeVerificationSystemNotificationEmbedKeys.CONTENT_TYPE);
           }
         }
       }
@@ -46,7 +46,7 @@ function handleMessageCreate(channelId) {
     if (found != null) {
       rawValue = found.rawValue;
     }
-    if (rawValue === AgeVerificationUtils.AgeVerificationSystemNotificationContentType.MANUAL_REVIEW_SUBMITTED) {
+    if (rawValue === AgeVerificationSystemNotificationUtils.AgeVerificationSystemNotificationContentType.MANUAL_REVIEW_SUBMITTED) {
       const result = ManualReviewActionCreators.invalidateAgeVerificationCaches();
       const tmp4Result = ManualReviewActionCreators;
     }
@@ -55,7 +55,7 @@ function handleMessageCreate(channelId) {
 const transformUser = fn(1390).transformUser;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
-const SafetyToastType = fn(7018).SafetyToastType;
+const SafetyToastType = fn(7019).SafetyToastType;
 let closure_10 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -113,7 +113,7 @@ const prototype = function AgeVerificationManager() {
         }
         if (tmp20) {
           (function handleLoadChannelMessages(channelId) {
-            const messages = _true(7172).fetchMessages({ channelId, limit });
+            const messages = _true(7178).fetchMessages({ channelId, limit });
           })(tmp16);
           (function handleLoadForumPosts(arg0) {
             channel = channel.getChannel(arg0);
@@ -130,8 +130,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(6997).preloadForumThreads(channel);
-              const obj = channelId(6997);
+              channelId(7003).preloadForumThreads(channel);
+              const obj = channelId(7003);
             }
           })(tmp16);
         }

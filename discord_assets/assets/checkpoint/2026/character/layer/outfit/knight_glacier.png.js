@@ -1,6 +1,6 @@
-// === Module 5557: ? ===
+// === Module 5560: ? ===
 
-// Module 5557
+// Module 5560
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/knight_glacier.png.js");

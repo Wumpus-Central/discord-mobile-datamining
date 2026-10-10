@@ -1,14 +1,14 @@
-// === Module 10528: useTenureBadgeRequirementString ===
+// === Module 10562: useTenureBadgeRequirementString ===
 
-// Module 10528 (useTenureBadgeRequirementString)
+// Module 10562 (useTenureBadgeRequirementString)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1392 */;
-import useTenureBadging from "useTenureBadging" /* 10529 */;
+import useTenureBadging from "useTenureBadging" /* 10563 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const TieredTenureBadgeUtils = erUSmA(7323);
+const TieredTenureBadgeUtils = erUSmA(7329);
 const TieredTenureBadge = PremiumConstants.TieredTenureBadge;
 function getTenureBadgeRequirementString(badge, tenureReqNumMonths) {
   if (TieredTenureBadge.PREMIUM_TENURE_1_MONTH !== badge) {

@@ -1,9 +1,9 @@
-// === Module 14933: useSafetyHubFetchError ===
+// === Module 14992: useSafetyHubFetchError ===
 
-// Module 14933 (useSafetyHubFetchError)
+// Module 14992 (useSafetyHubFetchError)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import SafetyHubStore from "SafetyHubStore" /* 5921 */;
+import SafetyHubStore from "SafetyHubStore" /* 7536 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

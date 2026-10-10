@@ -1,12 +1,12 @@
-// === Module 12773: ChannelPinActionCreators ===
+// === Module 12820: ChannelPinActionCreators ===
 
-// Module 12773 (ChannelPinActionCreators)
+// Module 12820 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 12774 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 12821 */;
 
 const require = fn;
-const FetchState = fn(12774).FetchState;
+const FetchState = fn(12821).FetchState;
 const Constants = fn(1085);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let obj = {
@@ -24,7 +24,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -43,7 +43,7 @@ let obj = {
               ({ id: closure_128_0, name: closure_128_1 } = tmp3);
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: tmp2(7883).unarchiveThreadIfNecessary(tmp3.id), done: false };
+              const obj5 = { value: tmp2(7901).unarchiveThreadIfNecessary(tmp3.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -57,7 +57,7 @@ let obj = {
             const HTTP = tmp3(1295).HTTP;
             const obj6 = { url: closure_1_7.PIN(closure_128_0, closure_129_1), rejectWithError: true };
             HTTP.put(obj6).catch((error) => {
-              const aPIError = new _private(5632).APIError(error);
+              const aPIError = new _private(5635).APIError(error);
               const code = aPIError.code;
               const intl = _private(1126).intl;
               const intl2 = _private(1126).intl;
@@ -119,11 +119,11 @@ let obj = {
               const obj2 = { title: stringResult3, body: stringResult1, confirmText: null };
               const intl17 = _private(1126).intl;
               obj2.confirmText = intl17.string(_private(1126).t.BddRzS);
-              channelName(5298).show(obj2);
-              const obj4 = channelName(5298);
+              channelName(5299).show(obj2);
+              const obj4 = channelName(5299);
             });
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp10) {
           c3 = tmp;
@@ -144,7 +144,7 @@ let obj = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -162,7 +162,7 @@ let obj = {
               channel = tmp4;
               dependencyMap = 1;
               c3 = 1;
-              const obj5 = { value: id(7883).unarchiveThreadIfNecessary(channel.id), done: false };
+              const obj5 = { value: id(7901).unarchiveThreadIfNecessary(channel.id), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -187,10 +187,10 @@ let obj = {
               obj2.cancelText = intl4.string(closure_0(1126).t["ETE/oC"]);
               unpinMessage = unpinMessage.unpinMessage;
               obj2.onConfirm = unpinMessage.bind(unpinMessage, closure_1_0, closure_1_1);
-              return closure_1(5298).show(obj2);
+              return closure_1(5299).show(obj2);
             });
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp8) {
           c3 = tmp;
@@ -226,7 +226,7 @@ let obj = {
       let length = ChannelPinsStore.getPins(channelId);
       let flag2 = true;
       if (null != length) {
-        state = length.state;
+        const state = length.state;
         flag2 = true;
         if (FetchState.FAILED !== state) {
           flag2 = false;

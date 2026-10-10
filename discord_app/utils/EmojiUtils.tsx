@@ -1,15 +1,15 @@
-// === Module 4727: EmojiUtils ===
+// === Module 4768: EmojiUtils ===
 
-// Module 4727 (EmojiUtils)
+// Module 4768 (EmojiUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1415 */;
 import ImageUtils from "ImageUtils" /* 1494 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4701 */;
-import EmojiTypes from "EmojiTypes" /* 4726 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4728 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5999 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7906 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4742 */;
+import EmojiTypes from "EmojiTypes" /* 4767 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4769 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5992 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7924 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4709 */;
+import PermissionStore from "PermissionStore" /* 4750 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
@@ -56,7 +56,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
           }
           DISALLOW_EXTERNAL = EmojiDisabledReasons.DISALLOW_EXTERNAL;
         } else {
-          if (!state(intention)) {
+          if (!closure_1_14(intention)) {
             let tmp19 = null != emoji && null != guildId;
             if (tmp19) {
               const tmp20 = emoji.type === EmojiTypes.EmojiTypes.GUILD || null != emoji.guildId;
@@ -131,7 +131,7 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(2068);
+const ChannelRecord = fn(2069);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
 const Permissions = fn(1085).Permissions;
 const EmojiConstants = fn(1393);

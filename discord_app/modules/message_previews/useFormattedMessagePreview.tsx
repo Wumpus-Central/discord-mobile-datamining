@@ -1,16 +1,16 @@
-// === Module 12527: useFormattedMessagePreview ===
+// === Module 12574: useFormattedMessagePreview ===
 
-// Module 12527 (useFormattedMessagePreview)
+// Module 12574 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
 import MessageTypes from "MessageTypes" /* 1101 */;
 import util from "util" /* 1126 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 5624 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6995 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 7980 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7985 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8081 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 5627 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7001 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 7998 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8003 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8099 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4719 */;
+import RelationshipStore from "RelationshipStore" /* 4760 */;
 import UserStore from "UserStore" /* 1390 */;
 
 const require = globalThis.__r;
@@ -425,7 +425,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
     }
     const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
     const tmpResult5 = tmp(504);
-    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5624).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
+    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5627).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
     return formatMessagePreview(author, obj2);
   }
   class I {

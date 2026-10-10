@@ -1,6 +1,6 @@
-// === Module 14142: Shadows ===
+// === Module 14197: Shadows ===
 
-// Module 14142 (Shadows)
+// Module 14197 (Shadows)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");

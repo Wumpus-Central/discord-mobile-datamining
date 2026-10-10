@@ -1,8 +1,8 @@
-// === Module 18407: useCreatorMonetizationIneligibleReasons ===
+// === Module 18481: useCreatorMonetizationIneligibleReasons ===
 
-// Module 18407 (useCreatorMonetizationIneligibleReasons)
+// Module 18481 (useCreatorMonetizationIneligibleReasons)
 import c from "c" /* 576 */;
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 18379 */;
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 18453 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

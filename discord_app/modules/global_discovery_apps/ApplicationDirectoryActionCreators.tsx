@@ -1,21 +1,21 @@
-// === Module 11701: ApplicationDirectoryActionCreators ===
+// === Module 11746: ApplicationDirectoryActionCreators ===
 
-// Module 11701 (ApplicationDirectoryActionCreators)
+// Module 11746 (ApplicationDirectoryActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 11707 */;
-import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 11708 */;
+import ApplicationCollectionSurface from "ApplicationCollectionSurface" /* 11752 */;
+import ApplicationCollectionActiveState from "ApplicationCollectionActiveState" /* 11753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 5090 */;
-import LocaleStore from "LocaleStore" /* 2128 */;
+import DevSettingsStore from "DevSettingsStore" /* 5091 */;
+import LocaleStore from "LocaleStore" /* 2129 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1370 */;
-import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6850 */;
-import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 11702 */;
-import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 11703 */;
-import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11698 */;
-import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 11704 */;
-import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 11705 */;
+import ApplicationDirectoryApplicationsStore from "ApplicationDirectoryApplicationsStore" /* 6853 */;
+import ApplicationDirectoryCategoriesStore from "ApplicationDirectoryCategoriesStore" /* 11747 */;
+import ApplicationDirectoryCollectionsStore from "ApplicationDirectoryCollectionsStore" /* 11748 */;
+import ApplicationDirectorySearchStore from "ApplicationDirectorySearchStore" /* 11743 */;
+import ApplicationDirectorySimilarApplicationsStore from "ApplicationDirectorySimilarApplicationsStore" /* 11749 */;
+import MyGuildApplicationsStore from "MyGuildApplicationsStore" /* 11750 */;
 
 require = fn;
 let closure_20 = async function _getEmbedApplication() {
@@ -33,7 +33,7 @@ let closure_20 = async function _getEmbedApplication() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -141,7 +141,7 @@ let closure_21 = async function _getApplication(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -255,7 +255,7 @@ let closure_22 = async function _getCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -319,7 +319,7 @@ let closure_23 = async function _getSimilarApplications(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -433,7 +433,7 @@ let closure_24 = async function _search(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -583,7 +583,7 @@ let closure_25 = async function _fetchCollections() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -727,7 +727,7 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -812,11 +812,11 @@ let closure_26 = async function _fetchIntegrationApplicationIdsForMyGuilds() {
     }
   }
 };
-fn(6850).FetchState;
-fn(11703).FetchState;
-fn(11698).FetchState;
-fn(11704).FetchState;
-const FetchState = fn(11705).FetchState;
+fn(6853).FetchState;
+fn(11748).FetchState;
+fn(11743).FetchState;
+fn(11749).FetchState;
+const FetchState = fn(11750).FetchState;
 const Endpoints = fn(1085).Endpoints;
 let c18 = 600000;
 const map = new Map();

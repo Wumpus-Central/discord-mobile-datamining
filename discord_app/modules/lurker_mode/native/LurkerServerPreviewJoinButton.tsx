@@ -1,11 +1,11 @@
-// === Module 16498: LurkerServerPreviewJoinButton ===
+// === Module 16568: LurkerServerPreviewJoinButton ===
 
-// Module 16498 (LurkerServerPreviewJoinButton)
+// Module 16568 (LurkerServerPreviewJoinButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import LurkingStore from "LurkingStore" /* 4710 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import LurkingStore from "LurkingStore" /* 4751 */;
 
 const require = fn;
 const JoinGuildSources = fn(1085).JoinGuildSources;
@@ -31,7 +31,7 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

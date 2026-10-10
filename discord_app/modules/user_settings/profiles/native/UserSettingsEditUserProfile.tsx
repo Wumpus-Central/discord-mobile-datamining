@@ -1,10 +1,10 @@
-// === Module 14759: UserSettingsEditUserProfile ===
+// === Module 14814: UserSettingsEditUserProfile ===
 
-// Module 14759 (UserSettingsEditUserProfile)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6848 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6872 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8295 */;
-import UserProfileEditFormDefault from "UserProfileEditForm" /* 14760 */;
+// Module 14814 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6851 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6878 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8311 */;
+import UserProfileEditFormDefault from "UserProfileEditForm" /* 14815 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1390 */;
 
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           tmp2 = closure_2;
           num = 80;
           tmp3 = closure_1(closure_2[8]);
-          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
         }
         return;
       }
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           tmp2 = closure_2;
           num = 80;
           tmp3 = closure_1(closure_2[8]);
-          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
         }
         return;
       }
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           tmp2 = closure_2;
           num = 80;
           tmp3 = closure_1(closure_2[8]);
-          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
         }
         return;
       }
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           tmp2 = closure_2;
           num = 80;
           tmp3 = closure_1(closure_2[8]);
-          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+          tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
         }
         return;
       }
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             tmp2 = closure_2;
             num = 80;
             tmp3 = closure_1(closure_2[8]);
-            tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+            tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
           }
           return;
         }
@@ -121,13 +121,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[8]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
         }
       }
-      AnalyticsLocationProvider = AnalyticsLocationProvider(6848).AnalyticsLocationProvider;
+      AnalyticsLocationProvider = AnalyticsLocationProvider(6851).AnalyticsLocationProvider;
       const obj2 = { value: analyticsLocations, children: tmp12 };
       tmp = <AnalyticsLocationProvider value={analyticsLocations}>{tmp12}</AnalyticsLocationProvider>;
       cResult[8] = analyticsLocations;
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   const items1 = [stateFromStores];
   const effect = noop.useEffect(() => {
     if (null != stateFromStores) {
-      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+      maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {});
     }
   }, items1);
   let tmp7 = null;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(tmp4(6848).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
+    tmp7 = jsx(tmp4(6851).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

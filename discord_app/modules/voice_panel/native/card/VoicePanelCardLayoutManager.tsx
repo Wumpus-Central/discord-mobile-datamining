@@ -1,13 +1,13 @@
-// === Module 11928: VoicePanelCardLayoutManager ===
+// === Module 11972: VoicePanelCardLayoutManager ===
 
-// Module 11928 (VoicePanelCardLayoutManager)
+// Module 11972 (VoicePanelCardLayoutManager)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1272 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10339 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10372 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6043 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6036 */;
 
 require = fn;
 function getTargetCardSize(windowWidth) {
@@ -20,12 +20,12 @@ function getTargetCardSize(windowWidth) {
   return Math.max(closure_1_8, (windowWidth - safeAreaLeft - safeAreaRight - gutter * (num - 1)) / num);
 }
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11926);
+const VoicePanelConstants = fn(11970);
 const VoicePanelCardItemType = VoicePanelConstants.VoicePanelCardItemType;
 ({ BASE_TARGET_CARD_SIZE: closure_8, VoicePanelCTACardDimensionKeys: closure_9, VoicePanelCTACardDimensions: c10, VOICE_PANEL_CHUNK_DIVISOR: closure_11 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(11929);
+const VoicePanelCardConstants = fn(11973);
 ({ EDGE_GUTTER: closure_12, CALL_TILE_GUTTER: map1 } = VoicePanelCardConstants);
-const ParticipantTypes = fn(5114).ParticipantTypes;
+const ParticipantTypes = fn(5115).ParticipantTypes;
 let closure_15 = { id: "invalid", type: VoicePanelCardItemType.PARTICIPANT, x: 0, y: 0, width: 0, height: 0, zIndex: 0 };
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -332,7 +332,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
     const map = new Map();
     self.cardCoords = map;
     const _Map2 = Map;
-    const map1 = new Map();
+    map1 = new Map();
     self.chunkedCoords = map1;
     const props = self.props;
     const windowWidth = props.windowWidth;

@@ -1,18 +1,18 @@
-// === Module 15521: AndroidFontScaleSetting ===
+// === Module 15583: AndroidFontScaleSetting ===
 
-// Module 15521 (AndroidFontScaleSetting)
+// Module 15583 (AndroidFontScaleSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 10575 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15522 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 10609 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15584 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useFontScaleStore = fn(15473).useFontScaleStore;
+const useFontScaleStore = fn(15535).useFontScaleStore;
 const FontScales = fn(1095).FontScales;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFontScaleSliderProps() {
   const cResult = c.c(13);
   const tmp4 = useFontScaleStore();
@@ -112,7 +112,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t.i19n5L);
   },
-  parent: fn(7974).MobileUserSettings.APPEARANCE,
+  parent: fn(7992).MobileUserSettings.APPEARANCE,
   useProps: ReactCompilerGating.isReactCompilerEnabled() ? (function useFontScaleSliderProps() {
     const cResult = c.c(13);
     const tmp4 = useFontScaleStore();

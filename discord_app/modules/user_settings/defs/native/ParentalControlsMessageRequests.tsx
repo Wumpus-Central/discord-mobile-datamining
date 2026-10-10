@@ -1,15 +1,15 @@
-// === Module 16216: ParentalControlsMessageRequests ===
+// === Module 16283: ParentalControlsMessageRequests ===
 
-// Module 16216 (ParentalControlsMessageRequests)
+// Module 16283 (ParentalControlsMessageRequests)
 import util from "util" /* 1126 */;
-import _modDef2565 from "module_2565" /* 2565 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5916 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 5918 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7497 */;
-import useSelectedTeen from "useSelectedTeen" /* 7722 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 15014 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15015 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16202 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7252 */;
+import useSelectedTeen from "useSelectedTeen" /* 7740 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 15073 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 15074 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 16269 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7258 */;
 
 require = fn;
 fn(558);
@@ -18,7 +18,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 function useIsDisabled() {
   return useParentalControlSettings.useDefaultGuildsRestricted();
 }
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
   if (typeof useIsDisabled === "function") {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
@@ -53,9 +53,9 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2565["7aYkh1"]);
+    return intl.string(_modDef2568["7aYkh1"]);
   },
-  parent: fn(7974).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7992).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useValue() {
     if (typeof useIsDisabled === "function") {
       const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();

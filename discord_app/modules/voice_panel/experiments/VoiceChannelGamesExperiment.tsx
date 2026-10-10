@@ -1,6 +1,6 @@
-// === Module 8835: VoiceChannelGamesExperiment ===
+// === Module 8854: VoiceChannelGamesExperiment ===
 
-// Module 8835 (VoiceChannelGamesExperiment)
+// Module 8854 (VoiceChannelGamesExperiment)
 import c from "c" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1454 */;
 

@@ -203,7 +203,7 @@ const dependencyMap = {
     data = data.data;
     let tmp = null;
     if (null != data) {
-      state = data.state;
+      const state = data.state;
       let tmp2 = null;
       if (typeof state === "string") {
         tmp2 = state;
@@ -257,7 +257,7 @@ const dependencyMap = {
         tmp4 = stage;
       }
       if (tmp4 == null) {
-        state = data.state;
+        const state = data.state;
         let tmp5 = null;
         if (typeof state === "string") {
           tmp5 = state;

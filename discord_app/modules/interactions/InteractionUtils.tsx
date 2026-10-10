@@ -1,15 +1,15 @@
-// === Module 8237: InteractionUtils ===
+// === Module 8253: InteractionUtils ===
 
-// Module 8237 (InteractionUtils)
+// Module 8253 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 1998 */;
-import InteractionTypes from "InteractionTypes" /* 5439 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 8238 */;
-import SkemaUtils from "SkemaUtils" /* 8239 */;
+import InteractionTypes from "InteractionTypes" /* 5442 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 8254 */;
+import SkemaUtils from "SkemaUtils" /* 8255 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 7865 */;
+import InteractionStore from "InteractionStore" /* 7883 */;
 
 require = fn;
 let closure_10 = async function _executeMessageComponentInteraction(arg0) {
@@ -34,7 +34,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "IconComponent", done: null };
+    return { value: "IconComponent", done: "+51" };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -350,4 +350,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(5436).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(5439).interactionCallbackErrorReason;

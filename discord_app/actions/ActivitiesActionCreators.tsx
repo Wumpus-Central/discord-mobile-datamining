@@ -1,18 +1,18 @@
-// === Module 10633: ActivitiesActionCreators ===
+// === Module 10667: ActivitiesActionCreators ===
 
-// Module 10633 (ActivitiesActionCreators)
+// Module 10667 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5106 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7008 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5107 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7014 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -48,7 +48,7 @@ export default {
     if (mediaSessionId === undefined) {
       mediaSessionId = null;
     }
-    distributor(num[4]).wait(() => DispatcherDefault.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor }));
+    distributor(num[4]).dispatch({ type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor });
     const HTTP = applicationId(num[5]).HTTP;
     const request = { url: constants.ACTIVITIES, body: { application_id: applicationId, token, duration: num, share_activity: share_activity.shareActivity, distributor, closed: flag, exePath, voice_channel_id: voiceChannelId, session_id: sessionId, media_session_id: mediaSessionId }, retries: 1, oldFormErrors: true, rejectWithError: true };
     const obj = distributor(num[4]);

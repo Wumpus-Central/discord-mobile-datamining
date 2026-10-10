@@ -1,8 +1,8 @@
-// === Module 17015: useConjurePublishedChannelId ===
+// === Module 17083: useConjurePublishedChannelId ===
 
-// Module 17015 (useConjurePublishedChannelId)
-import ConjureUtils from "ConjureUtils" /* 6939 */;
-import GuildChannelStore from "GuildChannelStore" /* 4707 */;
+// Module 17083 (useConjurePublishedChannelId)
+import ConjureUtils from "ConjureUtils" /* 6945 */;
+import GuildChannelStore from "GuildChannelStore" /* 4748 */;
 
 const require = globalThis.__r;
 

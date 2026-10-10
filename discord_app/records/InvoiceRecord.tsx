@@ -1,7 +1,7 @@
-// === Module 4737: InvoiceRecord ===
+// === Module 4778: InvoiceRecord ===
 
-// Module 4737 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4738 */;
+// Module 4778 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4779 */;
 import Record from "Record" /* 1405 */;
 
 require = fn;
@@ -238,20 +238,20 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
     tmp19 = new.target;
   }
 };
-InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_items) {
-  invoice_items = invoice_items.invoice_items;
+InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(body) {
+  const invoice_items = body.invoice_items;
   let mapped;
   if (invoice_items != null) {
     mapped = invoice_items.map(PremiumSubscriptionInvoiceItem.createInvoiceItemFromServer);
   }
-  const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null, applyWalletBalance: null, paymentLegs: null };
+  const obj = { id: "", invoiceItems: mapped, total: body.amount, subtotal: body.subtotal, currency: body.currency, tax: body.tax, taxInclusive: body.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null, applyWalletBalance: null, paymentLegs: null };
   const date = new Date(0);
   const tmp5 = new.target;
   const tmp7 = new.target;
   obj.subscriptionPeriodEnd = new Date(0);
-  ({ orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext, apply_wallet_balance } = invoice_items);
+  ({ orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext, apply_wallet_balance } = body);
   obj.applyWalletBalance = apply_wallet_balance;
-  obj.paymentLegs = invoice_items.payment_legs;
+  obj.paymentLegs = body.payment_legs;
   if (typeof InvoiceRecord === "function") {
     const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, apply_wallet_balance, InvoiceRecord);
     ({ id: tmp13.id, invoiceItems } = obj);

@@ -1,15 +1,15 @@
-// === Module 10220: getActivityStatusText ===
+// === Module 10249: getActivityStatusText ===
 
-// Module 10220 (getActivityStatusText)
+// Module 10249 (getActivityStatusText)
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1126 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7426 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8446 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10217 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10221 */;
-import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10222 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10223 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10224 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8462 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10246 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10250 */;
+import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10251 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10252 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10253 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;
@@ -44,7 +44,7 @@ export default function getActivityStatusText(name) {
     }
     tmp5 = details1;
   }
-  state = undefined;
+  let state;
   if (name != null) {
     state = name.state;
   }

@@ -1,13 +1,13 @@
-// === Module 5424: getSoundmojiASTFromString ===
+// === Module 5427: getSoundmojiASTFromString ===
 
-// Module 5424 (getSoundmojiASTFromString)
+// Module 5427 (getSoundmojiASTFromString)
 import AvatarUtils from "AvatarUtils" /* 1415 */;
-import isSoundValidDefault from "isSoundValid" /* 7047 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 11553 */;
-import getSoundFromMessageDefault from "getSoundFromMessage" /* 13978 */;
-import getSoundStringDefault from "getSoundString" /* 13979 */;
-import SoundboardStore from "SoundboardStore" /* 5425 */;
-import MessageStore from "MessageStore" /* 5429 */;
+import isSoundValidDefault from "isSoundValid" /* 7053 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 11599 */;
+import getSoundFromMessageDefault from "getSoundFromMessage" /* 14032 */;
+import getSoundStringDefault from "getSoundString" /* 14033 */;
+import SoundboardStore from "SoundboardStore" /* 5428 */;
+import MessageStore from "MessageStore" /* 5432 */;
 
 require = fn;
 const MessageStates = fn(1085).MessageStates;
@@ -28,7 +28,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
           tmp5 = tmp16;
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            state = undefined;
+            let state;
             if (message != null) {
               state = message.state;
             }
@@ -102,7 +102,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
         if (tmp9) {
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            state = undefined;
+            let state;
             if (message != null) {
               state = message.state;
             }

@@ -1,9 +1,9 @@
-// === Module 8323: useMaybeTrackProfileFrameViewed ===
+// === Module 8339: useMaybeTrackProfileFrameViewed ===
 
-// Module 8323 (useMaybeTrackProfileFrameViewed)
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8299 */;
+// Module 8339 (useMaybeTrackProfileFrameViewed)
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8315 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7257 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7263 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c2, useRef: c3 } = noop);
@@ -39,7 +39,7 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         if (ref.current == null) {
           ref.current = timestamp - openedAt;
         }
-        state = undefined;
+        let state;
         if (stateFromStores != null) {
           state = stateFromStores.state;
         }

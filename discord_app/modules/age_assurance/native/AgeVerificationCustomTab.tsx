@@ -1,10 +1,10 @@
-// === Module 7527: AgeVerificationCustomTab ===
+// === Module 7530: AgeVerificationCustomTab ===
 
-// Module 7527 (AgeVerificationCustomTab)
+// Module 7530 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1382 */;
-import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5053 */;
+import NativeBrowserManagerModuleDefault from "NativeBrowserManagerModule" /* 5054 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -53,7 +53,7 @@ let closure_10 = async function _openAgeVerificationCustomTab(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -180,7 +180,7 @@ let closure_11 = async function _resumeAgeVerificationCustomTab() {
           } else {
             c3 = 0;
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         }
         c3 = 0;

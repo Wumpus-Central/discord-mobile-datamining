@@ -1,9 +1,9 @@
-// === Module 13339: AddToWishlistItemCard ===
+// === Module 13389: AddToWishlistItemCard ===
 
-// Module 13339 (AddToWishlistItemCard)
+// Module 13389 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import SKUPreviewDefault from "SKUPreview" /* 8956 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 9023 */;
+import SKUPreviewDefault from "SKUPreview" /* 8975 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 9042 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { heartOverlay: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_4, right: nativeDefault.space.PX_4, zIndex: 1, alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.heartOverlay = rect;
@@ -56,7 +56,7 @@ export default function AddToWishlistItemCard(sku) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -94,10 +94,10 @@ export default function AddToWishlistItemCard(sku) {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            const obj14 = { key: "WISHLIST_ADD_SUGGESTION_ERROR", content: null };
+            const obj14 = { text: null };
             const intl = tmp4(tmp36[14]).intl;
-            obj14.content = intl.string(tmp4(tmp36[14]).t.F8FvUy);
-            v3(tmp36[13]).open(obj14);
+            obj14.text = intl.string(tmp4(tmp36[14]).t.F8FvUy);
+            v3(tmp36[13]).open("WISHLIST_ADD_SUGGESTION_ERROR", obj14);
             const obj2 = v3(tmp36[13]);
           } else if (arg0 === 1) {
             c4 = 3;

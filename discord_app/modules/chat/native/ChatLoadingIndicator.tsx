@@ -1,19 +1,19 @@
-// === Module 12810: ChatLoadingIndicator ===
+// === Module 12857: ChatLoadingIndicator ===
 
-// Module 12810 (ChatLoadingIndicator)
+// Module 12857 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4811 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import timing from "timing" /* 5092 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5299 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4850 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import timing from "timing" /* 5093 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 5080 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5754 */;
-import MessageStore from "MessageStore" /* 5429 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2115 */;
+import AccessibilityStore from "AccessibilityStore" /* 5081 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5757 */;
+import MessageStore from "MessageStore" /* 5432 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2116 */;
 import UserStore from "UserStore" /* 1390 */;
 import AppStateStore from "AppStateStore" /* 1999 */;
 
@@ -56,7 +56,7 @@ const View = fn(17).View;
 const AppStates = fn(1085).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.pulse = size;
@@ -177,7 +177,7 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   let obj2 = { variant: "text-md/normal", color: "text-default", children: null };
   let items1 = [tmp12, "\n", tmp14, "\n", tmp16, "\n", tmp18];
   obj2.children = items1;
-  const tmp21 = state(Text_Text.Text, obj2);
+  const tmp21 = closure_1_14(Text_Text.Text, obj2);
   cResult[11] = tmp12;
   cResult[12] = tmp14;
   cResult[13] = tmp16;
@@ -215,16 +215,16 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str4 = "true";
   }
   obj2.children = str4;
-  items1[3] = __initData2(Text_Text.Text, obj2);
+  items1[3] = map1(Text_Text.Text, obj2);
   let tmp4Result = null;
   if (messagesCached !== false) {
     const obj3 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items2 = [" ", "(should be ", str3, " to hide loading indicator)"];
     obj3.children = items2;
-    tmp4Result = state(Text_Text.Text, obj3);
+    tmp4Result = closure_1_14(Text_Text.Text, obj3);
   }
   items1[4] = tmp4Result;
-  const items3 = [state(closure_1_15, { children: items1 }), "\n", , , , , ];
+  const items3 = [closure_1_14(value2, { children: items1 }), "\n", , , , , ];
   const items4 = ["messages.ready", ":", " ", , ];
   let str6 = str;
   if (messagesReady) {
@@ -236,16 +236,16 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str7 = "true";
   }
   obj4.children = str7;
-  items4[3] = __initData2(Text_Text.Text, obj4);
+  items4[3] = map1(Text_Text.Text, obj4);
   let tmp4Result3 = null;
   if (messagesReady !== true) {
     const obj5 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items5 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj5.children = items5;
-    tmp4Result3 = state(Text_Text.Text, obj5);
+    tmp4Result3 = closure_1_14(Text_Text.Text, obj5);
   }
   items4[4] = tmp4Result3;
-  items3[2] = state(closure_1_15, { children: items4 });
+  items3[2] = closure_1_14(value2, { children: items4 });
   items3[3] = "\n";
   const items6 = ["connected", ":", " ", , ];
   let str10 = str;
@@ -258,16 +258,16 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str11 = "true";
   }
   obj6.children = str11;
-  items6[3] = __initData2(Text_Text.Text, obj6);
+  items6[3] = map1(Text_Text.Text, obj6);
   let tmp4Result4 = null;
   if (connected !== true) {
     const obj7 = { variant: "text-md/normal", color: "text-muted", children: null };
     const items7 = [" ", "(should be ", "true", " to hide loading indicator)"];
     obj7.children = items7;
-    tmp4Result4 = state(Text_Text.Text, obj7);
+    tmp4Result4 = closure_1_14(Text_Text.Text, obj7);
   }
   items6[4] = tmp4Result4;
-  items3[4] = state(closure_1_15, { children: items6 });
+  items3[4] = closure_1_14(value2, { children: items6 });
   items3[5] = "\n";
   if (!messagesCached) {
     messagesCached = !messagesReady;
@@ -284,12 +284,12 @@ let closure_18 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     str3 = "true";
   }
   obj8.children = str3;
-  items8[3] = __initData2(Text_Text.Text, obj8);
+  items8[3] = map1(Text_Text.Text, obj8);
   const obj9 = { variant: "text-md/normal", color: "text-default", children: null };
   items8[4] = null;
-  items3[6] = state(closure_1_15, { children: items8 });
+  items3[6] = closure_1_14(value2, { children: items8 });
   obj9.children = items3;
-  return state(Text_Text.Text, obj9);
+  return closure_1_14(Text_Text.Text, obj9);
 }));
 fn(558);
 const __initData = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
@@ -493,8 +493,8 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
     }
     return tmp7;
   };
-  const PressableOpacityResult2 = PressableOpacity(4811);
-  fn3.__closure = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4811).withRepeat, withSequence: PressableOpacity(4811).withSequence, withTiming: PressableOpacity(5092).withTiming, Easing: PressableOpacity(4811).Easing };
+  const PressableOpacityResult2 = PressableOpacity(4850);
+  fn3.__closure = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4850).withRepeat, withSequence: PressableOpacity(4850).withSequence, withTiming: PressableOpacity(5093).withTiming, Easing: PressableOpacity(4850).Easing };
   fn3.__workletHash = 17454673879926;
   fn3.__initData = __initData;
   const animatedStyle = PressableOpacityResult2.useAnimatedStyle(fn3);
@@ -507,7 +507,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       let obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = PressableOpacity(1126).intl;
       obj3.children = intl.string(PressableOpacity(1126).t.JwIJMV);
-      const tmp17 = closure_13(PressableOpacity(5087).Text, obj3);
+      const tmp17 = closure_13(PressableOpacity(5088).Text, obj3);
       cResult[7] = tmp17;
       let tmp15 = tmp17;
     } else {
@@ -520,7 +520,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
       if (!stateFromStores1) {
         return tmp18;
       } else if (cResult[11] !== tmp18) {
-        PressableOpacity = PressableOpacity(6191).PressableOpacity;
+        PressableOpacity = PressableOpacity(6184).PressableOpacity;
         let obj4 = { onPress: openLoadingIndicatorDebugBody, children: tmp18 };
         tmp = closure_13(PressableOpacity, obj4);
         cResult[11] = tmp18;
@@ -544,7 +544,7 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   cResult[5] = tmp3.pulse;
   cResult[6] = tmp14;
   tmp13 = tmp14;
-  let obj2 = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4811).withRepeat, withSequence: PressableOpacity(4811).withSequence, withTiming: PressableOpacity(5092).withTiming, Easing: PressableOpacity(4811).Easing };
+  let obj2 = { useReducedMotion: stateFromStores, withRepeat: PressableOpacity(4850).withRepeat, withSequence: PressableOpacity(4850).withSequence, withTiming: PressableOpacity(5093).withTiming, Easing: PressableOpacity(4850).Easing };
 }) : (function ChannelHeaderLoadingIndicator() {
   const tmp = closure_16();
   let items = [AccessibilityStore];
@@ -592,8 +592,8 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
     }
     return tmp7;
   };
-  let obj3 = stateFromStores(4811);
-  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4811).withRepeat, withSequence: stateFromStores(4811).withSequence, withTiming: stateFromStores(5092).withTiming, Easing: stateFromStores(4811).Easing };
+  let obj3 = stateFromStores(4850);
+  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4850).withRepeat, withSequence: stateFromStores(4850).withSequence, withTiming: stateFromStores(5093).withTiming, Easing: stateFromStores(4850).Easing };
   fn.__workletHash = 9356373946997;
   fn.__initData = __initData2;
   let obj5 = { style: tmp.container, children: null };
@@ -605,13 +605,13 @@ export const ChannelHeaderLoadingIndicator = ReactCompilerGating.isReactCompiler
   let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1126).intl;
   obj7.children = intl.string(stateFromStores(1126).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(5087).Text, obj7);
+  items3[1] = closure_13(stateFromStores(5088).Text, obj7);
   obj5.children = items3;
   const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(6191).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(6184).PressableOpacity, obj8);
   }
   return tmp7Result;
 });

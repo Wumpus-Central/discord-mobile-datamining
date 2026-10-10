@@ -1,7 +1,7 @@
-// === Module 17025: AbstractFramePoolManager ===
+// === Module 17093: AbstractFramePoolManager ===
 
-// Module 17025 (AbstractFramePoolManager)
-import FrameStackLevel from "FrameStackLevel" /* 17026 */;
+// Module 17093 (AbstractFramePoolManager)
+import FrameStackLevel from "FrameStackLevel" /* 17094 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -126,7 +126,7 @@ prototype["getWinningTargetState"] = function getWinningTargetState(id) {
   let tmp = null;
   if (this.hasFrameEntry(id)) {
     const pickWinnerResult = self.pickWinner(id);
-    state = undefined;
+    let state;
     if (pickWinnerResult != null) {
       state = pickWinnerResult.state;
     }

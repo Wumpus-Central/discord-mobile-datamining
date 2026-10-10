@@ -1,30 +1,27 @@
-// === Module 13704: PremiumGroupStore ===
+// === Module 13756: PremiumGroupStore ===
 
-// Module 13704 (PremiumGroupStore)
+// Module 13756 (PremiumGroupStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 13705 */;
-import SubscriptionStore from "SubscriptionStore" /* 4734 */;
+import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 13757 */;
+import SubscriptionStore from "SubscriptionStore" /* 4775 */;
 
 require = fn;
 function handleMutationStart() {
-  closure_7.membersData.isUpdating = true;
+  closure_6.membersData.isUpdating = true;
 }
 function handleMutationSuccess(subscriptionId) {
-  subscriptionId = subscriptionId.subscriptionId;
-  DispatcherDefault.wait(() => {
-    const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId);
-    return subscriptionGroupMembers.catch(NOOP_NULL);
-  });
-  closure_7.membersData.isUpdating = false;
+  const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId.subscriptionId);
+  subscriptionGroupMembers.catch(NOOP_NULL);
+  closure_6.membersData.isUpdating = false;
 }
 function handleMutationFailure() {
-  closure_7.membersData.isUpdating = false;
+  closure_6.membersData.isUpdating = false;
 }
-const PremiumGroupConstants = fn(4742);
-({ PremiumGroupAPIErrorCodes: closure_4, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: hasOwnProperty } = PremiumGroupConstants);
+const PremiumGroupConstants = fn(4783);
+({ PremiumGroupAPIErrorCodes: c3, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: closure_4 } = PremiumGroupConstants);
 const NOOP_NULL = fn(1085).NOOP_NULL;
-let closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
+let closure_6 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
 const Store = initializeDefault.Store;
 class PremiumGroupStore extends Store {
 }
@@ -33,96 +30,91 @@ prototype["initialize"] = function initialize() {
   this.waitFor(SubscriptionStore);
 };
 prototype["getMembers"] = function getMembers() {
-  return closure_7.membersData.data;
+  return closure_6.membersData.data;
 };
 prototype["isFetchingMembers"] = function isFetchingMembers() {
-  return closure_7.membersData.isFetching;
+  return closure_6.membersData.isFetching;
 };
 prototype["isUpdatingMembers"] = function isUpdatingMembers() {
-  return closure_7.membersData.isUpdating;
+  return closure_6.membersData.isUpdating;
 };
 prototype["hasFetchedMembers"] = function hasFetchedMembers() {
-  return null !== closure_7.membersData.data;
+  return null !== closure_6.membersData.data;
 };
 prototype["getMembership"] = function getMembership() {
-  return closure_7.membershipData.data;
+  return closure_6.membershipData.data;
 };
 prototype["isFetchingMembership"] = function isFetchingMembership() {
-  return closure_7.membershipData.isFetching;
+  return closure_6.membershipData.isFetching;
 };
 prototype["hasFetchedMembership"] = function hasFetchedMembership() {
-  return null !== closure_7.membershipData.data;
+  return null !== closure_6.membershipData.data;
 };
 prototype["getNumUsedSeats"] = function getNumUsedSeats() {
   let num = 0;
-  if (null != closure_7.membersData.data) {
-    num = closure_7.membersData.data.members.length;
+  if (null != closure_6.membersData.data) {
+    num = closure_6.membersData.data.members.length;
   }
   return num;
 };
 prototype["getNumAvailableInvites"] = function getNumAvailableInvites() {
-  if (null == closure_7.membersData.data) {
-    return hasOwnProperty;
+  if (null == closure_6.membersData.data) {
+    return React4;
   } else {
     const _Math = Math;
-    return Math.max(0, hasOwnProperty - (closure_7.membersData.data.members.length + closure_7.membersData.data.invitedUsers.length));
+    return Math.max(0, React4 - (closure_6.membersData.data.members.length + closure_6.membersData.data.invitedUsers.length));
   }
 };
 prototype["getNumTotalSeats"] = function getNumTotalSeats() {
-  return hasOwnProperty;
+  return React4;
 };
 PremiumGroupStore.displayName = "PremiumGroupStore";
 const premiumGroupStore = new PremiumGroupStore(DispatcherDefault, {
-  PREMIUM_GROUP_MEMBERS_REQUEST: function handleMembersRequest(subscriptionId) {
-    subscriptionId = subscriptionId.subscriptionId;
-    const isFetching = closure_7.membersData.isFetching;
+  PREMIUM_GROUP_MEMBERS_REQUEST: function handleMembersRequest(arg0) {
+    const isFetching = closure_6.membersData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      DispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(NOOP_NULL);
-      });
+      const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(tmp);
+      subscriptionGroupMembers.catch(NOOP_NULL);
       flag = true;
     }
     return flag;
   },
   PREMIUM_GROUP_MEMBERS_FETCH_START: function handleMembersFetchStart() {
-    closure_7.membersData.isFetching = true;
+    closure_6.membersData.isFetching = true;
   },
   PREMIUM_GROUP_MEMBERS_FETCH_SUCCESS: function handleMembersFetchSuccess(members) {
-    closure_7.membersData.data = members.members;
-    closure_7.membersData.isFetching = false;
+    closure_6.membersData.data = members.members;
+    closure_6.membersData.isFetching = false;
   },
   PREMIUM_GROUP_MEMBERS_FETCH_FAILURE: function handleMembersFetchFailure() {
-    closure_7.membersData.isFetching = false;
+    closure_6.membersData.isFetching = false;
   },
   PREMIUM_GROUP_MEMBERSHIP_REQUEST: function handleMembershipRequest() {
-    const isFetching = closure_7.membershipData.isFetching;
+    const isFetching = closure_6.membershipData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      DispatcherDefault.wait(() => {
-        const premiumGroupMembership = PremiumGroupActionCreators.fetchPremiumGroupMembership();
-        return premiumGroupMembership.catch(NOOP_NULL);
-      });
+      const premiumGroupMembership = PremiumGroupActionCreators.fetchPremiumGroupMembership();
+      premiumGroupMembership.catch(NOOP_NULL);
       flag = true;
     }
     return flag;
   },
   PREMIUM_GROUP_MEMBERSHIP_FETCH_START: function handleMembershipFetchStart() {
-    closure_7.membershipData.isFetching = true;
+    closure_6.membershipData.isFetching = true;
   },
   PREMIUM_GROUP_MEMBERSHIP_FETCH_SUCCESS: function handleMembershipFetchSuccess(membership) {
-    closure_7.membershipData.data = membership.membership;
-    closure_7.membershipData.isFetching = false;
-    closure_7.membershipData.hasFetched = true;
+    closure_6.membershipData.data = membership.membership;
+    closure_6.membershipData.isFetching = false;
+    closure_6.membershipData.hasFetched = true;
   },
   PREMIUM_GROUP_MEMBERSHIP_NOT_FOUND: function handleMembershipNotFound() {
-    closure_7.membershipData.isFetching = false;
-    closure_7.membershipData.hasFetched = true;
+    closure_6.membershipData.isFetching = false;
+    closure_6.membershipData.hasFetched = true;
   },
   PREMIUM_GROUP_MEMBERSHIP_FETCH_FAILURE: function handleMembershipFetchFailure() {
-    closure_7.membershipData.isFetching = false;
-    closure_7.membershipData.hasFetched = true;
+    closure_6.membershipData.isFetching = false;
+    closure_6.membershipData.hasFetched = true;
   },
   PREMIUM_GROUP_INVITE_USERS_START: handleMutationStart,
   PREMIUM_GROUP_INVITE_USERS_SUCCESS: handleMutationSuccess,
@@ -132,21 +124,18 @@ const premiumGroupStore = new PremiumGroupStore(DispatcherDefault, {
   PREMIUM_GROUP_REMOVE_MEMBER_FAILURE: handleMutationFailure,
   PREMIUM_GROUP_REMOVE_INVITE_START: handleMutationStart,
   PREMIUM_GROUP_REMOVE_INVITE_SUCCESS: handleMutationSuccess,
-  PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function handleRemoveInviteFailure(subscriptionId) {
-    subscriptionId = subscriptionId.subscriptionId;
-    if (subscriptionId.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
-      DispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(NOOP_NULL);
-      });
-      closure_7.membersData.isUpdating = false;
+  PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function handleRemoveInviteFailure(errorCode) {
+    if (errorCode.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
+      const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(tmp);
+      subscriptionGroupMembers.catch(NOOP_NULL);
+      closure_6.membersData.isUpdating = false;
       return true;
     } else {
-      closure_7.membersData.isUpdating = false;
+      closure_6.membersData.isUpdating = false;
     }
   },
   LOGOUT: function reset() {
-    closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
+    closure_6 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
   }
 });
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 7552: useInitiateAgeVerification ===
+// === Module 7561: useInitiateAgeVerification ===
 
-// Module 7552 (useInitiateAgeVerification)
+// Module 7561 (useInitiateAgeVerification)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 7510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -49,7 +49,7 @@ function useAgeVerificationRunner(onComplete) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -170,7 +170,7 @@ function useAgeVerificationRunner(onComplete) {
   };
 }
 const AbortCodes = fn(1085).AbortCodes;
-const SafetyToastType = fn(7018).SafetyToastType;
+const SafetyToastType = fn(7019).SafetyToastType;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInitiateAgeVerification(arg0) {

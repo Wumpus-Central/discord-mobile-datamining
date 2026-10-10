@@ -1,28 +1,28 @@
-// === Module 8290: UserProfileSpeedBumpActionSheet ===
+// === Module 8306: UserProfileSpeedBumpActionSheet ===
 
-// Module 8290 (UserProfileSpeedBumpActionSheet)
+// Module 8306 (UserProfileSpeedBumpActionSheet)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import TableRow from "TableRow" /* 6186 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8287 */;
-import UserActionCreators from "UserActionCreators" /* 8289 */;
-import _modDef8293 from "module_8293" /* 8293 */;
+import TableRow from "TableRow" /* 6179 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8303 */;
+import UserActionCreators from "UserActionCreators" /* 8305 */;
+import _modDef8309 from "module_8309" /* 8309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2064 */;
-import GuildMemberStore from "GuildMemberStore" /* 2124 */;
+import ChannelStore from "ChannelStore" /* 2065 */;
+import GuildMemberStore from "GuildMemberStore" /* 2125 */;
 import UserStore from "UserStore" /* 1390 */;
 
 require = fn;
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8291).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8307).UserProfileAnalyticsTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 }, tableContainer: null, header: null, bodyText: null, headerText: null, avatar: null, avatarContainer: null, avatarIconContainer: null, suppress: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 };
 obj.tableContainer = { marginBottom: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -49,11 +49,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
   speedBumpType = speedBumpType.speedBumpType;
   if (cResult[0] !== speedBumpType) {
     if (typeof SPEEDBUMP_ROWS === "function") {
-      const obj2 = { icon: _modDef8293, text: null };
+      const obj2 = { icon: _modDef8309, text: null };
       const intl = map(1126).intl;
       obj2.text = intl.string(map(1126).t.kcuWva);
       items = [obj2, ];
-      const obj3 = { icon: _modDef8293, text: null };
+      const obj3 = { icon: _modDef8309, text: null };
       if ("block" === speedBumpType) {
         const intl3 = map(1126).intl;
         let stringResult = intl3.string(map(1126).t.QxrDY1);
@@ -63,7 +63,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
       }
       obj3.text = stringResult;
       items[1] = obj3;
-      TableRowGroup = map(6269).TableRowGroup;
+      TableRowGroup = map(6264).TableRowGroup;
       map = items.map;
       const mapped = map((icon, arg1) => {
         const obj = { start: 0 === arg1, end: items.length === arg1, icon: __initData(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: icon.icon }), label: icon.text };
@@ -97,11 +97,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
 }) : (function InformationTable(arg0) {
   let items;
   if (typeof SPEEDBUMP_ROWS === "function") {
-    let obj = { icon: _modDef8293, text: null };
+    let obj = { icon: _modDef8309, text: null };
     const intl = items(1126).intl;
     obj.text = intl.string(items(1126).t.kcuWva);
     items = [obj, ];
-    const obj2 = { icon: _modDef8293, text: null };
+    const obj2 = { icon: _modDef8309, text: null };
     if ("block" === tmp) {
       const intl3 = tmp4(1126).intl;
       let stringResult = intl3.string(tmp4(1126).t.QxrDY1);
@@ -118,7 +118,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Inform
           return __initData(TableRow.TableRow, obj, index);
         })
     };
-    return closure_12(items(6269).TableRowGroup, obj3);
+    return closure_12(items(6264).TableRowGroup, obj3);
   } else {
     throw new TypeError("Trying to call a non-function");
   }

@@ -1,6 +1,6 @@
-// === Module 8659: StartStageChannelModal ===
+// === Module 8669: StartStageChannelModal ===
 
-// Module 8659 (StartStageChannelModal)
+// Module 8669 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,18 +8,18 @@ import util from "util" /* 1126 */;
 import native from "native" /* 1200 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1265 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1894 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5941 */;
-import GuildIcon from "GuildIcon" /* 6165 */;
-import Pressables from "Pressables" /* 6191 */;
-import _modDef6774 from "module_6774" /* 6774 */;
-import HotspotStore2 from "HotspotStore" /* 6902 */;
-import Form from "Form" /* 8563 */;
-import StageSparkleDefault from "StageSparkle" /* 8643 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5934 */;
+import GuildIcon from "GuildIcon" /* 6158 */;
+import Pressables from "Pressables" /* 6184 */;
+import _modDef6777 from "module_6777" /* 6777 */;
+import HotspotStore2 from "HotspotStore" /* 6908 */;
+import Form from "Form" /* 8579 */;
+import StageSparkleDefault from "StageSparkle" /* 8670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 2069 */;
+import StageInstanceStore from "StageInstanceStore" /* 2070 */;
 
 const require = globalThis.__r;
 const GuildIconDefault = GuildIcon;
@@ -30,13 +30,13 @@ function closeModal() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(5889);
+const StageChannelsConstants = fn(5892);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let constants = fn(2070).GuildScheduledEventPrivacyLevel;
+let constants = fn(2071).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { paddingHorizontal: 16 }, contentTopSpacing: { paddingTop: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.textInput = { padding: 12, width: "100%", borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
@@ -77,9 +77,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
       const _Symbol2 = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { accessibilityRole: "button", accessibilityLabel: tmp7, onPress: closeModal, children: null };
-        const obj3 = { source: _modDef6774 };
-        obj2.children = state(native.Icon, obj3);
-        const tmp13 = state(Pressables.PressableOpacity, obj2);
+        const obj3 = { source: _modDef6777 };
+        obj2.children = closure_1_14(native.Icon, obj3);
+        const tmp13 = closure_1_14(Pressables.PressableOpacity, obj2);
         cResult[4] = tmp13;
         let tmp9 = tmp13;
       } else {
@@ -87,7 +87,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
       }
       if (cResult[5] !== tmp5) {
         const obj4 = { style: tmp5, children: tmp9 };
-        const tmp17 = state(React5, obj4);
+        const tmp17 = closure_1_14(React5, obj4);
         cResult[5] = tmp5;
         cResult[6] = tmp17;
       }
@@ -110,10 +110,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function Naviga
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef6774 };
-    obj2.children = state(native.Icon, obj3);
-    obj.children = state(Pressables.PressableOpacity, obj2);
-    tmp2 = state(React5, obj);
+    const obj3 = { source: _modDef6777 };
+    obj2.children = closure_1_14(native.Icon, obj3);
+    obj.children = closure_1_14(Pressables.PressableOpacity, obj2);
+    tmp2 = closure_1_14(React5, obj);
   }
   return tmp2;
 });
@@ -126,7 +126,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
   if (null == guild) {
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      tmp2 = state(StageSparkleDefault, {});
+      tmp2 = closure_1_14(StageSparkleDefault, {});
       cResult[0] = tmp2;
       let first = tmp2;
     } else {
@@ -140,7 +140,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
       return tmp5;
     }
     const obj2 = { style: tmp4.guildIcon, size: GuildIcon.GuildIconSizes.LARGE, guild };
-    const tmp9 = state(GuildIconDefault, obj2);
+    const tmp9 = closure_1_14(GuildIconDefault, obj2);
     cResult[1] = guild;
     cResult[2] = tmp4.guildIcon;
     cResult[3] = tmp9;
@@ -149,10 +149,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Header
 }) : (function HeaderIcon(guild) {
   guild = guild.guild;
   if (null == guild) {
-    let tmp7 = state(StageSparkleDefault, {});
+    let tmp7 = closure_1_14(StageSparkleDefault, {});
   } else {
     const obj = { style: tmp.guildIcon, size: GuildIcon.GuildIconSizes.LARGE, guild };
-    tmp7 = state(GuildIconDefault, obj);
+    tmp7 = closure_1_14(GuildIconDefault, obj);
   }
   return tmp7;
 });
@@ -179,7 +179,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
     const obj2 = { text: null };
     const intl = util.intl;
     obj2.text = intl.string(util.t.BYJgew);
-    const tmp10 = state(Form.FormLabel, obj2);
+    const tmp10 = closure_1_14(Form.FormLabel, obj2);
     cResult[2] = tmp10;
     let tmp8 = tmp10;
   } else {
@@ -196,7 +196,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
         }
         if (cResult[10] !== sendStartNotification) {
           const obj3 = { selected: sendStartNotification };
-          const tmp21 = state(native.Checkbox, obj3);
+          const tmp21 = closure_1_14(native.Checkbox, obj3);
           cResult[10] = sendStartNotification;
           cResult[11] = tmp21;
           let tmp19 = tmp21;
@@ -214,7 +214,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
           }
         }
         const obj4 = { DEPRECATED_style: tmp4.notificationToggle, label: tmp15, onPress: onToggle, trailing: tmp19 };
-        const tmp24 = state(Form.FormRow, obj4);
+        const tmp24 = closure_1_14(Form.FormRow, obj4);
         cResult[12] = onToggle;
         cResult[13] = tmp4.notificationToggle;
         cResult[14] = tmp15;
@@ -225,7 +225,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
       const obj5 = { style: tmp4.label, children: null };
       const items1 = [tmp8, tmp11];
       obj5.children = items1;
-      const tmp18 = closure_1_15(React5, obj5);
+      const tmp18 = value2(React5, obj5);
       cResult[7] = tmp4.label;
       cResult[8] = tmp11;
       cResult[9] = tmp18;
@@ -238,8 +238,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
     const obj7 = { style: tmp4.pillLabel, variant: "text-xxs/bold", color: "text-overlay-light", children: null };
     const intl2 = util.intl;
     obj7.children = intl2.string(util.t.y2b7CA);
-    obj6.children = state(Text_Text.Text, obj7);
-    tmp12 = state(React5, obj6);
+    obj6.children = closure_1_14(Text_Text.Text, obj7);
+    tmp12 = closure_1_14(React5, obj6);
   }
   cResult[3] = stateFromStores;
   cResult[4] = tmp4.pill;
@@ -260,22 +260,22 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notification
   const obj4 = { text: null };
   const intl = util.intl;
   obj4.text = intl.string(util.t.BYJgew);
-  const items1 = [state(Form.FormLabel, obj4), ];
+  const items1 = [closure_1_14(Form.FormLabel, obj4), ];
   let tmp5Result = null;
   if (stateFromStores) {
     const obj5 = { style: tmp.pill, children: null };
     const obj6 = { style: tmp.pillLabel, variant: "text-xxs/bold", color: "text-overlay-light", children: null };
     const intl2 = util.intl;
     obj6.children = intl2.string(util.t.y2b7CA);
-    obj5.children = state(Text_Text.Text, obj6);
-    tmp5Result = state(React5, obj5);
+    obj5.children = closure_1_14(Text_Text.Text, obj6);
+    tmp5Result = closure_1_14(React5, obj5);
   }
   items1[1] = tmp5Result;
   obj3.children = items1;
-  obj2.label = closure_1_15(React5, obj3);
+  obj2.label = value2(React5, obj3);
   obj2.onPress = onToggle;
-  obj2.trailing = state(native.Checkbox, { selected: sendStartNotification });
-  return state(Form.FormRow, obj2);
+  obj2.trailing = closure_1_14(native.Checkbox, { selected: sendStartNotification });
+  return closure_1_14(Form.FormRow, obj2);
 });
 let closure_20 = tmp5;
 const size = fn(2);
@@ -308,7 +308,7 @@ export default function StartStageChannelModal(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -351,7 +351,7 @@ export default function StartStageChannelModal(arg0) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(5632).APIError(closure_128_1);
+            const aPIError = new closure_0(5635).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -366,8 +366,8 @@ export default function StartStageChannelModal(arg0) {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(6906).hideHotspot(closure_0(6902).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(6906);
+                  tmp66(6912).hideHotspot(closure_0(6908).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(6912);
                 }
               }
             } else if (arg0 === 1) {
@@ -415,7 +415,7 @@ export default function StartStageChannelModal(arg0) {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("module_6774");
+      obj.source = require("module_6777");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     }

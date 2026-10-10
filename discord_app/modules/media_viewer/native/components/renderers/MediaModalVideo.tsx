@@ -1,11 +1,11 @@
-// === Module 13021: MediaModalVideo ===
+// === Module 13068: MediaModalVideo ===
 
-// Module 13021 (MediaModalVideo)
+// Module 13068 (MediaModalVideo)
 import c from "c" /* 576 */;
-import common_Video from "common/Video" /* 8409 */;
-import useMediaLoadingDefault from "useMediaLoading" /* 13022 */;
-import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 13023 */;
-import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 13024 */;
+import common_Video from "common/Video" /* 8425 */;
+import useMediaLoadingDefault from "useMediaLoading" /* 13069 */;
+import MediaModalLoadingOverlayDefault from "MediaModalLoadingOverlay" /* 13070 */;
+import MediaModalSpoilerOverlayDefault from "MediaModalSpoilerOverlay" /* 13071 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (tmp7) {
             if (cResult[8] !== style) {
-              tmp5 = tmp5(13023);
+              tmp5 = tmp5(13070);
               const obj2 = { style, status: "error" };
               tmp2 = React4(tmp5, obj2);
               cResult[8] = style;
@@ -83,7 +83,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                               }
                             }
                             const obj5 = { style, index, source };
-                            const tmp17 = React4(tmp5(13024), obj5);
+                            const tmp17 = React4(tmp5(13071), obj5);
                             cResult[22] = index;
                             cResult[23] = source;
                             cResult[24] = style;
@@ -93,7 +93,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                           let tmp13 = null;
                           if (isLoadingVisible) {
                             const obj6 = { style, status: "loading" };
-                            tmp13 = React4(tmp5(13023), obj6);
+                            tmp13 = React4(tmp5(13070), obj6);
                           }
                           cResult[19] = isLoadingVisible;
                           cResult[20] = style;

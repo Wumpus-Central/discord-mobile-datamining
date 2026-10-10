@@ -1,11 +1,11 @@
-// === Module 8692: GameAutocompleteActionCreators ===
+// === Module 8707: GameAutocompleteActionCreators ===
 
-// Module 8692 (GameAutocompleteActionCreators)
+// Module 8707 (GameAutocompleteActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1295 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8220 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8236 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 8219 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 8235 */;
 
 require = fn;
 let closure_6 = async function _fetchGameAutocomplete(arg0) {
@@ -19,7 +19,7 @@ let closure_6 = async function _fetchGameAutocomplete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

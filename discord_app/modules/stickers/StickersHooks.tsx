@@ -1,25 +1,25 @@
-// === Module 9728: StickersHooks ===
+// === Module 9757: StickersHooks ===
 
-// Module 9728 (StickersHooks)
+// Module 9757 (StickersHooks)
 import c from "c" /* 576 */;
 import util from "util" /* 1126 */;
 import UserSettings from "UserSettings" /* 2041 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4714 */;
-import StickersUtils from "StickersUtils" /* 5746 */;
-import StickersTypes from "StickersTypes" /* 5747 */;
-import StickerSendability from "StickerSendability" /* 7040 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 8556 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9711 */;
-import StickersActionCreators from "StickersActionCreators" /* 9729 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4755 */;
+import StickersUtils from "StickersUtils" /* 5749 */;
+import StickersTypes from "StickersTypes" /* 5750 */;
+import StickerSendability from "StickerSendability" /* 7046 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 8572 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 9740 */;
+import StickersActionCreators from "StickersActionCreators" /* 9758 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2086 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4900 */;
-import SortedGuildStore from "SortedGuildStore" /* 5970 */;
+import GuildStore from "GuildStore" /* 2087 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4939 */;
+import SortedGuildStore from "SortedGuildStore" /* 5963 */;
 import UserStore from "UserStore" /* 1390 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 6036 */;
-import StickersStore from "StickersStore" /* 6037 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 6029 */;
+import StickersStore from "StickersStore" /* 6030 */;
 
 const require = globalThis.__r;
 
@@ -230,7 +230,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGui
             return closure_1_9.getCurrentUser();
           }
         }
-        obj3.type = tmp45(5747).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
+        obj3.type = tmp45(5750).StickerCategoryTypes.EMPTY_GUILD_UPSELL;
         ({ id: obj6.id, name: obj6.name } = guild);
         obj3.stickers = [];
         tmp35(obj3);
@@ -779,15 +779,15 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
   const tmp9 = current(noop.useState(true), 2);
   [tmp12, asyncGeneratorStep] = current(noop.useState(false), 2);
   if (cResult[3] !== id) {
-    let isGuildStickerResult = tmp(5746).isGuildSticker(id);
+    let isGuildStickerResult = tmp(5749).isGuildSticker(id);
     if (!isGuildStickerResult) {
-      isGuildStickerResult = tmp(5746).isStandardSticker(id);
-      const tmpResult4 = tmp(5746);
+      isGuildStickerResult = tmp(5749).isStandardSticker(id);
+      const tmpResult4 = tmp(5749);
     }
     cResult[3] = id;
     cResult[4] = isGuildStickerResult;
     let tmp13 = isGuildStickerResult;
-    const tmpResult3 = tmp(5746);
+    const tmpResult3 = tmp(5749);
   } else {
     tmp13 = cResult[4];
   }
@@ -832,7 +832,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     }
                   } else {
                     try {
@@ -913,7 +913,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     }
                   } else {
                     try {
@@ -992,7 +992,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     }
                   } else {
                     try {
@@ -1072,7 +1072,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     }
                   } else {
                     try {
@@ -1148,7 +1148,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       }
                     } else {
                       try {
@@ -1225,7 +1225,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       }
                     } else {
                       try {
@@ -1327,8 +1327,8 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
   const tmp5 = obj4(noop.useState(false), 2);
   let isGuildStickerResult = require("StickersUtils").isGuildSticker(renderableSticker);
   if (!isGuildStickerResult) {
-    isGuildStickerResult = tmp(5746).isStandardSticker(renderableSticker);
-    const tmpResult = tmp(5746);
+    isGuildStickerResult = tmp(5749).isStandardSticker(renderableSticker);
+    const tmpResult = tmp(5749);
   }
   obj4 = { hasFetched: tmp6, isReturnable: isGuildStickerResult, renderableSticker, shouldFetch: tmp4[0], stickersStoreDefinition: stateFromStores };
   noop = obj2.useRef(obj4);
@@ -1348,7 +1348,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useStickerF
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -1470,7 +1470,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
         const guildId = flag.getGuildId();
         const tmpResult = collapsedStickersCategories(num[16]);
         let canCreateExpressions = null != guild;
-        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5747).StickerCategoryTypes.FAVORITE);
+        const findIndexResult = visibleRowIndex.findIndex((type) => type.type === category(5750).StickerCategoryTypes.FAVORITE);
         if (canCreateExpressions) {
           canCreateExpressions = guildId === guild.id;
         }
@@ -1538,7 +1538,7 @@ export const useStickersGrid = function useStickersGrid(collapsedStickersCategor
           rowIndex = rowIndex + 1;
         }
         gridSectionIndex = gridSectionIndex + 1;
-        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5747).StickerCategoryTypes.RECENT);
+        findIndexResult1 = visibleRowIndex.findIndex((type) => type.type === category(5750).StickerCategoryTypes.RECENT);
       }
       if (null == items) {
         const iter = stickersCategories[Symbol.iterator]();

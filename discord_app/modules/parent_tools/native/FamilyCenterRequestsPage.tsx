@@ -1,31 +1,31 @@
-// === Module 15109: FamilyCenterRequestsPage ===
+// === Module 15168: FamilyCenterRequestsPage ===
 
-// Module 15109 (FamilyCenterRequestsPage)
+// Module 15168 (FamilyCenterRequestsPage)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1126 */;
-import _modDef2565 from "module_2565" /* 2565 */;
-import Text_Text from "Text/Text" /* 5087 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6810 */;
-import useUserLinks from "useUserLinks" /* 7720 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7721 */;
-import useHelpLineVisibility from "useHelpLineVisibility" /* 10392 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11487 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 15070 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 15110 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 15112 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 15121 */;
+import _modDef2568 from "module_2568" /* 2568 */;
+import Text_Text from "Text/Text" /* 5088 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6813 */;
+import useUserLinks from "useUserLinks" /* 7738 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7739 */;
+import useHelpLineVisibility from "useHelpLineVisibility" /* 10425 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11533 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 15129 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 15169 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 15174 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 15182 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7253);
+const FamilyCenterConstants = fn(7259);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } = FamilyCenterConstants);
-const THROUGHLINE_URL = fn(10348).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(10381).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj2 = { container: { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   if (cResult[0] !== tmp6) {
     const intl = util.intl;
     const obj3 = { maxConnections: tmp6 };
-    const formatToPlainStringResult = intl.formatToPlainString(_modDef2565["1/PzIj"], obj3);
+    const formatToPlainStringResult = intl.formatToPlainString(_modDef2568["1/PzIj"], obj3);
     cResult[0] = tmp6;
     cResult[1] = formatToPlainStringResult;
     let tmp7 = formatToPlainStringResult;
@@ -47,7 +47,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   if (cResult[2] !== tmp6) {
     const intl2 = util.intl;
     const obj4 = { maxConnections: tmp6 };
-    const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2565.RcTgiE, obj4);
+    const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2568.RcTgiE, obj4);
     cResult[2] = tmp6;
     cResult[3] = formatToPlainStringResult1;
     let tmp9 = formatToPlainStringResult1;
@@ -82,7 +82,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   const hasMaxConnections = useUserLinks.useHasMaxConnections();
   useAgeSpecificText;
   const intl = util.intl;
-  intl.formatToPlainString(_modDef2565["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
+  intl.formatToPlainString(_modDef2568["1/PzIj"], { maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer });
   const intl2 = util.intl;
   let tmp10 = null;
   if (hasMaxConnections) {
@@ -93,7 +93,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   }
   return tmp10;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj6 = { container: null, supportHeader: null };
 let obj3 = { display: "flex", paddingTop: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_12, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, borderTopWidth: 1 };
 obj6.container = { display: "flex", marginTop: nativeDefault.space.PX_16 };
@@ -115,7 +115,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
         ({ container, supportHeader } = tmp4);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = util.intl;
-          const stringResult = intl3.string(_modDef2565["7/tVhv"]);
+          const stringResult = intl3.string(_modDef2568["7/tVhv"]);
           cResult[3] = stringResult;
           let tmp13 = stringResult;
         } else {
@@ -161,13 +161,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   }
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
-    let formatResult = intl2.format(_modDef2565["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    let formatResult = intl2.format(_modDef2568["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (shouldShowThroughlineLink) {
       const intl = util.intl;
       const obj7 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2565["6tsC8u"], obj7);
+      formatResult = intl.format(_modDef2568["6tsC8u"], obj7);
     }
   }
   cResult[0] = shouldShowHelplineLink;
@@ -179,13 +179,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
     const intl2 = util.intl;
-    let formatResult = intl2.format(_modDef2565["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    let formatResult = intl2.format(_modDef2568["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
       const intl = util.intl;
       const obj2 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2565["6tsC8u"], obj2);
+      formatResult = intl.format(_modDef2568["6tsC8u"], obj2);
     }
   }
   let tmp11 = null;
@@ -193,7 +193,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
     const obj3 = { style: tmp.container, children: null };
     const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
     const intl3 = util.intl;
-    obj4.children = intl3.string(_modDef2565["7/tVhv"]);
+    obj4.children = intl3.string(_modDef2568["7/tVhv"]);
     const items = [closure_1_8(Text_Text.Text, obj4), ];
     const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
     items[1] = closure_1_8(Text_Text.Text, obj5);
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
   }
   return tmp11;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 const obj11 = { scrollView: { flex: 1 }, container: null };
 const obj8 = { marginBottom: nativeDefault.space.PX_4 };
 obj11.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };

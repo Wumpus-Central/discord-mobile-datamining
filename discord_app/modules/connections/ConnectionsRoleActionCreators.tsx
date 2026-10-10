@@ -1,6 +1,6 @@
-// === Module 10693: ConnectionsRoleActionCreators ===
+// === Module 10728: ConnectionsRoleActionCreators ===
 
-// Module 10693 (ConnectionsRoleActionCreators)
+// Module 10728 (ConnectionsRoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -91,7 +91,7 @@ let closure_5 = async function _putRoleConnectionsConfigurations(arg0) {
         const obj11 = { type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS", roleId: closure_131_1, roleConnectionConfigurations: closure_131_2 };
         closure_132_1(closure_132_2[3]).dispatch(obj11);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp28) {
       c6 = tmp;

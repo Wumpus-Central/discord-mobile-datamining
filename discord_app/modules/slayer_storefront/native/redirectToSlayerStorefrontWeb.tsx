@@ -1,6 +1,6 @@
-// === Module 10132: redirectToSlayerStorefrontWeb ===
+// === Module 10161: redirectToSlayerStorefrontWeb ===
 
-// Module 10132 (redirectToSlayerStorefrontWeb)
+// Module 10161 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -50,10 +50,10 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
           const obj6 = { value, done: true };
           return obj6;
         } else if (null == closure_129_0) {
-          const obj8 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
+          const obj8 = { text: null };
           const intl2 = closure_130_0(closure_130_2[4]).intl;
-          obj8.content = intl2.string(closure_130_0(closure_130_2[4]).t["rTU7/z"]);
-          closure_130_1(closure_130_2[3]).open(obj8);
+          obj8.text = intl2.string(closure_130_0(closure_130_2[4]).t["rTU7/z"]);
+          closure_130_1(closure_130_2[3]).open("SHOP_ITEM_HANDOFF_ERROR", obj8);
           c6 = 3;
           return { value: false, done: true };
         } else {
@@ -75,10 +75,10 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
         obj11.tags = obj12;
         const result = closure_130_0(closure_130_2[6]).captureBillingException(closure_129_4, obj11);
         const obj2 = closure_130_0(closure_130_2[6]);
-        const obj13 = { key: "SHOP_ITEM_HANDOFF_ERROR", content: null };
+        const obj13 = { text: null };
         const intl = closure_130_0(closure_130_2[4]).intl;
-        obj13.content = intl.string(closure_130_0(closure_130_2[4]).t["rTU7/z"]);
-        closure_130_1(closure_130_2[3]).open(obj13);
+        obj13.text = intl.string(closure_130_0(closure_130_2[4]).t["rTU7/z"]);
+        closure_130_1(closure_130_2[3]).open("SHOP_ITEM_HANDOFF_ERROR", obj13);
         c6 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {

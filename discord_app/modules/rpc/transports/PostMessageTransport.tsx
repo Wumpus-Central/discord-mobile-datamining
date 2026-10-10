@@ -1,15 +1,15 @@
-// === Module 10894: PostMessageTransport ===
+// === Module 10934: PostMessageTransport ===
 
-// Module 10894 (PostMessageTransport)
+// Module 10934 (PostMessageTransport)
 import DurationsDefault from "Durations" /* 1102 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 10895 */;
-import RPCErrorDefault from "RPCError" /* 10896 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 10935 */;
+import RPCErrorDefault from "RPCError" /* 10936 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2063 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2064 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(5636).RPC_EMBEDDED_APP_SCOPE;
+const RPC_EMBEDDED_APP_SCOPE = fn(5639).RPC_EMBEDDED_APP_SCOPE;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
@@ -51,9 +51,9 @@ class PostMessageTransport extends EventEmitter {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
           const obj = closure_1_1(1265);
-          obj2.channel_id = closure_1_0(4698).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4698);
-          obj2.guild_id = closure_1_0(4698).getEmbeddedActivityLocationGuildId(tmp2.location);
+          obj2.channel_id = closure_1_0(4739).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4739);
+          obj2.guild_id = closure_1_0(4739).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -133,7 +133,7 @@ class PostMessageTransport extends EventEmitter {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -289,7 +289,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_7.id);
               constants = 0;
               constants2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -338,7 +338,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -385,7 +385,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             c5 = 0;
