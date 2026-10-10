@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/quests/native/images",
-  width: 48,
-  height: 45,
+  width: 345,
+  height: 82,
   scales: [1, 2, 3],
-  hash: "fb99def53a2e7c887031d561bd6a6700",
-  name: "wreath_light",
+  hash: "91248bc802fa2159ae23ab96ddaf91db",
+  name: "clouds_light_background",
   type: "png",
 });

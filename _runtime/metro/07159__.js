@@ -1,22 +1,13 @@
 // _runtime/metro/07159__.js
+import registerAsset from "01132__.js";
 
-export default function areHookInputsEqual(arg0, arg1) {
-  if (arg0.length !== arg1.length) {
-    return false;
-  } else {
-    if (0 < arg1.length) {
-      let num3 = 0;
-      if (0 < arg0.length) {
-        const _Object = Object;
-        while (Object.is(arg0[num3], arg1[num3])) {
-          let sum = num3 + 1;
-          if (sum < arg1.length) {
-            num3 = sum;
-          }
-        }
-        return false;
-      }
-    }
-    return true;
-  }
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 343,
+  height: 112,
+  scales: [2, 3],
+  hash: "a236f8cc27bca615087c819a6d4db4e6",
+  name: "img_clouds_header_tier_2",
+  type: "png",
+});

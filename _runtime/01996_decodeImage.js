@@ -2953,8 +2953,8 @@ let closure_130_11 = function getKDtree(buffer, arg1, arg2) {
   rect = {
     i0: 0,
     i1: buffer.length,
-    bst: state(buffer, rect.i0, rect.i1),
-    est: closure_1_15(rect.bst),
+    bst: closure_1_14(buffer, rect.i0, rect.i1),
+    est: value2(rect.bst),
     tdst: 0,
     left: null,
     right: null,
@@ -2994,7 +2994,7 @@ let closure_130_11 = function getKDtree(buffer, arg1, arg2) {
         let tmp14 = i0;
         if (i0 < diff) {
           while (true) {
-            let tmp4 = __initData2;
+            let tmp4 = map1;
             let tmp6 = sum3;
             let tmp7 = sum3;
             if (
@@ -3003,7 +3003,7 @@ let closure_130_11 = function getKDtree(buffer, arg1, arg2) {
             ) {
               do {
                 let sum = tmp6 + 4;
-                tmp4 = __initData2;
+                tmp4 = map1;
                 tmp6 = sum;
                 tmp7 = sum;
                 sum1 = buffer[sum] * e[0] + buffer[sum + 1] * e[1] + buffer[sum + 2] * e[2] + buffer[sum + 3] * e[3];
@@ -3054,8 +3054,8 @@ let closure_130_11 = function getKDtree(buffer, arg1, arg2) {
         if (tmp26.i0 < sum5) {
           if (tmp26.i1 > sum5) {
             let rect1 = { i0: tmp26.i0, i1: sum5, bst: null, est: null, tdst: 0, left: null, right: null };
-            rect1.bst = state(buffer, rect1.i0, rect1.i1);
-            rect1.est = closure_1_15(rect1.bst);
+            rect1.bst = closure_1_14(buffer, rect1.i0, rect1.i1);
+            rect1.est = value2(rect1.bst);
             let rect2 = { i0: sum5, i1: tmp26.i1, bst: null, est: null, tdst: 0, left: null, right: null };
             let bst = { R: [], m: [], N: tmp26.bst.N - rect1.bst.N };
             rect2.bst = bst;
@@ -3069,7 +3069,7 @@ let closure_130_11 = function getKDtree(buffer, arg1, arg2) {
               rect2.bst.m[num8] = tmp26.bst.m[num8] - rect1.bst.m[num8];
               num8 = num8 + 1;
             } while (num8 < 4);
-            rect2.est = closure_1_15(rect2.bst);
+            rect2.est = value2(rect2.bst);
             tmp26.left = rect1;
             tmp26.right = rect2;
             items[num5] = rect1;
@@ -3193,20 +3193,20 @@ let closure_130_15 = function estats(arg0) {
   let num3 = 0;
   let tmp5 = items1;
   if (0 != N) {
-    const multVecResult = value2.multVec(items, items1);
+    const multVecResult = value3.multVec(items, items1);
     const _Math = Math;
-    const sqrtResult = Math.sqrt(value2.dot(multVecResult, multVecResult));
+    const sqrtResult = Math.sqrt(value3.dot(multVecResult, multVecResult));
     let num7 = 0;
     let tmp8 = sqrtResult;
-    let smlResult = value2.sml(1 / sqrtResult, multVecResult);
+    let smlResult = value3.sml(1 / sqrtResult, multVecResult);
     const sum = num7 + 1;
     num3 = tmp8;
     tmp5 = smlResult;
     while (sum < 16) {
-      let multVecResult1 = value2.multVec(items, smlResult);
+      let multVecResult1 = value3.multVec(items, smlResult);
       let _Math2 = Math;
-      let sqrtResult1 = Math.sqrt(value2.dot(multVecResult1, multVecResult1));
-      let smlResult1 = value2.sml(1 / sqrtResult1, multVecResult1);
+      let sqrtResult1 = Math.sqrt(value3.dot(multVecResult1, multVecResult1));
+      let smlResult1 = value3.sml(1 / sqrtResult1, multVecResult1);
       num7 = sum;
       tmp8 = sqrtResult1;
       smlResult = smlResult1;
@@ -3232,8 +3232,8 @@ let closure_130_15 = function estats(arg0) {
     q: items2,
     e: tmp5,
     L: num3,
-    eMq255: value2.dot(value2.sml(255, items2), tmp5),
-    eMq: value2.dot(tmp5, items2),
+    eMq255: value3.dot(value3.sml(255, items2), tmp5),
+    eMq: value3.dot(tmp5, items2),
     rgba: null,
   };
   const tmp16 = Math.round(255 * items2[3]) << 24;

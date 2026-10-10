@@ -1,41 +1,21 @@
 // _runtime/metro/06566__.js
-import _mod6567 from "06567__.js";
-
-function _get() {
-  if (typeof Reflect !== "undefined") {
-    const _Reflect2 = Reflect;
-    if (Reflect.get) {
-      const _Reflect = Reflect;
-      exports = get.bind();
-    }
-    module.exports = exports;
-    const apply = exports.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
-    } else {
-      applyArgumentsResult = apply(null, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  exports = (arg0, arg1, arg2) => {
-    const tmp = _mod6567(arg0, arg1);
-    if (tmp) {
-      const _Object = Object;
-      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
-      if (iter.get) {
-        let tmp3 = arg2;
-        const get = iter.get;
-        const call = get.call;
-        if (arguments.length < 3) {
-          tmp3 = arg0;
-        }
-        typeof call === "unknown" ? get() : call(tmp3);
-      } else {
-        return iter.value;
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
       }
-    }
-  };
+      return __proto__;
+    };
+  }
+  module.exports = exports;
+  return exports(arg0);
 }
-let exports = _get;
+let exports = _getPrototypeOf;
 
-export default _get;
+export default _getPrototypeOf;

@@ -1,7 +1,8 @@
 // _runtime/metro/06318__.js
 import _mod19 from "00019__.js";
 
-const context = _mod19.createContext(null);
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export const BottomSheetModalContext = context;
-export const BottomSheetModalProvider = context.Provider;
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

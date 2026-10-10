@@ -62,7 +62,7 @@ function stringify(
   get,
 ) {
   closure_0 = fn4;
-  let value4 = get.get(closure_9);
+  value4 = get.get(closure_9);
   let flag = false;
   let num = 0;
   let num2 = 0;

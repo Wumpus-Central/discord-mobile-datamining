@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6572d140954790b36ebb034e8accf006",
-  name: "UndoIcon",
+  hash: "f8bf13e5289aa31d46196df3283f80c3",
+  name: "FullscreenEnterIcon",
   type: "png",
 });

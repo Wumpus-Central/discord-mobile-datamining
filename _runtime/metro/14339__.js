@@ -1,13 +1,15 @@
 // _runtime/metro/14339__.js
-import registerAsset from "01132__.js";
+import _mod14332 from "14332__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/status",
-  width: 36,
-  height: 24,
-  scales: [2, 3],
-  hash: "48a492306912f6e40271e3f606596ed0",
-  name: "StatusVROnline",
-  type: "png",
-});
+export default (arg0, arg1) => {
+  try {
+    const tmp8 = new _mod14332(arg0, arg1);
+    let str = tmp8.range;
+    if (!str) {
+      str = "*";
+    }
+    return str;
+  } catch (err) {
+    return null;
+  }
+};

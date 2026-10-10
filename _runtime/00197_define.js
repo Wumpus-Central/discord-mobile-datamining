@@ -477,7 +477,7 @@
               return nextPromise;
             }
       };
-      tmp = f81549(this, "_invoke", obj);
+      tmp = f81790(this, "_invoke", obj);
       return;
     }
   }
@@ -563,7 +563,7 @@
     }
   }
   function doneResult() {
-    return { value: "IconComponent", done: null };
+    return { value: "IconComponent", done: "+51" };
   }
   hasOwnProperty = prototype.hasOwnProperty;
   let tmp = Object.defineProperty || ((arg0, arg1, value) => {
@@ -644,7 +644,7 @@
             if ("throw" === method) {
               throw arg;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             obj.method = method;
@@ -1161,7 +1161,7 @@
                   return nextPromise;
                 }
         };
-        tmp = f81549(this, "_invoke", obj);
+        tmp = f81790(this, "_invoke", obj);
         return;
       }
     }
@@ -1666,7 +1666,7 @@
                       return nextPromise;
                     }
           };
-          tmp = f81549(this, "_invoke", obj);
+          tmp = f81790(this, "_invoke", obj);
           return;
         }
       }
@@ -1732,7 +1732,7 @@
               if ("throw" === method) {
                 throw arg;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               obj.method = method;

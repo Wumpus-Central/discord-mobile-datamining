@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "7726a7882d06e6e78ae64010f2194cb2",
-  name: "ChevronSmallRightIcon",
+  hash: "5a0d5d16e378eea1c4baa447014a7b8d",
+  name: "CheckmarkLargeIcon",
   type: "png",
 });

@@ -23,7 +23,7 @@ fn = function n(toValue, userConfig, callback) {
       duration: 2000,
       dampingRatio: 0.5,
       reduceMotion: "st",
-      clamp: "formatToPlainString",
+      clamp: "message",
     };
     const merged = Object.assign(dependencyMap);
     let duration;

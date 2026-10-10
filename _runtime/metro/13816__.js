@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 34,
-  height: 34,
-  scales: [2, 3],
-  hash: "36d299b9a20b89def78675ec02a95049",
-  name: "badge_2",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "e64e51684091ac2de27992b084fed7fd",
+  name: "img_wumpus_nitro_tier_0",
   type: "png",
 });

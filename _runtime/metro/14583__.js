@@ -1,7 +1,6 @@
 // _runtime/metro/14583__.js
-import _mod14584 from "14584__.js";
-import get_ActivityIndicator from "00017__.js";
+import _mod14531 from "14531__.js";
+import _mod14532 from "14532__.js";
 
-export default function getReactNativeVersion() {
-  return _mod14584.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
-}
+export default _mod14531 &&
+  _mod14532(() => 42 !== Object.defineProperty(() => {}, "prototype", { value: 42, writable: false }).prototype);

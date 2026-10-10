@@ -92,8 +92,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "enabled",
       lastTimestamp: null,
-      startTimestamp: "MESSAGE_CREATE",
-      reduceMotion: "MESSAGE_REACTION_ADD",
+      startTimestamp: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+      reduceMotion: null,
     };
     let num = obj.velocity;
     if (num == null) {

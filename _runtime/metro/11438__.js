@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/safety_hub/images",
-  width: 350,
-  height: 350,
-  scales: [1],
-  hash: "ebaa362a049339e084011170417c750e",
-  name: "video_light",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "cc5db5ae696f6fff236bd5ec86149ea8",
+  name: "ClockWarningIcon",
   type: "png",
 });

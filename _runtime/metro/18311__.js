@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 165,
-  height: 178,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 181,
+  height: 141,
   scales: [2, 3],
-  hash: "b685c2aca3ddb21997a856f7601ff6ad",
-  name: "img_vanity_urls",
+  hash: "c7648e89b902e67df37080bfc90491c5",
+  name: "empty_server_settings_emoji_light",
   type: "png",
 });

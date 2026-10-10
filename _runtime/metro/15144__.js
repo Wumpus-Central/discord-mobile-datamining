@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c8ba289430cf44af74e8a6dfe840935f",
-  name: "LaptopPhoneIcon",
+  hash: "f5391dfd0b449071e14dba1ee723d353",
+  name: "ChatCheckIcon",
   type: "png",
 });

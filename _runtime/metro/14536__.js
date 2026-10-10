@@ -1,12 +1,12 @@
 // _runtime/metro/14536__.js
-import _mod14474 from "14474__.js";
-import all from "14500__.js";
+import _mod14532 from "14532__.js";
 
-let _moduleResult = all(_mod14474.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod14474.WeakMap));
-  const obj = /native code/;
-}
-
-export default _moduleResult;
+export default !_mod14532(() => {
+  const fn = () => {};
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});

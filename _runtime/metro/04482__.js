@@ -1,99 +1,120 @@
 // _runtime/metro/04482__.js
-import _mod4163 from "04163__.js";
-import _typeof_mod from "04158__.js";
-import requiredArgs_mod from "../04159_requiredArgs.js";
-import module_4162_mod from "04162__.js";
+import _mod4204 from "04204__.js";
+import startOfWeek_mod from "../04358_startOfWeek.js";
+import _typeof_mod from "04199__.js";
+import module_4203_mod from "04203__.js";
+import requiredArgs_mod from "../04200_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfWeek;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+startOfWeek = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = _typeof;
 }
-requiredArgs = tmp5;
-let module_4162 = module_4162_mod;
-if (!module_4162) {
-  const obj3 = { default: module_4162 };
+_typeof = tmp5;
+let module_4203 = module_4203_mod;
+if (!module_4203) {
+  const obj3 = { default: module_4203 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4162;
+  tmp7 = module_4203;
 }
-module_4162 = tmp7;
+module_4203 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function setUTCDay(arg0, arg1, weekStartsOn) {
-  requiredArgs.default(2, arguments);
-  const defaultOptions = _mod4163.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
+export default function getWeekYear(arg0, firstWeekContainsDate) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  const defaultOptions = _mod4204.getDefaultOptions();
+  let prop;
+  if (null != firstWeekContainsDate) {
+    prop = firstWeekContainsDate.firstWeekContainsDate;
   }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
+  if (null === prop) {
+    let prop1;
+    if (null != firstWeekContainsDate) {
+      locale = firstWeekContainsDate.locale;
       if (null !== locale) {
         if (undefined !== locale) {
           options = locale.options;
           if (null !== options) {
             if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
+              prop1 = options.firstWeekContainsDate;
             }
           }
         }
       }
     }
-    weekStartsOn = weekStartsOn1;
+    prop = prop1;
   }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
   }
-  if (null === weekStartsOn) {
+  if (null === prop) {
     const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
+    let prop2;
     if (null !== locale2) {
       if (undefined !== locale2) {
         const options2 = locale2.options;
         if (null !== options2) {
           if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
+            prop2 = options2.firstWeekContainsDate;
           }
         }
       }
     }
-    weekStartsOn = weekStartsOn2;
+    prop = prop2;
   }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
     }
   }
-  const defaultResult1 = module_4162.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = _typeof.default(arg0);
-      const defaultResult3 = module_4162.default(arg1);
-      let num4 = 0;
-      const uTCDay = defaultResult2.getUTCDay();
-      if ((defaultResult3 % 7 + 7) % 7 < defaultResult1) {
-        num4 = 7;
+  const defaultResult2 = module_4203.default(num);
+  if (defaultResult2 >= 1) {
+    if (defaultResult2 <= 7) {
+      const _Date = Date;
+      const date = new Date(0);
+      date.setFullYear(fullYear + 1, 0, defaultResult2);
+      date.setHours(0, 0, 0, 0);
+      const _Date2 = Date;
+      const date1 = new Date(0);
+      date1.setFullYear(fullYear, 0, defaultResult2);
+      date1.setHours(0, 0, 0, 0);
+      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
+      const time = defaultResult1.getTime();
+      if (time >= defaultResult3.getTime()) {
+        let sum = fullYear + 1;
+      } else {
+        const time1 = defaultResult1.getTime();
+        sum = fullYear;
+        if (time1 < defaultResult4.getTime()) {
+          sum = fullYear - 1;
+        }
       }
-      const diff = num4 + defaultResult3 - uTCDay;
-      defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff);
-      return defaultResult2;
+      return sum;
     }
   }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
   throw rangeError;
 };
 export default exports.default;

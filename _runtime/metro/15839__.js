@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4aac4b9e524273cde97c71cf7da9357a",
-  name: "DoubleCheckmarkIcon",
+  hash: "e0471dd70c51b44f6fe3c89ec72a7182",
+  name: "MobilePhoneSettingsIcon",
   type: "png",
 });

@@ -618,7 +618,7 @@ function forEachStep(self, call, iter, self2) {
     if (!iter) {
       tmp7 = value;
     } else {
-      let value4 = iter.value;
+      value4 = iter.value;
       let obj = priv;
       if (!priv(self, "dispose")) {
         key = obj(self, "length");
@@ -671,7 +671,7 @@ function get(self, arg1, arg2) {
       if (!iter) {
         let iter2 = value;
       } else {
-        let value4 = iter.value;
+        value4 = iter.value;
         if (!priv(self, "dispose")) {
           value2 = "length";
           key = priv(self, "length");

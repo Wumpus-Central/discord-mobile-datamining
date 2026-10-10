@@ -97,7 +97,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                   let obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -148,7 +148,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                       obj9.attributes = closure_129_1;
                       obj5.startSpanManual(obj9, (() => {
-                        closure_0 = closure_2(/* F157352 */ function() { ... });
+                        closure_0 = closure_2(/* F157808 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(tmp2[2]);
@@ -161,7 +161,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                     obj10.attributes = closure_129_1;
                     obj2.startSpan(obj10, (() => {
-                      closure_0 = closure_2(/* F157354 */ function() { ... });
+                      closure_0 = closure_2(/* F157810 */ function() { ... });
                       return () => { ... };
                     })());
                     let obj4 = str(tmp2[2]);
@@ -220,7 +220,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                   let obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+51" };
                                 }
                               } else {
                                 try {
@@ -326,7 +326,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                             closure_0 = [...arguments];
                                             c3 = 0;
                                             c4 = 0;
-                                            const iter = (/* F151911 */ function*() { ... })();
+                                            const iter = (/* F152374 */ function*() { ... })();
                                             iter.next();
                                             return iter;
                                           });

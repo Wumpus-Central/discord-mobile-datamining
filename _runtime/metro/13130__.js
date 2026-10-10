@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "275bd5b71554351f2696bfdcf78e312a",
-  name: "PaperPlusIcon",
+  hash: "5caaadc4fb41849c36d80e2425141f40",
+  name: "NewUserIcon",
   type: "png",
 });

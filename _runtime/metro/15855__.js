@@ -3,9 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "5e84f9eca1bcd2b0b2019b6de2f79246",
-  name: "hi.messages.5e84f9eca1bcd2b0b2019b6de2f79246.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "1c2e533ca379db7ea82903ea36d239f5",
+  name: "FileWarningIcon",
+  type: "png",
 });

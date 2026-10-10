@@ -270,7 +270,7 @@ function hoistSelectors(arg0) {
 export { hoistSelectors };
 export const isStructurallySame = function isStructurallySame(arr, arr2) {
   const map = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   closure_129_0 = map;
   const item = arr.forEach((value) => {
     options = value;

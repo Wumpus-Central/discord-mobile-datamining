@@ -1,13 +1,26 @@
 // _runtime/metro/07839__.js
-const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    },
-  },
-  5: "PentaxModelID",
-  555: "LevelInfo",
-};
+import findOffsets from "../07836_findOffsets.js";
 
-export default obj;
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  },
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  },
+};

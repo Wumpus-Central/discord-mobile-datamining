@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 159,
-  height: 105.5,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 250,
+  height: 200,
   scales: [2, 3],
-  hash: "deeeb1ec32f8166fcc70387b3490f426",
-  name: "role_subscription_lanyard_illo",
+  hash: "3c95b7ec7d2eb4c8fde35f37e918dd98",
+  name: "img_bans_empty_light",
   type: "png",
 });

@@ -1,26 +1,12 @@
 // _runtime/metro/04445__.js
-import _typeof_mod from "04158__.js";
-import requiredArgs_mod from "../04159_requiredArgs.js";
+import code from "02131__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function getYear(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getFullYear();
-};
+export default tmp3.default;
 export default exports.default;

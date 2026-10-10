@@ -1,45 +1,28 @@
 // _runtime/metro/07852__.js
-import _mod7809 from "07809__.js";
-import get0thIfdOffset from "../07829_get0thIfdOffset.js";
-import IFD_TYPE_0TH from "../07830_IFD_TYPE_0TH.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export default {
-  read(byteLength, sum, arg2, byteOrder, arg4) {
-    const ifd = get0thIfdOffset.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
-    let tmp6 = ifd;
-    if (ifd.ShotInfo) {
-      value = ifd.ShotInfo.value;
-      const obj2 = {};
-      if (undefined !== value[27]) {
-        const obj3 = { value: value[27], description: null };
-        let str = "None";
-        if (0 !== value[27]) {
-          let str2 = "Rotate 90 CW";
-          if (1 !== tmp7) {
-            let str3 = "Rotate 180";
-            if (2 !== tmp7) {
-              let str4 = "Unknown";
-              if (3 === tmp7) {
-                str4 = "Rotate 270 CW";
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        obj3.description = str;
-        obj2.AutoRotate = obj3;
-      }
-      const tmp3Result = _mod7809;
-      delete tmp[tmp2];
-      tmp6 = _mod7809.objectAssign({}, ifd, obj2);
-      const objectAssignResult = _mod7809.objectAssign({}, ifd, obj2);
+export const getStringValue = function getStringValue(value) {
+  const mapped = value.map((item) => String.fromCharCode(item));
+  return mapped.join("");
+};
+export const getEncodedString = function getEncodedString(arr) {
+  if (arr.length >= 8) {
+    const substr = arr.slice(0, 8);
+    const mapped = substr.map((item) => String.fromCharCode(item));
+    const joined = mapped.join("");
+    if ("ASCII\0\0\0" === joined) {
+      const substr1 = arr.slice(8);
+      const mapped1 = substr1.map((item) => String.fromCharCode(item));
+      return mapped1.join("");
+    } else if ("JIS\0\0\0\0\0" === joined) {
+      return "[JIS encoded text]";
+    } else if ("UNICODE\0" === joined) {
+      return "[Unicode encoded text]";
+    } else if ("\0\0\0\0\0\0\0\0" === joined) {
+      return "[Undefined encoding]";
     }
-    return tmp6;
-  },
-  SHOT_INFO_AUTO_ROTATE: 27,
+  }
+  return "Undefined";
+};
+export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
+  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
 };

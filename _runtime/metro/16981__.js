@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 84.5,
+  height: 90.5,
   scales: [2, 3],
-  hash: "c633d33c98eaf36e731a0f2d3f8db716",
-  name: "ChatShieldIcon",
+  hash: "89e957c2ca19c43cdc74008a47a75acc",
+  name: "money_birb_placeholder_light",
   type: "png",
 });

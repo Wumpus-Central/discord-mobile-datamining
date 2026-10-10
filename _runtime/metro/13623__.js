@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 411,
+  height: 134,
   scales: [2, 3],
-  hash: "67d5ffa8705bc838eb19bd17c2eff4ab",
-  name: "custom_sounds",
+  hash: "a7a629f03005b09b581ccdee10e4a92d",
+  name: "img_boost_subheader_resub_mobile",
   type: "png",
 });

@@ -1,81 +1,69 @@
 // _runtime/metro/07846__.js
-let closure_0 = {
-  xmp: "http://ns.adobe.com/xap/1.0/",
-  tiff: "http://ns.adobe.com/tiff/1.0/",
-  exif: "http://ns.adobe.com/exif/1.0/",
-  dc: "http://purl.org/dc/elements/1.1/",
-  xmpMM: "http://ns.adobe.com/xap/1.0/mm/",
-  stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#",
-  stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#",
-  photoshop: "http://ns.adobe.com/photoshop/1.0/",
-};
+import _mod7827 from "07827__.js";
+import _modDef7832 from "07832__.js";
+import get0thIfdOffset from "../07847_get0thIfdOffset.js";
+import IFD_TYPE_0TH from "../07848_IFD_TYPE_0TH.js";
 
-export const isMissingNamespaceError = function isMissingNamespaceError(message) {
-  const items = [
-    "prefix is non-null and namespace is null",
-    "prefix not bound to a namespace",
-    "prefix inte bundet till en namnrymd",
-    /Namespace prefix .+ is not defined/,
-  ];
-  let num = 0;
-  if (0 < items.length) {
-    const _RegExp = RegExp;
-    const regExp = new RegExp(items[num]);
-    while (!regExp.test(message.message)) {
-      num = num + 1;
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+let c3 = "Exif IFD Pointer";
+let c4 = "GPS Info IFD Pointer";
+let c5 = "Interoperability IFD Pointer";
+
+export default {
+  read(getUint16, c5, arg2) {
+    const byteOrder = _modDef7832.getByteOrder(getUint16, c5);
+    const obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(
+      getUint16,
+      IFD_TYPE_0TH.IFD_TYPE_0TH,
+      c5,
+      get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder),
+      byteOrder,
+      arg2,
+    );
+    let objectAssignResult = ifd;
+    if (undefined !== ifd[c3]) {
+      const tmp3Result6 = get0thIfdOffset;
+      objectAssignResult = _mod7827.objectAssign(
+        ifd,
+        tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
+      );
+      const tmp3Result = _mod7827;
     }
-    return true;
-  }
-  return false;
-};
-export const addMissingNamespaces = function addMissingNamespaces(str) {
-  const match = str.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
-  if (match) {
-    const items = [];
-    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
-    let match1 = obj.exec(str);
-    if (null !== match1) {
-      do {
-        if (-1 === items.indexOf(match1[1])) {
-          let arr = items.push(match1[1]);
-        }
-        match1 = obj.exec(str);
-      } while (null !== match1);
+    let objectAssignResult3 = objectAssignResult;
+    if (undefined !== objectAssignResult[c4]) {
+      const tmp3Result8 = get0thIfdOffset;
+      objectAssignResult3 = _mod7827.objectAssign(
+        objectAssignResult,
+        tmp3Result8.readIfd(
+          getUint16,
+          IFD_TYPE_0TH.IFD_TYPE_GPS,
+          c5,
+          c5 + objectAssignResult[tmp12].value,
+          byteOrder,
+          arg2,
+        ),
+      );
+      const tmp3Result7 = _mod7827;
     }
-    const items1 = [];
-    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
-    let match2 = obj2.exec(str);
-    if (null !== match2) {
-      do {
-        let tmp8 = match2[1];
-        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
-        if (tmp9) {
-          if (-1 === items1.indexOf(tmp8)) {
-            let arr2 = items1.push(tmp8);
-          }
-        }
-        match2 = obj2.exec(str);
-      } while (null !== match2);
+    let objectAssignResult4 = objectAssignResult3;
+    if (undefined !== objectAssignResult3[c5]) {
+      const tmp3Result10 = get0thIfdOffset;
+      objectAssignResult4 = _mod7827.objectAssign(
+        objectAssignResult3,
+        tmp3Result10.readIfd(
+          getUint16,
+          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
+          c5,
+          c5 + objectAssignResult3[tmp19].value,
+          byteOrder,
+          arg2,
+        ),
+      );
+      const tmp3Result9 = _mod7827;
     }
-    const found = items1.filter((item) => -1 === items.indexOf(item));
-    let replaced = str;
-    if (0 !== found.length) {
-      const items2 = [];
-      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
-        let tmp12 = found[num3];
-        let text = closure_0[tmp12];
-        if (!text) {
-          text = `http://fallback.namespace/${tmp12}`;
-        }
-        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
-      }
-      const _RegExp = RegExp;
-      const joined = items2.join("");
-      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
-      replaced = str.replace(regExp, `<${tmp2}$1${tmp17}>`);
-    }
-    return replaced;
-  } else {
-    return str;
-  }
+    return { tags: objectAssignResult4, byteOrder };
+  },
 };

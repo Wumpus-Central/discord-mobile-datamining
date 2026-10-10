@@ -1,57 +1,51 @@
 // _runtime/metro/04847__.js
-import c from "../00576_c.js";
-import _mod4842 from "04842__.js";
-import _slicedToArray from "00032__.js";
+import installWorkletsSupport_mod from "../04848_installWorkletsSupport.js";
 
-const RiveColor2 = tmp(4837);
-require = fn;
-fn(19).useCallback;
-const f31952 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+const require = globalThis.__r;
 
-export const useRiveColor = function useRiveColor(arg0, arg1) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod4842.useRiveProperty(arg1, arg0, f31952), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
-};
+let installWorkletsSupport = installWorkletsSupport_mod;
+installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
+for (const key10017 in require("04857__.js")) {
+  arg5[key10017] = require("04857__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("04858__.js")) {
+  arg5[key10021] = require("04858__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("04859__.js")) {
+  arg5[key10025] = require("04859__.js")[key10025];
+  continue;
+}
+for (const key10029 in require("04860__.js")) {
+  arg5[key10029] = require("04860__.js")[key10029];
+  continue;
+}
+for (const key10033 in require("04861__.js")) {
+  arg5[key10033] = require("04861__.js")[key10033];
+  continue;
+}
+for (const key10037 in require("04862__.js")) {
+  arg5[key10037] = require("04862__.js")[key10037];
+  continue;
+}
+for (const key10041 in require("04853__.js")) {
+  arg5[key10041] = require("04853__.js")[key10041];
+  continue;
+}
+for (const key10045 in require("04863__.js")) {
+  arg5[key10045] = require("04863__.js")[key10045];
+  continue;
+}
+for (const key10049 in require("04864__.js")) {
+  arg5[key10049] = require("04864__.js")[key10049];
+  continue;
+}
+for (const key10053 in require("04865__.js")) {
+  arg5[key10053] = require("04865__.js")[key10053];
+  continue;
+}
+for (const key10057 in require("04866__.js")) {
+  arg5[key10057] = require("04866__.js")[key10057];
+  continue;
+}

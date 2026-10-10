@@ -1,13 +1,39 @@
 // _runtime/metro/04999__.js
-import registerAsset from "01132__.js";
+import _mod4995 from "04995__.js";
+import ACTIONS from "../04996_ACTIONS.js";
+import PortalHost from "../04997_PortalHost.js";
+import registerHost from "../05000_registerHost.js";
+import _slicedToArray from "00032__.js";
+import noop_mod from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleXIcon-secondary",
-  type: "png",
+require = fn;
+let noop = fn(19);
+({ useReducer: c3, memo } = noop);
+let noop = noop_mod;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const memoResult = memo((rootHostName) => {
+  let str = rootHostName.rootHostName;
+  if (str === undefined) {
+    str = "root";
+  }
+  let flag = rootHostName.shouldAddRootHost;
+  if (flag === undefined) {
+    flag = true;
+  }
+  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
+  const obj = { value: tmp5, children: null };
+  const obj2 = { value: tmp4, children: null };
+  const items = [rootHostName.children];
+  if (flag) {
+    const obj3 = { name: str };
+    flag = React4(PortalHost.PortalHost, obj3);
+  }
+  items[1] = flag;
+  obj2.children = items;
+  obj.children = hasOwnProperty(_mod4995.PortalStateContext.Provider, obj2);
+  return React4(_mod4995.PortalDispatchContext.Provider, obj);
 });
+memoResult.displayName = "PortalProvider";
+
+export const PortalProvider = memoResult;

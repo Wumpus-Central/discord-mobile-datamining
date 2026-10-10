@@ -1,11 +1,7 @@
 // _runtime/metro/11236__.js
+let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
+if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
+  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
+}
 
-export const parameterize = function parameterize(join) {
-  const substr = [...arguments].slice();
-  const items = [join, ...substr];
-  const string = new String(String.raw.apply(items));
-  const str = join.join("\0");
-  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
-  string.__sentry_template_values__ = substr;
-  return string;
-};
+export const DEBUG_BUILD = __SENTRY_DEBUG__;

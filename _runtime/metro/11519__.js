@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/polls/native/images",
+  width: 140.5,
+  height: 131,
   scales: [2, 3],
-  hash: "d25dc6aac0ffe1d35c3be44e5c9ce017",
-  name: "ArrowAngleRightUpIcon",
+  hash: "2634e77a356f1f01c169d19e1ee5e0b0",
+  name: "load-issue-light",
   type: "png",
 });

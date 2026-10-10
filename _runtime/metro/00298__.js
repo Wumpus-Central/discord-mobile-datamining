@@ -450,7 +450,6 @@ let closure_11 = noop.forwardRef(function PressableText_withRef(textPressability
   return <NativeText />;
 });
 const __initData = { auto: true, text: true, none: false, contain: true, all: true };
-const __initData2 = { auto: "auto", top: "top", bottom: "bottom", middle: "center" };
-const state = get_hairlineWidth.create({ default: { overflow: "hidden" } });
+const value = get_hairlineWidth.create({ default: { overflow: "hidden" } });
 
 export default TextImpl;

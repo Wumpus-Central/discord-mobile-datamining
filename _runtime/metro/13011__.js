@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b7967e1c069a1d25ab22d1157c869621",
-  name: "MoreVerticalIcon",
+  hash: "aa1ab8f7d6e2b1c9438f72fdbfc69c0c",
+  name: "FireIcon",
   type: "png",
 });

@@ -1,132 +1,190 @@
 // _runtime/metro/14608__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
-import get_ActivityIndicator from "00017__.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import Buffer from "../01276_Buffer.js";
+import _mod14607 from "14607__.js";
+import _slicedToArray from "00032__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+function replaceByteInByteSequence(arr, arg1, arg2) {
+  let index = arr.indexOf(43);
+  if (index >= 0) {
+    do {
+      arr[index] = 32;
+      index = arr.indexOf(43, index + 1);
+    } while (index >= 0);
   }
+  return arr;
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-if (typeof WeakMap === "function") {
-  const _WeakMap = WeakMap;
-  const weakMap = new WeakMap();
-  const _WeakMap2 = WeakMap;
-  const weakMap1 = new WeakMap();
+function percentEncode(arr) {
+  const formatted = arr.toString(16).toUpperCase();
+  let text = formatted;
+  if (1 === formatted.length) {
+    text = `0${arr}`;
+  }
+  return "%" + text;
 }
-if (!noop) {
-  const merged = Object.assign({ default: null });
-  merged[0] = noop;
-  let value = merged;
-  if (null !== noop) {
-    if (typeof noop === "object") {
-      if (!weakMap) {
-        value = merged;
-        const keys = Object.keys();
-        if (keys !== undefined) {
-          value = merged;
-          while (keys[tmp] !== undefined) {
-            let tmp22 = "default" !== tmp12;
-            if (!tmp22) {
-              if (!tmp22) {
-                continue;
-              } else {
-                let _Object = Object;
-                let ownPropertyDescriptor = defineProperty;
-                if (defineProperty) {
-                  let _Object2 = Object;
-                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp12);
-                }
-                if (!ownPropertyDescriptor) {
-                  merged[tmp12] = noop[tmp12];
-                  continue;
-                } else {
-                  let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let hasOwnProperty = {}.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              let tmp13 = typeof call === "unknown" ? hasOwnProperty(tmp12) : call(noop, tmp12);
+function percentDecode(_Buffer) {
+  _Buffer = Buffer.Buffer;
+  const allocResult = _Buffer.alloc(_Buffer.byteLength);
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < _Buffer.length) {
+    while (true) {
+      if (37 === _Buffer[num]) {
+        let obj = _mod14607;
+        let sum = num + 1;
+        if (obj.isASCIIHex(_Buffer[sum])) {
+          let tmp3Result = _mod14607;
+          let sum1 = num + 2;
+          if (tmp3Result.isASCIIHex(_Buffer[sum1])) {
+            let sum2 = num2 + 1;
+            let _parseInt = parseInt;
+            let str = _Buffer.slice(sum, num + 3);
+            allocResult[num2] = parseInt(str.toString(), 16);
+            let tmp8 = sum1;
+            num = tmp8 + 1;
+            num2 = sum2;
+            num3 = sum2;
+            if (num >= _Buffer.length) {
+              break;
             }
           }
         }
-      } else if (weakMap.has(noop)) {
-        value = weakMap.get(noop);
-      } else {
-        const result = weakMap.set(noop, merged);
       }
-    } else {
-      value = merged;
+      sum2 = num2 + 1;
+      allocResult[num2] = _Buffer[num];
+      tmp8 = num;
     }
   }
-} else {
-  value = noop;
+  return allocResult.slice(0, num3);
 }
-class StorybookSwitcher {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_0(this, StorybookSwitcher);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(StorybookSwitcher);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+function serializeUrlencodedByte(_Buffer) {
+  let str = "";
+  const iter = _Buffer[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let str2 = "+";
+    if (32 === nextResult) {
+      str = `+`;
+      continue;
     } else {
-      constructResult = obj.apply(self, items);
+      if (42 !== tmp2) {
+        if (45 !== tmp2) {
+          if (46 !== tmp2) {
+            if (tmp2 < 48) {
+              if (tmp2 < 65) {
+                if (95 !== tmp2) {
+                  if (tmp2 < 97) {
+                    let fromCodePointResult = percentEncode(tmp2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      let _String = String;
+      fromCodePointResult = String.fromCodePoint(tmp2);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.state = { showStorybook: false };
-    emitter = global.emitter;
-    onResult = emitter.on("storybook", (showStorybook) => {
-      state.setState({ showStorybook });
-    });
-    return tmp3Result;
   }
+  return str;
 }
-_classCallCheck = StorybookSwitcher;
-_inherits(StorybookSwitcher, value.Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    let children = this.props.children;
-    const obj = { style: { flex: 1 }, children: null };
-    if (this.state.showStorybook) {
-      children = <tmp />;
-    }
-    obj.children = children;
-    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
-  }
-};
-let items = [entry];
 
-export default _createClass(StorybookSwitcher, items);
+export default {
+  percentEncode,
+  percentDecode,
+  parseUrlencoded(arg0) {
+    let _Buffer = Buffer.Buffer;
+    return (function parseUrlencoded(_Buffer) {
+      let items = [];
+      const iter = (function strictlySplitByteSequence(arr, arg1) {
+        const items = [];
+        const index = arr.indexOf(38);
+        let index1 = index;
+        let num = 0;
+        let num2 = 0;
+        if (index >= 0) {
+          do {
+            arr = items.push(arr.slice(num, index1));
+            let sum = index1 + 1;
+            index1 = arr.indexOf(38, sum);
+            num = sum;
+            num2 = sum;
+          } while (index1 >= 0);
+        }
+        if (num2 !== arr.length) {
+          items.push(arr.slice(num2));
+        }
+        return items;
+      })(_Buffer, 38)[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let arr3 = nextResult;
+        if (0 === nextResult.length) {
+          continue;
+        } else {
+          let index = arr3.indexOf(61);
+          let tmp23 = index;
+          if (index >= 0) {
+            let substr = arr3.slice(0, tmp23);
+            let substr1 = arr3.slice(tmp23 + 1);
+          } else {
+            substr = nextResult;
+            _Buffer = Buffer.Buffer;
+            substr1 = _Buffer.alloc(0);
+          }
+          let _Buffer2 = Buffer.Buffer;
+          let fromResult = _Buffer2.from(substr);
+          let tmp13 = replaceByteInByteSequence(fromResult, 43, 32);
+          let _Buffer3 = Buffer.Buffer;
+          let fromResult1 = _Buffer3.from(substr1);
+          let tmp17 = replaceByteInByteSequence(fromResult1, 43, 32);
+          let str = percentDecode(fromResult);
+          let items1 = [str.toString()];
+          let str2 = percentDecode(fromResult1);
+          items1[1] = str2.toString();
+          let arr = items.push(items1);
+        }
+      }
+      return items;
+    })(_Buffer.from(arg0));
+  },
+  serializeUrlencoded(_list) {
+    let str = "utf-8";
+    if (undefined !== arg1) {
+      str = tmp;
+    }
+    let str2 = "";
+    const entries = _list.entries();
+    while (tmp3 !== undefined) {
+      let tmp6 = _slicedToArray(tmp4, 2);
+      [tmp7, arr] = tmp6;
+      let _Buffer = Buffer.Buffer;
+      let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
+      let name = arr[1];
+      let tmp13 = arr.length > 2;
+      if (tmp13) {
+        tmp13 = undefined !== arr[2];
+      }
+      if (tmp13) {
+        if ("hidden" === arr[2]) {
+          if ("_charset_" === tmp12) {
+            name = str;
+          }
+        }
+        if ("file" === arr[2]) {
+          name = name.name;
+        }
+      }
+      if (0 !== tmp7) {
+        str2 = `${str2}&`;
+      }
+      let _Buffer2 = Buffer.Buffer;
+      let tmp9Result = serializeUrlencodedByte(_Buffer2.from(name));
+      let _HermesInternal = HermesInternal;
+      str2 = str2 + "" + tmp12 + "=" + tmp9Result;
+      continue;
+    }
+    return str2;
+  },
+};

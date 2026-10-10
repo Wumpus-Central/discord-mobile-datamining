@@ -1,52 +1,189 @@
 // _runtime/metro/07858__.js
-import _modDef7826 from "07826__.js";
+import _modDef7859 from "07859__.js";
+import _modDef7860 from "07860__.js";
 
 importDefault = arg2;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
+function parseTags(byteLength, size, sum, arg3) {
+  let items;
+  let obj4;
+  let tmp = sum;
+  const obj = {};
+  sum = sum + size.size;
+  if (sum < sum) {
+    if (tmp < byteLength.byteLength) {
+      while (true) {
+        let encoding = tmp23;
+        if (byteLength.getUint8(tmp) !== 28) {
+          let obj2 = { tag: null, tagSize: 0 };
+        } else {
+          let uint16 = byteLength.getUint16(tmp + 1);
+          let uint161 = byteLength.getUint16(tmp + 3);
+          if (!arg3) {
+            if (!_modDef7859.iptc[uint16]) {
+              obj2 = { tag: "Array", tagSize: uint161 };
+            }
+          }
+          items = [];
+          for (let num = 0; num < uint161; num = num + 1) {
+            let arr = items.push(byteLength.getUint8(tmp6 + num));
+          }
+          let obj3 = { id: uint16, name: null, value: null, description: null };
+          obj4 = _modDef7859.iptc[uint16];
+          if (obj4) {
+            if (typeof obj4 !== "string") {
+              break;
+            } else {
+              let combined = obj4;
+            }
+          } else {
+            let _HermesInternal = HermesInternal;
+            combined = "undefined-" + uint16;
+          }
+          obj3.name = combined;
+          obj3.value = items;
+          obj3.description = getTagDescription(_modDef7859.iptc[uint16], items, obj, encoding);
+          let tmp17 = _modDef7859.iptc[uint16] && _modDef7859.iptc[uint16].repeatable;
+          if (tmp17) {
+            obj3.repeatable = true;
+          }
+          let tmp18 = _modDef7859.iptc[uint16] && undefined !== _modDef7859.iptc[uint16].encoding_name;
+          if (tmp18) {
+            let obj5 = _modDef7859.iptc[uint16];
+            obj3.encoding = obj5.encoding_name(items);
+          }
+          let obj6 = { tag: obj3, tagSize: uint161 };
+          obj2 = obj6;
+        }
+        let tag = obj2.tag;
+        if (null !== tag) {
+          let tmp21 = encoding;
+          if (tag) {
+            if ("encoding" in tag) {
+              encoding = tag.encoding;
+            }
+            if (undefined !== obj[tag.name]) {
+              if (undefined !== tag.repeatable) {
+                let _Array = Array;
+                if (!(obj[tag.name] instanceof Array)) {
+                  let obj7 = {
+                    id: obj[tag.name].id,
+                    value: obj[tag.name].value,
+                    description: obj[tag.name].description,
+                  };
+                  let items1 = [obj7];
+                  obj[tag.name] = items1;
+                }
+                let arr3 = obj[tag.name];
+                let obj15 = { id: null, value: null, description: null };
+                ({ id: obj8.id, value: obj8.value, description: obj8.description } = tag);
+                let arr2 = arr3.push(obj15);
+                tmp21 = encoding;
+              }
+            }
+            let obj16 = { id: null, value: null, description: null };
+            ({ id: obj9.id, value: obj9.value, description: obj9.description } = tag);
+            obj[tag.name] = obj16;
+            tmp21 = encoding;
+          }
+          let sum1 = tmp + (5 + tmp19);
+          if (sum1 < sum) {
+            tmp23 = tmp21;
+            tmp = sum1;
+          }
+        }
+      }
+      if (typeof obj4.name === "function") {
+        let name = obj4.name(items);
+      } else {
+        name = obj4.name;
+      }
+    }
+  }
+  return obj;
+}
+function getTagDescription(description, items, arg2, encoding) {
+  if (
+    !(function hasDescriptionProperty(description) {
+      let tmp = description;
+      if (description) {
+        tmp = undefined !== description.description;
+      }
+      return tmp;
+    })(description)
+  ) {
+    let decodeResult = items;
+    if (
+      (function tagValueIsText(description, items) {
+        let tmp = description;
+        if (description) {
+          const _Array = Array;
+          tmp = items instanceof Array;
+        }
+        return tmp;
+      })(description, items)
+    ) {
+      const decoder = _modDef7860;
+      decodeResult = decoder.decode(encoding, items);
+    }
+    return decodeResult;
+  } else {
+    try {
+      return description.description(items, arg2);
+    } catch (err) {}
+  }
+}
 
 export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef7826.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  read(byteLength, sum, arg2) {
+    try {
+      const _Array = Array;
+      if (Array.isArray(byteLength)) {
+        const _DataView = DataView;
+        const _Uint8Array = Uint8Array;
+        const dataView = new DataView(Uint8Array.from(byteLength).buffer);
+        let obj = { size: byteLength.length };
+        return parseTags(dataView, obj, 0, arg2);
+      } else {
+        const tmp5 = (function getNaaResourceBlock(byteLength, sum) {
+          let tmp = sum;
+          if (sum + 12 <= byteLength.byteLength) {
+            while (943868237 === byteLength.getUint32(tmp, false)) {
+              let uint8 = byteLength.getUint8(tmp + 4 + 2);
+              sum = uint8;
+              if (uint8 % 2 === 0) {
+                sum = uint8 + 1;
+              }
+              let sum1 = sum + 1;
+              let obj = {
+                headerSize: 6 + sum1 + 4,
+                type: byteLength.getUint16(tmp + 4),
+                size: byteLength.getUint32(tmp + 4 + 2 + sum1),
+              };
+              if (1028 === obj.type) {
+                let obj2 = { naaBlock: obj, dataOffset: tmp + obj.headerSize };
+                return obj2;
+              } else {
+                let num = 0;
+                let sum2 = obj.headerSize + obj.size;
+                if (obj.size % 2 !== 0) {
+                  num = 1;
+                }
+                let sum3 = tmp + (sum2 + num);
+                tmp = sum3;
+              }
+            }
+            const _Error = Error;
+            const error = new Error("Not an IPTC resource block.");
+            throw error;
+          }
+          const error1 = new Error("No IPTC NAA resource block.");
+          throw error1;
+        })(byteLength, sum);
+        return parseTags(byteLength, tmp5.naaBlock, tmp5.dataOffset, arg2);
+      }
+    } catch (err) {
+      return {};
     }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
-    }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
-    }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef7826.getByteAt(getUint8, sum);
-    const tmpResult = _modDef7826;
-    const sum1 = byteAt1 + 256 * _modDef7826.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef7826;
-    const sum2 = sum1 + 65536 * _modDef7826.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef7826;
-    const byteAt2 = _modDef7826.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef7826;
-    const sum4 = byteAt2 + 256 * _modDef7826.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef7826;
-    const sum5 = sum4 + 65536 * _modDef7826.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
   },
 };

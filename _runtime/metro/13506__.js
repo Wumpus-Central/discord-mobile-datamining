@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/quests/images",
+  width: 608,
+  height: 608,
   scales: [2, 3],
-  hash: "aa9c26c29990ba7a6584e51ab5c56efa",
-  name: "debug",
+  hash: "6936c050862daceed7175a327466cd4a",
+  name: "quests_embed_mobile_missing",
   type: "png",
 });

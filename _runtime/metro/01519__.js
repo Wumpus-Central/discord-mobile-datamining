@@ -21,7 +21,7 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
   if (navigationInChildEnabled === undefined) {
     navigationInChildEnabled = false;
   }
-  state = undefined;
+  let state;
   let getState;
   let setState;
   let scheduleUpdate;

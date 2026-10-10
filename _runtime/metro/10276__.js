@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "925ba669dce4508a3d121b3e5d7504b9",
-  name: "PlusLargeIcon",
+  hash: "2bf7738cbb1d2827663b492fedbd65fb",
+  name: "MedalIcon",
   type: "png",
 });

@@ -2,7 +2,7 @@
 
 export const findFocusedRoute = function findFocusedRoute(stateForPath) {
   let state2;
-  state = undefined;
+  let state;
   if (stateForPath != null) {
     ({ index, routes } = stateForPath);
     if (index == null) {

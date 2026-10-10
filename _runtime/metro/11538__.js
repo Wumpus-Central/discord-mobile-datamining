@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "7036049d54a4b04a2af6c92d50fc7e6d",
-  name: "ImagesIcon",
+  hash: "538100cf5ed1ed88cced15fcffad07fd",
+  name: "PiggyBankIcon",
   type: "png",
 });

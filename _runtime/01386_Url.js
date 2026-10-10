@@ -1023,18 +1023,6 @@ const re9 = /^[+a-z0-9A-Z_-]{0,63}$/;
 const re10 = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
 let closure_11 = { javascript: true, "javascript:": true };
 const __initData = { javascript: true, "javascript:": true };
-const __initData2 = {
-  http: true,
-  https: true,
-  ftp: true,
-  gopher: true,
-  file: true,
-  "http:": true,
-  "https:": true,
-  "ftp:": true,
-  "gopher:": true,
-  "file:": true,
-};
 
 export const parse = function urlParse(obj, arg1, arg2) {
   if (obj) {

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 12,
-  height: 12,
-  scales: [2, 3],
-  hash: "b28329d7d2ebd0b330f6112973e5d746",
-  name: "ic_sparkle",
+  httpServerLocation: "/assets/images/native",
+  width: 195,
+  height: 92,
+  scales: [1, 2, 3],
+  hash: "a075205f01081abc73c7a94b31634a53",
+  name: "krisp_logo_light",
   type: "png",
 });

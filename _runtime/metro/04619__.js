@@ -1,7 +1,47 @@
 // _runtime/metro/04619__.js
-let closure_0 = { lastWeek: "'\u4E0A\u500B'eeee p", yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: "'\u4E0B\u500B'eeee p", other: "P" };
+import module_4203_mod from "04203__.js";
+import _typeof_mod from "04199__.js";
+import module_4471_mod from "04471__.js";
+import requiredArgs_mod from "../04200_requiredArgs.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+let module_4203 = module_4203_mod;
+if (!module_4203) {
+  const obj = { default: module_4203 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4203;
+}
+module_4203 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let module_4471 = module_4471_mod;
+if (!module_4471) {
+  const obj3 = { default: module_4471 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4471;
+}
+module_4471 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function setISOWeek(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4471.default(defaultResult1) - module_4203.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

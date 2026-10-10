@@ -1,6 +1,6 @@
 // _runtime/metro/07632__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef7583 from "07583__.js";
+import _modDef7615 from "07615__.js";
 import _modDef7633 from "07633__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Line = fn;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Line {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
+    tmp = closure_3(this, FeMerge);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Line);
+    obj = hasOwnProperty(FeMerge);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,36 +49,32 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Line, _modDef7583);
+_inherits(FeMerge, _modDef7615);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ x1, y1, x2, y2 } = props);
-    const merged = Object.assign(Line(7574).extract(this, props));
-    obj.x1 = x1;
-    obj.y1 = y1;
-    obj.x2 = x2;
-    obj.y2 = y2;
-    const obj2 = Line(7574);
-    const obj3 = {
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef7633, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const merged = Object.assign(FeMerge(7614).extractFilter(this.props));
+    const obj2 = FeMerge(7614);
+    const merged1 = Object.assign(FeMerge(7614).extractFeMerge(this.props, this));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

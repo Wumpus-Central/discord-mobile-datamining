@@ -358,7 +358,7 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -441,7 +441,7 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
                       const obj2 = { value, done: true };
                       return obj2;
                     } else {
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     }
                   } else {
                     try {
@@ -932,7 +932,7 @@ function updatePageloadTransaction(arg0) {
               const client1 = closure_0(dependencyMap[6]).getClient();
               if (client1) {
                 if ("navigation" === closure_4) {
-                  const value4 = weakMap.get(client1);
+                  value4 = weakMap.get(client1);
                   let tmp24 = value4;
                   if (value4) {
                     tmp24 = value4.span === tmp5;
@@ -1181,7 +1181,7 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
           const client1 = closure_0(dependencyMap[6]).getClient();
           if (client1) {
             if ("navigation" === closure_4) {
-              const value4 = weakMap.get(client1);
+              value4 = weakMap.get(client1);
               let tmp24 = value4;
               if (value4) {
                 tmp24 = value4.span === tmp5;
@@ -1299,8 +1299,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = pickSplat.initializeRouterUtils(closure_1_7, flag);
   };
-  obj3.afterAllSetup = function afterAllSetup(f136578) {
-    result.afterAllSetup(f136578);
+  obj3.afterAllSetup = function afterAllSetup(f137009) {
+    result.afterAllSetup(f137009);
     const _location = feedbackAsyncIntegration.WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1317,11 +1317,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj2[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj2;
-      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f136578, obj);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f137009, obj);
       const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
-      weakSet.add(f136578);
+      weakSet.add(f137009);
     }
   };
   return obj3;

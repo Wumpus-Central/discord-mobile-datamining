@@ -269,7 +269,7 @@ let closure_8 = async function _instrumentStream(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_3 = undefined;
               closure_146_6 = undefined;
               closure_146_7 = undefined;
-              let value4;
+              value4 = undefined;
               closure_146_9 = undefined;
               const obj5 = {
                 eventTypes: [],
@@ -514,7 +514,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 }
                 closure_146_0.end();
                 c22 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             }
             break;

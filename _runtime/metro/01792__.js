@@ -138,7 +138,7 @@ const items = [
 ];
 function createProgressTransitionRegister() {
   const map = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   const set = new Set();
   const set1 = new Set();
   c4 = false;
@@ -261,7 +261,7 @@ if (module_1659.shouldBeUseWeb()) {
       const _Map = Map;
       const map = new Map();
       const _Map2 = Map;
-      const map1 = new Map();
+      map1 = new Map();
       const _Set = Set;
       const set = new Set();
       const _Set2 = Set;

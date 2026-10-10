@@ -1,11 +1,7 @@
 // _runtime/metro/14526__.js
-import _mod14499 from "14499__.js";
+import _mod14592 from "14592__.js";
+import 14527__ from "14527__.js";
 
-export default (arg0) => {
-  if (_mod14499(arg0)) {
-    return arg0;
-  } else {
-    const tmp5 = new TypeError(String(arg0) + " is not an object");
-    throw tmp5;
-  }
-};
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14592;
+module_14527(obj, { assign: _mod14592 });

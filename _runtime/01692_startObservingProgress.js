@@ -37,7 +37,7 @@ stopObservingProgress.__initData = {
 };
 function createLayoutAnimationManager() {
   let map = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   function startActually(arg0, arg1, value, fn) {
     map = arg0;
     value2 = arg1;
@@ -242,7 +242,7 @@ const fn = function t() {
       },
     };
     tmp.LayoutAnimationsManager = obj;
-    const map1 = new Map();
+    map1 = new Map();
   } else {
     throw new TypeError("Trying to call a non-function");
   }

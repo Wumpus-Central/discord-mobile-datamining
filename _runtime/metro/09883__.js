@@ -1,12 +1,14 @@
 // _runtime/metro/09883__.js
-import AbstractParserWithWordBoundaryChecking from "../09797_AbstractParserWithWordBoundaryChecking.js";
+import repeatedTimeunitPattern from "../09819_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../09826_AbstractParserWithWordBoundaryChecking.js";
+import _mod9881 from "09881__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitWithinFormatParser = require;
+const FRMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +27,24 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class NLTimeUnitWithinFormatParser {
+const regExp = new RegExp(
+  "(?:on\\s*?)?(" +
+    _mod9881.ORDINAL_NUMBER_PATTERN +
+    ")(?:\\s*(?:au|\\-|\\\u2013|jusqu'au?|\\s)\\s*(" +
+    _mod9881.ORDINAL_NUMBER_PATTERN +
+    "))?(?:-|/|\\s*(?:de)?\\s*)(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod9881.MONTH_DICTIONARY) +
+    ")(?:(?:-|/|,?\\s*)(" +
+    _mod9881.YEAR_PATTERN +
+    "(?![^\\s]\\d)))?(?=\\W|$)",
+  "i",
+);
+class FRMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitWithinFormatParser);
+    tmp = c2(this, FRMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitWithinFormatParser);
+    obj = closure_4(FRMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,14 +59,10 @@ class NLTimeUnitWithinFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(FRMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    const regExp = new RegExp(
-      "(?:binnen|in|binnen de|voor)\\s*(" + NLTimeUnitWithinFormatParser(9884).TIME_UNITS_PATTERN + ")(?=\\W|$)",
-      "i",
-    );
     return regExp;
   },
 };
@@ -60,14 +70,39 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const ParsingComponents = NLTimeUnitWithinFormatParser(9793).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        NLTimeUnitWithinFormatParser(9884).parseDuration(arg1[1]),
-      );
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = FRMonthNameLittleEndianParser(9881).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = FRMonthNameLittleEndianParser(9881).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", FRMonthNameLittleEndianParser(9881).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply(
+            "year",
+            FRMonthNameLittleEndianParser(9820).findYearClosestToRef(createParsingResult.refDate, result, tmp4),
+          );
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = FRMonthNameLittleEndianParser(9881).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
+      }
     },
   },
 ];
 
-export default _createClass(NLTimeUnitWithinFormatParser, items);
+export default _createClass(FRMonthNameLittleEndianParser, items);

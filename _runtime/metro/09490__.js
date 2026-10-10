@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/nitro_icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BlushIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "e31ee2ef368806b54cff2e8c81e8cd97",
-  name: "img_nitro_icon_filled",
+  hash: "def0b6d35103453cf4894471df6b84ad",
+  name: "BlushIcon",
   type: "png",
 });

@@ -215,7 +215,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "+51" };
                               }
                             } else {
                               try {
@@ -430,7 +430,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                               }
                                               let obj2 = str(_function[4]);
                                             }
-                                            return str(_function[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F151916 */ function() { ... }, () => { ... });
+                                            return str(_function[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F152379 */ function() { ... }, () => { ... });
                                           });
                                         }
                                       }
@@ -460,7 +460,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                 const obj2 = { value, done: true };
                                                 return obj2;
                                               } else {
-                                                return { value: "IconComponent", done: null };
+                                                return { value: "IconComponent", done: "+51" };
                                               }
                                             } else {
                                               try {
@@ -679,7 +679,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                       obj4.attributes = obj;
                                                       if (BooleanResult) {
                                                         if (!tmp12) {
-                                                          closure_0 = _self(/* F156194 */ function() { ... });
+                                                          closure_0 = _self(/* F156649 */ function() { ... });
                                                           let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, () => { ... });
                                                           const tmp2Result8 = tmp2(startSpanManual[7]);
                                                         }

@@ -1,29 +1,19 @@
 // _runtime/metro/07943__.js
 const obj = {
   v: "4.8.0",
-  meta: { g: "LottieFiles AE 3.1.1", a: "", k: "", d: "", tc: "" },
+  meta: { g: "LottieFiles AE 3.0.2", a: "", k: "", d: "", tc: "" },
   fr: 60,
   ip: 0,
   op: 241,
-  w: 600,
-  h: 600,
-  nm: "BurstReaction_UFO_v2_KO",
+  w: 300,
+  h: 300,
+  nm: "BurstReaction_UFO_v02_Lottie",
   ddd: 0,
   assets: null,
   layers: null,
   markers: null,
 };
-const items = [
-  {
-    id: "image_0",
-    w: 128,
-    h: 128,
-    u: "",
-    p: "data:image/png;base64,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",
-    e: 1,
-  },
-  ,
-];
+const items = [{ id: "image_0", w: 128, h: 128, u: "", p: "", e: 1 }, ,];
 const obj2 = { id: "comp_0", layers: null };
 const obj3 = {
   ddd: 0,
@@ -1586,7 +1576,7 @@ items[1] = obj2;
 const obj103 = { id: "comp_1", layers: null };
 const obj104 = {
   ddd: 0,
-  ind: 1,
+  ind: 3,
   ty: 2,
   nm: "asmile.png",
   cl: "png",
@@ -1613,90 +1603,7 @@ const obj106 = {
   ddd: 0,
   ind: 1,
   ty: 4,
-  nm: "Scale 200% 2",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: [],
-  ip: 0,
-  op: 901,
-  st: 0,
-  bm: 0,
-};
-const obj107 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [300, 300, 0], ix: 2 },
-  a: { a: 0, k: [0, 0, 0], ix: 1 },
-  s: null,
-};
-const obj108 = { a: 1, k: null, ix: 6 };
-const items171 = [
-  {
-    i: { x: [0.059, 0.059, 0.667], y: [1, 1, 1] },
-    o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
-    t: 0,
-    s: [100, 100, 100],
-  },
-  {
-    i: { x: [0.637, 0.637, 0.667], y: [1, 1, 1] },
-    o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
-    t: 36,
-    s: [200, 200, 100],
-  },
-  {
-    i: { x: [0.471, 0.471, 0.667], y: [1, 1, 1] },
-    o: { x: [0.773, 0.773, 0.333], y: [0, 0, 0] },
-    t: 158,
-    s: [200, 200, 100],
-  },
-  { t: 191, s: [100, 100, 100] },
-];
-obj108.k = items171;
-obj107.s = obj108;
-obj106.ks = obj107;
-const items172 = [obj106, , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
-const obj112 = {
-  ddd: 0,
-  ind: 2,
-  ty: 4,
-  nm: "Scale 200%",
-  sr: 1,
-  ks: null,
-  ao: 0,
-  shapes: [],
-  ip: 0,
-  op: 901,
-  st: 0,
-  bm: 0,
-};
-const obj113 = {
-  o: { a: 0, k: 100, ix: 11 },
-  r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [300, 300, 0], ix: 2 },
-  a: { a: 0, k: [0, 0, 0], ix: 1 },
-  s: null,
-};
-const obj114 = { a: 1, k: null, ix: 6 };
-const items173 = [
-  {
-    i: { x: [0.059, 0.059, 0.667], y: [1, 1, 1] },
-    o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
-    t: 0,
-    s: [100, 100, 100],
-  },
-  { t: 36, s: [200, 200, 100] },
-];
-obj114.k = items173;
-obj113.s = obj114;
-obj112.ks = obj113;
-items172[1] = obj112;
-const obj116 = {
-  ddd: 0,
-  ind: 3,
-  ty: 4,
   nm: "Smoke Burst_05",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -1706,23 +1613,23 @@ const obj116 = {
   st: 87,
   bm: 0,
 };
-const obj117 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
-const obj118 = { a: 1, k: null, ix: 10 };
-const items174 = [
+const obj107 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
+const obj108 = { a: 1, k: null, ix: 10 };
+const items171 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 87, s: [17] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 107, s: [92] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 121, s: [112.333] },
   { t: 137, s: [75.333] },
 ];
-obj118.k = items174;
-obj117.r = obj118;
-const obj122 = { a: 1, k: null, ix: 2 };
-const items175 = [
+obj108.k = items171;
+obj107.r = obj108;
+const obj112 = { a: 1, k: null, ix: 2 };
+const items172 = [
   {
     i: { x: 0.833, y: 0.833 },
     o: { x: 0.167, y: 0.225 },
     t: 87,
-    s: [24.58, 20.765, 0],
+    s: [174.58, 170.765, 0],
     to: [1.434, -16.023, 0],
     ti: [-14.665, 8.319, 0],
   },
@@ -1730,53 +1637,53 @@ const items175 = [
     i: { x: 0.698, y: 1 },
     o: { x: 0.167, y: 0.167 },
     t: 105,
-    s: [44.572, -16.074, 0],
+    s: [194.572, 133.926, 0],
     to: [14.665, -8.319, 0],
     ti: [-30.484, 14.018, 0],
   },
-  { t: 137, s: [116.871, -21.11, 0] },
+  { t: 137, s: [266.871, 128.89, 0] },
 ];
-obj122.k = items175;
-obj117.p = obj122;
-const obj123 = { a: 1, k: null, ix: 6 };
-const items176 = [
+obj112.k = items172;
+obj107.p = obj112;
+const obj113 = { a: 1, k: null, ix: 6 };
+const items173 = [
   {
-    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 1] },
+    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 17.667] },
     o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
     t: 100,
     s: [100, 100, 100],
   },
   { t: 137, s: [0, 0, 100] },
 ];
-obj123.k = items176;
-obj117.s = obj123;
-obj116.ks = obj117;
-const obj125 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj126 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj127 = { a: 0, k: null, ix: 2 };
-const obj128 = { i: null, o: null, v: null, c: true };
-const items177 = [
+obj113.k = items173;
+obj107.s = obj113;
+obj106.ks = obj107;
+const obj115 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj116 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj117 = { a: 0, k: null, ix: 2 };
+const obj118 = { i: null, o: null, v: null, c: true };
+const items174 = [
   [-7.898, -7.729],
   [-1.653, 3.926],
   [6.063, 0.427],
 ];
-obj128.i = items177;
-const items178 = [
+obj118.i = items174;
+const items175 = [
   [2.633, 2.577],
   [1.653, -3.926],
   [-5.65, -0.398],
 ];
-obj128.o = items178;
-const items179 = [
+obj118.o = items175;
+const items176 = [
   [-2.952, 5.365],
   [5.919, 3.865],
   [-1.351, -10.069],
 ];
-obj128.v = items179;
-obj127.k = obj128;
-obj126.ks = obj127;
-const items180 = [obj126, ,];
-const obj129 = {
+obj118.v = items176;
+obj117.k = obj118;
+obj116.ks = obj117;
+const items177 = [obj116, ,];
+const obj119 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -1796,8 +1703,8 @@ const obj129 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items180[1] = obj129;
-items180[2] = {
+items177[1] = obj119;
+items177[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -1808,16 +1715,15 @@ items180[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj125.it = items180;
-const items181 = [obj125];
-obj116.shapes = items181;
-items172[2] = obj116;
-const obj132 = {
+obj115.it = items177;
+const items178 = [obj115];
+obj106.shapes = items178;
+const items179 = [obj106, , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+const obj122 = {
   ddd: 0,
-  ind: 4,
+  ind: 2,
   ty: 4,
   nm: "Smoke Burst_04",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -1827,23 +1733,23 @@ const obj132 = {
   st: 100,
   bm: 0,
 };
-const obj133 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
-const obj134 = { a: 1, k: null, ix: 10 };
-const items182 = [
+const obj123 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
+const obj124 = { a: 1, k: null, ix: 10 };
+const items180 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 100, s: [-17] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 120, s: [-92] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 130, s: [-193] },
   { t: 143, s: [-262] },
 ];
-obj134.k = items182;
-obj133.r = obj134;
-const obj138 = { a: 1, k: null, ix: 2 };
-const items183 = [
+obj124.k = items180;
+obj123.r = obj124;
+const obj128 = { a: 1, k: null, ix: 2 };
+const items181 = [
   {
     i: { x: 0.833, y: 0.833 },
     o: { x: 0.167, y: 0.219 },
     t: 100,
-    s: [-39.08, 15.765, 0],
+    s: [110.92, 165.765, 0],
     to: [0.816, -24.648, 0],
     ti: [14.665, 8.319, 0],
   },
@@ -1851,16 +1757,16 @@ const items183 = [
     i: { x: 0.698, y: 1 },
     o: { x: 0.167, y: 0.167 },
     t: 121.115,
-    s: [-49.322, -33.199, 0],
+    s: [100.678, 116.801, 0],
     to: [-14.665, -8.319, 0],
     ti: [-21.766, -9.232, 0],
   },
-  { t: 143, s: [-58.871, -10.485, 0] },
+  { t: 143, s: [91.129, 139.515, 0] },
 ];
-obj138.k = items183;
-obj133.p = obj138;
-const obj139 = { a: 1, k: null, ix: 6 };
-const items184 = [
+obj128.k = items181;
+obj123.p = obj128;
+const obj129 = { a: 1, k: null, ix: 6 };
+const items182 = [
   {
     i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 1] },
     o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
@@ -1869,35 +1775,35 @@ const items184 = [
   },
   { t: 143, s: [0, 0, 100] },
 ];
-obj139.k = items184;
-obj133.s = obj139;
-obj132.ks = obj133;
-const obj141 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj142 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj143 = { a: 0, k: null, ix: 2 };
-const obj144 = { i: null, o: null, v: null, c: true };
-const items185 = [
+obj129.k = items182;
+obj123.s = obj129;
+obj122.ks = obj123;
+const obj131 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj132 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj133 = { a: 0, k: null, ix: 2 };
+const obj134 = { i: null, o: null, v: null, c: true };
+const items183 = [
   [-7.898, -7.729],
   [-1.653, 3.926],
   [3.85, 1.064],
 ];
-obj144.i = items185;
-const items186 = [
+obj134.i = items183;
+const items184 = [
   [2.633, 2.577],
   [1.653, -3.926],
   [-3.85, -1.064],
 ];
-obj144.o = items186;
-const items187 = [
+obj134.o = items184;
+const items185 = [
   [-2.952, 5.365],
   [5.919, 3.865],
   [0.697, -6.965],
 ];
-obj144.v = items187;
-obj143.k = obj144;
-obj142.ks = obj143;
-const items188 = [obj142, ,];
-const obj145 = {
+obj134.v = items185;
+obj133.k = obj134;
+obj132.ks = obj133;
+const items186 = [obj132, ,];
+const obj135 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -1917,8 +1823,8 @@ const obj145 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items188[1] = obj145;
-items188[2] = {
+items186[1] = obj135;
+items186[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -1929,16 +1835,15 @@ items188[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj141.it = items188;
-const items189 = [obj141];
-obj132.shapes = items189;
-items172[3] = obj132;
-const obj148 = {
+obj131.it = items186;
+const items187 = [obj131];
+obj122.shapes = items187;
+items179[1] = obj122;
+const obj138 = {
   ddd: 0,
-  ind: 5,
+  ind: 3,
   ty: 4,
   nm: "Smoke Burst_03",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -1948,23 +1853,23 @@ const obj148 = {
   st: 66,
   bm: 0,
 };
-const obj149 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
-const obj150 = { a: 1, k: null, ix: 10 };
-const items190 = [
+const obj139 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
+const obj140 = { a: 1, k: null, ix: 10 };
+const items188 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 66, s: [17] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 86, s: [92] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 96, s: [193] },
   { t: 109, s: [262] },
 ];
-obj150.k = items190;
-obj149.r = obj150;
-const obj154 = { a: 1, k: null, ix: 2 };
-const items191 = [
+obj140.k = items188;
+obj139.r = obj140;
+const obj144 = { a: 1, k: null, ix: 2 };
+const items189 = [
   {
     i: { x: 0.833, y: 0.833 },
     o: { x: 0.167, y: 0.219 },
     t: 66,
-    s: [28.58, 15.765, 0],
+    s: [178.58, 165.765, 0],
     to: [-0.816, -24.648, 0],
     ti: [-14.665, 8.319, 0],
   },
@@ -1972,53 +1877,53 @@ const items191 = [
     i: { x: 0.698, y: 1 },
     o: { x: 0.167, y: 0.167 },
     t: 87.115,
-    s: [38.822, -33.199, 0],
+    s: [188.822, 116.801, 0],
     to: [14.665, -8.319, 0],
     ti: [21.766, -9.232, 0],
   },
-  { t: 109, s: [48.371, -10.485, 0] },
+  { t: 109, s: [198.371, 139.515, 0] },
 ];
-obj154.k = items191;
-obj149.p = obj154;
-const obj155 = { a: 1, k: null, ix: 6 };
-const items192 = [
+obj144.k = items189;
+obj139.p = obj144;
+const obj145 = { a: 1, k: null, ix: 6 };
+const items190 = [
   {
-    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 1] },
+    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 17.667] },
     o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
     t: 79,
     s: [100, 100, 100],
   },
   { t: 109, s: [0, 0, 100] },
 ];
-obj155.k = items192;
-obj149.s = obj155;
-obj148.ks = obj149;
-const obj157 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj158 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj159 = { a: 0, k: null, ix: 2 };
-const obj160 = { i: null, o: null, v: null, c: true };
-const items193 = [
+obj145.k = items190;
+obj139.s = obj145;
+obj138.ks = obj139;
+const obj147 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj148 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj149 = { a: 0, k: null, ix: 2 };
+const obj150 = { i: null, o: null, v: null, c: true };
+const items191 = [
   [-7.898, -7.729],
   [-1.653, 3.926],
   [3.85, 1.064],
 ];
-obj160.i = items193;
-const items194 = [
+obj150.i = items191;
+const items192 = [
   [2.633, 2.577],
   [1.653, -3.926],
   [-3.85, -1.064],
 ];
-obj160.o = items194;
-const items195 = [
+obj150.o = items192;
+const items193 = [
   [-2.952, 5.365],
   [5.919, 3.865],
   [0.697, -6.965],
 ];
-obj160.v = items195;
-obj159.k = obj160;
-obj158.ks = obj159;
-const items196 = [obj158, ,];
-const obj161 = {
+obj150.v = items193;
+obj149.k = obj150;
+obj148.ks = obj149;
+const items194 = [obj148, ,];
+const obj151 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -2038,8 +1943,8 @@ const obj161 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items196[1] = obj161;
-items196[2] = {
+items194[1] = obj151;
+items194[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -2050,16 +1955,15 @@ items196[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj157.it = items196;
-const items197 = [obj157];
-obj148.shapes = items197;
-items172[4] = obj148;
-const obj164 = {
+obj147.it = items194;
+const items195 = [obj147];
+obj138.shapes = items195;
+items179[2] = obj138;
+const obj154 = {
   ddd: 0,
-  ind: 6,
+  ind: 4,
   ty: 4,
   nm: "Smoke Burst_02",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2069,24 +1973,24 @@ const obj164 = {
   st: 75,
   bm: 0,
 };
-const obj165 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
-const obj166 = { a: 1, k: null, ix: 10 };
-const items198 = [
+const obj155 = { o: { a: 0, k: 100, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
+const obj156 = { a: 1, k: null, ix: 10 };
+const items196 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 75, s: [0] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 88, s: [-58] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 96, s: [-44] },
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.167], y: [0.167] }, t: 104, s: [22] },
   { t: 112, s: [-21] },
 ];
-obj166.k = items198;
-obj165.r = obj166;
-const obj171 = { a: 1, k: null, ix: 2 };
-const items199 = [
+obj156.k = items196;
+obj155.r = obj156;
+const obj161 = { a: 1, k: null, ix: 2 };
+const items197 = [
   {
     i: { x: 0.833, y: 0.833 },
     o: { x: 0.167, y: 0.273 },
     t: 75,
-    s: [-20.92, 13.265, 0],
+    s: [129.08, 163.265, 0],
     to: [-10.441, -24.648, 0],
     ti: [12.96, 6.819, 0],
   },
@@ -2094,53 +1998,53 @@ const items199 = [
     i: { x: 0.698, y: 1 },
     o: { x: 0.167, y: 0.167 },
     t: 96.115,
-    s: [-52.678, -11.449, 0],
+    s: [97.322, 138.551, 0],
     to: [-12.96, -6.819, 0],
     ti: [14.766, 7.768, 0],
   },
-  { t: 118, s: [-74.254, -36.735, 0] },
+  { t: 118, s: [75.746, 113.265, 0] },
 ];
-obj171.k = items199;
-obj165.p = obj171;
-const obj172 = { a: 1, k: null, ix: 6 };
-const items200 = [
+obj161.k = items197;
+obj155.p = obj161;
+const obj162 = { a: 1, k: null, ix: 6 };
+const items198 = [
   {
-    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 1] },
+    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 17.667] },
     o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
     t: 88,
     s: [100, 100, 100],
   },
   { t: 118, s: [0, 0, 100] },
 ];
-obj172.k = items200;
-obj165.s = obj172;
-obj164.ks = obj165;
-const obj174 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj175 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj176 = { a: 0, k: null, ix: 2 };
-const obj177 = { i: null, o: null, v: null, c: true };
-const items201 = [
+obj162.k = items198;
+obj155.s = obj162;
+obj154.ks = obj155;
+const obj164 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj165 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj166 = { a: 0, k: null, ix: 2 };
+const obj167 = { i: null, o: null, v: null, c: true };
+const items199 = [
   [-7.898, -7.729],
   [-1.653, 3.926],
   [3.85, 1.064],
 ];
-obj177.i = items201;
-const items202 = [
+obj167.i = items199;
+const items200 = [
   [2.633, 2.577],
   [1.653, -3.926],
   [-3.85, -1.064],
 ];
-obj177.o = items202;
-const items203 = [
+obj167.o = items200;
+const items201 = [
   [-2.952, 5.365],
   [5.919, 3.865],
   [0.697, -6.965],
 ];
-obj177.v = items203;
-obj176.k = obj177;
-obj175.ks = obj176;
-const items204 = [obj175, ,];
-const obj178 = {
+obj167.v = items201;
+obj166.k = obj167;
+obj165.ks = obj166;
+const items202 = [obj165, ,];
+const obj168 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -2160,8 +2064,8 @@ const obj178 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items204[1] = obj178;
-items204[2] = {
+items202[1] = obj168;
+items202[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -2172,16 +2076,15 @@ items204[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj174.it = items204;
-const items205 = [obj174];
-obj164.shapes = items205;
-items172[5] = obj164;
-const obj181 = {
+obj164.it = items202;
+const items203 = [obj164];
+obj154.shapes = items203;
+items179[3] = obj154;
+const obj171 = {
   ddd: 0,
-  ind: 7,
+  ind: 5,
   ty: 4,
   nm: "Smoke Burst_01",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2191,20 +2094,20 @@ const obj181 = {
   st: 58,
   bm: 0,
 };
-const obj182 = {
+const obj172 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: null,
 };
-const obj183 = { a: 1, k: null, ix: 2 };
-const items206 = [
+const obj173 = { a: 1, k: null, ix: 2 };
+const items204 = [
   {
     i: { x: 0.833, y: 0.833 },
     o: { x: 0.167, y: 0.249 },
     t: 58,
-    s: [-55.67, 1.515, 0],
+    s: [94.33, 151.515, 0],
     to: [-10.441, -24.648, 0],
     ti: [12.96, 6.819, 0],
   },
@@ -2212,53 +2115,53 @@ const items206 = [
     i: { x: 0.698, y: 1 },
     o: { x: 0.167, y: 0.167 },
     t: 79.115,
-    s: [-94.928, -15.699, 0],
+    s: [55.072, 134.301, 0],
     to: [-12.96, -6.819, 0],
     ti: [14.766, 7.768, 0],
   },
-  { t: 101, s: [-109.004, -48.485, 0] },
+  { t: 101, s: [40.996, 101.515, 0] },
 ];
-obj183.k = items206;
-obj182.p = obj183;
-const obj184 = { a: 1, k: null, ix: 6 };
-const items207 = [
+obj173.k = items204;
+obj172.p = obj173;
+const obj174 = { a: 1, k: null, ix: 6 };
+const items205 = [
   {
-    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 1] },
+    i: { x: [0.833, 0.833, 0.833], y: [0.833, 0.833, 17.667] },
     o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
     t: 71,
     s: [100, 100, 100],
   },
   { t: 101, s: [0, 0, 100] },
 ];
-obj184.k = items207;
-obj182.s = obj184;
-obj181.ks = obj182;
-const obj186 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj187 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj188 = { a: 0, k: null, ix: 2 };
-const obj189 = { i: null, o: null, v: null, c: true };
-const items208 = [
+obj174.k = items205;
+obj172.s = obj174;
+obj171.ks = obj172;
+const obj176 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj177 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj178 = { a: 0, k: null, ix: 2 };
+const obj179 = { i: null, o: null, v: null, c: true };
+const items206 = [
   [-7.898, -7.729],
   [-1.653, 3.926],
   [3.85, 1.064],
 ];
-obj189.i = items208;
-const items209 = [
+obj179.i = items206;
+const items207 = [
   [2.633, 2.577],
   [1.653, -3.926],
   [-3.85, -1.064],
 ];
-obj189.o = items209;
-const items210 = [
+obj179.o = items207;
+const items208 = [
   [-2.952, 5.365],
   [5.919, 3.865],
   [0.697, -6.965],
 ];
-obj189.v = items210;
-obj188.k = obj189;
-obj187.ks = obj188;
-const items211 = [obj187, ,];
-const obj190 = {
+obj179.v = items208;
+obj178.k = obj179;
+obj177.ks = obj178;
+const items209 = [obj177, ,];
+const obj180 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -2278,8 +2181,8 @@ const obj190 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items211[1] = obj190;
-items211[2] = {
+items209[1] = obj180;
+items209[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -2290,16 +2193,15 @@ items211[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj186.it = items211;
-const items212 = [obj186];
-obj181.shapes = items212;
-items172[6] = obj181;
-const obj193 = {
+obj176.it = items209;
+const items210 = [obj176];
+obj171.shapes = items210;
+items179[4] = obj171;
+const obj183 = {
   ddd: 0,
-  ind: 8,
+  ind: 6,
   ty: 4,
   nm: "Star_01",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2309,15 +2211,15 @@ const obj193 = {
   st: 197,
   bm: 0,
 };
-const obj194 = {
+const obj184 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [92.664, -130.977, 0], ix: 2 },
+  p: { a: 0, k: [242.664, 19.023, 0], ix: 2 },
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: null,
 };
-const obj195 = { a: 1, k: null, ix: 6 };
-const items213 = [
+const obj185 = { a: 1, k: null, ix: 6 };
+const items211 = [
   {
     i: { x: [0.272, 0.272, 0.667], y: [1, 1, 1] },
     o: { x: [0.114, 0.114, 0.333], y: [0.434, 0.434, 0] },
@@ -2332,11 +2234,11 @@ const items213 = [
   },
   { t: 214, s: [0, 0, 100] },
 ];
-obj195.k = items213;
-obj194.s = obj195;
-obj193.ks = obj194;
-const obj198 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const items214 = [
+obj185.k = items211;
+obj184.s = obj185;
+obj183.ks = obj184;
+const obj188 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const items212 = [
   {
     d: 1,
     ty: "el",
@@ -2368,16 +2270,15 @@ const items214 = [
     nm: "Transform",
   },
 ];
-obj198.it = items214;
-const items215 = [obj198];
-obj193.shapes = items215;
-items172[7] = obj193;
-const obj202 = {
+obj188.it = items212;
+const items213 = [obj188];
+obj183.shapes = items213;
+items179[5] = obj183;
+const obj192 = {
   ddd: 0,
-  ind: 9,
+  ind: 7,
   ty: 4,
   nm: "Star_02",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2387,15 +2288,15 @@ const obj202 = {
   st: 210,
   bm: 0,
 };
-const obj203 = {
+const obj193 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [123.908, -103.698, 0], ix: 2 },
+  p: { a: 0, k: [273.908, 46.302, 0], ix: 2 },
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: null,
 };
-const obj204 = { a: 1, k: null, ix: 6 };
-const items216 = [
+const obj194 = { a: 1, k: null, ix: 6 };
+const items214 = [
   {
     i: { x: [0.272, 0.272, 0.667], y: [1, 1, 1] },
     o: { x: [0.114, 0.114, 0.333], y: [0.123, 0.123, 0] },
@@ -2410,14 +2311,14 @@ const items216 = [
   },
   { t: 227, s: [0, 0, 100] },
 ];
-obj204.k = items216;
-obj203.s = obj204;
-obj202.ks = obj203;
-const obj207 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj208 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj209 = { a: 0, k: null, ix: 2 };
-const obj210 = { i: null, o: null, v: null, c: true };
-const items217 = [
+obj194.k = items214;
+obj193.s = obj194;
+obj192.ks = obj193;
+const obj197 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj198 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj199 = { a: 0, k: null, ix: 2 };
+const obj200 = { i: null, o: null, v: null, c: true };
+const items215 = [
   [0.21, -0.07],
   [0, 0],
   [0.16, -0.55],
@@ -2437,8 +2338,8 @@ const items217 = [
   [-0.55, -0.16],
   [0, 0],
 ];
-obj210.i = items217;
-const items218 = [
+obj200.i = items215;
+const items216 = [
   [0, 0],
   [-0.55, 0.16],
   [0, 0],
@@ -2458,8 +2359,8 @@ const items218 = [
   [0, 0],
   [0.21, 0.06],
 ];
-obj210.o = items218;
-const items219 = [
+obj200.o = items216;
+const items217 = [
   [3.825, 0.215],
   [1.915, 0.775],
   [0.775, 1.915],
@@ -2479,11 +2380,11 @@ const items219 = [
   [1.915, -0.775],
   [3.825, -0.205],
 ];
-obj210.v = items219;
-obj209.k = obj210;
-obj208.ks = obj209;
-const items220 = [
-  obj208,
+obj200.v = items217;
+obj199.k = obj200;
+obj198.ks = obj199;
+const items218 = [
+  obj198,
   {
     ty: "fl",
     c: { a: 0, k: [1, 1, 1, 1], ix: 4 },
@@ -2506,16 +2407,15 @@ const items220 = [
     nm: "Transform",
   },
 ];
-obj207.it = items220;
-const items221 = [obj207];
-obj202.shapes = items221;
-items172[8] = obj202;
-const obj213 = {
+obj197.it = items218;
+const items219 = [obj197];
+obj192.shapes = items219;
+items179[6] = obj192;
+const obj203 = {
   ddd: 0,
-  ind: 10,
+  ind: 8,
   ty: 4,
   nm: "Star_03",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2525,15 +2425,15 @@ const obj213 = {
   st: 194,
   bm: 0,
 };
-const obj214 = {
+const obj204 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [115.838, -76.839, 0], ix: 2 },
+  p: { a: 0, k: [265.838, 73.161, 0], ix: 2 },
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: null,
 };
-const obj215 = { a: 1, k: null, ix: 6 };
-const items222 = [
+const obj205 = { a: 1, k: null, ix: 6 };
+const items220 = [
   {
     i: { x: [0.272, 0.272, 0.667], y: [1, 1, 1] },
     o: { x: [0.114, 0.114, 0.333], y: [0.387, 0.387, 0] },
@@ -2548,14 +2448,14 @@ const items222 = [
   },
   { t: 211, s: [0, 0, 100] },
 ];
-obj215.k = items222;
-obj214.s = obj215;
-obj213.ks = obj214;
-const obj218 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj219 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj220 = { a: 0, k: null, ix: 2 };
-const obj221 = { i: null, o: null, v: null, c: true };
-const items223 = [
+obj205.k = items220;
+obj204.s = obj205;
+obj203.ks = obj204;
+const obj208 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj209 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj210 = { a: 0, k: null, ix: 2 };
+const obj211 = { i: null, o: null, v: null, c: true };
+const items221 = [
   [0, 0],
   [0.36, 2.569],
   [0, 0],
@@ -2581,8 +2481,8 @@ const items223 = [
   [0, 0],
   [0.117, 0.081],
 ];
-obj221.i = items223;
-const items224 = [
+obj211.i = items221;
+const items222 = [
   [-2.041, -1.407],
   [0, 0],
   [-0.03, -0.215],
@@ -2608,8 +2508,8 @@ const items224 = [
   [0, -0.149],
   [0, 0],
 ];
-obj221.o = items224;
-const items225 = [
+obj211.o = items222;
+const items223 = [
   [4.796, -0.749],
   [1.019, -7.004],
   [0.407, -11.377],
@@ -2635,11 +2535,11 @@ const items225 = [
   [5.515, -0.014],
   [5.326, -0.383],
 ];
-obj221.v = items225;
-obj220.k = obj221;
-obj219.ks = obj220;
-const items226 = [
-  obj219,
+obj211.v = items223;
+obj210.k = obj211;
+obj209.ks = obj210;
+const items224 = [
+  obj209,
   {
     ty: "fl",
     c: { a: 0, k: [1, 1, 1, 1], ix: 4 },
@@ -2662,21 +2562,20 @@ const items226 = [
     nm: "Transform",
   },
 ];
-obj218.it = items226;
-const items227 = [obj218];
-obj213.shapes = items227;
-items172[9] = obj213;
-const obj224 = {
+obj208.it = items224;
+const items225 = [obj208];
+obj203.shapes = items225;
+items179[7] = obj203;
+const obj214 = {
   ddd: 0,
-  ind: 11,
+  ind: 9,
   ty: 4,
   nm: "Intro Warp_06",
-  parent: 2,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
     r: { a: 0, k: 84.219, ix: 10 },
-    p: { a: 0, k: [97.88, -104.48, 0], ix: 2 },
+    p: { a: 0, k: [247.88, 45.52, 0], ix: 2 },
     a: { a: 0, k: [0, 0, 0], ix: 1 },
     s: { a: 0, k: [100, 100, 100], ix: 6 },
   },
@@ -2687,7 +2586,7 @@ const obj224 = {
   st: 190,
   bm: 0,
 };
-const obj226 = {
+const obj216 = {
   d: 1,
   ty: "el",
   s: null,
@@ -2696,15 +2595,15 @@ const obj226 = {
   mn: "ADBE Vector Shape - Ellipse",
   hd: false,
 };
-const obj227 = { a: 1, k: null, ix: 2 };
-const items228 = [
+const obj217 = { a: 1, k: null, ix: 2 };
+const items226 = [
   { i: { x: [0, 0], y: [1, 1] }, o: { x: [0.193, 0.193], y: [0, 0] }, t: 191, s: [11, 1.846] },
   { t: 231, s: [29.324, 12.709] },
 ];
-obj227.k = items228;
-obj226.s = obj227;
-const items229 = [obj226];
-const obj229 = {
+obj217.k = items226;
+obj216.s = obj217;
+const items227 = [obj216];
+const obj219 = {
   ty: "st",
   c: { a: 0, k: [0.341176470588, 0.949019607843, 0.529411764706, 1], ix: 3 },
   o: { a: 0, k: 100, ix: 4 },
@@ -2716,27 +2615,26 @@ const obj229 = {
   mn: "ADBE Vector Graphic - Stroke",
   hd: false,
 };
-const obj230 = { a: 1, k: null, ix: 5 };
-const items230 = [
+const obj220 = { a: 1, k: null, ix: 5 };
+const items228 = [
   { i: { x: [0], y: [1] }, o: { x: [0.193], y: [0] }, t: 191, s: [6] },
   { t: 231, s: [0] },
 ];
-obj230.k = items230;
-obj229.w = obj230;
-items229[1] = obj229;
-obj224.shapes = items229;
-items172[10] = obj224;
-const obj232 = {
+obj220.k = items228;
+obj219.w = obj220;
+items227[1] = obj219;
+obj214.shapes = items227;
+items179[8] = obj214;
+const obj222 = {
   ddd: 0,
-  ind: 12,
+  ind: 10,
   ty: 4,
   nm: "Intro Warp_04",
-  parent: 2,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
     r: { a: 0, k: 84.219, ix: 10 },
-    p: { a: 0, k: [77.902, -98.172, 0], ix: 2 },
+    p: { a: 0, k: [227.902, 51.828, 0], ix: 2 },
     a: { a: 0, k: [0, 0, 0], ix: 1 },
     s: { a: 0, k: [100, 100, 100], ix: 6 },
   },
@@ -2747,7 +2645,7 @@ const obj232 = {
   st: 187,
   bm: 0,
 };
-const obj234 = {
+const obj224 = {
   d: 1,
   ty: "el",
   s: null,
@@ -2756,15 +2654,15 @@ const obj234 = {
   mn: "ADBE Vector Shape - Ellipse",
   hd: false,
 };
-const obj235 = { a: 1, k: null, ix: 2 };
-const items231 = [
+const obj225 = { a: 1, k: null, ix: 2 };
+const items229 = [
   { i: { x: [0, 0], y: [1, 1] }, o: { x: [0.193, 0.193], y: [0, 0] }, t: 188, s: [28, 14.881] },
   { t: 228, s: [72.324, 31.344] },
 ];
-obj235.k = items231;
-obj234.s = obj235;
-const items232 = [obj234];
-const obj237 = {
+obj225.k = items229;
+obj224.s = obj225;
+const items230 = [obj224];
+const obj227 = {
   ty: "st",
   c: { a: 0, k: [0.341176470588, 0.949019607843, 0.529411764706, 1], ix: 3 },
   o: { a: 0, k: 100, ix: 4 },
@@ -2776,27 +2674,26 @@ const obj237 = {
   mn: "ADBE Vector Graphic - Stroke",
   hd: false,
 };
-const obj238 = { a: 1, k: null, ix: 5 };
-const items233 = [
+const obj228 = { a: 1, k: null, ix: 5 };
+const items231 = [
   { i: { x: [0], y: [1] }, o: { x: [0.193], y: [0] }, t: 188, s: [9] },
   { t: 228, s: [0] },
 ];
-obj238.k = items233;
-obj237.w = obj238;
-items232[1] = obj237;
-obj232.shapes = items232;
-items172[11] = obj232;
-const obj240 = {
+obj228.k = items231;
+obj227.w = obj228;
+items230[1] = obj227;
+obj222.shapes = items230;
+items179[9] = obj222;
+const obj230 = {
   ddd: 0,
-  ind: 13,
+  ind: 11,
   ty: 4,
   nm: "Intro Warp_05",
-  parent: 2,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
     r: { a: 0, k: 84.219, ix: 10 },
-    p: { a: 0, k: [49.5, -88.25, 0], ix: 2 },
+    p: { a: 0, k: [199.5, 61.75, 0], ix: 2 },
     a: { a: 0, k: [0, 0, 0], ix: 1 },
     s: { a: 0, k: [100, 100, 100], ix: 6 },
   },
@@ -2807,7 +2704,7 @@ const obj240 = {
   st: 184,
   bm: 0,
 };
-const obj242 = {
+const obj232 = {
   d: 1,
   ty: "el",
   s: null,
@@ -2816,15 +2713,15 @@ const obj242 = {
   mn: "ADBE Vector Shape - Ellipse",
   hd: false,
 };
-const obj243 = { a: 1, k: null, ix: 2 };
-const items234 = [
+const obj233 = { a: 1, k: null, ix: 2 };
+const items232 = [
   { i: { x: [0, 0], y: [1, 1] }, o: { x: [0.193, 0.193], y: [0, 0] }, t: 185, s: [44, 23.385] },
   { t: 225, s: [106.324, 46.08] },
 ];
-obj243.k = items234;
-obj242.s = obj243;
-const items235 = [obj242];
-const obj245 = {
+obj233.k = items232;
+obj232.s = obj233;
+const items233 = [obj232];
+const obj235 = {
   ty: "st",
   c: { a: 0, k: [0.341176470588, 0.949019607843, 0.529411764706, 1], ix: 3 },
   o: { a: 0, k: 100, ix: 4 },
@@ -2836,22 +2733,21 @@ const obj245 = {
   mn: "ADBE Vector Graphic - Stroke",
   hd: false,
 };
-const obj246 = { a: 1, k: null, ix: 5 };
-const items236 = [
+const obj236 = { a: 1, k: null, ix: 5 };
+const items234 = [
   { i: { x: [0], y: [1] }, o: { x: [0.193], y: [0] }, t: 185, s: [9] },
   { t: 225, s: [0] },
 ];
-obj246.k = items236;
-obj245.w = obj246;
-items235[1] = obj245;
-obj240.shapes = items235;
-items172[12] = obj240;
-const obj248 = {
+obj236.k = items234;
+obj235.w = obj236;
+items233[1] = obj235;
+obj230.shapes = items233;
+items179[10] = obj230;
+const obj238 = {
   ddd: 0,
-  ind: 14,
+  ind: 12,
   ty: 3,
   nm: "Left Smoke Scale",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2860,15 +2756,15 @@ const obj248 = {
   st: 0,
   bm: 0,
 };
-const obj249 = {
+const obj239 = {
   o: { a: 0, k: 0, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [-96.692, 32, 0], ix: 2 },
+  p: { a: 0, k: [53.308, 182, 0], ix: 2 },
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: null,
 };
-const obj250 = { a: 1, k: null, ix: 6 };
-const items237 = [
+const obj240 = { a: 1, k: null, ix: 6 };
+const items235 = [
   {
     i: { x: [0.613, 0.613, 0.667], y: [1, 1, 1] },
     o: { x: [0.258, 0.258, 0], y: [0, 0, 0] },
@@ -2877,16 +2773,15 @@ const items237 = [
   },
   { t: 175, s: [30, 30, 100] },
 ];
-obj250.k = items237;
-obj249.s = obj250;
-obj248.ks = obj249;
-items172[13] = obj248;
-const obj252 = {
+obj240.k = items235;
+obj239.s = obj240;
+obj238.ks = obj239;
+items179[11] = obj238;
+const obj242 = {
   ddd: 0,
-  ind: 15,
+  ind: 13,
   ty: 3,
   nm: "Right Smoke Scale",
-  parent: 2,
   sr: 1,
   ks: null,
   ao: 0,
@@ -2895,15 +2790,15 @@ const obj252 = {
   st: 0,
   bm: 0,
 };
-const obj253 = {
+const obj243 = {
   o: { a: 0, k: 0, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
-  p: { a: 0, k: [93.522, 32, 0], ix: 2 },
+  p: { a: 0, k: [243.522, 182, 0], ix: 2 },
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: null,
 };
-const obj254 = { a: 1, k: null, ix: 6 };
-const items238 = [
+const obj244 = { a: 1, k: null, ix: 6 };
+const items236 = [
   {
     i: { x: [0.613, 0.613, 0.667], y: [1, 1, 1] },
     o: { x: [0.258, 0.258, 0], y: [0, 0, 0] },
@@ -2912,16 +2807,16 @@ const items238 = [
   },
   { t: 175, s: [30, 30, 100] },
 ];
-obj254.k = items238;
-obj253.s = obj254;
-obj252.ks = obj253;
-items172[14] = obj252;
-const obj256 = {
+obj244.k = items236;
+obj243.s = obj244;
+obj242.ks = obj243;
+items179[12] = obj242;
+const obj246 = {
   ddd: 0,
-  ind: 16,
+  ind: 14,
   ty: 0,
   nm: "Smoke Redraw",
-  parent: 14,
+  parent: 12,
   refId: "comp_0",
   sr: 1,
   ks: null,
@@ -2933,28 +2828,28 @@ const obj256 = {
   st: 58,
   bm: 0,
 };
-const obj257 = {
+const obj247 = {
   o: null,
   r: { a: 0, k: 0, ix: 10 },
   p: { a: 0, k: [91.317, -0.55, 0], ix: 2 },
   a: { a: 0, k: [78.977, 181.25, 0], ix: 1 },
   s: { a: 0, k: [-44, 44, 100], ix: 6 },
 };
-const obj258 = { a: 1, k: null, ix: 11 };
-const items239 = [
+const obj248 = { a: 1, k: null, ix: 11 };
+const items237 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.333], y: [0] }, t: 123, s: [50] },
   { t: 166, s: [0] },
 ];
-obj258.k = items239;
-obj257.o = obj258;
-obj256.ks = obj257;
-items172[15] = obj256;
-const obj260 = {
+obj248.k = items237;
+obj247.o = obj248;
+obj246.ks = obj247;
+items179[13] = obj246;
+const obj250 = {
   ddd: 0,
-  ind: 17,
+  ind: 15,
   ty: 0,
   nm: "Smoke Redraw",
-  parent: 15,
+  parent: 13,
   refId: "comp_0",
   sr: 1,
   ks: null,
@@ -2966,67 +2861,54 @@ const obj260 = {
   st: 58,
   bm: 0,
 };
-const obj261 = {
+const obj251 = {
   o: null,
   r: { a: 0, k: 0, ix: 10 },
   p: { a: 0, k: [-87.363, 0, 0], ix: 2 },
   a: { a: 0, k: [83.523, 182.499, 0], ix: 1 },
   s: { a: 0, k: [44, 44, 100], ix: 6 },
 };
-const obj262 = { a: 1, k: null, ix: 11 };
-const items240 = [
+const obj252 = { a: 1, k: null, ix: 11 };
+const items238 = [
   { i: { x: [0.833], y: [0.833] }, o: { x: [0.333], y: [0] }, t: 123, s: [50] },
   { t: 166, s: [0] },
 ];
-obj262.k = items240;
-obj261.o = obj262;
-obj260.ks = obj261;
-items172[16] = obj260;
-const obj264 = {
-  ddd: 0,
-  ind: 18,
-  ty: 3,
-  nm: "Secondary Motion",
-  parent: 2,
-  sr: 1,
-  ks: null,
-  ao: 0,
-  ip: 1,
-  op: 901,
-  st: 0,
-  bm: 0,
-};
-const obj265 = {
+obj252.k = items238;
+obj251.o = obj252;
+obj250.ks = obj251;
+items179[14] = obj250;
+const obj254 = { ddd: 0, ind: 16, ty: 3, nm: "Secondary Motion", sr: 1, ks: null, ao: 0, ip: 1, op: 901, st: 0, bm: 0 };
+const obj255 = {
   o: { a: 0, k: 0, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [0, 0, 0], ix: 1 },
   s: { a: 0, k: [54, 54, 100], ix: 6 },
 };
-const point = { s: true, x: { a: 0, k: -0.313, ix: 3 }, y: null };
-const obj266 = { a: 1, k: null, ix: 4 };
-const items241 = [
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 9, s: [-69.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 28.125, s: [-64.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 47.25, s: [-69.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 66.375, s: [-64.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 85.5, s: [-69.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 104.625, s: [-64.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 123.75, s: [-69.752] },
-  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 142.875, s: [-64.752] },
-  { t: 162, s: [-69.752] },
+const point = { s: true, x: { a: 0, k: 149.687, ix: 3 }, y: null };
+const obj256 = { a: 1, k: null, ix: 4 };
+const items239 = [
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 9, s: [80.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 28.125, s: [85.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 47.25, s: [80.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 66.375, s: [85.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 85.5, s: [80.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 104.625, s: [85.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 123.75, s: [80.248] },
+  { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 142.875, s: [85.248] },
+  { t: 162, s: [80.248] },
 ];
-obj266.k = items241;
-point.y = obj266;
-obj265.p = point;
-obj264.ks = obj265;
-items172[17] = obj264;
-const obj275 = {
+obj256.k = items239;
+point.y = obj256;
+obj255.p = point;
+obj254.ks = obj255;
+items179[15] = obj254;
+const obj265 = {
   ddd: 0,
-  ind: 19,
+  ind: 17,
   ty: 3,
   nm: "UFO Control",
-  parent: 18,
+  parent: 16,
   sr: 1,
   ks: null,
   ao: 0,
@@ -3035,9 +2917,9 @@ const obj275 = {
   st: 0,
   bm: 0,
 };
-const obj276 = { o: { a: 0, k: 0, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
-const obj277 = { a: 1, k: null, ix: 10 };
-const items242 = [
+const obj266 = { o: { a: 0, k: 0, ix: 11 }, r: null, p: null, a: { a: 0, k: [0, 0, 0], ix: 1 }, s: null };
+const obj267 = { a: 1, k: null, ix: 10 };
+const items240 = [
   { i: { x: [0.223], y: [1] }, o: { x: [0.524], y: [0] }, t: 0, s: [-16] },
   { i: { x: [0.661], y: [1] }, o: { x: [0.327], y: [0] }, t: 30, s: [2.426] },
   { i: { x: [0.661], y: [1] }, o: { x: [0.318], y: [0] }, t: 58, s: [0] },
@@ -3047,10 +2929,10 @@ const items242 = [
   { i: { x: [0.833], y: [1] }, o: { x: [0.167], y: [0] }, t: 149, s: [2] },
   { t: 170, s: [-15] },
 ];
-obj277.k = items242;
-obj276.r = obj277;
-const obj285 = { a: 1, k: null, ix: 2 };
-const items243 = [
+obj267.k = items240;
+obj266.r = obj267;
+const obj275 = { a: 1, k: null, ix: 2 };
+const items241 = [
   {
     i: { x: 0.223, y: 1 },
     o: { x: 0.211, y: 0.37 },
@@ -3079,10 +2961,10 @@ const items243 = [
   },
   { t: 184, s: [34.259, -16.204, 0] },
 ];
-obj285.k = items243;
-obj276.p = obj285;
-const obj286 = { a: 1, k: null, ix: 6 };
-const items244 = [
+obj275.k = items241;
+obj266.p = obj275;
+const obj276 = { a: 1, k: null, ix: 6 };
+const items242 = [
   {
     i: { x: [0.223, 0.223, 0.223], y: [1, 1, 1] },
     o: { x: [0.541, 0.541, 0.541], y: [0.597, 0.597, -0.461] },
@@ -3121,16 +3003,16 @@ const items244 = [
   },
   { t: 184, s: [121.185, 99.185, 100] },
 ];
-obj286.k = items244;
-obj276.s = obj286;
-obj275.ks = obj276;
-items172[18] = obj275;
-const obj293 = {
+obj276.k = items242;
+obj266.s = obj276;
+obj265.ks = obj266;
+items179[16] = obj265;
+const obj283 = {
   ddd: 0,
-  ind: 20,
+  ind: 18,
   ty: 4,
   nm: "UFO Hole",
-  parent: 19,
+  parent: 17,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
@@ -3146,8 +3028,8 @@ const obj293 = {
   st: 0,
   bm: 0,
 };
-const obj295 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const items245 = [
+const obj285 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const items243 = [
   {
     d: 1,
     ty: "el",
@@ -3179,16 +3061,16 @@ const items245 = [
     nm: "Transform",
   },
 ];
-obj295.it = items245;
-const items246 = [obj295];
-obj293.shapes = items246;
-items172[19] = obj293;
-const obj299 = {
+obj285.it = items243;
+const items244 = [obj285];
+obj283.shapes = items244;
+items179[17] = obj283;
+const obj289 = {
   ddd: 0,
-  ind: 21,
+  ind: 19,
   ty: 4,
   nm: "UFO Alpha",
-  parent: 19,
+  parent: 17,
   td: 1,
   sr: 1,
   ks: {
@@ -3205,35 +3087,35 @@ const obj299 = {
   st: 0,
   bm: 0,
 };
-const obj301 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj302 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj303 = { a: 0, k: null, ix: 2 };
-const obj304 = { i: null, o: null, v: null, c: true };
+const obj291 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj292 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj293 = { a: 0, k: null, ix: 2 };
+const obj294 = { i: null, o: null, v: null, c: true };
+const items245 = [
+  [0, -7.012],
+  [40.626, 0],
+  [0, 7.012],
+  [-40.626, 0],
+];
+obj294.i = items245;
+const items246 = [
+  [0, 7.012],
+  [-40.626, 0],
+  [0, -7.012],
+  [40.626, 0],
+];
+obj294.o = items246;
 const items247 = [
-  [0, -7.012],
-  [40.626, 0],
-  [0, 7.012],
-  [-40.626, 0],
-];
-obj304.i = items247;
-const items248 = [
-  [0, 7.012],
-  [-40.626, 0],
-  [0, -7.012],
-  [40.626, 0],
-];
-obj304.o = items248;
-const items249 = [
   [73.557, -0.006],
   [0, 12.702],
   [-73.557, -0.006],
   [0, -12.702],
 ];
-obj304.v = items249;
-obj303.k = obj304;
-obj302.ks = obj303;
-const items250 = [
-  obj302,
+obj294.v = items247;
+obj293.k = obj294;
+obj292.ks = obj293;
+const items248 = [
+  obj292,
   {
     ty: "fl",
     c: { a: 0, k: [1, 0, 0, 1], ix: 4 },
@@ -3256,16 +3138,16 @@ const items250 = [
     nm: "Transform",
   },
 ];
-obj301.it = items250;
-const items251 = [obj301];
-obj299.shapes = items251;
-items172[20] = obj299;
-const obj307 = {
+obj291.it = items248;
+const items249 = [obj291];
+obj289.shapes = items249;
+items179[18] = obj289;
+const obj297 = {
   ddd: 0,
-  ind: 22,
+  ind: 20,
   ty: 4,
   nm: "Lights",
-  parent: 19,
+  parent: 17,
   tt: 1,
   sr: 1,
   ks: null,
@@ -3276,15 +3158,15 @@ const obj307 = {
   st: 0,
   bm: 0,
 };
-const obj308 = {
+const obj298 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [150, 80.245, 0], ix: 1 },
   s: { a: 0, k: [105, 105, 100], ix: 6 },
 };
-const obj309 = { a: 1, k: null, ix: 2 };
-const items252 = [
+const obj299 = { a: 1, k: null, ix: 2 };
+const items250 = [
   {
     i: { x: 0.833, y: 0.833 },
     o: { x: 0.167, y: 0.167 },
@@ -3295,11 +3177,11 @@ const items252 = [
   },
   { t: 278, s: [-119.687, -0.003, 0] },
 ];
-obj309.k = items252;
-obj308.p = obj309;
-obj307.ks = obj308;
-const obj310 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const items253 = [
+obj299.k = items250;
+obj298.p = obj299;
+obj297.ks = obj298;
+const obj300 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const items251 = [
   {
     d: 1,
     ty: "el",
@@ -3331,10 +3213,10 @@ const items253 = [
     nm: "Transform",
   },
 ];
-obj310.it = items253;
-const items254 = [obj310, , , , , , , ,];
-const obj314 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
-const items255 = [
+obj300.it = items251;
+const items252 = [obj300, , , , , , , ,];
+const obj304 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
+const items253 = [
   {
     d: 1,
     ty: "el",
@@ -3366,10 +3248,10 @@ const items255 = [
     nm: "Transform",
   },
 ];
-obj314.it = items255;
-items254[1] = obj314;
-const obj318 = { ty: "gr", it: null, nm: "Group 3", np: 2, cix: 2, bm: 0, ix: 3, mn: "ADBE Vector Group", hd: false };
-const items256 = [
+obj304.it = items253;
+items252[1] = obj304;
+const obj308 = { ty: "gr", it: null, nm: "Group 3", np: 2, cix: 2, bm: 0, ix: 3, mn: "ADBE Vector Group", hd: false };
+const items254 = [
   {
     d: 1,
     ty: "el",
@@ -3401,10 +3283,10 @@ const items256 = [
     nm: "Transform",
   },
 ];
-obj318.it = items256;
-items254[2] = obj318;
-const obj322 = { ty: "gr", it: null, nm: "Group 4", np: 2, cix: 2, bm: 0, ix: 4, mn: "ADBE Vector Group", hd: false };
-const items257 = [
+obj308.it = items254;
+items252[2] = obj308;
+const obj312 = { ty: "gr", it: null, nm: "Group 4", np: 2, cix: 2, bm: 0, ix: 4, mn: "ADBE Vector Group", hd: false };
+const items255 = [
   {
     d: 1,
     ty: "el",
@@ -3436,10 +3318,10 @@ const items257 = [
     nm: "Transform",
   },
 ];
-obj322.it = items257;
-items254[3] = obj322;
-const obj326 = { ty: "gr", it: null, nm: "Group 5", np: 2, cix: 2, bm: 0, ix: 5, mn: "ADBE Vector Group", hd: false };
-const items258 = [
+obj312.it = items255;
+items252[3] = obj312;
+const obj316 = { ty: "gr", it: null, nm: "Group 5", np: 2, cix: 2, bm: 0, ix: 5, mn: "ADBE Vector Group", hd: false };
+const items256 = [
   {
     d: 1,
     ty: "el",
@@ -3471,10 +3353,10 @@ const items258 = [
     nm: "Transform",
   },
 ];
-obj326.it = items258;
-items254[4] = obj326;
-const obj330 = { ty: "gr", it: null, nm: "Group 6", np: 2, cix: 2, bm: 0, ix: 6, mn: "ADBE Vector Group", hd: false };
-const items259 = [
+obj316.it = items256;
+items252[4] = obj316;
+const obj320 = { ty: "gr", it: null, nm: "Group 6", np: 2, cix: 2, bm: 0, ix: 6, mn: "ADBE Vector Group", hd: false };
+const items257 = [
   {
     d: 1,
     ty: "el",
@@ -3506,10 +3388,10 @@ const items259 = [
     nm: "Transform",
   },
 ];
-obj330.it = items259;
-items254[5] = obj330;
-const obj334 = { ty: "gr", it: null, nm: "Group 7", np: 2, cix: 2, bm: 0, ix: 7, mn: "ADBE Vector Group", hd: false };
-const items260 = [
+obj320.it = items257;
+items252[5] = obj320;
+const obj324 = { ty: "gr", it: null, nm: "Group 7", np: 2, cix: 2, bm: 0, ix: 7, mn: "ADBE Vector Group", hd: false };
+const items258 = [
   {
     d: 1,
     ty: "el",
@@ -3541,10 +3423,10 @@ const items260 = [
     nm: "Transform",
   },
 ];
-obj334.it = items260;
-items254[6] = obj334;
-const obj338 = { ty: "gr", it: null, nm: "Group 8", np: 2, cix: 2, bm: 0, ix: 8, mn: "ADBE Vector Group", hd: false };
-const items261 = [
+obj324.it = items258;
+items252[6] = obj324;
+const obj328 = { ty: "gr", it: null, nm: "Group 8", np: 2, cix: 2, bm: 0, ix: 8, mn: "ADBE Vector Group", hd: false };
+const items259 = [
   {
     d: 1,
     ty: "el",
@@ -3576,10 +3458,10 @@ const items261 = [
     nm: "Transform",
   },
 ];
-obj338.it = items261;
-items254[7] = obj338;
-const obj342 = { ty: "gr", it: null, nm: "Group 9", np: 2, cix: 2, bm: 0, ix: 9, mn: "ADBE Vector Group", hd: false };
-const items262 = [
+obj328.it = items259;
+items252[7] = obj328;
+const obj332 = { ty: "gr", it: null, nm: "Group 9", np: 2, cix: 2, bm: 0, ix: 9, mn: "ADBE Vector Group", hd: false };
+const items260 = [
   {
     d: 1,
     ty: "el",
@@ -3611,16 +3493,16 @@ const items262 = [
     nm: "Transform",
   },
 ];
-obj342.it = items262;
-items254[8] = obj342;
-obj307.shapes = items254;
-items172[21] = obj307;
-const obj346 = {
+obj332.it = items260;
+items252[8] = obj332;
+obj297.shapes = items252;
+items179[19] = obj297;
+const obj336 = {
   ddd: 0,
-  ind: 23,
+  ind: 21,
   ty: 4,
   nm: "UFO Base",
-  parent: 19,
+  parent: 17,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
@@ -3636,32 +3518,32 @@ const obj346 = {
   st: 0,
   bm: 0,
 };
-const obj348 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj349 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj350 = { a: 0, k: null, ix: 2 };
-const obj351 = { i: null, o: null, v: null, c: true };
-const items263 = [
+const obj338 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj339 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj340 = { a: 0, k: null, ix: 2 };
+const obj341 = { i: null, o: null, v: null, c: true };
+const items261 = [
   [0, 0],
   [40.626, 0],
   [0, 7.012],
 ];
-obj351.i = items263;
-const items264 = [
+obj341.i = items261;
+const items262 = [
   [0, 7.012],
   [-40.626, 0],
   [0, 0],
 ];
-obj351.o = items264;
-const items265 = [
+obj341.o = items262;
+const items263 = [
   [73.557, -6.354],
   [0, 6.354],
   [-73.557, -6.354],
 ];
-obj351.v = items265;
-obj350.k = obj351;
-obj349.ks = obj350;
-const items266 = [obj349, ,];
-const obj352 = {
+obj341.v = items263;
+obj340.k = obj341;
+obj339.ks = obj340;
+const items264 = [obj339, ,];
+const obj342 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -3684,8 +3566,8 @@ const obj352 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items266[1] = obj352;
-items266[2] = {
+items264[1] = obj342;
+items264[2] = {
   ty: "tr",
   p: { a: 0, k: [149.687, 86.596], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -3696,37 +3578,37 @@ items266[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj348.it = items266;
-const items267 = [obj348];
-const obj355 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
-const obj356 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj357 = { a: 0, k: null, ix: 2 };
-const obj358 = { i: null, o: null, v: null, c: true };
+obj338.it = items264;
+const items265 = [obj338];
+const obj345 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
+const obj346 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj347 = { a: 0, k: null, ix: 2 };
+const obj348 = { i: null, o: null, v: null, c: true };
+const items266 = [
+  [0, -7.012],
+  [40.626, 0],
+  [0, 7.012],
+  [-40.626, 0],
+];
+obj348.i = items266;
+const items267 = [
+  [0, 7.012],
+  [-40.626, 0],
+  [0, -7.012],
+  [40.626, 0],
+];
+obj348.o = items267;
 const items268 = [
-  [0, -7.012],
-  [40.626, 0],
-  [0, 7.012],
-  [-40.626, 0],
-];
-obj358.i = items268;
-const items269 = [
-  [0, 7.012],
-  [-40.626, 0],
-  [0, -7.012],
-  [40.626, 0],
-];
-obj358.o = items269;
-const items270 = [
   [73.557, -0.006],
   [0, 12.702],
   [-73.557, -0.006],
   [0, -12.702],
 ];
-obj358.v = items270;
-obj357.k = obj358;
-obj356.ks = obj357;
-const items271 = [obj356, ,];
-const obj359 = {
+obj348.v = items268;
+obj347.k = obj348;
+obj346.ks = obj347;
+const items269 = [obj346, ,];
+const obj349 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -3749,8 +3631,8 @@ const obj359 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items271[1] = obj359;
-items271[2] = {
+items269[1] = obj349;
+items269[2] = {
   ty: "tr",
   p: { a: 0, k: [149.687, 80.248], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -3761,16 +3643,16 @@ items271[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj355.it = items271;
-items267[1] = obj355;
-obj346.shapes = items267;
-items172[22] = obj346;
-const obj362 = {
+obj345.it = items269;
+items265[1] = obj345;
+obj336.shapes = items265;
+items179[20] = obj336;
+const obj352 = {
   ddd: 0,
-  ind: 24,
+  ind: 22,
   ty: 4,
   nm: "UFO 11",
-  parent: 19,
+  parent: 17,
   sr: 1,
   ks: null,
   ao: 0,
@@ -3780,15 +3662,15 @@ const obj362 = {
   st: 0,
   bm: 0,
 };
-const obj363 = {
+const obj353 = {
   o: { a: 0, k: 50, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: { a: 0, k: [0.813, -5.308, 0], ix: 2 },
   a: { a: 0, k: [0.431, 25.862, 0], ix: 1 },
   s: null,
 };
-const obj364 = { a: 1, k: null, ix: 6 };
-const items272 = [
+const obj354 = { a: 1, k: null, ix: 6 };
+const items270 = [
   {
     i: { x: [0.667, 0.667, 0.667], y: [1, 1, 1] },
     o: { x: [0.333, 0.333, 0.333], y: [0, 0, 0] },
@@ -3839,35 +3721,35 @@ const items272 = [
   },
   { t: 200, s: [116, 116, 100] },
 ];
-obj364.k = items272;
-obj363.s = obj364;
-obj362.ks = obj363;
-const obj373 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj374 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj375 = { a: 0, k: null, ix: 2 };
-const obj376 = { i: null, o: null, v: null, c: false };
-const items273 = [
+obj354.k = items270;
+obj353.s = obj354;
+obj352.ks = obj353;
+const obj363 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj364 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj365 = { a: 0, k: null, ix: 2 };
+const obj366 = { i: null, o: null, v: null, c: false };
+const items271 = [
   [0, 0],
   [27.412, 0],
   [0, -27.412],
 ];
-obj376.i = items273;
-const items274 = [
+obj366.i = items271;
+const items272 = [
   [0, -27.412],
   [-27.412, 0],
   [0, 0],
 ];
-obj376.o = items274;
-const items275 = [
+obj366.o = items272;
+const items273 = [
   [49.633, 24.817],
   [0, -24.817],
   [-49.633, 24.817],
 ];
-obj376.v = items275;
-obj375.k = obj376;
-obj374.ks = obj375;
-const items276 = [obj374, ,];
-const obj377 = {
+obj366.v = items273;
+obj365.k = obj366;
+obj364.ks = obj365;
+const items274 = [obj364, ,];
+const obj367 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -3889,8 +3771,8 @@ const obj377 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items276[1] = obj377;
-items276[2] = {
+items274[1] = obj367;
+items274[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -3901,16 +3783,16 @@ items276[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj373.it = items276;
-const items277 = [obj373];
-obj362.shapes = items277;
-items172[23] = obj362;
-const obj380 = {
+obj363.it = items274;
+const items275 = [obj363];
+obj352.shapes = items275;
+items179[21] = obj352;
+const obj370 = {
   ddd: 0,
-  ind: 25,
+  ind: 23,
   ty: 4,
   nm: "Ray",
-  parent: 19,
+  parent: 17,
   sr: 1,
   ks: null,
   ao: 0,
@@ -3920,25 +3802,25 @@ const obj380 = {
   st: 0,
   bm: 0,
 };
-const obj381 = {
+const obj371 = {
   o: null,
   r: { a: 0, k: 0, ix: 10 },
   p: { a: 0, k: [0.313, -11.043, 0], ix: 2 },
   a: { a: 0, k: [0, -54.009, 0], ix: 1 },
   s: null,
 };
-const obj382 = { a: 1, k: null, ix: 11 };
-const items278 = [
+const obj372 = { a: 1, k: null, ix: 11 };
+const items276 = [
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 57, s: [100] },
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 78, s: [62] },
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 99, s: [100] },
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 120, s: [62] },
   { t: 141, s: [0] },
 ];
-obj382.k = items278;
-obj381.o = obj382;
-const obj387 = { a: 1, k: null, ix: 6 };
-const items279 = [
+obj372.k = items276;
+obj371.o = obj372;
+const obj377 = { a: 1, k: null, ix: 6 };
+const items277 = [
   {
     i: { x: [0.465, 0.93, 0.93], y: [1, 1, 1] },
     o: { x: [0.05, 0.167, 0.167], y: [0.667, 0, 0] },
@@ -3953,35 +3835,35 @@ const items279 = [
   },
   { t: 85, s: [114, 100, 100] },
 ];
-obj387.k = items279;
-obj381.s = obj387;
-obj380.ks = obj381;
-const obj390 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj391 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj392 = { a: 0, k: null, ix: 2 };
-const obj393 = { i: null, o: null, v: null, c: true };
+obj377.k = items277;
+obj371.s = obj377;
+obj370.ks = obj371;
+const obj380 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj381 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj382 = { a: 0, k: null, ix: 2 };
+const obj383 = { i: null, o: null, v: null, c: true };
+const items278 = [
+  [0, 0],
+  [0, 0],
+  [0, 0],
+];
+obj383.i = items278;
+const items279 = [
+  [0, 0],
+  [0, 0],
+  [0, 0],
+];
+obj383.o = items279;
 const items280 = [
-  [0, 0],
-  [0, 0],
-  [0, 0],
-];
-obj393.i = items280;
-const items281 = [
-  [0, 0],
-  [0, 0],
-  [0, 0],
-];
-obj393.o = items281;
-const items282 = [
   [60.762, 87.526],
   [-60.701, 87.526],
   [0, -55.026],
 ];
-obj393.v = items282;
-obj392.k = obj393;
-obj391.ks = obj392;
-const items283 = [obj391, ,];
-const obj394 = {
+obj383.v = items280;
+obj382.k = obj383;
+obj381.ks = obj382;
+const items281 = [obj381, ,];
+const obj384 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -4004,8 +3886,8 @@ const obj394 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items283[1] = obj394;
-items283[2] = {
+items281[1] = obj384;
+items281[2] = {
   ty: "tr",
   p: { a: 0, k: [0, 0], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -4016,16 +3898,16 @@ items283[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj390.it = items283;
-const items284 = [obj390];
-obj380.shapes = items284;
-items172[24] = obj380;
-const obj397 = {
+obj380.it = items281;
+const items282 = [obj380];
+obj370.shapes = items282;
+items179[22] = obj370;
+const obj387 = {
   ddd: 0,
-  ind: 26,
+  ind: 24,
   ty: 4,
   nm: "UFO Glass",
-  parent: 19,
+  parent: 17,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
@@ -4041,32 +3923,32 @@ const obj397 = {
   st: 0,
   bm: 0,
 };
-const obj399 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
-const obj400 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj401 = { a: 0, k: null, ix: 2 };
-const obj402 = { i: null, o: null, v: null, c: false };
-const items285 = [
+const obj389 = { ty: "gr", it: null, nm: "Group 1", np: 2, cix: 2, bm: 0, ix: 1, mn: "ADBE Vector Group", hd: false };
+const obj390 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj391 = { a: 0, k: null, ix: 2 };
+const obj392 = { i: null, o: null, v: null, c: false };
+const items283 = [
   [0, 0],
   [-1.638, 1.145],
   [-2.436, 0.781],
 ];
-obj402.i = items285;
-const items286 = [
+obj392.i = items283;
+const items284 = [
   [1.325, -1.49],
   [2.055, -1.437],
   [0, 0],
 ];
-obj402.o = items286;
-const items287 = [
+obj392.o = items284;
+const items285 = [
   [-5.614, 3.663],
   [-1.155, -0.305],
   [5.614, -3.663],
 ];
-obj402.v = items287;
-obj401.k = obj402;
-obj400.ks = obj401;
-const items288 = [
-  obj400,
+obj392.v = items285;
+obj391.k = obj392;
+obj390.ks = obj391;
+const items286 = [
+  obj390,
   {
     ty: "st",
     c: { a: 0, k: [1, 1, 1, 1], ix: 3 },
@@ -4092,34 +3974,34 @@ const items288 = [
     nm: "Transform",
   },
 ];
-obj399.it = items288;
-const items289 = [obj399, ,];
-const obj405 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
-const obj406 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj407 = { a: 0, k: null, ix: 2 };
-const obj408 = { i: null, o: null, v: null, c: true };
-const items290 = [
+obj389.it = items286;
+const items287 = [obj389, ,];
+const obj395 = { ty: "gr", it: null, nm: "Group 2", np: 2, cix: 2, bm: 0, ix: 2, mn: "ADBE Vector Group", hd: false };
+const obj396 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj397 = { a: 0, k: null, ix: 2 };
+const obj398 = { i: null, o: null, v: null, c: true };
+const items288 = [
   [0, 0],
   [15.988, 0],
   [0, -15.988],
 ];
-obj408.i = items290;
-const items291 = [
+obj398.i = items288;
+const items289 = [
   [0, -15.988],
   [-15.988, 0],
   [0, 0],
 ];
-obj408.o = items291;
-const items292 = [
+obj398.o = items289;
+const items290 = [
   [28.948, 14.474],
   [0, -14.474],
   [-28.948, 14.474],
 ];
-obj408.v = items292;
-obj407.k = obj408;
-obj406.ks = obj407;
-const items293 = [obj406, ,];
-const obj409 = {
+obj398.v = items290;
+obj397.k = obj398;
+obj396.ks = obj397;
+const items291 = [obj396, ,];
+const obj399 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -4142,8 +4024,8 @@ const obj409 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items293[1] = obj409;
-items293[2] = {
+items291[1] = obj399;
+items291[2] = {
   ty: "tr",
   p: { a: 0, k: [150, 54.731], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -4154,34 +4036,34 @@ items293[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj405.it = items293;
-items289[1] = obj405;
-const obj412 = { ty: "gr", it: null, nm: "Group 3", np: 2, cix: 2, bm: 0, ix: 3, mn: "ADBE Vector Group", hd: false };
-const obj413 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
-const obj414 = { a: 0, k: null, ix: 2 };
-const obj415 = { i: null, o: null, v: null, c: true };
-const items294 = [
+obj395.it = items291;
+items287[1] = obj395;
+const obj402 = { ty: "gr", it: null, nm: "Group 3", np: 2, cix: 2, bm: 0, ix: 3, mn: "ADBE Vector Group", hd: false };
+const obj403 = { ind: 0, ty: "sh", ix: 1, ks: null, nm: "Path 1", mn: "ADBE Vector Shape - Group", hd: false };
+const obj404 = { a: 0, k: null, ix: 2 };
+const obj405 = { i: null, o: null, v: null, c: true };
+const items292 = [
   [0, 0],
   [17.734, 0],
   [0, -17.734],
 ];
-obj415.i = items294;
-const items295 = [
+obj405.i = items292;
+const items293 = [
   [0, -17.734],
   [-17.734, 0],
   [0, 0],
 ];
-obj415.o = items295;
-const items296 = [
+obj405.o = items293;
+const items294 = [
   [32.111, 16.055],
   [0, -16.055],
   [-32.111, 16.055],
 ];
-obj415.v = items296;
-obj414.k = obj415;
-obj413.ks = obj414;
-const items297 = [obj413, ,];
-const obj416 = {
+obj405.v = items294;
+obj404.k = obj405;
+obj403.ks = obj404;
+const items295 = [obj403, ,];
+const obj406 = {
   ty: "gf",
   o: { a: 0, k: 100, ix: 10 },
   r: 1,
@@ -4204,8 +4086,8 @@ const obj416 = {
   mn: "ADBE Vector Graphic - G-Fill",
   hd: false,
 };
-items297[1] = obj416;
-items297[2] = {
+items295[1] = obj406;
+items295[2] = {
   ty: "tr",
   p: { a: 0, k: [150, 53.731], ix: 2 },
   a: { a: 0, k: [0, 0], ix: 1 },
@@ -4216,16 +4098,15 @@ items297[2] = {
   sa: { a: 0, k: 0, ix: 5 },
   nm: "Transform",
 };
-obj412.it = items297;
-items289[2] = obj412;
-obj397.shapes = items289;
-items172[25] = obj397;
-const obj419 = {
+obj402.it = items295;
+items287[2] = obj402;
+obj387.shapes = items287;
+items179[23] = obj387;
+const obj409 = {
   ddd: 0,
-  ind: 27,
+  ind: 25,
   ty: 0,
   nm: "particle",
-  parent: 1,
   refId: "comp_1",
   sr: 1,
   ks: null,
@@ -4237,24 +4118,24 @@ const obj419 = {
   st: 0,
   bm: 0,
 };
-const obj420 = {
+const obj410 = {
   o: { a: 0, k: 100, ix: 11 },
   r: { a: 0, k: 0, ix: 10 },
   p: null,
   a: { a: 0, k: [20, 20, 0], ix: 1 },
   s: null,
 };
-const point1 = { s: true, x: { a: 0, k: 0, ix: 3 }, y: null };
-const obj421 = { a: 1, k: null, ix: 4 };
-const items298 = [
-  { i: { x: [0.342], y: [1] }, o: { x: [0.007], y: [0.266] }, t: 64, s: [-50.182] },
-  { t: 137, s: [0] },
+const point1 = { s: true, x: { a: 0, k: 150, ix: 3 }, y: null };
+const obj411 = { a: 1, k: null, ix: 4 };
+const items296 = [
+  { i: { x: [0.342], y: [1] }, o: { x: [0.007], y: [0.266] }, t: 64, s: [99.818] },
+  { t: 137, s: [150] },
 ];
-obj421.k = items298;
-point1.y = obj421;
-obj420.p = point1;
-const obj423 = { a: 1, k: null, ix: 6 };
-const items299 = [
+obj411.k = items296;
+point1.y = obj411;
+obj410.p = point1;
+const obj413 = { a: 1, k: null, ix: 6 };
+const items297 = [
   { i: { x: [0.342, 0.342, 0.667], y: [1, 1, 1] }, o: { x: [0, 0, 0.167], y: [0, 0, 0.317] }, t: 64, s: [30, 30, 100] },
   {
     i: { x: [0.453, 0.453, 0.833], y: [1, 1, 1] },
@@ -4264,21 +4145,20 @@ const items299 = [
   },
   { t: 182, s: [100, 100, 100] },
 ];
-obj423.k = items299;
-obj420.s = obj423;
-obj419.ks = obj420;
-items172[26] = obj419;
-const obj426 = {
+obj413.k = items297;
+obj410.s = obj413;
+obj409.ks = obj410;
+items179[24] = obj409;
+const obj416 = {
   ddd: 0,
-  ind: 28,
+  ind: 26,
   ty: 4,
   nm: "Intro Warp_03",
-  parent: 2,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
     r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [0, -15.5, 0], ix: 2 },
+    p: { a: 0, k: [150, 134.5, 0], ix: 2 },
     a: { a: 0, k: [0, 0, 0], ix: 1 },
     s: { a: 0, k: [100, 100, 100], ix: 6 },
   },
@@ -4289,7 +4169,7 @@ const obj426 = {
   st: 12,
   bm: 0,
 };
-const obj428 = {
+const obj418 = {
   d: 1,
   ty: "el",
   s: null,
@@ -4298,15 +4178,15 @@ const obj428 = {
   mn: "ADBE Vector Shape - Ellipse",
   hd: false,
 };
-const obj429 = { a: 1, k: null, ix: 2 };
-const items300 = [
+const obj419 = { a: 1, k: null, ix: 2 };
+const items298 = [
   { i: { x: [0.271, 0.271], y: [1, 1] }, o: { x: [0.167, 0.167], y: [0.167, 0.167] }, t: 12, s: [14, 0] },
   { t: 53, s: [69, 20.909] },
 ];
-obj429.k = items300;
-obj428.s = obj429;
-const items301 = [obj428];
-const obj431 = {
+obj419.k = items298;
+obj418.s = obj419;
+const items299 = [obj418];
+const obj421 = {
   ty: "st",
   c: { a: 0, k: [0.341176470588, 0.949019607843, 0.529411764706, 1], ix: 3 },
   o: { a: 0, k: 100, ix: 4 },
@@ -4318,27 +4198,26 @@ const obj431 = {
   mn: "ADBE Vector Graphic - Stroke",
   hd: false,
 };
-const obj432 = { a: 1, k: null, ix: 5 };
-const items302 = [
+const obj422 = { a: 1, k: null, ix: 5 };
+const items300 = [
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 12, s: [9.769] },
   { t: 53, s: [0] },
 ];
-obj432.k = items302;
-obj431.w = obj432;
-items301[1] = obj431;
-obj426.shapes = items301;
-items172[27] = obj426;
-const obj434 = {
+obj422.k = items300;
+obj421.w = obj422;
+items299[1] = obj421;
+obj416.shapes = items299;
+items179[25] = obj416;
+const obj424 = {
   ddd: 0,
-  ind: 29,
+  ind: 27,
   ty: 4,
   nm: "Intro Warp_02",
-  parent: 2,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
     r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [0, 12, 0], ix: 2 },
+    p: { a: 0, k: [150, 162, 0], ix: 2 },
     a: { a: 0, k: [0, 0, 0], ix: 1 },
     s: { a: 0, k: [100, 100, 100], ix: 6 },
   },
@@ -4349,7 +4228,7 @@ const obj434 = {
   st: 3,
   bm: 0,
 };
-const obj436 = {
+const obj426 = {
   d: 1,
   ty: "el",
   s: null,
@@ -4358,15 +4237,15 @@ const obj436 = {
   mn: "ADBE Vector Shape - Ellipse",
   hd: false,
 };
-const obj437 = { a: 1, k: null, ix: 2 };
-const items303 = [
+const obj427 = { a: 1, k: null, ix: 2 };
+const items301 = [
   { i: { x: [0.271, 0.271], y: [1, 1] }, o: { x: [0.167, 0.167], y: [0.167, 0.167] }, t: 3, s: [14, 0] },
   { t: 44, s: [104, 31.515] },
 ];
-obj437.k = items303;
-obj436.s = obj437;
-const items304 = [obj436];
-const obj439 = {
+obj427.k = items301;
+obj426.s = obj427;
+const items302 = [obj426];
+const obj429 = {
   ty: "st",
   c: { a: 0, k: [0.341176470588, 0.949019607843, 0.529411764706, 1], ix: 3 },
   o: { a: 0, k: 100, ix: 4 },
@@ -4378,27 +4257,26 @@ const obj439 = {
   mn: "ADBE Vector Graphic - Stroke",
   hd: false,
 };
-const obj440 = { a: 1, k: null, ix: 5 };
-const items305 = [
+const obj430 = { a: 1, k: null, ix: 5 };
+const items303 = [
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: 3, s: [9.769] },
   { t: 44, s: [0] },
 ];
-obj440.k = items305;
-obj439.w = obj440;
-items304[1] = obj439;
-obj434.shapes = items304;
-items172[28] = obj434;
-const obj442 = {
+obj430.k = items303;
+obj429.w = obj430;
+items302[1] = obj429;
+obj424.shapes = items302;
+items179[26] = obj424;
+const obj432 = {
   ddd: 0,
-  ind: 30,
+  ind: 28,
   ty: 4,
   nm: "Intro Warp_01",
-  parent: 2,
   sr: 1,
   ks: {
     o: { a: 0, k: 100, ix: 11 },
     r: { a: 0, k: 0, ix: 10 },
-    p: { a: 0, k: [0, 42, 0], ix: 2 },
+    p: { a: 0, k: [150, 192, 0], ix: 2 },
     a: { a: 0, k: [0, 0, 0], ix: 1 },
     s: { a: 0, k: [100, 100, 100], ix: 6 },
   },
@@ -4409,7 +4287,7 @@ const obj442 = {
   st: -6,
   bm: 0,
 };
-const obj444 = {
+const obj434 = {
   d: 1,
   ty: "el",
   s: null,
@@ -4418,15 +4296,15 @@ const obj444 = {
   mn: "ADBE Vector Shape - Ellipse",
   hd: false,
 };
-const obj445 = { a: 1, k: null, ix: 2 };
-const items306 = [
+const obj435 = { a: 1, k: null, ix: 2 };
+const items304 = [
   { i: { x: [0.271, 0.271], y: [1, 1] }, o: { x: [0.167, 0.167], y: [0.167, 0.167] }, t: -6, s: [14, 0] },
   { t: 35, s: [132, 40] },
 ];
-obj445.k = items306;
-obj444.s = obj445;
-const items307 = [obj444];
-const obj447 = {
+obj435.k = items304;
+obj434.s = obj435;
+const items305 = [obj434];
+const obj437 = {
   ty: "st",
   c: { a: 0, k: [0.341176470588, 0.949019607843, 0.529411764706, 1], ix: 3 },
   o: { a: 0, k: 100, ix: 4 },
@@ -4438,22 +4316,22 @@ const obj447 = {
   mn: "ADBE Vector Graphic - Stroke",
   hd: false,
 };
-const obj448 = { a: 1, k: null, ix: 5 };
-const items308 = [
+const obj438 = { a: 1, k: null, ix: 5 };
+const items306 = [
   { i: { x: [0.667], y: [1] }, o: { x: [0.333], y: [0] }, t: -6, s: [9.769] },
   { t: 35, s: [0] },
 ];
-obj448.k = items308;
-obj447.w = obj448;
-items307[1] = obj447;
-obj442.shapes = items307;
-items172[29] = obj442;
-obj.layers = items172;
-const items309 = [
+obj438.k = items306;
+obj437.w = obj438;
+items305[1] = obj437;
+obj432.shapes = items305;
+items179[27] = obj432;
+obj.layers = items179;
+const items307 = [
   { tm: 0, cm: "START", dr: 0 },
   { tm: 58, cm: "", dr: 0 },
   { tm: 240, cm: "END", dr: 0 },
 ];
-obj.markers = items309;
+obj.markers = items307;
 
 export default obj;

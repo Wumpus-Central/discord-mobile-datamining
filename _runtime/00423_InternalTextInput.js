@@ -455,7 +455,7 @@ const noop = fn(19);
 const jsx = fn(21).jsx;
 let closure_4 = fn(145).default;
 const Commands = fn(145).Commands;
-const value2 = { done: "done", enter: "default", go: "go", next: "next", previous: "previous", search: "search", send: "send" };
+const value3 = { done: "done", enter: "default", go: "go", next: "next", previous: "previous", search: "search", send: "send" };
 const constants = { decimal: "decimal-pad", email: "email-address", none: "default", numeric: "number-pad", search: "default", tel: "phone-pad", text: "default", url: "url" };
 const collapsedCategories = { "additional-name": "name-middle", "address-line1": "postal-address-region", "address-line2": "postal-address-locality", bday: "birthdate-full", "bday-day": "birthdate-day", "bday-month": "birthdate-month", "bday-year": "birthdate-year", "cc-csc": "cc-csc", "cc-exp": "cc-exp", "cc-exp-month": "cc-exp-month", "cc-exp-year": "cc-exp-year", "cc-number": "cc-number", country: "postal-address-country", "current-password": "password", email: "email", "family-name": "name-family", "given-name": "name-given", "honorific-prefix": "name-prefix", "honorific-suffix": "name-suffix", name: "name", "new-password": "password-new", off: "off", "one-time-code": "sms-otp", "postal-code": "postal-code", sex: "gender", "street-address": "street-address", tel: "tel", "tel-country-code": "tel-country-code", "tel-national": "tel-national", username: "username" };
 class TextInput {

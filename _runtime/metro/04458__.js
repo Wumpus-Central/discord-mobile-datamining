@@ -1,6 +1,7 @@
 // _runtime/metro/04458__.js
-import _typeof_mod from "04158__.js";
-import requiredArgs_mod from "../04159_requiredArgs.js";
+import _typeof_mod from "04199__.js";
+import module_4381_mod from "04381__.js";
+import module_4442_mod from "04442__.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -10,18 +11,51 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let module_4381 = module_4381_mod;
+if (!module_4381) {
+  const obj2 = { default: module_4381 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4381;
 }
-requiredArgs = tmp5;
+module_4381 = tmp5;
+let module_4442 = module_4442_mod;
+if (!module_4442) {
+  const obj3 = { default: module_4442 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4442;
+}
+module_4442 = tmp7;
+let closure_3 = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let closure_4 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export default function isFuture(arg0) {
-  requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+export default function formatRFC7231(arg0) {
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat2 = "1 arguments required, but only ".concat;
+    const typeError = new TypeError("1 arguments required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    const defaultResult = _typeof.default(arg0);
+    if (module_4381.default(defaultResult)) {
+      const uTCFullYear = defaultResult.getUTCFullYear();
+      const defaultResult1 = module_4442.default(defaultResult.getUTCDate(), 2);
+      const defaultResult2 = module_4442.default(defaultResult.getUTCHours(), 2);
+      const concat = "".concat;
+      const defaultResult3 = module_4442.default(defaultResult.getUTCMinutes(), 2);
+      const combined = "".concat(closure_3[defaultResult.getUTCDay(defaultResult)], ", ");
+      const combined1 = combined.concat(defaultResult1, " ");
+      const combined2 = combined1.concat(closure_4[defaultResult.getUTCMonth(defaultResult)], " ");
+      const combined3 = combined2.concat(uTCFullYear, " ");
+      const combined4 = combined3.concat(defaultResult2, ":");
+      const combined5 = combined4.concat(defaultResult3, ":");
+      return combined5.concat(module_4442.default(defaultResult.getUTCSeconds(), 2), " GMT");
+    } else {
+      const _RangeError = RangeError;
+      const rangeError = new RangeError("Invalid time value");
+      throw rangeError;
+    }
+  }
 };
 export default exports.default;

@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 256,
-  height: 130,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5bbcc6438e9b5eafb60d2e7f478ed717",
-  name: "img_invite_empty_darker",
+  hash: "c3befb4dec1b6486d35bd86d8fd2910e",
+  name: "BoostGemOutlineIcon",
   type: "png",
 });

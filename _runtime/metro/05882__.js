@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 1505,
-  height: 1505,
+  width: 128,
+  height: 128,
   scales: [1],
-  hash: "dad08de0f63cac4aff0fb523b64af317",
-  name: "img_meta_quest",
-  type: "svg",
+  hash: "1301559e28a24a2331fbb1cb62dbbbc5",
+  name: "img_meta_quest_dark",
+  type: "png",
 });

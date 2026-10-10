@@ -1,34 +1,4 @@
 // _runtime/metro/08427__.js
+import _modDef8428 from "08428__.js";
 
-export default {
-  DeprecatedAccessibilityRoles: [
-    "none",
-    "button",
-    "togglebutton",
-    "link",
-    "search",
-    "image",
-    "keyboardkey",
-    "text",
-    "adjustable",
-    "imagebutton",
-    "header",
-    "summary",
-    "alert",
-    "checkbox",
-    "combobox",
-    "menu",
-    "menubar",
-    "menuitem",
-    "progressbar",
-    "radio",
-    "radiogroup",
-    "scrollbar",
-    "spinbutton",
-    "switch",
-    "tab",
-    "tablist",
-    "timer",
-    "toolbar",
-  ],
-};
+export default _modDef8428({ contain: null, cover: null, stretch: null });

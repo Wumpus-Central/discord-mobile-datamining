@@ -1,42 +1,59 @@
 // _runtime/metro/04616__.js
-import 04617__ from "04617__.js";
-import 04618__ from "04618__.js";
-import 04619__ from "04619__.js";
-import date_mod from "04620__.js";
-import date_mod from "04621__.js";
+import _mod4204 from "04204__.js";
+import requiredArgs_mod from "../04200_requiredArgs.js";
 
-if (!module_4617) {
-  const obj = { default: module_4617 };
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  let obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4617;
+  tmp3 = requiredArgs;
 }
-if (!module_4618) {
-  const obj2 = { default: module_4618 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4618;
-}
-if (!module_4619) {
-  const obj3 = { default: module_4619 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4619;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp3;
 
-export default { code: "zh-TW", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function setDefaultOptions(obj) {
+  requiredArgs.default(1, arguments);
+  obj = {};
+  const defaultOptions = _mod4204.getDefaultOptions();
+  for (const key10017 in defaultOptions) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    let call = hasOwnProperty.call;
+    if (typeof call === "unknown") {
+      let hasOwnPropertyResult = hasOwnProperty(key10017);
+    } else {
+      hasOwnPropertyResult = call(defaultOptions, key10017);
+    }
+    if (!hasOwnPropertyResult) {
+      continue;
+    } else {
+      obj[key10017] = defaultOptions[key10017];
+      continue;
+    }
+    continue;
+  }
+  for (const key10023 in arg0) {
+    let _Object2 = Object;
+    let call2 = hasOwnProperty2.call;
+    if (typeof call2 === "unknown") {
+      let hasOwnProperty2Result = hasOwnProperty2(key10023);
+    } else {
+      hasOwnProperty2Result = call2(arg0, key10023);
+    }
+    if (!hasOwnProperty2Result) {
+      continue;
+    } else {
+      if (undefined === arg0[key10023]) {
+        delete tmp[tmp2];
+        continue;
+      } else {
+        obj[key10023] = arg0[key10023];
+        continue;
+      }
+      continue;
+    }
+    continue;
+  }
+  _mod4204.setDefaultOptions(obj);
+};
 export default exports.default;

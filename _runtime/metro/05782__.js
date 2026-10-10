@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 256,
   height: 256,
   scales: [1],
-  hash: "a9a658fd475f7a20d9e2c83953494ec4",
+  hash: "141e24b0bc4cfc4d58d1cb3b5e32f1dc",
   name: "img_bungie_white",
-  type: "svg",
+  type: "png",
 });

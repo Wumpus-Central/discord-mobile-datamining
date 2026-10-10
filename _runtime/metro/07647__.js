@@ -1,13 +1,14 @@
 // _runtime/metro/07647__.js
-import _modDef7583 from "07583__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef7600 from "07600__.js";
+import _modDef7648 from "07648__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Polygon = importDefault;
+const SvgImage = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,60 +27,90 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
+const Image = fn(17).Image;
 const jsx = fn(21).jsx;
-class Polygon {
+const re9 = /\s+/;
+class SvgImage {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = c2(this, Polygon);
-    items1 = [...items];
-    tmp2 = closure_4;
-    obj = closure_4(Polygon);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
+    tmp = closure_3(this, SvgImage);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(SvgImage);
+    tmp3 = closure_4;
+    if (closure_8()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (points) => {
-      points = points.points;
-      if (points) {
-        const _HermesInternal = HermesInternal;
-        points.d = "M" + Polygon(7648)(points) + "z";
-      }
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(points);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Polygon, _modDef7583);
+_inherits(SvgImage, _modDef7600);
 const entry = {
   key: "render",
   value: function render() {
+    const self = this;
     const props = this.props;
-    const points = props.points;
-    const obj = { ref: this.refMethod, d: null };
-    let combined = points;
-    if (points) {
-      const _HermesInternal = HermesInternal;
-      combined = "M" + Polygon(7648)(points) + "z";
+    ({ preserveAspectRatio, href } = props);
+    ({ x, y, width, height } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
     }
-    obj.d = combined;
-    const merged = Object.assign(props);
-    return jsx(Polygon(7643), { ref: this.refMethod, d: null });
+    if (preserveAspectRatio) {
+      let parts = preserveAspectRatio.trim().split(re9);
+      const str = preserveAspectRatio.trim();
+    } else {
+      parts = [];
+    }
+    const size = {
+      x,
+      y,
+      width,
+      height,
+      onLoad: props.onLoad,
+      meetOrSlice: SvgImage(7589).meetOrSliceTypes[tmp3] || 0,
+      align: null,
+      src: null,
+    };
+    [tmp2, tmp3] = parts;
+    const tmp6 = SvgImage(7589).meetOrSliceTypes[tmp3] || 0;
+    size.align = SvgImage(7589).alignEnum[tmp2] || "xMidYMid";
+    let assetSource = null;
+    if (href) {
+      let tmp10 = href;
+      if (typeof href === "string") {
+        const obj = { uri: href };
+        tmp10 = obj;
+      }
+      assetSource = Image.resolveAssetSource(tmp10);
+    }
+    size.src = assetSource;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const tmp7 = SvgImage(7589).alignEnum[tmp2] || "xMidYMid";
+    const merged = Object.assign(SvgImage(7591).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return (
+      <tmp11
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Polygon, items);
-importDefaultResultResult.displayName = "Polygon";
-importDefaultResultResult.defaultProps = { points: "" };
+const items = [entry];
+const importDefaultResultResult = _createClass(SvgImage, items);
+importDefaultResultResult.displayName = "Image";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
 
 export default importDefaultResultResult;

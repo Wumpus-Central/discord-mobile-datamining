@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 179,
-  height: 32,
+  httpServerLocation: "/assets/modules/video_calls/native/images",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "ed5b973480dda2a9e5ec5c3384729f7b",
-  name: "img_logo_bundle_horizontal_black",
+  hash: "e75d6cb3291053e29f69fac93519aa0b",
+  name: "spectator",
   type: "png",
 });

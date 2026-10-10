@@ -110,7 +110,7 @@ export const captureAppStart = function captureAppStart() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -147,7 +147,7 @@ export const captureAppStart = function captureAppStart() {
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
             const obj9 = _true(tmp3[0]);
           }
@@ -219,7 +219,7 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -256,7 +256,7 @@ export const _captureAppStart = function _captureAppStart(_captureAppStartResult
               const debug3 = _true(tmp3[0]).debug;
               debug3.warn("[AppStart] Could not capture App Start, missing client.");
               c5 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
             const obj9 = _true(tmp3[0]);
           }
@@ -372,7 +372,7 @@ export const appStartIntegration = () => {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -836,7 +836,7 @@ export const appStartIntegration = () => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -894,7 +894,7 @@ export const appStartIntegration = () => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {

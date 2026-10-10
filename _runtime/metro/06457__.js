@@ -26,28 +26,28 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    const obj2 = { rotationChange: rotation.rotation };
+function changeEventCalculator(scale, scale2) {
+  if (undefined === scale2) {
+    const obj2 = { scaleChange: scale.scale };
     let obj = obj2;
   } else {
-    obj = { rotationChange: rotation.rotation - rotation2.rotation };
+    obj = { scaleChange: scale.scale / scale2.scale };
   }
-  const merged = Object.assign(rotation);
+  const merged = Object.assign(scale);
   const merged1 = Object.assign(obj);
   return {};
 }
 changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11988645380499;
+changeEventCalculator.__workletHash = 9876979738005;
 changeEventCalculator.__initData = {
-  code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
+  code: "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}",
 };
-class RotationGesture {
+class PinchGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, RotationGesture);
+    tmp = closure_0(this, PinchGesture);
     tmp2 = c2;
-    obj = c2(RotationGesture);
+    obj = c2(PinchGesture);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
@@ -57,12 +57,12 @@ class RotationGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
+    tmp3Result.handlerName = "PinchGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = RotationGesture;
-_inherits(RotationGesture, fn(6354).ContinousBaseGesture);
+_classCallCheck = PinchGesture;
+_inherits(PinchGesture, fn(6355).ContinousBaseGesture);
 const entry = {
   key: "onChange",
   value: function onChange(arg0) {
@@ -78,4 +78,4 @@ const entry = {
 };
 let items = [entry];
 
-export const RotationGesture = _createClass(RotationGesture, items);
+export const PinchGesture = _createClass(PinchGesture, items);

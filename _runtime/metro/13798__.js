@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "25b28a12657775964c80c08fa4bc3ce7",
-  name: "ic_gift",
+  hash: "eb1c3c11742bff2f0226498ea684aa95",
+  name: "upload",
   type: "png",
 });

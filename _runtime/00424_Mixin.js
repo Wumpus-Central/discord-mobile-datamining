@@ -8,7 +8,7 @@ import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
 import noop from "metro/00019__.js";
 
 const jsx = fn(21).jsx;
-const f20122 = (arg0) => {};
+const f20196 = (arg0) => {};
 const NOT_RESPONDER = "NOT_RESPONDER";
 const RESPONDER_INACTIVE_PRESS_IN = "RESPONDER_INACTIVE_PRESS_IN";
 const RESPONDER_ACTIVE_PRESS_IN = "RESPONDER_ACTIVE_PRESS_IN";
@@ -137,7 +137,7 @@ const obj5 = {
     }
   },
   touchableGetInitialState() {
-    return { touchable: { touchState: "Array", responderID: 0 } };
+    return { touchable: { touchState: "Array", responderID: false } };
   },
   touchableHandleResponderTerminationRequest() {
     return !this.props.rejectResponderTermination;
@@ -237,7 +237,7 @@ const obj5 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f20122 === "function") {
+      if (typeof f20196 === "function") {
         ({ touches, changedTouches } = nativeEvent);
         let tmp12 = touches;
         if (touches) {
@@ -426,7 +426,7 @@ const obj5 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f20122 === "function") {
+    if (typeof f20196 === "function") {
       ({ touches, changedTouches } = nativeEvent);
       let tmp = touches;
       if (touches) {

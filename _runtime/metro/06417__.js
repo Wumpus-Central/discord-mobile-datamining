@@ -1,37 +1,95 @@
 // _runtime/metro/06417__.js
-import _mod6376 from "06376__.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06401_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6418 from "06418__.js";
-import _mod6420 from "06420__.js";
+import handlerIDToTag from "../06338_handlerIDToTag.js";
+import transformIntoHandlerTags from "../06365_transformIntoHandlerTags.js";
+import _mod6378 from "06378__.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06402_DEFAULT_PROPS_TRANSFORMER.js";
+import noop from "00019__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const require = globalThis.__r;
 
-export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
-  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
-  let reanimatedEventHandler;
-  if (!disableReanimated.disableReanimated) {
-    const Reanimated = _mod6376.Reanimated;
-    let handler;
-    if (Reanimated != null) {
-      handler = Reanimated.useHandler(memoizedGestureCallbacks);
-    }
-    const tmpResult = _mod6420;
-    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
-      handlerTag,
-      memoizedGestureCallbacks,
-      handler,
-      disableReanimated.changeEventCalculator,
-      disableReanimated.fillInDefaultValues,
+({ useEffect: c2, useMemo: c3 } = noop);
+
+export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
+  _require = Fling;
+  dependencyMap = clonedAndRemappedConfig;
+  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
+  const handlerTag = tmp2;
+  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
+    const _Error2 = Error;
+    const error = new Error(
+      require("tagMessage").tagMessage(
+        'The "disableReanimated" property must not be changed after the handler is created.',
+      ),
     );
+    throw error;
+  } else {
+    const gestureCallbacks = require("06418__.js").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
+    jsEventHandler = gestureCallbacks.jsEventHandler;
+    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
+    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
+    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
+      if (!reanimatedEventHandler) {
+        const _Error = Error;
+        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
+        throw error1;
+      }
+    }
+    const items = [tmp2, , ,];
+    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
+    const tmpResult = tmp(
+      () =>
+        DEFAULT_PROPS_TRANSFORMER.prepareRelations(
+          { simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block },
+          closure_2,
+        ),
+      items,
+    );
+    const gestureRelations = tmpResult;
+    const items1 = [
+      tmp2,
+      Fling,
+      clonedAndRemappedConfig,
+      jsEventHandler,
+      reanimatedEventHandler,
+      animatedEventHandler,
+      tmpResult,
+    ];
+    const tmpResult2 = tmp(() => {
+      const obj = {
+        handlerTag,
+        type,
+        config,
+        detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler },
+        gestureRelations,
+      };
+      return obj;
+    }, items1);
+    closure_7 = tmpResult2;
+    const items2 = [Fling, tmp2];
+    handlerTag(() => {
+      let NativeProxy = _mod6378.NativeProxy;
+      NativeProxy.createGestureHandler(closure_0, closure_2, {});
+      let result = transformIntoHandlerTags.scheduleFlushOperations();
+      return () => {
+        const NativeProxy = closure_0(6378).NativeProxy;
+        NativeProxy.dropGestureHandler(handlerTag);
+        const result = closure_0(6365).scheduleFlushOperations();
+      };
+    }, items2);
+    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
+    handlerTag(() => {
+      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
+      const NativeProxy = _mod6378.NativeProxy;
+      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
+      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
+      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
+      handlerIDToTag.registerGesture(closure_2, closure_7);
+      return () => {
+        closure_0(6402).unbindSharedValues(dependencyMap, handlerTag);
+        const obj = closure_0(6402);
+        closure_0(6338).unregisterGesture(handlerTag);
+      };
+    }, items3);
+    return tmpResult2;
   }
-  let animatedEventHandler;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    animatedEventHandler = disableReanimated.onUpdate;
-  }
-  return {
-    jsEventHandler: _mod6418.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated),
-    reanimatedEventHandler,
-    animatedEventHandler,
-  };
 };

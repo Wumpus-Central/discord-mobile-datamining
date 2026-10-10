@@ -18,7 +18,7 @@ export const useRouteCache = function useRouteCache(routes) {
   const reduced = routes.reduce((set, key) => {
     const current = ref.current;
     value = current.get(key.key);
-    state = key.state;
+    const state = key.state;
     const tmp2 = _objectWithoutProperties(key, closure_2);
     let tmp3 = tmp2;
     if (value) {

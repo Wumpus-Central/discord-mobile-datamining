@@ -1,126 +1,123 @@
 // _runtime/metro/11244__.js
-import _mod11174 from "11174__.js";
-import _mod11176 from "11176__.js";
+import spanTimeInputToSeconds from "../11213_spanTimeInputToSeconds.js";
+import _mod11214 from "11214__.js";
+import BAGGAGE_HEADER_NAME from "../11221_BAGGAGE_HEADER_NAME.js";
+import _mod11223 from "11223__.js";
+import _mod11235 from "11235__.js";
+import _mod11245 from "11245__.js";
 
 require = arg1;
-let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
-  _require = fn;
-  dependencyMap = value;
-  aggregateExceptionsFromError = arg2;
-  closure_3 = source;
-  if (arg5.length >= arg2 + 1) {
-    return arg5;
-  } else {
-    let items = [];
-    HermesBuiltin.arraySpread(arg5, 0);
-    length = items;
-    const _Error = Error;
-    if (obj3.isInstanceOf(errors[source], Error)) {
-      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-      let obj = {};
-      let merged = Object.assign(mechanism.mechanism);
-      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
-      let merged1 = Object.assign(tmp3);
-      obj.exception_id = exception_id;
-      mechanism.mechanism = obj;
-      const tmp7 = fn(value, errors[source]);
-      length = length.length;
-      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
-      let obj2 = {};
-      let merged2 = Object.assign(tmp7.mechanism);
-      obj2.type = "chained";
-      obj2.source = source;
-      obj2.exception_id = length;
-      obj2.parent_id = exception_id;
-      tmp7.mechanism = obj2;
-      const items1 = [tmp7];
-      HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
-    }
-    const _Array = Array;
-    if (Array.isArray(errors.errors)) {
-      errors = errors.errors;
-      const item = errors.forEach((item, index) => {
-        if (obj.isInstanceOf(item, Error)) {
-          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-          const obj2 = {};
-          const merged = Object.assign(tmp.mechanism);
-          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
-          const merged1 = Object.assign(tmp5);
-          obj2.exception_id = exception_id;
-          mechanism.mechanism = obj2;
-          const tmp12 = closure_0(closure_1, item);
-          length = length.length;
+const dependencyMap = arg6;
+function getDynamicSamplingContextFromSpan(spanContext) {
+  const client = _mod11235.getClient();
+  if (client) {
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    if (rootSpan[_frozenDsc]) {
+      return tmp5;
+    } else {
+      const traceState = rootSpan.spanContext().traceState;
+      value = traceState;
+      if (traceState) {
+        value = traceState.get("sentry.dsc");
+      }
+      let result = value;
+      if (value) {
+        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
+        const tmpResult6 = BAGGAGE_HEADER_NAME;
+      }
+      if (result) {
+        return result;
+      } else {
+        options = client.getOptions();
+        const tmp9 = client.getDsn() || {};
+        let DEFAULT_ENVIRONMENT = options.environment;
+        if (!DEFAULT_ENVIRONMENT) {
+          DEFAULT_ENVIRONMENT = _mod11245.DEFAULT_ENVIRONMENT;
+        }
+        const obj2 = {
+          environment: DEFAULT_ENVIRONMENT,
+          release: options.release,
+          public_key: tmp9.publicKey,
+          trace_id: spanContext.spanContext().traceId,
+        };
+        const dropUndefinedKeysResult = _mod11214.dropUndefinedKeys(obj2);
+        client.emit("createDsc", dropUndefinedKeysResult);
+        const tmpResult7 = _mod11214;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
+        const tmp13 = spanToJSONResult.data || {};
+        const tmp14 = tmp13[_mod11223.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        if (null != tmp14) {
           const _HermesInternal = HermesInternal;
-          mechanism = tmp12.mechanism;
-          const combined = "errors[" + index + "]";
-          if (!mechanism) {
-            mechanism = { type: "generic", handled: true };
-          }
-          tmp12.mechanism = mechanism;
-          const obj3 = {};
-          const merged2 = Object.assign(tmp12.mechanism);
-          obj3.type = "chained";
-          obj3.source = combined;
-          obj3.exception_id = length;
-          obj3.parent_id = exception_id;
-          tmp12.mechanism = obj3;
-          const items = [tmp12];
-          HermesBuiltin.arraySpread(length, 1);
-          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
+          dropUndefinedKeysResult.sample_rate = "" + tmp14;
         }
-        obj = _mod11174;
-      });
-    }
-    return length;
-  }
-}
-
-export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 250;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        const _Error = Error;
-        if (obj.isInstanceOf(originalException.originalException, Error)) {
-          let tmp5;
-          if (exception.exception.values.length > 0) {
-            tmp5 = exception.exception.values[exception.exception.values.length - 1];
-          }
-          if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(
-              exceptionFromError,
-              stackParser,
-              arg4,
-              originalException.originalException,
-              arg3,
-              exception.exception.values,
-              tmp5,
-              0,
-            ).map((value) => {
-              if (value.value) {
-                value.value = _mod11176.truncate(value.value, num);
-              }
-              return value;
-            });
-            const arr = aggregateExceptionsFromError(
-              exceptionFromError,
-              stackParser,
-              arg4,
-              originalException.originalException,
-              arg3,
-              exception.exception.values,
-              tmp5,
-              0,
-            );
-          }
+        const description = spanToJSONResult.description;
+        const tmpResult8 = spanTimeInputToSeconds;
+        if (tmp17) {
+          dropUndefinedKeysResult.transaction = description;
         }
-        obj = num(11174);
+        tmp17 = "url" !== tmp13[_mod11223.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        if (tmpResult9.hasTracingEnabled()) {
+          const _String = String;
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
+        return dropUndefinedKeysResult;
       }
     }
+    const tmpResult = spanTimeInputToSeconds;
+  } else {
+    return {};
   }
+}
+const _frozenDsc = "_frozenDsc";
+
+export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
+  const result = _mod11214.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
+};
+export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
+  options = getOptions.getOptions();
+  const tmp2 = getOptions.getDsn() || {};
+  let DEFAULT_ENVIRONMENT = options.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod11245.DEFAULT_ENVIRONMENT;
+  }
+  const dropUndefinedKeysResult = _mod11214.dropUndefinedKeys({
+    environment: DEFAULT_ENVIRONMENT,
+    release: options.release,
+    public_key: tmp2.publicKey,
+    trace_id,
+  });
+  getOptions.emit("createDsc", dropUndefinedKeysResult);
+  return dropUndefinedKeysResult;
+};
+export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(
+  getOptions,
+  getPropagationContext,
+) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  let dsc = propagationContext.dsc;
+  if (!dsc) {
+    options = getOptions.getOptions();
+    const tmp4 = getOptions.getDsn() || {};
+    let DEFAULT_ENVIRONMENT = options.environment;
+    if (!DEFAULT_ENVIRONMENT) {
+      DEFAULT_ENVIRONMENT = _mod11245.DEFAULT_ENVIRONMENT;
+    }
+    const obj2 = {
+      environment: DEFAULT_ENVIRONMENT,
+      release: options.release,
+      public_key: tmp4.publicKey,
+      trace_id: propagationContext.traceId,
+    };
+    const dropUndefinedKeysResult = _mod11214.dropUndefinedKeys(obj2);
+    getOptions.emit("createDsc", dropUndefinedKeysResult);
+    dsc = dropUndefinedKeysResult;
+  }
+  return dsc;
+};
+export { getDynamicSamplingContextFromSpan };
+export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
+  const tmp = getDynamicSamplingContextFromSpan(arg0);
+  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
 };

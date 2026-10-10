@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "74760e8f58ab462ca972dde9498902d3",
-  name: "img_account_sync_twitter_white",
-  type: "svg",
+  hash: "d33f2912dc07229c1490c1d77592fddf",
+  name: "img_account_sync_twitter_light_and_dark",
+  type: "png",
 });

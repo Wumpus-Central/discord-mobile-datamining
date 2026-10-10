@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting",
+  width: 177.5,
+  height: 112,
   scales: [2, 3],
-  hash: "b352e1ffa0afe53b75c17fb675b513d6",
-  name: "tier_1_32px",
+  hash: "d63f711157bc9a870f14f2f22d76c3fb",
+  name: "guild_subscription_no_guilds_dark",
   type: "png",
 });

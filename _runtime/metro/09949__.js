@@ -1,12 +1,12 @@
 // _runtime/metro/09949__.js
-import _mod9946 from "09946__.js";
+import _mod9950 from "09950__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKTimeUnitAgoFormatParser = require;
+const RUMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKTimeUnitAgoFormatParser {
+class RUMonthNameLittleEndianParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitAgoFormatParser);
+    tmp = c2(this, RUMonthNameLittleEndianParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitAgoFormatParser);
+    obj = closure_4(RUMonthNameLittleEndianParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,26 +45,60 @@ class UKTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod9946.AbstractParserWithLeftBoundaryChecking);
+_inherits(RUMonthNameLittleEndianParser, _mod9950.AbstractParserWithLeftRightBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
-    return "(" + UKTimeUnitAgoFormatParser(9944).TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+    return (
+      "(?:\u0441)?\\s*(" +
+      RUMonthNameLittleEndianParser(9948).ORDINAL_NUMBER_PATTERN +
+      ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" +
+      RUMonthNameLittleEndianParser(9948).ORDINAL_NUMBER_PATTERN +
+      "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" +
+      RUMonthNameLittleEndianParser(9819).matchAnyPattern(RUMonthNameLittleEndianParser(9948).MONTH_DICTIONARY) +
+      ")(?:(?:-|\\/|,?\\s{0,3})(" +
+      RUMonthNameLittleEndianParser(9948).YEAR_PATTERN +
+      "(?![^\\s]\\d)))?"
+    );
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = UKTimeUnitAgoFormatParser(9944).parseDuration(arg1[1]);
-      const ParsingComponents = UKTimeUnitAgoFormatParser(9793).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        UKTimeUnitAgoFormatParser(9792).reverseDuration(UKTimeUnitAgoFormatParser(9944).parseDuration(arg1[1])),
-      );
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = RUMonthNameLittleEndianParser(9948).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = RUMonthNameLittleEndianParser(9948).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", RUMonthNameLittleEndianParser(9948).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply(
+            "year",
+            RUMonthNameLittleEndianParser(9820).findYearClosestToRef(createParsingResult.refDate, result, tmp4),
+          );
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = RUMonthNameLittleEndianParser(9948).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
+      }
     },
   },
 ];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(RUMonthNameLittleEndianParser, items);

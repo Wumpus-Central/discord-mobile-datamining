@@ -1,12 +1,54 @@
 // _runtime/metro/04618__.js
-import 02133__ from "02133__.js";
+import module_4203_mod from "04203__.js";
+import _typeof_mod from "04199__.js";
+import module_4347_mod from "04347__.js";
+import module_4470_mod from "04470__.js";
+import requiredArgs_mod from "../04200_requiredArgs.js";
 
-if (!module_2133) {
-  const obj2 = { default: module_2133 };
-  let obj = obj2;
+let module_4203 = module_4203_mod;
+if (!module_4203) {
+  const obj = { default: module_4203 };
+  let tmp3 = obj;
 } else {
-  obj = module_2133;
+  tmp3 = module_4203;
 }
+module_4203 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let module_4347 = module_4347_mod;
+if (!module_4347) {
+  const obj3 = { default: module_4347 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4347;
+}
+module_4347 = tmp7;
+let module_4470 = module_4470_mod;
+if (!module_4470) {
+  const obj4 = { default: module_4470 };
+  let tmp9 = obj4;
+} else {
+  tmp9 = module_4470;
+}
+module_4470 = tmp9;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj5 = { default: requiredArgs };
+  let tmp11 = obj5;
+} else {
+  tmp11 = requiredArgs;
+}
+requiredArgs = tmp11;
 
-export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function setISODay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return module_4347.default(defaultResult1, module_4203.default(arg1) - module_4470.default(defaultResult1));
+};
 export default exports.default;

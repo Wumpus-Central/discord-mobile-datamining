@@ -1,12 +1,6 @@
 // _runtime/metro/14601__.js
+import _mod14602 from "14602__.js";
+import _mod14609 from "14609__.js";
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      clear() {
-        return closure_0.send("clear");
-      },
-    },
-  };
-};
+export const URL = _mod14602;
+export const URLSearchParams = _mod14609;

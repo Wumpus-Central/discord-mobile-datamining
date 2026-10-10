@@ -4226,7 +4226,7 @@ function constructClassInstance(_reactInternals, type3, memoizedProps) {
     }
   }
   const tmp6 = new type3(memoizedProps, tmp);
-  state = null;
+  let state = null;
   if (null !== tmp6.state) {
     state = null;
     if (undefined !== tmp6.state) {
@@ -5331,7 +5331,7 @@ function finishClassComponent(updateQueue, ref, type3, flag3, arg4, current) {
       return bailoutOnAlreadyFinishedWork(tmp, ref, current);
     }
   }
-  state = ref.stateNode;
+  let state = ref.stateNode;
   if (!(128 & ref.ref.flags)) {
     let renderResult = state.render();
   } else {
@@ -15882,7 +15882,7 @@ function createChildReconciler(arg0) {
                   tmp100 = tmp103;
                 } else {
                   const _Map = Map;
-                  const map1 = new Map();
+                  map1 = new Map();
                   let sibling7 = sibling6;
                   if (null !== sibling6) {
                     do {

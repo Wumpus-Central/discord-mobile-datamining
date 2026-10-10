@@ -184,7 +184,7 @@ class FeedbackWidget {
       state(1072).feedbackAlertDialog(props2.errorTitle, props2.formError);
       const obj2 = state(1072);
     };
-    tmp4Result.onScreenshotButtonPress = () => value2(closure_0, undefined, undefined, function() {
+    tmp4Result.onScreenshotButtonPress = () => value3(closure_0, undefined, undefined, function() {
       const self = this;
       c4 = 0;
       c5 = 0;
@@ -199,7 +199,7 @@ class FeedbackWidget {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -232,7 +232,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "toCharArray$esjava$1", attachment: "T", attachmentUri: "code" });
+                  debug.setState({ filename: "Array", attachment: "code", attachmentUri: "ip" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -608,7 +608,7 @@ let items = [
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -623,7 +623,7 @@ let items = [
                 } else {
                   v3(closure_1_2[7]).feedbackAlertDialog(props2.errorTitle, props2.captureScreenshotError);
                   v3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp8) {
                 v3 = tmp;

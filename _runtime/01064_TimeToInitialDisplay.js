@@ -75,7 +75,7 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -223,7 +223,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -330,7 +330,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } else {
                   try {
@@ -457,7 +457,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } else {
                   try {
@@ -598,7 +598,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } else {
                   try {
@@ -734,7 +734,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -899,7 +899,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -1026,7 +1026,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -1180,7 +1180,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -1476,7 +1476,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -1603,7 +1603,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -1760,7 +1760,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {

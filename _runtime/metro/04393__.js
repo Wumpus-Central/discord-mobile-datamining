@@ -1,31 +1,26 @@
 // _runtime/metro/04393__.js
-import _typeof_mod from "04158__.js";
-import requiredArgs_mod from "../04159_requiredArgs.js";
-
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-let c2 = 86400000;
-
-export default function getUTCDayOfYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  defaultResult1.setUTCMonth(0, 1);
-  defaultResult1.setUTCHours(0, 0, 0, 0);
-  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
+const obj = {
+  ceil: Math.ceil,
+  round: Math.round,
+  floor: Math.floor,
+  trunc(endImportTime) {
+    if (endImportTime < 0) {
+      const _Math2 = Math;
+      let rounded = Math.ceil(endImportTime);
+    } else {
+      const _Math = Math;
+      rounded = Math.floor(endImportTime);
+    }
+    return rounded;
+  },
 };
-export default exports.default;
+const trunc = "trunc";
+
+export const getRoundingMethod = function getRoundingMethod(roundingMethod) {
+  if (roundingMethod) {
+    let tmp3 = obj[roundingMethod];
+  } else {
+    tmp3 = obj[trunc];
+  }
+  return tmp3;
+};

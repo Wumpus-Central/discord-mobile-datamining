@@ -1,17 +1,18 @@
 // _runtime/metro/05716__.js
-import _mod5699 from "05699__.js";
+import _mod1305 from "01305__.js";
+import _mod5664 from "05664__.js";
 
-export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
-  let tmp = _mod5699(arg1);
-  if (tmp) {
-    tmp = "[[Enumerable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = "[[Configurable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-  }
-  return tmp;
-}
+let closure_2 = _mod1305("%Object.isExtensible%", true);
+
+export default _mod1305("%Object.preventExtensions%", true)
+  ? function IsExtensible(arg0) {
+      const tmp = _mod5664(arg0);
+      let tmp2 = !tmp;
+      if (!tmp) {
+        tmp2 = closure_2(arg0);
+      }
+      return tmp2;
+    }
+  : function IsExtensible(arg0) {
+      return !_mod5664(arg0);
+    };

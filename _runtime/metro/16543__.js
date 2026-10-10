@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 98,
-  height: 53,
-  scales: [2, 3],
-  hash: "5ef9dbb61427b1140982c78eede17afd",
-  name: "mfa-server",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 18,
+  height: 18,
+  scales: [1, 2],
+  hash: "424c540aff53032ef3cdcb5f4766723e",
+  name: "ic_rulebook_16px",
   type: "png",
 });

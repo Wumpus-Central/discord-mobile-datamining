@@ -83,7 +83,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         if (tmpResult10.hasSpansEnabled()) {
           const _String = String;
           obj2.sampled = String(spanToJSON.spanIsSampled(rootSpan));
-          let value4;
+          value4 = undefined;
           if (traceState != null) {
             value4 = traceState.get("sentry.sample_rand");
           }

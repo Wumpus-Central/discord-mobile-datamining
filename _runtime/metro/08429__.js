@@ -1,6 +1,20 @@
 // _runtime/metro/08429__.js
-import emptyFunction from "04908__.js";
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
-
-export default emptyFunction.shape(point);
+export default {
+  NONE: "",
+  INVERT: "CIColorInvert",
+  MONOCHROME: "CIColorMonochrome",
+  POSTERIZE: "CIColorPosterize",
+  FALSE: "CIFalseColor",
+  MAXIMUMCOMPONENT: "CIMaximumComponent",
+  MINIMUMCOMPONENT: "CIMinimumComponent",
+  CHROME: "CIPhotoEffectChrome",
+  FADE: "CIPhotoEffectFade",
+  INSTANT: "CIPhotoEffectInstant",
+  MONO: "CIPhotoEffectMono",
+  NOIR: "CIPhotoEffectNoir",
+  PROCESS: "CIPhotoEffectProcess",
+  TONAL: "CIPhotoEffectTonal",
+  TRANSFER: "CIPhotoEffectTransfer",
+  SEPIA: "CISepiaTone",
+};

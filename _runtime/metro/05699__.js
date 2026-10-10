@@ -1,46 +1,44 @@
 // _runtime/metro/05699__.js
-import _mod1306 from "01306__.js";
-import _mod1338 from "01338__.js";
+import _mod5700 from "05700__.js";
+import DefinePropertyOrThrow from "../05701_DefinePropertyOrThrow.js";
 
-let closure_2 = Object.assign({
-  "[[Configurable]]": true,
-  "[[Enumerable]]": true,
-  "[[Get]]": true,
-  "[[Set]]": true,
-  "[[Value]]": true,
-  "[[Writable]]": true,
-});
+const tmp = _mod5700("%Reflect.construct%", true);
+let closure_0 = tmp;
+try {
+  const obj = {
+    () => {
 
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1338(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
+      }
+  };
+  DefinePropertyOrThrow({}, "", obj);
+  let tmp4 = DefinePropertyOrThrow;
+  if (tmp4) {
+    if (tmp) {
+      let closure_1 = {};
+      const obj3 = {
+        () => {
+                throw closure_1;
+              },
+        "[[Enumerable]]": true
+      };
+      tmp4({}, "length", obj3);
+      module.exports = function IsConstructor(arg0) {
+        try {
+          closure_0(arg0, obj2);
+        } catch (tmp5) {
+          return tmp5 === closure_1;
         }
-        continue;
-      }
-      let tmp4 = _mod1338(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1338(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1338(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1338(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1306("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
-        }
-      }
-      return true;
+      };
+      const obj2 = {};
     }
   }
-  return false;
+  module.exports = function IsConstructor(fn) {
+    let prototype = typeof fn === "function";
+    if (typeof fn === "function") {
+      prototype = fn.prototype;
+    }
+    return prototype;
+  };
+} catch (err) {
+  tmp4 = null;
 }

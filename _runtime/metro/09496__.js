@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 120,
-  height: 96,
+  httpServerLocation: "/assets/modules/guild_identity/images",
+  width: 303,
+  height: 198,
   scales: [2, 3],
-  hash: "f9c127df442a3e2592e404fc380b1a52",
-  name: "img_search_empty_darker",
+  hash: "af6f5b1f2e3f6f41820436ec96e0f065",
+  name: "guild_identity_education_light",
   type: "png",
 });

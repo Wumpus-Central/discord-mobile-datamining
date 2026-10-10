@@ -1,85 +1,33 @@
 // _runtime/metro/04654__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    const obj2 = { data: null, locale: "uk" };
-    const obj3 = { conjunction: null, disjunction: null, unit: null };
-    const obj4 = {
-      long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-    };
-    obj3.conjunction = obj4;
-    const obj5 = {
-      long: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-    };
-    obj3.disjunction = obj5;
-    const obj6 = {
-      long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-    };
-    obj3.unit = obj6;
-    obj2.data = obj3;
-    ListFormat.__addLocaleData(obj2);
+import module_4201_mod from "04201__.js";
+
+let module_4201 = module_4201_mod;
+if (!module_4201) {
+  const obj = { default: module_4201 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4201;
+}
+function checkWeek(getTime, getTime2, arg2) {
+  let str = "eeee p";
+  if (!module_4201.default(getTime, getTime2, arg2)) {
+    const time = getTime.getTime();
+    let str2 = "'\u4E0A\u4E2A'eeee p";
+    if (time > getTime2.getTime()) {
+      str2 = "'\u4E0B\u4E2A'eeee p";
+    }
+    str = str2;
   }
+  return str;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
-}
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0430\u0431\u043E {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0430\u0431\u043E {1}",
-        start: "{0}, {1}",
-      },
-    },
-    unit: {
-      long: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0456 {1}", middle: "{0}, {1}", pair: "{0} \u0456 {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "uk",
+module_4201 = tmp3;
+let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
+
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
 };
-prop.push(obj);
+export default exports.default;

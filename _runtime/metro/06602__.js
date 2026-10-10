@@ -1,19 +1,39 @@
 // _runtime/metro/06602__.js
-import _mod19 from "00019__.js";
 import _mod6554 from "06554__.js";
+import _slicedToArray from "06536__.js";
 
-_mod19.useCallback;
+require = fn;
+const noop = fn(19);
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
 
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod6554.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
+export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  closure_1 = arg2;
+  let tmp = hasOwnProperty(undefined);
+  [r10015, tmp3] = _mod6554.useLayoutState(0);
+  React4(() => {
+    let tmpResult = closure_0;
+    if (typeof closure_0 === "function") {
+      tmpResult = tmp();
     }
-    return tmp;
-  }, items);
-  return obj2;
+    closure_2.current = tmpResult;
+    if (closure_1 != null) {
+      tmp3();
+    }
+  }, arg1);
+  const items = [tmp3];
+  const items1 = [
+    tmp.current,
+    React3((fn, arg1) => {
+      let tmp = fn;
+      if (typeof fn === "function") {
+        tmp = fn(ref.current);
+      }
+      if (tmp !== ref.current) {
+        tmp2.current = tmp;
+        arg1((arg0) => arg0 + 1, arg1);
+      }
+    }, items),
+  ];
+  return items1;
 };

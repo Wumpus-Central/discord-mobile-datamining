@@ -1,28 +1,39 @@
 // _runtime/metro/11243__.js
-import eventFromMessage from "../11227_eventFromMessage.js";
-import _mod11244 from "11244__.js";
-import setupIntegration from "11223__.js";
+import _mod11215 from "11215__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {};
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      options = getOptions.getOptions();
-      const result = _mod11244.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then(
+          (result) => {
+            closure_1();
+            return result;
+          },
+          (arg0) => {
+            closure_0(arg0);
+            closure_1();
+            throw arg0;
+          },
+        );
+      } else {
+        fn();
+        return promise;
+      }
+      obj = _mod11215;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
+  }
+};

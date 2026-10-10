@@ -96,7 +96,7 @@ function useBuildHref() {
         if (!tmp5) {
           const obj5 = {};
           let merged = Object.assign(first);
-          state = first.state;
+          const state = first.state;
           let tmp21 = obj3;
           if (state) {
             const first1 = state.routes[0];

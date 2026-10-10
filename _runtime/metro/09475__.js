@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 80,
-  height: 80,
+  httpServerLocation: "/assets/images/native/custom_app_icons/BrandInvertedIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "d6c65250c1813722d34dd286c312a88f",
-  name: "img_nitro_classic_icon_white_80px",
+  hash: "d3530007d60b5d4f6a3d08cddf26f42c",
+  name: "BrandInvertedIcon",
   type: "png",
 });
