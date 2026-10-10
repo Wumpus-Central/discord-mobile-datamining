@@ -1,52 +1,25 @@
 // === Module 5672: ? ===
 
 // Module 5672
-import _mod1476 from "module_1476" /* 1476 */;
-import defineDataProperty from "defineDataProperty" /* 1477 */;
-import keys2 from "keys2" /* 5673 */;
+import _mod5673 from "module_5673" /* 5673 */;
 
-let tmp = typeof Symbol === "function";
-if (typeof Symbol === "function") {
-  const _Symbol = Symbol;
-  tmp = typeof Symbol("foo") === "symbol";
-}
-let closure_2 = tmp;
-const tmp2 = _mod1476();
-let closure_5 = tmp2;
-function defineProperty(arg0, arg1, arg2, arg3) {
 
-}
-function defineProperties(prototype, ownPropertyDescriptors) {
-  const arr = keys2(ownPropertyDescriptors);
-  if (!closure_2) {
-    let num = 0;
-    if (0 < arr.length) {
-      while (typeof defineProperty === "function") {
-        if (!(tmp7 in prototype)) {
-          let tmp14 = defineDataProperty;
-          if (closure_5) {
-            let flag2 = true;
-            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
-          } else {
-            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
           }
-        } else if (true !== tmp9) {
-          if (typeof tmp9 === "function") {
-            let call2 = toString.call;
-          }
+          return trim5;
         }
-        num = num + 1;
       }
-      throw new TypeError("Trying to call a non-function");
     }
-  } else {
-    const call = concat.call;
-    const _Object = Object;
-    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
-    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
   }
-  const tmp = arguments.length > 2 ? arguments[2] : {};
-}
-defineProperties.supportsDescriptors = tmp2;
-
-export default defineProperties;
+  trim5 = _mod5673;
+};

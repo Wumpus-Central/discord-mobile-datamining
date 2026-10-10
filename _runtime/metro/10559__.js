@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b257d44a90a2362cd1a14481bdf7249c", name: "ExperimentalEpicIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images", width: 99.66666666666667, height: 66.66666666666667, scales: [3], hash: "0fef0a9d83d27dc691bf77b0bdae0680", name: "asset_opal_badge_small", type: "png" });

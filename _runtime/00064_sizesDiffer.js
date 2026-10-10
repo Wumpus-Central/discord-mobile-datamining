@@ -1,7 +1,7 @@
 // === Module 64: sizesDiffer ===
 
 // Module 64 (sizesDiffer)
-let closure_0 = { width: "Array", height: "Set" };
+let closure_0 = { width: "backgroundColor", height: "IconComponent" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

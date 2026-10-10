@@ -1,33 +1,12 @@
 // === Module 6553: ? ===
 
 // Module 6553
-import _mod6554 from "module_6554" /* 6554 */;
-import _slicedToArray from "module_6535" /* 6535 */;
+import PlatformConfig2 from "PlatformConfig" /* 6551 */;
 
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
+require = arg1;
+const dependencyMap = arg6;
 
-export const useLayoutState = function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod6554.useRecyclerViewContext();
-  const items = [tmp[0], ];
-  const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_0((arg0) => {
-      let tmpResult = closure_0;
-      if (typeof closure_0 === "function") {
-        tmpResult = tmp(arg0);
-      }
-      return tmpResult;
-    });
-    if (!arg1) {
-      if (recyclerViewContext != null) {
-        recyclerViewContext.layout();
-      }
-    }
-  }, items1);
-  return items;
+export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
+  const PlatformConfig = PlatformConfig2.PlatformConfig;
+  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
 };

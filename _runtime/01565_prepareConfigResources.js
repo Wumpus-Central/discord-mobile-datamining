@@ -703,7 +703,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
                 obj18.routes = items8;
               }
               tmp13.state = obj18;
-              state = tmp25;
+              let state = tmp25;
               if (items.length > 0) {
                 state = tmp25.routes[index].state;
               }

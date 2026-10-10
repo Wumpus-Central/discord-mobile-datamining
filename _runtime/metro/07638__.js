@@ -1,15 +1,13 @@
 // === Module 7638: ? ===
 
 // Module 7638
-import _modDef7583 from "module_7583" /* 7583 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Marker = importDefault;
+const FePointLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Marker {
+class FePointLight {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
+    tmp = c2(this, FePointLight);
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(FePointLight);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,32 +47,17 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef7583);
+_inherits(FePointLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(7572)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(7639), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FePointLight(7592).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
+const importDefaultResultResult = _createClass(FePointLight, items);
+importDefaultResultResult.displayName = "FePointLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

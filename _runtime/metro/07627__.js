@@ -3,7 +3,7 @@
 // Module 7627
 import module_65 from "module_65" /* 65 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFilter", validAttributes: { name: true, x: true, y: true, height: true, width: true, filterUnits: true, primitiveUnits: true } };
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGFeGaussianBlur", validAttributes: { x: true, y: true, width: true, height: true, result: true, in1: true, stdDeviationX: true, stdDeviationY: true, edgeMode: true } };
 
-export default module_65.get("RNSVGFilter", () => obj);
+export default module_65.get("RNSVGFeGaussianBlur", () => obj);
 export { __INTERNAL_VIEW_CONFIG };

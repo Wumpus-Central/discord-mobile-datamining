@@ -1,10 +1,10 @@
 // === Module 4398: ? ===
 
 // Module 4398
-import _typeof_mod from "module_4158" /* 4158 */;
-import startOfUTCWeek_mod from "startOfUTCWeek" /* 4161 */;
-import startOfUTCWeekYear_mod from "startOfUTCWeekYear" /* 4399 */;
-import requiredArgs_mod from "requiredArgs" /* 4159 */;
+import _typeof_mod from "module_4199" /* 4199 */;
+import endOfDay_mod from "endOfDay" /* 4399 */;
+import endOfMonth_mod from "endOfMonth" /* 4400 */;
+import requiredArgs_mod from "requiredArgs" /* 4200 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -14,22 +14,22 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let startOfUTCWeek = startOfUTCWeek_mod;
-if (!startOfUTCWeek) {
-  const obj2 = { default: startOfUTCWeek };
+let endOfDay = endOfDay_mod;
+if (!endOfDay) {
+  const obj2 = { default: endOfDay };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfUTCWeek;
+  tmp5 = endOfDay;
 }
-startOfUTCWeek = tmp5;
-let startOfUTCWeekYear = startOfUTCWeekYear_mod;
-if (!startOfUTCWeekYear) {
-  const obj3 = { default: startOfUTCWeekYear };
+endOfDay = tmp5;
+let endOfMonth = endOfMonth_mod;
+if (!endOfMonth) {
+  const obj3 = { default: endOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfUTCWeekYear;
+  tmp7 = endOfMonth;
 }
-startOfUTCWeekYear = tmp7;
+endOfMonth = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -38,13 +38,12 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
-let c4 = 604800000;
 
-export default function getUTCWeek(arg0, arg1) {
+export default function isLastDayOfMonth(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
-  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
-  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
+  const time = endOfDay.default(defaultResult1).getTime();
+  const defaultResult2 = endOfDay.default(defaultResult1);
+  return time === endOfMonth.default(defaultResult1).getTime();
 };
 export default exports.default;

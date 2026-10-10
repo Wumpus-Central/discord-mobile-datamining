@@ -1,11 +1,7 @@
 // === Module 6235: ? ===
 
 // Module 6235
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod6236 from "module_6236" /* 6236 */;
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
-};
+export default _mod6236;

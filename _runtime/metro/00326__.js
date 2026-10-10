@@ -192,7 +192,7 @@ function ItemWithSeparator(leadingItem) {
     tmp30 = tmp11;
   }
   children[2] = tmp30;
-  return state(__initData2, { children });
+  return closure_1_14(map1, { children });
 }
 let closure_3 = ["ItemSeparatorComponent", "SectionSeparatorComponent", "renderItem", "renderSectionFooter", "renderSectionHeader", "sections", "stickySectionHeadersEnabled"];
 _possibleConstructorReturnDefault;

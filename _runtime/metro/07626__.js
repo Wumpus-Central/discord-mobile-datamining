@@ -1,15 +1,16 @@
 // === Module 7626: ? ===
 
 // Module 7626
-import _modDef7583 from "module_7583" /* 7583 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7615 from "module_7615" /* 7615 */;
+import _modDef7627 from "module_7627" /* 7627 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const FeGaussianBlur = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Filter {
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
-    tmp2 = closure_4;
-    obj = closure_4(Filter);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, FeGaussianBlur);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeGaussianBlur);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +52,33 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Filter, _modDef7583);
+_inherits(FeGaussianBlur, _modDef7615);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(7627), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(FeGaussianBlur(7614).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(7614);
+    const merged1 = Object.assign(FeGaussianBlur(7614).extractIn(this.props));
+    const obj3 = FeGaussianBlur(7614);
+    const merged2 = Object.assign(FeGaussianBlur(7614).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

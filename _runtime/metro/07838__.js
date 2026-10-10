@@ -1,12 +1,7 @@
 // === Module 7838: ? ===
 
 // Module 7838
-const obj = { 4: null };
-obj[4] = {
-  name: "ShotInfo",
-  description(arg0) {
-    return arg0;
-  }
-};
 
-export default obj;
+export const get64BitValue = function get64BitValue(getUint32, sum4) {
+  return getUint32.getUint32(sum4 + 4);
+};

@@ -37,7 +37,6 @@ function createNormalizedConfigs(arg0, arg1) {
 }
 
 export const getPathFromState = function getPathFromState(state, screens) {
-  let map1;
   let routeState2;
   if (null == state) {
     const _Error = Error;

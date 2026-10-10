@@ -1,7 +1,7 @@
 // === Module 14342: ? ===
 
 // Module 14342
-import registerAsset from "module_1132" /* 1132 */;
+import _mod14340 from "module_14340" /* 14340 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "89ef758cad16b0f89bf10bf57ab078db", name: "StatusDND", type: "png" });
+export default (arg0, arg1, arg2) => _mod14340(arg0, arg1, "<", arg2);

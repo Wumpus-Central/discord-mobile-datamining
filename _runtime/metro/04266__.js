@@ -1,14 +1,53 @@
 // === Module 4266: ? ===
 
 // Module 4266
-import module_2133 from "module_2133" /* 2133 */;
+import module_4201_mod from "module_4201" /* 4201 */;
 
-if (!module_2133) {
-  const obj2 = { default: module_2133 };
-  let obj = obj2;
+let module_4201 = module_4201_mod;
+if (!module_4201) {
+  const obj = { default: module_4201 };
+  let tmp3 = obj;
 } else {
-  obj = module_2133;
+  tmp3 = module_4201;
 }
+module_4201 = tmp3;
+const dependencyMap = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
+let closure_2 = {
+  lastWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4201.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica scorsa alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} scorso alle' p`;
+      }
+    }
+    return str;
+  },
+  yesterday: "'ieri alle' p",
+  today: "'oggi alle' p",
+  tomorrow: "'domani alle' p",
+  nextWeek(getUTCDay, arg1, arg2) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (module_4201.default(getUTCDay, arg1, arg2)) {
+      let str = `${"'" + closure_1[tmp]} alle' p`;
+    } else {
+      str = "'domenica prossima alle' p";
+      if (0 !== uTCDay) {
+        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
+      }
+    }
+    return str;
+  },
+  other: "P"
+};
 
-export default { date: obj.default({ formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} '\u00E0s' {{time}}", long: "{{date}} '\u00E0s' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_2[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

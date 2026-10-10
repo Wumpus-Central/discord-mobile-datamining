@@ -1,16 +1,13 @@
 // === Module 6478: ? ===
 
 // Module 6478
-import _mod19 from "module_19" /* 19 */;
-import _mod6317 from "module_6317" /* 6317 */;
-
-const useContext = _mod19.useContext;
-
-export const useBottomSheetGestureHandlers = () => {
-  const tmp = useContext(_mod6317.BottomSheetGestureHandlersContext);
-  if (null === tmp) {
-    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
-  }
+const fn = function t(arg0, velocityY, substr) {
+  closure_0 = arg0 + 0.2 * velocityY;
+  closure_1 = min.apply(null, substr.map((item) => Math.abs(closure_0 - item)));
+  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
 };
+fn.__closure = {};
+fn.__workletHash = 8913698095371;
+fn.__initData = { code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}" };
+
+export const snapPoint = fn;

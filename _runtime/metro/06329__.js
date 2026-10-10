@@ -1,7 +1,12 @@
 // === Module 6329: ? ===
 
 // Module 6329
-import _mod17 from "module_17" /* 17 */;
+const global = arg0;
 
-
-export const findNodeHandle = _mod17.findNodeHandle;
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
+};

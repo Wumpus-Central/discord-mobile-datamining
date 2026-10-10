@@ -1,16 +1,7 @@
 // === Module 13879: ? ===
 
 // Module 13879
-let num = 0;
-let num2 = 0;
-let tmp2 = num;
-do {
-  do {
-    let tmp3 = tmp2 >>> 1;
-    let tmp5 = 1 & tmp2 ? 3988292384 ^ tmp3 : tmp3;
-    num2 = num2 + 1;
-    tmp2 = tmp5;
-  } while (num2 < 8);
-  tmp[num] = tmp5;
-  num = num + 1;
-} while (num < 256);
+import registerAsset from "module_1132" /* 1132 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 160, height: 82, scales: [2, 3], hash: "0d2c2c590995b34f0429dc331d39457b", name: "subscribe_confirm", type: "png" });

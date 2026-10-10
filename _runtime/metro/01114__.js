@@ -155,7 +155,6 @@ function getConfirmation(arg0, fn) {
 function getHistoryState() {
   try {
     const _window = window;
-    state = window.history.state;
     if (!state) {
       state = {};
     }

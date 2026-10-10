@@ -77,7 +77,7 @@ class KeyboardAvoidingView {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ class KeyboardAvoidingView {
             props.onLayout(closure_129_0);
           }
           c4 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } catch (tmp18) {
           c4 = tmp;
           throw tmp18;
@@ -163,7 +163,7 @@ class KeyboardAvoidingView {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -265,7 +265,7 @@ dependencyMap = asyncGeneratorStep(async function(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

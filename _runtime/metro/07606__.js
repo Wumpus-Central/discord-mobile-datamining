@@ -1,14 +1,16 @@
 // === Module 7606: ? ===
 
 // Module 7606
-import _modDef7598 from "module_7598" /* 7598 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7600 from "module_7600" /* 7600 */;
+import _modDef7607 from "module_7607" /* 7607 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeDisplacementMap = arg1;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeDisplacementMap {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class ClipPath {
   constructor() {
     self = this;
-    tmp = c2(this, FeDisplacementMap);
-    tmp2 = closure_4;
-    obj = closure_4(FeDisplacementMap);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, ClipPath);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ClipPath);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,19 @@ class FeDisplacementMap {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeDisplacementMap, _modDef7598);
+_inherits(ClipPath, _modDef7600);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDisplacementMap(7575).warnUnimplementedFilter();
-    return null;
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(7591).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeDisplacementMap, items);
-importDefaultResultResult.displayName = "FeDisplacementMap";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

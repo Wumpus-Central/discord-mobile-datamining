@@ -1,7 +1,7 @@
 // === Module 18434: ? ===
 
 // Module 18434
-import registerAsset from "module_1132" /* 1132 */;
+import _mod18435 from "module_18435" /* 18435 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "4e2695064a96facdf08d029a4fb1d275", name: "ic_add_perk_24px", type: "png" });
+export default _mod18435("toUpperCase");

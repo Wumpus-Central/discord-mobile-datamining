@@ -144,7 +144,7 @@ export const useNavigationCache = function useNavigationCache(getState) {
         });
       };
       obj2.isFocused = function isFocused() {
-        state = base.getState();
+        const state = base.getState();
         let tmp2 = state.routes[state.index].key === key.key;
         if (tmp2) {
           let isFocusedResult = !navigation;

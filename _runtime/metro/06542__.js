@@ -1,33 +1,32 @@
 // === Module 6542: ? ===
 
 // Module 6542
+import _mod6543 from "module_6543" /* 6543 */;
 
-export default function _objectWithoutPropertiesLoose(obj, arr) {
-  if (null == obj) {
+
+export default function _objectWithoutProperties(arg0, arr) {
+  if (null == arg0) {
     return {};
   } else {
-    obj = {};
-    for (const key10007 in arg0) {
-      hasOwnProperty = {}.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10007);
-      } else {
-        hasOwnPropertyResult = call(arg0, key10007);
-      }
-      if (!hasOwnPropertyResult) {
-        continue;
-      } else {
-        if (-1 !== arg1.indexOf(key10007)) {
-          continue;
-        } else {
-          obj[key10007] = arg0[key10007];
-          continue;
+    const tmp8 = _mod6543(arg0, arr);
+    const _Object2 = Object;
+    if (Object.getOwnPropertySymbols) {
+      const _Object = Object;
+      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
+      let num = 0;
+      if (0 < ownPropertySymbols.length) {
+        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
+        while (!tmp2) {
+          if (tmp2) {
+            tmp8[tmp] = arg0[tmp];
+          }
+          num = num + 1;
         }
-        continue;
+        const propertyIsEnumerable = {}.propertyIsEnumerable;
+        const call = propertyIsEnumerable.call;
+        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
       }
-      continue;
     }
-    return obj;
+    return tmp8;
   }
 };

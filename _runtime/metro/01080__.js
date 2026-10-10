@@ -109,7 +109,7 @@ function takeScreenshot() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -135,7 +135,7 @@ function takeScreenshot() {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -177,7 +177,7 @@ function takeScreenshot() {
                   closure_129_11 = str2;
                   closure_129_0(closure_129_1[7]).showFeedbackWidget();
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp18) {
                 c3 = tmp;
@@ -186,7 +186,7 @@ function takeScreenshot() {
             }
           }), 100);
           c0 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp9) {
         c0 = tmp;

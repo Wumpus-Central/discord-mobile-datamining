@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/native/images", width: 24, height: 24, scales: [1, 2, 3], hash: "d34103fd5e89ba1cd4ca70f2429c1570", name: "ic_wreath", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "6abfee45e74bcd203f98d0b7a2a2c9af", name: "TranscriptOutlineIcon", type: "png" });

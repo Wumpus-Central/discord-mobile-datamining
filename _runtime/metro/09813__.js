@@ -1,35 +1,22 @@
 // === Module 9813: ? ===
 
 // Module 9813
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9797 */;
-import now from "now" /* 9814 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import Chrono from "Chrono" /* 9814 */;
+import _mod9862 from "module_9862" /* 9862 */;
+import _mod9874 from "module_9874" /* 9874 */;
+import _mod9887 from "module_9887" /* 9887 */;
+import _mod9898 from "module_9898" /* 9898 */;
+import _mod9907 from "module_9907" /* 9907 */;
+import _mod9925 from "module_9925" /* 9925 */;
+import _mod9946 from "module_9946" /* 9946 */;
+import _mod9961 from "module_9961" /* 9961 */;
+import _mod9971 from "module_9971" /* 9971 */;
+import _mod9986 from "module_9986" /* 9986 */;
+import _mod10005 from "module_10005" /* 10005 */;
 
-let self = this;
-const ENCasualDateParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
+const require = globalThis.__r;
+
+const self = this;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -45,7 +32,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function i(arg0) {
+      fn = function t(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -92,82 +79,105 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_9 = fn(now);
-    const re10 = /(now|today|tonight|tomorrow|overmorrow|tmr|tmrw|yesterday|last\s*night)(?=\W|$)/i;
-    class ENCasualDateParser {
-      constructor() {
-        self = this;
-        tmp = c2(this, ENCasualDateParser);
-        tmp2 = closure_4;
-        obj = closure_4(ENCasualDateParser);
-        tmp3 = closure_3;
-        if (hasOwnProperty()) {
-          tmp7 = globalThis;
-          _Reflect = Reflect;
-          tmp8 = arguments;
-          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-        } else {
-          tmp4 = arguments;
-          tmp5 = arguments;
-          constructResult = obj(...arguments);
-        }
-        return tmp3(self, constructResult);
-      }
-    }
-    _inherits(ENCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
-    const entry = {
-      key: "innerPattern",
-      value: function innerPattern(arg0) {
-            return re10;
+    exports.en = undefined;
+    exports.Chrono = undefined;
+    exports.ParsingContext = undefined;
+    exports.ParsingResult = undefined;
+    exports.ParsingComponents = undefined;
+    exports.ReferenceWithTimezone = undefined;
+    exports.Meridiem = undefined;
+    exports.Weekday = undefined;
+    exports.de = undefined;
+    exports.fr = undefined;
+    exports.ja = undefined;
+    exports.pt = undefined;
+    exports.nl = undefined;
+    exports.zh = undefined;
+    exports.ru = undefined;
+    exports.es = undefined;
+    exports.uk = undefined;
+    exports.it = undefined;
+    exports.sv = undefined;
+    exports.strict = undefined;
+    exports.casual = undefined;
+    exports.parse = function parse(arg0, arg1, arg2) {
+      const casual = exports.casual;
+      return casual.parse(arg0, arg1, arg2);
+    };
+    exports.parseDate = function parseDate(arg0, arg1, arg2) {
+      const casual = exports.casual;
+      return casual.parseDate(arg0, arg1, arg2);
+    };
+    const fnResult = fn(Chrono);
+    exports.en = fnResult;
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_9815").Chrono;
           }
     };
-    let items = [entry, ];
-    const entry1 = {
-      key: "innerExtract",
-      value: function innerExtract(refDate, arg1) {
-            refDate = refDate.refDate;
-            const str2 = arg1[0].toLowerCase();
-            const parsingComponents = refDate.createParsingComponents();
-            if ("now" === str2) {
-              let nowResult = closure_9.now(refDate.reference);
-            } else if ("today" === str2) {
-              nowResult = closure_9.today(refDate.reference);
-            } else if ("yesterday" === str2) {
-              nowResult = closure_9.yesterday(refDate.reference);
-            } else {
-              if ("tomorrow" !== str2) {
-                if ("tmr" !== str2) {
-                  if ("tmrw" !== str2) {
-                    if ("tonight" === str2) {
-                      nowResult = closure_9.tonight(refDate.reference);
-                    } else if ("overmorrow" === str2) {
-                      nowResult = closure_9.theDayAfter(refDate.reference, 2);
-                    } else {
-                      nowResult = parsingComponents;
-                      if (str2.match(/last\s*night/)) {
-                        let tmp = refDate;
-                        if (refDate.getHours() > 6) {
-                          const _Date = Date;
-                          const date = new Date(refDate.getTime());
-                          date.setDate(date.getDate() - 1);
-                          tmp = date;
-                        }
-                        ENCasualDateParser(9796).assignSimilarDate(parsingComponents, tmp);
-                        parsingComponents.imply("hour", 0);
-                        nowResult = parsingComponents;
-                      }
-                    }
-                  }
-                }
-              }
-              nowResult = closure_9.tomorrow(refDate.reference);
-            }
-            nowResult.addTag("parser/ENCasualDateParser");
-            return nowResult;
+    Object.defineProperty(exports, "Chrono", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_9815").ParsingContext;
           }
     };
-    items[1] = entry1;
-    exports.default = _createClass(ENCasualDateParser, items);
+    Object.defineProperty(exports, "ParsingContext", obj2);
+    const _Object6 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ParsingResult;
+          }
+    };
+    Object.defineProperty(exports, "ParsingResult", obj3);
+    const _Object7 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ParsingComponents;
+          }
+    };
+    Object.defineProperty(exports, "ParsingComponents", obj4);
+    const _Object8 = Object;
+    const obj5 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ReferenceWithTimezone;
+          }
+    };
+    Object.defineProperty(exports, "ReferenceWithTimezone", obj5);
+    const _Object9 = Object;
+    const obj6 = {
+      enumerable: true,
+      get() {
+            return require("Meridiem").Meridiem;
+          }
+    };
+    Object.defineProperty(exports, "Meridiem", obj6);
+    const _Object10 = Object;
+    const obj7 = {
+      enumerable: true,
+      get() {
+            return require("Meridiem").Weekday;
+          }
+    };
+    Object.defineProperty(exports, "Weekday", obj7);
+    exports.de = fn(_mod9862);
+    exports.fr = fn(_mod9874);
+    exports.ja = fn(_mod9887);
+    exports.pt = fn(_mod9898);
+    exports.nl = fn(_mod9907);
+    exports.zh = fn(_mod9925);
+    exports.ru = fn(_mod9946);
+    exports.es = fn(_mod9961);
+    exports.uk = fn(_mod9971);
+    exports.it = fn(_mod9986);
+    exports.sv = fn(_mod10005);
+    ({ strict: exports.strict, casual: exports.casual } = fnResult);
   } else {
     const _Object2 = Object;
   }

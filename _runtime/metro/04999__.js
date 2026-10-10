@@ -1,7 +1,41 @@
 // === Module 4999: ? ===
 
 // Module 4999
-import registerAsset from "module_1132" /* 1132 */;
+import _mod4995 from "module_4995" /* 4995 */;
+import ACTIONS from "ACTIONS" /* 4996 */;
+import PortalHost from "PortalHost" /* 4997 */;
+import registerHost from "registerHost" /* 5000 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop_mod from "module_19" /* 19 */;
 
+require = fn;
+let noop = fn(19);
+({ useReducer: c3, memo } = noop);
+let noop = noop_mod;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const memoResult = memo((rootHostName) => {
+  let str = rootHostName.rootHostName;
+  if (str === undefined) {
+    str = "root";
+  }
+  let flag = rootHostName.shouldAddRootHost;
+  if (flag === undefined) {
+    flag = true;
+  }
+  [tmp4, tmp5] = React3(registerHost.reducer, ACTIONS.INITIAL_STATE);
+  const obj = { value: tmp5, children: null };
+  const obj2 = { value: tmp4, children: null };
+  const items = [rootHostName.children, ];
+  if (flag) {
+    const obj3 = { name: str };
+    flag = React4(PortalHost.PortalHost, obj3);
+  }
+  items[1] = flag;
+  obj2.children = items;
+  obj.children = hasOwnProperty(_mod4995.PortalStateContext.Provider, obj2);
+  return React4(_mod4995.PortalDispatchContext.Provider, obj);
+});
+memoResult.displayName = "PortalProvider";
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleXIcon-secondary", type: "png" });
+export const PortalProvider = memoResult;

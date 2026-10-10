@@ -1,14 +1,15 @@
 // === Module 4236: ? ===
 
 // Module 4236
-import module_2133 from "module_2133" /* 2133 */;
+let closure_0 = { lastWeek: "'el' eeee 'pasado a la' p", yesterday: "'ayer a la' p", today: "'hoy a la' p", tomorrow: "'ma\u00F1ana a la' p", nextWeek: "eeee 'a la' p", other: "P" };
+let closure_1 = { lastWeek: "'el' eeee 'pasado a las' p", yesterday: "'ayer a las' p", today: "'hoy a las' p", tomorrow: "'ma\u00F1ana a las' p", nextWeek: "eeee 'a las' p", other: "P" };
 
-if (!module_2133) {
-  const obj2 = { default: module_2133 };
-  let obj = obj2;
-} else {
-  obj = module_2133;
-}
-
-export default { date: obj.default({ formats: { full: "y\uB144 M\uC6D4 d\uC77C EEEE", long: "y\uB144 M\uC6D4 d\uC77C", medium: "y.MM.dd", short: "y.MM.dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "a H\uC2DC mm\uBD84 ss\uCD08 zzzz", long: "a H:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, getUTCHours, arg2, arg3) {
+  if (1 !== getUTCHours.getUTCHours()) {
+    let tmp2 = closure_1[arg0];
+  } else {
+    tmp2 = closure_0[arg0];
+  }
+  return tmp2;
+};
 export default exports.default;

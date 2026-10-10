@@ -1,16 +1,16 @@
 // === Module 6720: ? ===
 
 // Module 6720
-import GestureHandlerRefContext from "GestureHandlerRefContext" /* 6693 */;
+import CardAnimationContext from "CardAnimationContext" /* 6714 */;
 import noop from "module_19" /* 19 */;
 
 require = arg1;
 
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
+export const useCardAnimation = function useCardAnimation() {
+  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
   if (undefined === context) {
     const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
+    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
     throw error;
   } else {
     return context;

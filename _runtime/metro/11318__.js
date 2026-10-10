@@ -1,7 +1,20 @@
 // === Module 11318: ? ===
 
 // Module 11318
-import registerAsset from "module_1132" /* 1132 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "be17daf6700f31399d629fee23cb9327", name: "ic_text_channel_16px", type: "png" });
+export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
+  let tmp;
+  if (undefined !== arg0) {
+    if (arg0 < 400) {
+      let str2;
+      if (arg0 >= 500) {
+        str2 = "error";
+      }
+      let str = str2;
+    } else {
+      str = "warning";
+    }
+    tmp = str;
+  }
+  return tmp;
+};

@@ -276,7 +276,7 @@ const size = { position: "absolute", bottom: 0, alignItems: "center", width: "10
 obj.toolbar = size;
 obj.arrows = { flexDirection: "row", paddingLeft: 8 };
 obj.floating = { alignSelf: "center", borderRadius: 20, overflow: "hidden" };
-const __initData2 = StyleSheet.create(obj);
+StyleSheet.create(obj);
 KeyboardToolbar.Background = fn(1877).Background;
 KeyboardToolbar.Content = fn(1877).Content;
 KeyboardToolbar.Prev = fn(1877).Prev;

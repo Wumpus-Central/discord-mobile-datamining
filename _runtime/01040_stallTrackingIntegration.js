@@ -140,7 +140,7 @@ export const stallTrackingIntegration = () => {
             obj2.stall_count = obj3;
             const obj5 = { value: obj2.totalStallTime, unit: "millisecond" };
             obj2.stall_total_time = obj5;
-            const value4 = map.get(activeSpan);
+            value4 = map.get(activeSpan);
             let longestStallTime;
             if (null !== value4) {
               if (undefined !== value4) {

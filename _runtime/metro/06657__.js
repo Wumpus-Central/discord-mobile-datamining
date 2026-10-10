@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 375, height: 413, scales: [2, 3], hash: "9dd921dedb90562e62ae59d45a63666c", name: "register-background-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/auth/native/images", width: 480, height: 413, scales: [2, 3], hash: "b25b2e24db6c14f15201cb7533aed65e", name: "register-background-dark", type: "png" });

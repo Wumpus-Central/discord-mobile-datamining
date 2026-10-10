@@ -1,25 +1,30 @@
 // === Module 5669: ? ===
 
 // Module 5669
-import _mod5670 from "module_5670" /* 5670 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
+import _mod1464 from "module_1464" /* 1464 */;
 
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1464();
 
-export default function getPolyfill() {
-  if (String.prototype.trim) {
-    const trim = "\u200B".trim;
-    if ("\u200B" === "\u200B".trim()) {
-      const trim2 = "\u180E".trim;
-      if ("\u180E" === "\u180E".trim()) {
-        const trim3 = "_\u180E".trim;
-        if ("_\u180E" === "_\u180E".trim()) {
-          const trim4 = "\u180E_".trim;
-          if ("\u180E_" === "\u180E_".trim()) {
-            const _String = String;
-          }
-          return trim5;
-        }
-      }
-    }
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
-  trim5 = _mod5670;
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
 };

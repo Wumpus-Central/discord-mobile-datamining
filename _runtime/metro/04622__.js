@@ -1,44 +1,48 @@
 // === Module 4622: ? ===
 
 // Module 4622
-import localeToNumber_mod from "localeToNumber" /* 4623 */;
-import module_4625 from "module_4625" /* 4625 */;
-import module_4626 from "module_4626" /* 4626 */;
-import localeToNumber_mod from "module_4624" /* 4624 */;
-import date from "module_4627" /* 4627 */;
+import module_4203_mod from "module_4203" /* 4203 */;
+import _typeof_mod from "module_4199" /* 4199 */;
+import module_4612_mod from "module_4612" /* 4612 */;
+import requiredArgs_mod from "requiredArgs" /* 4200 */;
 
-let localeToNumber = localeToNumber_mod;
-if (!localeToNumber) {
-  const obj = { default: localeToNumber };
+let module_4203 = module_4203_mod;
+if (!module_4203) {
+  const obj = { default: module_4203 };
   let tmp3 = obj;
 } else {
-  tmp3 = localeToNumber;
+  tmp3 = module_4203;
 }
-if (!module_4625) {
-  const obj2 = { default: module_4625 };
+module_4203 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4625;
+  tmp5 = _typeof;
 }
-if (!module_4626) {
-  const obj3 = { default: module_4626 };
+_typeof = tmp5;
+let module_4612 = module_4612_mod;
+if (!module_4612) {
+  const obj3 = { default: module_4612 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4626;
+  tmp7 = module_4612;
 }
-let localeToNumber = localeToNumber_mod;
-if (!localeToNumber) {
-  const obj4 = { default: localeToNumber };
+module_4612 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
   let tmp9 = obj4;
 } else {
-  tmp9 = localeToNumber;
+  tmp9 = requiredArgs;
 }
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp9;
 
-export default { code: "hi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 4 } };
+export default function setQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4203.default(arg1) - (Math.floor(defaultResult1.getMonth() / 3) + 1);
+  return module_4612.default(defaultResult1, defaultResult1.getMonth() + 3 * diff);
+};
 export default exports.default;

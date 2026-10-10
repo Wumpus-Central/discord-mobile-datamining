@@ -1,7 +1,33 @@
 // === Module 11317: ? ===
 
 // Module 11317
-import registerAsset from "module_1132" /* 1132 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 19, height: 19, scales: [2, 3], hash: "77f70d67a495166d7b55949a3fa57226", name: "ic_channel_arrow", type: "png" });
+export const flatten = function flatten(arr) {
+  const items = [];
+  const item = arr.forEach((arr) => {
+    if (Array.isArray(arr)) {
+      let item = arr.forEach((arr) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach(() => { ... });
+                } else {
+                  arr = closure_1_0.push(arr);
+                }
+              });
+            } else {
+              arr = closure_1_0.push(arr);
+            }
+          });
+        } else {
+          arr = closure_1_0.push(arr);
+        }
+      });
+    } else {
+      arr = closure_1_0.push(arr);
+    }
+  });
+  return items;
+};

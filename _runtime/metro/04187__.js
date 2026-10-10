@@ -1,26 +1,7 @@
 // === Module 4187: ? ===
 
 // Module 4187
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    let str = "'\u03C4\u03B7\u03BD \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03B7' eeee '\u03C3\u03C4\u03B9\u03C2' p";
-    if (6 === getUTCDay.getUTCDay()) {
-      str = "'\u03C4\u03BF \u03C0\u03C1\u03BF\u03B7\u03B3\u03BF\u03CD\u03BC\u03B5\u03BD\u03BF' eeee '\u03C3\u03C4\u03B9\u03C2' p";
-    }
-    return str;
-  },
-  yesterday: "'\u03C7\u03B8\u03B5\u03C2 \u03C3\u03C4\u03B9\u03C2' p",
-  today: "'\u03C3\u03AE\u03BC\u03B5\u03C1\u03B1 \u03C3\u03C4\u03B9\u03C2' p",
-  tomorrow: "'\u03B1\u03CD\u03C1\u03B9\u03BF \u03C3\u03C4\u03B9\u03C2' p",
-  nextWeek: "eeee '\u03C3\u03C4\u03B9\u03C2' p",
-  other: "P"
-};
+import registerAsset from "module_1132" /* 1132 */;
 
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
-export default exports.default;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Byb21vdGlvbnMvdGhpcmRfcGFydHkvbWFjYXJvbg==", scales: [1], hash: "e36c73a1977952a1eee22795cf9f0fcf", name: "uk.messages.e36c73a1977952a1eee22795cf9f0fcf.compiled.messages", type: "jsona" });

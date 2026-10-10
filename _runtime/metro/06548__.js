@@ -1,30 +1,32 @@
 // === Module 6548: ? ===
 
 // Module 6548
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      exports = (arg0) => typeof arg0;
-    }
-    module.exports = exports;
-    return exports(arg0);
-  }
-  exports = (arg0) => {
+import _mod6549 from "module_6549" /* 6549 */;
+
+
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
     if (arg0) {
+      let str = arg1;
       const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
         }
-        return str;
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod6549;
+      } else {
+        return "string" === str ? String : Number(arg0);
       }
     }
-    str = typeof arg0;
-  };
-}
-let exports = _typeof;
-
-export default _typeof;
+  }
+  return arg0;
+};

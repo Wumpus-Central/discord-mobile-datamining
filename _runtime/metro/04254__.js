@@ -1,14 +1,42 @@
 // === Module 4254: ? ===
 
 // Module 4254
-import module_2133 from "module_2133" /* 2133 */;
+let closure_0 = {
+  lastWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'pro\u0161lu nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'pro\u0161lu srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'pro\u0161lu subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  yesterday: "'ju\u010Der u' p",
+  today: "'danas u' p",
+  tomorrow: "'sutra u' p",
+  nextWeek(getUTCDay) {
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      return "'idu\u0107u nedjelju u' p";
+    } else if (3 === uTCDay) {
+      return "'idu\u0107u srijedu u' p";
+    } else if (6 === uTCDay) {
+      return "'idu\u0107u subotu u' p";
+    } else {
+      return "'pro\u0161li' EEEE 'u' p";
+    }
+  },
+  other: "P"
+};
 
-if (!module_2133) {
-  const obj2 = { default: module_2133 };
-  let obj = obj2;
-} else {
-  obj = module_2133;
-}
-
-export default { date: obj.default({ formats: { full: "EEEE d. MMMM y", long: "d. MMMM y", medium: "d. MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "'kl'. HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl.' {{time}}", long: "{{date}} 'kl.' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
+};
 export default exports.default;

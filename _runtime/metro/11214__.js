@@ -1,159 +1,267 @@
 // === Module 11214: ? ===
 
 // Module 11214
-import _mod11167 from "module_11167" /* 11167 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod11207 from "module_11207" /* 11207 */;
+import _mod11208 from "module_11208" /* 11208 */;
+import _mod11215 from "module_11215" /* 11215 */;
+import _mod11216 from "module_11216" /* 11216 */;
+import _mod11217 from "module_11217" /* 11217 */;
 
-function dsnFromString(arg0) {
-  closure_0 = arg0;
-  const match = re3.exec(arg0);
-  if (match) {
-    const tmp5 = _slicedToArray(match.slice(1), 6);
-    let str = tmp5[1];
-    let str3 = "";
-    if (undefined !== tmp5[2]) {
-      str3 = tmp6;
+require = arg1;
+const dependencyMap = arg6;
+function addNonEnumerableProperty(arg0, arg1, value) {
+  try {
+    const _Object = Object;
+    const obj = { value, writable: true, configurable: true };
+    Object.defineProperty(arg0, arg1, obj);
+  } catch (err) {
+    if (_mod11207.DEBUG_BUILD) {
+      const logger = _mod11208.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
     }
-    let str4 = "";
-    if (undefined !== tmp5[3]) {
-      str4 = tmp7;
-    }
-    let str5 = "";
-    if (undefined !== tmp5[4]) {
-      str5 = tmp8;
-    }
-    let str6 = "";
-    if (undefined !== tmp5[5]) {
-      str6 = tmp9;
-    }
-    const parts = str6.split("/");
-    let str8 = str6;
-    let str9 = "";
-    if (parts.length > 1) {
-      const substr = parts.slice(0, -1);
-      str9 = substr.join("/");
-      str8 = parts.pop();
-    }
-    let first = str8;
-    if (str8) {
-      const match1 = str8.match(/^\d+/);
-      first = str8;
-      if (match1) {
-        first = match1[0];
-      }
-    }
-    const url = { protocol: tmp5[0], publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    if (!str) {
-      str = "";
-    }
-    url.publicKey = str;
-    if (!str3) {
-      str3 = "";
-    }
-    url.pass = str3;
-    url.host = str4;
-    if (!str5) {
-      str5 = "";
-    }
-    url.port = str5;
-    if (!str9) {
-      str9 = "";
-    }
-    url.path = str9;
-    url.projectId = first;
-    return url;
-  } else {
-    _mod11167.consoleSandbox(() => {
-      console.error("Invalid Sentry Dsn: " + closure_0);
-    });
   }
 }
-const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
-
-export { dsnFromString };
-export const dsnToString = function dsnToString(url) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
-  let str = "";
-  if (flag) {
-    str = "";
-    if (pass) {
-      const _HermesInternal = HermesInternal;
-      str = ":" + pass;
+function markFunctionWrapped(arg0, arg1) {
+  try {
+    let prototype = arg1.prototype;
+    if (!prototype) {
+      prototype = {};
     }
+    arg1.prototype = prototype;
+    arg0.prototype = prototype;
+    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+  } catch (err) {
   }
-  let str3 = "";
-  if (port) {
-    const _HermesInternal2 = HermesInternal;
-    str3 = ":" + port;
-  }
-  let combined = path;
-  if (path) {
-    const _HermesInternal3 = HermesInternal;
-    combined = "" + path + "/";
-  }
-  return "" + protocol + "://" + publicKey + str + "@" + host + str3 + "/" + combined + projectId;
-};
-export const makeDsn = function makeDsn(protocol) {
-  if (typeof protocol === "string") {
-    let url = dsnFromString(protocol);
-  } else {
-    url = { protocol: protocol.protocol, publicKey: protocol.publicKey || "", pass: protocol.pass || "", host: protocol.host, port: protocol.port || "", path: protocol.path || "", projectId: protocol.projectId };
-  }
-  if (url) {
-    let error = url;
-    let flag = true;
-    if (url(11166).DEBUG_BUILD) {
-      ({ port, projectId, protocol } = url);
-      const items = ["protocol", "publicKey", "host", "projectId"];
-      const found = items.find((item) => {
-        let flag = !tmp;
-        if (!url[item]) {
-          const logger = _mod11167.logger;
-          const _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: " + item + " missing");
-          flag = true;
-        }
-        return flag;
-      });
-      if (found) {
-        flag = !found;
-      } else {
-        if (!projectId.match(/^\d+$/)) {
-          let logger = error(11167).logger;
-          let _HermesInternal = HermesInternal;
-          logger.error("Invalid Sentry Dsn: Invalid projectId " + projectId);
-        }
-        let tmp6 = "http" === protocol;
-        if (!tmp6) {
-          tmp6 = "https" === protocol;
-        }
-        if (tmp6) {
-          let num3 = port;
-          if (port) {
-            const _isNaN = isNaN;
-            const _parseInt = parseInt;
-            num3 = isNaN(parseInt(port, 10));
+}
+function convertToPlainObject(type) {
+  if (obj.isError(type)) {
+    const error = { message: null, name: null, stack: null };
+    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
+    if (typeof type === "object") {
+      if (null !== type) {
+        const obj2 = {};
+        let obj3 = obj2;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          obj3 = obj2;
+          while (keys[tmp] !== undefined) {
+            let _Object2 = Object;
+            let call2 = hasOwnProperty2.call;
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
+              continue;
+            } else {
+              obj2[tmp17] = type[tmp17];
+              continue;
+            }
+            continue;
           }
-          if (num3) {
-            const logger3 = error(11167).logger;
-            error = logger3.error;
-            const _HermesInternal3 = HermesInternal;
-            error("Invalid Sentry Dsn: Invalid port " + port);
-            num3 = 1;
-          }
-        } else {
-          const logger2 = error(11167).logger;
-          const _HermesInternal2 = HermesInternal;
-          logger2.error("Invalid Sentry Dsn: Invalid protocol " + protocol);
         }
       }
+      const merged = Object.assign(obj3);
+      return error;
     }
-    if (flag) {
-      return url;
+    obj3 = {};
+  } else {
+    if (tmp2Result.isEvent(type)) {
+      const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
+      if (typeof type === "object") {
+        if (null !== type) {
+          const obj5 = {};
+          let obj7 = obj5;
+          const keys1 = Object.keys();
+          if (keys1 !== undefined) {
+            obj7 = obj5;
+            while (keys1[tmp] !== undefined) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
+                continue;
+              } else {
+                obj5[tmp8] = type[tmp8];
+                continue;
+              }
+              continue;
+            }
+          }
+        }
+        const merged1 = Object.assign(obj7);
+        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
+        if (typeof globalThis.CustomEvent !== "undefined") {
+          isInstanceOfResult = _mod11215.isInstanceOf(type, globalThis.CustomEvent);
+          const tmp2Result2 = _mod11215;
+        }
+        if (isInstanceOfResult) {
+          obj4.detail = type.detail;
+        }
+        return obj4;
+      }
+      obj7 = {};
+    } else {
+      return type;
+    }
+    tmp2Result = _mod11215;
+  }
+  obj = _mod11215;
+}
+function serializeEventTarget(arg0) {
+  try {
+    if (obj.isElement(arg0)) {
+      let htmlTreeAsStringResult = _mod11216.htmlTreeAsString(arg0);
+      const tmp2Result = _mod11216;
+    } else {
+      const _Object = Object;
+      const call = toString.call;
+      if (typeof call === "unknown") {
+        htmlTreeAsStringResult = toString();
+      } else {
+        htmlTreeAsStringResult = call(arg0);
+      }
+    }
+    return htmlTreeAsStringResult;
+  } catch (err) {
+    return "<unknown>";
+  }
+}
+function _dropUndefinedKeys(arr, map) {
+  if ((function isPojo(arr) {
+    if (obj.isPlainObject(arr)) {
+      try {
+        const _Object = Object;
+        const name = Object.getPrototypeOf(arr).constructor.name;
+        let tmp3 = !name;
+        if (name) {
+          tmp3 = "Object" === tmp2;
+        }
+        return tmp3;
+      } catch (err) {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  })(arr)) {
+    value = map.get(arr);
+    if (undefined !== value) {
+      return value;
+    } else {
+      const obj = {};
+      const result = map.set(arr, obj);
+      let _Object = Object;
+      const ownPropertyNames = Object.getOwnPropertyNames(arr);
+      for (const item10030 of ownPropertyNames) {
+        if (undefined !== arg0[item10030]) {
+          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
+        }
+        continue;
+      }
+      return obj;
+    }
+  } else {
+    const _Array = Array;
+    if (Array.isArray(arr)) {
+      value2 = map.get(arr);
+      if (undefined !== value2) {
+        return value2;
+      } else {
+        const items = [];
+        const result1 = map.set(arr, items);
+        const item = arr.forEach((item) => {
+          items.push(_dropUndefinedKeys(item, closure_0));
+        });
+        return items;
+      }
+    } else {
+      return arr;
     }
   }
+}
+
+export { addNonEnumerableProperty };
+export { convertToPlainObject };
+export const dropUndefinedKeys = function dropUndefinedKeys(arr) {
+  return _dropUndefinedKeys(arr, new Map());
+};
+export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 40;
+  }
+  const keys = Object.keys(convertToPlainObject(name));
+  const sorted = keys.sort();
+  const first = keys[0];
+  if (first) {
+    if (first.length >= num) {
+      return _mod11217.truncate(first, num);
+    } else {
+      let length = keys.length;
+      if (length > 0) {
+        const substr = keys.slice(0, length);
+        const joined = substr.join(", ");
+        while (joined.length > num) {
+          length = length - 1;
+        }
+        let truncateResult = joined;
+        if (length !== keys.length) {
+          truncateResult = _mod11217.truncate(joined, num);
+        }
+        return truncateResult;
+      }
+      return "";
+    }
+  } else {
+    return "[object has no keys]";
+  }
+};
+export const fill = function fill(GLOBAL_OBJ, fetch, fn) {
+  if (fetch in GLOBAL_OBJ) {
+    const tmp6 = fn(GLOBAL_OBJ[fetch]);
+    if (typeof tmp6 === "function") {
+      markFunctionWrapped(tmp6, tmp5);
+    }
+    try {
+      GLOBAL_OBJ[fetch] = tmp6;
+    } catch (err) {
+      if (_mod11207.DEBUG_BUILD) {
+        const logger = _mod11208.logger;
+        const _HermesInternal = HermesInternal;
+        logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+      }
+    }
+  }
+};
+export const getOriginalFunction = function getOriginalFunction(__sentry_original__) {
+  return __sentry_original__.__sentry_original__;
+};
+export { markFunctionWrapped };
+export const objectify = function objectify(arg0) {
+  if (null == arg0 === true) {
+    const _String = String;
+    let string = new String(arg0);
+  } else {
+    let tmp = typeof arg0 === "symbol";
+    if (typeof arg0 !== "symbol") {
+      tmp = typeof arg0 === "bigint";
+    }
+    if (tmp === true) {
+      const _Object = Object;
+      string = Object(arg0);
+    } else {
+      string = arg0;
+      if (obj.isPrimitive(arg0) === true) {
+        string = new arg0.constructor(arg0);
+      }
+      obj = _mod11215;
+    }
+  }
+  return string;
+};
+export const urlEncode = function urlEncode(arg0) {
+  const entries = Object.entries(arg0);
+  const mapped = entries.map((item) => {
+    [tmp, tmp2] = item;
+    return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+  });
+  return mapped.join("&");
 };

@@ -1,7 +1,26 @@
 // === Module 11321: ? ===
 
 // Module 11321
-import registerAsset from "module_1132" /* 1132 */;
+import _mod11209 from "module_11209" /* 11209 */;
+import _mod11322 from "module_11322" /* 11322 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 50, height: 50, scales: [2, 3], hash: "9fa4b907ff6d9b977fcf6802f2937622", name: "img_poop_dark", type: "png" });
+export const isBrowser = function isBrowser() {
+  let tmp = typeof window !== "undefined";
+  if (typeof window !== "undefined") {
+    const isNodeEnvResult = _mod11322.isNodeEnv();
+    let tmp3 = !isNodeEnvResult;
+    if (isNodeEnvResult) {
+      const _process = _mod11209.GLOBAL_OBJ.process;
+      let tmp2 = _process;
+      if (tmp2) {
+        tmp2 = "renderer" === _process.type;
+      }
+      tmp3 = tmp2;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};

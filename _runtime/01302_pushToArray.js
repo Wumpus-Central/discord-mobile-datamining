@@ -47,7 +47,7 @@ let obj2 = {
 let closure_9 = {};
 function stringify(parts1, arg1, fn, arg3, arg4, arg5, arg6, arg7, fn2, fn3, arg10, arg11, fn4, arg13, fn5, arg15, arg16, get) {
   closure_0 = fn4;
-  let value4 = get.get(closure_9);
+  value4 = get.get(closure_9);
   let flag = false;
   let num = 0;
   let num2 = 0;

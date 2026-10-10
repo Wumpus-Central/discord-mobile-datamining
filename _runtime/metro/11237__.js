@@ -1,29 +1,19 @@
 // === Module 11237: ? ===
 
 // Module 11237
-import _mod11169 from "module_11169" /* 11169 */;
+import _mod11214 from "module_11214" /* 11214 */;
 
 require = arg1;
 const dependencyMap = arg6;
+const _sentryScope = "_sentryScope";
+const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
-  let arr = arg2;
-  if (arg2 === undefined) {
-    const items = [arg1];
-    arr = items;
+export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
+  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+};
+export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+  if (sentrySpan) {
+    const result = _mod11214.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
+    const result1 = _mod11214.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
   }
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "npm";
-  }
-  const tmp = _metadata._metadata || {};
-  if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
-    const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod11169.SDK_VERSION }));
-    obj.version = str(11169).SDK_VERSION;
-    tmp.sdk = obj;
-  }
-  _metadata._metadata = tmp;
 };

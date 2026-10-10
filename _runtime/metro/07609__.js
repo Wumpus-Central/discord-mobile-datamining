@@ -1,84 +1,9 @@
 // === Module 7609: ? ===
 
 // Module 7609
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7598 from "module_7598" /* 7598 */;
-import _modDef7610 from "module_7610" /* 7610 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import module_65 from "module_65" /* 65 */;
 
-const FeGaussianBlur = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeGaussianBlur {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, FeGaussianBlur);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(FeGaussianBlur, _modDef7598);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(FeGaussianBlur(7597).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(7597);
-    const merged1 = Object.assign(FeGaussianBlur(7597).extractIn(this.props));
-    const obj3 = FeGaussianBlur(7597);
-    const merged2 = Object.assign(FeGaussianBlur(7597).extractFeGaussianBlur(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGDefs", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true } };
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGDefs", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

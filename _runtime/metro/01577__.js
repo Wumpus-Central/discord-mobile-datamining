@@ -543,7 +543,7 @@ function getRouteConfigsFromChildren(children) {
 }
 function getStateFromParams(params1, type) {
   if (params1 != null) {
-    state = params1.state;
+    const state = params1.state;
   }
   if (typeof isNavigationState === "function") {
     let isArray = null != state && typeof state === "object";
@@ -684,7 +684,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       return routes.every((name) => !mapped.includes(name.name));
     }, items2);
     const context2 = noop.useContext(require("get getKey").NavigationStateContext);
-    state = context2.state;
+    let state = context2.state;
     ({ getState: closure_21, setState: closure_22, setKey: closure_23, getKey: closure_24, getIsInitial: closure_25 } = context2);
     const context3 = noop.useContext(require("NavigationBuilderContext").NavigationBuilderContext);
     const getIsStateEmitted = context3.getIsStateEmitted;
@@ -1187,12 +1187,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
                 const obj = { state: rehydratedState, descriptors, navigation: navigationHelpers, children };
                 tmpResult = tmp(obj);
               }
-              obj2 = { value: "Array", children: 0 };
+              obj2 = { value: "Array", children: false };
               obj3 = { value: navigationHelpers, children: null };
               obj4 = { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) };
               obj3.children = jsx(NavigationStateListenerProvider.NavigationStateListenerProvider, { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) });
               obj2.children = jsx(NavigationHelpersContext.NavigationHelpersContext.Provider, { value: navigationHelpers, children: null });
-              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: 0 });
+              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: false });
             })
       };
       return obj20;

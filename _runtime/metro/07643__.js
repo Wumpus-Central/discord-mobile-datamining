@@ -1,16 +1,15 @@
 // === Module 7643: ? ===
 
 // Module 7643
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7583 from "module_7583" /* 7583 */;
-import _modDef7644 from "module_7644" /* 7644 */;
+import _modDef7600 from "module_7600" /* 7600 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Path = fn;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Path {
+class Filter {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Path);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Filter);
+    tmp2 = closure_4;
+    obj = closure_4(Filter);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,23 +50,21 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Path, _modDef7583);
+_inherits(Filter, _modDef7600);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const obj = {};
-    const merged = Object.assign(Path(7574).extract(this, props));
-    obj.d = props.d;
-    const obj2 = Path(7574);
-    const obj3 = {
+    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef7644, {
+    const merged = Object.assign(size);
+    obj.children = this.props.children;
+    return jsx(Filter(7644), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -76,7 +72,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = _createClass(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

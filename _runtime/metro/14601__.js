@@ -1,14 +1,9 @@
 // === Module 14601: ? ===
 
 // Module 14601
+import _mod14602 from "module_14602" /* 14602 */;
+import _mod14609 from "module_14609" /* 14609 */;
 
-export default () => (arg0) => {
-  closure_0 = arg0;
-  return {
-    features: {
-      clear() {
-        return closure_0.send("clear");
-      }
-    }
-  };
-};
+
+export const URL = _mod14602;
+export const URLSearchParams = _mod14609;

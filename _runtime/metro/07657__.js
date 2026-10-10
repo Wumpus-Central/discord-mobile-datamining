@@ -2,18 +2,16 @@
 
 // Module 7657
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import appendTransformPropsDefault from "appendTransformProps" /* 7567 */;
-import extractPropsDefault from "extractProps" /* 7574 */;
-import extractFontDefault from "extractFont" /* 7581 */;
-import _modDef7583 from "module_7583" /* 7583 */;
-import _modDef7660 from "module_7660" /* 7660 */;
+import _modDef7600 from "module_7600" /* 7600 */;
+import unitsDefault from "units" /* 7654 */;
+import _modDef7659 from "module_7659" /* 7659 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Text = fn;
+const Mask = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -34,70 +32,76 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturnDefault;
-_isNativeReflectConstruct = fn(7658);
 const jsx = fn(21).jsx;
-class Text {
+class Mask {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, Text);
-    items1 = [...items];
+    tmp = closure_3(this, Mask);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Text);
+    obj = hasOwnProperty(Mask);
     tmp3 = closure_4;
     if (closure_7()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = Text(7574).propsAndStyles(matrix);
-      const obj = Text(7574);
-      const merged = Object.assign(propsAndStylesResult, Text(7575).pickNotNil(extractFontDefault(propsAndStylesResult, true)));
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = Text(7575);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Text, _modDef7583);
+_inherits(Mask, _modDef7600);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = Text(7574).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = Text(7574);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef7660, {});
+    const self = this;
+    const props = this.props;
+    ({ maskUnits, maskContentUnits, style } = props);
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height, maskUnits: null, maskContentUnits: null, maskType: null };
+    let num = 0;
+    if (undefined !== maskUnits) {
+      num = unitsDefault[maskUnits];
+    }
+    size.maskUnits = num;
+    let num2 = 1;
+    if (undefined !== maskContentUnits) {
+      num2 = unitsDefault[maskContentUnits];
+    }
+    size.maskContentUnits = num2;
+    let str;
+    if (props != null) {
+      str = props.maskType;
+    }
+    if (!str) {
+      let maskType;
+      if (style != null) {
+        maskType = style.maskType;
+      }
+      str = maskType;
+    }
+    if (!str) {
+      str = "luminance";
+    }
+    size.maskType = Mask(7658).maskType[str];
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(Mask(7591).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp8 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Text, items);
-importDefaultResultResult.displayName = "Text";
+const items = [entry];
+const importDefaultResultResult = _createClass(Mask, items);
+importDefaultResultResult.displayName = "Mask";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

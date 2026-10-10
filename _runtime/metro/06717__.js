@@ -1,28 +1,15 @@
 // === Module 6717: ? ===
 
 // Module 6717
+import _mod17 from "module_17" /* 17 */;
 
-export const getModalRouteKeys = (arr, arg1) => {
-  closure_0 = arg1;
-  return arr.reduce((arr, key) => {
-    options = undefined;
-    if (closure_0[key.key] != null) {
-      options = tmp.options;
-    }
-    if (options == null) {
-      options = {};
-    }
-    const presentation = options.presentation;
-    let tmp2 = arr.length && !presentation;
-    if (!tmp2) {
-      tmp2 = "modal" === presentation;
-    }
-    if (!tmp2) {
-      tmp2 = "transparentModal" === presentation;
-    }
-    if (tmp2) {
-      arr = arr.push(key.key);
-    }
-    return arr;
-  }, []);
+const Platform = _mod17.Platform;
+
+export const getShadowStyle = function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
+  }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
 };

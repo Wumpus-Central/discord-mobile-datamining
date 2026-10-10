@@ -1,59 +1,53 @@
 // === Module 4847: ? ===
 
 // Module 4847
-import c from "c" /* 576 */;
-import _mod4842 from "module_4842" /* 4842 */;
-import _slicedToArray from "module_32" /* 32 */;
+import installWorkletsSupport_mod from "installWorkletsSupport" /* 4848 */;
 
-const RiveColor2 = tmp(4837);
-require = fn;
-fn(19).useCallback;
-const f31952 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+const require = globalThis.__r;
 
-export const useRiveColor = function useRiveColor(arg0, arg1) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod4842.useRiveProperty(arg1, arg0, f31952), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
-};
+let installWorkletsSupport = installWorkletsSupport_mod;
+installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
+for (const key10017 in require("module_4857")) {
+  arg5[key10017] = require("module_4857")[key10017];
+  continue;
+}
+for (const key10021 in require("module_4858")) {
+  arg5[key10021] = require("module_4858")[key10021];
+  continue;
+}
+for (const key10025 in require("module_4859")) {
+  arg5[key10025] = require("module_4859")[key10025];
+  continue;
+}
+for (const key10029 in require("module_4860")) {
+  arg5[key10029] = require("module_4860")[key10029];
+  continue;
+}
+for (const key10033 in require("module_4861")) {
+  arg5[key10033] = require("module_4861")[key10033];
+  continue;
+}
+for (const key10037 in require("module_4862")) {
+  arg5[key10037] = require("module_4862")[key10037];
+  continue;
+}
+for (const key10041 in require("module_4853")) {
+  arg5[key10041] = require("module_4853")[key10041];
+  continue;
+}
+for (const key10045 in require("module_4863")) {
+  arg5[key10045] = require("module_4863")[key10045];
+  continue;
+}
+for (const key10049 in require("module_4864")) {
+  arg5[key10049] = require("module_4864")[key10049];
+  continue;
+}
+for (const key10053 in require("module_4865")) {
+  arg5[key10053] = require("module_4865")[key10053];
+  continue;
+}
+for (const key10057 in require("module_4866")) {
+  arg5[key10057] = require("module_4866")[key10057];
+  continue;
+}

@@ -1,30 +1,77 @@
 // === Module 4453: ? ===
 
 // Module 4453
-import _typeof_mod from "module_4158" /* 4158 */;
-import requiredArgs_mod from "requiredArgs" /* 4159 */;
+import _mod4204 from "module_4204" /* 4204 */;
+import code_mod from "module_4445" /* 4445 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let code = code_mod;
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+code = tmp3;
+let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
 
-export default function isBefore(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time < _typeof.default(arg1).getTime();
+export default function formatDuration(arg0, locale) {
+  closure_0 = arg0;
+  if (arguments.length < 1) {
+    const _TypeError = TypeError;
+    const concat = "1 argument required, but only ".concat;
+    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
+    throw typeError;
+  } else {
+    locale = undefined;
+    const defaultOptions = _mod4204.getDefaultOptions();
+    if (null != locale) {
+      locale = locale.locale;
+    }
+    if (null === locale) {
+      locale = defaultOptions.locale;
+    }
+    if (null === locale) {
+      locale = code.default;
+    }
+    let format;
+    if (null != locale) {
+      format = locale.format;
+    }
+    if (null === format) {
+      format = closure_3;
+    }
+    let zero;
+    if (null != locale) {
+      zero = locale.zero;
+    }
+    closure_2 = null !== zero && undefined !== zero && zero;
+    let delimiter;
+    if (null != locale) {
+      delimiter = locale.delimiter;
+    }
+    let str2 = " ";
+    if (null !== delimiter) {
+      str2 = " ";
+      if (undefined !== delimiter) {
+        str2 = delimiter;
+      }
+    }
+    if (locale.formatDistance) {
+      const reduced = format.reduce((arr, item) => {
+        let combined = arr;
+        if (typeof closure_0[item] === "number") {
+          if (closure_2) {
+            combined = arr.concat(locale.formatDistance(tmp, tmp3));
+          } else {
+            combined = arr;
+          }
+        }
+        return combined;
+      }, []);
+      return reduced.join(str2);
+    } else {
+      return "";
+    }
+  }
 };
 export default exports.default;

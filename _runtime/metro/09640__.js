@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/stream_feedback/light-theme-desaturated", width: 64, height: 64, scales: [2, 3], hash: "9b2f923b8e946c7e2b9908f52890f136", name: "feedback-modal-happy-desaturated", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 40, scales: [1, 2, 3], hash: "55227139f1f67d25c138599e308898b1", name: "ic_upload_image_40px", type: "png" });

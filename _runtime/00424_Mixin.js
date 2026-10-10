@@ -10,7 +10,7 @@ import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;
-const f20122 = (arg0) => {
+const f20196 = (arg0) => {
 
 };
 const NOT_RESPONDER = "NOT_RESPONDER";
@@ -59,7 +59,7 @@ const obj5 = {
     }
   },
   touchableGetInitialState() {
-    return { touchable: { touchState: "Array", responderID: 0 } };
+    return { touchable: { touchState: "Array", responderID: false } };
   },
   touchableHandleResponderTerminationRequest() {
     return !this.props.rejectResponderTermination;
@@ -159,7 +159,7 @@ const obj5 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f20122 === "function") {
+      if (typeof f20196 === "function") {
         ({ touches, changedTouches } = nativeEvent);
         let tmp12 = touches;
         if (touches) {
@@ -328,7 +328,7 @@ const obj5 = {
   },
   _savePressInLocation(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f20122 === "function") {
+    if (typeof f20196 === "function") {
       ({ touches, changedTouches } = nativeEvent);
       let tmp = touches;
       if (touches) {

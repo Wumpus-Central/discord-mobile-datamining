@@ -1,14 +1,12 @@
 // === Module 6327: ? ===
 
 // Module 6327
-const fn = function o() {
-
-};
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
-
-export () => {
+function print() {
 
 }
-export const workletNoop = fn;
+const frozen = Object.freeze(print);
+
+export { print };
+export const enableLogging = (arg0) => {
+  console.warn("[BottomSheet] could not enable logging on production!");
+};

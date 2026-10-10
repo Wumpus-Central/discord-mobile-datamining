@@ -1,13 +1,13 @@
 // === Module 6354: ? ===
 
 // Module 6354
-import c2 from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
 
-let ContinousBaseGesture = arg1;
+let ExclusiveGesture = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,22 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const CALLBACK_TYPE = { UNDEFINED: 0, BEGAN: 1, START: 2, UPDATE: 3, CHANGE: 4, END: 5, FINALIZE: 6, TOUCHES_DOWN: 7, TOUCHES_MOVE: 8, TOUCHES_UP: 9, TOUCHES_CANCEL: 10 };
-class Gesture {
-  constructor() {
-    tmp = closure_4(this, Gesture);
-    return;
-  }
-}
-const importDefaultResult1Result = _createClass(Gesture);
-let c7 = 0;
-class BaseGesture {
+class ComposedGesture {
   constructor() {
     self = this;
-    tmp = closure_4(this, ContinousBaseGesture);
-    tmp2 = closure_3;
-    obj = closure_3(ContinousBaseGesture);
-    tmp3 = c2;
+    items = [...arguments];
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
@@ -51,271 +43,90 @@ class BaseGesture {
       constructResult = obj.apply(self, undefined);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.gestureId = -1;
-    tmp3Result.handlerTag = -1;
-    tmp3Result.handlerName = "";
-    tmp3Result.config = {};
-    tmp3Result.handlers = { gestureId: -1, handlerTag: -1, isWorklet: [] };
-    tmp7 = +closure_7;
-    closure_7 = tmp7 + 1;
-    tmp3Result.gestureId = tmp7;
-    tmp3Result.handlers.gestureId = tmp3Result.gestureId;
+    tmp3Result.gestures = [];
+    tmp3Result.simultaneousGestures = [];
+    tmp3Result.requireGesturesToFail = [];
+    tmp3Result.gestures = items;
     return tmp3Result;
   }
 }
-ContinousBaseGesture = BaseGesture;
-_inherits(BaseGesture, importDefaultResult1Result);
+ExclusiveGesture = ComposedGesture;
+_inherits(ComposedGesture, fn(6355).Gesture);
 const entry = {
-  key: "addDependency",
-  value: function addDependency(blocksHandlers, arg1) {
-    if (this.config[blocksHandlers]) {
-      const _Array = Array;
-      let combined = Array().concat(tmp, arg1);
-      const ArrayResult = Array();
-    } else {
-      combined = [arg1];
+  key: "prepareSingleGesture",
+  value: function prepareSingleGesture(item10006, simultaneousGestures, requireGesturesToFail) {
+    if (item10006 instanceof ExclusiveGesture(6355).BaseGesture) {
+      if (item10006.relationsSnapshot == null) {
+        const obj = { simultaneousWith: item10006.config.simultaneousWith, requireToFail: item10006.config.requireToFail };
+        item10006.relationsSnapshot = obj;
+      }
+      const obj2 = {};
+      const merged = Object.assign(item10006.config);
+      const simultaneousWith = item10006.relationsSnapshot.simultaneousWith;
+      if (undefined === simultaneousWith) {
+        const items = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, 0);
+        let items1 = items;
+      } else {
+        items1 = [];
+        HermesBuiltin.arraySpread(simultaneousGestures, HermesBuiltin.arraySpread(simultaneousWith, 0));
+      }
+      obj2.simultaneousWith = items1;
+      const requireToFail = item10006.relationsSnapshot.requireToFail;
+      if (undefined === requireToFail) {
+        const items2 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, 0);
+        let items3 = items2;
+      } else {
+        items3 = [];
+        HermesBuiltin.arraySpread(requireGesturesToFail, HermesBuiltin.arraySpread(requireToFail, 0));
+      }
+      obj2.requireToFail = items3;
+      item10006.config = obj2;
+    } else if (item10006 instanceof ExclusiveGesture) {
+      item10006.simultaneousGestures = simultaneousGestures;
+      item10006.requireGesturesToFail = requireGesturesToFail;
+      item10006.prepare();
     }
-    this.config[blocksHandlers] = combined;
   }
 };
 let items = [
   entry,
   {
-    key: "withRef",
-    value: function withRef(ref) {
-      this.config.ref = ref;
-      return this;
-    }
-  },
-  {
-    key: "isWorklet",
-    value: function isWorklet(__workletHash) {
-      return undefined !== __workletHash.__workletHash;
-    }
-  },
-  {
-    key: "onBegin",
-    value: function onBegin(onBegin) {
-      this.handlers.onBegin = onBegin;
-      this.handlers.isWorklet[obj.BEGAN] = this.isWorklet(onBegin);
-      return this;
-    }
-  },
-  {
-    key: "onStart",
-    value: function onStart(onStart) {
-      this.handlers.onStart = onStart;
-      this.handlers.isWorklet[obj.START] = this.isWorklet(onStart);
-      return this;
-    }
-  },
-  {
-    key: "onEnd",
-    value: function onEnd(onEnd) {
-      this.handlers.onEnd = onEnd;
-      this.handlers.isWorklet[obj.END] = this.isWorklet(onEnd);
-      return this;
-    }
-  },
-  {
-    key: "onFinalize",
-    value: function onFinalize(onFinalize) {
-      this.handlers.onFinalize = onFinalize;
-      this.handlers.isWorklet[obj.FINALIZE] = this.isWorklet(onFinalize);
-      return this;
-    }
-  },
-  {
-    key: "onTouchesDown",
-    value: function onTouchesDown(onTouchesDown) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesDown = onTouchesDown;
-      this.handlers.isWorklet[obj.TOUCHES_DOWN] = this.isWorklet(onTouchesDown);
-      return this;
-    }
-  },
-  {
-    key: "onTouchesMove",
-    value: function onTouchesMove(fn2) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesMove = fn2;
-      this.handlers.isWorklet[obj.TOUCHES_MOVE] = this.isWorklet(fn2);
-      return this;
-    }
-  },
-  {
-    key: "onTouchesUp",
-    value: function onTouchesUp(onTouchesUp) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesUp = onTouchesUp;
-      this.handlers.isWorklet[obj.TOUCHES_UP] = this.isWorklet(onTouchesUp);
-      return this;
-    }
-  },
-  {
-    key: "onTouchesCancelled",
-    value: function onTouchesCancelled(fn3) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesCancelled = fn3;
-      this.handlers.isWorklet[obj.TOUCHES_CANCEL] = this.isWorklet(fn3);
-      return this;
-    }
-  },
-  {
-    key: "enabled",
-    value: function enabled(enabled) {
-      this.config.enabled = enabled;
-      return this;
-    }
-  },
-  {
-    key: "shouldCancelWhenOutside",
-    value: function shouldCancelWhenOutside(shouldCancelWhenOutside) {
-      this.config.shouldCancelWhenOutside = shouldCancelWhenOutside;
-      return this;
-    }
-  },
-  {
-    key: "hitSlop",
-    value: function hitSlop(pressRetentionOffset) {
-      this.config.hitSlop = pressRetentionOffset;
-      return this;
-    }
-  },
-  {
-    key: "activeCursor",
-    value: function activeCursor(activeCursor) {
-      this.config.activeCursor = activeCursor;
-      return this;
-    }
-  },
-  {
-    key: "mouseButton",
-    value: function mouseButton(mouseButton) {
-      this.config.mouseButton = mouseButton;
-      return this;
-    }
-  },
-  {
-    key: "runOnJS",
-    value: function runOnJS(runOnJS) {
-      this.config.runOnJS = runOnJS;
-      return this;
-    }
-  },
-  {
-    key: "simultaneousWithExternalGesture",
-    value: function simultaneousWithExternalGesture() {
+    key: "prepare",
+    value: function prepare() {
       const self = this;
-      const items = [...arguments];
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        if (nextResult) {
-          let addDependencyResult = self.addDependency("simultaneousWith", tmp2);
-        }
+      for (const item10006 of tmp) {
+        let prepareSingleGestureResult = self.prepareSingleGesture(item10006, self.simultaneousGestures, self.requireGesturesToFail);
         continue;
       }
-      return self;
-    }
-  },
-  {
-    key: "requireExternalGestureToFail",
-    value: function requireExternalGestureToFail() {
-      const self = this;
-      const items = [...arguments];
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        if (nextResult) {
-          let addDependencyResult = self.addDependency("requireToFail", tmp2);
-        }
-        continue;
-      }
-      return self;
-    }
-  },
-  {
-    key: "blocksExternalGesture",
-    value: function blocksExternalGesture() {
-      const self = this;
-      const items = [...arguments];
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        if (nextResult) {
-          let addDependencyResult = self.addDependency("blocksHandlers", tmp2);
-        }
-        continue;
-      }
-      return self;
-    }
-  },
-  {
-    key: "withTestId",
-    value: function withTestId(testId) {
-      this.config.testId = testId;
-      return this;
-    }
-  },
-  {
-    key: "cancelsTouchesInView",
-    value: function cancelsTouchesInView(cancelsTouchesInView) {
-      this.config.cancelsTouchesInView = cancelsTouchesInView;
-      return this;
     }
   },
   {
     key: "initialize",
     value: function initialize() {
-      const self = this;
-      this.handlerTag = ContinousBaseGesture(6355).getNextHandlerTag();
-      const obj2 = {};
-      const merged = Object.assign(this.handlers);
-      obj2.handlerTag = this.handlerTag;
-      this.handlers = obj2;
-      if (this.config.ref) {
-        self.config.ref.current = self;
+      for (const item10006 of tmp) {
+        let initializeResult = item10006.initialize();
+        continue;
       }
     }
   },
   {
     key: "toGestureArray",
     value: function toGestureArray() {
-      const items = [this];
-      return items;
-    }
-  },
-  {
-    key: "prepare",
-    value: function prepare() {
-
-    }
-  },
-  {
-    key: "shouldUseReanimated",
-    get() {
-      let tmp = true !== this.config.runOnJS;
-      if (tmp) {
-        const isWorklet = this.handlers.isWorklet;
-        tmp = !isWorklet.includes(false);
-      }
-      if (tmp) {
-        tmp = !ContinousBaseGesture(6338).isRemoteDebuggingEnabled();
-        const obj = ContinousBaseGesture(6338);
-      }
-      return tmp;
+      const gestures = this.gestures;
+      return gestures.flatMap((toGestureArray) => toGestureArray.toGestureArray());
     }
   }
 ];
-const importDefaultResult1Result1 = _createClass(BaseGesture, items);
-class ContinousBaseGesture {
+const importDefaultResultResult = _createClass(ComposedGesture, items);
+class SimultaneousGesture {
   constructor() {
     self = this;
-    tmp = closure_4(this, ContinousBaseGesture);
-    tmp2 = closure_3;
-    obj = closure_3(ContinousBaseGesture);
-    tmp3 = c2;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
@@ -329,35 +140,65 @@ class ContinousBaseGesture {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ContinousBaseGesture, importDefaultResult1Result1);
+ExclusiveGesture = SimultaneousGesture;
+_inherits(SimultaneousGesture, importDefaultResultResult);
 const entry1 = {
-  key: "onUpdate",
-  value: function onUpdate(onUpdate) {
-    this.handlers.onUpdate = onUpdate;
-    this.handlers.isWorklet[obj.UPDATE] = this.isWorklet(onUpdate);
-    return this;
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], tmp[num], self.requireGesturesToFail);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
+    }
   }
 };
-const items1 = [
-  entry1,
-  {
-    key: "onChange",
-    value: function onChange(onChange) {
-      this.handlers.onChange = onChange;
-      this.handlers.isWorklet[obj.CHANGE] = this.isWorklet(onChange);
-      return this;
+let items1 = [entry1];
+class ExclusiveGesture {
+  constructor() {
+    self = this;
+    tmp = c2(this, ExclusiveGesture);
+    tmp2 = closure_4;
+    obj = closure_4(ExclusiveGesture);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-  },
-  {
-    key: "manualActivation",
-    value: function manualActivation(tmp4Result) {
-      this.config.manualActivation = tmp4Result;
-      return this;
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ExclusiveGesture, importDefaultResultResult);
+const entry2 = {
+  key: "prepare",
+  value: function prepare() {
+    let length;
+    const self = this;
+    let items = [];
+    let num = 0;
+    if (0 < this.gestures.length) {
+      do {
+        let requireGesturesToFail = self.requireGesturesToFail;
+        let prepareSingleGestureResult = self.prepareSingleGesture(self.gestures[num], self.simultaneousGestures, requireGesturesToFail.concat(items));
+        items = items.concat(tmp[num]);
+        num = num + 1;
+        length = self.gestures.length;
+      } while (num < length);
     }
   }
-];
+};
+let items2 = [entry2];
 
-export { CALLBACK_TYPE };
-export const Gesture = importDefaultResult1Result;
-export const BaseGesture = importDefaultResult1Result1;
-export const ContinousBaseGesture = _createClass(ContinousBaseGesture, items1);
+export const ComposedGesture = importDefaultResultResult;
+export const SimultaneousGesture = _createClass(SimultaneousGesture, items1);
+export const ExclusiveGesture = _createClass(ExclusiveGesture, items2);

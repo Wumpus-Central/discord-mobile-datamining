@@ -271,7 +271,7 @@ let closure_8 = async function _instrumentStream(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -293,7 +293,7 @@ let closure_8 = async function _instrumentStream(arg0) {
               closure_146_3 = undefined;
               closure_146_6 = undefined;
               closure_146_7 = undefined;
-              let value4;
+              value4 = undefined;
               closure_146_9 = undefined;
               const obj5 = { eventTypes: [], responseTexts: [], finishReasons: [], responseId: "", responseModel: "", responseTimestamp: 0, promptTokens: "r", completionTokens: "end", totalTokens: "toCharArray$esjava$1", chatCompletionToolCalls: {}, responsesApiToolCalls: [] };
               closure_146_2 = obj5;
@@ -475,7 +475,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 }
                 closure_146_0.end();
                 c22 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             }
           break;

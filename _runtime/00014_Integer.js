@@ -3064,7 +3064,7 @@ function gcd(absResult, absResult1) {
       let tmp25 = obj11;
       if (obj11.isEven()) {
         do {
-          let value4 = iter4.value;
+          value4 = iter4.value;
           if (typeof value4 === "number") {
             let tmp28 = value4 | c21;
           } else if (typeof value4 === "bigint") {

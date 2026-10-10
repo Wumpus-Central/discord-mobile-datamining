@@ -22,7 +22,7 @@ export const SceneView = function SceneView(getState) {
   const callback2 = getState.useCallback(() => {
     const routes = getState().routes;
     const found = routes.find((key) => key.key === key.key);
-    state = undefined;
+    let state;
     if (found) {
       state = found.state;
     }
@@ -65,7 +65,7 @@ export const SceneView = function SceneView(getState) {
   ({ key: arr3[1], name: arr3[2], params: arr3[3], path: arr3[4] } = route);
   const items3 = [routeState, callback2, callback3, getKey, callback1, callback4, addOptionsGetter];
   const memo = getState.useMemo(() => {
-    state = { routes: null };
+    let state = { routes: null };
     let items = [{ key: route.key, name: route.name, params: route.params, path: route.path }];
     state.routes = items;
     function addState(state) {

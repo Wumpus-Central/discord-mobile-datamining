@@ -138,7 +138,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             while (true) {
@@ -160,7 +160,7 @@ let items = [
                   closure_1 = values[Symbol.iterator]();
                   if (closure_1 === undefined) {
                     c9 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   } else {
                     c8 = 1;
                     closure_133_0 = tmp14;
@@ -224,7 +224,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             while (true) {
@@ -250,7 +250,7 @@ let items = [
                   closure_1 = dependencyMap[Symbol.iterator]();
                   if (closure_1 === undefined) {
                     c10 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   } else {
                     c8 = 1;
                     closure_133_0 = tmp16;

@@ -1,14 +1,13 @@
 // === Module 7624: ? ===
 
 // Module 7624
-import _modDef7598 from "module_7598" /* 7598 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FeTile = arg1;
+const FeDistantLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeTile {
+class FeDistantLight {
   constructor() {
     self = this;
-    tmp = c2(this, FeTile);
+    tmp = c2(this, FeDistantLight);
     tmp2 = closure_4;
-    obj = closure_4(FeTile);
+    obj = closure_4(FeDistantLight);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,18 +47,17 @@ class FeTile {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeTile, _modDef7598);
+_inherits(FeDistantLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeTile(7575).warnUnimplementedFilter();
+    const result = FeDistantLight(7592).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeTile, items);
-importDefaultResultResult.displayName = "FeTile";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FeDistantLight, items);
+importDefaultResultResult.displayName = "FeDistantLight";
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

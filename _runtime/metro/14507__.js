@@ -1,20 +1,10 @@
 // === Module 14507: ? ===
 
 // Module 14507
-import _mod14482 from "module_14482" /* 14482 */;
+const require = globalThis.__r;
 
-if (_mod14482) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
+const require = arg1;
+const dependencyMap = arg6;
 
-export default fn;
+export const shouldPolyfill = require("module_14508").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

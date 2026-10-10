@@ -1,17 +1,7 @@
 // === Module 16136: ? ===
 
 // Module 16136
-import _mod648 from "module_648" /* 648 */;
-import _mod665 from "module_665" /* 665 */;
-import noop_mod from "module_16137" /* 16137 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-if (_mod648) {
-  const _module = _mod665;
-  const items = [, -0];
-  const tmp5 = new _mod648(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new _mod648(arg0);
-  }
-  module.exports = noop;
-}
-let noop = noop_mod;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "a252d183eacce43fd0ee5d8aedb6e162", name: "ic_download_24px", type: "png" });

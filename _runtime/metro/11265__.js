@@ -1,56 +1,61 @@
 // === Module 11265: ? ===
 
 // Module 11265
-import _mod11167 from "module_11167" /* 11167 */;
-import _mod11194 from "module_11194" /* 11194 */;
-import _mod11195 from "module_11195" /* 11195 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const profiler = {
-  startProfiler() {
-    const client = _mod11194.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.start();
-        } else if (_mod11195.DEBUG_BUILD) {
-          const logger3 = _mod11167.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
-      } else if (_mod11195.DEBUG_BUILD) {
-        const logger2 = _mod11167.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod11195.DEBUG_BUILD) {
-      const logger = _mod11167.logger;
-      logger.warn("No Sentry client available, profiling is not started");
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  },
-  stopProfiler() {
-    const client = _mod11194.getClient();
-    if (client) {
-      const integrationByName = client.getIntegrationByName("ProfilingIntegration");
-      if (integrationByName) {
-        if (tmp6) {
-          const _profiler = integrationByName._profiler;
-          _profiler.stop();
-        } else if (_mod11195.DEBUG_BUILD) {
-          const logger3 = _mod11167.logger;
-          logger3.warn("Profiler is not available on profiling integration.");
-        }
-        tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
-      } else if (_mod11195.DEBUG_BUILD) {
-        const logger2 = _mod11167.logger;
-        logger2.warn("ProfilingIntegration is not available");
-      }
-    } else if (_mod11195.DEBUG_BUILD) {
-      const logger = _mod11167.logger;
-      logger.warn("No Sentry client available, profiling is not started");
-    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-};
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class SentryError {
+  constructor(arg0) {
+    str = require;
+    if (require === undefined) {
+      str = "warn";
+    }
+    self = this;
+    tmp = closure_0(this, SentryError);
+    items = [];
+    items[0] = global;
+    tmp2 = c2;
+    obj = c2(SentryError);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.message = global;
+    tmp3Result.logLevel = str;
+    return tmp3Result;
+  }
+}
+_classCallCheck = SentryError;
+_inherits(SentryError, _wrapNativeSuper(Error));
+
+export const SentryError = _createClass(SentryError);

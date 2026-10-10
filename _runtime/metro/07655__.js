@@ -1,7 +1,7 @@
 // === Module 7655: ? ===
 
 // Module 7655
-import _modDef7583 from "module_7583" /* 7583 */;
+import _modDef7600 from "module_7600" /* 7600 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Symbol = importDefault;
+const Marker = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class Symbol {
+class Marker {
   constructor() {
     self = this;
-    tmp = c2(this, Symbol);
+    tmp = c2(this, Marker);
     tmp2 = closure_4;
-    obj = closure_4(Symbol);
+    obj = closure_4(Marker);
     tmp3 = closure_3;
     if (metroRequire()) {
       tmp7 = globalThis;
@@ -50,21 +50,23 @@ class Symbol {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Symbol, _modDef7583);
+_inherits(Marker, _modDef7600);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
+    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
     const obj2 = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign({ name: props.id });
-    const merged1 = Object.assign(Symbol(7572)(props));
-    obj2.children = props.children;
-    return jsx(Symbol(7656), {
+    const obj = { name: props.id, refX: props.refX, refY: props.refY, markerUnits: props.markerUnits, orient: String(props.orient), markerWidth, markerHeight };
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(Marker(7589)({ viewBox, preserveAspectRatio }));
+    obj2.children = children;
+    return jsx(Marker(7656), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -72,7 +74,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Symbol, items);
-importDefaultResultResult.displayName = "Symbol";
+const importDefaultResultResult = _createClass(Marker, items);
+importDefaultResultResult.displayName = "Marker";
+importDefaultResultResult.defaultProps = { refX: 0, refY: 0, orient: "0", markerWidth: 3, markerHeight: 3, markerUnits: "strokeWidth" };
 
 export default importDefaultResultResult;

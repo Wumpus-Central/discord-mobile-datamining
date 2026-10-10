@@ -1,7 +1,10 @@
 // === Module 4995: ? ===
 
 // Module 4995
-import registerAsset from "module_1132" /* 1132 */;
+import _mod19 from "module_19" /* 19 */;
 
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "dd2bf1474590dee83bbb5fea2b4f182c", name: "CircleCheckIcon-primary", type: "png" });
+export const PortalStateContext = context;
+export const PortalDispatchContext = createContext(null);

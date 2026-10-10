@@ -1,14 +1,33 @@
 // === Module 11282: ? ===
 
 // Module 11282
+import setupIntegration from "module_11264" /* 11264 */;
 
-export function getSDKSource() {
-  return "npm";
-}
-export const isBrowserBundle = function isBrowserBundle() {
-  let prop = typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined";
-  if (typeof globalThis.__SENTRY_BROWSER_BUNDLE__ !== "undefined") {
-    prop = globalThis.__SENTRY_BROWSER_BUNDLE__;
+const weakMap = new WeakMap();
+
+export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
+  name: "FunctionToString",
+  setupOnce() {
+    toString = Function.prototype.toString;
+    try {
+      const _Function = Function;
+      Function.prototype.toString = function() {
+        const items = [...arguments];
+        const originalFunction = closure_1_0(11214).getOriginalFunction(this);
+        const obj = closure_1_0(11214);
+        let self = this;
+        if (set.has(obj2.getClient())) {
+          self = this;
+          if (undefined !== originalFunction) {
+            self = originalFunction;
+          }
+        }
+        return toString.apply(self, items);
+      };
+    } catch (err) {
+    }
+  },
+  setup(arg0) {
+    const result = weakMap.set(arg0, true);
   }
-  return prop;
-};
+}));

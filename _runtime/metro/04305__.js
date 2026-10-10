@@ -1,127 +1,44 @@
 // === Module 4305: ? ===
 
 // Module 4305
-import module_4306_mod from "module_4306" /* 4306 */;
-import module_4307_mod from "module_4307" /* 4307 */;
-import _typeof_mod from "module_4158" /* 4158 */;
-import requiredArgs_mod from "requiredArgs" /* 4159 */;
-import module_4162_mod from "module_4162" /* 4162 */;
+import module_4306 from "module_4306" /* 4306 */;
+import module_4307 from "module_4307" /* 4307 */;
+import module_4308 from "module_4308" /* 4308 */;
+import date_mod from "module_4309" /* 4309 */;
+import date_mod from "module_4310" /* 4310 */;
 
-function _typeof(arg0) {
-  if (typeof Symbol === "function") {
-    let _Symbol = Symbol;
-    if (typeof Symbol.iterator === "symbol") {
-      _typeof = function _typeof(arg0) {
-        return typeof arg0;
-      };
-    }
-    return _typeof(arg0);
-  }
-  _typeof = function _typeof(arg0) {
-    if (arg0) {
-      const _Symbol = Symbol;
-      if (typeof Symbol === "function") {
-        const _Symbol3 = Symbol;
-        if (arg0.constructor === Symbol) {
-          const _Symbol2 = Symbol;
-          let str = "symbol";
-        }
-        return str;
-      }
-    }
-    str = typeof arg0;
-  };
-}
-let module_4306 = module_4306_mod;
 if (!module_4306) {
   const obj = { default: module_4306 };
   let tmp3 = obj;
 } else {
   tmp3 = module_4306;
 }
-module_4306 = tmp3;
-let module_4307 = module_4307_mod;
 if (!module_4307) {
   const obj2 = { default: module_4307 };
   let tmp5 = obj2;
 } else {
   tmp5 = module_4307;
 }
-module_4307 = tmp5;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj3 = { default: _typeof };
+if (!module_4308) {
+  const obj3 = { default: module_4308 };
   let tmp7 = obj3;
 } else {
-  tmp7 = _typeof;
+  tmp7 = module_4308;
 }
-_typeof = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
   let tmp9 = obj4;
 } else {
-  tmp9 = requiredArgs;
+  tmp9 = date;
 }
-requiredArgs = tmp9;
-let module_4162 = module_4162_mod;
-if (!module_4162) {
-  const obj5 = { default: module_4162 };
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
   let tmp11 = obj5;
 } else {
-  tmp11 = module_4162;
+  tmp11 = date;
 }
-module_4162 = tmp11;
 
-export default function add(arg0, years) {
-  requiredArgs.default(2, arguments);
-  if (years) {
-    if ("object" === _typeof(years)) {
-      let num = 0;
-      if (years.years) {
-        num = module_4162.default(years.years);
-      }
-      let num2 = 0;
-      if (years.months) {
-        num2 = module_4162.default(years.months);
-      }
-      let num3 = 0;
-      if (years.weeks) {
-        num3 = module_4162.default(years.weeks);
-      }
-      let num4 = 0;
-      if (years.days) {
-        num4 = module_4162.default(years.days);
-      }
-      let num5 = 0;
-      if (years.hours) {
-        num5 = module_4162.default(years.hours);
-      }
-      let num6 = 0;
-      if (years.minutes) {
-        num6 = module_4162.default(years.minutes);
-      }
-      let num7 = 0;
-      if (years.seconds) {
-        num7 = module_4162.default(years.seconds);
-      }
-      const defaultResult1 = _typeof.default(arg0);
-      if (num2) {
-        let defaultResult2 = module_4307.default(defaultResult1, num2 + 12 * num);
-      } else {
-        defaultResult2 = defaultResult1;
-      }
-      if (num4) {
-        let defaultResult3 = module_4306.default(defaultResult2, num4 + 7 * num3);
-      } else {
-        defaultResult3 = defaultResult2;
-      }
-      const _Date = Date;
-      const sum = num7 + 60 * (num6 + 60 * num5);
-      const date = new Date(defaultResult3.getTime() + 1000 * sum);
-      return date;
-    }
-  }
-  return new Date(NaN);
-};
+export default { code: "pt-BR", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

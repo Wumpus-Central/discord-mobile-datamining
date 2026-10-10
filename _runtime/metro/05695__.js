@@ -1,11 +1,7 @@
 // === Module 5695: ? ===
 
 // Module 5695
+import _mod1314 from "module_1314" /* 1314 */;
 
-export default function isPropertyKey(str) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    tmp = typeof str === "symbol";
-  }
-  return tmp;
-};
+
+export default _mod1314.setPrototypeOf || null;

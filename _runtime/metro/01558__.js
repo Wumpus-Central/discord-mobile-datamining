@@ -24,7 +24,7 @@ function getStateFromRouteParams(params) {
                   }
                   return tmp;
                 })) {
-                  state = params.state;
+                  let state = params.state;
                 }
                 return state;
               }

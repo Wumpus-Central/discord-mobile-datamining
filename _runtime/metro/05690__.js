@@ -1,32 +1,17 @@
 // === Module 5690: ? ===
 
 // Module 5690
-import _mod1306 from "module_1306" /* 1306 */;
-import _mod5691 from "module_5691" /* 5691 */;
-import _mod5692 from "module_5692" /* 5692 */;
-import _mod5693 from "module_5693" /* 5693 */;
+import _mod1305 from "module_1305" /* 1305 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
 
-if (_mod5691) {
-  function setProto(arg0, arg1) {
-    if (_mod5691(arg0, arg1)) {
-      return arg0;
-    } else {
-      const tmp5 = new _mod1306("Reflect.setPrototypeOf: failed to set [[Prototype]]");
-      throw tmp5;
-    }
-  }
-} else {
-  setProto = _mod5692;
-  if (!setProto) {
-    let setProto2 = null;
-    if (_mod5693) {
-      setProto2 = function setProto(arg0, arg1) {
-        _mod5693(arg0, arg1);
-        return arg0;
-      };
-    }
-    setProto = setProto2;
-  }
+const tmp = _mod1305("%Array%");
+const isArray = tmp.isArray;
+let tmp2 = !isArray;
+if (!isArray) {
+  tmp2 = callBoundIntrinsic("Object.prototype.toString");
 }
+let closure_0 = tmp2;
 
-export default setProto;
+export default tmp.isArray || (function IsArray(arg0) {
+  return "[object Array]" === closure_0(arg0);
+});

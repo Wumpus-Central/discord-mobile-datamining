@@ -216,7 +216,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
         }
         let tmp23 = substr1[substr1.length - 1];
         let _Object3 = Object;
-        let merged1 = Object.assign(obj5, { initial: "color", screen: "l", params: "ks", state: "find" });
+        let merged1 = Object.assign(obj5, { initial: "Array", screen: "T", params: "y", state: "IconComponent" });
         if (1 === substr1.length) {
           if (undefined === substr1[0].key) {
             obj5.initial = true;
@@ -231,7 +231,7 @@ export const getActionFromState = function getActionFromState(index, initialRout
               ({ path: obj6.path, params: obj6.params } = tmp23);
               params = obj5;
             }
-            state = tmp23.state;
+            let state = tmp23.state;
             let tmp28;
             if (tmp12 != null) {
               let screens2 = tmp12.screens;

@@ -1,13 +1,14 @@
 // === Module 9850: ? ===
 
 // Module 9850
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod9808 from "module_9808" /* 9808 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import Filter from "Filter" /* 9838 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENMergeRelativeAfterDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,31 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class FRMergeDateRangeRefiner {
+class ENMergeRelativeAfterDateRefiner {
   constructor() {
     self = this;
-    tmp = closure_0(this, FRMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(FRMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(ENMergeRelativeAfterDateRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -64,14 +48,39 @@ class FRMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = FRMergeDateRangeRefiner;
-_inherits(FRMergeDateRangeRefiner, fn(_mod9808).default);
+_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(à|a|au|-)\s*$/i;
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, arg1, text) {
+    let match = str.match(/^\s*$/i);
+    if (match) {
+      let tmp4 = null != str.match(/^[+-]/i);
+      if (!tmp4) {
+        tmp4 = null != text.text.match(/^-/i);
+      }
+      match = tmp4;
+    }
+    return match;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text, arg3) {
+      const parseDurationResult = ENMergeRelativeAfterDateRefiner(9818).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/^-/i)) {
+        reverseDurationResult = ENMergeRelativeAfterDateRefiner(9821).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = ENMergeRelativeAfterDateRefiner(9822).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(9822).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
+      ({ reference, index } = start);
+      return new ENMergeRelativeAfterDateRefiner(9822).ParsingResult(reference, index, "" + start.text + arg0 + text.text, relativeFromReference);
+    }
+  }
+];
 
-export default _createClass(FRMergeDateRangeRefiner, items);
+export default _createClass(ENMergeRelativeAfterDateRefiner, items);

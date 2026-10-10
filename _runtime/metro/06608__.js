@@ -1,7 +1,8 @@
 // === Module 6608: ? ===
 
 // Module 6608
-import _modDef6609 from "module_6609" /* 6609 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default _modDef6609;
+export const styles = StyleSheet.create({ container: {} });

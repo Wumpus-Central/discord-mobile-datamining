@@ -210,7 +210,7 @@ let closure_6 = async function _instrumentStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -232,7 +232,7 @@ let closure_6 = async function _instrumentStream(arg0) {
               closure_136_3 = undefined;
               closure_136_6 = undefined;
               closure_136_7 = undefined;
-              let value4;
+              value4 = undefined;
               closure_136_9 = undefined;
               const obj4 = { responseTexts: [], finishReasons: [], toolCalls: [] };
               closure_136_2 = obj4;
@@ -422,7 +422,7 @@ let closure_6 = async function _instrumentStream(arg0) {
                 closure_136_0.setAttributes(closure_136_9);
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             }
           break;

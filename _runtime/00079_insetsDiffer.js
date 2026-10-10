@@ -1,7 +1,7 @@
 // === Module 79: insetsDiffer ===
 
 // Module 79 (insetsDiffer)
-let closure_0 = { top: "color", left: "l", right: "ks", bottom: "find" };
+let closure_0 = { top: "Array", left: "T", right: "y", bottom: "IconComponent" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

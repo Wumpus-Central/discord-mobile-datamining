@@ -1,13 +1,14 @@
 // === Module 7621: ? ===
 
 // Module 7621
+import _modDef7615 from "module_7615" /* 7615 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const FePointLight = fn;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FePointLight {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = c2(this, FePointLight);
+    tmp = c2(this, FeConvolveMatrix);
     tmp2 = closure_4;
-    obj = closure_4(FePointLight);
+    obj = closure_4(FeConvolveMatrix);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -47,17 +48,18 @@ class FePointLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FePointLight, fn(19).Component);
+_inherits(FeConvolveMatrix, _modDef7615);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FePointLight(7575).warnUnimplementedFilter();
+    const result = FeConvolveMatrix(7592).warnUnimplementedFilter();
     return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FePointLight, items);
-importDefaultResultResult.displayName = "FePointLight";
+const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

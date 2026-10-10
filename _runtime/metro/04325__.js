@@ -1,37 +1,14 @@
 // === Module 4325: ? ===
 
 // Module 4325
-import module_4162_mod from "module_4162" /* 4162 */;
-import module_4313_mod from "module_4313" /* 4313 */;
-import requiredArgs_mod from "requiredArgs" /* 4159 */;
+import module_2134 from "module_2134" /* 2134 */;
 
-let module_4162 = module_4162_mod;
-if (!module_4162) {
-  const obj = { default: module_4162 };
-  let tmp3 = obj;
+if (!module_2134) {
+  const obj2 = { default: module_2134 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4162;
+  obj = module_2134;
 }
-module_4162 = tmp3;
-let module_4313 = module_4313_mod;
-if (!module_4313) {
-  const obj2 = { default: module_4313 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4313;
-}
-module_4313 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function addSeconds(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4313.default(interval, 1000 * module_4162.default(arg1));
-};
+export default { date: obj.default({ formats: { full: "EEEE d MMMM y", long: "d MMMM y", medium: "d MMM y", short: "y-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "'kl'. HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'kl.' {{time}}", long: "{{date}} 'kl.' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

@@ -102,7 +102,7 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
     obj2.getState = function getState() {
       const tmp = getState();
       const current = ref.current;
-      state = tmp;
+      let state = tmp;
       if (null != current) {
         state = tmp;
         if (current.base === tmp) {

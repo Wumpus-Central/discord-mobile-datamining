@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/audit_logs", width: 24, height: 24, scales: [2, 3], hash: "6cae386612a05fa05fa9c172e944297a", name: "ic_audit_create_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 137, height: 107, scales: [2, 3], hash: "ce32488238d2e7b00e66ed407523473c", name: "img_verify_phone_darker", type: "png" });

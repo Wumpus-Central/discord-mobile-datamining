@@ -2,53 +2,23 @@
 
 // Module 5655
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1339 */;
-import ToObject from "ToObject" /* 5656 */;
+import properlyBoxed from "properlyBoxed" /* 5656 */;
 import _mod5658 from "module_5658" /* 5658 */;
-import ToUint32 from "ToUint32" /* 5659 */;
-import ToString from "ToString" /* 5671 */;
-import _mod5683 from "module_5683" /* 5683 */;
-import ArraySpeciesCreate from "ArraySpeciesCreate" /* 5684 */;
-import Get from "Get" /* 5694 */;
-import HasProperty from "HasProperty" /* 5707 */;
-import Call from "Call" /* 5708 */;
-import CreateDataPropertyOrThrow from "CreateDataPropertyOrThrow" /* 5709 */;
+import RequireObjectCoercible from "RequireObjectCoercible" /* 5660 */;
+import shimArrayPrototypeMap from "shimArrayPrototypeMap" /* 5721 */;
+import callBind from "callBind" /* 1474 */;
+import defineProperty from "module_5675" /* 5675 */;
 
-const ObjectResult = Object("a");
-let tmp2 = "a" !== ObjectResult[0];
-if (!tmp2) {
-  tmp2 = !(0 in ObjectResult);
+let closure_2 = callBind.apply(properlyBoxed());
+let closure_3 = callBoundIntrinsic("Array.prototype.slice");
+function map(arg0, arg1) {
+  RequireObjectCoercible(arg0);
+  return closure_2(arg0, closure_3(arguments, 1));
 }
-let closure_2 = tmp2;
-let closure_3 = callBoundIntrinsic("String.prototype.split");
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj.getPolyfill = properlyBoxed;
+obj.implementation = _mod5658;
+obj.shim = shimArrayPrototypeMap;
+defineProperty(map, obj);
 
-export default function map(arg0) {
-  const tmp3 = ToObject(this);
-  let arr = tmp3;
-  if (closure_2) {
-    arr = tmp3;
-    if (_mod5658(tmp3)) {
-      arr = closure_3(tmp3, "");
-    }
-  }
-  const tmp5 = ToUint32(arr.length);
-  if (_mod5683(arg0)) {
-    if (arguments.length > 1) {
-      const tmp11 = arguments[1];
-    }
-    const tmp12 = ArraySpeciesCreate(tmp3, tmp5);
-    for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
-      let tmp15 = ToString(num2);
-      if (HasProperty(tmp3, tmp15)) {
-        let tmp17 = Get(tmp3, tmp15);
-        let items = [tmp17, num2, tmp3];
-        let tmp18 = Call(arg0, tmp11, items);
-        let tmp19 = CreateDataPropertyOrThrow(tmp12, tmp15, tmp18);
-      }
-    }
-    return tmp12;
-  } else {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("Array.prototype.map callback must be a function");
-    throw typeError;
-  }
-};
+export default map;

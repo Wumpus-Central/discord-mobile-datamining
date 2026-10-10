@@ -1,34 +1,12 @@
 // === Module 14584: ? ===
 
 // Module 14584
+import _mod14531 from "module_14531" /* 14531 */;
+import _mod14565 from "module_14565" /* 14565 */;
+import _mod14582 from "module_14582" /* 14582 */;
 
-export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
-  try {
-    if (constants) {
-      if (constants.reactNativeVersion) {
-        const major = constants.reactNativeVersion.major;
-        const minor = constants.reactNativeVersion.minor;
-        const patch = constants.reactNativeVersion.patch;
-        const prerelease = constants.reactNativeVersion.prerelease;
-        if (typeof major !== "number") {
-          return null;
-        } else {
-          const items = [];
-          const _HermesInternal2 = HermesInternal;
-          items.push("" + tmp4 + "." + minor + "." + patch);
-          if (prerelease) {
-            const _HermesInternal = HermesInternal;
-            arr2.push("-" + prerelease);
-          }
-          return items.join("");
-        }
-      } else {
-        return null;
-      }
-    } else {
-      return null;
-    }
-  } catch (err) {
-    return null;
-  }
-};
+
+export default _mod14531 ? ((arg0, arg1, arg2) => _mod14582.f(arg0, arg1, _mod14565(1, arg2))) : ((arg0, arg1, arg2) => {
+  arg0[arg1] = arg2;
+  return arg0;
+});

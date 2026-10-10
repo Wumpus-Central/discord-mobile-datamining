@@ -1,15 +1,28 @@
 // === Module 7839: ? ===
 
 // Module 7839
-const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
+import findOffsets from "findOffsets" /* 7836 */;
+
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  isAvifFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          parseBoxResult = "avif" === parseBoxResult.majorBrand;
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
     }
   },
-  5: "PentaxModelID",
-  555: "LevelInfo"
+  findAvifOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  }
 };
-
-export default obj;

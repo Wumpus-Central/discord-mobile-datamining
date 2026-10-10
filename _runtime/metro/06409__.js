@@ -1,11 +1,33 @@
 // === Module 6409: ? ===
 
 // Module 6409
+import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6408 */;
 import noop from "module_19" /* 19 */;
 
-({ useEffect, useRef } = noop);
-new Map();
+({ useEffect: c2, useMemo: c3 } = noop);
 
-export function useDetectorAttachmentGuard(tmp8Result5) {
-
-}
+export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  const items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+    }
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
+    }
+  }, items1);
+};

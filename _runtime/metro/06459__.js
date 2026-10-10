@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
 }
 let _classCallCheck = _classCallCheck_mod;
 _possibleConstructorReturnDefault;
-class LongPressGesture {
+class FlingGesture {
   constructor() {
     self = this;
-    tmp = closure_0(this, LongPressGesture);
+    tmp = closure_0(this, FlingGesture);
     tmp2 = c2;
-    obj = c2(LongPressGesture);
+    obj = c2(FlingGesture);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -44,36 +44,28 @@ class LongPressGesture {
     }
     tmp3Result = tmp3(self, constructResult);
     tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
+    tmp3Result.handlerName = "FlingGestureHandler";
     return tmp3Result;
   }
 }
-_classCallCheck = LongPressGesture;
-_inherits(LongPressGesture, fn(6354).BaseGesture);
+_classCallCheck = FlingGesture;
+_inherits(FlingGesture, fn(6355).BaseGesture);
 const entry = {
-  key: "minDuration",
-  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
+  key: "numberOfPointers",
+  value: function numberOfPointers(numberOfPointers) {
+    this.config.numberOfPointers = numberOfPointers;
     return this;
   }
 };
 const items = [
   entry,
   {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    }
-  },
-  {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
+    key: "direction",
+    value: function direction(dependencyMap) {
+      this.config.direction = dependencyMap;
       return this;
     }
   }
 ];
 
-export const LongPressGesture = _createClass(LongPressGesture, items);
+export const FlingGesture = _createClass(FlingGesture, items);

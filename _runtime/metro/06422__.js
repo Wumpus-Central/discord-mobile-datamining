@@ -1,27 +1,19 @@
 // === Module 6422: ? ===
 
 // Module 6422
-import ComposedGestureName from "ComposedGestureName" /* 6392 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6401 */;
-import _mod6416 from "module_6416" /* 6416 */;
+import ComposedGestureName from "ComposedGestureName" /* 6393 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6402 */;
+import _mod6417 from "module_6417" /* 6417 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function transformLongPressProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
-  }
-  return shouldCancelWhenOutside;
-}
-const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
-const map = new Map(items);
-let closure_4 = {};
+let closure_2 = {};
 
-export const useLongPressGesture = function useLongPressGesture() {
+export const useFlingGesture = function useFlingGesture() {
   let tmp = cResult;
   if (cResult === undefined) {
-    tmp = closure_4;
+    tmp = closure_2;
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
-  return _mod6416.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6417.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 };

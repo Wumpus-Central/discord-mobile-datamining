@@ -1,18 +1,14 @@
 // === Module 6719: ? ===
 
 // Module 6719
-import CardAnimationContext from "CardAnimationContext" /* 6713 */;
-import noop from "module_19" /* 19 */;
 
-require = arg1;
-
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const findLastIndex = function findLastIndex(arg0, fn) {
+  let diff = arg0.length - 1;
+  if (0 <= diff) {
+    while (!fn(arg0[diff])) {
+      diff = diff - 1;
+    }
+    return diff;
   }
+  return -1;
 };

@@ -206,7 +206,7 @@ export const reactNavigationIntegration = () => {
           let name = currentRoute.name;
           const hasItem = closure_13.includes(currentRoute.key);
           if (flag5) {
-            state = current.getState();
+            let state = current.getState();
             let name2;
             if (state) {
               const items = [];
