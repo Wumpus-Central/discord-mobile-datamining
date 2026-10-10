@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ConjureProjectIconDefault from "ConjureProjectIcon.tsx";
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 },
   title: { flexShrink: 1 },
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3827.FzfmQ8);
+        const stringResult = intl.string(_modDef3849.FzfmQ8);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const intl = util.intl;
-      obj2.accessibilityLabel = intl.string(_modDef3827.FzfmQ8);
+      obj2.accessibilityLabel = intl.string(_modDef3849.FzfmQ8);
       obj2.children = React4(ConjureProjectIconDefault, { project, size: "header" });
       const items = [
         React4(Pressables.PressableOpacity, obj2),

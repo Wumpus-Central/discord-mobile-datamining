@@ -29,9 +29,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = require("c");
       const stateFromStores = require("useStateFromStores").useStateFromStores(tmp4, tmp5);
-      const tmp8 = stateFromStores(5929)(stateFromStores);
+      const tmp8 = stateFromStores(5922)(stateFromStores);
       dependencyMap = tmp8;
-      const tmp9 = stateFromStores(10879)();
+      const tmp9 = stateFromStores(10919)();
       noop = tmp9;
       if (cResult[2] === arg0) {
         if (cResult[3] === tmp9) {
@@ -77,9 +77,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
         pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
       );
-      let tmp2 = stateFromStores(5929)(stateFromStores);
+      let tmp2 = stateFromStores(5922)(stateFromStores);
       dependencyMap = tmp2;
-      const tmp3 = stateFromStores(10879)();
+      const tmp3 = stateFromStores(10919)();
       noop = tmp3;
       const items1 = [stateFromStores, tmp2, arg0, tmp3];
       const effect = noop.useEffect(() => {

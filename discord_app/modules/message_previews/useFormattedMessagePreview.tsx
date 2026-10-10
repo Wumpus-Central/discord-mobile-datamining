@@ -454,7 +454,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
           currentUserId: stateFromStores,
           authorNick: stringResult,
           otherUser: stateFromStores1,
-          otherUserNick: tmp(5624).useNullableUserAuthor(stateFromStores1, id).nick,
+          otherUserNick: tmp(5627).useNullableUserAuthor(stateFromStores1, id).nick,
           isBlocked,
           isIgnored,
           isCallActive: tmp10,

@@ -2,7 +2,7 @@
 import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import _modDef7672 from "../../../../_runtime/metro/07672__.js";
+import _modDef7689 from "../../../../_runtime/metro/07689__.js";
 import ChatInputParser from "ChatInputParser.tsx";
 import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -32,9 +32,9 @@ function findGameMentionTokens(text, name) {
   if (items === undefined) {
     items = [];
   }
-  const arr2 = __initData2(name);
+  const arr2 = map1(name);
   const found = items.filter((item) => item !== arr2);
-  const mapped = found.map(__initData2);
+  const mapped = found.map(map1);
   const obj = { token: arr2, locations: null };
   const items1 = [];
   let index = text.indexOf(arr2);
@@ -62,14 +62,14 @@ function buildGameMentionResult(id) {
   let uri = getGameMediaRefURLDefault(id.id, id.icon, { size: 32 });
   const obj = {
     location: 0,
-    length: __initData2(id.name).length,
+    length: map1(id.name).length,
     icon: null,
     iconSize: 16,
     iconCornerRadius: 4,
     iconSpacing: 4,
   };
   if (obj2.isNullOrEmpty(uri)) {
-    uri = Image.resolveAssetSource(_modDef7672).uri;
+    uri = Image.resolveAssetSource(_modDef7689).uri;
   }
   obj.icon = uri;
   return obj;
@@ -113,7 +113,7 @@ function findAllTimestampPillMatches(size, text) {
 }
 const Image = fn(17).Image;
 const Permissions = fn(1085).Permissions;
-const ChannelAutocompleteConstants = fn(5401);
+const ChannelAutocompleteConstants = fn(5404);
 ({
   GAME_MENTION_INPUT_PREFIX: c10,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_11,
@@ -382,9 +382,9 @@ export const serializeComposerGameMentions = function serializeComposerGameMenti
   closure_1 = text;
   function _loop2() {
     name = name.name;
-    let arr2 = __initData2(name);
+    let arr2 = map1(name);
     const found = items.filter((item) => item !== arr2);
-    const mapped = found.map(__initData2);
+    const mapped = found.map(map1);
     items = [];
     let index = closure_1.indexOf(arr2);
     if (-1 !== index) {

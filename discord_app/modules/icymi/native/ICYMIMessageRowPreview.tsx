@@ -345,11 +345,11 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = useThemeDefault();
       if (cResult[0] !== tmp5) {
         const obj2 = { seeMoreLabelColor: tmp4(587).colors.TEXT_DEFAULT };
-        const tmp7 = lineClamp(5091).createNativeStyleProperties(obj2)(tmp5);
+        const tmp7 = lineClamp(5092).createNativeStyleProperties(obj2)(tmp5);
         cResult[0] = tmp5;
         cResult[1] = tmp7;
         let tmp6 = tmp7;
-        const tmpResult = lineClamp(5091);
+        const tmpResult = lineClamp(5092);
       } else {
         tmp6 = cResult[1];
       }
@@ -386,7 +386,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = cResult[7];
         }
         if (cResult[8] !== messageOptions) {
-          const obj4 = new tmp4(7728)();
+          const obj4 = new tmp4(7746)();
           const obj3 = {
             renderEmbeds: tmp10,
             inlineEmbedMedia: tmp12,
@@ -436,7 +436,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           messageSizeCacheRef,
           maxHeight,
         };
-        const tmp26 = jsx(tmp4(9346), {
+        const tmp26 = jsx(tmp4(9373), {
           pointerEvents: str,
           horizontalOffset: 0,
           modifyRow: tmp8,
@@ -477,7 +477,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (str === undefined) {
         str = "none";
       }
-      const tmp = messageOptions(4992)();
+      const tmp = messageOptions(5031)();
       let obj = createStyles;
       dependencyMap = obj.createNativeStyleProperties({ seeMoreLabelColor: messageOptions(587).colors.TEXT_DEFAULT })(
         tmp,
@@ -512,7 +512,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return obj;
       }, items);
-      return jsx(messageOptions(9346), {
+      return jsx(messageOptions(9373), {
         pointerEvents: str,
         horizontalOffset: 0,
         modifyRow(arg0) {
@@ -649,11 +649,11 @@ export const MessageRowPreview = noop.memo(
           obj.pointerEvents = merged.pointerEvents;
           return obj;
         }, items);
-        const tmp3 = merged(6995)(message);
+        const tmp3 = merged(7001)(message);
         let obj = {};
         const merged1 = Object.assign(memo);
         const obj2 = {};
-        const merged2 = Object.assign(message(7730).DEFAULT_OPTIONS);
+        const merged2 = Object.assign(message(7748).DEFAULT_OPTIONS);
         obj2.ignoreMentioned = true;
         obj2.renderReplies = false;
         obj2.renderThreadEmbeds = false;

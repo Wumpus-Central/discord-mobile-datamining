@@ -2,7 +2,7 @@
 import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import DCDVideoRendererDefault from "../../../video_calls/native/components/DCDVideoRenderer.tsx";
@@ -14,12 +14,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const PixelRatio = fn(17).PixelRatio;
-const VoicePanelConstants = fn(11926);
+const VoicePanelConstants = fn(11970);
 let VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
-const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17668).VoicePanelPIPModes;
-const SCALE_PHYSICS = fn(11927).SCALE_PHYSICS;
+const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17740).VoicePanelPIPModes;
+const SCALE_PHYSICS = fn(11971).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let c13 = 50;
@@ -45,7 +45,7 @@ getScaleChangeWithOverscroll.__workletHash = 8727721301304;
 getScaleChangeWithOverscroll.__initData = {
   code: "function getScaleChangeWithOverscroll_VoicePanelVideoRendererTsx1(currentScale,scaleChange,fitScale){const{MIN_OVERSCROLL,OVERSCOLL_INTENSITY_FACTOR}=this.__closure;if(currentScale>=fitScale){return scaleChange;}const underScale=1-currentScale;const factor=Math.max(MIN_OVERSCROLL,1-underScale*underScale*OVERSCOLL_INTENSITY_FACTOR);return 1+(scaleChange-1)*factor;}",
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_22 = createStyles.createStyles({
   wrapper: {
     position: "absolute",
@@ -1595,7 +1595,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           value3 = sharedValue1.get();
           const result = value3 * sharedValue.get();
-          const value4 = sharedValue2.get();
+          value4 = sharedValue2.get();
           const result1 = value4 * sharedValue.get();
           if (result >= -50) {
             if (result <= c13) {
@@ -1771,7 +1771,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp3 = id === id;
         if (tmp3) {
           value3 = derivedValue2.get();
-          let value4 = !value3;
+          value4 = !value3;
           if (value3) {
             value4 = sharedValue6.get();
           }
@@ -2211,7 +2211,7 @@ let closure_93 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_1_21.get()) {
             const result = changeY.changeY * sharedValue4;
             value = sharedValue.get();
-            const value4 = sharedValue.get();
+            value4 = sharedValue.get();
             if (typeof sharedValue6 === "function") {
               const sum = 1 + result;
               let sum1 = sum;

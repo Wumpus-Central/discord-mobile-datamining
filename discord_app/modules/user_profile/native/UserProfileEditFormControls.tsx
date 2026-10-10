@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   button: {
     flexGrow: 1,
@@ -563,7 +563,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
               }
             }
             const obj4 = { "aria-hidden": true, value, onValueChange: tmp9, disabled: tmp4 };
-            const tmp21 = timestampProducer(tmp(6890).FormSwitch, obj4);
+            const tmp21 = timestampProducer(tmp(6896).FormSwitch, obj4);
             cResult[14] = tmp4;
             cResult[15] = tmp9;
             cResult[16] = value;
@@ -616,7 +616,7 @@ export const UserProfileEditFormSwitch = ReactCompilerGating.isReactCompilerEnab
         closure_2(value);
       }, items);
       if (isAndroidResult) {
-        let PressableHighlight = tmp2(6191).PressableHighlight;
+        let PressableHighlight = tmp2(6184).PressableHighlight;
       } else {
         PressableHighlight = React4;
       }

@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const ForumChannelStore = fn(11629);
+const ForumChannelStore = fn(11675);
 ({ useForumChannelStoreApi: metroRequire, useForumChannelStore: closure_7 } = ForumChannelStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj6.forumLayout = forumLayout;
             const result1 = Tracking.trackForumLayoutUpdated(obj6);
           }
-          state = closure_4.getState();
+          const state = closure_4.getState();
           state.setLayoutType(channelId, forumLayout);
           const state1 = closure_4.getState();
           state1.setSortOrder(channelId, sortOrder);

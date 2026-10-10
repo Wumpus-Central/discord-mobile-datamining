@@ -33,7 +33,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -410,7 +410,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -643,7 +643,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     while (true) {
@@ -709,7 +709,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
             let iter = sortByResult.slice(0, 25);
             let valueResult = iter.value();
             closure_145_5 = valueResult;
-            let verboseResult = state.verbose(
+            let verboseResult = value.verbose(
               "Guild Message Background Syncing for ",
               valueResult.map((channelId) => channelId.channelId),
             );
@@ -728,7 +728,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               return obj6;
             }
           } else {
-            let logResult = state.log("Aborting BG sync because there is no database");
+            let logResult = value.log("Aborting BG sync because there is no database");
           }
         }
       } else {
@@ -964,7 +964,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     while (true) {
@@ -1030,7 +1030,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -1093,14 +1093,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(2068);
+const ChannelRecord = fn(2069);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6037);
-const ChannelStore = fn(2064);
-const EmojiStore = fn(5994);
-const GuildStore = fn(2086);
+const StickersStore = fn(6030);
+const ChannelStore = fn(2065);
+const EmojiStore = fn(5987);
+const GuildStore = fn(2087);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

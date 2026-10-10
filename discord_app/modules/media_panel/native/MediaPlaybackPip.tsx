@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import safeTransitionToDefault from "../../links/safeTransitionTo.native.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
@@ -22,10 +22,10 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17668).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17740).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     justifyContent: "center",
@@ -90,7 +90,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       ({ activeMediaPlayerSource, isVoiceMessage, isControlVisible } = message);
       const tmp4 = closure_17();
       let obj = message(576);
-      const token = message(4779).useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
+      const token = message(4818).useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, UserStore, RelationshipStore];
         cResult[0] = items;
@@ -134,7 +134,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[4];
       }
-      const obj2 = message(4779);
+      const obj2 = message(4818);
       const stateFromStores = message(504).useStateFromStores(first, tmp12, tmp14);
       const tmpResult = message(504);
       [tmp17, importDefault] = noop.useState(0);
@@ -174,7 +174,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                   onLayout: R,
                   children: tmp20,
                 };
-                const tmp27 = closure_15(tmp(5087).Text, obj3);
+                const tmp27 = closure_15(tmp(5088).Text, obj3);
                 cResult[11] = tmp20;
                 cResult[12] = tmp27;
               } else {
@@ -215,7 +215,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj4 = { style: { flex: 1 }, children: null };
                 const obj5 = { spacing: 20, speed: 0.2, children: tmp26 };
-                const items2 = [closure_15(tmp(17840).Marquee, obj5)];
+                const items2 = [closure_15(tmp(17912).Marquee, obj5)];
                 const obj6 = {
                   start: { x: 0, y: 0 },
                   end: { x: 1, y: 0 },
@@ -287,8 +287,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       ({ isVoiceMessage, isControlVisible } = message);
       const tmp = closure_17();
-      const token = message(4779).useToken(first(587).colors.BACKGROUND_SURFACE_HIGH);
-      let obj = message(4779);
+      const token = message(4818).useToken(first(587).colors.BACKGROUND_SURFACE_HIGH);
+      let obj = message(4818);
       const items = [ChannelStore, UserStore, RelationshipStore];
       const items1 = [message];
       const stateFromStores = message(504).useStateFromStores(
@@ -329,7 +329,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               if (contentMessage.attachments.length > 0) {
                 str2 = "";
                 if (null != activeMediaPlayerSource.attachmentIndex) {
-                  str2 = tmp4(8377)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+                  str2 = tmp4(8393)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
                 }
               }
             }
@@ -342,7 +342,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               },
               children: str2,
             };
-            const tmp14 = closure_15(tmp2(5087).Text, obj3);
+            const tmp14 = closure_15(tmp2(5088).Text, obj3);
             const obj4 = {
               accessibilityElementsHidden: isControlVisible,
               style: tmp.infoContent,
@@ -356,7 +356,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             if (memo) {
               const obj6 = { style: { flex: 1 }, children: null };
               const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-              const items3 = [closure_15(tmp2(17840).Marquee, obj7)];
+              const items3 = [closure_15(tmp2(17912).Marquee, obj7)];
               const obj8 = {
                 start: { x: 0, y: 0 },
                 end: { x: 1, y: 0 },
@@ -367,7 +367,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
               obj8.colors = items4;
               obj8.style = tmp.infoContainerGradient;
-              items3[1] = closure_15(tmp4(5388), obj8);
+              items3[1] = closure_15(tmp4(5391), obj8);
               obj6.children = items3;
               tmp16Result = closure_16(closure_7, obj6);
             }
@@ -375,7 +375,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp13Result = null != stateFromStores;
             if (tmp13Result) {
               const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-              tmp13Result = closure_15(tmp2(5087).Text, obj9);
+              tmp13Result = closure_15(tmp2(5088).Text, obj9);
             }
             items5[1] = tmp13Result;
             obj5.children = items5;
@@ -412,7 +412,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 if (channel != null) {
                   guildId = channel.getGuildId();
                 }
-                safeTransitionToDefault(state.CHANNEL(guildId, message.channel_id, message.id), {
+                safeTransitionToDefault(closure_2_14.CHANNEL(guildId, message.channel_id, message.id), {
                   navigationReplace: true,
                   openChannel: true,
                 });
@@ -435,8 +435,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, { duration: 200 }) };
       };
-      const tmpResult = message(4811);
-      fn2.__closure = { withTiming: message(5092).withTiming, visible };
+      const tmpResult = message(4850);
+      fn2.__closure = { withTiming: message(5093).withTiming, visible };
       fn2.__workletHash = 3641278982291;
       fn2.__initData = __initData;
       const animatedStyle = tmpResult.useAnimatedStyle(fn2);
@@ -471,7 +471,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp18 = closure_15(tmp(8525).BackgroundBlurFill, { blurAmount: 0.05 });
+            const tmp18 = closure_15(tmp(8541).BackgroundBlurFill, { blurAmount: 0.05 });
             cResult[9] = tmp18;
             let tmp16 = tmp18;
           } else {
@@ -483,7 +483,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp23 = closure_15(tmp(6209).ArrowLargeLeftIcon, { size: "sm" });
+              const tmp23 = closure_15(tmp(6204).ArrowLargeLeftIcon, { size: "sm" });
               cResult[13] = tmp23;
               let tmp21 = tmp23;
             } else {
@@ -501,7 +501,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp32 = closure_15(tmp(4996).XLargeIcon, { size: "sm" });
+                      const tmp32 = closure_15(tmp(10258).XLargeIcon, { size: "sm" });
                       cResult[22] = tmp32;
                       let tmp30 = tmp32;
                     } else {
@@ -524,7 +524,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { style: tmp14, children: null };
                           const items = [tmp16, tmp24, tmp33];
                           obj3.children = items;
-                          const tmp40 = closure_16(visible(4811).View, obj3);
+                          const tmp40 = closure_16(visible(4850).View, obj3);
                           cResult[28] = tmp33;
                           cResult[29] = tmp14;
                           cResult[30] = tmp24;
@@ -589,7 +589,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = items3;
         tmp14 = items3;
       }
-      const obj2 = { withTiming: message(5092).withTiming, visible };
+      const obj2 = { withTiming: message(5093).withTiming, visible };
     }
   : function PiPControls(message) {
       message = message.message;
@@ -608,7 +608,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               if (channel != null) {
                 guildId = channel.getGuildId();
               }
-              safeTransitionToDefault(state.CHANNEL(guildId, message.channel_id, message.id), {
+              safeTransitionToDefault(closure_2_14.CHANNEL(guildId, message.channel_id, message.id), {
                 navigationReplace: true,
                 openChannel: true,
               });
@@ -624,8 +624,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, { duration: 200 }) };
       };
-      let obj = message(4811);
-      fn.__closure = { withTiming: message(5092).withTiming, visible };
+      let obj = message(4850);
+      fn.__closure = { withTiming: message(5093).withTiming, visible };
       fn.__workletHash = 1481412007504;
       fn.__initData = __initData2;
       const animatedStyle = obj.useAnimatedStyle(fn);
@@ -648,7 +648,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: null, children: null };
       const items1 = [tmp.pipControls, animatedStyle];
       obj3.style = items1;
-      const items2 = [closure_15(message(8525).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+      const items2 = [closure_15(message(8541).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
       const obj4 = {
         disabled: !visible,
         style: null,
@@ -656,7 +656,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: stringResult,
-        children: closure_15(message(6209).ArrowLargeLeftIcon, { size: "sm" }),
+        children: closure_15(message(6204).ArrowLargeLeftIcon, { size: "sm" }),
       };
       const items3 = [,];
       ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -669,14 +669,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: string2Result,
-        children: closure_15(message(4996).XLargeIcon, { size: "sm" }),
+        children: closure_15(message(10258).XLargeIcon, { size: "sm" }),
       };
       const items4 = [,];
       ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);
       obj5.style = items4;
       items2[2] = closure_15(closure_6, obj5);
       obj3.children = items2;
-      return closure_16(visible(4811).View, obj3);
+      return closure_16(visible(4850).View, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1466,12 +1466,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           PlayIcon = PlayIcon2.PlayIcon;
         }
-        return closure_2_15(PlayIcon, { color: nativeDefault.colors.WHITE, size: "md" });
+        return value2(PlayIcon, { color: nativeDefault.colors.WHITE, size: "md" });
       }, items5);
       const items7 = [mediaSourceMessage, handleClosePip, first, hasFlagResult];
       const memo1 = obj.useMemo(
         () =>
-          closure_2_15(closure_18, {
+          value2(closure_18, {
             message: mediaSourceMessage,
             activeMediaPlayerSource,
             isVoiceMessage: hasFlagResult,
@@ -1481,7 +1481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       const memo2 = obj.useMemo(
         () =>
-          closure_2_15(closure_21, {
+          value2(closure_21, {
             message: mediaSourceMessage,
             handleClosePip,
             visible: first,

@@ -22,14 +22,14 @@ const GameProfileSkeletonDefault = GameProfileSkeleton;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8900).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8919).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 120;
 let c11 = 160;
 const PlatformUtils = fn(1382);
 let closure_13 = null;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" },
   skeletonCardsScroller: null,
@@ -331,7 +331,7 @@ let closure_17 = noop.memo(
         }
         const obj = require("c");
         const tmp = _require;
-        const tmp11 = onPress(tmp(8929).GameProfileSectionSkeleton, {
+        const tmp11 = onPress(tmp(8948).GameProfileSectionSkeleton, {
           showViewAllSkeleton: true,
           skeletonTitleWidth: 200,
           children: onPress(GameProfileSkeletonCardRowDefault, {
@@ -1429,7 +1429,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   if (cResult[38] !== tmp44) {
                                     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: tmp44 };
-                                    const tmp53 = onPress(tmp(5087).Text, obj2);
+                                    const tmp53 = onPress(tmp(5088).Text, obj2);
                                     cResult[38] = tmp44;
                                     cResult[39] = tmp53;
                                     let tmp51 = tmp53;
@@ -1505,13 +1505,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                 const _Date = Date;
                                 const date = new Date(message.timestamp);
                                 obj6.createdAt = date;
-                                obj6.expiryLabel = tmp(8936).getPollExpiryLabel(poll);
+                                obj6.expiryLabel = tmp(8955).getPollExpiryLabel(poll);
                                 const formatResult = intl2.format(tmp(1126).t.t0FTsH, obj6);
                                 cResult[35] = message.timestamp;
                                 cResult[36] = poll;
                                 cResult[37] = formatResult;
                                 tmp44 = formatResult;
-                                const tmpResult = tmp(8936);
+                                const tmpResult = tmp(8955);
                               }
                             }
                           }
@@ -1537,7 +1537,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                           const intl = tmp(1126).intl;
                           const obj9 = { count: tmp8 };
                           obj8.children = intl.format(tmp(1126).t["mv/nIa"], obj9);
-                          tmp38 = onPress(tmp(5087).Text, obj8);
+                          tmp38 = onPress(tmp(5088).Text, obj8);
                         }
                         cResult[27] = cResult[11];
                         cResult[28] = tmp4.pollMoreOptions;
@@ -1569,7 +1569,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: poll.question.text,
             };
-            const tmp23 = onPress(tmp(5087).Text, obj10);
+            const tmp23 = onPress(tmp(5088).Text, obj10);
             cResult[23] = poll.question.text;
             cResult[24] = tmp23;
             let tmp21 = tmp23;
@@ -1680,7 +1680,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: poll.question.text,
         };
-        const items = [onPress(message(5087).Text, obj4), ,];
+        const items = [onPress(message(5088).Text, obj4), ,];
         const obj5 = { style: tmp.pollAnswers, children: null };
         const items1 = [
           substr.map((poll_media) => {
@@ -1704,7 +1704,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = tmp13(1126).intl;
           const obj6 = { count: diff };
           obj.children = intl.format(tmp13(1126).t["mv/nIa"], obj6);
-          tmp9Result = tmp9(tmp13(5087).Text, obj);
+          tmp9Result = tmp9(tmp13(5088).Text, obj);
         }
         items1[1] = tmp9Result;
         obj5.children = items1;
@@ -1716,9 +1716,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const _Date = Date;
         const date = new Date(message.timestamp);
         obj9.createdAt = date;
-        obj9.expiryLabel = message(8936).getPollExpiryLabel(poll);
+        obj9.expiryLabel = message(8955).getPollExpiryLabel(poll);
         obj8.children = intl2.format(message(1126).t.t0FTsH, obj9);
-        obj7.children = onPress(message(5087).Text, obj8);
+        obj7.children = onPress(message(5088).Text, obj8);
         items[2] = onPress(closure_5, obj7);
         obj3.children = items;
         obj2.children = closure_9(closure_5, obj3);

@@ -11,7 +11,7 @@ import TableRadioGroup from "../../../../design/components/TableRow/native/Table
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import _modDef9741 from "../../../../../_runtime/metro/09741__.js";
+import _modDef9770 from "../../../../../_runtime/metro/09770__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             const obj = { style: closure_0.nitroUpsell, children: null };
                             const items = [
                               __initData(native.Icon, {
-                                source: _modDef9741,
+                                source: _modDef9770,
                                 size: native.Icon.Sizes.SMALL,
                                 style: closure_0.nitroIcon,
                               }),
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             });
                             items[1] = __initData(Text_Text.Text, obj3);
                             obj.children = items;
-                            return __initData2(View, obj);
+                            return map1(View, obj);
                           }
                           cResult[37] = tmp39;
                           cResult[38] = tmp6.nitroIcon;
@@ -525,7 +525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj4.onValueChange = UserSettings.InlineAttachmentMedia.updateSetting;
                       items[1] = __initData(TableSwitchRow.TableSwitchRow, obj4);
                       obj2.children = items;
-                      const items1 = [__initData2(TableRowGroup.TableRowGroup, obj2)];
+                      const items1 = [map1(TableRowGroup.TableRowGroup, obj2)];
                       const obj5 = { description: null, hasIcons: false, children: null };
                       const intl5 = util.intl;
                       obj5.description = intl5.string(util.t.T0rbtM);
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj5.children = __initData(TableSwitchRow.TableSwitchRow, obj6);
                       items1[1] = __initData(TableRowGroup.TableRowGroup, obj5);
                       obj.children = items1;
-                      return __initData2(state, obj);
+                      return map1(closure_2_14, obj);
                     }
                     cResult[26] = setting;
                     cResult[27] = setting1;

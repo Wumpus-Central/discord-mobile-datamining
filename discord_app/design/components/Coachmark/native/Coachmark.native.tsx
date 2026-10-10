@@ -19,7 +19,7 @@ const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let closure_15 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: { position: "absolute", alignItems: "center" },
   shadow: null,
@@ -959,7 +959,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { style: tmp9, children: null };
               const items = [tmp10, tmp14];
               obj4.children = items;
-              const tmp21 = __initData2(closure_1_8, obj4);
+              const tmp21 = map1(closure_1_8, obj4);
               cResult[13] = tmp9;
               cResult[14] = tmp10;
               cResult[15] = tmp14;
@@ -1000,7 +1000,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         __initData(closure_1_8, { style: tmp.cursorSpine }),
       ];
       obj.children = items1;
-      return __initData2(closure_1_8, obj);
+      return map1(closure_1_8, obj);
     };
 ReactCompilerGating = fn(558);
 let obj10 = { marginBottom: nativeDefault.modules.mobile.COACHMARK_BUTTON_SPACING };

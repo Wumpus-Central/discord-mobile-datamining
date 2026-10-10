@@ -16,7 +16,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsMinimizedDuringScroll() {
       const cResult = sharedValue(576).c(3);
       const obj = sharedValue(576);
-      sharedValue = sharedValue(4811).useSharedValue(false);
+      sharedValue = sharedValue(4850).useSharedValue(false);
       if (cResult[0] !== sharedValue) {
         const fn = function t() {
           closure_0 = -1;
@@ -56,7 +56,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       return sharedValue;
     }
   : function useIsMinimizedDuringScroll() {
-      sharedValue = sharedValue(4811).useSharedValue(false);
+      sharedValue = sharedValue(4850).useSharedValue(false);
       const items = [sharedValue];
       const effect = noop.useEffect(() => {
         closure_0 = -1;

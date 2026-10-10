@@ -40,7 +40,7 @@ let closure_14 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -166,7 +166,7 @@ let closure_16 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     while (true) {
@@ -193,13 +193,14 @@ let closure_16 = async function _forgetMissingProjects() {
               c5 = 1;
               closure_130_0 = tmp36;
               if (null == closure_131_6.getProject(closure_130_0)) {
-                if (0 !== closure_131_4.getMentionCount(closure_130_0, closure_131_8.CONJURING_PROJECT)) {
-                  let obj5 = closure_131_0(closure_131_2[11]);
+                let obj5 = closure_131_0(closure_131_2[11]);
+                if (obj5.isConjureProjectUnread(closure_130_0)) {
+                  let obj6 = closure_131_0(closure_131_2[12]);
                   let _Math = Math;
                   c6 = 2;
                   c7 = 1;
-                  let obj6 = { value: obj5.sleep(5000 * Math.random()), done: false };
-                  return obj6;
+                  let obj7 = { value: obj6.sleep(5000 * Math.random()), done: false };
+                  return obj7;
                 } else {
                   let tmp46 = closure_131_17(closure_130_0);
                 }
@@ -207,7 +208,7 @@ let closure_16 = async function _forgetMissingProjects() {
             }
           }
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -221,19 +222,19 @@ let closure_16 = async function _forgetMissingProjects() {
           c5 = 0;
           _require.return();
           c7 = 3;
-          let obj7 = { value, done: true };
-          return obj7;
+          let obj8 = { value, done: true };
+          return obj8;
         } else if (null == closure_131_6.getProject(closure_130_0)) {
           c5 = 2;
           c6 = 4;
           c7 = 1;
-          let obj8 = { value: closure_131_20(closure_130_0), done: false };
-          return obj8;
+          let obj9 = { value: closure_131_20(closure_130_0), done: false };
+          return obj9;
         }
       } else if (3 === tmp4) {
         c5 = 1;
         closure_130_2 = ReadStateStore;
-        let obj2 = closure_131_0(closure_131_2[12]);
+        let obj2 = closure_131_0(closure_131_2[13]);
         closure_130_1 = obj2.createFailureStatus(closure_130_2);
         let tmp14 = 403 !== closure_130_1;
         if (tmp14) {
@@ -272,7 +273,7 @@ let closure_19 = async function _fetchProjectLimit() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -425,7 +426,7 @@ let closure_22 = async function _createProject(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -462,11 +463,11 @@ let closure_22 = async function _createProject(arg0) {
         } else if (1 === tmp7) {
           c5 = 0;
           closure_130_1 = closure_4;
-          const result = closure_131_0(closure_131_2[12]).classifyCreateFailure(closure_130_1);
-          const obj5 = closure_131_0(closure_131_2[12]);
-          const conjureCreateError = new closure_131_0(closure_131_2[12]).ConjureCreateError(
+          const result = closure_131_0(closure_131_2[13]).classifyCreateFailure(closure_130_1);
+          const obj5 = closure_131_0(closure_131_2[13]);
+          const conjureCreateError = new closure_131_0(closure_131_2[13]).ConjureCreateError(
             result,
-            closure_131_0(closure_131_2[12]).createFailureStatus(closure_130_1),
+            closure_131_0(closure_131_2[13]).createFailureStatus(closure_130_1),
           );
           throw conjureCreateError;
         } else if (arg0 === 1) {
@@ -542,7 +543,7 @@ let closure_25 = async function _setProjectIcon(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -583,7 +584,7 @@ let closure_25 = async function _setProjectIcon(arg0) {
                   c4 = 1;
                   c5 = 3;
                   c6 = 1;
-                  const obj8 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_1), done: false };
+                  const obj8 = { value: closure_131_0(closure_131_2[14]).fetchApplication(closure_130_1), done: false };
                   return obj8;
                 }
               }
@@ -640,7 +641,7 @@ let closure_27 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -718,7 +719,7 @@ let closure_28 = async function _unpublishProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -824,7 +825,7 @@ let closure_30 = async function _refreshPublishedProject(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -892,7 +893,7 @@ let closure_30 = async function _refreshPublishedProject(arg0, arg1) {
                 const obj8 = closure_131_1(closure_131_2[6]);
                 c4 = 3;
                 c5 = 1;
-                const obj12 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_6), done: false };
+                const obj12 = { value: closure_131_0(closure_131_2[14]).fetchApplication(closure_130_6), done: false };
                 return obj12;
               } else {
                 const obj13 = { isPreview: isPreview2 };
@@ -910,7 +911,7 @@ let closure_30 = async function _refreshPublishedProject(arg0, arg1) {
               const obj14 = { value, done: true };
               return obj14;
             } else {
-              const widgetConfigs = closure_131_0(closure_131_2[16]).fetchWidgetConfigs(closure_130_6, { force: true });
+              const widgetConfigs = closure_131_0(closure_131_2[17]).fetchWidgetConfigs(closure_130_6, { force: true });
               c4 = 4;
               c5 = 1;
               const obj15 = {
@@ -934,8 +935,8 @@ let closure_30 = async function _refreshPublishedProject(arg0, arg1) {
             tmp12 = !closure_130_3;
           }
           if (tmp12) {
-            const result = closure_131_0(closure_131_2[17]).reloadAppFramesAfterDeploy(closure_130_6);
-            const obj = closure_131_0(closure_131_2[17]);
+            const result = closure_131_0(closure_131_2[18]).reloadAppFramesAfterDeploy(closure_130_6);
+            const obj = closure_131_0(closure_131_2[18]);
           }
         }
       } catch (tmp50) {
@@ -948,7 +949,7 @@ let closure_30 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1085).Endpoints;
-const ReadStateTypes = fn(5974).ReadStateTypes;
+const ReadStateTypes = fn(5967).ReadStateTypes;
 let c10 = null;
 let c11 = null;
 let c12 = false;

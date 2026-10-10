@@ -52,9 +52,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9356).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(2124).getUserCommunicationDisabledVersion;
-const Changeset = fn(7729).Changeset;
+let closure_6 = fn(9383).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(2125).getUserCommunicationDisabledVersion;
+const Changeset = fn(7747).Changeset;
 const Constants = fn(1085);
 ({
   ActivityActionTypes: closure_12,
@@ -171,7 +171,7 @@ class MessagesRenderer {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -204,7 +204,7 @@ class MessagesRenderer {
                     const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                     if (null == tmp26) {
                       hasJumpedToOriginalPost = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     } else {
                       const obj8 = { animated: !useReducedMotion };
                       tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);
@@ -1269,7 +1269,7 @@ class MessagesRenderer {
                           let addResult20 = set.add(author.id);
                           iter2.return();
                         } else {
-                          let value4 = SKUStore.get(tmp97);
+                          value4 = SKUStore.get(tmp97);
                           if (null != value4) {
                             let invalidApplicationIds = props.invalidApplicationIds;
                             if (invalidApplicationIds.includes(tmp103.applicationId)) {

@@ -19,13 +19,13 @@ get_ActivityIndicator = fn(17);
   View: closure_8,
   FlatList: closure_9,
 } = get_ActivityIndicator);
-const usePriceTiers = fn(18421).usePriceTiers;
+const usePriceTiers = fn(18495).usePriceTiers;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 16;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginTop: 16 },
   title: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -60,7 +60,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
       } else if (null != error) {
         if (cResult[2] !== error.message) {
-          Text = Text(5087).Text;
+          Text = Text(5088).Text;
           const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
           const items = ["Error: ", error.message];
           obj3.children = items;
@@ -139,7 +139,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const items = ["Error: ", error.message];
         obj3.children = items;
-        tmp3 = closure_15(guildId(5087).Text, obj3);
+        tmp3 = closure_15(guildId(5088).Text, obj3);
       } else {
         tmp3 = null;
         if (null != templates) {
@@ -166,9 +166,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               obj.style = size;
               return closure_1_14(closure_1_8, obj);
             };
-            obj.snapToInterval = guildId(18473).CARD_WIDTH + v16;
+            obj.snapToInterval = guildId(18547).CARD_WIDTH + v16;
             obj.renderItem = function renderItem(template) {
-              return state(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
+              return closure_2_14(GuildRoleSubscriptionTierTemplatePreviewCardDefault, {
                 template: template.item,
                 priceTiers: tiers,
                 guildId,
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== guildId) {
         const obj2 = {};
         const merged = Object.assign(guildId);
-        const tmp10 = state(closure_19, obj2);
+        const tmp10 = closure_1_14(closure_19, obj2);
         cResult[0] = guildId;
         cResult[1] = tmp10;
         let tmp4 = tmp10;
@@ -481,7 +481,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp11;
       }
-      const tmp12 = state(GroupListingsFetchContext.GroupListingsFetchContextProvider, {
+      const tmp12 = closure_1_14(GroupListingsFetchContext.GroupListingsFetchContextProvider, {
         guildId: guildId.guildId,
         children: tmp4,
       });
@@ -494,6 +494,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GuildSettingsRoleSubscriptionTierTemplateSelection(guildId) {
       const obj = { guildId: guildId.guildId, children: null };
       const merged = Object.assign(guildId);
-      obj.children = state(closure_19, {});
-      return state(GroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
+      obj.children = closure_1_14(closure_19, {});
+      return closure_1_14(GroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
     };

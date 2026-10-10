@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   header: { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 },
   reactionPill: null,
@@ -147,12 +147,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items3 = [AccessibilityStore];
-        const fn2 = function w() {
-          return AccessibilityStore.useReducedMotion;
-        };
+        class D {
+          constructor() {
+            return closure_6.useReducedMotion;
+          }
+        }
         cResult[8] = items3;
-        cResult[9] = fn2;
-        let tmp19 = fn2;
+        cResult[9] = D;
+        let tmp19 = D;
         const tmp18 = items3;
       } else {
         class O {
@@ -206,9 +208,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return customEmojiById;
           }
         }
-        let obj5 = { id: null, animated: null, size: 96 };
-        ({ id: obj10.id, animated } = emoji);
-        if (animated == null) {
+        let obj5 = { id: emoji.id, animated: null, size: 96 };
+        class D {
+          constructor() {
+            return closure_6.useReducedMotion;
+          }
+        }
+        if (tmp23 == null) {
           class O {
             constructor() {
               customEmojiById = null;
@@ -220,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        if (animated) {
+        if (tmp23) {
           class O {
             constructor() {
               customEmojiById = null;
@@ -232,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        obj5.animated = animated;
+        obj5.animated = tmp23;
         emojiURL = obj9.getEmojiURL(obj5);
       }
       cResult[10] = emoji.animated;
@@ -310,7 +316,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = util.intl;
             obj2.text = intl2.string(util.t.in1rga);
             obj2.icon = StarOutlineIcon.StarOutlineIcon;
-            ToastActionCreatorsDefault.openMana("EMOJI_UNFAVORITED", obj2);
+            ToastActionCreatorsDefault.open("EMOJI_UNFAVORITED", obj2);
           } else {
             obj5.favoriteEmoji(stateFromStores1);
             const obj4 = { text: null, icon: null, iconColor: null };
@@ -318,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj4.text = intl.string(util.t.mE2e8A);
             obj4.icon = StarIcon.StarIcon;
             obj4.iconColor = nativeDefault.colors.ICON_FEEDBACK_WARNING;
-            ToastActionCreatorsDefault.openMana("EMOJI_FAVORITED", obj4);
+            ToastActionCreatorsDefault.open("EMOJI_FAVORITED", obj4);
           }
         }
       }, items4);

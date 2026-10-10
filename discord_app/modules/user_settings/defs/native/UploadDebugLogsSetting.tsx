@@ -17,7 +17,7 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -62,14 +62,11 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
       } else {
         if (2 === tmp8) {
           c3 = 1;
-          const obj5 = {
-            key: "USER_SETTINGS_CACHES_CLEARED",
-            IconComponent: closure_129_0(closure_129_2[11]).CircleInformationIcon,
-            content: null,
-          };
-          const intl = closure_129_0(closure_129_2[12]).intl;
-          obj5.content = intl.string(closure_129_0(closure_129_2[12]).t.VzHcSm);
-          closure_129_1(closure_129_2[10]).open(obj5);
+          const obj5 = { text: null, icon: null };
+          const intl = closure_129_0(closure_129_2[11]).intl;
+          obj5.text = intl.string(closure_129_0(closure_129_2[11]).t.VzHcSm);
+          obj5.icon = closure_129_0(closure_129_2[12]).CircleInformationIcon;
+          closure_129_1(closure_129_2[10]).open("USER_SETTINGS_CACHES_CLEARED", obj5);
           c3 = 0;
           (function onUploadDebugLogsRequestFinish() {
             closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
@@ -84,14 +81,11 @@ let closure_9 = async function _handleUploadDebugLogSettingPress() {
           c5 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const obj7 = {
-            key: "USER_SETTINGS_CACHES_CLEARED",
-            IconComponent: closure_129_0(closure_129_2[11]).CircleInformationIcon,
-            content: null,
-          };
-          const intl2 = closure_129_0(closure_129_2[12]).intl;
-          obj7.content = intl2.string(closure_129_0(closure_129_2[12]).t.BvyxE7);
-          closure_129_1(closure_129_2[10]).open(obj7);
+          const obj7 = { text: null, icon: null };
+          const intl2 = closure_129_0(closure_129_2[11]).intl;
+          obj7.text = intl2.string(closure_129_0(closure_129_2[11]).t.BvyxE7);
+          obj7.icon = closure_129_0(closure_129_2[12]).CircleInformationIcon;
+          closure_129_1(closure_129_2[10]).open("USER_SETTINGS_CACHES_CLEARED", obj7);
           c3 = 1;
           const obj6 = closure_129_1(closure_129_2[10]);
         }
@@ -134,7 +128,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadDebugLogsDisabled() {
   return closure_7().isDisabled;
 }
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUploadDebugLogsTrailing() {
       const cResult = c.c(2);
@@ -173,7 +167,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.aY1OH2);
   },
   parent: null,
-  IconComponent: fn(5013).CircleInformationIcon,
+  IconComponent: fn(5046).CircleInformationIcon,
   onPress: function handleUploadDebugLogSettingPress() {
     const self = this;
     const apply = closure_9.apply;

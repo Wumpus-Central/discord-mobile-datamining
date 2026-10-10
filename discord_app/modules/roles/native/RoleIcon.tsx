@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5087);
+const Text_Text = Text(5088);
 require = fn;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1382);
@@ -100,9 +100,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: result,
         lineHeight: "code",
-        textAlign: null,
+        textAlign: false,
         width: num,
-        marginBottom: null,
+        marginBottom: false,
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -115,6 +115,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         size = 20;
       }
       const size1 = { height: size, width: size };
+      const obj = {
+        fontFamily: "System",
+        fontSize: size * num,
+        lineHeight: "code",
+        textAlign: false,
+        width: size,
+        marginBottom: false,
+      };
       if (null != src) {
         const obj2 = { resizeMode: "contain", source: null, style: null };
         const obj3 = { uri: src };

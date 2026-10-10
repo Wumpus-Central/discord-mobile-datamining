@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const fetchProjectMcpConnection = fn(13164).fetchProjectMcpConnection;
+const fetchProjectMcpConnection = fn(13213).fetchProjectMcpConnection;
 let closure_6 = {
   setTimeout(arg0, arg1) {
     return setTimeout(arg0, arg1);
@@ -50,7 +50,7 @@ prototype["mint"] = function mint(dependencyMap) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -90,7 +90,7 @@ prototype["mint"] = function mint(dependencyMap) {
           c2 = 0;
           if (closure_129_1.isStale(closure_128_1)) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             let connection = null;
             if (!closure_129_0) {

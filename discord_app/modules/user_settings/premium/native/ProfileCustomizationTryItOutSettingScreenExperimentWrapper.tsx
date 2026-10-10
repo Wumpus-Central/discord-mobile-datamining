@@ -17,7 +17,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ProfileCustomizationTryItOutSettingScreenExperimentWrapper() {
       let tmp = dependencyMap;
       const cResult = c.c(2);
-      if (obj2.useIsTryItOutMobileRefreshEnabled("ProfileCustomizationTryItOutSettingScreenExperimentWrapper")) {
+      if (obj2.useTryItOutMobileRefreshConfig("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").enabled) {
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           tmp = jsx(ProfileCustomizationTryItOutV2SettingScreenDefault, {});
@@ -42,11 +42,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function ProfileCustomizationTryItOutSettingScreenExperimentWrapper() {
       return jsx(
         importDefault(
-          UserProfilePremiumTryItOutMobileRefreshExperiment.useIsTryItOutMobileRefreshEnabled(
+          UserProfilePremiumTryItOutMobileRefreshExperiment.useTryItOutMobileRefreshConfig(
             "ProfileCustomizationTryItOutSettingScreenExperimentWrapper",
-          )
-            ? 16107
-            : 16110,
+          ).enabled
+            ? 16169
+            : 16172,
         ),
         {},
       );

@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const effect = noop.useEffect(tmp4, tmp5);
           if ("R" === parsed.format) {
             if (cResult[5] !== parsed.parsed) {
-              const TIMESTAMP_FORMATS = R(8139).TIMESTAMP_FORMATS;
+              const TIMESTAMP_FORMATS = R(8155).TIMESTAMP_FORMATS;
               R = TIMESTAMP_FORMATS.R;
               RResult = R(parsed.parsed);
               parsed = parsed.parsed;

@@ -19,12 +19,12 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, contentContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 };
 let closure_9 = createStyles.createStyles(obj2);
-const InteractionComponentUtils = fn(5433);
+const InteractionComponentUtils = fn(5436);
 let obj6 = {
   type: fn(1998).ComponentType.STRING_SELECT,
   custom_id: "test",
@@ -72,7 +72,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === type) {
             let tmp7 = cResult[3];
           }
-          state = ComponentStateContext.useComponentState(tmp7).state;
+          const state = ComponentStateContext.useComponentState(tmp7).state;
           const _Symbol = Symbol;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { gap: 8 };
@@ -228,7 +228,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       obj.type = type;
       obj.id = String(type);
       const tmp = _slicedToArray(noop.useState(false), 2);
-      state = ComponentStateContext.useComponentState(obj).state;
+      let state = ComponentStateContext.useComponentState(obj).state;
       const obj3 = { style: { gap: 8 }, children: null };
       const items = [React5(Text_Text.Text, { variant: "heading-lg/medium", children: children.title }), , ,];
       if (obj.type === Server.ComponentType.STRING_SELECT) {

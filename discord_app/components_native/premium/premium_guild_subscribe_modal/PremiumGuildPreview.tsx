@@ -6,14 +6,14 @@ import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../common/FastImage.tsx";
 import GuildIcon from "../../../modules/guild/native/GuildIcon.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
-import _modDef13828 from "../../../../_runtime/metro/13828__.js";
-import _modDef13829 from "../../../../_runtime/metro/13829__.js";
-import _modDef13830 from "../../../../_runtime/metro/13830__.js";
-import _modDef13831 from "../../../../_runtime/metro/13831__.js";
-import _modDef13832 from "../../../../_runtime/metro/13832__.js";
-import _modDef13833 from "../../../../_runtime/metro/13833__.js";
-import _modDef13834 from "../../../../_runtime/metro/13834__.js";
-import _modDef13835 from "../../../../_runtime/metro/13835__.js";
+import _modDef13881 from "../../../../_runtime/metro/13881__.js";
+import _modDef13882 from "../../../../_runtime/metro/13882__.js";
+import _modDef13883 from "../../../../_runtime/metro/13883__.js";
+import _modDef13884 from "../../../../_runtime/metro/13884__.js";
+import _modDef13885 from "../../../../_runtime/metro/13885__.js";
+import _modDef13886 from "../../../../_runtime/metro/13886__.js";
+import _modDef13887 from "../../../../_runtime/metro/13887__.js";
+import _modDef13888 from "../../../../_runtime/metro/13888__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../modules/user_settings/ThemeStore.tsx";
 
@@ -22,29 +22,29 @@ const GuildIconDefault = GuildIcon;
 require = fn;
 function getTierIcon(theme, tier) {
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp20 = _modDef13829;
-    const tmp19 = _modDef13828;
+    let tmp20 = _modDef13882;
+    const tmp19 = _modDef13881;
     if (obj4.isThemeDark(theme)) {
       tmp20 = tmp19;
     }
     return tmp20;
   } else if (BoostedGuildTiers.TIER_1 === tier) {
-    let tmp15 = _modDef13831;
-    const tmp14 = _modDef13830;
+    let tmp15 = _modDef13884;
+    const tmp14 = _modDef13883;
     if (obj3.isThemeDark(theme)) {
       tmp15 = tmp14;
     }
     return tmp15;
   } else if (BoostedGuildTiers.TIER_2 === tier) {
-    let tmp10 = _modDef13833;
-    const tmp9 = _modDef13832;
+    let tmp10 = _modDef13886;
+    const tmp9 = _modDef13885;
     if (obj2.isThemeDark(theme)) {
       tmp10 = tmp9;
     }
     return tmp10;
   } else if (BoostedGuildTiers.TIER_3 === tier) {
-    let tmp5 = _modDef13835;
-    const tmp4 = _modDef13834;
+    let tmp5 = _modDef13888;
+    const tmp4 = _modDef13887;
     if (obj.isThemeDark(theme)) {
       tmp5 = tmp4;
     }
@@ -55,7 +55,7 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   guild: {
     padding: 16,
@@ -75,8 +75,8 @@ let obj3 = {
   flexDirection: "row",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500 };
-let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500 };
+obj2.guildName = { fontSize: 16, lineHeight: 20, color: fn(5969).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { fontSize: 16, lineHeight: 20, color: fn(5969).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.tierPill = {
   marginTop: 8,
   padding: 4,
@@ -96,7 +96,7 @@ let obj5 = {
   borderRadius: 11,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
 };
-obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5976).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+obj2.tierPillText = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5969).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
@@ -176,7 +176,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       return React5(View, obj);
     };
 ReactCompilerGating = fn(558);
-let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5976).DARK_WHITE_500_LIGHT_PRIMARY_660 };
+let obj6 = { fontSize: 12, lineHeight: 16, marginLeft: 4, color: fn(5969).DARK_WHITE_500_LIGHT_PRIMARY_660 };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "components_native/premium/premium_guild_subscribe_modal/PremiumGuildPreview.tsx",

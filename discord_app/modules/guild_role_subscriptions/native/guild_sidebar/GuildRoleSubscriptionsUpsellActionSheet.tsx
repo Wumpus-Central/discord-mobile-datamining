@@ -5,16 +5,16 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16591 from "../../../../../_runtime/metro/16591__.js";
+import _modDef16658 from "../../../../../_runtime/metro/16658__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
   title: { marginTop: 24, textAlign: "center" },
   description: { marginTop: 8, marginBottom: 24, textAlign: "center" },
@@ -48,11 +48,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: markAsDismissed(16591) };
-          const tmp12 = closure_6(markAsDismissed(6163), obj2);
+          const obj2 = { source: markAsDismissed(16658) };
+          const tmp12 = closure_6(markAsDismissed(6156), obj2);
           cResult[5] = tmp12;
           let tmp8 = tmp12;
-          const tmp11 = markAsDismissed(6163);
+          const tmp11 = markAsDismissed(6156);
         } else {
           tmp8 = cResult[5];
         }
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp13,
           };
-          const tmp17 = closure_6(tmp(5087).Text, obj3);
+          const tmp17 = closure_6(tmp(5088).Text, obj3);
           cResult[7] = tmp4.title;
           cResult[8] = tmp17;
           let tmp15 = tmp17;
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp4.description) {
           const obj4 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-          const tmp22 = closure_6(tmp(5087).Text, obj4);
+          const tmp22 = closure_6(tmp(5088).Text, obj4);
           cResult[10] = tmp4.description;
           cResult[11] = tmp22;
           let tmp20 = tmp22;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp5) {
           const obj5 = { onPress: tmp5, text: tmp23 };
-          const tmp27 = closure_6(tmp(5376).Button, obj5);
+          const tmp27 = closure_6(tmp(5379).Button, obj5);
           cResult[13] = tmp5;
           cResult[14] = tmp27;
           let tmp25 = tmp27;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj7 = { onPress: T, text: tmp29, variant: "secondary" };
-          const tmp32 = closure_6(tmp(5376).Button, obj7);
+          const tmp32 = closure_6(tmp(5379).Button, obj7);
           cResult[18] = T;
           cResult[19] = tmp32;
         } else {
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { startExpanded: true, onDismiss: tmp6, children: null };
           const items = [tmp8, tmp15, tmp20, tmp25, tmp33];
           obj8.children = items;
-          const tmp39 = closure_7(tmp(6836).BottomSheet, obj8);
+          const tmp39 = closure_7(tmp(6839).BottomSheet, obj8);
           cResult[23] = tmp25;
           cResult[24] = tmp33;
           cResult[25] = tmp6;
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         children: null,
       };
-      const obj2 = { source: _modDef16591 };
+      const obj2 = { source: _modDef16658 };
       const items = [closure_6(FastImageDefault, obj2), , , ,];
       const obj3 = {
         style: tmp.title,

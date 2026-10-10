@@ -6,7 +6,7 @@ import UserSettings from "../../user_settings/UserSettings.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
-import _modDef8293 from "../../../../_runtime/metro/08293__.js";
+import _modDef8309 from "../../../../_runtime/metro/08309__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -15,12 +15,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let UserProfileAnalyticsTypes = fn(8291).UserProfileAnalyticsTypes;
+let UserProfileAnalyticsTypes = fn(8307).UserProfileAnalyticsTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, EMPTY_STRING_SNOWFLAKE_ID: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   button: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: 56 },
   tableContainer: null,
@@ -71,11 +71,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       speedBumpType = speedBumpType.speedBumpType;
       if (cResult[0] !== speedBumpType) {
         if (typeof SPEEDBUMP_ROWS === "function") {
-          const obj2 = { icon: _modDef8293, text: null };
+          const obj2 = { icon: _modDef8309, text: null };
           const intl = map(1126).intl;
           obj2.text = intl.string(map(1126).t.kcuWva);
           items = [obj2];
-          const obj3 = { icon: _modDef8293, text: null };
+          const obj3 = { icon: _modDef8309, text: null };
           if ("block" === speedBumpType) {
             const intl3 = map(1126).intl;
             let stringResult = intl3.string(map(1126).t.QxrDY1);
@@ -85,7 +85,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           obj3.text = stringResult;
           items[1] = obj3;
-          TableRowGroup = map(6269).TableRowGroup;
+          TableRowGroup = map(6264).TableRowGroup;
           map = items.map;
           const mapped = map((icon, arg1) => {
             const obj = {
@@ -125,11 +125,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   : function InformationTable(arg0) {
       let items;
       if (typeof SPEEDBUMP_ROWS === "function") {
-        let obj = { icon: _modDef8293, text: null };
+        let obj = { icon: _modDef8309, text: null };
         const intl = items(1126).intl;
         obj.text = intl.string(items(1126).t.kcuWva);
         items = [obj];
-        const obj2 = { icon: _modDef8293, text: null };
+        const obj2 = { icon: _modDef8309, text: null };
         if ("block" === tmp) {
           const intl3 = tmp4(1126).intl;
           let stringResult = intl3.string(tmp4(1126).t.QxrDY1);
@@ -151,7 +151,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return __initData(TableRow.TableRow, obj, index);
           }),
         };
-        return closure_12(items(6269).TableRowGroup, obj3);
+        return closure_12(items(6264).TableRowGroup, obj3);
       } else {
         throw new TypeError("Trying to call a non-function");
       }

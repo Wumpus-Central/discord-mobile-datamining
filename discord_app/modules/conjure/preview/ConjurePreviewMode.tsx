@@ -1,18 +1,18 @@
 // discord_app/modules/conjure/preview/ConjurePreviewMode.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 
 require = fn;
 const obj = {
-  frame: _modDef3827.FKuG6X,
-  widget: _modDef3827.oOAVlP,
-  overlay: _modDef3827.EnTNKg,
-  bot: _modDef3827.uE5z15,
+  frame: _modDef3849.FKuG6X,
+  widget: _modDef3849.oOAVlP,
+  overlay: _modDef3849.EnTNKg,
+  bot: _modDef3849.uE5z15,
 };
 const obj2 = {};
-obj2[fn(8594).EmbeddedSurfaceType.APP_CHANNEL] = _modDef3827.xI4N6Q;
-obj2[fn(8594).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef3827.oWMDh6;
-obj2[fn(8594).EmbeddedSurfaceType.MAIN] = _modDef3827["0ICBnS"];
+obj2[fn(8610).EmbeddedSurfaceType.APP_CHANNEL] = _modDef3849.xI4N6Q;
+obj2[fn(8610).EmbeddedSurfaceType.VOICE_CHANNEL] = _modDef3849.oWMDh6;
+obj2[fn(8610).EmbeddedSurfaceType.MAIN] = _modDef3849["0ICBnS"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewMode.tsx");
 

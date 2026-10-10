@@ -20,7 +20,7 @@ import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubsc
 import EditStateContextProvider from "../../edit_state/EditStateContextProvider.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import _modDef18465 from "../../../../../_runtime/metro/18465__.js";
+import _modDef18539 from "../../../../../_runtime/metro/18539__.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,13 +30,13 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4702).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(15413).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4743).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(15475).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1085).GuildSettingsSections;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { flex: 1 }, tabsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 }, tabsContainerWithDraft: { paddingBottom: 0 }, actionButton: { alignSelf: "stretch", margin: 16, marginTop: 0 }, tabContent: null, actionHeader: null, actionDescription: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16 };
 obj2.tabContent = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -70,8 +70,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18465 };
-        const tmp17 = state(native.Icon, obj5);
+        const obj5 = { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18539 };
+        const tmp17 = closure_1_14(native.Icon, obj5);
         cResult[6] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -104,7 +104,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
             const obj6 = { children: null };
             items = [tmp9, tmp11, tmp22];
             obj6.children = items;
-            const tmp29 = value2(closure_1_15, obj6);
+            const tmp29 = value3(value2, obj6);
             cResult[14] = tmp9;
             cResult[15] = tmp11;
             cResult[16] = tmp22;
@@ -112,7 +112,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
             tmp26 = tmp29;
           }
           const obj7 = { style: tmp4.actionButton, children: tmp19 };
-          const tmp25 = state(timestampProducer, obj7);
+          const tmp25 = closure_1_14(timestampProducer, obj7);
           cResult[11] = tmp4.actionButton;
           cResult[12] = tmp19;
           cResult[13] = tmp25;
@@ -120,7 +120,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
         }
       }
       const obj8 = { variant: "destructive", grow: true, icon: tmp15, onPress: handleArchiveOrDelete, disabled: tmp18, text: buttonText };
-      const tmp21 = state(components_Button_Button.Button, obj8);
+      const tmp21 = closure_1_14(components_Button_Button.Button, obj8);
       cResult[7] = buttonText;
       cResult[8] = handleArchiveOrDelete;
       cResult[9] = tmp18;
@@ -128,13 +128,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
       tmp19 = tmp21;
     }
     const obj9 = { style: tmp4.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-    const tmp13 = state(Text_Text.Text, obj9);
+    const tmp13 = closure_1_14(Text_Text.Text, obj9);
     cResult[3] = descriptionText;
     cResult[4] = tmp4.actionDescription;
     cResult[5] = tmp13;
     tmp11 = tmp13;
   }
-  const tmp10 = state(FormHeaderDefault, { style: tmp4.actionHeader, children: buttonText });
+  const tmp10 = closure_1_14(FormHeaderDefault, { style: tmp4.actionHeader, children: buttonText });
   cResult[0] = buttonText;
   cResult[1] = tmp4.actionHeader;
   cResult[2] = tmp10;
@@ -149,12 +149,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   ({ buttonText, descriptionText, handleArchiveOrDelete, deleting, archiving } = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId, navigation));
   const tmp4 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId, navigation);
   const allowSelfRemoveMonetization = CreatorMonetizationRestrictionsHooks.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).allowSelfRemoveMonetization;
-  items = [state(FormHeaderDefault, { style: tmp.actionHeader, children: buttonText }), state(Text_Text.Text, { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText }), ];
+  items = [closure_1_14(FormHeaderDefault, { style: tmp.actionHeader, children: buttonText }), closure_1_14(Text_Text.Text, { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText }), ];
   const obj6 = { style: tmp.actionButton, children: null };
   const obj7 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const obj4 = { style: tmp.actionHeader, children: buttonText };
   const obj5 = { style: tmp.actionDescription, variant: "text-sm/medium", color: "text-default", children: descriptionText };
-  obj7.icon = state(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18465 });
+  obj7.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef18539 });
   obj7.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -166,10 +166,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Archiv
   const obj9 = { children: null };
   obj7.disabled = tmp9;
   obj7.text = buttonText;
-  obj6.children = state(components_Button_Button.Button, obj7);
-  items[2] = state(timestampProducer, obj6);
+  obj6.children = closure_1_14(components_Button_Button.Button, obj7);
+  items[2] = closure_1_14(timestampProducer, obj6);
   obj9.children = items;
-  return value2(closure_1_15, obj9);
+  return value3(value2, obj9);
 });
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabContent(selectedTab) {
@@ -180,9 +180,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabCon
     const _Symbol3 = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { bottom: true, children: null };
-      items = [state(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), state(closure_20, {})];
+      items = [closure_1_14(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), closure_1_14(closure_20, {})];
       obj2.children = items;
-      const tmp28 = value2(common_SafeAreaView.SafeAreaPaddingView, obj2);
+      const tmp28 = value3(common_SafeAreaView.SafeAreaPaddingView, obj2);
       cResult[0] = tmp28;
       let first = tmp28;
     } else {
@@ -190,7 +190,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabCon
     }
     if (cResult[1] !== tmp4.tabContent) {
       const obj3 = { style: tmp4.tabContent, children: first };
-      const tmp32 = state(React5, obj3);
+      const tmp32 = closure_1_14(React5, obj3);
       cResult[1] = tmp4.tabContent;
       cResult[2] = tmp32;
       let tmp29 = tmp32;
@@ -201,8 +201,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabCon
   } else if (GuildRoleSubscriptionsTierScenes.DESIGN === selectedTab) {
     const _Symbol2 = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj4 = { bottom: true, children: state(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
-      const tmp18 = state(common_SafeAreaView.SafeAreaPaddingView, obj4);
+      const obj4 = { bottom: true, children: closure_1_14(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
+      const tmp18 = closure_1_14(common_SafeAreaView.SafeAreaPaddingView, obj4);
       cResult[3] = tmp18;
       let tmp16 = tmp18;
     } else {
@@ -210,7 +210,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabCon
     }
     if (cResult[4] !== tmp4.tabContent) {
       const obj5 = { style: tmp4.tabContent, children: tmp16 };
-      const tmp22 = state(React5, obj5);
+      const tmp22 = closure_1_14(React5, obj5);
       cResult[4] = tmp4.tabContent;
       cResult[5] = tmp22;
       let tmp19 = tmp22;
@@ -221,7 +221,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabCon
   } else if (GuildRoleSubscriptionsTierScenes.BENEFITS === selectedTab) {
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp14 = state(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
+      const tmp14 = closure_1_14(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
       cResult[6] = tmp14;
       let tmp12 = tmp14;
     } else {
@@ -240,17 +240,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function TabCon
   if (GuildRoleSubscriptionsTierScenes.DETAILS === selectedTab) {
     const obj2 = { style: tmp.tabContent, children: null };
     const obj3 = { bottom: true, children: null };
-    items = [state(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), state(closure_20, {})];
+    items = [closure_1_14(GuildRoleSubscriptionTierDetailsModal.GuildRoleSubscriptionTierDetailsTab, {}), closure_1_14(closure_20, {})];
     obj3.children = items;
-    obj2.children = value2(common_SafeAreaView.SafeAreaPaddingView, obj3);
-    return state(React5, obj2);
+    obj2.children = value3(common_SafeAreaView.SafeAreaPaddingView, obj3);
+    return closure_1_14(React5, obj2);
   } else if (GuildRoleSubscriptionsTierScenes.DESIGN === selectedTab) {
     const obj = { style: tmp.tabContent, children: null };
-    const obj4 = { bottom: true, children: state(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
-    obj.children = state(common_SafeAreaView.SafeAreaPaddingView, obj4);
-    return state(React5, obj);
+    const obj4 = { bottom: true, children: closure_1_14(GuildRoleSubscriptionTierDesignModal.GuildRoleSubscriptionTierDesignTab, {}) };
+    obj.children = closure_1_14(common_SafeAreaView.SafeAreaPaddingView, obj4);
+    return closure_1_14(React5, obj);
   } else if (GuildRoleSubscriptionsTierScenes.BENEFITS === selectedTab) {
-    return state(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
+    return closure_1_14(GuildRoleSubscriptionTierBenefitsModal.GuildRoleSubscriptionTierBenefitsTab, {});
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -292,7 +292,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
               if (null != error) {
                 const _Symbol = Symbol;
                 if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp22 = state(native.Spacer, { size: 16 });
+                  const tmp22 = closure_1_14(native.Spacer, { size: 16 });
                   cResult[7] = tmp22;
                   let tmp20 = tmp22;
                 } else {
@@ -308,7 +308,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
                 }
                 if (cResult[10] !== tmp23) {
                   const obj6 = { children: tmp23 };
-                  const tmp28 = state(ErrorBlockDefault, obj6);
+                  const tmp28 = closure_1_14(ErrorBlockDefault, obj6);
                   cResult[10] = tmp23;
                   cResult[11] = tmp28;
                   let tmp25 = tmp28;
@@ -317,7 +317,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
                 }
                 const _Symbol2 = Symbol;
                 if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp31 = state(native.Spacer, { size: 16 });
+                  const tmp31 = closure_1_14(native.Spacer, { size: 16 });
                   cResult[12] = tmp31;
                   let tmp29 = tmp31;
                 } else {
@@ -327,7 +327,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
                   const obj7 = { children: null };
                   items = [tmp20, tmp25, tmp29];
                   obj7.children = items;
-                  const tmp35 = value2(closure_1_15, obj7);
+                  const tmp35 = value3(value2, obj7);
                   cResult[13] = tmp25;
                   cResult[14] = tmp35;
                 }
@@ -355,7 +355,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
                   }
                 }
                 const obj8 = { message: tmp11, ctaMessage: tmp12, onClick: tmp10, submitting, disabled: roleSubscriptionSettingsDisabled };
-                const tmp18 = state(ActionableNoticeDefault, obj8);
+                const tmp18 = closure_1_14(ActionableNoticeDefault, obj8);
                 cResult[17] = tmp10;
                 cResult[18] = roleSubscriptionSettingsDisabled;
                 cResult[19] = submitting;
@@ -406,14 +406,14 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
       if (!subscriptionListing.published) {
         if (null != error) {
           const obj5 = { children: null };
-          items = [state(native.Spacer, { size: 16 }), , ];
+          items = [closure_1_14(native.Spacer, { size: 16 }), , ];
           const obj6 = { children: error.getAnyErrorMessage() };
-          items[1] = state(ErrorBlockDefault, obj6);
+          items[1] = closure_1_14(ErrorBlockDefault, obj6);
           Spacer = native.Spacer;
-          tmp2 = state(Spacer, { size: 16 });
+          tmp2 = closure_1_14(Spacer, { size: 16 });
           items[2] = tmp2;
           obj5.children = items;
-          let tmp14 = value2(closure_1_15, obj5);
+          let tmp14 = value3(value2, obj5);
         } else {
           const obj7 = { message: null, ctaMessage: null, onClick: null, submitting: null, disabled: null };
           const intl = util.intl;
@@ -430,7 +430,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function DraftP
           };
           obj7.submitting = submitting;
           obj7.disabled = roleSubscriptionSettingsDisabled;
-          tmp14 = state(ActionableNoticeDefault, obj7);
+          tmp14 = closure_1_14(ActionableNoticeDefault, obj7);
         }
       }
     }
@@ -594,7 +594,7 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
               actionSheetKey: "TierTemplateSelected",
               importer: GuildRoleSubscriptionsTierTemplateSelectedActionSheetImporter
             };
-            tmp3 = state(DismissibleActionSheet.DismissibleActionSheet, obj);
+            tmp3 = closure_2_14(DismissibleActionSheet.DismissibleActionSheet, obj);
           }
           return tmp3;
         }

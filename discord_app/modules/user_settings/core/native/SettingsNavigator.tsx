@@ -49,9 +49,9 @@ const Constants = fn(1085);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(9317);
+const NativeStackNavigator = fn(9344);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   headerContainer: null,
@@ -499,7 +499,7 @@ export default noop.memo(
             }
             tmp40[0] = function transitionEnd(data) {
               let isActive = data.data.closing;
-              state = listeners.getState();
+              const state = listeners.getState();
               if (isActive) {
                 isActive = state.isActive;
               }

@@ -15,13 +15,13 @@ import RoleTierEditStore from "../RoleTierEditStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const GuildRoleSubscriptionsConstants = fn(15413);
+const GuildRoleSubscriptionsConstants = fn(15475);
 ({ GuildRoleSubscriptionsTierScenes: metroRequire, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: closure_7 } =
   GuildRoleSubscriptionsConstants);
 const UPLOAD_BANNER_SIZE = fn(1085).UPLOAD_BANNER_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_12 = createStyles.createStyles({
   coverPhoto: { height: 114, width: "100%" },
   coverDescription: { marginTop: 16 },

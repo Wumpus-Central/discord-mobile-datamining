@@ -1,10 +1,10 @@
 // discord_app/modules/activities/useFetchDeveloperActivityShelfItems.tsx
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators.tsx";
+import fetchDeveloperApplications from "fetchDeveloperApplications.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import DeveloperActivityShelfStore from "DeveloperActivityShelfStore.tsx";
 
 require = fn;
-const DevShelfFetchState = fn(9046).DevShelfFetchState;
+const DevShelfFetchState = fn(9065).DevShelfFetchState;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
@@ -103,7 +103,7 @@ export const useFetchDeveloperActivityShelfItems = ReactCompilerGating.isReactCo
           tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
         }
         if (tmp) {
-          const developerApplications = EmbeddedActivitiesActionCreators.fetchDeveloperApplications();
+          const developerApplications = fetchDeveloperApplications.fetchDeveloperApplications();
         }
       }, items1);
       return null;

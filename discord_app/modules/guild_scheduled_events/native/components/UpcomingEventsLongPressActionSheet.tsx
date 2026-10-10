@@ -9,10 +9,10 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const ReadStateTypes = fn(5974).ReadStateTypes;
+const ReadStateTypes = fn(5967).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles({ headerIcon: { marginRight: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -64,12 +64,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = guildId(504);
       const stateFromStores1 = guildId(504).useStateFromStores(tmp9, tmp11);
       if (cResult[6] !== stateFromStores) {
-        const obj2 = { guild: stateFromStores, size: tmp(6165).GuildIconSizes.LARGE };
-        const tmp17 = closure_7(stateFromStores1(6165), obj2);
+        const obj2 = { guild: stateFromStores, size: tmp(6158).GuildIconSizes.LARGE };
+        const tmp17 = closure_7(stateFromStores1(6158), obj2);
         cResult[6] = stateFromStores;
         cResult[7] = tmp17;
         let tmp13 = tmp17;
-        const tmp16 = stateFromStores1(6165);
+        const tmp16 = stateFromStores1(6158);
       } else {
         tmp13 = cResult[7];
       }
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[12] !== tmp18) {
           const obj3 = { leading: tmp18, title: tmp20 };
-          const tmp24 = closure_7(tmp(6835).BottomSheetTitleHeader, obj3);
+          const tmp24 = closure_7(tmp(6838).BottomSheetTitleHeader, obj3);
           cResult[12] = tmp18;
           cResult[13] = tmp24;
           let tmp22 = tmp24;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { source: stateFromStores1(12038) };
+          const obj4 = { source: stateFromStores1(12082) };
           const tmp28 = closure_7(tmp(1200).Icon, obj4);
           cResult[14] = tmp28;
           let tmp25 = tmp28;
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { text: null };
           const intl2 = tmp(1126).intl;
           obj5.text = intl2.string(tmp(1126).t.e6RscS);
-          const tmp31 = closure_7(tmp(8563).FormLabel, obj5);
+          const tmp31 = closure_7(tmp(8579).FormLabel, obj5);
           cResult[15] = tmp31;
           let tmp29 = tmp31;
         } else {
@@ -124,14 +124,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ActionSheetActionCreatorsDefault.hideActionSheet();
             },
           };
-          const tmp34 = closure_7(tmp(8563).FormRow, obj6);
+          const tmp34 = closure_7(tmp(8579).FormRow, obj6);
           cResult[16] = guildId;
           cResult[17] = tmp34;
           let tmp32 = tmp34;
         } else {
           tmp32 = cResult[17];
         }
-        const tmp35 = stateFromStores1(stateFromStores1 ? 12039 : 12040);
+        const tmp35 = stateFromStores1(stateFromStores1 ? 12083 : 12084);
         if (cResult[18] !== tmp35) {
           const obj7 = { source: tmp35 };
           const tmp38 = closure_7(tmp(1200).Icon, obj7);
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           if (cResult[22] !== cResult[21]) {
             const obj8 = { text: tmp39 };
-            const tmp44 = closure_7(tmp(8563).FormLabel, obj8);
+            const tmp44 = closure_7(tmp(8579).FormLabel, obj8);
             cResult[22] = tmp39;
             cResult[23] = tmp44;
             let tmp42 = tmp44;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj9 = { children: null };
                 const items2 = [tmp22, tmp32, tmp46];
                 obj9.children = items2;
-                const tmp51 = closure_8(tmp(6892).ActionSheet, obj9);
+                const tmp51 = closure_8(tmp(6898).ActionSheet, obj9);
                 cResult[31] = tmp32;
                 cResult[32] = tmp46;
                 cResult[33] = tmp22;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj10 = { leading: tmp36, label: tmp42, onPress: tmp45 };
-            const tmp48 = closure_7(tmp(8563).FormRow, obj10);
+            const tmp48 = closure_7(tmp(8579).FormRow, obj10);
             cResult[27] = tmp36;
             cResult[28] = tmp42;
             cResult[29] = tmp45;
@@ -236,27 +236,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { guild: stateFromStores, size: null };
       const obj2 = guildId(504);
       const tmp8 = stateFromStores1;
-      obj5.size = guildId(6165).GuildIconSizes.LARGE;
-      obj4.children = closure_7(stateFromStores1(6165), obj5);
+      obj5.size = guildId(6158).GuildIconSizes.LARGE;
+      obj4.children = closure_7(stateFromStores1(6158), obj5);
       obj3.leading = closure_7(View, obj4);
       const intl = guildId(1126).intl;
       obj3.title = intl.string(guildId(1126).t.tlopTM);
-      const items2 = [closure_7(guildId(6835).BottomSheetTitleHeader, obj3), ,];
+      const items2 = [closure_7(guildId(6838).BottomSheetTitleHeader, obj3), ,];
       const obj6 = { leading: null, label: null, onPress: null };
-      const tmp9 = stateFromStores1(6165);
-      obj6.leading = closure_7(guildId(1200).Icon, { source: stateFromStores1(12038) });
+      const tmp9 = stateFromStores1(6158);
+      obj6.leading = closure_7(guildId(1200).Icon, { source: stateFromStores1(12082) });
       const obj8 = { text: null };
       const intl2 = guildId(1126).intl;
       obj8.text = intl2.string(guildId(1126).t.e6RscS);
-      obj6.label = closure_7(guildId(8563).FormLabel, obj8);
+      obj6.label = closure_7(guildId(8579).FormLabel, obj8);
       obj6.onPress = function onPress() {
         ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
         ActionSheetActionCreatorsDefault.hideActionSheet();
       };
-      items2[1] = closure_7(guildId(8563).FormRow, obj6);
+      items2[1] = closure_7(guildId(8579).FormRow, obj6);
       const obj9 = { leading: null, label: null, onPress: null };
-      const obj7 = { source: stateFromStores1(12038) };
-      obj9.leading = closure_7(guildId(1200).Icon, { source: tmp8(stateFromStores1 ? 12039 : 12040) });
+      const obj7 = { source: stateFromStores1(12082) };
+      obj9.leading = closure_7(guildId(1200).Icon, { source: tmp8(stateFromStores1 ? 12083 : 12084) });
       const intl3 = tmp2(1126).intl;
       const string = intl3.string;
       const t = tmp2(1126).t;
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         stringResult = string(t.ONG3Yz);
       }
       const obj11 = { children: null };
-      obj9.label = closure_7(guildId(8563).FormLabel, { text: stringResult });
+      obj9.label = closure_7(guildId(8579).FormLabel, { text: stringResult });
       obj9.onPress = function onPress() {
         const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
         const result = NotificationSettingsModalActionCreatorsDefault.updateGuildNotificationSettings(
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           NotificationLabel.mutedEvents(!stateFromStores1),
         );
       };
-      items2[2] = closure_7(guildId(8563).FormRow, obj9);
+      items2[2] = closure_7(guildId(8579).FormRow, obj9);
       obj11.children = items2;
-      return closure_8(guildId(6892).ActionSheet, obj11);
+      return closure_8(guildId(6898).ActionSheet, obj11);
     };

@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
 const Endpoints = fn(1085).Endpoints;
-const promiseDeduper = new fn(10648).PromiseDeduper();
+const promiseDeduper = new fn(10682).PromiseDeduper();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/refreshApplicationWidget.tsx");
 
@@ -22,7 +22,7 @@ export const refreshApplicationWidget = function refreshApplicationWidget(play) 
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

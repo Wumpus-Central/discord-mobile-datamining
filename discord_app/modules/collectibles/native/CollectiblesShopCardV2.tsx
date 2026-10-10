@@ -32,7 +32,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   card: null,
   topRowOverlay: null,
@@ -145,14 +145,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 tmp21 = cResult[11];
               }
-              content = tmp21;
+              text = tmp21;
               const _Symbol2 = Symbol;
               if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
                 class Y {
                   constructor() {
                     obj = closure_1(closure_2[17]);
-                    obj1 = { key: "WISHLIST_ERROR", content: closure_7 };
-                    openResult = obj.open(obj1);
+                    obj1 = { text: closure_7 };
+                    openResult = obj.open("WISHLIST_ERROR", obj1);
                     return;
                   }
                 }
@@ -161,8 +161,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 class Y {
                   constructor() {
                     obj = closure_1(closure_2[17]);
-                    obj1 = { key: "WISHLIST_ERROR", content: closure_7 };
-                    openResult = obj.open(obj1);
+                    obj1 = { text: closure_7 };
+                    openResult = obj.open("WISHLIST_ERROR", obj1);
                     return;
                   }
                 }
@@ -269,7 +269,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       c5 = stringResult;
       const items1 = [stringResult];
       const callback1 = shouldShowWishlistNUXActionSheet.useCallback(() => {
-        ToastActionCreatorsDefault.open({ key: "WISHLIST_ERROR", content });
+        ToastActionCreatorsDefault.open("WISHLIST_ERROR", { text });
       }, items1);
       const tmp2Result9 = require("CollectiblesWishlistUtils");
       trackShopCardClick = require("useTrackShopCardClick").useTrackShopCardClick({
@@ -324,7 +324,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2Result11 = require("useWishlistButtonState");
       const items4 = [c5];
       let stateFromStores = require("initialize").useStateFromStores(items4, () =>
-        product(selectedProduct[21]).isThemeDark(content.theme),
+        product(selectedProduct[21]).isThemeDark(text.theme),
       );
       const tmp2Result12 = require("initialize");
       const items5 = [trackShopCardClick];
@@ -535,7 +535,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              if (product.skuId === content.FRACTIONAL_PREMIUM_1_DAY) {
+              if (product.skuId === text.FRACTIONAL_PREMIUM_1_DAY) {
                 if (!oneDayFractionalNitroEnabled) {
                   return null;
                 }

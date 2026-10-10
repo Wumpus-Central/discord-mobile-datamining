@@ -28,7 +28,7 @@ function getIsOnMainSurface() {
       if ("main" !== name) {
         return false;
       } else {
-        state = tmp2.state;
+        const state = tmp2.state;
         let tmp4;
         if (null != state) {
           if (0 !== state.routes.length) {

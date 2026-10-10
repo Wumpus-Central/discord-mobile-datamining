@@ -24,8 +24,8 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let apply = apply_mod;
-let closure_12 = apply.throttle(fn(9517).fetchEmoji, 1000);
-const createStyles = fn(5091);
+let closure_12 = apply.throttle(fn(9546).fetchEmoji, 1000);
+const createStyles = fn(5092);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },

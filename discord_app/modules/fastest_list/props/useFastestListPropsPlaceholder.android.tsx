@@ -17,33 +17,33 @@ function createNativePlaceholderConfig(listFooter) {
   const size = {
     borderRadius: "Array",
     borderTopLeftRadius: "defineProperty",
-    borderTopRightRadius: "code",
-    borderBottomLeftRadius: "name",
-    borderBottomRightRadius: "code",
-    divider: "a",
-    dividerColor: "item",
-    dividerPaddingLeft: "round",
-    dividerPaddingRight: "ix",
-    placeholderShape: "lj",
-    placeholderShapeColor: "a",
-    placeholderShapeCount: "toCharArray$esjava$1",
-    placeholderShapeGap: "unicodeVersion",
-    placeholderShapePaddingHorizontal: "lj",
-    placeholderShapePaddingVertical: "a",
-    placeholderFeedBackgroundColor: "toCharArray$esjava$1",
-    placeholderFeedColor: "code",
-    placeholderFeedLabelPadding: "lj",
-    placeholderFeedLabelPaddingInnerRatio: "a",
-    placeholderFeedLabelSize: "toCharArray$esjava$1",
-    placeholderFeedLabelSecondarySize: "color",
-    placeholderFeedPadding: "gap",
-    placeholderFeedShape: "track",
-    placeholderFeedShapeSize: "getChannel",
+    borderTopRightRadius: "error",
+    borderBottomLeftRadius: "track",
+    borderBottomRightRadius: "e",
+    divider: "toCharArray$esjava$1",
+    dividerColor: "toCharArray$esjava$1",
+    dividerPaddingLeft: "transform",
+    dividerPaddingRight: "e",
+    placeholderShape: "toCharArray$esjava$1",
+    placeholderShapeColor: "toCharArray$esjava$1",
+    placeholderShapeCount: "uri",
+    placeholderShapeGap: "e",
+    placeholderShapePaddingHorizontal: "toCharArray$esjava$1",
+    placeholderShapePaddingVertical: "toCharArray$esjava$1",
+    placeholderFeedBackgroundColor: "url",
+    placeholderFeedColor: "e",
+    placeholderFeedLabelPadding: "toCharArray$esjava$1",
+    placeholderFeedLabelPaddingInnerRatio: "toCharArray$esjava$1",
+    placeholderFeedLabelSize: "useAnimatedStyle",
+    placeholderFeedLabelSecondarySize: "e",
+    placeholderFeedPadding: "toCharArray$esjava$1",
+    placeholderFeedShape: "toCharArray$esjava$1",
+    placeholderFeedShapeSize: "code",
     placeholderType: NONE,
-    width: "color",
-    height: "r",
-    verticalAlignment: "mn",
-    horizontalAlignment: "Array",
+    width: false,
+    height: false,
+    verticalAlignment: false,
+    horizontalAlignment: false,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +162,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(6749).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(6750).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(6749).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(6750).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

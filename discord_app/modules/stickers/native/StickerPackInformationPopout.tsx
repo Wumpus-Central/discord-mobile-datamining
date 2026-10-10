@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, FlatList: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   informationContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = stickerPack;
         cResult[1] = items;
         let tmp5 = items;
-        tmpResult = tmp(5746);
+        tmpResult = tmp(5749);
       } else {
         tmp5 = cResult[1];
       }
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { variant: "text-md/bold", color: "text-brand", children: null };
                 const intl4 = tmp(1126).intl;
                 obj4.children = intl4.string(tmp(1126).t.cpT0Cq);
-                const tmp19 = closure_4(tmp(5087).Text, obj4);
+                const tmp19 = closure_4(tmp(5088).Text, obj4);
                 cResult[15] = tmp19;
                 let tmp17 = tmp19;
               } else {
@@ -118,7 +118,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityLabel: tmp15,
                   children: tmp17,
                 };
-                const tmp22 = closure_4(tmp(6191).PressableOpacity, obj5);
+                const tmp22 = closure_4(tmp(6184).PressableOpacity, obj5);
                 cResult[16] = onClose;
                 cResult[17] = tmp22;
                 let tmp20 = tmp22;
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: tmp9,
             };
-            const tmp13 = closure_4(tmp(5087).Text, obj9);
+            const tmp13 = closure_4(tmp(5088).Text, obj9);
             cResult[11] = tmp4.informationHeader;
             cResult[12] = tmp9;
             cResult[13] = tmp13;

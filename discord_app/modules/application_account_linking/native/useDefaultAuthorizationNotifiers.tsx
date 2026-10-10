@@ -1,6 +1,6 @@
 // discord_app/modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3309 from "../AccountLinking.messages.js";
+import _modDef3312 from "../AccountLinking.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
@@ -72,7 +72,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
         if (cResult[7] === value) {
           let tmp13 = cResult[8];
         }
-        const previousWhen = tmp(5929).usePreviousWhen(tmp13);
+        const previousWhen = tmp(5922).usePreviousWhen(tmp13);
         if (cResult[9] === tmp12) {
           if (cResult[10] === value) {
             if (cResult[11] === tmp5) {
@@ -85,17 +85,17 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
             }
           }
         }
-        const fn3 = function b() {
+        const fn3 = function k() {
           if (ref.current) {
             if (false === previousWhen) {
               if (true === closure_1) {
                 if (closure_4) {
                   tmp.current = false;
                   if (closure_2) {
-                    const obj2 = { content: null, key: "account-linked-toast" };
+                    const obj2 = { text: null };
                     const intl = util.intl;
-                    obj2.content = intl.string(_modDef3309.uG6teD);
-                    ToastActionCreatorsDefault.open(obj2);
+                    obj2.text = intl.string(_modDef3312.uG6teD);
+                    ToastActionCreatorsDefault.open("account-linked-toast", obj2);
                   }
                 }
               }
@@ -111,7 +111,7 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
         cResult[14] = items1;
         tmp16 = items1;
         tmp15 = fn3;
-        const tmpResult4 = tmp(5929);
+        const tmpResult4 = tmp(5922);
       }
       const obj4 = { value, shouldUpdate: tmp12 };
       cResult[6] = tmp12;
@@ -162,10 +162,10 @@ export const useDefaultAuthorizationNotifiers = ReactCompilerGating.isReactCompi
               if (stateFromStores) {
                 tmp.current = false;
                 if (flag) {
-                  const obj2 = { content: null, key: "account-linked-toast" };
+                  const obj2 = { text: null };
                   const intl = util.intl;
-                  obj2.content = intl.string(_modDef3309.uG6teD);
-                  ToastActionCreatorsDefault.open(obj2);
+                  obj2.text = intl.string(_modDef3312.uG6teD);
+                  ToastActionCreatorsDefault.open("account-linked-toast", obj2);
                 }
               }
             }

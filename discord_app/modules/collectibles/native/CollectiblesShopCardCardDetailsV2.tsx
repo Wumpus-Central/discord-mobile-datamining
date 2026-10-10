@@ -1,25 +1,20 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
-import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
-import useToken from "../../../design/tokens/native/useToken.tsx";
-import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
-import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
-import _mod9041 from "../../virtual_currency/hooks/index.tsx";
+import _mod9060 from "../../virtual_currency/hooks/index.tsx";
 import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder.tsx";
 import TagIcon from "../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
-import getProductName from "../utils/getProductName.tsx";
 import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import IAPStore from "../../../stores/native/IAPStore.android.tsx";
@@ -30,7 +25,7 @@ const Constants = fn(1085);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,
@@ -107,7 +102,7 @@ const memoResult = noop.memo(
                     let tmp13 = cResult[13];
                   }
                   const discountPercentage2 = tmp13.discountPercentage;
-                  const balance = _mod9041.useFetchVirtualCurrencyBalance().balance;
+                  const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
                   let tmp17 = null;
                   if (null != tmp9) {
                     tmp17 = null;
@@ -584,7 +579,7 @@ const memoResult = noop.memo(
                       tmp21 = closure_1_8(NitroWheelIcon.NitroWheelIcon, obj23);
                     }
                   }
-                  const tmpResult = _mod9041;
+                  const tmpResult = _mod9060;
                 }
                 const productDiscount = CollectiblesUtils.getProductDiscount(
                   tmp5,
@@ -880,192 +875,149 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function CardDetailsV2(arg0) {
-        const cResult = c.c(35);
+        const cResult = isInImprovedMobileShopLoading(576).c(37);
         ({ product, collectibleProductState, preferVCPrice, isDisabled, hidePrice } = arg0);
-        const tmp4 = closure_10();
-        const currentUser = useCurrentUser.useCurrentUser();
+        closure_10();
+        const obj = isInImprovedMobileShopLoading(576);
+        const currentUser = isInImprovedMobileShopLoading(8302).useCurrentUser();
         if (cResult[0] !== currentUser) {
           const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
           cResult[0] = currentUser;
           cResult[1] = canUseShopDiscountsResult;
-          let tmp6 = canUseShopDiscountsResult;
-        } else {
-          tmp6 = cResult[1];
         }
         if (cResult[2] !== currentUser) {
-          const shopDiscountSource = CollectiblesUtils.getShopDiscountSource(currentUser);
+          const shopDiscountSource = tmp(7275).getShopDiscountSource(currentUser);
           cResult[2] = currentUser;
           cResult[3] = shopDiscountSource;
-          let tmp9 = shopDiscountSource;
-          const tmpResult = CollectiblesUtils;
-        } else {
-          tmp9 = cResult[3];
+          const tmpResult = tmp(7275);
         }
-        const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+        const obj2 = isInImprovedMobileShopLoading(8302);
+        const token = isInImprovedMobileShopLoading(4818).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
         if (cResult[4] !== token) {
-          const tmpResult9 = ColorUtils;
-          const hexToRgbaStringResult = tmpResult9.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0.9));
+          const tmpResult10 = tmp(4967);
+          const hexToRgbaStringResult = tmpResult10.hexToRgbaString(tmp(4967).hexWithOpacity(token, 0.9));
           cResult[4] = token;
           cResult[5] = hexToRgbaStringResult;
-          let tmp13 = hexToRgbaStringResult;
-          const tmpResult10 = ColorUtils;
+          let tmp12 = hexToRgbaStringResult;
+          const tmpResult11 = tmp(4967);
         } else {
-          tmp13 = cResult[5];
+          tmp12 = cResult[5];
         }
         if (cResult[6] !== token) {
-          const tmpResult11 = ColorUtils;
-          const hexToRgbaStringResult1 = tmpResult11.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0));
+          const tmpResult12 = tmp(4967);
+          const hexToRgbaStringResult1 = tmpResult12.hexToRgbaString(tmp(4967).hexWithOpacity(token, 0));
           cResult[6] = token;
           cResult[7] = hexToRgbaStringResult1;
-          let tmp15 = hexToRgbaStringResult1;
-          const tmpResult12 = ColorUtils;
+          let tmp14 = hexToRgbaStringResult1;
+          const tmpResult13 = tmp(4967);
         } else {
-          tmp15 = cResult[7];
+          tmp14 = cResult[7];
         }
         if (cResult[8] !== product) {
-          const cardProductName = getProductName.getCardProductName(product);
+          const cardProductName = tmp(9077).getCardProductName(product);
           cResult[8] = product;
           cResult[9] = cardProductName;
-          let tmp17 = cardProductName;
-          const tmpResult13 = getProductName;
-        } else {
-          tmp17 = cResult[9];
+          const tmpResult14 = tmp(9077);
         }
+        const tmpResult9 = isInImprovedMobileShopLoading(4818);
+        isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9078).useIsInImprovedMobileShopLoading();
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [IAPStore];
-          class V {
-            constructor() {
-              return closure_1_5.isFetchingGoogleSkus();
-            }
-          }
           cResult[10] = items;
-          cResult[11] = V;
-          let tmp20 = V;
           let tmp19 = items;
         } else {
           tmp19 = cResult[10];
-          tmp20 = cResult[11];
         }
-        const tmpResult8 = useToken;
-        const stateFromStores = initialize.useStateFromStores(tmp19, tmp20);
-        if (cResult[12] === token) {
-          if (cResult[13] === tmp13) {
-            if (cResult[14] === tmp15) {
-              let tmp23 = cResult[15];
+        if (cResult[11] !== isInImprovedMobileShopLoading) {
+          class V {
+            constructor() {
+              isFetchingGoogleSkusResult = !closure_0;
+              if (!closure_0) {
+                tmp2 = closure_5;
+                isFetchingGoogleSkusResult = closure_5.isFetchingGoogleSkus();
+              }
+              return isFetchingGoogleSkusResult;
             }
-            const _Symbol = Symbol;
-            class V {
-              constructor() {
-                return closure_1_5.isFetchingGoogleSkus();
+          }
+          const items1 = [isInImprovedMobileShopLoading];
+          cResult[11] = isInImprovedMobileShopLoading;
+          cResult[12] = V;
+          cResult[13] = items1;
+          let tmp22 = items1;
+        } else {
+          class V {
+            constructor() {
+              isFetchingGoogleSkusResult = !closure_0;
+              if (!closure_0) {
+                tmp2 = closure_5;
+                isFetchingGoogleSkusResult = closure_5.isFetchingGoogleSkus();
               }
+              return isFetchingGoogleSkusResult;
             }
-            if (cResult[17] === tmp17) {
-              if (cResult[18] === tmp4.assetName) {
-                let tmp26 = cResult[19];
+          }
+          tmp22 = cResult[13];
+        }
+        const tmpResult15 = isInImprovedMobileShopLoading(9078);
+        const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(tmp19, V, tmp22);
+        if (cResult[14] === token) {
+          class V {
+            constructor() {
+              isFetchingGoogleSkusResult = !closure_0;
+              if (!closure_0) {
+                tmp2 = closure_5;
+                isFetchingGoogleSkusResult = closure_5.isFetchingGoogleSkus();
               }
-              if (cResult[20] === collectibleProductState) {
-                if (cResult[21] === tmp9) {
-                  if (cResult[22] === hidePrice) {
-                    if (cResult[23] === isDisabled) {
-                      if (cResult[24] === stateFromStores) {
-                        if (cResult[25] === preferVCPrice) {
-                          if (cResult[26] === product) {
-                            if (cResult[27] === tmp6) {
-                              if (cResult[28] === tmp4) {
-                                let tmp29 = cResult[29];
-                              }
-                              if (cResult[30] === tmp4.regularMetadataContainer) {
-                                if (cResult[31] === tmp26) {
-                                  if (cResult[32] === tmp29) {
-                                    if (cResult[33] === tmp23) {
-                                      let tmp31 = cResult[34];
-                                    }
-                                    return tmp31;
-                                  }
-                                }
-                              }
-                              class V {
-                                constructor() {
-                                  return closure_1_5.isFetchingGoogleSkus();
-                                }
-                              }
-                              tmp33[0] = tmp4.regularMetadataContainer;
-                              tmp33[1] = tmp23;
-                              tmp33[2] = tmp25;
-                              ({ START: tmp33[3], END: tmp33[4] } = constants2);
-                              const items1 = [tmp26, tmp29];
-                              tmp33[5] = items1;
-                              const tmp35 = options(LinearGradientDefault, tmp33);
-                              cResult[30] = tmp4.regularMetadataContainer;
-                              cResult[31] = tmp26;
-                              cResult[32] = tmp29;
-                              cResult[33] = tmp23;
-                              cResult[34] = tmp35;
-                              tmp31 = tmp35;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              class V {
-                constructor() {
-                  return closure_1_5.isFetchingGoogleSkus();
-                }
-              }
-              cResult[20] = collectibleProductState;
-              cResult[21] = tmp9;
-              cResult[22] = hidePrice;
-              cResult[23] = isDisabled;
-              cResult[24] = stateFromStores;
-              cResult[25] = preferVCPrice;
-              cResult[26] = product;
-              cResult[27] = tmp6;
-              cResult[28] = tmp4;
-              cResult[29] = !hidePrice;
-              tmp29 = tmp30;
+              return isFetchingGoogleSkusResult;
             }
-            const obj4 = {
-              style: tmp4.assetName,
-              variant: "heading-sm/bold",
-              color: "mobile-text-heading-primary",
-              lineClamp: 1,
-              accessibilityRole: "header",
-              children: tmp17,
-            };
-            const tmp28 = closure_1_8(Text_Text.Text, obj4);
-            cResult[17] = tmp17;
-            cResult[18] = tmp4.assetName;
-            cResult[19] = tmp28;
-            tmp26 = tmp28;
           }
         }
-        const items2 = [tmp15, tmp13, token];
-        cResult[12] = token;
-        cResult[13] = tmp13;
-        cResult[14] = tmp15;
-        cResult[15] = items2;
-        tmp23 = items2;
-        const tmpResult14 = initialize;
+        const items2 = [tmp14, tmp12, token];
+        cResult[14] = token;
+        cResult[15] = tmp12;
+        cResult[16] = tmp14;
+        cResult[17] = items2;
+        const tmpResult16 = isInImprovedMobileShopLoading(504);
       }
     : function CardDetailsV2(arg0) {
         ({ product, hidePrice } = arg0);
+        let isInImprovedMobileShopLoading;
         ({ collectibleProductState, preferVCPrice, isDisabled } = arg0);
         const tmp = closure_10();
-        const currentUser = useCurrentUser.useCurrentUser();
+        const currentUser = isInImprovedMobileShopLoading(8302).useCurrentUser();
+        const obj = isInImprovedMobileShopLoading(8302);
         const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
-        const shopDiscountSource = CollectiblesUtils.getShopDiscountSource(currentUser);
-        const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-        const obj5 = ColorUtils;
-        const hexToRgbaStringResult = obj5.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0.9));
-        const obj7 = ColorUtils;
-        const hexToRgbaStringResult1 = obj7.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0));
-        const cardProductName = getProductName.getCardProductName(product);
+        const shopDiscountSource = isInImprovedMobileShopLoading(7275).getShopDiscountSource(currentUser);
+        const obj3 = isInImprovedMobileShopLoading(7275);
+        const token = isInImprovedMobileShopLoading(4818).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+        const obj4 = isInImprovedMobileShopLoading(4818);
+        const obj5 = isInImprovedMobileShopLoading(4967);
+        const obj6 = isInImprovedMobileShopLoading(4967);
+        const hexToRgbaStringResult = obj5.hexToRgbaString(
+          isInImprovedMobileShopLoading(4967).hexWithOpacity(token, 0.9),
+        );
+        const obj7 = isInImprovedMobileShopLoading(4967);
+        const obj8 = isInImprovedMobileShopLoading(4967);
+        const hexToRgbaStringResult1 = obj7.hexToRgbaString(
+          isInImprovedMobileShopLoading(4967).hexWithOpacity(token, 0),
+        );
+        const cardProductName = isInImprovedMobileShopLoading(9077).getCardProductName(product);
+        const obj9 = isInImprovedMobileShopLoading(9077);
+        isInImprovedMobileShopLoading = isInImprovedMobileShopLoading(9078).useIsInImprovedMobileShopLoading();
+        const obj10 = isInImprovedMobileShopLoading(9078);
         const items = [IAPStore];
-        const stateFromStores = initialize.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
-        const obj11 = {
+        const items1 = [isInImprovedMobileShopLoading];
+        const stateFromStores = isInImprovedMobileShopLoading(504).useStateFromStores(
+          items,
+          () => {
+            let isFetchingGoogleSkusResult = !isInImprovedMobileShopLoading;
+            if (!isInImprovedMobileShopLoading) {
+              isFetchingGoogleSkusResult = IAPStore.isFetchingGoogleSkus();
+            }
+            return isFetchingGoogleSkusResult;
+          },
+          items1,
+        );
+        const obj12 = {
           style: tmp.regularMetadataContainer,
           colors: null,
           locations: [0, 0.4, 1],
@@ -1073,10 +1025,11 @@ export default noop.memo(
           end: constants2.END,
           children: null,
         };
-        const items1 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
-        obj11.colors = items1;
-        const items2 = [
-          closure_1_8(Text_Text.Text, {
+        const items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
+        obj12.colors = items2;
+        const obj11 = isInImprovedMobileShopLoading(504);
+        const items3 = [
+          closure_8(isInImprovedMobileShopLoading(5088).Text, {
             style: tmp.assetName,
             variant: "heading-sm/bold",
             color: "mobile-text-heading-primary",
@@ -1085,10 +1038,10 @@ export default noop.memo(
             children: cardProductName,
           }),
         ];
-        let tmp12Result = !hidePrice;
+        let tmp13Result = !hidePrice;
         if (!hidePrice) {
-          const obj13 = { style: tmp.priceVariantsContainer, children: null };
-          const obj14 = {
+          const obj14 = { style: tmp.priceVariantsContainer, children: null };
+          const obj15 = {
             product,
             hasShopDiscount: canUseShopDiscountsResult,
             discountSource: shopDiscountSource,
@@ -1098,14 +1051,14 @@ export default noop.memo(
             preferVCPrice,
             isDisabled,
           };
-          const items3 = [closure_1_8(memoResult, obj14)];
-          const obj15 = { product };
-          items3[1] = closure_1_8(CollectiblesShopCardVariantsDefault, obj15);
-          obj13.children = items3;
-          tmp12Result = options(View, obj13);
+          const items4 = [closure_8(closure_11, obj15)];
+          const obj16 = { product };
+          items4[1] = closure_8(CollectiblesShopCardVariantsDefault, obj16);
+          obj14.children = items4;
+          tmp13Result = closure_9(View, obj14);
         }
-        items2[1] = tmp12Result;
-        obj11.children = items2;
-        return options(LinearGradientDefault, obj11);
+        items3[1] = tmp13Result;
+        obj12.children = items3;
+        return closure_9(LinearGradientDefault, obj12);
       },
 );

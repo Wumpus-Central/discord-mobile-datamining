@@ -1,7 +1,7 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchTip.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import _modDef4053 from "../../SmartSearch.messages.js";
+import _modDef4075 from "../../SmartSearch.messages.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ function getCitationAuthors(citations) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: {
     marginHorizontal: nativeDefault.space.PX_16,
@@ -80,7 +80,7 @@ export default noop.memo(
         ({ container, header, titleContainer, title } = tmp4);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = guildId(1126).intl;
-          const stringResult = intl.string(_modDef4053.ydAwWi);
+          const stringResult = intl.string(_modDef4075.ydAwWi);
           cResult[2] = stringResult;
           let tmp7 = stringResult;
         } else {
@@ -95,7 +95,7 @@ export default noop.memo(
             accessibilityRole: "header",
             children: tmp7,
           };
-          const tmp12 = closure_5(guildId(5087).Text, obj2);
+          const tmp12 = closure_5(guildId(5088).Text, obj2);
           cResult[3] = tmp4.title;
           cResult[4] = tmp12;
           let tmp10 = tmp12;
@@ -105,8 +105,8 @@ export default noop.memo(
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
           const intl2 = guildId(1126).intl;
-          obj3.children = intl2.string(_modDef4053.QIdSmb);
-          const tmp16 = closure_5(guildId(5087).Text, obj3);
+          obj3.children = intl2.string(_modDef4075.QIdSmb);
+          const tmp16 = closure_5(guildId(5088).Text, obj3);
           cResult[5] = tmp16;
           let tmp13 = tmp16;
         } else {
@@ -127,7 +127,7 @@ export default noop.memo(
                 }
                 if (cResult[16] !== answerText) {
                   const obj4 = { variant: "text-md/normal", color: "text-default", children: answerText };
-                  const tmp28 = closure_5(guildId(5087).Text, obj4);
+                  const tmp28 = closure_5(guildId(5088).Text, obj4);
                   cResult[16] = answerText;
                   cResult[17] = tmp28;
                   let tmp26 = tmp28;
@@ -176,7 +176,7 @@ export default noop.memo(
               const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
               return hasOwnProperty(native.Avatar, obj, user.id);
             });
-            tmp20 = closure_5(guildId(13100).AvatarPile, obj7);
+            tmp20 = closure_5(guildId(13147).AvatarPile, obj7);
           }
           cResult[9] = arr;
           cResult[10] = guildId;
@@ -211,12 +211,12 @@ export default noop.memo(
           children: null,
         };
         const intl = citations(1126).intl;
-        obj4.children = intl.string(guildId(4053).ydAwWi);
-        const items1 = [closure_5(citations(5087).Text, obj4)];
+        obj4.children = intl.string(guildId(4075).ydAwWi);
+        const items1 = [closure_5(citations(5088).Text, obj4)];
         const obj5 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
         const intl2 = citations(1126).intl;
-        obj5.children = intl2.string(guildId(4053).QIdSmb);
-        items1[1] = closure_5(citations(5087).Text, obj5);
+        obj5.children = intl2.string(guildId(4075).QIdSmb);
+        items1[1] = closure_5(citations(5088).Text, obj5);
         obj3.children = items1;
         const items2 = [closure_6(View, obj3)];
         let tmp4Result = memo.length > 0;
@@ -232,13 +232,13 @@ export default noop.memo(
             const obj = { user, size: native.AvatarSizes.XSMALL_20, guildId };
             return hasOwnProperty(native.Avatar, obj, user.id);
           });
-          tmp4Result = closure_5(tmp5(13100).AvatarPile, obj6);
+          tmp4Result = closure_5(tmp5(13147).AvatarPile, obj6);
         }
         items2[1] = tmp4Result;
         obj2.children = items2;
         const items3 = [
           closure_6(View, obj2),
-          closure_5(citations(5087).Text, {
+          closure_5(citations(5088).Text, {
             variant: "text-md/normal",
             color: "text-default",
             children: children.answerText,

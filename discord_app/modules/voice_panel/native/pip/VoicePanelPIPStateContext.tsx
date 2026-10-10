@@ -6,11 +6,11 @@ let size = {
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
-  containerHeight: 0,
-  showSecondaryPIP: null,
+  containerHeight: "\u{1F9D1}\u{1F3FC}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FB}",
+  showSecondaryPIP: true,
   scale: null,
 };
-const ReanimatedHelperTypes = fn(6761);
+const ReanimatedHelperTypes = fn(6762);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 let ReactCompilerGating = fn(558);

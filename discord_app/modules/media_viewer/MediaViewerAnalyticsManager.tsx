@@ -26,8 +26,8 @@ let obj2 = {
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
   hasMediaOptions: "code",
-  source: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017912663185,
-  incrementableActions: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000543230922556,
+  source: false,
+  incrementableActions: false,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(
@@ -80,7 +80,7 @@ export const MediaViewerAnalytics = {
     closure_6.setState(obj3);
   },
   markSessionCompleted() {
-    state = closure_6.getState();
+    const state = closure_6.getState();
     obj2 = {
       source: state.source,
       guild_id: state.guildId,
@@ -107,25 +107,25 @@ export const MediaViewerAnalytics = {
   },
   trackMediaViewerImageSaved(arg0) {
     ({ url, success } = arg0);
-    state = closure_6.getState();
+    const state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_IMAGE_SAVED, { url, success, channel_id: state.channelId });
   },
   trackMediaViewerImageCopied(arg0) {
     ({ url, success } = arg0);
-    state = closure_6.getState();
+    const state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_IMAGE_COPIED, { url, success, channel_id: state.channelId });
   },
   trackMediaViewerLinkCopied(arg0) {
     ({ href, success } = arg0);
-    state = closure_6.getState();
+    const state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_LINK_COPIED, { href, success, channel_id: state.channelId });
   },
   trackMediaViewerLinkOpened(href) {
-    state = closure_6.getState();
+    const state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_LINK_OPENED, { href: href.href, channel_id: state.channelId });
   },
   trackMediaViewerDownloadButtonTapped() {
-    state = closure_6.getState();
+    const state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, {
       guild_id: state.guildId,
       channel_id: state.channelId,
@@ -133,7 +133,7 @@ export const MediaViewerAnalytics = {
     });
   },
   trackMediaViewerShareButtonTapped() {
-    state = closure_6.getState();
+    const state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, {
       guild_id: state.guildId,
       channel_id: state.channelId,

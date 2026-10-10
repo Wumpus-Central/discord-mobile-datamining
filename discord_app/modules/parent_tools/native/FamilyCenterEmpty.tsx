@@ -1,18 +1,14 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import c from "../../../../_runtime/00576_c.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef15114 from "../../../../_runtime/metro/15114__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
-let closure_6 = createStyles.createStyles({
-  art: { marginBottom: 10, width: 243 },
-  empty: { display: "flex", alignItems: "center" },
+const jsx = fn(21).jsx;
+const createStyles = fn(5092);
+let closure_4 = createStyles.createStyles({
+  empty: { display: "flex", alignItems: "center", justifyContent: "center" },
 });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,53 +16,35 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterEmpty(text) {
-      const cResult = c.c(8);
+      const cResult = c.c(5);
       text = text.text;
-      const tmp4 = closure_6();
-      if (cResult[0] !== tmp4.art) {
-        const obj2 = { source: _modDef15114, style: tmp4.art, resizeMethod: "scale" };
-        const tmp9 = React4(FastImageDefault, obj2);
-        cResult[0] = tmp4.art;
-        cResult[1] = tmp9;
-        let tmp5 = tmp9;
+      const tmp4 = closure_4();
+      if (cResult[0] !== text) {
+        const obj2 = { variant: "text-sm/medium", color: "text-muted", children: text };
+        const tmp7 = jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: text });
+        cResult[0] = text;
+        cResult[1] = tmp7;
+        let tmp5 = tmp7;
       } else {
         tmp5 = cResult[1];
       }
-      if (cResult[2] !== text) {
-        const obj3 = { variant: "text-sm/medium", color: "text-muted", children: text };
-        const tmp12 = React4(Text_Text.Text, obj3);
-        cResult[2] = text;
-        cResult[3] = tmp12;
-        let tmp10 = tmp12;
-      } else {
-        tmp10 = cResult[3];
-      }
-      if (cResult[4] === tmp4.empty) {
-        if (cResult[5] === tmp5) {
-          if (cResult[6] === tmp10) {
-            let tmp13 = cResult[7];
-          }
-          return tmp13;
+      if (cResult[2] === tmp4.empty) {
+        if (cResult[3] === tmp5) {
+          let tmp8 = cResult[4];
         }
+        return tmp8;
       }
-      const obj4 = { style: tmp4.empty, children: null };
-      const items = [tmp5, tmp10];
-      obj4.children = items;
-      const tmp14 = hasOwnProperty(View, obj4);
-      cResult[4] = tmp4.empty;
-      cResult[5] = tmp5;
-      cResult[6] = tmp10;
-      cResult[7] = tmp14;
-      tmp13 = tmp14;
+      const tmp9 = <View style={tmp4.empty}>{tmp5}</View>;
+      cResult[2] = tmp4.empty;
+      cResult[3] = tmp5;
+      cResult[4] = tmp9;
+      tmp8 = tmp9;
+      const obj3 = { style: tmp4.empty, children: tmp5 };
     }
   : function FamilyCenterEmpty(children) {
-      const tmp = closure_6();
-      const obj = { style: tmp.empty, children: null };
-      const obj2 = { source: _modDef15114, style: tmp.art, resizeMethod: "scale" };
-      const items = [
-        React4(FastImageDefault, obj2),
-        React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),
-      ];
-      obj.children = items;
-      return hasOwnProperty(View, obj);
+      return (
+        <View style={closure_4().empty}>
+          {jsx(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })}
+        </View>
+      );
     };

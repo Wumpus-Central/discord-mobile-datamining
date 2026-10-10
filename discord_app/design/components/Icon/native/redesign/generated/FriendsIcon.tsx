@@ -1,8 +1,8 @@
 // discord_app/design/components/Icon/native/redesign/generated/FriendsIcon.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import _mod4816 from "../../../../../../../_runtime/metro/04816__.js";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5033 from "../../../../../../../_runtime/metro/05033__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const FriendsIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod5033;
+        const tmpResult = _mod4816;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const FriendsIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod5033,
+        source: _mod4816,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

@@ -61,7 +61,7 @@ const Constants = fn(1085);
   InviteStates: closure_8,
   MessageFlags: closure_9,
 } = Constants);
-const LinkType = fn(7370).LinkType;
+const LinkType = fn(7376).LinkType;
 const InviteTypes = fn(7423).InviteTypes;
 fn(558);
 let ReactCompilerGating = fn(558);

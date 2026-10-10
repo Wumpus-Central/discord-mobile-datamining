@@ -7,7 +7,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05391_LinearGradient.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
@@ -56,10 +56,10 @@ get_ActivityIndicator = fn(17);
 const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumTypes: c10, PremiumUpsellTypes: closure_11 } = PremiumConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Gradients = fn(7145).Gradients;
+const Gradients = fn(7151).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_17 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -518,7 +518,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             }
             items[1] = nitroWheelDisabled2;
             obj2.style = items;
-            let tmpResult = state(NitroWheelIcon.NitroWheelIcon, obj2);
+            let tmpResult = closure_2_14(NitroWheelIcon.NitroWheelIcon, obj2);
           } else {
             const items1 = [closure_3.nitroWheelButton];
             let nitroWheelDisabled = loading;
@@ -528,7 +528,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = { style: null };
             items1[1] = nitroWheelDisabled;
             obj.style = items1;
-            tmpResult = state(native.NitroWheel, obj);
+            tmpResult = closure_2_14(native.NitroWheel, obj);
           }
           return tmpResult;
         };
@@ -539,7 +539,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             end: ConstantsIOS.HorizontalGradient.END,
             colors: useTier0UpsellContent ? Gradients.PREMIUM_TIER_0 : Gradients.PREMIUM_TIER_2_TRI_COLOR,
           };
-          return state(LinearGradientDefault, obj);
+          return closure_2_14(LinearGradientDefault, obj);
         };
         items2[1] = closure_14(tmp(tmp2[22]).ShinyButton, obj7);
         obj4.children = items2;
@@ -571,13 +571,13 @@ function animationEnterExit(value, cleanUp) {
   obj.opacity = spring.withSpring(value, springPresets.springStandard, "respect-motion-settings", fn);
   return obj;
 }
-animationEnterExit.__closure = { withSpring: fn(5375).withSpring, springStandard: fn(5379).springStandard };
+animationEnterExit.__closure = { withSpring: fn(5378).withSpring, springStandard: fn(5382).springStandard };
 animationEnterExit.__workletHash = 15470414797897;
 animationEnterExit.__initData = {
   code: "function animationEnterExit_PremiumFeatureUpsellTsx1(visible,cleanUp){const{withSpring,springStandard}=this.__closure;return{opacity:withSpring(visible,springStandard,'respect-motion-settings',function(finished){cleanUp===null||cleanUp===void 0||cleanUp(finished);})};}",
 };
 ReactCompilerGating = fn(558);
-let obj3 = { withSpring: fn(5375).withSpring, springStandard: fn(5379).springStandard };
+let obj3 = { withSpring: fn(5378).withSpring, springStandard: fn(5382).springStandard };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumFeatureUpsell.tsx");
 

@@ -14,7 +14,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     while (true) {
@@ -121,7 +121,7 @@ let closure_6 = async function _uploadRtcLogFiles(arg0) {
       }
       if (dependencyMap === undefined) {
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } else {
         closure_131_1 = tmp57;
         closure_131_2 = "";

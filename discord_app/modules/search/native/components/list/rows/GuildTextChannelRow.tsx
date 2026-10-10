@@ -9,7 +9,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = ["channel", "trailing", "lastMessageId", "onPress"];
-const layout = fn(9285).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9312).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

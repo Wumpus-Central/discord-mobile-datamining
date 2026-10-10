@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   actionBarCTAContainer: { marginVertical: 4 },
   iconStyle: null,
@@ -75,16 +75,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             style: actionBarCTAContainer,
             onPress: tmp6,
-            iconSource: channel(8648),
+            iconSource: channel(8680),
             iconStyle: promptIconStyle,
             completed: isLive,
             title: tmp8,
             subtitle: tmp9,
           };
-          const tmp15 = jsx(tmp(8563).FormCTA, {
+          const tmp15 = jsx(tmp(8579).FormCTA, {
             style: actionBarCTAContainer,
             onPress: tmp6,
-            iconSource: channel(8648),
+            iconSource: channel(8680),
             iconStyle: promptIconStyle,
             completed: isLive,
             title: tmp8,
@@ -110,7 +110,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      obj2 = guild(8556);
+      obj2 = guild(8572);
     }
   : function ScheduleEventPrompt(isLive) {
       ({ guild: require, channel } = isLive);
@@ -126,7 +126,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 { channel },
               );
           },
-          iconSource: channel(8648),
+          iconSource: channel(8680),
           iconStyle: tmp.promptIconStyle,
           completed: isLive.isLive,
           title: null,
@@ -145,7 +145,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 { channel },
               );
           },
-          iconSource: channel(8648),
+          iconSource: channel(8680),
           iconStyle: tmp.promptIconStyle,
           completed: isLive.isLive,
           title: null,
@@ -190,12 +190,12 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[8] !== scheduled_start_time) {
               const intl2 = tmp(1126).intl;
-              const obj4 = { startTime: tmp(4752).calendarFormat(recurrenceId(4661)(scheduled_start_time)) };
+              const obj4 = { startTime: tmp(4793).calendarFormat(recurrenceId(4702)(scheduled_start_time)) };
               const formatToPlainStringResult1 = intl2.formatToPlainString(tmp(1126).t.PTebCR, obj4);
               cResult[8] = scheduled_start_time;
               cResult[9] = formatToPlainStringResult1;
               let tmp12 = formatToPlainStringResult1;
-              const tmpResult = tmp(4752);
+              const tmpResult = tmp(4793);
             } else {
               tmp12 = cResult[9];
             }
@@ -218,17 +218,17 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = {
               style: tmp7,
               onPress: tmp6,
-              iconSource: recurrenceId(8646),
+              iconSource: recurrenceId(8776),
               iconStyle: tmp8,
               iconContainerStyle: tmp9,
               completed: isLive,
               title: tmp10,
               subtitle: tmp12,
             };
-            const tmp18 = jsx(tmp(8563).FormCTA, {
+            const tmp18 = jsx(tmp(8579).FormCTA, {
               style: tmp7,
               onPress: tmp6,
-              iconSource: recurrenceId(8646),
+              iconSource: recurrenceId(8776),
               iconStyle: tmp8,
               iconContainerStyle: tmp9,
               completed: isLive,
@@ -265,7 +265,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         return null;
       }
-      obj2 = event(8556);
+      obj2 = event(8572);
     }
   : function StartEventPrompt(event) {
       event = event.event;
@@ -283,7 +283,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
               recurrenceId,
             );
           },
-          iconSource: recurrenceId(8646),
+          iconSource: recurrenceId(8776),
           iconStyle: tmp.iconStyle,
           iconContainerStyle: null,
           completed: null,
@@ -298,9 +298,9 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { eventName: name };
         obj2.title = intl.formatToPlainString(tmp2(1126).t["1vGXqM"], obj3);
         const intl2 = tmp2(1126).intl;
-        const obj4 = { startTime: tmp2(4752).calendarFormat(recurrenceId(4661)(scheduled_start_time)) };
+        const obj4 = { startTime: tmp2(4793).calendarFormat(recurrenceId(4702)(scheduled_start_time)) };
         obj2.subtitle = intl2.formatToPlainString(tmp2(1126).t.PTebCR, obj4);
-        tmp4 = jsx(tmp2(8563).FormCTA, {
+        tmp4 = jsx(tmp2(8579).FormCTA, {
           style: tmp.actionBarCTAContainer,
           onPress: function handleStartEvent() {
             const result = guild_scheduled_events_GuildScheduledEventModalActionCreators.openStartGuildEventModal(
@@ -308,14 +308,14 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled()
               recurrenceId,
             );
           },
-          iconSource: recurrenceId(8646),
+          iconSource: recurrenceId(8776),
           iconStyle: tmp.iconStyle,
           iconContainerStyle: null,
           completed: null,
           title: null,
           subtitle: null,
         });
-        const tmp2Result = tmp2(4752);
+        const tmp2Result = tmp2(4793);
       }
       return tmp4;
     };

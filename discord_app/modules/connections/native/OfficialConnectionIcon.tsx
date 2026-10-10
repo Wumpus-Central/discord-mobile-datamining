@@ -5,8 +5,8 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import useRoleIconProps from "../../roles/useRoleIconProps.tsx";
 import RoleIconDefault from "../../roles/native/RoleIcon.tsx";
-import _modDef10682 from "../../../../_runtime/metro/10682__.js";
-import _modDef10683 from "../../../../_runtime/metro/10683__.js";
+import _modDef10716 from "../../../../_runtime/metro/10716__.js";
+import _modDef10717 from "../../../../_runtime/metro/10717__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ const Constants = fn(1085);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj5 = {
                     style: tmp18,
                     size: native.Icon.Sizes.CUSTOM,
-                    source: _modDef10683,
+                    source: _modDef10717,
                     color: PRIMARY_630,
                   };
                   const tmp21 = timestampProducer(native.Icon, obj5);
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[25] = items2;
                 tmp18 = items2;
               }
-              const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef10682, color: roleColor };
+              const obj6 = { style: tmp14, size: native.Icon.Sizes.CUSTOM, source: _modDef10716, color: roleColor };
               const tmp17 = timestampProducer(native.Icon, obj6);
               cResult[20] = roleColor;
               cResult[21] = tmp14;
@@ -236,11 +236,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: null, children: null };
       const items1 = [style, size1];
       obj5.style = items1;
-      const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef10682, color: roleColor };
+      const obj6 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef10716, color: roleColor };
       const items2 = [tmp.verifiedCheck, size1];
       obj6.style = items2;
       const items3 = [timestampProducer(native.Icon, obj6)];
-      const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef10683, color: PRIMARY_630 };
+      const obj7 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef10717, color: PRIMARY_630 };
       const items4 = [tmp.verifiedCheck, size1];
       obj7.style = items4;
       items3[1] = timestampProducer(native.Icon, obj7);

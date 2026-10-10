@@ -31,7 +31,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   form: { paddingTop: nativeDefault.space.PX_16 },
   trailingWrapper: { flexDirection: "row", alignItems: "center" },
@@ -206,10 +206,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ contentContainerStyle, platformType } = closeGuildSettings);
       closeGuildSettings = closeGuildSettings.closeGuildSettings;
       let obj = platformType(576);
-      const token = platformType(4779).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+      const token = platformType(4818).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp6 = closure_13();
       dependencyMap = tmp6;
-      let obj2 = platformType(4779);
+      let obj2 = platformType(4818);
       const navigation = platformType(1503).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [hasChanges];
@@ -232,7 +232,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const submitting = stateFromStoresObject.submitting;
       hasChanges = stateFromStoresObject.hasChanges;
       guild = stateFromStoresObject.guild;
-      const tmp11 = closeGuildSettings(4992)();
+      const tmp11 = closeGuildSettings(5031)();
       constants2 = tmp11;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [hasChanges];
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-        value = tmp4(5760).get(platformType);
+        value = tmp4(5763).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -373,11 +373,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return hasChanges.getProps().integrations;
               }
             }
-            obj5.helpdeskArticle = tmp4(2127).getArticleURL(constants2.YOUTUBE_INTEGRATION);
+            obj5.helpdeskArticle = tmp4(2128).getArticleURL(constants2.YOUTUBE_INTEGRATION);
             const formatResult = intl2.format(tmp(1126).t["4OSAQ9"], obj5);
             cResult[28] = tmp38;
             cResult[29] = formatResult;
-            const tmp4Result3 = tmp4(2127);
+            const tmp4Result3 = tmp4(2128);
           }
         } else {
           let tmp43;
@@ -390,12 +390,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return hasChanges.getProps().integrations;
                 }
               }
-              obj6.helpdeskArticle = tmp4(2127).getArticleURL(constants2.TWITCH_INTEGRATION);
+              obj6.helpdeskArticle = tmp4(2128).getArticleURL(constants2.TWITCH_INTEGRATION);
               const formatResult1 = intl.format(tmp(1126).t.ro1jEN, obj6);
               cResult[30] = tmp38;
               cResult[31] = formatResult1;
               let tmp40 = formatResult1;
-              const tmp4Result4 = tmp4(2127);
+              const tmp4Result4 = tmp4(2128);
             } else {
               tmp40 = cResult[31];
             }
@@ -444,10 +444,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28 = tmp49;
           tmp29 = forResult;
           tmp30 = tmp43;
-          Form = tmp(8563).Form;
-          Stack = tmp(5374).Stack;
+          Form = tmp(8579).Form;
+          Stack = tmp(5377).Stack;
         }
-        const tmp4Result = tmp4(5760);
+        const tmp4Result = tmp4(5763);
       }
       cResult[4] = stateFromStores;
       cResult[5] = closeGuildSettings;
@@ -481,10 +481,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
         }
       }
-      const token = platformType(4779).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+      const token = platformType(4818).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp5 = closure_13();
       dependencyMap = tmp5;
-      let obj = platformType(4779);
+      let obj = platformType(4818);
       const navigation = platformType(1503).useNavigation();
       let obj2 = platformType(1503);
       const items = [c5];
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }));
       const submitting = stateFromStoresObject.submitting;
       ({ hasChanges: c5, guild } = stateFromStoresObject);
-      constants2 = closeGuildSettings(4992)();
+      constants2 = closeGuildSettings(5031)();
       const obj4 = platformType(504);
       const items1 = [c5];
       const stateFromStores = platformType(504).useStateFromStores(items1, () => _undefined.getProps().integrations);
@@ -510,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           fn = () => null;
         }
         const obj3 = { headerLeft: fn, title: null, headerRight: null };
-        value = tmp3(5760).get(platformType);
+        value = tmp3(5763).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -540,18 +540,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let intl = tmp(1126).intl;
           const obj6 = {
             connectAction: onConectTap,
-            helpdeskArticle: tmp3(2127).getArticleURL(constants2.YOUTUBE_INTEGRATION),
+            helpdeskArticle: tmp3(2128).getArticleURL(constants2.YOUTUBE_INTEGRATION),
           };
           let formatResult = intl.format(tmp(1126).t["4OSAQ9"], obj6);
-          const tmp3Result3 = tmp3(2127);
+          const tmp3Result3 = tmp3(2128);
         } else if (tmp10.TWITCH === platformType) {
           const intl2 = tmp(1126).intl;
           const obj7 = {
             connectAction: onConectTap,
-            helpdeskArticle: tmp3(2127).getArticleURL(constants2.TWITCH_INTEGRATION),
+            helpdeskArticle: tmp3(2128).getArticleURL(constants2.TWITCH_INTEGRATION),
           };
           formatResult = intl2.format(tmp(1126).t.ro1jEN, obj7);
-          const tmp3Result4 = tmp3(2127);
+          const tmp3Result4 = tmp3(2128);
         }
         const obj8 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
         const obj9 = { style: null, spacing: null, children: null };
@@ -580,10 +580,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { children: null };
         const items2 = [mapped];
         const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-        items2[1] = closure_10(tmp(5087).Text, obj12);
+        items2[1] = closure_10(tmp(5088).Text, obj12);
         obj9.children = items2;
-        obj8.children = closure_11(tmp(5374).Stack, obj9);
-        const items3 = [closure_10(tmp(8563).Form, obj8), closure_10(tmp(6726).NavScrim, {})];
+        obj8.children = closure_11(tmp(5377).Stack, obj9);
+        const items3 = [closure_10(tmp(8579).Form, obj8), closure_10(tmp(6727).NavScrim, {})];
         obj11.children = items3;
         return closure_11(closure_12, obj11);
       }

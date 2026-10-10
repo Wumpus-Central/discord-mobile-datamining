@@ -7,7 +7,7 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 import ChangelogStore from "ChangelogStore.tsx";
 
 require = fn;
-const ChangelogLoadState = fn(2114).ChangelogLoadState;
+const ChangelogLoadState = fn(2115).ChangelogLoadState;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useChangelog(id, arg1) {

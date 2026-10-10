@@ -1,7 +1,7 @@
 // discord_app/modules/notifications/settings/native/routes/RedesignSettingsNotificationScreen.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
-import _modDef2891 from "../../../NotificationSettings.messages.js";
+import _modDef2894 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../../settings/native/renderer/SettingLayout.tsx";
@@ -11,8 +11,8 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(15695).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7974).MobileUserSettings;
+let closure_4 = fn(15757).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(7992).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -38,7 +38,7 @@ export default noop.memo(
           const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
           const obj5 = { label: null, settings: null };
           const intl = util.intl;
-          obj5.label = intl.string(_modDef2891.nvBHcD);
+          obj5.label = intl.string(_modDef2894.nvBHcD);
           const items1 = [, , , , , ,];
           ({
             REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],
@@ -123,7 +123,7 @@ export default noop.memo(
           const items = [MobileNotifSettingsRouteBuilders.buildOverviewCategoriesSection()];
           const obj4 = { label: null, settings: null };
           const intl = util.intl;
-          obj4.label = intl.string(_modDef2891.nvBHcD);
+          obj4.label = intl.string(_modDef2894.nvBHcD);
           const items1 = [, , , , , ,];
           ({
             REDESIGN_IN_APP_NOTIFICATIONS: arr2[0],

@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/native/FractionalNitroPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef13365 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef13415 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ const VerticalGradient = fn(1085).VerticalGradient;
 const PremiumTypes = fn(1392).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flexDirection: "column",
@@ -68,8 +68,8 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         obj2.legacyCopy = intl3.string(tmp(1126).t.xT1Vfn);
         const intl4 = tmp(1126).intl;
         const obj3 = { maxFileSize: null };
-        const tmpResult = tmp(7742);
-        obj3.maxFileSize = tmp(4728).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+        const tmpResult = tmp(7760);
+        obj3.maxFileSize = tmp(4769).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
         obj2.rolloutCopy = intl4.formatToPlainString(tmp(1126).t.IDAfOy, obj3);
         items[2] = tmpResult.getNitroFileUploadRolloutCopy(obj2);
         const intl5 = tmp(1126).intl;
@@ -78,7 +78,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         items[4] = intl6.string(tmp(1126).t.zTk8Ul);
         cResult[0] = items;
         let first = items;
-        const tmpResult2 = tmp(4728);
+        const tmpResult2 = tmp(4769);
       } else {
         first = cResult[0];
       }
@@ -101,7 +101,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { uri: _modDef13365 };
+        const obj5 = { uri: _modDef13415 };
         cResult[4] = obj5;
         let tmp12 = obj5;
       } else {
@@ -223,7 +223,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
         end: VerticalGradient.END,
         style: tmp.gradient,
       };
-      obj8.uri = _modDef13365;
+      obj8.uri = _modDef13415;
       obj7.source = obj8;
       obj7.style = tmp.headerImage;
       items1[1] = closure_6(FastImageDefault, obj7);

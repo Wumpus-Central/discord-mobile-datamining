@@ -25,7 +25,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_8 = async function _getOrFetchApplicationForLaunch(arg0) {
         obj7.locationKind = closure_131_3;
         closure_132_1(closure_132_2[6]).dispatch(obj7);
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } else if (arg0 === 1) {
         c8 = 3;
         throw value;
@@ -135,7 +135,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -181,13 +181,13 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(4698).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4739).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(10797)(
+                  shouldClosePopout(10871)(
                     tmp,
                     channel,
                     () => {
@@ -203,7 +203,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(4698);
+              const obj2 = closure_1_0(4739);
             });
             c2 = 2;
             c3 = 1;
@@ -241,7 +241,7 @@ let closure_10 = async function _confirmActivityAgeGate(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -388,7 +388,7 @@ let closure_11 = async function _confirmExternalAppLaunch(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

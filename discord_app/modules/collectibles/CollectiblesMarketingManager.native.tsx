@@ -2,6 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import CollectiblesActionCreators from "CollectiblesActionCreators.tsx";
 import CollectiblesMarketingReleaseType2 from "../../../discord_common/js/shared/shared-constants/CollectiblesMarketingReleaseType.tsx";
+import CollectiblesMarketingCacheExperiment from "experiments/CollectiblesMarketingCacheExperiment.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 
@@ -11,10 +12,20 @@ class CollectiblesMarketingManager extends tmp2 {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
       value = DevSettingsStore.get("shop_include_unpublished");
-      const CollectiblesMarketingReleaseType = CollectiblesMarketingReleaseType2.CollectiblesMarketingReleaseType;
-      const collectiblesMarketings = CollectiblesActionCreators.fetchCollectiblesMarketings({
-        release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD,
-      });
+      const collectiblesMarketingCacheTTL =
+        CollectiblesMarketingCacheExperiment.getCollectiblesMarketingCacheTTL("CollectiblesMarketingManager");
+      let result = null != collectiblesMarketingCacheTTL;
+      if (result) {
+        const obj2 = { ttlMs: collectiblesMarketingCacheTTL };
+        result = CollectiblesActionCreators.restoreCollectiblesMarketingsFromCache(obj2);
+        const tmp2Result = CollectiblesActionCreators;
+      }
+      if (!result) {
+        let CollectiblesMarketingReleaseType = CollectiblesMarketingReleaseType2.CollectiblesMarketingReleaseType;
+        const obj3 = { release: value ? CollectiblesMarketingReleaseType.BETA : CollectiblesMarketingReleaseType.PROD };
+        CollectiblesMarketingReleaseType = CollectiblesActionCreators.fetchCollectiblesMarketings(obj3);
+        const tmp2Result2 = CollectiblesActionCreators;
+      }
     };
     return applyArgumentsResult;
   }
@@ -28,6 +39,6 @@ prototype["_terminate"] = function _terminate() {
 };
 const collectiblesMarketingManager = new CollectiblesMarketingManager();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/CollectiblesMarketingManager.native.tsx");
 
 export default collectiblesMarketingManager;

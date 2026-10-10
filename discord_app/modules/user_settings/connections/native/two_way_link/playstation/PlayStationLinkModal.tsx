@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef5010 from "../../../../../../../_runtime/metro/05010__.js";
 import Navigator from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import _modDef7728 from "../../../../../../../_runtime/metro/07728__.js";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
 import useAccountLinkStepTracking from "../useAccountLinkStepTracking.tsx";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
@@ -17,7 +17,7 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 function getScreens(platformType, headerStyle) {
   function onClose() {
-    return onClose(12869).hideModal();
+    return onClose(12916).hideModal();
   }
   function blank() {
     return null;
@@ -37,7 +37,7 @@ function getScreens(platformType, headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(platformType(9188).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return jsx(platformType(9215).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
         return jsx(PlayStationLinkPreConnect.PlayStationLinkPreConnect, { platformType });
@@ -48,7 +48,7 @@ function getScreens(platformType, headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(platformType(9188).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return jsx(platformType(9215).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
@@ -79,7 +79,7 @@ function getScreens(platformType, headerStyle) {
     },
   };
 }
-const constants = fn(12871).PlayStationLinkModalScenes;
+const constants = fn(12918).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const headerRight = ReactCompilerGating.isReactCompilerEnabled()
@@ -95,11 +95,11 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef5010, onPress: first, accessibilityLabel: null };
+        const obj2 = { source: _modDef7728, onPress: first, accessibilityLabel: null };
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
         const tmp8 = jsx(HeaderActionButton.HeaderActionButton, {
-          source: _modDef5010,
+          source: _modDef7728,
           onPress: first,
           accessibilityLabel: null,
         });
@@ -112,7 +112,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CloseButton() {
       const obj = {
-        source: _modDef5010,
+        source: _modDef7728,
         onPress: function onClose() {
           return PlayStationLinkModalActionCreatorsDefault.hideModal();
         },
@@ -121,7 +121,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
       return jsx(HeaderActionButton.HeaderActionButton, {
-        source: _modDef5010,
+        source: _modDef7728,
         onPress: function onClose() {
           return PlayStationLinkModalActionCreatorsDefault.hideModal();
         },
@@ -188,11 +188,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function PlayStationLinkModal(platformType) {
       platformType = platformType.platformType;
-      const twoWayLinkStyles = platformType(9187).useTwoWayLinkStyles();
+      const twoWayLinkStyles = platformType(9214).useTwoWayLinkStyles();
       const items = [platformType, twoWayLinkStyles];
       const memo = noop.useMemo(() => getScreens(platformType, twoWayLinkStyles), items);
-      const obj = platformType(9187);
-      const accountLinkStepTracking = platformType(12868).useAccountLinkStepTracking(
+      const obj = platformType(9214);
+      const accountLinkStepTracking = platformType(12915).useAccountLinkStepTracking(
         platformType,
         platformType.locationStack,
       );
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = platformType(1126).intl;
       obj3.headerBackTitle = intl.string(platformType(1126).t["13/7kX"]);
-      return jsx(platformType(6686).Navigator, {
+      return jsx(platformType(6687).Navigator, {
         onStateChange: accountLinkStepTracking,
         screens: memo,
         initialRouteName: constants.LANDING,

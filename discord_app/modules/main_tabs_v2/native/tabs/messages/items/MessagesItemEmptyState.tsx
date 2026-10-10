@@ -5,39 +5,28 @@ import util from "../../../../../../intl/index.native.tsx";
 import RootNavigationRef from "../../../../RootNavigationRef.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
-import _modDef16397 from "../../../../../../../_runtime/metro/16397__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
-let obj = {
-  container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 },
-  containerImage: null,
-  image: null,
-  body: null,
-  title: null,
-};
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(5092);
+let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
-obj.containerImage = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
-obj.image = { height: "100%", width: "100%" };
-let obj4 = { marginBottom: nativeDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
 obj.body = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
 obj.title = { textAlign: "center" };
-let closure_7 = createStyles.createStyles(obj);
+let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj5 = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
+let obj4 = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
 
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function MessagesItemEmptyState() {
-        const cResult = c.c(18);
-        const tmp4 = closure_7();
+        const cResult = c.c(12);
+        const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const fn = function t() {
             const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
@@ -57,111 +46,85 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        if (cResult[1] !== tmp4.image) {
-          let obj2 = { resizeMode: "contain", source: _modDef16397, style: tmp4.image };
-          const tmp10 = hasOwnProperty(FastImageDefault, obj2);
-          cResult[1] = tmp4.image;
-          cResult[2] = tmp10;
-          let tmp6 = tmp10;
+        ({ container, title } = tmp4);
+        if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = util.intl;
+          const stringResult = intl.string(util.t["8JZof8"]);
+          cResult[1] = stringResult;
+          let tmp6 = stringResult;
         } else {
-          tmp6 = cResult[2];
+          tmp6 = cResult[1];
         }
-        if (cResult[3] === tmp4.containerImage) {
-          if (cResult[4] === tmp6) {
-            let tmp11 = cResult[5];
-          }
-          const _Symbol = Symbol;
-          if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = util.intl;
-            const stringResult = intl.string(util.t["8JZof8"]);
-            cResult[6] = stringResult;
-            let tmp13 = stringResult;
-          } else {
-            tmp13 = cResult[6];
-          }
-          if (cResult[7] !== tmp4.title) {
-            const obj3 = {
-              color: "mobile-text-heading-primary",
-              variant: "heading-lg/bold",
-              style: tmp4.title,
-              maxFontSizeMultiplier: 2,
-              children: tmp13,
-            };
-            const tmp17 = hasOwnProperty(Text_Text.Heading, obj3);
-            cResult[7] = tmp4.title;
-            cResult[8] = tmp17;
-            let tmp15 = tmp17;
-          } else {
-            tmp15 = cResult[8];
-          }
-          const _Symbol2 = Symbol;
-          if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = util.intl;
-            const stringResult1 = intl2.string(util.t["qm+H7x"]);
-            cResult[9] = stringResult1;
-            let tmp18 = stringResult1;
-          } else {
-            tmp18 = cResult[9];
-          }
-          if (cResult[10] !== tmp4.body) {
-            const obj4 = {
-              color: "text-default",
-              variant: "text-md/medium",
-              style: tmp4.body,
-              maxFontSizeMultiplier: 2,
-              children: tmp18,
-            };
-            const tmp22 = hasOwnProperty(Text_Text.Text, obj4);
-            cResult[10] = tmp4.body;
-            cResult[11] = tmp22;
-            let tmp20 = tmp22;
-          } else {
-            tmp20 = cResult[11];
-          }
-          const _Symbol3 = Symbol;
-          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj5 = { text: null, onPress: null, size: "lg" };
-            const intl3 = util.intl;
-            obj5.text = intl3.string(util.t.zIJnA6);
-            obj5.onPress = first;
-            const tmp25 = hasOwnProperty(components_Button_Button.Button, obj5);
-            cResult[12] = tmp25;
-            let tmp23 = tmp25;
-          } else {
-            tmp23 = cResult[12];
-          }
-          if (cResult[13] === tmp4.container) {
-            if (cResult[14] === tmp11) {
-              if (cResult[15] === tmp15) {
-                if (cResult[16] === tmp20) {
-                  let tmp26 = cResult[17];
-                }
-                return tmp26;
-              }
+        if (cResult[2] !== tmp4.title) {
+          let obj2 = {
+            color: "mobile-text-heading-primary",
+            variant: "heading-lg/bold",
+            style: title,
+            maxFontSizeMultiplier: 2,
+            children: tmp6,
+          };
+          const tmp10 = React4(Text_Text.Heading, obj2);
+          cResult[2] = tmp4.title;
+          cResult[3] = tmp10;
+          let tmp8 = tmp10;
+        } else {
+          tmp8 = cResult[3];
+        }
+        if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl2 = util.intl;
+          const stringResult1 = intl2.string(util.t["qm+H7x"]);
+          cResult[4] = stringResult1;
+          let tmp11 = stringResult1;
+        } else {
+          tmp11 = cResult[4];
+        }
+        if (cResult[5] !== tmp4.body) {
+          const obj3 = {
+            color: "text-default",
+            variant: "text-md/medium",
+            style: tmp4.body,
+            maxFontSizeMultiplier: 2,
+            children: tmp11,
+          };
+          const tmp15 = React4(Text_Text.Text, obj3);
+          cResult[5] = tmp4.body;
+          cResult[6] = tmp15;
+          let tmp13 = tmp15;
+        } else {
+          tmp13 = cResult[6];
+        }
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj4 = { text: null, onPress: null, size: "lg" };
+          const intl3 = util.intl;
+          obj4.text = intl3.string(util.t.zIJnA6);
+          obj4.onPress = first;
+          const tmp18 = React4(components_Button_Button.Button, obj4);
+          cResult[7] = tmp18;
+          let tmp16 = tmp18;
+        } else {
+          tmp16 = cResult[7];
+        }
+        if (cResult[8] === tmp4.container) {
+          if (cResult[9] === tmp8) {
+            if (cResult[10] === tmp13) {
+              let tmp19 = cResult[11];
             }
+            return tmp19;
           }
-          const obj6 = { style: tmp4.container, collapsable: false, children: null };
-          const items = [tmp11, tmp15, tmp20, tmp23];
-          obj6.children = items;
-          const tmp29 = timestampProducer(View, obj6);
-          cResult[13] = tmp4.container;
-          cResult[14] = tmp11;
-          cResult[15] = tmp15;
-          cResult[16] = tmp20;
-          cResult[17] = tmp29;
-          tmp26 = tmp29;
         }
-        const tmp12 = hasOwnProperty(View, { style: tmp4.containerImage, children: tmp6 });
-        cResult[3] = tmp4.containerImage;
-        cResult[4] = tmp6;
-        cResult[5] = tmp12;
-        tmp11 = tmp12;
-        const obj7 = { style: tmp4.containerImage, children: tmp6 };
+        const obj5 = { style: container, collapsable: false, children: null };
+        const items = [tmp8, tmp13, tmp16];
+        obj5.children = items;
+        const tmp20 = hasOwnProperty(View, obj5);
+        cResult[8] = tmp4.container;
+        cResult[9] = tmp8;
+        cResult[10] = tmp13;
+        cResult[11] = tmp20;
+        tmp19 = tmp20;
       }
     : function MessagesItemEmptyState() {
-        const tmp = closure_7();
+        const tmp = closure_6();
         const obj = { style: tmp.container, collapsable: false, children: null };
-        let obj2 = { style: tmp.containerImage, children: null };
         const callback = noop.useCallback(() => {
           const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
           if (rootNavigationRef != null) {
@@ -175,10 +138,7 @@ export default noop.memo(
             }
           }
         }, []);
-        const obj3 = { resizeMode: "contain", source: _modDef16397, style: tmp.image };
-        obj2.children = hasOwnProperty(FastImageDefault, obj3);
-        const items = [hasOwnProperty(View, obj2), , ,];
-        const obj4 = {
+        let obj2 = {
           color: "mobile-text-heading-primary",
           variant: "heading-lg/bold",
           style: tmp.title,
@@ -186,9 +146,9 @@ export default noop.memo(
           children: null,
         };
         const intl = util.intl;
-        obj4.children = intl.string(util.t["8JZof8"]);
-        items[1] = hasOwnProperty(Text_Text.Heading, obj4);
-        const obj5 = {
+        obj2.children = intl.string(util.t["8JZof8"]);
+        const items = [React4(Text_Text.Heading, obj2), ,];
+        const obj3 = {
           color: "text-default",
           variant: "text-md/medium",
           style: tmp.body,
@@ -196,15 +156,15 @@ export default noop.memo(
           children: null,
         };
         const intl2 = util.intl;
-        obj5.children = intl2.string(util.t["qm+H7x"]);
-        items[2] = hasOwnProperty(Text_Text.Text, obj5);
-        const obj6 = { text: null, onPress: null, size: "lg" };
+        obj3.children = intl2.string(util.t["qm+H7x"]);
+        items[1] = React4(Text_Text.Text, obj3);
+        const obj4 = { text: null, onPress: null, size: "lg" };
         const intl3 = util.intl;
-        obj6.text = intl3.string(util.t.zIJnA6);
-        obj6.onPress = callback;
-        items[3] = hasOwnProperty(components_Button_Button.Button, obj6);
+        obj4.text = intl3.string(util.t.zIJnA6);
+        obj4.onPress = callback;
+        items[2] = React4(components_Button_Button.Button, obj4);
         obj.children = items;
-        return timestampProducer(View, obj);
+        return hasOwnProperty(View, obj);
       },
 );
 export const MESSAGES_ITEM_EMPTY_STATE_HEIGHT = 325;

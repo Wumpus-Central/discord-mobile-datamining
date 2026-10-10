@@ -1,7 +1,7 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeForce.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import v1 from "../../../../../_runtime/01279_v1.js";
-import inlineStyles from "../../../../../_runtime/07559_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";

@@ -16,7 +16,7 @@ const Constants = fn(1085);
   SubscriptionStatusTypesSets: closure_7,
   SubscriptionTypes: closure_8,
 } = Constants);
-const BillingConstants = fn(4739);
+const BillingConstants = fn(4780);
 ({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: c10 } = BillingConstants);
 const PremiumConstants = fn(1392);
 ({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
@@ -246,7 +246,7 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
 });
 Object.defineProperty(prototype, "planIdFromItems", {
   get: function planIdFromItems() {
-    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(__initData2));
+    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(map1));
   },
   set: undefined,
 });

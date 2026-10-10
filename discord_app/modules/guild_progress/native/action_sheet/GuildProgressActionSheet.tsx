@@ -22,7 +22,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildProgressConstants = fn(12158);
+const GuildProgressConstants = fn(12202);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1085);
 ({
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingTop: 8, paddingBottom: 16 },
@@ -70,7 +70,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { style: tmp4.header, children: null };
           const items = [tmp5, tmp7];
           obj2.children = items;
-          const tmp13 = closure_1_15(View, obj2);
+          const tmp13 = value2(View, obj2);
           cResult[6] = tmp4.header;
           cResult[7] = tmp5;
           cResult[8] = tmp7;
@@ -78,13 +78,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = tmp13;
         }
         const obj3 = { style: tmp4.headerSubtitle, children: subtitle };
-        const tmp9 = state(native.LegacyText, obj3);
+        const tmp9 = closure_1_14(native.LegacyText, obj3);
         cResult[3] = tmp4.headerSubtitle;
         cResult[4] = subtitle;
         cResult[5] = tmp9;
         tmp7 = tmp9;
       }
-      const tmp6 = state(Text_Text.Text, {
+      const tmp6 = closure_1_14(Text_Text.Text, {
         style: tmp4.headerTitle,
         variant: "heading-xl/extrabold",
         color: "mobile-text-heading-primary",
@@ -108,17 +108,17 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_16();
       const obj = { style: tmp.header, children: null };
       const items = [
-        state(Text_Text.Text, {
+        closure_1_14(Text_Text.Text, {
           style: tmp.headerTitle,
           variant: "heading-xl/extrabold",
           color: "mobile-text-heading-primary",
           accessibilityRole: "header",
           children: title,
         }),
-        state(native.LegacyText, { style: tmp.headerSubtitle, children: subtitle }),
+        closure_1_14(native.LegacyText, { style: tmp.headerSubtitle, children: subtitle }),
       ];
       obj.children = items;
-      return closure_1_15(View, obj);
+      return value2(View, obj);
     };
 let closure_17 = tmp6;
 const size = fn(2);
@@ -265,7 +265,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -280,14 +280,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return obj3;
               } else {
                 let base64;
-                tmp5(8621).init(View);
-                const obj6 = tmp5(8621);
-                tmp2(12163).hideActionSheet(id.id);
-                const obj7 = tmp2(12163);
+                tmp5(8637).init(View);
+                const obj6 = tmp5(8637);
+                tmp2(12207).hideActionSheet(id.id);
+                const obj7 = tmp2(12207);
                 const obj4 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj5 = { value: tmp5(7750).openImagePicker(obj4), done: false };
+                const obj5 = { value: tmp5(7768).openImagePicker(obj4), done: false };
                 return obj5;
               }
             } else if (arg0 === 1) {
@@ -300,11 +300,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               base64 = value.base64;
               if (null != base64) {
-                tmp5(8621).updateIcon(closure_129_5, base64);
-                const obj = tmp5(8621);
+                tmp5(8637).updateIcon(closure_129_5, base64);
+                const obj = tmp5(8637);
               }
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp16) {
             c3 = tmp;

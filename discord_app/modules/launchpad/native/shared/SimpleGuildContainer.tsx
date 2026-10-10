@@ -7,7 +7,7 @@ import GuildsBarActivityIndicatorDefault from "../../../guilds_bar/native/Guilds
 import CutoutImageDefault from "CutoutImage.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildsBarActivityIndicator = isCurrentUserConnected(16697);
+const GuildsBarActivityIndicator = isCurrentUserConnected(16767);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_12 = noop.memo(

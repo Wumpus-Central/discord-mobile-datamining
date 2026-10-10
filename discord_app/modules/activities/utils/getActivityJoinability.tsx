@@ -32,13 +32,13 @@ export default function getActivityJoinability(arg0) {
   if (isEmbedded) {
     if (isEmbedded) {
       const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
-      let tmp16 = null != currentEmbeddedActivity;
-      if (tmp16) {
+      let tmp17 = null != currentEmbeddedActivity;
+      if (tmp17) {
         let application_id;
         if (activity != null) {
           application_id = activity.application_id;
         }
-        tmp16 = currentEmbeddedActivity.applicationId === application_id;
+        tmp17 = currentEmbeddedActivity.applicationId === application_id;
       }
     }
     if (null == user) {
@@ -52,6 +52,7 @@ export default function getActivityJoinability(arg0) {
             channelId,
             currentUser: tmp2,
             application: tmp,
+            isContentGated: tmp3,
             isActivitiesEnabledForCurrentPlatform: null,
             ChannelStore: null,
             VoiceStateStore: null,
@@ -62,9 +63,9 @@ export default function getActivityJoinability(arg0) {
             useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
           obj5.ChannelStore = ChannelStore;
           obj5.VoiceStateStore = VoiceStateStore;
-          obj5.PermissionStore = tmp3;
+          obj5.PermissionStore = tmp4;
           obj5.GuildStore = GuildStore;
-          if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
+          if (tmp46Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
             CANNOT_JOIN2 = obj.CANNOT_JOIN;
@@ -87,7 +88,7 @@ export default function getActivityJoinability(arg0) {
       }
       const partySize = getPartySize.getPartySize(activity);
       if (obj4.hasPartySize(partySize)) {
-        if (!tmp27Result.isPartyFull(partySize)) {
+        if (!tmp28Result.isPartyFull(partySize)) {
           if (hasFlagDefault(activity, constants.PARTY_PRIVACY_FRIENDS)) {
             if (RelationshipStore.isFriend(user.id)) {
               return obj.CAN_JOIN;
@@ -125,7 +126,7 @@ export default function getActivityJoinability(arg0) {
             return obj.CANNOT_JOIN;
           }
         }
-        tmp27Result = isPartyFull;
+        tmp28Result = isPartyFull;
       }
       return obj.CANNOT_JOIN;
     }
@@ -134,11 +135,11 @@ export default function getActivityJoinability(arg0) {
     if (activity != null) {
       application_id1 = activity.application_id;
     }
-    const tmp8Result = getCurrentUserPresenceActivityDefault(tmp4, tmp5, application_id1);
-    let isInParty = null != tmp8Result;
+    const tmp9Result = getCurrentUserPresenceActivityDefault(tmp5, tmp6, application_id1);
+    let isInParty = null != tmp9Result;
     if (isInParty) {
       obj = getIsInParty;
-      isInParty = obj.getIsInParty(tmp8Result, activity);
+      isInParty = obj.getIsInParty(tmp9Result, activity);
     }
   }
   return obj.JOINED;

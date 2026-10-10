@@ -44,7 +44,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -121,8 +121,8 @@ const Constants = fn(1085);
 const getAppIntentScheme = fn(2024).getAppIntentScheme;
 let obj2 = new LoggerDefault("VoiceEngineStreamingManager");
 obj2.enableNativeLogger(true);
-const timeout = new fn(2059).Timeout();
-const timeout1 = new fn(2059).Timeout();
+const timeout = new fn(2060).Timeout();
+const timeout1 = new fn(2060).Timeout();
 let closure_16 = [];
 const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 class VoiceEngineStreamingManager extends tmp6 {
@@ -167,10 +167,10 @@ prototype["_initialize"] = function _initialize() {
       currentUserActiveStream(7443).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(5105);
+        const tmp2Result = closure_1(5106);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(5897).encodeStreamKey(currentUserActiveStream),
+          tmp9(5900).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
@@ -191,7 +191,7 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(5897);
+        const tmp9Result = tmp9(5900);
       }
       const obj3 = currentUserActiveStream(7443);
       tmp9 = currentUserActiveStream;

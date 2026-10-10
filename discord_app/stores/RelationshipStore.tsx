@@ -28,7 +28,7 @@ function upsertRelationship(id, type) {
       }
     }
     const result = map.set(id, type);
-    const value4 = map1.get(type);
+    value4 = map1.get(type);
     if (null != value4) {
       value4.add(id);
     } else {
@@ -92,7 +92,7 @@ let closure_14 = 0;
 const dependencyMap = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = { friends: "color", blocked: "l", ignored: "ks", blockedOrIgnored: "find" };
+let closure_19 = { friends: "Array", blocked: "T", ignored: "y", blockedOrIgnored: "IconComponent" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -523,7 +523,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     set.delete(relationship.relationship.id);
     flushStaleUserIdLists();
     size = set2.size;
-    const value4 = map1.get(RelationshipTypes.PENDING_INCOMING);
+    value4 = map1.get(RelationshipTypes.PENDING_INCOMING);
     let num;
     if (value4 != null) {
       num = value4.size;

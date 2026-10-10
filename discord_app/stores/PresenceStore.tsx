@@ -188,7 +188,7 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      const map1 = new Map(
+      map1 = new Map(
         reversed1.map((party) => {
           party = party.party;
           let id;

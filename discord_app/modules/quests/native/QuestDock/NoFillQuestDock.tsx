@@ -6,13 +6,13 @@ const require = globalThis.__r;
 const require = fn;
 let View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_4 = createStyles.createStyles({
-  placeholder: { position: "absolute", left: 0, right: 0, height: fn(15285).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
+  placeholder: { position: "absolute", left: 0, right: 0, height: fn(15347).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
 });
 const ReactCompilerGating = fn(558);
 let obj2 = {
-  placeholder: { position: "absolute", left: 0, right: 0, height: fn(15285).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
+  placeholder: { position: "absolute", left: 0, right: 0, height: fn(15347).QUEST_DOCK_COLLAPSED_HEIGHT, opacity: 0 },
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/NoFillQuestDock.tsx");
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           accessibilityElementsHidden: "no-hide-descendants",
           importantForAccessibility: "none",
           pointerEvents: null,
-          style: "SubjectArea",
+          style: "RNGestureHandlerButton",
         };
         let items = [tmp.placeholder];
         const obj3 = { bottom: youBarTotalHeight - 1 };
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             accessibilityElementsHidden="no-hide-descendants"
             importantForAccessibility="none"
             pointerEvents={null}
-            style="SubjectArea"
+            style="RNGestureHandlerButton"
           />
         );
       } else {

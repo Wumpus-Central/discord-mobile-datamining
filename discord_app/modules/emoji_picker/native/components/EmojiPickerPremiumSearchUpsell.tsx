@@ -7,22 +7,22 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import MobileEmojiPickerUpsellRestyleExperiment from "../../../premium/experiments/MobileEmojiPickerUpsellRestyleExperiment.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
-import _modDef9490 from "../../../../../_runtime/metro/09490__.js";
+import _modDef9519 from "../../../../../_runtime/metro/09519__.js";
 import PremiumExpressionPickerSearchUpsellDefault from "../../../premium/roadblocks/native/views/PremiumExpressionPickerSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const util = NitroWheelIcon(1126);
 const native = NitroWheelIcon(1200);
-const PremiumUtils = NitroWheelIcon(4728);
-const NitroWheelIcon2 = NitroWheelIcon(9016);
+const PremiumUtils = NitroWheelIcon(4769);
+const NitroWheelIcon2 = NitroWheelIcon(9035);
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
 const PremiumConstants = fn(1392);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -317,13 +317,13 @@ export const PremiumSearchUpsell = noop.memo(
           } else {
             const obj6 = {
               style: nitroIcon.nitroIcon,
-              source: _modDef9490,
+              source: _modDef9519,
               disableColor: true,
               size: native.Icon.Sizes.MEDIUM,
             };
             tmp15Result = jsx(native.Icon, {
               style: nitroIcon.nitroIcon,
-              source: _modDef9490,
+              source: _modDef9519,
               disableColor: true,
               size: native.Icon.Sizes.MEDIUM,
             });
@@ -371,13 +371,13 @@ export const PremiumSearchUpsell = noop.memo(
         } else {
           const obj5 = {
             style: tmp.nitroIcon,
-            source: _modDef9490,
+            source: _modDef9519,
             disableColor: true,
             size: native.Icon.Sizes.MEDIUM,
           };
           tmp7Result = jsx(native.Icon, {
             style: tmp.nitroIcon,
-            source: _modDef9490,
+            source: _modDef9519,
             disableColor: true,
             size: native.Icon.Sizes.MEDIUM,
           });

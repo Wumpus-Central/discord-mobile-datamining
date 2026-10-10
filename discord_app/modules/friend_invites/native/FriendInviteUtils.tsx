@@ -2,7 +2,6 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5006 from "../../../../_runtime/metro/05006__.js";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
@@ -15,11 +14,10 @@ export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
   InstantInviteActionCreatorsDefault.revokeFriendInvites().then(() => {
-    const obj2 = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
+    const obj2 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj2.content = intl.string(util.t.jSHEOQ);
-    obj2.icon = _modDef5006;
-    ToastActionCreatorsDefault.open(obj2);
+    obj2.text = intl.string(util.t.jSHEOQ);
+    ToastActionCreatorsDefault.open("TOAST_FRIEND_INVITES_REVOKED", obj2);
   });
 };
 export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
@@ -30,7 +28,7 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
     }
     if (null != dMFromUserId) {
       InstantInviteActionCreatorsDefault.transitionToInvite(invite, { forceTransition: true });
-      DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
+      DispatcherDefault.wait(() => closure_1_1(closure_1_2[6])());
     } else {
       let obj2 = {
         inviteKey: invite.code,
@@ -43,17 +41,12 @@ export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
             username = inviter.username;
           }
           const obj = ToastActionCreatorsDefault;
-          obj.open({
-            key: "FRIEND_INVITE_ACCEPT_CONFIRMATION",
-            content: intl.formatToPlainString(util.t.st2dcs, { username }),
-            icon: _modDef5006,
+          obj.open("FRIEND_INVITE_ACCEPT_CONFIRMATION", {
+            text: intl.formatToPlainString(util.t.st2dcs, { username }),
+            variant: "success",
           });
-          const obj2 = {
-            key: "FRIEND_INVITE_ACCEPT_CONFIRMATION",
-            content: intl.formatToPlainString(util.t.st2dcs, { username }),
-            icon: _modDef5006,
-          };
-          DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
+          const obj2 = { text: intl.formatToPlainString(util.t.st2dcs, { username }), variant: "success" };
+          DispatcherDefault.wait(() => closure_1_1(closure_1_2[6])());
           const tmpResult = DispatcherDefault;
         },
       };

@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx
-import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
+import fetchShelf from "../fetchShelf.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
@@ -18,7 +18,7 @@ let closure_7 = async function _getCachedOrFetchActivityApplicationForLaunch() {
   if (channel != null) {
     const guild_id = channel.guild_id;
   }
-  await EmbeddedActivitiesActionCreators.fetchShelf({ guildId: guild_id });
+  await fetchShelf.fetchShelf({ guildId: guild_id });
   closure_130_1 = value;
   const activityConfigs = closure_130_1.activityConfigs;
   const applications = closure_130_1.applications;

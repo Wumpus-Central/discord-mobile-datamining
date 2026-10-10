@@ -6,7 +6,7 @@ import DismissibleContentShownStateStore from "../dismissible_content/Dismissibl
 
 require = fn;
 const NOOP = fn(1085).NOOP;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 let items = [];
 const module_570 = fn(570);
 let closure_8 = module_570.create(() => ({ suggestions: items, dismiss: NOOP }));
@@ -98,7 +98,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = isFreemium;
         cResult[2] = items1;
       } else {
-        const tmp9 = _slicedToArray(tmp(7093).useSelectedDismissibleContent(cResult[2]), 2);
+        const tmp9 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[2]), 2);
         _require = tmp10;
         if (cResult[3] !== tmp9[1]) {
           class I {
@@ -168,7 +168,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp16;
         cResult[10] = obj3;
         tmp18 = obj3;
-        const tmpResult = tmp(7093);
+        const tmpResult = tmp(7099);
       }
       tmp6 = DismissibleContentShownStateStore(first);
     }

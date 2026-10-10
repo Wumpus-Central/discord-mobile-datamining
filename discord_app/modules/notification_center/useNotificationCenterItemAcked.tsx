@@ -43,7 +43,7 @@ export const useNotificationCenterItemAcked = ReactCompilerGating.isReactCompile
         }
         let isRemoteAckedResult = stateFromStores;
         if (!stateFromStores) {
-          tmp = tmp(6066);
+          tmp = tmp(6059);
           isRemoteAcked = tmp.isRemoteAcked;
           isRemoteAckedResult = isRemoteAcked(forceUnacked, setting);
         }

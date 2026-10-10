@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _mod4692 from "../../../_runtime/metro/04692__.js";
+import _mod4733 from "../../../_runtime/metro/04733__.js";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const AutomodTriggerType = fn(11403).AutomodTriggerType;
+const AutomodTriggerType = fn(11448).AutomodTriggerType;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 let closure_7 = {};
 const identity = fn(1267);
@@ -101,7 +101,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ syncRules: arr[0], fetching: arr[1] } = arg0);
           return items;
-        }, require("../../../_runtime/metro/04692__.js").shallow),
+        }, require("../../../_runtime/metro/04733__.js").shallow),
         2,
       );
       first = tmp3[0];
@@ -249,7 +249,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -321,7 +321,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -349,7 +349,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 } else {
                   c0 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp6) {
                 c0 = tmp;
@@ -397,7 +397,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ syncRules: arr[0], fetching: arr[1] } = arg0);
           return items;
-        }, require("../../../_runtime/metro/04692__.js").shallow),
+        }, require("../../../_runtime/metro/04733__.js").shallow),
         2,
       );
       first = tmp2[0];
@@ -416,7 +416,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -487,7 +487,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -515,7 +515,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return obj;
               } else {
                 c0 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp6) {
               c0 = tmp;
@@ -536,7 +536,7 @@ function useSyncAutomodRules(arg0) {
       const items = [,];
       ({ syncRules: arr[0], fetching: arr[1] } = arg0);
       return items;
-    }, _mod4692.shallow),
+    }, _mod4733.shallow),
     2,
   );
   const first = tmp2[0];
@@ -555,7 +555,7 @@ function useSyncAutomodRules(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -652,7 +652,7 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      return withEqualityFn(tmp4, require("../../../_runtime/metro/04692__.js").shallow);
+      return withEqualityFn(tmp4, require("../../../_runtime/metro/04733__.js").shallow);
     }
   : function useAutomodRulesList(arg0) {
       _require = arg0;
@@ -666,5 +666,5 @@ export const useAutomodRulesList = ReactCompilerGating.isReactCompilerEnabled()
           obj = {};
         }
         return { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
-      }, require("../../../_runtime/metro/04692__.js").shallow);
+      }, require("../../../_runtime/metro/04733__.js").shallow);
     };

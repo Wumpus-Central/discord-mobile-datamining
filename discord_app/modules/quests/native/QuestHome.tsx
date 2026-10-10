@@ -6,7 +6,6 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5008 from "../../../../_runtime/metro/05008__.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
@@ -32,12 +31,12 @@ import QuestUtmStore from "../QuestUtmStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, StyleSheet } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, UserSettingsSections: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: { flex: 1 },
   loadingContainer: null,
@@ -576,8 +575,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== tmp5) {
         const obj3 = { action: null };
         const obj4 = { variant: "secondary", text: tmp6, onPress: tmp5 };
-        obj3.action = state(components_Button_Button.Button, obj4);
-        const tmp12 = state(QuestHomeEmptyStateDefault, obj3);
+        obj3.action = closure_1_14(components_Button_Button.Button, obj4);
+        const tmp12 = closure_1_14(QuestHomeEmptyStateDefault, obj3);
         cResult[3] = tmp5;
         cResult[4] = tmp12;
         let tmp8 = tmp12;
@@ -595,8 +594,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj3.text = intl.string(util.t["/g10LC"]);
       obj3.onPress = callback;
-      obj2.action = state(components_Button_Button.Button, obj3);
-      return state(QuestHomeEmptyStateDefault, obj2);
+      obj2.action = closure_1_14(components_Button_Button.Button, obj3);
+      return closure_1_14(QuestHomeEmptyStateDefault, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
@@ -613,7 +612,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== onClearFilters) {
         const obj2 = { variant: "secondary", text: first, onPress: onClearFilters };
-        const tmp8 = state(components_Button_Button.Button, obj2);
+        const tmp8 = closure_1_14(components_Button_Button.Button, obj2);
         cResult[1] = onClearFilters;
         cResult[2] = tmp8;
         let tmp6 = tmp8;
@@ -635,7 +634,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp6) {
         const obj3 = { action: tmp6, title: tmp9, subtitle: tmp10 };
-        const tmp16 = state(QuestHomeEmptyStateDefault, obj3);
+        const tmp16 = closure_1_14(QuestHomeEmptyStateDefault, obj3);
         cResult[5] = tmp6;
         cResult[6] = tmp16;
         let tmp13 = tmp16;
@@ -650,12 +649,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj2.text = intl.string(util.t.urZl31);
       obj2.onPress = onClearFilters.onClearFilters;
-      obj.action = state(components_Button_Button.Button, obj2);
+      obj.action = closure_1_14(components_Button_Button.Button, obj2);
       const intl2 = util.intl;
       obj.title = intl2.string(util.t.PBfFnx);
       const intl3 = util.intl;
       obj.subtitle = intl3.string(util.t.nwdKFC);
-      return state(QuestHomeEmptyStateDefault, obj);
+      return closure_1_14(QuestHomeEmptyStateDefault, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
@@ -680,7 +679,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { grow: true, onPress: first, variant: "primary", text: null };
           const intl = util.intl;
           obj2.text = intl.string(util.t.tx5Ax5);
-          const tmp7 = state(components_Button_Button.Button, obj2);
+          const tmp7 = closure_1_14(components_Button_Button.Button, obj2);
           cResult[1] = tmp7;
           let tmp5 = tmp7;
         } else {
@@ -688,7 +687,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[2] !== previewButton.previewButton) {
           const obj3 = { style: previewButton.previewButton, children: tmp5 };
-          const tmp11 = state(hasOwnProperty, obj3);
+          const tmp11 = closure_1_14(hasOwnProperty, obj3);
           previewButton = previewButton.previewButton;
           cResult[2] = previewButton;
           cResult[3] = tmp11;
@@ -708,8 +707,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { grow: true, onPress: callback, variant: "primary", text: null };
         const intl = util.intl;
         obj3.text = intl.string(util.t.tx5Ax5);
-        obj2.children = state(components_Button_Button.Button, obj3);
-        tmp5 = state(hasOwnProperty, obj2);
+        obj2.children = closure_1_14(components_Button_Button.Button, obj3);
+        tmp5 = closure_1_14(hasOwnProperty, obj2);
       }
       return tmp5;
     };
@@ -720,7 +719,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
       const tmp4 = closure_17();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = state(closure_22, {});
+        const tmp8 = closure_1_14(closure_22, {});
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -741,7 +740,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { variant: "text-lg/semibold", color: "text-strong", children: null };
                 const intl = util.intl;
                 obj2.children = intl.string(util.t.JALI2K);
-                const tmp14 = state(Text_Text.Text, obj2);
+                const tmp14 = closure_1_14(Text_Text.Text, obj2);
                 cResult[9] = tmp14;
                 let tmp12 = tmp14;
               } else {
@@ -749,7 +748,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[10] !== tmp11) {
                 const obj3 = { style: tmp11, children: tmp12 };
-                const tmp18 = state(hasOwnProperty, obj3);
+                const tmp18 = closure_1_14(hasOwnProperty, obj3);
                 cResult[10] = tmp11;
                 cResult[11] = tmp18;
                 let tmp15 = tmp18;
@@ -765,7 +764,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { children: null };
               const items = [first, tmp9, tmp15];
               obj4.children = items;
-              const tmp22 = value2(closure_1_15, obj4);
+              const tmp22 = value3(value2, obj4);
               cResult[12] = tmp9;
               cResult[13] = tmp15;
               cResult[14] = tmp22;
@@ -780,7 +779,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp10 = state(QuestHomeBountiesDefault, {
+      const tmp10 = closure_1_14(QuestHomeBountiesDefault, {
         shopCarouselConfig,
         orbShopProducts,
         obtainableOrbRewards,
@@ -797,8 +796,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel, shopCarouselConfig } = arg0);
       const obj = { children: null };
       const items = [
-        state(closure_22, {}),
-        state(QuestHomeBountiesDefault, {
+        closure_1_14(closure_22, {}),
+        closure_1_14(QuestHomeBountiesDefault, {
           shopCarouselConfig,
           orbShopProducts,
           obtainableOrbRewards,
@@ -812,10 +811,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { variant: "text-lg/semibold", color: "text-strong", children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t.JALI2K);
-      obj2.children = state(Text_Text.Text, obj3);
-      items[2] = state(hasOwnProperty, obj2);
+      obj2.children = closure_1_14(Text_Text.Text, obj3);
+      items[2] = closure_1_14(hasOwnProperty, obj2);
       obj.children = items;
-      return value2(closure_1_15, obj);
+      return value3(value2, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_24 = noop.memo(
@@ -842,7 +841,7 @@ let closure_24 = noop.memo(
                     return tmp7;
                   }
                   const obj2 = { onLayout, children: cResult[5] };
-                  const tmp10 = state(hasOwnProperty, obj2);
+                  const tmp10 = closure_1_14(hasOwnProperty, obj2);
                   cResult[6] = onLayout;
                   cResult[7] = cResult[5];
                   cResult[8] = tmp10;
@@ -854,9 +853,9 @@ let closure_24 = noop.memo(
         }
         if (shouldShowBounties) {
           const obj3 = { shopCarouselConfig, orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel };
-          let tmp3Result = state(closure_23, obj3);
+          let tmp3Result = closure_1_14(closure_23, obj3);
         } else {
-          tmp3Result = state(closure_22, {});
+          tmp3Result = closure_1_14(closure_22, {});
         }
         cResult[0] = obtainableOrbRewards;
         cResult[1] = orbShopProducts;
@@ -874,12 +873,12 @@ let closure_24 = noop.memo(
             obtainableOrbRewards: tmp2,
             showOrbShopPlaceholderCarousel: tmp3,
           };
-          let tmp5Result = state(closure_23, obj2);
+          let tmp5Result = closure_1_14(closure_23, obj2);
         } else {
-          tmp5Result = state(closure_22, {});
+          tmp5Result = closure_1_14(closure_22, {});
         }
         obj.children = tmp5Result;
-        return state(hasOwnProperty, obj);
+        return closure_1_14(hasOwnProperty, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -1022,16 +1021,10 @@ export default noop.memo(
                 tmp8 = ref.current !== scrollToQuestId;
               }
               if (tmp8) {
-                const obj3 = {
-                  key: "QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND",
-                  content: null,
-                  icon: null,
-                  toastDurationMs: 5000,
-                };
+                const obj3 = { text: null, variant: "critical", duration: 5000 };
                 const intl = util.intl;
-                obj3.content = intl.string(util.t.sIyHuY);
-                obj3.icon = _modDef5008;
-                ToastActionCreatorsDefault.open(obj3);
+                obj3.text = intl.string(util.t.sIyHuY);
+                ToastActionCreatorsDefault.open("QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND", obj3);
                 const obj5 = { quest_id: scrollToQuestId };
                 AnalyticsUtilsDefault.track(constants.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj5);
                 ref.current = scrollToQuestId;
@@ -1130,16 +1123,10 @@ export default noop.memo(
               tmp8 = ref.current !== scrollToQuestId;
             }
             if (tmp8) {
-              const obj3 = {
-                key: "QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND",
-                content: null,
-                icon: null,
-                toastDurationMs: 5000,
-              };
+              const obj3 = { text: null, variant: "critical", duration: 5000 };
               const intl = util.intl;
-              obj3.content = intl.string(util.t.sIyHuY);
-              obj3.icon = _modDef5008;
-              ToastActionCreatorsDefault.open(obj3);
+              obj3.text = intl.string(util.t.sIyHuY);
+              ToastActionCreatorsDefault.open("QUEST_HOME_MOBILE_DEEP_LINK_QUEST_NOT_FOUND", obj3);
               const obj5 = { quest_id: scrollToQuestId };
               AnalyticsUtilsDefault.track(constants.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST, obj5);
               ref.current = scrollToQuestId;
@@ -1155,9 +1142,9 @@ export default noop.memo(
         const tmp12 = scrollViewRef((getUtmCurrentContext) => getUtmCurrentContext.getUtmCurrentContext());
         let obj5 = { name: null, type: null, properties: null };
         let obj4 = scrollToQuestId(sortMethod[14]);
-        obj5.name = scrollToQuestId(sortMethod[37]).ImpressionNames.QUEST_HOME;
-        obj5.type = scrollToQuestId(sortMethod[37]).ImpressionTypes.VIEW;
-        const tmp13 = filters(sortMethod[38]);
+        obj5.name = scrollToQuestId(sortMethod[36]).ImpressionNames.QUEST_HOME;
+        obj5.type = scrollToQuestId(sortMethod[36]).ImpressionTypes.VIEW;
+        const tmp13 = filters(sortMethod[37]);
         obj5.properties = {
           utm_source_current: tmp12.utmSourceCurrent,
           utm_medium_current: tmp12.utmMediumCurrent,
@@ -1200,21 +1187,21 @@ export default noop.memo(
         });
         const obj7 = scrollToQuestId(sortMethod[25]);
         const obj8 = { selectedSortMethod: sortMethod, selectedFilters: filters, numQuestsVisible: quests.length };
-        enabled = scrollToQuestId(sortMethod[40]).useVirtualCurrencyMobileEnabled().enabled;
+        enabled = scrollToQuestId(sortMethod[39]).useVirtualCurrencyMobileEnabled().enabled;
         const QuestHomeBountiesFeatureGateExperiment = scrollToQuestId(
-          sortMethod[41],
+          sortMethod[40],
         ).QuestHomeBountiesFeatureGateExperiment;
-        const OrbsHoldoutExperiment = scrollToQuestId(sortMethod[42]).OrbsHoldoutExperiment;
+        const OrbsHoldoutExperiment = scrollToQuestId(sortMethod[41]).OrbsHoldoutExperiment;
         const obj10 = { location: handleQuestCardLayout.QUEST_HOME_MOBILE };
         const obj11 = { location: handleQuestCardLayout.QUEST_HOME_MOBILE };
-        const obj9 = scrollToQuestId(sortMethod[40]);
+        const obj9 = scrollToQuestId(sortMethod[39]);
         const tmp18 = handleQuestCardLayout;
-        const params = scrollToQuestId(sortMethod[43]).useRoute().params;
+        const params = scrollToQuestId(sortMethod[42]).useRoute().params;
         let previewAdCreativeIds;
         if (params != null) {
           previewAdCreativeIds = params.previewAdCreativeIds;
         }
-        const obj12 = scrollToQuestId(sortMethod[43]);
+        const obj12 = scrollToQuestId(sortMethod[42]);
         const fetchQuestHomeBounties = scrollToQuestId(sortMethod[25]).useFetchQuestHomeBounties({
           previewAdCreativeIds,
         });
@@ -1245,10 +1232,10 @@ export default noop.memo(
           enabled = !OrbsHoldoutExperiment.useConfig(obj11).enabled;
         }
         if (enabled) {
-          enabled = tmp(tmp2[46]).shouldShowBountiesGivenFilters(filters);
-          const tmpResult4 = tmp(tmp2[46]);
+          enabled = tmp(tmp2[45]).shouldShowBountiesGivenFilters(filters);
+          const tmpResult4 = tmp(tmp2[45]);
         }
-        const BountiesShopCarouselExperiment = tmp(tmp2[47]).BountiesShopCarouselExperiment;
+        const BountiesShopCarouselExperiment = tmp(tmp2[46]).BountiesShopCarouselExperiment;
         config = BountiesShopCarouselExperiment.useConfig({ location: tmp18.QUEST_HOME_MOBILE });
         const obj13 = { location: tmp18.QUEST_HOME_MOBILE };
         const tmpResult = scrollToQuestId(sortMethod[25]);
@@ -1256,7 +1243,7 @@ export default noop.memo(
         if (enabled) {
           tmp23 = "none" !== config.placement;
         }
-        const questHomeOrbShopCarouselData = scrollToQuestId(sortMethod[48]).useQuestHomeOrbShopCarouselData({
+        const questHomeOrbShopCarouselData = scrollToQuestId(sortMethod[47]).useQuestHomeOrbShopCarouselData({
           enabled: tmp23,
           sortType: config.sortType,
         });
@@ -1275,7 +1262,7 @@ export default noop.memo(
         const items9 = [visibilityRef];
         const callback = obj3.useCallback(
           () =>
-            state(closure_24, {
+            closure_2_14(closure_24, {
               shouldShowBounties: enabled,
               onLayout: handleHeaderLayout,
               shopCarouselConfig: config,
@@ -1289,7 +1276,7 @@ export default noop.memo(
         const callback1 = obj3.useCallback((item) => {
           item = item.item;
           const index = item.index;
-          return state(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
+          return closure_2_14(QuestContentImpressionTracker.QuestContentImpressionTrackerNative, {
             questOrQuests: item,
             questContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
             questContentPosition: index,
@@ -1298,11 +1285,11 @@ export default noop.memo(
             skipRemountKey: true,
             sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE,
             children() {
-              return previewAdCreativeIds(scrollToQuestId(sortMethod[50]).QuestCard, {
+              return previewAdCreativeIds(scrollToQuestId(sortMethod[49]).QuestCard, {
                 quest: item,
                 questContentPosition: index,
                 containerPadding: 0,
-                sourceQuestContent: scrollToQuestId(sortMethod[44]).QuestContent.QUEST_HOME_MOBILE,
+                sourceQuestContent: scrollToQuestId(sortMethod[43]).QuestContent.QUEST_HOME_MOBILE,
               });
             },
           });
@@ -1345,7 +1332,7 @@ export default noop.memo(
             const obj2 = { includesBounties: ref2.current };
             QuestHomeRoundtripTrackerDefault.startTracking(obj2);
             return () => {
-              filters(sortMethod[51]).clearTracking();
+              filters(sortMethod[50]).clearTracking();
             };
           }
         }, items12);
@@ -1410,7 +1397,7 @@ export default noop.memo(
           obj17.onLayout = handleListLayout;
           obj17.onScroll = handleListScroll;
           obj17.onLoad = handleListLoad;
-          tmp48Result = previewAdCreativeIds(tmp(tmp2[52]).FlashList, obj17);
+          tmp48Result = previewAdCreativeIds(tmp(tmp2[51]).FlashList, obj17);
         }
       },
 );

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   contentWrapper: { paddingHorizontal: nativeDefault.space.PX_16 },
   gifContainer: { flexDirection: "column", alignItems: "center" },
@@ -33,17 +33,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       const tmp4 = closure_7();
       if (cResult[0] !== item.url) {
-        const gifUrlKeyResult = tmp(9706).gifUrlKey(item.url);
+        const gifUrlKeyResult = tmp(9735).gifUrlKey(item.url);
         cResult[0] = item.url;
         cResult[1] = gifUrlKeyResult;
         let tmp5 = gifUrlKeyResult;
-        const tmpResult = tmp(9706);
+        const tmpResult = tmp(9735);
       } else {
         tmp5 = cResult[1];
       }
       let obj = item(576);
-      const isFavoriteGIF = item(9710).useIsFavoriteGIF(tmp5);
-      const tmpResult2 = item(9710);
+      const isFavoriteGIF = item(9739).useIsFavoriteGIF(tmp5);
+      const tmpResult2 = item(9739);
       ({ width, height } = isFavoriteGIF(1497)());
       const bound = Math.min((width - 2 * isFavoriteGIF(587).space.PX_16) / item.width, (0.5 * height) / item.height);
       const result = item.width * bound;
@@ -54,38 +54,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          class G {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
-            }
-          }
-          cResult[5] = G;
+          const fn = function w() {
+            isFavoriteGIF(5056).hideActionSheet();
+          };
+          cResult[5] = fn;
+          let tmp13 = fn;
         } else {
-          class G {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
-            }
-          }
+          tmp13 = cResult[5];
         }
-        dependencyMap = G;
+        dependencyMap = tmp13;
         if (cResult[6] === isFavoriteGIF) {
-          class G {
-            constructor() {
-              obj = closure_1(closure_2[10]);
-              hideActionSheetResult = obj.hideActionSheet();
-              return;
-            }
+          if (cResult[7] === item) {
+            let tmp14 = cResult[8];
           }
-          const noop = O;
+          onPress = tmp14;
           if (cResult[9] !== item.url) {
-            class G {
+            class R {
               constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
+                tmp = closure_2();
+                obj = closure_0(closure_2[14]);
+                copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                 return;
               }
             }
@@ -114,39 +102,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           } else {
-            class G {
+            class R {
               constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
+                tmp = closure_2();
+                obj = closure_0(closure_2[14]);
+                copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                 return;
               }
             }
           }
-          if (cResult[11] === O) {
-            class G {
+          if (cResult[11] === tmp14) {
+            class R {
               constructor() {
-                obj = closure_1(closure_2[10]);
-                hideActionSheetResult = obj.hideActionSheet();
+                tmp = closure_2();
+                obj = closure_0(closure_2[14]);
+                copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                 return;
               }
             }
             if (cResult[14] === tmp12) {
-              class G {
+              class R {
                 constructor() {
-                  obj = closure_1(closure_2[10]);
-                  hideActionSheetResult = obj.hideActionSheet();
+                  tmp = closure_2();
+                  obj = closure_0(closure_2[14]);
+                  copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                   return;
                 }
               }
               if (cResult[17] !== item.src) {
-                class G {
+                class R {
                   constructor() {
-                    obj = closure_1(closure_2[10]);
-                    hideActionSheetResult = obj.hideActionSheet();
+                    tmp = closure_2();
+                    obj = closure_0(closure_2[14]);
+                    copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                     return;
                   }
                 }
-                tmp21[0] = item.src;
+                tmp20[0] = item.src;
                 cResult[17] = item.src;
                 class P {
                   constructor() {
@@ -171,29 +163,32 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return tmp(closure_0(closure_2[16]).Button, obj);
                   }
                 }
-                cResult[18] = tmp21;
+                cResult[18] = tmp20;
               } else {
-                class G {
+                class R {
                   constructor() {
-                    obj = closure_1(closure_2[10]);
-                    hideActionSheetResult = obj.hideActionSheet();
+                    tmp = closure_2();
+                    obj = closure_0(closure_2[14]);
+                    copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                     return;
                   }
                 }
               }
-              if (cResult[19] === tmp19) {
-                class G {
+              if (cResult[19] === tmp18) {
+                class R {
                   constructor() {
-                    obj = closure_1(closure_2[10]);
-                    hideActionSheetResult = obj.hideActionSheet();
+                    tmp = closure_2();
+                    obj = closure_0(closure_2[14]);
+                    copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                     return;
                   }
                 }
                 if (cResult[22] !== P) {
-                  class G {
+                  class R {
                     constructor() {
-                      obj = closure_1(closure_2[10]);
-                      hideActionSheetResult = obj.hideActionSheet();
+                      tmp = closure_2();
+                      obj = closure_0(closure_2[14]);
+                      copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                       return;
                     }
                   }
@@ -222,10 +217,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 } else {
-                  class G {
+                  class R {
                     constructor() {
-                      obj = closure_1(closure_2[10]);
-                      hideActionSheetResult = obj.hideActionSheet();
+                      tmp = closure_2();
+                      obj = closure_0(closure_2[14]);
+                      copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                       return;
                     }
                   }
@@ -254,15 +250,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return tmp(closure_0(closure_2[16]).Button, obj);
                   }
                 }
-                if (cResult[25] !== tmp16) {
-                  class G {
+                if (cResult[25] !== R) {
+                  class R {
                     constructor() {
-                      obj = closure_1(closure_2[10]);
-                      hideActionSheetResult = obj.hideActionSheet();
+                      tmp = closure_2();
+                      obj = closure_0(closure_2[14]);
+                      copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                       return;
                     }
                   }
-                  let obj2 = { variant: "secondary", onPress: tmp16, text: tmp29, grow: true };
+                  let obj2 = { variant: "secondary", onPress: R, text: tmp28, grow: true };
                   class P {
                     constructor() {
                       tmp2 = closure_0;
@@ -286,8 +283,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return tmp(closure_0(closure_2[16]).Button, obj);
                     }
                   }
-                  cResult[25] = tmp16;
-                  class O {
+                  cResult[25] = R;
+                  class C {
                     constructor() {
                       tmp = closure_2();
                       obj = closure_0(closure_2[7]);
@@ -297,61 +294,66 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp15 = closure_1;
                         tmp16 = closure_2;
                         obj4 = closure_1(closure_2[11]);
-                        obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+                        obj1 = { text: null, icon: null };
                         tmp17 = closure_0;
                         tmp18 = closure_2;
                         intl2 = closure_0(closure_2[12]).intl;
                         tmp19 = closure_0;
                         tmp20 = closure_2;
-                        obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+                        obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
                         tmp21 = closure_0;
                         tmp22 = closure_2;
-                        obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-                        openResult = obj4.open(obj1);
+                        obj1.icon = closure_0(closure_2[13]).GifIcon;
+                        str2 = "REMOVED_FROM_FAVORITES";
+                        openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
                       } else {
                         tmp2 = item;
                         addFavoriteGIFResult = obj.addFavoriteGIF(item);
                         tmp4 = closure_1;
                         tmp5 = closure_2;
                         obj2 = closure_1(closure_2[11]);
-                        obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+                        obj6 = { text: null, icon: null };
                         tmp6 = closure_0;
                         tmp7 = closure_2;
                         intl = closure_0(closure_2[12]).intl;
                         tmp8 = closure_0;
                         tmp9 = closure_2;
-                        obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+                        obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
                         tmp10 = closure_0;
                         tmp11 = closure_2;
-                        obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-                        openResult1 = obj2.open(obj6);
+                        obj6.icon = closure_0(closure_2[13]).GifIcon;
+                        str = "ADDED_TO_FAVORITES";
+                        openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
                       }
                       return;
                     }
                   }
-                  cResult[26] = tmp31;
+                  cResult[26] = tmp30;
                 } else {
-                  class G {
+                  class R {
                     constructor() {
-                      obj = closure_1(closure_2[10]);
-                      hideActionSheetResult = obj.hideActionSheet();
+                      tmp = closure_2();
+                      obj = closure_0(closure_2[14]);
+                      copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                       return;
                     }
                   }
                 }
-                if (cResult[27] === tmp27) {
-                  class G {
+                if (cResult[27] === tmp26) {
+                  class R {
                     constructor() {
-                      obj = closure_1(closure_2[10]);
-                      hideActionSheetResult = obj.hideActionSheet();
+                      tmp = closure_2();
+                      obj = closure_0(closure_2[14]);
+                      copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                       return;
                     }
                   }
                   if (cResult[30] === tmp4.gifContainer) {
-                    class G {
+                    class R {
                       constructor() {
-                        obj = closure_1(closure_2[10]);
-                        hideActionSheetResult = obj.hideActionSheet();
+                        tmp = closure_2();
+                        obj = closure_0(closure_2[14]);
+                        copyResult = obj.copy(item.url, closure_0(closure_2[15]).presentLinkCopied);
                         return;
                       }
                     }
@@ -379,9 +381,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return tmp(closure_0(closure_2[16]).Button, obj);
                     }
                   }
-                  tmp37[0] = tmp18;
+                  tmp36[0] = tmp17;
                   const items = [,];
-                  class O {
+                  class C {
                     constructor() {
                       tmp = closure_2();
                       obj = closure_0(closure_2[7]);
@@ -391,47 +393,49 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         tmp15 = closure_1;
                         tmp16 = closure_2;
                         obj4 = closure_1(closure_2[11]);
-                        obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+                        obj1 = { text: null, icon: null };
                         tmp17 = closure_0;
                         tmp18 = closure_2;
                         intl2 = closure_0(closure_2[12]).intl;
                         tmp19 = closure_0;
                         tmp20 = closure_2;
-                        obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+                        obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
                         tmp21 = closure_0;
                         tmp22 = closure_2;
-                        obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-                        openResult = obj4.open(obj1);
+                        obj1.icon = closure_0(closure_2[13]).GifIcon;
+                        str2 = "REMOVED_FROM_FAVORITES";
+                        openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
                       } else {
                         tmp2 = item;
                         addFavoriteGIFResult = obj.addFavoriteGIF(item);
                         tmp4 = closure_1;
                         tmp5 = closure_2;
                         obj2 = closure_1(closure_2[11]);
-                        obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+                        obj6 = { text: null, icon: null };
                         tmp6 = closure_0;
                         tmp7 = closure_2;
                         intl = closure_0(closure_2[12]).intl;
                         tmp8 = closure_0;
                         tmp9 = closure_2;
-                        obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+                        obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
                         tmp10 = closure_0;
                         tmp11 = closure_2;
-                        obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-                        openResult1 = obj2.open(obj6);
+                        obj6.icon = closure_0(closure_2[13]).GifIcon;
+                        str = "ADDED_TO_FAVORITES";
+                        openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
                       }
                       return;
                     }
                   }
-                  items[1] = tmp32;
-                  tmp37[1] = items;
-                  const tmp38 = closure_6(View, tmp37);
+                  items[1] = tmp31;
+                  tmp36[1] = items;
+                  const tmp37 = closure_6(View, tmp36);
                   cResult[30] = tmp4.gifContainer;
-                  cResult[31] = tmp25;
-                  cResult[32] = tmp32;
-                  cResult[33] = tmp38;
+                  cResult[31] = tmp24;
+                  cResult[32] = tmp31;
+                  cResult[33] = tmp37;
                 }
-                class O {
+                class C {
                   constructor() {
                     tmp = closure_2();
                     obj = closure_0(closure_2[7]);
@@ -441,45 +445,47 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp15 = closure_1;
                       tmp16 = closure_2;
                       obj4 = closure_1(closure_2[11]);
-                      obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+                      obj1 = { text: null, icon: null };
                       tmp17 = closure_0;
                       tmp18 = closure_2;
                       intl2 = closure_0(closure_2[12]).intl;
                       tmp19 = closure_0;
                       tmp20 = closure_2;
-                      obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+                      obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
                       tmp21 = closure_0;
                       tmp22 = closure_2;
-                      obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-                      openResult = obj4.open(obj1);
+                      obj1.icon = closure_0(closure_2[13]).GifIcon;
+                      str2 = "REMOVED_FROM_FAVORITES";
+                      openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
                     } else {
                       tmp2 = item;
                       addFavoriteGIFResult = obj.addFavoriteGIF(item);
                       tmp4 = closure_1;
                       tmp5 = closure_2;
                       obj2 = closure_1(closure_2[11]);
-                      obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+                      obj6 = { text: null, icon: null };
                       tmp6 = closure_0;
                       tmp7 = closure_2;
                       intl = closure_0(closure_2[12]).intl;
                       tmp8 = closure_0;
                       tmp9 = closure_2;
-                      obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+                      obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
                       tmp10 = closure_0;
                       tmp11 = closure_2;
-                      obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-                      openResult1 = obj2.open(obj6);
+                      obj6.icon = closure_0(closure_2[13]).GifIcon;
+                      str = "ADDED_TO_FAVORITES";
+                      openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
                     }
                     return;
                   }
                 }
                 let obj3 = { children: null };
-                const items1 = [tmp27, tmp31];
+                const items1 = [tmp26, tmp30];
                 obj3.children = items1;
-                const tmp33 = closure_6(tmp(5965).ButtonGroup, obj3);
-                cResult[27] = tmp27;
-                cResult[28] = tmp31;
-                cResult[29] = tmp33;
+                const tmp32 = closure_6(tmp(5958).ButtonGroup, obj3);
+                cResult[27] = tmp26;
+                cResult[28] = tmp30;
+                cResult[29] = tmp32;
               }
               class P {
                 constructor() {
@@ -504,9 +510,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp(closure_0(closure_2[16]).Button, obj);
                 }
               }
-              tmp24[0] = tmp19;
-              tmp24[1] = tmp21;
-              class O {
+              tmp23[0] = tmp18;
+              tmp23[1] = tmp20;
+              class C {
                 constructor() {
                   tmp = closure_2();
                   obj = closure_0(closure_2[7]);
@@ -516,41 +522,43 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp15 = closure_1;
                     tmp16 = closure_2;
                     obj4 = closure_1(closure_2[11]);
-                    obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+                    obj1 = { text: null, icon: null };
                     tmp17 = closure_0;
                     tmp18 = closure_2;
                     intl2 = closure_0(closure_2[12]).intl;
                     tmp19 = closure_0;
                     tmp20 = closure_2;
-                    obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+                    obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
                     tmp21 = closure_0;
                     tmp22 = closure_2;
-                    obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-                    openResult = obj4.open(obj1);
+                    obj1.icon = closure_0(closure_2[13]).GifIcon;
+                    str2 = "REMOVED_FROM_FAVORITES";
+                    openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
                   } else {
                     tmp2 = item;
                     addFavoriteGIFResult = obj.addFavoriteGIF(item);
                     tmp4 = closure_1;
                     tmp5 = closure_2;
                     obj2 = closure_1(closure_2[11]);
-                    obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+                    obj6 = { text: null, icon: null };
                     tmp6 = closure_0;
                     tmp7 = closure_2;
                     intl = closure_0(closure_2[12]).intl;
                     tmp8 = closure_0;
                     tmp9 = closure_2;
-                    obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+                    obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
                     tmp10 = closure_0;
                     tmp11 = closure_2;
-                    obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-                    openResult1 = obj2.open(obj6);
+                    obj6.icon = closure_0(closure_2[13]).GifIcon;
+                    str = "ADDED_TO_FAVORITES";
+                    openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
                   }
                   return;
                 }
               }
-              cResult[19] = tmp19;
-              cResult[20] = tmp21;
-              cResult[21] = tmp25;
+              cResult[19] = tmp18;
+              cResult[20] = tmp20;
+              cResult[21] = tmp24;
             }
             const items2 = [tmp4.gifImage];
             class P {
@@ -577,7 +585,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[14] = tmp12;
-            class O {
+            class C {
               constructor() {
                 tmp = closure_2();
                 obj = closure_0(closure_2[7]);
@@ -587,34 +595,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp15 = closure_1;
                   tmp16 = closure_2;
                   obj4 = closure_1(closure_2[11]);
-                  obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+                  obj1 = { text: null, icon: null };
                   tmp17 = closure_0;
                   tmp18 = closure_2;
                   intl2 = closure_0(closure_2[12]).intl;
                   tmp19 = closure_0;
                   tmp20 = closure_2;
-                  obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+                  obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
                   tmp21 = closure_0;
                   tmp22 = closure_2;
-                  obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-                  openResult = obj4.open(obj1);
+                  obj1.icon = closure_0(closure_2[13]).GifIcon;
+                  str2 = "REMOVED_FROM_FAVORITES";
+                  openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
                 } else {
                   tmp2 = item;
                   addFavoriteGIFResult = obj.addFavoriteGIF(item);
                   tmp4 = closure_1;
                   tmp5 = closure_2;
                   obj2 = closure_1(closure_2[11]);
-                  obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+                  obj6 = { text: null, icon: null };
                   tmp6 = closure_0;
                   tmp7 = closure_2;
                   intl = closure_0(closure_2[12]).intl;
                   tmp8 = closure_0;
                   tmp9 = closure_2;
-                  obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+                  obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
                   tmp10 = closure_0;
                   tmp11 = closure_2;
-                  obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-                  openResult1 = obj2.open(obj6);
+                  obj6.icon = closure_0(closure_2[13]).GifIcon;
+                  str = "ADDED_TO_FAVORITES";
+                  openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
                 }
                 return;
               }
@@ -645,8 +655,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp(closure_0(closure_2[16]).Button, obj);
             }
           }
-          cResult[11] = O;
-          class O {
+          cResult[11] = tmp14;
+          class C {
             constructor() {
               tmp = closure_2();
               obj = closure_0(closure_2[7]);
@@ -656,34 +666,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp15 = closure_1;
                 tmp16 = closure_2;
                 obj4 = closure_1(closure_2[11]);
-                obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+                obj1 = { text: null, icon: null };
                 tmp17 = closure_0;
                 tmp18 = closure_2;
                 intl2 = closure_0(closure_2[12]).intl;
                 tmp19 = closure_0;
                 tmp20 = closure_2;
-                obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+                obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
                 tmp21 = closure_0;
                 tmp22 = closure_2;
-                obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-                openResult = obj4.open(obj1);
+                obj1.icon = closure_0(closure_2[13]).GifIcon;
+                str2 = "REMOVED_FROM_FAVORITES";
+                openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
               } else {
                 tmp2 = item;
                 addFavoriteGIFResult = obj.addFavoriteGIF(item);
                 tmp4 = closure_1;
                 tmp5 = closure_2;
                 obj2 = closure_1(closure_2[11]);
-                obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+                obj6 = { text: null, icon: null };
                 tmp6 = closure_0;
                 tmp7 = closure_2;
                 intl = closure_0(closure_2[12]).intl;
                 tmp8 = closure_0;
                 tmp9 = closure_2;
-                obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+                obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
                 tmp10 = closure_0;
                 tmp11 = closure_2;
-                obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-                openResult1 = obj2.open(obj6);
+                obj6.icon = closure_0(closure_2[13]).GifIcon;
+                str = "ADDED_TO_FAVORITES";
+                openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
               }
               return;
             }
@@ -691,7 +703,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[12] = isFavoriteGIF;
           cResult[13] = P;
         }
-        class O {
+        class C {
           constructor() {
             tmp = closure_2();
             obj = closure_0(closure_2[7]);
@@ -701,41 +713,44 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp15 = closure_1;
               tmp16 = closure_2;
               obj4 = closure_1(closure_2[11]);
-              obj1 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+              obj1 = { text: null, icon: null };
               tmp17 = closure_0;
               tmp18 = closure_2;
               intl2 = closure_0(closure_2[12]).intl;
               tmp19 = closure_0;
               tmp20 = closure_2;
-              obj1.content = intl2.string(closure_0(closure_2[12]).t.in1rga);
+              obj1.text = intl2.string(closure_0(closure_2[12]).t.in1rga);
               tmp21 = closure_0;
               tmp22 = closure_2;
-              obj1.IconComponent = closure_0(closure_2[13]).GifIcon;
-              openResult = obj4.open(obj1);
+              obj1.icon = closure_0(closure_2[13]).GifIcon;
+              str2 = "REMOVED_FROM_FAVORITES";
+              openResult = obj4.open("REMOVED_FROM_FAVORITES", obj1);
             } else {
               tmp2 = item;
               addFavoriteGIFResult = obj.addFavoriteGIF(item);
               tmp4 = closure_1;
               tmp5 = closure_2;
               obj2 = closure_1(closure_2[11]);
-              obj6 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+              obj6 = { text: null, icon: null };
               tmp6 = closure_0;
               tmp7 = closure_2;
               intl = closure_0(closure_2[12]).intl;
               tmp8 = closure_0;
               tmp9 = closure_2;
-              obj6.content = intl.string(closure_0(closure_2[12]).t.okQonm);
+              obj6.text = intl.string(closure_0(closure_2[12]).t.okQonm);
               tmp10 = closure_0;
               tmp11 = closure_2;
-              obj6.IconComponent = closure_0(closure_2[13]).GifIcon;
-              openResult1 = obj2.open(obj6);
+              obj6.icon = closure_0(closure_2[13]).GifIcon;
+              str = "ADDED_TO_FAVORITES";
+              openResult1 = obj2.open("ADDED_TO_FAVORITES", obj6);
             }
             return;
           }
         }
         cResult[6] = isFavoriteGIF;
         cResult[7] = item;
-        cResult[8] = O;
+        cResult[8] = C;
+        tmp14 = C;
       }
       const size = { width: result, height: result1 };
       cResult[2] = result;
@@ -771,18 +786,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj = GIFPickerActionCreators;
         if (isFavoriteGIF) {
           obj.removeFavoriteGIF(item.url);
-          const obj3 = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
+          const obj3 = { text: null, icon: null };
           const intl2 = util.intl;
-          obj3.content = intl2.string(util.t.in1rga);
-          obj3.IconComponent = GifIcon.GifIcon;
-          ToastActionCreatorsDefault.open(obj3);
+          obj3.text = intl2.string(util.t.in1rga);
+          obj3.icon = GifIcon.GifIcon;
+          ToastActionCreatorsDefault.open("REMOVED_FROM_FAVORITES", obj3);
         } else {
           obj.addFavoriteGIF(item);
-          const obj5 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+          const obj5 = { text: null, icon: null };
           const intl = util.intl;
-          obj5.content = intl.string(util.t.okQonm);
-          obj5.IconComponent = GifIcon.GifIcon;
-          ToastActionCreatorsDefault.open(obj5);
+          obj5.text = intl.string(util.t.okQonm);
+          obj5.icon = GifIcon.GifIcon;
+          ToastActionCreatorsDefault.open("ADDED_TO_FAVORITES", obj5);
         }
       }, items1);
       const items2 = [callback, item.url];

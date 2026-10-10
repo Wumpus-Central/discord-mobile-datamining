@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MessageRecord from "../../../../records/MessageRecord.tsx";
 
 require = fn;
-const MessageSnapshotRecord = fn(4720).MessageSnapshotRecord;
+const MessageSnapshotRecord = fn(4761).MessageSnapshotRecord;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useGetInitialMessagePreview.tsx");

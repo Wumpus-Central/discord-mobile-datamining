@@ -42,14 +42,14 @@ const Constants = fn(1085);
   AnalyticsPages: c10,
   AnalyticsSections: closure_11,
 } = Constants);
-let closure_12 = fn(6837).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_12 = fn(6840).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 1.05;
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj = {
   gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
@@ -139,7 +139,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj2 = { items: tmp8, align: tmp9, disableGesture: true, triggerOnLongPress: true, children };
-                const tmp13 = state(ContextMenu.ContextMenu, obj2);
+                const tmp13 = closure_1_14(ContextMenu.ContextMenu, obj2);
                 cResult[12] = children;
                 cResult[13] = tmp8;
                 cResult[14] = tmp9;
@@ -200,9 +200,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.align = str;
       obj2.children = children;
-      return state(ContextMenu.ContextMenu, obj2);
+      return closure_1_14(ContextMenu.ContextMenu, obj2);
     };
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
@@ -257,8 +257,8 @@ let obj14 = {
   textAlign: "center",
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14799).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14799).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14855).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14855).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {
@@ -278,7 +278,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-          const tmp15 = state(CircleInformationIcon.CircleInformationIcon, obj2);
+          const tmp15 = closure_1_14(CircleInformationIcon.CircleInformationIcon, obj2);
           cResult[0] = tmp15;
           let first = tmp15;
         } else {
@@ -290,7 +290,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
             const obj3 = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-            const tmp10 = state(EyeSlashIcon2.EyeSlashIcon, obj3);
+            const tmp10 = closure_1_14(EyeSlashIcon2.EyeSlashIcon, obj3);
             cResult[1] = tmp10;
             let tmp7 = tmp10;
           } else {
@@ -336,7 +336,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = { variant: "secondary", border: "none", radius: 16, style: tmp4.card, children: null };
                   const items = [tmp18, tmp23, tmp26];
                   obj4.children = items;
-                  const tmp32 = closure_1_15(Card.Card, obj4);
+                  const tmp32 = value2(Card.Card, obj4);
                   cResult[15] = tmp4.card;
                   cResult[16] = tmp18;
                   cResult[17] = tmp23;
@@ -347,7 +347,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp27 = null != tmp5;
                 if (tmp27) {
                   const obj5 = { style: tmp4.indicator, "aria-hidden": true, children: tmp5 };
-                  tmp27 = state(React4, obj5);
+                  tmp27 = closure_1_14(React4, obj5);
                 }
                 cResult[12] = tmp5;
                 cResult[13] = tmp4.indicator;
@@ -363,7 +363,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               "aria-hidden": true,
               children: badge.name,
             };
-            const tmp25 = state(Text_Text.Text, obj6);
+            const tmp25 = closure_1_14(Text_Text.Text, obj6);
             cResult[8] = badge.name;
             cResult[9] = tmp4.name;
             cResult[10] = str3;
@@ -371,7 +371,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             tmp23 = tmp25;
           }
           const obj7 = { badge, size: BadgeGrid.BADGE_TILE_ICON_SIZE, style: tmp17 };
-          const tmp22 = state(BadgeCatalogIconDefault, obj7);
+          const tmp22 = closure_1_14(BadgeCatalogIconDefault, obj7);
           cResult[5] = badge;
           cResult[6] = tmp17;
           cResult[7] = tmp22;
@@ -393,12 +393,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (badge.alwaysVisible) {
         const obj2 = { size: "sm", color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT };
-        let tmp2 = state(CircleInformationIcon.CircleInformationIcon, obj2);
+        let tmp2 = closure_1_14(CircleInformationIcon.CircleInformationIcon, obj2);
       } else {
         tmp2 = null;
         if (flag) {
           const obj = { size: "sm", color: nativeDefault.colors.ICON_MUTED };
-          tmp2 = state(EyeSlashIcon2.EyeSlashIcon, obj);
+          tmp2 = closure_1_14(EyeSlashIcon2.EyeSlashIcon, obj);
         }
       }
       const obj3 = { variant: "secondary", border: "none", radius: 16, style: tmp.card, children: null };
@@ -410,12 +410,12 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items[1] = iconHidden;
       obj4.style = items;
-      const items1 = [state(BadgeCatalogIconDefault, obj4), ,];
+      const items1 = [closure_1_14(BadgeCatalogIconDefault, obj4), ,];
       let str = "text-default";
       if (flag) {
         str = "text-muted";
       }
-      items1[1] = state(Text_Text.Text, {
+      items1[1] = closure_1_14(Text_Text.Text, {
         variant: "text-xs/medium",
         color: str,
         lineClamp: 1,
@@ -426,11 +426,11 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp14Result = null != tmp2;
       if (tmp14Result) {
         const obj6 = { style: tmp.indicator, "aria-hidden": true, children: tmp2 };
-        tmp14Result = state(React4, obj6);
+        tmp14Result = closure_1_14(React4, obj6);
       }
       items1[2] = tmp14Result;
       obj3.children = items1;
-      return closure_1_15(Card.Card, obj3);
+      return value2(Card.Card, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_24 = noop.memo(
@@ -552,8 +552,8 @@ let closure_24 = noop.memo(
                     obj.onLongPress = fn;
                     obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                     obj.style = style;
-                    obj.children = state(closure_23, { badge, alwaysVisible });
-                    return state(native.PressableScale, obj);
+                    obj.children = closure_2_14(closure_23, { badge, alwaysVisible });
+                    return closure_2_14(native.PressableScale, obj);
                   }
                   cResult[13] = alwaysVisible;
                   cResult[14] = badge;
@@ -661,8 +661,8 @@ let closure_24 = noop.memo(
             obj.onLongPress = fn;
             obj.delayLongPress = ContextMenuConstants.CONTEXT_MENU_LONG_PRESS_DURATION_MS;
             obj.style = items1;
-            obj.children = state(closure_23, { badge, alwaysVisible });
-            return state(native.PressableScale, obj);
+            obj.children = closure_2_14(closure_23, { badge, alwaysVisible });
+            return closure_2_14(native.PressableScale, obj);
           }
           let result = index % badge(alwaysVisible[13]).BADGE_GRID_COLUMNS;
           const _Math = Math;
@@ -1949,13 +1949,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     if (hiddenBadges.some((badge_id) => badge_id.badge_id === badge_id.badge_id)) {
       closure_18(badge_id);
     } else if (set.has(badge_id.badge_id)) {
-      const obj2 = { key: null, content: null };
       const _HermesInternal = HermesInternal;
-      obj2.key = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
+      const obj2 = { text: null };
+      const combined = "BADGE_ALWAYS_VISIBLE-" + badge_id.badge_id;
       const intl = util.intl;
       const obj = ToastActionCreatorsDefault;
-      obj2.content = intl.string(BadgeUtils.getAlwaysVisibleCopy(badge_id.badge_id));
-      obj.open(obj2);
+      obj2.text = intl.string(BadgeUtils.getAlwaysVisibleCopy(badge_id.badge_id));
+      obj.open(combined, obj2);
     }
   });
   closure_20 = tmp2(tmp3[26])((badgeId) => {
@@ -2112,7 +2112,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     obj10.style = items17;
     const items18 = [
       fixedBadges.map((badge, index) =>
-        state(
+        closure_2_14(
           closure_24,
           { badge, index, tileSize: badgeTileSize, alwaysVisible: set.has(badge.badge_id), onPress },
           badge.badge_id,
@@ -2137,7 +2137,7 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
             onSetHidden,
             onPress,
           };
-          let tmpResult = state(closure_49, obj2, badge.badge_id);
+          let tmpResult = closure_2_14(closure_49, obj2, badge.badge_id);
         } else {
           const obj = {
             badge,
@@ -2147,12 +2147,12 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
             onPress,
             onSetHidden,
           };
-          tmpResult = state(closure_24, obj, badge.badge_id);
+          tmpResult = closure_2_14(closure_24, obj, badge.badge_id);
         }
         return tmpResult;
       }),
       hiddenBadges.map((badge, index) =>
-        state(
+        closure_2_14(
           closure_24,
           {
             badge,

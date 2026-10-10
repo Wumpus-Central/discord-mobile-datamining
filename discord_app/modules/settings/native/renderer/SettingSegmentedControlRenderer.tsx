@@ -12,10 +12,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NodeType = fn(10630).NodeType;
+const NodeType = fn(10664).NodeType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   controlContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -212,13 +212,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => {
         const items = [];
         const item = settings.forEach((id) => {
-          const tmp = items(14756).SETTING_RENDERER_CONFIG[id];
+          const tmp = items(14811).SETTING_RENDERER_CONFIG[id];
           settings(38)(tmp.type === constants.ROUTE, "Invalid setting type for segmented control: " + id);
           const screen = tmp.screen;
           const obj = { label: null, id: null, page: null };
           const component = screen.getComponent();
           const tmp2 = settings(38);
-          obj.label = items(14887).getSettingTitle(id);
+          obj.label = items(14946).getSettingTitle(id);
           obj.id = id;
           obj.page = closure_2_8(component, {});
           items.push(obj);

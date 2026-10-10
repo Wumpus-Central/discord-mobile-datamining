@@ -19,7 +19,7 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(2068).createChannelRecordFromServer;
+let closure_6 = fn(2069).createChannelRecordFromServer;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_9,
@@ -57,7 +57,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -187,7 +187,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -333,7 +333,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -432,7 +432,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "code" },
+      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
       silent: flag2,
     });
     if (flag) {
@@ -445,7 +445,11 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "code" }, silent: flag2 };
+    const obj2 = {
+      type: "CHANNEL_DELETE",
+      channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" },
+      silent: flag2,
+    };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -589,8 +593,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7021).checkGuildTemplateDirty(closure_128_2);
-        name(7021);
+        const result = name(7027).checkGuildTemplateDirty(closure_128_2);
+        name(7027);
       }
       return closure_128_1;
     })();
@@ -610,7 +614,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -754,7 +758,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

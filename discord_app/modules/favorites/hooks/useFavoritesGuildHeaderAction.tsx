@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3439 from "../intl/FavoritesGuild.messages.js";
+import _modDef3442 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== hasAccess) {
         const intl = util.intl;
         if (hasAccess) {
-          tmp2 = _modDef3439;
+          tmp2 = _modDef3442;
           let ojM1xJ = tmp2.G9fGlP;
         } else {
           ojM1xJ = util.t.ojM1xJ;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       const intl = util.intl;
       if (hasAccess) {
-        let ojM1xJ = _modDef3439.G9fGlP;
+        let ojM1xJ = _modDef3442.G9fGlP;
       } else {
         ojM1xJ = util.t.ojM1xJ;
       }

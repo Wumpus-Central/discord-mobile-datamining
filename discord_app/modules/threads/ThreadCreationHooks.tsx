@@ -184,11 +184,11 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     closure_134_1 = closure_1;
     closure_134_2 = closure_2;
     closure_134_4 = forumLikeChannel.isForumLikeChannel();
-    await body();
+    await closure_3();
     if (1 === tmp9) {
       c9 = 0;
       closure_134_8 = closure_8;
-      body = closure_134_8.body;
+      const body = closure_134_8.body;
       let code;
       if (body != null) {
         code = body.code;
@@ -309,17 +309,15 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
                       if (null == closure_1_8.body) {
                         fn();
                       }
-                      const result = andDeleteMostRecentUserCreatedThreadId.addConditionalChangeListener(() => {
-                        andDeleteMostRecentUserCreatedThreadId = andDeleteMostRecentUserCreatedThreadId.getAndDeleteMostRecentUserCreatedThreadId();
+                      const result = closure_6.addConditionalChangeListener(() => {
+                        const andDeleteMostRecentUserCreatedThreadId = closure_2_6.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != andDeleteMostRecentUserCreatedThreadId) {
-                          const channel2 = channel.getChannel(andDeleteMostRecentUserCreatedThreadId);
-                          closure_1(closure_1_2[31]).wait(() => {
-                            if (null == closure_0) {
-                              closure_1();
-                            } else {
-                              closure_0(tmp);
-                            }
-                          });
+                          const channel = closure_2_8.getChannel(andDeleteMostRecentUserCreatedThreadId);
+                          if (null == channel) {
+                            closure_1();
+                          } else {
+                            closure_0(channel);
+                          }
                           return false;
                         }
                       });
@@ -380,15 +378,13 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
         }
         new Promise((arg0, fn) => {
           closure_0 = arg0;
-          if (null == body.body) {
+          if (null == closure_3.body) {
             fn();
           }
           const result = closure_1_8.addConditionalChangeListener(() => {
-            const channel = closure_2_8.getChannel(body.body.id);
+            channel = channel.getChannel(closure_2_3.body.id);
             if (null != channel) {
-              closure_2_1(closure_2_2[31]).wait(() => {
-                channel(channel);
-              });
+              closure_0(channel);
               return false;
             }
           });
@@ -458,13 +454,13 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7237).DraftType;
-const SlowmodeType = fn(7368).SlowmodeType;
+const DraftType = fn(7243).DraftType;
+const SlowmodeType = fn(7374).SlowmodeType;
 const ThreadConstants = fn(1125);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1085);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -528,7 +524,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -623,7 +619,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -678,7 +674,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -773,7 +769,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCreateT
             }
             parentMessageId(threadSettings[22]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
             c7 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp43) {
           c7 = tmp;
@@ -860,7 +856,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -1101,7 +1097,7 @@ export const useCreateForumPostCommon = ReactCompilerGating.isReactCompilerEnabl
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

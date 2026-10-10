@@ -11,7 +11,7 @@ let closure_3 = ["header", "icon", "subtitle", "buttons"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   headerImage: {
     marginLeft: "auto",

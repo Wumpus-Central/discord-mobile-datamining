@@ -21,10 +21,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const isThread = fn(2068).isThread;
+const isThread = fn(2069).isThread;
 const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = {
@@ -35,7 +35,7 @@ const HomeDrawerActiveHook = {
   UNREAD: "unread",
   NONE: "none",
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_21 = createStyles.createStyles({
   guildName: { flexDirection: "row", alignItems: "center", gap: 4 },
   guildNameText: { flexShrink: 1 },
@@ -175,7 +175,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: guild.name,
           };
-          const tmp22 = closure_18(tmp(5087).Text, obj3);
+          const tmp22 = closure_18(tmp(5088).Text, obj3);
           cResult[12] = guild.name;
           cResult[13] = tmp4.guildNameText;
           cResult[14] = "text-default";
@@ -252,7 +252,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = guild.name;
           const items = [
             collapsedCategories(Text_Text.Text, obj2),
-            collapsedCategories(value2, { size: "xs", color: "icon-muted" }),
+            collapsedCategories(value3, { size: "xs", color: "icon-muted" }),
           ];
           obj.children = items;
           return closure_2_19(View, obj);
@@ -562,7 +562,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(4943).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(4982).MobileHomeDrawerExperiment;
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -589,7 +589,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ disableSubtitle, onActiveHookChange } = guildId);
       const items = [GuildStore];
       const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-      const MobileHomeDrawerExperiment = guildId(4943).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = guildId(4982).MobileHomeDrawerExperiment;
       let tmp3 = null;
       if (null != stateFromStores) {
         tmp3 = null;

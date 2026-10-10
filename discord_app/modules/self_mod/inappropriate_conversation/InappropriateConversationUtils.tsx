@@ -5,7 +5,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import ChannelSafetyWarningsStore from "../ChannelSafetyWarningsStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10251).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10284).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx",

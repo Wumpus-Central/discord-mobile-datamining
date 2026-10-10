@@ -12,8 +12,8 @@ const noop = fn(19);
 const View = fn(17).View;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12078);
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
+const NotificationPermissionConstants = fn(12122);
 ({
   EventActionType: c10,
   EventActionLocation: closure_11,
@@ -23,7 +23,7 @@ const NotificationPermissionConstants = fn(12078);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 604800000;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -86,12 +86,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       closure_5(tmp5, tmp6);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         function handlePress() {
-          const pushNotificationPermission = onDismiss(12079).requestPushNotificationPermission(
+          const pushNotificationPermission = onDismiss(12123).requestPushNotificationPermission(
             constants2.ALLOW_TO_REQUEST,
             constants3.NOTIFICATION_CENTER,
             closure_1_8,
           );
-          const obj = onDismiss(12079);
+          const obj = onDismiss(12123);
           AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
             action: constants4.ACCEPT,
             prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
@@ -118,7 +118,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-        const tmp13 = closure_14(tmp(10312).BellSlashIcon, obj2);
+        const tmp13 = closure_14(tmp(10345).BellSlashIcon, obj2);
         cResult[5] = tmp13;
         let tmp10 = tmp13;
       } else {
@@ -137,7 +137,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "text-md/semibold", color: "text-default", children: null };
         const intl = tmp(1126).intl;
         obj4.children = intl.string(tmp(1126).t.G6YBna);
-        const tmp20 = closure_14(tmp(5087).Text, obj4);
+        const tmp20 = closure_14(tmp(5088).Text, obj4);
         cResult[8] = tmp20;
         let tmp18 = tmp20;
       } else {
@@ -149,7 +149,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         obj5.style = obj6;
         const intl2 = tmp(1126).intl;
         obj5.children = intl2.string(tmp(1126).t["9CoPDE"]);
-        const tmp24 = closure_14(tmp(5087).Text, obj5);
+        const tmp24 = closure_14(tmp(5088).Text, obj5);
         cResult[9] = tmp24;
         let tmp21 = tmp24;
       } else {
@@ -160,7 +160,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = tmp(1126).intl;
         obj7.text = intl3.string(tmp(1126).t.a4bgO0);
         obj7.onPress = tmp8;
-        const tmp27 = closure_14(tmp(5376).Button, obj7);
+        const tmp27 = closure_14(tmp(5379).Button, obj7);
         cResult[10] = tmp27;
         let tmp25 = tmp27;
       } else {
@@ -183,7 +183,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = tmp(1126).intl;
           const stringResult = intl4.string(tmp(1126).t.WAI6xu);
-          const tmp38 = closure_14(tmp(6212).XSmallIcon, { size: "sm", color: "icon-strong" });
+          const tmp38 = closure_14(tmp(6207).XSmallIcon, { size: "sm", color: "icon-strong" });
           cResult[16] = stringResult;
           cResult[17] = tmp38;
           let tmp35 = tmp38;
@@ -200,7 +200,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: tmp34,
             children: tmp35,
           };
-          const tmp41 = closure_14(tmp(6191).PressableHighlight, obj9);
+          const tmp41 = closure_14(tmp(6184).PressableHighlight, obj9);
           cResult[18] = tmp9;
           cResult[19] = tmp41;
           let tmp39 = tmp41;
@@ -250,37 +250,37 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { style: tmp.container, children: null };
       const obj2 = {
         style: tmp.iconContainer,
-        children: closure_14(onDismiss(10312).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
+        children: closure_14(onDismiss(10345).BellSlashIcon, { size: "md", color: nativeDefault.colors.ICON_STRONG }),
       };
       const items = [closure_14(View, obj2), ,];
       const obj4 = { style: tmp.contentContainer, children: null };
       const obj5 = { variant: "text-md/semibold", color: "text-default", children: null };
       const intl = onDismiss(1126).intl;
       obj5.children = intl.string(onDismiss(1126).t.G6YBna);
-      const items1 = [closure_14(onDismiss(5087).Text, obj5), ,];
+      const items1 = [closure_14(onDismiss(5088).Text, obj5), ,];
       const obj6 = { variant: "text-md/medium", color: "text-muted", style: null, children: null };
       const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
       obj6.style = { marginTop: nativeDefault.space.PX_4 };
       const intl2 = onDismiss(1126).intl;
       obj6.children = intl2.string(onDismiss(1126).t["9CoPDE"]);
-      items1[1] = closure_14(onDismiss(5087).Text, obj6);
+      items1[1] = closure_14(onDismiss(5088).Text, obj6);
       const obj8 = { style: tmp.ctaButton, children: null };
       const obj9 = { variant: "primary", size: "md", text: null, onPress: null };
       const intl3 = onDismiss(1126).intl;
       obj9.text = intl3.string(onDismiss(1126).t.a4bgO0);
       obj9.onPress = function handlePress() {
-        const pushNotificationPermission = onDismiss(12079).requestPushNotificationPermission(
+        const pushNotificationPermission = onDismiss(12123).requestPushNotificationPermission(
           constants2.ALLOW_TO_REQUEST,
           constants3.NOTIFICATION_CENTER,
           closure_1_8,
         );
-        const obj = onDismiss(12079);
+        const obj = onDismiss(12123);
         AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, {
           action: constants4.ACCEPT,
           prompt_type: constants5.NOTIFICATION_CENTER_BANNER,
         });
       };
-      obj8.children = closure_14(onDismiss(5376).Button, obj9);
+      obj8.children = closure_14(onDismiss(5379).Button, obj9);
       items1[2] = closure_14(View, obj8);
       obj4.children = items1;
       items[1] = closure_15(View, obj4);
@@ -299,8 +299,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl4 = onDismiss(1126).intl;
       obj10.accessibilityLabel = intl4.string(onDismiss(1126).t.WAI6xu);
-      obj10.children = closure_14(onDismiss(6212).XSmallIcon, { size: "sm", color: "icon-strong" });
-      items[2] = closure_14(onDismiss(6191).PressableHighlight, obj10);
+      obj10.children = closure_14(onDismiss(6207).XSmallIcon, { size: "sm", color: "icon-strong" });
+      items[2] = closure_14(onDismiss(6184).PressableHighlight, obj10);
       obj.children = items;
       return closure_15(View, obj);
     };

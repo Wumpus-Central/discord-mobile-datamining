@@ -34,8 +34,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
         reason(1255).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1255);
       }
-      closure_0(7005).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7005);
+      closure_0(7011).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7011);
     });
     return () => {
       const item = reason(12).forEach(closure_1_0, (userIds, guildId) => closure_1_0(closure_1_2[7]).unsubscribeMembers(guildId, userIds));
@@ -67,8 +67,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
         reason(1255).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1255);
       }
-      closure_0(7005).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7005);
+      closure_0(7011).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7011);
     });
     return () => {
       const item = reason(12).forEach(closure_1_0, (userIds, guildId) => closure_1_0(closure_1_2[7]).unsubscribeMembers(guildId, userIds));

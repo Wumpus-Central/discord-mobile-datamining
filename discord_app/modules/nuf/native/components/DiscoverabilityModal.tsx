@@ -13,16 +13,16 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12355).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12399).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     justifyContent: "center",
     paddingBottom: 44,
-    paddingTop: fn(6263).NAV_BAR_HEIGHT + 32,
+    paddingTop: fn(6258).NAV_BAR_HEIGHT + 32,
   },
 };
 let closure_8 = createStyles.createStyles(obj2);
@@ -164,9 +164,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(tmp5, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function v(arg0) {
-          const result = allowPhone(12383).startContactSyncForDiscoverability(arg0);
-          const obj = allowPhone(12383);
-          const result1 = allowPhone(12383).closeDiscoverabilityModal(false);
+          const result = allowPhone(12427).startContactSyncForDiscoverability(arg0);
+          const obj = allowPhone(12427);
+          const result1 = allowPhone(12427).closeDiscoverabilityModal(false);
         };
         cResult[3] = fn2;
         let tmp8 = fn2;
@@ -210,9 +210,9 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { style: tmp.container, children: null };
       const callback = noop.useCallback((arg0) => {
-        const result = allowPhone(12383).startContactSyncForDiscoverability(arg0);
-        const obj = allowPhone(12383);
-        const result1 = allowPhone(12383).closeDiscoverabilityModal(false);
+        const result = allowPhone(12427).startContactSyncForDiscoverability(arg0);
+        const obj = allowPhone(12427);
+        const result1 = allowPhone(12427).closeDiscoverabilityModal(false);
       }, []);
       const obj2 = { onNext: callback, loading: false, initialName: null };
       const tmp2 = useContactSyncModalStore();

@@ -1,7 +1,7 @@
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2141 from "../../../intl/Mana.messages.js";
+import _modDef2142 from "../../../intl/Mana.messages.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let closure_6 = { overshootClamping: true };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", gap: 4 },
   stepPill: { height: 4, borderRadius: 2 },
@@ -237,7 +237,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
                   const _Symbol = Symbol;
                   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl = util.intl;
-                    const stringResult = intl.string(_modDef2141.KUwsC0);
+                    const stringResult = intl.string(_modDef2142.KUwsC0);
                     cResult[11] = stringResult;
                     let tmp7 = stringResult;
                   } else {
@@ -343,7 +343,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {
             accessible: true,
             accessibilityRole: "progressbar",
-            accessibilityLabel: intl.string(_modDef2141.KUwsC0),
+            accessibilityLabel: intl.string(_modDef2142.KUwsC0),
             accessibilityValue: null,
             importantForAccessibility: "yes",
             style: null,
@@ -357,7 +357,7 @@ export const ModalStepIndicator = ReactCompilerGating.isReactCompilerEnabled()
             <View
               accessible
               accessibilityRole="progressbar"
-              accessibilityLabel={intl.string(_modDef2141.KUwsC0)}
+              accessibilityLabel={intl.string(_modDef2142.KUwsC0)}
               accessibilityValue={null}
               importantForAccessibility="yes"
               style={null}

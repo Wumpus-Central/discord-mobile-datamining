@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   textContainer: { flex: 1, justifyContent: "center" },
@@ -161,7 +161,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         const _HermesInternal = HermesInternal;
         obj2.children = "[" + intl.string(tmp(1126).t.bz1PZX) + "]";
-        const tmp13 = closure_5(tmp(5087).Text, obj2);
+        const tmp13 = closure_5(tmp(5088).Text, obj2);
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -203,11 +203,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         ({ channelTitle: channelTitle2, channelIcon } = channelTitle);
         if (cResult[5] !== stateFromStores) {
-          const channelIcon1 = tmp(8142).getChannelIcon(stateFromStores);
+          const channelIcon1 = tmp(8158).getChannelIcon(stateFromStores);
           cResult[5] = stateFromStores;
           cResult[6] = channelIcon1;
           let tmp14 = channelIcon1;
-          const tmpResult2 = tmp(8142);
+          const tmpResult2 = tmp(8158);
         } else {
           tmp14 = cResult[6];
         }
@@ -217,7 +217,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp10) {
             const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp10 };
-            const tmp21 = closure_5(tmp(5087).Text, obj4);
+            const tmp21 = closure_5(tmp(5088).Text, obj4);
             cResult[10] = tmp10;
             cResult[11] = tmp21;
             let tmp19 = tmp21;
@@ -261,20 +261,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl = benefit(1126).intl;
       obj2.children = "[" + intl.string(benefit(1126).t.bz1PZX) + "]";
-      let tmp8 = closure_5(benefit(5087).Text, obj2);
+      let tmp8 = closure_5(benefit(5088).Text, obj2);
       if (null != stateFromStores) {
         const obj3 = { style: tmp.channelTitle, children: null };
         const obj4 = {
           style: tmp.channelIcon,
           size: tmp2(1200).Icon.Sizes.CUSTOM,
-          source: tmp2(8142).getChannelIcon(stateFromStores),
+          source: tmp2(8158).getChannelIcon(stateFromStores),
         };
         const items2 = [closure_5(tmp2(1200).Icon, obj4)];
         const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-        items2[1] = closure_5(tmp2(5087).Text, obj5);
+        items2[1] = closure_5(tmp2(5088).Text, obj5);
         obj3.children = items2;
         tmp8 = closure_6(View, obj3);
-        const tmp2Result = tmp2(8142);
+        const tmp2Result = tmp2(8158);
       }
       if (null != benefit.emoji_id) {
         let str = benefit.emoji_id;

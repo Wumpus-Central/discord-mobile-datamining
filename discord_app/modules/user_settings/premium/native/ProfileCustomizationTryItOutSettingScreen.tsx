@@ -15,7 +15,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, AnalyticsPages: closure_8 } = Constants);
 const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: null, activityIndicator: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const pendingAvatarDecoration = tmp14.pendingAvatarDecoration;
       const setPendingAvatarDecoration = tmp14.setPendingAvatarDecoration;
       if (cResult[4] !== stateFromStores) {
-        class A {
+        class L {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -73,18 +73,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
         }
         const items1 = [stateFromStores];
         cResult[4] = stateFromStores;
-        cResult[5] = A;
+        cResult[5] = L;
         cResult[6] = items1;
         let tmp16 = items1;
       } else {
-        class A {
+        class L {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -92,16 +92,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
         }
         tmp16 = cResult[6];
       }
-      const effect = pendingAvatarDecoration.useEffect(A, tmp16);
+      const effect = pendingAvatarDecoration.useEffect(L, tmp16);
       if (cResult[7] === categories) {
-        class A {
+        class L {
           constructor() {
             obj = closure_1;
             if (null != closure_1) {
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[15]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
@@ -164,9 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [stateFromStores];
       const effect = pendingAvatarDecoration.useEffect(() => {
         if (null != stateFromStores) {
-          maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {
-            dispatchWait: true,
-          });
+          maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {});
         }
       }, items1);
       const items2 = [pendingAvatarDecoration, setPendingAvatarDecoration, categories];

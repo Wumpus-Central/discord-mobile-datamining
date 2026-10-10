@@ -64,7 +64,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_22 = async function _saveProtos(arg0) {
         } else {
           closure_2 = tmp2;
           closure_1 = tmp2;
-          resetTimer(closure_2_15, false);
+          resetTimer(value2, false);
           if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
             let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
             if (!hasPendingUsageResult) {
@@ -128,7 +128,7 @@ let closure_22 = async function _saveProtos(arg0) {
         },
       );
       c4 = 3;
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;
@@ -143,7 +143,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6093).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6086).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1373).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

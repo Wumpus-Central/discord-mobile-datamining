@@ -7,7 +7,7 @@ import IAPStoreDefault from "../../../stores/native/IAPStore.android.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import types from "../../virtual_currency/types.tsx";
-import _modDef9040 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
+import _modDef9059 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -189,6 +189,39 @@ export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(cRes
     return tmp5;
   }
 };
+export const getGoogleSkuIds = function getGoogleSkuIds(products) {
+  let items = [];
+  let item = products.forEach((googleSkuIds) => {
+    let tmp = undefined !== googleSkuIds.googleSkuIds;
+    if (tmp) {
+      tmp = null !== googleSkuIds.googleSkuIds;
+    }
+    if (tmp) {
+      let push = items.push;
+      let _Object = Object;
+      items = [];
+      HermesBuiltin.arraySpread(Object.values(googleSkuIds.googleSkuIds), 0);
+      HermesBuiltin.apply(items, items);
+    }
+    if (obj.getIsVariantProduct(googleSkuIds)) {
+      const variants = googleSkuIds.variants;
+      const item = variants.forEach((googleSkuIds) => {
+        let tmp = undefined !== googleSkuIds.googleSkuIds;
+        if (tmp) {
+          tmp = null !== googleSkuIds.googleSkuIds;
+        }
+        if (tmp) {
+          const push = navigation.push;
+          const _Object = Object;
+          items = [];
+          HermesBuiltin.arraySpread(Object.values(googleSkuIds.googleSkuIds), 0);
+          HermesBuiltin.apply(items, navigation);
+        }
+      });
+    }
+  });
+  return items;
+};
 export const isGPlaySynced = function isGPlaySynced(variants) {
   if (obj.getIsVariantProduct(variants)) {
     variants = variants.variants;
@@ -312,8 +345,8 @@ export const filterGPlaySyncedCategories = function filterGPlaySyncedCategories(
     return items;
   }
 };
-export const filterHiddenCategories = function filterHiddenCategories(arr) {
-  return arr.filter((unpublishedAt) => {
+export const filterHiddenCategories = function filterHiddenCategories(result1) {
+  return result1.filter((unpublishedAt) => {
     let tmp = null == unpublishedAt.unpublishedAt;
     if (!tmp) {
       const _Date = Date;
@@ -327,5 +360,5 @@ export const filterHiddenCategories = function filterHiddenCategories(arr) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9040, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef9059, description: "", isPreviewMode: true };
 };

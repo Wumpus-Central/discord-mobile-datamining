@@ -1,8 +1,8 @@
 // discord_app/modules/launchpad/native/shared/renderChannelContent.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
+import WarningIcon from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import GuildRoleSubscriptionGatedChannelIconDefault from "../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
@@ -11,11 +11,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(11713).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(5974).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(11758).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let PlatformUtils = fn(1382);
 let num = -1;
 if (PlatformUtils.isIOS()) {

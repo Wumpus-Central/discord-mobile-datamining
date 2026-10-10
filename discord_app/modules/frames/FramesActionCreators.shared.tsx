@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import getChannelIdForEmbeddedSurfaceDefault from "../embedded_apps/utils/getChannelIdForEmbeddedSurface.tsx";
 import leaveCurrentEmbeddedActivity from "../activities/utils/leaveCurrentEmbeddedActivity.tsx";
-import EmbeddedActivitiesActionCreators from "../activities/EmbeddedActivitiesActionCreators.tsx";
+import createProxyTicket from "../activities/createProxyTicket.tsx";
 import leaveFrame from "leaveFrame.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import FramesStore from "FramesStore.tsx";
@@ -19,7 +19,7 @@ let closure_10 = async function _launchFrame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -242,7 +242,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10811);
+    obj2 = obj2(10821);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -274,7 +274,7 @@ let closure_15 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ let closure_15 = async function _refreshProxyTicket() {
               c5 = 4;
               c6 = 1;
               const obj6 = {
-                value: EmbeddedActivitiesActionCreators.createProxyTicket(
+                value: createProxyTicket.createProxyTicket(
                   applicationId,
                   getChannelIdForEmbeddedSurfaceDefault(surface),
                   surface.type,
@@ -418,14 +418,14 @@ let closure_15 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(10767);
+const FramesConstants = fn(10802);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
   getFrameIntentForSurface: closure_7,
   makeFrameId: closure_8,
 } = FramesConstants);
-const ActivityPanelModes = fn(6074).ActivityPanelModes;
+const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 

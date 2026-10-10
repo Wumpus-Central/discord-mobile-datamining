@@ -21,7 +21,7 @@ require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17721).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(17793).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1085).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
@@ -539,7 +539,7 @@ export default noop.memo(
           function renderButton(arg0) {
             let tmp = arg0;
             if (arg0 == null) {
-              const obj = { onPress, ref: "r" };
+              const obj = { onPress, ref: "Array" };
               tmp = obj;
             }
             const obj2 = { targetRef: ref, canShowTooltip: null };
@@ -551,7 +551,7 @@ export default noop.memo(
               tmp9 = isConnectedToVoiceChannel;
             }
             obj2.canShowTooltip = tmp9;
-            const items = [closure_2_15(closure_19, obj2)];
+            const items = [value2(closure_19, obj2)];
             const obj3 = { style, ref, children: null };
             const tmp3 = _objectWithoutProperties(tmp, closure_4);
             const obj4 = { ref: tmp.ref };
@@ -574,10 +574,10 @@ export default noop.memo(
             obj4.icon = tmp15;
             const intl = util.intl;
             obj4.accessibilityLabel = intl.string(util.t.dnI0AL);
-            obj3.children = closure_2_15(VoicePanelIconButtonDefault, obj4);
-            items[1] = closure_2_15(tmp11, obj3);
+            obj3.children = value2(VoicePanelIconButtonDefault, obj4);
+            items[1] = value2(tmp11, obj3);
             obj5.children = items;
-            return constants(value2, obj5);
+            return constants(value3, obj5);
           }
           if (!tmp4Result2.isAndroid()) {
             if (tmp10) {

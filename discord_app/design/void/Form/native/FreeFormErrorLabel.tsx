@@ -15,11 +15,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(8);
       ({ children, style } = arg0);
       if (cResult[0] !== children) {
-        const nodeText = tmp(4781).getNodeText(children);
+        const nodeText = tmp(4820).getNodeText(children);
         cResult[0] = children;
         cResult[1] = nodeText;
         let tmp4 = nodeText;
-        const tmpResult = tmp(4781);
+        const tmpResult = tmp(4820);
       } else {
         tmp4 = cResult[1];
       }
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function Label(style) {
       const children = style.children;
       let nodeText;
-      nodeText = nodeText(4781).getNodeText(children);
+      nodeText = nodeText(4820).getNodeText(children);
       const items = [nodeText];
       const effect = noop.useEffect(() => {
         let tmp2 = null != nodeText;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           AccessibilityAnnouncer.announce(nodeText);
         }
       }, items);
-      return jsx(nodeText(5087).Text, {
+      return jsx(nodeText(5088).Text, {
         style: style.style,
         variant: "text-xs/medium",
         color: "text-feedback-critical",

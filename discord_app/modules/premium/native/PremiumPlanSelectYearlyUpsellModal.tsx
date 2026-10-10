@@ -2,7 +2,7 @@
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef13772 from "../../../../_runtime/metro/13772__.js";
+import _modDef13824 from "../../../../_runtime/metro/13824__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -10,11 +10,11 @@ import IAPStore from "../../../stores/native/IAPStore.android.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const usePremiumPlanSelectStore = fn(13758).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13810).usePremiumPlanSelectStore;
 let closure_9 = fn(1392).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginHorizontal: 26 },
   image: { alignSelf: "center", marginVertical: 32 },
@@ -29,13 +29,13 @@ const merged = Object.assign(TextStylesDefault(fn(1096).Fonts.DISPLAY_EXTRABOLD,
 obj3.alignSelf = "center";
 obj3.textAlign = "center";
 obj3.paddingBottom = 8;
-obj3.color = fn(5976).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5969).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
 obj2.description = {
   alignSelf: "center",
   textAlign: "center",
   paddingBottom: 32,
-  color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500,
+  color: fn(5969).DARK_WHITE_500_LIGHT_BLACK_500,
 };
 obj2.upsellButton = { marginBottom: 16 };
 obj2.continueButton = { marginBottom: 4 };
@@ -46,7 +46,7 @@ let obj4 = {
   alignSelf: "center",
   textAlign: "center",
   paddingBottom: 32,
-  color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500,
+  color: fn(5969).DARK_WHITE_500_LIGHT_BLACK_500,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
@@ -274,8 +274,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [tmp4, c3] = noop.useState(null);
       const obj = noop;
       const tmp3 = _slicedToArray(noop.useState(null), 2);
-      const premiumBundledItemsFromProductId = productId(7119).getPremiumBundledItemsFromProductId(productId);
-      const obj2 = productId(7119);
+      const premiumBundledItemsFromProductId = productId(7125).getPremiumBundledItemsFromProductId(productId);
+      const obj2 = productId(7125);
       let items = [LocaleStore];
       const stateFromStores = productId(504).useStateFromStores(items, () => locale.locale);
       const obj3 = productId(504);
@@ -315,12 +315,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp5Result = productId(1901);
         const obj7 = { style: tmp.image, source: null };
         const tmp19 = common_AlertDefault;
-        obj7.source = _modDef13772;
+        obj7.source = _modDef13824;
         const items2 = [closure_10(FastImageDefault, obj7), , , , ,];
         const obj8 = { style: tmp.header, accessibilityRole: "header", children: null };
         const intl = productId(1126).intl;
         const obj9 = { discountPercentage: formatPercentResult, planName: null };
-        obj9.planName = productId(4728).getPremiumTypeDisplayName(premiumTier);
+        obj9.planName = productId(4769).getPremiumTypeDisplayName(premiumTier);
         obj8.children = intl.format(productId(1126).t.LQCVfK, obj9);
         items2[1] = closure_10(productId(1200).LegacyText, obj8);
         const obj10 = { style: tmp.description, children: null };
@@ -339,7 +339,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         obj13.disabled = tmp11;
         obj13.loading = "upsell" === tmp4 && tmp2;
-        obj12.children = closure_10(productId(5376).Button, obj13);
+        obj12.children = closure_10(productId(5379).Button, obj13);
         items2[3] = closure_10(View, obj12);
         const obj15 = { style: tmp.continueButton, children: null };
         const obj16 = { variant: "secondary", text: null, onPress: null, disabled: null, loading: null };
@@ -351,14 +351,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         obj16.disabled = tmp11;
         obj16.loading = "default" === tmp4 && tmp2;
-        obj15.children = closure_10(productId(5376).Button, obj16);
+        obj15.children = closure_10(productId(5379).Button, obj16);
         items2[4] = closure_10(View, obj15);
         const obj17 = { style: tmp.cancelButton, children: null };
         const obj18 = { variant: "tertiary", text: null, onPress: null };
         const intl5 = productId(1126).intl;
         obj18.text = intl5.string(productId(1126).t.cpT0Cq);
         obj18.onPress = onClose;
-        obj17.children = closure_10(productId(5376).Button, obj18);
+        obj17.children = closure_10(productId(5379).Button, obj18);
         items2[5] = closure_10(View, obj17);
         obj6.children = items2;
         obj5.children = closure_11(View, obj6);

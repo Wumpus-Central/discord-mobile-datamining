@@ -28,7 +28,7 @@ prototype["_createSound"] = function _createSound(arg0, arg1, fn) {
   closure_0 = fn;
   const DCDSoundManager = NativeModules.DCDSoundManager;
   DCDSoundManager.prepare(arg0, arg1, this._key, (arg0, arg1) => {
-    if (arg1) {
+    if (null != arg1) {
       ({ duration: self._duration, numberOfChannels: self._numberOfChannels } = arg1);
     }
     if (null == arg0) {

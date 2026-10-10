@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj1 = { other_user_id: user.id, report_id: reportId };
                   trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.IAR_BLOCK_USER_BUTTON_CLICKED, obj1);
                   obj3 = closure_1(closure_2[10]);
-                  blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" });
+                  blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" }, channelId);
                   obj4 = closure_1(closure_2[11]);
                   result = obj4.showBlockSuccessToast(user.id, channelId);
                   return;
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj1 = { other_user_id: user.id, report_id: reportId };
               trackWithMetadataResult = obj.trackWithMetadata(AnalyticEvents.IAR_BLOCK_USER_BUTTON_CLICKED, obj1);
               obj3 = closure_1(closure_2[10]);
-              blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" });
+              blockUserResult = obj3.blockUser(user.id, { location: "ReportMenuBlockUser-iOS" }, channelId);
               obj4 = closure_1(closure_2[11]);
               result = obj4.showBlockSuccessToast(user.id, channelId);
               return;

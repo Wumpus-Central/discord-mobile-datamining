@@ -20,7 +20,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -953,7 +953,7 @@ export default noop.memo(
         const items9 = [onPressGIF, resultItems.length, resultQuery];
         const memo2 = onPressGIF.useMemo(
           () =>
-            __initData2(GIFPickerSearchSuggestionsDefault, {
+            map1(GIFPickerSearchSuggestionsDefault, {
               onClickSuggestion(arg0) {
                 return callback2(arg0, false);
               },

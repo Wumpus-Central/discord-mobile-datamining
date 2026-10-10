@@ -1,6 +1,6 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/07559_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

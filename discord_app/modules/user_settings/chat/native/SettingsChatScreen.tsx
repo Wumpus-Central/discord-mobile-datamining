@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef9741 from "../../../../../_runtime/metro/09741__.js";
+import _modDef9770 from "../../../../../_runtime/metro/09770__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -92,11 +92,11 @@ function getChatSettings() {
   return items1;
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7974).MobileUserSettings;
+const MobileUserSettings = fn(7992).MobileUserSettings;
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   card: {
     marginTop: 8,
@@ -140,7 +140,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = intl.format(tmp(1126).t["Up+hSO"], {
           supportURL: "https://support.discord.com/hc/articles/9665451164951",
         });
-        const tmp13 = closure_9(tmp(5087).Text, obj3);
+        const tmp13 = closure_9(tmp(5088).Text, obj3);
         cResult[2] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -172,7 +172,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { style: tmp5.cardContent, children: null };
         const obj8 = {
           style: tmp5.cardIcon,
-          source: _modDef9741,
+          source: _modDef9770,
           size: tmp(1200).Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
         };
@@ -186,10 +186,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj9.children = intl2.format(tmp(1126).t.uW1zul, obj10);
-        items2[1] = closure_9(tmp(5087).Text, obj9);
+        items2[1] = closure_9(tmp(5088).Text, obj9);
         obj7.children = items2;
         obj6.children = closure_10(View, obj7);
-        obj5.children = closure_9(tmp(6188).Card, obj6);
+        obj5.children = closure_9(tmp(6181).Card, obj6);
         tmp15 = closure_9(View, obj5);
       }
       cResult[3] = stackNavigation;
@@ -222,7 +222,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: tmp3.cardContent, children: null };
         const obj7 = {
           style: tmp3.cardIcon,
-          source: _modDef9741,
+          source: _modDef9770,
           size: tmp(1200).Icon.Sizes.SMALL,
           color: nativeDefault.unsafe_rawColors.PRIMARY_400,
         };
@@ -236,10 +236,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj8.children = intl2.format(tmp(1126).t.uW1zul, obj9);
-        items2[1] = closure_9(tmp(5087).Text, obj8);
+        items2[1] = closure_9(tmp(5088).Text, obj8);
         obj6.children = items2;
         obj5.children = closure_10(View, obj6);
-        obj4.children = closure_9(tmp(6188).Card, obj5);
+        obj4.children = closure_9(tmp(6181).Card, obj5);
         tmp7Result = closure_9(View, obj4);
       }
       children[1] = tmp7Result;

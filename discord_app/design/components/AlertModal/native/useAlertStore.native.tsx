@@ -38,7 +38,7 @@ export const dismissAlerts = function dismissAlerts() {
     });
   });
   if (tmp4) {
-    arr4(5301)();
+    arr4(5302)();
   }
   const obj = first(1272);
   tmp4 = 0 === tmp[1].length && first.length > 0;
@@ -70,7 +70,7 @@ export const dismissAlert = function dismissAlert(key) {
       }
     });
     if (tmp2) {
-      found(5301)();
+      found(5302)();
     }
     let obj = require("ReactBatchUpdates");
   }

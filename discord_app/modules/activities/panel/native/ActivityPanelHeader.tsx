@@ -15,12 +15,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 
-const native = GestureDetector(4788);
-const LegacyBaseButton = GestureDetector(6333);
+const native = GestureDetector(4827);
+const LegacyBaseButton = GestureDetector(6334);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(6074);
+const ActivityPanelConstants = fn(6067);
 ({
   ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8,
   LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9,
@@ -29,7 +29,7 @@ const ActivityPanelConstants = fn(6074);
 const ThemeTypes = fn(1096).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj = { panelHeader: null, panelLandscape: null, headerContainer: null, pullIndicator: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -117,7 +117,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const obj3 = { runOnJS: setMode(4811).runOnJS, setMode, ActivityPanelModes };
+                  const obj3 = { runOnJS: setMode(4850).runOnJS, setMode, ActivityPanelModes };
                   T.__closure = obj3;
                   T.__workletHash = 14504167937928;
                   T.__initData = __initData;
@@ -142,7 +142,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = {
-                  mode: setMode(17636).MorphablePanelModes.PANEL,
+                  mode: setMode(17708).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -226,7 +226,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         items[2] = obj;
         return items;
       }, items1);
-      obj.runOnJS = landscape(4811).runOnJS;
+      obj.runOnJS = landscape(4850).runOnJS;
       obj.setMode = setMode;
       obj.ActivityPanelModes = ActivityPanelModes;
       fn.__closure = obj;
@@ -236,7 +236,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
       const callback = noop.useCallback(fn, items2);
       const obj3 = {
-        mode: landscape(17636).MorphablePanelModes.PANEL,
+        mode: landscape(17708).MorphablePanelModes.PANEL,
         panGestureEnabled: true,
         pipState,
         swipeRequiresPop: true,
@@ -244,7 +244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPanMinimizeGestureEnd: callback,
         disableHorizontalSafeAreas: true,
       };
-      obj2.gesture = setMode(17636)(obj3);
+      obj2.gesture = setMode(17708)(obj3);
       obj2.headerWrapperStyles = memo;
       obj2.headerStyles = memo1;
       obj2.styles = tmp;
@@ -299,7 +299,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { style: headerWrapperStyles, children: null };
             const items = [first, tmp9, tmp13];
             obj4.children = items;
-            const tmp20 = __initData2(hasOwnProperty, obj4);
+            const tmp20 = map1(hasOwnProperty, obj4);
             cResult[7] = headerWrapperStyles;
             cResult[8] = tmp9;
             cResult[9] = tmp13;
@@ -342,14 +342,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: headerStyles, children };
         items[2] = __initData(hasOwnProperty, obj5);
         obj3.children = items;
-        obj2.children = __initData2(hasOwnProperty, obj3);
+        obj2.children = map1(hasOwnProperty, obj3);
         obj.children = __initData(LegacyBaseButton.GestureDetector, obj2);
         tmp3Result2 = __initData(native.ThemeContextProvider, obj);
       }
       return tmp3Result2;
     };
 let closure_18 = tmp7;
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj4 = {
   buttonContainer: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 },
   buttonContainerLandscape: { flexDirection: "column-reverse" },
@@ -495,7 +495,7 @@ let closure_20 = noop.memo(
                           };
                           const items3 = [tmp37, tmp41, tmp43];
                           obj4.children = items3;
-                          const tmp49 = __initData2(closure_18, obj4);
+                          const tmp49 = map1(closure_18, obj4);
                           cResult[28] = gesture;
                           cResult[29] = headerStyles;
                           cResult[30] = headerWrapperStyles;
@@ -519,7 +519,7 @@ let closure_20 = noop.memo(
                   const obj6 = { style: tmp27, children: null };
                   const items4 = [tmp30, tmp33, tmp36];
                   obj6.children = items4;
-                  const tmp40 = __initData2(hasOwnProperty, obj6);
+                  const tmp40 = map1(hasOwnProperty, obj6);
                   cResult[20] = tmp27;
                   cResult[21] = tmp30;
                   cResult[22] = tmp33;
@@ -628,7 +628,7 @@ let closure_20 = noop.memo(
         }
         items3[2] = tmp20;
         obj4.children = items3;
-        const items4 = [__initData2(hasOwnProperty, obj4), ,];
+        const items4 = [map1(hasOwnProperty, obj4), ,];
         let tmp21 = null;
         if (!landscape) {
           tmp21 = tmp8Result;
@@ -638,7 +638,7 @@ let closure_20 = noop.memo(
         const tmp5Result = MinimizeActivityButtonDefault;
         items4[2] = __initData(LeaveActivityButtonDefault, { selfEmbeddedActivity: tmp23, setMode });
         obj3.children = items4;
-        return __initData2(closure_18, obj3);
+        return map1(closure_18, obj3);
       },
 );
 ReactCompilerGating = fn(558);

@@ -2,10 +2,10 @@
 import ShopBlockType from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const prototype = function FeedBlockRecord(arg0) {
+const prototype = function FeedBlockRecord(length) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.FEED;
-  ({ ranked_sku_ids: tmp.rankedSkuIds, sorted_sku_ids: tmp.sortedSkuIds } = arg0);
+  ({ ranked_sku_ids: tmp.rankedSkuIds, sorted_sku_ids: tmp.sortedSkuIds } = length);
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {

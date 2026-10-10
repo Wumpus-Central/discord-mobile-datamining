@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../../_runtime/00576_c.js";
-import inlineStyles from "../../../../../_runtime/07559_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

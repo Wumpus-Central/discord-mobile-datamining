@@ -13,9 +13,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12386);
+let CreateGuildConstants = fn(12430);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6660);
+CreateGuildConstants = fn(6661);
 ({
   CreateGuildModalStates: closure_9,
   GuildTemplateTriggers: c10,
@@ -25,10 +25,10 @@ const Constants = fn(1085);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   flex: { flex: 1 },
-  contentContainer: { marginTop: fn(6263).NAV_BAR_HEIGHT },
+  contentContainer: { marginTop: fn(6258).NAV_BAR_HEIGHT },
   scrollContainer: null,
   sections: null,
   headerContainer: null,
@@ -38,7 +38,7 @@ let obj2 = {
   footerContainer: null,
   footerTitle: null,
 };
-let obj3 = { marginTop: fn(6263).NAV_BAR_HEIGHT };
+let obj3 = { marginTop: fn(6258).NAV_BAR_HEIGHT };
 obj2.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.sections = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING, gap: 24 };
@@ -77,7 +77,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp9 = state(Text_Text.Text, obj2);
+        const tmp9 = closure_1_14(Text_Text.Text, obj2);
         cResult[1] = tmp4.headerTitle;
         cResult[2] = tmp9;
         let tmp7 = tmp9;
@@ -99,7 +99,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: tmp10,
         };
-        const tmp14 = state(Text_Text.Text, obj3);
+        const tmp14 = closure_1_14(Text_Text.Text, obj3);
         cResult[4] = tmp4.headerDescription;
         cResult[5] = tmp14;
         let tmp12 = tmp14;
@@ -117,7 +117,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: headerContainer, children: null };
       const items = [tmp7, tmp12];
       obj4.children = items;
-      const tmp16 = closure_1_15(hasOwnProperty, obj4);
+      const tmp16 = value2(hasOwnProperty, obj4);
       cResult[6] = tmp4.headerContainer;
       cResult[7] = tmp7;
       cResult[8] = tmp12;
@@ -136,13 +136,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = util.intl;
       obj2.children = intl.string(util.t["5HZu07"]);
-      const items = [state(Text_Text.Text, obj2)];
+      const items = [closure_1_14(Text_Text.Text, obj2)];
       const obj3 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t["/k/L/j"]);
-      items[1] = state(Text_Text.Text, obj3);
+      items[1] = closure_1_14(Text_Text.Text, obj3);
       obj.children = items;
-      return closure_1_15(hasOwnProperty, obj);
+      return value2(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -343,8 +343,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const intl3 = tmp2(1126).intl;
       obj4.children = intl3.string(trigger(1126).t["N+Mi/U"]);
       const items2 = [
-        closure_14(trigger(5087).Text, obj4),
-        closure_14(trigger(5376).Button, {
+        closure_14(trigger(5088).Text, obj4),
+        closure_14(trigger(5379).Button, {
           variant: "primary",
           grow: true,
           text: stringResult,
@@ -386,7 +386,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { Icon: tmp3, message: guildTemplate.label, onPress: tmp4 };
-        const tmp8 = state(ListSelectionItemDefault, obj2);
+        const tmp8 = closure_1_14(ListSelectionItemDefault, obj2);
         cResult[3] = guildTemplate.label;
         cResult[4] = tmp3;
         cResult[5] = tmp4;
@@ -411,7 +411,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           return onGuildTemplatePress(guildTemplate);
         },
       };
-      return state(ListSelectionItemDefault, obj);
+      return closure_1_14(ListSelectionItemDefault, obj);
     };
 ReactCompilerGating = fn(558);
 let obj6 = {

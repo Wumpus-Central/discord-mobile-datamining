@@ -23,13 +23,14 @@ import guild_header_coachmark from "guild_header_coachmark.tsx";
 import guild_boost_checkout_banner from "guild_boost_checkout_banner.tsx";
 import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner.tsx";
 import guild_boost_tab_banner from "guild_boost_tab_banner.tsx";
+import shop_tab_tooltip from "shop_tab_tooltip.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
 const MessageType = fn(1210).MessageType;
 class PremiumMarketingComponentProperties$Type extends MessageType {
   constructor() {
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 };
     items[1] = {
       no: 2,
@@ -220,25 +221,34 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
         return require("guild_boost_checkout_banner").GuildBoostCheckoutBanner;
       },
     };
-    obj = { no: 25, name: "guild_boost_marketing_page_banner", kind: "message", oneof: "properties", T: null };
-    class T {
-      constructor() {
-        return closure_1_0(closure_1_1[23]).GuildBoostMarketingPageBanner;
-      }
-    }
-    obj.T = T;
-    items[22] = obj;
-    items[23] = {
-      no: 26,
-      name: "guild_boost_tab_banner",
+    items[22] = {
+      no: 25,
+      name: "guild_boost_marketing_page_banner",
       kind: "message",
       oneof: "properties",
       T() {
-        return require("guild_boost_tab_banner").GuildBoostTabBanner;
+        return require("guild_boost_marketing_page_banner").GuildBoostMarketingPageBanner;
       },
     };
-    items[24] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
-    items[25] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
+    obj = { no: 26, name: "guild_boost_tab_banner", kind: "message", oneof: "properties", T: null };
+    class T {
+      constructor() {
+        return closure_1_0(closure_1_1[24]).GuildBoostTabBanner;
+      }
+    }
+    obj.T = T;
+    items[23] = obj;
+    items[24] = {
+      no: 27,
+      name: "shop_tab_tooltip",
+      kind: "message",
+      oneof: "properties",
+      T() {
+        return require("shop_tab_tooltip").ShopTabTooltip;
+      },
+    };
+    items[25] = { no: 3, name: "content_identifier", kind: "scalar", T: 9 };
+    items[26] = { no: 18, name: "is_default_base", kind: "scalar", T: 8 };
     tmp1 = new tmp("discord_protos.premium_marketing.v1.PremiumMarketingComponentProperties", items, T);
     return tmp1;
   }
@@ -594,13 +604,27 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(properties, tag,
       writeUnknownFields,
     );
   }
+  if ("shopTabTooltip" === properties.properties.oneofKind) {
+    const ShopTabTooltip = shop_tab_tooltip.ShopTabTooltip;
+    const tagResult24 = tag.tag(27, _mod1210.WireType.LengthDelimited);
+    const joined23 = ShopTabTooltip.internalBinaryWrite(
+      properties.properties.shopTabTooltip,
+      tag.tag(27, _mod1210.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult23 = ShopTabTooltip.internalBinaryWrite(
+      properties.properties.shopTabTooltip,
+      tag.tag(27, _mod1210.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
   if ("" !== properties.contentIdentifier) {
     tag.tag(3, _mod1210.WireType.LengthDelimited).string(properties.contentIdentifier);
-    const tagResult24 = tag.tag(3, _mod1210.WireType.LengthDelimited);
+    const tagResult25 = tag.tag(3, _mod1210.WireType.LengthDelimited);
   }
   if (false !== properties.isDefaultBase) {
     tag.tag(18, _mod1210.WireType.Varint).bool(properties.isDefaultBase);
-    const tagResult25 = tag.tag(18, _mod1210.WireType.Varint);
+    const tagResult26 = tag.tag(18, _mod1210.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {

@@ -12,7 +12,7 @@ import LurkingStore from "../../../lurker_mode/LurkingStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const TextAreaCta = fn(11588).TextAreaCta;
+const TextAreaCta = fn(11634).TextAreaCta;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -764,7 +764,7 @@ export default noop.memo(
           const intl8 = tmp2(1126).intl;
           obj2.buttonPrimaryText = intl8.string(tmp2(1126).t.RLch70);
           obj2.buttonPrimaryOnPress = callback2;
-          let tmp15Result = jsx(guildId(12122), {
+          let tmp15Result = jsx(guildId(12166), {
             type: "button-action",
             message: null,
             buttonSecondaryText: null,
@@ -772,7 +772,7 @@ export default noop.memo(
             buttonPrimaryText: null,
             buttonPrimaryOnPress: null,
           });
-          const tmp14 = guildId(12122);
+          const tmp14 = guildId(12166);
         } else {
           if (channel.isReadonlyAnnouncementsChannel) {
             let obj3 = {
@@ -808,8 +808,8 @@ export default noop.memo(
             obj4.buttonPrimaryText = intl2.string(tmp2(1126).t.RLch70);
             obj4.buttonPrimaryOnPress = callback2;
           }
-          tmp15Result = jsx(guildId(12122), obj4);
-          const tmp17 = guildId(12122);
+          tmp15Result = jsx(guildId(12166), obj4);
+          const tmp17 = guildId(12166);
         }
         return tmp15Result;
       },

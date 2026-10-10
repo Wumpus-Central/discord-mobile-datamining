@@ -41,7 +41,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ renderItem, item, shouldAnimate } = entering);
       entering = entering.entering;
       const exiting = entering.exiting;
-      state = entering.state;
+      const state = entering.state;
       const cleanUp = entering.cleanUp;
       const useReducedMotion = entering.useReducedMotion;
       let obj = shouldAnimate(entering[3]);
@@ -192,7 +192,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       shouldAnimate = shouldAnimate.shouldAnimate;
       const entering = shouldAnimate.entering;
       const exiting = shouldAnimate.exiting;
-      state = shouldAnimate.state;
+      const state = shouldAnimate.state;
       const cleanUp = shouldAnimate.cleanUp;
       const useReducedMotion = shouldAnimate.useReducedMotion;
       let sharedValue;

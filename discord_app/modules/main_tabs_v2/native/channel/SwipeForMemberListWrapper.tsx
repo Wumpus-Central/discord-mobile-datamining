@@ -22,9 +22,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 let StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(9283);
+const ChannelDetailsStore = fn(9310);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const ONYX_BORDER_WIDTH = fn(9271).ONYX_BORDER_WIDTH;
+const ONYX_BORDER_WIDTH = fn(9298).ONYX_BORDER_WIDTH;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
@@ -32,7 +32,7 @@ const jsxProd = fn(21);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let c16 = 150;
 let context = noop.createContext(undefined);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   memberListPreview: null,
   content: null,

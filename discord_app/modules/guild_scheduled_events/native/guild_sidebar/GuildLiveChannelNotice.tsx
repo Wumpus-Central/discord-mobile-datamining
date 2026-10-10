@@ -32,7 +32,7 @@ import MarkupUtils from "../../../markup/MarkupUtils.tsx";
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(2070).GuildScheduledEventEntityTypes;
+const constants = fn(2071).GuildScheduledEventEntityTypes;
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -52,7 +52,7 @@ let obj = {};
 const merged = Object.assign(guildEventRules);
 let obj2 = {};
 const merged1 = Object.assign(guildEventRules.channelMention);
-obj2.react = fn(11721).inlineChannelMentionReact;
+obj2.react = fn(11766).inlineChannelMentionReact;
 obj.channelMention = obj2;
 obj.guild = {
   react(content, output, state) {
@@ -64,9 +64,9 @@ obj.guild = {
     return content;
   },
 };
-obj.channel = { react: fn(11721).inlineChannelReact };
+obj.channel = { react: fn(11766).inlineChannelReact };
 let closure_27 = MarkupUtils.reactParserFor(obj);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_28 = createStyles.createStyles((height) => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", marginTop: PX_82 },
@@ -204,20 +204,20 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                     const items2 = [,];
                     ({ badge: arr2[0], audienceBadge: arr2[1] } = tmp4);
                     obj5.style = items2;
-                    let obj6 = { size: "custom", style: guildId(11714).makeSizeStyle(14) };
-                    const items3 = [closure_13(guildId(12220).HeadphonesIcon, obj6)];
+                    let obj6 = { size: "custom", style: guildId(11759).makeSizeStyle(14) };
+                    const items3 = [closure_13(guildId(12264).HeadphonesIcon, obj6)];
                     let obj7 = {
                       variant: "text-xs/semibold",
                       style: { marginLeft: 4 },
                       maxFontSizeMultiplier: 1,
                       children: audienceCount,
                     };
-                    items3[1] = closure_13(guildId(5087).Text, obj7);
+                    items3[1] = closure_13(guildId(5088).Text, obj7);
                     obj5.children = items3;
                     obj4.children = closure_14(View, obj5);
                     tmp14Result = closure_13(View, obj4);
                     const tmp16 = users.length > 0 && { marginLeft: 4 };
-                    const tmpResult = guildId(11714);
+                    const tmpResult = guildId(11759);
                   }
                   cResult[13] = audienceCount;
                   cResult[14] = tmp4.audienceBadge;
@@ -268,9 +268,9 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { variant: "text-xs/medium", lineClamp: 1, maxFontSizeMultiplier: 1, children: null };
               const _HermesInternal = HermesInternal;
               obj5.children = "+" + tmp2 + 1;
-              obj4.children = __initData2(Text_Text.Text, obj5);
-              obj3.children = __initData2(View, obj4);
-              let tmp3Result = __initData2(View, obj3, "overflow");
+              obj4.children = map1(Text_Text.Text, obj5);
+              obj3.children = map1(View, obj4);
+              let tmp3Result = map1(View, obj3, "overflow");
             }
             return tmp3Result;
           }
@@ -283,8 +283,8 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           items1[1] = obj;
           obj6.style = items1;
           const obj7 = { user, guildId, size: XSMALL };
-          obj6.children = __initData2(native.Avatar, obj7);
-          tmp3Result = __initData2(View, obj6, arg1);
+          obj6.children = map1(native.Avatar, obj7);
+          tmp3Result = map1(View, obj6, arg1);
         }
       };
       cResult[7] = guildId;
@@ -324,9 +324,9 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj5 = { variant: "text-xs/medium", lineClamp: 1, maxFontSizeMultiplier: 1, children: null };
                   const _HermesInternal = HermesInternal;
                   obj5.children = "+" + tmp2 + 1;
-                  obj4.children = __initData2(Text_Text.Text, obj5);
-                  obj3.children = __initData2(View, obj4);
-                  let tmp3Result = __initData2(View, obj3, "overflow");
+                  obj4.children = map1(Text_Text.Text, obj5);
+                  obj3.children = map1(View, obj4);
+                  let tmp3Result = map1(View, obj3, "overflow");
                 }
                 return tmp3Result;
               }
@@ -339,8 +339,8 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
               items1[1] = obj;
               obj6.style = items1;
               const obj7 = { user, guildId, size: XSMALL };
-              obj6.children = __initData2(native.Avatar, obj7);
-              tmp3Result = __initData2(View, obj6, index);
+              obj6.children = map1(native.Avatar, obj7);
+              tmp3Result = map1(View, obj6, index);
             }
           }),
           ,
@@ -355,19 +355,19 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
           const items2 = [,];
           ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
           obj3.style = items2;
-          let obj4 = { size: "custom", style: max(11714).makeSizeStyle(14) };
-          const items3 = [closure_13(max(12220).HeadphonesIcon, obj4)];
+          let obj4 = { size: "custom", style: max(11759).makeSizeStyle(14) };
+          const items3 = [closure_13(max(12264).HeadphonesIcon, obj4)];
           let obj6 = {
             variant: "text-xs/semibold",
             style: { marginLeft: 4 },
             maxFontSizeMultiplier: 1,
             children: audienceCount,
           };
-          items3[1] = closure_13(max(5087).Text, obj6);
+          items3[1] = closure_13(max(5088).Text, obj6);
           obj3.children = items3;
           obj2.children = closure_14(View, obj3);
           tmp8Result = closure_13(View, obj2);
-          let obj5 = max(11714);
+          let obj5 = max(11759);
           const tmp9 = users.length > 0 && { marginLeft: 4 };
         }
         items[1] = tmp8Result;
@@ -383,7 +383,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp4Result;
     };
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj4 = {
   card: { padding: PX_122 },
   row: { flexDirection: "row", alignItems: "center" },
@@ -492,7 +492,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp11;
             }
             const obj2 = { style: tmp5.button, children: tmp9 };
-            const tmp14 = __initData2(View, obj2);
+            const tmp14 = map1(View, obj2);
             cResult[5] = tmp5.button;
             cResult[6] = tmp9;
             cResult[7] = tmp14;
@@ -500,7 +500,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp10 = __initData2(components_Button_Button.Button, {
+      const tmp10 = map1(components_Button_Button.Button, {
         onPress: tmp8,
         variant: str,
         size: "sm",
@@ -537,8 +537,8 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.variant = str;
       obj2.disabled = flag;
       obj2.text = label;
-      obj.children = __initData2(components_Button_Button.Button, obj2);
-      return __initData2(View, obj);
+      obj.children = map1(components_Button_Button.Button, obj2);
+      return map1(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_33 = noop.memo(
@@ -609,7 +609,7 @@ let closure_33 = noop.memo(
                                   const obj2 = { children: null };
                                   const items = [tmp15, voiceUsers, tmp19, tmp33, joinButton];
                                   obj2.children = items;
-                                  const tmp40 = state(View, obj2);
+                                  const tmp40 = closure_1_14(View, obj2);
                                   cResult[28] = joinButton;
                                   cResult[29] = tmp33;
                                   cResult[30] = tmp15;
@@ -619,7 +619,7 @@ let closure_33 = noop.memo(
                                   tmp37 = tmp40;
                                 }
                                 const obj3 = { style: tmp23, children: tmp24 };
-                                const tmp36 = __initData2(View, obj3);
+                                const tmp36 = map1(View, obj3);
                                 cResult[25] = tmp23;
                                 cResult[26] = tmp24;
                                 cResult[27] = tmp36;
@@ -635,7 +635,7 @@ let closure_33 = noop.memo(
                                   size: "xxs",
                                   color: "redesign-channel-name-muted-text",
                                 };
-                                tmp29 = __initData2(LocationIcon, obj4);
+                                tmp29 = map1(LocationIcon, obj4);
                               }
                               const items1 = [tmp29];
                               const obj5 = {
@@ -653,9 +653,9 @@ let closure_33 = noop.memo(
                               const obj7 = { marginTop: num18, flexShrink: 1 };
                               obj5.style = obj7;
                               obj5.children = _location;
-                              items1[1] = __initData2(Text_Text.Text, obj5);
+                              items1[1] = map1(Text_Text.Text, obj5);
                               obj6.children = items1;
-                              tmp27Result = state(closure_1_15, obj6);
+                              tmp27Result = closure_1_14(value2, obj6);
                               tmpResult = PlatformUtils2;
                             }
                             cResult[21] = LocationIcon;
@@ -678,7 +678,7 @@ let closure_33 = noop.memo(
                           color: "redesign-channel-name-text",
                           children: topic,
                         };
-                        const tmp22 = __initData2(Text_Text.Text, obj8);
+                        const tmp22 = map1(Text_Text.Text, obj8);
                         cResult[15] = tmp4.topic;
                         cResult[16] = topic;
                         cResult[17] = tmp22;
@@ -688,7 +688,7 @@ let closure_33 = noop.memo(
                     const obj9 = { style: tmp4.row, children: null };
                     const items3 = [tmp5, tmp12];
                     obj9.children = items3;
-                    const tmp18 = state(View, obj9);
+                    const tmp18 = closure_1_14(View, obj9);
                     cResult[11] = tmp4.row;
                     cResult[12] = tmp5;
                     cResult[13] = tmp12;
@@ -697,7 +697,7 @@ let closure_33 = noop.memo(
                   }
                 }
                 const obj10 = { variant: tmp10, color: "status-positive", style: tmp11, children: heading };
-                const tmp14 = __initData2(Text_Text.Text, obj10);
+                const tmp14 = map1(Text_Text.Text, obj10);
                 cResult[7] = heading;
                 cResult[8] = tmp10;
                 cResult[9] = tmp11;
@@ -714,10 +714,10 @@ let closure_33 = noop.memo(
         }
         if (null != liveDot) {
           const obj11 = { size: "xxs", color: "status-positive", style: tmp4.calendarIcon };
-          let tmp8 = __initData2(liveDot, obj11);
+          let tmp8 = map1(liveDot, obj11);
         } else {
           const obj12 = { style: tmp4.liveDot };
-          tmp8 = __initData2(View, obj12);
+          tmp8 = map1(View, obj12);
         }
         cResult[0] = liveDot;
         ({ calendarIcon: tmp3[1], liveDot } = tmp4);
@@ -731,12 +731,12 @@ let closure_33 = noop.memo(
         const obj = { style: tmp.row, children: null };
         if (null != LiveIcon) {
           const obj2 = { size: "xxs", color: "status-positive", style: tmp.calendarIcon };
-          let tmp5 = __initData2(LiveIcon, obj2);
-          let tmp4 = __initData2;
+          let tmp5 = map1(LiveIcon, obj2);
+          let tmp4 = map1;
         } else {
-          tmp4 = __initData2;
+          tmp4 = map1;
           const obj3 = { style: tmp.liveDot };
-          tmp5 = __initData2(View, obj3);
+          tmp5 = map1(View, obj3);
         }
         const items = [tmp5];
         const obj4 = { variant: isLiveStreaming ? c22 : c21, color: "status-positive", style: null, children: null };
@@ -750,7 +750,7 @@ let closure_33 = noop.memo(
         items[1] = tmp4(Text_Text.Text, obj4);
         obj.children = items;
         const items2 = [
-          state(View, obj),
+          closure_1_14(View, obj),
           voiceUsers,
           tmp4(Text_Text.Text, {
             style: tmp.topic,
@@ -790,7 +790,7 @@ let closure_33 = noop.memo(
           obj8.children = _location;
           items4[1] = tmp4(Text_Text.Text, obj8);
           obj9.children = items4;
-          tmp2Result = state(closure_1_15, obj9);
+          tmp2Result = closure_1_14(value2, obj9);
           tmp7Result = PlatformUtils2;
         }
         const obj11 = { children: null };
@@ -798,7 +798,7 @@ let closure_33 = noop.memo(
         items2[3] = tmp4(View, obj6);
         items2[4] = joinButton;
         obj11.children = items2;
-        return state(View, obj11);
+        return closure_1_14(View, obj11);
       },
 );
 ReactCompilerGating = fn(558);
@@ -971,8 +971,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.topic = channel.guildEvent.name;
       obj4.location = tmp2;
       const obj3 = channel(504);
-      obj4.LocationIcon = channel(8142).getChannelIconComponent(channel);
-      obj4.LiveIcon = channel(8647).CalendarIcon;
+      obj4.LocationIcon = channel(8158).getChannelIconComponent(channel);
+      obj4.LiveIcon = channel(8679).CalendarIcon;
       obj4.voiceUsers = closure_13(closure_29, {
         guildId: channel.guild_id,
         users: stateFromStoresArray,
@@ -1025,7 +1025,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[7] !== guildEvent) {
           const obj2 = { guildEvent };
-          const tmp23 = __initData2(closure_36, obj2);
+          const tmp23 = map1(closure_36, obj2);
           cResult[7] = guildEvent;
           cResult[8] = tmp23;
           let tmp20 = tmp23;
@@ -1051,7 +1051,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         CalendarIcon = CalendarIcon2.CalendarIcon;
         obj3.LiveIcon = CalendarIcon;
         obj3.joinButton = tmp20;
-        const tmp26 = __initData2(tmp3, obj3);
+        const tmp26 = map1(tmp3, obj3);
         cResult[9] = tmp3;
         cResult[10] = tmp4;
         cResult[11] = tmp5;
@@ -1080,8 +1080,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.LocationIcon = LocationIcon.LocationIcon;
         obj2.LiveIcon = CalendarIcon2.CalendarIcon;
         const obj3 = { guildEvent };
-        obj2.joinButton = __initData2(closure_36, obj3);
-        tmp4 = __initData2(closure_33, obj2);
+        obj2.joinButton = map1(closure_36, obj3);
+        tmp4 = map1(closure_33, obj2);
       }
       return tmp4;
     };
@@ -1114,7 +1114,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp5) {
         const obj2 = { onPress: tmp5, variant: "active", size: "sm", text: tmp6 };
-        const tmp10 = closure_13(tmp(5376).Button, obj2);
+        const tmp10 = closure_13(tmp(5379).Button, obj2);
         cResult[3] = tmp5;
         cResult[4] = tmp10;
         let tmp8 = tmp10;
@@ -1147,7 +1147,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { onPress: callback, variant: "active", size: "sm", text: null };
       const intl = guildEvent(1126).intl;
       obj2.text = intl.string(guildEvent(1126).t.z4FcDs);
-      obj.children = closure_13(guildEvent(5376).Button, obj2);
+      obj.children = closure_13(guildEvent(5379).Button, obj2);
       return closure_13(View, obj);
     };
 ReactCompilerGating = fn(558);
@@ -1157,9 +1157,9 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       ({ stageInstance, channel } = arg0);
       useChannelNameDefault(channel);
       const obj = channel(576);
-      const stageParticipants = channel(5963).useStageParticipants(
+      const stageParticipants = channel(5956).useStageParticipants(
         channel.id,
-        channel(5957).StageChannelParticipantNamedIndex.SPEAKER,
+        channel(5950).StageChannelParticipantNamedIndex.SPEAKER,
       );
       if (cResult[0] !== stageParticipants) {
         const _Symbol = Symbol;
@@ -1239,9 +1239,9 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = channel(504);
         const stateFromStores1 = channel(504).useStateFromStores(tmp16, E);
         const tmpResult4 = channel(504);
-        const stageHasStream = channel(5892).useStageHasStream(channel.id);
-        const tmpResult5 = channel(5892);
-        const guildActiveEvent = channel(8638).useGuildActiveEvent(channel.guild_id);
+        const stageHasStream = channel(5895).useStageHasStream(channel.id);
+        const tmpResult5 = channel(5895);
+        const guildActiveEvent = channel(8654).useGuildActiveEvent(channel.guild_id);
         const _Symbol5 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           class E {
@@ -1309,22 +1309,22 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = channel;
         cResult[13] = guildActiveEvent;
         cResult[14] = channelIconComponent;
-        const tmpResult6 = channel(8638);
+        const tmpResult6 = channel(8654);
       }
-      const obj2 = channel(5963);
+      const obj2 = channel(5956);
     }
   : function GuildLiveStageNotice(channel) {
       channel = channel.channel;
       const tmp2 = useChannelNameDefault(channel);
-      const stageParticipants = channel(5963).useStageParticipants(
+      const stageParticipants = channel(5956).useStageParticipants(
         channel.id,
-        channel(5957).StageChannelParticipantNamedIndex.SPEAKER,
+        channel(5950).StageChannelParticipantNamedIndex.SPEAKER,
       );
       const found = stageParticipants.filter(
         (type) => type.type === channel(dependencyMap[41]).StageChannelParticipantTypes.VOICE,
       );
       const mapped = found.map((user) => user.user);
-      const obj = channel(5963);
+      const obj = channel(5956);
       const items = [StageChannelParticipantStore];
       const items1 = [channel.id];
       const stateFromStores = channel(504).useStateFromStores(
@@ -1342,9 +1342,9 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         PermissionStore.can(Permissions.CONNECT, channel),
       );
       const obj3 = channel(504);
-      const stageHasStream = channel(5892).useStageHasStream(channel.id);
-      const obj4 = channel(5892);
-      const guildActiveEvent = channel(8638).useGuildActiveEvent(channel.guild_id);
+      const stageHasStream = channel(5895).useStageHasStream(channel.id);
+      const obj4 = channel(5895);
+      const guildActiveEvent = channel(8654).useGuildActiveEvent(channel.guild_id);
       const obj6 = {
         heading: null,
         location: null,
@@ -1359,14 +1359,14 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.location = tmp2;
       let channelIconComponent;
       if (null != guildActiveEvent) {
-        channelIconComponent = tmp3(8142).getChannelIconComponent(channel);
-        const tmp3Result = tmp3(8142);
+        channelIconComponent = tmp3(8158).getChannelIconComponent(channel);
+        const tmp3Result = tmp3(8158);
       }
       obj6.LocationIcon = channelIconComponent;
       if (null != guildActiveEvent) {
-        let StageIcon = tmp3(8647).CalendarIcon;
+        let StageIcon = tmp3(8679).CalendarIcon;
       } else {
-        StageIcon = tmp3(8208).StageIcon;
+        StageIcon = tmp3(8224).StageIcon;
       }
       obj6.LiveIcon = StageIcon;
       obj6.topic = channel.stageInstance.topic;
@@ -1386,7 +1386,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.joinButton = tmp9Result;
       return closure_13(closure_33, obj6);
     };
-let obj3 = { react: fn(11721).inlineChannelReact };
+let obj3 = { react: fn(11766).inlineChannelReact };
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/native/guild_sidebar/GuildLiveChannelNotice.tsx",
@@ -1397,12 +1397,12 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
   let activeEventOrStageInstanceChannel;
   const tmp = closure_30();
   const tmp2 = activeEventOrStageInstanceChannel;
-  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16530).useActiveEventOrStageInstanceChannel(
+  activeEventOrStageInstanceChannel = activeEventOrStageInstanceChannel(16600).useActiveEventOrStageInstanceChannel(
     guild.id,
   );
-  let obj = activeEventOrStageInstanceChannel(16530);
-  const guildActiveEvent = activeEventOrStageInstanceChannel(8638).useGuildActiveEvent(guild.id);
-  let obj2 = activeEventOrStageInstanceChannel(8638);
+  let obj = activeEventOrStageInstanceChannel(16600);
+  const guildActiveEvent = activeEventOrStageInstanceChannel(8654).useGuildActiveEvent(guild.id);
+  let obj2 = activeEventOrStageInstanceChannel(8654);
   const items = [StageInstanceStore];
   const items1 = [activeEventOrStageInstanceChannel];
   const stateFromStores = activeEventOrStageInstanceChannel(504).useStateFromStores(
@@ -1467,7 +1467,7 @@ export default noop.memo(function GuildLiveChannelNotice(guild) {
     obj7.onPress = tmp7;
     obj7.onLongPress = callback;
     obj7.children = tmp13;
-    tmp20 = closure_13(tmp2(6188).Card, obj7);
+    tmp20 = closure_13(tmp2(6181).Card, obj7);
   }
   return tmp20;
 });

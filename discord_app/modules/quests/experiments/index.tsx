@@ -149,25 +149,44 @@ const obj22 = {
 const obj23 = { 1: null };
 obj23[1] = { enabled: true };
 obj22.variations = obj23;
+const obj24 = {
+  DEFAULT: 0,
+  [0]: "DEFAULT",
+  ALL_TIERS: 1,
+  [1]: "ALL_TIERS",
+  TIER_1_VISUALS: 2,
+  [2]: "TIER_1_VISUALS",
+  TIER_2_VISUALS: 3,
+  [3]: "TIER_2_VISUALS",
+  TIER_3_VISUALS: 4,
+  [4]: "TIER_3_VISUALS",
+};
 const apexExperiment11 = ApexExperiment.createApexExperiment(obj22);
 let ApexExperiment = ApexExperiment_mod;
-const apexExperiment12 = ApexExperiment.createApexExperiment({
+const obj25 = {
   name: "2026-09-new-orb-reward-visuals",
   kind: "user",
-  defaultConfig: { enabled: false },
-  variations: { 0: { enabled: false }, 1: { enabled: true } },
-});
+  defaultConfig: { variant: obj24.DEFAULT },
+  variations: {
+    0: { variant: obj24.DEFAULT },
+    1: { variant: obj24.ALL_TIERS },
+    2: { variant: obj24.TIER_2_VISUALS },
+    3: { variant: obj24.TIER_3_VISUALS },
+    4: { variant: obj24.TIER_1_VISUALS },
+  },
+};
+const apexExperiment12 = ApexExperiment.createApexExperiment(obj25);
 let ApexExperiment = ApexExperiment_mod;
-const obj25 = {
+const obj27 = {
   name: "2026-09-mobile-quest-reward-button-to-secondary-button",
   kind: "user",
   defaultConfig: { enabled: false },
   variations: null,
 };
-const obj26 = { 1: null };
-obj26[1] = { enabled: true };
-obj25.variations = obj26;
-const apexExperiment13 = ApexExperiment.createApexExperiment(obj25);
+const obj28 = { 1: null };
+obj28[1] = { enabled: true };
+obj27.variations = obj28;
+const apexExperiment13 = ApexExperiment.createApexExperiment(obj27);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -228,5 +247,6 @@ export const MobileQuestHomeSortPriorityExperiment = apexExperiment9;
 export const QuestHomeLayoutVisualTweakVariant = obj19;
 export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
 export const QuestMobileBarSecondaryCtaExperiment = apexExperiment11;
+export const QuestOrbTierVariant = obj24;
 export const QuestOrbTierExperiment = apexExperiment12;
 export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment13;

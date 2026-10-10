@@ -17,7 +17,7 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9356).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9383).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

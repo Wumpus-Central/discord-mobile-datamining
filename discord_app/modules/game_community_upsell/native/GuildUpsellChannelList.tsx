@@ -14,12 +14,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(16620).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_9 = fn(16687).MAX_DISPLAYED_UPSELL_GUILDS;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG },
   header: null,
@@ -76,7 +76,7 @@ let items = [
     id: "hangout",
     title: fn(1126).t.ScXySs,
     description: fn(1126).t.DSCqxM,
-    Icon: fn(13056).BumpingFistsSpotIllustration,
+    Icon: fn(13103).BumpingFistsSpotIllustration,
   },
   ,
 ];
@@ -84,32 +84,32 @@ const obj14 = {
   id: "hangout",
   title: fn(1126).t.ScXySs,
   description: fn(1126).t.DSCqxM,
-  Icon: fn(13056).BumpingFistsSpotIllustration,
+  Icon: fn(13103).BumpingFistsSpotIllustration,
 };
 items[1] = {
   id: "gaming",
   title: fn(1126).t["F+MTAZ"],
   description: fn(1126).t.srNlJw,
-  Icon: fn(16621).ChatControllersSpotIllustration,
+  Icon: fn(16688).ChatControllersSpotIllustration,
 };
 const obj15 = {
   id: "gaming",
   title: fn(1126).t["F+MTAZ"],
   description: fn(1126).t.srNlJw,
-  Icon: fn(16621).ChatControllersSpotIllustration,
+  Icon: fn(16688).ChatControllersSpotIllustration,
 };
 items[2] = {
   id: "hobbies",
   title: fn(1126).t["0Ka6B5"],
   description: fn(1126).t["5oGAp/"],
-  Icon: fn(16625).MiniaturesSpotIllustration,
+  Icon: fn(16692).MiniaturesSpotIllustration,
 };
 const ReactCompilerGating = fn(558);
 const obj16 = {
   id: "hobbies",
   title: fn(1126).t["0Ka6B5"],
   description: fn(1126).t["5oGAp/"],
-  Icon: fn(16625).MiniaturesSpotIllustration,
+  Icon: fn(16692).MiniaturesSpotIllustration,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const GameCommunityAddServerEntryExperiment = tmp(13933).GameCommunityAddServerEntryExperiment;
+      const GameCommunityAddServerEntryExperiment = tmp(13986).GameCommunityAddServerEntryExperiment;
       const cardAction = GameCommunityAddServerEntryExperiment.useConfig(first).cardAction;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         items = [ConsentStore, LocalAppDetectionStore];
@@ -291,7 +291,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return someResult;
           }
         }
-        const tmp19 = closure_12(tmp(5087).Text, {
+        const tmp19 = closure_12(tmp(5088).Text, {
           variant: "heading-md/bold",
           color: "mobile-text-heading-primary",
           children: null,
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj4 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.createDescription, children: tmp20 };
-        const tmp23 = closure_12(tmp(5087).Text, obj4);
+        const tmp23 = closure_12(tmp(5088).Text, obj4);
         class I {
           constructor() {
             hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
@@ -419,9 +419,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj5.children = intl2.string(Icon.description);
         items1[1] = __initData(Text_Text.Text, obj5);
         obj3.children = items1;
-        items[1] = __initData2(timestampProducer, obj3);
+        items[1] = map1(timestampProducer, obj3);
         obj.children = items;
-        return __initData2(Card.Card, obj, Icon.id);
+        return map1(Card.Card, obj, Icon.id);
       });
       cResult[14] = tmp4.templateCard;
       cResult[15] = tmp4.templateIconWrapper;
@@ -535,7 +535,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.onPress = callback2;
         items1[1] = __initData(components_Button_Button.Button, obj7);
         obj5.children = items1;
-        items[3] = __initData2(timestampProducer, obj5);
+        items[3] = map1(timestampProducer, obj5);
         let tmpResult = memo.length > 0;
         if (tmpResult) {
           const obj8 = { style: closure_0.joinSection, children: null };
@@ -553,11 +553,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj10.children = intl6.string(util.t.pJT2DK);
           items2[1] = __initData(Text_Text.Text, obj10);
           obj8.children = items2;
-          tmpResult = __initData2(timestampProducer, obj8);
+          tmpResult = map1(timestampProducer, obj8);
         }
         items[4] = tmpResult;
         obj.children = items;
-        return __initData2(timestampProducer, obj);
+        return map1(timestampProducer, obj);
       }, items2);
       let obj2 = require("MobileGameCommunitiesActionCreators");
       const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();

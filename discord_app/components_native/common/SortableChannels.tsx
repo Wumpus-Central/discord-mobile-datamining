@@ -320,7 +320,7 @@ class SortableChannels extends Component3 {
     };
     obj.renderSectionHeader = function renderSectionHeader(data, arg1) {
       let tmp = arg1;
-      state = list.state;
+      const state = list.state;
       ({ active, hoveringIndex } = state);
       const order = list.props.order;
       ({ activeIndex, panResponder } = state);
@@ -367,7 +367,7 @@ class SortableChannels extends Component3 {
     };
     obj.renderItem = function renderItem(data, arg1) {
       let tmp = arg1;
-      state = list.state;
+      const state = list.state;
       ({ active, hoveringIndex } = state);
       let tmp3 = !tmp;
       ({ activeIndex, panResponder } = state);
@@ -553,7 +553,7 @@ prototype["createPanResponder"] = function createPanResponder(arg0, point, value
       }
     },
     onPanResponderGrant() {
-      state = self.state;
+      const state = self.state;
       const pan = state.pan;
       const onMoveStart = closure_1.onMoveStart;
       if (null != state.active) {

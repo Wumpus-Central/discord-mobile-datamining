@@ -58,8 +58,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      isGuildVoiceResult = closure_0(8699).getGuildMembersInMobileVCInvitesExperiment(obj2);
-      const obj = closure_0(8699);
+      isGuildVoiceResult = closure_0(8714).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(8714);
     }
     if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
@@ -81,8 +81,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         channel: set,
         inviteTargetType: dependencyMap,
       };
-      const inviteSuggestions = closure_0(8700).loadInviteSuggestions(obj4);
-      const obj3 = closure_0(8700);
+      const inviteSuggestions = closure_0(8715).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(8715);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

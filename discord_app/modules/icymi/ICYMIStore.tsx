@@ -594,7 +594,7 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6061);
+let GuildScheduledEventStore = fn(6054);
 ({
   eventScheduledToStartWithin: metroRequire,
   isGuildEventEnded: closure_7,
@@ -603,7 +603,7 @@ let GuildScheduledEventStore = fn(6061);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8453).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8469).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -965,7 +965,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8450).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(8466).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1062,7 +1062,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8450).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(8466).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
@@ -1071,15 +1071,15 @@ obj = {
           if (c38 > 0) {
             c43 = null;
           }
-          const tmp8 = arr11.length > tmp(8450).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr11.length > tmp(8466).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
-            const tmpResult = tmp(8454);
+            const tmpResult = tmp(8470);
             const items6 = [];
             HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmpResult.hydrateItems(items6, 0, tmp(8450).ICYMI_PAGE_SIZE, closure_34);
+            tmpResult.hydrateItems(items6, 0, tmp(8466).ICYMI_PAGE_SIZE, closure_34);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
@@ -1096,8 +1096,8 @@ obj = {
             str = "foreground_load";
           }
           obj2.homeSessionId = str;
-          tmp(8463).trackFeedLoaded(obj2);
-          const tmpResult2 = tmp(8463);
+          tmp(8479).trackFeedLoaded(obj2);
+          const tmpResult2 = tmp(8479);
         }
       }
     }

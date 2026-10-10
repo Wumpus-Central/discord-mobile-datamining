@@ -18,16 +18,16 @@ function MediaViewer(arg0) {
   __initData2 = undefined;
   ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
   ({ useViewerProps, zoomed } = syncer);
-  value = [height(6872).MEDIA_VIEWER];
+  value = [height(6878).MEDIA_VIEWER];
   let tmp = height;
-  const tmp3 = height(6848);
+  const tmp3 = height(6851);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(13033)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(13080)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -51,7 +51,7 @@ function MediaViewer(arg0) {
   const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
   const items1 = [dismiss, isClosing];
   let obj5 = require("useMediaViewerPanGesture");
-  height(5371)(
+  height(5372)(
     sharedValue1.useCallback(() => {
       if (!isClosing.get()) {
         dismiss();
@@ -60,7 +60,7 @@ function MediaViewer(arg0) {
     }, items1),
   );
   const absoluteFillObject = closure_6.absoluteFillObject;
-  const tmp16 = height(5371);
+  const tmp16 = height(5372);
   function ee() {
     const obj = {};
     const merged = Object.assign(absoluteFillObject);
@@ -234,9 +234,9 @@ function MediaViewer(arg0) {
   const obj16 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const obj15 = require("DeviceOrientation");
   const items6 = [
-    dismiss(height(10327), { barStyle: "light-content", hidden: !tmp5 }),
-    dismiss(height(4811).View, { style: animatedStyle }),
-    dismiss(height(4812), {
+    dismiss(height(10360), { barStyle: "light-content", hidden: !tmp5 }),
+    dismiss(height(4850).View, { style: animatedStyle }),
+    dismiss(height(4851), {
       ref: animatedRef,
       style: animatedStyle2,
       children: dismiss(callback, {
@@ -286,11 +286,11 @@ function MediaViewer(arg0) {
   }
   obj18.pointerEvents = str;
   obj18.children = renderOverlay(dismiss, overlayEnabled);
-  items6[3] = dismiss(height(4812), obj18);
-  items6[4] = dismiss(tmp(10819), {});
+  items6[3] = dismiss(height(4851), obj18);
+  items6[4] = dismiss(tmp(10829), {});
   obj16.children = items6;
   const children = tmp30(tmp31, obj16);
-  return dismiss(tmp7(6848).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return dismiss(tmp7(6851).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);

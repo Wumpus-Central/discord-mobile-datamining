@@ -86,7 +86,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp17 = state(View, obj2);
+        const tmp17 = closure_1_14(View, obj2);
         cResult[8] = tmp2;
         cResult[9] = tmp4;
         cResult[10] = tmp5;
@@ -130,7 +130,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj.onLayout = onLayout;
       obj.children = children;
-      return state(View, obj);
+      return closure_1_14(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -158,7 +158,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {};
       const merged = Object.assign(tmp5);
       obj2.measurementProps = navigationTTIRegionMeasurement;
-      const tmp12 = state(closure_16, obj2);
+      const tmp12 = closure_1_14(closure_16, obj2);
       cResult[3] = navigationTTIRegionMeasurement;
       cResult[4] = tmp5;
       cResult[5] = tmp12;
@@ -174,7 +174,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const merged1 = Object.assign(merged);
       obj2.measurementProps = navigationTTIRegionMeasurement;
-      return state(closure_16, obj2);
+      return closure_1_14(closure_16, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -236,7 +236,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                       obj2.measurementProps = measurementProps;
                       const items = [tmp12, tmp14];
                       obj2.children = items;
-                      const tmp23 = closure_1_15(closure_16, obj2);
+                      const tmp23 = value2(closure_16, obj2);
                       cResult[18] = measurementProps;
                       cResult[19] = tmp5;
                       cResult[20] = tmp12;
@@ -266,7 +266,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           depth: obj3.hierarchyDepth,
           violation: obj3.violation,
         } = hierarchy);
-        const tmp16 = state(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, obj4);
+        const tmp16 = closure_1_14(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, obj4);
         cResult[9] = tmp4;
         cResult[10] = hierarchy.depth;
         cResult[11] = hierarchy.excludedDescendants;
@@ -278,7 +278,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[17] = tmp16;
         tmp14 = tmp16;
       }
-      const tmp13 = state(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
+      const tmp13 = closure_1_14(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
         value: hierarchy.contextValue,
         children: props.children,
       });
@@ -299,11 +299,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(_objectWithoutProperties(props, closure_5));
       obj.measurementProps = measurementProps.measurementProps;
       const items = [
-        state(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
+        closure_1_14(NavigationTTIRegionHierarchy.NavigationTTIRegionHierarchyContext.Provider, {
           value: hierarchy.contextValue,
           children: props.children,
         }),
-        state(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, {
+        closure_1_14(NavigationTTIRegionDebugOverlay.NavigationTTIRegionDebugOverlay, {
           name: str,
           regionId: hierarchy.regionId,
           tracking,
@@ -315,7 +315,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items;
-      return closure_1_15(closure_16, obj);
+      return value2(closure_16, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -347,7 +347,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             measurementProps: navigationTTIRegionMeasurement,
             hierarchy: navigationTTIRegionHierarchy,
           };
-          const tmp11 = state(closure_18, obj2);
+          const tmp11 = closure_1_14(closure_18, obj2);
           cResult[4] = navigationTTIRegionHierarchy;
           cResult[5] = navigationTTIRegionMeasurement;
           cResult[6] = children;
@@ -368,7 +368,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const Children = noop.Children;
       obj2.hasChildren = Children.count(name.children) > 0;
       const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(obj2);
-      return state(closure_18, {
+      return closure_1_14(closure_18, {
         props: name,
         measurementProps: useComponentRenderSpan.useNavigationTTIRegionMeasurement("include", name.name),
         hierarchy: navigationTTIRegionHierarchy,
@@ -416,7 +416,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               measurementProps: navigationTTIRegionMeasurement,
               hierarchy: navigationTTIRegionHierarchy,
             };
-            const tmp13 = state(closure_18, obj2);
+            const tmp13 = closure_1_14(closure_18, obj2);
             cResult[7] = navigationTTIRegionHierarchy;
             cResult[8] = navigationTTIRegionMeasurement;
             cResult[9] = name;
@@ -453,7 +453,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const Children = noop.Children;
       obj2.hasChildren = Children.count(name.children) > 0;
       const navigationTTIRegionHierarchy = NavigationTTIRegionHierarchy.useNavigationTTIRegionHierarchy(obj2);
-      return state(closure_18, {
+      return closure_1_14(closure_18, {
         props: name,
         measurementProps: useComponentRenderSpan.useNavigationTTIRegionMeasurement(
           "exclude",
@@ -470,11 +470,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         if ("include" === tracking.tracking) {
           const obj2 = {};
           const merged = Object.assign(tracking);
-          let tmp7 = state(closure_19, obj2);
+          let tmp7 = closure_1_14(closure_19, obj2);
         } else {
           const obj3 = {};
           const merged1 = Object.assign(tracking);
-          tmp7 = state(closure_20, obj3);
+          tmp7 = closure_1_14(closure_20, obj3);
         }
         cResult[0] = tracking;
         cResult[1] = tmp7;
@@ -486,11 +486,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       if ("include" === tracking.tracking) {
         const obj2 = {};
         const merged = Object.assign(tracking);
-        let tmp6 = state(closure_19, obj2);
+        let tmp6 = closure_1_14(closure_19, obj2);
       } else {
         const obj = {};
         const merged1 = Object.assign(tracking);
-        tmp6 = state(closure_20, obj);
+        tmp6 = closure_1_14(closure_20, obj);
       }
       return tmp6;
     };
@@ -517,7 +517,7 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] !== tracking) {
           const obj2 = {};
           const merged = Object.assign(tracking);
-          const tmp44 = state(closure_21, obj2);
+          const tmp44 = closure_1_14(closure_21, obj2);
           cResult[2] = tracking;
           cResult[3] = tmp44;
           let tmp38 = tmp44;
@@ -538,7 +538,7 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] !== tmp27) {
           const obj3 = {};
           const merged1 = Object.assign(tmp27);
-          const tmp37 = state(View, obj3);
+          const tmp37 = closure_1_14(View, obj3);
           cResult[6] = tmp27;
           cResult[7] = tmp37;
           let tmp31 = tmp37;
@@ -565,7 +565,7 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {};
           const merged2 = Object.assign(tmp8);
           obj4.name = tmp7;
-          const tmp25 = state(closure_17, obj4);
+          const tmp25 = closure_1_14(closure_17, obj4);
           cResult[13] = tmp7;
           cResult[14] = tmp8;
           cResult[15] = tmp25;
@@ -573,7 +573,7 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] !== tmp8) {
             const obj5 = {};
             const merged3 = Object.assign(tmp8);
-            const tmp18 = state(View, obj5);
+            const tmp18 = closure_1_14(View, obj5);
             cResult[11] = tmp8;
             cResult[12] = tmp18;
             let tmp12 = tmp18;
@@ -591,12 +591,12 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
       if (obj.useStateFromStores(items, () => DevSettingsStore.get("navigation_tti_visualizer"))) {
         const obj2 = {};
         const merged = Object.assign(tracking);
-        return state(closure_21, obj2);
+        return closure_1_14(closure_21, obj2);
       } else if ("exclude" === tracking.tracking) {
         ({ tracking: tracking2, name, descendantTracking } = tracking);
         const obj3 = {};
         const merged1 = Object.assign(_objectWithoutProperties(tracking, closure_8));
-        return state(View, obj3);
+        return closure_1_14(View, obj3);
       } else {
         tracking = tracking.tracking;
         const tmp5 = _objectWithoutProperties(tracking, closure_9);
@@ -604,11 +604,11 @@ export const NavTTIView = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = {};
           const merged2 = Object.assign(tmp5);
           obj4.name = tracking.name;
-          let tmp6Result = state(closure_17, obj4);
+          let tmp6Result = closure_1_14(closure_17, obj4);
         } else {
           const obj5 = {};
           const merged3 = Object.assign(tmp5);
-          tmp6Result = state(View, obj5);
+          tmp6Result = closure_1_14(View, obj5);
         }
         return tmp6Result;
       }

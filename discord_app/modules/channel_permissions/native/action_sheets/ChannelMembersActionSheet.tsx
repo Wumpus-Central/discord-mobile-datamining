@@ -2,16 +2,16 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import native from "../../../../design/void/native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import BottomSheetModal from "../../../../../_runtime/06305_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06306_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import InlineNotice from "../../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import ChannelPermissionsUtils from "../../ChannelPermissionsUtils.tsx";
 import ChannelOverwritesItemDefault from "../components/ChannelOverwritesItem.tsx";
@@ -33,7 +33,7 @@ const Constants = fn(1085);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== channelId) {
-        const fn = function v() {
+        const fn = function y() {
           return ChannelStore.getChannel(channelId);
         };
         cResult[1] = channelId;
@@ -83,101 +83,42 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        class C {
-          constructor() {
-            obj = closure_3;
-            guildId = undefined;
-            tmp = closure_7;
-            if (closure_3 != null) {
-              guildId = obj.getGuildId();
-            }
-            guild = closure_7.getGuild(guildId);
-            obj1 = { guild, sortedGuildRoles: null };
-            sortedRoles = undefined;
-            if (null != guild) {
-              tmp5 = closure_6;
-              sortedRoles = closure_6.getSortedRoles(guild.id);
-            }
-            obj1.sortedGuildRoles = sortedRoles;
-            return obj1;
+        const fn2 = function x() {
+          guildId = undefined;
+          if (stateFromStores != null) {
+            guildId = stateFromStores.getGuildId();
           }
-        }
+          guild = GuildStore.getGuild(guildId);
+          const obj2 = { guild, sortedGuildRoles: null };
+          let sortedRoles;
+          if (null != guild) {
+            sortedRoles = GuildRoleStore.getSortedRoles(guild.id);
+          }
+          obj2.sortedGuildRoles = sortedRoles;
+          return obj2;
+        };
         const items2 = [stateFromStores];
         cResult[4] = stateFromStores;
-        cResult[5] = C;
+        cResult[5] = fn2;
         cResult[6] = items2;
         let tmp15 = items2;
+        let tmp14 = fn2;
       } else {
-        class C {
-          constructor() {
-            obj = closure_3;
-            guildId = undefined;
-            tmp = closure_7;
-            if (closure_3 != null) {
-              guildId = obj.getGuildId();
-            }
-            guild = closure_7.getGuild(guildId);
-            obj1 = { guild, sortedGuildRoles: null };
-            sortedRoles = undefined;
-            if (null != guild) {
-              tmp5 = closure_6;
-              sortedRoles = closure_6.getSortedRoles(guild.id);
-            }
-            obj1.sortedGuildRoles = sortedRoles;
-            return obj1;
-          }
-        }
+        tmp14 = cResult[5];
         tmp15 = cResult[6];
       }
       const tmpResult = channelId(504);
-      const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp11, C, tmp15);
+      const stateFromStoresObject = channelId(504).useStateFromStoresObject(tmp11, tmp14, tmp15);
       ({ guild, sortedGuildRoles } = stateFromStoresObject);
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor() {
-            obj = closure_3;
-            guildId = undefined;
-            tmp = closure_7;
-            if (closure_3 != null) {
-              guildId = obj.getGuildId();
-            }
-            guild = closure_7.getGuild(guildId);
-            obj1 = { guild, sortedGuildRoles: null };
-            sortedRoles = undefined;
-            if (null != guild) {
-              tmp5 = closure_6;
-              sortedRoles = closure_6.getSortedRoles(guild.id);
-            }
-            obj1.sortedGuildRoles = sortedRoles;
-            return obj1;
-          }
-        }
         const items3 = [GuildMemberStore];
         cResult[7] = items3;
-        const tmp17 = items3;
+        let tmp17 = items3;
       } else {
-        class C {
-          constructor() {
-            obj = closure_3;
-            guildId = undefined;
-            tmp = closure_7;
-            if (closure_3 != null) {
-              guildId = obj.getGuildId();
-            }
-            guild = closure_7.getGuild(guildId);
-            obj1 = { guild, sortedGuildRoles: null };
-            sortedRoles = undefined;
-            if (null != guild) {
-              tmp5 = closure_6;
-              sortedRoles = closure_6.getSortedRoles(guild.id);
-            }
-            obj1.sortedGuildRoles = sortedRoles;
-            return obj1;
-          }
-        }
+        tmp17 = cResult[7];
       }
       if (cResult[8] !== stateFromStores) {
-        class O {
+        class B {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -190,11 +131,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const items4 = [stateFromStores];
         cResult[8] = stateFromStores;
-        cResult[9] = O;
+        cResult[9] = B;
         cResult[10] = items4;
-        let tmp19 = items4;
+        let tmp20 = items4;
       } else {
-        class O {
+        class B {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -205,17 +146,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_5.getMemberIds(guildId);
           }
         }
-        tmp19 = cResult[10];
+        tmp20 = cResult[10];
       }
       const tmpResult5 = channelId(504);
-      const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, O, tmp19);
+      const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, B, tmp20);
       const tmpResult6 = channelId(504);
       navigation = channelId(1503).useNavigation();
-      tmp5(5418)(stateFromStores);
+      tmp5(5421)(stateFromStores);
       const tmpResult7 = channelId(1503);
-      const appChannelBotUserId = channelId(10733).useAppChannelBotUserId(stateFromStores);
+      const appChannelBotUserId = channelId(10768).useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
-        class O {
+        class B {
           constructor() {
             obj = closure_3;
             guildId = undefined;
@@ -348,10 +289,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp32Result2 = closure_11(RowButton.RowButton, obj12);
             } else {
               const obj13 = { style: tmp.warning, children: null };
-              const obj14 = { messageType: native.HelpMessageTypes.INFO, children: null };
+              const obj14 = { type: "info", message: null, role: "static" };
               const intl2 = util.intl;
-              obj14.children = intl2.string(util.t.VOuiSj);
-              obj13.children = closure_11(native.HelpMessage, obj14);
+              obj14.message = intl2.string(util.t.VOuiSj);
+              obj13.children = closure_11(InlineNotice.InlineNotice, obj14);
               tmp32Result2 = closure_11(tmp14, obj13);
             }
             const items6 = [tmp32Result2];

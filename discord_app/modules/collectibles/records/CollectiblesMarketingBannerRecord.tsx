@@ -32,6 +32,26 @@ prototype["fromServer"] = function fromServer(arg0) {
     throw new TypeError("Trying to call a non-function");
   }
 };
+prototype["fromPersisted"] = function fromPersisted(arg0) {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  ({ popoutAsset: obj.popout_asset, revertTextColor: obj.revert_text_color } = arg0);
+  if (typeof prototype === "function") {
+    const obj2 = Object.create(prototype.prototype);
+    obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.BANNER;
+    ({
+      title: tmp3.title,
+      body: tmp3.body,
+      asset: tmp3.asset,
+      popout_asset: tmp3.popoutAsset,
+      version: tmp3.version,
+      revert_text_color: tmp3.revertTextColor,
+    } = obj);
+    return obj2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingBannerRecord.tsx");
 
 export const CollectiblesMarketingBannerRecord = prototype;

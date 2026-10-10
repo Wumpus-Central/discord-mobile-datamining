@@ -15,7 +15,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp2;
       let obj = guildId(576);
       let obj2 = showWelcomeModal;
-      showWelcomeModal = guildId(12499).useShowWelcomeModal(guildId, guildId.channelId);
+      showWelcomeModal = guildId(12546).useShowWelcomeModal(guildId, guildId.channelId);
       if (cResult[0] === guildId) {
         if (cResult[1] === tmp2) {
           if (cResult[2] === showWelcomeModal) {
@@ -66,7 +66,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       importDefault = showWelcomeModal.useRef(false);
       const tmp = useIsHubRealNamePromptShowingDefault(guildId);
       dependencyMap = tmp;
-      showWelcomeModal = guildId(12499).useShowWelcomeModal(guildId, guildId.channelId);
+      showWelcomeModal = guildId(12546).useShowWelcomeModal(guildId, guildId.channelId);
       const items = [guildId, showWelcomeModal, tmp];
       const effect = showWelcomeModal.useEffect(() => {
         if (!ref.current) {

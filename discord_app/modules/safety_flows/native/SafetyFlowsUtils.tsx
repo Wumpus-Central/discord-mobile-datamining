@@ -1,8 +1,7 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2859 from "../SafetyFlows.messages.js";
+import _modDef2862 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5006 from "../../../../_runtime/metro/05006__.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import types from "../types.tsx";
 import constants from "../constants.tsx";
@@ -36,10 +35,10 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef5006, content: null };
+    const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.content = intl.string(_modDef2859["/fHz9S"]);
-    ToastActionCreatorsDefault.open(obj3);
+    obj3.text = intl.string(_modDef2862["/fHz9S"]);
+    ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;
     const tmp16 = types.TASK_TYPE_TO_SCREENS[task_type];
@@ -129,7 +128,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -177,7 +176,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
                 closure_129_0 = value;
                 navigateToScreenForTask(data, closure_129_0);
                 c4 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp15) {
               c4 = tmp;
@@ -224,7 +223,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -272,7 +271,7 @@ export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled()
                 closure_129_0 = value;
                 navigateToScreenForTask(data, closure_129_0);
                 c4 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp15) {
               c4 = tmp;

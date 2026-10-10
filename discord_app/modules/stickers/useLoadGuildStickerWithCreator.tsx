@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const abortController = new AbortController();
           const signal = abortController.signal;
           closure_0 = asyncGeneratorStep(async () => {
-            await _null(9729).fetchGuildStickersWithCreator(_null, c1);
+            await _null(9758).fetchGuildStickersWithCreator(_null, c1);
             if (1 === tmp7) {
               c3 = 0;
               signal("error");

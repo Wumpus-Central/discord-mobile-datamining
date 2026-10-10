@@ -23,18 +23,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : function useBugReporterExperimentSettingPredicate() {
       return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
     };
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: fn(16031).BugIcon,
+  IconComponent: fn(16093).BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12578, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12625, dependencyMap.paths));
     }
   },
   withArrow: true,

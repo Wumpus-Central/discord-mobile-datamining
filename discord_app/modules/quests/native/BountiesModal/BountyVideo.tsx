@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05391_LinearGradient.js";
 import AssetUtils from "../../lib/AssetUtils.tsx";
 import BountiesModalProgress from "BountiesModalProgress.tsx";
 import pickBountyVideoRendition from "../../../ads/utils/pickBountyVideoRendition.tsx";
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
   ActivityIndicator: closure_7,
   Pressable: closure_8,
 } = get_ActivityIndicator);
-const BountiesModalConstants = fn(15202);
+const BountiesModalConstants = fn(15264);
 ({ getBountyVideoEndPeekClipHeight: closure_9, getBountyVideoEndPeekScale: c10 } = BountiesModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -36,7 +36,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0).hex();
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_21 = createStyles.createStyles(() => {
   const obj = { videoContainer: null, leftRow: null, progress: null, poster: null, scrimGradient: null };
   const obj2 = {};

@@ -26,15 +26,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(2068);
+const ChannelRecord = fn(2069);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11509).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10187).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11555).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10216).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerLeftContainer: null,
@@ -127,7 +127,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -220,7 +220,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "IconComponent", done: null };
+                              return { value: "IconComponent", done: "+51" };
                             }
                           } else {
                             try {
@@ -392,7 +392,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_8(false);
               closure_129_9.current = false;
               React = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else if (arg0 === 1) {
             React = 3;
@@ -438,14 +438,14 @@ export default function ShareScreen(appEntryKey) {
   const memo = obj.useMemo(() => {
     if (null != embed) {
       const obj = { attachments: sharedContent.attachments, isRevamp: true };
-      const items = [value2(ShareAttachmentsDefault, obj)];
+      const items = [value3(ShareAttachmentsDefault, obj)];
       embed = undefined;
       if (tmp != null) {
         embed = tmp.embed;
       }
       const obj2 = { children: null };
       const obj3 = { embed, isLoadingEmbed: isLoading, isRevamp: true };
-      items[1] = value2(ShareEmbedDefault, obj3);
+      items[1] = value3(ShareEmbedDefault, obj3);
       obj2.children = items;
       let tmp4Result = collapsedCategories(constants, obj2);
     } else {
@@ -475,7 +475,7 @@ export default function ShareScreen(appEntryKey) {
       const obj = { count: tmp2 };
       subtitle = intl.formatToPlainString(util.t["3Fbkir"], obj);
     }
-    return value2(HeaderShared.GenericHeaderTitle, {
+    return value3(HeaderShared.GenericHeaderTitle, {
       title: title.children,
       subtitle,
       subtitleColor: "text-feedback-warning",

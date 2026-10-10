@@ -11,7 +11,7 @@ import MessagePreviewStore from "MessagePreviewStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const isThread = fn(2068).isThread;
+const isThread = fn(2069).isThread;
 const Endpoints = fn(1085).Endpoints;
 let closure_11 = new LoggerDefault("MessagePreviewManager");
 class MessagePreviewManager extends tmp3 {
@@ -73,7 +73,7 @@ class MessagePreviewManager extends tmp3 {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           while (true) {
@@ -217,7 +217,7 @@ prototype["fetchLocal"] = function fetchLocal(guild_id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -355,7 +355,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -395,7 +395,7 @@ prototype["fetchDms"] = function fetchDms(nextWants) {
               const obj7 = { type: "MESSAGE_PREVIEWS_LOADED", guildId: null, messages: body };
               tmp5(584).dispatch(obj7);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp12) {
             c3 = tmp;

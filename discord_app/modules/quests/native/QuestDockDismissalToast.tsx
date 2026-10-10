@@ -1,19 +1,19 @@
 // discord_app/modules/quests/native/QuestDockDismissalToast.tsx
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5016 from "../../../../_runtime/metro/05016__.js";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/quests/native/QuestDockDismissalToast.tsx");
 
 export const displayQuestDismissalToast = function displayQuestDismissalToast() {
-  const obj2 = { key: "QUEST_BAR_DISMISS_TOAST", content: null, icon: null, position: "bottom" };
+  const obj2 = { text: null, icon: null, position: "bottom" };
   const intl = util.intl;
-  obj2.content = intl.formatToPlainString(util.t.dYE1px, {
+  obj2.text = intl.formatToPlainString(util.t.dYE1px, {
     arrowHook() {
       return "\u2192";
     },
   });
-  obj2.icon = _modDef5016;
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.icon = CircleInformationIcon.CircleInformationIcon;
+  ToastActionCreatorsDefault.open("QUEST_BAR_DISMISS_TOAST", obj2);
 };

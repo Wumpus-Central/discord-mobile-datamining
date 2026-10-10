@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef6829 from "../../../../../_runtime/metro/06829__.js";
+import _modDef6832 from "../../../../../_runtime/metro/06832__.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import useAnimationDelayedAutoFocus from "../hooks/useAnimationDelayedAutoFocus.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["style", "option", "selected", "selectedItemName", "unselectedSubLabel", "autoFocus"];
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   formRow: {
     flexDirection: "row",
@@ -97,8 +97,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[17] === tmp10) {
                   const _Symbol = Symbol;
                   if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj2 = { source: _modDef6829, size: tmp(1200).IconSizes.SMALL_20 };
-                    const tmp26 = jsx(tmp(1200).Icon, { source: _modDef6829, size: tmp(1200).IconSizes.SMALL_20 });
+                    const obj2 = { source: _modDef6832, size: tmp(1200).IconSizes.SMALL_20 };
+                    const tmp26 = jsx(tmp(1200).Icon, { source: _modDef6832, size: tmp(1200).IconSizes.SMALL_20 });
                     cResult[19] = tmp26;
                     let tmp23 = tmp26;
                   } else {
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     trailing: tmp23,
                   };
                   const merged = Object.assign(tmp6);
-                  const tmp32 = jsx(tmp(8563).FormRow, {
+                  const tmp32 = jsx(tmp(8579).FormRow, {
                     start: true,
                     end: true,
                     style: tmp16,
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { variant: str, color: str2, lineClamp: 1, children: tmp5.displayName };
-        const tmp19 = jsx(tmp(5087).Text, { variant: str, color: str2, lineClamp: 1, children: tmp5.displayName });
+        const tmp19 = jsx(tmp(5088).Text, { variant: str, color: str2, lineClamp: 1, children: tmp5.displayName });
         cResult[11] = tmp5.displayName;
         cResult[12] = str;
         cResult[13] = str2;
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       obj2.subLabel = fn;
-      obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(6829), size: native.IconSizes.SMALL_20 });
+      obj2.trailing = jsx(native.Icon, { source: unselectedSubLabel(6832), size: native.IconSizes.SMALL_20 });
       const merged1 = Object.assign(merged);
       return jsx(Form.FormRow, { start: true, end: true, style: null, label: null, subLabel: null, trailing: null });
     };

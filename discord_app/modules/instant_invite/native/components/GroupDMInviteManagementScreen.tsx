@@ -13,11 +13,11 @@ import InviteRecord from "../../../../records/InviteRecord.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const ChannelSettingsStore = fn(9668);
+const ChannelSettingsStore = fn(9697);
 const Constants = fn(1085);
 ({ ChannelSettingsSections: closure_9, Endpoints: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_12 = createStyles.createStyles({ list: { paddingTop: 8 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMInviteManagement(channelId) {
@@ -38,7 +38,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   if (cResult[1] !== channelId) {
     class T {
       constructor() {
-        closure_0 = closure_3(/* F153933 */ function() { ... });
+        closure_0 = closure_3(/* F154384 */ function() { ... });
         promise = (function fetchInvites() { ... })();
         catchPromise = promise.catch(() => { ... });
         return;
@@ -49,20 +49,20 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   } else {
     class T {
       constructor() {
-        closure_0 = closure_3(/* F153933 */ function() { ... });
+        closure_0 = closure_3(/* F154384 */ function() { ... });
         promise = (function fetchInvites() { ... })();
         catchPromise = promise.catch(() => { ... });
         return;
       }
     }
   }
-  first1(5393)(T);
+  first1(5396)(T);
   const tmp6 = _slicedToArray(noop.useState(true), 2);
   [tmp12, _slicedToArray] = noop.useState(21);
   if (cResult[3] !== first1) {
     class T {
       constructor() {
-        closure_0 = closure_3(/* F153933 */ function() { ... });
+        closure_0 = closure_3(/* F154384 */ function() { ... });
         promise = (function fetchInvites() { ... })();
         catchPromise = promise.catch(() => { ... });
         return;
@@ -190,7 +190,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
           return channelId.code;
         }
       }
-      SceneLoadingIndicator = SceneLoadingIndicator(6725).SceneLoadingIndicator;
+      SceneLoadingIndicator = SceneLoadingIndicator(6726).SceneLoadingIndicator;
       let obj = {};
       let tmp24 = <SceneLoadingIndicator />;
     } else {
@@ -205,12 +205,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
             return channelId.code;
           }
         }
-        let obj4 = { lightSource: tmp9(10273), darkSource: tmp9(10274), title: null, body: null };
+        let obj4 = { lightSource: tmp9(10306), darkSource: tmp9(10307), title: null, body: null };
         const intl = SceneLoadingIndicator(1126).intl;
         obj4.title = intl.string(SceneLoadingIndicator(1126).t["+nLJkZ"]);
         const intl2 = SceneLoadingIndicator(1126).intl;
         obj4.body = intl2.string(SceneLoadingIndicator(1126).t.F53CAc);
-        tmp24 = jsx(SceneLoadingIndicator(1200).EmptyState, { lightSource: tmp9(10273), darkSource: tmp9(10274), title: null, body: null });
+        tmp24 = jsx(SceneLoadingIndicator(1200).EmptyState, { lightSource: tmp9(10306), darkSource: tmp9(10307), title: null, body: null });
       } else {
         class P {
           constructor(arg0) {
@@ -239,7 +239,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   [first, dependencyMap] = noop.useState([]);
   const tmp3 = _slicedToArray(noop.useState(true), 2);
   closure_3 = tmp3[1];
-  first(5393)(() => {
+  first(5396)(() => {
     closure_0 = async function _fetchInvites2() {
       if (v3 === 2) {
         v3 = 3;
@@ -251,7 +251,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -293,7 +293,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
             v1(closure_128_0);
             v3(false);
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp13) {
           v3 = tmp;
@@ -336,14 +336,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function GroupD
   [][0] = first;
   const callback = noop.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp14 = jsx(channelId(6725).SceneLoadingIndicator, {});
+    let tmp14 = jsx(channelId(6726).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
-    let obj2 = { lightSource: tmp4(10273), darkSource: tmp4(10274), title: null, body: null };
+    let obj2 = { lightSource: tmp4(10306), darkSource: tmp4(10307), title: null, body: null };
     const intl = channelId(1126).intl;
     obj2.title = intl.string(channelId(1126).t["+nLJkZ"]);
     const intl2 = channelId(1126).intl;
     obj2.body = intl2.string(channelId(1126).t.F53CAc);
-    tmp14 = jsx(channelId(1200).EmptyState, { lightSource: tmp4(10273), darkSource: tmp4(10274), title: null, body: null });
+    tmp14 = jsx(channelId(1200).EmptyState, { lightSource: tmp4(10306), darkSource: tmp4(10307), title: null, body: null });
   } else {
     let obj = { style: tmp.list, data: memo, keyExtractor: callback, renderItem: tmp11, initialNumToRender: 10, windowSize: tmp7[0] };
     tmp14 = <closure_7 style={tmp.list} data={memo} keyExtractor={callback} renderItem={tmp11} initialNumToRender={10} windowSize={tmp7[0]} />;
@@ -363,7 +363,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     if (cResult[3] !== tmp4) {
       const obj2 = { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT };
-      const tmp8 = jsx(channelId(6686).Navigator, { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+      const tmp8 = jsx(channelId(6687).Navigator, { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
       cResult[3] = tmp4;
       cResult[4] = tmp8;
       let tmp5 = tmp8;
@@ -377,7 +377,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const intl = channelId(1126).intl;
   obj4.title = intl.string(channelId(1126).t.OQ9MKu);
   const obj = channelId(576);
-  obj4.headerLeft = channelId(6205).getHeaderCloseButton(onClose);
+  obj4.headerLeft = channelId(6200).getHeaderCloseButton(onClose);
   obj4.render = function render() {
     return <closure_2_13 channelId={channelId} />;
   };
@@ -387,7 +387,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[1] = onClose;
   cResult[2] = obj3;
   tmp4 = obj3;
-  const tmpResult = channelId(6205);
+  const tmpResult = channelId(6200);
 }) : (function GroupDMInviteManagementScreen(channelId) {
   channelId = channelId.channelId;
   const onClose = channelId.onClose;
@@ -405,5 +405,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     obj[constants.INSTANT_INVITES_MANAGEMENT] = obj2;
     return obj;
   }, items);
-  return jsx(channelId(6686).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(6687).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 }));

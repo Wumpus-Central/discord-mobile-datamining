@@ -15,7 +15,7 @@ let closure_8 = async function _transferToXbox(arg0) {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_8 = async function _transferToXbox(arg0) {
         closure_130_2(closure_130_3[12]).stopOwnStream(false);
         closure_130_5.openURL(closure_129_2);
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } else {
         const obj17 = {
           importer() {

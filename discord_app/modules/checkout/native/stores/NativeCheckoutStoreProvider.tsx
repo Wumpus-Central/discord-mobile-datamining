@@ -11,17 +11,17 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const NativeCheckoutStore = fn(7137);
+const NativeCheckoutStore = fn(7143);
 ({
   createNativeStore: closure_7,
   NativeCheckoutStoreContext: closure_8,
   NativeCheckoutStoreContextOrNull: closure_9,
 } = NativeCheckoutStore);
 const AnalyticEvents = fn(1085).AnalyticEvents;
-let ItemPurchaseType = fn(5070).ItemPurchaseType;
+let ItemPurchaseType = fn(5071).ItemPurchaseType;
 const PaymentGateways = fn(1096).PaymentGateways;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_14 = createStyles.createStyles({
   loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" },
 });
@@ -421,7 +421,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         checkoutAnalyticsFields: View,
         analyticsInitialStep: closure_7,
       } = children);
-      const contextMetadata = order(6176)(() => {
+      const contextMetadata = order(6169)(() => {
         let id;
         if (order != null) {
           id = order.id;
@@ -434,7 +434,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { message: "Checkout session ID: " + id };
         return { loadId: id, startTime: Date.now() };
       });
-      redux = order(6176)(() => {
+      redux = order(6169)(() => {
         const obj = {};
         const merged = Object.assign(View);
         obj.load_id = contextMetadata.loadId;
@@ -456,7 +456,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         ),
         1,
       )[0];
-      order(5393)(() => {
+      order(5396)(() => {
         if (null != View) {
           const result = PaymentFlowStartedTriggerPoint.trackPaymentFlowStartedAnalyticsAndCTP(closure_9);
           const obj3 = {};
@@ -487,7 +487,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           current = null == order;
         }
         if (!current) {
-          state = first.getState();
+          const state = first.getState();
           state.setOrder(order);
           ref.current = true;
         }
@@ -501,8 +501,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { checkoutSucceeded: tmp2, order: null };
             ({ id: obj3.id, status: obj3.status } = orderRecord);
             obj2.order = { id: null, status: null };
-            checkoutInitParameters(10136).discardDraftOrder(obj2);
-            const obj = checkoutInitParameters(10136);
+            checkoutInitParameters(10165).discardDraftOrder(obj2);
+            const obj = checkoutInitParameters(10165);
             const obj5 = { id: null, status: null };
           }
         },
@@ -603,7 +603,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -654,7 +654,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               closure_1_10(false);
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp23) {
             c4 = tmp;

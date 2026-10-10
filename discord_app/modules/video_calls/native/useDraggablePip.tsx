@@ -7,8 +7,8 @@ import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallo
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const useChannelCallStore = fn(10320).useChannelCallStore;
-const Constants = fn(10816);
+const useChannelCallStore = fn(10353).useChannelCallStore;
+const Constants = fn(10826);
 ({ PIP_FOCUS_SCALE: closure_4, PIP_GESTURE_ACTIVE_OFFSET: hasOwnProperty } = Constants);
 let closure_6 = {
   mass: 1,
@@ -393,7 +393,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled()
           const _Math2 = Math;
           const bound = Math.min(Math.max(sum, 0), diff);
           const sum1 = sharedValue3.get() + 0.0875 * velocityX.velocityY;
-          const value4 = derivedValue6.get();
+          value4 = derivedValue6.get();
           const diff1 = value4 - derivedValue4.get();
           if (typeof tmp4 === "function") {
             const _Math3 = Math;
@@ -532,7 +532,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { transform: null };
         const obj2 = { translateX: null };
         value = sharedValue1.get();
-        const value4 = derivedValue3.get();
+        value4 = derivedValue3.get();
         obj2.translateX = value + (value4 - derivedValue1.get()) / 2;
         const items = [obj2, ,];
         const obj3 = { translateY: null };
@@ -850,7 +850,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled()
           const _Math2 = Math;
           const bound = Math.min(Math.max(sum, 0), diff);
           const sum1 = sharedValue3.get() + 0.0875 * velocityX.velocityY;
-          const value4 = derivedValue6.get();
+          value4 = derivedValue6.get();
           const diff1 = value4 - derivedValue4.get();
           if (typeof tmp4 === "function") {
             const _Math3 = Math;
@@ -980,7 +980,7 @@ export const useDraggablePip = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { transform: null };
         const obj2 = { translateX: null };
         value = sharedValue1.get();
-        const value4 = derivedValue3.get();
+        value4 = derivedValue3.get();
         obj2.translateX = value + (value4 - derivedValue1.get()) / 2;
         const items = [obj2, ,];
         const obj3 = { translateY: null };

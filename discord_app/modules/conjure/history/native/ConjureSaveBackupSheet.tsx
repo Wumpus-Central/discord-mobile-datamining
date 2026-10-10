@@ -6,11 +6,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(13164).createDatabaseRestorePoint;
+let closure_6 = fn(13213).createDatabaseRestorePoint;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureSaveBackupSheet = "ConjureSaveBackupSheet";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_16 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -184,10 +184,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           })
           .then(
             () => {
-              const obj2 = { key: "VIBEGRATIONS_HISTORY_BACKUP_SAVED", content: null };
+              const obj2 = { text: null };
               const intl = projectId(onSaved[11]).intl;
-              obj2.content = intl.string(environment(onSaved[12]).OoHJfv);
-              environment(onSaved[10]).open(obj2);
+              obj2.text = intl.string(environment(onSaved[12]).OoHJfv);
+              environment(onSaved[10]).open("VIBEGRATIONS_HISTORY_BACKUP_SAVED", obj2);
               closure_1_2();
               const obj = environment(onSaved[10]);
               environment(onSaved[13]).hideActionSheet(ConjureSaveBackupSheet);
@@ -235,10 +235,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           })
           .then(
             () => {
-              const obj2 = { key: "VIBEGRATIONS_HISTORY_BACKUP_SAVED", content: null };
+              const obj2 = { text: null };
               const intl = projectId(onSaved[11]).intl;
-              obj2.content = intl.string(environment(onSaved[12]).OoHJfv);
-              environment(onSaved[10]).open(obj2);
+              obj2.text = intl.string(environment(onSaved[12]).OoHJfv);
+              environment(onSaved[10]).open("VIBEGRATIONS_HISTORY_BACKUP_SAVED", obj2);
               closure_1_2();
               const obj = environment(onSaved[10]);
               environment(onSaved[13]).hideActionSheet(ConjureSaveBackupSheet);

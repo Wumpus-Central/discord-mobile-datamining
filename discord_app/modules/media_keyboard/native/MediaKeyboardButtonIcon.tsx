@@ -4,7 +4,7 @@ import ReanimatedRexportDefault from "../../reanimated/ReanimatedRexport.tsx";
 import useKeyboardTypeDefault from "../../keyboard/native/useKeyboardType.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
-import _objectDestructuringEmpty from "../../../../_runtime/11893__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/11937__objectDestructuringEmpty.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -63,7 +63,7 @@ export const MediaKeyboardButtonIcon = ReactCompilerGating.isReactCompilerEnable
       if (cResult[2] !== tmp4) {
         const obj3 = {};
         const merged1 = Object.assign(tmp4);
-        const tmp17 = jsx(tmp(10275).PlusLargeIcon, {});
+        const tmp17 = jsx(tmp(10308).PlusLargeIcon, {});
         cResult[2] = tmp4;
         cResult[3] = tmp17;
         let tmp12 = tmp17;

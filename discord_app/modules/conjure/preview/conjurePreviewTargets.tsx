@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/conjurePreviewTargets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePreviewMode from "ConjurePreviewMode.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -42,13 +42,13 @@ export const getPreviewTargetLabel = function getPreviewTargetLabel(memo2) {
     return ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo2.surface);
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3827.y5GiL1);
+    return intl3.string(_modDef3849.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3827["2940LX"]);
+    return intl2.string(_modDef3849["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef3827.tjpaGN);
+    return intl.string(_modDef3849.tjpaGN);
   }
 };
 export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2) {

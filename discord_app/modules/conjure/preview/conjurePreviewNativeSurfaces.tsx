@@ -51,30 +51,30 @@ function answerFor(cmd) {
   } else if (null == obj[cmd.cmd]) {
     return null;
   } else {
-    ({ options, subject } = tmp9(cmd));
+    ({ options, subject } = tmp10(cmd));
     if (found.recorded.length >= 20) {
-      const obj2 = { result: tmp11 };
-      return obj2;
+      obj = { result: tmp12 };
+      return obj;
     } else {
-      let obj3 = { command: cmd.cmd, answered: tmp12 };
+      let obj2 = { command: cmd.cmd, answered: tmp13 };
       if (null != options) {
         if (options.length > 0) {
-          const obj4 = { options };
-          obj = obj4;
+          const obj3 = { options };
+          let obj6 = obj3;
         }
-        const merged = Object.assign(obj);
+        const merged = Object.assign(obj6);
         if (null != subject) {
-          const obj5 = { subject };
-          let obj6 = obj5;
+          const obj4 = { subject };
+          let obj5 = obj4;
         } else {
-          obj6 = {};
+          obj5 = {};
         }
-        const merged1 = Object.assign(obj6);
-        obj3 = tmp13(obj3);
+        const merged1 = Object.assign(obj5);
+        obj2 = tmp2(obj2);
       }
-      obj = {};
+      obj6 = {};
     }
-    const tmp9Result = tmp9(cmd);
+    const tmp10Result = tmp10(cmd);
   }
 }
 const RPCCommands = Constants.RPCCommands;
@@ -157,8 +157,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "code", answered: null }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "code", answered: null }),
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "code", answered: "Error" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "code", answered: "Error" }),
 };
 let closure_5 = {
   drain() {
@@ -189,8 +189,8 @@ export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSess
       closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      let result = obj2(11379).setRpcCommandInterceptor(answerFor);
-      obj = obj2(11379);
+      let result = obj2(11421).setRpcCommandInterceptor(answerFor);
+      obj = obj2(11421);
     }
     const obj3 = {
       iframeId,

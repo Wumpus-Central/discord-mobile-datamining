@@ -7,10 +7,10 @@ import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import ApplicationFlagUtils from "../applications/utils/ApplicationFlagUtils.tsx";
 import CommandPermissionContext from "../application_commands/CommandPermissionContext.tsx";
+import activityLaunchErrorUtils from "utils/activityLaunchErrorUtils.tsx";
 import pendingFrameLaunch from "utils/pendingFrameLaunch.tsx";
 import EmbeddedActivityLocationKind from "../../../discord_common/js/shared/shared-constants/EmbeddedActivityLocationKind.tsx";
 import getShelfItemDataDefault from "getShelfItemData.tsx";
-import activityLaunchErrorUtils from "utils/activityLaunchErrorUtils.tsx";
 import getPlatformDefault from "utils/getPlatform.tsx";
 import QuestMatchingUtils from "../quests/utils/QuestMatchingUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -108,7 +108,7 @@ let closure_18 = async function _trackFrameSessionStartFailed(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

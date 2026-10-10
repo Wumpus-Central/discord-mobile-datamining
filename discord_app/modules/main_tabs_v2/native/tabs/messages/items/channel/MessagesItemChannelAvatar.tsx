@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11713).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11758).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -413,8 +413,8 @@ export default noop.memo(
                 isMobileOnline: stateFromStores3,
                 isVROnline: stateFromStores4,
                 status: null,
-                streaming: "57b3286b2824f2c7cf84996c89963e3f",
-                style: "es-419.messages.57b3286b2824f2c7cf84996c89963e3f.compiled.messages",
+                streaming: "803693e032df6c7df40fd0c7af437d2c",
+                style: "da.messages.803693e032df6c7df40fd0c7af437d2c.compiled.messages",
                 size: "jsona",
                 animate: "VOICE_CATEGORY_EXPAND",
                 typing: null,
@@ -579,8 +579,8 @@ export default noop.memo(
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
               status: null,
-              streaming: "57b3286b2824f2c7cf84996c89963e3f",
-              style: "es-419.messages.57b3286b2824f2c7cf84996c89963e3f.compiled.messages",
+              streaming: "803693e032df6c7df40fd0c7af437d2c",
+              style: "da.messages.803693e032df6c7df40fd0c7af437d2c.compiled.messages",
               size: "jsona",
               animate: "VOICE_CATEGORY_EXPAND",
               typing: null,
@@ -603,8 +603,8 @@ export default noop.memo(
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
               status: null,
-              streaming: "57b3286b2824f2c7cf84996c89963e3f",
-              style: "es-419.messages.57b3286b2824f2c7cf84996c89963e3f.compiled.messages",
+              streaming: "803693e032df6c7df40fd0c7af437d2c",
+              style: "da.messages.803693e032df6c7df40fd0c7af437d2c.compiled.messages",
               size: "jsona",
               animate: "VOICE_CATEGORY_EXPAND",
               typing: null,

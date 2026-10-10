@@ -112,12 +112,12 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(5922);
+const SafetyHubConstants = fn(7512);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 },
@@ -161,7 +161,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = { style: tmp4.headerContainer, children: null };
           const items = [tmp5, tmp8];
           obj2.children = items;
-          const tmp15 = __initData2(View, obj2);
+          const tmp15 = map1(View, obj2);
           cResult[6] = tmp4.headerContainer;
           cResult[7] = tmp5;
           cResult[8] = tmp8;
@@ -239,7 +239,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items[1] = tmp8;
       obj.children = items;
-      return __initData2(View, obj);
+      return map1(View, obj);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -408,7 +408,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -612,7 +612,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -634,7 +634,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp27(11427).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                      value: tmp27(11472).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                       done: false,
                     };
                     return obj6;
@@ -649,8 +649,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   if (body != null) {
                     code = body.code;
                   }
-                  closure_129_4(safetyHubAppealSignal(5928).getRequestReviewErrorFromCode(code));
-                  const obj2 = safetyHubAppealSignal(5928);
+                  closure_129_4(safetyHubAppealSignal(7511).getRequestReviewErrorFromCode(code));
+                  const obj2 = safetyHubAppealSignal(7511);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;

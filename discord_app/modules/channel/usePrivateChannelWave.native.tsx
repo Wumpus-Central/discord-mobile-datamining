@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 const Constants = fn(1085);
 ({ ME: metroRequire, Routes: closure_7 } = Constants);
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 let c9 = "749054660769218631";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -51,7 +51,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -71,13 +71,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_0 = undefined;
                 tmp7 = closure_1;
                 if (!closure_1) {
-                  tmp44(true);
+                  tmp42(true);
                   const obj8 = { channelId: closure_0.id, source: "Messages Tab" };
-                  closure_0(tmp44[7]).trackWaveCtaClicked(obj8);
-                  const obj4 = closure_0(tmp44[7]);
-                  closure_0(tmp44[8]).transitionTo(React5.CHANNEL(timestampProducer, closure_0.id));
+                  closure_0(tmp42[7]).trackWaveCtaClicked(obj8);
+                  const obj4 = closure_0(tmp42[7]);
+                  closure_0(tmp42[8]).transitionTo(React5.CHANNEL(timestampProducer, closure_0.id));
                   c3 = 1;
-                  const obj7 = first(tmp44[9]);
+                  const obj7 = first(tmp42[9]);
                   const items = [closure_2_9];
                   const obj9 = { location: constants.SEND_WAVE };
                   c4 = 2;
@@ -89,18 +89,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               if (1 === tmp7) {
                 c3 = 0;
-                closure_128_0 = tmp44;
+                closure_128_0 = tmp42;
                 let ok = closure_128_0.ok;
                 if (!ok) {
                   ok = 429 !== closure_128_0.status;
                 }
                 if (!ok) {
-                  const obj11 = { key: "HANDLE_WAVE_PRESS_TOAST", content: null, icon: null };
-                  const intl = closure_0(tmp44[11]).intl;
-                  obj11.content = intl.string(closure_0(tmp44[11]).t.Whhv4w);
-                  obj11.icon = first(tmp44[12]);
-                  first(tmp44[10]).open(obj11);
-                  const obj2 = first(tmp44[10]);
+                  const obj11 = { text: null, variant: "critical" };
+                  const intl = closure_0(tmp42[11]).intl;
+                  obj11.text = intl.string(closure_0(tmp42[11]).t.Whhv4w);
+                  first(tmp42[10]).open("HANDLE_WAVE_PRESS_TOAST", obj11);
+                  const obj2 = first(tmp42[10]);
                 }
               } else if (arg0 === 1) {
                 c5 = 3;
@@ -113,13 +112,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 c3 = 0;
               }
-              tmp7 = tmp44(false);
+              tmp7 = tmp42(false);
             }
             c5 = 3;
-          } catch (tmp44) {
+          } catch (tmp42) {
             if (tmp4 === c3) {
               c5 = tmp2;
-              throw tmp44;
+              throw tmp42;
             } else {
               c4 = tmp;
             }
@@ -158,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -176,13 +175,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   id = tmp7;
                   tmp7 = first;
                   if (!first) {
-                    tmp44(true);
+                    tmp42(true);
                     const obj8 = { channelId: id.id, source: "Messages Tab" };
-                    id(tmp44[7]).trackWaveCtaClicked(obj8);
-                    const obj4 = id(tmp44[7]);
-                    id(tmp44[8]).transitionTo(closure_1_7.CHANNEL(closure_1_6, id.id));
+                    id(tmp42[7]).trackWaveCtaClicked(obj8);
+                    const obj4 = id(tmp42[7]);
+                    id(tmp42[8]).transitionTo(closure_1_7.CHANNEL(closure_1_6, id.id));
                     c3 = 1;
-                    const obj7 = tmp3(tmp44[9]);
+                    const obj7 = tmp3(tmp42[9]);
                     const items = [closure_1_9];
                     const obj9 = { location: constants.SEND_WAVE };
                     c4 = 2;
@@ -194,18 +193,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 if (1 === tmp7) {
                   c3 = 0;
-                  closure_128_0 = tmp44;
+                  closure_128_0 = tmp42;
                   let ok = closure_128_0.ok;
                   if (!ok) {
                     ok = 429 !== closure_128_0.status;
                   }
                   if (!ok) {
-                    const obj11 = { key: "HANDLE_WAVE_PRESS_TOAST", content: null, icon: null };
-                    const intl = id(tmp44[11]).intl;
-                    obj11.content = intl.string(id(tmp44[11]).t.Whhv4w);
-                    obj11.icon = tmp3(tmp44[12]);
-                    tmp3(tmp44[10]).open(obj11);
-                    const obj2 = tmp3(tmp44[10]);
+                    const obj11 = { text: null, variant: "critical" };
+                    const intl = id(tmp42[11]).intl;
+                    obj11.text = intl.string(id(tmp42[11]).t.Whhv4w);
+                    tmp3(tmp42[10]).open("HANDLE_WAVE_PRESS_TOAST", obj11);
+                    const obj2 = tmp3(tmp42[10]);
                   }
                 } else if (arg0 === 1) {
                   c5 = 3;
@@ -221,10 +219,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp7 = closure_129_2(false);
               }
               c5 = 3;
-            } catch (tmp44) {
+            } catch (tmp42) {
               if (tmp4 === c3) {
                 c5 = tmp2;
-                throw tmp44;
+                throw tmp42;
               } else {
                 c4 = tmp;
               }

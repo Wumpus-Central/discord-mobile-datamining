@@ -7,7 +7,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import _modDef16543 from "../../../../_runtime/metro/16543__.js";
+import _modDef16613 from "../../../../_runtime/metro/16613__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -33,7 +33,7 @@ let closure_9 = async function _handlePress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_9 = async function _handlePress() {
         closure_128_0 = value.default;
         closure_129_1(closure_129_2[9]).openURL(closure_128_0.getArticleURL(closure_129_4.SETTING_UP_TWO_FACTOR));
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp17) {
       c3 = tmp;
@@ -78,7 +78,7 @@ const Constants = fn(1085);
 ({ HelpdeskArticles: closure_4, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   MFAWarning: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" },
   MFAWarningIcon: { marginVertical: 10, width: 98, height: 53 },
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(10);
       const tmp4 = closure_7();
       if (cResult[0] !== tmp4.MFAWarningIcon) {
-        const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16543 };
+        const obj2 = { style: tmp4.MFAWarningIcon, source: _modDef16613 };
         const tmp9 = hasOwnProperty(FastImageDefault, obj2);
         cResult[0] = tmp4.MFAWarningIcon;
         cResult[1] = tmp9;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function GuildMFAWarning() {
       const tmp = closure_7();
       const obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-      const obj2 = { style: tmp.MFAWarningIcon, source: _modDef16543 };
+      const obj2 = { style: tmp.MFAWarningIcon, source: _modDef16613 };
       const items = [hasOwnProperty(FastImageDefault, obj2)];
       const obj3 = { variant: "text-xs/medium", color: "text-default", children: null };
       const intl = util.intl;

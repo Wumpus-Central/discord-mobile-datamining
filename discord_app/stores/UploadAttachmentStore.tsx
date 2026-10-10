@@ -138,7 +138,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     }
     const items = [...value3];
     items.shift();
-    let value4 = obj.get(channelId);
+    value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -181,7 +181,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const cloudUpload = new CloudUpload.CloudUpload(file, channelId, items.length, importDefault);
       items.push(cloudUpload);
     });
-    let value4 = obj.get(channelId);
+    value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -248,7 +248,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         return id;
       }
     });
-    let value4 = obj.get(channelId);
+    value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -277,7 +277,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     if (findIndexResult > -1) {
       const first = items.splice(findIndexResult, 1)[0];
       first.removeFromMsgDraft();
-      let value4 = obj.get(channelId);
+      value4 = obj.get(channelId);
       if (value4 == null) {
         const _Map2 = Map;
         value4 = new Map();
@@ -310,7 +310,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
         first.removeFromMsgDraft();
       }
     });
-    let value4 = obj.get(channelId);
+    value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();
@@ -357,7 +357,7 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     const found = items.filter((id) => id.id !== require);
     const cloudUpload = new CloudUpload.CloudUpload(file, channelId, undefined, allowOptimization);
     found.push(cloudUpload);
-    let value4 = obj.get(channelId);
+    value4 = obj.get(channelId);
     if (value4 == null) {
       const _Map2 = Map;
       value4 = new Map();

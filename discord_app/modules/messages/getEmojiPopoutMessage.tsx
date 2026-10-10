@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
-import _modDef4085 from "../emojis/default_emojis/DefaultEmojis.messages.js";
+import _modDef4107 from "../emojis/default_emojis/DefaultEmojis.messages.js";
 import ExpressionSourceRecord from "../emojis/records/ExpressionSourceRecord.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -26,7 +26,7 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
     const obj2 = { type: obj.UNAVAILABLE, text: null, description: null, emojiDescription: null, analyticsType: null };
     const intl11 = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj2.emojiDescription = intl11.format(_modDef4085["/jdd/7"], obj3);
+    obj2.emojiDescription = intl11.format(_modDef4107["/jdd/7"], obj3);
     obj2.analyticsType = constants.NITRO_EMOJI_PACK;
     return obj2;
   } else {

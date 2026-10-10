@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15154, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15216, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -20,7 +20,7 @@ export default noop.memo(
         const tmp = stackNavigation;
         stackNavigation = stackNavigation(1503).useStackNavigation();
         const obj2 = stackNavigation(1503);
-        const params = stackNavigation(6681).useSettingNavigationRoute().params;
+        const params = stackNavigation(6682).useSettingNavigationRoute().params;
         let selectedPlatformType;
         if (params != null) {
           selectedPlatformType = params.selectedPlatformType;
@@ -34,7 +34,7 @@ export default noop.memo(
                 obj.onPress = onPress;
                 const intl = stackNavigation(1126).intl;
                 obj.label = intl.string(stackNavigation(1126).t.OYkgVk);
-                return closure_1_4(stackNavigation(9270).HeaderTextButton, obj);
+                return closure_1_4(stackNavigation(9297).HeaderTextButton, obj);
               },
             });
           };
@@ -51,7 +51,7 @@ export default noop.memo(
         const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
         if (cResult[3] !== selectedPlatformType) {
           const obj4 = { selectedPlatformType };
-          const tmp11 = jsx(tmp(15155).UserSettingsConnections, { selectedPlatformType });
+          const tmp11 = jsx(tmp(15217).UserSettingsConnections, { selectedPlatformType });
           cResult[3] = selectedPlatformType;
           cResult[4] = tmp11;
           let tmp9 = tmp11;
@@ -64,7 +64,7 @@ export default noop.memo(
         stackNavigation = stackNavigation(1503).useStackNavigation();
         let obj = stackNavigation(1503);
         const tmp = stackNavigation;
-        const params = stackNavigation(6681).useSettingNavigationRoute().params;
+        const params = stackNavigation(6682).useSettingNavigationRoute().params;
         let selectedPlatformType;
         if (params != null) {
           selectedPlatformType = params.selectedPlatformType;
@@ -78,10 +78,10 @@ export default noop.memo(
               obj.onPress = onPress;
               const intl = stackNavigation(1126).intl;
               obj.label = intl.string(stackNavigation(1126).t.OYkgVk);
-              return closure_1_4(stackNavigation(9270).HeaderTextButton, obj);
+              return closure_1_4(stackNavigation(9297).HeaderTextButton, obj);
             },
           });
         }, items);
-        return jsx(tmp(15155).UserSettingsConnections, { selectedPlatformType });
+        return jsx(tmp(15217).UserSettingsConnections, { selectedPlatformType });
       },
 );

@@ -3,15 +3,15 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import MemberVerificationTypes from "../../../MemberVerificationTypes.tsx";
-import EnvelopeIcon from "../../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
 import MobilePhoneIcon2 from "../../../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
+import EnvelopeIcon from "../../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const CheckmarkLargeIcon2 = CheckmarkLargeIcon(4776);
-const Text_Text = CheckmarkLargeIcon(5087);
-const components_Button_Button = CheckmarkLargeIcon(5376);
+const Text_Text = CheckmarkLargeIcon(5088);
+const components_Button_Button = CheckmarkLargeIcon(5379);
+const CheckmarkLargeIcon2 = CheckmarkLargeIcon(6195);
 require = fn;
 function getLabel(arg0, arg1) {
   if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === arg0) {
@@ -42,7 +42,7 @@ function getLabel(arg0, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     padding: 8,

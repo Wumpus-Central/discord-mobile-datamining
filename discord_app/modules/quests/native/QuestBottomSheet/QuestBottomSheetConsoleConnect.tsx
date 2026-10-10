@@ -10,11 +10,11 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
-import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
-import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
-import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import XboxNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/XboxNeutralIcon.tsx";
 import PlaystationNeutralIcon from "../../../../design/components/Icon/native/redesign/generated/PlaystationNeutralIcon.tsx";
+import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
+import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
 import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import authorizeConnectionDefault from "../../../connections/authorizeConnection.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -29,7 +29,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -51,7 +51,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === onConsoleSelect) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { hasIcons: true, children: tmp4 };
-            const tmp9 = closure_8(onConsoleSelect(6269).TableRowGroup, obj2);
+            const tmp9 = closure_8(onConsoleSelect(6264).TableRowGroup, obj2);
             cResult[5] = tmp4;
             cResult[6] = tmp9;
             let tmp7 = tmp9;
@@ -284,19 +284,19 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15313, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15375, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(9149).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9149);
-  closure_4 = quest(12929).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(12929);
-  noop = quest(9174).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9170).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9170);
+  closure_4 = quest(12977).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(12977);
+  noop = quest(9201).useGetQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj3 = quest(9174);
+  let obj3 = quest(9201);
   return closure_8(closure_9, {
     consoles: noop.useMemo(
       () =>

@@ -22,7 +22,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6898);
+const Constants = fn(6904);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1085).Routes;
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
@@ -44,7 +44,7 @@ const dependencyMap2 = {
     columnGap: 3,
   },
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_16 = createStyles.createStyles({
   card: { flexDirection: "column" },
   textWithIcon: { flexDirection: "row", alignItems: "center" },
@@ -488,7 +488,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const tmpResult6 = tmp(504);
-        const tmpResult7 = tmp(6869);
+        const tmpResult7 = tmp(6875);
         const createdAtDate = tmpResult7.getCreatedAtDate(guildId(11).extractTimestamp(userId), stateFromStores);
         const obj6 = guildId(11);
         if (stateFromStores2 != null) {
@@ -503,7 +503,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const createdAtDate1 = tmp(6869).getCreatedAtDate(tmp22, stateFromStores);
+        const createdAtDate1 = tmp(6875).getCreatedAtDate(tmp22, stateFromStores);
         const _Symbol = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
@@ -647,7 +647,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[30] = tmp4.memberJoinDates;
         cResult[31] = tmp31;
         cResult[32] = items3;
-        const tmpResult8 = tmp(6869);
+        const tmpResult8 = tmp(6875);
       }
       class U {
         constructor() {
@@ -698,13 +698,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return member;
       });
       const obj3 = userId(504);
-      const obj4 = userId(6869);
+      const obj4 = userId(6875);
       const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
       let joinedAt;
       if (stateFromStores2 != null) {
         joinedAt = stateFromStores2.joinedAt;
       }
-      const createdAtDate1 = userId(6869).getCreatedAtDate(joinedAt, stateFromStores);
+      const createdAtDate1 = userId(6875).getCreatedAtDate(joinedAt, stateFromStores);
       const obj7 = { themeType, children: null };
       const intl = tmp4(1126).intl;
       obj7.children = intl.string(userId(1126).t.a6XYD9);
@@ -714,7 +714,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj8.style = items4;
       const obj9 = {
         themeType,
-        icon: closure_11(userId(10142).ClydeIcon, { size: "xs" }),
+        icon: closure_11(userId(10171).ClydeIcon, { size: "xs" }),
         accessibilityLabel: null,
         children: null,
       };
@@ -732,9 +732,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           importantForAccessibility: "no-hide-descendants",
           children,
         };
-        const items6 = [closure_11(tmp4(5087).Text, obj11)];
+        const items6 = [closure_11(tmp4(5088).Text, obj11)];
         const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-        const obj13 = { guild: stateFromStores1, size: tmp4(6165).GuildIconSizes.XXSMALL };
+        const obj13 = { guild: stateFromStores1, size: tmp4(6158).GuildIconSizes.XXSMALL };
         obj12.icon = closure_11(GuildIconDefault, obj13);
         const intl3 = tmp4(1126).intl;
         const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -1013,7 +1013,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp13;
         tmp11 = tmp13;
       }
-      const tmp10 = closure_11(url(5087).Text, { variant: textVariant, color: "text-link", children: label });
+      const tmp10 = closure_11(url(5088).Text, { variant: textVariant, color: "text-link", children: label });
       cResult[4] = label;
       cResult[5] = textVariant;
       cResult[6] = tmp10;
@@ -1202,7 +1202,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = context;
               tmp10 = channel;
               if (rootNavigationRef.isReady()) {
-                state = rootNavigationRef.getState();
+                const state = rootNavigationRef.getState();
                 let num;
                 if (state != null) {
                   const routes = state.routes;

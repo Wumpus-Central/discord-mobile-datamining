@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[8]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[8]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[8]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp2 = closure_2;
               num = 80;
               tmp3 = closure_1(closure_2[8]);
-              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+              tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
             }
             return;
           }
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 tmp2 = closure_2;
                 num = 80;
                 tmp3 = closure_1(closure_2[8]);
-                tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+                tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
               }
               return;
             }
@@ -122,13 +122,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp2 = closure_2;
                   num = 80;
                   tmp3 = closure_1(closure_2[8]);
-                  tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), { dispatchWait: true });
+                  tmp3Result = tmp3(obj.id, obj.getAvatarURL(undefined, 80), {});
                 }
                 return;
               }
             }
           }
-          AnalyticsLocationProvider = AnalyticsLocationProvider(6848).AnalyticsLocationProvider;
+          AnalyticsLocationProvider = AnalyticsLocationProvider(6851).AnalyticsLocationProvider;
           const obj2 = { value: analyticsLocations, children: tmp12 };
           tmp = <AnalyticsLocationProvider value={analyticsLocations}>{tmp12}</AnalyticsLocationProvider>;
           cResult[8] = analyticsLocations;
@@ -152,9 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [stateFromStores];
       const effect = noop.useEffect(() => {
         if (null != stateFromStores) {
-          maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {
-            dispatchWait: true,
-          });
+          maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), {});
         }
       }, items1);
       let tmp7 = null;
@@ -166,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { currentUser: stateFromStores };
         const merged = Object.assign(arg0);
         obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-        tmp7 = jsx(tmp4(6848).AnalyticsLocationProvider, {
+        tmp7 = jsx(tmp4(6851).AnalyticsLocationProvider, {
           value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations,
           children: null,
         });

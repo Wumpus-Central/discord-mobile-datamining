@@ -92,7 +92,7 @@ obj = {
           const items = [];
           HermesBuiltin.arraySpread(applicationIds, HermesBuiltin.arraySpread(userIds, 0));
           const joined = items.join(",");
-          state = undefined;
+          let state;
           if (obj[joined] != null) {
             state = tmp18.state;
           }

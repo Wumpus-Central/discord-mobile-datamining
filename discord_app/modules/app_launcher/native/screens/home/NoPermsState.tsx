@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     paddingVertical: 16,
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function EmptyState() {
       const cResult = c.c(10);
       const tmp4 = closure_6();
-      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11755 : 11756);
+      const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11799 : 11800);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function EmptyState() {
       const tmp = closure_6();
-      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11755 : 11756);
+      const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11799 : 11800);
       const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
       );

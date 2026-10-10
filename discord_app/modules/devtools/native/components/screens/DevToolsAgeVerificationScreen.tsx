@@ -28,7 +28,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
   await AgeVerificationURLActionCreators.requestAgeVerification({});
   if (1 === tmp7) {
     c3 = 0;
-    closure_129_1(closure_129_2[8]).open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
+    closure_129_1(closure_129_2[8]).open("age-verification-test-failure", { text: "Failed to show age verification test modal" });
     c5 = 3;
     closure_129_1(closure_129_2[8]);
   } else if (arg0 === 1) {
@@ -42,7 +42,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
       verificationVendorName: closure_128_0.verification_vendor_name,
       incodeParameters: closure_128_0.incode_parameters,
       onComplete() {
-          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+          closure_1_1(closure_1_2[8]).open("age-verification-test-success", { text: "[On Complete] Successfully age verified" });
         },
       entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
     });
@@ -54,7 +54,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
       verificationVendorName: closure_128_0.verification_vendor_name,
       incodeParameters: closure_128_0.incode_parameters,
       onComplete() {
-          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+          closure_1_1(closure_1_2[8]).open("age-verification-test-success", { text: "[On Complete] Successfully age verified" });
         },
       entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
     };
@@ -64,7 +64,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };

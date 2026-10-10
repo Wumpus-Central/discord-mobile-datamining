@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef13760 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-1x.png.js";
-import _modDef13761 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-2x.png.js";
-import _modDef13762 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-3x.png.js";
+import _modDef13812 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-1x.png.js";
+import _modDef13813 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-2x.png.js";
+import _modDef13814 from "../../../../../../discord_assets/assets/mana/asset-library/generated/TreasureChestBannerSpotIllustration-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13760 }, 3: null };
-let obj2 = { uri: _modDef13760 };
-obj[2] = { uri: _modDef13761 };
-const obj3 = { uri: _modDef13761 };
-obj[3] = { uri: _modDef13762 };
+let obj = { 1: null, 2: { uri: _modDef13812 }, 3: null };
+let obj2 = { uri: _modDef13812 };
+obj[2] = { uri: _modDef13813 };
+const obj3 = { uri: _modDef13813 };
+obj[3] = { uri: _modDef13814 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13762 };
+const obj4 = { uri: _modDef13814 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx",

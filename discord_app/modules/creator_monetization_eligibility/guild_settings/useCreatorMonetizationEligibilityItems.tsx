@@ -396,7 +396,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -460,7 +460,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             tmp13();
           }
           c2 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } catch (tmp16) {
           c2 = tmp;
           throw tmp16;
@@ -524,7 +524,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -588,7 +588,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
               tmp13();
             }
             c2 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } catch (tmp16) {
             c2 = tmp;
             throw tmp16;
@@ -642,8 +642,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         let handleContactSupportClick;
         if (!noRecentViolations) {
           handleContactSupportClick = function handleContactSupportClick() {
-            const tmp = onEligibilityBecameStale(4759);
-            return tmp(onEligibilityBecameStale(2127).getSubmitRequestURL());
+            const tmp = onEligibilityBecameStale(4800);
+            return tmp(onEligibilityBecameStale(2128).getSubmitRequestURL());
           };
         }
         obj2.actionHandler = handleContactSupportClick;

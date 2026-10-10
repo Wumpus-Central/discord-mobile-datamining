@@ -25,11 +25,11 @@ import ForumPostMessagesStore from "ForumPostMessagesStore.tsx";
 import ForumPostUnreadCountStore from "ForumPostUnreadCountStore.tsx";
 import ForumSearchStore from "ForumSearchStore.tsx";
 
-const ThreadSortOrder = tmp(2073);
-const ForumUtils = tmp(7000);
-const ThreadUtils = tmp(7904);
+const ThreadSortOrder = tmp(2074);
+const ForumUtils = tmp(7006);
+const ThreadUtils = tmp(7922);
 require = fn;
-const ForumTimestampFormats = fn(6968).ForumTimestampFormats;
+const ForumTimestampFormats = fn(6974).ForumTimestampFormats;
 const Constants = fn(1085);
 ({
   AnalyticsObjectTypes: closure_20,
@@ -37,7 +37,7 @@ const Constants = fn(1085);
   EMPTY_STRING_SNOWFLAKE_ID: closure_22,
   Permissions: closure_23,
 } = Constants);
-const ChannelFlags = fn(2071).ChannelFlags;
+const ChannelFlags = fn(2072).ChannelFlags;
 let closure_25 = fn(1125).MAX_THREAD_UNREAD_MESSAGE_COUNT;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -1071,7 +1071,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = id(576);
       const stateFromStores = id(504).useStateFromStores(tmp7, tmp9);
       const tmpResult = id(504);
-      const nullableMessageAuthor = id(5624).useNullableMessageAuthor(author);
+      const nullableMessageAuthor = id(5627).useNullableMessageAuthor(author);
       if (cResult[5] === tmp5) {
         if (cResult[6] === id) {
           let tmp12 = cResult[7];
@@ -1137,7 +1137,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = items1;
       tmp13 = items1;
       tmp12 = fn2;
-      const tmpResult2 = id(5624);
+      const tmpResult2 = id(5627);
     }
   : function useForumPostMessageAuthor(author, getGuildId) {
       let id;
@@ -1151,7 +1151,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const stateFromStores = id(504).useStateFromStores(items, () => UserStore.getUser(id));
       const obj = id(504);
-      const nullableMessageAuthor = id(5624).useNullableMessageAuthor(author);
+      const nullableMessageAuthor = id(5627).useNullableMessageAuthor(author);
       const items1 = [guildId, id];
       const effect = noop.useEffect(() => {
         let tmp2 = null != id;
@@ -1997,9 +1997,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       const fn = function b() {
         if (null == searchQuery) {
           if (null != ref.current) {
-            closure_1(9301).clearForumSearch(user.id);
+            closure_1(9328).clearForumSearch(user.id);
             tmp.current = null;
-            const obj2 = closure_1(9301);
+            const obj2 = closure_1(9328);
           }
         }
         if (null != searchQuery) {
@@ -2039,8 +2039,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                closure_1(9301).clearForumSearch(user.id);
-                const obj = closure_1(9301);
+                closure_1(9328).clearForumSearch(user.id);
+                const obj = closure_1(9328);
               }
             }
           }
@@ -2091,9 +2091,9 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = isSearchLoading.useEffect(() => {
         if (null == searchQuery) {
           if (null != ref.current) {
-            closure_1(9301).clearForumSearch(user.id);
+            closure_1(9328).clearForumSearch(user.id);
             tmp.current = null;
-            const obj2 = closure_1(9301);
+            const obj2 = closure_1(9328);
           }
         }
         if (null != searchQuery) {
@@ -2133,8 +2133,8 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               } else {
-                closure_1(9301).clearForumSearch(user.id);
-                const obj = closure_1(9301);
+                closure_1(9328).clearForumSearch(user.id);
+                const obj = closure_1(9328);
               }
             }
           }

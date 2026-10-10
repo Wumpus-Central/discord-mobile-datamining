@@ -3,16 +3,15 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
-import _modDef3181 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3184 from "../../age_assurance/ManualReview.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
+import InlineNotice from "../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
 import ManualReviewActionCreators from "../../age_assurance/ManualReviewActionCreators.tsx";
 import SafetyHubActionCreatorsAll from "../SafetyHubActionCreators.tsx";
 import AutomatedUnderageAppealModalActionCreatorsDefault from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
@@ -22,7 +21,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const require = globalThis.__r;
 
-const useShouldShowInitialGoogleWalletBanner = hyh4ls(14938);
+const useShouldShowInitialGoogleWalletBanner = hyh4ls(14997);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -35,7 +34,7 @@ function handleManualReviewClick() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(5922).AgeCheckStatus;
+const AgeCheckStatus = fn(7512).AgeCheckStatus;
 const Constants = fn(1085);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
@@ -43,34 +42,40 @@ const jsxProd = fn(21);
 let ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? function RetryBanner() {
-      const cResult = c.c(1);
+      const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
-        const obj3 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl = util.intl;
-        obj3.text = intl.string(util.t.IcA9iD);
-        obj3.onPress = handleRetryClick;
-        obj2.button = __initData(components_Button_Button.Button, obj3);
-        const intl2 = util.intl;
-        obj2.children = intl2.string(util.t.dqbMbn);
-        const tmp7 = __initData(native.HelpMessage, obj2);
-        cResult[0] = tmp7;
-        let first = tmp7;
+        const stringResult = intl.string(util.t.dqbMbn);
+        cResult[0] = stringResult;
+        let first = stringResult;
       } else {
         first = cResult[0];
       }
-      return first;
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { type: "critical", message: first, role: "alert", action: null };
+        const obj3 = { text: null, onClick: null };
+        const intl2 = util.intl;
+        obj3.text = intl2.string(util.t.IcA9iD);
+        obj3.onClick = handleRetryClick;
+        obj2.action = obj3;
+        const tmp9 = __initData(InlineNotice.InlineNotice, obj2);
+        cResult[1] = tmp9;
+        let tmp6 = tmp9;
+      } else {
+        tmp6 = cResult[1];
+      }
+      return tmp6;
     }
   : function RetryBanner() {
-      const obj = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
-      const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      const obj = { type: "critical", message: null, role: "alert", action: null };
       const intl = util.intl;
-      obj2.text = intl.string(util.t.IcA9iD);
-      obj2.onPress = handleRetryClick;
-      obj.button = __initData(components_Button_Button.Button, obj2);
+      obj.message = intl.string(util.t.dqbMbn);
+      const obj2 = { text: null, onClick: null };
       const intl2 = util.intl;
-      obj.children = intl2.string(util.t.dqbMbn);
-      return __initData(native.HelpMessage, obj);
+      obj2.text = intl2.string(util.t.IcA9iD);
+      obj2.onClick = handleRetryClick;
+      obj.action = obj2;
+      return __initData(InlineNotice.InlineNotice, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -97,8 +102,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[3] = stringResult;
       } else {
         if (cResult[4] !== cResult[3]) {
-          const obj2 = { messageType: native.HelpMessageTypes.INFO, children: tmp8 };
-          const tmp13 = __initData(native.HelpMessage, obj2);
+          const obj2 = { type: "info", message: tmp8, role: "status" };
+          const tmp13 = __initData(InlineNotice.InlineNotice, obj2);
           cResult[4] = tmp8;
           cResult[5] = tmp13;
           let tmp11 = tmp13;
@@ -114,11 +119,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = initialize.useStateFromStores(items, () =>
         isExpressiveModalV2Enabled.getIsExpressiveModalV2Enabled(),
       );
-      const obj2 = { messageType: native.HelpMessageTypes.INFO, children: null };
       const intl = util.intl;
       const t = util.t;
-      obj2.children = intl.string(stateFromStores ? t.PU8nMu : t["nhhy/R"]);
-      return __initData(native.HelpMessage, obj2);
+      return __initData(InlineNotice.InlineNotice, {
+        type: "info",
+        message: intl.string(stateFromStores ? t.PU8nMu : t["nhhy/R"]),
+        role: "status",
+      });
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -126,20 +133,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(5);
       const tmp4 = closure_22();
       _require = tmp4;
-      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      if (cResult[0] !== tmp4) {
         const intl = tmp(1126).intl;
-        obj2.text = intl.string(tmp(1126).t.IcA9iD);
-        obj2.onPress = handleRetryClick;
-        const tmp8 = closure_12(tmp(5376).Button, obj2);
-        cResult[0] = tmp8;
-        let first = tmp8;
-      } else {
-        first = cResult[0];
-      }
-      if (cResult[1] !== tmp4) {
-        const intl2 = tmp(1126).intl;
-        const obj3 = {
+        const obj2 = {
           manualReviewHook(children, arg1) {
             return __initData(
               Text_Text.Text,
@@ -154,34 +150,39 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             );
           },
         };
-        const formatResult = intl2.format(_modDef3181.vPoM8y, obj3);
-        cResult[1] = tmp4;
-        cResult[2] = formatResult;
-        let tmp9 = formatResult;
+        const formatResult = intl.format(_modDef3184.vPoM8y, obj2);
+        cResult[0] = tmp4;
+        cResult[1] = formatResult;
+        let tmp5 = formatResult;
       } else {
-        tmp9 = cResult[2];
+        tmp5 = cResult[1];
       }
-      if (cResult[3] !== tmp9) {
-        const obj4 = { messageType: tmp(1200).HelpMessageTypes.ERROR, button: first, children: tmp9 };
-        const tmp14 = closure_12(tmp(1200).HelpMessage, obj4);
-        cResult[3] = tmp9;
-        cResult[4] = tmp14;
-        let tmp12 = tmp14;
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj3 = { text: null, onClick: null };
+        const intl2 = tmp(1126).intl;
+        obj3.text = intl2.string(tmp(1126).t.IcA9iD);
+        obj3.onClick = handleRetryClick;
+        cResult[2] = obj3;
+        let tmp8 = obj3;
       } else {
-        tmp12 = cResult[4];
+        tmp8 = cResult[2];
       }
-      return tmp12;
+      if (cResult[3] !== tmp5) {
+        const obj4 = { type: "critical", message: tmp5, role: "alert", action: tmp8 };
+        const tmp12 = closure_12(tmp(7567).InlineNotice, obj4);
+        cResult[3] = tmp5;
+        cResult[4] = tmp12;
+        let tmp10 = tmp12;
+      } else {
+        tmp10 = cResult[4];
+      }
+      return tmp10;
     }
   : function ManualOrAutomatedReviewBanner() {
       _require = closure_22();
-      const obj = { messageType: require("native").HelpMessageTypes.ERROR, button: null, children: null };
-      const obj2 = { variant: "secondary", size: "sm", text: null, onPress: null };
+      const obj = { type: "critical", message: null, role: "alert", action: null };
       const intl = require("util").intl;
-      obj2.text = intl.string(require("util").t.IcA9iD);
-      obj2.onPress = handleRetryClick;
-      obj.button = closure_12(require("components/Button/Button").Button, obj2);
-      const intl2 = require("util").intl;
-      obj.children = intl2.format(_modDef3181.vPoM8y, {
+      obj.message = intl.format(_modDef3184.vPoM8y, {
         manualReviewHook(children, arg1) {
           return __initData(
             Text_Text.Text,
@@ -196,17 +197,21 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       });
-      return closure_12(require("native").HelpMessage, obj);
+      const obj3 = { text: null, onClick: null };
+      const intl2 = require("util").intl;
+      obj3.text = intl2.string(require("util").t.IcA9iD);
+      obj3.onClick = handleRetryClick;
+      obj.action = obj3;
+      return closure_12(require("InlineNotice").InlineNotice, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ManualReviewBanner() {
-      let stringResult = dependencyMap;
-      const cResult = c.c(4);
+      const cResult = c.c(5);
       const availableAgeVerificationMethods = useAvailableAgeVerificationMethods.useAvailableAgeVerificationMethods();
       const methods = availableAgeVerificationMethods.methods;
       if (availableAgeVerificationMethods.loading) {
-        const _Symbol4 = Symbol;
+        const _Symbol5 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp27 = __initData(closure_18, {});
           cResult[0] = tmp27;
@@ -219,18 +224,18 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           if (0 !== methods.length) {
             if (methods.every((method) => method.method === require("user").AgeAssuranceMethod.GOOGLE_WALLET)) {
               const _Symbol2 = Symbol;
-              if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+              if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
                 const tmp15 = __initData(closure_19, {});
-                cResult[2] = tmp15;
+                cResult[3] = tmp15;
               }
             } else {
               const _Symbol = Symbol;
-              if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+              if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
                 const tmp10 = __initData(closure_17, {});
-                cResult[3] = tmp10;
+                cResult[4] = tmp10;
                 let tmp7 = tmp10;
               } else {
-                tmp7 = cResult[3];
+                tmp7 = cResult[4];
               }
               return tmp7;
             }
@@ -238,17 +243,23 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol3 = Symbol;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
-          const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
           const intl = util.intl;
-          obj4.text = intl.string(util.t.NkTGsC);
-          obj4.onPress = handleManualReviewClick;
-          obj3.button = __initData(components_Button_Button.Button, obj4);
+          const stringResult = intl.string(util.t.VTgFYh);
+          cResult[1] = stringResult;
+          let obj4 = stringResult;
+        } else {
+          obj4 = cResult[1];
+        }
+        const _Symbol4 = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj3 = { type: "critical", message: obj4, role: "alert", action: null };
+          obj4 = { text: null, onClick: null };
           const intl2 = util.intl;
-          stringResult = intl2.string(util.t.VTgFYh);
-          obj3.children = stringResult;
-          const tmp21 = __initData(native.HelpMessage, obj3);
-          cResult[1] = tmp21;
+          obj4.text = intl2.string(util.t.NkTGsC);
+          obj4.onClick = handleManualReviewClick;
+          obj3.action = obj4;
+          const tmp21 = __initData(InlineNotice.InlineNotice, obj3);
+          cResult[2] = tmp21;
         }
       }
     }
@@ -267,15 +278,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj2 = { messageType: native.HelpMessageTypes.ERROR, button: null, children: null };
-        const obj3 = { variant: "secondary", size: "sm", text: null, onPress: null };
+        const obj2 = { type: "critical", message: null, role: "alert", action: null };
         const intl = util.intl;
-        obj3.text = intl.string(util.t.NkTGsC);
-        obj3.onPress = handleManualReviewClick;
-        obj2.button = __initData(components_Button_Button.Button, obj3);
+        obj2.message = intl.string(util.t.VTgFYh);
+        const obj3 = { text: null, onClick: null };
         const intl2 = util.intl;
-        obj2.children = intl2.string(util.t.VTgFYh);
-        tmp5Result = __initData(native.HelpMessage, obj2);
+        obj3.text = intl2.string(util.t.NkTGsC);
+        obj3.onClick = handleManualReviewClick;
+        obj2.action = obj3;
+        tmp5Result = __initData(InlineNotice.InlineNotice, obj2);
       }
       return tmp5Result;
     };
@@ -284,7 +295,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AutomatedUnderageAppealStatus() {
       let hyh4ls = require;
       let formatResult = dependencyMap;
-      const cResult = c.c(12);
+      const cResult = c.c(13);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SafetyHubStore];
         const fn = function n() {
@@ -303,17 +314,17 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         useShouldShowInitialGoogleWalletBanner.useShouldShowInitialGoogleWalletBanner();
       if (stateFromStores === AgeCheckStatus.NONE) {
         if (cResult[2] !== shouldShowInitialGoogleWalletBanner) {
-          let tmp45 = null;
+          let tmp46 = null;
           if (shouldShowInitialGoogleWalletBanner) {
-            tmp45 = __initData(closure_19, {});
+            tmp46 = __initData(closure_19, {});
           }
           cResult[2] = shouldShowInitialGoogleWalletBanner;
-          cResult[3] = tmp45;
+          cResult[3] = tmp46;
         }
       } else if (stateFromStores === AgeCheckStatus.SUCCESS) {
-        const _Symbol8 = Symbol;
+        const _Symbol9 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
+          const obj2 = { type: "positive", message: null, role: "status" };
           const intl6 = util.intl;
           hyh4ls = util.t.hyh4ls;
           const obj3 = {
@@ -329,71 +340,78 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           formatResult = intl6.format(hyh4ls, obj3);
-          obj2.children = formatResult;
-          const tmp42 = __initData(native.HelpMessage, obj2);
-          cResult[4] = tmp42;
+          obj2.message = formatResult;
+          const tmp43 = __initData(InlineNotice.InlineNotice, obj2);
+          cResult[4] = tmp43;
         }
       } else if (stateFromStores === AgeCheckStatus.VERIFIED) {
         const _Symbol7 = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { messageType: native.HelpMessageTypes.SUCCESS, button: null, children: null };
-          const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
           const intl4 = util.intl;
-          obj5.text = intl4.string(util.t["2jvQ6K"]);
-          obj5.onPress = handleLogInClick;
-          obj4.button = __initData(components_Button_Button.Button, obj5);
+          const stringResult = intl4.string(util.t["2Qe65J"]);
+          cResult[5] = stringResult;
+          let obj5 = stringResult;
+        } else {
+          obj5 = cResult[5];
+        }
+        const _Symbol8 = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj4 = { type: "positive", message: obj5, role: "status", action: null };
+          obj5 = { text: null, onClick: null };
           const intl5 = util.intl;
-          obj4.children = intl5.string(util.t["2Qe65J"]);
-          const tmp38 = __initData(native.HelpMessage, obj4);
-          cResult[5] = tmp38;
+          obj5.text = intl5.string(util.t["2jvQ6K"]);
+          obj5.onClick = handleLogInClick;
+          obj4.action = obj5;
+          const tmp39 = __initData(InlineNotice.InlineNotice, obj4);
+          cResult[6] = tmp39;
         }
       } else if (stateFromStores === AgeCheckStatus.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
         const _Symbol6 = Symbol;
-        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj6 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj6 = { type: "positive", message: null, role: "status" };
           const intl3 = util.intl;
-          obj6.children = intl3.string(util.t.Ie7p1Q);
-          const tmp33 = __initData(native.HelpMessage, obj6);
-          cResult[6] = tmp33;
+          obj6.message = intl3.string(util.t.Ie7p1Q);
+          const tmp33 = __initData(InlineNotice.InlineNotice, obj6);
+          cResult[7] = tmp33;
         }
       } else if (stateFromStores === AgeCheckStatus.ERROR) {
         const _Symbol5 = Symbol;
-        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj7 = { messageType: native.HelpMessageTypes.ERROR, children: null };
+        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj7 = { type: "critical", message: null, role: "alert" };
           const intl2 = util.intl;
-          obj7.children = intl2.string(util.t["4sILBU"]);
-          const tmp29 = __initData(native.HelpMessage, obj7);
-          cResult[7] = tmp29;
+          obj7.message = intl2.string(util.t["4sILBU"]);
+          const tmp29 = __initData(InlineNotice.InlineNotice, obj7);
+          cResult[8] = tmp29;
         }
       } else if (stateFromStores === AgeCheckStatus.FAILURE) {
         const _Symbol4 = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj8 = { messageType: native.HelpMessageTypes.ERROR, children: null };
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj8 = { type: "critical", message: null, role: "alert" };
           const intl = util.intl;
-          obj8.children = intl.string(util.t["40R63o"]);
-          const tmp25 = __initData(native.HelpMessage, obj8);
-          cResult[8] = tmp25;
+          obj8.message = intl.string(util.t["40R63o"]);
+          const tmp25 = __initData(InlineNotice.InlineNotice, obj8);
+          cResult[9] = tmp25;
         }
       } else if (stateFromStores === AgeCheckStatus.UNDERAGE) {
         const _Symbol3 = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp21 = __initData(closure_17, {});
-          cResult[9] = tmp21;
+          cResult[10] = tmp21;
         }
       } else if (stateFromStores === AgeCheckStatus.UNDERAGE_MANUAL_REVIEW) {
         const _Symbol2 = Symbol;
-        if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp16 = __initData(closure_20, {});
-          cResult[10] = tmp16;
+          cResult[11] = tmp16;
         }
       } else {
         const _Symbol = Symbol;
-        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp12 = __initData(closure_18, {});
-          cResult[11] = tmp12;
+          cResult[12] = tmp12;
           let tmp9 = tmp12;
         } else {
-          tmp9 = cResult[11];
+          tmp9 = cResult[12];
         }
         return tmp9;
       }
@@ -410,7 +428,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp9 = tmp20;
       } else if (stateFromStores === AgeCheckStatus.SUCCESS) {
-        const obj2 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
+        const obj2 = { type: "positive", message: null, role: "status" };
         const intl6 = util.intl;
         const obj3 = {
           loginHook(children) {
@@ -424,33 +442,33 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        obj2.children = intl6.format(util.t.hyh4ls, obj3);
-        tmp9 = __initData(native.HelpMessage, obj2);
+        obj2.message = intl6.format(util.t.hyh4ls, obj3);
+        tmp9 = __initData(InlineNotice.InlineNotice, obj2);
       } else if (stateFromStores === AgeCheckStatus.VERIFIED) {
-        const obj4 = { messageType: native.HelpMessageTypes.SUCCESS, button: null, children: null };
-        const obj5 = { variant: "secondary", size: "sm", text: null, onPress: null };
+        const obj4 = { type: "positive", message: null, role: "status", action: null };
         const intl4 = util.intl;
-        obj5.text = intl4.string(util.t["2jvQ6K"]);
-        obj5.onPress = handleLogInClick;
-        obj4.button = __initData(components_Button_Button.Button, obj5);
+        obj4.message = intl4.string(util.t["2Qe65J"]);
+        const obj5 = { text: null, onClick: null };
         const intl5 = util.intl;
-        obj4.children = intl5.string(util.t["2Qe65J"]);
-        tmp9 = __initData(native.HelpMessage, obj4);
+        obj5.text = intl5.string(util.t["2jvQ6K"]);
+        obj5.onClick = handleLogInClick;
+        obj4.action = obj5;
+        tmp9 = __initData(InlineNotice.InlineNotice, obj4);
       } else if (stateFromStores === AgeCheckStatus.VERIFIED_OTHER_VIOLATIONS_REMAIN) {
-        const obj6 = { messageType: native.HelpMessageTypes.SUCCESS, children: null };
+        const obj6 = { type: "positive", message: null, role: "status" };
         const intl3 = util.intl;
-        obj6.children = intl3.string(util.t.Ie7p1Q);
-        tmp9 = __initData(native.HelpMessage, obj6);
+        obj6.message = intl3.string(util.t.Ie7p1Q);
+        tmp9 = __initData(InlineNotice.InlineNotice, obj6);
       } else if (stateFromStores === AgeCheckStatus.ERROR) {
-        const obj7 = { messageType: native.HelpMessageTypes.ERROR, children: null };
+        const obj7 = { type: "critical", message: null, role: "alert" };
         const intl2 = util.intl;
-        obj7.children = intl2.string(util.t["4sILBU"]);
-        tmp9 = __initData(native.HelpMessage, obj7);
+        obj7.message = intl2.string(util.t["4sILBU"]);
+        tmp9 = __initData(InlineNotice.InlineNotice, obj7);
       } else if (stateFromStores === AgeCheckStatus.FAILURE) {
-        const obj8 = { messageType: native.HelpMessageTypes.ERROR, children: null };
+        const obj8 = { type: "critical", message: null, role: "alert" };
         const intl = util.intl;
-        obj8.children = intl.string(util.t["40R63o"]);
-        tmp9 = __initData(native.HelpMessage, obj8);
+        obj8.message = intl.string(util.t["40R63o"]);
+        tmp9 = __initData(InlineNotice.InlineNotice, obj8);
       } else if (stateFromStores === AgeCheckStatus.UNDERAGE) {
         tmp9 = __initData(closure_17, {});
       } else if (stateFromStores === AgeCheckStatus.UNDERAGE_MANUAL_REVIEW) {
@@ -460,7 +478,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp9;
     };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj7 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 },
   loadingIndicator: { display: "flex", justifyContent: "center", alignItems: "center" },
@@ -482,11 +500,11 @@ export default function SafetyHubPage(visible) {
   const tmp2 = importDefault;
   const tmp4 = require("useSafetyHubLoading")();
   const tmp5 = visible;
-  importDefault = visible(safetyHubFetchError[23]).useSafetyHubInitialized();
-  let obj = visible(safetyHubFetchError[23]);
-  state = visible(safetyHubFetchError[24]).useSafetyHubAccountStanding();
-  let obj2 = visible(safetyHubFetchError[24]);
-  safetyHubFetchError = visible(safetyHubFetchError[25]).useSafetyHubFetchError();
+  importDefault = visible(safetyHubFetchError[22]).useSafetyHubInitialized();
+  let obj = visible(safetyHubFetchError[22]);
+  const state = visible(safetyHubFetchError[23]).useSafetyHubAccountStanding();
+  let obj2 = visible(safetyHubFetchError[23]);
+  safetyHubFetchError = visible(safetyHubFetchError[24]).useSafetyHubFetchError();
   require("useMountEffect")(() => {
     const safetyHubData = SafetyHubActionCreatorsAll.getSafetyHubData();
     if (closure_1) {
@@ -501,7 +519,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14940, dependencyMap.paths),
+          asyncRequireImpl(14999, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );
@@ -521,11 +539,11 @@ export default function SafetyHubPage(visible) {
     if (null == safetyHubFetchError) {
       let obj5 = { style: tmp.container, children: null };
       const obj6 = { style: tmp.body, children: null };
-      const items2 = [closure_12(closure_21, {}), closure_12(tmp2(tmp3[34]), {})];
+      const items2 = [closure_12(closure_21, {}), closure_12(tmp2(tmp3[33]), {})];
       obj6.children = items2;
       const items3 = [
         closure_13(closure_5, obj6),
-        closure_12(tmp5(tmp3[35]).ConnectedSafetyHubViolationsContainer, {}),
+        closure_12(tmp5(tmp3[34]).ConnectedSafetyHubViolationsContainer, {}),
       ];
       obj5.children = items3;
       tmp9 = closure_13(closure_7, obj5);

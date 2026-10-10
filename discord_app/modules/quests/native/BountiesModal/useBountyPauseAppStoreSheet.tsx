@@ -3,12 +3,13 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
+import trackAppStoreOverlaySurfaceClicked from "../../lib/analytics/trackAppStoreOverlaySurfaceClicked.tsx";
 import AdsVideoTypes from "../AdsVideoTypes.tsx";
 import QuestCustomAppStoreOverlayUtils from "../../utils/QuestCustomAppStoreOverlayUtils.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
 const ComponentActions = fn(1085).ComponentActions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -296,7 +297,7 @@ export const useBountyPauseAppStoreSheet = ReactCompilerGating.isReactCompilerEn
       return trackingCtx.trackAdContentAppStoreOverlayEvent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, inlineStoreAppId, overlayVariant, event, timeSpentMs, overlaySurface });
     };
     obj4.trackOverlaySurfaceClick = function trackOverlaySurfaceClick(overlaySurface) {
-      trackingCtx = AnalyticsActions;
+      trackingCtx = trackAppStoreOverlaySurfaceClicked;
       return trackingCtx.trackAppStoreOverlaySurfaceClickedForAdContent({ adContentId: bounty.id, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, trackingCtx, overlaySurface });
     };
     obj4.appStoreOverlayCarouselScrollContext = { adContentId: trackingCtx.id };

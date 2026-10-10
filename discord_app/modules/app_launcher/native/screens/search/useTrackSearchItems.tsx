@@ -63,7 +63,7 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   properties: null,
                 };
                 const obj3 = {
-                  location: closure_0(7240).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+                  location: closure_0(7246).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
                   application_id: applicationId,
                   command_id: commandId,
                   search_results_position: isViewable.index,
@@ -71,8 +71,8 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   source,
                 };
                 obj2.properties = obj3;
-                closure_0(8952).trackImpression(obj2, false);
-                const obj = closure_0(8952);
+                closure_0(8971).trackImpression(obj2, false);
+                const obj = closure_0(8971);
               }
             }
           }
@@ -114,7 +114,7 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   properties: null,
                 };
                 const obj3 = {
-                  location: closure_0(7240).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
+                  location: closure_0(7246).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH,
                   application_id: applicationId,
                   command_id: commandId,
                   search_results_position: isViewable.index,
@@ -122,8 +122,8 @@ export const useTrackSearchItems = ReactCompilerGating.isReactCompilerEnabled()
                   source,
                 };
                 obj2.properties = obj3;
-                closure_0(8952).trackImpression(obj2, false);
-                const obj = closure_0(8952);
+                closure_0(8971).trackImpression(obj2, false);
+                const obj = closure_0(8971);
               }
             }
           }

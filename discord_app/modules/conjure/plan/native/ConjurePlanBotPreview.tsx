@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/native/ConjurePlanBotPreview.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import ChatItemDefault from "../../../../components_native/chat/ChatItem.tsx";
 import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview.tsx";
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = {
@@ -35,8 +35,8 @@ let obj3 = {
 };
 obj2.menu = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(17063).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(17063).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17131).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17131).MESSAGE_EDGE_INSET,
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -105,8 +105,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = fn(558);
 let obj4 = {
   paddingTop: nativeDefault.space.PX_4,
-  paddingLeft: fn(17063).MESSAGE_CONTENT_INSET,
-  paddingRight: fn(17063).MESSAGE_EDGE_INSET,
+  paddingLeft: fn(17131).MESSAGE_CONTENT_INSET,
+  paddingRight: fn(17131).MESSAGE_EDGE_INSET,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");
@@ -233,8 +233,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { direction: "vertical", spacing: 4, children: null };
         const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl = tmp2(1126).intl;
-        obj3.children = intl.string(_modDef3827.sA1lTv);
-        const items1 = [closure_5(tmp2(5087).Text, obj3), ,];
+        obj3.children = intl.string(_modDef3849.sA1lTv);
+        const items1 = [closure_5(tmp2(5088).Text, obj3), ,];
         const obj4 = {
           style: tmp.chat,
           children: items.map((menu) => {
@@ -256,10 +256,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items1[1] = closure_5(View, obj4);
         let obj5 = { variant: "text-xs/normal", color: "text-muted", children: null };
         const intl2 = tmp2(1126).intl;
-        obj5.children = intl2.string(_modDef3827.NnmbJu);
-        items1[2] = closure_5(tmp2(5087).Text, obj5);
+        obj5.children = intl2.string(_modDef3849.NnmbJu);
+        items1[2] = closure_5(tmp2(5088).Text, obj5);
         obj2.children = items1;
-        tmp5 = closure_6(tmp2(5374).Stack, obj2);
+        tmp5 = closure_6(tmp2(5377).Stack, obj2);
       }
       return tmp5;
     };

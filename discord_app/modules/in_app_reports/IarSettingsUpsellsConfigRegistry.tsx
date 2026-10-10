@@ -10,11 +10,11 @@ const require = globalThis.__r;
 
 require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(7705).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
+SettingsUpsellsConfigRegistry[fn(7722).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
   IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(7705).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(7722).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
   IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(7705).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(7722).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
   IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
 fn(558);
 const ReactCompilerGating = fn(558);

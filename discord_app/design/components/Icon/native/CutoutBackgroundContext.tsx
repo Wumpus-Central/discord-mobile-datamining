@@ -5,7 +5,7 @@ import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const shared_colors = obj(8999);
+const shared_colors = obj(9018);
 require = fn;
 const jsx = fn(21).jsx;
 let context = noop.createContext(undefined);

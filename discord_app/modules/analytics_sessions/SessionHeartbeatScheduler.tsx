@@ -39,7 +39,7 @@ let closure_26 = async function _trackHeartbeat() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -261,7 +261,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
       const obj = { value, done: true };
       return obj;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           }
         }
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp16) {
       c3 = tmp;
@@ -337,7 +337,7 @@ function handleAuthenticationChange() {
   scheduleHeartbeatTracking();
 }
 function handleRTCStateChange() {
-  state = RTCConnectionStore.getState();
+  const state = RTCConnectionStore.getState();
   if (closure_21 !== state) {
     closure_21 = state;
     scheduleHeartbeatTracking();
@@ -364,7 +364,7 @@ function handleAppStateUpdate(state) {
   }
 }
 function handleFluxInitialized() {
-  state = RTCConnectionStore.getState();
+  const state = RTCConnectionStore.getState();
   closure_22 = SessionForegroundUtils2.isForegrounded();
   closure_23 = SessionRouteUtils2.isActiveUserRoute();
   handleAuthenticationChange();
@@ -390,7 +390,7 @@ let closure_39 = async function _getSession() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -557,9 +557,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7178);
+const SessionForegroundUtils = fn(7184);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7179);
+const SessionRouteUtils = fn(7185);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -141,8 +141,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const height = reanimatedKeyboardAnimation.height;
       progress = reanimatedKeyboardAnimation.progress;
       let obj = animatedSheetIndex(1645);
-      const keyboardTypeSharedValue = animatedSheetIndex(4948).useKeyboardTypeSharedValue();
-      let obj2 = animatedSheetIndex(4948);
+      const keyboardTypeSharedValue = animatedSheetIndex(4987).useKeyboardTypeSharedValue();
+      let obj2 = animatedSheetIndex(4987);
       const fn = function b() {
         ReanimatedRexport;
         [0][1] = bottom;
@@ -167,9 +167,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         const tmpResult = ReanimatedRexport;
       };
-      let obj3 = animatedSheetIndex(4811);
+      let obj3 = animatedSheetIndex(4850);
       fn.__closure = {
-        interpolate: animatedSheetIndex(4811).interpolate,
+        interpolate: animatedSheetIndex(4850).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return items;
       }, items);
       let obj4 = {
-        interpolate: animatedSheetIndex(4811).interpolate,
+        interpolate: animatedSheetIndex(4850).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
@@ -198,8 +198,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         height,
         EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1105).EXPRESSION_FOOTER_HEIGHT,
       };
-      return height(flag(4811).View, {
+      return height(flag(4850).View, {
         style: memo,
-        children: height(animatedSheetIndex(4953).PortalHost, { name: str }),
+        children: height(animatedSheetIndex(4992).PortalHost, { name: str }),
       });
     };

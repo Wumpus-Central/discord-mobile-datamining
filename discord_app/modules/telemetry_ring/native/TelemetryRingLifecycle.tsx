@@ -27,7 +27,7 @@ class TelemetryRingLifecycleImpl extends tmp2 {
 }
 const prototype = TelemetryRingLifecycleImpl.prototype;
 prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
-  state = AppStateStore.getState();
+  const state = AppStateStore.getState();
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
     shouldRunResult = ZoomedInTelemetryDefault.shouldRun();

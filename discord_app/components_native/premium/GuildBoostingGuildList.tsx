@@ -9,7 +9,7 @@ import UserSettingsModalActionCreatorsDefault from "../../actions/UserSettingsMo
 import transitionToGuild from "../../modules/routing/transitionToGuild.native.tsx";
 import useGuildPowerupsBoostCountDefault from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import TouchableHitBoxDefault from "../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef9756 from "../../../_runtime/metro/09756__.js";
+import _modDef9785 from "../../../_runtime/metro/09785__.js";
 import BoostedGuildTierProgressCircleDefault from "../../modules/premium/native/BoostedGuildTierProgressCircle.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -20,7 +20,7 @@ const View = fn(17).View;
 let closure_6 = fn(1085).NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   guildCard: {
     padding: 12,
@@ -91,7 +91,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[8] !== stateFromStores.name) {
             const obj2 = { variant: "text-md/bold", children: stateFromStores.name };
-            const tmp20 = closure_7(tmp(5087).Text, obj2);
+            const tmp20 = closure_7(tmp(5088).Text, obj2);
             cResult[8] = stateFromStores.name;
             cResult[9] = tmp20;
             let tmp18 = tmp20;
@@ -100,7 +100,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp4.premiumGuildImage) {
             const obj3 = {
-              source: _modDef9756,
+              source: _modDef9785,
               style: tmp4.premiumGuildImage,
               resizeMode: "contain",
               resizeMethod: "resize",
@@ -125,7 +125,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[14] !== tmp25) {
             const obj5 = { variant: "text-xs/medium", children: tmp25 };
-            const tmp29 = closure_7(tmp(5087).Text, obj5);
+            const tmp29 = closure_7(tmp(5088).Text, obj5);
             cResult[14] = tmp25;
             cResult[15] = tmp29;
             let tmp27 = tmp29;
@@ -207,7 +207,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj10 = {
           guild: stateFromStores,
-          size: tmp(6165).GuildIconSizes.LARGE,
+          size: tmp(6158).GuildIconSizes.LARGE,
           style: tmp4.guildIcon,
           selected: false,
         };
@@ -244,23 +244,23 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj3 = { guild: stateFromStores, size: null, style: null, selected: false };
         const tmp2Result = TouchableHitBoxDefault;
-        obj3.size = tmp5(6165).GuildIconSizes.LARGE;
+        obj3.size = tmp5(6158).GuildIconSizes.LARGE;
         obj3.style = tmp.guildIcon;
         const items1 = [closure_7(GuildIconDefault, obj3), ,];
         const obj4 = { style: tmp.guildCardDescription, children: null };
         const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
-        const items2 = [closure_7(tmp5(5087).Text, obj5)];
+        const items2 = [closure_7(tmp5(5088).Text, obj5)];
         const obj6 = { style: tmp.subscriptionInfo, children: null };
         const obj7 = { source: null, style: null, resizeMode: "contain", resizeMethod: "resize" };
         const tmp2Result3 = GuildIconDefault;
-        obj7.source = _modDef9756;
+        obj7.source = _modDef9785;
         obj7.style = tmp.premiumGuildImage;
         const items3 = [closure_7(FastImageDefault, obj7)];
         const obj8 = { variant: "text-xs/medium", children: null };
         const intl = tmp5(1126).intl;
         const obj9 = { subscriberCount: tmp8 };
         obj8.children = intl.format(tmp5(1126).t.If4iTS, obj9);
-        items3[1] = closure_7(tmp5(5087).Text, obj8);
+        items3[1] = closure_7(tmp5(5088).Text, obj8);
         obj6.children = items3;
         items2[1] = closure_8(View, obj6);
         obj4.children = items2;

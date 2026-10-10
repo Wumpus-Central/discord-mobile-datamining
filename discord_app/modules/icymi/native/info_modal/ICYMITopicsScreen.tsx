@@ -11,13 +11,13 @@ import FoodIcon from "../../../../design/components/Icon/native/redesign/generat
 import BicycleIcon from "../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
 import TvIcon from "../../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
+import MedalIcon from "../../../../design/components/Icon/native/redesign/generated/MedalIcon.tsx";
 import RobotIcon from "../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
 import PiggyBankIcon from "../../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
 import PencilSparkleIcon from "../../../../design/components/Icon/native/redesign/generated/PencilSparkleIcon.tsx";
 import ICYMIAnalytics2 from "../../ICYMIAnalytics.tsx";
 import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
 import ScienceIcon from "../../../../design/components/Icon/native/redesign/generated/ScienceIcon.tsx";
-import MedalIcon from "../../../../design/components/Icon/native/redesign/generated/MedalIcon.tsx";
 import PaintbrushThinIcon from "../../../../design/components/Icon/native/redesign/generated/PaintbrushThinIcon.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -58,10 +58,10 @@ function primaryCategoryToEmojiIcon(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16847).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16917).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   footer: null,
@@ -233,7 +233,7 @@ export default function ICYMITopicsScreen() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -284,10 +284,10 @@ export default function ICYMITopicsScreen() {
             if (value) {
               closure_129_3.push("join_guilds");
             } else {
-              const obj9 = { key: "ICYMIInfoModal", content: null };
+              const obj9 = { text: null };
               const intl = closure_0(v2[33]).intl;
-              obj9.content = intl.string(closure_0(v2[33]).t.CG4Hks);
-              closure_1(v2[32]).open(obj9);
+              obj9.text = intl.string(closure_0(v2[33]).t.CG4Hks);
+              closure_1(v2[32]).open("ICYMIInfoModal", obj9);
               const obj = closure_1(v2[32]);
             }
             const _setTimeout = setTimeout;
@@ -326,11 +326,11 @@ export default function ICYMITopicsScreen() {
   let obj3 = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1126).intl;
   obj3.children = intl.string(first(1126).t.Y5d99L);
-  const children = [closure_10(first(5087).Text, obj3), , , ,];
+  const children = [closure_10(first(5088).Text, obj3), , , ,];
   const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1126).intl;
   obj4.children = intl2.string(first(1126).t.MGZsfv);
-  children[1] = closure_10(first(5087).Text, obj4);
+  children[1] = closure_10(first(5088).Text, obj4);
   children[2] = closure_10(closure_6, { style: tmp.separator });
   let obj6 = {
     showsVerticalScrollIndicator: false,
@@ -368,7 +368,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1126).intl;
     obj11.text = intl3.string(tmp7(1126).t.PDTjLN);
     obj11.onPress = callback;
-    obj9.children = closure_10(tmp7(5376).Button, obj11);
+    obj9.children = closure_10(tmp7(5379).Button, obj11);
     tmp12Result = closure_10(closure_6, obj9);
   }
   children[4] = tmp12Result;

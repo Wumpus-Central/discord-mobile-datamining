@@ -63,7 +63,7 @@ export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type
   }
 };
 export const isLaunched = function isLaunched(conjureBuilderPreviewFrame) {
-  state = undefined;
+  let state;
   if (conjureBuilderPreviewFrame != null) {
     state = conjureBuilderPreviewFrame.state;
   }
@@ -82,7 +82,7 @@ export const getFrameHostWindowKey = function getFrameHostWindowKey(state) {
   return hostWindowKey;
 };
 export const asLaunched = function asLaunched(mainFrame) {
-  state = undefined;
+  let state;
   if (mainFrame != null) {
     state = mainFrame.state;
   }

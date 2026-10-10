@@ -78,8 +78,8 @@ function useTooltipHelper(ref, arg1, arg2) {
     closure_0 = arg0;
     closure_1 = async function _measureHelper(arg0) {
       closure_129_0 = ref;
-      const measurements = closure_2_0(9420).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
-      const items = [measurements, closure_2_0(9420).getMeasurements(closure_1, closure_2_0)];
+      const measurements = closure_2_0(9449).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
+      const items = [measurements, closure_2_0(9449).getMeasurements(closure_1, closure_2_0)];
       await Promise.all(items);
       if (1 === tmp7) {
         c4 = 0;
@@ -149,7 +149,7 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled()
       const tmp8 = useWindowDimensionsDefault();
       closure_3 = tmp8;
       closure_4 = context.useRef(tmp8);
-      context = context.useContext(tmp(6843).LayerContext);
+      context = context.useContext(tmp(6846).LayerContext);
       closure_6 = context.useRef(null);
       const items = [context, ref];
       const effect = context.useEffect(() => {
@@ -166,8 +166,8 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled()
         closure_0 = arg0;
         closure_1 = async function _measureHelper(arg0) {
           closure_129_0 = ref;
-          const measurements = closure_2_0(9420).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
-          const items = [measurements, closure_2_0(9420).getMeasurements(closure_1, closure_2_0)];
+          const measurements = closure_2_0(9449).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
+          const items = [measurements, closure_2_0(9449).getMeasurements(closure_1, closure_2_0)];
           await Promise.all(items);
           if (1 === tmp7) {
             c4 = 0;
@@ -224,7 +224,7 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = useWindowDimensionsDefault();
       closure_3 = tmp3;
       ref = context.useRef(tmp3);
-      context = context.useContext(ref(6843).LayerContext);
+      context = context.useContext(ref(6846).LayerContext);
       context.useRef(null);
       let items = [context, ref];
       const effect = context.useEffect(() => {
@@ -241,8 +241,8 @@ export const useTooltip = ReactCompilerGating.isReactCompilerEnabled()
         closure_0 = arg0;
         closure_1 = async function _measureHelper(arg0) {
           closure_129_0 = ref;
-          const measurements = closure_2_0(9420).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
-          const items = [measurements, closure_2_0(9420).getMeasurements(closure_1, closure_2_0)];
+          const measurements = closure_2_0(9449).getMeasurements(surfaceRef.surfaceRef, closure_2_0);
+          const items = [measurements, closure_2_0(9449).getMeasurements(closure_1, closure_2_0)];
           await Promise.all(items);
           if (1 === tmp7) {
             c4 = 0;

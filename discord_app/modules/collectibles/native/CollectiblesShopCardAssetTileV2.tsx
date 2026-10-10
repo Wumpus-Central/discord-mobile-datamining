@@ -17,7 +17,7 @@ import ProfileEffectSampleV2Default from "ProfileEffectSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
 import NameplateCardPreviewDefault from "../nameplates/native/NameplateCardPreview.tsx";
-import _modDef9028 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import _modDef9047 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -28,8 +28,8 @@ get_ActivityIndicator = fn(17);
 const EXTERNAL_PRODUCT_SKU_IDS = fn(1087).EXTERNAL_PRODUCT_SKU_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const diff = fn(8948).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
-const createStyles = fn(5091);
+const diff = fn(8967).COLLECTIBLES_SHOP_CARD_HEIGHT - 2 * nativeDefault.space.PX_16;
+const createStyles = fn(5092);
 let obj = {
   assetContainer: null,
   overlayContainer: null,
@@ -299,7 +299,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { uri: _modDef9028 };
+          const obj4 = { uri: _modDef9047 };
           cResult[10] = obj4;
           let tmp40 = obj4;
         } else {
@@ -419,7 +419,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       ({ product, cardWidth } = arg0);
       ({ disableBundleStaticBackground, muteBundleStaticBackground } = arg0);
       const tmp = closure_10();
-      const shopProductItems = cardWidth(8279).useShopProductItems(product);
+      const shopProductItems = cardWidth(8295).useShopProductItems(product);
       const items = [cardWidth];
       ({ firstProfileEffect, firstAvatarDecoration, firstNameplate } = shopProductItems);
       const memo = noop.useMemo(() => {
@@ -447,7 +447,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         return closure_7(BundleSampleV2Default, obj2);
       } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
         const obj3 = { source: null, style: null };
-        const obj4 = { uri: _modDef9028 };
+        const obj4 = { uri: _modDef9047 };
         obj3.source = obj4;
         obj3.style = tmp.externalProductImage;
         return closure_7(FastImageDefault, obj3);
@@ -456,10 +456,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         if (ALL.has(product.skuId)) {
           let size = {
             skuId: product.skuId,
-            width: cardWidth(9029).FRACTIONAL_NITRO_COIN_SIZE.CARD,
-            height: cardWidth(9029).FRACTIONAL_NITRO_COIN_SIZE.CARD,
+            width: cardWidth(9048).FRACTIONAL_NITRO_COIN_SIZE.CARD,
+            height: cardWidth(9048).FRACTIONAL_NITRO_COIN_SIZE.CARD,
           };
-          return closure_7(cardWidth(9029).FractionalNitroCoinIllustration, size);
+          return closure_7(cardWidth(9048).FractionalNitroCoinIllustration, size);
         } else {
           const first = _slicedToArray(product.items, 1)[0];
           let type;
@@ -478,7 +478,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { style: tmp.profileFrameContainer, children: null };
             const obj9 = {
               profileFrame: first,
-              previewWidth: cardWidth(8948).COLLECTIBLES_SHOP_CARD_WIDTH - nativeDefault.space.PX_32,
+              previewWidth: cardWidth(8967).COLLECTIBLES_SHOP_CARD_WIDTH - nativeDefault.space.PX_32,
               previewHeight,
               profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
             };
@@ -492,7 +492,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj = cardWidth(8279);
+      const obj = cardWidth(8295);
     };
 ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled()

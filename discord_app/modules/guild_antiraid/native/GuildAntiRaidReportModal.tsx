@@ -14,7 +14,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(14121);
+const GuildReportRaidModalConstants = fn(14176);
 ({
   getReportRaidHelpArticleURL: closure_7,
   getReportRaidTypeLabel: closure_8,
@@ -23,7 +23,7 @@ const GuildReportRaidModalConstants = fn(14121);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flex: 1,
@@ -96,7 +96,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4.headerSubtitle) {
         const obj3 = { style: headerSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp7 };
-        const tmp11 = closure_10(tmp(5087).Text, obj3);
+        const tmp11 = closure_10(tmp(5088).Text, obj3);
         cResult[4] = tmp4.headerSubtitle;
         cResult[5] = tmp11;
         let tmp9 = tmp11;
@@ -110,7 +110,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp13) {
             const obj4 = { hasIcons: false, children: tmp13 };
-            const tmp17 = closure_10(tmp(6269).TableRowGroup, obj4);
+            const tmp17 = closure_10(tmp(6264).TableRowGroup, obj4);
             cResult[10] = tmp13;
             cResult[11] = tmp17;
             let tmp15 = tmp17;
@@ -145,7 +145,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[21] !== onSubmit) {
                 const obj6 = { size: "md", text: tmp25, onPress: onSubmit };
-                const tmp29 = closure_10(tmp(5376).Button, obj6);
+                const tmp29 = closure_10(tmp(5379).Button, obj6);
                 cResult[21] = onSubmit;
                 cResult[22] = tmp29;
                 let tmp27 = tmp29;
@@ -407,7 +407,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -504,9 +504,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   dependencyMap = 3;
                 } else {
                   tmp21.current = true;
-                  const result = tmp2(11344).trackReportRaidViewed(guildId, first);
-                  const obj2 = tmp2(11344);
-                  tmp2(11344).handleReportRaid(guildId);
+                  const result = tmp2(11386).trackReportRaidViewed(guildId, first);
+                  const obj2 = tmp2(11386);
+                  tmp2(11386).handleReportRaid(guildId);
                   const intl = tmp2(1126).intl;
                   c1 = 1;
                   dependencyMap = 1;

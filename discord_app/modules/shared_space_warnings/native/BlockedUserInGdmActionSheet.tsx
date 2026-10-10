@@ -3,12 +3,12 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import NicknameUtilsDefault from "../../../utils/NicknameUtils.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import SharedSpacesWarningActionCreators from "../SharedSpacesWarningActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -139,12 +139,12 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(13952);
+const SharedSpaceWarningConstants = fn(14005);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" },
   headerImage: { alignSelf: "center", width: 73, height: 86 },
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.size = REFRESH_MEDIUM_32;
           let tmp17 = closure_10(tmp(1200).Avatar, obj2);
         } else {
-          tmp17 = closure_10(tmp(11338).UserIcon, {});
+          tmp17 = closure_10(tmp(11380).UserIcon, {});
         }
         cResult[8] = guildId;
         cResult[9] = tmp12;
@@ -228,7 +228,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[12] !== tmp7) {
           const obj3 = { users: tmp7, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-          const tmp11 = closure_10(tmp(10246).FacepileGroupDMAvatar, obj3);
+          const tmp11 = closure_10(tmp(10279).FacepileGroupDMAvatar, obj3);
           cResult[12] = tmp7;
           cResult[13] = tmp11;
           let tmp9 = tmp11;
@@ -260,11 +260,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj3.size = REFRESH_MEDIUM_32;
           let tmp6 = closure_10(tmp(1200).Avatar, obj3);
         } else {
-          tmp6 = closure_10(tmp(11338).UserIcon, {});
+          tmp6 = closure_10(tmp(11380).UserIcon, {});
         }
       } else {
         const obj4 = { users: found, size: tmp(1200).AvatarSizes.REFRESH_MEDIUM_32 };
-        return closure_10(tmp(10246).FacepileGroupDMAvatar, obj4);
+        return closure_10(tmp(10279).FacepileGroupDMAvatar, obj4);
       }
       const obj = userIds(504);
     };

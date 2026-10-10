@@ -135,9 +135,9 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
         CREATOR_MONETIZABLE_PROVISIONAL: arr2[1],
         ROLE_SUBSCRIPTIONS_ENABLED: arr2[2],
       } = constants2);
-      const guildEligibleForGuildProducts = tmp(6954).useGuildEligibleForGuildProducts(id);
+      const guildEligibleForGuildProducts = tmp(6960).useGuildEligibleForGuildProducts(id);
       let tmp9 = null != features;
-      const tmpResult = tmp(6954);
+      const tmpResult = tmp(6960);
       if (tmp9) {
         tmp9 = stateFromStores;
       }

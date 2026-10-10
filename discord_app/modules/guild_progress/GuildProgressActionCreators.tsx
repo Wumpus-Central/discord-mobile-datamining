@@ -9,8 +9,7 @@ export default {
     DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_INITIALIZE", guildId: id });
   },
   markCompletedProgressSeen(id) {
-    importDefault = id;
-    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId }));
+    DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_COMPLETED_SEEN", guildId: id });
   },
   dismissProgress(id) {
     DispatcherDefault.dispatch({ type: "GUILD_PROGRESS_DISMISS", guildId: id });

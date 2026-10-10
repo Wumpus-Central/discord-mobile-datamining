@@ -4,7 +4,7 @@ import discord_common_shallowEqual from "../../../discord_common/js/packages/sha
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
-import BottomSheetModal from "../../../_runtime/06305_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/06306_BottomSheetModal.js";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -2298,7 +2298,7 @@ prototype4["queueViewabilityChange"] = function queueViewabilityChange() {
 prototype4["reset"] = function reset() {
   const self = this;
   let num = this.props.chunkBase;
-  state = this.state;
+  const state = this.state;
   ({ fastListComputer, items } = state);
   if (!state.isFirstLayout) {
     ({ setState, getInitialState } = self);
@@ -2423,7 +2423,7 @@ prototype4["clampInitialScrollPosition"] = function clampInitialScrollPosition()
 prototype4["computeBlocks"] = function computeBlocks() {
   const self = this;
   ({ batchesToRender, chunkBase } = this.props);
-  state = this.state;
+  const state = this.state;
   const fastListComputer = state.fastListComputer;
   ({ isFirstLayout, items } = state);
   if (chunkBase == null) {

@@ -1,12 +1,11 @@
 // discord_app/modules/conjure/settings/native/useConjureAppSettingsForm.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
 import conjureSettingValues from "../conjureSettingValues.tsx";
-import useConjureSettingPickerOptionsDefault from "../useConjureSettingPickerOptions.tsx";
-import ConjureSettingOptionsSheetDefault from "ConjureSettingOptionsSheet.tsx";
+import ConjureGuildPickerSheetDefault from "../../guild_pickers/native/ConjureGuildPickerSheet.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -20,14 +19,14 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let ConjureConnectionStore = fn(13164);
+let ConjureConnectionStore = fn(13213);
 ({ requestProjectRebuild: closure_12, sendUserMessage: map1, submitProjectSettings: closure_14 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 const ConjureSettingsChannelSheet = "ConjureSettingsChannelSheet";
 const ConjureSettingsPickerSheet = "ConjureSettingsPickerSheet";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8 };
@@ -54,7 +53,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }
   if (cResult[1] !== conjureSettingsGuildId) {
     const fn = function l() {
-      let channels = null;
+      channels = null;
       if (null != conjureSettingsGuildId) {
         channels = GuildChannelStore.getChannels(tmp);
       }
@@ -107,7 +106,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                           if (cResult[39] === tmp42) {
                                           }
                                         }
-                                        class K {
+                                        class O {
                                           constructor() {
                                             obj = closure_0(closure_2[34]);
                                             obj1 = { content: null, key: null, stackingBehavior: "stack" };
@@ -148,7 +147,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                                 }
                               }
                             }
-                            class K {
+                            class O {
                               constructor() {
                                 obj = closure_0(closure_2[34]);
                                 obj1 = { content: null, key: null, stackingBehavior: "stack" };
@@ -192,7 +191,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                         }
                       }
                     }
-                    class K {
+                    class O {
                       constructor() {
                         obj = closure_0(closure_2[34]);
                         obj1 = { content: null, key: null, stackingBehavior: "stack" };
@@ -226,8 +225,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
                     cResult[26] = conjureSettingsGuildId;
                     cResult[27] = onChange;
                     cResult[28] = tmp14;
-                    cResult[29] = K;
-                    tmp41 = K;
+                    cResult[29] = O;
+                    tmp41 = O;
                   }
                   const obj5 = { text: cResult[15] };
                   const tmp40 = closure_17(cResult[10], obj5);
@@ -253,7 +252,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       if (null != found) {
         tmp2 = tmp2[33];
         const tmpResult4 = tmp(tmp2);
-        class K {
+        class O {
           constructor() {
             obj = closure_0(closure_2[34]);
             obj1 = { content: null, key: null, stackingBehavior: "stack" };
@@ -284,7 +283,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         }
         let channelName = tmpResult4.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
-        class K {
+        class O {
           constructor() {
             obj = closure_0(closure_2[34]);
             obj1 = { content: null, key: null, stackingBehavior: "stack" };
@@ -341,8 +340,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   c4 = undefined;
   let found;
   ({ projectId, isPreview, hint, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(17002).useConjureSettingsGuildId(projectId, isPreview);
-  let obj = def(17002);
+  const conjureSettingsGuildId = def(17070).useConjureSettingsGuildId(projectId, isPreview);
+  let obj = def(17070);
   const items = [GuildChannelStore];
   const items1 = [conjureSettingsGuildId];
   const stateFromStores = def(504).useStateFromStores(items, () => {
@@ -354,7 +353,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
   }, items1);
   if (null != conjureSettingsGuildId) {
     if (null != stateFromStores) {
-      const result = tmp(6939).conjureSettingChannels(stateFromStores, def.channel_filter);
+      const result = tmp(6945).conjureSettingChannels(stateFromStores, def.channel_filter);
       c4 = result;
       found = result.find((id) => id.id === importDefault);
       if (found == null) {
@@ -362,15 +361,15 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
       }
       let obj3 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
       if (null != found) {
-        const tmpResult2 = tmp(5418);
+        const tmpResult2 = tmp(5421);
         let channelName = tmpResult2.computeChannelName(found, UserStore, RelationshipStore, true);
       } else {
         let intl = tmp(1126).intl;
-        channelName = intl.string(_modDef3827.iZIF9m);
+        channelName = intl.string(_modDef3849.iZIF9m);
       }
       let obj4 = { hasIcons: false, children: null };
       const obj5 = { text: channelName };
-      obj3.trailing = closure_17(tmp(6197).TableRowTrailingText, obj5);
+      obj3.trailing = closure_17(tmp(6190).TableRowTrailingText, obj5);
       obj3.onPress = function onPress() {
         const obj2 = { content: null, key: null, stackingBehavior: "stack" };
         const obj3 = { header: { title: def.label }, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
@@ -380,7 +379,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj3.channels = channels;
         obj3.selectedChannel = found;
         const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3827["jtBVV+"]);
+        obj3.noChannelOptionLabel = intl.string(_modDef3849["jtBVV+"]);
         obj3.onSelect = function onSelect(id) {
           let str;
           if (id != null) {
@@ -395,222 +394,310 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conjur
         obj2.key = ConjureSettingsChannelSheet;
         obj.showActionSheet(obj2);
       };
-      obj4.children = closure_17(tmp(6186).TableRow, obj3);
-      return closure_17(tmp(6269).TableRowGroup, obj4);
+      obj4.children = closure_17(tmp(6179).TableRow, obj3);
+      return closure_17(tmp(6264).TableRowGroup, obj4);
     }
   }
   return fallback;
 });
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjurePickerSettingRow(def) {
-  const cResult = def(576).c(15);
+  const cResult = def(conjureSettingsGuildId[28]).c(27);
   def = def.def;
   ({ hint, value, disabled, onChange } = def);
   ({ projectId, isPreview, fallback } = def);
-  const obj = def(576);
-  const conjureSettingsGuildId = def(17002).useConjureSettingsGuildId(projectId, isPreview);
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function n(id) {
-      return { id, label: id };
-    };
-    cResult[0] = fn;
-    let first = fn;
+  let obj = def(conjureSettingsGuildId[28]);
+  conjureSettingsGuildId = def(conjureSettingsGuildId[29]).useConjureSettingsGuildId(projectId, isPreview);
+  let prop = onChange;
+  const tmp6 = onChange(conjureSettingsGuildId[29])(conjureSettingsGuildId, def);
+  if (cResult[0] !== value) {
+    const result = tmp(tmp2[29]).conjureSettingPickedIds(value);
+    cResult[0] = value;
+    cResult[1] = result;
+    let arr = result;
+    const tmpResult = tmp(tmp2[29]);
   } else {
-    first = cResult[0];
+    arr = cResult[1];
   }
-  let obj2 = def(17002);
-  const withSavedPicksResult = def(17002).withSavedPicks(onChange(17002)(conjureSettingsGuildId, def), value, first);
-  dependencyMap = withSavedPicksResult;
-  if (null == conjureSettingsGuildId) {
-    return fallback;
-  } else {
-    const result = tmp(17002).conjureSettingPickedIds(value);
-    const asyncGeneratorStep = result;
-    _slicedToArray = tmp16;
-    if (true === def.multiple) {
-      const intl2 = tmp(1126).intl;
-      const obj3 = { count: result.length };
-      let formatToPlainStringResult = intl2.formatToPlainString(onChange(3827)["LPs/Pv"], obj3);
-    } else {
-      const found = withSavedPicksResult.find((id) => id.id === result[0]);
-      formatToPlainStringResult = undefined;
-      if (found != null) {
-        formatToPlainStringResult = found.label;
-      }
-      if (formatToPlainStringResult == null) {
-        const intl = tmp(1126).intl;
-        formatToPlainStringResult = intl.string(onChange(3827).rn7w7I);
-      }
-    }
-    if (cResult[1] !== formatToPlainStringResult) {
-      const obj4 = { text: formatToPlainStringResult };
-      const tmp11 = closure_17(tmp(6197).TableRowTrailingText, obj4);
-      cResult[1] = formatToPlainStringResult;
-      cResult[2] = tmp11;
-      let tmp9 = tmp11;
-    } else {
-      tmp9 = cResult[2];
-    }
-    if (cResult[3] === def.label) {
-      if (cResult[4] === tmp16) {
-        if (cResult[5] === onChange) {
-          if (cResult[6] === withSavedPicksResult) {
-            if (cResult[7] === result) {
-              let tmp12 = cResult[8];
-            }
-            if (cResult[9] === def.label) {
-              if (cResult[10] === disabled) {
-                if (cResult[11] === hint) {
-                  if (cResult[12] === tmp9) {
-                    if (cResult[13] === tmp12) {
-                      let tmp13 = cResult[14];
+  let obj2 = def(conjureSettingsGuildId[29]);
+  let tmp8 = null;
+  if ("user" === def.type) {
+    tmp8 = conjureSettingsGuildId;
+  }
+  const conjureMemberRequests = def(conjureSettingsGuildId[36]).useConjureMemberRequests(tmp8, arr);
+  if (null != conjureSettingsGuildId) {
+    if (null != tmp6) {
+      if (cResult[2] === def.multiple) {
+        if (cResult[3] === tmp6) {
+          if (cResult[4] === arr) {
+            if (cResult[5] === value) {
+              closure_3 = tmp10;
+              if (cResult[10] !== cResult[8]) {
+                let obj3 = { text: tmp12 };
+                cResult[10] = tmp12;
+                class R {
+                  constructor() {
+                    obj = closure_0(closure_2[34]);
+                    tmp = jsx;
+                    obj1 = { guildId: closure_2, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
+                    num = 1;
+                    tmp2 = closure_1(closure_2[37]);
+                    if (closure_3) {
+                      num = 25;
                     }
-                    return tmp13;
+                    obj4 = { content: null, key: null, stackingBehavior: "stack" };
+                    obj1.maxPicks = num;
+                    obj1.selected = closure_4.filter((id) => arr.includes(id.id));
+                    obj1.onSubmit = function onSubmit(arr) {
+                      const mapped = arr.map(() => { ... });
+                      let tmp3 = mapped;
+                      if (!closure_1_3) {
+                        let str = mapped[0];
+                        if (str == null) {
+                          str = "";
+                        }
+                        tmp3 = str;
+                      }
+                      onChange(tmp3);
+                    };
+                    obj4.content = tmp(tmp2, obj1);
+                    obj4.key = ConjureSettingsPickerSheet;
+                    showActionSheetResult = obj.showActionSheet(obj4);
+                    return;
                   }
                 }
+                let tmp22 = closure_17(tmp(tmp2[32]).TableRowTrailingText, obj3);
+                const tmp24 = closure_17(tmp(tmp2[32]).TableRowTrailingText, obj3);
+              } else {
+                tmp22 = cResult[11];
               }
-            }
-            const obj5 = { hasIcons: false, children: null };
-            const obj6 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
-            class S {
-              constructor() {
-                obj = closure_0(closure_2[34]);
-                obj1 = { content: null, key: ConjureSettingsPickerSheet, stackingBehavior: "stack" };
-                obj4 = {
-                  title: def.label,
-                  options: closure_2,
-                  multiple: closure_4,
-                  selected: closure_3,
-                  onChange(arg0) {
-                                  let tmp2 = arg0;
-                                  if (!multiple) {
-                                    let str = arg0[0];
+              if (cResult[12] === def.channel_filter) {
+                if (cResult[13] === def.label) {
+                  if (cResult[14] === def.type) {
+                    if (cResult[15] === conjureSettingsGuildId) {
+                      if (cResult[16] === tmp10) {
+                        if (cResult[17] === onChange) {
+                          if (cResult[18] === tmp11) {
+                            if (cResult[19] === arr) {
+                              let tmp25 = cResult[20];
+                            }
+                            if (cResult[21] === def.label) {
+                              if (cResult[22] === disabled) {
+                                if (cResult[23] === hint) {
+                                  if (cResult[24] === tmp22) {
+                                    if (cResult[25] === tmp25) {
+                                      let tmp26 = cResult[26];
+                                    }
+                                    return tmp26;
+                                  }
+                                }
+                              }
+                            }
+                            const obj4 = { hasIcons: false, children: null };
+                            const obj5 = { label: def.label, subLabel: null, arrow: true, disabled: null, trailing: null, onPress: null };
+                            class R {
+                              constructor() {
+                                obj = closure_0(closure_2[34]);
+                                tmp = jsx;
+                                obj1 = { guildId: closure_2, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
+                                num = 1;
+                                tmp2 = closure_1(closure_2[37]);
+                                if (closure_3) {
+                                  num = 25;
+                                }
+                                obj4 = { content: null, key: null, stackingBehavior: "stack" };
+                                obj1.maxPicks = num;
+                                obj1.selected = closure_4.filter((id) => arr.includes(id.id));
+                                obj1.onSubmit = function onSubmit(arr) {
+                                  const mapped = arr.map(() => { ... });
+                                  let tmp3 = mapped;
+                                  if (!closure_1_3) {
+                                    let str = mapped[0];
                                     if (str == null) {
                                       str = "";
                                     }
-                                    tmp2 = str;
+                                    tmp3 = str;
                                   }
-                                  return onChange(tmp2);
-                                }
-                };
-                obj1.content = jsx(closure_1(closure_2[36]), obj4);
-                showActionSheetResult = obj.showActionSheet(obj1);
-                return;
+                                  onChange(tmp3);
+                                };
+                                obj4.content = tmp(tmp2, obj1);
+                                obj4.key = ConjureSettingsPickerSheet;
+                                showActionSheetResult = obj.showActionSheet(obj4);
+                                return;
+                              }
+                            }
+                            obj5.disabled = disabled;
+                            obj5.trailing = tmp22;
+                            obj5.onPress = tmp25;
+                            obj4.children = closure_17(tmp(tmp2[31]).TableRow, obj5);
+                            const tmp28 = closure_17(tmp(tmp2[20]).TableRowGroup, obj4);
+                            cResult[21] = def.label;
+                            cResult[22] = disabled;
+                            cResult[23] = hint;
+                            cResult[24] = tmp22;
+                            cResult[25] = tmp25;
+                            cResult[26] = tmp28;
+                            tmp26 = tmp28;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
+              class R {
+                constructor() {
+                  obj = closure_0(closure_2[34]);
+                  tmp = jsx;
+                  obj1 = { guildId: closure_2, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
+                  num = 1;
+                  tmp2 = closure_1(closure_2[37]);
+                  if (closure_3) {
+                    num = 25;
+                  }
+                  obj4 = { content: null, key: null, stackingBehavior: "stack" };
+                  obj1.maxPicks = num;
+                  obj1.selected = closure_4.filter((id) => arr.includes(id.id));
+                  obj1.onSubmit = function onSubmit(arr) {
+                    const mapped = arr.map(() => { ... });
+                    let tmp3 = mapped;
+                    if (!closure_1_3) {
+                      let str = mapped[0];
+                      if (str == null) {
+                        str = "";
+                      }
+                      tmp3 = str;
+                    }
+                    onChange(tmp3);
+                  };
+                  obj4.content = tmp(tmp2, obj1);
+                  obj4.key = ConjureSettingsPickerSheet;
+                  showActionSheetResult = obj.showActionSheet(obj4);
+                  return;
+                }
+              }
+              cResult[12] = def.channel_filter;
+              cResult[13] = def.label;
+              cResult[14] = def.type;
+              cResult[15] = conjureSettingsGuildId;
+              cResult[16] = cResult[6];
+              cResult[17] = onChange;
+              cResult[18] = cResult[7];
+              cResult[19] = arr;
+              cResult[20] = R;
+              tmp25 = R;
             }
-            obj6.onPress = tmp12;
-            obj5.children = closure_17(tmp(6186).TableRow, obj6);
-            const tmp15 = closure_17(tmp(6269).TableRowGroup, obj5);
-            cResult[9] = def.label;
-            cResult[10] = disabled;
-            cResult[11] = hint;
-            cResult[12] = tmp9;
-            cResult[13] = tmp12;
-            cResult[14] = tmp15;
-            tmp13 = tmp15;
           }
         }
       }
-    }
-    class S {
-      constructor() {
-        obj = closure_0(closure_2[34]);
-        obj1 = { content: null, key: ConjureSettingsPickerSheet, stackingBehavior: "stack" };
-        obj4 = {
-          title: def.label,
-          options: closure_2,
-          multiple: closure_4,
-          selected: closure_3,
-          onChange(arg0) {
-                  let tmp2 = arg0;
-                  if (!multiple) {
-                    let str = arg0[0];
-                    if (str == null) {
-                      str = "";
-                    }
-                    tmp2 = str;
-                  }
-                  return onChange(tmp2);
-                }
+      const _Symbol = Symbol;
+      if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function w(id) {
+          return { id, label: id };
         };
-        obj1.content = jsx(closure_1(closure_2[36]), obj4);
-        showActionSheetResult = obj.showActionSheet(obj1);
-        return;
+        cResult[9] = fn;
       }
+      tmp(tmp2[29]);
+      closure_3 = tmp16;
+      if (true === def.multiple) {
+        const intl2 = tmp(tmp2[16]).intl;
+        prop = prop(tmp2[17])["LPs/Pv"];
+        const obj6 = { count: arr.length };
+        let formatToPlainStringResult = intl2.formatToPlainString(prop, obj6);
+      } else {
+        const found = arr2.find((id) => id.id === arr[0]);
+        formatToPlainStringResult = undefined;
+        if (found != null) {
+          formatToPlainStringResult = found.label;
+        }
+        if (formatToPlainStringResult == null) {
+          const intl = tmp(tmp2[16]).intl;
+          formatToPlainStringResult = intl.string(prop(tmp2[17]).rn7w7I);
+        }
+      }
+      cResult[2] = def.multiple;
+      cResult[3] = tmp6;
+      cResult[4] = arr;
+      cResult[5] = value;
+      cResult[6] = true === def.multiple;
+      cResult[7] = arr2;
+      cResult[8] = formatToPlainStringResult;
     }
-    cResult[3] = def.label;
-    cResult[4] = true === def.multiple;
-    cResult[5] = onChange;
-    cResult[6] = withSavedPicksResult;
-    cResult[7] = result;
-    cResult[8] = S;
-    tmp12 = S;
-    const tmpResult2 = tmp(17002);
   }
-  const tmpResult = def(17002);
+  return fallback;
 }) : (function ConjurePickerSettingRow(def) {
   def = def.def;
   ({ value, onChange: importDefault } = def);
-  c3 = undefined;
-  let multiple;
+  let conjureSettingsGuildId;
+  c4 = undefined;
+  closure_5 = undefined;
   ({ projectId, isPreview, hint, disabled, fallback } = def);
-  const conjureSettingsGuildId = def(17002).useConjureSettingsGuildId(projectId, isPreview);
-  const obj = def(17002);
-  const withSavedPicksResult = def(17002).withSavedPicks(useConjureSettingPickerOptionsDefault(conjureSettingsGuildId, def), value, (id) => ({ id, label: id }));
-  dependencyMap = withSavedPicksResult;
-  if (null == conjureSettingsGuildId) {
-    return fallback;
-  } else {
-    const result = tmp(17002).conjureSettingPickedIds(value);
-    c3 = result;
-    multiple = tmp8;
-    if (true === def.multiple) {
-      const intl2 = tmp(1126).intl;
-      const obj3 = { count: result.length };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3827["LPs/Pv"], obj3);
-    } else {
-      const found = withSavedPicksResult.find((id) => id.id === selected[0]);
-      formatToPlainStringResult = undefined;
-      if (found != null) {
-        formatToPlainStringResult = found.label;
-      }
-      if (formatToPlainStringResult == null) {
-        const intl = tmp(1126).intl;
-        formatToPlainStringResult = intl.string(_modDef3827.rn7w7I);
-      }
-    }
-    const obj4 = { hasIcons: false, children: null };
-    const obj5 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
-    const obj6 = { text: formatToPlainStringResult };
-    obj5.trailing = closure_17(tmp(6197).TableRowTrailingText, obj6);
-    obj5.onPress = function onPress() {
-      const obj2 = {
-        content: constants(ConjureSettingOptionsSheetDefault, {
-          title: def.label,
-          options,
-          multiple,
-          selected,
-          onChange(arg0) {
-            let tmp2 = arg0;
-            if (!multiple) {
-              let str = arg0[0];
-              if (str == null) {
-                str = "";
-              }
-              tmp2 = str;
-            }
-            return closure_1_1(tmp2);
-          }
-        }),
-        key: ConjureSettingsPickerSheet,
-        stackingBehavior: "stack"
-      };
-      ActionSheetActionCreators.showActionSheet(obj2);
-    };
-    obj4.children = closure_17(tmp(6186).TableRow, obj5);
-    return closure_17(tmp(6269).TableRowGroup, obj4);
+  conjureSettingsGuildId = def(conjureSettingsGuildId[29]).useConjureSettingsGuildId(projectId, isPreview);
+  const tmp5 = require("useConjureSettingPickerOptions")(conjureSettingsGuildId, def);
+  let obj = def(conjureSettingsGuildId[29]);
+  const result = def(conjureSettingsGuildId[29]).conjureSettingPickedIds(value);
+  c3 = result;
+  let obj2 = def(conjureSettingsGuildId[29]);
+  let tmp6 = null;
+  if ("user" === def.type) {
+    tmp6 = conjureSettingsGuildId;
   }
-  let obj2 = def(17002);
+  const conjureMemberRequests = def(conjureSettingsGuildId[36]).useConjureMemberRequests(tmp6, result);
+  if (null != conjureSettingsGuildId) {
+    if (null != tmp5) {
+      const withSavedPicksResult = tmp(tmp2[29]).withSavedPicks(tmp5, value, (id) => ({ id, label: id }));
+      c4 = withSavedPicksResult;
+      closure_5 = tmp11;
+      if (true === def.multiple) {
+        const intl2 = tmp(tmp2[16]).intl;
+        const obj4 = { count: result.length };
+        let formatToPlainStringResult = intl2.formatToPlainString(require("../../intl/ConjureUntranslated.messages.js")["LPs/Pv"], obj4);
+      } else {
+        const found = withSavedPicksResult.find((id) => id.id === _undefined[0]);
+        formatToPlainStringResult = undefined;
+        if (found != null) {
+          formatToPlainStringResult = found.label;
+        }
+        if (formatToPlainStringResult == null) {
+          const intl = tmp(tmp2[16]).intl;
+          formatToPlainStringResult = intl.string(require("../../intl/ConjureUntranslated.messages.js").rn7w7I);
+        }
+      }
+      const obj5 = { hasIcons: false, children: null };
+      const obj6 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
+      const obj7 = { text: formatToPlainStringResult };
+      obj6.trailing = closure_17(tmp(tmp2[32]).TableRowTrailingText, obj7);
+      obj6.onPress = function onPress() {
+        const obj2 = { guildId: conjureSettingsGuildId, type: def.type, channelFilter: def.channel_filter, title: def.label, maxPicks: null, selected: null, onSubmit: null };
+        let num = 1;
+        const obj = ActionSheetActionCreators;
+        if (closure_5) {
+          num = 25;
+        }
+        const obj3 = { content: null, key: null, stackingBehavior: "stack" };
+        obj2.maxPicks = num;
+        obj2.selected = _undefined2.filter((id) => _undefined.includes(id.id));
+        obj2.onSubmit = function onSubmit(arr) {
+          const mapped = arr.map((id) => id.id);
+          let tmp3 = mapped;
+          if (!closure_1_5) {
+            let str = mapped[0];
+            if (str == null) {
+              str = "";
+            }
+            tmp3 = str;
+          }
+          closure_1_1(tmp3);
+        };
+        obj3.content = constants(ConjureGuildPickerSheetDefault, obj2);
+        obj3.key = ConjureSettingsPickerSheet;
+        obj.showActionSheet(obj3);
+      };
+      obj5.children = closure_17(tmp(tmp2[31]).TableRow, obj6);
+      return closure_17(tmp(tmp2[20]).TableRowGroup, obj5);
+    }
+  }
+  return fallback;
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/settings/native/useConjureAppSettingsForm.tsx");
@@ -949,7 +1036,7 @@ export default function useConjureAppSettingsForm(projectId) {
     tmp12Result = map(projectId(flag[24]).TextInput, obj, value.name);
   }
   let tmp = renderSecret();
-  selected = tmp;
+  asyncGeneratorStep = tmp;
   let items = [memo1];
   const stateFromStores = projectId(flag[14]).useStateFromStores(items, () => ConjureConnectionStore.getSettings(projectId));
   let tmp5 = stateFromStores(first.useState({}), 2);
@@ -1084,7 +1171,7 @@ export default function useConjureAppSettingsForm(projectId) {
   closure_19 = tmp18;
   const items5 = [null != memo3.values || null != memo3.secrets, notifyAgent, projectId, first2, memo3];
   let tmp20 = null;
-  const callback = obj2.useCallback(selected(function*() {
+  const callback = obj2.useCallback(asyncGeneratorStep(async () => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -1095,7 +1182,7 @@ export default function useConjureAppSettingsForm(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1161,11 +1248,11 @@ export default function useConjureAppSettingsForm(projectId) {
                 if (application_id == null) {
                   _null = null;
                 }
-                _null2(11381)(_null);
+                _null2(11423)(_null);
                 let isPreviewlessProjectResult = null != project2;
                 if (isPreviewlessProjectResult) {
-                  isPreviewlessProjectResult = _null(6940).isPreviewlessProject(project2);
-                  const obj = _null(6940);
+                  isPreviewlessProjectResult = _null(6946).isPreviewlessProject(project2);
+                  const obj = _null(6946);
                 }
                 if (!isPreviewlessProjectResult) {
                   let prop;
@@ -1176,10 +1263,10 @@ export default function useConjureAppSettingsForm(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(11381)(_null2);
-                  const tmp35 = _null2(11381);
+                  _null2(11423)(_null2);
+                  const tmp35 = _null2(11423);
                 }
-                const tmp19 = _null2(11381);
+                const tmp19 = _null2(11423);
               }
               c5 = 0;
               closure_131_12(false);
@@ -1188,7 +1275,7 @@ export default function useConjureAppSettingsForm(projectId) {
             closure_1_12(closure_131_0);
           }
           const intl = _null(1126).intl;
-          closure_1_13(closure_131_0, intl.string(_null2(3827)["08bsJL"]));
+          closure_1_13(closure_131_0, intl.string(_null2(3849)["08bsJL"]));
         }
       } catch (tmp75) {
         closure_4 = tmp75;

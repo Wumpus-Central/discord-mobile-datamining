@@ -11,7 +11,7 @@ let closure_3 = ["option", "children", "contentContainerStyles", "scrollable", "
 const View = fn(17).View;
 const DEFAULT_CONTENT_PADDING = fn(1502).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   actionSheetBackground: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
   titleContainer: { backgroundColor: "transparent" },
@@ -69,7 +69,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
             }
           },
         };
-        obj3.children = jsx(tmp(6887).ActionSheetCloseButton, {
+        obj3.children = jsx(tmp(6893).ActionSheetCloseButton, {
           onPress() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             onDismiss = onDismiss.onDismiss;
@@ -131,7 +131,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
                     obj5.startExpanded = tmp14;
                     obj5.header = tmp24;
                     obj5.children = tmp27;
-                    const tmp36 = jsx(tmp(6836).BottomSheet, {}, tmp6.name);
+                    const tmp36 = jsx(tmp(6839).BottomSheet, {}, tmp6.name);
                     cResult[24] = tmp6.name;
                     cResult[25] = tmp7;
                     cResult[26] = tmp13;
@@ -218,7 +218,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       };
       const obj4 = {
         style: { alignSelf: "flex-start" },
-        children: jsx(merged(6887).ActionSheetCloseButton, {
+        children: jsx(merged(6893).ActionSheetCloseButton, {
           onPress() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             const onDismiss = merged.onDismiss;
@@ -230,7 +230,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       };
       obj3.leading = (
         <View style={{ alignSelf: "flex-start" }}>
-          {jsx(merged(6887).ActionSheetCloseButton, {
+          {jsx(merged(6893).ActionSheetCloseButton, {
             onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
               const onDismiss = merged.onDismiss;
@@ -243,7 +243,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       );
       ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
       obj3.trailing = jsx(merged(1200).Spacer, { size: 24 });
-      obj.header = jsx(merged(6835).BottomSheetTitleHeader, {
+      obj.header = jsx(merged(6838).BottomSheetTitleHeader, {
         titleContainerStyle: tmp2.titleContainer,
         titleWrapperStyle: tmp2.titleWrapper,
         subtitleStyle: tmp2.subtitleWrapper,
@@ -256,5 +256,5 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       const items = [tmp2.contentContainer, contentContainerStyles];
       obj9.style = items;
       obj.children = <View style={null}>{children}</View>;
-      return jsx(merged(6836).BottomSheet, {}, option.name);
+      return jsx(merged(6839).BottomSheet, {}, option.name);
     };

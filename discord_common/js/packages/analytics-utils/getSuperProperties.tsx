@@ -156,7 +156,7 @@ if (null == obj) {
         value3 = obj;
       }
       const SessionStorage = SessionStorage3.SessionStorage;
-      let value4 = SessionStorage.get(referralProperties);
+      value4 = SessionStorage.get(referralProperties);
       if (null == value4) {
         const obj3 = {};
         const _Object = Object;
@@ -193,7 +193,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("35020300000000", 10) };
+    obj = { client_build_number: parseInt("35020400000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

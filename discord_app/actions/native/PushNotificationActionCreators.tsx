@@ -38,7 +38,7 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -114,8 +114,8 @@ let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1085);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const MAX_PUSH_SYNC_ACCOUNTS = fn(12082).MAX_PUSH_SYNC_ACCOUNTS;
-const PushNotificationConstants = fn(5940);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12126).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(5933);
 ({
   BUNDLE_ID: closure_11,
   DEVICE_PUSH_VOIP_PROVIDER: closure_12,
@@ -156,13 +156,13 @@ export default {
       if (flag) {
         let tmp8 = __initData;
       } else {
-        tmp8 = __initData2();
+        tmp8 = map1();
       }
       const obj2 = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
       const obj = TrackedHTTPUtilsDefault;
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
-        isAndroidResult = !state;
+        isAndroidResult = !closure_1_14;
       }
       obj2.bypass_server_throttling_supported = isAndroidResult;
       obj2.bundle_id = bundle_id;
@@ -240,8 +240,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12085).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12085);
+          const result = v2(12129).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12129);
         }
       }
       return value;
@@ -251,8 +251,8 @@ export default {
     logger.log("Unregistering push notification token: " + token);
     const request = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     const obj = TrackedHTTPUtilsDefault;
-    request.body = { provider: __initData2(), token };
-    const obj2 = { provider: __initData2(), token };
+    request.body = { provider: map1(), token };
+    const obj2 = { provider: map1(), token };
     request.trackedActionData = {
       event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN,
     };
@@ -260,10 +260,7 @@ export default {
   },
 };
 export const setPushPermissionState = function setPushPermissionState(PROMPT_SEEN) {
-  const permissionState = PROMPT_SEEN;
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState });
-  });
+  DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_SET_STATE", permissionState: PROMPT_SEEN });
 };
 export const setPushPermissionReactivationSeen = function setPushPermissionReactivationSeen(promptType) {
   DispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_PERMISSION_REACTIVATION_SEEN", promptType });

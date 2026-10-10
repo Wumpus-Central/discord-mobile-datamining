@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const ComponentActions = fn(1085).ComponentActions;
 let closure_5 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5636).TransportTypes;
+const TransportTypes = fn(5639).TransportTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/embedded_apps/native/utils/createWebViewController.tsx");
 

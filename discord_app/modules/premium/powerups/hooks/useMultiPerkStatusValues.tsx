@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2597 from "../GuildPowerups.messages.js";
+import _modDef2600 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { type: "active", statusText: null };
             const intl = util.intl;
-            obj4.statusText = intl.string(_modDef2597.FFLkmx);
+            obj4.statusText = intl.string(_modDef2600.FFLkmx);
             cResult[8] = obj4;
           }
         }
@@ -336,7 +336,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else if (someResult) {
           const obj3 = { type: "active", statusText: null };
           const intl = util.intl;
-          obj3.statusText = intl.string(_modDef2597.FFLkmx);
+          obj3.statusText = intl.string(_modDef2600.FFLkmx);
           tmp4 = obj3;
         }
         const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {

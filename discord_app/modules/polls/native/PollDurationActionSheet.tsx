@@ -52,7 +52,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { title: tmp7, hasIcons: false, onChange: tmp5, defaultValue: selectedDuration, children: tmp9 };
-        const tmp13 = jsx(onChange(6267).TableRadioGroup, {
+        const tmp13 = jsx(onChange(6262).TableRadioGroup, {
           title: tmp7,
           hasIcons: false,
           onChange: tmp5,
@@ -98,7 +98,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp, tmp2] = item;
         return jsx(onChange(dependencyMap[9]).TableRadioRow, { value: parseInt(tmp), label: tmp2 }, tmp);
       });
-      return jsx(onChange(6267).TableRadioGroup, {
+      return jsx(onChange(6262).TableRadioGroup, {
         title: null,
         hasIcons: false,
         onChange: null,

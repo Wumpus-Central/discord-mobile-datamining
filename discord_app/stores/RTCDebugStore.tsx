@@ -76,7 +76,7 @@ function updateStats(arr, arg1) {
   }
   return obj2;
 }
-const Constants = fn(5116);
+const Constants = fn(5117);
 const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 ({ Features: closure_8, SimulcastOverrideQuality: closure_9 } = Constants);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + fn(1085).RTCDebugSections.TRANSPORT + ":" + 0;
@@ -121,7 +121,7 @@ class RTCDebugVideoOutputMap {
 const prototype = RTCDebugVideoOutputMap.prototype;
 RTCDebugVideoOutputMap["empty"] = function empty() {
   if (typeof RTCDebugVideoOutputMap === "function") {
-    state = {};
+    const state = {};
     const obj2 = Object.create(tmp.prototype);
     obj2.state = state;
     return obj2;
@@ -145,7 +145,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
-    state = {};
+    const state = {};
     const _HermesInternal = HermesInternal;
     state["" + arg0 + ":" + arg1 + ":" + arg2] = arg3;
     const merged1 = Object.assign(self.state);
@@ -200,13 +200,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  obj = {
-    codec: name,
-    resolution: null,
-    bitrateEstimate: "Array",
-    fps:
-      -0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007748250686510155,
-  };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: "nuppineula" };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -341,7 +335,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(5136).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(5137).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let num = arg3;
             const obj2 = {
               type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -361,7 +355,7 @@ const rTCDebugStore = new RTCDebugStore(DispatcherDefault, {
             obj2.streamId = str;
             DispatcherDefault.dispatch(obj2);
           });
-          DispatcherDefault.wait(() => RTCDebugActionCreatorsAll.open());
+          RTCDebugActionCreatorsAll.open();
         }
       }
     }

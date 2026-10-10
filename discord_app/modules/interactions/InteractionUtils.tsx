@@ -32,7 +32,7 @@ let closure_10 = async function _executeMessageComponentInteraction(arg0) {
   } else if (2 === tmp7) {
     c3 = 0;
     c5 = 3;
-    return { value: "IconComponent", done: null };
+    return { value: "IconComponent", done: "+51" };
   } else if (3 === tmp7) {
     if (arg0 === 1) {
       c5 = 3;
@@ -348,4 +348,4 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   }
   return true;
 };
-export const interactionCallbackErrorReason = fn(5436).interactionCallbackErrorReason;
+export const interactionCallbackErrorReason = fn(5439).interactionCallbackErrorReason;

@@ -11,7 +11,7 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1085);
 ({ ACTIVITY_PLATFORM_TYPES: closure_7, PlatformTypes } = Constants);
-const KeyboardKeysUpdated = fn(7219).KeyboardKeysUpdated;
+const KeyboardKeysUpdated = fn(7225).KeyboardKeysUpdated;
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
@@ -249,11 +249,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("initialize");
       const obj4 = set(12);
       const items1 = [tmp15, tmp16, tmp17, tmp18, E];
-      sortByResult = obj4.sortBy(set(5760).filter(tmp8), items1);
+      sortByResult = obj4.sortBy(set(5763).filter(tmp8), items1);
       cResult[5] = tmp9;
       cResult[6] = tmp8;
       cResult[7] = sortByResult;
-      const arr3 = set(5760);
+      const arr3 = set(5763);
     }
   : function usePlatforms() {
       let items = [ConnectedAccountsStore];

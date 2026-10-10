@@ -129,9 +129,8 @@ const themeStore = new ThemeStore(DispatcherDefault, {
         );
       }
       obj = DispatcherDefault;
-      obj.wait(() => {
-        DispatcherDefault.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } });
-      });
+      const obj2 = { type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: false } };
+      obj.dispatch(obj2);
     }
     const tmp13 = resolveThemeDefault(systemTheme, obj, c15);
     let flag = tmp13 !== closure_13;

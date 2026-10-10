@@ -6,7 +6,7 @@ import ContentInventoryStore from "../content_inventory/ContentInventoryStore.ts
 require = fn;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(8453).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8469).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -126,6 +126,7 @@ export const GameProfileSources = {
   AnnouncementChannelReturn: "announcement_channel_return",
   CallTile: "call_tile",
   InAppBrowserReturn: "in_app_browser_return",
+  CommunityPreviewReturn: "community_preview_return",
   Deeplink: "deeplink",
   DmHeaderActivity: "dm_header_activity",
   VcHeaderActivity: "vc_header_activity",

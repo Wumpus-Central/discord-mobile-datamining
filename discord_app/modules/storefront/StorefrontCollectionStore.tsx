@@ -14,7 +14,7 @@ const prototype = StorefrontCollectionStore.prototype;
 prototype["getFetchState"] = function getFetchState(arg0) {
   let tmp;
   if (null != arg0) {
-    state = undefined;
+    let state;
     if (dependencyMap[arg0] != null) {
       state = tmp3.state;
     }
@@ -25,7 +25,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
 prototype["getFetchStateForApplication"] = function getFetchStateForApplication(arg0) {
   let tmp;
   if (null != arg0) {
-    state = undefined;
+    let state;
     if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }
@@ -84,7 +84,7 @@ prototype["getCollection"] = function getCollection(item10006) {
   }
   let collection = null;
   if (null != tmp) {
-    state = undefined;
+    let state;
     if (tmp != null) {
       state = tmp.state;
     }
@@ -114,7 +114,7 @@ prototype["getFetchParamsForApplication"] = function getFetchParamsForApplicatio
   if (null != arg0) {
     tmp = dependencyMap2[arg0];
   }
-  state = undefined;
+  let state;
   if (tmp != null) {
     state = tmp.state;
   }
@@ -144,7 +144,7 @@ prototype["getCollectionsForApplication"] = function getCollectionsForApplicatio
   return collections;
 };
 prototype["getCollectionPageFetchState"] = function getCollectionPageFetchState(arg0) {
-  state = undefined;
+  let state;
   if (dependencyMap3[arg0] != null) {
     state = tmp.state;
   }
@@ -157,9 +157,9 @@ prototype["getCollectionPageFetchedAt"] = function getCollectionPageFetchedAt(ar
   }
   return fetchedAt;
 };
-prototype["getCollectionPageIds"] = function getCollectionPageIds(arg0) {
+prototype["getCollectionPageIds"] = function getCollectionPageIds(item10006) {
   let collectionIds = null;
-  if (null != dependencyMap3[arg0]) {
+  if (null != dependencyMap3[item10006]) {
     collectionIds = null;
     if ("error" !== tmp.state) {
       collectionIds = null;
@@ -170,11 +170,11 @@ prototype["getCollectionPageIds"] = function getCollectionPageIds(arg0) {
   }
   return collectionIds;
 };
-prototype["getCollectionListTotal"] = function getCollectionListTotal(arg0) {
-  return closure_3[arg0];
+prototype["getCollectionListTotal"] = function getCollectionListTotal(collectionListKey) {
+  return closure_3[collectionListKey];
 };
 prototype["getCollectionsAfterFetchState"] = function getCollectionsAfterFetchState(arg0) {
-  state = undefined;
+  let state;
   if (dependencyMap4[arg0] != null) {
     state = tmp.state;
   }
@@ -248,7 +248,7 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
     const item = collections.forEach((collection) => {
       set.add(collection.id);
       if (!dependencyMap) {
-        state = undefined;
+        let state;
         if (tmp2 != null) {
           state = tmp2.state;
         }

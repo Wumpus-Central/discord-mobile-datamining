@@ -11,12 +11,12 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(2068).isGuildSelectableChannelType;
+let closure_3 = fn(2069).isGuildSelectableChannelType;
 const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9687);
+const ApplicationCommandsConstants = fn(9716);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5401);
+const ChannelAutocompleteConstants = fn(5404);
 ({
   CHANNEL_SENTINEL: closure_11,
   EMOJI_SENTINEL: closure_12,
@@ -25,7 +25,7 @@ const ChannelAutocompleteConstants = fn(5401);
 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -52,10 +52,10 @@ const re19 = /[\r\n]/;
 function getMentionTextWithUser(messageChannel, user) {
   if (obj.hasSameRoleAsUsername(messageChannel, user)) {
     const _HermesInternal2 = HermesInternal;
-    let combined = "" + state + user.tag;
+    let combined = "" + closure_1_14 + user.tag;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + state + UserUtilsDefault.getUserTag(user);
+    combined = "" + closure_1_14 + UserUtilsDefault.getUserTag(user);
     const tmpResult = UserUtilsDefault;
   }
   return combined;
@@ -106,10 +106,10 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     const user = type.user;
     if (obj6.hasSameRoleAsUsername(channel, user)) {
       const _HermesInternal9 = HermesInternal;
-      let combined = "" + state + user.tag;
+      let combined = "" + closure_1_14 + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + state + UserUtilsDefault.getUserTag(user);
+      combined = "" + closure_1_14 + UserUtilsDefault.getUserTag(user);
       const tmp34Result = UserUtilsDefault;
     }
     return combined;
@@ -117,7 +117,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     return type.text;
   } else if (constants.ROLE === type) {
     const _HermesInternal7 = HermesInternal;
-    return "" + state + type.name;
+    return "" + closure_1_14 + type.name;
   } else if (constants.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
@@ -150,7 +150,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     }
   } else if (constants.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
-    return "" + __initData2 + type.game.name;
+    return "" + map1 + type.game.name;
   } else if (constants.TIMESTAMP_MENTION === type) {
     return TimestampUtils.unparseTimestamp(type.mention.timestamp, type.mention.format);
   } else if (constants.EMOJI === type) {

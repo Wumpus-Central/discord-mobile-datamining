@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ questName: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -23,9 +23,9 @@ export default noop.memo(
           str = size;
         }
         const obj = quest(576);
-        quest = quest(15320).useVideoQuestModalContext().quest;
-        const tmpResult = quest(15320);
-        const questTaskDetails = quest(9149).useQuestTaskDetails(quest);
+        quest = quest(15382).useVideoQuestModalContext().quest;
+        const tmpResult = quest(15382);
+        const questTaskDetails = quest(9170).useQuestTaskDetails(quest);
         if (cResult[0] !== quest.id) {
           const fn = function s() {
             const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
@@ -55,7 +55,7 @@ export default noop.memo(
                         const obj2 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
                         const intl2 = tmp(1126).intl;
                         obj2.children = intl2.string(tmp(1126).t["1Wvve2"]);
-                        tmp15 = closure_4(tmp(5087).Text, obj2);
+                        tmp15 = closure_4(tmp(5088).Text, obj2);
                       }
                       cResult[12] = tmp5;
                       cResult[13] = tmp15;
@@ -85,7 +85,7 @@ export default noop.memo(
                         };
                         const items = [tmp9, tmp17];
                         obj3.children = items;
-                        const tmp24 = closure_5(tmp(5374).Stack, obj3);
+                        const tmp24 = closure_5(tmp(5377).Stack, obj3);
                         cResult[18] = style;
                         cResult[19] = tmp9;
                         cResult[20] = tmp17;
@@ -101,7 +101,7 @@ export default noop.memo(
                     };
                     const items1 = [tmp11, tmp14];
                     obj4.children = items1;
-                    const tmp20 = closure_5(tmp(5374).Stack, obj4);
+                    const tmp20 = closure_5(tmp(5377).Stack, obj4);
                     cResult[14] = onTextBlockLayout;
                     cResult[15] = tmp11;
                     cResult[16] = tmp14;
@@ -120,7 +120,7 @@ export default noop.memo(
                   const intl = tmp(1126).intl;
                   const obj6 = { questName: quest.config.messages.questName };
                   obj5.children = intl.formatToPlainString(tmp(1126).t.EAYZAr, obj6);
-                  tmp12 = closure_4(tmp(5087).Text, obj5);
+                  tmp12 = closure_4(tmp(5088).Text, obj5);
                 }
                 cResult[8] = quest.config;
                 cResult[9] = tmp8;
@@ -154,7 +154,7 @@ export default noop.memo(
           onPress: tmp7,
           withAnimation: withRewardTileAnimation,
         };
-        const tmpResult2 = quest(9149);
+        const tmpResult2 = quest(9170);
       }
     : function VideoQuestModalReward(style) {
         const withQuestName = style.withQuestName;
@@ -170,14 +170,14 @@ export default noop.memo(
           str = size;
         }
         ({ withRewardTileAnimation, onTextBlockLayout } = style);
-        quest = quest(15320).useVideoQuestModalContext().quest;
-        const obj = quest(15320);
+        quest = quest(15382).useVideoQuestModalContext().quest;
+        const obj = quest(15382);
         const items = [quest.id];
-        const questTaskDetails = quest(9149).useQuestTaskDetails(quest);
+        const questTaskDetails = quest(9170).useQuestTaskDetails(quest);
         const callback = noop.useCallback(() => {
           const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
         }, items);
-        const obj2 = quest(9149);
+        const obj2 = quest(9170);
         const obj3 = {
           justify: "center",
           align: "center",
@@ -206,19 +206,19 @@ export default noop.memo(
           const intl = tmp3(1126).intl;
           const obj7 = { questName: quest.config.messages.questName };
           obj6.children = intl.formatToPlainString(tmp3(1126).t.EAYZAr, obj7);
-          tmp = closure_4(tmp3(5087).Text, obj6);
+          tmp = closure_4(tmp3(5088).Text, obj6);
         }
         const items2 = [tmp];
         if (tmp9Result) {
           const obj8 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
           const intl2 = tmp3(1126).intl;
           obj8.children = intl2.string(tmp3(1126).t["1Wvve2"]);
-          tmp9Result = closure_4(tmp3(5087).Text, obj8);
+          tmp9Result = closure_4(tmp3(5088).Text, obj8);
         }
         items2[1] = tmp9Result;
         obj5.children = items2;
-        items1[1] = closure_5(quest(5374).Stack, obj5);
+        items1[1] = closure_5(quest(5377).Stack, obj5);
         obj3.children = items1;
-        return closure_5(quest(5374).Stack, obj3);
+        return closure_5(quest(5377).Stack, obj3);
       },
 );

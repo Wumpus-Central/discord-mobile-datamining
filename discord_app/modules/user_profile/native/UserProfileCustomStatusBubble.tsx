@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/07559_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07576_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -26,7 +26,7 @@ const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 let Fonts = fn(1096).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { position: "relative" },
@@ -132,7 +132,7 @@ let closure_16 = {
   statusBubblePaddingVertical: 7,
 };
 const dependencyMap = {
-  [fn(6898).UserProfileThemeTypes.PREVIEW]: {
+  [fn(6904).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -288,7 +288,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           };
           let items = [tmp13, text];
           obj4.children = items;
-          const tmp17 = closure_12(emoji(5087).Text, obj4);
+          const tmp17 = closure_12(emoji(5088).Text, obj4);
           cResult[10] = lineClamp;
           cResult[11] = onTextLayout;
           cResult[12] = tmp13;
@@ -316,7 +316,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             obj6.style = obj7;
             items[1] = closure_2_11(closure_2_8, obj6);
             obj2.children = items;
-            let tmp4 = __initData(__initData2, obj2);
+            let tmp4 = __initData(map1, obj2);
           } else {
             let name;
             if (emoji != null) {
@@ -331,7 +331,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               obj8.style = obj9;
               items1[1] = closure_2_11(closure_2_8, obj8);
               obj.children = items1;
-              tmp4 = __initData(__initData2, obj);
+              tmp4 = __initData(map1, obj);
             }
           }
           return tmp4;
@@ -383,7 +383,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           obj8.style = obj9;
           items[1] = closure_1_11(closure_1_8, obj8);
           obj4.children = items;
-          let tmp8Result = __initData(__initData2, obj4);
+          let tmp8Result = __initData(map1, obj4);
         } else {
           let name;
           if (emoji != null) {
@@ -398,7 +398,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             obj11.style = obj12;
             items1[1] = closure_1_11(closure_1_8, obj11);
             obj10.children = items1;
-            tmp8Result = __initData(__initData2, obj10);
+            tmp8Result = __initData(map1, obj10);
           }
         }
         const items2 = [tmp8Result, text];
@@ -413,7 +413,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj2 = PlatformUtils;
       }
     };
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_20 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
@@ -595,7 +595,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext().trackUserProfileAction;
       const tmpResult8 = require("UserProfileAnalyticsContext");
       if (undefined === previewText) {
-        state = undefined;
+        let state;
         if (customStatusActivity != null) {
           state = customStatusActivity.state;
         }
@@ -993,7 +993,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         require("UserProfileAnalyticsContext").useUserProfileAnalyticsContext().trackUserProfileAction;
       const tmp5Result6 = require("UserProfileAnalyticsContext");
       if (undefined === previewText) {
-        state = undefined;
+        let state;
         if (customStatusActivity != null) {
           state = customStatusActivity.state;
         }

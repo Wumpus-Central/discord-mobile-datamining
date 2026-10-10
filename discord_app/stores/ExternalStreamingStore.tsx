@@ -24,7 +24,7 @@ let closure_16 = async function _getTwitchGame() {
   closure_3 = tmp2;
   closure_2 = tmp3;
   closure_130_0 = closure_0;
-  if (null != state[closure_0]) {
+  if (null != value[closure_0]) {
     return tmp26;
   }
   await makeTwitchRequest("/games", { id: tmp23 }, tmp24);
@@ -101,7 +101,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

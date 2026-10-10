@@ -25,7 +25,7 @@ const CacheActionsDiskUsageSectionDefault = CacheActionsDiskUsageSection;
 require = fn;
 function handleCacheActionPress(text) {
   const obj = ToastActionCreatorsDefault;
-  obj.openMana(text, { text, icon: CircleInformationIcon.CircleInformationIcon });
+  obj.open(text, { text, icon: CircleInformationIcon.CircleInformationIcon });
   const obj2 = { text, icon: CircleInformationIcon.CircleInformationIcon };
   ActionSheetActionCreatorsDefault.hideActionSheet(CacheActionsActionSheet);
 }
@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { title: null };
         let intl = tmp(1126).intl;
         obj3.title = intl.string(tmp(1126).t.ZVZVwR);
-        const tmp10 = closure_7(tmp(6835).BottomSheetTitleHeader, obj3);
+        const tmp10 = closure_7(tmp(6838).BottomSheetTitleHeader, obj3);
         const intl2 = tmp(1126).intl;
         const stringResult = intl2.string(tmp(1126).t.AVZpFH);
         cResult[0] = tmp10;
@@ -61,7 +61,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp7, tmp8] = cResult;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = closure_7(tmp(15755).FileUpIcon, {});
+        const tmp15 = closure_7(tmp(15817).FileUpIcon, {});
         const intl3 = tmp(1126).intl;
         const stringResult1 = intl3.string(tmp(1126).t["/GUaXh"]);
         cResult[2] = tmp15;
@@ -84,7 +84,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -100,7 +100,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   c1 = 1;
                   dependencyMap = 1;
-                  const obj5 = { value: tmp2(15791).writeCaches(), done: false };
+                  const obj5 = { value: tmp2(15853).writeCaches(), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -114,7 +114,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl = tmp2(1126).intl;
                 handleCacheActionPress(intl.string(tmp2(1126).t.GgUIfl));
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp15) {
               dependencyMap = tmp;
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== first) {
         let obj4 = { icon: tmp12, label: tmp13, disabled: first, onPress: tmp17 };
-        const tmp21 = closure_7(tmp(6186).TableRow, obj4);
+        const tmp21 = closure_7(tmp(6179).TableRow, obj4);
         cResult[5] = first;
         cResult[6] = tmp21;
         let tmp19 = tmp21;
@@ -153,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp29 = closure_7(tmp(15792).FileWarningIcon, { color: "text-feedback-critical" });
+            const tmp29 = closure_7(tmp(15854).FileWarningIcon, { color: "text-feedback-critical" });
             const intl5 = tmp(1126).intl;
             const stringResult2 = intl5.string(tmp(1126).t.tgwiMO);
             cResult[11] = tmp29;
@@ -177,7 +177,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -191,13 +191,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { value, done: true };
                       return obj3;
                     } else {
-                      v1(15788).clearCaches();
-                      const obj5 = v1(15788);
-                      tmp2(15791).clearCaches();
-                      const obj6 = tmp2(15791);
+                      v1(15850).clearCaches();
+                      const obj5 = v1(15850);
+                      tmp2(15853).clearCaches();
+                      const obj6 = tmp2(15853);
                       v1 = 1;
                       dependencyMap = 1;
-                      const obj4 = { value: tmp2(5052).browserManagerClearWebsiteData(), done: false };
+                      const obj4 = { value: tmp2(5053).browserManagerClearWebsiteData(), done: false };
                       return obj4;
                     }
                   } else if (arg0 === 1) {
@@ -211,7 +211,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     const intl = tmp2(1126).intl;
                     handleCacheActionPress(intl.string(tmp2(1126).t["23xR5w"]));
                     dependencyMap = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp13) {
                   dependencyMap = tmp;
@@ -236,7 +236,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[14] !== first) {
             let obj5 = { variant: "danger", icon: tmp26, label: tmp27, disabled: first, onPress: tmp31 };
-            const tmp35 = closure_7(tmp(6186).TableRow, obj5);
+            const tmp35 = closure_7(tmp(6179).TableRow, obj5);
             cResult[14] = first;
             cResult[15] = tmp35;
             let tmp33 = tmp35;
@@ -269,7 +269,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const obj7 = { header: tmp7, dismissAccessibilityLabel: tmp8, children: null };
               const items = [tmp36, tmp39];
               obj7.children = items;
-              const tmp46 = closure_8(tmp(6892).ActionSheet, obj7);
+              const tmp46 = closure_8(tmp(6898).ActionSheet, obj7);
               cResult[22] = tmp36;
               cResult[23] = tmp39;
               cResult[24] = tmp46;
@@ -279,7 +279,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { hasIcons: true, children: null };
           const items1 = [tmp19, tmp22, tmp33];
           obj8.children = items1;
-          const tmp38 = closure_8(tmp(6269).TableRowGroup, obj8);
+          const tmp38 = closure_8(tmp(6264).TableRowGroup, obj8);
           cResult[16] = tmp33;
           cResult[17] = tmp19;
           cResult[18] = tmp22;
@@ -290,7 +290,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp24Result2 = null != DiskUsageManagerDefault.calculateSize;
       if (tmp24Result2) {
         const obj9 = {
-          icon: closure_7(tmp(11819).FileIcon, {}),
+          icon: closure_7(tmp(11863).FileIcon, {}),
           label: null,
           trailing: null,
           disabled: null,
@@ -302,14 +302,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         obj9.label = intl4.string(isCalculating ? t.Ynmbie : t.iAFGRu);
         let tmp24Result = null;
         if (isCalculating) {
-          tmp24Result = closure_7(tmp(6160).ActivityIndicator, { size: "small", accessible: false });
+          tmp24Result = closure_7(tmp(6153).ActivityIndicator, { size: "small", accessible: false });
         }
         obj9.trailing = tmp24Result;
         obj9.disabled = first;
         const obj10 = { busy: isCalculating, disabled: first };
         obj9.accessibilityState = obj10;
         obj9.onPress = handleCalculateSize;
-        tmp24Result2 = closure_7(tmp(6186).TableRow, obj9);
+        tmp24Result2 = closure_7(tmp(6179).TableRow, obj9);
       }
       cResult[7] = handleCalculateSize;
       cResult[8] = first;
@@ -348,7 +348,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -379,7 +379,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const intl = closure_128_0(closure_128_2[8]).intl;
               closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t.GgUIfl));
               c2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp15) {
             c2 = tmp;
@@ -438,7 +438,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -472,7 +472,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const intl = closure_128_0(closure_128_2[8]).intl;
               closure_128_10(intl.string(closure_128_0(closure_128_2[8]).t["23xR5w"]));
               c2 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp21) {
             c2 = tmp;
@@ -492,7 +492,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = items1;
       return closure_1_8(ActionSheet.ActionSheet, obj2);
     };
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCacheActionsPredicate() {
       const cResult = c.c(2);
@@ -525,7 +525,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15792).FileWarningIcon,
+  IconComponent: fn(15854).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_11 }), CacheActionsActionSheet);
   },

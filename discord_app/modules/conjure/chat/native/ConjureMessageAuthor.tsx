@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 },
   name: { flexShrink: 1 },
@@ -24,8 +24,8 @@ let obj2 = {
   conjureTile: null,
 };
 let size = {
-  width: fn(17063).MESSAGE_AVATAR_SIZE,
-  height: fn(17063).MESSAGE_AVATAR_SIZE,
+  width: fn(17131).MESSAGE_AVATAR_SIZE,
+  height: fn(17131).MESSAGE_AVATAR_SIZE,
   borderRadius: nativeDefault.radii.sm,
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_MUTED,
@@ -308,7 +308,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const at = arg0.at;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3827.uk6jhJ);
+        const stringResult = intl.string(_modDef3849.uk6jhJ);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -328,7 +328,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   : function ConjureHeader(arg0) {
       const obj = { name: null, color: "text-brand", at: null };
       const intl = util.intl;
-      obj.name = intl.string(_modDef3827.uk6jhJ);
+      obj.name = intl.string(_modDef3849.uk6jhJ);
       obj.at = arg0.at;
       return timestampProducer(closure_10, obj);
     };
@@ -374,7 +374,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[6] === tmp4) {
           }
-          PressableOpacity = PressableOpacity(6191).PressableOpacity;
+          PressableOpacity = PressableOpacity(6184).PressableOpacity;
           const obj2 = {
             onPress: tmp4,
             onLongPress: tmp4,
@@ -387,7 +387,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = tmp8;
           cResult[8] = tmp;
         }
-        const obj3 = { size, user: tmp3, guildId: "r" };
+        const obj3 = { size, user: tmp3, guildId: "Array" };
         const tmp10 = closure_6(PressableOpacity(1200).Avatar, obj3);
         cResult[3] = size;
         cResult[4] = tmp3;
@@ -420,7 +420,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const intl = require("util").intl;
         obj.accessibilityLabel = intl.string(require("util").t.iXAna6);
-        const obj2 = { size: NORMAL, user: tmp3, guildId: "r" };
+        const obj2 = { size: NORMAL, user: tmp3, guildId: "Array" };
         obj.children = closure_6(require("native").Avatar, obj2);
         tmp5 = closure_6(require("Pressables").PressableOpacity, obj);
       }

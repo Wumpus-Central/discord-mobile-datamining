@@ -57,7 +57,7 @@ prototype["initialize"] = function initialize() {
     if (null == value.activeLibraryApplicationBranchIds) {
       const Storage4 = Storage6.Storage;
       const Storage5 = Storage6.Storage;
-      let value4 = Storage5.get(LibraryApplicationStore);
+      value4 = Storage5.get(LibraryApplicationStore);
       if (value4 == null) {
         value4 = {};
       }

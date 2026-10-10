@@ -3,11 +3,11 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef9508 from "../../../../_runtime/metro/09508__.js";
+import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import _modDef9537 from "../../../../_runtime/metro/09537__.js";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { color: "text-feedback-warning", style: tmp4.icon };
         let tmp6Result = React4(WarningIcon.WarningIcon, obj6);
       } else {
-        const obj7 = { source: _modDef9508, style: tmp4.icon };
+        const obj7 = { source: _modDef9537, style: tmp4.icon };
         tmp6Result = React4(FastImageDefault, obj7);
       }
       cResult[0] = isAtLimit;
@@ -141,7 +141,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp4Result = React4(WarningIcon.WarningIcon, obj2);
         let tmp9 = React4;
       } else {
-        const obj3 = { source: _modDef9508, style: tmp.icon };
+        const obj3 = { source: _modDef9537, style: tmp.icon };
         tmp4Result = React4(FastImageDefault, obj3);
         tmp9 = React4;
       }

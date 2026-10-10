@@ -53,6 +53,7 @@ const items1 = [
   dismissible_content.DismissibleContent.BATTLENET_CONNECTION_DEPRECATION,
   dismissible_content.DismissibleContent.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
   dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST_EMBED,
+  dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_SERVER_CHANNEL_MEMBER_LIST_EMBED,
 ];
 const items2 = [
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_ICON,
@@ -75,6 +76,7 @@ const items2 = [
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_REMINDER,
   dismissible_content.DismissibleContent.GAME_SERVER_NEW_GAMES_COACHMARK,
   dismissible_content.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,
+  dismissible_content.DismissibleContent.SHOP_TAB_TOOLTIP,
   dismissible_content.DismissibleContent.GUILD_HEADER_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_BOOST_TAB_BANNER,
   dismissible_content.DismissibleContent.GUILD_BOOST_TAB_HIGHLIGHT,

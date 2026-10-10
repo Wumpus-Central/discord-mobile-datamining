@@ -44,11 +44,10 @@ export default noop.memo(
         const stateFromStores = require("initialize").useStateFromStores(first, tmp8);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           function handleRequestError() {
-            const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+            const obj2 = { text: null, variant: "critical" };
             const intl = recipientId(acceptMessageRequest[10]).intl;
-            obj2.content = intl.string(recipientId(acceptMessageRequest[10]).t["EDYbS+"]);
-            obj2.icon = navigation(acceptMessageRequest[11]);
-            navigation(acceptMessageRequest[9]).open(obj2);
+            obj2.text = intl.string(recipientId(acceptMessageRequest[10]).t["EDYbS+"]);
+            navigation(acceptMessageRequest[9]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
           }
           cResult[3] = handleRequestError;
           let tmp10 = handleRequestError;
@@ -69,7 +68,7 @@ export default noop.memo(
           if (cResult[7] === stateFromStores) {
             let tmp12 = cResult[8];
           }
-          const messageRequestActions = tmp(tmp2[12]).useMessageRequestActions(tmp12);
+          const messageRequestActions = tmp(tmp2[11]).useMessageRequestActions(tmp12);
           acceptMessageRequest = messageRequestActions.acceptMessageRequest;
           const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
           ({ isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } =
@@ -165,7 +164,7 @@ export default noop.memo(
                     buttonSecondaryDisabled: tmp14,
                     buttonSecondaryLoading: isRejectLoading,
                   };
-                  const tmp32 = jsx(navigation(tmp2[14]), {
+                  const tmp32 = jsx(navigation(tmp2[13]), {
                     type: "button-action",
                     message: tmp19,
                     subtext: tmp21,
@@ -201,7 +200,7 @@ export default noop.memo(
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -230,7 +229,7 @@ export default noop.memo(
                     return obj;
                   } else {
                     c1 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp9) {
                   c1 = tmp;
@@ -264,7 +263,7 @@ export default noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -293,9 +292,9 @@ export default noop.memo(
                   const obj5 = { value, done: true };
                   return obj5;
                 } else {
-                  closure_0(acceptMessageRequest[13]).transitionToChannel(closure_0.id, { navigationReplace: true });
+                  closure_0(acceptMessageRequest[12]).transitionToChannel(closure_0.id, { navigationReplace: true });
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp14) {
                 c3 = tmp;
@@ -317,7 +316,7 @@ export default noop.memo(
           cResult[10] = channel.id;
           cResult[11] = onAcceptClick;
           tmp15 = onAcceptClick;
-          const tmpResult2 = tmp(tmp2[12]);
+          const tmpResult2 = tmp(tmp2[11]);
         }
         let obj5 = { user: stateFromStores, onError: tmp10, onRejectSuccess: tmp11 };
         cResult[6] = tmp11;
@@ -341,7 +340,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -370,9 +369,9 @@ export default noop.memo(
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                channel(c2[13]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
+                channel(c2[12]).transitionToChannel(closure_129_0.id, { navigationReplace: true });
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp14) {
               c3 = tmp;
@@ -391,7 +390,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -420,7 +419,7 @@ export default noop.memo(
                 return obj;
               } else {
                 c1 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp9) {
               c1 = tmp;
@@ -430,21 +429,20 @@ export default noop.memo(
         };
         importDefault = channel(1503).useNavigation();
         let obj = channel(1503);
-        const isMessageRequestRestrictedViewer = channel(12115).useIsMessageRequestRestrictedViewer();
-        let obj2 = channel(12115);
+        const isMessageRequestRestrictedViewer = channel(12159).useIsMessageRequestRestrictedViewer();
+        let obj2 = channel(12159);
         const items = [closure_4];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj3 = channel(504);
-        const messageRequestActions = channel(12116).useMessageRequestActions({
+        const messageRequestActions = channel(12160).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
-            const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+            const obj2 = { text: null, variant: "critical" };
             const intl = channel(_undefined[10]).intl;
-            obj2.content = intl.string(channel(_undefined[10]).t["EDYbS+"]);
-            obj2.icon = closure_1(_undefined[11]);
-            closure_1(_undefined[9]).open(obj2);
+            obj2.text = intl.string(channel(_undefined[10]).t["EDYbS+"]);
+            closure_1(_undefined[9]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
           },
           onRejectSuccess: function handleRejectSuccess() {
             closure_1.pop();
@@ -485,15 +483,14 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        let obj4 = channel(12116);
+        let obj4 = channel(12160);
         let obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {
-            const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+            const obj2 = { text: null, variant: "critical" };
             const intl = channel(_undefined[10]).intl;
-            obj2.content = intl.string(channel(_undefined[10]).t["EDYbS+"]);
-            obj2.icon = closure_1(_undefined[11]);
-            closure_1(_undefined[9]).open(obj2);
+            obj2.text = intl.string(channel(_undefined[10]).t["EDYbS+"]);
+            closure_1(_undefined[9]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
           },
           onRejectSuccess: function handleRejectSuccess() {
             closure_1.pop();

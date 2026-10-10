@@ -6,7 +6,7 @@ import ConjureLiveReloadStore from "ConjureLiveReloadStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const sendLiveReload = fn(13164).sendLiveReload;
+const sendLiveReload = fn(13213).sendLiveReload;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/live_reload/useConjureLiveReloadSetting.tsx");

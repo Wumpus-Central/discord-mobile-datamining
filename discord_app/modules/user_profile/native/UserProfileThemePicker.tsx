@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_530 = nativeDefault.unsafe_rawColors.PRIMARY_530;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   colorRow: {
     flexDirection: "row",

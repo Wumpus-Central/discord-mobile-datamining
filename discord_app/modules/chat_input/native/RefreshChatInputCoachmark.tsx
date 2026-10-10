@@ -9,7 +9,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_2 = ["buttonRef"];
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[0] = disabled;
         cResult[1] = items;
       } else {
-        const tmp6 = _slicedToArray(tmp(7093).useSelectedDismissibleContent(cResult[1]), 2);
+        const tmp6 = _slicedToArray(tmp(7099).useSelectedDismissibleContent(cResult[1]), 2);
         _require = tmp7;
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -53,7 +53,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { type: "rive", rive: tmp(4885).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+          const obj2 = { type: "rive", rive: tmp(4924).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
           cResult[6] = obj2;
           let tmp14 = obj2;
         } else {
@@ -83,7 +83,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = tmp13;
         cResult[9] = obj3;
         tmp16 = obj3;
-        const tmpResult = tmp(7093);
+        const tmpResult = tmp(7099);
       }
       const obj = require("c");
     }

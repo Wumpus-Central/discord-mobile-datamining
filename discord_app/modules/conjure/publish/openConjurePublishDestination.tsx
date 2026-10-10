@@ -10,7 +10,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const Routes = fn(1085).Routes;
-const MAIN_SURFACE = fn(10767).MAIN_SURFACE;
+const MAIN_SURFACE = fn(10802).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/openConjurePublishDestination.tsx");
 function openConjurePublishDestination(channel, arg1) {

@@ -13,6 +13,7 @@ const map3 = new Map();
 const map4 = new Map();
 const map5 = new Map();
 const map6 = new Map();
+const map7 = new Map();
 const Store = initializeDefault.Store;
 class ConjureDebugStore extends Store {}
 const prototype = ConjureDebugStore.prototype;
@@ -31,21 +32,21 @@ prototype["getFetchState"] = function getFetchState(arg0) {
   return str;
 };
 prototype["getLastCompaction"] = function getLastCompaction(projectId) {
-  value = map3.get(projectId);
+  value = map4.get(projectId);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype["getLastTurnUsage"] = function getLastTurnUsage(projectId) {
-  value = map5.get(projectId);
+  value = map6.get(projectId);
   if (value == null) {
     value = null;
   }
   return value;
 };
 prototype["getLastCompactionDecline"] = function getLastCompactionDecline(projectId) {
-  value = map4.get(projectId);
+  value = map5.get(projectId);
   if (value == null) {
     value = null;
   }
@@ -58,8 +59,15 @@ prototype["getForceCompactionState"] = function getForceCompactionState(projectI
   }
   return str;
 };
+prototype["getSandboxRestartState"] = function getSandboxRestartState(projectId) {
+  let str = map3.get(projectId);
+  if (str == null) {
+    str = "idle";
+  }
+  return str;
+};
 prototype["getTimingTraces"] = function getTimingTraces(projectId) {
-  value = map6.get(projectId);
+  value = map7.get(projectId);
   if (value == null) {
     value = closure_2;
   }
@@ -67,7 +75,7 @@ prototype["getTimingTraces"] = function getTimingTraces(projectId) {
 };
 prototype["getTimingTrace"] = function getTimingTrace(projectId, traceId) {
   closure_0 = traceId;
-  value = map6.get(projectId);
+  value = map7.get(projectId);
   let found;
   if (value != null) {
     found = value.find((id) => id.id === closure_0);
@@ -86,7 +94,9 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
             if (0 === map4.size) {
               if (0 === map5.size) {
                 if (0 === map6.size) {
-                  return false;
+                  if (0 === map7.size) {
+                    return false;
+                  }
                 }
               }
             }
@@ -101,6 +111,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     map4.clear();
     map5.clear();
     map6.clear();
+    map7.clear();
   },
   CONJURE_DEBUG_STATUS_REQUESTED: function handleStatusRequested(projectId) {
     const result = map1.set(projectId.projectId, "loading");
@@ -110,23 +121,33 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     if ("open" === projectId.connState) {
       return false;
     } else {
-      const tmp10 = "pending" === map2.get(projectId);
-      if (tmp10) {
+      let tmp14 = "pending" === map2.get(projectId);
+      if (tmp14) {
         const obj = { outcome: "failed", reason: "Connection lost before the worker answered", observedAt: null };
         const _Date = Date;
         const date = new Date();
         obj.observedAt = date.toISOString();
         const result = map2.set(projectId, obj);
       }
-      const tmp6 = "loading" === map1.get(projectId);
+      const tmp6 = "pending" === map3.get(projectId);
       if (tmp6) {
-        const result1 = map1.set(projectId, "failed");
+        const obj2 = { outcome: "failed", reason: "Connection lost before the worker answered", observedAt: null };
+        const _Date2 = Date;
+        const date1 = new Date();
+        obj2.observedAt = date1.toISOString();
+        const result1 = map3.set(projectId, obj2);
       }
-      let tmp8 = !tmp10;
-      if (!tmp10) {
-        tmp8 = !tmp6;
+      const tmp12 = "loading" === map1.get(projectId);
+      if (tmp12) {
+        const result2 = map1.set(projectId, "failed");
       }
-      return !tmp8;
+      if (!tmp14) {
+        tmp14 = tmp6;
+      }
+      if (!tmp14) {
+        tmp14 = tmp12;
+      }
+      return tmp14 && undefined;
     }
   },
   CONJURE_DEBUG_STATUS_SET: function handleStatusSet(failed) {
@@ -140,7 +161,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     const result2 = map1.set(projectId, "failed");
   },
   CONJURE_DEBUG_COMPACTION_REPORT: function handleCompactionReport(tokensBefore) {
-    const result = map3.set(tokensBefore.projectId, {
+    const result = map4.set(tokensBefore.projectId, {
       tokensBefore: tokensBefore.tokensBefore,
       tokensAfter: tokensBefore.tokensAfter,
       retainedMessages: tokensBefore.retainedMessages,
@@ -149,7 +170,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     });
   },
   CONJURE_DEBUG_COMPACTION_DECLINED: function handleCompactionDeclined(promptCeiling) {
-    const result = map4.set(promptCeiling.projectId, {
+    const result = map5.set(promptCeiling.projectId, {
       promptCeiling: promptCeiling.promptCeiling,
       threshold: promptCeiling.threshold,
       projected: promptCeiling.projected,
@@ -168,10 +189,20 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     const result = map2.set(outcome.projectId, obj);
     const tmp2 = true === outcome.pendingTurn ? { pendingTurn: true } : {};
   },
+  CONJURE_SANDBOX_RESTART_REQUESTED: function handleSandboxRestartRequested(projectId) {
+    const result = map3.set(projectId.projectId, "pending");
+  },
+  CONJURE_SANDBOX_RESTART_RESULT: function handleSandboxRestartResult(outcome) {
+    const result = map3.set(outcome.projectId, {
+      outcome: outcome.outcome,
+      reason: outcome.reason,
+      observedAt: outcome.observedAt,
+    });
+  },
   CONJURE_DEBUG_TIMING_TRACE: function handleTimingTrace(live) {
     ({ projectId, batch } = live);
     let found;
-    let items = map6.get(projectId);
+    let items = map7.get(projectId);
     if (items == null) {
       items = [];
     }
@@ -186,7 +217,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
         started_at2.started_at + started_at2.as_of - (started_at.started_at + started_at.as_of),
     );
     const substr = sorted.slice(0, 100);
-    const result = map6.set(
+    const result = map7.set(
       projectId,
       substr.sort((started_at, started_at2) => started_at.started_at - started_at2.started_at),
     );
@@ -196,7 +227,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     if (0 === obj.runeCount(turn.total)) {
       return false;
     } else {
-      const result = map5.set(turn.projectId, turn);
+      const result = map6.set(turn.projectId, turn);
     }
     obj = ConjureTypes;
   },
@@ -209,6 +240,7 @@ const conjureDebugStore = new ConjureDebugStore(DispatcherDefault, {
     map4.delete(projectId);
     map5.delete(projectId);
     map6.delete(projectId);
+    map7.delete(projectId);
   },
 });
 const size = fn(2);

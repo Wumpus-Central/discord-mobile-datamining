@@ -4,12 +4,12 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import BotTagDefault from "../../applications/native/BotTag.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const Text_Text = Text(5087);
+const Text_Text = Text(5088);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flexGrow: 1, alignItems: "center", flexDirection: "row" },
   botTag: { marginLeft: nativeDefault.space.PX_4 },

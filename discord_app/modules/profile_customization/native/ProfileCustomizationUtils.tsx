@@ -91,16 +91,16 @@ export const useUserProfileBannerBackgroundColor = ReactCompilerGating.isReactCo
         pendingAvatarSrc = AvatarUtils.getUserAvatarURL(obj2);
       }
     };
-export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, arg2, acked) {
+export const getAvatarSource = function getAvatarSource(getAvatarURL, guildId, avatarSrcOverride, stateFromStores) {
   if (null == getAvatarURL) {
     return null;
   } else {
-    let userAvatarURL = arg2;
-    if (undefined === arg2) {
+    let userAvatarURL = avatarSrcOverride;
+    if (undefined === avatarSrcOverride) {
       let memoizedImageSourceResult = VideoBackground.memoizedImageSource(
-        getAvatarURL.getAvatarURL(guildId, 80, !acked),
+        getAvatarURL.getAvatarURL(guildId, 80, !stateFromStores),
       );
-      const tmp2 = !acked;
+      const tmp2 = !stateFromStores;
     } else {
       if (userAvatarURL == null) {
         const obj2 = {};

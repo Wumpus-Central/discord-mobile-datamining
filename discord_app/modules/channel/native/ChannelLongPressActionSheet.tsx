@@ -76,7 +76,7 @@ let closure_37 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -257,7 +257,7 @@ function getActionSheetButtons(channel) {
       obj8.label = intl5.string(tmp8(isOptedIn[24]).t.OQ9MKu);
       obj8.IconComponent = tmp8(isOptedIn[33]).LinkIcon;
       obj8.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10254, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10287, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj8);
     }
@@ -324,7 +324,7 @@ function getActionSheetButtons(channel) {
     obj16.label = intl7.string(isMuted(isOptedIn[43]).jMMrDM);
     obj16.IconComponent = channel(isOptedIn[31]).PencilIcon;
     obj16.onPress = function onPress() {
-      router_utils.transitionTo(__initData5.CHANNEL(guildId, StaticChannelRoute.CONJURE, vibegrationsProjectId));
+      router_utils.transitionTo(__initData4.CHANNEL(guildId, StaticChannelRoute.CONJURE, vibegrationsProjectId));
     };
     const items4 = [obj16];
     obj15.buttons = items4;
@@ -627,7 +627,7 @@ function getActionSheetButtons(channel) {
             obj36.IconComponent = tmp93(isOptedIn[70]).ChatIcon;
             obj36.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10318, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10351, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj36);
@@ -661,7 +661,7 @@ function getActionSheetButtons(channel) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -690,7 +690,7 @@ function getActionSheetButtons(channel) {
                   } else {
                     value.openEndStageModal(closure_128_0);
                     paths = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp10) {
                   paths = tmp;
@@ -941,15 +941,15 @@ function getActionSheetButtons(channel) {
   }
   tmp31 = null != vibegrationsProjectId && null != guildId;
 }
-const SafetyWarningTypes = fn(10251).SafetyWarningTypes;
-const ChannelRecord = fn(2068);
+const SafetyWarningTypes = fn(10284).SafetyWarningTypes;
+const ChannelRecord = fn(2069);
 ({
   isGuildTextChannelType: closure_9,
   isGuildVocalChannelType: c10,
   isReadableType: closure_11,
   isTextChannel: closure_12,
 } = ChannelRecord);
-const StaticChannelRoute = fn(2071).StaticChannelRoute;
+const StaticChannelRoute = fn(2072).StaticChannelRoute;
 const Constants = fn(1085);
 ({
   AnalyticsObjectTypes: closure_24,
@@ -963,7 +963,7 @@ const Constants = fn(1085);
   Routes: closure_32,
   ZERO_STRING_GUILD_ID: closure_33,
 } = Constants);
-let closure_34 = fn(9600).ChannelDetailsNavigatorScreens;
+let closure_34 = fn(9629).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
@@ -972,7 +972,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const onClose = channel.onClose;
       let obj = channel(576);
-      const analyticsLocations = onClose(6848)(onClose(6872).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
+      const analyticsLocations = onClose(6851)(onClose(6878).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
       if (cResult[0] !== channel) {
         const guildId = channel.getGuildId();
         cResult[0] = channel;
@@ -982,8 +982,8 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       dependencyMap = tmp5;
-      const tmp4 = onClose(6848);
-      const isFavoritesGuildSelected = channel(10279).useIsFavoritesGuildSelected();
+      const tmp4 = onClose(6851);
+      const isFavoritesGuildSelected = channel(10312).useIsFavoritesGuildSelected();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
         cResult[2] = items;
@@ -1001,7 +1001,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp10 = cResult[4];
       }
-      const tmpResult = channel(10279);
+      const tmpResult = channel(10312);
       const stateFromStores = channel(504).useStateFromStores(tmp8, tmp10);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PermissionStore];
@@ -1054,7 +1054,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const optInEnabledForGuild = channel(6083).useOptInEnabledForGuild(tmp5);
+      const optInEnabledForGuild = channel(6076).useOptInEnabledForGuild(tmp5);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class O {
           constructor() {
@@ -1118,7 +1118,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = channel.parent_id;
       cResult[11] = tmp5;
       cResult[12] = F;
-      const tmpResult6 = channel(6083);
+      const tmpResult6 = channel(6076);
     }
   : function ChannelLongPressActionSheetConnected(channel) {
       channel = channel.channel;
@@ -1159,7 +1159,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         obj.isParentOptedIn =
           null != channel.parent_id && UserGuildSettingsStore.isChannelOptedIn(tmp, channel.parent_id);
         if (tmp == null) {
-          tmp = __initData6;
+          tmp = __initData5;
         }
         obj.isPinned = UserGuildSettingsStore.isFavorite(tmp, channel.id);
         return obj;
@@ -1365,11 +1365,11 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
             str = "danger";
           }
           return closure_1_35(
-            channel(6888).ActionSheetRow,
+            channel(6894).ActionSheetRow,
             {
               variant: str,
               label,
-              icon: closure_1_35(channel(6888).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
+              icon: closure_1_35(channel(6894).ActionSheetRow.Icon, { IconComponent, style: iconStyle, disableColor }),
               trailing,
               onPress() {
                 if (onPress != null) {

@@ -3,7 +3,7 @@ import search_tracking_TrackingDefault from "../tracking/Tracking.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const SearchTabs = fn(9285).SearchTabs;
+const SearchTabs = fn(9312).SearchTabs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");

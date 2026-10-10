@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = markAsDismissed(576);
       const stateFromStores = markAsDismissed(504).useStateFromStores(tmp4, tmp5);
-      const reducedMotion = noop.useContext(markAsDismissed(4795).AccessibilityPreferencesContext).reducedMotion;
+      const reducedMotion = noop.useContext(markAsDismissed(4834).AccessibilityPreferencesContext).reducedMotion;
       const tmp8 = closure_8(targetRef, visible);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = markAsDismissed(1126).intl;
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       if (cResult[19] === visible) {
                         let tmp19 = cResult[20];
                       }
-                      const coachmark = markAsDismissed(9413).useCoachmark(targetRef, tmp19);
+                      const coachmark = markAsDismissed(9442).useCoachmark(targetRef, tmp19);
                       return null;
                     }
                   }
@@ -228,7 +228,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = {
           type: "rive",
-          rive: markAsDismissed(4804).BadgesCoachmarkRive,
+          rive: markAsDismissed(4843).BadgesCoachmarkRive,
           aspectRatio: "16/9",
           riveProps: null,
         };

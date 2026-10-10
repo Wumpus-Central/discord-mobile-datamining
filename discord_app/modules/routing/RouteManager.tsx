@@ -31,14 +31,14 @@ class RouteManager {
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj2(11161);
+          obj = obj2(11202);
           if (!obj.convertRouteToNavigation(pathname)) {
             obj2(1112).replaceWith(Routes.ME);
             const tmp2Result = obj2(1112);
           }
         }
       }
-      state = KeybindRouterStore.getState();
+      const state = KeybindRouterStore.getState();
       if (state.basePath !== pathname.pathname) {
         state.resetPath(pathname.pathname);
       }
@@ -64,7 +64,7 @@ class RouteManager {
     };
     obj.flushRoute = function flushRoute() {
       clearTimeout(obj.timer);
-      state = KeybindRouterStore.getState();
+      const state = KeybindRouterStore.getState();
       if (null != state.path) {
         obj = obj2(1112);
         obj.transitionTo(state.path);
@@ -79,7 +79,7 @@ prototype["initialize"] = function initialize() {
   const history = obj2(1112).getHistory();
   this.unlistenHistory = history.listen(this.handleRouteChange);
   const obj = obj2(1112);
-  state = KeybindRouterStore.getState();
+  const state = KeybindRouterStore.getState();
   state.resetPath(obj2(1112).getHistory().location.pathname);
   this.unlistenKeyboardChange = KeybindRouterStore.subscribe(this.handleKeybindRouteChange);
   GatewayConnectionStore.addChangeListener(this.handleConnectionChange);
@@ -94,7 +94,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
       obj2 = obj2(1112);
       let tmp9Result = tmp9(location, REPLACE);
       if (null != tmp9Result) {
-        let tmp11Result = tmp11(11162);
+        let tmp11Result = tmp11(11203);
         let obj3 = {
           message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
           data: null,
@@ -192,14 +192,14 @@ obj2.handleConnectionChange = function handleConnectionChange() {
 obj2.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj2(11161);
+      obj = obj2(11202);
       if (!obj.convertRouteToNavigation(pathname)) {
         obj2(1112).replaceWith(Routes.ME);
         const tmp2Result = obj2(1112);
       }
     }
   }
-  state = KeybindRouterStore.getState();
+  const state = KeybindRouterStore.getState();
   if (state.basePath !== pathname.pathname) {
     state.resetPath(pathname.pathname);
   }
@@ -225,7 +225,7 @@ obj2.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
 };
 obj2.flushRoute = function flushRoute() {
   clearTimeout(obj.timer);
-  state = KeybindRouterStore.getState();
+  const state = KeybindRouterStore.getState();
   if (null != state.path) {
     obj = obj2(1112);
     obj.transitionTo(state.path);

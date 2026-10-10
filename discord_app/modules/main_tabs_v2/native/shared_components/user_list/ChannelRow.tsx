@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4661 from "../../../../../../_runtime/metro/04661__.js";
+import _modDef4702 from "../../../../../../_runtime/metro/04702__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -22,11 +22,11 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10187).UserRowModes;
-const ReadStateTypes = fn(5974).ReadStateTypes;
+const UserRowModes = fn(10216).UserRowModes;
+const ReadStateTypes = fn(5967).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -238,8 +238,8 @@ export default noop.memo(
               }
               obj2.guild = stateFromStores;
               obj2.channel = tmp4;
-              obj2.size = tmp(11549).GuildIconWithChannelTypeSizes.SMALL_32;
-              const tmp34 = closure_14(tmp(11549).GuildIconWithChannelType, obj2);
+              obj2.size = tmp(11595).GuildIconWithChannelTypeSizes.SMALL_32;
+              const tmp34 = closure_14(tmp(11595).GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
             cResult[27] = stateFromStores;
@@ -363,7 +363,7 @@ export default noop.memo(
               channel,
               size: GuildIconWithChannelType.GuildIconWithChannelTypeSizes.SMALL_32,
             };
-            tmp2 = state(GuildIconWithChannelType.GuildIconWithChannelType, obj);
+            tmp2 = closure_2_14(GuildIconWithChannelType.GuildIconWithChannelType, obj);
           }
           return tmp2;
         }, items5);
@@ -405,7 +405,7 @@ export default noop.memo(
             }
             const obj = { style: closure_7.subLabel, children: null };
             const obj2 = { color: nativeDefault.colors.TEXT_SUBTLE, style: closure_7.subLabelIcon };
-            const items = [state(TextIcon, obj2), ,];
+            const items = [closure_2_14(TextIcon, obj2), ,];
             const obj3 = {
               style: closure_7.threadName,
               variant: "text-xs/medium",
@@ -414,7 +414,7 @@ export default noop.memo(
               ellipsizeMode: "tail",
               children: stateFromStores1,
             };
-            items[1] = state(Text_Text.Text, obj3);
+            items[1] = closure_2_14(Text_Text.Text, obj3);
             let tmp5Result = null;
             if (null != stateFromStores2) {
               const obj4 = { children: null };
@@ -424,19 +424,19 @@ export default noop.memo(
                 color: "text-subtle",
                 children: "\u2022",
               };
-              const items1 = [state(Text_Text.Text, obj5)];
+              const items1 = [closure_2_14(Text_Text.Text, obj5)];
               const obj6 = {
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: DateUtils.calendarFormatCompact(_modDef4661(tmp14)),
+                children: DateUtils.calendarFormatCompact(_modDef4702(tmp14)),
               };
-              items1[1] = state(Text_Text.Text, obj6);
+              items1[1] = closure_2_14(Text_Text.Text, obj6);
               obj4.children = items1;
-              tmp5Result = value2(closure_2_15, obj4);
+              tmp5Result = value3(value2, obj4);
             }
             items[2] = tmp5Result;
             obj.children = items;
-            return value2(View, obj);
+            return value3(View, obj);
           }
         }, items7);
         const memo3 = subLabel.useMemo(() => {

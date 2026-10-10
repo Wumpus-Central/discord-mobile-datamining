@@ -48,7 +48,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -79,7 +79,7 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
       } else {
         value.openGuildVoiceModal(closure_129_0, "Channel List");
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -87,13 +87,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9285);
+const SearchConstants = fn(9312);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(17263).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9284).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(17335).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9311).SearchFilterAddLocations;
 const Constants = fn(1085);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(2071).StaticChannelRoute;
+const StaticChannelRoute = fn(2072).StaticChannelRoute;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressSearchLink(arg0) {
@@ -206,7 +206,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
         const obj2 = { channelId: guildId.id, guildId: null, searchContext: null };
         guildId = guildId.getGuildId();
         if (guildId == null) {
-          guildId = closure_3_15;
+          guildId = value2;
         }
         obj2.guildId = guildId;
         obj2.searchContext = searchContext;
@@ -256,7 +256,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
         const obj2 = { channelId: guildId.id, guildId: null, searchContext: null };
         guildId = guildId.getGuildId();
         if (guildId == null) {
-          guildId = closure_3_15;
+          guildId = value2;
         }
         obj2.guildId = guildId;
         obj2.searchContext = searchContext;
@@ -305,7 +305,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -373,7 +373,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
           const obj6 = closure_0(context[23]);
         }
@@ -415,7 +415,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -483,7 +483,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressCo
               }
             });
             c5 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
           const obj6 = closure_0(context[23]);
         }
@@ -527,7 +527,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(closure_2_15, channelId);
+    ChannelActionCreatorsDefault.preload(value2, channelId);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[29]).transitionToChannel(closure_0);
     });
@@ -550,7 +550,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(closure_2_15, channelId);
+    ChannelActionCreatorsDefault.preload(value2, channelId);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[29]).transitionToChannel(closure_0);
     });
@@ -578,7 +578,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(closure_2_15, arg1);
+    ChannelActionCreatorsDefault.preload(value2, arg1);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[29]).transitionToChannel(closure_0);
     });
@@ -602,7 +602,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
     if (parent != null) {
       parent.goBack();
     }
-    ChannelActionCreatorsDefault.preload(closure_2_15, arg1);
+    ChannelActionCreatorsDefault.preload(value2, arg1);
     const result1 = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
       searchContext(dependencyMap[29]).transitionToChannel(closure_0);
     });
@@ -845,7 +845,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
           const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
           let guildId = channel.getGuildId();
           if (guildId == null) {
-            guildId = closure_3_15;
+            guildId = value2;
           }
           obj2.guildId = guildId;
           obj2.searchContext = searchContext;
@@ -876,7 +876,7 @@ export const useOnPressMediaItem = function useOnPressMediaItem(searchContext) {
             const obj2 = { channelId: channel.id, guildId: null, searchContext: null };
             let guildId = channel.getGuildId();
             if (guildId == null) {
-              guildId = closure_3_15;
+              guildId = value2;
             }
             obj2.guildId = guildId;
             obj2.searchContext = searchContext;
@@ -933,8 +933,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(11990).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(11990);
+        const result = searchContext(12034).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(12034);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -966,8 +966,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(11990).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(11990);
+      const result = searchContext(12034).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(12034);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

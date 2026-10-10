@@ -232,7 +232,7 @@ export const beginConjureControlOperation = function beginConjureControlOperatio
     closure_129_1 = undefined;
     closure_129_2 = undefined;
     closure_129_3 = undefined;
-    let value4 = map.get(TableRowGroup);
+    value4 = map.get(TableRowGroup);
     if (value4 == null) {
       const obj4 = { holders: 0, timers: null };
       const _Set = Set;

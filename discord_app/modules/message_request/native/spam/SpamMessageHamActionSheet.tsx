@@ -3,7 +3,6 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5008 from "../../../../../_runtime/metro/05008__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
@@ -19,7 +18,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   container: null,
@@ -49,11 +48,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = tmp5[1];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         function handleRequestError() {
-          const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+          const obj2 = { text: null, variant: "critical" };
           const intl = channel(onCancel[10]).intl;
-          obj2.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
-          obj2.icon = onConfirm(onCancel[11]);
-          onConfirm(onCancel[9]).open(obj2);
+          obj2.text = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+          onConfirm(onCancel[9]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
         }
         cResult[0] = handleRequestError;
         let first1 = handleRequestError;
@@ -62,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         function handleAcceptSuccess() {
-          onConfirm(onCancel[12]).hideActionSheet();
+          onConfirm(onCancel[11]).hideActionSheet();
         }
         cResult[1] = handleAcceptSuccess;
         let tmp8 = handleAcceptSuccess;
@@ -92,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj = channel(onCancel[8]);
-      const stateFromStores = channel(onCancel[13]).useStateFromStores(tmp9, P);
+      const stateFromStores = channel(onCancel[12]).useStateFromStores(tmp9, P);
       if (cResult[5] !== stateFromStores) {
         class P {
           constructor() {
@@ -111,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = channel(onCancel[13]);
-      const messageRequestActions = channel(onCancel[14]).useMessageRequestActions(tmp14);
+      const tmpResult = channel(onCancel[12]);
+      const messageRequestActions = channel(onCancel[13]).useMessageRequestActions(tmp14);
       const acceptMessageRequest = messageRequestActions.acceptMessageRequest;
       ({ isAcceptLoading, isOptimisticAccepted } = messageRequestActions);
       if (cResult[7] === acceptMessageRequest) {
@@ -131,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = first;
       cResult[10] = onConfirm;
       cResult[11] = handleAccept;
-      const tmpResult2 = channel(onCancel[14]);
+      const tmpResult2 = channel(onCancel[13]);
     }
   : function SpamMessageRequestHamActionSheet(arg0) {
       ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
@@ -149,11 +147,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const messageRequestActions = useMessageRequestActions.useMessageRequestActions({
         user: stateFromStores,
         onError: function handleRequestError() {
-          const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+          const obj2 = { text: null, variant: "critical" };
           const intl = recipientId(1126).intl;
-          obj2.content = intl.string(recipientId(1126).t["EDYbS+"]);
-          obj2.icon = _modDef5008;
-          ToastActionCreatorsDefault.open(obj2);
+          obj2.text = intl.string(recipientId(1126).t["EDYbS+"]);
+          ToastActionCreatorsDefault.open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
         },
         onAcceptSuccess: function handleAcceptSuccess() {
           ActionSheetActionCreatorsDefault.hideActionSheet();

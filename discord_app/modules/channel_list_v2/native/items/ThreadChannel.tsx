@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
-import inlineStyles from "../../../../../_runtime/07559_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
 import showLongPressForumPostActionSheetDefault from "../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../threads/native/components/showThreadLongPressActionSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -19,14 +19,14 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11713);
+const RedesignChannelListConstants = fn(11758);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1085).Permissions;
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 let closure_16 = fn(1125).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: {
     marginVertical: CHANNEL_MARGIN_VERTICAL,
@@ -70,7 +70,7 @@ let closure_21 = noop.memo(
     ? function SpineCurveSvg(color) {
         const cResult = c.c(7);
         color = color.color;
-        const sum = __initData2(color.fontScale) / 2 - 16 + 2;
+        const sum = map1(color.fontScale) / 2 - 16 + 2;
         if (cResult[0] !== sum) {
           const rect = { position: "absolute", left: 23, top: sum };
           cResult[0] = sum;
@@ -106,7 +106,7 @@ let closure_21 = noop.memo(
     : function SpineCurveSvg(arg0) {
         ({ color, fontScale } = arg0);
         const size = { width: 12, height: 16, style: null, children: null };
-        const rect = { position: "absolute", left: 23, top: __initData2(fontScale) / 2 - 16 + 2 };
+        const rect = { position: "absolute", left: 23, top: map1(fontScale) / 2 - 16 + 2 };
         size.style = rect;
         size.children = constants(inlineStyles.Path, {
           fill: color,

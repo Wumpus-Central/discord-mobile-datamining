@@ -11,7 +11,7 @@ import NotificationCenterStore from "NotificationCenterStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(5974).ReadStateTypes;
+const ReadStateTypes = fn(5967).ReadStateTypes;
 let c10 = 100;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -352,7 +352,7 @@ export const useNotificationCenterItemsLoader = ReactCompilerGating.isReactCompi
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+51" };
                                 }
                               } else {
                                 try {
@@ -756,7 +756,7 @@ export const useNotificationCenterItemsLoader = ReactCompilerGating.isReactCompi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {

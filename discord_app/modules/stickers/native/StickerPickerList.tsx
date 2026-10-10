@@ -8,7 +8,7 @@ import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPro
 import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef9761 from "../../../../_runtime/metro/09761__.js";
+import _modDef9790 from "../../../../_runtime/metro/09790__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,8 +17,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(9731).useStickerPickerStore;
-const StickerPickerConstants = fn(9698);
+const useStickerPickerStore = fn(9760).useStickerPickerStore;
+const StickerPickerConstants = fn(9727);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -28,7 +28,7 @@ const Constants = fn(1085);
 ({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED },
   section: null,
@@ -81,8 +81,8 @@ let closure_17 = noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { source: _modDef9761, size: native.Icon.Sizes.SMALL };
-            const tmp11 = __initData2(native.Icon, obj3);
+            const obj3 = { source: _modDef9790, size: native.Icon.Sizes.SMALL };
+            const tmp11 = map1(native.Icon, obj3);
             cResult[5] = tmp11;
             let tmp8 = tmp11;
           } else {
@@ -104,7 +104,7 @@ let closure_17 = noop.memo(
               color: "interactive-text-active",
               children: tmp12,
             };
-            const tmp16 = __initData2(Text_Text.Text, obj4);
+            const tmp16 = map1(Text_Text.Text, obj4);
             cResult[7] = tmp4.nsfwText;
             cResult[8] = tmp16;
             let tmp14 = tmp16;
@@ -120,7 +120,7 @@ let closure_17 = noop.memo(
           const obj5 = { style: tmp6, children: null };
           const items = [tmp8, tmp14];
           obj5.children = items;
-          const tmp20 = state(View, obj5);
+          const tmp20 = closure_1_14(View, obj5);
           cResult[9] = tmp6;
           cResult[10] = tmp14;
           cResult[11] = tmp20;
@@ -137,7 +137,7 @@ let closure_17 = noop.memo(
         const obj = { style: null, children: null };
         const items = [tmp.nsfwContainer, { height: height.height }];
         obj.style = items;
-        const items1 = [__initData2(native.Icon, { source: _modDef9761, size: native.Icon.Sizes.SMALL })];
+        const items1 = [map1(native.Icon, { source: _modDef9790, size: native.Icon.Sizes.SMALL })];
         const obj3 = {
           style: tmp.nsfwText,
           variant: "text-sm/normal",
@@ -146,9 +146,9 @@ let closure_17 = noop.memo(
         };
         const intl = util.intl;
         obj3.children = intl.string(util.t.uy25Qz);
-        items1[1] = __initData2(Text_Text.Text, obj3);
+        items1[1] = map1(Text_Text.Text, obj3);
         obj.children = items1;
-        return state(View, obj);
+        return closure_1_14(View, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -174,7 +174,7 @@ let closure_18 = noop.memo(
             if (cResult[6] !== isSectionNitroLocked) {
               let tmp8 = isSectionNitroLocked;
               if (isSectionNitroLocked) {
-                tmp8 = __initData2(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+                tmp8 = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
               }
               cResult[6] = isSectionNitroLocked;
               cResult[7] = tmp8;
@@ -189,7 +189,7 @@ let closure_18 = noop.memo(
                 variant: "heading-sm/semibold",
                 children: label,
               };
-              const tmp12 = __initData2(Text_Text.Text, obj3);
+              const tmp12 = map1(Text_Text.Text, obj3);
               cResult[8] = label;
               cResult[9] = tmp12;
               let tmp10 = tmp12;
@@ -207,7 +207,7 @@ let closure_18 = noop.memo(
             const obj4 = { style: tmp6, children: null };
             const items = [tmp7, tmp10];
             obj4.children = items;
-            const tmp16 = state(View, obj4);
+            const tmp16 = closure_1_14(View, obj4);
             cResult[10] = tmp6;
             cResult[11] = tmp7;
             cResult[12] = tmp10;
@@ -229,11 +229,11 @@ let closure_18 = noop.memo(
         const items = [closure_16().section, sectionStyle, { height }];
         obj.style = items;
         if (isSectionNitroLocked) {
-          isSectionNitroLocked = __initData2(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+          isSectionNitroLocked = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
         }
         const items1 = [
           isSectionNitroLocked,
-          __initData2(Text_Text.Text, {
+          map1(Text_Text.Text, {
             lineClamp: 1,
             color: "interactive-text-default",
             variant: "heading-sm/semibold",
@@ -241,7 +241,7 @@ let closure_18 = noop.memo(
           }),
         ];
         obj.children = items1;
-        return state(View, obj);
+        return closure_1_14(View, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -261,7 +261,7 @@ let closure_19 = noop.memo(
         if (cResult[2] !== isSectionNitroLocked) {
           let tmp6 = isSectionNitroLocked;
           if (isSectionNitroLocked) {
-            tmp6 = __initData2(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+            tmp6 = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
           }
           cResult[2] = isSectionNitroLocked;
           cResult[3] = tmp6;
@@ -275,7 +275,7 @@ let closure_19 = noop.memo(
           }
           return tmp8;
         }
-        const tmp9 = __initData2(View, { style: tmp4, children: tmp5 });
+        const tmp9 = map1(View, { style: tmp4, children: tmp5 });
         cResult[4] = tmp4;
         cResult[5] = tmp5;
         cResult[6] = tmp9;
@@ -285,10 +285,10 @@ let closure_19 = noop.memo(
         let isSectionNitroLocked = height.isSectionNitroLocked;
         const obj = { style: { height: height.height }, children: null };
         if (isSectionNitroLocked) {
-          isSectionNitroLocked = __initData2(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+          isSectionNitroLocked = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
         }
         obj.children = isSectionNitroLocked;
-        return __initData2(View, obj);
+        return map1(View, obj);
       },
 );
 ReactCompilerGating = fn(558);
@@ -583,7 +583,7 @@ export default noop.memo(
         const items5 = [sectionDividerPositions, sectionFooterSizes, sectionNitroLocked];
         const callback = obj.useCallback(
           (arg0) =>
-            __initData2(closure_18, {
+            map1(closure_18, {
               label: sectionLabels[arg0],
               isSectionNitroLocked: sectionNitroLocked[arg0],
               sectionStyle: closure_8.sectionSticker,
@@ -595,14 +595,14 @@ export default noop.memo(
         const callback1 = obj.useCallback((arg0) => {
           if (null != sectionDividerPositions[arg0]) {
             const obj2 = { position: tmp };
-            return __initData2(PremiumUpsellSectionDividerDefault, obj2);
+            return map1(PremiumUpsellSectionDividerDefault, obj2);
           } else {
             let tmp3 = true === sectionNitroLocked[arg0];
             if (tmp3) {
               tmp3 = true === tmp2[arg0 + 1];
             }
             const obj = { height: sectionFooterSizes[arg0], isSectionNitroLocked: tmp3 };
-            return __initData2(closure_19, obj);
+            return map1(closure_19, obj);
           }
         }, items5);
         const items7 = [channel.guild_id, null != searchResults && searchResults.nitroLocked.length > 0];
@@ -610,7 +610,7 @@ export default noop.memo(
           let tmp2 = null;
           if (null != listHeaderDividerPosition) {
             const obj = { position: tmp };
-            tmp2 = __initData2(PremiumUpsellSectionDividerDefault, obj);
+            tmp2 = map1(PremiumUpsellSectionDividerDefault, obj);
           }
           return tmp2;
         }, items6);
@@ -629,7 +629,7 @@ export default noop.memo(
           let tmp = null;
           if (closure_30) {
             const obj = { guildId: channel.guild_id };
-            tmp = __initData2(StickerPickerPremiumSearchUpsellDefault, obj);
+            tmp = map1(StickerPickerPremiumSearchUpsellDefault, obj);
           }
           return tmp;
         }, items7);
@@ -651,12 +651,12 @@ export default noop.memo(
                 setFocusedSticker,
                 channel,
               };
-              let tmp5 = __initData2(StickerPickerListRowDefault, obj2);
-              let tmp2 = __initData2;
+              let tmp5 = map1(StickerPickerListRowDefault, obj2);
+              let tmp2 = map1;
             } else if (useStickerPickerListData.StickerPickerSectionType.NSFW === type) {
-              tmp2 = __initData2;
+              tmp2 = map1;
               const obj = { height: rowHeight };
-              tmp5 = __initData2(closure_17, obj);
+              tmp5 = map1(closure_17, obj);
             } else {
               return null;
             }
@@ -665,7 +665,7 @@ export default noop.memo(
               const obj3 = { children: null };
               const items = [tmp2(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {}), tmp5];
               obj3.children = items;
-              tmp18 = state(closure_2_15, obj3);
+              tmp18 = closure_2_14(value2, obj3);
             }
             return tmp18;
           }

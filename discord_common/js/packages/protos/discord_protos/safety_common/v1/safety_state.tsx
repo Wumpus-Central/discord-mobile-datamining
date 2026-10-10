@@ -895,7 +895,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
         );
         obj2.state = obj10;
       } else if (105 === tmp5) {
-        state = { oneofKind: "banned", banned: null };
+        let state = { oneofKind: "banned", banned: null };
         state.banned = tempBannedStateType.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj2.state.banned);
         obj2.state = state;
       } else if (1 === tmp5) {

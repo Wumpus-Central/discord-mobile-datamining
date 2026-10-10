@@ -33,7 +33,7 @@ function getAdvancedSettings() {
   items1[3] = obj5;
   return items1;
 }
-const MobileUserSettings = fn(7974).MobileUserSettings;
+const MobileUserSettings = fn(7992).MobileUserSettings;
 const MarketingURLs = fn(1085).MarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

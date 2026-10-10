@@ -1491,7 +1491,7 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
         value3 = emojiName.value;
       }
       obj2.emojiName = value3;
-      let value4;
+      value4 = undefined;
       if (animated != null) {
         value4 = animated.value;
       }
@@ -1529,8 +1529,8 @@ const result4 = UserSettingDefinitions.wrapSettingWithSelectiveSyncing(
 fn(2045);
 let items = [ListDensityMode.AUTO, ,];
 const obj86 = { comparator: discord_common_shallowEqualDefault };
-items[1] = fn(9286).ChannelListLayoutTypes.COZY;
-items[2] = fn(9286).ChannelListLayoutTypes.COMPACT;
+items[1] = fn(9313).ChannelListLayoutTypes.COZY;
+items[2] = fn(9313).ChannelListLayoutTypes.COMPACT;
 const set1 = new Set(items);
 UserSettingDefinitions = fn(2045);
 const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
@@ -1556,9 +1556,9 @@ const defineProtoSettingResult75 = UserSettingDefinitions.defineProtoSetting(
   },
 );
 const items1 = [
-  fn(9286).MessagePreviewTypes.ALL,
-  fn(9286).MessagePreviewTypes.UNREADS,
-  fn(9286).MessagePreviewTypes.NONE,
+  fn(9313).MessagePreviewTypes.ALL,
+  fn(9313).MessagePreviewTypes.UNREADS,
+  fn(9313).MessagePreviewTypes.NONE,
 ];
 const set2 = new Set(items1);
 UserSettingDefinitions = fn(2045);

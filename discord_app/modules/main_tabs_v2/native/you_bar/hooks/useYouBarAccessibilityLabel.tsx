@@ -185,7 +185,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   tmp21 = A;
   const tmpResult3 = name(gameMentionsAsPlainText[13]);
 }) : (function useYouBarAccessibilityLabel(id) {
-  _require = id(4923).useName(id);
+  _require = id(4962).useName(id);
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -196,7 +196,7 @@ export const useYouBarAccessibilityLabel = ReactCompilerGating.isReactCompilerEn
   if (setting != null) {
     text = setting.text;
   }
-  let obj = id(4923);
+  let obj = id(4962);
   let tmp6 = null;
   if ("" !== text) {
     tmp6 = text;

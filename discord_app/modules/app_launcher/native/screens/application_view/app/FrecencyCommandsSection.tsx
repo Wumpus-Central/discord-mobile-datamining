@@ -11,14 +11,14 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
-  container: { marginBottom: fn(11771).BETWEEN_SECTIONS_MARGIN },
+  container: { marginBottom: fn(11815).BETWEEN_SECTIONS_MARGIN },
   header: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 },
 };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginBottom: fn(11771).BETWEEN_SECTIONS_MARGIN };
+let obj3 = { marginBottom: fn(11815).BETWEEN_SECTIONS_MARGIN };
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx",
@@ -278,7 +278,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
         const intl = context(1126).intl;
         obj3.children = intl.string(context(1126).t.acSE0h);
-        obj2.children = arr(context(5087).Heading, obj3);
+        obj2.children = arr(context(5088).Heading, obj3);
         const items1 = [
           arr(View, obj2),
           arr.map((command, index) =>

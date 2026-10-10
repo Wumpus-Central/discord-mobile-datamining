@@ -33,7 +33,7 @@ let closure_18 = async function _authorizeWithPrompt(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -436,7 +436,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -574,7 +574,7 @@ let closure_20 = async function _authenticate(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(5636);
+let Constants = fn(5639);
 ({ TransportTypes: closure_9, RPC_AUTHENTICATED_SCOPE: c10, RPC_PRIVATE_SCOPE: closure_11 } = Constants);
 Constants = fn(1085);
 ({ Endpoints: closure_12, RPCCommands: map1, RPCErrors: closure_14 } = Constants);
@@ -601,10 +601,10 @@ export default function createAuthCommandHandlers(arg0, arg1) {
           id = socket.application.id;
           if (null == id) {
             let obj2 = { errorCode: constants2.INVALID_COMMAND };
-            const tmp29 = new closure_1(10896)(obj2, "No application.");
+            const tmp29 = new closure_1(10936)(obj2, "No application.");
             throw tmp29;
           } else {
-            IDENTIFY = closure_0(8441).OAuth2Scopes.IDENTIFY;
+            IDENTIFY = closure_0(8457).OAuth2Scopes.IDENTIFY;
             _authorize = function _authorize() {};
             let Storage2 = closure_0(510).Storage;
             value = Storage2.get(CachedTokens);
@@ -643,7 +643,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   return authorizeWithPrompt(obj2, closure_0, closure_1).then((result) => {
                     if (null == result) {
                       const obj = { errorCode: constants2.UNKNOWN_ERROR };
-                      const tmp22 = new closure_1(10896)(obj, "Unknown error occurred");
+                      const tmp22 = new closure_1(10936)(obj, "Unknown error occurred");
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
@@ -655,7 +655,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                           str = "unknown error";
                         }
                         const _HermesInternal = HermesInternal;
-                        const tmp82 = new closure_1(10896)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
+                        const tmp82 = new closure_1(10936)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
                         throw tmp82;
                       } else {
                         ({ access_token, scope, expires_in } = parsed);
@@ -691,7 +691,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
               catchPromise = authorizeWithPrompt(obj3, socket, signal).then((result) => {
                 if (null == result) {
                   const obj = { errorCode: constants2.UNKNOWN_ERROR };
-                  const tmp22 = new closure_1(10896)(obj, "Unknown error occurred");
+                  const tmp22 = new closure_1(10936)(obj, "Unknown error occurred");
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
@@ -703,7 +703,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       str = "unknown error";
                     }
                     const _HermesInternal = HermesInternal;
-                    const tmp82 = new closure_1(10896)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
+                    const tmp82 = new closure_1(10936)(obj2, "OAuth2 Error: " + parsed.error + ": " + str);
                     throw tmp82;
                   } else {
                     ({ access_token, scope, expires_in } = parsed);
@@ -731,7 +731,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
       if (null == access_token) {
         let obj = { errorCode: constants2.INVALID_TOKEN };
-        const tmp11 = new closure_1(10896)(obj, "No access token provided");
+        const tmp11 = new closure_1(10936)(obj, "No access token provided");
         throw tmp11;
       } else {
         return authenticate(socket, access_token);
@@ -784,7 +784,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                 socket.authorization.authing = false;
                 if (null == location) {
                   const obj2 = { errorCode: constants2.UNKNOWN_ERROR };
-                  const tmp25 = new hasItem(10896)(obj2, "Unknown error occurred");
+                  const tmp25 = new hasItem(10936)(obj2, "Unknown error occurred");
                   throw tmp25;
                 } else {
                   const _URL = URL;
@@ -806,13 +806,13 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                         }
                         const obj4 = { errorCode: constants2.OAUTH2_ERROR };
                         const _HermesInternal = HermesInternal;
-                        const tmp122 = new hasItem(10896)(obj4, "OAuth2 Error: " + value2 + ": " + str5);
+                        const tmp122 = new hasItem(10936)(obj4, "OAuth2 Error: " + value2 + ": " + str5);
                         throw tmp122;
                       }
                     }
                     if (null == value) {
                       const obj5 = { errorCode: constants2.OAUTH2_ERROR };
-                      const tmp8 = new hasItem(10896)(obj5, "OAuth2 Error: Unable to find auth code");
+                      const tmp8 = new hasItem(10936)(obj5, "OAuth2 Error: Unable to find auth code");
                       throw tmp8;
                     } else {
                       const obj = { code: value };

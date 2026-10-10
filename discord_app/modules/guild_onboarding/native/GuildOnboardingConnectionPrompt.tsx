@@ -16,19 +16,19 @@ import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(6786).OnboardingConnectionType;
-let closure_12 = fn(6782).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(6789).OnboardingConnectionType;
+let closure_12 = fn(6785).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(6263).NAV_BAR_HEIGHT,
+    marginTop: fn(6258).NAV_BAR_HEIGHT,
     marginBottom: nativeDefault.space.PX_16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -44,7 +44,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(6263).NAV_BAR_HEIGHT,
+  marginTop: fn(6258).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -644,7 +644,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.connectionsList,
           children: stateFromStores.map((connection, index) => {
             const obj = { connection, guildId, location: AnalyticsLocationDefault.GUILD_ONBOARDING };
-            return state(ConnectionCardDefault, obj, index);
+            return closure_2_14(ConnectionCardDefault, obj, index);
           }),
         };
         items13[1] = closure_14(ref, obj17);

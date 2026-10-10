@@ -18,17 +18,12 @@ export const showOverdueRemindersToast = function showOverdueRemindersToast() {
     if (mostRecentOverdueDueAt > obj2.getRemindersLastSeenAt()) {
       MessageRemindersSeenStorage.markRemindersSeen();
       const tmp3Result = MessageRemindersSeenStorage;
-      const obj3 = {
-        key: "overdue-message-reminders",
-        IconComponent: ClockIcon.ClockIcon,
-        content: null,
-        position: "bottom",
-        toastDurationMs: 5000,
-      };
+      const obj3 = { text: null, icon: null, position: "bottom", duration: 5000 };
       const intl = util.intl;
       const obj5 = { count: overdueMessageReminderCount };
-      obj3.content = intl.formatToPlainString(util.t.yBmFPA, obj5);
-      ToastActionCreatorsDefault.open(obj3);
+      obj3.text = intl.formatToPlainString(util.t.yBmFPA, obj5);
+      obj3.icon = ClockIcon.ClockIcon;
+      ToastActionCreatorsDefault.open("overdue-message-reminders", obj3);
     }
     obj2 = MessageRemindersSeenStorage;
   }

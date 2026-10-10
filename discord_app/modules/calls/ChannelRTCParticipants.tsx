@@ -59,11 +59,11 @@ function sortKey(type) {
     return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
-const CallConstants = fn(5114);
+const CallConstants = fn(5115);
 ({ isStreamParticipant: closure_14, ParticipantTypes: closure_15 } = CallConstants);
 let Constants = fn(1085);
 ({ ActivityTypes: closure_16, ChannelTypes: closure_17 } = Constants);
-Constants = fn(5116);
+Constants = fn(5117);
 ({ MediaEngineContextTypes: closure_18, Features: closure_19 } = Constants);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 const ChannelRTCParticipantsIndexes = {
@@ -124,7 +124,7 @@ class ChannelRTCParticipants {
         }
         return items;
       }
-      if (state(type)) {
+      if (closure_2_14(type)) {
         items.push(obj.STREAM);
         let isPoppedOut = type.type === constants.HIDDEN_STREAM;
         if (!isPoppedOut) {
@@ -252,11 +252,11 @@ prototype["updateStageSpeaker"] = function updateStageSpeaker(id) {
   const stageSpeakerIds2 = self.stageSpeakerIds;
   stageSpeakerIds2.delete(id);
 };
-prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f92347) {
+prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f92613) {
   const self = this;
-  const userId = f92347;
+  const userId = f92613;
   let flag;
-  if (this.participants[f92347] != null) {
+  if (this.participants[f92613] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.USER) {
@@ -294,10 +294,10 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f923
   }
   return flag;
 };
-prototype["updateParticipantQuality"] = function updateParticipantQuality(f92353, maxResolution, maxFrameRate) {
+prototype["updateParticipantQuality"] = function updateParticipantQuality(f92619, maxResolution, maxFrameRate) {
   const self = this;
   let flag;
-  if (this.participants[f92353] != null) {
+  if (this.participants[f92619] != null) {
     flag = arr.reduce((acc, type) => {
       let flag = acc;
       if (type.type === constants.STREAM) {

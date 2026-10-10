@@ -23,10 +23,10 @@ let items = [,];
 let obj2 = { duration: null, easing: null };
 const ANIMATION_DURATION_MS = nativeDefault.modules.toast.ANIMATION_DURATION_MS;
 obj2.duration = ANIMATION_DURATION_MS.resolve({});
-obj2.easing = fn(4811).Easing.linear;
+obj2.easing = fn(4850).Easing.linear;
 const QUEUE_ENTER_DELAY_MS = nativeDefault.modules.toast.QUEUE_ENTER_DELAY_MS;
 let closure_11 = QUEUE_ENTER_DELAY_MS.resolve({});
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj4 = { container: null, bounds: null, toast: null, toastTop: null, toastBottom: null };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -54,7 +54,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AnimatedToast(position) {
       const cResult = position(cleanUp[8]).c(19);
       position = position.position;
-      state = position.state;
+      const state = position.state;
       cleanUp = position.cleanUp;
       ({ entry, enterDelayMs } = position);
       const tmp2 = closure_12();
@@ -248,7 +248,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function AnimatedToast(position) {
       position = position.position;
-      state = position.state;
+      const state = position.state;
       const cleanUp = position.cleanUp;
       let first1;
       ({ entry, enterDelayMs } = position);

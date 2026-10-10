@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function showStorageDiagnosticsToast(text) {
   const obj = ToastActionCreatorsDefault;
-  obj.openMana("storage-diagnostics-upload", { text, icon: CircleInformationIcon.CircleInformationIcon });
+  obj.open("storage-diagnostics-upload", { text, icon: CircleInformationIcon.CircleInformationIcon });
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -29,7 +29,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -115,7 +115,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
   let obj2 = { variant: "text-sm/normal", color: "text-subtle", children: null };
   let intl = onBusyChange(1126).intl;
   obj2.children = intl.string(onBusyChange(1126).t.Fzi4HX);
-  const items = [closure_6(onBusyChange(5087).Text, obj2)];
+  const items = [closure_6(onBusyChange(5088).Text, obj2)];
   let obj3 = { variant: "secondary", text: null, loading: null, disabled: null, onPress: null };
   let intl2 = onBusyChange(1126).intl;
   obj3.text = intl2.string(onBusyChange(1126).t.VSunuT);
@@ -131,7 +131,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
     }
     return applyArgumentsResult;
   };
-  items[1] = closure_6(onBusyChange(5376).Button, obj3);
+  items[1] = closure_6(onBusyChange(5379).Button, obj3);
   obj.children = items;
-  return closure_7(onBusyChange(5374).Stack, obj);
+  return closure_7(onBusyChange(5377).Stack, obj);
 }

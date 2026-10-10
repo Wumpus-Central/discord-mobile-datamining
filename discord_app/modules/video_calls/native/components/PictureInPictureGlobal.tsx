@@ -20,17 +20,17 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(10827);
+const usePipDimensionsDefault = tmp5(10837);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9356).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9383).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1085).PictureInPicturePositions;
-const ParticipantTypes = fn(5114).ParticipantTypes;
+const ParticipantTypes = fn(5115).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: { flex: 1, marginLeft: 12, marginRight: 12 },
   elevationShadow: null,
@@ -376,8 +376,8 @@ let closure_19 = noop.memo(
             }
           }
           const tmpResult8 = tmp(504);
-          const shouldForcePipOrientation = tmp(10824).useShouldForcePipOrientation(tmp31);
-          tmp(8310);
+          const shouldForcePipOrientation = tmp(10834).useShouldForcePipOrientation(tmp31);
+          tmp(8326);
           if (cResult[20] === channel.id) {
             class M {
               constructor() {
@@ -425,7 +425,7 @@ let closure_19 = noop.memo(
           cResult[21] = shouldForcePipOrientation;
           cResult[22] = obj2;
           tmp35 = obj2;
-          const tmpResult9 = tmp(10824);
+          const tmpResult9 = tmp(10834);
         }
         let tmp19 = stateFromStores1;
         if (null != tmp6) {
@@ -659,7 +659,7 @@ let closure_20 = noop.memo(
         [tmp5, tmp6] = noop.useState(first);
         if (cResult[1] !== channel) {
           const obj2 = { channel };
-          const tmp10 = closure_1_15(closure_19, obj2);
+          const tmp10 = value2(closure_19, obj2);
           cResult[1] = channel;
           cResult[2] = tmp10;
           let tmp7 = tmp10;
@@ -674,7 +674,7 @@ let closure_20 = noop.memo(
             return tmp11;
           }
         }
-        const tmp12 = closure_1_15(PictureInPictureDefault, {
+        const tmp12 = value2(PictureInPictureDefault, {
           channel,
           preferredPosition: tmp5,
           onMove: tmp6,
@@ -695,8 +695,8 @@ let closure_20 = noop.memo(
           noop.useState(() => constants.TOP_RIGHT),
           2,
         );
-        obj.children = closure_1_15(closure_19, { channel });
-        return closure_1_15(PictureInPictureDefault, obj);
+        obj.children = value2(closure_19, { channel });
+        return value2(PictureInPictureDefault, obj);
       },
 );
 const __initData = {

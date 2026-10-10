@@ -5,8 +5,8 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3083 from "../../../Checkpoint.messages.js";
-import _modDef3115 from "../../../Checkpoint2026.messages.js";
+import _modDef3086 from "../../../Checkpoint.messages.js";
+import _modDef3118 from "../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import TextWritingAnimation from "../TextWritingAnimation.tsx";
 import CheckpointKnickKnacksDefault from "../CheckpointKnickKnacks.tsx";
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = util.intl;
-          const stringResult = intl.string(_modDef3083["CdU/PF"]);
+          const stringResult = intl.string(_modDef3086["CdU/PF"]);
           cResult[7] = stringResult;
           let tmp14 = stringResult;
         } else {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] !== name) {
             const intl2 = util.intl;
             const obj4 = { username: name };
-            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3115.xhZ23b, obj4);
+            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3118.xhZ23b, obj4);
             cResult[11] = name;
             cResult[12] = formatToPlainStringResult;
             let tmp20 = formatToPlainStringResult;
@@ -188,12 +188,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.style = items1;
       const tmp5 = CheckpointScreenDefault;
       const intl = util.intl;
-      obj6.text = intl.string(_modDef3083["CdU/PF"]);
+      obj6.text = intl.string(_modDef3086["CdU/PF"]);
       obj6.delay = delay;
       const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), ,];
       const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
       const intl2 = util.intl;
-      obj8.text = intl2.formatToPlainString(_modDef3115.xhZ23b, { username: name });
+      obj8.text = intl2.formatToPlainString(_modDef3118.xhZ23b, { username: name });
       obj8.delay = delay + TextWritingAnimation.DURATION;
       items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
       items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

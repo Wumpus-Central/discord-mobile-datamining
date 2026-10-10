@@ -1,8 +1,8 @@
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
 import ExpressionPickerConstants from "ExpressionPickerConstants.tsx";
-import uniqueIdDefault from "../../../_runtime/05942_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05935_uniqueId.js";
 import identity_mod from "../../../_runtime/metro/01267__.js";
-import 04951__ from "../../../_runtime/metro/04951__.js";
+import 04990__ from "../../../_runtime/metro/04990__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const ExpressionPickerViewType = ExpressionPickerConstants.ExpressionPickerViewT
 let closure_3 = Object.freeze({ activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-const withEqualityFnResult = identity(module_4951.persist(() => closure_3, {
+const withEqualityFnResult = identity(module_4990.persist(() => closure_3, {
   name: "expression-picker-last-active-view",
   partialize(lastActiveView) {
     return { lastActiveView: lastActiveView.lastActiveView };
@@ -26,7 +26,7 @@ export const openExpressionPicker = function openExpressionPicker(arg0, arg1, ar
   require("ReactBatchUpdates").batchUpdates(() => withEqualityFnResult.setState({ activeView, activeViewType, activeChannelId, lastActiveView: withEqualityFnResult.getState().activeView }));
 };
 export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) {
-  state = withEqualityFnResult.getState();
+  const state = withEqualityFnResult.getState();
   let tmp2 = undefined !== arg0 && arg0 !== state.activeViewType;
   if (!tmp2) {
     tmp2 = undefined !== arg1 && arg1 !== state.activeChannelId;
@@ -40,7 +40,7 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
   }
 };
 export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(arg0, arg1) {
-  state = withEqualityFnResult.getState();
+  const state = withEqualityFnResult.getState();
   if (null == state.activeView) {
     let EMOJI = state.lastActiveView;
     if (EMOJI == null) {
@@ -69,7 +69,7 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
   }
 };
 export const toggleExpressionPicker = function toggleExpressionPicker(activeView, activeViewType, activeChannelId) {
-  state = withEqualityFnResult.getState();
+  const state = withEqualityFnResult.getState();
   if (state.activeView === activeView) {
     if (state.activeViewType === activeViewType) {
       if (state.activeChannelId === activeChannelId) {

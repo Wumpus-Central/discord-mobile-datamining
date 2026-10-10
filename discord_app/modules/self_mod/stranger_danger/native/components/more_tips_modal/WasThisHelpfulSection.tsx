@@ -11,8 +11,8 @@ import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.t
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const constants = fn(10251).SafetyWarningFeedbackTypes;
-const Constants = fn(10348);
+const constants = fn(10284).SafetyWarningFeedbackTypes;
+const Constants = fn(10381);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
   UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_9,
@@ -20,7 +20,7 @@ const Constants = fn(10348);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flexDirection: "column", alignItems: "center" },
   buttonsContainer: { flexDirection: "row", marginTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 },
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     obj1.text = intl.string(tmp(tmp2[12]).t["gd/Yqs"]);
                     obj1.icon = tmp(tmp2[13]).ShieldIcon;
                     obj1.iconColor = closure_1(tmp2[6]).colors.ICON_BRAND;
-                    openManaResult = obj2.openMana(tmp6, obj1);
+                    openResult = obj2.open(tmp6, obj1);
                     tmpResult = tmp(tmp2[14]);
                     obj6 = { channelId: tmp3, warningId: tmp4, senderId, warningType: null, cta: null };
                     type = undefined;
@@ -235,7 +235,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj1.text = intl.string(tmp(tmp2[12]).t["gd/Yqs"]);
                   obj1.icon = tmp(tmp2[13]).ShieldIcon;
                   obj1.iconColor = closure_1(tmp2[6]).colors.ICON_BRAND;
-                  openManaResult = obj2.openMana(tmp6, obj1);
+                  openResult = obj2.open(tmp6, obj1);
                   tmpResult = tmp(tmp2[14]);
                   obj6 = { channelId: tmp3, warningId: tmp4, senderId, warningType: null, cta: null };
                   type = undefined;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj1.text = intl.string(tmp(tmp2[12]).t["gd/Yqs"]);
             obj1.icon = tmp(tmp2[13]).ShieldIcon;
             obj1.iconColor = closure_1(tmp2[6]).colors.ICON_BRAND;
-            openManaResult = obj2.openMana(tmp6, obj1);
+            openResult = obj2.open(tmp6, obj1);
             tmpResult = tmp(tmp2[14]);
             obj6 = { channelId: tmp3, warningId: tmp4, senderId, warningType: null, cta: null };
             type = undefined;
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.text = intl.string(util.t["gd/Yqs"]);
         obj3.icon = ShieldIcon.ShieldIcon;
         obj3.iconColor = nativeDefault.colors.ICON_BRAND;
-        ToastActionCreatorsDefault.openMana(tmp6, obj3);
+        ToastActionCreatorsDefault.open(tmp6, obj3);
         const obj4 = { channelId, warningId, senderId, warningType: null, cta: null };
         let type;
         if (stateFromStores != null) {

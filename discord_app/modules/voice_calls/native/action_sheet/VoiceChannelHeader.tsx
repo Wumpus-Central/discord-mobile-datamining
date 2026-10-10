@@ -8,7 +8,7 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10298 from "../../../../../_runtime/metro/10298__.js";
+import _modDef10331 from "../../../../../_runtime/metro/10331__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -51,7 +51,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(16);
       channel = channel.channel;
       const tmp4 = closure_12();
-      state = CallStateHooksDefault(channel.id).state;
+      const state = CallStateHooksDefault(channel.id).state;
       if (cResult[0] === channel) {
         if (cResult[1] === tmp4.subtitle) {
           if (cResult[2] === state) {
@@ -131,7 +131,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : function PrivateChannelSubtitle(channel) {
       channel = channel.channel;
       const tmp = closure_12();
-      state = CallStateHooksDefault(channel.id).state;
+      const state = CallStateHooksDefault(channel.id).state;
       const obj = { style: tmp.subtitleWrapper, children: null };
       const items = [
         collapsed(OngoingCallStatusLabelDefault, {
@@ -182,7 +182,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channel(576);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-      const tmp10 = stateFromStores1(10976)(channel);
+      const tmp10 = stateFromStores1(11016)(channel);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [EmbeddedActivitiesStore];
         cResult[3] = items1;
@@ -224,7 +224,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = stateFromStores1;
       const tmpResult = channel(504);
       stateFromStores1 = channel(504).useStateFromStores(tmp11, A, tmp15);
-      const tmp17 = tmp9(5418)(channel);
+      const tmp17 = tmp9(5421)(channel);
       if (stateFromStores != null) {
         class A {
           constructor() {
@@ -282,7 +282,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-overlay-light",
                     children: tmp17,
                   };
-                  const tmp34 = closure_10(tmp(5087).Text, obj2);
+                  const tmp34 = closure_10(tmp(5088).Text, obj2);
                 }
                 cResult[21] = tmp17;
                 cResult[22] = tmp34;
@@ -312,7 +312,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-overlay-light",
                     children: tmp18,
                   };
-                  const tmp36 = closure_10(tmp(5087).Text, obj3);
+                  const tmp36 = closure_10(tmp(5088).Text, obj3);
                 }
                 cResult[23] = tmp18;
                 cResult[24] = tmp36;
@@ -462,9 +462,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { size: channel(1200).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
       if (isRoleRequiredDefault(channel)) {
-        let tmp5Result = tmp5(13541);
+        let tmp5Result = tmp5(13592);
       } else {
-        tmp5Result = tmp5(11087);
+        tmp5Result = tmp5(11127);
       }
       obj6.source = tmp5Result;
       obj6.style = tmp.icons;
@@ -479,7 +479,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: formatToPlainStringResult,
         };
-        tmp14Result = closure_10(tmp2(5087).Text, obj8);
+        tmp14Result = closure_10(tmp2(5088).Text, obj8);
       }
       const items4 = [tmp14Result];
       let tmp14Result3 = name;
@@ -491,7 +491,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: name,
         };
-        tmp14Result3 = closure_10(tmp2(5087).Text, obj9);
+        tmp14Result3 = closure_10(tmp2(5088).Text, obj9);
       }
       items4[1] = tmp14Result3;
       obj7.children = items4;
@@ -529,7 +529,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = collapsed(closure_15, {
         onPress,
-        iconSource: _modDef10298,
+        iconSource: _modDef10331,
         iconStyle: tmp4.icons,
         accessibilityLabel: first,
       });
@@ -537,12 +537,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4.icons;
       cResult[3] = tmp8;
       tmp7 = tmp8;
-      const obj2 = { onPress, iconSource: _modDef10298, iconStyle: tmp4.icons, accessibilityLabel: first };
+      const obj2 = { onPress, iconSource: _modDef10331, iconStyle: tmp4.icons, accessibilityLabel: first };
     }
   : function AddMemberButton(onPress) {
       const obj = {
         onPress: onPress.onPress,
-        iconSource: _modDef10298,
+        iconSource: _modDef10331,
         iconStyle: closure_12().icons,
         accessibilityLabel: null,
       };

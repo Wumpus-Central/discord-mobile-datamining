@@ -92,7 +92,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1085);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(5084);
+const MessageConstants = fn(5085);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,
@@ -320,7 +320,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
       const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-      messageGroupSpacing = MessageDisplayCompact.getSetting() ? __initData : __initData2;
+      messageGroupSpacing = MessageDisplayCompact.getSetting() ? __initData : map1;
     }
     return messageGroupSpacing;
   },
@@ -329,14 +329,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? __initData : __initData2);
+    return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? __initData : map1);
   },
   set: undefined,
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
     const MessageDisplayCompact = require("UserSettings").MessageDisplayCompact;
-    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? __initData : __initData2);
+    return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? __initData : map1);
   },
   set: undefined,
 });

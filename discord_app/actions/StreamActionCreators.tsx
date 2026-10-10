@@ -92,7 +92,7 @@ let closure_19 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -208,7 +208,7 @@ let closure_20 = async function _notifyStreamStart(arg0) {
 };
 const Constants = fn(1085);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(5895).StreamTypes;
+const StreamTypes = fn(5898).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -316,7 +316,7 @@ export const updateStreamSettings = function updateStreamSettings(noTrack) {
 export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: __initData2.STREAM(encodeStreamKeyResult),
+    url: map1.STREAM(encodeStreamKeyResult),
     body: { region: preferredRegion },
     oldFormErrors: true,
     rejectWithError: true,
@@ -372,8 +372,8 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(5411).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(5411);
+          closure_0(5414).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5414);
         }
       }
     };

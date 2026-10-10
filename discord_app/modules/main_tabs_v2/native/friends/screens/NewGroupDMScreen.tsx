@@ -57,7 +57,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         }
                       } else {
                         try {
@@ -154,7 +154,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                                 const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                                 return obj5;
                               } else {
-                                const obj6 = v3(7008);
+                                const obj6 = v3(7014);
                                 v3 = 1;
                                 dependencyMap = 1;
                                 const obj7 = {
@@ -191,14 +191,14 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj = { value, done: true };
                               return obj;
                             } else {
-                              const tmp8 = v3(7010);
+                              const tmp8 = v3(7016);
                               const call = tmp8.call;
                               if (typeof call === "unknown") {
                                 tmp8(false, true);
                               } else {
                                 call(tmp9, false, true);
                               }
-                              v3(11297)(closure_128_3);
+                              v3(11338)(closure_128_3);
                               dependencyMap = 3;
                               tmp9 = closure_128_3;
                             }
@@ -291,7 +291,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10187).UserRowModes;
+const UserRowModes = fn(10216).UserRowModes;
 const Constants = fn(1085);
 ({
   InstantInviteSources: map1,
@@ -301,7 +301,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE },
   container: { height: "100%", display: "flex" },
@@ -410,7 +410,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -457,10 +457,10 @@ export default function NewGroupDMScreen(navigation) {
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              const obj7 = { key: "GROUP_DM_ADD_ERROR", content: null };
+              const obj7 = { text: null };
               const intl = parent(tmp50[24]).intl;
-              obj7.content = intl.string(parent(tmp50[24]).t["N/9OFy"]);
-              tmp4(tmp50[23]).open(obj7);
+              obj7.text = intl.string(parent(tmp50[24]).t["N/9OFy"]);
+              tmp4(tmp50[23]).open("GROUP_DM_ADD_ERROR", obj7);
               const obj5 = tmp4(tmp50[23]);
             } else {
               if (3 === tmp8) {
@@ -799,7 +799,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

@@ -16,20 +16,20 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
     name = channel.name;
   }
   if (null != name) {
-    const obj2 = { key: null, content: null };
     const _HermesInternal = HermesInternal;
-    obj2.key = "AUTOMOD_REMOVED_" + channel_id;
+    const obj2 = { text: null };
+    const combined = "AUTOMOD_REMOVED_" + channel_id;
     const intl = util.intl;
     const obj3 = { channel: null };
     const _HermesInternal2 = HermesInternal;
     obj3.channel = "#" + name;
-    obj2.content = intl.formatToPlainString(util.t["9U3Wb3"], obj3);
-    ToastActionCreatorsDefault.open(obj2);
+    obj2.text = intl.formatToPlainString(util.t["9U3Wb3"], obj3);
+    ToastActionCreatorsDefault.open(combined, obj2);
   }
 };
 export const openRemovedContentModal = function openRemovedContentModal(action) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(17921, dependencyMap.paths),
+    asyncRequireImpl(17993, dependencyMap.paths),
     "AutomodRemovedContentSheet",
     { action },
   );

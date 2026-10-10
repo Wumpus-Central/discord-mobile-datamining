@@ -2,18 +2,18 @@
 import inject from "inject.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import _modDef5154 from "../../../../../_runtime/metro/05154__.js";
+import _modDef5155 from "../../../../../_runtime/metro/05155__.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
 import transformStatsDefault from "transformStats.tsx";
-import _modDef5201 from "../../../../../_runtime/metro/05201__.js";
+import _modDef5202 from "../../../../../_runtime/metro/05202__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/05203_reduce.js";
-import _modDef5206 from "../../../../../_runtime/metro/05206__.js";
+import reduceDefault from "../../../../../_runtime/05204_reduce.js";
+import _modDef5207 from "../../../../../_runtime/metro/05207__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(5116);
+let Constants = fn(5117);
 ({
   StatsFilter: closure_4,
   ExperimentFlags: hasOwnProperty,
@@ -23,7 +23,7 @@ let Constants = fn(5116);
   MediaTypes: closure_9,
   SIMULCAST_HQ_QUALITY: c10,
 } = Constants);
-Constants = fn(5138);
+Constants = fn(5139);
 ({
   NATIVE_MODE_VALUES: closure_11,
   InputModes: closure_12,
@@ -243,7 +243,7 @@ class Connection extends tmp4 {
       closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
-      const tmp2 = _modDef5154(closure_0.videoStreamParameters);
+      const tmp2 = _modDef5155(closure_0.videoStreamParameters);
       closure_0 = tmp2;
       if (arg0 === closure_0.userId) {
         if (null != arr) {
@@ -413,9 +413,9 @@ class Connection extends tmp4 {
               if (diff1 >= 0) {
                 closure_0.emit(
                   discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef5206(diff1 / (diff + diff1), 0, 1),
+                  100 * _modDef5207(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef5206(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5207(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -1045,15 +1045,15 @@ prototype["getStats"] = function getStats() {
         const obj = self(2014);
       }
     });
-    let obj = self(5198);
-    resolved = self(5198)
-      .timeout(promise, self(5147).STATS_INTERVAL)
+    let obj = self(5199);
+    resolved = self(5199)
+      .timeout(promise, self(5148).STATS_INTERVAL)
       .catch((error) => {
-        if (!(error instanceof self(5198).TimeoutError)) {
+        if (!(error instanceof self(5199).TimeoutError)) {
           throw error;
         }
       });
-    const timeoutResult = self(5198).timeout(promise, self(5147).STATS_INTERVAL);
+    const timeoutResult = self(5199).timeout(promise, self(5148).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1084,7 +1084,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef5201(sorted, sorted1);
+  _modDef5202(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1505,6 +1505,10 @@ prototype["setSingleCpuCopy"] = function setSingleCpuCopy(enabled) {
   const conn = this.conn;
   conn.setTransportOptions({ singleCpuCopy: this.singleCpuCopy });
 };
+prototype["setAudioLatencyMeasurement"] = function setAudioLatencyMeasurement(audioLatencyMeasurement) {
+  const conn = this.conn;
+  conn.setTransportOptions({ audioLatencyMeasurement });
+};
 prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTransport(overrideDeniedVideoCodecs) {
   const self = this;
   let someResult =
@@ -1888,6 +1892,13 @@ prototype["setLocalVideoSinkWants"] = function setLocalVideoSinkWants(localVideo
   self.localVideoSinkWants = localVideoSinkWants;
   tmp2 = entries[Symbol.iterator]();
 };
+prototype["setAvSyncEnabled"] = function setAvSyncEnabled(arg0, arg1) {
+  const conn = this.conn;
+  const setAvSyncEnabled = conn.setAvSyncEnabled;
+  if (setAvSyncEnabled != null) {
+    setAvSyncEnabled(arg0, arg1);
+  }
+};
 prototype["startSamplesLocalPlayback"] = function startSamplesLocalPlayback(arg0, numberOfChannels, items, fn) {
   if (numberOfChannels.numberOfChannels > 2) {
     fn(2, "Too many channels");
@@ -1946,7 +1957,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef5201(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5202(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;

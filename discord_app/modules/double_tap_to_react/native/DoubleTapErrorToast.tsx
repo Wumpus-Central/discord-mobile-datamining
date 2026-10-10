@@ -21,5 +21,5 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
     const obj3 = { emojiName };
     stringResult = intl.formatToPlainString(util.t.WZGLFq, obj3);
   }
-  ToastActionCreatorsDefault.openMana("EMOJI_DOUBLE_TAP_ERROR", { text: stringResult, variant: "critical" });
+  ToastActionCreatorsDefault.open("EMOJI_DOUBLE_TAP_ERROR", { text: stringResult, variant: "critical" });
 };

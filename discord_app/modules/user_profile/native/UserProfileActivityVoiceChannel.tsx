@@ -77,7 +77,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
         const obj2 = { text: guild.name, icon: null };
         const obj = ToastActionCreatorsDefault;
         obj2.icon = { type: "guild", src: getGuildIconURL(guild, 48), name: guild.name };
-        obj.openMana("GUILD_NAME_TOAST", obj2);
+        obj.open("GUILD_NAME_TOAST", obj2);
       },
       children: null,
     };
@@ -130,7 +130,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13099, dependencyMap.paths),
+      asyncRequireImpl(13146, dependencyMap.paths),
       "UserProfileActivityVoiceChannelUsers",
       {
         users,

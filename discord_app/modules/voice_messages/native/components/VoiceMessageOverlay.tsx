@@ -9,7 +9,7 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import inlineStyles from "../../../../../_runtime/07559_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/07576_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,10 +21,10 @@ const ReanimatedRexport_mod = ReanimatedRexport2;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(11586).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(11587).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(11632).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(11633).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1085).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(11588).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11634).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const VoiceMessageOverlay = "VoiceMessageOverlay";
@@ -34,11 +34,11 @@ let c19 = 500;
 let ReanimatedRexport = ReanimatedRexport_mod;
 let closure_20 = ReanimatedRexport.createAnimatedComponent(fn(1200).Icon);
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_21 = ReanimatedRexport.createAnimatedComponent(fn(5087).Text);
+let closure_21 = ReanimatedRexport.createAnimatedComponent(fn(5088).Text);
 let closure_22 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c23 = 68;
 let c24 = 56;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_25 = createStyles.createStyles(() => {
   const obj = {
     innerContainer: {
@@ -348,7 +348,7 @@ let closure_37 = noop.memo(
             maxFontSizeMultiplier: 2,
             children: tmp11,
           };
-          const tmp25 = __initData2(closure_21, obj8);
+          const tmp25 = map1(closure_21, obj8);
           cResult[6] = animatedStyle;
           cResult[7] = tmp11;
           cResult[8] = tmp25;
@@ -442,7 +442,7 @@ let closure_37 = noop.memo(
             maxFontSizeMultiplier: 2,
             children: stringResult,
           };
-          tmp26 = __initData2(closure_21, obj2);
+          tmp26 = map1(closure_21, obj2);
         }
         return tmp26;
       },

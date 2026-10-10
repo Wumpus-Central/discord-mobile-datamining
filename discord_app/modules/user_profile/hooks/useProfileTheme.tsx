@@ -11,7 +11,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const useEffectiveThemeOverride = fn(8338).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(8354).useEffectiveThemeOverride;
 const ThemeTypes = fn(1085).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

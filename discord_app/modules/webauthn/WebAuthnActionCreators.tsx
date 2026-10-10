@@ -51,7 +51,7 @@ let closure_8 = async function _editWebAuthnCredential(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -106,7 +106,7 @@ let closure_8 = async function _editWebAuthnCredential(arg0) {
             const obj2 = closure_131_1(closure_131_2[3]);
           }
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp22) {
         c5 = tmp;
@@ -137,7 +137,7 @@ let closure_10 = async function _finishRegisterWebAuthnCredential() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -184,7 +184,7 @@ let closure_10 = async function _finishRegisterWebAuthnCredential() {
           const obj11 = { type: "MFA_ENABLE_SUCCESS", codes: closure_131_0.body.backup_codes };
           closure_132_1(closure_132_2[3]).dispatch(obj11);
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp6) {
         c6 = tmp;

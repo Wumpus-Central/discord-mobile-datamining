@@ -6,7 +6,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import AppLauncherFlashList from "AppLauncherFlashList.tsx";
-import _modDef11808 from "../../../../../_runtime/metro/11808__.js";
+import _modDef11852 from "../../../../../_runtime/metro/11852__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -16,7 +16,7 @@ require = fn;
 let closure_3 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
   searchBarContainer: { marginBottom: 16 },
   emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" },
@@ -122,20 +122,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       let appLauncherFlashListProps;
       const bottom = appLauncherFlashListProps(1631)().bottom;
-      appLauncherFlashListProps = ref(11743).useAppLauncherFlashListProps();
+      appLauncherFlashListProps = ref(11788).useAppLauncherFlashListProps();
       const items = [appLauncherFlashListProps.scrollerRef, ref];
       const memo = noop.useMemo(() => mergeProps.mergeRefs(appLauncherFlashListProps.scrollerRef, ref), items);
       const obj3 = { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo };
       const items1 = [{ paddingBottom: bottom }, merged.contentContainerStyle];
       obj3.contentContainerStyle = items1;
-      const obj = ref(11743);
+      const obj = ref(11788);
       const merged1 = Object.assign(merged);
       ({
         onScroll: obj2.animatedOnScroll,
         gestureRef: obj2.simultaneousHandlers,
         animatedProps: obj2.animatedProps,
       } = appLauncherFlashListProps);
-      return jsx(appLauncherFlashListProps(11743), {
+      return jsx(appLauncherFlashListProps(11788), {
         contentContainerStyle: null,
         scrollIndicatorInsets: { bottom },
         ref: memo,
@@ -168,8 +168,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp10 = jsx(native.EmptyState, {
         style: emptyState,
         imageStyle: emptyStateImage,
-        lightSource: _modDef11808,
-        darkSource: _modDef11808,
+        lightSource: _modDef11852,
+        darkSource: _modDef11852,
         title: tmp5,
         body: tmp6,
       });
@@ -180,8 +180,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         style: emptyState,
         imageStyle: emptyStateImage,
-        lightSource: _modDef11808,
-        darkSource: _modDef11808,
+        lightSource: _modDef11852,
+        darkSource: _modDef11852,
         title: tmp5,
         body: tmp6,
       };
@@ -191,8 +191,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         style: tmp.emptyState,
         imageStyle: tmp.emptyStateImage,
-        lightSource: _modDef11808,
-        darkSource: _modDef11808,
+        lightSource: _modDef11852,
+        darkSource: _modDef11852,
         title: null,
         body: null,
       };
@@ -203,8 +203,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return jsx(native.EmptyState, {
         style: tmp.emptyState,
         imageStyle: tmp.emptyStateImage,
-        lightSource: _modDef11808,
-        darkSource: _modDef11808,
+        lightSource: _modDef11852,
+        darkSource: _modDef11852,
         title: null,
         body: null,
       });

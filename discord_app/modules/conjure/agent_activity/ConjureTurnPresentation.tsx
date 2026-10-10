@@ -20,7 +20,10 @@ export const resolveAttachmentHost = function resolveAttachmentHost(hasAttachmen
   return str;
 };
 export const resolveTurnPresentation = function resolveTurnPresentation(hasAttachments) {
-  ({ steps, content, hasProposal } = hasAttachments);
+  ({ steps, content, hasProposal, hasLiveClarification } = hasAttachments);
+  if (hasLiveClarification === undefined) {
+    hasLiveClarification = false;
+  }
   c0 = undefined;
   const streamedContentResult = ConjureTimelineTree.streamedContent(steps);
   const found = streamedContentResult.filter((type) => "message" === type.type);
@@ -51,6 +54,9 @@ export const resolveTurnPresentation = function resolveTurnPresentation(hasAttac
   const found2 = found1.filter((type) => "message" === type.type);
   let tmp10 = !hasProposal;
   if (!hasProposal) {
+    tmp10 = !hasLiveClarification;
+  }
+  if (tmp10) {
     tmp10 = "" !== content.trim();
   }
   const obj2 = {

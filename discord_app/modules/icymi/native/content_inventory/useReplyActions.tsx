@@ -13,9 +13,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DraftType = fn(7237).DraftType;
+const DraftType = fn(7243).DraftType;
 const EmojiIntention = fn(1393).EmojiIntention;
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
@@ -78,7 +78,7 @@ export const useReplyActions = function useReplyActions(cResult) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -149,7 +149,7 @@ export const useReplyActions = function useReplyActions(cResult) {
             const intl = entry(hotwheels_gaming_activity[18]).intl;
             obj13.text = intl.string(entry(hotwheels_gaming_activity[18]).t.fjcCk5);
             obj13.icon = entry(hotwheels_gaming_activity[19]).ChatCheckIcon;
-            stateFromStores(hotwheels_gaming_activity[17]).openMana("content_inventory_message_sent", obj13);
+            stateFromStores(hotwheels_gaming_activity[17]).open("content_inventory_message_sent", obj13);
             const obj4 = stateFromStores(hotwheels_gaming_activity[17]);
           }
           if (entry.content_type === entry(hotwheels_gaming_activity[8]).ContentInventoryEntryType.CUSTOM_STATUS) {
@@ -275,7 +275,7 @@ export const useReplyActions = function useReplyActions(cResult) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj3);
         const obj5 = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16875, dependencyMap.paths),
+          asyncRequireImpl(16943, dependencyMap.paths),
           "ReactActionSheet",
           obj5,
         );

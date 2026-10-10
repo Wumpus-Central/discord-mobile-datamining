@@ -7,7 +7,7 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 require = fn;
 let closure_3 = ["_state", "_version"];
 const Store = fn(506).Store;
-let closure_6 = { _state: "Array", _version: "Set" };
+let closure_6 = { _state: "backgroundColor", _version: "IconComponent" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {
@@ -320,7 +320,7 @@ prototype["asyncPersist"] = function asyncPersist() {
   return Promise.resolve(false);
 };
 prototype["persist"] = function persist() {
-  state = this.getState();
+  const state = this.getState();
   const Storage = Storage3.Storage;
   const result = Storage.set(this.getClass().persistKey, { _state: state, _version: this._version });
 };

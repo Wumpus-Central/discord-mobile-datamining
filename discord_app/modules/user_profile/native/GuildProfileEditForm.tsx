@@ -61,7 +61,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14764, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14819, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -105,7 +105,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1126).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(6848).AnalyticsLocationProvider, obj2);
+  return closure_17(user(6851).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 let closure_4 = ["nick", "bio", "guild_tag"];
@@ -128,9 +128,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
   ? function GuildProfileTryItOutUpsellExperimentWrapper(arg0) {
       const cResult = c.c(16);
       ({ onLayout, onButtonPress } = arg0);
-      const isTryItOutMobileRefreshEnabled =
-        UserProfilePremiumTryItOutMobileRefreshExperiment.useIsTryItOutMobileRefreshEnabled("GuildProfileEditForm");
-      const tmp6 = UserProfileEditFormSharedStylesDefault();
+      const tmp5 = UserProfileEditFormSharedStylesDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { includeKeyboardHeight: true };
         cResult[0] = obj3;
@@ -138,7 +136,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      if (isTryItOutMobileRefreshEnabled) {
+      if (obj2.useTryItOutMobileRefreshConfig("GuildProfileEditForm").enabled) {
         const _Symbol3 = Symbol;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = util.intl;
@@ -147,89 +145,89 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           const stringResult1 = intl4.string(util.t.pj0XBN);
           cResult[1] = stringResult;
           cResult[2] = stringResult1;
-          let tmp21 = stringResult1;
-          let tmp20 = stringResult;
+          let tmp20 = stringResult1;
+          let tmp19 = stringResult;
         } else {
-          tmp20 = cResult[1];
-          tmp21 = cResult[2];
+          tmp19 = cResult[1];
+          tmp20 = cResult[2];
         }
         if (cResult[3] === onButtonPress) {
           if (cResult[4] === onLayout) {
-            let tmp24 = cResult[5];
+            let tmp23 = cResult[5];
           }
-          return tmp24;
+          return tmp23;
         }
         const obj4 = {
-          text: tmp20,
-          buttonText: tmp21,
+          text: tmp19,
+          buttonText: tmp20,
           buttonVariant: "experimental_premium-primary",
           onButtonPress,
           onLayout,
         };
-        const tmp26 = constants(UserProfileFloatingUpsellDefault, obj4);
+        const tmp25 = constants(UserProfileFloatingUpsellDefault, obj4);
         cResult[3] = onButtonPress;
         cResult[4] = onLayout;
-        cResult[5] = tmp26;
-        tmp24 = tmp26;
+        cResult[5] = tmp25;
+        tmp23 = tmp25;
       } else {
-        const sum = nativeDefault.space.PX_16 + tmp8.bottom;
+        const sum = nativeDefault.space.PX_16 + tmp7.bottom;
         if (cResult[6] !== sum) {
           const obj5 = { bottom: sum };
           cResult[6] = sum;
           cResult[7] = obj5;
-          let tmp10 = obj5;
+          let tmp9 = obj5;
         } else {
-          tmp10 = cResult[7];
+          tmp9 = cResult[7];
         }
-        if (cResult[8] === tmp6.floatingUpsell) {
-          if (cResult[9] === tmp10) {
-            let tmp11 = cResult[10];
+        if (cResult[8] === tmp5.floatingUpsell) {
+          if (cResult[9] === tmp9) {
+            let tmp10 = cResult[10];
           }
           const _Symbol = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
             const stringResult2 = intl.string(util.t.pj0XBN);
             cResult[11] = stringResult2;
-            let tmp12 = stringResult2;
+            let tmp11 = stringResult2;
           } else {
-            tmp12 = cResult[11];
+            tmp11 = cResult[11];
           }
           const _Symbol2 = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             const obj6 = { variant: "text-sm/normal", children: null };
             const intl2 = util.intl;
             obj6.children = intl2.string(util.t.YIZS5B);
-            const tmp16 = constants(Text_Text.Text, obj6);
-            cResult[12] = tmp16;
-            let tmp14 = tmp16;
+            const tmp15 = constants(Text_Text.Text, obj6);
+            cResult[12] = tmp15;
+            let tmp13 = tmp15;
           } else {
-            tmp14 = cResult[12];
+            tmp13 = cResult[12];
           }
           if (cResult[13] === onButtonPress) {
-            if (cResult[14] === tmp11) {
-              let tmp17 = cResult[15];
+            if (cResult[14] === tmp10) {
+              let tmp16 = cResult[15];
             }
-            return tmp17;
+            return tmp16;
           }
-          const obj7 = { style: tmp11, ctaText: tmp12, onPress: onButtonPress, children: tmp14 };
-          const tmp19 = constants(UserProfileUpsellCardDefault, obj7);
+          const obj7 = { style: tmp10, ctaText: tmp11, onPress: onButtonPress, children: tmp13 };
+          const tmp18 = constants(UserProfileUpsellCardDefault, obj7);
           cResult[13] = onButtonPress;
-          cResult[14] = tmp11;
-          cResult[15] = tmp19;
-          tmp17 = tmp19;
+          cResult[14] = tmp10;
+          cResult[15] = tmp18;
+          tmp16 = tmp18;
         }
-        const items = [tmp6.floatingUpsell, tmp10];
-        cResult[8] = tmp6.floatingUpsell;
-        cResult[9] = tmp10;
+        const items = [tmp5.floatingUpsell, tmp9];
+        cResult[8] = tmp5.floatingUpsell;
+        cResult[9] = tmp9;
         cResult[10] = items;
-        tmp11 = items;
+        tmp10 = items;
       }
+      obj2 = UserProfilePremiumTryItOutMobileRefreshExperiment;
     }
   : function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
       onButtonPress = onButtonPress.onButtonPress;
-      const isTryItOutMobileRefreshEnabled =
-        UserProfilePremiumTryItOutMobileRefreshExperiment.useIsTryItOutMobileRefreshEnabled("GuildProfileEditForm");
-      if (isTryItOutMobileRefreshEnabled) {
+      const obj = UserProfilePremiumTryItOutMobileRefreshExperiment;
+      if (obj.useTryItOutMobileRefreshConfig("GuildProfileEditForm").enabled) {
         const obj2 = {
           text: null,
           buttonText: null,
@@ -243,12 +241,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.buttonText = intl4.string(util.t.pj0XBN);
         obj2.onButtonPress = onButtonPress;
         obj2.onLayout = onButtonPress.onLayout;
-        let tmp7Result = constants(UserProfileFloatingUpsellDefault, obj2);
-        const tmp4Result = UserProfileFloatingUpsellDefault;
+        let tmp6Result = constants(UserProfileFloatingUpsellDefault, obj2);
+        const tmp3Result = UserProfileFloatingUpsellDefault;
       } else {
         const obj3 = { style: null, ctaText: null, onPress: null, children: null };
-        const items = [tmp5.floatingUpsell];
-        const obj4 = { bottom: nativeDefault.space.PX_16 + tmp6.bottom };
+        const items = [tmp4.floatingUpsell];
+        const obj4 = { bottom: nativeDefault.space.PX_16 + tmp5.bottom };
         items[1] = obj4;
         obj3.style = items;
         const intl = util.intl;
@@ -258,10 +256,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = util.intl;
         obj5.children = intl2.string(util.t.YIZS5B);
         obj3.children = constants(Text_Text.Text, obj5);
-        tmp7Result = constants(UserProfileUpsellCardDefault, obj3);
-        const tmp4Result2 = UserProfileUpsellCardDefault;
+        tmp6Result = constants(UserProfileUpsellCardDefault, obj3);
+        const tmp3Result2 = UserProfileUpsellCardDefault;
       }
-      return tmp7Result;
+      return tmp6Result;
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);

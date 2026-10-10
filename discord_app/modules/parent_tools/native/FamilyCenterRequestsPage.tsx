@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2565 from "../FamilyCenter.messages.js";
+import _modDef2568 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -18,13 +18,13 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7253);
+const FamilyCenterConstants = fn(7259);
 ({ MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS: hasOwnProperty, MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS: metroRequire } =
   FamilyCenterConstants);
-const THROUGHLINE_URL = fn(10348).THROUGHLINE_URL;
+const THROUGHLINE_URL = fn(10381).THROUGHLINE_URL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj2 = {
   container: {
     display: "flex",
@@ -45,7 +45,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== tmp6) {
         const intl = util.intl;
         const obj3 = { maxConnections: tmp6 };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2565["1/PzIj"], obj3);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2568["1/PzIj"], obj3);
         cResult[0] = tmp6;
         cResult[1] = formatToPlainStringResult;
         let tmp7 = formatToPlainStringResult;
@@ -55,7 +55,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== tmp6) {
         const intl2 = util.intl;
         const obj4 = { maxConnections: tmp6 };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2565.RcTgiE, obj4);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2568.RcTgiE, obj4);
         cResult[2] = tmp6;
         cResult[3] = formatToPlainStringResult1;
         let tmp9 = formatToPlainStringResult1;
@@ -91,7 +91,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const hasMaxConnections = useUserLinks.useHasMaxConnections();
       useAgeSpecificText;
       const intl = util.intl;
-      intl.formatToPlainString(_modDef2565["1/PzIj"], {
+      intl.formatToPlainString(_modDef2568["1/PzIj"], {
         maxConnections: useIsInAdultAgeGroupDefault() ? hasOwnProperty : timestampProducer,
       });
       const intl2 = util.intl;
@@ -104,7 +104,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10;
     };
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj6 = { container: null, supportHeader: null };
 let obj3 = {
   display: "flex",
@@ -133,7 +133,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             ({ container, supportHeader } = tmp4);
             if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = util.intl;
-              const stringResult = intl3.string(_modDef2565["7/tVhv"]);
+              const stringResult = intl3.string(_modDef2568["7/tVhv"]);
               cResult[3] = stringResult;
               let tmp13 = stringResult;
             } else {
@@ -179,7 +179,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (shouldShowHelplineLink) {
         const intl2 = util.intl;
-        let formatResult = intl2.format(_modDef2565["KOwsf/"], {
+        let formatResult = intl2.format(_modDef2568["KOwsf/"], {
           helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
         });
       } else {
@@ -187,7 +187,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (shouldShowThroughlineLink) {
           const intl = util.intl;
           const obj7 = { helpLink: THROUGHLINE_URL };
-          formatResult = intl.format(_modDef2565["6tsC8u"], obj7);
+          formatResult = intl.format(_modDef2568["6tsC8u"], obj7);
         }
       }
       cResult[0] = shouldShowHelplineLink;
@@ -200,7 +200,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       useHelpLineVisibility;
       if (shouldShowHelplineLink) {
         const intl2 = util.intl;
-        let formatResult = intl2.format(_modDef2565["KOwsf/"], {
+        let formatResult = intl2.format(_modDef2568["KOwsf/"], {
           helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
         });
       } else {
@@ -208,7 +208,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp6) {
           const intl = util.intl;
           const obj2 = { helpLink: THROUGHLINE_URL };
-          formatResult = intl.format(_modDef2565["6tsC8u"], obj2);
+          formatResult = intl.format(_modDef2568["6tsC8u"], obj2);
         }
       }
       let tmp11 = null;
@@ -216,7 +216,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { style: tmp.container, children: null };
         const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: null };
         const intl3 = util.intl;
-        obj4.children = intl3.string(_modDef2565["7/tVhv"]);
+        obj4.children = intl3.string(_modDef2568["7/tVhv"]);
         const items = [closure_1_8(Text_Text.Text, obj4)];
         const obj5 = { variant: "text-xs/medium", color: "text-muted", children: formatResult };
         items[1] = closure_1_8(Text_Text.Text, obj5);
@@ -225,7 +225,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp11;
     };
-createStyles = fn(5091);
+createStyles = fn(5092);
 const obj11 = { scrollView: { flex: 1 }, container: null };
 const obj8 = { marginBottom: nativeDefault.space.PX_4 };
 obj11.container = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };

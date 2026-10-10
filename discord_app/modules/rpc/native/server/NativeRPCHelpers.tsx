@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/native/server/NativeRPCHelpers.tsx
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const TransportTypes = fn(5636).TransportTypes;
+const TransportTypes = fn(5639).TransportTypes;
 const RPCCloseCodes = fn(1085).RPCCloseCodes;
 let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
   closure_0 = arg0;
@@ -20,7 +20,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -38,10 +38,10 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
             closure_131_0 = closure_0;
             closure_131_1 = closure_1;
             closure_131_2 = dependencyMap;
-            const result = closure_0(10905).validateOriginAndUpdateSocket(closure_0, closure_1);
+            const result = closure_0(10945).validateOriginAndUpdateSocket(closure_0, closure_1);
             if (null == dependencyMap) {
               const obj5 = { closeCode: constants.INVALID_CLIENTID };
-              const tmp23 = new closure_1(10896)(obj5, "No Client ID Specified");
+              const tmp23 = new closure_1(10936)(obj5, "No Client ID Specified");
               c6 = 3;
               const obj6 = { value: Promise.reject(tmp23), done: true };
               return obj6;
@@ -49,7 +49,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
               c5 = 1;
               c6 = 1;
               const obj7 = {
-                value: closure_0(10905).processSocketThrottlers(
+                value: closure_0(10945).processSocketThrottlers(
                   dependencyMap,
                   closure_0.transport !== tmp2.POST_MESSAGE,
                   closure_0.abortController.signal,
@@ -58,7 +58,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
               };
               return obj7;
             }
-            const obj10 = closure_0(10905);
+            const obj10 = closure_0(10945);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -70,7 +70,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         } else {
           c6 = 3;
           const obj9 = {
-            value: closure_0(10905).validateSocketApplication(closure_131_0, closure_131_2, closure_131_1),
+            value: closure_0(10945).validateSocketApplication(closure_131_0, closure_131_2, closure_131_1),
             done: true,
           };
           return obj9;
@@ -95,5 +95,5 @@ export const validateSocketClient = function validateSocketClient() {
   }
   return applyArgumentsResult;
 };
-export const getDeprecatedVoiceSettings = () => closure_0(10905).getDeprecatedVoiceSettingsWithShortcut(() => []);
-export const getVoiceSettings = (arg0) => closure_0(10905).getVoiceSettingsWithShortcut(arg0, () => "");
+export const getDeprecatedVoiceSettings = () => closure_0(10945).getDeprecatedVoiceSettingsWithShortcut(() => []);
+export const getVoiceSettings = (arg0) => closure_0(10945).getVoiceSettingsWithShortcut(arg0, () => "");

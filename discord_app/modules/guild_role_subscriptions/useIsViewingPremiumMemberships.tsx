@@ -2,7 +2,7 @@
 import c from "../../../_runtime/00576_c.js";
 import Constants from "../../Constants.tsx";
 import ChannelConstants from "../channel/ChannelConstants.tsx";
-import _mod4911 from "../../../_runtime/metro/04911__.js";
+import _mod4950 from "../../../_runtime/metro/04950__.js";
 import RouteUtils from "../routing/RouteUtils.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -22,11 +22,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return null != _mod4911.useRouteMatch(first);
+      return null != _mod4950.useRouteMatch(first);
     }
   : function useIsViewingPremiumMemberships() {
       const RouteParam = RouteUtils.RouteParam;
       return (
-        null != _mod4911.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS))
+        null != _mod4950.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS))
       );
     };

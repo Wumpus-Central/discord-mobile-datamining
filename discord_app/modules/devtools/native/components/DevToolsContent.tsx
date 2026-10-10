@@ -23,7 +23,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   devToolsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: nativeDefault.space.PX_16 },
   sortingIcons: null,
@@ -255,7 +255,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = closure_10(tmp(16038).ArrowSmallUpIcon, {});
+          const tmp10 = closure_10(tmp(16100).ArrowSmallUpIcon, {});
           cResult[5] = tmp10;
           let tmp8 = tmp10;
         } else {
@@ -318,7 +318,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                const tmp18 = closure_10(tmp(16040).ArrowSmallDownIcon, {});
+                const tmp18 = closure_10(tmp(16102).ArrowSmallDownIcon, {});
                 cResult[15] = tmp18;
                 const tmp17 = tmp18;
               } else {
@@ -351,7 +351,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityLabel: "Shift down",
                 children: tmp17,
               };
-              const tmp21 = closure_10(tmp(6191).PressableOpacity, obj2);
+              const tmp21 = closure_10(tmp(6184).PressableOpacity, obj2);
               cResult[16] = end;
               cResult[17] = C;
               cResult[18] = tmp16;
@@ -371,7 +371,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityLabel: "Shift up",
           children: tmp8,
         };
-        const tmp13 = closure_10(tmp(6191).PressableOpacity, obj3);
+        const tmp13 = closure_10(tmp(6184).PressableOpacity, obj3);
         cResult[6] = start;
         cResult[7] = tmp5;
         cResult[8] = tmp6;
@@ -469,7 +469,7 @@ export default noop.memo(
                   }
                   let tmp19 = tmp15;
                   if (!embedded) {
-                    let obj3 = { style: tmp4.devToolsContainer, contentContainerStyle: null, children: null };
+                    const obj3 = { style: tmp4.devToolsContainer, contentContainerStyle: null, children: null };
                     const obj4 = { paddingBottom: tmp7.bottom + tmp6(tmp2[8]).space.PX_16 };
                     obj3.contentContainerStyle = obj4;
                     obj3.children = tmp15;
@@ -532,19 +532,17 @@ export default noop.memo(
             if (closure_1_2) {
               str = "sorting-disabled";
             }
-            const obj2 = { key: str, content: null };
             let str2 = "Sorting enabled";
             if (closure_1_2) {
               str2 = "Sorting disabled";
             }
-            obj2.content = str2;
-            closure_1(first[22]).open(obj2);
+            closure_1(first[22]).open(str, { text: str2 });
             const obj = closure_1(first[22]);
             const result = navigation(first[15]).triggerHapticFeedback(
               navigation(first[15]).HapticFeedbackTypes.IMPACT_MEDIUM,
             );
             closure_1_3((arg0) => !arg0);
-            const obj3 = navigation(first[15]);
+            const obj2 = navigation(first[15]);
           };
           obj.onPress = function onPress() {
             if (!screenKey) {
@@ -607,19 +605,17 @@ export default noop.memo(
               if (_undefined) {
                 str = "sorting-disabled";
               }
-              const obj2 = { key: str, content: null };
               let str2 = "Sorting enabled";
               if (_undefined) {
                 str2 = "Sorting disabled";
               }
-              obj2.content = str2;
-              closure_1(dependencyMap[22]).open(obj2);
+              closure_1(dependencyMap[22]).open(str, { text: str2 });
               const obj = closure_1(dependencyMap[22]);
               const result = screenKey(dependencyMap[15]).triggerHapticFeedback(
                 screenKey(dependencyMap[15]).HapticFeedbackTypes.IMPACT_MEDIUM,
               );
               closure_1_3((arg0) => !arg0);
-              const obj3 = screenKey(dependencyMap[15]);
+              const obj2 = screenKey(dependencyMap[15]);
             };
             obj.onPress = function onPress() {
               if (!c2) {
@@ -636,7 +632,7 @@ export default noop.memo(
         });
         let tmp6Result = tmp7;
         if (!embedded) {
-          let obj3 = { style: tmp.devToolsContainer, contentContainerStyle: null, children: null };
+          const obj3 = { style: tmp.devToolsContainer, contentContainerStyle: null, children: null };
           const obj4 = { paddingBottom: tmp4.bottom + nativeDefault.space.PX_16 };
           obj3.contentContainerStyle = obj4;
           obj3.children = tmp7;

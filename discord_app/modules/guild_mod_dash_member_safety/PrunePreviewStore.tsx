@@ -59,11 +59,11 @@ export const CACHE_TTL_MS = 3600000;
 export { getPrunePreviewKey };
 export const usePrunePreviewStore = obj4;
 export const setPrunePreview = function setPrunePreview(arg0, arg1, arg2, arg3, arg4) {
-  state = obj4.getState();
+  const state = obj4.getState();
   state.setPreview(arg0, arg1, arg2, arg3, arg4);
 };
 export const clearAllPrunePreviews = function clearAllPrunePreviews() {
-  state = obj4.getState();
+  const state = obj4.getState();
   state.clear();
 };
 export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled()
@@ -172,7 +172,7 @@ export const usePrunePreview = ReactCompilerGating.isReactCompilerEnabled()
     };
 export const getPrunePreview = function getPrunePreview(arg0, arg1, arg2) {
   const items = [];
-  state = obj4.getState();
+  const state = obj4.getState();
   HermesBuiltin.arraySpread(arg2, 0);
   const sorted = items.sort();
   const tmp3 = state.entries["" + arg0 + ":" + arg1 + ":" + sorted.join(sorted, ",")];

@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Math = Math;
           const _Date = Date;
           const date = new Date(reduced.ends_at);
-          const bound = Math.max(0, tmp(7269).getDaysRemaining(date));
+          const bound = Math.max(0, tmp(7275).getDaysRemaining(date));
           if (reduced.metadata != null) {
             class S {
               constructor(arg0, arg1) {
@@ -263,7 +263,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = undefined;
           cResult[16] = undefined;
           cResult[17] = obj2;
-          const tmpResult6 = tmp(7269);
+          const tmpResult6 = tmp(7275);
         }
       }
       cResult[6] = expiringPowerupCoachmarkEnabled;

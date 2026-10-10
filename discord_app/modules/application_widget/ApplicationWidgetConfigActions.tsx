@@ -41,7 +41,7 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -98,7 +98,7 @@ let closure_11 = async function _fetchFeaturedWidgetConfigsFromApi() {
         closure_129_9.succeed();
         c3 = 0;
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp27) {
       closure_2 = tmp27;
@@ -132,7 +132,7 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -183,7 +183,7 @@ let closure_13 = async function _fetchDeveloperWidgetConfigsFromApi() {
         closure_129_1(closure_129_2[6]).dispatch(obj10);
         c3 = 0;
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp27) {
       closure_2 = tmp27;
@@ -211,7 +211,7 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -266,7 +266,7 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
           closure_130_1(closure_130_2[6]).dispatch(obj12);
           c4 = 0;
           c6 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp30) {
         closure_3 = tmp30;
@@ -280,13 +280,13 @@ let closure_15 = async function _fetchWidgetConfigsFromApi() {
     }
   })();
 };
-const FetchState = fn(11384).FetchState;
+const FetchState = fn(11429).FetchState;
 const Endpoints = fn(1085).Endpoints;
-const promiseDeduper = new fn(10648).PromiseDeduper();
+const promiseDeduper = new fn(10682).PromiseDeduper();
 const importDefaultResult2 = new Backoff(DurationsDefault.Millis.SECOND, DurationsDefault.Millis.MINUTE, true);
 const subscription = Dispatcher.subscribe("LOGOUT", () => importDefaultResult2.succeed());
-const promiseDeduper3 = new fn(10648).PromiseDeduper();
-const promiseDeduper4 = new fn(10648).PromiseDeduper();
+const promiseDeduper3 = new fn(10682).PromiseDeduper();
+const promiseDeduper4 = new fn(10682).PromiseDeduper();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_widget/ApplicationWidgetConfigActions.tsx");
 

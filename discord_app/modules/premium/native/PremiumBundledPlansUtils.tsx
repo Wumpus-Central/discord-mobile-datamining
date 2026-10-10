@@ -251,11 +251,11 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
   productId,
   subscription,
 ) {
-  if (productId in found(7120).AppStorePremiumProductIdsToPremiumBundledItems) {
-    const tmp8 = tmp(7120).AppStorePremiumProductIdsToPremiumBundledItems[productId];
+  if (productId in found(7126).AppStorePremiumProductIdsToPremiumBundledItems) {
+    const tmp8 = tmp(7126).AppStorePremiumProductIdsToPremiumBundledItems[productId];
     if (null != tmp8.premiumTier) {
       if (tmpResult.isBoostOnlySubscription(subscription)) {
-        const itemsWithUpsertedPremiumPlanId = tmp(4728).getItemsWithUpsertedPremiumPlanId(
+        const itemsWithUpsertedPremiumPlanId = tmp(4769).getItemsWithUpsertedPremiumPlanId(
           subscription,
           tmp8.basePlanId,
         );
@@ -277,7 +277,7 @@ export const getModifySubscriptionItemsForProduct = function getModifySubscripti
         }
         return mapped;
       }
-      tmpResult = tmp(4728);
+      tmpResult = tmp(4769);
     }
     return getSubscriptionItemsForProduct(productId);
   } else {

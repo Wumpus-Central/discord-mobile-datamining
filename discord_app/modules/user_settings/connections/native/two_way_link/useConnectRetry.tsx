@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/user_settings/connections/nat
 
 export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConnectRetry(arg0, arg1) {
-      state = arg0;
+      const state = arg0;
       closure_1 = arg1;
       const cResult = c.c(3);
       if (cResult[0] === arg0) {
@@ -33,7 +33,7 @@ export const useConnectRetry = ReactCompilerGating.isReactCompilerEnabled()
       tmp2 = fn;
     }
   : function useConnectRetry(arg0, arg1) {
-      state = arg0;
+      const state = arg0;
       closure_1 = arg1;
       const items = [arg0, arg1];
       return noop.useCallback(() => {

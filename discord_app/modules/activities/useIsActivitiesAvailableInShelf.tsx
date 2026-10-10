@@ -1,5 +1,5 @@
 // discord_app/modules/activities/useIsActivitiesAvailableInShelf.tsx
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators.tsx";
+import fetchShelf from "fetchShelf.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const isActivitiesEnabledForCurrentPlatform =
         require("useIsActivitiesEnabledForCurrentPlatform").useIsActivitiesEnabledForCurrentPlatform();
-      const tmp3 = isActivitiesEnabledForCurrentPlatform(10836)(arg1);
+      const tmp3 = isActivitiesEnabledForCurrentPlatform(10847)(arg1);
       if (cResult[0] === guildId) {
         if (cResult[1] === tmp3) {
           let tmp4 = cResult[2];
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (tmp) {
             const obj2 = { guildId };
-            const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+            const shelf = fetchShelf.fetchShelf(obj2);
           }
         };
         const items = [guildId, isActivitiesEnabledForCurrentPlatform, tmp4];
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (tmp) {
           const obj2 = { guildId };
-          const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+          const shelf = fetchShelf.fetchShelf(obj2);
         }
       }, items);
       if (tmp3) {

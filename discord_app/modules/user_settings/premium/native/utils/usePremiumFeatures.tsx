@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/premium/native/utils/usePremiumFeatures.tsx
 import util from "../../../../../intl/index.native.tsx";
 import user from "../../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3277 from "../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3280 from "../../../../premium/premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
-import BoostGemIcon from "../../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import FriendsIcon from "../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import ScreenStreamIcon from "../../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
 import UploadIcon from "../../../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
 import SuperReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
+import BoostGemIcon from "../../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import UserSquareIcon from "../../../../../design/components/Icon/native/redesign/generated/UserSquareIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 const PremiumConstants = fn(1392);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(4742).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(4783).TOTAL_PREMIUM_GROUP_USERS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           availableOnFractional: false,
         };
         const intl = util.intl;
-        obj.label = intl.formatToPlainString(_modDef3277.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
+        obj.label = intl.formatToPlainString(_modDef3280.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
         const items = [hasOwnProperty.TIER_2];
         obj.premiumTypes = new Set(items);
         const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           availableOnFractional: false,
         };
         const intl2 = util.intl;
-        obj3.label = intl2.string(_modDef3277["G6K/+s"]);
+        obj3.label = intl2.string(_modDef3280["G6K/+s"]);
         const items3 = [hasOwnProperty.TIER_2];
         const obj2 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
         const set = new Set(items);
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           availableOnFractional: false,
         };
         const intl8 = util.intl;
-        obj11.label = intl8.formatToPlainString(_modDef3277.HVCRVf, { numBoosts });
+        obj11.label = intl8.formatToPlainString(_modDef3280.HVCRVf, { numBoosts });
         const items15 = [hasOwnProperty.TIER_2];
         const obj12 = { numBoosts };
         const set6 = new Set(items13);

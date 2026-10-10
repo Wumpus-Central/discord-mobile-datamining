@@ -18,7 +18,7 @@ import EmbeddedActivitiesStore from "../../EmbeddedActivitiesStore.tsx";
 require = fn;
 const Constants = fn(2024);
 ({ OrientationLockState: closure_11, ACTIVITY_LOCKED_ASPECT_RATIO: closure_12 } = Constants);
-const ActivityPanelModes = fn(6074).ActivityPanelModes;
+const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let closure_15 = { x: 0, y: 0, gestureActive: false };
 const FunctionUtils = fn(2039);
@@ -1259,7 +1259,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = {
-          context: connectedActivityInTextChannelId(17630),
+          context: connectedActivityInTextChannelId(17702),
           orientationLockStateForApp,
           mode,
           hasConnectedActivity,
@@ -1270,7 +1270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp19 = (
           <closure_24
-            context={connectedActivityInTextChannelId(17630)}
+            context={connectedActivityInTextChannelId(17702)}
             orientationLockStateForApp={orientationLockStateForApp}
             mode={mode}
             hasConnectedActivity={hasConnectedActivity}
@@ -1373,7 +1373,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = mode(504);
       return (
         <closure_24
-          context={connectedActivityInTextChannelId(17630)}
+          context={connectedActivityInTextChannelId(17702)}
           orientationLockStateForApp={orientationLockStateForApp}
           mode={mode}
           hasConnectedActivity={hasConnectedActivity}

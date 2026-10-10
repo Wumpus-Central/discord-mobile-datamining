@@ -4,7 +4,6 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import conjureProjectMute from "../projects/conjureProjectMute.tsx";
-import VibegrationsReadStateFlags2 from "../../../../discord_common/js/shared/shared-constants/VibegrationsReadStateFlags.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserSettingsProtoStore from "../../user_settings/UserSettingsProtoStore.tsx";
 import ReadStateStore from "../../../stores/ReadStateStore.tsx";
@@ -12,28 +11,29 @@ import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-function unreadStatus(mentionCount, ackMessageIdResult, arg2) {
-  let tmp2 = null;
+function projectBadge(mentionCount, ackMessageIdResult, arg2) {
+  let tmp = null;
   if (!arg2) {
-    tmp2 = null;
-    if (0 !== mentionCount) {
-      if (tmp == ackMessageIdResult) {
-        const FINISHED = VibegrationsReadStateFlags2.VibegrationsReadStateFlags.FINISHED;
-      } else {
-        let VibegrationsReadStateFlags = dependencyMap;
-        const nonTimestampBits = SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+    let tmp3 = mentionCount > 0;
+    if (!tmp3) {
+      let tmp5 = null != ackMessageIdResult;
+      if (tmp5) {
+        tmp5 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
       }
-      VibegrationsReadStateFlags = VibegrationsReadStateFlags2.VibegrationsReadStateFlags;
-      const NEEDS_INPUT = VibegrationsReadStateFlags.NEEDS_INPUT;
+      tmp3 = tmp5;
+    }
+    tmp = null;
+    if (tmp3) {
+      tmp = mentionCount;
     }
   }
-  return tmp2;
+  return tmp;
 }
-const ReadStateTypes = fn(5974).ReadStateTypes;
+const ReadStateTypes = fn(5967).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjureProjectUnreadStatus(arg0) {
+  ? function useConjureProjectBadge(arg0) {
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -49,21 +49,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != closure_0) {
             const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
             const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
-            let VibegrationsReadStateFlags = dependencyMap;
-            let tmp9 = null;
+            let tmp10 = null;
             if (!obj.isConjureProjectMuted(UserSettingsProtoStore.settings, closure_0)) {
-              tmp9 = null;
-              if (0 !== mentionCount) {
-                if (null == ackMessageIdResult) {
-                  const FINISHED = VibegrationsReadStateFlags2.VibegrationsReadStateFlags.FINISHED;
-                } else {
-                  const nonTimestampBits = SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+              let tmp11 = mentionCount > 0;
+              if (!tmp11) {
+                let tmp12 = null != ackMessageIdResult;
+                if (tmp12) {
+                  tmp12 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
                 }
-                VibegrationsReadStateFlags = VibegrationsReadStateFlags2.VibegrationsReadStateFlags;
-                const NEEDS_INPUT = VibegrationsReadStateFlags.NEEDS_INPUT;
+                tmp11 = tmp12;
+              }
+              tmp10 = null;
+              if (tmp11) {
+                tmp10 = mentionCount;
               }
             }
-            tmp2 = tmp9;
+            tmp2 = tmp10;
             obj = conjureProjectMute;
           }
           return tmp2;
@@ -81,7 +82,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       return require("initialize").useStateFromStores(first, tmp7, tmp8);
     }
-  : function useConjureProjectUnreadStatus(arg0) {
+  : function useConjureProjectBadge(arg0) {
       _require = arg0;
       const items = [ReadStateStore, UserSettingsProtoStore];
       const items1 = [arg0];
@@ -92,21 +93,22 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != closure_0) {
             const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
             const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
-            let VibegrationsReadStateFlags = dependencyMap;
-            let tmp9 = null;
+            let tmp10 = null;
             if (!obj.isConjureProjectMuted(UserSettingsProtoStore.settings, closure_0)) {
-              tmp9 = null;
-              if (0 !== mentionCount) {
-                if (null == ackMessageIdResult) {
-                  const FINISHED = VibegrationsReadStateFlags2.VibegrationsReadStateFlags.FINISHED;
-                } else {
-                  const nonTimestampBits = SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+              let tmp11 = mentionCount > 0;
+              if (!tmp11) {
+                let tmp12 = null != ackMessageIdResult;
+                if (tmp12) {
+                  tmp12 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
                 }
-                VibegrationsReadStateFlags = VibegrationsReadStateFlags2.VibegrationsReadStateFlags;
-                const NEEDS_INPUT = VibegrationsReadStateFlags.NEEDS_INPUT;
+                tmp11 = tmp12;
+              }
+              tmp10 = null;
+              if (tmp11) {
+                tmp10 = mentionCount;
               }
             }
-            tmp2 = tmp9;
+            tmp2 = tmp10;
             obj = conjureProjectMute;
           }
           return tmp2;
@@ -115,14 +117,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
     };
 ReactCompilerGating = fn(558);
-const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureUnreadSummary() {
       const cResult = c.c(2);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore, UserSettingsProtoStore];
         const fn = function s() {
-          let hasUnread = false;
-          let badgeCount = 0;
+          let num = 0;
+          let num2 = 0;
           const resourceIds = ReadStateStore.getResourceIds(constants.CONJURING_PROJECT);
           const iter = resourceIds[Symbol.iterator]();
           const nextResult = iter.next();
@@ -130,20 +132,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             let mentionCount = ReadStateStore.getMentionCount(nextResult, constants.CONJURING_PROJECT);
             let ackMessageIdResult = ReadStateStore.ackMessageId(nextResult, constants.CONJURING_PROJECT);
             let obj = require("conjureProjectMute");
-            let tmp11 = unreadStatus(
+            let tmp11 = projectBadge(
               mentionCount,
               ackMessageIdResult,
               obj.isConjureProjectMuted(settings.settings, nextResult),
             );
             if (null != tmp11) {
-              hasUnread = true;
-              if (tmp12 === require("VibegrationsReadStateFlags").VibegrationsReadStateFlags.NEEDS_INPUT) {
-                badgeCount = badgeCount + 1;
-              }
+              num = num + 1;
+              num2 = num2 + tmp12;
             }
             continue;
           }
-          return { hasUnread, badgeCount };
+          return { hasUnread: num > 0, unreadCount: num, badgeCount: num2 };
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -157,8 +157,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   : function useConjureUnreadSummary() {
       const items = [ReadStateStore, UserSettingsProtoStore];
       return initialize.useStateFromStoresObject(items, () => {
-        let hasUnread = false;
-        let badgeCount = 0;
+        let num = 0;
+        let num2 = 0;
         const resourceIds = ReadStateStore.getResourceIds(constants.CONJURING_PROJECT);
         const iter = resourceIds[Symbol.iterator]();
         const nextResult = iter.next();
@@ -166,20 +166,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           let mentionCount = ReadStateStore.getMentionCount(nextResult, constants.CONJURING_PROJECT);
           let ackMessageIdResult = ReadStateStore.ackMessageId(nextResult, constants.CONJURING_PROJECT);
           let obj = require("conjureProjectMute");
-          let tmp11 = unreadStatus(
+          let tmp11 = projectBadge(
             mentionCount,
             ackMessageIdResult,
             obj.isConjureProjectMuted(settings.settings, nextResult),
           );
           if (null != tmp11) {
-            hasUnread = true;
-            if (tmp12 === require("VibegrationsReadStateFlags").VibegrationsReadStateFlags.NEEDS_INPUT) {
-              badgeCount = badgeCount + 1;
-            }
+            num = num + 1;
+            num2 = num2 + tmp12;
           }
           continue;
         }
-        return { hasUnread, badgeCount };
+        return { hasUnread: num > 0, unreadCount: num, badgeCount: num2 };
       });
     };
 function ackConjureProject(projectId) {
@@ -189,7 +187,20 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
 export { ackConjureProject };
-export const useConjureProjectUnreadStatus = tmp2;
+export const isConjureProjectUnread = function isConjureProjectUnread(arg0) {
+  const mentionCount = ReadStateStore.getMentionCount(arg0, ReadStateTypes.CONJURING_PROJECT);
+  const ackMessageIdResult = ReadStateStore.ackMessageId(arg0, ReadStateTypes.CONJURING_PROJECT);
+  let tmp3 = mentionCount > 0;
+  if (!tmp3) {
+    let tmp5 = null != ackMessageIdResult;
+    if (tmp5) {
+      tmp5 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+    }
+    tmp3 = tmp5;
+  }
+  return tmp3;
+};
+export const useConjureProjectBadge = tmp2;
 export const useConjureUnreadSummary = tmp3;
 export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAckConjureProjectWhileViewing(projectId) {
@@ -206,7 +217,17 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
         const fn = function c() {
           let tmp2 = null != closure_0;
           if (tmp2) {
-            tmp2 = ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
+            const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
+            const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
+            let tmp7 = mentionCount > 0;
+            if (!tmp7) {
+              let tmp8 = null != ackMessageIdResult;
+              if (tmp8) {
+                tmp8 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+              }
+              tmp7 = tmp8;
+            }
+            tmp2 = tmp7;
           }
           return tmp2;
         };
@@ -222,7 +243,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
       }
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = stateFromStores(16562)();
+      const tmp9 = stateFromStores(11426)();
       dependencyMap = tmp9;
       if (cResult[4] === tmp9) {
         if (cResult[5] === projectId) {
@@ -233,7 +254,7 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
           const effect = noop.useEffect(tmp10, tmp11);
         }
       }
-      const fn2 = function j() {
+      const fn2 = function l() {
         let tmp2 = null != projectId;
         if (tmp2) {
           tmp2 = stateFromStores;
@@ -265,13 +286,23 @@ export const useAckConjureProjectWhileViewing = ReactCompilerGating.isReactCompi
         () => {
           let tmp2 = null != closure_0;
           if (tmp2) {
-            tmp2 = ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
+            const mentionCount = ReadStateStore.getMentionCount(closure_0, ReadStateTypes.CONJURING_PROJECT);
+            const ackMessageIdResult = ReadStateStore.ackMessageId(closure_0, ReadStateTypes.CONJURING_PROJECT);
+            let tmp7 = mentionCount > 0;
+            if (!tmp7) {
+              let tmp8 = null != ackMessageIdResult;
+              if (tmp8) {
+                tmp8 = 0 !== SnowflakeUtilsDefault.getNonTimestampBits(ackMessageIdResult);
+              }
+              tmp7 = tmp8;
+            }
+            tmp2 = tmp7;
           }
           return tmp2;
         },
         items1,
       );
-      let tmp2 = stateFromStores(16562)();
+      let tmp2 = stateFromStores(11426)();
       dependencyMap = tmp2;
       const items2 = [projectId, stateFromStores, tmp2];
       const effect = noop.useEffect(() => {

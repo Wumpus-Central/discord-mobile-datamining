@@ -6,7 +6,7 @@ import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2597 from "../GuildPowerups.messages.js";
+import _modDef2600 from "../GuildPowerups.messages.js";
 import themes from "../../../../design/utils/shared/themes.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -266,7 +266,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                     obj4.variant = str5;
                                     const intl2 = util.intl;
-                                    const tmp4Result = _modDef2597;
+                                    const tmp4Result = _modDef2600;
                                     obj4.text = intl2.string(tmp13 ? tmp4Result.TZsu1U : tmp4Result.gSxlHf);
                                     obj4.onPress = function onPress() {
                                       if (closure_0) {
@@ -463,7 +463,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj13.variant = str2;
         const intl2 = util.intl;
-        const tmp3Result2 = _modDef2597;
+        const tmp3Result2 = _modDef2600;
         obj13.text = intl2.string(result ? tmp3Result2.TZsu1U : tmp3Result2.gSxlHf);
         obj13.onPress = function onPress() {
           if (c0) {
@@ -491,7 +491,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ listing, onDismiss } = guildId);
       const tmp4 = closure_7();
       const bottom = forceStaticImages(1631)().bottom;
-      forceStaticImages = forceStaticImages(12241)(guildId, listing);
+      forceStaticImages = forceStaticImages(12285)(guildId, listing);
       if (null == forceStaticImages) {
         return null;
       } else {
@@ -531,7 +531,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             return tmp26;
                           }
                           const obj4 = { scrollable: true, startExpanded: true, onDismiss, children: tmp23 };
-                          const tmp28 = closure_4(tmp(6836).BottomSheet, obj4);
+                          const tmp28 = closure_4(tmp(6839).BottomSheet, obj4);
                           cResult[23] = onDismiss;
                           cResult[24] = tmp23;
                           cResult[25] = tmp28;
@@ -542,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj5 = { contentContainerStyle: tmp6, children: null };
                     const items = [tmp7, tmp10, tmp19];
                     obj5.children = items;
-                    const tmp25 = closure_5(tmp(6305).BottomSheetScrollView, obj5);
+                    const tmp25 = closure_5(tmp(6306).BottomSheetScrollView, obj5);
                     cResult[18] = tmp6;
                     cResult[19] = tmp7;
                     cResult[20] = tmp10;
@@ -588,7 +588,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (tmp11) {
             const obj7 = { style: tmp4.disabledReasonContainer, children: null };
             const obj8 = { text: forceStaticImages.disabledReason };
-            obj7.children = closure_4(tmp5(12237), obj8);
+            obj7.children = closure_4(tmp5(12281), obj8);
             tmp11 = closure_4(View, obj7);
           }
           cResult[5] = forceStaticImages.disabledReason;
@@ -597,7 +597,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = tmp11;
         }
         ({ title: obj3.title, description: obj3.description } = forceStaticImages);
-        const tmp9 = closure_4(tmp5(12244), { title: null, description: null });
+        const tmp9 = closure_4(tmp5(12288), { title: null, description: null });
         cResult[2] = forceStaticImages.description;
         cResult[3] = forceStaticImages.title;
         cResult[4] = tmp9;
@@ -619,12 +619,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { paddingBottom: useSafeAreaInsetsDefault().bottom };
         obj2.contentContainerStyle = obj3;
         ({ title: obj4.title, description: obj4.description } = tmp4);
-        const items = [closure_4(tmp2(12244), { title: null, description: null }), ,];
+        const items = [closure_4(tmp2(12288), { title: null, description: null }), ,];
         let tmp6Result = null != tmp4.disabledReason;
         if (tmp6Result) {
           const obj6 = { style: tmp.disabledReasonContainer, children: null };
           const obj7 = { text: tmp4.disabledReason };
-          obj6.children = closure_4(tmp2(12237), obj7);
+          obj6.children = closure_4(tmp2(12281), obj7);
           tmp6Result = closure_4(View, obj6);
         }
         items[1] = tmp6Result;
@@ -635,8 +635,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         );
         items[2] = closure_4(View, obj13);
         obj2.children = items;
-        obj.children = closure_5(guildId(6305).BottomSheetScrollView, obj2);
-        tmp6Result2 = closure_4(guildId(6836).BottomSheet, obj);
+        obj.children = closure_5(guildId(6306).BottomSheetScrollView, obj2);
+        tmp6Result2 = closure_4(guildId(6839).BottomSheet, obj);
         const obj5 = { title: null, description: null };
       }
       return tmp6Result2;

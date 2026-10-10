@@ -8,7 +8,7 @@ import HeaderActionButton from "../../../../../design/components/Navigator/nativ
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef18311 from "../../../../../../_runtime/metro/18311__.js";
+import _modDef18385 from "../../../../../../_runtime/metro/18385__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -19,7 +19,7 @@ const View = fn(17).View;
 const GuildFeatures = fn(1085).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   wrapper: { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 },
   section: null,
@@ -102,8 +102,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      fn = self(6205).getHeaderConditionalBackButton(this.handleCancel);
-      let obj = self(6205);
+      fn = self(6200).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(6200);
     }
     let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
@@ -201,7 +201,7 @@ prototype["render"] = function render() {
     obj5.children = items1;
     const items3 = [options(View, obj5)];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef18311, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef18385, style: styles.image, resizeMode: "contain" };
     obj12.children = closure_1_8(FastImageDefault, obj13);
     items3[1] = closure_1_8(View, obj12);
     obj4.children = items3;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           styles: tmp4,
           contentContainerStyle,
         };
-        const items3 = [closure_8(GuildSettingsModalVanityURL, obj4), closure_8(tmp(6726).NavScrim, {})];
+        const items3 = [closure_8(GuildSettingsModalVanityURL, obj4), closure_8(tmp(6727).NavScrim, {})];
         obj3.children = items3;
         tmp19 = closure_9(closure_10, obj3);
       }
@@ -352,7 +352,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           styles: tmp,
           contentContainerStyle: guildId.contentContainerStyle,
         };
-        const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(6726).NavScrim, {})];
+        const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(6727).NavScrim, {})];
         obj5.children = items3;
         tmp10 = closure_9(closure_10, obj5);
       }

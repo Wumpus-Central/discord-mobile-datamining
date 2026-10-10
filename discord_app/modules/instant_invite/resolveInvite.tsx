@@ -7,7 +7,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(5945);
+const TrackedHTTPUtilsDefault = tmp4(5938);
 require = fn;
 let Constants = fn(7423);
 ({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);

@@ -150,7 +150,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = userIds(576);
       const stateFromStoresArray = userIds(504).useStateFromStoresArray(first, tmp7, tmp8);
       const tmpResult = userIds(504);
-      const slayerStorefrontDevApplicationIdOverride = userIds(8978).useSlayerStorefrontDevApplicationIdOverride();
+      const slayerStorefrontDevApplicationIdOverride = userIds(8997).useSlayerStorefrontDevApplicationIdOverride();
       if (null == slayerStorefrontDevApplicationIdOverride) {
         return stateFromStoresArray;
       } else {
@@ -162,7 +162,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = slayerStorefrontDevApplicationIdOverride;
         cResult[6] = items2;
       }
-      const tmpResult2 = userIds(8978);
+      const tmpResult2 = userIds(8997);
     }
   : function useUsersPlayingStorefrontEnabledGamesApplicationIds(userIds) {
       userIds = userIds.userIds;

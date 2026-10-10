@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp9 = jsx(tmp(5044).CopyIcon, { size: "sm" });
+        const tmp9 = jsx(tmp(5042).CopyIcon, { size: "sm" });
         cResult[4] = tmp9;
         let tmp7 = tmp9;
       } else {
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp6) {
         const obj2 = { icon: tmp7, variant: "secondary", onPress: tmp6, accessibilityLabel: tmp10, size: "sm" };
-        const tmp14 = jsx(tmp(8114).IconButton, {
+        const tmp14 = jsx(tmp(7573).IconButton, {
           icon: tmp7,
           variant: "secondary",
           onPress: tmp6,

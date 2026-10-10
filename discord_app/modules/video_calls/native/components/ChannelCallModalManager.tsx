@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/components/ChannelCallModalManager.tsx
-import DispatcherDefault from "../../../../Dispatcher.tsx";
+import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
 import LifecycleManager from "../../../../lib/LifecycleManager.tsx";
 
-let require = fn;
+require = fn;
 class ChannelCallModalManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,9 +18,7 @@ class ChannelCallModalManager extends tmp2 {
         isInChannelResult = VoiceStateStore.isInChannel(channel.id, currentUser.id);
       }
       if (tmp4) {
-        DispatcherDefault.wait(() => {
-          const result = applyArgumentsResult(dependencyMap[4]).dismissVoiceChannelScreens(channel);
-        });
+        const result = PrivateChannelCallUtils.dismissVoiceChannelScreens(channel);
         applyArgumentsResult.terminate();
       }
       applyArgumentsResult.inVoiceChannel = isInChannelResult;

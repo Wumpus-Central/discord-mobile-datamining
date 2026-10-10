@@ -55,7 +55,7 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -254,15 +254,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const top = children.top;
       ({ bottom, left } = children);
       ({ right, leading: dependencyMap } = children);
-      const sharedValue = top(4811).useSharedValue(0);
-      let obj = top(4811);
-      const sharedValue1 = top(4811).useSharedValue(0);
-      const obj2 = top(4811);
-      const sharedValue2 = top(4811).useSharedValue(0.2);
-      const obj3 = top(4811);
-      const sharedValue3 = top(4811).useSharedValue(0);
-      let obj4 = top(4811);
-      const mountLayoutEffect = top(5393).useMountLayoutEffect(() => {
+      const sharedValue = top(4850).useSharedValue(0);
+      let obj = top(4850);
+      const sharedValue1 = top(4850).useSharedValue(0);
+      const obj2 = top(4850);
+      const sharedValue2 = top(4850).useSharedValue(0.2);
+      const obj3 = top(4850);
+      const sharedValue3 = top(4850).useSharedValue(0);
+      let obj4 = top(4850);
+      const mountLayoutEffect = top(5396).useMountLayoutEffect(() => {
         randomizeAnimationValues({
           positionValue: sharedValue,
           rotationValue: sharedValue1,
@@ -271,7 +271,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           leading,
         });
       });
-      const obj5 = top(5393);
+      const obj5 = top(5396);
       class S {
         constructor() {
           obj = { scale: closure_5.get() };
@@ -316,8 +316,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       S.__workletHash = 17194622427708;
       S.__initData = __initData2;
-      const style = top(4811).useAnimatedStyle(S);
-      return closure_11(left(4811).View, { style, children: children.emojiComponent });
+      const style = top(4850).useAnimatedStyle(S);
+      return closure_11(left(4850).View, { style, children: children.emojiComponent });
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -885,7 +885,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+51" };
                                 }
                               } else {
                                 try {
@@ -939,7 +939,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     500,
                                   );
                                   c3 = 3;
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "+51" };
                                 } catch (tmp23) {
                                   c3 = tmp;
                                   throw tmp23;
@@ -1214,7 +1214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -1254,13 +1254,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 emoji_name: closure_129_2.name,
                 emoji_animated: closure_129_2.animated,
                 recommended: closure_129_4.current,
-                location: tmp22(6872).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+                location: tmp22(6878).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
               };
               tmp22(1265).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => closure_0(emoji[26]).showDoubleTapEmojiUpdatedToast({ emoji }), 500);
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             } catch (tmp24) {
               c3 = tmp;
               throw tmp24;

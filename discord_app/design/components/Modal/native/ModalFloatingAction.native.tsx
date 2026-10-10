@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles({
   floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 },
   spacer: { height: 96 },

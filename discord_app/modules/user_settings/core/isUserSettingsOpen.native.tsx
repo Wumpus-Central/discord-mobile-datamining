@@ -22,7 +22,7 @@ function isUserSettingsOpen() {
       someResult = routes.some((name) => {
         let tmp = "settings" === name.name;
         if (!tmp) {
-          state = name.state;
+          const state = name.state;
           let routes1;
           if (state != null) {
             routes1 = state.routes;
@@ -33,7 +33,7 @@ function isUserSettingsOpen() {
             someResult = routes.some((name) => {
               let tmp = "settings" === name.name;
               if (!tmp) {
-                state = name.state;
+                const state = name.state;
                 let routes1;
                 if (state != null) {
                   routes1 = state.routes;
@@ -44,7 +44,7 @@ function isUserSettingsOpen() {
                   someResult = routes.some((name) => {
                     let tmp = "settings" === name.name;
                     if (!tmp) {
-                      state = name.state;
+                      const state = name.state;
                       let routes1;
                       if (state != null) {
                         routes1 = state.routes;
@@ -55,7 +55,7 @@ function isUserSettingsOpen() {
                         someResult = routes.some((name) => {
                           let tmp = "settings" === name.name;
                           if (!tmp) {
-                            state = name.state;
+                            const state = name.state;
                             let routes1;
                             if (state != null) {
                               routes1 = state.routes;
@@ -115,7 +115,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
               someResult = routes.some((name) => {
                 let tmp = "settings" === name.name;
                 if (!tmp) {
-                  state = name.state;
+                  const state = name.state;
                   let routes1;
                   if (state != null) {
                     routes1 = state.routes;
@@ -126,7 +126,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                     someResult = routes.some((name) => {
                       let tmp = "settings" === name.name;
                       if (!tmp) {
-                        state = name.state;
+                        const state = name.state;
                         let routes1;
                         if (state != null) {
                           routes1 = state.routes;
@@ -182,7 +182,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
           someResult = routes.some((name) => {
             let tmp = "settings" === name.name;
             if (!tmp) {
-              state = name.state;
+              const state = name.state;
               let routes1;
               if (state != null) {
                 routes1 = state.routes;
@@ -193,7 +193,7 @@ export const useIsUserSettingsOpen = ReactCompilerGating.isReactCompilerEnabled(
                 someResult = routes.some((name) => {
                   let tmp = "settings" === name.name;
                   if (!tmp) {
-                    state = name.state;
+                    const state = name.state;
                     let routes1;
                     if (state != null) {
                       routes1 = state.routes;

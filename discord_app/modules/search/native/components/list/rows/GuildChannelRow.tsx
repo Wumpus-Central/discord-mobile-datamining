@@ -13,9 +13,9 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["channel", "subtitle", "trailing", "extras", "onPress", "voiceStates"];
 const View = fn(17).View;
-const layout = fn(9285).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(9312).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: { paddingVertical: 10 },
   content: { flexDirection: "row", alignItems: "center" },

@@ -7,12 +7,12 @@ import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4969);
+const GuildPowerupsConstants = fn(5008);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
 let items = [
   ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET),
   ...Array.from(tmp2.GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET),
-  fn(4972).VANITY_URL_POWERUP_SKU_ID,
+  fn(5011).VANITY_URL_POWERUP_SKU_ID,
 ];
 let set = new Set(items);
 const ReactCompilerGating = fn(558);
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Set = Set;
         set = new Set(set);
         if (serverThemeRollbackEnabled) {
-          set.add(tmp(4972).GUILD_POWERUP_GUILD_THEME_SKU_ID);
+          set.add(tmp(5011).GUILD_POWERUP_GUILD_THEME_SKU_ID);
         }
         cResult[3] = serverThemeRollbackEnabled;
         cResult[4] = set;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       });
-      let tmp2 = stateFromStores(12268)(arg0);
+      let tmp2 = stateFromStores(12312)(arg0);
       dependencyMap = tmp2;
       const obj = require("initialize");
       const serverThemeRollbackEnabled = require("ServerThemeExperiment").useServerThemeRollbackEnabled(

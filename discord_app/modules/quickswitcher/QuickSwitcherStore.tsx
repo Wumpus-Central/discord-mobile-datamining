@@ -387,32 +387,32 @@ function handleUserSearchUpdate(arr, str) {
   if (!flag) {
     let DOWN = require;
     if (sortByMatchScore.AutocompleterResultTypes.USER_GLOBAL !== queryMode) {
-      if (DOWN(8684).AutocompleterResultTypes.USER !== queryMode) {
-        if (DOWN(8684).AutocompleterResultTypes.TEXT_CHANNEL === queryMode) {
+      if (DOWN(8699).AutocompleterResultTypes.USER !== queryMode) {
+        if (DOWN(8699).AutocompleterResultTypes.TEXT_CHANNEL === queryMode) {
           const intl5 = DOWN(1126).intl;
-          arr.unshift(DOWN(8684).createHeaderResult(intl5.string(DOWN(1126).t.W26k4V)));
+          arr.unshift(DOWN(8699).createHeaderResult(intl5.string(DOWN(1126).t.W26k4V)));
           let items = arr;
-          const DOWNResult = DOWN(8684);
-        } else if (DOWN(8684).AutocompleterResultTypes.VOICE_CHANNEL === queryMode) {
+          const DOWNResult = DOWN(8699);
+        } else if (DOWN(8699).AutocompleterResultTypes.VOICE_CHANNEL === queryMode) {
           const intl4 = DOWN(1126).intl;
-          arr.unshift(DOWN(8684).createHeaderResult(intl4.string(DOWN(1126).t.zUoI5C)));
+          arr.unshift(DOWN(8699).createHeaderResult(intl4.string(DOWN(1126).t.zUoI5C)));
           items = arr;
-          const DOWNResult1 = DOWN(8684);
-        } else if (DOWN(8684).AutocompleterResultTypes.GUILD === queryMode) {
+          const DOWNResult1 = DOWN(8699);
+        } else if (DOWN(8699).AutocompleterResultTypes.GUILD === queryMode) {
           const intl3 = DOWN(1126).intl;
-          arr.unshift(DOWN(8684).createHeaderResult(intl3.string(DOWN(1126).t.olADPs)));
+          arr.unshift(DOWN(8699).createHeaderResult(intl3.string(DOWN(1126).t.olADPs)));
           items = arr;
-          const DOWNResult2 = DOWN(8684);
-        } else if (DOWN(8684).AutocompleterResultTypes.APPLICATION === queryMode) {
+          const DOWNResult2 = DOWN(8699);
+        } else if (DOWN(8699).AutocompleterResultTypes.APPLICATION === queryMode) {
           const intl2 = DOWN(1126).intl;
-          arr.unshift(DOWN(8684).createHeaderResult(intl2.string(DOWN(1126).t.VwK1ld)));
+          arr.unshift(DOWN(8699).createHeaderResult(intl2.string(DOWN(1126).t.VwK1ld)));
           items = arr;
-          const DOWNResult3 = DOWN(8684);
-        } else if (DOWN(8684).AutocompleterResultTypes.GAME_PROFILE === queryMode) {
+          const DOWNResult3 = DOWN(8699);
+        } else if (DOWN(8699).AutocompleterResultTypes.GAME_PROFILE === queryMode) {
           const intl = DOWN(1126).intl;
-          arr.unshift(DOWN(8684).createHeaderResult(intl.string(DOWN(1126).t.gEp2SG)));
+          arr.unshift(DOWN(8699).createHeaderResult(intl.string(DOWN(1126).t.gEp2SG)));
           items = arr;
-          const DOWNResult4 = DOWN(8684);
+          const DOWNResult4 = DOWN(8699);
         } else {
           found = arr.filter((type) => type.type === sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE);
           const substr = found.slice(0, 3);
@@ -430,25 +430,25 @@ function handleUserSearchUpdate(arr, str) {
           c28 = str;
           const _Math = Math;
           c29 = Math.max(str.length, c29);
-          str = DOWN(8684).findNextSelectedResult;
-          DOWN = DOWN(8684).FindResultDirections.DOWN;
+          str = DOWN(8699).findNextSelectedResult;
+          DOWN = DOWN(8699).FindResultDirections.DOWN;
           selectedIndex = str(DOWN, -1, arr);
-          const DOWNResult5 = DOWN(8684);
+          const DOWNResult5 = DOWN(8699);
         } else {
           let tmp31 = null != tmp29;
           if (tmp31) {
-            tmp31 = tmp29.type === DOWN(8684).AutocompleterResultTypes.HEADER;
+            tmp31 = tmp29.type === DOWN(8699).AutocompleterResultTypes.HEADER;
           }
           if (tmp31) {
-            selectedIndex = DOWN(8684).findNextSelectedResult(DOWN(8684).FindResultDirections.DOWN, selectedIndex, arr);
-            const DOWNResult6 = DOWN(8684);
+            selectedIndex = DOWN(8699).findNextSelectedResult(DOWN(8699).FindResultDirections.DOWN, selectedIndex, arr);
+            const DOWNResult6 = DOWN(8699);
           }
         }
         quickSwitcherStoreClass.emitChange();
       }
     }
     guild = null;
-    if (queryMode !== DOWN(8684).AutocompleterResultTypes.USER_GLOBAL) {
+    if (queryMode !== DOWN(8699).AutocompleterResultTypes.USER_GLOBAL) {
       guild = GuildStore.getGuild(SelectedGuildStore.getGuildId());
     }
     if (null != guild) {
@@ -461,8 +461,8 @@ function handleUserSearchUpdate(arr, str) {
       const intl6 = DOWN(1126).intl;
       formatToPlainStringResult = intl6.string(DOWN(1126).t.XFYW1o);
     }
-    arr.unshift(DOWN(8684).createHeaderResult(formatToPlainStringResult));
-    const DOWNResult7 = DOWN(8684);
+    arr.unshift(DOWN(8699).createHeaderResult(formatToPlainStringResult));
+    const DOWNResult7 = DOWN(8699);
     length = arr;
   }
 }
@@ -482,8 +482,8 @@ function handleGameAutocompleteSettled() {
     _null.refreshGameProfiles();
   }
 }
-const DraftType = fn(7237).DraftType;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4707).GUILD_VOCAL_CHANNELS_KEY;
+const DraftType = fn(7243).DraftType;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4748).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ CHANNEL_NOTICE_SHOW_DELAY: closure_20, Permissions: closure_21 } = Constants);
 const seenQSTutorial = "seenQSTutorial";
@@ -657,7 +657,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(DispatcherDefault, {
         }
         _null.setLimit(num);
         const guildId = SelectedGuildStore.getGuildId();
-        if (queryMode === tmp6(8684).AutocompleterResultTypes.USER) {
+        if (queryMode === tmp6(8699).AutocompleterResultTypes.USER) {
           if (null != guildId) {
             const obj = { userFilters: null };
             const obj2 = { guild: guildId, friends: true };
@@ -665,10 +665,10 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(DispatcherDefault, {
             _null.setOptions(obj, true);
           }
         }
-        if (queryMode === tmp6(8684).AutocompleterResultTypes.VOICE_CHANNEL) {
+        if (queryMode === tmp6(8699).AutocompleterResultTypes.VOICE_CHANNEL) {
           _null.setOptions({ voiceChannelGuildFilter: null }, true);
         } else {
-          _null.setOptions({ userFilters: null, voiceChannelGuildFilter: "r" }, true);
+          _null.setOptions({ userFilters: null, voiceChannelGuildFilter: "Array" }, true);
         }
       }
       if (queryMode === sortByMatchScore.AutocompleterResultTypes.USER) {

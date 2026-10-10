@@ -14,7 +14,7 @@ import DismissibleContentUnsafeUtils from "../../dismissible_content/Dismissible
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
 import ReferralProgramUtils from "../referral_program/ReferralProgramUtils.tsx";
@@ -23,7 +23,7 @@ import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.ts
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef15180 from "../../../../_runtime/metro/15180__.js";
+import _modDef15242 from "../../../../_runtime/metro/15242__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
@@ -31,10 +31,10 @@ import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
 require = fn;
 const View = fn(17).View;
 let closure_6 = fn(1392).PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-const Gradients = fn(7145).Gradients;
+const Gradients = fn(7151).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   tag: { paddingVertical: 4, paddingHorizontal: 8, borderRadius: nativeDefault.radii.round },
   badge: null,
@@ -215,7 +215,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (acked) {
           if (cResult[5] !== acked2.icon) {
             const obj4 = {
-              source: _modDef15180,
+              source: _modDef15242,
               size: native.Icon.Sizes.EXTRA_SMALL,
               color: acked2.icon.color,
               style: acked2.icon,
@@ -321,7 +321,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (acked) {
         const obj5 = { style: tmp4.acked, children: null };
         const obj6 = {
-          source: _modDef15180,
+          source: _modDef15242,
           size: native.Icon.Sizes.EXTRA_SMALL,
           color: tmp4.icon.color,
           style: tmp4.icon,
@@ -611,7 +611,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[49] !== tmp5.icon) {
                         const obj14 = {
-                          source: _modDef15180,
+                          source: _modDef15242,
                           size: native.Icon.Sizes.EXTRA_SMALL,
                           color: tmp5.icon.color,
                           style: tmp5.icon,
@@ -962,7 +962,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = intl);
               obj11.style = items4;
               const obj12 = {
-                source: _modDef15180,
+                source: _modDef15242,
                 size: native.Icon.Sizes.EXTRA_SMALL,
                 color: intl.icon.color,
                 style: intl.icon,

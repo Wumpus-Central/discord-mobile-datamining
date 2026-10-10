@@ -26,7 +26,7 @@ function getSelectedGuildChannel() {
     channel = ChannelStore.getChannel(channelId);
   }
   if (null == channel) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
       text: "Select a channel first",
       variant: "critical",
     });
@@ -43,7 +43,7 @@ function getSelectedGuildChannel() {
   if (null == obj) {
     return null;
   } else if (null == obj.guild) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
       text: "Select a guild channel first",
       variant: "critical",
     });
@@ -62,7 +62,7 @@ function buildTestMessageData(arg0) {
     channel = ChannelStore.getChannel(channelId);
   }
   if (null == channel) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
       text: "Select a channel first",
       variant: "critical",
     });
@@ -78,7 +78,7 @@ function buildTestMessageData(arg0) {
   }
   let currentUser = UserStore.getCurrentUser();
   if (null == currentUser) {
-    ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+    ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
       text: "Current user is null",
       variant: "critical",
     });
@@ -223,12 +223,12 @@ function buildReactionNotification(arg0) {
   }
 }
 const ScrollView = fn(17).ScrollView;
-const createChannelRecord = fn(2068).createChannelRecord;
+const createChannelRecord = fn(2069).createChannelRecord;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_12, InAppNotificationTypes } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, content: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.content = { padding: nativeDefault.space.PX_16 };
@@ -364,7 +364,7 @@ const items3 = [
         channel = ChannelStore.getChannel(channelId);
       }
       if (null == channel) {
-        ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+        ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
           text: "Select a channel first",
           variant: "critical",
         });
@@ -408,7 +408,7 @@ const items3 = [
       const tmp = getSelectedGuildChannel();
       let currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
-        ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+        ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
           text: "Current user is null",
           variant: "critical",
         });
@@ -499,7 +499,7 @@ const items3 = [
     build: function buildMessageRequestNotification() {
       let currentUser = UserStore.getCurrentUser();
       if (null == currentUser) {
-        ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+        ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
           text: "Current user is null",
           variant: "critical",
         });
@@ -621,7 +621,7 @@ let obj6 = {
       channel = ChannelStore.getChannel(channelId);
     }
     if (null == channel) {
-      ToastActionCreatorsDefault.openMana("DEV_IN_APP_NOTIF_TEST_ERROR", {
+      ToastActionCreatorsDefault.open("DEV_IN_APP_NOTIF_TEST_ERROR", {
         text: "Select a channel first",
         variant: "critical",
       });
@@ -708,25 +708,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj2.children = options.map((label) => {
               closure_0 = label;
               return closure_1_14(
-                first(6186).TableRow,
+                first(6179).TableRow,
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(15804).BeakerIcon, {}),
+                  icon: closure_1_14(first(15866).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
-                  trailing: closure_1_14(first(6195).TableRowArrow, {}),
+                  trailing: closure_1_14(first(6188).TableRowArrow, {}),
                 },
                 label.label,
               );
             });
             items = [
-              state(TableRowGroup.TableRowGroup, obj2),
-              state(native.Spacer, { size: nativeDefault.space.PX_16 }),
+              closure_2_14(TableRowGroup.TableRowGroup, obj2),
+              closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 }),
             ];
             obj.children = items;
-            return closure_2_15(noop.Fragment, obj, title.title);
+            return value2(noop.Fragment, obj, title.title);
           });
           cResult[6] = tmp14;
           cResult[7] = mapped;
@@ -744,21 +744,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: items3.map((label) => {
               closure_0 = label;
               return closure_1_14(
-                first(6186).TableRow,
+                first(6179).TableRow,
                 {
                   label: label.label,
                   subLabel: label.subLabel,
-                  icon: closure_1_14(first(15804).BeakerIcon, {}),
+                  icon: closure_1_14(first(15866).BeakerIcon, {}),
                   onPress() {
                     return first(closure_0);
                   },
-                  trailing: closure_1_14(first(6195).TableRowArrow, {}),
+                  trailing: closure_1_14(first(6188).TableRowArrow, {}),
                 },
                 label.label,
               );
             }),
           };
-          const tmp20 = closure_14(tmp(6269).TableRowGroup, obj4);
+          const tmp20 = closure_14(tmp(6264).TableRowGroup, obj4);
           cResult[8] = tmp20;
           let tmp17 = tmp20;
         } else {
@@ -812,22 +812,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.children = options.map((label) => {
             closure_0 = label;
             return closure_1_14(
-              closure_1_0(6186).TableRow,
+              closure_1_0(6179).TableRow,
               {
                 label: label.label,
                 subLabel: label.subLabel,
-                icon: closure_1_14(closure_1_0(15804).BeakerIcon, {}),
+                icon: closure_1_14(closure_1_0(15866).BeakerIcon, {}),
                 onPress() {
                   return closure_2_0(closure_0);
                 },
-                trailing: closure_1_14(closure_1_0(6195).TableRowArrow, {}),
+                trailing: closure_1_14(closure_1_0(6188).TableRowArrow, {}),
               },
               label.label,
             );
           });
-          items = [state(TableRowGroup.TableRowGroup, obj2), state(native.Spacer, { size: nativeDefault.space.PX_16 })];
+          items = [
+            closure_2_14(TableRowGroup.TableRowGroup, obj2),
+            closure_2_14(native.Spacer, { size: nativeDefault.space.PX_16 }),
+          ];
           obj.children = items;
-          return closure_2_15(noop.Fragment, obj, title.title);
+          return value2(noop.Fragment, obj, title.title);
         }),
       ];
       let obj2 = { size: nativeDefault.space.PX_16 };
@@ -836,15 +839,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         children: items3.map((label) =>
           closure_1_14(
-            label(6186).TableRow,
+            label(6179).TableRow,
             {
               label: label.label,
               subLabel: label.subLabel,
-              icon: closure_1_14(label(15804).BeakerIcon, {}),
+              icon: closure_1_14(label(15866).BeakerIcon, {}),
               onPress() {
                 return label(label);
               },
-              trailing: closure_1_14(label(6195).TableRowArrow, {}),
+              trailing: closure_1_14(label(6188).TableRowArrow, {}),
             },
             label.label,
           ),

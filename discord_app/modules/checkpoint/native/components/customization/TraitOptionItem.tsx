@@ -2,11 +2,11 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useA11yRolesNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05391_LinearGradient.js";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6247 from "../../../../../../_runtime/metro/06247__.js";
-import inlineStyles from "../../../../../../_runtime/07559_inlineStyles.js";
+import _modDef6242 from "../../../../../../_runtime/metro/06242__.js";
+import inlineStyles from "../../../../../../_runtime/07576_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
@@ -85,7 +85,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp23;
           }
           const obj3 = { style: tmp11, maskElement: tmp13, pointerEvents: "none", children: tmp16 };
-          const tmp26 = closure_1_11(_modDef6247, obj3);
+          const tmp26 = closure_1_11(_modDef6242, obj3);
           cResult[6] = tmp11;
           cResult[7] = tmp16;
           cResult[8] = tmp26;
@@ -142,7 +142,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
         const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
         obj2.children = closure_1_11(LinearGradientDefault, obj3);
-        let tmp4Result = closure_1_11(_modDef6247, obj2);
+        let tmp4Result = closure_1_11(_modDef6242, obj2);
       } else {
         const items1 = [, ,];
         ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

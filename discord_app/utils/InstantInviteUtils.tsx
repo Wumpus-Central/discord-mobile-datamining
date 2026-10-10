@@ -97,18 +97,18 @@ const hours = "hours";
 const days = "days";
 const never = "never";
 const dependencyMap = {
-  [fn(8670).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
-  [fn(8670).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
-  [fn(8670).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
-  [fn(8670).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
-  [fn(8670).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
-  [fn(8670).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
-  [fn(8670).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
-  [fn(8670).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
-  [fn(8670).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
-  [fn(8670).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
+  [fn(8685).INVITE_OPTIONS_30_MINUTES.value]: { value: 30, type: "minutes" },
+  [fn(8685).INVITE_OPTIONS_1_HOUR.value]: { value: 1, type: "hours" },
+  [fn(8685).INVITE_OPTIONS_6_HOURS.value]: { value: 6, type: "hours" },
+  [fn(8685).INVITE_OPTIONS_12_HOURS.value]: { value: 12, type: "hours" },
+  [fn(8685).INVITE_OPTIONS_1_DAY.value]: { value: 1, type: "days" },
+  [fn(8685).INVITE_OPTIONS_7_DAYS.value]: { value: 7, type: "days" },
+  [fn(8685).INVITE_OPTIONS_14_DAYS.value]: { value: 14, type: "days" },
+  [fn(8685).INVITE_OPTIONS_30_DAYS.value]: { value: 30, type: "days" },
+  [fn(8685).INVITE_OPTIONS_60_DAYS.value]: { value: 60, type: "days" },
+  [fn(8685).INVITE_OPTIONS_FOREVER.value]: { value: 0, type: "never" },
 };
-let items = [fn(8670).INVITE_OPTIONS_14_DAYS, fn(8670).INVITE_OPTIONS_30_DAYS, fn(8670).INVITE_OPTIONS_60_DAYS];
+let items = [fn(8685).INVITE_OPTIONS_14_DAYS, fn(8685).INVITE_OPTIONS_30_DAYS, fn(8685).INVITE_OPTIONS_60_DAYS];
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/InstantInviteUtils.tsx");
 
@@ -144,25 +144,25 @@ export default {
       return tmp2;
     });
   },
-  getMaxUsesOptions: fn(8670).MAX_USES_OPTIONS,
-  INVITE_OPTIONS_FOREVER: fn(8670).INVITE_OPTIONS_FOREVER,
-  INVITE_OPTIONS_1_DAY: fn(8670).INVITE_OPTIONS_1_DAY,
-  INVITE_OPTIONS_7_DAYS: fn(8670).INVITE_OPTIONS_7_DAYS,
-  INVITE_OPTIONS_14_DAYS: fn(8670).INVITE_OPTIONS_14_DAYS,
-  INVITE_OPTIONS_30_DAYS: fn(8670).INVITE_OPTIONS_30_DAYS,
-  INVITE_OPTIONS_60_DAYS: fn(8670).INVITE_OPTIONS_60_DAYS,
-  INVITE_OPTIONS_12_HOURS: fn(8670).INVITE_OPTIONS_12_HOURS,
-  INVITE_OPTIONS_6_HOURS: fn(8670).INVITE_OPTIONS_6_HOURS,
-  INVITE_OPTIONS_8_HOURS: fn(8670).INVITE_OPTIONS_8_HOURS,
-  INVITE_OPTIONS_1_HOUR: fn(8670).INVITE_OPTIONS_1_HOUR,
-  INVITE_OPTIONS_30_MINUTES: fn(8670).INVITE_OPTIONS_30_MINUTES,
-  INVITE_OPTIONS_UNLIMITED: fn(8670).INVITE_OPTIONS_UNLIMITED,
-  INVITE_OPTIONS_ONCE: fn(8670).INVITE_OPTIONS_ONCE,
-  INVITE_OPTIONS_5_TIMES: fn(8670).INVITE_OPTIONS_5_TIMES,
-  INVITE_OPTIONS_10_TIMES: fn(8670).INVITE_OPTIONS_10_TIMES,
-  INVITE_OPTIONS_25_TIMES: fn(8670).INVITE_OPTIONS_25_TIMES,
-  INVITE_OPTIONS_50_TIMES: fn(8670).INVITE_OPTIONS_50_TIMES,
-  INVITE_OPTIONS_100_TIMES: fn(8670).INVITE_OPTIONS_100_TIMES,
+  getMaxUsesOptions: fn(8685).MAX_USES_OPTIONS,
+  INVITE_OPTIONS_FOREVER: fn(8685).INVITE_OPTIONS_FOREVER,
+  INVITE_OPTIONS_1_DAY: fn(8685).INVITE_OPTIONS_1_DAY,
+  INVITE_OPTIONS_7_DAYS: fn(8685).INVITE_OPTIONS_7_DAYS,
+  INVITE_OPTIONS_14_DAYS: fn(8685).INVITE_OPTIONS_14_DAYS,
+  INVITE_OPTIONS_30_DAYS: fn(8685).INVITE_OPTIONS_30_DAYS,
+  INVITE_OPTIONS_60_DAYS: fn(8685).INVITE_OPTIONS_60_DAYS,
+  INVITE_OPTIONS_12_HOURS: fn(8685).INVITE_OPTIONS_12_HOURS,
+  INVITE_OPTIONS_6_HOURS: fn(8685).INVITE_OPTIONS_6_HOURS,
+  INVITE_OPTIONS_8_HOURS: fn(8685).INVITE_OPTIONS_8_HOURS,
+  INVITE_OPTIONS_1_HOUR: fn(8685).INVITE_OPTIONS_1_HOUR,
+  INVITE_OPTIONS_30_MINUTES: fn(8685).INVITE_OPTIONS_30_MINUTES,
+  INVITE_OPTIONS_UNLIMITED: fn(8685).INVITE_OPTIONS_UNLIMITED,
+  INVITE_OPTIONS_ONCE: fn(8685).INVITE_OPTIONS_ONCE,
+  INVITE_OPTIONS_5_TIMES: fn(8685).INVITE_OPTIONS_5_TIMES,
+  INVITE_OPTIONS_10_TIMES: fn(8685).INVITE_OPTIONS_10_TIMES,
+  INVITE_OPTIONS_25_TIMES: fn(8685).INVITE_OPTIONS_25_TIMES,
+  INVITE_OPTIONS_50_TIMES: fn(8685).INVITE_OPTIONS_50_TIMES,
+  INVITE_OPTIONS_100_TIMES: fn(8685).INVITE_OPTIONS_100_TIMES,
 };
 export { RowTypes };
 export const generateRowsForQuery = function generateRowsForQuery(arg0) {
@@ -297,7 +297,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       importDefault = undefined;
       ({ rows: c0, counts: c1 } = obj10);
       if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        const obj12 = { query: tmp44, limit: 3, guildId: "code" };
+        const obj12 = { query: tmp44, limit: 3, guildId: "apply" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);

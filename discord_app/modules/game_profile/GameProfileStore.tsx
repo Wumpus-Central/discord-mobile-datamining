@@ -87,7 +87,7 @@ const gameProfileStore = new GameProfileStore(DispatcherDefault, {
     closure_6[gameId] = false;
   },
   GAME_PROFILE_SET_PENDING_RETURN: function handleSetPendingReturn(arg0) {
-    ({ gameId, channelId, initialScrollOffset } = arg0);
+    ({ gameId, channelId, initialScrollOffset, tab, source } = arg0);
     let gameId1;
     if (_null != null) {
       gameId1 = _null.gameId;
@@ -103,11 +103,23 @@ const gameProfileStore = new GameProfileStore(DispatcherDefault, {
           initialScrollOffset1 = _null.initialScrollOffset;
         }
         if (initialScrollOffset1 === initialScrollOffset) {
-          return false;
+          let tab1;
+          if (_null != null) {
+            tab1 = _null.tab;
+          }
+          if (tab1 === tab) {
+            let source1;
+            if (_null != null) {
+              source1 = _null.source;
+            }
+            if (source1 === source) {
+              return false;
+            }
+          }
         }
       }
     }
-    _null = { gameId, channelId, initialScrollOffset };
+    _null = { gameId, channelId, initialScrollOffset, tab, source };
   },
   GAME_PROFILE_CLEAR_PENDING_RETURN: function handleClearPendingReturn(arg0) {
     if (null != _null) {

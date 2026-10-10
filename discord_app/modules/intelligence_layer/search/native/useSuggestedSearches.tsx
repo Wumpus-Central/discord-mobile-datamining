@@ -7,8 +7,8 @@ import SuggestedSearchStore from "../SuggestedSearchStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_SUGGESTED_SEARCHES = fn(11991).EMPTY_SUGGESTED_SEARCHES;
-let closure_6 = fn(11992).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const EMPTY_SUGGESTED_SEARCHES = fn(12035).EMPTY_SUGGESTED_SEARCHES;
+let closure_6 = fn(12036).SUGGESTED_SEARCHES_WINDOW_SIZE;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");

@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06334_LegacyBaseButton.js";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import IndividualProductPreview from "IndividualProductPreview.tsx";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1087).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   previewContainer: {
     paddingTop: nativeDefault.space.PX_16,
@@ -538,7 +538,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             const obj8 = { style: tmp25, children: null };
                                             const items2 = [tmp26, tmp56];
                                             obj8.children = items2;
-                                            const tmp63 = __initData2(collapsed, obj8);
+                                            const tmp63 = map1(collapsed, obj8);
                                             cResult[48] = tmp4.previewContainer;
                                             cResult[49] = tmp56;
                                             cResult[50] = tmp26;
@@ -549,7 +549,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                         const obj9 = { style: bundleContainer, children: null };
                                         const items3 = [tmp37, tmp52];
                                         obj9.children = items3;
-                                        const tmp59 = __initData2(collapsed, obj9);
+                                        const tmp59 = map1(collapsed, obj9);
                                         cResult[44] = tmp4.bundleContainer;
                                         cResult[45] = tmp37;
                                         cResult[46] = tmp52;
@@ -560,7 +560,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     const obj10 = { style: tmp4.bundleInfoContainer, children: null };
                                     const items4 = [tmp41, tmp49];
                                     obj10.children = items4;
-                                    const tmp55 = __initData2(collapsed, obj10);
+                                    const tmp55 = map1(collapsed, obj10);
                                     cResult[40] = tmp4.bundleInfoContainer;
                                     cResult[41] = tmp41;
                                     cResult[42] = tmp49;
@@ -570,7 +570,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   const obj11 = { variant: "text-sm/medium", color: "text-default", children: null };
                                   const items5 = [name, tmp45];
                                   obj11.children = items5;
-                                  const tmp51 = __initData2(Text_Text.Text, obj11);
+                                  const tmp51 = map1(Text_Text.Text, obj11);
                                   cResult[37] = name;
                                   cResult[38] = tmp45;
                                   cResult[39] = tmp51;
@@ -591,7 +591,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj13 = { style: bundleInfoContainer, children: null };
                         const items6 = [tmp29, tmp34];
                         obj13.children = items6;
-                        const tmp40 = __initData2(collapsed, obj13);
+                        const tmp40 = map1(collapsed, obj13);
                         cResult[26] = tmp4.bundleInfoContainer;
                         cResult[27] = tmp29;
                         cResult[28] = tmp34;
@@ -712,7 +712,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.children = intl.formatToPlainString(util.t["/0Yndu"], { num: items.length });
       items4[1] = __initData(Text_Text.Text, obj6);
       obj4.children = items4;
-      const items5 = [__initData2(collapsed, obj4)];
+      const items5 = [map1(collapsed, obj4)];
       const obj8 = { style: tmp.bundleInfoContainer, children: null };
       const items6 = [
         __initData(closure_16, { items, bundledProducts, activeIndex: num, onSelect: tmp3, onTrackPress }),
@@ -726,11 +726,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp20Result = __initData(Text_Text.Text, obj9);
       }
       items7[1] = tmp20Result;
-      items6[1] = __initData2(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
+      items6[1] = map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: items7 });
       obj8.children = items6;
-      items5[1] = __initData2(collapsed, obj8);
+      items5[1] = map1(collapsed, obj8);
       obj3.children = items5;
-      items3[1] = __initData2(collapsed, obj3);
+      items3[1] = map1(collapsed, obj3);
       obj2.children = items3;
-      return __initData2(collapsed, obj2);
+      return map1(collapsed, obj2);
     };

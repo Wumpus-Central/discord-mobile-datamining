@@ -58,7 +58,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -78,14 +78,14 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               closure_131_1 = undefined;
               closure_131_2 = undefined;
               closure_131_3 = undefined;
-              const VIDEO_MODAL_MOBILE = closure_0(5984).QuestContent.VIDEO_MODAL_MOBILE;
+              const VIDEO_MODAL_MOBILE = closure_0(5977).QuestContent.VIDEO_MODAL_MOBILE;
               closure_131_1 = VIDEO_MODAL_MOBILE;
               c6 = 1;
               closure_131_2 = getQuestImpressionId();
               if (null == ref.current) {
-                const obj8 = closure_0(7415);
-                ref.current = obj8.getAdUser(closure_0(7409).getQuestContentName(VIDEO_MODAL_MOBILE));
-                const obj9 = closure_0(7409);
+                const obj8 = closure_0(7416);
+                ref.current = obj8.getAdUser(closure_0(7415).getQuestContentName(VIDEO_MODAL_MOBILE));
+                const obj9 = closure_0(7415);
               }
               c7 = 2;
               c8 = 1;
@@ -95,7 +95,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
           } else if (1 === tmp8) {
             c6 = 0;
             closure_131_4 = closure_5;
-            const questLogger = closure_0(7391).getQuestLogger();
+            const questLogger = closure_0(7397).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_131_4);
             throw closure_131_4;
           } else if (arg0 === 1) {
@@ -115,9 +115,9 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               sourceQuestContent: null,
             };
             const obj14 = {};
-            const obj13 = closure_0(7400);
-            const merged = Object.assign(closure_0(7409).getContentProperties(closure_131_1));
-            const merged1 = Object.assign(engagedViewEmitter(7358)());
+            const obj13 = closure_0(7406);
+            const merged = Object.assign(closure_0(7415).getContentProperties(closure_131_1));
+            const merged1 = Object.assign(engagedViewEmitter(7364)());
             obj14.impression_id = closure_131_2;
             obj14.video_watch_seconds = closure_131_0.video_watch_seconds;
             obj14.video_position_seconds = closure_131_0.video_position_seconds;
@@ -140,15 +140,15 @@ export default function useVideoQuestPlayerAnalytics(duration) {
               obj2 = closure_0(1382);
             }
             obj14.android_advertising_id = advertisingId1;
-            const obj16 = closure_0(7409);
-            const adMetadataSealed = closure_0(7380).getAdMetadataSealed(sourceQuestContent, questId);
+            const obj16 = closure_0(7415);
+            const adMetadataSealed = closure_0(7386).getAdMetadataSealed(sourceQuestContent, questId);
             let metadata_sealed = adMetadataSealed;
             if (adMetadataSealed == null) {
               metadata_sealed = null;
             }
             obj14.metadata_sealed = metadata_sealed;
-            const obj3 = closure_0(7380);
-            const adTrafficMetadataSealed = closure_0(7380).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+            const obj3 = closure_0(7386);
+            const adTrafficMetadataSealed = closure_0(7386).getAdTrafficMetadataSealed(sourceQuestContent, questId);
             let traffic_metadata_sealed = adTrafficMetadataSealed;
             if (adTrafficMetadataSealed == null) {
               traffic_metadata_sealed = null;
@@ -159,7 +159,7 @@ export default function useVideoQuestPlayerAnalytics(duration) {
             obj13.trackQuestEvent(obj12);
             c6 = 0;
             c8 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp53) {
           closure_5 = tmp53;

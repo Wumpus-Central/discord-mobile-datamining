@@ -1,7 +1,7 @@
 // discord_app/design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import LottieIcon from "../LottieIcon.tsx";
-import _mod12734 from "../../../../../../_runtime/metro/12734__.js";
+import _mod12781 from "../../../../../../_runtime/metro/12781__.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -34,7 +34,7 @@ export const SpendEarnOrbsLightThemeLottie = ReactCompilerGating.isReactCompiler
         tmp5 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod12734;
+        const tmpResult = _mod12781;
         cResult[3] = tmpResult;
         let tmp9 = tmpResult;
       } else {
@@ -57,5 +57,5 @@ export const SpendEarnOrbsLightThemeLottie = ReactCompilerGating.isReactCompiler
   : function SpendEarnOrbsLightThemeLottie(ref) {
       const merged = Object.assign(ref, Object.assign({ ref: 0 }));
       const merged1 = Object.assign(merged);
-      return jsx(LottieIcon.LottieIcon, { dotLottie: _mod12734, ref: ref.ref, layers, markers: items });
+      return jsx(LottieIcon.LottieIcon, { dotLottie: _mod12781, ref: ref.ref, layers, markers: items });
     };

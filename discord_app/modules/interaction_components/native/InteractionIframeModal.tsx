@@ -18,7 +18,7 @@ const BotTagTypes = fn(1373).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const interaction_iframe_modal = "interaction_iframe_modal";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 }, header: { flexDirection: "row", padding: 16, justifyContent: "space-between", alignItems: "center" }, headerCenterContainer: { flexDirection: "column", alignItems: "center" }, headerTitleContainer: { flexDirection: "row", marginBottom: 2 }, closeButton: { marginEnd: 8 }, spacerView: { marginStart: 8, width: 32 }, botTag: { marginStart: 4 } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -32,9 +32,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   ({ application, title, id } = arg0);
   id2 = application.id;
   const obj = id2(576);
-  const iframeModalState = id2(18001).useIframeModalState(arg0);
+  const iframeModalState = id2(18073).useIframeModalState(arg0);
   ({ queryParams, iframeUrl } = iframeModalState);
-  let obj2 = id2(18001);
+  let obj2 = id2(18073);
   [r10030, importDefault] = noop.useState(makeIframeIdDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { includeKeyboardHeight: true };
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             return true;
           }
         }
-        const tmp24 = closure_7(tmp(4996).XLargeIcon, {});
+        const tmp24 = closure_7(tmp(10258).XLargeIcon, {});
         cResult[17] = tmp24;
         const tmp23 = tmp24;
       } else {
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
             }
           }
           const obj5 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", children: application.name };
-          const tmp29 = closure_7(tmp(5087).Text, obj5);
+          const tmp29 = closure_7(tmp(5088).Text, obj5);
           cResult[21] = application.name;
           cResult[22] = tmp29;
         } else {
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
         cResult[25] = tmp35;
       }
       const obj9 = { accessibilityRole: "button", accessibilityLabel: tmp21, onPress: A, style: tmp4.closeButton, children: tmp23 };
-      const tmp27 = closure_7(tmp(6191).PressableOpacity, obj9);
+      const tmp27 = closure_7(tmp(6184).PressableOpacity, obj9);
       cResult[18] = A;
       cResult[19] = tmp4.closeButton;
       cResult[20] = tmp27;
@@ -356,10 +356,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Interact
   obj10.activitySessionId = queryParams.instance_id;
   obj10.queryParams = queryParams;
   obj10.onLoadError = function onLoadError() {
-    const obj2 = { key: interaction_iframe_modal, content: null };
+    const obj2 = { text: null };
     const intl = util.intl;
-    obj2.content = intl.string(util.t.HehpFW);
-    ToastActionCreatorsDefault.open(obj2);
+    obj2.text = intl.string(util.t.HehpFW);
+    ToastActionCreatorsDefault.open(interaction_iframe_modal, obj2);
     callback();
   };
   const tmp5Result = require("ComponentOwnedWebView");

@@ -18,7 +18,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 function handleFindFriends() {
-  ContactSyncModalActionCreators.openContactSyncModal({}, __initData2.FRIENDS_ADD_FRIENDS_MODAL);
+  ContactSyncModalActionCreators.openContactSyncModal({}, map1.FRIENDS_ADD_FRIENDS_MODAL);
 }
 function handleShare() {
   const self = this;
@@ -70,7 +70,7 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(12378).Sections;
+const Sections = fn(12422).Sections;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_12,
@@ -78,7 +78,7 @@ const Constants = fn(1085);
   InstantInviteSources: closure_14,
   RelationshipTypes: closure_15,
 } = Constants);
-let ContactPermissions = fn(12356).ContactPermissions;
+let ContactPermissions = fn(12400).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = {
@@ -91,7 +91,7 @@ let closure_19 = {
   CONTACT_SUGGESTIONS: 3,
   [3]: "CONTACT_SUGGESTIONS",
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1 },
   inviteAppsContainerNonSticky: {
@@ -124,11 +124,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const contactSyncAccount = require("ContactSyncUtils").useContactSyncAccount();
       if (cResult[0] !== contactSyncAccount) {
-        const isContactSyncEnabledResult = tmp(12358).isContactSyncEnabled(contactSyncAccount);
+        const isContactSyncEnabledResult = tmp(12402).isContactSyncEnabled(contactSyncAccount);
         cResult[0] = contactSyncAccount;
         cResult[1] = isContactSyncEnabledResult;
         let tmp5 = isContactSyncEnabledResult;
-        let tmpResult = tmp(12358);
+        let tmpResult = tmp(12402);
       } else {
         tmp5 = cResult[1];
       }
@@ -1165,9 +1165,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return sourcePage(analyticsLocations[29])
             .unionBy(items1, items, (user) => user.user.id)
             .sort((user, user2) => {
-              const name = items1(4923).getName(user.user);
-              const obj = items1(4923);
-              return name.localeCompare(items1(4923).getName(user2.user));
+              const name = items1(4962).getName(user.user);
+              const obj = items1(4962);
+              return name.localeCompare(items1(4962).getName(user2.user));
             });
         }
         const items8 = [first4, first3];
@@ -1208,9 +1208,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return _modDef12
           .unionBy(items1, items, (id) => id.id)
           .sort((arg0, arg1) => {
-            const name = sourcePage(4923).getName(arg0);
-            const obj = sourcePage(4923);
-            return name.localeCompare(sourcePage(4923).getName(arg1));
+            const name = sourcePage(4962).getName(arg0);
+            const obj = sourcePage(4962);
+            return name.localeCompare(sourcePage(4962).getName(arg1));
           });
       };
       cResult[13] = first2;
@@ -1288,7 +1288,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       sourcePage(analyticsLocations[27])(() => {
         AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, {
-          friend_add_type: __initData2.FRIENDS_ADD_FRIENDS_MODAL,
+          friend_add_type: map1.FRIENDS_ADD_FRIENDS_MODAL,
           source_page: sourcePage,
         });
       });
@@ -1338,9 +1338,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return _modDef12
           .unionBy(items1, items, (id) => id.id)
           .sort((arg0, arg1) => {
-            const name = sourcePage(4923).getName(arg0);
-            const obj = sourcePage(4923);
-            return name.localeCompare(sourcePage(4923).getName(arg1));
+            const name = sourcePage(4962).getName(arg0);
+            const obj = sourcePage(4962);
+            return name.localeCompare(sourcePage(4962).getName(arg1));
           });
       });
       let obj5 = navigation(analyticsLocations[31]);
@@ -1379,9 +1379,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return sourcePage(analyticsLocations[29])
             .unionBy(items1, items, (user) => user.user.id)
             .sort((user, user2) => {
-              const name = items1(4923).getName(user.user);
-              const obj = items1(4923);
-              return name.localeCompare(items1(4923).getName(user2.user));
+              const name = items1(4962).getName(user.user);
+              const obj = items1(4962);
+              return name.localeCompare(items1(4962).getName(user2.user));
             });
         },
         items4,

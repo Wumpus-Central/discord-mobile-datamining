@@ -3,7 +3,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(5979).BOUNTY_CTA_TIMER_MILLISECONDS;
+let closure_4 = fn(5972).BOUNTY_CTA_TIMER_MILLISECONDS;
 const BountyVideoEndMode = {
   END_CARD: "END_CARD",
   END_CARD_WITH_CTA: "END_CARD_WITH_CTA",

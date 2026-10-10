@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/create/conjureAppSlotsLeftLabel.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/create/conjureAppSlotsLeftLabel.tsx");
@@ -8,11 +8,11 @@ const result = size.fileFinishedImporting("modules/conjure/create/conjureAppSlot
 export const conjureAppSlotsLeftLabel = function conjureAppSlotsLeftLabel(count) {
   if (0 === count) {
     const intl2 = util.intl;
-    let stringResult = intl2.string(_modDef3827.s28pGG);
+    let stringResult = intl2.string(_modDef3849.s28pGG);
   } else {
     const intl = util.intl;
     const obj = { count };
-    stringResult = intl.formatToPlainString(_modDef3827.Wy5aK4, obj);
+    stringResult = intl.formatToPlainString(_modDef3849.Wy5aK4, obj);
   }
   return stringResult;
 };

@@ -34,7 +34,7 @@ function canConnectToChannel(type, afkChannelId) {
   }
   return canBasicChannelResult;
 }
-const isVoiceChannel = fn(2068).isVoiceChannel;
+const isVoiceChannel = fn(2069).isVoiceChannel;
 const BasicPermissions = fn(1085).BasicPermissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

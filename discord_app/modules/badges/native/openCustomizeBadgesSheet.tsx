@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/badges/native/openCustomizeBadgesSheet.tsx");
 
 export const openCustomizeBadgesSheet = function openCustomizeBadgesSheet(analyticsLocations) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14798, dependencyMap.paths), "Customize Badges", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14854, dependencyMap.paths), "Customize Badges", {
     analyticsLocations: analyticsLocations.analyticsLocations,
   });
 };

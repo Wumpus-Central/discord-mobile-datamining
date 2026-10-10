@@ -7,10 +7,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8600).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(8616).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   error: { paddingVertical: nativeDefault.space.PX_24, alignItems: "center", rowGap: nativeDefault.space.PX_12 },
 };
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       badgeColorSecondary = guildId.guildId;
       const tmp4 = closure_8();
       const obj = badgeColorSecondary(576);
-      const guildProfile1 = badgeColorSecondary(8601).useGuildProfile(badgeColorSecondary);
+      const guildProfile1 = badgeColorSecondary(8617).useGuildProfile(badgeColorSecondary);
       ({ guildProfile, fetchStatus } = guildProfile1);
       if (cResult[0] !== badgeColorSecondary) {
         const fn = function f() {
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
             const intl = tmp(1126).intl;
             obj4.children = intl.string(tmp(1126).t.tmGHjc);
-            const tmp16 = closure_6(tmp(5087).Text, obj4);
+            const tmp16 = closure_6(tmp(5088).Text, obj4);
             cResult[10] = tmp16;
             let tmp14 = tmp16;
           } else {
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return GuildProfileActionCreators.getGuildProfile(badgeColorSecondary, true);
               },
             };
-            const tmp21 = closure_6(tmp(5376).Button, obj5);
+            const tmp21 = closure_6(tmp(5379).Button, obj5);
             cResult[12] = badgeColorSecondary;
             cResult[13] = tmp21;
             let tmp19 = tmp21;
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const _Symbol = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp12 = closure_6(tmp(6725).SceneLoadingIndicator, {});
+            const tmp12 = closure_6(tmp(6726).SceneLoadingIndicator, {});
             cResult[17] = tmp12;
             tmp10 = tmp12;
           } else {
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { title: null };
           const intl3 = tmp(1126).intl;
           obj8.title = intl3.string(tmp(1126).t["2QmKZ2"]);
-          const tmp36 = closure_6(tmp(6835).BottomSheetTitleHeader, obj8);
+          const tmp36 = closure_6(tmp(6838).BottomSheetTitleHeader, obj8);
           cResult[18] = tmp36;
           let tmp34 = tmp36;
         } else {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj14 = { children: null };
           const items2 = [tmp34, tmp10];
           obj14.children = items2;
-          const tmp39 = closure_7(tmp(6892).ActionSheet, obj14);
+          const tmp39 = closure_7(tmp(6898).ActionSheet, obj14);
           cResult[19] = tmp10;
           cResult[20] = tmp39;
           let tmp37 = tmp39;
@@ -174,12 +174,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp37;
       }
-      const obj2 = badgeColorSecondary(8601);
+      const obj2 = badgeColorSecondary(8617);
     }
   : function ServerTagPreviewActionSheet(guildId) {
       guildId = guildId.guildId;
       const tmp = closure_8();
-      const guildProfile1 = guildId(8601).useGuildProfile(guildId);
+      const guildProfile1 = guildId(8617).useGuildProfile(guildId);
       let guildProfile = guildProfile1.guildProfile;
       const items = [guildId];
       const effect = noop.useEffect(() => {
@@ -212,26 +212,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { variant: "text-md/medium", color: "text-muted", children: null };
         const intl = tmp2(1126).intl;
         obj4.children = intl.string(tmp2(1126).t.tmGHjc);
-        const items1 = [closure_6(tmp2(5087).Text, obj4)];
+        const items1 = [closure_6(tmp2(5088).Text, obj4)];
         const obj6 = { variant: "secondary", text: null, onPress: null };
         const intl2 = tmp2(1126).intl;
         obj6.text = intl2.string(tmp2(1126).t["5911Lb"]);
         obj6.onPress = function onPress() {
           return GuildProfileActionCreators.getGuildProfile(guildId, true);
         };
-        items1[1] = closure_6(tmp2(5376).Button, obj6);
+        items1[1] = closure_6(tmp2(5379).Button, obj6);
         obj3.children = items1;
         tmp7 = closure_7(View, obj3);
         tmp8 = closure_6;
       } else {
-        tmp7 = closure_6(tmp2(6725).SceneLoadingIndicator, {});
+        tmp7 = closure_6(tmp2(6726).SceneLoadingIndicator, {});
         tmp8 = closure_6;
       }
       const obj7 = { children: null };
       const obj13 = { title: null };
       const intl3 = tmp2(1126).intl;
       obj13.title = intl3.string(guildId(1126).t["2QmKZ2"]);
-      const items2 = [tmp8(guildId(6835).BottomSheetTitleHeader, obj13), tmp7];
+      const items2 = [tmp8(guildId(6838).BottomSheetTitleHeader, obj13), tmp7];
       obj7.children = items2;
-      return closure_7(guildId(6892).ActionSheet, obj7);
+      return closure_7(guildId(6898).ActionSheet, obj7);
     };

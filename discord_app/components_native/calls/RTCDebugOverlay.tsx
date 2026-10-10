@@ -22,15 +22,15 @@ require = fn;
 let closure_4 = ["type"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(5116).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5117).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 function asString(arg0) {}
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4928);
+const ColorUtils = fn(4967);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj3;
 obj.scroller = { flex: 1, margin: 8 };
@@ -449,7 +449,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = guildId(504);
       const stateFromStores1 = guildId(504).useStateFromStores(tmp14, tmp16, tmp17);
-      const tmp19 = channelId(5418)(stateFromStores1);
+      const tmp19 = channelId(5421)(stateFromStores1);
       let name = null;
       if (null != stateFromStores) {
         name = stateFromStores.name;
@@ -521,9 +521,9 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj5 = { title: "general", children: null };
       obj6 = { obj: null };
-      const tmp4 = channelId(5418)(stateFromStores1);
+      const tmp4 = channelId(5421)(stateFromStores1);
       obj4.name = name;
-      obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5418)(stateFromStores1) } };
+      obj6.obj = { guild: obj4, channel: { id: channelId, name: channelId(5421)(stateFromStores1) } };
       obj5.children = closure_17(ObjectKV, obj6);
       return closure_17(closure_23, obj5);
     };
@@ -857,7 +857,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
           RTCDebugActionCreatorsAll.open();
-          return () => closure_1_1(584).wait(closure_1_2(5135).close);
+          return RTCDebugActionCreatorsAll.close;
         };
         const items = [];
         cResult[0] = fn;
@@ -955,7 +955,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_21();
       const effect = noop.useEffect(() => {
         RTCDebugActionCreatorsAll.open();
-        return () => closure_1_1(584).wait(closure_1_2(5135).close);
+        return RTCDebugActionCreatorsAll.close;
       }, []);
       const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
       const items = [tmp.container, style];

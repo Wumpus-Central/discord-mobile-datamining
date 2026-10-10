@@ -15,7 +15,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = {
     flex: 1,
@@ -83,7 +83,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp18;
         tmp15 = tmp18;
       }
-      const tmp14 = jsx(channelId(9270).GenericHeaderTitle, {
+      const tmp14 = jsx(channelId(9297).GenericHeaderTitle, {
         title,
         subtitle: tmp12,
         variant: "heading-lg/semibold",
@@ -117,7 +117,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "heading-lg/semibold",
         subtitleColor: "text-muted",
       };
-      obj2.children = jsx(channelId(9270).GenericHeaderTitle, {
+      obj2.children = jsx(channelId(9297).GenericHeaderTitle, {
         title: channelId.title,
         subtitle: useChannelNameDefault(stateFromStores, true),
         variant: "heading-lg/semibold",

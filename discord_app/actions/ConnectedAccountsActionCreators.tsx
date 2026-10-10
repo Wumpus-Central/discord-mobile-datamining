@@ -23,7 +23,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
 
 export default {
-  fetch: fn(5883).fetchConnectedAccounts,
+  fetch: fn(5886).fetchConnectedAccounts,
   authorize(arg0) {
     closure_0 = arg0;
     let obj = arg1;
@@ -72,14 +72,14 @@ export default {
       if (url == null) {
         platform_type = "";
       }
-      state = platform_type(tmp2[7]).getCallbackParamsFromURL(platform_type).state;
+      const state = platform_type(tmp2[7]).getCallbackParamsFromURL(platform_type).state;
       if (null != state) {
         const result1 = c4.addPendingAuthorizedState(state);
       }
       return closure_129_0;
     })();
   },
-  callback: fn(5884).postConnectionCallback,
+  callback: fn(5887).postConnectionCallback,
   connect(arg0, arg1, name, location, friend_sync) {
     const request = {
       url: timestampProducer.CONNECTION(arg0, arg1),
@@ -199,7 +199,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {

@@ -4,7 +4,7 @@ import initialize from "../../../../../discord_common/js/packages/flux/index.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2597 from "../GuildPowerups.messages.js";
+import _modDef2600 from "../GuildPowerups.messages.js";
 import GameServerHostingRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/GameServerHostingRive.tsx";
 import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
@@ -37,8 +37,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const GuildPowerupsBoostGemDefault = tmp5(12211);
-const GuildPowerupsImageDefault = tmp5(12213);
+const GuildPowerupsBoostGemDefault = tmp5(12255);
+const GuildPowerupsImageDefault = tmp5(12257);
 const View = _mod17.View;
 ({ GuildPowerupType: hasOwnProperty, GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP: metroRequire } = GuildPowerupsConstants);
 let closure_7 = GameServerConstants.GAME_SERVER_POWERUP_SKU_ID;
@@ -396,7 +396,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
             const intl = util.intl;
             const obj6 = { cooldownDays: powerup.deactivationCooldownPeriodDays };
-            obj5.children = intl.formatToPlainString(_modDef2597.GMhQcE, obj6);
+            obj5.children = intl.formatToPlainString(_modDef2600.GMhQcE, obj6);
             items1[1] = closure_1_8(Text_Text.Text, obj5);
             obj3.children = items1;
             tmp15 = options(View, obj3);
@@ -443,7 +443,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
           const intl = util.intl;
           const obj6 = { cooldownDays: powerup.deactivationCooldownPeriodDays };
-          obj5.children = intl.formatToPlainString(_modDef2597.GMhQcE, obj6);
+          obj5.children = intl.formatToPlainString(_modDef2600.GMhQcE, obj6);
           items1[1] = closure_1_8(Text_Text.Text, obj5);
           obj3.children = items1;
           tmp5Result = options(View, obj3);
@@ -574,7 +574,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj3 = { variant: str, text: null, loading: null, disabled: null, onPress: null };
                     const intl3 = util.intl;
                     const string = intl3.string;
-                    let TZsu1U = _modDef2597;
+                    let TZsu1U = _modDef2600;
                     if (isPowerupActive) {
                       TZsu1U = TZsu1U.TZsu1U;
                       let stringResult = string(TZsu1U);
@@ -600,7 +600,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 if (tmp8) {
                   const obj4 = { variant: "primary", text: null, onPress: null };
                   const intl2 = util.intl;
-                  obj4.text = intl2.string(_modDef2597.g5Ds69);
+                  obj4.text = intl2.string(_modDef2600.g5Ds69);
                   obj4.onPress = tmp14;
                   tmp30 = closure_1_8(components_Button_Button.Button, obj4);
                 }
@@ -626,7 +626,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmp19) {
               const obj6 = { style: tmp4.description, variant: "text-md/bold", children: null };
               const intl = util.intl;
-              obj6.children = intl.string(_modDef2597["jo5++h"]);
+              obj6.children = intl.string(_modDef2600["jo5++h"]);
               tmp23 = closure_1_8(Text_Text.Text, obj6);
             }
             cResult[6] = tmp19;
@@ -698,7 +698,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp14) {
           const obj2 = { style: tmp.description, variant: "text-md/bold", children: null };
           const intl = util.intl;
-          obj2.children = intl.string(_modDef2597["jo5++h"]);
+          obj2.children = intl.string(_modDef2600["jo5++h"]);
           tmp14 = closure_1_8(Text_Text.Text, obj2);
         }
         const items = [tmp14, , ,];
@@ -714,7 +714,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (showConfigureButton) {
           const obj4 = { variant: "primary", text: null, onPress: null };
           const intl2 = util.intl;
-          obj4.text = intl2.string(_modDef2597.g5Ds69);
+          obj4.text = intl2.string(_modDef2600.g5Ds69);
           obj4.onPress = tmp10;
           showConfigureButton = closure_1_8(components_Button_Button.Button, obj4);
         }
@@ -734,7 +734,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { variant: str, text: null, loading: null, disabled: null, onPress: null };
           const intl3 = util.intl;
           const string = intl3.string;
-          let TZsu1U = _modDef2597;
+          let TZsu1U = _modDef2600;
           if (isPowerupActive) {
             TZsu1U = TZsu1U.TZsu1U;
             let stringResult = string(TZsu1U);

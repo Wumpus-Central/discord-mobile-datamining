@@ -6,10 +6,10 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import DateUtils from "../../../../utils/DateUtils.tsx";
-import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import useMaybeGetSortedBoosts from "../hooks/useMaybeGetSortedBoosts.tsx";
 import BoostTier1Icon from "../../../../design/components/Icon/native/redesign/generated/BoostTier1Icon.tsx";
 import BoostGemSlashIcon2 from "../../../../design/components/Icon/native/redesign/generated/BoostGemSlashIcon.tsx";

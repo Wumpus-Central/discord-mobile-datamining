@@ -4,16 +4,16 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef18082 from "../../../../../../_runtime/metro/18082__.js";
+import _modDef18156 from "../../../../../../_runtime/metro/18156__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const EventActionType = fn(12078).EventActionType;
+const EventActionType = fn(12122).EventActionType;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_24, alignItems: "center" },
   image: null,
@@ -62,9 +62,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
             action_type: EventActionType.SKIP_STEP,
             action_location: _location,
-            permission_granted: "r",
+            permission_granted: "Array",
           });
-          const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
+          const obj2 = {
+            action_type: EventActionType.SKIP_STEP,
+            action_location: _location,
+            permission_granted: "Array",
+          };
           ActionSheetActionCreatorsDefault.hideActionSheet();
         };
         cResult[2] = _location;
@@ -74,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       if (cResult[4] !== tmp4.image) {
-        let obj2 = { style: tmp4.image, source: _modDef18082, resizeMode: "contain" };
+        let obj2 = { style: tmp4.image, source: _modDef18156, resizeMode: "contain" };
         const tmp11 = closure_7(FastImageDefault, obj2);
         cResult[4] = tmp4.image;
         cResult[5] = tmp11;
@@ -92,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== tmp4.title) {
         const obj3 = { style: tmp4.title, variant: "heading-xl/bold", accessibilityRole: "header", children: tmp12 };
-        const tmp16 = closure_7(tmp(5087).Text, obj3);
+        const tmp16 = closure_7(tmp(5088).Text, obj3);
         cResult[7] = tmp4.title;
         cResult[8] = tmp16;
         let tmp14 = tmp16;
@@ -109,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[10] !== tmp4.subtitle) {
         const obj4 = { style: tmp4.subtitle, variant: "text-sm/medium", color: "text-default", children: tmp17 };
-        const tmp21 = closure_7(tmp(5087).Text, obj4);
+        const tmp21 = closure_7(tmp(5088).Text, obj4);
         cResult[10] = tmp4.subtitle;
         cResult[11] = tmp21;
         let tmp19 = tmp21;
@@ -126,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[13] !== tmp5) {
         const obj5 = { text: tmp22, onPress: tmp5 };
-        const tmp26 = closure_7(tmp(5376).Button, obj5);
+        const tmp26 = closure_7(tmp(5379).Button, obj5);
         cResult[13] = tmp5;
         cResult[14] = tmp26;
         let tmp24 = tmp26;
@@ -143,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[16] !== tmp6) {
         const obj6 = { text: tmp27, onPress: tmp6, variant: "secondary" };
-        const tmp31 = closure_7(tmp(5376).Button, obj6);
+        const tmp31 = closure_7(tmp(5379).Button, obj6);
         cResult[16] = tmp6;
         cResult[17] = tmp31;
         let tmp29 = tmp31;
@@ -172,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const items = [tmp7, tmp14, tmp19, tmp32];
           obj8.children = items;
           obj7.children = closure_8(View, obj8);
-          const tmp38 = closure_7(tmp(6836).BottomSheet, obj7);
+          const tmp38 = closure_7(tmp(6839).BottomSheet, obj7);
           cResult[22] = tmp4.container;
           cResult[23] = tmp19;
           cResult[24] = tmp32;
@@ -185,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj9 = { style: tmp4.buttons, children: null };
       const items1 = [tmp24, tmp29];
       obj9.children = items1;
-      const tmp33 = closure_8(_location(5965).ButtonGroup, obj9);
+      const tmp33 = closure_8(_location(5958).ButtonGroup, obj9);
       cResult[18] = tmp4.buttons;
       cResult[19] = tmp24;
       cResult[20] = tmp29;
@@ -211,37 +215,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(AnalyticEvents.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
           action_type: EventActionType.SKIP_STEP,
           action_location: _location,
-          permission_granted: "r",
+          permission_granted: "Array",
         });
-        const obj2 = { action_type: EventActionType.SKIP_STEP, action_location: _location, permission_granted: "r" };
+        const obj2 = {
+          action_type: EventActionType.SKIP_STEP,
+          action_location: _location,
+          permission_granted: "Array",
+        };
         ActionSheetActionCreatorsDefault.hideActionSheet();
       }, items1);
       let obj = { children: null };
       let obj2 = { style: tmp.container, children: null };
-      const obj3 = { style: tmp.image, source: _modDef18082, resizeMode: "contain" };
+      const obj3 = { style: tmp.image, source: _modDef18156, resizeMode: "contain" };
       const items2 = [closure_7(FastImageDefault, obj3), , ,];
       const obj4 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
       const intl = _location(1126).intl;
       obj4.children = intl.string(_location(1126).t.a4bgO0);
-      items2[1] = closure_7(_location(5087).Text, obj4);
+      items2[1] = closure_7(_location(5088).Text, obj4);
       const obj5 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
       const intl2 = _location(1126).intl;
       obj5.children = intl2.string(_location(1126).t["rW5gw/"]);
-      items2[2] = closure_7(_location(5087).Text, obj5);
+      items2[2] = closure_7(_location(5088).Text, obj5);
       const obj6 = { style: tmp.buttons, children: null };
       const obj7 = { text: null, onPress: null };
       const intl3 = _location(1126).intl;
       obj7.text = intl3.string(_location(1126).t.a4bgO0);
       obj7.onPress = callback;
-      const items3 = [closure_7(_location(5376).Button, obj7)];
+      const items3 = [closure_7(_location(5379).Button, obj7)];
       const obj8 = { text: null, onPress: null, variant: "secondary" };
       const intl4 = _location(1126).intl;
       obj8.text = intl4.string(_location(1126).t["/L3kom"]);
       obj8.onPress = callback1;
-      items3[1] = closure_7(_location(5376).Button, obj8);
+      items3[1] = closure_7(_location(5379).Button, obj8);
       obj6.children = items3;
-      items2[3] = closure_8(_location(5965).ButtonGroup, obj6);
+      items2[3] = closure_8(_location(5958).ButtonGroup, obj6);
       obj2.children = items2;
       obj.children = closure_8(View, obj2);
-      return closure_7(_location(6836).BottomSheet, obj);
+      return closure_7(_location(6839).BottomSheet, obj);
     };

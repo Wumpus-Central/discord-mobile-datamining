@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import Server from "../../flow/Server.tsx";
-import _modDef4661 from "../../../_runtime/metro/04661__.js";
+import _modDef4702 from "../../../_runtime/metro/04702__.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
@@ -25,9 +25,9 @@ function getDiscountInfo(active_discount_id) {
         return obj3;
       } else {
         if (closure_1_11 !== active_discount_id) {
-          if (state !== active_discount_id) {
-            if (closure_1_15 !== active_discount_id) {
-              if (__initData2 === active_discount_id) {
+          if (closure_1_14 !== active_discount_id) {
+            if (value2 !== active_discount_id) {
+              if (map1 === active_discount_id) {
                 const obj4 = { duration: 1, percentage: 40, discountId: active_discount_id };
                 return obj4;
               } else if (timestampProducer === active_discount_id) {
@@ -42,7 +42,7 @@ function getDiscountInfo(active_discount_id) {
               } else if (options === active_discount_id) {
                 const obj8 = { duration: 12, percentage: 30, discountId: active_discount_id };
                 return obj8;
-              } else if (value2 === active_discount_id) {
+              } else if (value3 === active_discount_id) {
                 const obj9 = { duration: 1, percentage: 40, discountId: active_discount_id };
                 return obj9;
               } else if (collapsedCategories === active_discount_id) {
@@ -110,8 +110,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp10 = null != prop;
         if (tmp10) {
           const _Date = Date;
-          tmp10 = _modDef4661(Date.now()) <= _modDef4661(prop);
-          const tmp12Result = _modDef4661(Date.now());
+          tmp10 = _modDef4702(Date.now()) <= _modDef4702(prop);
+          const tmp12Result = _modDef4702(Date.now());
         }
         cResult[2] = prop;
         cResult[3] = tmp10;
@@ -136,8 +136,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null != prop;
       if (tmp4) {
         const _Date = Date;
-        tmp4 = _modDef4661(Date.now()) <= _modDef4661(prop);
-        const tmp6Result = _modDef4661(Date.now());
+        tmp4 = _modDef4702(Date.now()) <= _modDef4702(prop);
+        const tmp6Result = _modDef4702(Date.now());
       }
       return tmp4;
     };

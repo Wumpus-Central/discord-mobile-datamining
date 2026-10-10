@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles((height) => {
   const obj = { row: { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height }, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
   const obj2 = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
@@ -39,7 +39,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const tmp6 = closure_8(height);
   let obj = sharedValue(576);
-  sharedValue = sharedValue(4811).useSharedValue(1);
+  sharedValue = sharedValue(4850).useSharedValue(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
     const fn = function w() {
@@ -52,7 +52,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     [tmp8, tmp9] = cResult;
   }
-  const tmpResult = sharedValue(4811);
+  const tmpResult = sharedValue(4850);
   if (tmp4) {
     tmp4 = !tmpResult3.useStateFromStores(tmp8, tmp9);
   }
@@ -73,7 +73,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     I.__closure = obj2;
     I.__workletHash = 10137317865125;
     I.__initData = __initData;
-    const animatedStyle = tmp(4811).useAnimatedStyle(I);
+    const animatedStyle = tmp(4850).useAnimatedStyle(I);
     if (cResult[6] === animatedStyle) {
       if (cResult[7] === tmp6.row) {
         let tmp17 = cResult[8];
@@ -211,7 +211,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[7] = tmp6.row;
     cResult[8] = items3;
     tmp17 = items3;
-    const tmpResult4 = tmp(4811);
+    const tmpResult4 = tmp(4850);
   }
   class P {
     constructor() {
@@ -262,8 +262,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let sharedValue;
   flag = undefined;
   const tmp3 = closure_8(height);
-  sharedValue = sharedValue(4811).useSharedValue(1);
-  let obj = sharedValue(4811);
+  sharedValue = sharedValue(4850).useSharedValue(1);
+  let obj = sharedValue(4850);
   const tmp4 = sharedValue;
   const items = [AccessibilityStore];
   if (flag) {
@@ -292,7 +292,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   R.__closure = { opacity: sharedValue };
   R.__workletHash = 4335136835878;
   R.__initData = __initData2;
-  const animatedStyle = tmp4(4811).useAnimatedStyle(R);
+  const animatedStyle = tmp4(4850).useAnimatedStyle(R);
   let obj3 = { style: null, collapsable: false, children: null };
   const items2 = [tmp3.row, animatedStyle];
   obj3.style = items2;
@@ -310,5 +310,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj5.children = closure_6(View, obj6);
   items3[1] = closure_6(View, obj5);
   obj3.children = items3;
-  return closure_7(flag(4811).View, obj3);
+  return closure_7(flag(4850).View, obj3);
 }));

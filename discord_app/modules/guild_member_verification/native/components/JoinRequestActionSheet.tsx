@@ -12,7 +12,7 @@ const View = fn(17).View;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles({
   container: { flex: 1 },
   profileContainer: { position: "relative" },
@@ -150,7 +150,6 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                             type: "action_sheet",
                             withMutualGuilds: true,
                             withMutualFriends: true,
-                            dispatchWait: true,
                             guildId: null,
                           };
                           obj1.guildId = guildId;
@@ -233,13 +232,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp8 = guildId;
                       num = 80;
                       tmp7 = closure_1(closure_2[23]);
-                      obj1 = {
-                        type: "action_sheet",
-                        withMutualGuilds: true,
-                        withMutualFriends: true,
-                        dispatchWait: true,
-                        guildId: null,
-                      };
+                      obj1 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId: null };
                       obj1.guildId = guildId;
                       tmp7Result = tmp7(obj.id, obj.getAvatarURL(guildId, 80), obj1);
                     }
@@ -381,13 +374,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp = isNonUserBotResult;
         }
         if (!tmp) {
-          const obj2 = {
-            type: "action_sheet",
-            withMutualGuilds: true,
-            withMutualFriends: true,
-            dispatchWait: true,
-            guildId,
-          };
+          const obj2 = { type: "action_sheet", withMutualGuilds: true, withMutualFriends: true, guildId };
           maybeFetchUserProfileDefault(stateFromStores.id, stateFromStores.getAvatarURL(guildId, 80), obj2);
         }
       }, items5);

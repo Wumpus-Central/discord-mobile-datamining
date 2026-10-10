@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4692 from "../../../../../_runtime/metro/04692__.js";
+import _mod4733 from "../../../../../_runtime/metro/04733__.js";
 import identity from "../../../../../_runtime/metro/01267__.js";
 import "ReactCompilerGating";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -10,8 +10,8 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let closure_2 = Object.freeze({
   name: "",
   emojiId: "code",
-  emojiName: "useEffect",
-  description: "track",
+  emojiName: "Map",
+  description: "transform",
   refId: "apply",
 });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
@@ -56,14 +56,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4692.shallow);
+      return closure_3(first, _mod4733.shallow);
     }
   : function useDescriptionState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ description: arr[0], setDescription: arr[1] } = arg0);
         return items;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -80,14 +80,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4692.shallow);
+      return closure_3(first, _mod4733.shallow);
     }
   : function useEmojiIdState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ emojiId: arr[0], setEmojiId: arr[1] } = arg0);
         return items;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -104,14 +104,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4692.shallow);
+      return closure_3(first, _mod4733.shallow);
     }
   : function useEmojiNameState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ emojiName: arr[0], setEmojiName: arr[1] } = arg0);
         return items;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -128,25 +128,25 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4692.shallow);
+      return closure_3(first, _mod4733.shallow);
     }
   : function useNameState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ name: arr[0], setName: arr[1] } = arg0);
         return items;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx",
 );
 
 export const resetImperatively = function resetImperatively() {
-  state = closure_3.getState();
+  const state = closure_3.getState();
   state.reset();
 };
 export const initializeImperatively = function initializeImperatively(benefit) {
-  state = closure_3.getState();
+  const state = closure_3.getState();
   ({ setDescription, setEmojiId, setEmojiName, setName, setRefId } = state);
   state.reset();
   if (null != benefit.description) {
@@ -177,12 +177,12 @@ export const useRefIdState = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4692.shallow);
+      return closure_3(first, _mod4733.shallow);
     }
   : function useRefIdState() {
       return closure_3((arg0) => {
         const items = [,];
         ({ refId: arr[0], setRefId: arr[1] } = arg0);
         return items;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };

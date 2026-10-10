@@ -16,7 +16,7 @@ const jsxProd = fn(21);
 const locations = [0, 0.4, 0.5, 0.6, 1];
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_13 = createStyles.createStyles({ root: { position: "relative" }, band: { position: "absolute", top: 0, bottom: 0 }, fill: { flex: 1 } });
 let closure_14 = { code: "function ConjureShimmerTsx1(){const{bandWidth,progress,width}=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};}" };
 const __initData = { code: "function ConjureShimmerTsx2(){const{bandWidth,progress,width}=this.__closure;return{transform:[{translateX:-bandWidth+progress.get()*(bandWidth+width)}]};}" };
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   const width = tmp5[0];
   dependencyMap = tmp5[1];
   let obj = tint(504);
-  sharedValue = tint(4811).useSharedValue(0);
+  sharedValue = tint(4850).useSharedValue(0);
   if (live) {
     live = !stateFromStores;
   }
@@ -345,7 +345,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     items[4] = cssResult;
     return items;
   }, items2);
-  let obj3 = tint(4811);
+  let obj3 = tint(4850);
   class R {
     constructor() {
       obj = { transform: null };
@@ -359,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   R.__closure = { bandWidth: result, progress: sharedValue, width };
   R.__workletHash = 8820828976937;
   R.__initData = __initData;
-  const animatedStyle = tint(4811).useAnimatedStyle(R);
+  const animatedStyle = tint(4850).useAnimatedStyle(R);
   let obj4 = {
     style: tmp.root,
     onLayout: live.useCallback((nativeEvent) => {
@@ -388,11 +388,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
     items4[2] = animatedStyle;
     obj8.style = items4;
     const obj10 = { style: tmp.fill, start, end, colors: memo, locations };
-    obj8.children = closure_8(width(5388), obj10);
-    obj6.children = closure_8(width(4811).View, obj8);
-    obj5.children = closure_8(width(6247), obj6);
+    obj8.children = closure_8(width(5391), obj10);
+    obj6.children = closure_8(width(4850).View, obj8);
+    obj5.children = closure_8(width(6242), obj6);
     tmp14 = closure_8(closure_6, obj5);
-    const tmp18 = width(6247);
+    const tmp18 = width(6242);
   }
   items3[1] = tmp14;
   obj4.children = items3;

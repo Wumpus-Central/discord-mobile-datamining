@@ -30,7 +30,7 @@ let closure_13 = async function _authorizeLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -86,7 +86,7 @@ const WebBrowserType = fn(1085).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const ReactCompilerGating = fn(558);
 const tmp3 = new LoggerDefault("TwoWayLink");
@@ -309,7 +309,7 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
         closure_128_0 = value;
         v0 = 0;
         v0(false);
-        state = closure_0(onNext[15]).getCallbackParamsFromURL(closure_128_0).state;
+        const state = closure_0(onNext[15]).getCallbackParamsFromURL(closure_128_0).state;
         onError(onNext[16])(null != state, "Authorize URL state query parameter must be present");
         c4.current = state;
         await "IconComponent";
@@ -352,7 +352,7 @@ export const TwoWayLinkPreConnect = ReactCompilerGating.isReactCompilerEnabled()
           await closure_1_12(platformType);
           closure_128_0 = value;
           closure_129_3(false);
-          state = platformType(tmp16[15]).getCallbackParamsFromURL(closure_128_0).state;
+          const state = platformType(tmp16[15]).getCallbackParamsFromURL(closure_128_0).state;
           tmp3(tmp16[16])(null != state, "Authorize URL state query parameter must be present");
           closure_129_4.current = state;
           await "IconComponent";

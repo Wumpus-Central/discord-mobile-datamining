@@ -19,7 +19,7 @@ const Constants = fn(1085);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -579,7 +579,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                             loading: first2.status === constants.LOADING,
                                                             grow: false,
                                                           };
-                                                          const tmp60 = closure_9(sourcePage(5376).Button, obj7);
+                                                          const tmp60 = closure_9(sourcePage(5379).Button, obj7);
                                                           cResult[57] = tmp21;
                                                           cResult[58] = tmp28 <= 0;
                                                           cResult[59] = first2.status === constants.LOADING;
@@ -708,7 +708,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   obj10.style = items4;
                                   let intl = sourcePage(1126).intl;
                                   obj10.children = intl.string(sourcePage(1126).t.Yi6Mpu);
-                                  const items5 = [closure_9(sourcePage(5087).Text, obj10), ,];
+                                  const items5 = [closure_9(sourcePage(5088).Text, obj10), ,];
                                   const obj11 = {
                                     returnKeyType: "done",
                                     submitBehavior: "submit",
@@ -739,7 +739,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                   }
                                   obj11.status = undefined;
-                                  items5[1] = tmp36(sourcePage(6770).TextArea, obj11);
+                                  items5[1] = tmp36(sourcePage(6773).TextArea, obj11);
                                   if (first2.status !== constants.ERROR) {
                                     const obj12 = {
                                       style: tmp4.messageFooterText,
@@ -868,7 +868,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 substr = trimmed.substring(1);
                 tmp2 = substr;
               }
-              const validateDiscordTagResult = sourcePage(7015).validateDiscordTag(tmp2);
+              const validateDiscordTagResult = sourcePage(7022).validateDiscordTag(tmp2);
               if (null != validateDiscordTagResult) {
                 let obj3 = {
                   status: constants.ERROR,
@@ -882,7 +882,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj6 = {
                   discordTag: tmp2,
                   context: { location: "Search - Add Friend Search" },
-                  errorUxConfig: sourcePage(7011).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+                  errorUxConfig: sourcePage(7017).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
                   note: null,
                 };
                 let tmp9;
@@ -890,8 +890,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   tmp9 = trimmed1;
                 }
                 obj6.note = tmp9;
-                const obj5 = ref(7011);
-                ref(7011)
+                const obj5 = ref(7017);
+                ref(7017)
                   .sendRequest(obj6)
                   .then(
                     () => {
@@ -960,9 +960,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       closure_6(obj3);
                     },
                   );
-                const sendRequestResult = ref(7011).sendRequest(obj6);
+                const sendRequestResult = ref(7017).sendRequest(obj6);
               }
-              let obj = sourcePage(7015);
+              let obj = sourcePage(7022);
             }
           }
           cResult[11] = first3;
@@ -1068,7 +1068,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             substr = trimmed.substring(1);
             tmp2 = substr;
           }
-          const validateDiscordTagResult = sourcePage(7015).validateDiscordTag(tmp2);
+          const validateDiscordTagResult = sourcePage(7022).validateDiscordTag(tmp2);
           if (null != validateDiscordTagResult) {
             let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
             closure_6(obj3);
@@ -1078,7 +1078,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = {
               discordTag: tmp2,
               context: { location: "Search - Add Friend Search" },
-              errorUxConfig: sourcePage(7011).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+              errorUxConfig: sourcePage(7017).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
               note: null,
             };
             let tmp9;
@@ -1086,8 +1086,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = trimmed1;
             }
             obj6.note = tmp9;
-            const obj5 = ref(7011);
-            ref(7011)
+            const obj5 = ref(7017);
+            ref(7017)
               .sendRequest(obj6)
               .then(
                 () => {
@@ -1151,9 +1151,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   closure_6(obj3);
                 },
               );
-            const sendRequestResult = ref(7011).sendRequest(obj6);
+            const sendRequestResult = ref(7017).sendRequest(obj6);
           }
-          let obj = sourcePage(7015);
+          let obj = sourcePage(7022);
         }
       }
       ({ style, onFocus, autoFocusInput, headerText, ref } = arg0);
@@ -1272,7 +1272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj7.disabled = str.trim().length <= 0;
         obj7.onPress = handleSubmitEditing;
         obj7.loading = first1.status === constants.LOADING;
-        items6[2] = closure_9(sourcePage(5376).Button, obj7);
+        items6[2] = closure_9(sourcePage(5379).Button, obj7);
         obj5.children = items6;
         return closure_10(closure_11, obj5);
       } else {
@@ -1284,7 +1284,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj9.style = items7;
         let intl = sourcePage(1126).intl;
         obj9.children = intl.string(sourcePage(1126).t.Yi6Mpu);
-        const items8 = [closure_9(sourcePage(5087).Text, obj9), ,];
+        const items8 = [closure_9(sourcePage(5088).Text, obj9), ,];
         const obj10 = {
           returnKeyType: "done",
           submitBehavior: "submit",
@@ -1301,7 +1301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         obj10.status = str2;
-        items8[1] = closure_9(sourcePage(6770).TextArea, obj10);
+        items8[1] = closure_9(sourcePage(6773).TextArea, obj10);
         if (first1.status !== constants.ERROR) {
           const obj11 = {
             style: tmp.messageFooterText,
@@ -1311,7 +1311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           let intl2 = sourcePage(1126).intl;
           obj11.children = intl2.string(sourcePage(1126).t.UtfQNw);
-          let tmp17Result = closure_9(sourcePage(5087).Text, obj11);
+          let tmp17Result = closure_9(sourcePage(5088).Text, obj11);
           items8[2] = tmp17Result;
           obj8.children = items8;
           closure_10(tmp16, obj8);

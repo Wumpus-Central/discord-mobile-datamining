@@ -715,7 +715,7 @@ function loadLocalOverrides() {
   }
   items[1] = value3;
   const Storage3 = Storage5.Storage;
-  let value4 = Storage3.get(guildExperimentOverrides);
+  value4 = Storage3.get(guildExperimentOverrides);
   if (value4 == null) {
     value4 = {};
   }
@@ -897,7 +897,7 @@ function handleGuildChange(arg0) {
     continue;
   }
 }
-const ExperimentConstants = fn(4978);
+const ExperimentConstants = fn(5017);
 ({ ExperimentBuckets: hasOwnProperty, ExperimentTypes: metroRequire, ExposureTypes: closure_7 } = ExperimentConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, EMPTY_STRING_SNOWFLAKE_ID: closure_9, UserFlags: c10 } = Constants);

@@ -8,13 +8,13 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(16281);
+const RegistrationUIStore = fn(16348);
 ({
   setRegistrationErrors: metroRequire,
   updateRegistrationOptions: closure_7,
   useRegistrationUIStore: closure_8,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(16282);
+const RegistrationConstants = fn(16349);
 ({
   authStateToRegisterTransitionStep: closure_9,
   RegisterTransitionSteps: c10,
@@ -98,7 +98,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                   let obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -136,7 +136,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                     closure_130_3 = tmp55;
                     if (closure_130_3 instanceof sourceState(context[12]).CaptchaCancelError) {
                       c7 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     } else {
                       authenticationErrorsFromAPIError = sourceState(context[13]).getAuthenticationErrorsFromAPIError(
                         closure_130_3,
@@ -229,7 +229,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                     };
                     phone.push(sourceState(context[15]).AuthStates.VERIFY_PHONE, obj13);
                     c7 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp55) {
                   if (tmp4 === c5) {
@@ -313,7 +313,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
               let obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -349,7 +349,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                 closure_130_5 = closure_4;
                 if (closure_130_5 instanceof sourceState(navigation[12]).CaptchaCancelError) {
                   c7 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 } else {
                   authenticationErrorsFromAPIError = sourceState(navigation[13]).getAuthenticationErrorsFromAPIError(
                     closure_130_5,
@@ -442,7 +442,7 @@ export const useIdentityRegistrationStep = ReactCompilerGating.isReactCompilerEn
                 };
                 tmp5.push(sourceState(navigation[15]).AuthStates.VERIFY_PHONE, obj13);
                 c7 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp55) {
               closure_4 = tmp55;

@@ -3,7 +3,6 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import SecureFramesUtils from "../SecureFramesUtils.tsx";
@@ -16,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(8810);
+const SecureFramesConstants = fn(8829);
 ({
   USER_VERIFICATION_CHUNK_SIZE: closure_9,
   USER_VERIFICATION_LENGTH: c10,
@@ -28,7 +27,7 @@ const Constants = fn(1085);
 const ANDROID_FOREGROUND_RIPPLE = fn(1204).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flex: 1,
@@ -259,19 +258,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             fingerprintUserKey,
             isOtherUserKeyPersistent,
             channelId,
-            __initData2.E2EE_USER_VERIFY_MODAL,
+            map1.E2EE_USER_VERIFY_MODAL,
           );
           ModalActionCreatorsDefault.pop();
-          const obj3 = {
-            key,
-            iconColor: "text-feedback-positive",
-            IconComponent: CircleCheckIcon.CircleCheckIcon,
-            content: null,
-          };
+          const obj3 = { text: null, variant: "success" };
           const intl = util.intl;
           const obj4 = { username: name };
-          obj3.content = intl.formatToPlainString(util.t.Gwu134, obj4);
-          ToastActionCreatorsDefault.open(obj3);
+          obj3.text = intl.formatToPlainString(util.t.Gwu134, obj4);
+          ToastActionCreatorsDefault.open(__initData, obj3);
         }
       }, items2);
       const items3 = [fingerprintUserKey, isOtherUserKeyPersistent, userId];
@@ -282,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items3);
       const obj8 = userId(name[18]);
-      enabled = userId(name[24]).useSecureFramesDeeplinkExperiment({
+      enabled = userId(name[23]).useSecureFramesDeeplinkExperiment({
         location: "SecureFramesUserVerificationModal",
       }).enabled;
       const items4 = [channelId, readableSecureFramesFingerprint, fingerprint, enabled, userId];
@@ -295,19 +289,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj = { userId, channelId };
             const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
             if (enabled) {
-              let userVerificationDeeplink = showShareActionSheet(8809).getUserVerificationDeeplink(userId, tmp);
-              const showShareActionSheetResult = showShareActionSheet(8809);
+              let userVerificationDeeplink = showShareActionSheet(8828).getUserVerificationDeeplink(userId, tmp);
+              const showShareActionSheetResult = showShareActionSheet(8828);
             } else {
               userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
             }
-            showShareActionSheet = showShareActionSheet(8465).showShareActionSheet;
+            showShareActionSheet = showShareActionSheet(8481).showShareActionSheet;
             obj2 = { message: userVerificationDeeplink };
             showShareActionSheet(obj2, constants.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
-            const showShareActionSheetResult1 = showShareActionSheet(8465);
+            const showShareActionSheetResult1 = showShareActionSheet(8481);
           }
         }
       }, items4);
-      analyticsLocations = channelId(name[27])().analyticsLocations;
+      analyticsLocations = channelId(name[26])().analyticsLocations;
       const items5 = [analyticsLocations, channelId, userId];
       const callback3 = fingerprintUserKey.useCallback(() => {
         ModalActionCreatorsDefault.pop();
@@ -318,8 +312,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           sourceAnalyticsLocations: analyticsLocations,
         });
       }, items5);
-      const obj9 = userId(name[24]);
-      const obj10 = userId(name[29]);
+      const obj9 = userId(name[23]);
+      const obj10 = userId(name[28]);
       const alertIfSecureFramesKeyInconsistent = obj10.useAlertIfSecureFramesKeyInconsistent({
         channelId,
         userId,
@@ -367,12 +361,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onPress: null,
         children: null,
       };
-      let intl = userId(name[23]).intl;
-      obj13.accessibilityLabel = intl.string(userId(name[23]).t.cpT0Cq);
+      let intl = userId(name[22]).intl;
+      obj13.accessibilityLabel = intl.string(userId(name[22]).t.cpT0Cq);
       obj13.androidRippleConfig = ANDROID_FOREGROUND_RIPPLE;
       obj13.onPress = callback3;
-      obj13.children = closure_16(userId(name[31]).ArrowLargeLeftIcon, { size: "md" });
-      const items9 = [closure_16(userId(name[32]).PressableOpacity, obj13)];
+      obj13.children = closure_16(userId(name[30]).ArrowLargeLeftIcon, { size: "md" });
+      const items9 = [closure_16(userId(name[31]).PressableOpacity, obj13)];
       let tmp24Result = null != fingerprint && null != readableSecureFramesFingerprint;
       if (tmp24Result) {
         const obj14 = {
@@ -383,33 +377,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onPress: null,
           children: null,
         };
-        const intl2 = tmp2(tmp3[23]).intl;
-        obj14.accessibilityLabel = intl2.string(tmp2(tmp3[23]).t.RDE0Sc);
+        const intl2 = tmp2(tmp3[22]).intl;
+        obj14.accessibilityLabel = intl2.string(tmp2(tmp3[22]).t.RDE0Sc);
         obj14.androidRippleConfig = ANDROID_FOREGROUND_RIPPLE;
         obj14.onPress = callback2;
         const obj15 = { variant: "text-md/semibold", color: "text-brand", children: null };
-        const intl3 = tmp2(tmp3[23]).intl;
-        obj15.children = intl3.string(tmp2(tmp3[23]).t.RDE0Sc);
-        obj14.children = closure_16(tmp2(tmp3[33]).Text, obj15);
-        tmp24Result = closure_16(tmp2(tmp3[32]).PressableOpacity, obj14);
+        const intl3 = tmp2(tmp3[22]).intl;
+        obj15.children = intl3.string(tmp2(tmp3[22]).t.RDE0Sc);
+        obj14.children = closure_16(tmp2(tmp3[32]).Text, obj15);
+        tmp24Result = closure_16(tmp2(tmp3[31]).PressableOpacity, obj14);
       }
       items9[1] = tmp24Result;
       obj12.children = items9;
       const items10 = [closure_17(isUserSecureFramesVerified, obj12), , ,];
       const obj16 = { spacing: 8, justify: "center", align: "center", direction: "vertical", children: null };
       const obj17 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-      const intl4 = tmp2(tmp3[23]).intl;
-      obj17.children = intl4.string(userId(name[23]).t["/WPGnF"]);
-      const items11 = [closure_16(userId(name[33]).Text, obj17)];
+      const intl4 = tmp2(tmp3[22]).intl;
+      obj17.children = intl4.string(userId(name[22]).t["/WPGnF"]);
+      const items11 = [closure_16(userId(name[32]).Text, obj17)];
       const obj18 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
-      const intl5 = tmp2(tmp3[23]).intl;
-      obj18.children = intl5.format(userId(name[23]).t.oc2kce, { username: name });
-      items11[1] = closure_16(userId(name[33]).Text, obj18);
+      const intl5 = tmp2(tmp3[22]).intl;
+      obj18.children = intl5.format(userId(name[22]).t.oc2kce, { username: name });
+      items11[1] = closure_16(userId(name[32]).Text, obj18);
       obj16.children = items11;
-      items10[1] = closure_17(userId(name[34]).Stack, obj16);
+      items10[1] = closure_17(userId(name[33]).Stack, obj16);
       const obj19 = { style: tmp.code, children: null };
       const items12 = [
-        closure_16(channelId(name[35]), { style: tmp.helpMessage, userId, userKey: fingerprintUserKey }),
+        closure_16(channelId(name[34]), { style: tmp.helpMessage, userId, userKey: fingerprintUserKey }),
       ];
       const obj21 = { title: null, chunks: null, columns: null, trailing: null };
       const obj20 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
@@ -428,23 +422,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }, items6),
         2,
       );
-      const intl6 = tmp2(tmp3[23]).intl;
-      obj21.title = intl6.string(userId(name[23]).t["/WPGnF"]);
+      const intl6 = tmp2(tmp3[22]).intl;
+      obj21.title = intl6.string(userId(name[22]).t["/WPGnF"]);
       obj21.chunks = readableSecureFramesFingerprint;
       obj21.columns = columns;
       if (null == readableSecureFramesFingerprint) {
         let tmp24Result2 = closure_16(readableSecureFramesFingerprint, {});
       } else {
         const obj22 = { color: tmp19, text: tmp18 };
-        tmp24Result2 = closure_16(tmp2(tmp3[30]).TextBadge, obj22);
+        tmp24Result2 = closure_16(tmp2(tmp3[29]).TextBadge, obj22);
       }
       obj21.trailing = tmp24Result2;
-      items12[1] = closure_16(channelId(name[36]), obj21);
+      items12[1] = closure_16(channelId(name[35]), obj21);
       obj19.children = items12;
       items10[2] = closure_17(isUserSecureFramesVerified, obj19);
       const obj23 = { style: tmp.footer, children: null };
       const items13 = [
-        closure_16(userId(name[33]).Text, {
+        closure_16(userId(name[32]).Text, {
           style: tmp.footerText,
           variant: "text-xs/normal",
           color: "text-default",
@@ -460,18 +454,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         callback = callback1;
       }
       obj25.onPress = callback;
-      const intl7 = tmp2(tmp3[23]).intl;
+      const intl7 = tmp2(tmp3[22]).intl;
       let string = intl7.string;
-      let t = tmp2(tmp3[23]).t;
+      let t = tmp2(tmp3[22]).t;
       if (isUserSecureFramesVerified) {
         let stringResult = string(t["Osb+/n"]);
       } else {
         stringResult = string(t["0tvNAn"]);
       }
       obj25.text = stringResult;
-      items13[1] = closure_16(userId(name[37]).Button, obj25);
+      items13[1] = closure_16(userId(name[36]).Button, obj25);
       obj23.children = items13;
       items10[3] = closure_17(isUserSecureFramesVerified, obj23);
       rect.children = items10;
-      return closure_17(userId(name[38]).SafeAreaPaddingView, rect);
+      return closure_17(userId(name[37]).SafeAreaPaddingView, rect);
     };

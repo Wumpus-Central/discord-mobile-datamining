@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
-import CircleXIcon from "../../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import CircleXIcon from "../../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
 import InputFieldContainer from "../../../../design/components/Input/native/InputFieldContainer.native.tsx";
 import MagnifyingGlassIcon from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginHorizontal: nativeDefault.space.PX_16 },
   content: { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" },

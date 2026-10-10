@@ -137,7 +137,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
     const currentQuests = QuestActionCreators.fetchCurrentQuests();
     const tmpResult = QuestActionCreators;
     if (tmpResult2.isMac()) {
-      state = DiscordAppStateDefault.getState();
+      const state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
     tmpResult2 = PlatformUtils;

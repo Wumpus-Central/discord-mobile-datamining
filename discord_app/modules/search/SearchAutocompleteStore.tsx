@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import _modDef5201 from "../../../_runtime/metro/05201__.js";
+import _modDef5202 from "../../../_runtime/metro/05202__.js";
 import AutocompleteUtils from "../../utils/AutocompleteUtils.tsx";
 import GuildUtilsDefault from "../../utils/GuildUtils.tsx";
 import UserSearchManagerDefault from "../autocompleter/UserSearchManager.tsx";
@@ -74,7 +74,7 @@ function handleUserSearchResults(searchContext, results) {
         ({ query, cursorScope } = value3);
         let tmp10 = getAutocompleteList(searchContext, mode, tokens);
         const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
-        let value4 = map1.get(searchContextId1);
+        value4 = map1.get(searchContextId1);
         if (value4 == null) {
           const obj4 = {
             results: [],
@@ -230,7 +230,7 @@ function rebuildAutocompleteResults(c14) {
 const Constants = fn(1085);
 ({ SearchPopoutModes: c10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6099).AutocompleterResultTypes;
+fn(6092).AutocompleterResultTypes;
 let c14 = null;
 let closure_15 = [];
 const map = new Map();
@@ -269,7 +269,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef5201(c14, searchContext)) {
+    if (!_modDef5202(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -277,7 +277,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef5201(c14, searchContext)) {
+    if (!_modDef5202(c14, searchContext)) {
       c14 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -291,7 +291,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
         let flag = false;
       }
       const searchContextId1 = SearchUtils.getSearchContextId(searchContext);
-      let value4 = map1.get(searchContextId1);
+      value4 = map1.get(searchContextId1);
       if (value4 == null) {
         const obj6 = {
           results: [],

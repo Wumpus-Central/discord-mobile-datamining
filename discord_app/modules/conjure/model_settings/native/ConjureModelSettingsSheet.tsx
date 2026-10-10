@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ConjureEffortPickerDefault from "ConjureEffortPicker.tsx";
@@ -11,7 +11,7 @@ import ConjureConnectionStore from "../../connection/ConjureConnectionStore.tsx"
 
 require = fn;
 const View = fn(17).View;
-const sendModelSettings = fn(13164).sendModelSettings;
+const sendModelSettings = fn(13213).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -225,16 +225,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const items7 = [closure_7(ConjureEffortPickerDefault, obj5)];
         const intl = tmp(1126).intl;
         const string = intl.string;
-        const tmp12 = _modDef3827;
+        const tmp12 = _modDef3849;
         if (tmp5) {
           let stringResult = string(tmp12.GxpdUR);
         } else {
           stringResult = string(tmp12["/rJzr6"]);
         }
         const obj6 = { variant: "text-xs/normal", color: "text-muted", children: stringResult };
-        items7[1] = closure_7(tmp(5087).Text, obj6);
+        items7[1] = closure_7(tmp(5088).Text, obj6);
         obj4.children = items7;
-        return closure_8(tmp(5374).Stack, obj4);
+        return closure_8(tmp(5377).Stack, obj4);
       }
       const obj3 = projectId(504);
     };
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { title: null };
         const intl = util.intl;
-        obj2.title = intl.string(_modDef3827["3E7Yc0"]);
+        obj2.title = intl.string(_modDef3849["3E7Yc0"]);
         const tmp7 = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { header: null, children: null };
       const obj2 = { title: null };
       const intl = util.intl;
-      obj2.title = intl.string(_modDef3827["3E7Yc0"]);
+      obj2.title = intl.string(_modDef3849["3E7Yc0"]);
       obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
       obj.children = React5(View, { children: React5(closure_9, { projectId: projectId.projectId }) });
       return React5(ActionSheet.ActionSheet, obj);

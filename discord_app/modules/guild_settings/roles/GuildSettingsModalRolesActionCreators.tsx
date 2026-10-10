@@ -24,7 +24,7 @@ let closure_6 = async function _updateGuildRole(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -121,7 +121,7 @@ export default {
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_START_REORDER", guildId });
   },
   stopReordering() {
-    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER" }));
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER" });
   },
   updateRoleOrder(from, to) {
     DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_EDIT_ORDER", from, to });

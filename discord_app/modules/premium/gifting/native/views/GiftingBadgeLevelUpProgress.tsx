@@ -1,19 +1,19 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeLevelUpProgress.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2661 from "../../GiftingBadge.messages.js";
+import _modDef2664 from "../../GiftingBadge.messages.js";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
 import GiftingBadgeIconDefault from "GiftingBadgeIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const util = format(1126);
-const Text_Text = format(5087);
+const Text_Text = format(5088);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(8300).getSingleRequirementThreshold;
+let closure_4 = fn(8316).getSingleRequirementThreshold;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_4, width: "100%" },
   barRow: null,
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       intl = util.intl;
                       format = intl.format;
                       const obj9 = { count: progress, threshold: tmp18 };
-                      formatResult = format(_modDef2661.iIpfQe, obj9);
+                      formatResult = format(_modDef2664.iIpfQe, obj9);
                       cResult[6] = tmp4;
                       cResult[7] = newTier;
                       cResult[8] = tmp6;
@@ -333,7 +333,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: tmp.labels, children: null };
       const obj11 = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
-      obj11.children = intl.format(_modDef2661.iIpfQe, { count: progress, threshold: tmp7 });
+      obj11.children = intl.format(_modDef2664.iIpfQe, { count: progress, threshold: tmp7 });
       obj10.children = hasOwnProperty(Text_Text.Text, obj11);
       items3[1] = hasOwnProperty(View, obj10);
       obj3.children = items3;

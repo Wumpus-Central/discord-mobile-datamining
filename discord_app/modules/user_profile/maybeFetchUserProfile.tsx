@@ -1,18 +1,18 @@
 // discord_app/modules/user_profile/maybeFetchUserProfile.tsx
+import ConnectionsUtils from "../connections/ConnectionsUtils.tsx";
+import CollectiblesActionCreators from "../collectibles/CollectiblesActionCreators.tsx";
+import useAvatarColor from "../avatar/useAvatarColor.tsx";
 import UserActionCreators from "../../actions/UserActionCreators.tsx";
 import preloadUserBannerImageDefault from "preloadUserBannerImage.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import UserProfileStore from "UserProfileStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");
 
 export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
-  _require = id;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -29,16 +29,11 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let flag3 = obj.dispatchWait;
+  let flag3 = obj.waitForRefetch;
   if (flag3 === undefined) {
-    flag3 = false;
-  }
-  let flag4 = obj.waitForRefetch;
-  if (flag4 === undefined) {
-    flag4 = true;
+    flag3 = true;
   }
   const guildId = obj.guildId;
-  let obj5;
   if ("" === id) {
     return Promise.resolve();
   } else if (UserProfileStore.isFetchingProfile(id, guildId)) {
@@ -115,8 +110,7 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
       profileEffect = userProfile.profileEffect;
     }
     if (null != profileEffect) {
-      const result = require("CollectiblesActionCreators").maybeFetchCollectiblesProduct(profileEffect.skuId);
-      const obj2 = require("CollectiblesActionCreators");
+      const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(profileEffect.skuId);
     }
     if (null != guildId) {
       let profileFrame1;
@@ -128,14 +122,12 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
       profileFrame = userProfile.profileFrame;
     }
     if (null != profileFrame) {
-      const result1 = require("CollectiblesActionCreators").maybeFetchCollectiblesProduct(profileFrame.skuId);
-      const obj3 = require("CollectiblesActionCreators");
+      const result1 = CollectiblesActionCreators.maybeFetchCollectiblesProduct(profileFrame.skuId);
     }
     if (null != guildIconURL) {
-      require("useAvatarColor").maybeFetchColors(guildIconURL);
-      const obj4 = require("useAvatarColor");
+      useAvatarColor.maybeFetchColors(guildIconURL);
     }
-    obj5 = {
+    const obj5 = {
       type,
       withMutualGuilds,
       withMutualFriends: flag2,
@@ -148,28 +140,22 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
     let tmp34;
     if (null != guildId) {
       const obj7 = { guildMember: GuildMemberStore.getMember(guildId, id), channel: ChannelStore.getChannel(tmp) };
-      const visibleConnectionsRole = require("ConnectionsUtils").getVisibleConnectionsRole(obj7);
+      const visibleConnectionsRole = ConnectionsUtils.getVisibleConnectionsRole(obj7);
       id = undefined;
       if (visibleConnectionsRole != null) {
         id = visibleConnectionsRole.id;
       }
       tmp34 = id;
-      const obj6 = require("ConnectionsUtils");
     }
     obj5.connectionsRoleId = tmp34;
-    if (flag3) {
-      obj5(584).wait(() => UserActionCreators.fetchProfile(closure_0, obj5, preloadUserBannerImageDefault));
-      return Promise.resolve();
-    } else {
-      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(8296));
-      let resolved = profile;
-      if (tmp18) {
-        resolved = profile;
-        if (!flag4) {
-          resolved = Promise.resolve();
-        }
+    const profile = UserActionCreators.fetchProfile(id, obj5, preloadUserBannerImageDefault);
+    let resolved = profile;
+    if (tmp18) {
+      resolved = profile;
+      if (!flag3) {
+        resolved = Promise.resolve();
       }
-      return resolved;
     }
+    return resolved;
   }
 }

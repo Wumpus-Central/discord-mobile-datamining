@@ -38,7 +38,7 @@ function replaceUsernameVariable(message, str, username) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   relativeContainer: { position: "relative" },
   welcomeContainer: {
@@ -438,7 +438,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             }
             const items5 = [stateFromStores2, stateFromStores3];
-            class W {
+            class H {
               constructor() {
                 obj = closure_2;
                 tmp = null == closure_2 || obj.isNonUserBot();
@@ -458,7 +458,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (tmp5 != null) {
                     id2 = tmp5.id;
                   }
-                  obj1 = { dispatchWait: true, guildId: null };
+                  obj1 = { guildId: null };
                   obj1.guildId = id2;
                   tmp4Result = tmp4(id, avatarURL, obj1);
                 }
@@ -476,7 +476,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          class W {
+          class H {
             constructor() {
               obj = closure_2;
               tmp = null == closure_2 || obj.isNonUserBot();
@@ -496,7 +496,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (tmp5 != null) {
                   id2 = tmp5.id;
                 }
-                obj1 = { dispatchWait: true, guildId: null };
+                obj1 = { guildId: null };
                 obj1.guildId = id2;
                 tmp4Result = tmp4(id, avatarURL, obj1);
               }
@@ -504,7 +504,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           cResult[21] = undefined;
-          cResult[22] = W;
+          cResult[22] = H;
         }
         let obj2 = {};
         obj2[guildId] = tmp32;
@@ -584,7 +584,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (stateFromStores3 != null) {
             id2 = stateFromStores3.id;
           }
-          const obj2 = { dispatchWait: true, guildId: id2 };
+          const obj2 = { guildId: id2 };
           maybeFetchUserProfileDefault(id, avatarURL, obj2);
         }
         tmp = null == stateFromStores2 || stateFromStores2.isNonUserBot();

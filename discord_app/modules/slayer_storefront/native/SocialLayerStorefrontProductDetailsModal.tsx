@@ -28,7 +28,7 @@ import n_mod from "../../../../_runtime/metro/00683__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10129).SlayerShopPDPCTAType;
+const SlayerShopPDPCTAType = fn(10158).SlayerShopPDPCTAType;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -40,7 +40,7 @@ let n = n_mod;
 const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
 const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 let closure_17 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0).hex();
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: { flex: 1 },
   header: null,
@@ -78,7 +78,7 @@ let obj = {
 };
 const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0);
 obj.header = {
-  height: fn(6263).NAV_BAR_HEIGHT,
+  height: fn(6258).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -88,7 +88,7 @@ obj.header = {
 };
 obj.headerTitle = { flexShrink: 1 };
 let obj2 = {
-  height: fn(6263).NAV_BAR_HEIGHT,
+  height: fn(6258).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -171,15 +171,15 @@ obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.s
 let obj19 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
 obj.hero = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10130).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10159).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
-obj.heroLandscape = { flex: 1, minHeight: 140, height: "emoji" };
+obj.heroLandscape = { flex: 1, minHeight: 140, height: "code" };
 let obj20 = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10130).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10159).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -219,7 +219,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === tmp5) {
               }
               const obj3 = { style: tmp5, children: tmp31 };
-              const tmp37 = state(React5, obj3);
+              const tmp37 = closure_1_14(React5, obj3);
               cResult[9] = tmp5;
               cResult[10] = tmp31;
               cResult[11] = tmp37;
@@ -232,7 +232,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             resizeMode: "cover",
             style: tmp4.heroImage,
           };
-          const tmp33 = state(common_Video.VideoComponent, obj4);
+          const tmp33 = closure_1_14(common_Video.VideoComponent, obj4);
           cResult[5] = mediaItem.videoThumbnailSrc;
           cResult[6] = tmp4.heroImage;
           cResult[7] = tmp30;
@@ -244,7 +244,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { uri: mediaItem.backgroundSrc };
             obj5.source = obj6;
             obj5.style = timestampProducer.absoluteFill;
-            const tmp19 = state(FastImageDefault, obj5);
+            const tmp19 = closure_1_14(FastImageDefault, obj5);
             cResult[12] = mediaItem.backgroundSrc;
             cResult[13] = tmp19;
             let tmp15 = tmp19;
@@ -270,14 +270,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { style: tmp5, children: null };
             const items = [tmp15, tmp21];
             obj8.children = items;
-            const tmp28 = closure_1_15(React5, obj8);
+            const tmp28 = value2(React5, obj8);
             cResult[19] = tmp5;
             cResult[20] = tmp15;
             cResult[21] = tmp21;
             cResult[22] = tmp28;
           }
           const obj9 = { source: tmp20, style: tmp4.heroImage, resizeMode: "cover" };
-          const tmp24 = state(FastImageDefault, obj9);
+          const tmp24 = closure_1_14(FastImageDefault, obj9);
           cResult[16] = tmp4.heroImage;
           cResult[17] = tmp20;
           cResult[18] = tmp24;
@@ -302,14 +302,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp11;
             }
             const obj11 = { style: tmp5, children: tmp7 };
-            const tmp14 = state(React5, obj11);
+            const tmp14 = closure_1_14(React5, obj11);
             cResult[28] = tmp5;
             cResult[29] = tmp7;
             cResult[30] = tmp14;
             tmp11 = tmp14;
           }
           const obj12 = { source: tmp6, style: tmp4.heroImage, resizeMode: "cover" };
-          const tmp10 = state(FastImageDefault, obj12);
+          const tmp10 = closure_1_14(FastImageDefault, obj12);
           cResult[25] = tmp4.heroImage;
           cResult[26] = tmp6;
           cResult[27] = tmp10;
@@ -337,30 +337,30 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.source = obj4;
         obj3.poster = mediaItem.videoThumbnailSrc;
         obj3.style = tmp.heroImage;
-        obj2.children = state(common_Video.VideoComponent, obj3);
-        let tmp6 = state(React5, obj2);
+        obj2.children = closure_1_14(common_Video.VideoComponent, obj3);
+        let tmp6 = closure_1_14(React5, obj2);
       } else if (null != mediaItem.backgroundSrc) {
         const obj5 = { style: items, children: null };
         const obj6 = { source: null, style: null, resizeMode: "cover" };
         const obj7 = { uri: mediaItem.backgroundSrc };
         obj6.source = obj7;
         obj6.style = timestampProducer.absoluteFill;
-        const items1 = [state(FastImageDefault, obj6)];
+        const items1 = [closure_1_14(FastImageDefault, obj6)];
         const obj8 = { source: null, style: null, resizeMode: "cover" };
         const obj9 = { uri: mediaItem.src };
         obj8.source = obj9;
         obj8.style = tmp.heroImage;
-        items1[1] = state(FastImageDefault, obj8);
+        items1[1] = closure_1_14(FastImageDefault, obj8);
         obj5.children = items1;
-        tmp6 = closure_1_15(React5, obj5);
+        tmp6 = value2(React5, obj5);
       } else {
         const obj = { style: items, children: null };
         const obj10 = { source: null, style: null, resizeMode: "cover" };
         const obj11 = { uri: mediaItem.src };
         obj10.source = obj11;
         obj10.style = tmp.heroImage;
-        obj.children = state(FastImageDefault, obj10);
-        tmp6 = state(React5, obj);
+        obj.children = closure_1_14(FastImageDefault, obj10);
+        tmp6 = closure_1_14(React5, obj);
       }
       return tmp6;
     };
@@ -372,7 +372,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "text-sm/medium", color: "text-muted", children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t.V91tvy);
-        const tmp6 = state(Text_Text.Text, obj2);
+        const tmp6 = closure_1_14(Text_Text.Text, obj2);
         cResult[0] = tmp6;
         let first = tmp6;
       } else {
@@ -384,7 +384,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl = util.intl;
       obj.children = intl.string(util.t.V91tvy);
-      return state(Text_Text.Text, obj);
+      return closure_1_14(Text_Text.Text, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
@@ -406,7 +406,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp10 = state(closure_20, {});
+          const tmp10 = closure_1_14(closure_20, {});
           cResult[2] = tmp10;
           let tmp7 = tmp10;
         } else {
@@ -414,7 +414,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== userPrice) {
           const obj3 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: userPrice };
-          const tmp13 = state(Text_Text.Text, obj3);
+          const tmp13 = closure_1_14(Text_Text.Text, obj3);
           cResult[3] = userPrice;
           cResult[4] = tmp13;
           let tmp11 = tmp13;
@@ -430,14 +430,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { style: priceSection.priceSection, children: null };
           const items = [tmp7, tmp14];
           obj4.children = items;
-          const tmp21 = closure_1_15(React5, obj4);
+          const tmp21 = value2(React5, obj4);
           priceSection = priceSection.priceSection;
           cResult[8] = priceSection;
           cResult[9] = tmp14;
           cResult[10] = tmp21;
         }
         const obj5 = { style: priceSection.priceRow, children: tmp11 };
-        const tmp17 = state(React5, obj5);
+        const tmp17 = closure_1_14(React5, obj5);
         cResult[5] = priceSection.priceRow;
         cResult[6] = tmp11;
         cResult[7] = tmp17;
@@ -454,13 +454,13 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null;
       if (null != userPrice) {
         const obj3 = { style: tmp.priceSection, children: null };
-        const items = [state(closure_20, {})];
+        const items = [closure_1_14(closure_20, {})];
         const obj4 = { style: tmp.priceRow, children: null };
         const obj5 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: userPrice };
-        obj4.children = state(Text_Text.Text, obj5);
-        items[1] = state(React5, obj4);
+        obj4.children = closure_1_14(Text_Text.Text, obj5);
+        items[1] = closure_1_14(React5, obj4);
         obj3.children = items;
-        tmp4 = closure_1_15(React5, obj3);
+        tmp4 = value2(React5, obj3);
       }
       return tmp4;
     };
@@ -905,7 +905,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[0] !== sku.name) {
           const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: sku.name };
-          const tmp6 = state(Text_Text.Heading, obj3);
+          const tmp6 = closure_1_14(Text_Text.Heading, obj3);
           cResult[0] = sku.name;
           cResult[1] = tmp6;
           let tmp4 = tmp6;
@@ -917,7 +917,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp9 = !isNullOrEmptyResult;
           if (!isNullOrEmptyResult) {
             const obj4 = { variant: "text-md/medium", color: "text-muted", children: sku.description };
-            tmp9 = state(Text_Text.Text, obj4);
+            tmp9 = closure_1_14(Text_Text.Text, obj4);
           }
           cResult[2] = sku.description;
           cResult[3] = tmp9;
@@ -933,7 +933,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: section.section, children: null };
         const items = [tmp4, tmp7];
         obj5.children = items;
-        const tmp14 = closure_1_15(React5, obj5);
+        const tmp14 = value2(React5, obj5);
         section = section.section;
         cResult[4] = section;
         cResult[5] = tmp4;
@@ -949,16 +949,16 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       if (!obj.isNullOrEmpty(sku.name)) {
         const obj2 = { style: tmp.section, children: null };
         const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: sku.name };
-        const items = [state(Text_Text.Heading, obj3)];
+        const items = [closure_1_14(Text_Text.Heading, obj3)];
         const isNullOrEmptyResult = StringUtils.isNullOrEmpty(sku.description);
         let tmp7Result = !isNullOrEmptyResult;
         if (!isNullOrEmptyResult) {
           const obj4 = { variant: "text-md/medium", color: "text-muted", children: sku.description };
-          tmp7Result = state(Text_Text.Text, obj4);
+          tmp7Result = closure_1_14(Text_Text.Text, obj4);
         }
         items[1] = tmp7Result;
         obj2.children = items;
-        tmp5Result = closure_1_15(React5, obj2);
+        tmp5Result = value2(React5, obj2);
         const tmp2Result = StringUtils;
       }
       return tmp5Result;
@@ -1000,7 +1000,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = { style: tmp8, children: null };
                   const items = [tmp9, tmp10, tmp11];
                   obj2.children = items;
-                  const tmp41 = closure_1_15(tmp7, obj2);
+                  const tmp41 = value2(tmp7, obj2);
                   cResult[14] = tmp7;
                   cResult[15] = tmp8;
                   cResult[16] = tmp9;
@@ -1055,7 +1055,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp26 = !isNullOrEmptyResult;
         if (!isNullOrEmptyResult) {
           const obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: trimmed };
-          tmp26 = state(Text_Text.Heading, obj3);
+          tmp26 = closure_1_14(Text_Text.Heading, obj3);
         }
         const tmpResult9 = StringUtils;
         const isNullOrEmptyResult1 = StringUtils.isNullOrEmpty(trimmed1);
@@ -1068,20 +1068,20 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { uri: tmp5 };
             obj5.source = obj6;
             obj5.style = tmp4.labelIcon;
-            tmp31 = state(FastImageDefault, obj5);
+            tmp31 = closure_1_14(FastImageDefault, obj5);
           }
           const items1 = [tmp31];
           const obj7 = { variant: "text-sm/medium", color: "text-muted", children: trimmed1 };
-          items1[1] = state(Text_Text.Text, obj7);
+          items1[1] = closure_1_14(Text_Text.Text, obj7);
           obj4.children = items1;
-          tmp30Result = closure_1_15(React5, obj4);
+          tmp30Result = value2(React5, obj4);
         }
         const tmpResult10 = StringUtils;
         const isNullOrEmptyResult2 = StringUtils.isNullOrEmpty(trimmed2);
         let tmp36 = !isNullOrEmptyResult2;
         if (!isNullOrEmptyResult2) {
           const obj8 = { variant: "text-md/medium", color: "text-default", children: trimmed2 };
-          tmp36 = state(Text_Text.Text, obj8);
+          tmp36 = closure_1_14(Text_Text.Text, obj8);
         }
         tmp19 = forResult;
         section = tmp4.section;
@@ -1129,7 +1129,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp14 = !isNullOrEmptyResult;
       if (!isNullOrEmptyResult) {
         const obj4 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: trimmed };
-        tmp14 = state(Text_Text.Heading, obj4);
+        tmp14 = closure_1_14(Text_Text.Heading, obj4);
       }
       const items = [tmp14, ,];
       const tmp8Result6 = StringUtils;
@@ -1143,13 +1143,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { uri: assetURL };
           obj6.source = obj7;
           obj6.style = tmp.labelIcon;
-          tmp18 = state(FastImageDefault, obj6);
+          tmp18 = closure_1_14(FastImageDefault, obj6);
         }
         const items1 = [tmp18];
         const obj8 = { variant: "text-sm/medium", color: "text-muted", children: trimmed1 };
-        items1[1] = state(Text_Text.Text, obj8);
+        items1[1] = closure_1_14(Text_Text.Text, obj8);
         obj5.children = items1;
-        tmp11Result = closure_1_15(React5, obj5);
+        tmp11Result = value2(React5, obj5);
       }
       items[1] = tmp11Result;
       const tmp8Result7 = StringUtils;
@@ -1157,11 +1157,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp23 = !isNullOrEmptyResult2;
       if (!isNullOrEmptyResult2) {
         const obj9 = { variant: "text-md/medium", color: "text-default", children: trimmed2 };
-        tmp23 = state(Text_Text.Text, obj9);
+        tmp23 = closure_1_14(Text_Text.Text, obj9);
       }
       items[2] = tmp23;
       obj3.children = items;
-      tmp11Result2 = closure_1_15(React5, obj3);
+      tmp11Result2 = value2(React5, obj3);
       const tmp8Result8 = StringUtils;
     };
 ReactCompilerGating = fn(558);
@@ -1422,10 +1422,10 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_18();
       dependencyMap = tmp;
       const rect = analyticsLocations(1631)();
-      const isScreenLandscape = skuId(8310).useIsScreenLandscape();
-      let obj = skuId(8310);
-      const mobileStoreFront = analyticsLocations(9371).useMobileStoreFront();
-      let obj2 = analyticsLocations(9371);
+      const isScreenLandscape = skuId(8326).useIsScreenLandscape();
+      let obj = skuId(8326);
+      const mobileStoreFront = analyticsLocations(9398).useMobileStoreFront();
+      let obj2 = analyticsLocations(9398);
       let items = [trackPDPClick];
       const stateFromStores = skuId(504).useStateFromStores(items, () => SKUStore.get(skuId));
       let obj3 = skuId(504);
@@ -1439,13 +1439,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         applicationId1 = stateFromStores.applicationId;
       }
-      const getOrFetchApplication = skuId(6854).useGetOrFetchApplication(applicationId1);
+      const getOrFetchApplication = skuId(6857).useGetOrFetchApplication(applicationId1);
       let tmp12 = getOrFetchApplication;
-      const obj5 = skuId(6854);
+      const obj5 = skuId(6857);
       if (getOrFetchApplication == null) {
         tmp12 = null;
       }
-      const tmp2Result = analyticsLocations(6851);
+      const tmp2Result = analyticsLocations(6854);
       const items2 = [skuAssets];
       stateFromStores2 = skuId(504).useStateFromStores(items2, () => skuAssets.getSkuAssets());
       const items3 = [stateFromStores];
@@ -1461,7 +1461,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PDP];
         return items1;
       }, items4);
-      analyticsLocations(5393)(() => {
+      analyticsLocations(5396)(() => {
         const obj2 = {
           location_stack: memo1,
           type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY,
@@ -1512,7 +1512,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             const items = [[], []];
             let result = items;
           } else {
-            const obj2 = carouselMediaItems;
+            const obj = carouselMediaItems;
             const tenantMetadata = stateFromStores.tenantMetadata;
             let carouselItems;
             if (tenantMetadata != null) {
@@ -1524,12 +1524,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             if (carouselItems == null) {
               carouselItems = [];
             }
-            const obj = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
-            result = obj2.convertCarouselItemsToMediaItems(
+            const obj2 = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
+            result = obj.convertCarouselItemsToMediaItems(
               carouselItems,
               stateFromStores.applicationId,
               stateFromStores2,
-              obj,
+              obj2,
             );
           }
           return result;
@@ -1575,7 +1575,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             const items = [[], []];
             let result = items;
           } else {
-            const obj2 = carouselMediaItems;
+            const obj = carouselMediaItems;
             const tenantMetadata = stateFromStores.tenantMetadata;
             let carouselItems;
             if (tenantMetadata != null) {
@@ -1587,12 +1587,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             if (carouselItems == null) {
               carouselItems = [];
             }
-            const obj = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
-            result = obj2.convertCarouselItemsToMediaItems(
+            const obj2 = { heroWidth: carouselMediaItems.MOBILE_HERO_WIDTH_PX };
+            result = obj.convertCarouselItemsToMediaItems(
               carouselItems,
               stateFromStores.applicationId,
               stateFromStores2,
-              obj,
+              obj2,
             );
           }
           return result;
@@ -1698,7 +1698,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj = BillingPlatformUtils;
       }, items9);
-      const OTPACOMOrderExperiment = tmp4(9370).OTPACOMOrderExperiment;
+      const OTPACOMOrderExperiment = tmp4(9397).OTPACOMOrderExperiment;
       let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
       const tmp15Result6 = mobileStoreFront(stateFromStores.useState(0), 2);
       if (tmp4Result6.isIOS()) {
@@ -1727,7 +1727,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         obj6.orderRequired = enabled;
         const items10 = [skuId];
         obj6.skuIds = items10;
-        obj6.onOrderRetryCancellation = tmp4(10126).closeSocialLayerStorefrontProductDetailsModal;
+        obj6.onOrderRetryCancellation = tmp4(10155).closeSocialLayerStorefrontProductDetailsModal;
         const obj8 = {
           is_gift: false,
           location_stack: memo1,
@@ -1761,19 +1761,19 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           onPurchaseComplete: callback2,
           onPurchaseError: callback1,
         };
-        obj6.children = closure_14(tmp4(10137).HeadlessSlayerStorefrontPurchaseRunner, obj9);
-        tmp43Result = closure_14(tmp2(10133), obj6, skuId);
-        const tmp2Result2 = tmp2(10133);
+        obj6.children = closure_14(tmp4(10166).HeadlessSlayerStorefrontPurchaseRunner, obj9);
+        tmp43Result = closure_14(tmp2(10162), obj6, skuId);
+        const tmp2Result2 = tmp2(10162);
       }
       const items11 = [skuId, memo1, trackPDPClick];
       if (null == stateFromStores) {
         return null;
       } else {
-        let result = tmp4(6929).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+        let result = tmp4(6935).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
         const intl4 = tmp4(1126).intl;
         const stringResult = intl4.string(tmp4(1126).t.boqtTA);
-        const tmp4Result7 = tmp4(6929);
-        let result1 = tmp4(4741).isSocialLayerStorefrontGiftingSupported();
+        const tmp4Result7 = tmp4(6935);
+        let result1 = tmp4(4782).isSocialLayerStorefrontGiftingSupported();
         if (null != tmp25) {
           const obj10 = { mediaItem: tmp25, landscape: isScreenLandscape };
           let tmp49 = closure_14(closure_19, obj10);
@@ -1781,12 +1781,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           tmp49 = null;
           if (null != memo) {
             const obj11 = { sku: stateFromStores };
-            tmp49 = closure_14(tmp2(9009), obj11);
+            tmp49 = closure_14(tmp2(9028), obj11);
           }
         }
         let tmp53 = null;
         if (stateFromStores.exclusive) {
-          const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10141).ExclusiveBadge, {}) };
+          const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10170).ExclusiveBadge, {}) };
           tmp53 = closure_14(memo1, obj12);
         }
         let tmp56 = null;
@@ -1824,8 +1824,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           const intl = tmp4(1126).intl;
-          obj18.children = intl.string(tmp2(3697).gndWN7);
-          tmp65Result = closure_14(tmp4(5087).Text, obj18);
+          obj18.children = intl.string(tmp2(3719).gndWN7);
+          tmp65Result = closure_14(tmp4(5088).Text, obj18);
         }
         items13[1] = tmp65Result;
         const obj19 = { style: tmp.footerButtonRow, children: null };
@@ -1844,11 +1844,11 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj21.disabled = tmp68;
         obj21.onPress = callback3;
-        obj20.children = closure_14(tmp4(5376).Button, obj21);
+        obj20.children = closure_14(tmp4(5379).Button, obj21);
         const items14 = [closure_14(memo1, obj20)];
         if (result1) {
           const obj22 = {
-            icon: tmp2(8092),
+            icon: tmp2(8110),
             variant: "primary",
             size: "lg",
             disabled: tmp28,
@@ -1858,7 +1858,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp4(1126).intl;
           obj22.accessibilityLabel = intl2.string(tmp4(1126).t.QAZA5f);
           obj22.onPress = tmp48;
-          result1 = closure_14(tmp4(8114).IconButton, obj22);
+          result1 = closure_14(tmp4(7573).IconButton, obj22);
         }
         items14[1] = result1;
         obj19.children = items14;
@@ -1866,7 +1866,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         if (result) {
           const obj23 = { style: tmp.legalCopy, children: null };
           const obj24 = { shouldAppendDisclaimer: false === tmp2Result(tmp12).hasAlreadyLinked };
-          const mobileFinePrintMessageForApplication = tmp4(10144).getMobileFinePrintMessageForApplication(
+          const mobileFinePrintMessageForApplication = tmp4(10173).getMobileFinePrintMessageForApplication(
             getOrFetchApplication,
             stringResult,
             obj24,
@@ -1879,13 +1879,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             ),
           );
           result = closure_14(tmp64, obj23);
-          const tmp4Result9 = tmp4(10144);
+          const tmp4Result9 = tmp4(10173);
         }
         items13[3] = result;
         obj15.children = items13;
         const tmp63Result = closure_15(memo1, obj15);
         const items15 = [tmp.container];
-        const tmp4Result8 = tmp4(4741);
+        const tmp4Result8 = tmp4(4782);
         let num3 = 0;
         if (!tmp4Result10.isIOS()) {
           num3 = rect.top;
@@ -1897,16 +1897,16 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         const items16 = [tmp43Result, , ,];
         const obj27 = { style: tmp.header, children: null };
         const obj28 = {
-          onPress: tmp4(10126).closeSocialLayerStorefrontProductDetailsModal,
+          onPress: tmp4(10155).closeSocialLayerStorefrontProductDetailsModal,
           backImage() {
-            return state(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
+            return closure_2_14(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
           },
           accessibilityLabel: null,
           displayMode: "minimal",
         };
         const intl3 = tmp4(1126).intl;
         obj28.accessibilityLabel = intl3.string(tmp4(1126).t.cpT0Cq);
-        const items17 = [closure_14(tmp4(6214).HeaderBackButton, obj28)];
+        const items17 = [closure_14(tmp4(6209).HeaderBackButton, obj28)];
         const obj29 = {
           variant: "heading-lg/bold",
           color: "mobile-text-heading-primary",
@@ -1918,7 +1918,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           name = getOrFetchApplication.name;
         }
         obj29.children = name;
-        items17[1] = closure_14(tmp4(5087).Heading, obj29);
+        items17[1] = closure_14(tmp4(5088).Heading, obj29);
         obj27.children = items17;
         items16[1] = closure_15(memo1, obj27);
         const obj30 = { style: tmp.scrollContainer, children: null };
@@ -1927,7 +1927,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           const obj31 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
           const items18 = [closure_16, closure_17];
           obj31.colors = items18;
-          exclusive = closure_14(tmp2(5388), obj31);
+          exclusive = closure_14(tmp2(5391), obj31);
         }
         const items19 = [exclusive];
         if (isScreenLandscape) {
@@ -2002,8 +2002,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { skuIDs: first, activeSubscription: null, children: null };
         const obj3 = {};
         const merged = Object.assign(arg0);
-        obj2.children = state(closure_25, obj3);
-        const tmp11 = state(NativePaymentContext.NativePaymentContextProvider, obj2);
+        obj2.children = closure_1_14(closure_25, obj3);
+        const tmp11 = closure_1_14(NativePaymentContext.NativePaymentContextProvider, obj2);
         cResult[1] = arg0;
         cResult[2] = tmp11;
         let tmp5 = tmp11;
@@ -2015,6 +2015,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function WrappedSocialLayerStorefrontProductDetailsModal(arg0) {
       const obj = { skuIDs: [], activeSubscription: null, children: null };
       const merged = Object.assign(arg0);
-      obj.children = state(closure_25, {});
-      return state(NativePaymentContext.NativePaymentContextProvider, obj);
+      obj.children = closure_1_14(closure_25, {});
+      return closure_1_14(NativePaymentContext.NativePaymentContextProvider, obj);
     };

@@ -6,7 +6,6 @@ import native2 from "../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useToken2 from "../../../../design/tokens/native/useToken.tsx";
-import _modDef5009 from "../../../../../_runtime/metro/05009__.js";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import useAvatarColorDefault from "../../../avatar/useAvatarColor.tsx";
 import transitionToActivityDefault from "../../../activities/utils/transitionToActivity.native.tsx";
@@ -16,6 +15,7 @@ import useIsViewingActivity from "../../../activities/native/useIsViewingActivit
 import VideoRenderer from "VideoRenderer.tsx";
 import UserTileDefault from "UserTile.tsx";
 import useAvatarSpeakingColor from "../../../calls/native/useAvatarSpeakingColor.tsx";
+import _modDef10910 from "../../../../../_runtime/metro/10910__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
@@ -34,12 +34,12 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(10320);
+const ChannelCallStore = fn(10353);
 ({ togglePipFocus: map1, useIsVoiceChatFocused: closure_14 } = ChannelCallStore);
-const ParticipantTypes = fn(5114).ParticipantTypes;
+const ParticipantTypes = fn(5115).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   elevationShadow: null,
   background: null,
@@ -353,7 +353,7 @@ let closure_20 = noop.memo(
                 if (closure_4) {
                   const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
                 } else {
-                  __initData2();
+                  map1();
                 }
               }
               cResult[11] = channel.id;
@@ -488,7 +488,7 @@ let closure_20 = noop.memo(
           if (closure_4) {
             const participant = ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
           } else {
-            __initData2();
+            map1();
           }
         }
         if (ParticipantTypes.HIDDEN_STREAM !== type1) {
@@ -541,7 +541,7 @@ let closure_20 = noop.memo(
                     if (closure_3) {
                       openVoice();
                     } else {
-                      __initData2();
+                      map1();
                     }
                   },
                 };
@@ -1019,11 +1019,11 @@ let closure_23 = noop.memo(
                               const obj4 = { style: tmp4.thermalAlertIconContainer, children: null };
                               const obj5 = {
                                 style: tmp4.thermalAlertIcon,
-                                source: _modDef5009,
+                                source: _modDef10910,
                                 color: tmp4.thermalAlertIcon.color,
                               };
-                              obj4.children = value2(native2.Icon, obj5);
-                              tmp39 = value2(hasOwnProperty, obj4);
+                              obj4.children = value3(native2.Icon, obj5);
+                              tmp39 = value3(hasOwnProperty, obj4);
                             }
                             cResult[22] = tmp9;
                             cResult[23] = tmp4.thermalAlertIcon;
@@ -1042,7 +1042,7 @@ let closure_23 = noop.memo(
                         avatarSize: native2.AvatarSizes.PROFILE,
                         resizeMode: VideoRenderer.ResizeMode.COVER,
                       };
-                      let tmp35 = value2(UserTileDefault, obj6);
+                      let tmp35 = value3(UserTileDefault, obj6);
                       const tmp15Result = UserTileDefault;
                     }
                     cResult[16] = channel;
@@ -1062,7 +1062,7 @@ let closure_23 = noop.memo(
                   };
                   ({ user: obj8.user, speaking: obj8.speaking } = tmp13);
                   obj7.speakingColor = avatarSpeakingColor;
-                  tmp35 = value2(native2.Avatar, obj7);
+                  tmp35 = value3(native2.Avatar, obj7);
                 }
                 const items2 = [tmp4.avatarContainer, tmp30];
                 cResult[13] = tmp4.avatarContainer;
@@ -1152,20 +1152,20 @@ let closure_23 = noop.memo(
           obj4.style = items1;
           if (tmp15) {
             if (!tmp6) {
-              let tmp18 = value2;
+              let tmp18 = value3;
               const obj6 = {
                 participant: tmp7,
                 avatarSize: native2.AvatarSizes.PROFILE,
                 resizeMode: VideoRenderer.ResizeMode.COVER,
               };
-              let tmp20 = value2(UserTileDefault, obj6);
+              let tmp20 = value3(UserTileDefault, obj6);
               const tmp8Result = UserTileDefault;
             }
             const items2 = [tmp20];
             let tmp18Result = null;
             if (tmp5) {
               const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef5009, color: tmp.thermalAlertIcon.color };
+              const obj9 = { style: tmp.thermalAlertIcon, source: _modDef10910, color: tmp.thermalAlertIcon.color };
               obj8.children = tmp18(native2.Icon, obj9);
               tmp18Result = tmp18(hasOwnProperty, obj8);
             }
@@ -1183,8 +1183,8 @@ let closure_23 = noop.memo(
           };
           ({ user: obj7.user, speaking: obj7.speaking } = tmp7);
           obj16.speakingColor = tmp13;
-          tmp20 = value2(native2.Avatar, obj16);
-          tmp18 = value2;
+          tmp20 = value3(native2.Avatar, obj16);
+          tmp18 = value3;
         }
         tmp11 = useAvatarColorDefault(avatarURL, token);
       },
@@ -1274,7 +1274,7 @@ export default noop.memo(
                               return tmp30;
                             }
                             const obj5 = { style: tmp12, children: tmp25 };
-                            const tmp33 = value2(hasOwnProperty, obj5);
+                            const tmp33 = value3(hasOwnProperty, obj5);
                             cResult[25] = tmp25;
                             cResult[26] = tmp12;
                             cResult[27] = tmp33;
@@ -1282,8 +1282,8 @@ export default noop.memo(
                           }
                           const obj6 = { activeOpacity: 0.7, children: null };
                           const obj7 = { style: tmp17, children: cResult[21] };
-                          obj6.children = value2(hasOwnProperty, obj7);
-                          const tmp29 = value2(React4, obj6);
+                          obj6.children = value3(hasOwnProperty, obj7);
+                          const tmp29 = value3(React4, obj6);
                           cResult[22] = cResult[21];
                           cResult[23] = tmp17;
                           cResult[24] = tmp29;
@@ -1300,11 +1300,11 @@ export default noop.memo(
                     children: null,
                   };
                   const obj9 = { channel, pipParticipant, selfParticipant };
-                  obj8.children = value2(closure_23, obj9);
-                  let tmp19Result = value2(hasOwnProperty, obj8);
+                  obj8.children = value3(closure_23, obj9);
+                  let tmp19Result = value3(hasOwnProperty, obj8);
                 } else {
                   const obj10 = { channel, pipParticipant, selfParticipant };
-                  tmp19Result = value2(closure_20, obj10);
+                  tmp19Result = value3(closure_20, obj10);
                 }
                 cResult[16] = channel;
                 cResult[17] = isViewingActivity;
@@ -1360,16 +1360,16 @@ export default noop.memo(
         if (isViewingActivity) {
           const obj7 = { pointerEvents: "none", style: tmp.activityPipContainer, children: null };
           const obj8 = { channel, pipParticipant, selfParticipant };
-          obj7.children = value2(closure_23, obj8);
-          let tmp8Result = value2(hasOwnProperty, obj7);
+          obj7.children = value3(closure_23, obj8);
+          let tmp8Result = value3(hasOwnProperty, obj7);
         } else {
           const obj9 = { channel, pipParticipant, selfParticipant };
-          tmp8Result = value2(closure_20, obj9);
+          tmp8Result = value3(closure_20, obj9);
         }
         tmp2Result = PlatformUtils;
         obj6.children = tmp8Result;
-        obj5.children = value2(React4, { activeOpacity: 0.7, children: value2(hasOwnProperty, obj6) });
-        return value2(hasOwnProperty, obj5);
+        obj5.children = value3(React4, { activeOpacity: 0.7, children: value3(hasOwnProperty, obj6) });
+        return value3(hasOwnProperty, obj5);
       },
 );
 export { areParticipantsEqual };

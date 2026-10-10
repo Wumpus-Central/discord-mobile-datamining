@@ -48,4 +48,6 @@ export const MarketingComponentType = {
   [20]: "GUILD_BOOST_MARKETING_PAGE_BANNER",
   GUILD_BOOST_TAB_BANNER: 21,
   [21]: "GUILD_BOOST_TAB_BANNER",
+  SHOP_TAB_TOOLTIP: 22,
+  [22]: "SHOP_TAB_TOOLTIP",
 };

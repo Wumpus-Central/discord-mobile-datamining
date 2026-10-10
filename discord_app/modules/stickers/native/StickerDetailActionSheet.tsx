@@ -62,7 +62,7 @@ function UnavailableStickerDetail(arg0) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(9750, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(9779, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), ,];
@@ -115,7 +115,7 @@ function UnavailableStickerDetail(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(9698);
+const StickerPickerConstants = fn(9727);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1085);
 ({
@@ -125,10 +125,10 @@ const Constants = fn(1085);
   GuildFeatures: closure_18,
   UserSettingsSections: closure_19,
 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(6837).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(6840).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
@@ -218,7 +218,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 obj1.text = intl2.string(tmp4(tmp2[22]).t.in1rga);
                 obj1.icon = tmp4(tmp2[18]).StarOutlineIcon;
                 str2 = "STICKER_UNFAVORITED";
-                openManaResult = tmpResult.openMana("STICKER_UNFAVORITED", obj1);
+                openResult = tmpResult.open("STICKER_UNFAVORITED", obj1);
               } else {
                 tmp5 = closure_0;
                 favoriteStickerResult = obj2.favoriteSticker(closure_0);
@@ -229,7 +229,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 obj7.icon = tmp4(tmp2[17]).StarIcon;
                 obj7.iconColor = tmp(tmp2[13]).colors.ICON_FEEDBACK_WARNING;
                 str = "STICKER_FAVORITED";
-                openManaResult1 = tmpResult1.openMana("STICKER_FAVORITED", obj7);
+                openResult1 = tmpResult1.open("STICKER_FAVORITED", obj7);
               }
               return;
             }
@@ -268,7 +268,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 obj1.text = intl2.string(tmp4(tmp2[22]).t.in1rga);
                 obj1.icon = tmp4(tmp2[18]).StarOutlineIcon;
                 str2 = "STICKER_UNFAVORITED";
-                openManaResult = tmpResult.openMana("STICKER_UNFAVORITED", obj1);
+                openResult = tmpResult.open("STICKER_UNFAVORITED", obj1);
               } else {
                 tmp5 = closure_0;
                 favoriteStickerResult = obj2.favoriteSticker(closure_0);
@@ -279,7 +279,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 obj7.icon = tmp4(tmp2[17]).StarIcon;
                 obj7.iconColor = tmp(tmp2[13]).colors.ICON_FEEDBACK_WARNING;
                 str = "STICKER_FAVORITED";
-                openManaResult1 = tmpResult1.openMana("STICKER_FAVORITED", obj7);
+                openResult1 = tmpResult1.open("STICKER_FAVORITED", obj7);
               }
               return;
             }
@@ -308,7 +308,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               obj1.text = intl2.string(tmp4(tmp2[22]).t.in1rga);
               obj1.icon = tmp4(tmp2[18]).StarOutlineIcon;
               str2 = "STICKER_UNFAVORITED";
-              openManaResult = tmpResult.openMana("STICKER_UNFAVORITED", obj1);
+              openResult = tmpResult.open("STICKER_UNFAVORITED", obj1);
             } else {
               tmp5 = closure_0;
               favoriteStickerResult = obj2.favoriteSticker(closure_0);
@@ -319,7 +319,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               obj7.icon = tmp4(tmp2[17]).StarIcon;
               obj7.iconColor = tmp(tmp2[13]).colors.ICON_FEEDBACK_WARNING;
               str = "STICKER_FAVORITED";
-              openManaResult1 = tmpResult1.openMana("STICKER_FAVORITED", obj7);
+              openResult1 = tmpResult1.open("STICKER_FAVORITED", obj7);
             }
             return;
           }
@@ -372,7 +372,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = util.intl;
             obj3.text = intl2.string(util.t.in1rga);
             obj3.icon = StarOutlineIcon2.StarOutlineIcon;
-            ToastActionCreatorsDefault.openMana("STICKER_UNFAVORITED", obj3);
+            ToastActionCreatorsDefault.open("STICKER_UNFAVORITED", obj3);
             const tmpResult = ToastActionCreatorsDefault;
           } else {
             obj2.favoriteSticker(closure_0);
@@ -381,7 +381,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             obj4.text = intl.string(util.t.mE2e8A);
             obj4.icon = StarIcon.StarIcon;
             obj4.iconColor = nativeDefault.colors.ICON_FEEDBACK_WARNING;
-            ToastActionCreatorsDefault.openMana("STICKER_FAVORITED", obj4);
+            ToastActionCreatorsDefault.open("STICKER_FAVORITED", obj4);
             const tmpResult2 = ToastActionCreatorsDefault;
           }
         }, items1),
@@ -731,7 +731,7 @@ function GuildStickerDetail(sticker) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(9750, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequireImpl(9779, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   analyticsLocation = obj.useMemo(() => {
@@ -758,7 +758,7 @@ function GuildStickerDetail(sticker) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -791,7 +791,7 @@ function GuildStickerDetail(sticker) {
             v3(closure_128_0);
             closure_1_5(true);
             v3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp16) {
           v3 = tmp;

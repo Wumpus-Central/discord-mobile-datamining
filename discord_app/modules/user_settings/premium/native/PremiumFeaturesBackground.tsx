@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
-import LinearGradientDefault from "../../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05391_LinearGradient.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(7145).Gradients;
+const Gradients = fn(7151).Gradients;
 const PremiumTypes = fn(1392).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   cardContainer: {
     display: "flex",

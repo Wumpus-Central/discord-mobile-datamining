@@ -4,7 +4,7 @@ import initialize from "../../../../../../../discord_common/js/packages/flux/ind
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3083 from "../../../../Checkpoint.messages.js";
+import _modDef3086 from "../../../../Checkpoint.messages.js";
 import CheckpointConstants from "../../../../CheckpointConstants.tsx";
 import MicrophoneIcon from "../../../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
 import CheckpointEmphasisDefault from "../../CheckpointEmphasis.tsx";
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl = util.intl;
       if (rounded <= 0) {
-        let stringResult = intl.string(_modDef3083["OBeYX/"]);
+        let stringResult = intl.string(_modDef3086["OBeYX/"]);
         let tmp28 = importDefault;
       } else {
         const obj6 = { numMinutes: rounded };
-        stringResult = intl.formatToPlainString(_modDef3083.UZbUtl, obj6);
+        stringResult = intl.formatToPlainString(_modDef3086.UZbUtl, obj6);
         tmp28 = importDefault;
       }
       if (rounded > 0) {
@@ -210,18 +210,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return arg0;
             },
           };
-          const formatToPlainStringResult = intl2.formatToPlainString(tmp28(3115).RqXsIs, obj7);
+          const formatToPlainStringResult = intl2.formatToPlainString(tmp28(3118).RqXsIs, obj7);
         }
       }
-      const tmp28Result = tmp28(15936);
+      const tmp28Result = tmp28(15998);
       const container = tmp4.container;
       if (cResult[23] !== tmp4.image) {
-        const obj8 = { uri: tmp28(15939), style: tmp4.image };
-        const tmp36 = timestampProducer(tmp28(15938), obj8);
+        const obj8 = { uri: tmp28(16001), style: tmp4.image };
+        const tmp36 = timestampProducer(tmp28(16000), obj8);
         cResult[23] = tmp4.image;
         cResult[24] = tmp36;
         let tmp33 = tmp36;
-        const tmp28Result4 = tmp28(15938);
+        const tmp28Result4 = tmp28(16000);
       } else {
         tmp33 = cResult[24];
       }
@@ -246,7 +246,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp4.titleText,
           children: stringResult.toLocaleUpperCase(),
         };
-        items3[1] = timestampProducer(tmp28(15934), obj11);
+        items3[1] = timestampProducer(tmp28(15996), obj11);
         obj10.children = items3;
         const tmp46 = React5(View, obj10);
         let tmp44Result = !tmp24;
@@ -256,13 +256,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj12.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
           obj12.style = tmp4.number;
           const obj13 = { end: rounded };
-          obj12.children = timestampProducer(tmp28(15940), obj13);
+          obj12.children = timestampProducer(tmp28(16002), obj13);
           tmp44Result = timestampProducer(View, obj12);
         }
-        const tmp28Result6 = tmp28(15934);
+        const tmp28Result6 = tmp28(15996);
         if (tmp24) {
           const intl5 = util.intl;
-          let stringResult1 = intl5.string(tmp28(3083).MyO0sh);
+          let stringResult1 = intl5.string(tmp28(3086).MyO0sh);
         } else if (null != bound) {
           const intl4 = util.intl;
           const obj14 = {
@@ -272,11 +272,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
             },
           };
-          stringResult1 = intl4.format(tmp28(3115).RqXsIs, obj14);
+          stringResult1 = intl4.format(tmp28(3118).RqXsIs, obj14);
         } else {
           const intl3 = util.intl;
           const obj15 = { numMinutes: rounded };
-          stringResult1 = intl3.format(tmp28(3115).Y3poDW, obj15);
+          stringResult1 = intl3.format(tmp28(3118).Y3poDW, obj15);
         }
         cResult[2] = tmp4.container;
         cResult[3] = tmp4.copy;
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = View;
         tmp13 = View;
         tmp12 = tmp28Result6;
-        const tmp28Result5 = tmp28(15934);
+        const tmp28Result5 = tmp28(15996);
       }
       const tmp38 = timestampProducer(View, { style: tmp4.imageContainer, children: tmp33 });
       cResult[25] = tmp4.imageContainer;
@@ -363,11 +363,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl = util.intl;
       if (rounded <= 0) {
-        let stringResult = intl.string(_modDef3083["OBeYX/"]);
+        let stringResult = intl.string(_modDef3086["OBeYX/"]);
         let tmp10 = importDefault;
       } else {
         const obj2 = { numMinutes: rounded };
-        stringResult = intl.formatToPlainString(_modDef3083.UZbUtl, obj2);
+        stringResult = intl.formatToPlainString(_modDef3086.UZbUtl, obj2);
         tmp10 = importDefault;
       }
       let formatToPlainStringResult;
@@ -381,25 +381,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return arg0;
             },
           };
-          formatToPlainStringResult = intl2.formatToPlainString(tmp10(3115).RqXsIs, obj3);
+          formatToPlainStringResult = intl2.formatToPlainString(tmp10(3118).RqXsIs, obj3);
         }
       }
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { style: tmp.imageContainer, children: null };
       const obj6 = { uri: null, style: null };
-      const tmp10Result = tmp10(15936);
-      obj6.uri = tmp10(15939);
+      const tmp10Result = tmp10(15998);
+      obj6.uri = tmp10(16001);
       obj6.style = tmp.image;
-      obj5.children = timestampProducer(tmp10(15938), obj6);
+      obj5.children = timestampProducer(tmp10(16000), obj6);
       const items1 = [timestampProducer(View, obj5)];
       const obj7 = { style: tmp.copy, children: null };
       const obj8 = { style: tmp.title, children: null };
       const items2 = [timestampProducer(MicrophoneIcon.MicrophoneIcon, { size: "xs", color: CHECKPOINT_PRIMARY })];
       const obj10 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
       const obj9 = { size: "xs", color: CHECKPOINT_PRIMARY };
-      const tmp10Result4 = tmp10(15938);
+      const tmp10Result4 = tmp10(16000);
       obj10.children = stringResult.toLocaleUpperCase();
-      items2[1] = timestampProducer(tmp10(15934), obj10);
+      items2[1] = timestampProducer(tmp10(15996), obj10);
       obj8.children = items2;
       const items3 = [React5(View, obj8), ,];
       let tmp13Result = !tmp6;
@@ -409,15 +409,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj11.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
         obj11.style = tmp.number;
         const obj12 = { end: rounded };
-        obj11.children = timestampProducer(tmp10(15940), obj12);
+        obj11.children = timestampProducer(tmp10(16002), obj12);
         tmp13Result = timestampProducer(View, obj11);
       }
       items3[1] = tmp13Result;
       const obj13 = { variant: "heading-lg/medium", accessibilityLabel: formatToPlainStringResult, children: null };
-      const tmp10Result5 = tmp10(15934);
+      const tmp10Result5 = tmp10(15996);
       if (rounded <= 0) {
         const intl5 = util.intl;
-        let stringResult1 = intl5.string(tmp10(3083).MyO0sh);
+        let stringResult1 = intl5.string(tmp10(3086).MyO0sh);
       } else if (null != bound) {
         const intl4 = util.intl;
         const obj14 = {
@@ -427,15 +427,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
           },
         };
-        stringResult1 = intl4.format(tmp10(3115).RqXsIs, obj14);
+        stringResult1 = intl4.format(tmp10(3118).RqXsIs, obj14);
       } else {
         const intl3 = util.intl;
         const obj15 = { numMinutes: rounded };
-        stringResult1 = intl3.format(tmp10(3115).Y3poDW, obj15);
+        stringResult1 = intl3.format(tmp10(3118).Y3poDW, obj15);
       }
       const obj16 = { children: null };
       obj13.children = stringResult1;
-      items3[2] = timestampProducer(tmp10(15934), obj13);
+      items3[2] = timestampProducer(tmp10(15996), obj13);
       obj7.children = items3;
       items1[1] = React5(View, obj7);
       obj4.children = items1;

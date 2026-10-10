@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd };
-        const tmp20 = jsx(tmp(6889).TableSwitchRow, {
+        const tmp20 = jsx(tmp(6895).TableSwitchRow, {
           label: name,
           icon: tmp14,
           value: !muted,
@@ -158,7 +158,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           start: isStart,
           end: isEnd,
         };
-        return jsx(tmp2(6889).TableSwitchRow, {
+        return jsx(tmp2(6895).TableSwitchRow, {
           label: guild.name,
           icon: jsx(GuildIconDefault, { guild }),
           value: !muted,
@@ -219,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else if (0 === stateFromStoresArray.length) {
         return null;
       } else if (cResult[6] !== tmp6) {
-        Form = Form(8563).Form;
+        Form = Form(8579).Form;
         const obj2 = { children: tmp6 };
         tmp = <Form>{tmp6}</Form>;
         cResult[6] = tmp6;
@@ -236,7 +236,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null;
       if (0 !== stateFromStoresArray.length) {
         const obj2 = { children: tmp3 };
-        tmp4 = jsx(stateFromStoresArray(8563).Form, { children: tmp3 });
+        tmp4 = jsx(stateFromStoresArray(8579).Form, { children: tmp3 });
       }
       return tmp4;
     };

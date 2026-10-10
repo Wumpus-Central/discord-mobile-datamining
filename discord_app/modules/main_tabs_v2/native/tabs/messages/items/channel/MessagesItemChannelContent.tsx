@@ -2,18 +2,18 @@
 import SnowflakeUtilsDefault from "../../../../../../../utils/SnowflakeUtils.tsx";
 import c from "../../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4661 from "../../../../../../../../_runtime/metro/04661__.js";
+import _modDef4702 from "../../../../../../../../_runtime/metro/04702__.js";
 import useThemeDefault from "../../../../../../../hooks/useTheme.tsx";
 import useChannelNameDefault from "../../../../../../channel/useChannelName.tsx";
 import isChangelogChannelDefault from "../../../../../../changelog/utils/isChangelogChannel.tsx";
-import _modDef6649 from "../../../../../../../../_runtime/metro/06649__.js";
-import _modDef8308 from "../../../../../../../../_runtime/metro/08308__.js";
+import _modDef6650 from "../../../../../../../../_runtime/metro/06650__.js";
+import _modDef8324 from "../../../../../../../../_runtime/metro/08324__.js";
 import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
 import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef10300 from "../../../../../../../../_runtime/metro/10300__.js";
-import _modDef10430 from "../../../../../../../../_runtime/metro/10430__.js";
+import _modDef10333 from "../../../../../../../../_runtime/metro/10333__.js";
+import _modDef10463 from "../../../../../../../../_runtime/metro/10463__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -23,10 +23,10 @@ import ReadStateStore from "../../../../../../../stores/ReadStateStore.tsx";
 const native = channelMutedIcon(1200);
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj = {
   content: { flex: 1 },
   channelIcon: { alignSelf: "center" },
@@ -71,7 +71,7 @@ obj.botTag = { marginRight: nativeDefault.space.PX_4 };
 let obj6 = { marginRight: nativeDefault.space.PX_4 };
 obj.contentPadded = { paddingRight: nativeDefault.space.PX_40 };
 let closure_9 = createStyles.createStyles(obj);
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   if (arg2) {
     let MOBILE_TEXT_HEADING_PRIMARY = nativeDefault.colors.TEXT_MUTED;
@@ -93,7 +93,7 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   };
   return obj;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = {
     channelIcon: { marginRight: nativeDefault.space.PX_4 },
@@ -120,7 +120,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (blocked) {
         if (cResult[0] === channelMutedIcon2.channelIcon) {
         }
-        const obj2 = { source: _modDef8308, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj2 = { source: _modDef8324, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         items = [,];
         ({ channelIcon: arr[0], channelMutedIcon } = channelMutedIcon2);
         items[1] = channelMutedIcon;
@@ -132,7 +132,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (ignored) {
         if (cResult[3] === channelMutedIcon2.channelIcon) {
         }
-        const obj3 = { source: _modDef6649, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj3 = { source: _modDef6650, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items1 = [,];
         ({ channelIcon: arr4[0], channelIgnoredIcon: arr4[1] } = channelMutedIcon2);
         obj3.style = items1;
@@ -143,7 +143,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (muted) {
         if (cResult[6] === channelMutedIcon2.channelIcon) {
         }
-        const obj4 = { source: _modDef10430, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj4 = { source: _modDef10463, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items2 = [,];
         ({ channelIcon: arr3[0], channelMutedIcon: arr3[1] } = channelMutedIcon2);
         obj4.style = items2;
@@ -156,7 +156,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[9] === channelMutedIcon2.channelFavoriteIcon) {
         }
-        const obj5 = { source: _modDef10300, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj5 = { source: _modDef10333, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items3 = [,];
         ({ channelIcon: arr2[0], channelFavoriteIcon: arr2[1] } = channelMutedIcon2);
         obj5.style = items3;
@@ -170,19 +170,19 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       ({ muted, favorite, ignored, blocked } = selected);
       const tmp = closure_11(selected.selected);
       if (blocked) {
-        const obj2 = { source: _modDef8308, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj2 = { source: _modDef8324, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items = [,];
         ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
         obj2.style = items;
         let tmp2 = timestampProducer(native.Icon, obj2);
       } else if (ignored) {
-        const obj3 = { source: _modDef6649, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj3 = { source: _modDef6650, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items1 = [,];
         ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
         obj3.style = items1;
         tmp2 = timestampProducer(native.Icon, obj3);
       } else if (muted) {
-        const obj4 = { source: _modDef10430, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+        const obj4 = { source: _modDef10463, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
         const items2 = [,];
         ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
         obj4.style = items2;
@@ -190,7 +190,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp2 = null;
         if (favorite) {
-          const obj = { source: _modDef10300, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+          const obj = { source: _modDef10333, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
           const items3 = [,];
           ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
           obj.style = items3;
@@ -215,10 +215,10 @@ export default noop.memo(
           channel);
         const tmp5 = useThemeDefault();
         if (cResult[0] !== tmp5) {
-          const isThemeLightResult = tmp(4786).isThemeLight(tmp5);
+          const isThemeLightResult = tmp(4825).isThemeLight(tmp5);
           cResult[0] = tmp5;
           cResult[1] = isThemeLightResult;
-          const tmpResult = tmp(4786);
+          const tmpResult = tmp(4825);
         }
         let tmp8 = hasUnreadMessages;
         if (hasUnreadMessages) {
@@ -313,7 +313,7 @@ export default noop.memo(
         ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
         ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
         let tmp5 = hasUnreadMessages;
-        const obj = channel(4786);
+        const obj = channel(4825);
         if (hasUnreadMessages) {
           tmp5 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
         }
@@ -329,21 +329,21 @@ export default noop.memo(
         }
         const tmp8 = closure_9();
         const tmp9 = closure_10(channelSelected, tmp5, tmp7);
-        const isThemeLightResult = channel(4786).isThemeLight(useThemeDefault());
+        const isThemeLightResult = channel(4825).isThemeLight(useThemeDefault());
         const items = [ReadStateStore];
         const stateFromStores = channel(504).useStateFromStores(items, () => ReadStateStore.lastMessageId(channel.id));
         const tmp11 = useMessagePreviewsDefault(channel, { unread: hasUnreadMessages });
         let tmp12 = null != tmp11;
         if (tmp12) {
-          const obj3 = _modDef4661();
-          tmp12 = _modDef4661().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
-          const tmp13 = _modDef4661().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+          const obj3 = _modDef4702();
+          tmp12 = _modDef4702().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
+          const tmp13 = _modDef4702().diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
         }
         if (tmp12) {
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
         const tmpResult = channel(504);
-        const tmpResult3 = channel(16381);
+        const tmpResult3 = channel(16448);
         let id = stateFromStores;
         if (stateFromStores == null) {
           id = channel.id;
@@ -361,7 +361,7 @@ export default noop.memo(
         const waveShouldShow = tmp17.waveShouldShow;
         let obj4 = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
         const obj2 = { timestamp: SnowflakeUtilsDefault.extractTimestamp(id) };
-        obj4.variant = channel(4779).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+        obj4.variant = channel(4818).useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
         const items1 = [,];
         ({ channelText: arr2[0], channelName: arr2[1] } = tmp9);
         obj4.style = items1;
@@ -372,7 +372,7 @@ export default noop.memo(
           if (null != channel.recipients) {
             if (channel.recipients.length > 0) {
               const obj8 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
-              const EffectDisplayType = tmp(10232).EffectDisplayType;
+              const EffectDisplayType = tmp(10263).EffectDisplayType;
               obj8.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
               obj4 = Object.assign(obj4);
               closure_6(UsernameWithEffectsDefault, obj8);
@@ -383,7 +383,7 @@ export default noop.memo(
         const obj9 = {};
         const merged = Object.assign(obj4);
         obj9.children = tmp16;
-        const items2 = [closure_6(channel(5087).Text, obj9), ,];
+        const items2 = [closure_6(channel(5088).Text, obj9), ,];
         let tmp20Result = null;
         if (tmp15) {
           const obj10 = { userId: channel.recipients[0], disabledTooltip: true };
@@ -430,7 +430,7 @@ export default noop.memo(
             ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
             obj17.style = items7;
             obj17.children = relativeTimestamp;
-            tmp20Result6 = closure_6(tmp(5087).Text, obj17);
+            tmp20Result6 = closure_6(tmp(5088).Text, obj17);
           }
           items6[1] = tmp20Result6;
           obj14.children = items6;
@@ -456,9 +456,9 @@ export default noop.memo(
               str7 = str6;
             }
             obj19.color = str7;
-            obj19.layout = tmp(9286).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+            obj19.layout = tmp(9313).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
             obj19.muted = muted;
-            let tmp20Result7 = closure_6(tmp(12539).ChannelRowPreview, obj19);
+            let tmp20Result7 = closure_6(tmp(12586).ChannelRowPreview, obj19);
           } else if (channel.isDM()) {
             const obj20 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
             let guild_id;
@@ -474,7 +474,7 @@ export default noop.memo(
               const obj21 = { variant: "text-xs/medium", style: tmp9.channelText, lineClamp: 1, children: null };
               const intl = tmp(1126).intl;
               obj21.children = intl.string(tmp(1126).t.FL5T01);
-              tmp20Result7 = closure_6(tmp(5087).Text, obj21);
+              tmp20Result7 = closure_6(tmp(5088).Text, obj21);
             }
           }
           obj18.children = tmp20Result7;
@@ -508,6 +508,6 @@ export default noop.memo(
           }
           const obj24 = { backgroundColor: combined };
         }
-        const tmpResult4 = channel(4779);
+        const tmpResult4 = channel(4818);
       },
 );

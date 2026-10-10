@@ -10,9 +10,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 17632;
+    let tmp4 = 17704;
   } else {
-    tmp4 = 17638;
+    tmp4 = 17710;
   }
   return React5(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
@@ -24,7 +24,7 @@ function wrapChildren(items3) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const ActivityPanelModes = fn(6074).ActivityPanelModes;
+const ActivityPanelModes = fn(6067).ActivityPanelModes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_12 = [];
@@ -94,7 +94,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const items1 = [
         renderActivityPanelSystemUIManager(),
-        closure_7(mode(4788).TransitionGroup, {
+        closure_7(mode(4827).TransitionGroup, {
           items: memo,
           renderItem: renderActivityOrPIP,
           getItemKey: getKey,
@@ -102,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj.children = items1;
-      return closure_8(mode(6842).LayerScope, obj);
+      return closure_8(mode(6845).LayerScope, obj);
     };
 let closure_15 = tmp4;
 ReactCompilerGating = fn(558);

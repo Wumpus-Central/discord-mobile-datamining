@@ -244,14 +244,14 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
 }
 const Constants = fn(1085);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5400).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5401).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5403).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5404).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
 const re17 = /^ *> ?/gm;
 const re18 = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
-const regExp = new RegExp(fn(5086).ANSI_CONTROL_SEQUENCE_RE, "g");
+const regExp = new RegExp(fn(5087).ANSI_CONTROL_SEQUENCE_RE, "g");
 let obj = {
   newline: t.defaultRules.newline,
   paragraph: t.defaultRules.paragraph,

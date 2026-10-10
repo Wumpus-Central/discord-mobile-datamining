@@ -15,10 +15,10 @@ require = fn;
 const View = fn(17).View;
 const Permissions = fn(1085).Permissions;
 const EMOJI_URL_BASE_SIZE = fn(1393).EMOJI_URL_BASE_SIZE;
-const GuildMemberFlags = fn(4695).GuildMemberFlags;
+const GuildMemberFlags = fn(4736).GuildMemberFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   actionsContainer: { paddingHorizontal: 12 },
   actionsHeader: { display: "flex", marginBottom: 16 },
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   flag = false;
                 }
                 obj.completed = flag;
-                return closure_2_15(closure_18, obj, "member-action-" + channelId.channelId);
+                return value2(closure_18, obj, "member-action-" + channelId.channelId);
               }),
             ];
             let rulesChannelId;

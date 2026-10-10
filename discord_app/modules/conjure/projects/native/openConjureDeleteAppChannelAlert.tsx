@@ -155,7 +155,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -254,7 +254,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -274,7 +274,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                     noop(null);
                     dependencyMap = 1;
                     c3 = 1;
-                    const obj4 = { value: tmp2(11368)(conjureServerApp), done: false };
+                    const obj4 = { value: tmp2(11410)(conjureServerApp), done: false };
                     return obj4;
                   }
                 }
@@ -289,7 +289,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_129_1();
               } else {
                 const intl = tmp3(1126).intl;
-                closure_128_0 = intl.string(tmp2(3827).PJ2Fkn);
+                closure_128_0 = intl.string(tmp2(3849).PJ2Fkn);
                 closure_129_5(closure_128_0);
                 const _Error = Error;
                 const error = new Error(closure_128_0);

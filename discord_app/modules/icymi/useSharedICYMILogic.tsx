@@ -11,7 +11,7 @@ import ICYMIStore from "ICYMIStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let SCROLL_EVENT_THROTTLE_MS = fn(16819).SCROLL_EVENT_THROTTLE_MS;
+let SCROLL_EVENT_THROTTLE_MS = fn(16889).SCROLL_EVENT_THROTTLE_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
@@ -587,13 +587,13 @@ export const useSharedICYMILogic = ReactCompilerGating.isReactCompilerEnabled()
           const result = ICYMIAnalytics.trackItemLongImpression(
             viewableItems,
             viewableFeedItemsArray.map((id) => {
-              const obj = { id: id.id, type: notificationItem(8450).typeToString(id) };
+              const obj = { id: id.id, type: notificationItem(8466).typeToString(id) };
               return obj;
             }),
             stateFromStores,
           );
           const found = viewableItems.filter((item) => {
-            const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(16824).NON_ELIGIBLE_SCROLL_ITEMS;
+            const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(16894).NON_ELIGIBLE_SCROLL_ITEMS;
             return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
           });
           const result1 = ICYMIActionCreatorsDefault.triggerItemsLongImpression(
@@ -601,7 +601,7 @@ export const useSharedICYMILogic = ReactCompilerGating.isReactCompilerEnabled()
               item = item.item;
               const obj = {
                 itemId: item.id,
-                itemType: notificationItem(8454).itemToType(item),
+                itemType: notificationItem(8470).itemToType(item),
                 triggerType: "list",
                 itemFeedIndex: item.index,
                 itemScore: null,
@@ -626,7 +626,7 @@ export const useSharedICYMILogic = ReactCompilerGating.isReactCompilerEnabled()
       const callback2 = allUnreadItemsHydrated.useCallback((viewableItems) => {
         viewableItems = viewableItems.viewableItems;
         const found = viewableItems.filter((item) => {
-          const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(16824).NON_ELIGIBLE_SCROLL_ITEMS;
+          const NON_ELIGIBLE_SCROLL_ITEMS = notificationItem(16894).NON_ELIGIBLE_SCROLL_ITEMS;
           return !NON_ELIGIBLE_SCROLL_ITEMS.has(item.item.data.kind);
         });
         closure_1(unreadItems[11]).startItemsDwell(
@@ -634,7 +634,7 @@ export const useSharedICYMILogic = ReactCompilerGating.isReactCompilerEnabled()
             item = item.item;
             const obj = {
               itemId: item.id,
-              itemType: notificationItem(8454).itemToType(item),
+              itemType: notificationItem(8470).itemToType(item),
               triggerType: "list",
               itemFeedIndex: item.index,
               itemScore: null,

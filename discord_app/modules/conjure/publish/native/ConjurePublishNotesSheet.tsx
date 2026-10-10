@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishNotesSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -17,12 +17,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(5084).MessageSendLocation;
+let closure_9 = fn(4748).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const ConjurePublishNotesSheet = "ConjurePublishNotesSheet";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -219,7 +219,7 @@ export default function ConjurePublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3827.Gd63Fl);
+    obj4.title = intl.string(_modDef3849.Gd63Fl);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -228,7 +228,7 @@ export default function ConjurePublishNotesSheet(guildId) {
       ref.current = true;
       closure_1_10(id.id);
     };
-    obj2.content = state(ChannelPickerActionSheetDefault, obj3);
+    obj2.content = closure_2_14(ChannelPickerActionSheetDefault, obj3);
     obj.showActionSheet(obj2);
   }, items6);
   callback2 = obj4.useCallback(() => {
@@ -247,7 +247,7 @@ export default function ConjurePublishNotesSheet(guildId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -273,8 +273,8 @@ export default function ConjurePublishNotesSheet(guildId) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(7363).parse(found, combined);
-                  const tmp31Result = tmp3(7172);
+                  const parsed = tmp3(7369).parse(found, combined);
+                  const tmp31Result = tmp3(7178);
                   const obj5 = { location: constants.CONJURE_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
@@ -303,10 +303,10 @@ export default function ConjurePublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(16969).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+                const result = guildId(17037).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
                 closure_129_21();
                 dependencyMap = 0;
-                const obj = guildId(16969);
+                const obj = guildId(17037);
               }
             }
             const _Error = Error;

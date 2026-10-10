@@ -1,7 +1,6 @@
 // discord_app/modules/self_mod/shared/ShowSafetyToast.native.tsx
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
-import _modDef10376 from "../../../../_runtime/metro/10376__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToast.native.tsx");
@@ -9,11 +8,5 @@ const result = size.fileFinishedImporting("modules/self_mod/shared/ShowSafetyToa
 export const showSafetyToast = function showSafetyToast(arg0) {
   ({ id, text } = arg0);
   const obj = ToastActionCreatorsDefault;
-  obj.open({
-    key: id,
-    icon: _modDef10376,
-    IconComponent: ShieldIcon.ShieldIcon,
-    iconColor: "text-brand",
-    content: text,
-  });
+  obj.open(id, { text, icon: ShieldIcon.ShieldIcon, iconColor: "text-brand" });
 };

@@ -23,7 +23,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
                 const state3 = coerceTabsRouteResult.state;
                 let tmp4;
                 if (state3 != null) {
-                  state = coerceTabsRouteResult.state;
+                  const state = coerceTabsRouteResult.state;
                   let index;
                   if (state != null) {
                     index = state.index;
@@ -83,7 +83,7 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
             const state3 = coerceTabsRouteResult.state;
             let tmp5;
             if (state3 != null) {
-              state = coerceTabsRouteResult.state;
+              const state = coerceTabsRouteResult.state;
               let index;
               if (state != null) {
                 index = state.index;

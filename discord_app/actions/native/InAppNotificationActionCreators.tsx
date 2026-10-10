@@ -9,8 +9,6 @@ export default {
     DispatcherDefault.dispatch({ type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult });
   },
   clearNotification() {
-    DispatcherDefault.wait(() => {
-      DispatcherDefault.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
-    });
+    DispatcherDefault.dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
   },
 };

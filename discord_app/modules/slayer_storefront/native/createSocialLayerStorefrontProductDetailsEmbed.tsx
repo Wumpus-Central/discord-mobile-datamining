@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3697 from "../intl/SlayerStorefront.messages.js";
+import _modDef3719 from "../intl/SlayerStorefront.messages.js";
 import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
@@ -80,7 +80,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3697.BKf0MM);
+              stringResult = string(_modDef3719.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -215,5 +215,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications = Reac
         },
         items2,
       );
-      memo(6854)(stateFromStoresArray);
+      memo(6857)(stateFromStoresArray);
     };

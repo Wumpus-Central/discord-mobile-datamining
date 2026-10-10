@@ -7,12 +7,12 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/06305_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06306_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef11060 from "../../../../../_runtime/metro/11060__.js";
+import _modDef11100 from "../../../../../_runtime/metro/11100__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
@@ -24,12 +24,12 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const resetFocus = fn(10320).resetFocus;
+const resetFocus = fn(10353).resetFocus;
 const InstantInviteSources = fn(1085).InstantInviteSources;
 const Permissions = fn(1096).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   spacer: { width: 8 },
   actionBarContainer: {
@@ -38,7 +38,7 @@ let obj2 = {
     justifyContent: "center",
     alignItems: "flex-start",
     flexDirection: "row",
-    height: fn(10830).CALL_ACTION_BAR_HEIGHT,
+    height: fn(10840).CALL_ACTION_BAR_HEIGHT,
   },
 };
 let closure_15 = createStyles.createStyles(obj2);
@@ -80,7 +80,7 @@ let obj3 = {
   justifyContent: "center",
   alignItems: "flex-start",
   flexDirection: "row",
-  height: fn(10830).CALL_ACTION_BAR_HEIGHT,
+  height: fn(10840).CALL_ACTION_BAR_HEIGHT,
 };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -455,7 +455,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_15();
       const tmp6 = useChannelNameDefault(channel);
       const obj = channel(576);
-      const isVoiceChannelLocked = channel(10976).useIsVoiceChannelLocked(channel);
+      const isVoiceChannelLocked = channel(11016).useIsVoiceChannelLocked(channel);
       if (cResult[0] === channel) {
         if (cResult[1] === isVoiceChannelLocked) {
           let tmp8 = cResult[2];
@@ -508,7 +508,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp15 = null;
         if (null != tmp8) {
-          const obj7 = { source: _modDef11060, onPress: tmp8, accessibilityLabel: null };
+          const obj7 = { source: _modDef11100, onPress: tmp8, accessibilityLabel: null };
           const intl = tmp(1126).intl;
           const obj8 = { channelName: tmp6 };
           obj7.accessibilityLabel = intl.formatToPlainString(tmp(1126).t["dHHb/2"], obj8);
@@ -534,13 +534,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = isVoiceChannelLocked;
       cResult[2] = fn;
       tmp8 = fn;
-      const obj2 = channel(10976);
+      const obj2 = channel(11016);
     }
   : function ChannelCallConnectingHeader(channel) {
       channel = channel.channel;
       const tmp = closure_15();
       const tmp4 = useChannelNameDefault(channel);
-      const isVoiceChannelLocked = channel(10976).useIsVoiceChannelLocked(channel);
+      const isVoiceChannelLocked = channel(11016).useIsVoiceChannelLocked(channel);
       let fn = null;
       if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
         fn = null;
@@ -554,7 +554,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_12(View, { style: { width: 4 } }), , ,];
       let tmp9Result = null;
       if (null != fn) {
-        const obj2 = { source: _modDef11060, onPress: fn, accessibilityLabel: null };
+        const obj2 = { source: _modDef11100, onPress: fn, accessibilityLabel: null };
         const intl = tmp5(1126).intl;
         const obj3 = { channelName: tmp4 };
         obj2.accessibilityLabel = intl.formatToPlainString(tmp5(1126).t["dHHb/2"], obj3);
@@ -605,7 +605,7 @@ export const CallConnectingActionBar = ReactCompilerGating.isReactCompilerEnable
       const obj4 = { style: tmp2.actionBarContainer, children: null };
       const items = [tmp3, tmp4];
       obj4.children = items;
-      const tmp11 = state(View, obj4);
+      const tmp11 = closure_1_14(View, obj4);
       cResult[3] = tmp2.actionBarContainer;
       cResult[4] = tmp3;
       cResult[5] = tmp4;
@@ -617,5 +617,5 @@ export const CallConnectingActionBar = ReactCompilerGating.isReactCompilerEnable
       const obj = { style: closure_15().actionBarContainer, children: null };
       const items = [__initData(closure_17, { channel }), __initData(closure_18, { channel })];
       obj.children = items;
-      return state(View, obj);
+      return closure_1_14(View, obj);
     };

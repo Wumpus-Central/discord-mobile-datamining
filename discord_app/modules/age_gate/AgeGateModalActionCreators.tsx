@@ -20,7 +20,7 @@ export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDER
   DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE, channelId });
 };
 export const closeAgeGateModal = function closeAgeGateModal(source) {
-  DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE" }));
+  DispatcherDefault.dispatch({ type: "AGE_GATE_MODAL_CLOSE" });
   if (undefined !== source) {
     const obj2 = { source, action: AgeGateAnalyticAction.AGE_GATE_CLOSE };
     AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, obj2);
@@ -28,15 +28,12 @@ export const closeAgeGateModal = function closeAgeGateModal(source) {
   }
 };
 export const openSuccessAgeGateModal = function openSuccessAgeGateModal(source) {
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
-  });
+  DispatcherDefault.dispatch({ type: "AGE_GATE_SUCCESS_MODAL_OPEN" });
   AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS });
 };
 export const openFailureAgeGateModal = function openFailureAgeGateModal(source, underageMessage) {
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage });
-  });
+  DispatcherDefault.dispatch({ type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage });
+  const obj2 = { type: "AGE_GATE_FAILURE_MODAL_OPEN", underageMessage };
   AnalyticsUtilsDefault.track(constants2.AGE_GATE_ACTION, { source, action: AgeGateAnalyticAction.AGE_GATE_FAILURE });
 };
 export const closeFailedAgeGate = function closeFailedAgeGate() {

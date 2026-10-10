@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = ReanimatedRexport.createAnimatedComponent(Pressable);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -121,7 +121,7 @@ export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled()
               const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
               value = itemMeasurements.get();
               value[result + ContextMenuState.INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
-              const value4 = itemMeasurements.get();
+              value4 = itemMeasurements.get();
               value4[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
               const value5 = itemMeasurements.get();
               value5[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;
@@ -443,7 +443,7 @@ export const ContextMenuItem = ReactCompilerGating.isReactCompilerEnabled()
               const result = index * ContextMenuState.INDEX_BOUNDS_OFFSET;
               value = itemMeasurements.get();
               value[result + ContextMenuState.INDEX_BOUNDS_PAGE_X_OFFSET] = pageX;
-              const value4 = itemMeasurements.get();
+              value4 = itemMeasurements.get();
               value4[result + ContextMenuState.INDEX_BOUNDS_PAGE_Y_OFFSET] = pageY;
               const value5 = itemMeasurements.get();
               value5[result + ContextMenuState.INDEX_BOUNDS_WIDTH_OFFSET] = width;

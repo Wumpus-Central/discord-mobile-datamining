@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 const PlatformUtils = fn(1382);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
@@ -85,7 +85,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp11;
       }
       const obj3 = { startExpanded: true, onDismiss: S, children: <View style={tmp4.contentWrapper}>{tmp8}</View> };
-      tmp11 = jsx(nonce(6836).BottomSheet, {
+      tmp11 = jsx(nonce(6839).BottomSheet, {
         startExpanded: true,
         onDismiss: S,
         children: <View style={tmp4.contentWrapper}>{tmp8}</View>,
@@ -180,7 +180,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { startExpanded: true, onDismiss: tmp10, children: null };
                   const obj4 = { style: tmp4.contentWrapper, children: tmp11 };
                   obj3.children = <View style={tmp4.contentWrapper}>{tmp11}</View>;
-                  const tmp18 = jsx(tmp(6836).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
+                  const tmp18 = jsx(tmp(6839).BottomSheet, { startExpanded: true, onDismiss: tmp10, children: null });
                   cResult[11] = tmp4.contentWrapper;
                   cResult[12] = tmp11;
                   cResult[13] = tmp18;
@@ -256,7 +256,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           nonce: v4Result,
         });
         obj3.children = <View style={tmp.contentWrapper}>{null}</View>;
-        return jsx(tmp2(6836).BottomSheet, {
+        return jsx(tmp2(6839).BottomSheet, {
           startExpanded: true,
           onDismiss() {
             AnalyticsUtilsDefault.track(AnalyticEvents.CLOSE_POPOUT, { nonce });

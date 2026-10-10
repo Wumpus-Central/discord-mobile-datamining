@@ -99,14 +99,17 @@ export default function useActivityWebViewLockManager() {
 };
 export const useLockedWebView = function useLockedWebView(transitionState) {
   transitionState = transitionState.transitionState;
-  let shown;
-  shown = transitionState(shown[2]).useSharedValue(false);
-  const renderWebView = noop.useContext(transitionState.context).useActivityWebViewLock();
-  const items = [shown, transitionState, renderWebView];
-  const effect = noop.useEffect(() => {
+  const hasActivity = transitionState.hasActivity;
+  let renderWebView;
+  const shown = transitionState(hasActivity[2]).useSharedValue(false);
+  renderWebView = renderWebView.useContext(transitionState.context).useActivityWebViewLock();
+  const items = [shown, transitionState, renderWebView, hasActivity];
+  const effect = renderWebView.useEffect(() => {
     if (transitionState !== native.TransitionStates.YEETED) {
       if (renderWebView) {
-        const result = shown.set(true);
+        if (hasActivity) {
+          const result = shown.set(true);
+        }
       }
     }
     const result1 = shown.set(false);

@@ -127,10 +127,10 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
       const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
       const obj = flag(504);
       let tmp = flag;
-      const hasDiscountApplied = flag(8069).useHasDiscountApplied();
-      const obj2 = flag(8069);
-      const hasActiveTrial = flag(8070).useHasActiveTrial();
-      const tmp6 = fetched(7102)();
+      const hasDiscountApplied = flag(8087).useHasDiscountApplied();
+      const obj2 = flag(8087);
+      const hasActiveTrial = flag(8088).useHasActiveTrial();
+      const tmp6 = fetched(7108)();
       let verified;
       if (stateFromStores != null) {
         verified = stateFromStores.verified;
@@ -162,5 +162,5 @@ export const useMaybeFetchReferralsRemaining = ReactCompilerGating.isReactCompil
           const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
         }
       }, items1);
-      const obj3 = flag(8070);
+      const obj3 = flag(8088);
     };

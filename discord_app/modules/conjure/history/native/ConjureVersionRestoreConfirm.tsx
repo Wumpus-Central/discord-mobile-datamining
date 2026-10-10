@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/history/native/ConjureVersionRestoreConfirm.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import AlertModal from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import TableCheckboxRow from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
@@ -22,9 +22,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const checked = tmp4[0];
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3827.NDY6Zv);
+        const stringResult = intl.string(_modDef3849.NDY6Zv);
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef3827.z2x5zj);
+        const stringResult1 = intl2.string(_modDef3849.z2x5zj);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp6 = stringResult;
@@ -39,7 +39,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl5 = util.intl;
-          const stringResult2 = intl5.string(_modDef3827.K3Q49G);
+          const stringResult2 = intl5.string(_modDef3849.K3Q49G);
           cResult[5] = stringResult2;
           let tmp15 = stringResult2;
         } else {
@@ -112,9 +112,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { hasIcons: false, children: null };
         const obj7 = { label: null, subLabel: null, checked: null, onPress: null };
         const intl3 = util.intl;
-        obj7.label = intl3.string(_modDef3827["+/pFME"]);
+        obj7.label = intl3.string(_modDef3849["+/pFME"]);
         const intl4 = util.intl;
-        obj7.subLabel = intl4.string(_modDef3827["+I112y"]);
+        obj7.subLabel = intl4.string(_modDef3849["+I112y"]);
         obj7.checked = checked;
         obj7.onPress = tmp4[1];
         obj6.children = hasOwnProperty(TableCheckboxRow.TableCheckboxRow, obj7);
@@ -132,17 +132,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const checked = tmp[0];
       const obj = { title: null, content: null, extraContent: null, actions: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef3827.NDY6Zv);
+      obj.title = intl.string(_modDef3849.NDY6Zv);
       const intl2 = util.intl;
-      obj.content = intl2.string(_modDef3827.z2x5zj);
+      obj.content = intl2.string(_modDef3849.z2x5zj);
       let tmp3Result;
       if (null != matchingBackup) {
         const obj2 = { hasIcons: false, children: null };
         const obj3 = { label: null, subLabel: null, checked: null, onPress: null };
         const intl3 = util.intl;
-        obj3.label = intl3.string(_modDef3827["+/pFME"]);
+        obj3.label = intl3.string(_modDef3849["+/pFME"]);
         const intl4 = util.intl;
-        obj3.subLabel = intl4.string(_modDef3827["+I112y"]);
+        obj3.subLabel = intl4.string(_modDef3849["+I112y"]);
         obj3.checked = checked;
         obj3.onPress = tmp[1];
         obj2.children = hasOwnProperty(TableCheckboxRow.TableCheckboxRow, obj3);
@@ -152,7 +152,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { children: null };
       const obj5 = { variant: "primary", text: null, onPress: null };
       const intl5 = util.intl;
-      obj5.text = intl5.string(_modDef3827.K3Q49G);
+      obj5.text = intl5.string(_modDef3849.K3Q49G);
       obj5.onPress = function onPress() {
         let tmp2 = null;
         if (first) {

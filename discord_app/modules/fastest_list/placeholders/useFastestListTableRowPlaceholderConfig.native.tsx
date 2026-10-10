@@ -5,7 +5,7 @@ import FastestListPropsPlaceholder from "../props/FastestListPropsPlaceholder.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT },
   placeholderAvatar: null,
@@ -30,10 +30,10 @@ let obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj2.placeholderDivider = { backgroundColor: fn(5976).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(5969).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: fn(5976).DIVIDER_BACKGROUND };
+let obj5 = { backgroundColor: fn(5969).DIVIDER_BACKGROUND };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx",

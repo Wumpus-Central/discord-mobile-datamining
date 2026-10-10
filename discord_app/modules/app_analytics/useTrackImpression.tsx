@@ -5,7 +5,7 @@ import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/a
 import _modDef1355 from "../../../_runtime/metro/01355__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
-import uniqueIdDefault from "../../../_runtime/05942_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05935_uniqueId.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       noop = noop.useRef(undefined);
       noop.useRef(undefined);
-      obj(5393)(() => {
+      obj(5396)(() => {
         if (obj.trackOnInitialLoad) {
           const tmp6 = _modDef1355(ref.current, current);
           if (!tmp6) {

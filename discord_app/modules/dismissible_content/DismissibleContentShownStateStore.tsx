@@ -26,8 +26,7 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = content(2053).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-    if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
+    if (!obj.bypassesFatigue(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
       content = undefined;
@@ -64,7 +63,7 @@ let closure_14 = async function _arbitrateCandidates(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -321,7 +320,7 @@ function invalidateArbitration() {
   batchInvocationManager.reset();
 }
 function isInCooldown() {
-  state = closure_11.getState();
+  const state = closure_11.getState();
   new Date();
   let tmp4 = null == state.shownFatigableCandidate;
   if (tmp4) {
@@ -355,7 +354,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -558,7 +557,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(2059).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(2060).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -680,9 +679,9 @@ export { isInCooldown };
 export { isStateInCooldown };
 export const addCandidateContent = function addCandidateContent(content) {
   closure_0 = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = closure_0(2053).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-  closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
+  closure_1 = closure_0(2053).bypassesFatigue(content.content);
   dependencyMap = null;
+  let obj = closure_0(2053);
   closure_0(1272).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
@@ -710,7 +709,7 @@ export const addCandidateContent = function addCandidateContent(content) {
   if (null != dependencyMap) {
     applyWinnerUpdateResult(dependencyMap);
   }
-  let obj = closure_0(1272);
+  const obj2 = closure_0(1272);
 };
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   closure_0 = arg0;
@@ -855,13 +854,7 @@ export const isAnyContentShown = function isAnyContentShown(arr) {
 };
 export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
   const items = [...closure_11.getState().currentlyShown];
-  const items1 = [
-    closure_11.getState().currentlyShown.size,
-    items.filter((item) => {
-      const CONTENT_TYPES_WITH_BYPASS_FATIGUE = closure_1_0(dependencyMap[6]).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-      return !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(item);
-    }).length
-  ];
+  const items1 = [closure_11.getState().currentlyShown.size, items.filter((item) => !closure_1_0(dependencyMap[6]).bypassesFatigue(item)).length];
   return items1;
 };
 export { reset };

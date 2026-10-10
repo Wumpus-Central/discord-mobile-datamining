@@ -31,12 +31,12 @@ export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCom
       const obj = stateFromStores(576);
       stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
       const tmpResult = stateFromStores(504);
-      const isPremiumSubscriber = stateFromStores(10501).useIsPremiumSubscriber(PremiumTypes.TIER_2);
+      const isPremiumSubscriber = stateFromStores(10535).useIsPremiumSubscriber(PremiumTypes.TIER_2);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === isPremiumSubscriber) {
           let tmp9 = cResult[4];
         }
-        isPremiumSubscriber(5393)(tmp9);
+        isPremiumSubscriber(5396)(tmp9);
       }
       const fn2 = function c() {
         let id;
@@ -52,7 +52,7 @@ export const useMaybeFetchTieredTenureBadgeData = ReactCompilerGating.isReactCom
       cResult[3] = isPremiumSubscriber;
       cResult[4] = fn2;
       tmp9 = fn2;
-      const tmpResult2 = stateFromStores(10501);
+      const tmpResult2 = stateFromStores(10535);
     }
   : function useMaybeFetchTieredTenureBadgeData() {
       const items = [UserStore];

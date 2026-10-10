@@ -13,10 +13,10 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getBadgeTooltip = fn(8847).getBadgeTooltip;
+const getBadgeTooltip = fn(8866).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 },
   avatarBackground: null,
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = styles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [LocaleStore];
-        const fn = function y() {
+        const fn = function x() {
           return locale.locale;
         };
         cResult[0] = items;
@@ -106,9 +106,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -133,9 +134,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -160,9 +162,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -188,9 +191,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -214,9 +218,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -244,9 +249,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -273,9 +279,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tooltipSubtitle == null) {
                 tooltipSubtitle = tooltipTitle;
               }
-              obj1 = { key: "guild-badge-tooltip", content: null };
-              obj1.content = tooltipSubtitle;
-              openResult = obj4.open(obj1);
+              obj1 = { text: null };
+              obj1.text = tooltipSubtitle;
+              str = "guild-badge-tooltip";
+              openResult = obj4.open("guild-badge-tooltip", obj1);
             }
             return;
           }
@@ -298,9 +305,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (tooltipSubtitle == null) {
                   tooltipSubtitle = tooltipTitle;
                 }
-                obj1 = { key: "guild-badge-tooltip", content: null };
-                obj1.content = tooltipSubtitle;
-                openResult = obj4.open(obj1);
+                obj1 = { text: null };
+                obj1.text = tooltipSubtitle;
+                str = "guild-badge-tooltip";
+                openResult = obj4.open("guild-badge-tooltip", obj1);
               }
               return;
             }
@@ -323,9 +331,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (tooltipSubtitle == null) {
                     tooltipSubtitle = tooltipTitle;
                   }
-                  obj1 = { key: "guild-badge-tooltip", content: null };
-                  obj1.content = tooltipSubtitle;
-                  openResult = obj4.open(obj1);
+                  obj1 = { text: null };
+                  obj1.text = tooltipSubtitle;
+                  str = "guild-badge-tooltip";
+                  openResult = obj4.open("guild-badge-tooltip", obj1);
                 }
                 return;
               }
@@ -348,9 +357,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (tooltipSubtitle == null) {
                       tooltipSubtitle = tooltipTitle;
                     }
-                    obj1 = { key: "guild-badge-tooltip", content: null };
-                    obj1.content = tooltipSubtitle;
-                    openResult = obj4.open(obj1);
+                    obj1 = { text: null };
+                    obj1.text = tooltipSubtitle;
+                    str = "guild-badge-tooltip";
+                    openResult = obj4.open("guild-badge-tooltip", obj1);
                   }
                   return;
                 }
@@ -374,9 +384,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (tooltipSubtitle == null) {
                       tooltipSubtitle = tooltipTitle;
                     }
-                    obj1 = { key: "guild-badge-tooltip", content: null };
-                    obj1.content = tooltipSubtitle;
-                    openResult = obj4.open(obj1);
+                    obj1 = { text: null };
+                    obj1.text = tooltipSubtitle;
+                    str = "guild-badge-tooltip";
+                    openResult = obj4.open("guild-badge-tooltip", obj1);
                   }
                   return;
                 }
@@ -416,27 +427,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[15] = tmp24;
         const tmp9Result = tmp9(tmp2[20]);
       }
-      class O {
-        constructor() {
-          if (closure_2) {
-            tmp = closure_1;
-            tmp2 = closure_2;
-            obj = closure_1(closure_2[18]);
-            tmp3 = id;
-            tmp4 = globalThis;
-            _HermesInternal = HermesInternal;
-            str = "GuildProfileActionSheet:";
-            hideActionSheetResult = obj.hideActionSheet("GuildProfileActionSheet:" + id);
-            tmp6 = closure_0;
-            obj2 = closure_0(closure_2[19]);
-            transitionToGuildResult = obj2.transitionToGuild(id);
-          }
-          return;
+      const fn2 = function k() {
+        if (stateFromStores1) {
+          const _HermesInternal = HermesInternal;
+          ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + id);
+          transitionToGuild.transitionToGuild(id);
         }
-      }
+      };
       cResult[10] = id;
       cResult[11] = stateFromStores1;
-      cResult[12] = O;
+      cResult[12] = fn2;
       const tmpResult6 = profile(stateFromStores1[11]);
     }
   : function GuildProfileHeader(icon) {
@@ -468,8 +468,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (tooltipSubtitle == null) {
             tooltipSubtitle = tooltipTitle;
           }
-          const obj5 = { key: "guild-badge-tooltip", content: tooltipSubtitle };
-          ToastActionCreatorsDefault.open(obj5);
+          const obj5 = { text: tooltipSubtitle };
+          ToastActionCreatorsDefault.open("guild-badge-tooltip", obj5);
         }
         const tmp4 = getBadgeTooltip(BadgeCategory.getBadgeCategory(guildTraits), guildTraits.visibility);
         tmp5 = null == tooltipTitle && null == tooltipSubtitle;

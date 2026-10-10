@@ -14,7 +14,7 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "header-section";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -84,11 +84,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const id = channel.id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+          const obj2 = { text: null, variant: "critical" };
           const intl = goToMessageRequestPreview(str[6]).intl;
-          obj2.content = intl.string(goToMessageRequestPreview(str[6]).t["EDYbS+"]);
-          obj2.icon = hasSingleMessageRequest(str[10]);
-          hasSingleMessageRequest(str[9]).open(obj2);
+          obj2.text = intl.string(goToMessageRequestPreview(str[6]).t["EDYbS+"]);
+          hasSingleMessageRequest(str[9]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
         };
         cResult[0] = fn;
         let first = fn;
@@ -103,7 +102,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] === str) {
             let tmp8 = cResult[6];
           }
-          const messageRequestActions = goToMessageRequestPreview(tmp2[13]).useMessageRequestActions(tmp8);
+          const messageRequestActions = goToMessageRequestPreview(tmp2[12]).useMessageRequestActions(tmp8);
           const acceptMessageRequest = messageRequestActions.acceptMessageRequest;
           const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
           ({ isAcceptLoading, isRejectLoading, isUserProfileLoading, isOptimisticAccepted, isOptimisticRejected } =
@@ -240,7 +239,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                                                     let tmp62 = null;
                                                                     if (!isLastRow) {
                                                                       tmp62 = closure_8(
-                                                                        goToMessageRequestPreview(tmp2[20]).FormDivider,
+                                                                        goToMessageRequestPreview(tmp2[19]).FormDivider,
                                                                         { iconPush: true, outer: true },
                                                                       );
                                                                     }
@@ -273,7 +272,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                                                   const items1 = [tmp57, tmp61];
                                                                   obj8.children = items1;
                                                                   const tmp66 = closure_9(
-                                                                    goToMessageRequestPreview(tmp2[18])
+                                                                    goToMessageRequestPreview(tmp2[17])
                                                                       .PressableOpacity,
                                                                     obj8,
                                                                   );
@@ -319,7 +318,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                                     children: cResult[47],
                                                   };
                                                   const tmp52 = closure_8(
-                                                    goToMessageRequestPreview(tmp2[18]).PressableOpacity,
+                                                    goToMessageRequestPreview(tmp2[17]).PressableOpacity,
                                                     obj11,
                                                   );
                                                   cResult[48] = tmp14;
@@ -335,11 +334,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                             if (!isRejectLoading) {
                                               if (!isOptimisticRejected) {
                                                 const obj12 = {
-                                                  size: goToMessageRequestPreview(tmp2[16]).Icon.Sizes.SMALL,
+                                                  size: goToMessageRequestPreview(tmp2[15]).Icon.Sizes.SMALL,
                                                   disableColor: true,
-                                                  source: hasSingleMessageRequest(tmp2[19]),
+                                                  source: hasSingleMessageRequest(tmp2[18]),
                                                 };
-                                                let tmp46 = closure_8(goToMessageRequestPreview(tmp2[16]).Icon, obj12);
+                                                let tmp46 = closure_8(goToMessageRequestPreview(tmp2[15]).Icon, obj12);
                                               }
                                               cResult[44] = isOptimisticRejected;
                                               cResult[45] = isRejectLoading;
@@ -362,7 +361,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                       children: cResult[35],
                                     };
                                     const tmp38 = closure_8(
-                                      goToMessageRequestPreview(tmp2[18]).PressableOpacity,
+                                      goToMessageRequestPreview(tmp2[17]).PressableOpacity,
                                       obj14,
                                     );
                                     cResult[36] = tmp14;
@@ -380,11 +379,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                               if (!isUserProfileLoading) {
                                 if (!isOptimisticAccepted) {
                                   const obj15 = {
-                                    size: goToMessageRequestPreview(tmp2[16]).Icon.Sizes.SMALL,
+                                    size: goToMessageRequestPreview(tmp2[15]).Icon.Sizes.SMALL,
                                     disableColor: true,
-                                    source: hasSingleMessageRequest(tmp2[17]),
+                                    source: hasSingleMessageRequest(tmp2[16]),
                                   };
-                                  let tmp32 = closure_8(goToMessageRequestPreview(tmp2[16]).Icon, obj15);
+                                  let tmp32 = closure_8(goToMessageRequestPreview(tmp2[15]).Icon, obj15);
                                 }
                                 cResult[31] = isAcceptLoading;
                                 cResult[32] = isOptimisticAccepted;
@@ -407,7 +406,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj17 = { channel: null, otherUser: null, isRestricted: null };
                       ({ channel: obj7.channel, user: obj7.otherUser } = messageRequest);
                       obj17.isRestricted = tmp4;
-                      const tmp22 = closure_8(hasSingleMessageRequest(tmp2[15]), obj17);
+                      const tmp22 = closure_8(hasSingleMessageRequest(tmp2[14]), obj17);
                       cResult[22] = tmp4;
                       cResult[23] = messageRequest.channel;
                       cResult[24] = messageRequest.user;
@@ -461,7 +460,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = rejectMessageRequest;
           cResult[9] = handleRejectMessageRequest;
           tmp10 = handleRejectMessageRequest;
-          const tmpResult = goToMessageRequestPreview(tmp2[13]);
+          const tmpResult = goToMessageRequestPreview(tmp2[12]);
         }
         const obj18 = { user: str, onAcceptSuccess: tmp7, onError: first };
         cResult[4] = tmp7;
@@ -474,11 +473,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           if (hasSingleMessageRequest) {
             tmp = closure_0;
             tmp2 = closure_2;
-            obj = closure_0(closure_2[11]);
+            obj = closure_0(closure_2[10]);
             tmp3 = id;
             transitionToChannelResult = obj.transitionToChannel(id);
             tmp5 = closure_1;
-            arr = closure_1(closure_2[12]);
+            arr = closure_1(closure_2[11]);
             arr1 = arr.pop();
           }
           return;
@@ -504,11 +503,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const id = channel.id;
       const items = [id, hasSingleMessageRequest];
       const callback = channel.useCallback(() => {
-        const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        const obj2 = { text: null, variant: "critical" };
         const intl = require("util").intl;
-        obj2.content = intl.string(require("util").t["EDYbS+"]);
-        obj2.icon = hasSingleMessageRequest(str[10]);
-        hasSingleMessageRequest(str[9]).open(obj2);
+        obj2.text = intl.string(require("util").t["EDYbS+"]);
+        hasSingleMessageRequest(str[9]).open("MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", obj2);
       }, []);
       const callback1 = channel.useCallback(() => {
         if (hasSingleMessageRequest) {
@@ -587,7 +585,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.style = tmp.pressableRow;
       const obj6 = { style: tmp.rowContainer, children: null };
       const items2 = [
-        closure_8(hasSingleMessageRequest(str[15]), {
+        closure_8(hasSingleMessageRequest(str[14]), {
           channel: messageRequest.channel,
           otherUser: messageRequest.user,
           isRestricted: flag,
@@ -619,7 +617,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const obj10 = {
               size: require("native").Icon.Sizes.SMALL,
               disableColor: true,
-              source: hasSingleMessageRequest(tmp5[17]),
+              source: hasSingleMessageRequest(tmp5[16]),
             };
             let tmp10Result = closure_8(require("native").Icon, obj10);
           }
@@ -651,7 +649,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj13 = {
                 size: require("native").Icon.Sizes.SMALL,
                 disableColor: true,
-                source: hasSingleMessageRequest(tmp5[19]),
+                source: hasSingleMessageRequest(tmp5[18]),
               };
               let tmp10Result3 = closure_8(require("native").Icon, obj13);
             }
@@ -698,19 +696,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       arr = require("useSortedMessageRequests")();
       let obj = goToMessageRequestPreview(arr[8]);
       const tmp5 = importDefault;
-      const listHasSingleMessageRequest = goToMessageRequestPreview(arr[23]).useListHasSingleMessageRequest();
-      let obj2 = goToMessageRequestPreview(arr[23]);
-      const isMessageRequestRestrictedViewer = goToMessageRequestPreview(arr[24]).useIsMessageRequestRestrictedViewer();
+      const listHasSingleMessageRequest = goToMessageRequestPreview(arr[22]).useListHasSingleMessageRequest();
+      let obj2 = goToMessageRequestPreview(arr[22]);
+      const isMessageRequestRestrictedViewer = goToMessageRequestPreview(arr[23]).useIsMessageRequestRestrictedViewer();
       if (0 === arr.length) {
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let obj4 = { bodyText: null };
           let intl = tmp(tmp2[6]).intl;
           obj4.bodyText = intl.string(tmp(tmp2[6]).t.SXrqTf);
-          const tmp28 = closure_8(tmp5(tmp2[25]), obj4);
+          const tmp28 = closure_8(tmp5(tmp2[24]), obj4);
           cResult[0] = tmp28;
           let first = tmp28;
-          const tmp5Result = tmp5(tmp2[25]);
+          const tmp5Result = tmp5(tmp2[24]);
         } else {
           first = cResult[0];
         }
@@ -740,7 +738,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cResult[9] = bottom;
                   cResult[10] = num10;
                   let tmp14 = num10;
-                  tmpResult = tmp(tmp2[27]);
+                  tmpResult = tmp(tmp2[26]);
                 } else {
                   tmp14 = cResult[10];
                 }
@@ -814,7 +812,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = goToMessageRequestPreview(arr[6]).intl;
             const obj4 = { pendingRequestNumber: arr.length };
             obj3.children = intl.format(goToMessageRequestPreview(arr[6]).t.evH4Yb, obj4);
-            obj2.children = closure_1_8(goToMessageRequestPreview(arr[26]).Text, obj3);
+            obj2.children = closure_1_8(goToMessageRequestPreview(arr[25]).Text, obj3);
             return closure_1_8(closure_1_5, obj2);
           } else {
             let id;
@@ -841,7 +839,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = renderData;
         tmp13 = renderData;
       }
-      let obj3 = goToMessageRequestPreview(arr[24]);
+      let obj3 = goToMessageRequestPreview(arr[23]);
     }
   : function MessageRequestList(goToMessageRequestPreview) {
       goToMessageRequestPreview = goToMessageRequestPreview.goToMessageRequestPreview;
@@ -850,15 +848,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = tmp;
       const bottom = require("useSafeAreaInsets")().bottom;
       arr = require("useSortedMessageRequests")();
-      const hasSingleMessageRequest = goToMessageRequestPreview(arr[23]).useListHasSingleMessageRequest();
-      let obj = goToMessageRequestPreview(arr[23]);
+      const hasSingleMessageRequest = goToMessageRequestPreview(arr[22]).useListHasSingleMessageRequest();
+      let obj = goToMessageRequestPreview(arr[22]);
       const tmp2 = importDefault;
-      const isRestricted = goToMessageRequestPreview(arr[24]).useIsMessageRequestRestrictedViewer();
+      const isRestricted = goToMessageRequestPreview(arr[23]).useIsMessageRequestRestrictedViewer();
       if (0 === arr.length) {
         let obj3 = { bodyText: null };
         let intl = tmp4(tmp3[6]).intl;
         obj3.bodyText = intl.string(tmp4(tmp3[6]).t.SXrqTf);
-        return closure_8(tmp2(tmp3[25]), obj3);
+        return closure_8(tmp2(tmp3[24]), obj3);
       } else {
         const items = [c10];
         HermesBuiltin.arraySpread(arr, 1);
@@ -888,7 +886,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = goToMessageRequestPreview(arr[6]).intl;
             const obj4 = { pendingRequestNumber: arr.length };
             obj3.children = intl.format(goToMessageRequestPreview(arr[6]).t.evH4Yb, obj4);
-            obj2.children = closure_1_8(goToMessageRequestPreview(arr[26]).Text, obj3);
+            obj2.children = closure_1_8(goToMessageRequestPreview(arr[25]).Text, obj3);
             return closure_1_8(closure_1_5, obj2);
           } else {
             let id;
@@ -910,5 +908,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.data = items;
         return closure_8(closure_6, obj4);
       }
-      let obj2 = goToMessageRequestPreview(arr[24]);
+      let obj2 = goToMessageRequestPreview(arr[23]);
     };

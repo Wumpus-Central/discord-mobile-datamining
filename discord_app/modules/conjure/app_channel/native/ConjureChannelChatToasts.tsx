@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { column: null, opaque: null, card: null, body: null };
 const rect = {
   position: "absolute",
@@ -74,7 +74,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp10 = cResult[4];
         }
         if (cResult[5] !== message.author) {
-          const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+          const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
           const tmp13 = hasOwnProperty(native.Avatar, obj3);
           cResult[5] = message.author;
           cResult[6] = tmp13;
@@ -181,7 +181,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           onPress: callback,
           children: null,
         };
-        const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+        const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
         const items1 = [hasOwnProperty(native.Avatar, obj4)];
         const obj5 = { style: tmp.body, children: null };
         const obj6 = { variant: "text-xs/semibold", color: "text-default", lineClamp: 1, children: name };

@@ -1,7 +1,8 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import user2 from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes.tsx";
-import _modDef3829 from "intl/CustomTypingIndicator.messages.js";
+import _modDef3851 from "intl/CustomTypingIndicator.messages.js";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import UserProfileSettingsStore from "../user_profile/UserProfileSettingsStore.tsx";
@@ -15,23 +16,23 @@ require = fn;
 const Permissions = fn(1085).Permissions;
 const EmojiIntention = fn(1393).EmojiIntention;
 let obj = {};
-obj[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3829["6Cdy4a"];
-obj[fn(1398).TypingSuggestion.YAPPING] = _modDef3829.E5VRaj;
-obj[fn(1398).TypingSuggestion.VENTING] = _modDef3829.xmxdPC;
-obj[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3829["qGaH/9"];
-obj[fn(1398).TypingSuggestion.BARKING] = _modDef3829.M282uk;
-obj[fn(1398).TypingSuggestion.BABBLING] = _modDef3829.myNZDT;
-obj[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3829.F7RLTP;
-obj[fn(1398).TypingSuggestion.MEOWING] = _modDef3829.EfxyQI;
+obj[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3851["6Cdy4a"];
+obj[fn(1398).TypingSuggestion.YAPPING] = _modDef3851.E5VRaj;
+obj[fn(1398).TypingSuggestion.VENTING] = _modDef3851.xmxdPC;
+obj[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3851["qGaH/9"];
+obj[fn(1398).TypingSuggestion.BARKING] = _modDef3851.M282uk;
+obj[fn(1398).TypingSuggestion.BABBLING] = _modDef3851.myNZDT;
+obj[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3851.F7RLTP;
+obj[fn(1398).TypingSuggestion.MEOWING] = _modDef3851.EfxyQI;
 let obj2 = {};
-obj2[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3829.kh4K4F;
-obj2[fn(1398).TypingSuggestion.YAPPING] = _modDef3829.m9AeqG;
-obj2[fn(1398).TypingSuggestion.VENTING] = _modDef3829["SZ0/Qu"];
-obj2[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3829.N8cWE8;
-obj2[fn(1398).TypingSuggestion.BARKING] = _modDef3829.L5aWEN;
-obj2[fn(1398).TypingSuggestion.BABBLING] = _modDef3829.AoBaEw;
-obj2[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3829["3hOLod"];
-obj2[fn(1398).TypingSuggestion.MEOWING] = _modDef3829["0Z9/o9"];
+obj2[fn(1398).TypingSuggestion.UNSPECIFIED] = _modDef3851.kh4K4F;
+obj2[fn(1398).TypingSuggestion.YAPPING] = _modDef3851.m9AeqG;
+obj2[fn(1398).TypingSuggestion.VENTING] = _modDef3851["SZ0/Qu"];
+obj2[fn(1398).TypingSuggestion.OVERSHARING] = _modDef3851.N8cWE8;
+obj2[fn(1398).TypingSuggestion.BARKING] = _modDef3851.L5aWEN;
+obj2[fn(1398).TypingSuggestion.BABBLING] = _modDef3851.AoBaEw;
+obj2[fn(1398).TypingSuggestion.DAYDREAMING] = _modDef3851["3hOLod"];
+obj2[fn(1398).TypingSuggestion.MEOWING] = _modDef3851["0Z9/o9"];
 let items = [
   fn(1398).TypingSuggestion.UNSPECIFIED,
   fn(1398).TypingSuggestion.YAPPING,
@@ -111,11 +112,19 @@ export function getCustomTypingIndicatorSuggestionPresets() {
 export const getCustomTypingIndicatorSuggestionMessage = function getCustomTypingIndicatorSuggestionMessage(
   typingSuggestion,
 ) {
-  return obj[typingSuggestion];
+  let tmp2 = obj[typingSuggestion];
+  if (tmp2 == null) {
+    tmp2 = tmp[user2.TypingSuggestion.UNSPECIFIED];
+  }
+  return tmp2;
 };
 export const getCustomTypingIndicatorSuggestionWithNameMessage =
   function getCustomTypingIndicatorSuggestionWithNameMessage(suggestion) {
-    return obj2[suggestion];
+    let tmp2 = obj2[suggestion];
+    if (tmp2 == null) {
+      tmp2 = tmp[user2.TypingSuggestion.UNSPECIFIED];
+    }
+    return tmp2;
   };
 export const getRandomCustomTypingIndicatorSuggestion = function getRandomCustomTypingIndicatorSuggestion() {
   return items[Math.floor(Math, Math.random(Math) * items.length)];

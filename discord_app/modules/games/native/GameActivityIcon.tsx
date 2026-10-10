@@ -6,12 +6,12 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const AvatarUtils = UnknownGameIcon(1415);
-const shared = UnknownGameIcon(4930);
-const UnknownGameIcon2 = UnknownGameIcon(7671);
+const shared = UnknownGameIcon(4969);
+const UnknownGameIcon2 = UnknownGameIcon(7688);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

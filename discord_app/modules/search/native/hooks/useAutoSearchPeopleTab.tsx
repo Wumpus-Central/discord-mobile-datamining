@@ -9,7 +9,7 @@ import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(12006).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(12050).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/useAutoSearchPeopleTab.tsx");
@@ -34,7 +34,7 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
           if (cResult[8] !== arg0) {
             const fn3 = function p() {
               return () => {
-                closure_1(12015).cleanupPeopleTab(closure_1_0);
+                closure_1(12059).cleanupPeopleTab(closure_1_0);
               };
             };
             const items = [arg0];
@@ -53,8 +53,8 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
           if (!closure_1) {
             const debounceResult = _mod12.debounce((searchQueryString) => {
               if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-                closure_1(12015).searchPeopleTab(closure_1_0, searchQueryString);
-                const obj = closure_1(12015);
+                closure_1(12059).searchPeopleTab(closure_1_0, searchQueryString);
+                const obj = closure_1(12059);
               }
             }, closure_5);
             return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -98,8 +98,8 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
         if (!closure_1) {
           const debounceResult = _mod12.debounce((searchQueryString) => {
             if (!autocompleteVisible.isAutocompleteVisible(closure_1_0)) {
-              closure_1(12015).searchPeopleTab(closure_1_0, searchQueryString);
-              const obj = closure_1(12015);
+              closure_1(12059).searchPeopleTab(closure_1_0, searchQueryString);
+              const obj = closure_1(12059);
             }
           }, closure_5);
           return SearchPlatformUtilsDefault.subscribeTextInputValue(closure_0, debounceResult);
@@ -108,7 +108,7 @@ export const useAutoSearchPeopleTab = ReactCompilerGating.isReactCompilerEnabled
       const items2 = [arg0];
       const effect2 = noop.useEffect(
         () => () => {
-          closure_1(12015).cleanupPeopleTab(closure_1_0);
+          closure_1(12059).cleanupPeopleTab(closure_1_0);
         },
         items2,
       );

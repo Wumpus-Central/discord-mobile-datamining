@@ -8,11 +8,8 @@ let result = size.fileFinishedImporting("modules/native_menu/native/NativeMenuAc
 
 export default {
   showNativeMenu(key, memo) {
-    importDefault = memo;
-    DispatcherDefault.wait(() => {
-      const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
-      DispatcherDefault.dispatch({ type: "SHOW_NATIVE_MENU", key, menu });
-    });
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+    DispatcherDefault.dispatch({ type: "SHOW_NATIVE_MENU", key, menu: memo });
   },
   hideNativeMenu(key) {
     DispatcherDefault.dispatch({ type: "HIDE_NATIVE_MENU", key });

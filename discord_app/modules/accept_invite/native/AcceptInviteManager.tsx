@@ -1,10 +1,10 @@
 // discord_app/modules/accept_invite/native/AcceptInviteManager.tsx
-import DispatcherDefault from "../../../Dispatcher.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
+import DisplayedInviteActionCreators from "../../../actions/native/DisplayedInviteActionCreators.tsx";
 import FriendInviteUtils from "../../friend_invites/native/FriendInviteUtils.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -15,7 +15,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ACCEPT_INVITE_MODAL_KEY = fn(7353).ACCEPT_INVITE_MODAL_KEY;
+const ACCEPT_INVITE_MODAL_KEY = fn(7359).ACCEPT_INVITE_MODAL_KEY;
 const Constants = fn(1085);
 ({ InviteStates: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const prototype = function AcceptInviteManager() {
@@ -84,8 +84,9 @@ const prototype = function AcceptInviteManager() {
               }
               const obj = { location: str };
               FriendInviteUtils.acceptFriendInvite(invite, obj);
-              DispatcherDefault.wait(() => set(8933).clearDisplayedInvite());
+              DisplayedInviteActionCreators.clearDisplayedInvite();
               flag = false;
+              const tmp33Result = DisplayedInviteActionCreators;
             }
           }
         }
@@ -128,7 +129,7 @@ const prototype = function AcceptInviteManager() {
                       openChannel: true,
                     });
                     flag3 = true;
-                    const tmp39Result = router_utils;
+                    const tmp38Result = router_utils;
                   }
                   flag2 = flag3;
                 }
@@ -138,7 +139,7 @@ const prototype = function AcceptInviteManager() {
           obj9 = InviteTypeUtils;
         }
         if (flag2) {
-          DispatcherDefault.wait(() => set(8933).clearDisplayedInvite());
+          DisplayedInviteActionCreators.clearDisplayedInvite();
           flag = false;
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -149,7 +150,7 @@ const prototype = function AcceptInviteManager() {
             inviteInstanceId,
           };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(17907, dependencyMap.paths),
+            asyncRequireImpl(17979, dependencyMap.paths),
             obj4,
             ACCEPT_INVITE_MODAL_KEY,
           );

@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { commandIcon: null, loadingIcon: null, loadingName: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg };
 obj2.commandIcon = size;
@@ -366,7 +366,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp = closure_6();
       const tmp5 = item;
-      const applicationCommandsIconSource = item(11883).getApplicationCommandsIconSource(section);
+      const applicationCommandsIconSource = item(11927).getApplicationCommandsIconSource(section);
       const obj2 = {
         accessibilityLabel: memo,
         onPress,
@@ -379,13 +379,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp8Result = null != applicationCommandsIconSource;
       if (tmp8Result) {
         const obj3 = { style: tmp.commandIcon, source: applicationCommandsIconSource };
-        tmp8Result = jsx(section(6163), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+        tmp8Result = jsx(section(6156), { style: tmp.commandIcon, source: applicationCommandsIconSource });
       }
       obj2.icon = tmp8Result;
-      obj2.trailing = jsx(tmp5(5042).SendMessageIcon, {});
+      obj2.trailing = jsx(tmp5(5040).SendMessageIcon, {});
       obj2.start = start;
       obj2.end = end;
-      return jsx(item(6186).TableRow, {
+      return jsx(item(6179).TableRow, {
         accessibilityLabel: memo,
         onPress,
         label: item.displayName,

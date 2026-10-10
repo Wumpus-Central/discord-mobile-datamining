@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp16 = jsx(stateFromStores(18203), {
+      const tmp16 = jsx(stateFromStores(18277), {
         title: tmp11,
         searchPlaceholder: tmp12,
         listId: "automod-exempt-channels",
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.renderLabel = getChannelOptionName;
       obj2.renderIcon = callback;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(18203), {
+      return jsx(stateFromStores(18277), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-channels",

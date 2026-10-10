@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   searchWrap: null,
@@ -32,8 +32,8 @@ let size = {
   backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
   marginLeft: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
-  height: fn(6300).InputHeights.MD,
-  width: fn(6300).InputHeights.MD,
+  height: fn(6301).InputHeights.MD,
+  width: fn(6301).InputHeights.MD,
   justifyContent: "center",
   alignItems: "center",
 };
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
           closure_1_1((arg0) => arg0 + 1);
-          ToastActionCreatorsDefault.open({ content: "Debug logs refreshed", key: "debug-logs-refreshed" });
+          ToastActionCreatorsDefault.open("debug-logs-refreshed", { text: "Debug logs refreshed" });
         };
         cResult[0] = fn;
         first = fn;
@@ -632,7 +632,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [tmp6, importDefault] = sortOrder(noop.useState(0), 2);
       const onRefresh = noop.useCallback(() => {
         closure_1_1((arg0) => arg0 + 1);
-        ToastActionCreatorsDefault.open({ content: "Debug logs refreshed", key: "debug-logs-refreshed" });
+        ToastActionCreatorsDefault.open("debug-logs-refreshed", { text: "Debug logs refreshed" });
       }, []);
       let Storage = require("Storage").Storage;
       let str = Storage.get("debug-log-sort-order", "oldest");

@@ -185,7 +185,7 @@ function parseUserResults(results) {
   }
 }
 function handleModalActionSheetOpen(key) {
-  if (key.key !== state) {
+  if (key.key !== closure_1_14) {
     return false;
   } else {
     c15 = true;
@@ -202,7 +202,7 @@ function handleModalActionSheetOpen(key) {
   }
 }
 function handleActionSheetDismiss(key) {
-  if (key.key !== state) {
+  if (key.key !== closure_1_14) {
     return false;
   } else {
     if (null != closure_3) {
@@ -222,7 +222,7 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   return false;
 }
-const PrivateChannelRecord = fn(2068).PrivateChannelRecord;
+const PrivateChannelRecord = fn(2069).PrivateChannelRecord;
 const Constants = fn(1085);
 ({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;

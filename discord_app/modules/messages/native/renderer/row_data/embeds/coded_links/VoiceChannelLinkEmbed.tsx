@@ -14,7 +14,7 @@ import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const getGuildAcronym = fn(2082).getGuildAcronym;
+const getGuildAcronym = fn(2083).getGuildAcronym;
 const Permissions = fn(1085).Permissions;
 const InviteTypes = fn(7423).InviteTypes;
 const size = fn(2);

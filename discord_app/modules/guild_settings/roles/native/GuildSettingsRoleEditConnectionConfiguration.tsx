@@ -112,7 +112,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1085).PlatformTypes;
-const Constants = fn(6870);
+const Constants = fn(6876);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
@@ -122,7 +122,7 @@ const Constants = fn(6870);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,
@@ -196,7 +196,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[0] !== bot) {
-          const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+          const obj3 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
           const tmp26 = onChangeText(native.Avatar, obj3);
           cResult[0] = bot;
           cResult[1] = tmp26;
@@ -217,7 +217,11 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 name1 = getOrFetchApplicationBatched.name;
               }
             } else if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-              const obj4 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+              const obj4 = {
+                size: native.AvatarSizes.XSMALL,
+                user: getOrFetchApplicationBatched.bot,
+                guildId: "Array",
+              };
               const tmp20 = onChangeText(native.Avatar, obj4);
               cResult[2] = getOrFetchApplicationBatched.bot;
               cResult[3] = tmp20;
@@ -333,7 +337,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         application2 = integration.application;
       }
       if (null != application2) {
-        const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "r" };
+        const obj2 = { size: native.AvatarSizes.XSMALL, user: null, guildId: "Array" };
         let bot;
         if (integration != null) {
           const application = integration.application;
@@ -354,7 +358,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp11;
           if (null != bot1) {
-            const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+            const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
             tmp11 = onChangeText(native.Avatar, obj3);
           }
           let name1;
@@ -547,7 +551,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         _slicedToArray(tmp, num);
       };
-      return onChangeText(metadataField(6889).TableSwitchRow, obj, metadataField);
+      return onChangeText(metadataField(6895).TableSwitchRow, obj, metadataField);
     };
 ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1430,7 +1434,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const str1 = require("RoleConnectionRequirementUtils")
         .displayedValueFor(value3, realizedOperatorForResult)
         .toString();
-      let value4;
+      value4 = undefined;
       if (existingPendingConfiguration != null) {
         if (existingPendingConfiguration.configuration != null) {
           value4 = iter3.value;
@@ -1497,7 +1501,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = -1;
       }
-      const realizedOperatorForResult = metadataField(18303).realizedOperatorFor(existingPendingConfiguration.operator);
+      const realizedOperatorForResult = metadataField(18377).realizedOperatorFor(existingPendingConfiguration.operator);
       c7 = realizedOperatorForResult;
       value = undefined;
       if (existingPendingConfiguration != null) {
@@ -1505,9 +1509,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           value = iter.value;
         }
       }
-      let obj = metadataField(18303);
-      const tmpResult = metadataField(18303);
-      str1 = metadataField(18303).displayedValueFor(value, realizedOperatorForResult).toString();
+      let obj = metadataField(18377);
+      const tmpResult = metadataField(18377);
+      str1 = metadataField(18377).displayedValueFor(value, realizedOperatorForResult).toString();
       let mapped = noop;
       [value] = noop.useState(str1);
       closure_10 = tmp9;
@@ -1596,7 +1600,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.children = onInputValueChange(metadataField(1200).TextInput, obj6, metadataField);
           let items1 = [onInputValueChange(map, obj5, "_numericalInputContainer")];
           const obj7 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-          items1[1] = onInputValueChange(metadataField(5087).Text, obj7);
+          items1[1] = onInputValueChange(metadataField(5088).Text, obj7);
           obj4.children = items1;
           tmp21Result = closure_13(tmp22, obj4);
         }
@@ -1638,9 +1642,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             _slicedToArray(tmp3, num);
           },
         };
-        return onInputValueChange(metadataField(6889).TableSwitchRow, obj8, metadataField);
+        return onInputValueChange(metadataField(6895).TableSwitchRow, obj8, metadataField);
       }
-      const str = metadataField(18303).displayedValueFor(value, realizedOperatorForResult);
+      const str = metadataField(18377).displayedValueFor(value, realizedOperatorForResult);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1655,7 +1659,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== configMetadataMap) {
-        const value4 = configMetadataMap.get(React5.CREATED_AT);
+        value4 = configMetadataMap.get(React5.CREATED_AT);
         cResult[1] = configMetadataMap;
         cResult[2] = value4;
         let tmp8 = value4;
@@ -1704,7 +1708,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj3 = { children: null };
                   const items = [tmp11, tmp16, tmp24];
                   obj3.children = items;
-                  const tmp32 = __initData2(state, obj3);
+                  const tmp32 = map1(closure_1_14, obj3);
                   cResult[19] = tmp11;
                   cResult[20] = tmp16;
                   cResult[21] = tmp24;
@@ -1814,7 +1818,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       });
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1893,7 +1897,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { children: null };
                       const items = [tmp11, tmp16, tmp24, tmp32];
                       obj3.children = items;
-                      const tmp40 = __initData2(state, obj3);
+                      const tmp40 = map1(closure_1_14, obj3);
                       cResult[25] = tmp11;
                       cResult[26] = tmp16;
                       cResult[27] = tmp24;
@@ -2037,7 +2041,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       });
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
@@ -2125,7 +2129,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { children: null };
                       const items = [tmp11, tmp16, tmp24, tmp34];
                       obj3.children = items;
-                      const tmp42 = __initData2(state, obj3);
+                      const tmp42 = map1(closure_1_14, obj3);
                       cResult[26] = tmp34;
                       cResult[27] = tmp11;
                       cResult[28] = tmp16;
@@ -2269,7 +2273,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.locked = locked;
       items[3] = onChangeText(closure_17, obj6);
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
@@ -2366,7 +2370,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { children: null };
                       const items = [tmp11, tmp16, tmp26, tmp36];
                       obj3.children = items;
-                      const tmp44 = __initData2(state, obj3);
+                      const tmp44 = map1(closure_1_14, obj3);
                       cResult[27] = tmp36;
                       cResult[28] = tmp11;
                       cResult[29] = tmp16;
@@ -2510,7 +2514,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       obj6.locked = locked;
       items[3] = onChangeText(closure_17, obj6);
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
@@ -2547,7 +2551,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             tmp13 = cResult[7];
           }
           if (cResult[8] !== configMetadataMap) {
-            const value4 = configMetadataMap.get(React5.PAYPAL_VERIFIED);
+            value4 = configMetadataMap.get(React5.PAYPAL_VERIFIED);
             cResult[8] = configMetadataMap;
             cResult[9] = value4;
             let tmp15 = value4;
@@ -2568,7 +2572,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { children: null };
               const items = [tmp11, tmp18];
               obj3.children = items;
-              const tmp26 = __initData2(state, obj3);
+              const tmp26 = map1(closure_1_14, obj3);
               cResult[14] = tmp11;
               cResult[15] = tmp18;
               cResult[16] = tmp26;
@@ -2644,7 +2648,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.locked = locked;
       items[1] = onChangeText(closure_17, obj4);
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
@@ -2747,7 +2751,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { children: null };
                           const items = [tmp11, tmp16, tmp24, tmp32, tmp43];
                           obj3.children = items;
-                          const tmp51 = __initData2(state, obj3);
+                          const tmp51 = map1(closure_1_14, obj3);
                           cResult[32] = tmp43;
                           cResult[33] = tmp11;
                           cResult[34] = tmp16;
@@ -2927,7 +2931,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       obj7.locked = locked;
       items[4] = onChangeText(closure_17, obj7);
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
@@ -3014,7 +3018,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                       const obj3 = { children: null };
                       const items = [tmp13, tmp18, tmp26, tmp34];
                       obj3.children = items;
-                      const tmp42 = __initData2(state, obj3);
+                      const tmp42 = map1(closure_1_14, obj3);
                       cResult[26] = tmp34;
                       cResult[27] = tmp13;
                       cResult[28] = tmp18;
@@ -3154,7 +3158,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         locked,
       });
       obj2.children = items;
-      return __initData2(state, obj2);
+      return map1(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let obj5 = { color: nativeDefault.colors.TEXT_MUTED };
@@ -3355,7 +3359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const items = [tmp22(closure_16, obj14), tmp21];
             obj13.children = items;
-            return __initData2(TableRowGroup.TableRowGroup, obj13);
+            return map1(TableRowGroup.TableRowGroup, obj13);
           } catch (err) {}
         }
       }

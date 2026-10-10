@@ -30,7 +30,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_9 = async function _startNativeImpression(arg0) {
             );
             closure_130_7(closure_129_0, closure_129_3);
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           } else {
             const obj8 = { metadataSealed: closure_129_1, impressionId: closure_129_0, specs: null, signal: null };
             const items = [closure_129_4];
@@ -209,7 +209,7 @@ let closure_10 = async function _getImpressionToken(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -294,7 +294,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -349,7 +349,7 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
               }
             }
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -379,9 +379,9 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
   return iter;
 };
 let obj = {};
-let obj2 = { viewThroughSpec: { kind: fn(12913).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
-obj[fn(12913).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
-let obj3 = { kind: fn(12913).IosAttributionFramework.AD_ATTRIBUTION_KIT };
+let obj2 = { viewThroughSpec: { kind: fn(12961).IosAttributionFramework.AD_ATTRIBUTION_KIT } };
+obj[fn(12961).IosAttributionFramework.AD_ATTRIBUTION_KIT] = obj2;
+let obj3 = { kind: fn(12961).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);

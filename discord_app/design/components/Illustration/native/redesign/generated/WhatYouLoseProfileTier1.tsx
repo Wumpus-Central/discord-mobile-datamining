@@ -1,7 +1,7 @@
 // discord_app/design/components/Illustration/native/redesign/generated/WhatYouLoseProfileTier1.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../shared.tsx";
-import _mod8343 from "../../index.tsx";
+import _mod8359 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,20 +15,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== theme) {
         const obj3 = {
           dark() {
-            return require("../../../../../../../_runtime/metro/13595__.js");
+            return require("../../../../../../../_runtime/metro/13646__.js");
           },
           darker() {
-            return require("../../../../../../../_runtime/metro/13596__.js");
+            return require("../../../../../../../_runtime/metro/13647__.js");
           },
           light() {
-            return require("../../../../../../../_runtime/metro/13597__.js");
+            return require("../../../../../../../_runtime/metro/13648__.js");
           },
         };
-        const illustrationSource = _mod8343.getIllustrationSource(theme, obj3);
+        const illustrationSource = _mod8359.getIllustrationSource(theme, obj3);
         cResult[0] = theme;
         cResult[1] = illustrationSource;
         let tmp4 = illustrationSource;
-        const tmpResult = _mod8343;
+        const tmpResult = _mod8359;
       } else {
         tmp4 = cResult[1];
       }
@@ -36,30 +36,30 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useWhatYouLoseProfileTier1Source() {
       const obj = shared;
-      return _mod8343.getIllustrationSource(obj.useThemeContext().theme, {
+      return _mod8359.getIllustrationSource(obj.useThemeContext().theme, {
         dark() {
-          return require("../../../../../../../_runtime/metro/13595__.js");
+          return require("../../../../../../../_runtime/metro/13646__.js");
         },
         darker() {
-          return require("../../../../../../../_runtime/metro/13596__.js");
+          return require("../../../../../../../_runtime/metro/13647__.js");
         },
         light() {
-          return require("../../../../../../../_runtime/metro/13597__.js");
+          return require("../../../../../../../_runtime/metro/13648__.js");
         },
       });
     };
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getWhatYouLoseProfileTier1Source(theme) {
-  return _mod8343.getIllustrationSource(theme, {
+  return _mod8359.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/13595__.js");
+      return require("../../../../../../../_runtime/metro/13646__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/13596__.js");
+      return require("../../../../../../../_runtime/metro/13647__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/13597__.js");
+      return require("../../../../../../../_runtime/metro/13648__.js");
     },
   });
 }

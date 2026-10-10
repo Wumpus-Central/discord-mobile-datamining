@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureStatusLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import ConjureTypes from "../ConjureTypes.tsx";
 
 require = fn;
@@ -30,13 +30,13 @@ function thinkingLabel(saving) {
     tmp = "end" !== activity.phase;
   }
   if (flag4) {
-    let xnCAaP = _modDef3827["1jqaAc"];
+    let xnCAaP = _modDef3849["1jqaAc"];
   } else if (flag2) {
-    xnCAaP = _modDef3827.M4KI5F;
+    xnCAaP = _modDef3849.M4KI5F;
   } else if (flag3) {
     xnCAaP = items[0];
   } else {
-    const tmp4 = _modDef3827;
+    const tmp4 = _modDef3849;
     if (flag) {
       xnCAaP = tmp4.mKK6wB;
     } else if (compacting) {
@@ -48,11 +48,11 @@ function thinkingLabel(saving) {
   return xnCAaP;
 }
 const items = [
-  _modDef3827["AX+5lk"],
-  _modDef3827.VAU6A7,
-  _modDef3827["1emysd"],
-  _modDef3827.EXHX3L,
-  _modDef3827.ChslmX,
+  _modDef3849["AX+5lk"],
+  _modDef3849.VAU6A7,
+  _modDef3849["1emysd"],
+  _modDef3849.EXHX3L,
+  _modDef3849.ChslmX,
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureStatusLabels.tsx");
@@ -74,13 +74,13 @@ export const isRecallingLine = function isRecallingLine(current) {
 export const connectionLabel = function connectionLabel(stateFromStores8) {
   if ("connecting" === stateFromStores8) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3827["ECl+Dx"]);
+    return intl3.string(_modDef3849["ECl+Dx"]);
   } else if ("closed" === stateFromStores8) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3827.mQZSp1);
+    return intl2.string(_modDef3849.mQZSp1);
   } else if ("failed" === stateFromStores8) {
     const intl = util.intl;
-    return intl.string(_modDef3827.xzJSZ6);
+    return intl.string(_modDef3849.xzJSZ6);
   }
 };
 export { thinkingLabel };
@@ -92,8 +92,8 @@ export const runesUsedLabels = function runesUsedLabels(projectUsage) {
   const runesFromUsdResult = ConjureTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3827.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
+  obj2.text = intl.formatToPlainString(_modDef3849.gMuw5d, { runes: runesFromUsdResult.toLocaleString() });
   const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3827.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
+  obj2.aria = intl2.formatToPlainString(_modDef3849.Z4LvGa, { runes: runesFromUsdResult, turns: projectUsage.turns });
   return obj2;
 };

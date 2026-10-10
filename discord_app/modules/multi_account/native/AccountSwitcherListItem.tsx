@@ -13,15 +13,15 @@ import StreamerModeStore from "../../../stores/StreamerModeStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const initialize = CircleCheckIcon(504);
-const CircleCheckIcon2 = CircleCheckIcon(4993);
-const CircleInformationIcon = CircleCheckIcon(5013);
+const CircleInformationIcon = CircleCheckIcon(5046);
+const CircleCheckIcon2 = CircleCheckIcon(6867);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12081).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12125).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function AccountStatusIcon(user) {
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
   }
   ({ accountSwitcherListItem, accountInfo } = tmp5);
   if (cResult[12] !== tmp15) {
-    { user: null, guildId: "r" }.user = tmp15;
+    { user: null, guildId: "Array" }.user = tmp15;
     class U {
       constructor() {
         return closure_1_7.getCurrentUser();
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     cResult[12] = tmp15;
     cResult[13] = tmp35;
     let tmp33 = tmp35;
-    const obj6 = { user: null, guildId: "r" };
+    const obj6 = { user: null, guildId: "Array" };
   } else {
     tmp33 = cResult[13];
   }
@@ -470,7 +470,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AccountS
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: null };
-    const obj9 = { user: obj3, guildId: "r" };
+    const obj9 = { user: obj3, guildId: "Array" };
     const items3 = [options(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: null };
     const obj11 = { style: tmp.tagContainer, children: null };

@@ -6,8 +6,8 @@ import native from "../../../design/void/native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import _modDef10463 from "../../../../_runtime/metro/10463__.js";
-import _modDef10464 from "../../../../_runtime/metro/10464__.js";
+import _modDef10497 from "../../../../_runtime/metro/10497__.js";
+import _modDef10498 from "../../../../_runtime/metro/10498__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { alignItems: "center" },
   header: { fontSize: 20, fontWeight: "700", color: nativeDefault.colors.TEXT_SUBTLE, marginBottom: 16 },
@@ -64,9 +64,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6 = useThemeDefault();
       if (tmpResult.isThemeDark(tmp6)) {
-        let tmp5Result2 = _modDef10463;
+        let tmp5Result2 = _modDef10497;
       } else {
-        tmp5Result2 = _modDef10464;
+        tmp5Result2 = _modDef10498;
       }
       if (cResult[4] === tmp4.image) {
         if (cResult[5] === tmp5Result2) {
@@ -114,9 +114,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items[1] = timestampProducer(native.LegacyText, obj3);
       const obj6 = { style: tmp.image, source: null };
       if (obj7.isThemeDark(tmp4)) {
-        let tmp2Result = _modDef10463;
+        let tmp2Result = _modDef10497;
       } else {
-        tmp2Result = _modDef10464;
+        tmp2Result = _modDef10498;
       }
       obj6.source = tmp2Result;
       items[2] = timestampProducer(React4, obj6);

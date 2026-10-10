@@ -2,19 +2,19 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
-import _modDef2955 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2958 from "../intl/DisplayNameStyles.messages.js";
 import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const DISPLAY_NAME_STYLES_EFFECT_NAMES = {};
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.SOLID] = _modDef2955.OpWJ3f;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.GRADIENT] = _modDef2955["i9e/u1"];
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.NEON] = _modDef2955.x68b1F;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.TOON] = _modDef2955.otpeeM;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.POP] = _modDef2955.cjQOKb;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.GUMMY] = _modDef2955.x9Gtie;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.PRISM] = _modDef2955["/M7psm"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.SOLID] = _modDef2958.OpWJ3f;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.GRADIENT] = _modDef2958["i9e/u1"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.NEON] = _modDef2958.x68b1F;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.TOON] = _modDef2958.otpeeM;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.POP] = _modDef2958.cjQOKb;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.GUMMY] = _modDef2958.x9Gtie;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[fn(1409).DisplayNameEffect.PRISM] = _modDef2958["/M7psm"];
 let closure_5 = {
   [fn(1409).DisplayNameEffect.SOLID]: 3,
   [fn(1409).DisplayNameEffect.GRADIENT]: 2.5,
@@ -39,7 +39,7 @@ export const useDisplayNameStylesEffectConfig = ReactCompilerGating.isReactCompi
         const intl = util.intl;
         let OpWJ3f = obj[effectId];
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2955.OpWJ3f;
+          OpWJ3f = _modDef2958.OpWJ3f;
         }
         const stringResult = intl.string(OpWJ3f);
         cResult[0] = effectId;
@@ -88,7 +88,7 @@ export const useDisplayNameStylesEffectConfig = ReactCompilerGating.isReactCompi
         const intl = util.intl;
         let OpWJ3f = obj[effectId];
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2955.OpWJ3f;
+          OpWJ3f = _modDef2958.OpWJ3f;
         }
         obj = {
           name: intl.string(OpWJ3f),

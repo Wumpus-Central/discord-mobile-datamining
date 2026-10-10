@@ -42,7 +42,7 @@ let closure_13 = async function _fetchStickerPacks() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -85,9 +85,7 @@ let closure_13 = async function _fetchStickerPacks() {
           } else {
             if (!closure_130_8.isFetchingStickerPacks) {
               if (!closure_130_8.hasLoadedStickerPacks) {
-                closure_130_1(closure_130_2[10]).wait(() => {
-                  closure_1_1(closure_1_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
-                });
+                closure_130_1(closure_130_2[10]).dispatch({ type: "STICKER_PACKS_FETCH_START" });
                 const HTTP = closure_130_0(closure_130_2[9]).HTTP;
                 const request = { url: closure_130_9.STICKER_PACKS, query: null, rejectWithError: null };
                 const obj8 = { locale: closure_129_0 };
@@ -132,7 +130,7 @@ let closure_14 = async function _fetchSticker(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -208,7 +206,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -263,7 +261,7 @@ let closure_15 = async function _fetchGuildStickersWithCreator(arg0) {
           };
           closure_131_1(closure_131_2[10]).dispatch(obj7);
           c5 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp13) {
         c5 = tmp;
@@ -283,7 +281,7 @@ let closure_16 = async function _deleteGuildSticker(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -316,7 +314,7 @@ let closure_16 = async function _deleteGuildSticker(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp5) {
       c1 = tmp;

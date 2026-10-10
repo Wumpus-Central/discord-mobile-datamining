@@ -35,7 +35,7 @@ function loadFromProtoSettings() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
+      DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
     }
   }
 }
@@ -53,7 +53,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
+      DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
     }
   }
 }
@@ -93,7 +93,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "Set" };
+    obj = { theme: "backgroundColor", customTheme: "IconComponent" };
   }
   return obj;
 };
@@ -270,7 +270,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(DispatcherDefault, {
         if (clientThemeSettings != null) {
           prop = clientThemeSettings.customUserThemeSettings;
         }
-        DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
+        DispatcherDefault.dispatch({ type: "REFRESH_THEME" });
       }
     }
   },

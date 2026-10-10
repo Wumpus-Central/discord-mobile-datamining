@@ -10,11 +10,7 @@ const getJankScreenNameDefault = getJankScreenName;
 
 class JankNavigationReporter {
   constructor() {
-    return Object.assign({
-      _isAttached: false,
-      _routeKeyAtDispatch: "Boolean",
-      _screensBeforeDispatch: "backgroundColor",
-    });
+    return Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "color" });
   }
 }
 const prototype = JankNavigationReporter.prototype;
@@ -119,8 +115,4 @@ prototype["shouldSettleInJS"] = function shouldSettleInJS(focusedRoute, _screens
 };
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigationReporter.android.tsx");
 
-export default Object.assign({
-  _isAttached: false,
-  _routeKeyAtDispatch: "Boolean",
-  _screensBeforeDispatch: "backgroundColor",
-});
+export default Object.assign({ _isAttached: false, _routeKeyAtDispatch: "Boolean", _screensBeforeDispatch: "color" });

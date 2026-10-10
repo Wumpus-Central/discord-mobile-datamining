@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ textInput: { marginBottom: 16 }, title: { marginBottom: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutMenu.tsx");
@@ -22,19 +22,16 @@ export default function OrbCheckoutMenu() {
         skuId: tmp,
         analyticsLocations: [],
         onCheckoutSuccess() {
-          closure_1_1(closure_1_2[7]).open({
-            key: "ORB_CHECKOUT_SUCCESS",
-            content: "Successfully redeemed item with Orbs",
-          });
+          closure_1_1(closure_1_2[7]).open("ORB_CHECKOUT_SUCCESS", { text: "Successfully redeemed item with Orbs" });
         },
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13381, dependencyMap.paths), obj2);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13431, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: null };
   const items1 = [
-    closure_5(value(5087).Text, { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" }),
-    closure_5(value(6290).TextInput, {
+    closure_5(value(5088).Text, { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" }),
+    closure_5(value(6285).TextInput, {
       containerStyle: tmp.textInput,
       label: "SKU ID",
       value,
@@ -43,12 +40,12 @@ export default function OrbCheckoutMenu() {
       },
       clearable: true,
     }),
-    closure_5(value(5087).Text, {
+    closure_5(value(5088).Text, {
       style: tmp.title,
       variant: "text-md/bold",
       children: "Checkout will open with the orb price of the product, if it exists",
     }),
-    closure_5(value(5376).Button, {
+    closure_5(value(5379).Button, {
       text: "Open Orbs Checkout",
       variant: "primary",
       onPress: callback,
@@ -56,5 +53,5 @@ export default function OrbCheckoutMenu() {
     }),
   ];
   obj.children = items1;
-  return closure_6(value(6188).Card, obj);
+  return closure_6(value(6181).Card, obj);
 }

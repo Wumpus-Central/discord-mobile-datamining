@@ -11,7 +11,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1085).AnalyticEvents;
-const Constants = fn(9621);
+const Constants = fn(9650);
 ({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -38,7 +38,7 @@ export default function StreamFeedbackActionSheet(stream) {
     freeformConfig: null,
   };
   const intl4 = tmp(1126).intl;
-  const tmp9 = analyticsData(2827);
+  const tmp9 = analyticsData(2830);
   if (stateFromStores) {
     let TVTIT1 = tmp9["0ZBLiZ"];
     let tmp10 = tmp8;
@@ -50,7 +50,7 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1126).intl;
   obj3.problemsHeader = intl5.string(stream(1126).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1126).t["0uxA2V"]);
-  obj3.problemOptions = stream(9624).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj3.problemOptions = stream(9653).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   let obj4 = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1126).intl;
   obj4.label = intl6.string(stream(1126).t.emlT91);
@@ -64,13 +64,13 @@ export default function StreamFeedbackActionSheet(stream) {
     trackOpen: null,
     trackReport: null,
   };
-  const tmpResult = stream(9624);
+  const tmpResult = stream(9653);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
   obj5.ratingBody = stringResult2;
   const intl7 = tmp(1126).intl;
-  obj5.categoriesHeader = intl7.string(tmp10(2827).tq8598);
+  obj5.categoriesHeader = intl7.string(tmp10(2830).tq8598);
   const items1 = [obj3];
   obj5.optionsTree = items1;
   obj5.trackOpen = function trackOpen() {
@@ -144,7 +144,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17968, dependencyMap.paths), "UploadLogs", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18040, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });
@@ -156,7 +156,7 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(17966), {
+  return jsx(tmp10(18038), {
     headerLabel: stringResult,
     showHeaderCloseButton: true,
     ratingBody: null,

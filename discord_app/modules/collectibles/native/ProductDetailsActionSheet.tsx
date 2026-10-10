@@ -33,7 +33,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_17 = {};
 const logger = new LoggerDefault("ProductDetailsActionSheet");
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { position: "relative", flex: 1 },
   actionButtons: null,
@@ -55,8 +55,8 @@ const rect = {
 };
 obj2.actionButtons = rect;
 let size = {
-  width: fn(5381).MEDIUM_BUTTON_HEIGHT,
-  height: fn(5381).MEDIUM_BUTTON_HEIGHT,
+  width: fn(5384).MEDIUM_BUTTON_HEIGHT,
+  height: fn(5384).MEDIUM_BUTTON_HEIGHT,
   alignItems: "center",
   justifyContent: "center",
   borderRadius: nativeDefault.radii.round,
@@ -65,11 +65,11 @@ let size = {
 };
 obj2.previewProfileButton = size;
 let obj3 = { backgroundColor: null };
-let native = fn(4788);
+let native = fn(4827);
 obj3.backgroundColor = native.setColorOpacity("white", 0.72);
 obj2.previewProfileButtonLight = obj3;
 let obj4 = { backgroundColor: null };
-native = fn(4788);
+native = fn(4827);
 obj4.backgroundColor = native.setColorOpacity("white", 0.62);
 obj2.previewProfileButtonLightPressed = obj4;
 let tmp5 = new LoggerDefault("ProductDetailsActionSheet");
@@ -92,9 +92,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_19();
       dependencyMap = tmp4;
       const obj = handlePreviewPress(576);
-      const theme = handlePreviewPress(4788).useThemeContext().theme;
-      const obj2 = handlePreviewPress(4788);
-      const isThemeLightResult = handlePreviewPress(4930).isThemeLight(theme);
+      const theme = handlePreviewPress(4827).useThemeContext().theme;
+      const obj2 = handlePreviewPress(4827);
+      const isThemeLightResult = handlePreviewPress(4969).isThemeLight(theme);
       closure_3 = tmp6;
       const tmp7 = isThemeLightResult ? tmp4.previewProfileButtonLight : tmp4.previewProfileButtonDark;
       closure_4 = tmp7;
@@ -116,7 +116,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   const intl = tmp(1126).intl;
                   const stringResult = intl.string(tmp(1126).t["3Qcx6K"]);
                   const obj4 = { size: "md", color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT };
-                  const tmp17 = closure_15(tmp(6650).EyeIcon, obj4);
+                  const tmp17 = closure_15(tmp(6651).EyeIcon, obj4);
                   cResult[9] = stringResult;
                   cResult[10] = tmp17;
                   let tmp13 = tmp17;
@@ -177,16 +177,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = onTrackPress;
       cResult[2] = fn;
       tmp9 = fn;
-      const obj3 = handlePreviewPress(4930);
+      const obj3 = handlePreviewPress(4969);
     }
   : function PreviewProfileTrigger(handlePreviewPress) {
       handlePreviewPress = handlePreviewPress.handlePreviewPress;
       const onTrackPress = handlePreviewPress.onTrackPress;
       const tmp = closure_19();
       dependencyMap = tmp;
-      const theme = handlePreviewPress(4788).useThemeContext().theme;
-      const obj = handlePreviewPress(4788);
-      const isThemeLightResult = handlePreviewPress(4930).isThemeLight(theme);
+      const theme = handlePreviewPress(4827).useThemeContext().theme;
+      const obj = handlePreviewPress(4827);
+      const isThemeLightResult = handlePreviewPress(4969).isThemeLight(theme);
       closure_3 = theme === ThemeTypes.ONYX;
       closure_4 = isThemeLightResult ? tmp.previewProfileButtonLight : tmp.previewProfileButtonDark;
       closure_5 = isThemeLightResult ? tmp.previewProfileButtonLightPressed : tmp.previewProfileButtonDarkPressed;
@@ -216,8 +216,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(1126).intl;
       obj3.accessibilityLabel = intl.string(handlePreviewPress(1126).t["3Qcx6K"]);
-      const obj2 = handlePreviewPress(4930);
-      obj3.children = closure_15(handlePreviewPress(6650).EyeIcon, {
+      const obj2 = handlePreviewPress(4969);
+      obj3.children = closure_15(handlePreviewPress(6651).EyeIcon, {
         size: "md",
         color: onTrackPress(587).colors.INTERACTIVE_ICON_DEFAULT,
       });
@@ -1308,13 +1308,13 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const ref1 = noop.useRef(null);
-      const tmp9 = closure_1_15(Sheet_BottomSheet.BottomSheet, {
+      const tmp9 = value2(Sheet_BottomSheet.BottomSheet, {
         scrollable: true,
         startExpanded: true,
         onExpand: tmp6,
         onDismiss: tmp7,
         ref,
-        children: closure_1_15(closure_22, {
+        children: value2(closure_22, {
           ref: noop.useRef(null),
           product,
           initialVariantIndex,
@@ -1334,7 +1334,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         onExpand: tmp6,
         onDismiss: tmp7,
         ref,
-        children: closure_1_15(closure_22, {
+        children: value2(closure_22, {
           ref: noop.useRef(null),
           product,
           initialVariantIndex,
@@ -1347,7 +1347,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       ({ product, initialVariantIndex, analyticsLocations, stageCollectibleChangeForEditProfile } = arg0);
       const ref1 = noop.useRef(null);
       const ref = noop.useRef(null);
-      return closure_1_15(Sheet_BottomSheet.BottomSheet, {
+      return value2(Sheet_BottomSheet.BottomSheet, {
         scrollable: true,
         startExpanded: true,
         onExpand() {
@@ -1367,7 +1367,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           return notifyDismissedResult;
         },
         ref: noop.useRef(null),
-        children: closure_1_15(closure_22, {
+        children: value2(closure_22, {
           ref: ref1,
           product,
           initialVariantIndex,
@@ -1481,9 +1481,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = { Illustration: generated_NoResults.NoResults, body: tmp18, children: null };
           const obj4 = { text: tmp20, onPress: retry };
-          tmp18 = closure_1_15(components_Button_Button.Button, obj4);
+          tmp18 = value2(components_Button_Button.Button, obj4);
           obj3.children = tmp18;
-          const tmp23 = closure_1_15(native2.EmptyState, obj3);
+          const tmp23 = value2(native2.EmptyState, obj3);
           cResult[13] = retry;
           cResult[14] = tmp23;
         } else {
@@ -1505,7 +1505,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               return skuId.skuId === skuId;
             }
           }
-          const tmp17 = closure_1_15(ProductDetailsActionSheetSkeletonDefault, {});
+          const tmp17 = value2(ProductDetailsActionSheetSkeletonDefault, {});
           cResult[15] = tmp17;
         } else {
           class T {
@@ -1521,17 +1521,17 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       skuId = skuId.skuId;
       const initialVariantIndex = skuId.initialVariantIndex;
       ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-      const collectiblesShopProduct = skuId(9068).useCollectiblesShopProduct(skuId, {
+      const collectiblesShopProduct = skuId(9088).useCollectiblesShopProduct(skuId, {
         needsCategory: false,
         seedCategoryStore: true,
       });
       const product = collectiblesShopProduct.product;
       dependencyMap = product;
       ({ state, retry } = collectiblesShopProduct);
-      const obj = skuId(9068);
-      const getOrFetchPurchases = skuId(10060).useGetOrFetchPurchases();
+      const obj = skuId(9088);
+      const getOrFetchPurchases = skuId(10089).useGetOrFetchPurchases();
       ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
-      const obj2 = skuId(10060);
+      const obj2 = skuId(10089);
       const ref1 = noop.useRef(null);
       const items = [product, skuId, initialVariantIndex];
       if ("ready" === state) {
@@ -1566,22 +1566,22 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               ref,
               children: closure_15(closure_22, obj3),
             };
-            return closure_15(tmp(6836).BottomSheet, obj4);
+            return closure_15(tmp(6839).BottomSheet, obj4);
           }
         }
       }
       if ("error" === state) {
-        const obj5 = { Illustration: tmp(8342).NoResults, body: null, children: null };
+        const obj5 = { Illustration: tmp(8358).NoResults, body: null, children: null };
         const intl = tmp(1126).intl;
         obj5.body = intl.string(tmp(1126).t.eAn6z2);
         const obj6 = { text: null, onPress: null };
         const intl2 = tmp(1126).intl;
         obj6.text = intl2.string(tmp(1126).t["+hivLW"]);
         obj6.onPress = retry;
-        obj5.children = closure_15(tmp(5376).Button, obj6);
+        obj5.children = closure_15(tmp(5379).Button, obj6);
         closure_15(tmp(1200).EmptyState, obj5);
       } else {
-        closure_15(initialVariantIndex(13394), {});
+        closure_15(initialVariantIndex(13444), {});
       }
       ref = noop.useRef(null);
     };
@@ -1616,7 +1616,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           analyticsLocations: obj4.analyticsLocations,
           stageCollectibleChangeForEditProfile: obj4.stageCollectibleChangeForEditProfile,
         } = skuId);
-        const tmp16 = closure_1_15(closure_24, obj3);
+        const tmp16 = value2(closure_24, obj3);
         cResult[0] = skuId.analyticsLocations;
         cResult[1] = skuId.initialVariantIndex;
         cResult[2] = skuId.stageCollectibleChangeForEditProfile;
@@ -1627,7 +1627,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== skuId) {
           const obj6 = {};
           const merged = Object.assign(skuId);
-          const tmp11 = closure_1_15(closure_23, obj6);
+          const tmp11 = value2(closure_23, obj6);
           cResult[5] = skuId;
           cResult[6] = tmp11;
         }
@@ -1657,12 +1657,12 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           stageCollectibleChangeForEditProfile,
         } = stageCollectibleChangeForEditProfile);
         obj2.stageCollectibleChangeForEditProfile = stageCollectibleChangeForEditProfile;
-        closure_1_15(closure_24, obj2);
+        value2(closure_24, obj2);
       } else {
         if ("product" in stageCollectibleChangeForEditProfile) {
           const obj5 = {};
           const merged = Object.assign(stageCollectibleChangeForEditProfile);
-          let tmp3 = closure_1_15(closure_23, obj5);
+          let tmp3 = value2(closure_23, obj5);
         } else {
           logger.error("ProductDetailsActionSheet opened with a skuId but no product, and the experiment is disabled");
           tmp3 = null;
@@ -1697,7 +1697,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== tmp4) {
         const obj2 = {};
         const merged = Object.assign(tmp4);
-        const tmp15 = closure_1_15(closure_25, obj2);
+        const tmp15 = value2(closure_25, obj2);
         cResult[3] = tmp4;
         cResult[4] = tmp15;
         let tmp9 = tmp15;
@@ -1710,7 +1710,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      const tmp17 = closure_1_15(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, {
+      const tmp17 = value2(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, {
         newValue: tmp5,
         children: tmp9,
       });
@@ -1727,6 +1727,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(shopAnalyticsContext, Object.assign({ shopAnalyticsContext: 0 }));
       const obj = { newValue: shopAnalyticsContext, children: null };
       const merged1 = Object.assign(merged);
-      obj.children = closure_1_15(closure_25, {});
-      return closure_1_15(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
+      obj.children = value2(closure_25, {});
+      return value2(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, obj);
     };

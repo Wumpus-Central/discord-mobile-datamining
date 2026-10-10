@@ -43,6 +43,7 @@ import VideoHealthManager from "VideoHealthManager.tsx";
 import ThermalUtilsDefault from "../modules/device/ThermalUtils.native.tsx";
 import BandwidthEstimationExperimentDefault from "../modules/media_engine/BandwidthEstimationExperiment.tsx";
 import AlertActionCreatorsDefault from "../actions/AlertActionCreators.tsx";
+import E2eLatencyMeasurementExperiment2 from "../modules/media_engine/E2eLatencyMeasurementExperiment.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import DeviceFrecencyStore from "../modules/media_engine/DeviceFrecencyStore.tsx";
 import MediaEngineStatsStore from "../modules/media_engine/MediaEngineStatsStore.tsx";
@@ -82,10 +83,10 @@ let Constants = fn(1085);
   RTCConnectionQuality: closure_19,
   BoostedGuildTiers: closure_20,
 } = Constants);
-const StreamSettingsConstants = fn(5211);
+const StreamSettingsConstants = fn(5212);
 ({ ApplicationStreamFPS: closure_21, ApplicationStreamResolutions: closure_22 } = StreamSettingsConstants);
-let closure_23 = fn(5212).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5116);
+let closure_23 = fn(5213).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5117);
 ({
   Features: closure_24,
   MediaEngineContextTypes: closure_25,
@@ -100,7 +101,7 @@ if (obj.test("https:")) {
   str = "wss:";
 }
 const constants10 = { INIT: "init", EPOCH: "epoch", TRANSITION: "transition" };
-const __initData6 = {
+const __initData5 = {
   CONNECTION_CREATE: 0,
   [0]: "CONNECTION_CREATE",
   CONNECTION_DESTROY: 1,
@@ -1074,6 +1075,12 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
   const _voiceDuration = this._voiceDuration;
   if (_voiceDuration != null) {
     const result = _voiceDuration.setSpatialAudioEnabled(arg0);
+  }
+};
+prototype["setAvSyncEnabled"] = function setAvSyncEnabled(arg0, arg1) {
+  const _connection = this._connection;
+  if (_connection != null) {
+    _connection.setAvSyncEnabled(arg0, arg1);
   }
 };
 prototype["setSimulcastDebugOverride"] = function setSimulcastDebugOverride(arg0, arg1, arg2) {
@@ -2281,16 +2288,16 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     }
     if (type === constants2.GUILD_STAGE_VOICE) {
       if (!self._videoDecoderFallbackSuppressed) {
-        const logger = self.logger;
-        logger.info("Suppressing video decoder fallback: stage channel");
+        const logger2 = self.logger;
+        logger2.info("Suppressing video decoder fallback: stage channel");
         self._videoDecoderFallbackSuppressed = true;
       }
     } else {
       const found = codecs.filter((type) => "video" === type.type);
       const mapped = found.map((name) => name.name);
-      const logger2 = self.logger;
+      const logger = self.logger;
       const _HermesInternal = HermesInternal;
-      logger2.info(
+      logger.info(
         "The originally selected video decoder is not working, fallback to the other available decoders: " +
           mapped.join(","),
       );
@@ -2342,7 +2349,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
     const logger = self.logger;
     logger.info("RTC media connection state change: " + self.state + " => " + arg0);
     if (socket === self._socket) {
-      state = self.state;
+      const state = self.state;
       if (constants7.DISCONNECTED === arg0) {
         self.setState(constants3.RTC_DISCONNECTED);
       } else if (constants7.CONNECTING === arg0) {
@@ -2975,7 +2982,7 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
         obj6.participant_type = self.getVoiceParticipantType();
         obj6.join_voice_id = self.joinVoiceId;
         const mediaEngine2 = MediaEngineStore.getMediaEngine();
-        let tmp17 = mediaEngine2.getVideoInputDeviceId() !== __initData3;
+        let tmp17 = mediaEngine2.getVideoInputDeviceId() !== __initData2;
         if (tmp17) {
           tmp17 = _connection.context === constants6.DEFAULT;
         }
@@ -3086,18 +3093,25 @@ prototype["_handleSDP"] = function _handleSDP(arg0) {
   logger.warn("Cannot set SDP on connection with protocol:", self.protocol);
 };
 prototype["_handleMediaSessionId"] = function _handleMediaSessionId(_mediaSessionId) {
+  const self = this;
   this._mediaSessionId = _mediaSessionId;
   const logger = this.logger;
   logger.info("Setting media-session-id: " + _mediaSessionId + " for rtc-connection-id: " + this.getRTCConnectionId());
+  if (this.shouldReport()) {
+    const _connection = self._connection;
+    if (null != _connection) {
+      const result = _connection.setAudioLatencyMeasurement(true);
+    }
+  }
   const rawThermalState = ThermalUtilsDefault.getRawThermalState();
   const obj3 = {};
-  const merged = Object.assign(this._getAnalyticsProperties());
-  obj3.media_session_id = this.getMediaSessionId();
-  obj3.parent_media_session_id = this.parentMediaSessionId;
+  const merged = Object.assign(self._getAnalyticsProperties());
+  obj3.media_session_id = self.getMediaSessionId();
+  obj3.parent_media_session_id = self.parentMediaSessionId;
   obj3.raw_thermal_state = rawThermalState;
   AnalyticsUtilsDefault.track(constants.MEDIA_SESSION_JOINED, obj3);
   const obj4 = DispatcherDefault;
-  obj4.dispatch({ type: "MEDIA_SESSION_JOINED", mediaSessionId: this.getMediaSessionId(), context: this.context });
+  obj4.dispatch({ type: "MEDIA_SESSION_JOINED", mediaSessionId: self.getMediaSessionId(), context: self.context });
 };
 prototype["_handleMediaSinkWants"] = function _handleMediaSinkWants(_remoteVideoSinkWants) {
   ({ _connection, logger } = this);
@@ -3620,7 +3634,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5120).now();
+  const commitReceivedTime = _connection(5121).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3660,7 +3674,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5120).now();
+  const welcomeReceivedTime = _connection(5121).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3846,18 +3860,23 @@ prototype["shouldReport"] = function shouldReport() {
       isStaffPersonalResult = currentUser.isStaffPersonal();
     }
     if (!isStaffPersonalResult) {
-      const self = this;
-      if (this.context === constants6.STREAM) {
-        if (null != self.parentMediaSessionId) {
-          let parentMediaSessionId = self.parentMediaSessionId;
+      const E2eLatencyMeasurementExperiment = E2eLatencyMeasurementExperiment2.E2eLatencyMeasurementExperiment;
+      if (E2eLatencyMeasurementExperiment.getConfig({ location: "RTCConnection" }).enabled) {
+        return true;
+      } else {
+        const self = this;
+        if (this.context === constants6.STREAM) {
+          if (null != self.parentMediaSessionId) {
+            let parentMediaSessionId = self.parentMediaSessionId;
+          }
+          let tmp6 = null != parentMediaSessionId;
+          if (tmp6) {
+            tmp6 = MurmurHashV3Default.v3(parentMediaSessionId) % 100 < 5;
+          }
+          return tmp6;
         }
-        let tmp4 = null != parentMediaSessionId;
-        if (tmp4) {
-          tmp4 = MurmurHashV3Default.v3(parentMediaSessionId) % 100 < 5;
-        }
-        return tmp4;
+        parentMediaSessionId = self.getMediaSessionId();
       }
-      parentMediaSessionId = self.getMediaSessionId();
     }
   }
   return true;

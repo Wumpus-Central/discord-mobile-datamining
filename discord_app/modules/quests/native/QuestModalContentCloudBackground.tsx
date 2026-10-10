@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import themes from "../../../design/utils/shared/themes.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[11] === tmp16) {
                     let tmp17 = cResult[12];
                   }
-                  const tmp18Result = importDefault(tmp6 ? 15322 : 15323);
+                  const tmp18Result = importDefault(tmp6 ? 15384 : 15385);
                   if (cResult[13] === str) {
                     if (cResult[14] === tmp17) {
                       if (cResult[15] === tmp18Result) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { style: null, source: null, resizeMode: null };
         const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
         obj6.style = items2;
-        obj6.source = importDefault(isThemeDarkResult ? 15322 : 15323);
+        obj6.source = importDefault(isThemeDarkResult ? 15384 : 15385);
         obj6.resizeMode = str2;
         items1[1] = hasOwnProperty(FastImageDefault, obj6);
         obj3.children = items1;

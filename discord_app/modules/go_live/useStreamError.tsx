@@ -3,12 +3,12 @@ import AVErrorStore from "../errors/av_errors/AVErrorStore.tsx";
 
 const require = fn;
 let closure_3 = {
-  [fn(5288).AVError.STREAM_SOUNDSHARE_FAILED]: 0,
-  [fn(5288).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1,
-  [fn(5288).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1,
-  [fn(5288).AVError.STREAM_SEND_LOW_FPS]: 2,
-  [fn(5288).AVError.STREAM_VIEW_LOW_FPS]: 2,
-  [fn(5288).AVError.STREAM_BAD_NETWORK_QUALITY]: 3,
+  [fn(5289).AVError.STREAM_SOUNDSHARE_FAILED]: 0,
+  [fn(5289).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1,
+  [fn(5289).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1,
+  [fn(5289).AVError.STREAM_SEND_LOW_FPS]: 2,
+  [fn(5289).AVError.STREAM_VIEW_LOW_FPS]: 2,
+  [fn(5289).AVError.STREAM_BAD_NETWORK_QUALITY]: 3,
 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

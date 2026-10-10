@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
-import _modDef2565 from "../FamilyCenter.messages.js";
+import _modDef2568 from "../FamilyCenter.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1 },
   scrollContent: {
@@ -90,7 +90,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { variant: "text-sm/medium", children: null };
           const intl = util.intl;
-          obj2.children = intl.string(_modDef2565["26A0Df"]);
+          obj2.children = intl.string(_modDef2568["26A0Df"]);
           const tmp7 = closure_1_11(Text_Text.Text, obj2);
           cResult[0] = tmp7;
           let first = tmp7;
@@ -152,7 +152,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { spacing: 8, children: null };
         const obj3 = { variant: "text-sm/medium", children: null };
         const intl = util.intl;
-        obj3.children = intl.string(_modDef2565["26A0Df"]);
+        obj3.children = intl.string(_modDef2568["26A0Df"]);
         const items = [closure_1_11(Text_Text.Text, obj3)];
         const obj4 = {
           spacing: 4,
@@ -187,7 +187,7 @@ export default function ScheduleDowntimeScreen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -422,7 +422,7 @@ export default function ScheduleDowntimeScreen() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -539,7 +539,7 @@ export default function ScheduleDowntimeScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -672,16 +672,16 @@ export default function ScheduleDowntimeScreen() {
     obj13.trailing = closure_11(tmp2(stringResult[14]).Text, obj14);
     obj13.onPress = function handleStartTimePress() {
       const intl = util.intl;
-      const f146117 = (first1) => {
+      const f146544 = (first1) => {
         closure_1_11(first1);
         const result = (closure_0(rule[21]).timeToMinutes(first1) + 540) % 1440;
         const time = { hours: Math.floor(result / 60), minutes: result % 60 };
         closure_1_13(time);
       };
-      const stringResult = intl.string(_modDef2565["8bLRt0"]);
+      const stringResult = intl.string(_modDef2568["8bLRt0"]);
       const obj2 = { title: stringResult, mode: "time", startDate: null, onSubmit: null };
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(8545, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(8561, dependencyMap.paths);
       obj2.startDate = new Date(2025, 0, 1, first1.hours, first1.minutes, 0, 0);
       obj2.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };
@@ -701,10 +701,10 @@ export default function ScheduleDowntimeScreen() {
     obj15.onPress = function handleEndTimePress() {
       const intl = util.intl;
       closure_0 = closure_13;
-      const stringResult = intl.string(_modDef2565["+JkWJV"]);
+      const stringResult = intl.string(_modDef2568["+JkWJV"]);
       const obj2 = { title: stringResult, mode: "time", startDate: null, onSubmit: null };
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequireImpl(8545, dependencyMap.paths);
+      const tmp2 = asyncRequireImpl(8561, dependencyMap.paths);
       obj2.startDate = new Date(2025, 0, 1, first2.hours, first2.minutes, 0, 0);
       obj2.onSubmit = function onSubmit(hours) {
         const time = { hours: hours.hours(), minutes: hours.minutes() };

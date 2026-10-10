@@ -23,7 +23,7 @@ socket.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    state = DiscordAppStateDefault.getState();
+    const state = DiscordAppStateDefault.getState();
     const installationForTracking = AuthenticationStore.getInstallationForTracking();
     const obj3 = { token, userId: null, properties: null, presence: null };
     let id = AuthenticationStore.getId();

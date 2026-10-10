@@ -10,7 +10,7 @@ require = fn;
 let closure_2 = ["leading", "trailing"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   trailingButtonClearance: { paddingTop: nativeDefault.space.PX_8 },
   centeredAccessory: { justifyContent: "center", alignItems: "center" },
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged = Object.assign(tmp5);
           obj3.leading = tmp13;
           obj3.trailing = tmp15;
-          const tmp22 = jsx(tmp(6835).BottomSheetTitleHeader, {});
+          const tmp22 = jsx(tmp(6838).BottomSheetTitleHeader, {});
           cResult[12] = tmp5;
           cResult[13] = tmp13;
           cResult[14] = tmp15;

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagConstants = fn(7869);
+const GuildTagConstants = fn(7887);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
   GUILD_TAG_BADGE_PALETTE_PRESETS: closure_7,
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = { leading: true, trailing: true };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_13 = createStyles.createStyles((width) => {
   const obj = {
     container: { paddingHorizontal: PX_16, paddingBottom: nativeDefault.space.PX_16 },
@@ -1572,7 +1572,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               function se(colorChannel) {
                 value = sharedValue.get();
                 value3 = sharedValue1.get();
-                const value4 = sharedValue2.get();
+                value4 = sharedValue2.get();
                 const hsvToRgbWorkletResult = ColorPickerUtils.hsvToRgbWorklet({ h: value, s: value3, v: value4 });
                 const formatted = ColorUtils.rgbToHex(
                   hsvToRgbWorkletResult[0],
@@ -1759,7 +1759,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       callback4 = obj.useCallback((colorChannel) => {
         value = sharedValue.get();
         value3 = sharedValue1.get();
-        const value4 = sharedValue2.get();
+        value4 = sharedValue2.get();
         const hsvToRgbWorkletResult = ColorPickerUtils.hsvToRgbWorklet({ h: value, s: value3, v: value4 });
         const formatted = ColorUtils.rgbToHex(
           hsvToRgbWorkletResult[0],

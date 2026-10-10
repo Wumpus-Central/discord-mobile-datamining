@@ -51,7 +51,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -73,7 +73,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(15265).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(15327).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
@@ -82,7 +82,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(15264).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(15326).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -125,7 +125,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 v0(true);
               }
               sort_type = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp34) {
             closure_3 = tmp34;
@@ -198,7 +198,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     return mapped.filter((item) => null != item);
   }, items2);
   const someResult = first.some((item) => {
-    state = undefined;
+    let state;
     if (collectiblesShopProducts[item] != null) {
       state = tmp.state;
     }

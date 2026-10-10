@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1 },
   scrollArea: { flex: 1 },
@@ -63,7 +63,7 @@ let obj6 = {
   paddingTop: nativeDefault.space.PX_8,
   paddingBottom: nativeDefault.space.PX_16,
 };
-obj2.purchaseButton = { height: fn(5381).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+obj2.purchaseButton = { height: fn(5384).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(obj2);
 const __initData = {
   code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
@@ -77,7 +77,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = sharedValue(576).c(3);
       let obj = sharedValue(576);
       const tmp = sharedValue;
-      sharedValue = sharedValue(4811).useSharedValue(0.3);
+      sharedValue = sharedValue(4850).useSharedValue(0.3);
       if (cResult[0] !== sharedValue) {
         const fn = function o() {
           const obj = ReanimatedRexport;
@@ -94,33 +94,33 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
       }
       const effect = noop.useEffect(tmp5, tmp6);
-      const obj2 = sharedValue(4811);
+      const obj2 = sharedValue(4850);
       const fn2 = function l() {
         return { opacity: sharedValue.get() };
       };
       fn2.__closure = { opacity: sharedValue };
       fn2.__workletHash = 4141895524740;
       fn2.__initData = __initData;
-      return tmp(4811).useAnimatedStyle(fn2);
+      return tmp(4850).useAnimatedStyle(fn2);
     }
   : function usePulseStyle() {
-      sharedValue = sharedValue(4811).useSharedValue(0.3);
+      sharedValue = sharedValue(4850).useSharedValue(0.3);
       const items = [sharedValue];
       const effect = noop.useEffect(() => {
         const obj = ReanimatedRexport;
         const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
       }, items);
-      let obj = sharedValue(4811);
+      let obj = sharedValue(4850);
       const fn = function o() {
         return { opacity: sharedValue.get() };
       };
       fn.__closure = { opacity: sharedValue };
       fn.__workletHash = 5056040834599;
       fn.__initData = __initData2;
-      return sharedValue(4811).useAnimatedStyle(fn);
+      return sharedValue(4850).useAnimatedStyle(fn);
     };
 ReactCompilerGating = fn(558);
-let obj7 = { height: fn(5381).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+let obj7 = { height: fn(5384).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetSkeleton.tsx");
 

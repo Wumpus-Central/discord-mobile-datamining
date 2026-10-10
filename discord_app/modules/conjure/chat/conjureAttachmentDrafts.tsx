@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import ConjureTypes from "../ConjureTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import Dispatcher_mod from "../../../Dispatcher.tsx";
@@ -126,7 +126,7 @@ function takeConjureAttachmentRefs(projectId, chat) {
   }
 }
 let closure_3 = ["converted"];
-const ConjureConnectionStore = fn(13164);
+const ConjureConnectionStore = fn(13213);
 ({
   deleteStagedAttachment: hasOwnProperty,
   sendUserMessage: metroRequire,
@@ -134,14 +134,14 @@ const ConjureConnectionStore = fn(13164);
 } = ConjureConnectionStore);
 let closure_9 = [];
 let c10 = 1;
-const zustandStore = fn(4950).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4989).createZustandStore(() => ({ draftsByProject: {} }));
 const ReactCompilerGating = fn(558);
 function conjureAttachmentTooLargeText(contentType) {
   const intl = util.intl;
   const obj = { size: null };
   const obj2 = ConjureTypes;
   obj.size = obj2.formatConjureAttachmentLimit(ConjureTypes.conjureAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3827.JZ59Bo, obj);
+  return intl.formatToPlainString(_modDef3849.JZ59Bo, obj);
 }
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
@@ -171,7 +171,7 @@ export const uploadConjureAttachment = function uploadConjureAttachment(arg0, si
     const obj3 = { size: null };
     const tmpResult = ConjureTypes;
     obj3.size = tmpResult.formatConjureAttachmentLimit(ConjureTypes.conjureAttachmentLimit(contentType));
-    obj2.errorText = intl.formatToPlainString(_modDef3827.JZ59Bo, obj3);
+    obj2.errorText = intl.formatToPlainString(_modDef3849.JZ59Bo, obj3);
     resolved = Promise.resolve(obj2);
     const tmpResult2 = ConjureTypes;
   }

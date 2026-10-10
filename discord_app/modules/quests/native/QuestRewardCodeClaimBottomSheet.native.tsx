@@ -2,7 +2,6 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5008 from "../../../../_runtime/metro/05008__.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
@@ -14,10 +13,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(5979).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(5972).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
@@ -70,13 +69,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const claimOrFetchRewardCode = tmp(hasError[11]).useClaimOrFetchRewardCode(tmp10);
               ({ claimCode, fetchCode, hasError } = claimOrFetchRewardCode);
               if (cResult[9] !== hasError) {
-                const fn2 = function k() {
+                const fn2 = function x() {
                   if (hasError) {
-                    const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
+                    const obj2 = { text: null, variant: "critical" };
                     const intl = util.intl;
-                    obj2.content = intl.string(util.t.CKsXk3);
-                    obj2.icon = _modDef5008;
-                    ToastActionCreatorsDefault.open(obj2);
+                    obj2.text = intl.string(util.t.CKsXk3);
+                    ToastActionCreatorsDefault.open("CLAIM_QUEST_REWARD_ERROR", obj2);
                     ActionSheetActionCreatorsDefault.hideActionSheet();
                   }
                 };
@@ -93,11 +91,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               const effect = noop.useEffect(tmp12, tmp13);
               if (cResult[12] !== quest) {
                 let obj2 = { quest };
-                const result = tmp(hasError[16]).isTieredRewardCodeQuest(obj2);
+                const result = tmp(hasError[15]).isTieredRewardCodeQuest(obj2);
                 cResult[12] = quest;
                 cResult[13] = result;
                 let tmp16 = result;
-                const tmpResult7 = tmp(hasError[16]);
+                const tmpResult7 = tmp(hasError[15]);
               } else {
                 tmp16 = cResult[13];
               }
@@ -159,8 +157,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                         const obj2 = { text: null, icon: null };
                                         const intl = quest(1126).intl;
                                         obj2.text = intl.string(quest(1126).t.MSaeTe);
-                                        obj2.icon = quest(5044).CopyIcon;
-                                        rewardCode(4768).openMana("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+                                        obj2.icon = quest(5042).CopyIcon;
+                                        rewardCode(4809).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
                                       });
                                     }
                                   };
@@ -204,8 +202,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                             }
                                             let tmp59 = null != code4;
                                             if (tmp59) {
-                                              let obj3 = { IconComponent: tmp(hasError[18]).CopyIcon };
-                                              tmp59 = closure_8(tmp(hasError[24]).TableRow.Icon, obj3);
+                                              let obj3 = { IconComponent: tmp(hasError[17]).CopyIcon };
+                                              tmp59 = closure_8(tmp(hasError[23]).TableRow.Icon, obj3);
                                             }
                                             let code5;
                                             if (rewardCode != null) {
@@ -328,7 +326,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                                             grow: true,
                                                             text: cResult[67],
                                                           };
-                                                          const tmp90 = closure_8(tmp(hasError[26]).Button, obj7);
+                                                          const tmp90 = closure_8(tmp(hasError[25]).Button, obj7);
                                                           cResult[68] = claimRewardCodePrimaryCtaClickHandler;
                                                           cResult[69] = tmp40;
                                                           cResult[70] = cResult[67];
@@ -384,8 +382,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                           }
                                           const obj12 = { hasIcons: false, children: null };
                                           const obj13 = { label: code2, trailing: tmp57, onPress: tmp63 };
-                                          obj12.children = closure_8(tmp(hasError[24]).TableRow, obj13);
-                                          const tmp66 = closure_8(tmp(hasError[25]).TableRowGroup, obj12);
+                                          obj12.children = closure_8(tmp(hasError[23]).TableRow, obj13);
+                                          const tmp66 = closure_8(tmp(hasError[24]).TableRowGroup, obj12);
                                           cResult[49] = code2;
                                           cResult[50] = tmp57;
                                           cResult[51] = tmp63;
@@ -399,7 +397,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                 const tmpResult8 = tmp(hasError[11]);
                                 const obj14 = { quest, rewardCode };
                                 const rewardCodeRedemptionInstructions = tmp(
-                                  hasError[19],
+                                  hasError[18],
                                 ).getRewardCodeRedemptionInstructions(obj14);
                                 let tmp45 = isFetchingRewardCode;
                                 if (!isFetchingRewardCode) {
@@ -412,13 +410,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   tmp45 = null == code10;
                                 }
-                                BottomSheet = tmp(hasError[20]).BottomSheet;
+                                BottomSheet = tmp(hasError[19]).BottomSheet;
                                 const _Symbol = Symbol;
                                 if (cResult[46] === Symbol.for("react.memo_cache_sentinel")) {
                                   const obj15 = { title: null };
                                   let intl = tmp(hasError[13]).intl;
                                   obj15.title = intl.string(tmp(hasError[13]).t.srzsU2);
-                                  const tmp49 = closure_8(tmp(hasError[21]).BottomSheetTitleHeader, obj15);
+                                  const tmp49 = closure_8(tmp(hasError[20]).BottomSheetTitleHeader, obj15);
                                   cResult[46] = tmp49;
                                   let tmp47 = tmp49;
                                 } else {
@@ -431,12 +429,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                     style: tmp5.redemptionInstructions,
                                     variant: "text-md/normal",
                                     color: "text-default",
-                                    children: tmp4(hasError[23]).parse(rewardCodeRedemptionInstructions, true, {
+                                    children: tmp4(hasError[22]).parse(rewardCodeRedemptionInstructions, true, {
                                       allowLinks: true,
                                     }),
                                   };
-                                  tmp51 = closure_8(tmp(hasError[22]).Text, obj16);
-                                  const tmp4Result = tmp4(hasError[23]);
+                                  tmp51 = closure_8(tmp(hasError[21]).Text, obj16);
+                                  const tmp4Result = tmp4(hasError[22]);
                                 }
                                 cResult[32] = isClaimingReward;
                                 cResult[33] = isFetchingRewardCode;
@@ -460,7 +458,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                 tmp39 = BottomSheet;
                                 tmp38 = closure_5;
                                 tmp37 = closure_5;
-                                const tmpResult9 = tmp(hasError[19]);
+                                const tmpResult9 = tmp(hasError[18]);
                               }
                             }
                           }
@@ -472,7 +470,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     claimCode,
                     fetchCode,
                     hasError,
-                    onDismiss: tmp4(hasError[15]).hideActionSheet,
+                    onDismiss: tmp4(hasError[14]).hideActionSheet,
                     quest,
                     questContent,
                     questContentPosition,
@@ -492,7 +490,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const tmpResult6 = tmp(hasError[11]);
-              const getRewardCodeQuestReward = tmp(hasError[16]).getRewardCodeQuestReward;
+              const getRewardCodeQuestReward = tmp(hasError[15]).getRewardCodeQuestReward;
               if (tmp16) {
                 const obj18 = { quest, idx: null };
                 let tier1;
@@ -514,7 +512,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[16] = tier2;
               cResult[17] = rewardCodeQuestReward;
               redemptionLink = rewardCodeQuestReward;
-              const tmpResult10 = tmp(hasError[16]);
+              const tmpResult10 = tmp(hasError[15]);
             }
           }
         }
@@ -559,16 +557,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       ({ claimCode, fetchCode } = claimOrFetchRewardCode);
       const effect = noop.useEffect(() => {
         if (hasError) {
-          const obj2 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
+          const obj2 = { text: null, variant: "critical" };
           const intl = util.intl;
-          obj2.content = intl.string(util.t.CKsXk3);
-          obj2.icon = _modDef5008;
-          ToastActionCreatorsDefault.open(obj2);
+          obj2.text = intl.string(util.t.CKsXk3);
+          ToastActionCreatorsDefault.open("CLAIM_QUEST_REWARD_ERROR", obj2);
           ActionSheetActionCreatorsDefault.hideActionSheet();
         }
       }, items1);
       let obj2 = quest(hasError[11]);
-      const result = quest(hasError[16]).isTieredRewardCodeQuest({ quest });
+      const result = quest(hasError[15]).isTieredRewardCodeQuest({ quest });
       noop = result;
       const items2 = [result, quest];
       let tier;
@@ -618,14 +615,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items3);
-      const obj4 = quest(hasError[16]);
+      const obj4 = quest(hasError[15]);
       const tmp4Result = quest(hasError[11]);
       const items4 = [rewardCode];
       const obj5 = {
         claimCode,
         fetchCode,
         hasError,
-        onDismiss: rewardCode(hasError[15]).hideActionSheet,
+        onDismiss: rewardCode(hasError[14]).hideActionSheet,
         quest,
         questContent,
         questContentPosition,
@@ -638,8 +635,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { text: null, icon: null };
             const intl = quest(1126).intl;
             obj2.text = intl.string(quest(1126).t.MSaeTe);
-            obj2.icon = quest(5044).CopyIcon;
-            rewardCode(4768).openMana("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+            obj2.icon = quest(5042).CopyIcon;
+            rewardCode(4809).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
           });
         }
       }, items4);
@@ -647,14 +644,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         claimCode,
         fetchCode,
         hasError,
-        onDismiss: rewardCode(hasError[15]).hideActionSheet,
+        onDismiss: rewardCode(hasError[14]).hideActionSheet,
         quest,
         questContent,
         questContentPosition,
         redemptionLink: memo1,
         sourceQuestContent,
       });
-      const rewardCodeRedemptionInstructions = quest(hasError[19]).getRewardCodeRedemptionInstructions({
+      const rewardCodeRedemptionInstructions = quest(hasError[18]).getRewardCodeRedemptionInstructions({
         quest,
         rewardCode,
       });
@@ -672,7 +669,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { title: null };
       let intl = tmp4(tmp2[13]).intl;
       obj7.title = intl.string(quest(hasError[13]).t.srzsU2);
-      obj6.header = closure_8(quest(hasError[21]).BottomSheetTitleHeader, obj7);
+      obj6.header = closure_8(quest(hasError[20]).BottomSheetTitleHeader, obj7);
       const obj8 = { style: tmp3.wrapper, children: null };
       let tmp16Result = null != rewardCode && null != rewardCodeRedemptionInstructions;
       if (tmp16Result) {
@@ -680,10 +677,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp3.redemptionInstructions,
           variant: "text-md/normal",
           color: "text-default",
-          children: tmp(tmp2[23]).parse(rewardCodeRedemptionInstructions, true, { allowLinks: true }),
+          children: tmp(tmp2[22]).parse(rewardCodeRedemptionInstructions, true, { allowLinks: true }),
         };
-        tmp16Result = closure_8(tmp4(tmp2[22]).Text, obj9);
-        const tmpResult = tmp(tmp2[23]);
+        tmp16Result = closure_8(tmp4(tmp2[21]).Text, obj9);
+        const tmpResult = tmp(tmp2[22]);
       }
       const items5 = [tmp16Result];
       let code1;
@@ -702,8 +699,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp16Result3 = null != code3;
       if (tmp16Result3) {
-        const obj12 = { IconComponent: tmp4(tmp2[18]).CopyIcon };
-        tmp16Result3 = closure_8(tmp4(tmp2[24]).TableRow.Icon, obj12);
+        const obj12 = { IconComponent: tmp4(tmp2[17]).CopyIcon };
+        tmp16Result3 = closure_8(tmp4(tmp2[23]).TableRow.Icon, obj12);
       }
       obj11.trailing = tmp16Result3;
       let code4;
@@ -715,11 +712,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         tmp26 = callback;
       }
       const tmp21 = null == code1 && tmp3.codeCopyWrapperLoading;
-      const tmp4Result2 = quest(hasError[19]);
+      const tmp4Result2 = quest(hasError[18]);
       obj11.onPress = tmp26;
-      obj10.children = closure_8(quest(hasError[25]).TableRowGroup, {
+      obj10.children = closure_8(quest(hasError[24]).TableRowGroup, {
         hasIcons: false,
-        children: closure_8(quest(hasError[24]).TableRow, obj11),
+        children: closure_8(quest(hasError[23]).TableRow, obj11),
       });
       const items6 = [closure_8(closure_5, obj10)];
       let code5;
@@ -753,11 +750,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         items7[1] = closure_8(closure_5, obj16);
         obj8.children = items7;
         obj6.children = closure_9(closure_5, obj8);
-        return closure_8(tmp4(tmp2[20]).BottomSheet, obj6);
+        return closure_8(tmp4(tmp2[19]).BottomSheet, obj6);
       }
       const intl2 = tmp4(tmp2[13]).intl;
       stringResult = intl2.string(tmp4(tmp2[13]).t["23SS+z"]);
-      const obj13 = { hasIcons: false, children: closure_8(quest(hasError[24]).TableRow, obj11) };
+      const obj13 = { hasIcons: false, children: closure_8(quest(hasError[23]).TableRow, obj11) };
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -790,9 +787,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = questId(questContentPosition[8]);
       const stateFromStores = questId(questContentPosition[10]).useStateFromStores(first, tmp6);
       if (null == stateFromStores) {
-        questContent(tmp2[15]).hideActionSheet();
+        questContent(tmp2[14]).hideActionSheet();
         let tmp9 = null;
-        const obj4 = questContent(tmp2[15]);
+        const obj4 = questContent(tmp2[14]);
       } else {
         if (cResult[3] === stateFromStores) {
           if (cResult[4] === questContent) {
@@ -819,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 sourceQuestContent,
                 children: tmp8,
               };
-              const tmp11 = closure_8(tmp(tmp2[27]).QuestContentImpressionTrackerNative, obj2);
+              const tmp11 = closure_8(tmp(tmp2[26]).QuestContentImpressionTrackerNative, obj2);
               cResult[8] = stateFromStores;
               cResult[9] = questContent;
               cResult[10] = questContentPosition;
@@ -854,9 +851,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [QuestStore];
       const stateFromStores = require("initialize").useStateFromStores(items, () => QuestStore.getQuest(require));
       if (null == stateFromStores) {
-        questContent(tmp2[15]).hideActionSheet();
+        questContent(tmp2[14]).hideActionSheet();
         let tmp5 = null;
-        const obj3 = questContent(tmp2[15]);
+        const obj3 = questContent(tmp2[14]);
       } else {
         const obj2 = {
           overrideVisibility: true,

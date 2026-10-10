@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import chunkDefault from "../../../../../../_runtime/09529_chunk.js";
+import chunkDefault from "../../../../../../_runtime/09558_chunk.js";
 import LayoutUtils from "../LayoutUtils.tsx";
 import EmojiIconDefault from "../EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiGal
   cResult[0] = emojiIds;
   cResult[1] = guildId;
   cResult[2] = num;
-  cResult[3] = guildId(9531).GappedList;
+  cResult[3] = guildId(9560).GappedList;
   cResult[4] = View;
   cResult[5] = 8;
   cResult[6] = mapped;

@@ -3,7 +3,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef2661 from "../../GiftingBadge.messages.js";
+import _modDef2664 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               const intl = util.intl;
               const obj6 = { giftsRemaining: giftsToNextTier, nextTier: nextTierName };
-              const formatToPlainStringResult = intl.formatToPlainString(_modDef2661["0+xfd9"], obj6);
+              const formatToPlainStringResult = intl.formatToPlainString(_modDef2664["0+xfd9"], obj6);
               cResult[12] = giftsToNextTier;
               cResult[13] = nextTierName;
               cResult[14] = formatToPlainStringResult;
@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [React4(View, obj3)];
       const obj5 = { variant: "text-md/semibold", children: null };
       const intl = util.intl;
-      obj5.children = intl.formatToPlainString(_modDef2661["0+xfd9"], {
+      obj5.children = intl.formatToPlainString(_modDef2664["0+xfd9"], {
         giftsRemaining: giftsToNextTier,
         nextTier: nextTierName,
       });

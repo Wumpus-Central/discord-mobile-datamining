@@ -1,9 +1,12 @@
 // discord_app/modules/conjure/clarification/ConjureClarification.tsx
-import Constants from "../../../Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import util from "../../../intl/index.native.tsx";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
+import ChannelStore from "../../../stores/ChannelStore.tsx";
+import UserStore from "../../../stores/UserStore.tsx";
 
-const ChannelTypes = Constants.ChannelTypes;
-let closure_0 = {
+require = fn;
+const ChannelTypes = fn(1085).ChannelTypes;
+let closure_4 = {
   [ChannelTypes.GUILD_TEXT]: "text",
   [ChannelTypes.GUILD_VOICE]: "voice",
   [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement",
@@ -11,7 +14,15 @@ let closure_0 = {
   [ChannelTypes.GUILD_FORUM]: "forum",
   [ChannelTypes.GUILD_MEDIA]: "media",
 };
-let closure_1 = { channel: "#", role: "@", user: "@" };
+let closure_5 = { channel: "#", role: "@", user: "@" };
+let obj = { channel: null, role: null, user: null };
+let items = [_modDef3849["9+dfPT"], _modDef3849.pGSJqE];
+obj.channel = items;
+let items1 = [_modDef3849["2VkCoD"], _modDef3849.c8YlX8];
+obj.role = items1;
+let items2 = [_modDef3849.GZIAxl, _modDef3849["4bptbQ"]];
+obj.user = items2;
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
 
 export const isClarificationComplete = function isClarificationComplete(questions, arg1) {
@@ -105,7 +116,7 @@ export const multiSelectAnswer = function multiSelectAnswer(options, answeredOpt
   options = options.options;
   const found = options.filter((id) => answeredOptionIdsResult.includes(id.id));
   const mapped = found.map((label) => label.label);
-  const obj = { kind: "multi", optionIds: answeredOptionIdsResult };
+  obj = { kind: "multi", optionIds: answeredOptionIdsResult };
   if ("" === trimmed) {
     let obj2 = {};
   } else {
@@ -136,15 +147,76 @@ export const multiSelectAnswer = function multiSelectAnswer(options, answeredOpt
 export const clarificationChannelType = function clarificationChannelType(arg0) {
   let tmp;
   if (null != arg0) {
-    tmp = closure_0[arg0];
+    tmp = closure_4[arg0];
   }
   return tmp;
 };
 export const MAX_CLARIFICATION_ENTITY_PICKS = 10;
-export const entityAnswer = function entityAnswer(arg0, entities, str, guildId) {
-  closure_0 = arg0;
+export const clarificationEntities = function clarificationEntities(input, items1, arg2, arg3) {
+  closure_0 = input;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  const substr = items1.slice(0, 10);
+  return substr.map((id) => {
+    closure_0 = id;
+    obj = { id, name: null };
+    let tmp = closure_1(id);
+    if (tmp == null) {
+      const found = closure_2.find((id) => id.id === closure_0);
+      let name;
+      if (found != null) {
+        name = found.name;
+      }
+      tmp = name;
+    }
+    if (tmp == null) {
+      tmp = id;
+    }
+    obj.name = tmp;
+    if ("channel" === closure_0) {
+      const channel = ChannelStore.getChannel(id);
+      let type;
+      if (channel != null) {
+        type = channel.type;
+      }
+      let tmp15;
+      if (null != type) {
+        tmp15 = closure_4[type];
+      }
+      const obj2 = { kind: tmp5 };
+      if (null == tmp15) {
+        let obj3 = {};
+      } else {
+        obj3 = { channel_type: tmp15 };
+      }
+      const merged = Object.assign(obj3);
+    } else {
+      if ("user" === tmp5) {
+        const user = UserStore.getUser(id);
+        let username;
+        if (user != null) {
+          username = user.username;
+        }
+        const obj4 = { kind: tmp5 };
+        if (null == username) {
+          let obj5 = {};
+        } else {
+          obj5 = { username };
+        }
+        const merged1 = Object.assign(obj5);
+        let obj6 = obj4;
+      } else {
+        obj6 = { kind: tmp5 };
+      }
+      const merged2 = Object.assign(obj6);
+      return obj;
+    }
+  });
+};
+export const entityAnswer = function entityAnswer(input, entities, str, guildId) {
+  closure_0 = input;
   const trimmed = str.trim();
-  const obj = { kind: "entities", entities };
+  obj = { kind: "entities", entities };
   if (null == guildId) {
     let obj2 = {};
   } else {
@@ -157,7 +229,18 @@ export const entityAnswer = function entityAnswer(arg0, entities, str, guildId) 
     obj3 = { custom: trimmed };
   }
   const merged1 = Object.assign(obj3);
-  const items = [...entities.map((name) => "" + closure_1[closure_0] + name.name)];
+  const items = [
+    ...entities.map((name) => {
+      name = name.name;
+      if (name.startsWith(dependencyMap[closure_0])) {
+        let name2 = name.name;
+      } else {
+        const _HermesInternal = HermesInternal;
+        name2 = "" + dependencyMap[closure_0] + name.name;
+      }
+      return name2;
+    }),
+  ];
   if ("" === trimmed) {
     let items1 = [];
   } else {
@@ -166,6 +249,14 @@ export const entityAnswer = function entityAnswer(arg0, entities, str, guildId) 
   HermesBuiltin.arraySpread(items1, tmp5);
   obj.text = items.join(", ");
   return obj;
+};
+export const clarificationPickerPlaceholder = function clarificationPickerPlaceholder(input, arg1) {
+  const intl = util.intl;
+  let num = 0;
+  if (arg1) {
+    num = 1;
+  }
+  return intl.string(obj[input][num]);
 };
 export const clarificationAnswerAttachments = function clarificationAnswerAttachments(clarification, arg1) {
   closure_0 = arg1;
@@ -210,7 +301,7 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
         if ("image" === tmp.kind) {
           const attachment = tmp.attachment;
         }
-        const obj = { question_id: id.id, option_ids: tmp2 };
+        obj = { question_id: id.id, option_ids: tmp2 };
         if (null != custom) {
           if ("" !== custom) {
             const obj2 = { custom };
@@ -249,7 +340,7 @@ export const clarificationAnswersPayload = function clarificationAnswersPayload(
   });
   let tmp = null;
   if (flatMapResult.length > 0) {
-    let obj = { clarification_id: clarification.id, answers: flatMapResult };
+    obj = { clarification_id: clarification.id, answers: flatMapResult };
     tmp = obj;
   }
   return tmp;

@@ -14,7 +14,7 @@ let closure_2 = ["title", "headerIcon", "trailingIcon", "showContainer", "childr
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   titleContainer: { flexDirection: "row", marginBottom: 12, justifyContent: "space-between" },
   title: { flexDirection: "row" },

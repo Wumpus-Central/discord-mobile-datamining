@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 let PersistedStore = fn(505).PersistedStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -59,7 +59,7 @@ let closure_10 = noop.memo(
               const databaseResult = DatabaseDaosDefault.database();
               if (null != databaseResult) {
                 databaseResult.disable("via UserSettingsDatabaseControls");
-                ToastActionCreatorsDefault.open({ key: "disable_database", content: "Database has been disabled." });
+                ToastActionCreatorsDefault.open("disable_database", { text: "Database has been disabled." });
                 const tmpResult = ToastActionCreatorsDefault;
               }
             },
@@ -71,7 +71,7 @@ let closure_10 = noop.memo(
               const databaseResult = DatabaseDaosDefault.database();
               if (null != databaseResult) {
                 databaseResult.disable("via UserSettingsDatabaseControls");
-                ToastActionCreatorsDefault.open({ key: "disable_database", content: "Database has been disabled." });
+                ToastActionCreatorsDefault.open("disable_database", { text: "Database has been disabled." });
                 const tmpResult = ToastActionCreatorsDefault;
               }
             },
@@ -91,7 +91,7 @@ let closure_10 = noop.memo(
             const databaseResult = DatabaseDaosDefault.database();
             if (null != databaseResult) {
               databaseResult.disable("via UserSettingsDatabaseControls");
-              ToastActionCreatorsDefault.open({ key: "disable_database", content: "Database has been disabled." });
+              ToastActionCreatorsDefault.open("disable_database", { text: "Database has been disabled." });
               const tmpResult = ToastActionCreatorsDefault;
             }
           },
@@ -165,20 +165,14 @@ let closure_12 = noop.memo(
             label: "Disable + Remove Database",
             onPress() {
               const result = DatabaseManagerDefault.replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-              ToastActionCreatorsDefault.open({
-                key: "disable_database_and_remove",
-                content: "Database has been removed.",
-              });
+              ToastActionCreatorsDefault.open("disable_database_and_remove", { text: "Database has been removed." });
             },
           };
           const tmp6 = jsx(TableRow.TableRow, {
             label: "Disable + Remove Database",
             onPress() {
               const result = DatabaseManagerDefault.replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-              ToastActionCreatorsDefault.open({
-                key: "disable_database_and_remove",
-                content: "Database has been removed.",
-              });
+              ToastActionCreatorsDefault.open("disable_database_and_remove", { text: "Database has been removed." });
             },
           });
           cResult[0] = tmp6;
@@ -193,10 +187,7 @@ let closure_12 = noop.memo(
           label: "Disable + Remove Database",
           onPress() {
             const result = DatabaseManagerDefault.replaceDisableAllDatabases("via UserSettingsDatabaseControls");
-            ToastActionCreatorsDefault.open({
-              key: "disable_database_and_remove",
-              content: "Database has been removed.",
-            });
+            ToastActionCreatorsDefault.open("disable_database_and_remove", { text: "Database has been removed." });
           },
         });
       },
@@ -273,7 +264,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4) {
         const obj2 = { title: tmp4 };
-        const tmp8 = jsx(tmp(6835).BottomSheetTitleHeader, { title: tmp4 });
+        const tmp8 = jsx(tmp(6838).BottomSheetTitleHeader, { title: tmp4 });
         cResult[2] = tmp4;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -291,7 +282,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp11;
         }
         const obj3 = { header: tmp6, children: tmp9 };
-        const tmp13 = jsx(tmp(6892).ActionSheet, { header: tmp6, children: tmp9 });
+        const tmp13 = jsx(tmp(6898).ActionSheet, { header: tmp6, children: tmp9 });
         cResult[7] = tmp6;
         cResult[8] = tmp9;
         cResult[9] = tmp13;
@@ -299,31 +290,29 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = {
         hasIcons: false,
-        children: jsx(store(6888).ActionSheetRow, {
+        children: jsx(store(6894).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
           onPress() {
             store.clear();
-            ToastActionCreatorsDefault.open({
-              key: "DevToolsPersistedStoresActionSheet",
-              content: "Store cleared from persisted storage",
+            ToastActionCreatorsDefault.open("DevToolsPersistedStoresActionSheet", {
+              text: "Store cleared from persisted storage",
             });
             close();
           },
         }),
       };
-      const tmp10 = jsx(store(6888).ActionSheetRow.Group, {
+      const tmp10 = jsx(store(6894).ActionSheetRow.Group, {
         hasIcons: false,
-        children: jsx(store(6888).ActionSheetRow, {
+        children: jsx(store(6894).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
           onPress() {
             store.clear();
-            ToastActionCreatorsDefault.open({
-              key: "DevToolsPersistedStoresActionSheet",
-              content: "Store cleared from persisted storage",
+            ToastActionCreatorsDefault.open("DevToolsPersistedStoresActionSheet", {
+              text: "Store cleared from persisted storage",
             });
             close();
           },
@@ -340,9 +329,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         subLabel: "App restart required to re-init the cleared store",
         onPress() {
           store.clear();
-          ToastActionCreatorsDefault.open({
-            key: "DevToolsPersistedStoresActionSheet",
-            content: "Store cleared from persisted storage",
+          ToastActionCreatorsDefault.open("DevToolsPersistedStoresActionSheet", {
+            text: "Store cleared from persisted storage",
           });
           close();
         },
@@ -351,41 +339,39 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : function DevToolsPersistedStoresActionSheet(store) {
       store = store.store;
       const close = store.close;
-      const obj = { header: jsx(store(6835).BottomSheetTitleHeader, { title: store.getName() }), children: null };
+      const obj = { header: jsx(store(6838).BottomSheetTitleHeader, { title: store.getName() }), children: null };
       const obj3 = {
         hasIcons: false,
-        children: jsx(store(6888).ActionSheetRow, {
+        children: jsx(store(6894).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
           onPress() {
             store.clear();
-            ToastActionCreatorsDefault.open({
-              key: "DevToolsPersistedStoresActionSheet",
-              content: "Store cleared from persisted storage",
+            ToastActionCreatorsDefault.open("DevToolsPersistedStoresActionSheet", {
+              text: "Store cleared from persisted storage",
             });
             close();
           },
         }),
       };
-      obj.children = jsx(store(6888).ActionSheetRow.Group, {
+      obj.children = jsx(store(6894).ActionSheetRow.Group, {
         hasIcons: false,
-        children: jsx(store(6888).ActionSheetRow, {
+        children: jsx(store(6894).ActionSheetRow, {
           variant: "danger",
           label: "Clear persisted store",
           subLabel: "App restart required to re-init the cleared store",
           onPress() {
             store.clear();
-            ToastActionCreatorsDefault.open({
-              key: "DevToolsPersistedStoresActionSheet",
-              content: "Store cleared from persisted storage",
+            ToastActionCreatorsDefault.open("DevToolsPersistedStoresActionSheet", {
+              text: "Store cleared from persisted storage",
             });
             close();
           },
         }),
       });
-      return jsx(store(6892).ActionSheet, {
-        header: jsx(store(6835).BottomSheetTitleHeader, { title: store.getName() }),
+      return jsx(store(6898).ActionSheet, {
+        header: jsx(store(6838).BottomSheetTitleHeader, { title: store.getName() }),
         children: null,
       });
     };
@@ -641,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[5] !== tmp3.sectionHeader) {
-        class U {
+        class H {
           constructor(arg0) {
             tmp = jsx;
             obj = {
@@ -665,9 +651,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[5] = tmp3.sectionHeader;
-        cResult[6] = U;
+        cResult[6] = H;
       } else {
-        class U {
+        class H {
           constructor(arg0) {
             tmp = jsx;
             obj = {
@@ -693,7 +679,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const sum = useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom + tmp5(587).space.PX_16;
       if (cResult[7] === tmp6) {
-        class U {
+        class H {
           constructor(arg0) {
             tmp = jsx;
             obj = {
@@ -721,14 +707,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = tmp6;
       cResult[8] = tmp8;
       cResult[9] = O;
-      cResult[10] = U;
+      cResult[10] = H;
       cResult[11] = tmp7;
       cResult[12] = sections;
       cResult[13] = sum;
       cResult[14] = jsx(FastestListDefault, {
         sections,
         renderItem: O,
-        renderSectionHeader: U,
+        renderSectionHeader: H,
         insetEnd: sum,
         itemSize: tmp6,
         sectionHeaderSize: tmp7,
@@ -739,7 +725,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp16 = jsx(FastestListDefault, {
         sections,
         renderItem: O,
-        renderSectionHeader: U,
+        renderSectionHeader: H,
         insetEnd: sum,
         itemSize: tmp6,
         sectionHeaderSize: tmp7,

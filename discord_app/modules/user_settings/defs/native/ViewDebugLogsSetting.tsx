@@ -77,7 +77,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   : function ViewDebugLogsActionSheetRow(icon) {
       const title = icon.title;
       ({ screenKey: importDefault, render: dependencyMap } = icon);
-      return closure_5(title(6888).ActionSheetRow, {
+      return closure_5(title(6894).ActionSheetRow, {
         icon: icon.icon,
         label: title,
         onPress() {

@@ -92,7 +92,7 @@ class TransitionGroup {
             set.delete(tmp2);
           }
           if (value.state === map.YEETED) {
-            state = map.ENTERED;
+            let state = map.ENTERED;
           } else {
             state = value.state;
           }

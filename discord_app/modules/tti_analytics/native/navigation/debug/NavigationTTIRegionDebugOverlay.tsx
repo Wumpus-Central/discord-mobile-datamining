@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
 let closure_10 = ["time_start", "first_paint", "first_contentful_paint"];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   outline: null,
   includedOutline: null,
@@ -580,7 +580,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               accessible: false,
               children: tmp7,
             };
-            const tmp16 = closure_8(surface(5087).Text, obj3);
+            const tmp16 = closure_8(surface(5088).Text, obj3);
             cResult[8] = tmp7;
             cResult[9] = tmp4.badgeText;
             cResult[10] = str6;
@@ -742,15 +742,15 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
         name);
       const tmp4 = closure_11();
       let obj = name(576);
-      const navTTISurface = name(11442).useNavTTISurface();
-      let obj2 = name(11442);
+      const navTTISurface = name(11487).useNavTTISurface();
+      let obj2 = name(11487);
       let obj3 = noop;
       [tmp7, dependencyMap] = noop.useState(false);
       if (typeof useNavigationTTIDebugFreezeTarget === "function") {
         const syncExternalStore = obj3.useSyncExternalStore(
-          tmp(11445).subscribeNavigationTTIDebugFreezeTarget,
-          tmp(11445).getNavigationTTIDebugFreezeTarget,
-          tmp(11445).getNavigationTTIDebugFreezeTarget,
+          tmp(11490).subscribeNavigationTTIDebugFreezeTarget,
+          tmp(11490).getNavigationTTIDebugFreezeTarget,
+          tmp(11490).getNavigationTTIDebugFreezeTarget,
         );
         if (cResult[0] === name) {
           if (cResult[1] === regionId) {
@@ -1040,7 +1040,7 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
                                                   accessible: false,
                                                   children: combined1,
                                                 };
-                                                const tmp61 = closure_8(tmp(5087).Text, obj9);
+                                                const tmp61 = closure_8(tmp(5088).Text, obj9);
                                                 cResult[32] = combined1;
                                                 cResult[33] = tmp4.badgeText;
                                                 cResult[34] = num32;
@@ -1176,15 +1176,15 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
       noop = undefined;
       closure_5 = undefined;
       const tmp = closure_11();
-      const navTTISurface = name(11442).useNavTTISurface();
-      let obj = name(11442);
+      const navTTISurface = name(11487).useNavTTISurface();
+      let obj = name(11487);
       let obj2 = noop;
       [tmp6, c2] = noop.useState(false);
       if (typeof useNavigationTTIDebugFreezeTarget === "function") {
         const syncExternalStore = obj2.useSyncExternalStore(
-          tmp2(11445).subscribeNavigationTTIDebugFreezeTarget,
-          tmp2(11445).getNavigationTTIDebugFreezeTarget,
-          tmp2(11445).getNavigationTTIDebugFreezeTarget,
+          tmp2(11490).subscribeNavigationTTIDebugFreezeTarget,
+          tmp2(11490).getNavigationTTIDebugFreezeTarget,
+          tmp2(11490).getNavigationTTIDebugFreezeTarget,
         );
         let obj3 = { name, regionId: name.regionId, tracking };
         const tmp9 = closure_12(obj3);
@@ -1431,7 +1431,7 @@ export const NavigationTTIRegionDebugOverlay = ReactCompilerGating.isReactCompil
           }
           obj7.lineClamp = num;
           obj7.children = combined1;
-          obj5.children = closure_8(tmp2(5087).Text, obj7);
+          obj5.children = closure_8(tmp2(5088).Text, obj7);
           const items2 = [closure_8(closure_5, obj5)];
           let tmp39Result = null;
           if (0 === hierarchyDepth) {

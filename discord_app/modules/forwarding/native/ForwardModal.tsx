@@ -26,11 +26,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11509).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10187).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11555).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10216).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, display: "flex", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
 };
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -387,17 +387,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                     return obj6;
                   } else {
-                    const obj7 = { key: "FORWARD_ERROR", content: null };
+                    const obj7 = { text: null };
                     const intl2 = closure_0(source[25]).intl;
-                    obj7.content = intl2.string(closure_0(source[25]).t.R0RpRX);
-                    forwardOptions(source[24]).open(obj7);
-                    const obj28 = forwardOptions(source[24]);
+                    obj7.text = intl2.string(closure_0(source[25]).t.R0RpRX);
+                    forwardOptions(source[24]).open("FORWARD_ERROR", obj7);
+                    const obj27 = forwardOptions(source[24]);
                   }
                 } else {
-                  const obj8 = { withMessage: tmp118 };
+                  const obj8 = { withMessage: tmp116 };
                   c3 = 1;
                   c4 = 1;
-                  const obj10 = { value: tmp119(first1, obj8, _undefined), done: false };
+                  const obj10 = { value: tmp117(first1, obj8, _undefined), done: false };
                   return obj10;
                 }
               }
@@ -425,9 +425,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     if (forwardOptions(source[27])(message, closure_129_1)) {
                       const promise = new Promise((arg0) => {
                         closure_0 = arg0;
-                        closure_1_0(5300).openAlert(
+                        closure_1_0(5301).openAlert(
                           "staff-to-non-staff-forward",
-                          closure_1_15(forwardOptions(11515), {
+                          closure_1_15(forwardOptions(11561), {
                             onConfirm() {
                               return closure_0(true);
                             },
@@ -504,13 +504,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj.numDestinations = closure_129_1.length;
                       obj.numDestinationChanges = ref.current;
                       obj.numQueryChanges = ref2.current;
-                      obj27.trackForwardSent(obj);
+                      obj28.trackForwardSent(obj);
                       closure_129_3 = first1.filter((item, index) => "rejected" === dependencyMap[index].status);
                       const obj21 = { message, failedDestinations: closure_129_3, forwardOptions };
                       const result = closure_0(source[21]).showForwardFailedAlertModal(obj21);
                       const obj2 = closure_0(source[21]);
                     }
-                    obj27 = closure_0(source[20]);
+                    obj28 = closure_0(source[20]);
                   }
                   c4 = 3;
                   const obj22 = { value, done: true };
@@ -545,11 +545,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj25.numDestinationChanges = ref.current;
               obj25.numQueryChanges = ref2.current;
               obj25.source = source;
-              tmp109(obj25);
-              const obj26 = { key: "FORWARD_SUCCESS", IconComponent: forwardOptions(source[33]), content: null };
+              obj7(obj25);
+              const obj26 = { text: null, icon: null };
               const intl = closure_0(source[25]).intl;
-              obj26.content = intl.string(closure_0(source[25]).t.kwmYkt);
-              forwardOptions(source[24]).open(obj26);
+              obj26.text = intl.string(closure_0(source[25]).t.kwmYkt);
+              obj26.icon = forwardOptions(source[33]);
+              forwardOptions(source[24]).open("FORWARD_SUCCESS", obj26);
               c4 = 3;
               const obj29 = { value: undefined, done: true };
               return obj29;
@@ -629,7 +630,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl = util.intl;
           obj.accessibilityLabel = intl.string(util.t.Xrt5Po);
           obj.IconComponent = LinkIcon.LinkIcon;
-          tmp = closure_2_15(HeaderActionButton.HeaderActionButton, obj);
+          tmp = value2(HeaderActionButton.HeaderActionButton, obj);
         }
         return tmp;
       };

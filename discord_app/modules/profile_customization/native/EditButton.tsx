@@ -1,7 +1,7 @@
 // discord_app/modules/profile_customization/native/EditButton.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _modDef7966 from "../../../../_runtime/metro/07966__.js";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import _modDef7984 from "../../../../_runtime/metro/07984__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -41,7 +41,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp5 = jsx(IconButton.IconButton, {
-        icon: _modDef7966,
+        icon: _modDef7984,
         variant: str,
         size: "sm",
         onPress,
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = str;
       cResult[4] = tmp5;
       tmp4 = tmp5;
-      const obj3 = { icon: _modDef7966, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
+      const obj3 = { icon: _modDef7984, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
     }
   : function EditButton(disabled) {
       let str = disabled.variant;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         style,
         children: jsx(IconButton.IconButton, {
-          icon: _modDef7966,
+          icon: _modDef7984,
           variant: str,
           size: "sm",
           onPress,
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return (
         <View style={style}>
           {jsx(IconButton.IconButton, {
-            icon: _modDef7966,
+            icon: _modDef7984,
             variant: str,
             size: "sm",
             onPress,

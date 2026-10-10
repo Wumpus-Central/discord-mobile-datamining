@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   card: {
     borderWidth: 1,
@@ -68,7 +68,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_8();
       if (cResult[0] !== toastText) {
         function onPress() {
-          ToastActionCreatorsDefault.open({ key: "WISHLIST_SOURCE_ICON", content: toastText });
+          ToastActionCreatorsDefault.open("WISHLIST_SOURCE_ICON", { text: toastText });
         }
         cResult[0] = toastText;
         cResult[1] = onPress;
@@ -78,7 +78,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-        const tmp9 = closure_5(tmp(8958).HeartIcon, obj2);
+        const tmp9 = closure_5(tmp(8977).HeartIcon, obj2);
         cResult[2] = tmp9;
         let tmp6 = tmp9;
       } else {
@@ -118,12 +118,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         style: closure_8().sourceIcon,
         onPress() {
-          ToastActionCreatorsDefault.open({ key: "WISHLIST_SOURCE_ICON", content: toastText });
+          ToastActionCreatorsDefault.open("WISHLIST_SOURCE_ICON", { text: toastText });
         },
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_5(toastText(8958).HeartIcon, {
+        children: closure_5(toastText(8977).HeartIcon, {
           color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT,
           size: "md",
         }),

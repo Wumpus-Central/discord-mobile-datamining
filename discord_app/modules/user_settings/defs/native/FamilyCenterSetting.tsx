@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/defs/native/FamilyCenterSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2565 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2568 from "../../../parent_tools/FamilyCenter.messages.js";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
 import useParentalConsentWarning from "../../../parent_tools/useParentalConsentWarning.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = intl(1126);
-const WarningIcon = intl(5004);
+const WarningIcon = intl(7571);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useFamilyCenterTrailing() {
       let intl = require;
@@ -41,7 +41,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityLabel: null,
               };
               intl = util.intl;
-              stringResult = intl.string(_modDef2565.wucWfE);
+              stringResult = intl.string(_modDef2568.wucWfE);
               obj4.accessibilityLabel = stringResult;
               const tmp11 = jsx(WarningIcon.WarningIcon, {
                 size: "sm",
@@ -82,7 +82,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               accessibilityLabel: null,
             };
             const intl = util.intl;
-            obj3.accessibilityLabel = intl.string(_modDef2565.wucWfE);
+            obj3.accessibilityLabel = intl.string(_modDef2568.wucWfE);
             tmp6 = jsx(WarningIcon.WarningIcon, {
               size: "sm",
               color: nativeDefault.colors.ICON_FEEDBACK_WARNING,
@@ -97,10 +97,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2565.RZqaJn);
+    return intl.string(_modDef2568.RZqaJn);
   },
   parent: null,
-  IconComponent: fn(8200).GroupIcon,
+  IconComponent: fn(8216).GroupIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useFamilyCenterTrailing() {
         let intl = require;
@@ -130,7 +130,7 @@ const route = SettingBuilders.createRoute({
                   accessibilityLabel: null,
                 };
                 intl = util.intl;
-                stringResult = intl.string(_modDef2565.wucWfE);
+                stringResult = intl.string(_modDef2568.wucWfE);
                 obj4.accessibilityLabel = stringResult;
                 const tmp11 = jsx(WarningIcon.WarningIcon, {
                   size: "sm",
@@ -171,7 +171,7 @@ const route = SettingBuilders.createRoute({
                 accessibilityLabel: null,
               };
               const intl = util.intl;
-              obj3.accessibilityLabel = intl.string(_modDef2565.wucWfE);
+              obj3.accessibilityLabel = intl.string(_modDef2568.wucWfE);
               tmp6 = jsx(WarningIcon.WarningIcon, {
                 size: "sm",
                 color: nativeDefault.colors.ICON_FEEDBACK_WARNING,

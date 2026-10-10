@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _mod4692 from "../../../../../_runtime/metro/04692__.js";
+import _mod4733 from "../../../../../_runtime/metro/04733__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -58,8 +58,8 @@ let closure_9 = async function _onFindYourFriendsDeletionPress() {
           const aPIError = new closure_129_0(closure_129_2[10]).APIError(closure_128_1);
           anyErrorMessage = aPIError.getAnyErrorMessage();
           if (null != anyErrorMessage) {
-            const obj7 = { key: "FIND_YOUR_FRIENDS_DELETION", content: anyErrorMessage };
-            closure_129_1(closure_129_2[11]).open(obj7);
+            const obj7 = { text: anyErrorMessage };
+            closure_129_1(closure_129_2[11]).open("FIND_YOUR_FRIENDS_DELETION", obj7);
             const obj3 = closure_129_1(closure_129_2[11]);
           }
         } else if (arg0 === 1) {
@@ -110,10 +110,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_6(first, _mod4692.shallow);
+      return closure_6(first, _mod4733.shallow);
     }
   : function useFindYourFriendsDeletionIsLoading() {
-      return closure_6((isLoading) => isLoading.isLoading, _mod4692.shallow);
+      return closure_6((isLoading) => isLoading.isLoading, _mod4733.shallow);
     };
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -121,7 +121,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsFindYourFriendsDeletionTrailing() {
       const cResult = c.c(2);
@@ -150,7 +150,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(7974).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7992).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -162,7 +162,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15039).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15098).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsFindYourFriendsDeletionTrailing() {
         const cResult = c.c(2);

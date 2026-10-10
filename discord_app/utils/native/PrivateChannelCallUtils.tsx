@@ -31,7 +31,7 @@ function openChannelCallModal(channel) {
         const tmpResult = StageChannelActionCreatorExtras;
       }
     }
-    state = VoicePanelStore.getState();
+    const state = VoicePanelStore.getState();
     state.openChannel(channel.id);
     const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
     const obj3 = { channelId: channel.id };
@@ -73,7 +73,7 @@ function guardPrivateCallForChannel(id, fn) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -103,7 +103,7 @@ function guardPrivateCallForChannel(id, fn) {
                 } else {
                   closure_128_0();
                   c2 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp9) {
                 c2 = tmp;
@@ -158,17 +158,17 @@ export { openChannelCallModal };
 export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
   _require = channelId;
   if (obj.shouldShowAgeGateForChannelId(channelId)) {
-    tmp(6724).runAfterInteractions(() => {
+    tmp(6725).runAfterInteractions(() => {
       AgeGateModalActionCreators.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL, closure_0);
     }, 150);
-    const tmpResult = tmp(6724);
+    const tmpResult = tmp(6725);
   }
   obj = require("AgeGateUtils");
   tmp = _require;
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(channel) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13509, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
+  obj.openLazy(asyncRequireImpl(13560, dependencyMap.paths), "" + c17 + "-" + channel.id, { channel });
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("" + c17 + "-" + id.id);
@@ -214,7 +214,7 @@ export const handleJoinCall = function handleJoinCall(channel) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -242,13 +242,13 @@ export const handleJoinCall = function handleJoinCall(channel) {
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
-        tmp4(4946).dismissKeyboard();
-        const obj2 = tmp4(4946);
-        const voiceChannel = v1(5886).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(4985).dismissKeyboard();
+        const obj2 = tmp4(4985);
+        const voiceChannel = v1(5889).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp17) {
         dependencyMap = tmp;
         throw tmp17;
@@ -282,7 +282,7 @@ export const handleStartCall = function handleStartCall(channel) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -314,9 +314,9 @@ export const handleStartCall = function handleStartCall(channel) {
           return obj;
         } else if (!value) {
           c3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
-        tmp2(4946).dismissKeyboard();
+        tmp2(4985).dismissKeyboard();
         let isFriendResult = closure_129_0.type !== constants.DM;
         if (!isFriendResult) {
           isFriendResult = friend.isFriend(closure_129_0.getRecipientId());
@@ -327,7 +327,7 @@ export const handleStartCall = function handleStartCall(channel) {
           recipientId = closure_129_0.getRecipientId();
         }
         closure_128_1 = recipientId;
-        const tmp25 = tmp5(7010);
+        const tmp25 = tmp5(7016);
         const call = tmp25.call;
         const id = closure_129_0.id;
         let tmp28 = closure_128_0;
@@ -341,7 +341,7 @@ export const handleStartCall = function handleStartCall(channel) {
           call(id, closure_129_1, tmp28, tmp25Result);
         }
         c3 = 3;
-        const obj2 = tmp2(4946);
+        const obj2 = tmp2(4985);
       } catch (tmp36) {
         c3 = tmp;
         throw tmp36;
@@ -393,7 +393,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -421,10 +421,10 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
-        tmp4(4946).dismissKeyboard();
-        const tmp11 = v1(7010);
+        tmp4(4985).dismissKeyboard();
+        const tmp11 = v1(7016);
         const call = tmp11.call;
         id = closure_128_0.id;
         if (typeof call === "unknown") {
@@ -433,7 +433,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
           call(id, closure_128_1, true);
         }
         dependencyMap = 3;
-        const obj2 = tmp4(4946);
+        const obj2 = tmp4(4985);
       } catch (tmp18) {
         dependencyMap = tmp;
         throw tmp18;
@@ -468,7 +468,7 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
         const obj5 = { value, done: true };
         return obj5;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -496,13 +496,13 @@ export const handleRedesignJoinCall = function handleRedesignJoinCall(id) {
           return obj;
         } else if (!value) {
           dependencyMap = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
-        tmp4(4946).dismissKeyboard();
-        const obj2 = tmp4(4946);
-        const voiceChannel = v1(5886).selectVoiceChannel(closure_128_0.id, closure_128_1);
+        tmp4(4985).dismissKeyboard();
+        const obj2 = tmp4(4985);
+        const voiceChannel = v1(5889).selectVoiceChannel(closure_128_0.id, closure_128_1);
         dependencyMap = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } catch (tmp17) {
         dependencyMap = tmp;
         throw tmp17;

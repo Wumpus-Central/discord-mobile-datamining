@@ -7,16 +7,12 @@ const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 const result = size.fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");
 
 export default function dispatchAutoDisableVideo(userId, videoToggleState) {
-  importDefault = userId;
-  dependencyMap = videoToggleState;
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({
-      type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
-      context: MediaEngineContextTypes.DEFAULT,
-      userId,
-      videoToggleState,
-      persist: false,
-      isAutomatic: true,
-    });
+  DispatcherDefault.dispatch({
+    type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
+    context: MediaEngineContextTypes.DEFAULT,
+    userId,
+    videoToggleState,
+    persist: false,
+    isAutomatic: true,
   });
 }

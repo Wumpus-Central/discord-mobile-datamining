@@ -21,7 +21,7 @@ const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
 const getSystemAnalyticsInfo = fn(7430).getSystemAnalyticsInfo;
-const ClipsConstants = fn(7744);
+const ClipsConstants = fn(7762);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
@@ -31,7 +31,7 @@ const ClipsConstants = fn(7744);
 } = ClipsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(5895).StreamTypes;
+const StreamTypes = fn(5898).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -179,7 +179,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       let tmp7 =
         null != ClipsStore.getHardwareClassification() && null != ClipsStore.getHardwareClassificationForDecoupled();
       if (tmp7) {
-        tmp7 = ClipsStore.getHardwareClassificationVersion() === state;
+        tmp7 = ClipsStore.getHardwareClassificationVersion() === closure_1_14;
       }
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
@@ -226,7 +226,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {

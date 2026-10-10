@@ -213,7 +213,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
     const result = closure_5.set(userId, peekResult);
-    const map1 = new Map(
+    map1 = new Map(
       badges.map((badge_id) => {
         const items = [badge_id.badge_id, badge_id];
         return items;

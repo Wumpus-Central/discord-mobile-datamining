@@ -13,7 +13,7 @@ import GameConsoleStore from "../../../game_console/GameConsoleStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ChannelCallStore = fn(10320);
+const ChannelCallStore = fn(10353);
 ({
   useChannelCallStore: metroRequire,
   focusTimeout: closure_7,

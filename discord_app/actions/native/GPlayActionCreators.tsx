@@ -46,7 +46,7 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     while (true) {
@@ -322,7 +322,74 @@ let closure_25 = async function _fetchDesktopSubscriptionSkus(arg0) {
     }
   }
 };
-let closure_32 = async function _loadUserCountry() {
+function retryFailedInAppSkus() {
+  const items = [...set1];
+  const found = items.filter((item) => {
+    let hasItem = set2.has(item);
+    if (hasItem) {
+      hasItem = null == product.getProduct(item);
+    }
+    return hasItem;
+  });
+  const item = set1.forEach((item) => set.delete(item));
+  set1.clear();
+  let tmp3 = found.length > 0;
+  if (tmp3) {
+    const isOnlineResult = _true(getUserCountry[17]).isOnline();
+    if (!isOnlineResult) {
+      tmp3 = isOnlineResult;
+    } else {
+      if (obj2.isGooglePlayBillingSupported()) {
+        let isReadyResult = IAPStore.isReady();
+      } else {
+        isReadyResult = AuthenticationStore.isAuthenticated();
+      }
+      obj2 = found(getUserCountry[15]);
+    }
+    const obj = _true(getUserCountry[17]);
+  }
+  if (tmp3) {
+    _true = importDefaultResultResult1(found).then(
+      () => {
+        closure_1_36.succeed();
+        let tmp2 = size.size > 0;
+        if (tmp2) {
+          tmp2 = closure_1_36.fails < 5;
+        }
+        if (tmp2) {
+          closure_1_36.fail(retryFailedInAppSkus);
+        }
+      },
+      (code) => {
+        code = undefined;
+        if (code != null) {
+          code = code.code;
+        }
+        if (code === String(GPlayBillingResult.BILLING_CLIENT_NOT_READY)) {
+          const item = closure_0.forEach((item) => set.delete(item));
+        } else {
+          let code1;
+          if (code != null) {
+            code1 = code.code;
+          }
+          if (!set.has(code1)) {
+            const item1 = closure_0.forEach((item) => set2.add(item));
+            let tmp7 = set1.size > 0;
+            if (tmp7) {
+              tmp7 = closure_36.fails < 5;
+            }
+            if (tmp7) {
+              closure_36.fail(retryFailedInAppSkus);
+            }
+          }
+        }
+      },
+    );
+    const item1 = found.forEach((item) => map.set(item, _true));
+    const promise = importDefaultResultResult1(found);
+  }
+}
+let closure_38 = async function _loadUserCountry() {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -333,7 +400,7 @@ let closure_32 = async function _loadUserCountry() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -367,7 +434,7 @@ let closure_32 = async function _loadUserCountry() {
         const obj6 = { type: "GPLAY_SET_USER_COUNTRY", countryCode: closure_128_0 };
         closure_129_1(closure_129_2[14]).dispatch(obj6);
         c3 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp13) {
       c3 = tmp;
@@ -375,7 +442,7 @@ let closure_32 = async function _loadUserCountry() {
     }
   }
 };
-let closure_33 = async function _subscribe(arg0) {
+let closure_39 = async function _subscribe(arg0) {
   closure_7 = tmp3;
   closure_134_0 = closure_0;
   closure_134_1 = closure_2;
@@ -392,7 +459,7 @@ let closure_33 = async function _subscribe(arg0) {
     const obj8 = { tags: null };
     obj7.oldProductId = oldProductId;
     obj8.tags = obj7;
-    closure_135_38(closure_134_3, obj8);
+    closure_135_44(closure_134_3, obj8);
     const obj9 = { title: null, body: null };
     const intl = closure_135_0(closure_135_2[21]).intl;
     obj9.title = intl.string(closure_135_0(closure_135_2[21]).t["U+H+kd"]);
@@ -416,7 +483,7 @@ let closure_33 = async function _subscribe(arg0) {
   }
   return value;
 };
-let closure_34 = async function _verifyPurchase(arg0) {
+let closure_40 = async function _verifyPurchase(arg0) {
   closure_0 = arg0;
   c7 = 0;
   c8 = 0;
@@ -432,7 +499,7 @@ let closure_34 = async function _verifyPurchase(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -457,7 +524,7 @@ let closure_34 = async function _verifyPurchase(arg0) {
             const tmp75 = state.getState().analyticsByProductId[closure_0.productId];
             closure_131_1 = tmp75;
             id = id.getId();
-            const SubscriptionProductIds = closure_2_0(7120).SubscriptionProductIds;
+            const SubscriptionProductIds = closure_2_0(7126).SubscriptionProductIds;
             const hasItem = SubscriptionProductIds.includes(closure_0.productId);
             let tmp53 = !hasItem;
             closure_131_2 = tmp53;
@@ -513,7 +580,7 @@ let closure_34 = async function _verifyPurchase(arg0) {
           const obj9 = { tags: null };
           const obj10 = { productId: closure_131_0.productId };
           obj9.tags = obj10;
-          closure_132_38(closure_131_6, obj9);
+          closure_132_44(closure_131_6, obj9);
           if (null != closure_131_1) {
             const succeededOnlyFields2 = closure_131_1.succeededOnlyFields;
             closure_131_5 = closure_132_7(closure_131_1, closure_132_6);
@@ -566,12 +633,12 @@ function captureGPlayBillingException(code, merged) {
   if (code != null) {
     code = code.code;
   }
-  if (!set1.has(code)) {
+  if (!set3.has(code)) {
     let code1;
     if (code != tmp2) {
       code1 = code.code;
     }
-    const hasItem = set.has(code1);
+    const hasItem = set2.has(code1);
     if (code != tmp2) {
       const message = code.message;
       if (message != tmp2) {
@@ -619,11 +686,11 @@ let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let subscriptionId = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const GPlayAnalyticsStore = fn(9373);
+const GPlayAnalyticsStore = fn(9400);
 ({ deleteGPlayAnalytics: closure_9, useGPlayAnalyticsStore: c10 } = GPlayAnalyticsStore);
 let Constants = fn(1085);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = Constants);
-Constants = fn(7126);
+Constants = fn(7132);
 const GPlayBillingResult = Constants.GPlayBillingResult;
 const GPlaySkusType = Constants.GPlaySkusType;
 const PremiumConstants = fn(1392);
@@ -642,7 +709,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -766,7 +833,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -818,7 +885,7 @@ const importDefaultResultResult = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -859,7 +926,7 @@ asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1004,7 +1071,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1056,7 +1123,7 @@ const importDefaultResultResult1 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1097,7 +1164,7 @@ asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1126,7 +1193,7 @@ asyncGeneratorStep(async () => {
         return obj;
       } else {
         c0 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -1151,7 +1218,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1203,7 +1270,7 @@ const importDefaultResultResult2 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1237,6 +1304,19 @@ let tmp7 = new LoggerDefault("GPlayActionCreators");
 let closure_29 = new BackoffDefault(5000, 300000, true);
 let c30 = 0;
 let c31 = null;
+let items = [, , ,];
+({
+  BILLING_UNAVAILABLE: arr[0],
+  DEVELOPER_ERROR: arr[1],
+  FEATURE_NOT_SUPPORTED: arr[2],
+  ITEM_UNAVAILABLE: arr[3],
+} = GPlayBillingResult);
+let set = new Set(items.map(String));
+const map = new Map();
+map1 = new Map();
+const set1 = new Set();
+const tmp11 = new BackoffDefault(5000, 300000, true);
+let closure_36 = new BackoffDefault(1000, 60000);
 asyncGeneratorStep(async (arg0, arg1) => {
   if (c8 === 2) {
     c8 = 3;
@@ -1248,7 +1328,7 @@ asyncGeneratorStep(async (arg0, arg1) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1307,7 +1387,7 @@ asyncGeneratorStep(async (arg0, arg1) => {
       } else {
         c6 = 0;
         c8 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp39) {
       closure_5 = tmp39;
@@ -1331,7 +1411,7 @@ let closure_0 = asyncGeneratorStep(async () => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1441,7 +1521,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1493,7 +1573,7 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
             throw closure_129_1;
           } else {
             c6 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1523,18 +1603,18 @@ const importDefaultResultResult3 = asyncGeneratorStep(async () => {
   iter.next();
   return iter;
 });
-let items = [, , , ,];
+const items1 = [, , , ,];
 ({
-  SERVICE_DISCONNECTED: arr[0],
-  SERVICE_TIMEOUT: arr[1],
-  BILLING_UNAVAILABLE: arr[2],
-  BILLING_CLIENT_NOT_READY: arr[3],
-  DEVELOPER_ERROR: arr[4],
+  SERVICE_DISCONNECTED: arr2[0],
+  SERVICE_TIMEOUT: arr2[1],
+  BILLING_UNAVAILABLE: arr2[2],
+  BILLING_CLIENT_NOT_READY: arr2[3],
+  DEVELOPER_ERROR: arr2[4],
 } = GPlayBillingResult);
-let set = new Set(items.map(String));
-const items1 = [, ,];
-({ FEATURE_NOT_SUPPORTED: arr2[0], SERVICE_UNAVAILABLE: arr2[1], NETWORK_ERROR: arr2[2] } = GPlayBillingResult);
-const set1 = new Set(items1.map(String));
+const set2 = new Set(items1.map(String));
+const items2 = [, ,];
+({ FEATURE_NOT_SUPPORTED: arr3[0], SERVICE_UNAVAILABLE: arr3[1], NETWORK_ERROR: arr3[2] } = GPlayBillingResult);
+const set3 = new Set(items2.map(String));
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
 
@@ -1545,122 +1625,219 @@ export const ensureSkusLoaded = function ensureSkusLoaded(items) {
   closure_0 = items;
   if (obj.isAndroid()) {
     if (items.every((item) => null != product.getProduct(item))) {
-      return Promise.resolve();
+      let resolved = Promise.resolve();
     } else if (null != closure_31) {
-      return closure_31;
+      resolved = closure_31;
     } else {
       let _Date = Date;
       if (Date.now() < c30) {
-        return Promise.resolve();
+        resolved = Promise.resolve();
       } else {
-        if (obj3.isOnline()) {
-          if (tmpResult.isGooglePlayBillingSupported()) {
-            if (!IAPStore.isReady()) {
-              return Promise.resolve();
-            }
-          } else if (!AuthenticationStore.isAuthenticated()) {
-            return Promise.resolve();
-          }
-          const tmp9 = (async () => {
-            if (c5 === 2) {
-              c5 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp6 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
+        const isOnlineResult = _true(getUserCountry[17]).isOnline();
+        if (!isOnlineResult) {
+          if (isOnlineResult) {
+            const tmp12 = (async () => {
+              if (c5 === 2) {
+                c5 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp6 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj2 = { value, done: true };
+                  return obj2;
+                } else {
+                  return { value: "IconComponent", done: "+51" };
+                }
               } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c5 = 2;
-                if (0 === c4) {
-                  if (arg0 === 1) {
+                try {
+                  c5 = 2;
+                  if (0 === c4) {
+                    if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c5 = 3;
+                      const obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      closure_1 = tmp3;
+                      closure_0 = tmp3;
+                      c3 = 1;
+                      c4 = 2;
+                      c5 = 1;
+                      const obj = { value: importDefaultResultResult2(), done: false };
+                      return obj;
+                    }
+                  } else if (1 === tmp7) {
+                    c3 = 0;
+                    c31 = null;
+                    if (closure_129_0.every((item) => null != product.getProduct(item))) {
+                      closure_1_29.succeed();
+                      closure_30 = 0;
+                    } else {
+                      const _Date3 = Date;
+                      const timestamp = Date.now();
+                      closure_30 = timestamp + closure_1_29.fail();
+                    }
+                    throw closure_2;
+                  } else if (arg0 === 1) {
                     c5 = 3;
                     throw value;
                   } else if (arg0 === 2) {
+                    c3 = 0;
+                    c31 = null;
+                    if (closure_129_0.every((item) => null != product.getProduct(item))) {
+                      closure_1_29.succeed();
+                      closure_30 = 0;
+                    } else {
+                      const _Date2 = Date;
+                      const timestamp1 = Date.now();
+                      closure_30 = timestamp1 + closure_1_29.fail();
+                    }
                     c5 = 3;
-                    const obj3 = { value, done: true };
-                    return obj3;
                   } else {
-                    closure_1 = tmp3;
-                    closure_0 = tmp3;
-                    c3 = 1;
-                    c4 = 2;
-                    c5 = 1;
-                    const obj = { value: importDefaultResultResult2(), done: false };
-                    return obj;
+                    c3 = 0;
+                    c31 = null;
+                    if (closure_129_0.every((item) => null != product.getProduct(item))) {
+                      closure_1_29.succeed();
+                      closure_30 = 0;
+                    } else {
+                      const _Date = Date;
+                      const timestamp2 = Date.now();
+                      closure_30 = timestamp2 + closure_1_29.fail();
+                    }
+                    c5 = 3;
                   }
-                } else if (1 === tmp7) {
-                  c3 = 0;
-                  c31 = null;
-                  if (closure_129_0.every((item) => null != product.getProduct(item))) {
-                    closure_1_29.succeed();
-                    closure_30 = 0;
+                } catch (tmp31) {
+                  closure_2 = tmp31;
+                  if (tmp4 === c3) {
+                    c5 = tmp2;
+                    throw tmp31;
                   } else {
-                    const _Date3 = Date;
-                    const timestamp = Date.now();
-                    closure_30 = timestamp + closure_1_29.fail();
+                    c4 = tmp;
                   }
-                  throw closure_2;
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c3 = 0;
-                  c31 = null;
-                  if (closure_129_0.every((item) => null != product.getProduct(item))) {
-                    closure_1_29.succeed();
-                    closure_30 = 0;
-                  } else {
-                    const _Date2 = Date;
-                    const timestamp1 = Date.now();
-                    closure_30 = timestamp1 + closure_1_29.fail();
-                  }
-                  c5 = 3;
-                } else {
-                  c3 = 0;
-                  c31 = null;
-                  if (closure_129_0.every((item) => null != product.getProduct(item))) {
-                    closure_1_29.succeed();
-                    closure_30 = 0;
-                  } else {
-                    const _Date = Date;
-                    const timestamp2 = Date.now();
-                    closure_30 = timestamp2 + closure_1_29.fail();
-                  }
-                  c5 = 3;
-                }
-              } catch (tmp31) {
-                closure_2 = tmp31;
-                if (tmp4 === c3) {
-                  c5 = tmp2;
-                  throw tmp31;
-                } else {
-                  c4 = tmp;
                 }
               }
-            }
-          })();
-          closure_31 = tmp9;
-          return tmp9;
+            })();
+            closure_31 = tmp12;
+            resolved = tmp12;
+          } else {
+            resolved = Promise.resolve();
+          }
         } else {
-          return Promise.resolve();
+          if (tmpResult.isGooglePlayBillingSupported()) {
+            let isReadyResult = IAPStore.isReady();
+          } else {
+            isReadyResult = AuthenticationStore.isAuthenticated();
+          }
+          tmpResult = tmp(getUserCountry[15]);
         }
-        obj3 = _true(getUserCountry[18]);
+        let obj3 = _true(getUserCountry[17]);
       }
     }
   } else {
     return Promise.resolve();
   }
-  obj = closure_0(getUserCountry[17]);
+  obj = closure_0(getUserCountry[18]);
+  tmp = closure_0;
+};
+export const retainInAppSkus = function retainInAppSkus(c0) {
+  closure_0 = c0;
+  let item = c0.forEach((item) => {
+    let num = map1.get(item);
+    if (num == null) {
+      num = 0;
+    }
+    return map1.set(item, num + 1);
+  });
+  const items = [...new Set(c0)];
+  const found = items.filter((item) => {
+    const hasItem = map.has(item);
+    let tmp2 = !hasItem;
+    if (!hasItem) {
+      tmp2 = null == product.getProduct(item);
+    }
+    return tmp2;
+  });
+  let tmp3 = found.length > 0;
+  if (tmp3) {
+    const isOnlineResult = _true(getUserCountry[17]).isOnline();
+    if (!isOnlineResult) {
+      tmp3 = isOnlineResult;
+    } else {
+      if (obj2.isGooglePlayBillingSupported()) {
+        let isReadyResult = IAPStore.isReady();
+      } else {
+        isReadyResult = AuthenticationStore.isAuthenticated();
+      }
+      obj2 = closure_0(getUserCountry[15]);
+    }
+    const obj = _true(getUserCountry[17]);
+  }
+  if (tmp3) {
+    closure_129_0 = found;
+    closure_129_1 = importDefaultResultResult1(found).then(
+      () => {
+        closure_1_36.succeed();
+        let tmp2 = size.size > 0;
+        if (tmp2) {
+          tmp2 = closure_1_36.fails < 5;
+        }
+        if (tmp2) {
+          closure_1_36.fail(retryFailedInAppSkus);
+        }
+      },
+      (code) => {
+        code = undefined;
+        if (code != null) {
+          code = code.code;
+        }
+        if (code === String(GPlayBillingResult.BILLING_CLIENT_NOT_READY)) {
+          const item = closure_0.forEach((item) => set.delete(item));
+        } else {
+          let code1;
+          if (code != null) {
+            code1 = code.code;
+          }
+          if (!set.has(code1)) {
+            const item1 = closure_0.forEach((item) => set2.add(item));
+            let tmp7 = set1.size > 0;
+            if (tmp7) {
+              tmp7 = closure_36.fails < 5;
+            }
+            if (tmp7) {
+              closure_36.fail(retryFailedInAppSkus);
+            }
+          }
+        }
+      },
+    );
+    let item1 = found.forEach((item) => map.set(item, _true));
+    const promise = importDefaultResultResult1(found);
+  }
+  const obj3 = { settled: null, release: null };
+  set = new Set(c0);
+  obj3.settled = Promise.all(c0.map((item) => map.get(item))).then(() => {});
+  obj3.release = function release() {
+    return closure_0.forEach((item) => {
+      let num = closure_1_34.get(item);
+      if (num == null) {
+        num = 0;
+      }
+      const diff = num - 1;
+      if (0 < diff) {
+        const result = closure_1_34.set(item, diff);
+      } else {
+        closure_1_34.delete(item);
+      }
+    });
+  };
+  return obj3;
 };
 export const loadUserCountry = function loadUserCountry() {
   const self = this;
-  const apply = closure_32.apply;
+  const apply = closure_38.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1680,7 +1857,7 @@ export const purchase = function purchase() {
 };
 export const subscribe = function subscribe() {
   const self = this;
-  const apply = closure_33.apply;
+  const apply = closure_39.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1690,7 +1867,7 @@ export const subscribe = function subscribe() {
 };
 export const verifyPurchase = function verifyPurchase() {
   const self = this;
-  const apply = closure_34.apply;
+  const apply = closure_40.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

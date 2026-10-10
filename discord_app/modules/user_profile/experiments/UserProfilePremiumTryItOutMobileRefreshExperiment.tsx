@@ -10,16 +10,16 @@ const obj = {
   defaultConfig: { enabled: false },
   variations: null,
 };
-let obj2 = { 1: null };
-obj2[1] = { enabled: true };
+let obj2 = { 1: null, 2: { enabled: true, shuffleButtonLocation: "header" } };
+obj2[2] = { enabled: true, shuffleButtonLocation: "inline" };
 obj.variations = obj2;
 let closure_2 = ApexExperiment.createApexExperiment(obj);
 const result = size.fileFinishedImporting(
   "modules/user_profile/experiments/UserProfilePremiumTryItOutMobileRefreshExperiment.tsx",
 );
 
-export const useIsTryItOutMobileRefreshEnabled = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useIsTryItOutMobileRefreshEnabled(location) {
+export const useTryItOutMobileRefreshConfig = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useTryItOutMobileRefreshConfig(location) {
       const cResult = c.c(2);
       if (cResult[0] !== location) {
         const obj2 = { location };
@@ -29,8 +29,8 @@ export const useIsTryItOutMobileRefreshEnabled = ReactCompilerGating.isReactComp
       } else {
         tmp2 = cResult[1];
       }
-      return closure_2.useConfig(tmp2).enabled;
+      return closure_2.useConfig(tmp2);
     }
-  : function useIsTryItOutMobileRefreshEnabled(location) {
-      return closure_2.useConfig({ location }).enabled;
+  : function useTryItOutMobileRefreshConfig(location) {
+      return closure_2.useConfig({ location });
     };

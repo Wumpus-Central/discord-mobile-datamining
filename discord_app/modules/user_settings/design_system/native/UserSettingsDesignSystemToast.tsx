@@ -4,13 +4,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import EmojiUtils from "../../../../utils/EmojiUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import toastUtils from "../../../../design/mana/components/Toast/toastUtils.native.tsx";
-import CheckmarkLargeIcon from "../../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
-import _modDef5006 from "../../../../../_runtime/metro/05006__.js";
-import _modDef5008 from "../../../../../_runtime/metro/05008__.js";
-import _modDef5012 from "../../../../../_runtime/metro/05012__.js";
-import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
+import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
@@ -25,7 +20,7 @@ const jsxProd = fn(21);
 let c6 = "This is a toast message";
 let c7 = "https://cdn.discordapp.com/embed/avatars/0.png";
 let sum2 = 0;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { padding: nativeDefault.space.PX_16 }, previews: { alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -251,97 +246,62 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let items = [
   {
-    label: "Success \u2014 checkmark component",
+    label: "Success",
     onPress() {
-      const obj2 = {
-        key: null,
-        content: "Saved",
-        IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
-        iconColor: "status-positive",
-      };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "SUCCESS_COMPONENT" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      return ToastActionCreatorsDefault.open("" + "SUCCESS" + "-" + sum, { text: "Saved", variant: "success" });
     },
   },
   {
-    label: "Critical \u2014 X component",
+    label: "Critical",
     onPress() {
-      const obj2 = {
-        key: null,
-        content: "Something went wrong",
-        IconComponent: XLargeIcon.XLargeIcon,
-        iconColor: "icon-feedback-critical",
-      };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "ERROR_COMPONENT" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      return ToastActionCreatorsDefault.open("" + "CRITICAL" + "-" + sum, {
+        text: "Something went wrong",
+        variant: "critical",
+      });
     },
   },
   {
-    label: "Success \u2014 checkmark bitmap",
+    label: "Default \u2014 information icon",
     onPress() {
-      const obj2 = { key: null, content: "Saved", icon: _modDef5006 };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "SUCCESS_BITMAP" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      const obj2 = { text, icon: null };
+      const combined = "" + "INFO_ICON" + "-" + sum;
+      obj2.icon = CircleInformationIcon.CircleInformationIcon;
+      return ToastActionCreatorsDefault.open(combined, obj2);
     },
   },
   {
-    label: "Critical \u2014 yellow alert bitmap",
+    label: "Default \u2014 copy icon",
     onPress() {
-      const obj2 = { key: null, content: "Something went wrong", icon: _modDef5008 };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "ERROR_BITMAP" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
-    },
-  },
-  {
-    label: "Default \u2014 information bitmap",
-    onPress() {
-      const obj2 = { key: null, content: Thisisatoastmessage, icon: _modDef5012 };
-      const sum = sum2 + 1;
-      sum2 = sum;
-      obj2.key = "" + "INFO_BITMAP" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
-    },
-  },
-  {
-    label: "Default \u2014 icon passthrough",
-    onPress() {
-      const obj2 = { key: null, content: "Copied", IconComponent: CopyIcon.CopyIcon };
-      const sum = sum2 + 1;
-      sum2 = sum;
-      obj2.key = "" + "PASSTHROUGH" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      const obj2 = { text: "Copied", icon: null };
+      const combined = "" + "COPY_ICON" + "-" + sum;
+      obj2.icon = CopyIcon.CopyIcon;
+      return ToastActionCreatorsDefault.open(combined, obj2);
     },
   },
   {
     label: "Default \u2014 no icon",
     onPress() {
-      const obj2 = { key: null, content: Thisisatoastmessage };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "NO_ICON" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      return ToastActionCreatorsDefault.open("" + "NO_ICON" + "-" + sum, { text });
     },
   },
   {
     label: "Long text",
     onPress() {
-      const obj2 = {
-        key: null,
-        content:
-          "This is a much longer toast message that should wrap onto several lines and then clamp, so the container has to make room for it.",
-      };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "LONG" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      return ToastActionCreatorsDefault.open("" + "LONG" + "-" + sum, {
+        text: "This is a much longer toast message that should wrap onto several lines and then clamp, so the container has to make room for it.",
+      });
     },
   },
 ];
@@ -349,20 +309,14 @@ let items1 = [
   {
     label: "Queue three",
     onPress() {
-      const obj2 = { key: null, content: "First of three" };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "QUEUE" + "-" + sum;
-      ToastActionCreatorsDefault.open(obj2);
-      const obj4 = { key: null, content: "Second of three" };
+      ToastActionCreatorsDefault.open("" + "QUEUE" + "-" + sum, { text: "First of three" });
       const sum1 = sum2 + 1;
       sum2 = sum1;
-      obj4.key = "" + "QUEUE" + "-" + sum1;
-      ToastActionCreatorsDefault.open(obj4);
-      const obj6 = { key: null, content: "Third of three" };
+      ToastActionCreatorsDefault.open("" + "QUEUE" + "-" + sum1, { text: "Second of three" });
       sum2 = sum2 + 1;
-      obj6.key = "" + "QUEUE" + "-" + sum2;
-      ToastActionCreatorsDefault.open(obj6);
+      ToastActionCreatorsDefault.open("" + "QUEUE" + "-" + sum2, { text: "Third of three" });
     },
   },
   {
@@ -371,7 +325,7 @@ let items1 = [
       let num = 0;
       do {
         let obj = ToastActionCreatorsDefault;
-        let openResult = obj.open({ key: "DEDUPE_DEMO", content: "Should only appear once" });
+        let openResult = obj.open("DEDUPE_DEMO", { text: "Should only appear once" });
         num = num + 1;
       } while (num < 3);
     },
@@ -387,68 +341,49 @@ const items2 = [
   {
     label: "Bottom position",
     onPress() {
-      const obj2 = { key: null, content: Thisisatoastmessage, position: "bottom" };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "BOTTOM" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      return ToastActionCreatorsDefault.open("" + "BOTTOM" + "-" + sum, { text, position: "bottom" });
     },
   },
   {
     label: "Ten second duration",
     onPress() {
-      const obj2 = { key: null, content: Thisisatoastmessage, toastDurationMs: 10000 };
       const sum = sum2 + 1;
       sum2 = sum;
-      obj2.key = "" + "DURATION" + "-" + sum;
-      return ToastActionCreatorsDefault.open(obj2);
+      return ToastActionCreatorsDefault.open("" + "DURATION" + "-" + sum, { text, duration: 10000 });
     },
   },
 ];
 ReactCompilerGating = fn(558);
 let obj3 = { padding: nativeDefault.space.PX_16 };
 let obj6 = {
-  label: "Success \u2014 checkmark component",
+  label: "Success",
   onPress() {
-    const obj2 = {
-      key: null,
-      content: "Saved",
-      IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon,
-      iconColor: "status-positive",
-    };
     const sum = sum2 + 1;
     sum2 = sum;
-    obj2.key = "" + "SUCCESS_COMPONENT" + "-" + sum;
-    return ToastActionCreatorsDefault.open(obj2);
+    return ToastActionCreatorsDefault.open("" + "SUCCESS" + "-" + sum, { text: "Saved", variant: "success" });
   },
 };
 let obj7 = {
   label: "Queue three",
   onPress() {
-    const obj2 = { key: null, content: "First of three" };
     const sum = sum2 + 1;
     sum2 = sum;
-    obj2.key = "" + "QUEUE" + "-" + sum;
-    ToastActionCreatorsDefault.open(obj2);
-    const obj4 = { key: null, content: "Second of three" };
+    ToastActionCreatorsDefault.open("" + "QUEUE" + "-" + sum, { text: "First of three" });
     const sum1 = sum2 + 1;
     sum2 = sum1;
-    obj4.key = "" + "QUEUE" + "-" + sum1;
-    ToastActionCreatorsDefault.open(obj4);
-    const obj6 = { key: null, content: "Third of three" };
+    ToastActionCreatorsDefault.open("" + "QUEUE" + "-" + sum1, { text: "Second of three" });
     sum2 = sum2 + 1;
-    obj6.key = "" + "QUEUE" + "-" + sum2;
-    ToastActionCreatorsDefault.open(obj6);
+    ToastActionCreatorsDefault.open("" + "QUEUE" + "-" + sum2, { text: "Third of three" });
   },
 };
 let obj8 = {
   label: "Bottom position",
   onPress() {
-    const obj2 = { key: null, content: Thisisatoastmessage, position: "bottom" };
     const sum = sum2 + 1;
     sum2 = sum;
-    obj2.key = "" + "BOTTOM" + "-" + sum;
-    return ToastActionCreatorsDefault.open(obj2);
+    return ToastActionCreatorsDefault.open("" + "BOTTOM" + "-" + sum, { text, position: "bottom" });
   },
 };
 const size = fn(2);
@@ -471,8 +406,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp13 = React4(closure_11, {});
         const obj2 = {
-          title: "Automatic mapping",
-          hint: "These use the older toast props and are converted to Mana toasts. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
+          title: "Variants and icons",
+          hint: "Status toasts use the success and critical variants. Other toasts can show an icon.",
           demos: items,
         };
         const tmp16 = React4(closure_10, obj2);
@@ -504,25 +439,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp29 = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Components" });
-        const obj5 = { text: Thisisatoastmessage, variant: "default" };
+        const obj5 = { text, variant: "default" };
         const tmp31 = React4(Toast.Toast, obj5);
-        const obj6 = {
-          text: Thisisatoastmessage,
-          variant: "default",
-          icon: CircleInformationIcon.CircleInformationIcon,
-        };
+        const obj6 = { text, variant: "default", icon: CircleInformationIcon.CircleInformationIcon };
         const tmp32 = React4(Toast.Toast, obj6);
         const obj7 = {
-          text: Thisisatoastmessage,
+          text,
           variant: "default",
           icon: CircleInformationIcon.CircleInformationIcon,
           iconColor: nativeDefault.colors.ICON_BRAND,
           secondaryIconColor: nativeDefault.colors.ICON_DEFAULT,
         };
         const tmp34 = React4(Toast.Toast, obj7);
-        const obj8 = { text: Thisisatoastmessage, variant: "success" };
+        const obj8 = { text, variant: "success" };
         const tmp35 = React4(Toast.Toast, obj8);
-        const obj9 = { text: Thisisatoastmessage, variant: "critical" };
+        const obj9 = { text, variant: "critical" };
         const tmp36 = React4(Toast.Toast, obj9);
         const tmp37 = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
         cResult[5] = tmp36;
@@ -628,8 +559,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { spacing: nativeDefault.space.PX_16, children: null };
       items = [React4(closure_11, {}), , , ,];
       items[1] = React4(closure_10, {
-        title: "Automatic mapping",
-        hint: "These use the older toast props and are converted to Mana toasts. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
+        title: "Variants and icons",
+        hint: "Status toasts use the success and critical variants. Other toasts can show an icon.",
         demos: items,
       });
       items[2] = React4(closure_10, {
@@ -645,7 +576,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { spacing: nativeDefault.space.PX_12, style: tmp4.previews, children: null };
       items1 = [
         React4(Text_Text.Text, { variant: "text-lg/bold", children: "Components" }),
-        React4(Toast.Toast, { text: Thisisatoastmessage, variant: "default" }),
+        React4(Toast.Toast, { text, variant: "default" }),
         ,
         ,
         ,
@@ -656,8 +587,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ,
       ];
       const obj4 = {
-        title: "Automatic mapping",
-        hint: "These use the older toast props and are converted to Mana toasts. Checkmarks and Xs become status variants whether the call site passes a component or a bitmap.",
+        title: "Variants and icons",
+        hint: "Status toasts use the success and critical variants. Other toasts can show an icon.",
         demos: items,
       };
       const obj5 = {
@@ -670,22 +601,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hint: "Both are deprecated on the Mana API but still forwarded, so existing call sites keep working.",
         demos: items2,
       };
-      const obj8 = { text: Thisisatoastmessage, variant: "default" };
-      items1[2] = React4(Toast.Toast, {
-        text: Thisisatoastmessage,
-        variant: "default",
-        icon: CircleInformationIcon.CircleInformationIcon,
-      });
-      const obj9 = { text: Thisisatoastmessage, variant: "default", icon: CircleInformationIcon.CircleInformationIcon };
+      const obj8 = { text, variant: "default" };
+      items1[2] = React4(Toast.Toast, { text, variant: "default", icon: CircleInformationIcon.CircleInformationIcon });
+      const obj9 = { text, variant: "default", icon: CircleInformationIcon.CircleInformationIcon };
       items1[3] = React4(Toast.Toast, {
-        text: Thisisatoastmessage,
+        text,
         variant: "default",
         icon: CircleInformationIcon.CircleInformationIcon,
         iconColor: nativeDefault.colors.ICON_BRAND,
         secondaryIconColor: nativeDefault.colors.ICON_DEFAULT,
       });
-      items1[4] = React4(Toast.Toast, { text: Thisisatoastmessage, variant: "success" });
-      items1[5] = React4(Toast.Toast, { text: Thisisatoastmessage, variant: "critical" });
+      items1[4] = React4(Toast.Toast, { text, variant: "success" });
+      items1[5] = React4(Toast.Toast, { text, variant: "critical" });
       items1[6] = React4(Text_Text.Text, { variant: "text-lg/bold", children: "Entities" });
       if ("" !== emojiUrl) {
         const obj13 = { type: "emoji", src: emojiUrl, alt: "\u{1F525}" };

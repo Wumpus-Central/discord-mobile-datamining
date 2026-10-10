@@ -3,7 +3,7 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import native from "../../../design/void/native.tsx";
+import InlineNotice from "../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
 import useSecureFramesUserVerifiedKeysCount from "../hooks/useSecureFramesUserVerifiedKeysCount.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = cResult[7];
             }
             if (cResult[8] !== tmp9) {
-              const obj3 = { messageType: native.HelpMessageTypes.INFO, children: tmp9 };
-              const tmp13 = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: tmp9 });
+              const obj3 = { type: "info", message: tmp9, role: "static" };
+              const tmp13 = jsx(InlineNotice.InlineNotice, { type: "info", message: tmp9, role: "static" });
               cResult[8] = tmp9;
               cResult[9] = tmp13;
               let tmp11 = tmp13;
@@ -83,11 +83,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { style: null, children: null };
         const items = [tmp.container, style];
         obj2.style = items;
-        const obj3 = { messageType: native.HelpMessageTypes.INFO, children: null };
+        const obj3 = { type: "info", message: null, role: "static" };
         const intl = util.intl;
         const obj4 = { count: secureFramesUserVerifiedKeysCount };
-        obj3.children = intl.format(util.t.uZDkz0, obj4);
-        obj2.children = jsx(native.HelpMessage, { messageType: native.HelpMessageTypes.INFO, children: null });
+        obj3.message = intl.format(util.t.uZDkz0, obj4);
+        obj2.children = jsx(InlineNotice.InlineNotice, { type: "info", message: null, role: "static" });
         tmp5 = <View style={null}>{null}</View>;
       }
       return tmp5;

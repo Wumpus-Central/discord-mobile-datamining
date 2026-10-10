@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef12873 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef12920 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(12871).PlayStationLinkModalScenes;
+let closure_4 = fn(12918).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -38,12 +38,12 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
         obj5.label = intl2.string(tmp(1126).t["+eJP7o"]);
         const intl3 = tmp(1126).intl;
         obj5.subLabel = intl3.string(tmp(1126).t["+0VIUh"]);
-        obj5.icon = tmp(8212).VoiceNormalIcon;
+        obj5.icon = tmp(8228).VoiceNormalIcon;
         const items = [obj5];
         const obj6 = { label: null, icon: null };
         const intl4 = tmp(1126).intl;
         obj6.label = intl4.string(tmp(1126).t.ZH4QFa);
-        obj6.icon = tmp(9184).GameControllerIcon;
+        obj6.icon = tmp(9211).GameControllerIcon;
         items[1] = obj6;
         cResult[1] = items;
         let tmp11 = items;
@@ -61,7 +61,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
         tmp12 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj7 = { uri: _modDef12873 };
+        const obj7 = { uri: _modDef12920 };
         cResult[4] = obj7;
         let tmp13 = obj7;
       } else {
@@ -88,7 +88,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
           return tmp19;
         }
       }
-      const tmp20 = jsx(navigation(9186).TwoWayLinkLanding, {
+      const tmp20 = jsx(navigation(9213).TwoWayLinkLanding, {
         platformType,
         img: tmp13,
         imgStyle: tmp4.image,
@@ -119,19 +119,19 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
         obj.label = intl.string(navigation(1126).t["+eJP7o"]);
         const intl2 = navigation(1126).intl;
         obj.subLabel = intl2.string(navigation(1126).t["+0VIUh"]);
-        obj.icon = navigation(8212).VoiceNormalIcon;
+        obj.icon = navigation(8228).VoiceNormalIcon;
         const items = [obj];
         const obj2 = { label: null, icon: null };
         const intl3 = navigation(1126).intl;
         obj2.label = intl3.string(navigation(1126).t.ZH4QFa);
-        obj2.icon = navigation(9184).GameControllerIcon;
+        obj2.icon = navigation(9211).GameControllerIcon;
         items[1] = obj2;
         return items;
       }, []);
       const callback = noop.useCallback(() => {
         navigation.push(constants.PRE_CONNECT);
       }, items);
-      const memo1 = noop.useMemo(() => ({ uri: _modDef12873 }), []);
+      const memo1 = noop.useMemo(() => ({ uri: _modDef12920 }), []);
       const obj3 = {
         platformType: platformType.platformType,
         img: memo1,
@@ -149,7 +149,7 @@ export const PlayStationLinkLanding = ReactCompilerGating.isReactCompilerEnabled
       obj3.body = intl.format(navigation(1126).t.kqZQNe, { helpdeskArticleUrl: articleURL });
       obj3.onNext = callback;
       obj3.valueProps = memo;
-      return jsx(navigation(9186).TwoWayLinkLanding, {
+      return jsx(navigation(9213).TwoWayLinkLanding, {
         platformType: platformType.platformType,
         img: memo1,
         imgStyle: tmp.image,

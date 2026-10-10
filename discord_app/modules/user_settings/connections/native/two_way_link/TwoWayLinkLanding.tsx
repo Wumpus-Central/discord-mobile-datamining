@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
   image: { marginBottom: 32 },
   valueProps: { marginTop: 24, maxWidth: "100%" },
@@ -34,7 +34,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       ({ learnMoreLink, onNext } = platformType);
       const tmp4 = closure_8();
       const obj = platformType(576);
-      const twoWayLinkStyles = platformType(9187).useTwoWayLinkStyles();
+      const twoWayLinkStyles = platformType(9214).useTwoWayLinkStyles();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ConnectedAccountsStore];
         cResult[0] = items;
@@ -57,7 +57,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[2];
       }
-      const obj2 = platformType(9187);
+      const obj2 = platformType(9214);
       const stateFromStores = platformType(504).useStateFromStores(first, tmp8);
       ({ container, content } = twoWayLinkStyles);
       if (imgStyle == null) {
@@ -213,7 +213,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
               style: twoWayLinkStyles.body,
               children: body,
             };
-            const tmp21 = closure_6(tmp(5087).Text, obj5);
+            const tmp21 = closure_6(tmp(5088).Text, obj5);
             cResult[12] = body;
             cResult[13] = twoWayLinkStyles.body;
             cResult[14] = tmp21;
@@ -226,14 +226,14 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityRole: "header",
             children: tmp15,
           };
-          const tmp18 = closure_6(tmp(5087).Text, obj6);
+          const tmp18 = closure_6(tmp(5088).Text, obj6);
           cResult[9] = twoWayLinkStyles.title;
           cResult[10] = tmp15;
           cResult[11] = tmp18;
           tmp16 = tmp18;
         }
         const obj7 = { source: img, style: tmp10 };
-        const tmp14 = closure_6(valueProps(6163), obj7);
+        const tmp14 = closure_6(valueProps(6156), obj7);
         cResult[6] = img;
         cResult[7] = tmp10;
         cResult[8] = tmp14;
@@ -270,7 +270,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[1] = imgStyle;
       obj5.style = items1;
-      const items2 = [closure_6(valueProps(6163), obj5), , ,];
+      const items2 = [closure_6(valueProps(6156), obj5), , ,];
       const obj6 = {
         variant: "heading-xl/bold",
         color: "mobile-text-heading-primary",
@@ -294,7 +294,7 @@ export const TwoWayLinkLanding = ReactCompilerGating.isReactCompilerEnabled()
         children: body,
       });
       const obj7 = { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body };
-      const tmp10 = valueProps(6163);
+      const tmp10 = valueProps(6156);
       items2[3] = closure_6(closure_3, {
         style: tmp.valueProps,
         children: valueProps.map((label, index) => {

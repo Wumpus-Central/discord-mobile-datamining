@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -55,6 +55,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                   isUpdate: false,
                   disabledReason: null,
                   confirmReason: null,
+                  missingSurface: null,
                 };
               }
             }
@@ -69,7 +70,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                 str11 = "";
               }
               const obj3 = { server: str11 };
-              formatResult = intl13.format(_modDef3827.N4NkyR, obj3);
+              formatResult = intl13.format(_modDef3849.N4NkyR, obj3);
             }
           }
           const obj4 = { installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -103,6 +104,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
             isUpdate: null,
             disabledReason: null,
             confirmReason: null,
+            missingSurface: null,
           };
           let destination;
           if (null != null) {
@@ -128,13 +130,22 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                     str15 = "";
                   }
                   const obj6 = { server: str15 };
-                  formatResult1 = intl14.format(_modDef3827.eHYXFg, obj6);
+                  formatResult1 = intl14.format(_modDef3849.eHYXFg, obj6);
                 }
               }
             }
             tmp40 = formatResult1;
           }
           obj5.confirmReason = tmp40;
+          let tmp45 = null;
+          if (tmp23) {
+            let str16 = "bot";
+            if ("activity" === surface) {
+              str16 = "channel";
+            }
+            tmp45 = str16;
+          }
+          obj5.missingSurface = tmp45;
           if (null == null) {
             if (result) {
               let prop2;
@@ -145,9 +156,9 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                 const obj7 = {};
                 const merged1 = Object.assign(obj5);
                 const intl17 = util.intl;
-                obj7.label = intl17.string(_modDef3827["tUeY/h"]);
+                obj7.label = intl17.string(_modDef3849["tUeY/h"]);
                 obj7.action = "review_permissions";
-                obj7.navigatesOnPublish = tmp45;
+                obj7.navigatesOnPublish = tmp46;
                 return obj7;
               }
             }
@@ -157,17 +168,17 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
             }
             if (update == null) {
               const intl15 = util.intl;
-              update = intl15.string(_modDef3827.QesMDC);
+              update = intl15.string(_modDef3849.QesMDC);
             }
             const obj8 = {};
             const merged2 = Object.assign(obj5);
             if (!tmp38) {
               const intl16 = util.intl;
-              update = intl16.string(_modDef3827["120EFN"]);
+              update = intl16.string(_modDef3849["120EFN"]);
             }
             obj8.label = update;
             obj8.action = "publish";
-            obj8.navigatesOnPublish = tmp45;
+            obj8.navigatesOnPublish = tmp46;
             return obj8;
           }
         } else if ("activity" === status2.surface) {
@@ -187,7 +198,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           if (null != guildName) {
             const intl = util.intl;
             const obj9 = { server: guildName };
-            const formatToPlainStringResult = intl.formatToPlainString(_modDef3827.fTgw6C, obj9);
+            const formatToPlainStringResult = intl.formatToPlainString(_modDef3849.fTgw6C, obj9);
             if ("bot" === surface) {
               const obj11 = {
                 update: null,
@@ -197,7 +208,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                 navigatesOnUpdate: false,
               };
               const intl6 = util.intl;
-              obj11.update = intl6.string(_modDef3827.JpDnbE);
+              obj11.update = intl6.string(_modDef3849.JpDnbE);
               obj11.open = formatToPlainStringResult;
             } else if ("activity" === surface) {
               const obj13 = {
@@ -208,12 +219,12 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                 navigatesOnUpdate: false,
               };
               const intl4 = util.intl;
-              obj13.update = intl4.string(_modDef3827.QesMDC);
+              obj13.update = intl4.string(_modDef3849.QesMDC);
               let formatToPlainStringResult1 = formatToPlainStringResult;
               if (null != appChannelName) {
                 const intl5 = util.intl;
                 const obj14 = { channel: appChannelName };
-                formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3827.l9xGQD, obj14);
+                formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3849.l9xGQD, obj14);
               }
               obj13.open = formatToPlainStringResult1;
             } else if ("automod" === surface) {
@@ -225,9 +236,9 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
                 navigatesOnUpdate: false,
               };
               const intl2 = util.intl;
-              obj15.update = intl2.string(_modDef3827.bwBMMn);
+              obj15.update = intl2.string(_modDef3849.bwBMMn);
               const intl3 = util.intl;
-              obj15.open = intl3.string(_modDef3827.KjbLum);
+              obj15.open = intl3.string(_modDef3849.KjbLum);
             }
           }
         }
@@ -240,9 +251,9 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
             navigatesOnUpdate: false,
           };
           const intl11 = util.intl;
-          obj16.update = intl11.string(_modDef3827.JpDnbE);
+          obj16.update = intl11.string(_modDef3849.JpDnbE);
           const intl12 = util.intl;
-          obj16.open = intl12.string(_modDef3827.NNIwRu);
+          obj16.open = intl12.string(_modDef3849.NNIwRu);
         } else {
           if ("activity" === surface) {
             const obj17 = {
@@ -253,9 +264,9 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
               navigatesOnUpdate: false,
             };
             const intl9 = util.intl;
-            obj17.update = intl9.string(_modDef3827.QesMDC);
+            obj17.update = intl9.string(_modDef3849.QesMDC);
             const intl10 = util.intl;
-            obj17.open = intl10.string(_modDef3827.iyQTsb);
+            obj17.open = intl10.string(_modDef3849.iyQTsb);
           }
           const obj32 = {
             update: null,
@@ -265,9 +276,9 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
             navigatesOnUpdate: true,
           };
           const intl7 = util.intl;
-          obj32.update = intl7.string(_modDef3827["LUi/55"]);
+          obj32.update = intl7.string(_modDef3849["LUi/55"]);
           const intl8 = util.intl;
-          obj32.open = intl8.string(_modDef3827.TXUK1g);
+          obj32.open = intl8.string(_modDef3849.TXUK1g);
         }
       }
     }

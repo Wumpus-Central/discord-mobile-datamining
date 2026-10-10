@@ -1,11 +1,11 @@
 // discord_app/modules/voice_panel/native/hooks/useControlsHoverGesture.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VoicePanelModes = fn(11926).VoicePanelModes;
-const VoicePanelControlsModes = fn(11924).VoicePanelControlsModes;
+const VoicePanelModes = fn(11970).VoicePanelModes;
+const VoicePanelControlsModes = fn(11968).VoicePanelControlsModes;
 let c6 = 500;
 const __initData = {
   code: "function useControlsHoverGestureTsx1(){const{connected,mode,VoicePanelModes,controlsSpecs,VoicePanelControlsModes,runOnJS,showControls,lastIdleRefreshMillis,IDLE_REFRESH_DEBOUNCE_MILLIS,refreshIdleTimeout}=this.__closure;if(!connected.get()){return;}if(mode.get()!==VoicePanelModes.PANEL){return;}const controlsHidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;if(controlsHidden){runOnJS(showControls)();return;}const currentTimeMillis=Date.now();if(currentTimeMillis-lastIdleRefreshMillis.get()<IDLE_REFRESH_DEBOUNCE_MILLIS){return;}lastIdleRefreshMillis.set(currentTimeMillis);refreshIdleTimeout();}",

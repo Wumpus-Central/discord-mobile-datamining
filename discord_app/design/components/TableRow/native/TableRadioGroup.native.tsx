@@ -40,7 +40,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
             let tmp9 = cResult[4];
           }
           const imperativeHandle = mapped.useImperativeHandle(groupRef.groupRef, tmp8, tmp9);
-          context = mapped.useContext(onChange(6268).RedesignCompatContext);
+          context = mapped.useContext(onChange(6263).RedesignCompatContext);
           if (cResult[5] === tmp4) {
             if (cResult[6] === onChange) {
               let tmp12 = cResult[7];
@@ -85,7 +85,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
                     hasIcons,
                     children: cResult[13],
                   };
-                  const tmp19 = context(onChange(6269).TableRowGroup, obj3);
+                  const tmp19 = context(onChange(6264).TableRowGroup, obj3);
                   cResult[16] = accessibilityLabel;
                   cResult[17] = description;
                   cResult[18] = hasIcons;
@@ -221,7 +221,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      jsx = obj.useContext(onChange(6268).RedesignCompatContext);
+      jsx = obj.useContext(onChange(6263).RedesignCompatContext);
       const items1 = [undefined !== value, onChange];
       onSelect = obj.useCallback((arg0) => {
         if (!closure_1) {
@@ -250,7 +250,7 @@ export const TableRadioGroup = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp4 = type;
       });
-      obj2.children = jsx(onChange(6269).TableRowGroup, {
+      obj2.children = jsx(onChange(6264).TableRowGroup, {
         accessibilityRole: "radiogroup",
         accessibilityLabel,
         title,

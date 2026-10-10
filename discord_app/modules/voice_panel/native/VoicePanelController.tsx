@@ -8,17 +8,17 @@ import embeddedActivityLocationUtils from "../../activities/utils/embeddedActivi
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import _modDef5020 from "../../../../_runtime/metro/05020__.js";
-import VideoSlashIcon from "../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
 import ChannelRTCParticipants from "../../calls/ChannelRTCParticipants.tsx";
 import DeviceOrientation from "../../device/native/DeviceOrientation.tsx";
+import MicrophoneSlashIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
 import cheapWorkletShallowEqual from "../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import updateSharedValueIfChangedDefault from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import EmbeddedActivitiesActionCreators from "../../activities/EmbeddedActivitiesActionCreators.tsx";
 import VoicePanelCardLayoutManagerDefault from "card/VoicePanelCardLayoutManager.tsx";
+import VideoSlashIcon from "../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import applyActivityOrientationLockDefault from "../../activities/native/applyActivityOrientationLock.tsx";
 import VoicePanelPIPStateContext from "pip/VoicePanelPIPStateContext.tsx";
 import VoicePanelFloatingCTAUtils from "controls/utils/VoicePanelFloatingCTAUtils.tsx";
@@ -311,7 +311,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
       }
       return setControlsMode({ mode, debounce });
     }, items4);
-    obj2.runOnJS = tmp(4811).runOnJS;
+    obj2.runOnJS = tmp(4850).runOnJS;
     obj2._queueHideControls = callback1;
     fn.__closure = obj2;
     fn.__workletHash = 9447192071204;
@@ -334,11 +334,11 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
         ReanimatedRexport.runOnJS(callback)();
       }
     };
-    const obj4 = { VoicePanelModes, runOnJS: tmp(4811).runOnJS, _queueHideControls: callback1, _clearHideControlsQueue };
+    const obj4 = { VoicePanelModes, runOnJS: tmp(4850).runOnJS, _queueHideControls: callback1, _clearHideControlsQueue };
     fn2.__closure = obj4;
     fn2.__workletHash = 9080436423990;
     fn2.__initData = __initData13;
-    const animatedReaction = tmp(4811).useAnimatedReaction(S, fn2);
+    const animatedReaction = tmp(4850).useAnimatedReaction(S, fn2);
     const items6 = [stateFromStores, tmp4Result, isConnected];
     const layoutEffect = noop.useLayoutEffect(() => {
       if (closure_3) {
@@ -350,7 +350,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
       }
       tmp5 = CONTROLS_HEIGHT;
     }, items6);
-    const tmpResult = tmp(4811);
+    const tmpResult = tmp(4850);
     const fn3 = function f() {
       return connected.get();
     };
@@ -372,7 +372,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
     fn4.__closure = obj6;
     fn4.__workletHash = 14172278286591;
     fn4.__initData = __initData15;
-    const animatedReaction1 = tmp(4811).useAnimatedReaction(fn3, fn4);
+    const animatedReaction1 = tmp(4850).useAnimatedReaction(fn3, fn4);
     const items7 = [cancelControlsDebounce, _clearHideControlsQueue];
     const layoutEffect1 = noop.useLayoutEffect(() => () => {
       cancelControlsDebounce();
@@ -396,16 +396,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(11926);
+const VoicePanelConstants = fn(11970);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(11924);
+const VoicePanelControlsConstants = fn(11968);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
 const OrientationLockState = fn(2024).OrientationLockState;
-const ActivityPanelModes = fn(6074).ActivityPanelModes;
-const isActivityParticipant = fn(5114).isActivityParticipant;
-const MorphablePanelModes = fn(11927).MorphablePanelModes;
+const ActivityPanelModes = fn(6067).ActivityPanelModes;
+const isActivityParticipant = fn(5115).isActivityParticipant;
+const MorphablePanelModes = fn(11971).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {
@@ -460,7 +460,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAct
     if (tmp3) {
       tmp3 = connectedValue;
     }
-    state = VoicePanelStore.getState();
+    const state = VoicePanelStore.getState();
     state.setIsActivityFocused(tmp3);
   }
   const fn = function s() {
@@ -510,7 +510,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAct
     if (tmp3) {
       tmp3 = connectedValue;
     }
-    state = VoicePanelStore.getState();
+    const state = VoicePanelStore.getState();
     state.setIsActivityFocused(tmp3);
   }, items);
   const fn = function h() {
@@ -644,7 +644,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpe
   }
   const effect = obj2.useEffect(A, tmp18);
   if (cResult[9] !== stateFromStores1) {
-    class C {
+    class M {
       constructor() {
         if (closure_4) {
           tmp2 = closure_2;
@@ -662,11 +662,11 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpe
     const items3 = [stateFromStores1];
     cResult[9] = stateFromStores1;
     cResult[10] = items3;
-    cResult[11] = C;
-    let tmp21 = C;
+    cResult[11] = M;
+    let tmp21 = M;
     const tmp20 = items3;
   } else {
-    class C {
+    class M {
       constructor() {
         if (closure_4) {
           tmp2 = closure_2;
@@ -685,7 +685,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpe
   }
   const effect1 = obj2.useEffect(tmp21, tmp20);
   if (cResult[12] === showControls) {
-    class C {
+    class M {
       constructor() {
         if (closure_4) {
           tmp2 = closure_2;
@@ -723,14 +723,15 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpe
           tmp9 = closure_1;
           tmp10 = closure_2;
           obj = closure_1(closure_2[29]);
-          obj1 = { key: "SPEAKING_WHILE_MUTED", icon: null, content: null, toastDurationMs: null };
-          obj1.icon = closure_1(closure_2[30]);
+          obj1 = { text: null, icon: null, duration: null };
           tmp11 = closure_0;
-          intl = closure_0(closure_2[31]).intl;
-          obj1.content = intl.string(closure_0(closure_2[31]).t["29gnR4"]);
+          intl = closure_0(closure_2[30]).intl;
+          obj1.text = intl.string(closure_0(closure_2[30]).t["29gnR4"]);
+          obj1.icon = closure_0(closure_2[31]).MicrophoneSlashIcon;
           num = 3;
-          obj1.toastDurationMs = 3 * closure_1(closure_2[27]).Millis.SECOND;
-          openResult = obj.open(obj1);
+          obj1.duration = 3 * closure_1(closure_2[27]).Millis.SECOND;
+          str = "SPEAKING_WHILE_MUTED";
+          openResult = obj.open("SPEAKING_WHILE_MUTED", obj1);
         }
       }
       return;
@@ -779,11 +780,12 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSpe
       if (performance.now() - ref2.current >= MINUTE) {
         ref.current = true;
         showControls();
-        const obj2 = { key: "SPEAKING_WHILE_MUTED", icon: _modDef5020, content: null, toastDurationMs: null };
+        const obj2 = { text: null, icon: null, duration: null };
         const intl = util.intl;
-        obj2.content = intl.string(util.t["29gnR4"]);
-        obj2.toastDurationMs = 3 * DurationsDefault.Millis.SECOND;
-        ToastActionCreatorsDefault.open(obj2);
+        obj2.text = intl.string(util.t["29gnR4"]);
+        obj2.icon = MicrophoneSlashIcon.MicrophoneSlashIcon;
+        obj2.duration = 3 * DurationsDefault.Millis.SECOND;
+        ToastActionCreatorsDefault.open("SPEAKING_WHILE_MUTED", obj2);
       }
     }
   }, items5);
@@ -840,7 +842,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
               const intl = util.intl;
               obj2.text = intl.string(util.t.O2IlPT);
               obj2.icon = VideoSlashIcon.VideoSlashIcon;
-              ToastActionCreatorsDefault.openMana("EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", obj2);
+              ToastActionCreatorsDefault.open("EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", obj2);
               const result2 = trackActivityThermalStateNoticeShown.trackActivityThermalStateNoticeShown();
             }
             if (isVideoEnabledResult) {
@@ -981,7 +983,7 @@ let closure_43 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHan
             const intl = util.intl;
             obj2.text = intl.string(util.t.O2IlPT);
             obj2.icon = VideoSlashIcon.VideoSlashIcon;
-            ToastActionCreatorsDefault.openMana("EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", obj2);
+            ToastActionCreatorsDefault.open("EMBEDDED_ACTIVITIES_VIDEO_DISABLED_FOR_THERMAL_STATE", obj2);
             const result2 = trackActivityThermalStateNoticeShown.trackActivityThermalStateNoticeShown();
           }
           if (isVideoEnabledResult) {
@@ -1460,7 +1462,7 @@ let closure_58 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLay
                 obj1.key = closure_12;
                 safeAreaDisableLock = state.requestSafeAreaDisableLock(obj1);
                 return () => {
-                  state = ref.getState();
+                  const state = ref.getState();
                   const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
                 };
               } else {
@@ -1486,7 +1488,7 @@ let closure_58 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLay
               obj1.key = closure_12;
               safeAreaDisableLock = state.requestSafeAreaDisableLock(obj1);
               return () => {
-                state = ref.getState();
+                const state = ref.getState();
                 const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
               };
             } else {
@@ -1608,11 +1610,11 @@ let closure_58 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLay
   const items2 = [isConnected, id];
   const layoutEffect1 = layoutManager.useLayoutEffect(() => {
     if (isConnected) {
-      state = SafeAreaDisabledStore.getState();
+      let state = SafeAreaDisabledStore.getState();
       const obj = { key: id, lockEnabled: true };
       let safeAreaDisableLock = state.requestSafeAreaDisableLock(obj);
       return () => {
-        state = ref.getState();
+        const state = ref.getState();
         const safeAreaDisableLock = state.requestSafeAreaDisableLock({ key, lockEnabled: false });
       };
     }
@@ -2505,7 +2507,7 @@ let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
               }
               flag = flag2;
             } else {
-              state = VoicePanelStore.getState();
+              const state = VoicePanelStore.getState();
               state.closeChannel(channelId);
               flag = true;
             }
@@ -2570,7 +2572,7 @@ let closure_66 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
         }
         flag = flag2;
       } else {
-        state = VoicePanelStore.getState();
+        const state = VoicePanelStore.getState();
         state.closeChannel(channelId);
         flag = true;
       }
@@ -2669,8 +2671,8 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     obj = mode(dependencyMap[26]);
     tmp3 = arg1;
   };
-  let obj = mode(4811);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9550).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4811).runOnJS, dismissKeyboard: mode(4946).dismissKeyboard };
+  let obj = mode(4850);
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9579).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4850).runOnJS, dismissKeyboard: mode(4985).dismissKeyboard };
   fn2.__workletHash = 9634019064864;
   fn2.__initData = __initData21;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -2706,8 +2708,8 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     obj = mode(dependencyMap[26]);
     tmp3 = arg1;
   };
-  let obj = mode(4811);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9550).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4811).runOnJS, dismissKeyboard: mode(4946).dismissKeyboard };
+  let obj = mode(4850);
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9579).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(4850).runOnJS, dismissKeyboard: mode(4985).dismissKeyboard };
   fn2.__workletHash = 12442886667392;
   fn2.__initData = __initData23;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

@@ -101,7 +101,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg1 == null) {
         tmp4 = closure_7;
       }
-      const tmp3Result = flag(7378)(tmp4);
+      const tmp3Result = flag(7384)(tmp4);
       ref2 = tmp3Result;
       closure_5(null);
       const items = [flag, arg0, tmp3Result];
@@ -188,7 +188,7 @@ export const useIsVisible = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items = [num];
       return closure_8(
-        num(7378)((isIntersecting) => {
+        num(7384)((isIntersecting) => {
           closure_0(isIntersecting.isIntersecting);
         }).current,
         closure_4(() => {

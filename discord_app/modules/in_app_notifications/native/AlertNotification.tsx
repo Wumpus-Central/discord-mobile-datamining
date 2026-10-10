@@ -11,14 +11,14 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let size = {
-  shape: fn(8997).CutoutShape.RoundedRect,
-  x: fn(6165).ImageSizes[fn(undefined, 6165).GuildIconSizes.NORMAL] - -6 - 24,
+  shape: fn(9016).CutoutShape.RoundedRect,
+  x: fn(6158).ImageSizes[fn(undefined, 6158).GuildIconSizes.NORMAL] - -6 - 24,
   y: -6,
   width: 24,
   height: 24,
   cornerRadius: nativeDefault.radii.sm,
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles({
   warningBadge: {
     position: "absolute",
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       guild = notification.guild;
       const tmp4 = closure_9();
       const obj = channel(576);
-      const incidentData = channel(12531).useGuildIncidentsState(notification.key).incidentData;
+      const incidentData = channel(12578).useGuildIncidentsState(notification.key).incidentData;
       let raidDetectedAt;
       if (incidentData != null) {
         raidDetectedAt = incidentData.raidDetectedAt;
@@ -161,7 +161,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj6 = { style: tmp4.warningIcon, color: nativeDefault.colors.ICON_FEEDBACK_WARNING };
-        const tmp22 = closure_5(tmp(5004).WarningIcon, obj6);
+        const tmp22 = closure_5(tmp(7571).WarningIcon, obj6);
         cResult[10] = tmp4.warningIcon;
         cResult[11] = tmp22;
       } else {
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { text: tmp6 };
-            const tmp30 = closure_5(tmp(12537).SystemMessageText, obj7);
+            const tmp30 = closure_5(tmp(12584).SystemMessageText, obj7);
             cResult[18] = tmp6;
             cResult[19] = tmp30;
           } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj8 = { icon: tmp25, header: tmp13, children: tmp29, onPress: C, notification };
-          const tmp33 = closure_5(tmp(12567).NotificationPressable, obj8);
+          const tmp33 = closure_5(tmp(12614).NotificationPressable, obj8);
           cResult[20] = tmp13;
           cResult[21] = notification;
           cResult[22] = C;
@@ -241,14 +241,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[13] = tmp20;
       cResult[14] = tmp24;
       const obj10 = { style: tmp4.warningBadge, children: tmp20 };
-      const obj2 = channel(12531);
+      const obj2 = channel(12578);
     }
   : function AlertNotification(notification) {
       notification = notification.notification;
       const channel = notification.channel;
       guild = notification.guild;
       const tmp = closure_9();
-      const incidentData = channel(12531).useGuildIncidentsState(notification.key).incidentData;
+      const incidentData = channel(12578).useGuildIncidentsState(notification.key).incidentData;
       let raidDetectedAt;
       if (incidentData != null) {
         raidDetectedAt = incidentData.raidDetectedAt;
@@ -281,12 +281,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { cutouts: null, children: null };
       const items2 = [size];
       obj4.cutouts = items2;
-      let obj = channel(12531);
-      obj4.children = closure_5(guild(6165), { guild, selected: false });
-      const items3 = [closure_5(guild(8997), obj4)];
+      let obj = channel(12578);
+      obj4.children = closure_5(guild(6158), { guild, selected: false });
+      const items3 = [closure_5(guild(9016), obj4)];
       const obj5 = { style: tmp.warningBadge, children: null };
-      const tmp8 = guild(8997);
-      obj5.children = closure_5(channel(5004).WarningIcon, {
+      const tmp8 = guild(9016);
+      obj5.children = closure_5(channel(7571).WarningIcon, {
         style: tmp.warningIcon,
         color: guild(587).colors.ICON_FEEDBACK_WARNING,
       });
@@ -294,8 +294,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items3;
       obj2.icon = closure_7(closure_6, obj3);
       obj2.header = memo;
-      obj2.children = closure_5(channel(12537).SystemMessageText, { text: stringResult });
+      obj2.children = closure_5(channel(12584).SystemMessageText, { text: stringResult });
       obj2.onPress = callback;
       obj2.notification = notification;
-      return closure_5(channel(12567).NotificationPressable, obj2);
+      return closure_5(channel(12614).NotificationPressable, obj2);
     };

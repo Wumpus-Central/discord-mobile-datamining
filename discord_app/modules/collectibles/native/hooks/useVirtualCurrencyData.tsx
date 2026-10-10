@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/hooks/useVirtualCurrencyData.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import CollectiblesProductUtils from "../../utils/CollectiblesProductUtils.tsx";
-import _mod9041 from "../../../virtual_currency/hooks/index.tsx";
+import _mod9060 from "../../../virtual_currency/hooks/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
         if (cResult[1] === product) {
           let tmp4 = cResult[2];
         }
-        const balance = _mod9041.useFetchVirtualCurrencyBalance().balance;
+        const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
         let tmp7 = null;
         if (null != tmp4) {
           tmp7 = null;
@@ -38,7 +38,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
         cResult[5] = tmp4;
         cResult[6] = obj2;
         tmp8 = obj2;
-        const tmpResult = _mod9041;
+        const tmpResult = _mod9060;
       }
       const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount });
       cResult[0] = hasShopDiscount;
@@ -51,7 +51,7 @@ export const useVirtualCurrencyData = ReactCompilerGating.isReactCompilerEnabled
   : function useVirtualCurrencyData(product, hasShopDiscount) {
       const productOrbPrice = CollectiblesProductUtils.getProductOrbPrice({ product, hasShopDiscount });
       const obj2 = { product, hasShopDiscount };
-      const balance = _mod9041.useFetchVirtualCurrencyBalance().balance;
+      const balance = _mod9060.useFetchVirtualCurrencyBalance().balance;
       const items = [productOrbPrice, balance];
       return {
         price: productOrbPrice,

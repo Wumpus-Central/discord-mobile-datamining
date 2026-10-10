@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
-import _modDef3439 from "../intl/FavoritesGuild.messages.js";
+import _modDef3442 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -33,15 +33,15 @@ function EmptyBody() {
   }, []);
   let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3439.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3442.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16545).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16615).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 let c9 = "heading-md/semibold";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 },
   divider: null,
@@ -292,7 +292,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { variant, color: "mobile-text-heading-primary", children: null };
           const intl = util.intl;
-          obj2.children = intl.string(_modDef3439["1n0TGE"]);
+          obj2.children = intl.string(_modDef3442["1n0TGE"]);
           const tmp16 = timestampProducer(Text_Text.Heading, obj2);
           const tmp18 = timestampProducer(EmptyBody, {});
           cResult[3] = tmp16;
@@ -372,7 +372,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
       const obj4 = { variant, color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
-      obj4.children = intl.string(_modDef3439["1n0TGE"]);
+      obj4.children = intl.string(_modDef3442["1n0TGE"]);
       const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
       obj3.children = items1;
       items[1] = React5(Stack_Stack.Stack, obj3);

@@ -220,7 +220,7 @@ prototype["getEncoderUsageStats"] = function getEncoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    let map1 = new Map();
+    map1 = new Map();
     let obj3 = self.outboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
     for (const item10013 of codecsUsed) {
@@ -240,7 +240,7 @@ prototype["getDecoderUsageStats"] = function getDecoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    let map1 = new Map();
+    map1 = new Map();
     let obj3 = self.inboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
     for (const item10013 of codecsUsed) {
@@ -1510,12 +1510,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set1 = new Set();
   const set2 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp14 = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  let tmp14 = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
   if (tmp14) {
     tmp14 = null != transport.camera;
   }
   self.cameraDuration.value = tmp14;
-  let tmp16 = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  let tmp16 = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
   if (tmp16) {
     tmp16 = null != transport.camera;
   }
@@ -1523,7 +1523,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp16 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp16;
-  let tmp18 = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  let tmp18 = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
   if (tmp18) {
     tmp18 = null != transport.camera;
   }
@@ -1534,7 +1534,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   if (tmp20) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  let liveBackgroundEnabled = self.connection.context === tmp(5136).MediaEngineContextTypes.DEFAULT;
+  let liveBackgroundEnabled = self.connection.context === tmp(5137).MediaEngineContextTypes.DEFAULT;
   if (liveBackgroundEnabled) {
     liveBackgroundEnabled = null != transport.camera;
   }
@@ -1868,7 +1868,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     } else {
       self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
     }
-    tmpResult = tmp(2081);
+    tmpResult = tmp(2082);
   }
 };
 prototype["updateSystemResourceStats"] = function updateSystemResourceStats() {

@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UserProfileAnalyticsTypes = fn(8291).UserProfileAnalyticsTypes;
+const UserProfileAnalyticsTypes = fn(8307).UserProfileAnalyticsTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");

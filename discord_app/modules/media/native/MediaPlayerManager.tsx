@@ -39,12 +39,12 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
     wasPipClosedByUser: null,
     progress: null,
     rate: "Set",
-    showPip: 2422,
+    showPip: -1.5,
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: 2425
+    currentlyDisplayedChannelId: null
   };
   return obj;
 });
@@ -177,7 +177,7 @@ prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   });
 };
 prototype["handleVoicePanelStateUpdated"] = function handleVoicePanelStateUpdated() {
-  state = VoicePanelStore.getState();
+  const state = VoicePanelStore.getState();
   let result = state.isVoicePanelFullscreen();
   if (!result) {
     result = state.voicePanelsPIP.size > 0;
@@ -205,7 +205,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
       id = source.id;
     }
     closure_16.verbose("Playback rate changed to " + _require + ": " + id);
-    state = obj.getState();
+    const state = obj.getState();
     ({ activeMediaPlayerSource, isPlaying, wasPipClosedByUser } = state);
     if (tmp9(activeMediaPlayerSource, source)) {
       const obj2 = { rate: _require, isPlaying: 0 !== _require, wasPipClosedByUser: null };
@@ -232,7 +232,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
 prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlayerPlaybackProgressUpdated(arg0) {
   ({ source: require, time: importDefault, duration: dependencyMap } = arg0);
   ReactBatchUpdates.batchUpdates(() => {
-    state = obj.getState();
+    const state = obj.getState();
     if (tmp2(state.activeMediaPlayerSource, _require)) {
       const currentlyDisplayedChannelId = state.currentlyDisplayedChannelId;
       if (state.showPip) {
@@ -241,7 +241,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
           const obj2 = { time, duration: dependencyMap, isCompleted: null };
           let flag;
           if (dependencyMap > 0) {
-            flag = dependencyMap - time <= __initData2;
+            flag = dependencyMap - time <= map1;
           }
           if (flag == null) {
             flag = false;
@@ -277,7 +277,7 @@ prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayer
   source = source.source;
   source(1272).batchUpdates(() => {
     let id;
-    state = obj.getState();
+    const state = obj.getState();
     if (source != null) {
       id = source.id;
     }
@@ -388,7 +388,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
 };
 function updateDisplayState() {
   ReactBatchUpdates.batchUpdates(() => {
-    state = useMediaPlayerManagerStore.getState();
+    const state = useMediaPlayerManagerStore.getState();
     ({ displayedMediaItemIdsPerChannel, activeMediaPlayerSource } = state);
     if (undefined === activeMediaPlayerSource) {
       activeMediaPlayerSource = {};
@@ -476,6 +476,6 @@ export default updateDisplayState1;
 export { useMediaPlayerManagerStore };
 export const isPlaybackComplete = function isPlaybackComplete(duration) {
   if (duration.duration > 0) {
-    return duration.duration - duration.time <= __initData2;
+    return duration.duration - duration.time <= map1;
   }
 };

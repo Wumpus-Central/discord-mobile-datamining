@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[18] !== onClose) {
             const obj2 = { text: tmp24, variant: "secondary", onPress: onClose };
             cResult[18] = onClose;
-            cResult[19] = closure_6(tmp(5376).Button, obj2);
+            cResult[19] = closure_6(tmp(5379).Button, obj2);
             class P {
               constructor() {
                 if (closure_1 != null) {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const tmp28 = closure_6(tmp(5376).Button, obj2);
+            const tmp28 = closure_6(tmp(5379).Button, obj2);
           }
           if (cResult[20] === tmp22) {
             if (cResult[21] === tmp26) {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj5 = { variant: "destructive", text: tmp19, onPress: tmp12 };
-        const tmp23 = closure_6(tmp(5376).Button, obj5);
+        const tmp23 = closure_6(tmp(5379).Button, obj5);
         cResult[14] = tmp12;
         cResult[15] = tmp19;
         cResult[16] = tmp23;
@@ -226,14 +226,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = { children: null };
       const items1 = [
-        closure_6(guildId(5376).Button, { variant: "destructive", text: confirmText, onPress: callback }),
+        closure_6(guildId(5379).Button, { variant: "destructive", text: confirmText, onPress: callback }),
       ];
       const obj3 = { text: null, variant: "secondary", onPress: null };
       const intl4 = tmp7(1126).intl;
       obj3.text = intl4.string(guildId(1126).t.bANR0R);
       obj3.onPress = onClose;
-      items1[1] = closure_6(guildId(5376).Button, obj3);
+      items1[1] = closure_6(guildId(5379).Button, obj3);
       obj2.children = items1;
       obj.buttons = closure_8(closure_7, obj2);
-      return closure_6(onClose(6119), obj);
+      return closure_6(onClose(6112), obj);
     };

@@ -32,7 +32,7 @@ export default function useFetchShareEmbed(arg0) {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -59,7 +59,7 @@ export default function useFetchShareEmbed(arg0) {
                   const items = [current];
                   c4 = 3;
                   c5 = 1;
-                  const obj10 = { value: current(11415).unfurlEmbedUrl(items), done: false };
+                  const obj10 = { value: current(11460).unfurlEmbedUrl(items), done: false };
                   return obj10;
                 } else {
                   c5 = 3;
@@ -96,7 +96,7 @@ export default function useFetchShareEmbed(arg0) {
                     }
                   });
                   c5 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 } else if (0 === closure_128_1.embeds.length) {
                   tmp4(undefined);
                   c3 = 0;

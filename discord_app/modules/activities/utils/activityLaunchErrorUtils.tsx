@@ -3,8 +3,8 @@ import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import InteractionCallbackErrorDefault from "../../errors/InteractionCallbackError.tsx";
 import InteractionUtils from "../../interactions/InteractionUtils.tsx";
-import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
 import EmbeddedActivityClientErrorDefault from "../../errors/EmbeddedActivityClientError.tsx";
+import fetchDeveloperApplications from "../fetchDeveloperApplications.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocationMetadataStore from "../../location_metadata/stores/LocationMetadataStore.tsx";
@@ -22,7 +22,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
             if (setting) {
               c5 = 1;
               c6 = 1;
-              const obj5 = { value: EmbeddedActivitiesActionCreators.fetchDeveloperApplications(), done: false };
+              const obj5 = { value: fetchDeveloperApplications.fetchDeveloperApplications(), done: false };
               return obj5;
             }
           } else if (_require instanceof InteractionCallbackErrorDefault) {
@@ -165,7 +165,7 @@ let closure_10 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(9046).DevShelfFetchState;
+const DevShelfFetchState = fn(9065).DevShelfFetchState;
 const AbortCodes = fn(1085).AbortCodes;
 const jsx = fn(21).jsx;
 const ActivityLaunchFailErrorType = {

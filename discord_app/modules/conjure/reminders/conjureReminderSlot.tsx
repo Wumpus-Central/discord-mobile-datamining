@@ -215,7 +215,7 @@ function nextReminderClockState(projectId, projectId2, now) {
     }
   }
 }
-const ConjureChatStore = fn(12948);
+const ConjureChatStore = fn(12996);
 ({ isStrandedSegment: metroRequire, turnSettled: closure_7 } = ConjureChatStore);
 let items = [60000, 180000, 600000];
 let c9 = 600000;
@@ -1260,7 +1260,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useConjureReminder(projectId, arr, draftHasText) {
       closure_0 = projectId;
-      const tmp = obj(17042)(projectId);
+      const tmp = obj(17110)(projectId);
       let diff = arr.length - 1;
       let tmp4 = null;
       if (0 <= diff) {
@@ -1317,8 +1317,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         bound = Math.max(atResult.created_at, num, num2);
       }
       obj.messageAt = bound;
-      obj.visible = obj(16562)();
-      const tmp2 = obj(16562)();
+      obj.visible = obj(11426)();
+      const tmp2 = obj(11426)();
       [tmp15, tmp16] = obj3.useState(() => {
         const timestamp = Date.now();
         obj = {};

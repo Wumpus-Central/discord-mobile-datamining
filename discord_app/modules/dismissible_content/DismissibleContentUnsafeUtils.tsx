@@ -132,7 +132,7 @@ let closure_7 = async function _UNSAFE_markDismissibleContentAsDismissed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -234,7 +234,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -287,7 +287,7 @@ let closure_9 = async function _UNSAFE_markTimeRecurringGuildDismissibleContentA
           closure_131_1,
         );
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp13) {
       c6 = tmp;
@@ -312,7 +312,7 @@ let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleConten
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -369,7 +369,7 @@ let closure_10 = async function _UNSAFE_markSnowflakeBoundGuildDismissibleConten
             closure_132_1,
           );
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } catch (tmp13) {
         c7 = tmp;

@@ -62,7 +62,7 @@ function makeSearchItem(channel, guild) {
   if (id == null) {
     id = closure_1_10;
   }
-  const CHANNELResult = state.CHANNEL(id, channel.id);
+  const CHANNELResult = closure_1_14.CHANNEL(id, channel.id);
   const obj3 = {
     id: CHANNELResult,
     relatedUniqueIdentifier: CHANNELResult,
@@ -125,7 +125,7 @@ function makeGuildDomain(guild1) {
   if (flag === undefined) {
     flag = false;
   }
-  const CHANNELResult = state.CHANNEL(guild1.id);
+  const CHANNELResult = closure_1_14.CHANNEL(guild1.id);
   const obj = {
     id: CHANNELResult,
     relatedUniqueIdentifier: CHANNELResult,
@@ -218,7 +218,7 @@ function setChannelActivity(channelId) {
       const set = new Set(items);
       const items3 = [];
       HermesBuiltin.arraySpread(set, 0);
-      const CHANNELResult = state.CHANNEL(channel.guild_id, channel.id);
+      const CHANNELResult = closure_1_14.CHANNEL(channel.guild_id, channel.id);
       const obj4 = {
         webpageURL: null,
         relatedUniqueIdentifier: null,

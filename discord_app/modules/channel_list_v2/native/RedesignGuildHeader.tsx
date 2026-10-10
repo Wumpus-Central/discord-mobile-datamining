@@ -27,7 +27,7 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(11713);
+const RedesignChannelListConstants = fn(11758);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,
@@ -67,9 +67,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       return isThemeDarkResult;
     };
 fn(558);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let closure_17 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_18 = createStyles.createStyles((arg0) => {
   const obj = {
     bannerWrapper: { width: "100%", maxHeight: arg0 * collapsed, aspectRatio, overflow: "hidden" },
@@ -82,7 +82,7 @@ let closure_18 = createStyles.createStyles((arg0) => {
   obj.bannerOverlay = obj3;
   return obj;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
     let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
@@ -91,7 +91,7 @@ let result = createStyles.experimental_createToken((gradient) => {
   }
   return PANEL_BG;
 });
-createStyles = fn(5091);
+createStyles = fn(5092);
 let closure_19 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
 ReactCompilerGating = fn(558);
 const __initData = {
@@ -263,7 +263,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp14 = closure_1_13(ThemedGradientDefault, { absolute: true, tall: true });
+        const tmp14 = map1(ThemedGradientDefault, { absolute: true, tall: true });
         cResult[5] = tmp14;
         let tmp11 = tmp14;
       } else {
@@ -271,7 +271,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== animatedStyle1) {
         const obj5 = { style: animatedStyle1, children: tmp11 };
-        const tmp18 = closure_1_13(REAWorkaroundViewDefault, obj5);
+        const tmp18 = map1(REAWorkaroundViewDefault, obj5);
         cResult[6] = animatedStyle1;
         cResult[7] = tmp18;
         let tmp15 = tmp18;
@@ -299,7 +299,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { style: tmp10, children: null };
               const items1 = [tmp15, tmp24];
               obj6.children = items1;
-              const tmp31 = state(REAWorkaroundViewDefault, obj6);
+              const tmp31 = closure_1_14(REAWorkaroundViewDefault, obj6);
               cResult[16] = tmp24;
               cResult[17] = tmp10;
               cResult[18] = tmp15;
@@ -307,7 +307,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               tmp28 = tmp31;
             }
             const obj7 = { style: tmp4.headerWrapper, children: tmp22 };
-            const tmp27 = closure_1_13(hasOwnProperty, obj7);
+            const tmp27 = map1(hasOwnProperty, obj7);
             cResult[13] = tmp4.headerWrapper;
             cResult[14] = tmp22;
             cResult[15] = tmp27;
@@ -315,7 +315,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp23 = closure_1_13(ChannelListStickyHeaderDefault, {
+      const tmp23 = map1(ChannelListStickyHeaderDefault, {
         guild,
         showExtraButtons: !tmp7,
         canOpenGuildActionSheet: !tmp7,
@@ -358,20 +358,20 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.style = items;
       const obj5 = { style: animatedStyle1, children: null };
       const tmp5 = REAWorkaroundViewDefault;
-      obj5.children = __initData2(ThemedGradientDefault, { absolute: true, tall: true });
-      const items1 = [__initData2(REAWorkaroundViewDefault, obj5)];
+      obj5.children = map1(ThemedGradientDefault, { absolute: true, tall: true });
+      const items1 = [map1(REAWorkaroundViewDefault, obj5)];
       const obj6 = {
         style: tmp.headerWrapper,
-        children: __initData2(ChannelListStickyHeaderDefault, {
+        children: map1(ChannelListStickyHeaderDefault, {
           guild,
           showExtraButtons: !isFavoritesGuildIdResult,
           canOpenGuildActionSheet: !isFavoritesGuildIdResult,
           showCoachmarks: !isFavoritesGuildIdResult,
         }),
       };
-      items1[1] = __initData2(hasOwnProperty, obj6);
+      items1[1] = map1(hasOwnProperty, obj6);
       obj4.children = items1;
-      return state(tmp5, obj4);
+      return closure_1_14(tmp5, obj4);
     };
 const __initData5 = {
   code: 'function RedesignGuildHeaderTsx5(){const{scrollPosition,interpolate,maxScrollPosition,bannerHeight}=this.__closure;const scrollPosValue=scrollPosition.get();return{opacity:interpolate(scrollPosValue,[0,maxScrollPosition],[1,0],"clamp"),transform:[{translateY:scrollPosValue>=0?interpolate(-scrollPosValue,[0,bannerHeight],[0,-bannerHeight],"clamp"):scrollPosValue/2},{scale:scrollPosValue>=0?1:(bannerHeight-scrollPosValue)/bannerHeight}]};}',
@@ -740,7 +740,7 @@ export default noop.memo(
                   const obj2 = { style: tmp2.guildHeaderWrapper, preventClipping: true, children: null };
                   const items = [tmp3, tmp6];
                   obj2.children = items;
-                  const tmp13 = state(hasOwnProperty, obj2);
+                  const tmp13 = closure_1_14(hasOwnProperty, obj2);
                   cResult[9] = tmp2.guildHeaderWrapper;
                   cResult[10] = tmp3;
                   cResult[11] = tmp6;
@@ -749,7 +749,7 @@ export default noop.memo(
                 }
               }
               const obj3 = { guild, scrollPosition, bannerHeight: num };
-              const tmp9 = __initData2(closure_24, obj3);
+              const tmp9 = map1(closure_24, obj3);
               cResult[5] = guild;
               cResult[6] = scrollPosition;
               cResult[7] = num;
@@ -758,7 +758,7 @@ export default noop.memo(
             }
           }
         }
-        const tmp4 = __initData2(closure_29, { guild, scrollPosition, bannerHeight, bannerWidth });
+        const tmp4 = map1(closure_29, { guild, scrollPosition, bannerHeight, bannerWidth });
         cResult[0] = bannerHeight;
         cResult[1] = bannerWidth;
         cResult[2] = guild;
@@ -769,18 +769,16 @@ export default noop.memo(
     : function RedesignGuildHeader(bannerWidth) {
         ({ guild, scrollPosition, bannerHeight } = bannerWidth);
         const obj = { style: closure_17().guildHeaderWrapper, preventClipping: true, children: null };
-        const items = [
-          __initData2(closure_29, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth }),
-        ];
+        const items = [map1(closure_29, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth })];
         const obj2 = { guild, scrollPosition, bannerHeight: null };
         let num = 0;
         if (null != guild.banner) {
           num = bannerHeight;
         }
         obj2.bannerHeight = num;
-        items[1] = __initData2(closure_24, obj2);
+        items[1] = map1(closure_24, obj2);
         obj.children = items;
-        return state(hasOwnProperty, obj);
+        return closure_1_14(hasOwnProperty, obj);
       },
 );
 export const useRedesignGuildHeaderHeight = tmp5;

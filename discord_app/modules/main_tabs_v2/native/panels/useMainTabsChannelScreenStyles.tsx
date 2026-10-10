@@ -5,7 +5,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);
@@ -53,7 +53,7 @@ export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompile
           num3 = elevation.elevation;
         }
         obj3.elevation = num3;
-        let value4;
+        value4 = undefined;
         if (isCompletelyCovered != null) {
           value4 = isCompletelyCovered.get();
         }
@@ -111,7 +111,7 @@ export const useMainTabsChannelScreenStyles = ReactCompilerGating.isReactCompile
           num3 = elevation.elevation;
         }
         obj3.elevation = num3;
-        let value4;
+        value4 = undefined;
         if (isCompletelyCovered != null) {
           value4 = isCompletelyCovered.get();
         }

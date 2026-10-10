@@ -64,9 +64,9 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "code",
-    triggeredMigrations: true,
-    offlineEditDataVersion: true,
+    loading: "emoji",
+    triggeredMigrations: "toCharArray$esjava$1",
+    offlineEditDataVersion: "SLAYER_STOREFRONT_CARD_IMPRESSION",
   };
   return obj;
 };

@@ -4,13 +4,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef15430 from "../../../../../_runtime/metro/15430__.js";
+import _modDef15492 from "../../../../../_runtime/metro/15492__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef15430 };
+          const obj2 = { source: _modDef15492 };
           const tmp11 = React3(native.Icon, obj2);
           cResult[3] = tmp11;
           let tmp8 = tmp11;
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "interactive-text-active",
           children: text,
         }),
-        React3(native.Icon, { source: _modDef15430 }),
+        React3(native.Icon, { source: _modDef15492 }),
       ];
       obj.children = items;
       return React4(Pressables.PressableHighlight, obj);

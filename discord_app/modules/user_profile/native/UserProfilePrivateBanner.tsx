@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   banner: {
     flexDirection: "row",
@@ -23,7 +23,7 @@ let obj2 = {
     paddingHorizontal: nativeDefault.space.PX_8,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
     position: "relative",
-    zIndex: fn(6898).PROFILE_TOP_LAYER_Z_INDEX,
+    zIndex: fn(6904).PROFILE_TOP_LAYER_Z_INDEX,
   },
 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -38,7 +38,7 @@ let obj3 = {
   paddingHorizontal: nativeDefault.space.PX_8,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   position: "relative",
-  zIndex: fn(6898).PROFILE_TOP_LAYER_Z_INDEX,
+  zIndex: fn(6904).PROFILE_TOP_LAYER_Z_INDEX,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateBanner.tsx");

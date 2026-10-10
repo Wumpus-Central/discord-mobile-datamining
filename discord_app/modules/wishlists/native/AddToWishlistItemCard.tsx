@@ -11,7 +11,7 @@ const View = fn(17).View;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { heartOverlay: null };
 const rect = {
   position: "absolute",
@@ -72,7 +72,7 @@ export default function AddToWishlistItemCard(sku) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -127,10 +127,10 @@ export default function AddToWishlistItemCard(sku) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c3 = 1;
-              const obj14 = { key: "WISHLIST_ADD_SUGGESTION_ERROR", content: null };
+              const obj14 = { text: null };
               const intl = tmp4(tmp36[14]).intl;
-              obj14.content = intl.string(tmp4(tmp36[14]).t.F8FvUy);
-              v3(tmp36[13]).open(obj14);
+              obj14.text = intl.string(tmp4(tmp36[14]).t.F8FvUy);
+              v3(tmp36[13]).open("WISHLIST_ADD_SUGGESTION_ERROR", obj14);
               const obj2 = v3(tmp36[13]);
             } else if (arg0 === 1) {
               c4 = 3;

@@ -10,7 +10,7 @@ const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 0 },
   title: { marginHorizontal: 24, marginTop: 16 },
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn = function o() {
           ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
           GuildSettingsActionCreatorsDefault.close();
-          onRequireModeratorMFAClick(7087).openUserSettings({ screen: constants.ACCOUNT });
+          onRequireModeratorMFAClick(7093).openUserSettings({ screen: constants.ACCOUNT });
         };
         cResult[0] = fn;
         let first = fn;
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp9,
         };
-        const tmp13 = closure_5(tmp(5087).Heading, obj4);
+        const tmp13 = closure_5(tmp(5088).Heading, obj4);
         cResult[4] = tmp4.title;
         cResult[5] = tmp13;
         let tmp11 = tmp13;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { startExpanded: true, children: null };
         const items = [tmp11, tmp14];
         obj5.children = items;
-        const tmp18 = closure_6(tmp(6836).BottomSheet, obj5);
+        const tmp18 = closure_6(tmp(6839).BottomSheet, obj5);
         cResult[9] = tmp11;
         cResult[10] = tmp14;
         cResult[11] = tmp18;
@@ -111,11 +111,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ({
           actions: {
             onEnableMFAClick() {
-              closure_1_1(5055).hideActionSheet(closure_1_7);
-              const obj = closure_1_1(5055);
-              closure_1_1(8621).close();
-              const obj2 = closure_1_1(8621);
-              onRequireModeratorMFAClick(7087).openUserSettings({ screen: constants.ACCOUNT });
+              closure_1_1(5056).hideActionSheet(closure_1_7);
+              const obj = closure_1_1(5056);
+              closure_1_1(8637).close();
+              const obj2 = closure_1_1(8637);
+              onRequireModeratorMFAClick(7093).openUserSettings({ screen: constants.ACCOUNT });
             },
             onRequireModeratorMFAClick() {
               ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -135,13 +135,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = onRequireModeratorMFAClick(1126).intl;
       obj2.children = intl.string(onRequireModeratorMFAClick(1126).t["3s47iN"]);
-      const items1 = [closure_5(onRequireModeratorMFAClick(5087).Heading, obj2)];
+      const items1 = [closure_5(onRequireModeratorMFAClick(5088).Heading, obj2)];
       const tmp3 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo);
       items1[1] = closure_5(EligibilityChecklistDefault, {
         style: tmp.container,
         items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
       });
       obj.children = items1;
-      return closure_6(onRequireModeratorMFAClick(6836).BottomSheet, obj);
+      return closure_6(onRequireModeratorMFAClick(6839).BottomSheet, obj);
     };
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

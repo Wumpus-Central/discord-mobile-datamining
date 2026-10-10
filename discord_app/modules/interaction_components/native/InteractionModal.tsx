@@ -10,6 +10,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import InlineNotice from "../../../design/mana/components/InlineNotice/InlineNotice.native.tsx";
 import ComponentStateContext from "../ComponentStateContext.tsx";
 import InteractionModalUtils from "../InteractionModalUtils.tsx";
 import renderComponents from "renderComponents.tsx";
@@ -21,11 +22,11 @@ function onClose() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const InteractionModalState = fn(14575).InteractionModalState;
+const InteractionModalState = fn(14629).InteractionModalState;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const interaction_modal = "interaction_modal";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   modal: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   scroll: { flex: 1 },
@@ -164,8 +165,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           tmp42 = cResult[32];
                         }
                         if (cResult[33] !== tmp42) {
-                          const obj7 = { messageType: native.HelpMessageTypes.WARNING, children: tmp42 };
-                          const tmp46 = timestampProducer(native.HelpMessage, obj7);
+                          const obj7 = { type: "warning", message: tmp42, role: "static" };
+                          const tmp46 = timestampProducer(InlineNotice.InlineNotice, obj7);
                           cResult[33] = tmp42;
                           cResult[34] = tmp46;
                           let tmp44 = tmp46;
@@ -306,8 +307,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp39 = null;
                         if ("" !== error) {
                           const obj14 = { style: tmp4.error, children: null };
-                          const obj15 = { messageType: native.HelpMessageTypes.ERROR, children: error };
-                          obj14.children = timestampProducer(native.HelpMessage, obj15);
+                          const obj15 = { type: "critical", message: error, role: "alert" };
+                          obj14.children = timestampProducer(InlineNotice.InlineNotice, obj15);
                           tmp39 = timestampProducer(React3, obj14);
                         }
                       }
@@ -425,17 +426,17 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7Result = null;
         if ("" !== error) {
           const obj10 = { style: tmp.error, children: null };
-          const obj11 = { messageType: native.HelpMessageTypes.ERROR, children: error };
-          obj10.children = timestampProducer(native.HelpMessage, obj11);
+          const obj11 = { type: "critical", message: error, role: "alert" };
+          obj10.children = timestampProducer(InlineNotice.InlineNotice, obj11);
           tmp7Result = timestampProducer(React3, obj10);
         }
       }
       const obj12 = { children: null };
       const items3 = [tmp7Result];
-      const obj13 = { messageType: native.HelpMessageTypes.WARNING, children: null };
+      const obj13 = { type: "warning", message: null, role: "static" };
       const intl2 = util.intl;
-      obj13.children = intl2.format(util.t["dSTy/w"], { applicationName });
-      items3[1] = timestampProducer(native.HelpMessage, obj13);
+      obj13.message = intl2.format(util.t["dSTy/w"], { applicationName });
+      items3[1] = timestampProducer(InlineNotice.InlineNotice, obj13);
       obj12.children = items3;
       const items4 = [React5(React3, obj12), ,];
       const obj14 = { modal: children, validators, validationErrors, setValidationErrors, children: null };

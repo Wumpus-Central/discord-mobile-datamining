@@ -7,7 +7,7 @@ import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StageInstanceStore from "StageInstanceStore.tsx";
 
 require = fn;
-const constants = fn(5889).RequestToSpeakPermissionStates;
+const constants = fn(5892).RequestToSpeakPermissionStates;
 const Permissions = fn(1085).Permissions;
 const RowType = fn(7489).RowType;
 const size = fn(2);

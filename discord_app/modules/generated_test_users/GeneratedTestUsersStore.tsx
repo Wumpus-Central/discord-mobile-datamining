@@ -28,7 +28,7 @@ prototype["initialize"] = function initialize(pools) {
     if (null != pools.users) {
       const _Map2 = Map;
       const _Object2 = Object;
-      const map1 = new Map(Object.entries(pools.users));
+      map1 = new Map(Object.entries(pools.users));
       closure_1.users = map1;
     }
   }

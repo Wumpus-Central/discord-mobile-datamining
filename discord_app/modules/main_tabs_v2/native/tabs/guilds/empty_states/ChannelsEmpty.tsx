@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../../../actions/native/CreateChannelModalActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16602 from "../../../../../../../_runtime/metro/16602__.js";
-import _modDef16603 from "../../../../../../../_runtime/metro/16603__.js";
+import _modDef16669 from "../../../../../../../_runtime/metro/16669__.js";
+import _modDef16670 from "../../../../../../../_runtime/metro/16670__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../../../stores/PermissionStore.tsx";
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   wrapper: { flex: 1, paddingTop: 12 },
   content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 },
@@ -24,7 +24,7 @@ let obj = {
   personalizeButtonWrapper: null,
 };
 let obj3 = {};
-const merged = Object.assign(fn(5087).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(5088).TextStyleSheet["heading-md/bold"]);
 obj3.fontSize = 18;
 obj3.marginTop = 16;
 obj3.marginBottom = 8;
@@ -93,7 +93,7 @@ export default noop.memo(
           tmp11 = cResult[7];
         }
         const tmpResult = guild(573);
-        const youBarTotalHeight = guild(15290).useYouBarTotalHeight(16);
+        const youBarTotalHeight = guild(15352).useYouBarTotalHeight(16);
         if (cResult[8] !== youBarTotalHeight) {
           const obj2 = { paddingBottom: youBarTotalHeight };
           cResult[8] = youBarTotalHeight;
@@ -113,7 +113,7 @@ export default noop.memo(
               }
               const _Symbol = Symbol;
               if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj3 = { source: _modDef16603 };
+                const obj3 = { source: _modDef16670 };
                 const tmp24 = closure_7(FastImageDefault, obj3);
                 cResult[17] = tmp24;
                 let tmp20 = tmp24;
@@ -140,7 +140,7 @@ export default noop.memo(
                     style: tmp25,
                     children: tmp26,
                   };
-                  const tmp30 = closure_7(tmp(5087).Text, obj4);
+                  const tmp30 = closure_7(tmp(5088).Text, obj4);
                   cResult[22] = tmp25;
                   cResult[23] = tmp30;
                   let tmp28 = tmp30;
@@ -158,7 +158,7 @@ export default noop.memo(
                 }
                 if (cResult[25] !== tmp4.text) {
                   const obj5 = { color: "text-default", variant: "text-md/medium", style: tmp4.text, children: tmp31 };
-                  const tmp35 = closure_7(tmp(5087).Text, obj5);
+                  const tmp35 = closure_7(tmp(5088).Text, obj5);
                   cResult[25] = tmp4.text;
                   cResult[26] = tmp35;
                   let tmp33 = tmp35;
@@ -217,7 +217,7 @@ export default noop.memo(
                   const intl4 = tmp(1126).intl;
                   obj9.text = intl4.string(tmp(1126).t["63PyJQ"]);
                   obj9.onPress = tmp11;
-                  obj8.children = closure_7(tmp(5377).BaseTextButton, obj9);
+                  obj8.children = closure_7(tmp(5380).BaseTextButton, obj9);
                   tmp37 = closure_7(View, obj8);
                 }
                 cResult[27] = canCreateChannel;
@@ -239,12 +239,12 @@ export default noop.memo(
           if (canCustomizeGuild) {
             const obj10 = { style: tmp4.personalizeButtonWrapper, children: null };
             const obj11 = { icon: null, label: null, onPress: null };
-            const obj12 = { source: _modDef16602, disableColor: true };
+            const obj12 = { source: _modDef16669, disableColor: true };
             obj11.icon = closure_7(tmp(1200).Icon, obj12);
             const intl = tmp(1126).intl;
             obj11.label = intl.string(tmp(1126).t["Yhi9/N"]);
             obj11.onPress = tmp10;
-            obj10.children = closure_7(tmp(8565).RowButton, obj11);
+            obj10.children = closure_7(tmp(8581).RowButton, obj11);
             tmp16 = closure_7(View, obj10);
           }
           cResult[13] = canCustomizeGuild;
@@ -258,7 +258,7 @@ export default noop.memo(
         cResult[11] = tmp13;
         cResult[12] = items5;
         tmp14 = items5;
-        const tmpResult2 = guild(15290);
+        const tmpResult2 = guild(15352);
       }
     : function ChannelsEmpty(guild) {
         guild = guild.guild;
@@ -285,25 +285,25 @@ export default noop.memo(
         const obj = guild(573);
         const obj3 = { style: null, children: null };
         const items4 = [tmp.wrapper];
-        const obj2 = guild(15290);
-        items4[1] = { paddingBottom: guild(15290).useYouBarTotalHeight(16) };
+        const obj2 = guild(15352);
+        items4[1] = { paddingBottom: guild(15352).useYouBarTotalHeight(16) };
         obj3.style = items4;
         if (canCustomizeGuild) {
           const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
           const obj6 = { icon: null, label: null, onPress: null };
-          const obj7 = { source: _modDef16602, disableColor: true };
+          const obj7 = { source: _modDef16669, disableColor: true };
           obj6.icon = closure_7(tmp2(1200).Icon, obj7);
           const intl = tmp2(1126).intl;
           obj6.label = intl.string(tmp2(1126).t["Yhi9/N"]);
           obj6.onPress = callback;
-          obj5.children = closure_7(tmp2(8565).RowButton, obj6);
+          obj5.children = closure_7(tmp2(8581).RowButton, obj6);
           canCustomizeGuild = closure_7(View, obj5);
         }
         const items5 = [canCustomizeGuild];
         const obj8 = { style: tmp.content, children: null };
         const obj9 = { source: null };
-        const obj4 = { paddingBottom: guild(15290).useYouBarTotalHeight(16) };
-        obj9.source = _modDef16603;
+        const obj4 = { paddingBottom: guild(15352).useYouBarTotalHeight(16) };
+        obj9.source = _modDef16670;
         const items6 = [closure_7(FastImageDefault, obj9), , ,];
         const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
         const items7 = [,];
@@ -311,18 +311,18 @@ export default noop.memo(
         obj10.style = items7;
         const intl2 = tmp2(1126).intl;
         obj10.children = intl2.string(guild(1126).t.o4s29v);
-        items6[1] = closure_7(guild(5087).Text, obj10);
+        items6[1] = closure_7(guild(5088).Text, obj10);
         const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
         const intl3 = tmp2(1126).intl;
         obj11.children = intl3.string(guild(1126).t.iypvFu);
-        items6[2] = closure_7(guild(5087).Text, obj11);
+        items6[2] = closure_7(guild(5088).Text, obj11);
         if (canCreateChannel) {
           const obj12 = { style: tmp.buttonWrapper, children: null };
           const obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
           const intl4 = tmp2(1126).intl;
           obj13.text = intl4.string(tmp2(1126).t["63PyJQ"]);
           obj13.onPress = callback1;
-          obj12.children = closure_7(tmp2(5377).BaseTextButton, obj13);
+          obj12.children = closure_7(tmp2(5380).BaseTextButton, obj13);
           canCreateChannel = closure_7(View, obj12);
         }
         items6[3] = canCreateChannel;

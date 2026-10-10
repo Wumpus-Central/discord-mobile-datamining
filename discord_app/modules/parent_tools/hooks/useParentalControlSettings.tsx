@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import FamilyCenterControlledSettingsStore from "../FamilyCenterControlledSettingsStore.tsx";
 
 require = fn;
-const SafetyToastType = fn(7018).SafetyToastType;
+const SafetyToastType = fn(7019).SafetyToastType;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -349,7 +349,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -377,17 +377,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                     items2 = [closure_0];
                   }
                   c4 = 1;
-                  selectedTeenId(7254).updateTeenConsents(tmp28, items1, items2);
+                  selectedTeenId(7260).updateTeenConsents(tmp28, items1, items2);
                   c2 = 2;
                   c5 = 1;
-                  const obj3 = selectedTeenId(7254);
+                  const obj3 = selectedTeenId(7260);
                 }
               }
             } else {
               if (1 === tmp7) {
                 c4 = 0;
-                selectedTeenId(7017).showFailedToast(constants.GENERIC_ERROR);
-                const obj2 = selectedTeenId(7017);
+                selectedTeenId(7025).showFailedToast(constants.GENERIC_ERROR);
+                const obj2 = selectedTeenId(7025);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw value;
@@ -440,7 +440,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -468,17 +468,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                     items2 = [closure_0];
                   }
                   c4 = 1;
-                  selectedTeenId(7254).updateTeenConsents(tmp28, items1, items2);
+                  selectedTeenId(7260).updateTeenConsents(tmp28, items1, items2);
                   c2 = 2;
                   c5 = 1;
-                  const obj3 = selectedTeenId(7254);
+                  const obj3 = selectedTeenId(7260);
                 }
               }
             } else {
               if (1 === tmp7) {
                 c4 = 0;
-                selectedTeenId(7017).showFailedToast(constants.GENERIC_ERROR);
-                const obj2 = selectedTeenId(7017);
+                selectedTeenId(7025).showFailedToast(constants.GENERIC_ERROR);
+                const obj2 = selectedTeenId(7025);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw value;
@@ -537,8 +537,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp7.mutualGuilds && !tmp7.all;
     }
   : function useAllowFriendsFromMutualGuildsOnlyForTeen() {
-      const selectedTeen = controlledSetting(7722).useSelectedTeen();
-      const ParentalControlledFriendSourceFlags = controlledSetting(15015).ParentalControlledFriendSourceFlags;
+      const selectedTeen = controlledSetting(7740).useSelectedTeen();
+      const ParentalControlledFriendSourceFlags = controlledSetting(15074).ParentalControlledFriendSourceFlags;
       let id;
       if (selectedTeen != null) {
         id = selectedTeen.id;

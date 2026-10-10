@@ -33,7 +33,7 @@ let closure_14 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
                 }
                 c4 = 3;
                 c4 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             }
             if (null != messageId) {
@@ -187,7 +187,7 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
                       if (closure_129_7.type === closure_130_10.GUILD_STAGE_VOICE) {
                         if (!closure_130_9.can(closure_130_11.CONNECT, closure_129_7)) {
                           c4 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         }
                       }
                       if (closure_129_3 != null) {
@@ -259,7 +259,7 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
             return obj17;
           } else if (value) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (3 === tmp5) {
           if (arg0 === 1) {
@@ -271,7 +271,7 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
             return obj18;
           } else if (value) {
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -304,8 +304,8 @@ let closure_15 = async function _handleMessagesTapChannel(arg0) {
     }
   }
 };
-const isGuildVocalChannelType = fn(2068).isGuildVocalChannelType;
-const isGuildLurker = fn(2082).isGuildLurker;
+const isGuildVocalChannelType = fn(2069).isGuildVocalChannelType;
+const isGuildLurker = fn(2083).isGuildLurker;
 const Constants = fn(1085);
 ({ ChannelTypes: c10, Permissions: closure_11, Routes: closure_12 } = Constants);
 const size = fn(2);

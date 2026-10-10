@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useActivityApplications.tsx
-import EmbeddedActivitiesActionCreators from "../../../../activities/EmbeddedActivitiesActionCreators.tsx";
+import fetchShelf from "../../../../activities/fetchShelf.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,7 +20,7 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
       } else {
         tmp3 = cResult[1];
       }
-      const arr = fetchesShelf(11668)(tmp3);
+      const arr = fetchesShelf(11714)(tmp3);
       if (cResult[2] !== arr) {
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -47,7 +47,7 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
         const fn2 = function h() {
           if (fetchesShelf) {
             const obj2 = { guildId };
-            const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+            const shelf = fetchShelf.fetchShelf(obj2);
           }
         };
         const items = [fetchesShelf, guildId];
@@ -64,11 +64,11 @@ export const useActivityApplications = ReactCompilerGating.isReactCompilerEnable
       guildId = guildId.guildId;
       const fetchesShelf = guildId.fetchesShelf;
       const items = [fetchesShelf, guildId];
-      const mapped = fetchesShelf(11668)({ guildId }).map((application) => application.application);
+      const mapped = fetchesShelf(11714)({ guildId }).map((application) => application.application);
       const effect = noop.useEffect(() => {
         if (fetchesShelf) {
           const obj2 = { guildId };
-          const shelf = EmbeddedActivitiesActionCreators.fetchShelf(obj2);
+          const shelf = fetchShelf.fetchShelf(obj2);
         }
       }, items);
       return mapped;

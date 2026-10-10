@@ -3,6 +3,7 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import frecency_user_settings from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
+import v1 from "../../_runtime/01279_v1.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
@@ -198,17 +199,14 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1279);
-  replaced = replaced(1279).v4().replace(closure_12, "");
-  const str = replaced(1279).v4();
+  const replaced = v1.v4().replace(re12, "");
+  const str = v1.v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, {
     search_type: constants3.GIF,
     load_id: replaced,
   });
   const obj3 = { search_type: constants3.GIF, load_id: replaced };
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: replaced });
-  });
+  DispatcherDefault.dispatch({ type: "GIF_PICKER_INITIALIZE", analyticsID: replaced });
 };
 export const fetchTrending = function fetchTrending() {
   const HTTP = HTTPUtils.HTTP;

@@ -2,7 +2,6 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import SecureFramesUtils from "../SecureFramesUtils.tsx";
@@ -17,7 +16,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(8810);
+const SecureFramesConstants = fn(8829);
 ({
   AnalyticsSecureFramesUserVerification: closure_9,
   SECURE_FRAMES_PUBLIC_KEY_VERSION: c10,
@@ -26,7 +25,7 @@ const SecureFramesConstants = fn(8810);
 const AnalyticsLocations = fn(1085).AnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
 let size = {
   height: 80,
@@ -374,10 +373,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (constants.OTHER_USER_ALREADY_VERIFIED !== memo) {
           if (constants.MATCH !== tmp) {
             const obj = { style: closure_3.icon, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-            return __initData2(XLargeBoldIcon.XLargeBoldIcon, obj);
+            return map1(XLargeBoldIcon.XLargeBoldIcon, obj);
           }
         }
-        return __initData2(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, {
+        return map1(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, {
           style: closure_3.icon,
           color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE,
         });
@@ -401,16 +400,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             AnalyticsLocations.DEEP_LINK,
           );
           ActionSheetActionCreatorsDefault.hideActionSheet();
-          const obj4 = {
-            key,
-            iconColor: "text-feedback-positive",
-            IconComponent: CircleCheckIcon.CircleCheckIcon,
-            content: null,
-          };
+          const obj4 = { text: null, variant: "success" };
           const intl = util.intl;
           const obj5 = { username: name };
-          obj4.content = intl.formatToPlainString(util.t.Gwu134, obj5);
-          ToastActionCreatorsDefault.open(obj4);
+          obj4.text = intl.formatToPlainString(util.t.Gwu134, obj5);
+          ToastActionCreatorsDefault.open(closure_2_11, obj4);
         }
       }, items8);
       const obj10 = { startExpanded: true, header: null, children: null };
@@ -418,9 +412,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         fingerprintUserKey.useMemo(() => SecureFramesUtils.getUserVerifyStateText(memo, name), items5),
         2,
       );
-      obj10.header = name(userId(fingerprint[28]).BottomSheetTitleHeader, {
+      obj10.header = name(userId(fingerprint[27]).BottomSheetTitleHeader, {
         title: null,
-        leading: name(userId(fingerprint[29]).ActionSheetCloseButton, { onPress: callback }),
+        leading: name(userId(fingerprint[28]).ActionSheetCloseButton, { onPress: callback }),
       });
       const obj12 = { style: tmp.content, children: null };
       const obj13 = { style: tmp.iconContainer, children: null };
@@ -428,33 +422,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj13.children = memo1;
         const items9 = [tmp23(tmp25, obj13), , , ,];
         const obj14 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp17 };
-        items9[1] = tmp23(tmp2(tmp3[30]).Text, obj14);
+        items9[1] = tmp23(tmp2(tmp3[29]).Text, obj14);
         const obj15 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: tmp18 };
-        items9[2] = tmp23(tmp2(tmp3[30]).Text, obj15);
+        items9[2] = tmp23(tmp2(tmp3[29]).Text, obj15);
         const obj16 = { style: tmp.helpMessage, userId, userKey: fingerprintUserKey };
-        items9[3] = tmp23(tmp14(tmp3[31]), obj16);
+        items9[3] = tmp23(tmp14(tmp3[30]), obj16);
         const obj17 = { spacing: 12, style: tmp.buttons, children: null };
         const obj18 = { variant: "primary", onPress: callback1, text: null, disabled: null };
-        let intl = tmp2(tmp3[27]).intl;
-        obj18.text = intl.string(tmp2(tmp3[27]).t["0tvNAn"]);
+        let intl = tmp2(tmp3[26]).intl;
+        obj18.text = intl.string(tmp2(tmp3[26]).t["0tvNAn"]);
         if (!loading) {
           loading = memo !== stateFromStores.MATCH;
         }
         obj18.disabled = loading;
-        const items10 = [tmp23(tmp2(tmp3[32]).Button, obj18)];
+        const items10 = [tmp23(tmp2(tmp3[31]).Button, obj18)];
         const obj19 = { variant: "secondary", onPress: callback, text: null };
-        const intl2 = tmp2(tmp3[27]).intl;
-        obj19.text = intl2.string(tmp2(tmp3[27]).t["ETE/oC"]);
-        items10[1] = tmp23(tmp2(tmp3[32]).Button, obj19);
+        const intl2 = tmp2(tmp3[26]).intl;
+        obj19.text = intl2.string(tmp2(tmp3[26]).t["ETE/oC"]);
+        items10[1] = tmp23(tmp2(tmp3[31]).Button, obj19);
         obj17.children = items10;
-        items9[4] = closure_14(tmp2(tmp3[33]).Stack, obj17);
+        items9[4] = closure_14(tmp2(tmp3[32]).Stack, obj17);
         obj12.children = items9;
         obj10.children = closure_14(tmp25, obj12);
-        return tmp23(userId(fingerprint[34]).BottomSheet, obj10);
+        return tmp23(userId(fingerprint[33]).BottomSheet, obj10);
       }
       memo1 = tmp23(fingerprint2, {});
       const obj11 = {
         title: null,
-        leading: name(userId(fingerprint[29]).ActionSheetCloseButton, { onPress: callback }),
+        leading: name(userId(fingerprint[28]).ActionSheetCloseButton, { onPress: callback }),
       };
     };

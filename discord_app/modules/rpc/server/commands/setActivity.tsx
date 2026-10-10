@@ -6,7 +6,7 @@ import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObj
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-let Constants = fn(5636);
+let Constants = fn(5639);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 const TransportTypes = Constants.TransportTypes;
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
@@ -25,8 +25,8 @@ let obj = {};
 let obj2 = { scope: null, validation: null, handler: null };
 let obj3 = {};
 let items1 = [
-  fn(8441).OAuth2Scopes.RPC,
-  fn(8441).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(8457).OAuth2Scopes.RPC,
+  fn(8457).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];

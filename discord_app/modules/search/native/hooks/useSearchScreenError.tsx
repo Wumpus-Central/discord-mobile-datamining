@@ -1,14 +1,13 @@
 // discord_app/modules/search/native/hooks/useSearchScreenError.tsx
 import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5009 from "../../../../../_runtime/metro/05009__.js";
 import SearchUtils from "../../SearchUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SearchMessageStore from "../../SearchMessageStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_6 = fn(9285).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_6 = fn(9312).SEARCH_MESSAGE_TAB_SENTINEL;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -44,8 +43,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp8 = cResult[5];
         }
-        content = tmp8;
-        SearchMessageStore = content.useRef(null);
+        text = tmp8;
+        SearchMessageStore = text.useRef(null);
         if (cResult[6] === stateFromStores) {
           if (cResult[7] === tmp8) {
             let tmp13 = cResult[8];
@@ -75,11 +74,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp3 = closure_1;
                 tmp4 = closure_2;
                 obj = closure_1(closure_2[9]);
-                obj1 = { key: "SEARCH_ERROR_TOAST", icon: null, content: null };
-                obj1.icon = closure_1(closure_2[10]);
+                obj1 = { text: null, variant: "critical" };
                 tmp5 = closure_3;
-                obj1.content = closure_3;
-                openResult = obj.open(obj1);
+                obj1.text = closure_3;
+                str = "SEARCH_ERROR_TOAST";
+                openResult = obj.open("SEARCH_ERROR_TOAST", obj1);
                 tmp2.current = tmp;
               }
               return;
@@ -99,11 +98,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               tmp3 = closure_1;
               tmp4 = closure_2;
               obj = closure_1(closure_2[9]);
-              obj1 = { key: "SEARCH_ERROR_TOAST", icon: null, content: null };
-              obj1.icon = closure_1(closure_2[10]);
+              obj1 = { text: null, variant: "critical" };
               tmp5 = closure_3;
-              obj1.content = closure_3;
-              openResult = obj.open(obj1);
+              obj1.text = closure_3;
+              str = "SEARCH_ERROR_TOAST";
+              openResult = obj.open("SEARCH_ERROR_TOAST", obj1);
               tmp2.current = tmp;
             }
             return;
@@ -156,8 +155,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5 = null != stateFromStores;
       const callback = anyErrorMessage.useCallback(() => {
         if (stateFromStores !== ref.current) {
-          const obj2 = { key: "SEARCH_ERROR_TOAST", icon: _modDef5009, content: anyErrorMessage };
-          ToastActionCreatorsDefault.open(obj2);
+          const obj2 = { text: anyErrorMessage, variant: "critical" };
+          ToastActionCreatorsDefault.open("SEARCH_ERROR_TOAST", obj2);
           tmp2.current = tmp;
         }
       }, items1);

@@ -20,7 +20,7 @@ const semanticColor1 = internal2.resolveSemanticColor(
   nativeDefault.themes.LIGHT,
   nativeDefault.colors.MOBILE_ANDROID_BUTTON_BACKGROUND_RIPPLE,
 );
-const DeviceUtils = fn(5067);
+const DeviceUtils = fn(5068);
 const systemVersionMajor = DeviceUtils.getSystemVersionMajor();
 let frozen = Object.freeze({ foreground: true });
 let closure_6 = Object.freeze({});

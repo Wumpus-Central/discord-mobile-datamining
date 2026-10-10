@@ -11,7 +11,7 @@ class Timer extends PureComponent {
     tmp6 = new Timer(global, tmp5, tmp4, tmp3, tmp2, tmp);
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      state = closure_0.state;
+      const state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -30,7 +30,7 @@ class Timer extends PureComponent {
       closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      state = closure_0.state;
+      const state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {

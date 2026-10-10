@@ -13,7 +13,7 @@ const Constants = fn(1085);
 const PremiumUpsellTypes = fn(1392).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_11 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -37,7 +37,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
   }
   let obj = analyticsLocations(576);
   const stateFromStores = analyticsLocations(504).useStateFromStores(tmp5, S);
-  const tmp9 = stateFromStores(9232)();
+  const tmp9 = stateFromStores(9259)();
   dependencyMap = tmp9;
   let result = tmp9 / 10;
   _slicedToArray = result;
@@ -86,7 +86,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
               if (cResult[15] !== stateFromStores) {
                 let tmp42 = null;
                 if (!stateFromStores) {
-                  tmp42 = closure_9(analyticsLocations(9016).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+                  tmp42 = closure_9(analyticsLocations(9035).NitroWheelIcon, { size: "xs", color: "icon-muted" });
                 }
                 class S {
                   constructor() {
@@ -112,7 +112,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
               let obj4 = { onPress: tmp18, style: tmp36, children: null };
               const items1 = [tmp38, tmp41];
               obj4.children = items1;
-              const tmp46 = closure_10(analyticsLocations(6191).PressableOpacity, obj4);
+              const tmp46 = closure_10(analyticsLocations(6184).PressableOpacity, obj4);
               cResult[17] = tmp18;
               cResult[18] = tmp36;
               cResult[19] = tmp38;
@@ -170,7 +170,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
               let obj6 = { onPress: tmp18, style: tmp27, children: null };
               const items3 = [tmp29, tmp32];
               obj6.children = items3;
-              const tmp35 = closure_10(analyticsLocations(6191).PressableOpacity, obj6);
+              const tmp35 = closure_10(analyticsLocations(6184).PressableOpacity, obj6);
               cResult[29] = tmp18;
               cResult[30] = tmp27;
               cResult[31] = tmp29;
@@ -206,7 +206,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
               if (cResult[38] === tmp18) {
               }
               let obj7 = { onPress: tmp18, style: tmp20, children: tmp22 };
-              const tmp25 = closure_9(analyticsLocations(6191).PressableOpacity, obj7);
+              const tmp25 = closure_9(analyticsLocations(6184).PressableOpacity, obj7);
               cResult[38] = tmp18;
               cResult[39] = tmp20;
               cResult[40] = tmp25;
@@ -258,7 +258,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
   const tmp = closure_11();
   const items = [currentUser];
   const stateFromStores = analyticsLocations(504).useStateFromStores(items, () => stateFromStores(maxLength[10]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
-  const tmp5 = stateFromStores(9232)();
+  const tmp5 = stateFromStores(9259)();
   dependencyMap = tmp5;
   let result = tmp5 / 10;
   _slicedToArray = result;
@@ -275,16 +275,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
   const callback = first.useCallback(() => {
     if (stateFromStores) {
       if (first > 0) {
-        const obj2 = { content: null, key: "premium-message-length-info-toast" };
+        const obj2 = { text: null };
         const intl = util.intl;
-        obj2.content = intl.string(util.t.YSRIqa);
-        ToastActionCreatorsDefault.open(obj2);
+        obj2.text = intl.string(util.t.YSRIqa);
+        ToastActionCreatorsDefault.open("premium-message-length-info-toast", obj2);
       } else {
-        const obj3 = { content: null, key: "premium-message-length-info-toast" };
+        const obj3 = { text: null };
         const intl2 = util.intl;
         const obj5 = { maxLength };
-        obj3.content = intl2.formatToPlainString(util.t.vcvHa0, obj5);
-        ToastActionCreatorsDefault.open(obj3);
+        obj3.text = intl2.formatToPlainString(util.t.vcvHa0, obj5);
+        ToastActionCreatorsDefault.open("premium-message-length-info-toast", obj3);
       }
     } else {
       const obj7 = { initialUpsellKey: constants.LONGER_MESSAGE, analyticsLocations, analyticsProperties: null };
@@ -300,35 +300,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatCounter(
     let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xxs/semibold", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = "-" + first;
-    const items3 = [closure_9(analyticsLocations(5087).Text, obj3), ];
+    const items3 = [closure_9(analyticsLocations(5088).Text, obj3), ];
     let tmp20Result = null;
     if (!stateFromStores) {
-      tmp20Result = closure_9(analyticsLocations(9016).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp20Result = closure_9(analyticsLocations(9035).NitroWheelIcon, { size: "xs", color: "icon-muted" });
     }
     items3[1] = tmp20Result;
     obj2.children = items3;
-    let tmp16Result = closure_10(analyticsLocations(6191).PressableOpacity, obj2);
+    let tmp16Result = closure_10(analyticsLocations(6184).PressableOpacity, obj2);
   } else if (first >= tmp7) {
     let obj4 = { onPress: callback, style: null, children: null };
     const items4 = [tmp.container, style];
     obj4.style = items4;
     let obj5 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: -first };
-    const items5 = [closure_9(analyticsLocations(5087).Text, obj5), ];
+    const items5 = [closure_9(analyticsLocations(5088).Text, obj5), ];
     let tmp17Result = null;
     if (tmp11) {
-      tmp17Result = closure_9(analyticsLocations(9016).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp17Result = closure_9(analyticsLocations(9035).NitroWheelIcon, { size: "xs", color: "icon-muted" });
     }
     items5[1] = tmp17Result;
     obj4.children = items5;
-    tmp16Result = closure_10(analyticsLocations(6191).PressableOpacity, obj4);
+    tmp16Result = closure_10(analyticsLocations(6184).PressableOpacity, obj4);
   } else {
     tmp16Result = null;
     if (tmp11) {
       let obj6 = { onPress: callback, style: null, children: null };
       const items6 = [tmp.container, style];
       obj6.style = items6;
-      obj6.children = closure_9(analyticsLocations(9016).NitroWheelIcon, { size: "xs", color: "icon-muted" });
-      tmp16Result = closure_9(analyticsLocations(6191).PressableOpacity, obj6);
+      obj6.children = closure_9(analyticsLocations(9035).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp16Result = closure_9(analyticsLocations(6184).PressableOpacity, obj6);
     }
   }
   return tmp16Result;

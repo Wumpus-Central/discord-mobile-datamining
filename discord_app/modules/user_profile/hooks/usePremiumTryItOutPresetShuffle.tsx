@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return I;
     }
   : function usePremiumTryItOutPresetShuffle() {
-      const tmp = callback(4992)();
+      const tmp = callback(5031)();
       const isThemeLightResult = shared.isThemeLight(tmp);
       const require = isThemeLightResult;
       const items = [isThemeLightResult];

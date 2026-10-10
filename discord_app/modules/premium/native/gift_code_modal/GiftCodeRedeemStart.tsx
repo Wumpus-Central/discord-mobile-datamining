@@ -8,7 +8,7 @@ import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
-import _mod5742 from "module_5742" /* 5742 */;
+import _mod5745 from "module_5745" /* 5745 */;
 import GameIcon from "../../../game_detection/native/GameIcon.tsx";
 import SlayerStorefrontUtils from "../../../slayer_storefront/SlayerStorefrontUtils.tsx";
 import SoundboardActionCreators from "../../../soundboard/SoundboardActionCreators.tsx";
@@ -38,12 +38,12 @@ function getGiftCodeHeaderText(isSubscription) {
       if (sku != null) {
         name = sku.name;
       }
-      let subscriptionGiftStartHeaderText = sender(5630).getSubscriptionGiftStartHeaderText(
+      let subscriptionGiftStartHeaderText = sender(5633).getSubscriptionGiftStartHeaderText(
         subscriptionPlan,
         sender,
         name,
       );
-      const obj24 = sender(5630);
+      const obj24 = sender(5633);
     }
     return subscriptionGiftStartHeaderText;
   }
@@ -52,19 +52,19 @@ function getGiftCodeHeaderText(isSubscription) {
     subscriptionGiftStartHeaderText = intl.string(sender(1126).t["Bn1J+a"]);
   } else {
     const obj2 = { type: itemType, isBundle, sender };
-    const match = sender(5742).match(obj2);
+    const match = sender(5745).match(obj2);
     const obj3 = { isBundle: true, sender: null };
-    const P = sender(5742).P;
-    obj3.sender = P.not(sender(5742).P.nullish);
-    const str = sender(5742);
-    const obj4 = { isBundle: true, sender: sender(5742).P.nullish };
+    const P = sender(5745).P;
+    obj3.sender = P.not(sender(5745).P.nullish);
+    const str = sender(5745);
+    const obj4 = { isBundle: true, sender: sender(5745).P.nullish };
     const withResult = match.with(obj3, () => {
       const intl = util.intl;
       return intl.formatToPlainString(util.t.JUV1tL, { sender });
     });
     const obj5 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: null };
-    const P2 = sender(5742).P;
-    obj5.sender = P2.not(sender(5742).P.nullish);
+    const P2 = sender(5745).P;
+    obj5.sender = P2.not(sender(5745).P.nullish);
     const withResult1 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -75,8 +75,8 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.string(sender(1126).t.iJ8823);
       });
     const obj6 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: null };
-    const P3 = sender(5742).P;
-    obj6.sender = P3.not(sender(5742).P.nullish);
+    const P3 = sender(5745).P;
+    obj6.sender = P3.not(sender(5745).P.nullish);
     const withResult2 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -91,8 +91,8 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t.SKduyh, { sender });
       });
     const obj7 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: null };
-    const P4 = sender(5742).P;
-    obj7.sender = P4.not(sender(5742).P.nullish);
+    const P4 = sender(5745).P;
+    obj7.sender = P4.not(sender(5745).P.nullish);
     const withResult3 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -111,8 +111,8 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.formatToPlainString(util.t["1w42T2"], { sender });
       });
     const obj8 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: null };
-    const P5 = sender(5742).P;
-    obj8.sender = P5.not(sender(5742).P.nullish);
+    const P5 = sender(5745).P;
+    obj8.sender = P5.not(sender(5745).P.nullish);
     const withResult4 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -134,7 +134,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t.vFiQlU, { sender });
       });
-    const obj9 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5742).P.nullish };
+    const obj9 = { type: sender(1993).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5745).P.nullish };
     const withResult5 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -160,7 +160,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = util.intl;
         return intl.formatToPlainString(util.t["UH/EQL"], { sender });
       });
-    const obj10 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5742).P.nullish };
+    const obj10 = { type: sender(1993).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5745).P.nullish };
     const withResult6 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -190,7 +190,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = sender(1126).intl;
         return intl.string(sender(1126).t["2ZO6CC"]);
       });
-    const obj11 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: sender(5742).P.nullish };
+    const obj11 = { type: sender(1993).CollectiblesItemType.NAMEPLATE, sender: sender(5745).P.nullish };
     const withResult7 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -224,7 +224,7 @@ function getGiftCodeHeaderText(isSubscription) {
         const intl = sender(1126).intl;
         return intl.string(sender(1126).t["2NxdjX"]);
       });
-    const obj12 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: sender(5742).P.nullish };
+    const obj12 = { type: sender(1993).CollectiblesItemType.PROFILE_FRAME, sender: sender(5745).P.nullish };
     const withResult8 = match
       .with(obj3, () => {
         const intl = util.intl;
@@ -349,7 +349,7 @@ function getGiftCodeHeaderText(isSubscription) {
         return intl.string(sender(1126).t["1+tgC0"]);
       });
   }
-  obj = sender(6924);
+  obj = sender(6930);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
@@ -357,7 +357,7 @@ const Constants = fn(1085);
 ({ AnalyticEvents: c10, GiftCodeModalStates: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28 },

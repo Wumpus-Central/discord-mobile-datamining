@@ -12,10 +12,10 @@ import FramesStore from "../FramesStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const FramesConstants = fn(10767);
+const FramesConstants = fn(10802);
 ({ FrameLayoutModes: closure_7, isLaunched: closure_8 } = FramesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles({ pool: { position: "absolute", opacity: 0 } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -26,7 +26,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       id = frame.id;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function l() {
-          return first1(10889)();
+          return first1(10929)();
         };
         cResult[0] = fn;
         let first = fn;
@@ -100,7 +100,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const syncExternalStore = noop.useSyncExternalStore(first1(17024).subscribe, P);
+        const syncExternalStore = noop.useSyncExternalStore(first1(17092).subscribe, P);
         if (cResult[11] !== syncExternalStore) {
           class P {
             constructor() {
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 };
         const tmp23 = jsx(
-          first1(17609),
+          first1(17681),
           { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp17 },
           first1,
         );
@@ -169,7 +169,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       iframeId = undefined;
       dependencyMap = undefined;
       const id = frame.id;
-      [iframeId, dependencyMap] = noop.useState(() => first(10889)());
+      [iframeId, dependencyMap] = noop.useState(() => first(10929)());
       const items = [id, iframeId];
       const effect = noop.useEffect(() => {
         FramePoolManagerDefault.registerFrameEntry(id, first);
@@ -188,7 +188,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         dependencyMap(makeIframeIdDefault());
       }, []);
-      let syncExternalStore = noop.useSyncExternalStore(iframeId(17024).subscribe, () =>
+      let syncExternalStore = noop.useSyncExternalStore(iframeId(17092).subscribe, () =>
         FramePoolManagerDefault.getWinningTargetState(id),
       );
       let obj = { frame, iframeId, onActivityCrash: callback, presentation: null };
@@ -197,7 +197,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         syncExternalStore = obj2;
       }
       obj.presentation = syncExternalStore;
-      return jsx(iframeId(17609), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
+      return jsx(iframeId(17681), { frame, iframeId, onActivityCrash: callback, presentation: null }, iframeId);
     };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramePool.tsx");

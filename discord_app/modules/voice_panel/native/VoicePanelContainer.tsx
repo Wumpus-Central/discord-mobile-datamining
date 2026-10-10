@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4692 from "../../../../_runtime/metro/04692__.js";
+import _mod4733 from "../../../../_runtime/metro/04733__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelUIDefault from "VoicePanelUI.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";
@@ -111,7 +111,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp5 = VoicePanelStore(first, _mod4692.shallow);
+        const tmp5 = VoicePanelStore(first, _mod4733.shallow);
         if (cResult[1] !== tmp5) {
           const obj2 = { items: tmp5, getItemKey: getChannelKey, renderItem: renderVoicePanel };
           const tmp10 = jsx(native.TransitionGroup, {
@@ -128,9 +128,9 @@ export default noop.memo(
         return tmp6;
       }
     : function VoicePanelContainer() {
-        const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4692.shallow);
+        const tmp = VoicePanelStore((channels) => Array.from(channels.channels), _mod4733.shallow);
         return jsx(native.TransitionGroup, {
-          items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4692.shallow),
+          items: VoicePanelStore((channels) => Array.from(channels.channels), _mod4733.shallow),
           getItemKey: getChannelKey,
           renderItem: renderVoicePanel,
         });

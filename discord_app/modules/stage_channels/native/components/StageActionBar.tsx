@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_8 = createStyles.createStyles({
   container: {
     paddingHorizontal: 12,
@@ -29,7 +29,7 @@ export default noop.memo(
         channel = channel.channel;
         let tmp4 = closure_8();
         let obj = channel(576);
-        const canModerateRequestToSpeak = channel(5890).useCanModerateRequestToSpeak(channel.id);
+        const canModerateRequestToSpeak = channel(5893).useCanModerateRequestToSpeak(channel.id);
         if (cResult[0] !== channel) {
           const obj3 = { channel };
           cResult[0] = channel;
@@ -38,19 +38,19 @@ export default noop.memo(
         } else {
           tmp6 = cResult[1];
         }
-        let obj2 = channel(5890);
-        const actionBarPrimaryButton = channel(11006).useActionBarPrimaryButton(tmp6);
-        const tmpResult = channel(11006);
-        const getActionBarHeight = channel(10980).useGetActionBarHeight(channel.id);
-        const tmp9 = actionBarPrimaryButton(10837)(channel.id);
-        const tmpResult5 = channel(10980);
-        const tmp10 = channel(10939).useShowStageMusicMuteButton(channel.id) && !tmp9;
+        let obj2 = channel(5893);
+        const actionBarPrimaryButton = channel(11046).useActionBarPrimaryButton(tmp6);
+        const tmpResult = channel(11046);
+        const getActionBarHeight = channel(11020).useGetActionBarHeight(channel.id);
+        const tmp9 = actionBarPrimaryButton(10849)(channel.id);
+        const tmpResult5 = channel(11020);
+        const tmp10 = channel(10979).useShowStageMusicMuteButton(channel.id) && !tmp9;
         if (cResult[2] !== channel.guild_id) {
-          const isStageVideoEnabledResult = tmp(5892).isStageVideoEnabled(channel.guild_id);
+          const isStageVideoEnabledResult = tmp(5895).isStageVideoEnabled(channel.guild_id);
           cResult[2] = channel.guild_id;
           cResult[3] = isStageVideoEnabledResult;
           let tmp11 = isStageVideoEnabledResult;
-          const tmpResult7 = tmp(5892);
+          const tmpResult7 = tmp(5895);
         } else {
           tmp11 = cResult[3];
         }
@@ -105,7 +105,7 @@ export default noop.memo(
                           tmp46 = tmp13Result;
                         }
                         const obj5 = { channel, isSmallSize: tmp11 };
-                        const tmp45 = closure_5(tmp(10936).ChatButton, obj5);
+                        const tmp45 = closure_5(tmp(10976).ChatButton, obj5);
                         cResult[18] = channel;
                         cResult[19] = tmp11;
                         cResult[20] = tmp45;
@@ -113,7 +113,7 @@ export default noop.memo(
                       }
                     }
                   }
-                  let tmpResult8 = tmp(10936);
+                  let tmpResult8 = tmp(10976);
                   const obj6 = { channel, isSmallSize: tmp11 };
                   tmpResult8 = closure_5(
                     canModerateRequestToSpeak ? tmpResult8.RequestToSpeakListButton : tmpResult8.MoveToAudienceButton,
@@ -125,7 +125,7 @@ export default noop.memo(
                   cResult[17] = tmpResult8;
                 }
                 const obj7 = { channel, isSmallSize: tmp11 };
-                const tmp38 = closure_5(tmp(11061).ChannelCallMicButton, obj7);
+                const tmp38 = closure_5(tmp(11101).ChannelCallMicButton, obj7);
                 cResult[11] = channel;
                 cResult[12] = tmp11;
                 cResult[13] = tmp38;
@@ -135,7 +135,7 @@ export default noop.memo(
             let tmp34 = tmp11;
             if (tmp11) {
               const obj8 = { channel, isSmallSize: tmp11 };
-              tmp34 = closure_5(tmp(11006).VideoButton, obj8);
+              tmp34 = closure_5(tmp(11046).VideoButton, obj8);
             }
             cResult[7] = channel;
             cResult[8] = tmp11;
@@ -229,7 +229,7 @@ export default noop.memo(
                         tmp27 = tmp13Result2;
                       }
                       const obj12 = { channel, isSmallSize: tmp14 };
-                      const tmp26 = closure_5(tmp(10936).ChatButton, obj12);
+                      const tmp26 = closure_5(tmp(10976).ChatButton, obj12);
                       cResult[41] = channel;
                       cResult[42] = tmp14;
                       cResult[43] = tmp26;
@@ -239,7 +239,7 @@ export default noop.memo(
                   let tmp22 = canModerateRequestToSpeak;
                   if (canModerateRequestToSpeak) {
                     const obj13 = { channel, isSmallSize: tmp14 };
-                    tmp22 = closure_5(tmp(10936).RequestToSpeakListButton, obj13);
+                    tmp22 = closure_5(tmp(10976).RequestToSpeakListButton, obj13);
                   }
                   cResult[37] = channel;
                   cResult[38] = canModerateRequestToSpeak;
@@ -248,7 +248,7 @@ export default noop.memo(
                   tmp21 = tmp22;
                 }
                 const obj14 = { channel, isSmallSize: tmp14 };
-                const tmp20 = closure_5(tmp(10936).RequestToSpeakButton, obj14);
+                const tmp20 = closure_5(tmp(10976).RequestToSpeakButton, obj14);
                 cResult[34] = channel;
                 cResult[35] = tmp14;
                 cResult[36] = tmp20;
@@ -258,7 +258,7 @@ export default noop.memo(
             let tmp16 = tmp10;
             if (tmp10) {
               const obj15 = { channel, isSmallSize: tmp14 };
-              tmp16 = closure_5(tmp(10936).MusicMuteButton, obj15);
+              tmp16 = closure_5(tmp(10976).MusicMuteButton, obj15);
             }
             cResult[30] = channel;
             cResult[31] = tmp14;
@@ -284,7 +284,7 @@ export default noop.memo(
         cResult[5] = actionBarPrimaryButton;
         cResult[6] = fn;
         tmp13 = fn;
-        const tmpResult6 = channel(10939);
+        const tmpResult6 = channel(10979);
       }
     : function StageActionBar(channel) {
         channel = channel.channel;

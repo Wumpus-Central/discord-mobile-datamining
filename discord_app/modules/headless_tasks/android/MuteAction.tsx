@@ -1,6 +1,6 @@
 // discord_app/modules/headless_tasks/android/MuteAction.tsx
 import UserSettingsConstants from "../../user_settings/UserSettingsConstants.tsx";
-import _modDef4661 from "../../../../_runtime/metro/04661__.js";
+import _modDef4702 from "../../../../_runtime/metro/04702__.js";
 import NotificationSettingsUtils from "../../../utils/NotificationSettingsUtils.tsx";
 import NotificationSettingsModalActionCreatorsDefault from "../../../actions/NotificationSettingsModalActionCreators.tsx";
 import HeadlessTaskUtilsDefault from "../HeadlessTaskUtils.tsx";
@@ -20,9 +20,9 @@ export default (arg0) => {
         if (HOURS_1 == null) {
           HOURS_1 = MuteUntilSeconds.HOURS_1;
         }
-        const obj = _modDef4661();
-        toISOStringResult = _modDef4661().add(HOURS_1, "second").toISOString();
-        const addResult = _modDef4661().add(HOURS_1, "second");
+        const obj = _modDef4702();
+        toISOStringResult = _modDef4702().add(HOURS_1, "second").toISOString();
+        const addResult = _modDef4702().add(HOURS_1, "second");
       }
       const obj2 = {
         guildId: closure_0.guildId,

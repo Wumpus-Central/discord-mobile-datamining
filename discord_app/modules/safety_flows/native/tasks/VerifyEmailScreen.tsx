@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -75,10 +75,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   v0 = 0;
                   v0(false);
                   closure_1_5(false);
-                  const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null };
+                  const obj7 = { text: null };
                   const intl = tmp3(first[10]).intl;
-                  obj7.content = intl.string(ref(first[11]).PfbG6H);
-                  ref(first[9]).open(obj7);
+                  obj7.text = intl.string(ref(first[11]).PfbG6H);
+                  ref(first[9]).open("SAFETY_FLOWS_VERIFY_EMAIL_ERROR", obj7);
                   const obj2 = ref(first[9]);
                 } else if (arg0 === 1) {
                   c4 = 3;
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -226,10 +226,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c3 = 0;
                   closure_128_3(false);
                   closure_128_5(false);
-                  const obj7 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null };
+                  const obj7 = { text: null };
                   const intl = tmp3(tmp30[10]).intl;
-                  obj7.content = intl.string(ref(tmp30[11]).PfbG6H);
-                  ref(tmp30[9]).open(obj7);
+                  obj7.text = intl.string(ref(tmp30[11]).PfbG6H);
+                  ref(tmp30[9]).open("SAFETY_FLOWS_VERIFY_EMAIL_ERROR", obj7);
                   const obj2 = ref(tmp30[9]);
                 } else if (arg0 === 1) {
                   c4 = 3;

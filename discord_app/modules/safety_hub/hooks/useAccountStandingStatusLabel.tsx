@@ -7,7 +7,7 @@ import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const util = tmp(1126);
-const SafetyHubAccountStandingLabels = tmp(14934);
+const SafetyHubAccountStandingLabels = tmp(14993);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
 export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompilerEnabled()
@@ -15,7 +15,7 @@ export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompiler
       let tmp = require;
       let formatToPlainStringResult = dependencyMap;
       const cResult = c.c(5);
-      state = useSafetyHubAccountStanding.useSafetyHubAccountStanding();
+      let state = useSafetyHubAccountStanding.useSafetyHubAccountStanding();
       const safetyHubInitialized = useSafetyHubInitialized.useSafetyHubInitialized();
       const safetyHubFetchError = useSafetyHubFetchError.useSafetyHubFetchError();
       if (safetyHubInitialized) {

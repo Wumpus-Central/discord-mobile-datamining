@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePreNavigationAction() {
       const cResult = c.c(1);
@@ -37,7 +37,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: fn(12971).ShieldLockIcon,
+  IconComponent: fn(13018).ShieldLockIcon,
   screen: {
     route: fn(1085).UserSettingsSections.DATA_AND_PRIVACY,
     getComponent() {

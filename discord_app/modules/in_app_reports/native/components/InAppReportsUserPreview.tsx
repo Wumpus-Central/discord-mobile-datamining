@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY },
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let tmp17 = cResult[15];
                   }
                   if (cResult[16] !== user) {
-                    const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "r" };
+                    const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" };
                     const tmp20 = React3(native.Avatar, obj4);
                     cResult[16] = user;
                     cResult[17] = tmp20;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [tmp.userContainer, { borderColor: ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08) }];
       obj5.style = items2;
       const hexWithOpacityResult = ColorUtils.hexWithOpacity(tmp.borderColor.color, 0.08);
-      const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "r" })];
+      const items3 = [React3(native.Avatar, { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" })];
       const obj7 = { style: tmp.userProfileInfo, children: null };
       let tmp8Result = null != user.globalName;
       if (tmp8Result) {

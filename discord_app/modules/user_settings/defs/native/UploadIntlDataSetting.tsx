@@ -17,7 +17,7 @@ let closure_11 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -154,7 +154,7 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -211,11 +211,10 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
         if (2 === tmp9) {
           c3 = 1;
           const obj4 = {
-            key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED",
-            IconComponent: closure_129_0(closure_129_3[15]).CircleInformationIcon,
-            content: "Failed to upload internationalization data.",
+            text: "Failed to upload internationalization data.",
+            icon: closure_129_0(closure_129_3[15]).CircleInformationIcon,
           };
-          closure_129_1(closure_129_3[14]).open(obj4);
+          closure_129_1(closure_129_3[14]).open("USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", obj4);
           c3 = 0;
           (function onUploadIntlDataRequestFinish() {
             closure_1_0(1272).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
@@ -264,11 +263,10 @@ let closure_12 = async function _handleUploadIntlDataSettingPress() {
           throw value;
         } else if (arg0 !== 2) {
           const obj8 = {
-            key: "USER_SETTINGS_INTL_DATA_UPLOADED",
-            IconComponent: closure_129_0(closure_129_3[15]).CircleInformationIcon,
-            content: "Internationalization data uploaded successfully.",
+            text: "Internationalization data uploaded successfully.",
+            icon: closure_129_0(closure_129_3[15]).CircleInformationIcon,
           };
-          closure_129_1(closure_129_3[14]).open(obj8);
+          closure_129_1(closure_129_3[14]).open("USER_SETTINGS_INTL_DATA_UPLOADED", obj8);
           c3 = 1;
           const obj = closure_129_1(closure_129_3[14]);
         }
@@ -312,7 +310,7 @@ ReactCompilerGating = fn(558);
 function useIsUploadIntlDataDisabled() {
   return closure_9().isDisabled;
 }
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useUploadIntlDataTrailing() {
       const cResult = c.c(2);
@@ -350,7 +348,7 @@ const pressable = SettingBuilders.createPressable({
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15755).FileUpIcon,
+  IconComponent: fn(15817).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
     const apply = closure_12.apply;
@@ -361,7 +359,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(15039).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(15098).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useUploadIntlDataTrailing() {
         const cResult = c.c(2);

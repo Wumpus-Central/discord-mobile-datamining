@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/02000_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5016 from "../../../../_runtime/metro/05016__.js";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
@@ -44,7 +44,7 @@ function SortAndViewOptions(channel) {
   const items = [id];
   const callback = noop.useCallback(() => {
     const combined = "ForumDisplaySettingsActionSheet-" + id;
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12483, dependencyMap.paths), combined, {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12530, dependencyMap.paths), combined, {
       channelId: id,
       onClose() {
         ActionSheetActionCreatorsDefault.hideActionSheet(combined);
@@ -60,12 +60,12 @@ function SortAndViewOptions(channel) {
     stringResult = string(t.xyYt8A);
   }
   isMediaChannelResult = channel.isMediaChannel();
-  return closure_14(id(5376).Button, {
+  return closure_14(id(5379).Button, {
     variant: "secondary",
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(id(11793).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(id(11837).ArrowsUpDownIcon, { size: "xxs" }),
   });
 }
 function TagFilter(channel) {
@@ -75,13 +75,13 @@ function TagFilter(channel) {
   obj.text = intl.string(channel(1126).t["112vVE"]);
   obj.onPress = function handlePress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12484, dependencyMap.paths),
+      asyncRequireImpl(12531, dependencyMap.paths),
       "ForumTagFilterActionSheet",
       { channel },
     );
   };
-  obj.icon = closure_14(channel(9056).TagIcon, { size: "xxs" });
-  return closure_14(channel(5376).Button, obj);
+  obj.icon = closure_14(channel(9075).TagIcon, { size: "xxs" });
+  return closure_14(channel(5379).Button, obj);
 }
 function getForumItemType(arg0) {
   let str = "thread";
@@ -114,14 +114,14 @@ function onForumViewableItemsChanged(changed) {
   });
 }
 function onCreatePostWithoutPermission() {
-  const obj2 = { key: "FORUM_NO_POST_PERMISSION_HELP", content: null, icon: null };
+  const obj2 = { text: null, icon: null };
   const intl = util.intl;
-  obj2.content = intl.string(util.t.iyzwnD);
-  obj2.icon = _modDef5016;
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.text = intl.string(util.t.iyzwnD);
+  obj2.icon = CircleInformationIcon.CircleInformationIcon;
+  ToastActionCreatorsDefault.open("FORUM_NO_POST_PERMISSION_HELP", obj2);
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(11629).useForumChannelStore;
+const useForumChannelStore = fn(11675).useForumChannelStore;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_11, AnalyticsPages: closure_12, AnalyticsSections: map1 } = Constants);
 const Fonts = fn(1096).Fonts;
@@ -140,7 +140,7 @@ let items = [
   "loading_section",
 ];
 const set = new Set(items);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerRow: {
@@ -205,7 +205,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== tmp4.divider) {
           const obj3 = { style: tmp4.divider, variant: "text-xs/bold", color: "text-muted", children: tmp8 };
-          const tmp12 = state(Text_Text.Text, obj3);
+          const tmp12 = closure_1_14(Text_Text.Text, obj3);
           cResult[4] = tmp4.divider;
           cResult[5] = tmp12;
           let tmp10 = tmp12;
@@ -219,7 +219,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp13;
         }
         const obj4 = { style: tmp6, children: tmp10 };
-        const tmp16 = state(View, obj4);
+        const tmp16 = closure_1_14(View, obj4);
         cResult[6] = tmp6;
         cResult[7] = tmp10;
         cResult[8] = tmp16;
@@ -239,8 +239,8 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.divider, variant: "text-xs/bold", color: "text-muted", children: null };
       const intl = util.intl;
       obj3.children = intl.string(util.t["3+LO1w"]);
-      obj2.children = state(Text_Text.Text, obj3);
-      return state(View, obj2);
+      obj2.children = closure_1_14(Text_Text.Text, obj3);
+      return closure_1_14(View, obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
@@ -261,14 +261,14 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp10;
             }
             const obj2 = { style: tmp4.section, children: tmp7 };
-            const tmp13 = state(View, obj2);
+            const tmp13 = closure_1_14(View, obj2);
             cResult[6] = tmp4.section;
             cResult[7] = tmp7;
             cResult[8] = tmp13;
             tmp10 = tmp13;
           }
           const obj3 = { style: tmp4.divider, variant: "text-xs/bold", color: "text-muted", children: cResult[2] };
-          const tmp9 = state(Text_Text.Text, obj3);
+          const tmp9 = closure_1_14(Text_Text.Text, obj3);
           cResult[3] = tmp4.divider;
           cResult[4] = cResult[2];
           cResult[5] = tmp9;
@@ -303,8 +303,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.formatToPlainString(util.t["tBz/8b"], obj3);
       }
       obj2.children = stringResult;
-      obj.children = state(Text_Text.Text, obj2);
-      return state(View, obj);
+      obj.children = closure_1_14(Text_Text.Text, obj2);
+      return closure_1_14(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
@@ -334,13 +334,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp9;
         }
         const obj3 = { style: missingPermissionContainer, children: tmp7 };
-        const tmp12 = state(View, obj3);
+        const tmp12 = closure_1_14(View, obj3);
         cResult[5] = tmp4.missingPermissionContainer;
         cResult[6] = tmp7;
         cResult[7] = tmp12;
         tmp9 = tmp12;
       }
-      const tmp8 = state(Text_Text.Text, {
+      const tmp8 = closure_1_14(Text_Text.Text, {
         style: missingPermissionText,
         variant: "text-xs/normal",
         color: "text-muted",
@@ -357,8 +357,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       obj2.children = intl.format(util.t.TycmzM, { channelName: channelName.channelName });
-      obj.children = state(Text_Text.Text, obj2);
-      return state(View, obj);
+      obj.children = closure_1_14(Text_Text.Text, obj2);
+      return closure_1_14(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
@@ -388,13 +388,13 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp9;
         }
         const obj3 = { style: section, children: tmp7 };
-        const tmp12 = state(View, obj3);
+        const tmp12 = closure_1_14(View, obj3);
         cResult[5] = tmp4.section;
         cResult[6] = tmp7;
         cResult[7] = tmp12;
         tmp9 = tmp12;
       }
-      const tmp8 = state(Text_Text.Text, {
+      const tmp8 = closure_1_14(Text_Text.Text, {
         style: missingPermissionText,
         variant: "text-xs/normal",
         color: "text-muted",
@@ -411,8 +411,8 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       obj2.children = intl.format(util.t.OWZJdS, { channelName: channelName.channelName });
-      obj.children = state(Text_Text.Text, obj2);
-      return state(View, obj);
+      obj.children = closure_1_14(Text_Text.Text, obj2);
+      return closure_1_14(View, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1168,7 +1168,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                       function ae(item) {
                                         item = item.item;
                                         if (item === archived_section) {
-                                          let tmp15Result = state(closure_25, {});
+                                          let tmp15Result = closure_2_14(closure_25, {});
                                         } else if (item === search_section) {
                                           let num;
                                           if (searchResults != null) {
@@ -1183,18 +1183,18 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                             str = "";
                                           }
                                           obj2.searchQuery = str;
-                                          tmp15Result = state(closure_26, obj2);
+                                          tmp15Result = closure_2_14(closure_26, obj2);
                                         } else if (item === loading_section) {
-                                          tmp15Result = state(ForumPostPlaceholderDefault, {});
+                                          tmp15Result = closure_2_14(ForumPostPlaceholderDefault, {});
                                         } else if (item === missing_permission_archived_threads) {
                                           const obj3 = { channelName };
-                                          tmp15Result = state(closure_27, obj3);
+                                          tmp15Result = closure_2_14(closure_27, obj3);
                                         } else if (item === missing_permission_search) {
                                           const obj4 = { channelName };
-                                          tmp15Result = state(closure_28, obj4);
+                                          tmp15Result = closure_2_14(closure_28, obj4);
                                         } else {
                                           const obj = { threadId: item };
-                                          tmp15Result = state(ForumPostDefault, obj);
+                                          tmp15Result = closure_2_14(ForumPostDefault, obj);
                                         }
                                         return tmp15Result;
                                       }
@@ -1905,7 +1905,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(tmp3[17]).intl;
       obj12.accessibilityLabel = intl.string(channel(analyticsLocations[17]).t.TyAuoT);
-      obj12.icon = require("../../../../_runtime/metro/12493__.js");
+      obj12.icon = require("../../../../_runtime/metro/12540__.js");
       obj12.disabled = tmp15;
       obj12.positionBottom = insets.bottom + require("native").space.PX_16;
       obj12.onPress = callback1;

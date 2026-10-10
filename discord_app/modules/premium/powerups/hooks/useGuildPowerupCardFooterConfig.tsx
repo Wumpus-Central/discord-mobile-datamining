@@ -6,7 +6,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(4969);
+const GuildPowerupsConstants = fn(5008);
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
   GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
       let tmp12 = tmp5.type !== constants.INACTIVE;
       if (!tmp12) {
-        tmp12 = skuId.skuId === tmp(4972).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-        const tmp13 = skuId.skuId === tmp(4972).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        tmp12 = skuId.skuId === tmp(5011).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        const tmp13 = skuId.skuId === tmp(5011).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
       }
       let tmp14 = tmp12;
       if (!tmp12) {

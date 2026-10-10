@@ -77,7 +77,7 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
           let obj = _modDef683(items);
           value = obj.get("hsl.h");
           value3 = obj.get("hsl.s");
-          const value4 = obj.get("hsl.l");
+          value4 = obj.get("hsl.l");
           if (constants.ANALOGOUS === items1) {
             return (function generateAnalogousColors(items, value3, value4, value) {
               const obj = closure_1_0(683);

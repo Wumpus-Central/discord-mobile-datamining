@@ -85,7 +85,7 @@ function updateParty(id, id2, activities, status) {
       if (obj9.isEmpty(dependencyMap[id2])) {
         delete tmp[tmp3];
       }
-      const value4 = map.get(tmp29);
+      value4 = map.get(tmp29);
       flag3 = true;
       if (null != value4) {
         value4.delete(id2);

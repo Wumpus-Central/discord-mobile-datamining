@@ -1,7 +1,7 @@
 // discord_app/modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx
 import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
 import c from "../../../../_runtime/00576_c.js";
-import _mod8794 from "../../../../discord_common/js/packages/libdave/index.tsx";
+import _mod8813 from "../../../../discord_common/js/packages/libdave/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,7 +35,7 @@ export const useReadableSecureFramesFingerprint = ReactCompilerGating.isReactCom
         tmp5 = null;
         if ("" !== fingerprintBase64) {
           const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
-          const str7 = _mod8794.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+          const str7 = _mod8813.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
           tmp5 = null;
           if (null != str7) {
             const _RegExp = RegExp;
@@ -49,7 +49,7 @@ export const useReadableSecureFramesFingerprint = ReactCompilerGating.isReactCom
             }
             tmp5 = arr;
           }
-          const tmpResult = _mod8794;
+          const tmpResult = _mod8813;
         }
       }
       cResult[0] = chunkSize;
@@ -67,7 +67,7 @@ export const useReadableSecureFramesFingerprint = ReactCompilerGating.isReactCom
         if (null != fingerprintBase64) {
           if ("" !== fingerprintBase64) {
             const toByteArrayResult = byteLengthDefault.toByteArray(fingerprintBase64);
-            const str5 = _mod8794.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+            const str5 = _mod8813.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
             if (null == str5) {
               return null;
             } else {

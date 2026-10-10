@@ -26,7 +26,7 @@ let closure_18 = async function _uploadContacts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_18 = async function _uploadContacts(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          const friend_suggestions = tmp5;
+          closure_3 = tmp5;
           closure_2 = tmp2;
           closure_130_1 = undefined;
           closure_130_0 = closure_0;
@@ -91,34 +91,30 @@ let closure_18 = async function _uploadContacts(arg0) {
         throw value;
       } else if (arg0 === 2) {
         c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
         body = value.body;
-        closure_131_1(closure_131_2[9]).wait(() =>
-          closure_1(closure_2[9]).dispatch({
-            type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS",
-            suggestions: friend_suggestions.friend_suggestions,
-          }),
-        );
+        const obj10 = { type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS", suggestions: body.friend_suggestions };
+        closure_131_1(closure_131_2[9]).dispatch(obj10);
         c5 = 3;
-        const obj10 = { value: body, done: true };
-        return obj10;
+        const obj11 = { value: body, done: true };
+        return obj11;
       }
-    } catch (tmp12) {
+    } catch (tmp13) {
       c5 = tmp;
-      throw tmp12;
+      throw tmp13;
     }
   }
 };
 const NativeModules = fn(17).NativeModules;
-const ContactSyncPersistedStore = fn(12357);
+const ContactSyncPersistedStore = fn(12401);
 ({
   useContactSyncStore: metroRequire,
   clearDismissState: closure_7,
   deleteStoredContacts: closure_8,
 } = ContactSyncPersistedStore);
-const ContactSyncConstants = fn(12356);
+const ContactSyncConstants = fn(12400);
 ({
   CONTACT_SYNC_MODAL_KEY: closure_9,
   ContactPermissions: c10,

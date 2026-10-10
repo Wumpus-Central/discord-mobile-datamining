@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flexDirection: "row",
@@ -57,13 +57,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const manaTypeConsolidationExperiment =
         require("ManaTypeConsolidationExperiment").useManaTypeConsolidationExperiment("GuildPowerupsWarning");
-      const tmp7 = manaTypeConsolidationExperiment(12253)(guildId, powerupNames);
+      const tmp7 = manaTypeConsolidationExperiment(12297)(guildId, powerupNames);
       ({ title, description } = tmp7);
       if (tmp7.shouldShow) {
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { color: tmp6(587).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-          const tmp12 = closure_4(tmp(5001).CircleErrorIcon, obj3);
+          const tmp12 = closure_4(tmp(6289).CircleErrorIcon, obj3);
           cResult[0] = tmp12;
           let first = tmp12;
         } else {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj6 = { variant: str2, style: tmp4.text, children: description };
-          const tmp18 = closure_4(tmp(5087).Text, obj6);
+          const tmp18 = closure_4(tmp(5088).Text, obj6);
           cResult[4] = description;
           cResult[5] = tmp4.text;
           cResult[6] = str2;
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp16 = tmp18;
         }
         const obj7 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp4.text, children: title };
-        const tmp15 = closure_4(tmp(5087).Text, obj7);
+        const tmp15 = closure_4(tmp(5088).Text, obj7);
         cResult[1] = tmp4.text;
         cResult[2] = title;
         cResult[3] = tmp15;
@@ -178,15 +178,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { style: tmp.container, children: null };
         const obj3 = { style: tmp.contentContainer, children: null };
         const obj4 = { color: tmp5(587).colors.TEXT_FEEDBACK_WARNING, size: "md" };
-        let items = [closure_4(tmp2(5001).CircleErrorIcon, obj4), , ,];
+        let items = [closure_4(tmp2(6289).CircleErrorIcon, obj4), , ,];
         const obj5 = { variant: "text-md/semibold", color: "text-feedback-warning", style: tmp.text, children: tmp7 };
-        items[1] = closure_4(tmp2(5087).Text, obj5);
+        items[1] = closure_4(tmp2(5088).Text, obj5);
         let str = "text-sm/medium";
         if (manaTypeConsolidationExperiment) {
           str = "experimental/body-sm/normal";
         }
         const obj6 = { variant: str, style: tmp.text, children: tmp8 };
-        items[2] = closure_4(tmp2(5087).Text, obj6);
+        items[2] = closure_4(tmp2(5088).Text, obj6);
         let mapped;
         if (warnings != null) {
           mapped = warnings.map((children, index) => {

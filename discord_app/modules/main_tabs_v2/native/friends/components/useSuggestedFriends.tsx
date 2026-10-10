@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
 require = fn;
-const SuggestedFriendSource = fn(12378).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12422).SuggestedFriendSource;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
@@ -207,9 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return _modDef12
             .unionBy(found, mapped, (user) => user.user.id)
             .sort((user, user2) => {
-              const name = added(4923).getName(user.user);
-              const obj = added(4923);
-              return name.localeCompare(added(4923).getName(user2.user));
+              const name = added(4962).getName(user.user);
+              const obj = added(4962);
+              return name.localeCompare(added(4962).getName(user2.user));
             });
         } else {
           return [];

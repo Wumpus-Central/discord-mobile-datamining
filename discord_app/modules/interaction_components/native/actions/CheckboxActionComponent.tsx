@@ -20,7 +20,7 @@ export default noop.memo(function CheckboxActionComponent(type) {
     tmp5 = obj2;
   }
   const componentState = componentStateContext.useComponentState(type, tmp5);
-  state = componentState.state;
+  const state = componentState.state;
   const executeStateUpdate = componentState.executeStateUpdate;
   const items = [state, type];
   const memo = noop.useMemo(() => {

@@ -8,9 +8,9 @@ import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const SearchConstants = fn(9285);
+const SearchConstants = fn(9312);
 ({ SearchListItemTypes: closure_7, USER_ESTIMATED_ITEM_SIZE: closure_8 } = SearchConstants);
-const constants2 = fn(9284).SearchResultContentEntityTypes;
+const constants2 = fn(9311).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -280,7 +280,7 @@ export default noop.memo(
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -325,7 +325,7 @@ export default noop.memo(
                   const result = closure_1(onPressGroupDMItem[14]).trackSearchResultClicked(obj7);
                   tmp5(closure_130_0, closure_130_2);
                   c5 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp10) {
                 c5 = tmp;
@@ -392,7 +392,7 @@ export default noop.memo(
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -438,7 +438,7 @@ export default noop.memo(
                   const result = closure_1(stateFromStores[14]).trackSearchResultClicked(obj7);
                   onPressDMItem(closure_130_0, closure_130_2);
                   c5 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp10) {
                 c5 = tmp;

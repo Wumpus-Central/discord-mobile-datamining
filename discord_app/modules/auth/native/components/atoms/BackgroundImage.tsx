@@ -1,12 +1,14 @@
 // discord_app/modules/auth/native/components/atoms/BackgroundImage.tsx
 import c from "../../../../../../_runtime/00576_c.js";
 import shared from "../../../../../design/shared.tsx";
+import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import _modDef6657 from "../../../../../../_runtime/metro/06657__.js";
+import _modDef6658 from "../../../../../../_runtime/metro/06658__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
-({ Image: closure_4, View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -14,11 +16,10 @@ const result = size.fileFinishedImporting("modules/auth/native/components/atoms/
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function BackgroundImage(arg0) {
-      let tmp2 = dependencyMap;
       const cResult = c.c(7);
       ({ backgroundImageSource, backgroundImageCover } = arg0);
       if (cResult[0] !== (undefined !== backgroundImageCover && backgroundImageCover)) {
-        const items = [timestampProducer.absoluteFill, tmp4 ? { width: "100%", height: "100%" } : { width: "100%" }];
+        const items = [hasOwnProperty.absoluteFill, tmp4 ? { width: "100%", height: "100%" } : { width: "100%" }];
         cResult[0] = tmp4;
         cResult[1] = items;
       } else if (null != backgroundImageSource) {
@@ -27,14 +28,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp13 = cResult[4];
           }
           if (cResult[5] !== tmp13) {
-            const obj2 = { style: timestampProducer.absoluteFill, children: null };
+            const obj2 = { style: hasOwnProperty.absoluteFill, children: null };
             const obj3 = {};
             const merged = Object.assign(tmp13);
-            obj2.children = <React4 />;
-            const tmp22 = <hasOwnProperty style={timestampProducer.absoluteFill}>{null}</hasOwnProperty>;
+            obj2.children = jsx(FastImageDefault, {});
+            const tmp22 = <React4 style={hasOwnProperty.absoluteFill}>{null}</React4>;
             cResult[5] = tmp13;
             cResult[6] = tmp22;
             let tmp14 = tmp22;
+            const tmp5Result = FastImageDefault;
           } else {
             tmp14 = cResult[6];
           }
@@ -47,10 +49,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = obj4;
       } else {
         if (tmpResult.isThemeDark(tmp6)) {
-          tmp2 = 6656;
-          let tmp5Result = importDefault(tmp2);
+          let tmp5Result2 = _modDef6657;
         } else {
-          tmp5Result = _modDef6657;
+          tmp5Result2 = _modDef6658;
         }
         tmpResult = shared;
       }
@@ -61,30 +62,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      const tmp = flag(4992)();
+      const tmp = flag(5031)();
       dependencyMap = tmp;
       let items = [backgroundImageSource, flag, tmp];
       let obj = { style: absoluteFill.absoluteFill, children: null };
-      const merged = Object.assign(
-        noop.useMemo(() => {
-          const items = [timestampProducer.absoluteFill];
-          const obj = { style: items, source: null };
-          items[1] = flag ? { width: "100%", height: "100%" } : { width: "100%" };
-          if (null != backgroundImageSource) {
-            obj.source = backgroundImageSource;
-            return obj;
+      const memo = noop.useMemo(() => {
+        const items = [hasOwnProperty.absoluteFill];
+        const obj = { style: items, source: null };
+        items[1] = flag ? { width: "100%", height: "100%" } : { width: "100%" };
+        if (null != backgroundImageSource) {
+          obj.source = backgroundImageSource;
+          return obj;
+        } else {
+          let tmp2 = dependencyMap;
+          if (obj2.isThemeDark(closure_2)) {
+            tmp2 = 6657;
+            let tmp4Result = importDefault(tmp2);
           } else {
-            let tmp2 = dependencyMap;
-            if (obj2.isThemeDark(closure_2)) {
-              tmp2 = 6656;
-              let tmp4Result = importDefault(tmp2);
-            } else {
-              tmp4Result = _modDef6657;
-            }
-            obj2 = shared;
+            tmp4Result = _modDef6658;
           }
-        }, items),
-      );
-      obj.children = <closure_4 />;
-      return <closure_5 style={absoluteFill.absoluteFill}>{null}</closure_5>;
+          obj2 = shared;
+        }
+      }, items);
+      const merged = Object.assign(memo);
+      obj.children = jsx(flag(6156), {});
+      return <closure_4 style={absoluteFill.absoluteFill}>{null}</closure_4>;
     };

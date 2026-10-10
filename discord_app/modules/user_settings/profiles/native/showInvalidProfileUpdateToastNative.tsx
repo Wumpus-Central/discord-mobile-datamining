@@ -1,7 +1,5 @@
 // discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
-import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5010 from "../../../../../_runtime/metro/05010__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting(
@@ -9,20 +7,8 @@ const result = size.fileFinishedImporting(
 );
 
 export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(avatar) {
-  const obj = ToastActionCreatorsDefault;
-  obj.open({
-    key: "USER_SETTINGS_UPDATE_FAILURE",
-    content: avatar,
-    icon: _modDef5010,
-    iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
-  });
+  ToastActionCreatorsDefault.open("USER_SETTINGS_UPDATE_FAILURE", { text: avatar, variant: "critical" });
 };
 export const showGenericGuildProfileUpdateFailureToast = function showGenericGuildProfileUpdateFailureToast(avatar) {
-  const obj = ToastActionCreatorsDefault;
-  obj.open({
-    key: "USER_SETTINGS_UPDATE_FAILURE",
-    content: avatar,
-    icon: _modDef5010,
-    iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL,
-  });
+  ToastActionCreatorsDefault.open("USER_SETTINGS_UPDATE_FAILURE", { text: avatar, variant: "critical" });
 };

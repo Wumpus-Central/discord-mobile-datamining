@@ -50,13 +50,13 @@ export const useRequestToSpeakPermission = ReactCompilerGating.isReactCompilerEn
             return closure_5.getChannel(closure_0);
           }
         }
-        const canEveryoneRoleResult = stateFromStores(4714).canEveryoneRole(
+        const canEveryoneRoleResult = stateFromStores(4755).canEveryoneRole(
           Permissions.REQUEST_TO_SPEAK,
           stateFromStores,
         );
         cResult[4] = stateFromStores;
         cResult[5] = canEveryoneRoleResult;
-        const obj3 = stateFromStores(4714);
+        const obj3 = stateFromStores(4755);
       } else {
         class S {
           constructor() {
@@ -113,11 +113,11 @@ export const useRequestToSpeakPermission = ReactCompilerGating.isReactCompilerEn
         items1,
       );
       let obj = require("initialize");
-      const canEveryoneRoleResult = stateFromStores(4714).canEveryoneRole(
+      const canEveryoneRoleResult = stateFromStores(4755).canEveryoneRole(
         Permissions.REQUEST_TO_SPEAK,
         stateFromStores,
       );
-      const obj2 = stateFromStores(4714);
+      const obj2 = stateFromStores(4755);
       [tmp4, tmp5] = noop.useState(canEveryoneRoleResult);
       dependencyMap = tmp5;
       if (canEveryoneRoleResult !== tmp4) {

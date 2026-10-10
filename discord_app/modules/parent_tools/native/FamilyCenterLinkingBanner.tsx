@@ -2,25 +2,24 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2565 from "../FamilyCenter.messages.js";
+import _modDef2568 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterBannerButton from "FamilyCenterBannerButton.tsx";
-import _modDef15111 from "../../../../_runtime/metro/15111__.js";
+import WizardHatAndBookSpotIllustration from "../../../design/components/mana-assets/native/generated/WizardHatAndBookSpotIllustration.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
     marginTop: nativeDefault.space.PX_16,
-    paddingTop: 0,
+    paddingTop: nativeDefault.space.PX_16,
     paddingBottom: nativeDefault.space.PX_16,
     alignItems: "center",
     borderRadius: nativeDefault.radii.md,
@@ -34,7 +33,7 @@ let obj2 = {
 let obj3 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   marginTop: nativeDefault.space.PX_16,
-  paddingTop: 0,
+  paddingTop: nativeDefault.space.PX_16,
   paddingBottom: nativeDefault.space.PX_16,
   alignItems: "center",
   borderRadius: nativeDefault.radii.md,
@@ -42,25 +41,25 @@ let obj3 = {
   overflow: "hidden",
 };
 obj2.content = { padding: nativeDefault.space.PX_16 };
-let size = { width: "100%", height: 175, marginBottom: nativeDefault.space.PX_12 };
-obj2.art = size;
 let obj4 = { padding: nativeDefault.space.PX_16 };
+obj2.art = { marginBottom: nativeDefault.space.PX_12 };
+let obj5 = { marginBottom: nativeDefault.space.PX_12 };
 obj2.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_6 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
-let obj5 = { marginBottom: nativeDefault.space.PX_8 };
-createStyles = fn(5091);
-let obj6 = { container: null };
+let obj6 = { marginBottom: nativeDefault.space.PX_8 };
+createStyles = fn(5092);
+const obj9 = { container: null };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterLinkingBanner() {
-      const cResult = c.c(22);
+      const cResult = c.c(23);
       const tmp4 = closure_6();
       const tmp6 = useIsInAdultAgeGroupDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2565.zUCWEL);
+        const stringResult = intl.string(_modDef2568.zUCWEL);
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef2565.B0NPbp);
+        const stringResult1 = intl2.string(_modDef2568.B0NPbp);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp7 = stringResult;
@@ -71,11 +70,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText = useAgeSpecificText.useAgeSpecificText(tmp7, tmp8);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = util.intl;
-        const formatResult = intl3.format(_modDef2565.yMnoDl, {
+        const formatResult = intl3.format(_modDef2568.yMnoDl, {
           link: "https://support.discord.com/hc/articles/14155060633623",
         });
         const intl4 = util.intl;
-        const stringResult2 = intl4.string(_modDef2565.JsAEDi);
+        const stringResult2 = intl4.string(_modDef2568.JsAEDi);
         cResult[2] = formatResult;
         cResult[3] = stringResult2;
         let tmp13 = stringResult2;
@@ -86,81 +85,87 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useAgeSpecificText;
       const ageSpecificText1 = useAgeSpecificText.useAgeSpecificText(tmp12, tmp13);
-      if (cResult[4] !== tmp4.art) {
-        const obj2 = { source: _modDef15111, style: tmp4.art, resizeMethod: "resize" };
-        const tmp20 = React4(FastImageDefault, obj2);
-        cResult[4] = tmp4.art;
-        cResult[5] = tmp20;
-        let tmp17 = tmp20;
-        const tmp5Result = FastImageDefault;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp19 = React4(WizardHatAndBookSpotIllustration.WizardHatAndBookSpotIllustration, { accessible: false });
+        cResult[4] = tmp19;
+        let tmp17 = tmp19;
       } else {
-        tmp17 = cResult[5];
+        tmp17 = cResult[4];
       }
-      if (cResult[6] === ageSpecificText) {
-        if (cResult[7] === tmp4.header) {
-          let tmp21 = cResult[8];
+      if (cResult[5] !== tmp4.art) {
+        const obj2 = { style: tmp4.art, children: tmp17 };
+        const tmp23 = React4(View, obj2);
+        cResult[5] = tmp4.art;
+        cResult[6] = tmp23;
+        let tmp20 = tmp23;
+      } else {
+        tmp20 = cResult[6];
+      }
+      if (cResult[7] === ageSpecificText) {
+        if (cResult[8] === tmp4.header) {
+          let tmp24 = cResult[9];
         }
-        if (cResult[9] !== ageSpecificText1) {
+        if (cResult[10] !== ageSpecificText1) {
           const obj3 = { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 };
-          const tmp25 = React4(Text_Text.Text, obj3);
-          cResult[9] = ageSpecificText1;
-          cResult[10] = tmp25;
-          let tmp23 = tmp25;
+          const tmp28 = React4(Text_Text.Text, obj3);
+          cResult[10] = ageSpecificText1;
+          cResult[11] = tmp28;
+          let tmp26 = tmp28;
         } else {
-          tmp23 = cResult[10];
+          tmp26 = cResult[11];
         }
-        if (cResult[11] === tmp4.content) {
-          if (cResult[12] === tmp21) {
-            if (cResult[13] === tmp23) {
-              let tmp26 = cResult[14];
+        if (cResult[12] === tmp4.content) {
+          if (cResult[13] === tmp24) {
+            if (cResult[14] === tmp26) {
+              let tmp29 = cResult[15];
             }
-            if (cResult[15] !== tmp6) {
-              const tmp31 = React4(tmp6 ? closure_8 : closure_10, {});
-              cResult[15] = tmp6;
-              cResult[16] = tmp31;
+            if (cResult[16] !== tmp6) {
+              const tmp34 = React4(tmp6 ? closure_8 : closure_10, {});
+              cResult[16] = tmp6;
+              cResult[17] = tmp34;
             } else {
-              if (cResult[17] === tmp4.container) {
-                if (cResult[18] === tmp17) {
-                  if (cResult[19] === tmp26) {
-                    if (cResult[20] === tmp30) {
-                      let tmp33 = cResult[21];
+              if (cResult[18] === tmp4.container) {
+                if (cResult[19] === tmp20) {
+                  if (cResult[20] === tmp29) {
+                    if (cResult[21] === tmp33) {
+                      let tmp36 = cResult[22];
                     }
-                    return tmp33;
+                    return tmp36;
                   }
                 }
               }
               const obj4 = { style: tmp4.container, children: null };
-              const items = [tmp17, tmp26, cResult[16]];
+              const items = [tmp20, tmp29, cResult[17]];
               obj4.children = items;
-              const tmp36 = hasOwnProperty(View, obj4);
-              cResult[17] = tmp4.container;
-              cResult[18] = tmp17;
-              cResult[19] = tmp26;
-              cResult[20] = cResult[16];
-              cResult[21] = tmp36;
-              tmp33 = tmp36;
+              const tmp39 = hasOwnProperty(View, obj4);
+              cResult[18] = tmp4.container;
+              cResult[19] = tmp20;
+              cResult[20] = tmp29;
+              cResult[21] = cResult[17];
+              cResult[22] = tmp39;
+              tmp36 = tmp39;
             }
           }
         }
         const obj5 = { style: tmp4.content, children: null };
-        const items1 = [tmp21, tmp23];
+        const items1 = [tmp24, tmp26];
         obj5.children = items1;
-        const tmp29 = hasOwnProperty(View, obj5);
-        cResult[11] = tmp4.content;
-        cResult[12] = tmp21;
-        cResult[13] = tmp23;
-        cResult[14] = tmp29;
-        tmp26 = tmp29;
+        const tmp32 = hasOwnProperty(View, obj5);
+        cResult[12] = tmp4.content;
+        cResult[13] = tmp24;
+        cResult[14] = tmp26;
+        cResult[15] = tmp32;
+        tmp29 = tmp32;
       }
-      const tmp22 = React4(Text_Text.Text, {
+      const tmp25 = React4(Text_Text.Text, {
         style: tmp4.header,
         variant: "heading-lg/semibold",
         children: ageSpecificText,
       });
-      cResult[6] = ageSpecificText;
-      cResult[7] = tmp4.header;
-      cResult[8] = tmp22;
-      tmp21 = tmp22;
+      cResult[7] = ageSpecificText;
+      cResult[8] = tmp4.header;
+      cResult[9] = tmp25;
+      tmp24 = tmp25;
       const obj6 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };
       const tmpResult2 = useAgeSpecificText;
     }
@@ -170,23 +175,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       const obj = useAgeSpecificText;
       const intl2 = util.intl;
-      const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2565.zUCWEL), intl2.string(_modDef2565.B0NPbp));
-      const stringResult = intl.string(_modDef2565.zUCWEL);
+      const ageSpecificText = obj.useAgeSpecificText(intl.string(_modDef2568.zUCWEL), intl2.string(_modDef2568.B0NPbp));
+      const stringResult = intl.string(_modDef2568.zUCWEL);
       const intl3 = util.intl;
       const obj2 = useAgeSpecificText;
       const intl4 = util.intl;
       const obj3 = { style: tmp.container, children: null };
+      const obj4 = { style: tmp.art, children: null };
       const ageSpecificText1 = obj2.useAgeSpecificText(
-        intl3.format(_modDef2565.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
-        intl4.string(_modDef2565.JsAEDi),
+        intl3.format(_modDef2568.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
+        intl4.string(_modDef2568.JsAEDi),
       );
-      const obj4 = { source: null, style: null, resizeMethod: "resize" };
-      const formatResult = intl3.format(_modDef2565.yMnoDl, {
-        link: "https://support.discord.com/hc/articles/14155060633623",
-      });
-      obj4.source = _modDef15111;
-      obj4.style = tmp.art;
-      const items = [React4(FastImageDefault, obj4), ,];
+      obj4.children = React4(WizardHatAndBookSpotIllustration.WizardHatAndBookSpotIllustration, { accessible: false });
+      const items = [React4(View, obj4), ,];
       const obj5 = { style: tmp.content, children: null };
       const items1 = [
         React4(Text_Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }),
@@ -198,8 +199,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = items;
       return hasOwnProperty(View, obj3);
     };
-obj6.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
-let closure_7 = createStyles.createStyles(obj6);
+obj9.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
+let closure_7 = createStyles.createStyles(obj9);
 ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterLinkingBannerParentContent() {
@@ -208,9 +209,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { index: 1, header: null, description: null };
         const intl = util.intl;
-        obj2.header = intl.string(_modDef2565["7xxAni"]);
+        obj2.header = intl.string(_modDef2568["7xxAni"]);
         const intl2 = util.intl;
-        obj2.description = intl2.string(_modDef2565["1M9So2"]);
+        obj2.description = intl2.string(_modDef2568["1M9So2"]);
         const tmp9 = React4(closure_12, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -220,9 +221,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { index: 2, header: null, description: null };
         const intl3 = util.intl;
-        obj3.header = intl3.string(_modDef2565["AXgx+a"]);
+        obj3.header = intl3.string(_modDef2568["AXgx+a"]);
         const intl4 = util.intl;
-        obj3.description = intl4.string(_modDef2565.GzMFnb);
+        obj3.description = intl4.string(_modDef2568.GzMFnb);
         const tmp14 = React4(closure_12, obj3);
         cResult[1] = tmp14;
         let tmp10 = tmp14;
@@ -232,9 +233,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { index: 3, header: null, description: null, isLast: true };
         const intl5 = util.intl;
-        obj4.header = intl5.string(_modDef2565.MZn1tG);
+        obj4.header = intl5.string(_modDef2568.MZn1tG);
         const intl6 = util.intl;
-        obj4.description = intl6.string(_modDef2565["8rLBxD"]);
+        obj4.description = intl6.string(_modDef2568["8rLBxD"]);
         const tmp20 = React4(closure_12, obj4);
         const tmp21 = React4(FamilyCenterBannerButton.FamilyCenterParentQRCodeButton, {});
         cResult[2] = tmp20;
@@ -262,31 +263,31 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: closure_7().container, children: null };
       const obj2 = { index: 1, header: null, description: null };
       const intl = util.intl;
-      obj2.header = intl.string(_modDef2565["7xxAni"]);
+      obj2.header = intl.string(_modDef2568["7xxAni"]);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2565["1M9So2"]);
+      obj2.description = intl2.string(_modDef2568["1M9So2"]);
       const items = [React4(closure_12, obj2), , ,];
       const obj3 = { index: 2, header: null, description: null };
       const intl3 = util.intl;
-      obj3.header = intl3.string(_modDef2565["AXgx+a"]);
+      obj3.header = intl3.string(_modDef2568["AXgx+a"]);
       const intl4 = util.intl;
-      obj3.description = intl4.string(_modDef2565.GzMFnb);
+      obj3.description = intl4.string(_modDef2568.GzMFnb);
       items[1] = React4(closure_12, obj3);
       const obj4 = { index: 3, header: null, description: null, isLast: true };
       const intl5 = util.intl;
-      obj4.header = intl5.string(_modDef2565.MZn1tG);
+      obj4.header = intl5.string(_modDef2568.MZn1tG);
       const intl6 = util.intl;
-      obj4.description = intl6.string(_modDef2565["8rLBxD"]);
+      obj4.description = intl6.string(_modDef2568["8rLBxD"]);
       items[2] = React4(closure_12, obj4);
       items[3] = React4(FamilyCenterBannerButton.FamilyCenterParentQRCodeButton, {});
       obj.children = items;
       return hasOwnProperty(View, obj);
     };
-createStyles = fn(5091);
-const obj10 = { container: null };
-const obj9 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
-obj10.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
-let closure_9 = createStyles.createStyles(obj10);
+createStyles = fn(5092);
+const obj13 = { container: null };
+const obj10 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
+obj13.container = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_9 = createStyles.createStyles(obj13);
 ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterLinkingBannerTeenContent() {
@@ -316,14 +317,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         children: React4(FamilyCenterBannerButton.FamilyCenterTeenQRCodeButton, {}),
       });
     };
-createStyles = fn(5091);
-const obj14 = {
+createStyles = fn(5092);
+const obj17 = {
   row: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   gap: { marginBottom: 12 },
   circle: null,
   rowContent: null,
 };
-const size1 = {
+let size = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -334,9 +335,9 @@ const size1 = {
   borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
 };
-obj14.circle = size1;
-obj14.rowContent = { marginLeft: 12, flex: 1 };
-let closure_11 = createStyles.createStyles(obj14);
+obj17.circle = size;
+obj17.rowContent = { marginLeft: 12, flex: 1 };
+let closure_11 = createStyles.createStyles(obj17);
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? function FamilyCenterLinkingInstructionsRow(isLast) {

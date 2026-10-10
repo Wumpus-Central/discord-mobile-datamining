@@ -180,7 +180,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
         NumberResult = Number(value);
       }
       obj.folderId = NumberResult;
-      let value4;
+      value4 = undefined;
       if (guildIds.name != null) {
         value4 = iter3.value;
       }

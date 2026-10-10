@@ -26,7 +26,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12927, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12975, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   if (obj.hasQuestRewardCode(quest.config)) {
     const obj2 = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12927, dependencyMap.paths), timestampProducer, obj2);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12975, dependencyMap.paths), timestampProducer, obj2);
   } else {
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
       const obj3 = { quest };
@@ -64,7 +64,7 @@ let closure_15 = async function _handleRewardClaim(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -101,11 +101,10 @@ let closure_15 = async function _handleRewardClaim(arg0) {
         c4 = 0;
         closure_129_1 = closure_3;
         questLogger.error("Error claiming reward", closure_129_1);
-        const obj8 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
+        const obj8 = { text: null, variant: "critical" };
         const intl = closure_130_0(closure_130_2[17]).intl;
-        obj8.content = intl.string(closure_130_0(closure_130_2[17]).t.CKsXk3);
-        obj8.icon = closure_130_1(closure_130_2[18]);
-        closure_130_1(closure_130_2[16]).open(obj8);
+        obj8.text = intl.string(closure_130_0(closure_130_2[17]).t.CKsXk3);
+        closure_130_1(closure_130_2[16]).open("CLAIM_QUEST_REWARD_ERROR", obj8);
         c6 = 3;
         return { value: false, done: true };
       } else if (arg0 === 1) {
@@ -121,11 +120,11 @@ let closure_15 = async function _handleRewardClaim(arg0) {
         c6 = 3;
         return { value: true, done: true };
       }
-    } catch (tmp24) {
-      closure_3 = tmp24;
+    } catch (tmp23) {
+      closure_3 = tmp23;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp24;
+        throw tmp23;
       } else {
         c5 = tmp;
       }
@@ -143,7 +142,7 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -232,14 +231,13 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
             obj9 = closure_130_0(closure_130_2[10]);
           }
           if (!closure_129_6) {
-            closure_130_1(closure_130_2[19]).open();
-            const obj6 = closure_130_1(closure_130_2[19]);
+            closure_130_1(closure_130_2[18]).open();
+            const obj6 = closure_130_1(closure_130_2[18]);
           }
-          const obj12 = { key: "CLAIM_QUEST_REWARD_ERROR", content: null, icon: null };
+          const obj12 = { text: null, variant: "critical" };
           const intl = closure_130_0(closure_130_2[17]).intl;
-          obj12.content = intl.string(closure_130_0(closure_130_2[17]).t["HZlu0+"]);
-          obj12.icon = closure_130_1(closure_130_2[18]);
-          closure_130_1(closure_130_2[16]).open(obj12);
+          obj12.text = intl.string(closure_130_0(closure_130_2[17]).t["HZlu0+"]);
+          closure_130_1(closure_130_2[16]).open("CLAIM_QUEST_REWARD_ERROR", obj12);
           c4 = 3;
           return { value: false, done: true };
         }
@@ -267,13 +265,13 @@ let closure_16 = async function _handleRewardClaimThenView(arg0) {
         const obj14 = { value: closure_129_9, done: true };
         return obj14;
       }
-    } catch (tmp58) {
+    } catch (tmp56) {
       c4 = tmp;
-      throw tmp58;
+      throw tmp56;
     }
   }
 };
-const QuestConstants = fn(5979);
+const QuestConstants = fn(5972);
 ({
   QuestsExperimentLocations: hasOwnProperty,
   QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: metroRequire,
@@ -287,7 +285,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9148, dependencyMap.paths), React5, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9169, dependencyMap.paths), React5, {
     questId: questId.questId,
   });
 };
@@ -322,8 +320,8 @@ export const openQuestHome = function openQuestHome(scrollToQuestId) {
   }
   if (obj.getIsEligibleForQuests()) {
     let obj2 = { questId: scrollToQuestId, fromContent };
-    const result = scrollToQuestId(tmp4[21]).setQuestHomeUtmContext(obj2);
-    flag(tmp4[22])();
+    const result = scrollToQuestId(tmp4[20]).setQuestHomeUtmContext(obj2);
+    flag(tmp4[21])();
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => {
       const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
@@ -347,7 +345,7 @@ export const openQuestHome = function openQuestHome(scrollToQuestId) {
         }
       }
     }, 1);
-    const tmp3Result = scrollToQuestId(tmp4[21]);
+    const tmp3Result = scrollToQuestId(tmp4[20]);
   }
 };
 export const isHeroVideoSupported = function isHeroVideoSupported(mimetype) {

@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1085);
 ({ NOOP: closure_8, Permissions: closure_9 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     borderRadius: nativeDefault.radii.xxl,
@@ -250,26 +250,26 @@ export default noop.memo(
           small = false;
         }
         let VJlc0S = dependencyMap;
-        const tmp = voiceStates(9280)();
-        const tmp2 = voiceStates(4992)();
-        let joinButtonText = closure_11(tmp, channel(4930).isThemeLight(tmp2));
-        const obj = channel(4930);
-        const isConnectedToVoiceChannel = channel(10324).useIsConnectedToVoiceChannel(channel);
-        const obj2 = channel(10324);
+        const tmp = voiceStates(9307)();
+        const tmp2 = voiceStates(5031)();
+        let joinButtonText = closure_11(tmp, channel(4969).isThemeLight(tmp2));
+        const obj = channel(4969);
+        const isConnectedToVoiceChannel = channel(10357).useIsConnectedToVoiceChannel(channel);
+        const obj2 = channel(10357);
         const items = [PermissionStore];
         const stateFromStores = channel(573).useStateFromStores(
           items,
           () => !PermissionStore.can(constants.CONNECT, channel),
         );
         const obj3 = channel(573);
-        const stageParticipantsCount = channel(5963).useStageParticipantsCount(
+        const stageParticipantsCount = channel(5956).useStageParticipantsCount(
           channel.id,
-          channel(5957).StageChannelParticipantNamedIndex.AUDIENCE,
+          channel(5950).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         const isGuildStageVoiceResult = channel.isGuildStageVoice();
-        const obj4 = channel(5963);
-        const obj5 = channel(5892);
-        const tmp8 = channel(5892).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
+        const obj4 = channel(5956);
+        const obj5 = channel(5895);
+        const tmp8 = channel(5895).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
         const items1 = [VoiceStateStore];
         const stateFromStores1 = channel(573).useStateFromStores(items1, () => VoiceStateStore.hasVideo(channel.id));
         const sum = stageParticipantsCount + voiceStates.length;
@@ -286,9 +286,9 @@ export default noop.memo(
           tmp12 = tmp8;
         }
         const tmp3Result = channel(573);
-        const connectedUserLimit = channel(11946).useConnectedUserLimit({ channel, video: tmp12 });
-        const tmp3Result3 = channel(11946);
-        let connectedUserLimitFormatted = channel(11946).useConnectedUserLimitFormatted({
+        const connectedUserLimit = channel(11990).useConnectedUserLimit({ channel, video: tmp12 });
+        const tmp3Result3 = channel(11990);
+        let connectedUserLimitFormatted = channel(11990).useConnectedUserLimitFormatted({
           channel,
           video: tmp12,
           userCount: sum,
@@ -335,7 +335,7 @@ export default noop.memo(
             connectedUserLimitFormatted = intl2.string(VJlc0S);
           }
           obj8.children = connectedUserLimitFormatted;
-          obj7.children = jsx(tmp3(5087).Text, {
+          obj7.children = jsx(tmp3(5088).Text, {
             style: null,
             color: "interactive-text-default",
             variant: "text-xs/semibold",
@@ -375,9 +375,9 @@ export default noop.memo(
               }
               const items3 = [joinButtonIconActive, { marginRight: 3, marginLeft: -1 }];
               if (isGuildStageVoiceResult) {
-                let VoiceNormalIcon = tmp3(8208).StageIcon;
+                let VoiceNormalIcon = tmp3(8224).StageIcon;
               } else {
-                VoiceNormalIcon = tmp3(8212).VoiceNormalIcon;
+                VoiceNormalIcon = tmp3(8228).VoiceNormalIcon;
               }
               const obj10 = { size: "xs", style: items3 };
               <VoiceNormalIcon size="xs" style={items3} />;
@@ -416,6 +416,6 @@ export default noop.memo(
             formatted = str(toUpperCase.VJlc0S);
           }
         }
-        const tmp3Result4 = channel(11946);
+        const tmp3Result4 = channel(11990);
       },
 );

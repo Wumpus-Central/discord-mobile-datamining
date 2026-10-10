@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef2173 from "../../../ads/SponsoredContentPreferences.messages.js";
+import _modDef2174 from "../../../ads/SponsoredContentPreferences.messages.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1209).AdTopic.REAL_MONEY_GAMING] = _modDef2173.pmIitA;
+obj[fn(1209).AdTopic.REAL_MONEY_GAMING] = _modDef2174.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
 let ReactCompilerGating = fn(558);
@@ -59,7 +59,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] !== tmp4) {
           const intl2 = tmp(1126).intl;
-          const tmp13 = _modDef2173;
+          const tmp13 = _modDef2174;
           const stringResult1 = intl2.string(tmp4 ? tmp13.B9PPxE : tmp13.Y9ZOp8);
           cResult[7] = tmp4;
           cResult[8] = stringResult1;
@@ -75,7 +75,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { label: tmp9, subLabel: cResult[8], value: !tmp4, onValueChange: tmp8 };
-          const tmp19 = closure_5(tmp(6889).TableSwitchRow, obj2);
+          const tmp19 = closure_5(tmp(6895).TableSwitchRow, obj2);
           cResult[9] = tmp8;
           cResult[10] = tmp9;
           cResult[11] = cResult[8];
@@ -99,7 +99,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = adTopic(1126).intl;
       obj.label = intl.string(obj[adTopic]);
       const intl2 = adTopic(1126).intl;
-      const tmp3 = _modDef2173;
+      const tmp3 = _modDef2174;
       obj.subLabel = intl2.string(hasItem ? tmp3.B9PPxE : tmp3.Y9ZOp8);
       obj.value = !hasItem;
       obj.onValueChange = function onValueChange(arg0) {
@@ -114,9 +114,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [...set];
         AdTopicOptOuts2.updateSetting(items);
       };
-      return closure_5(adTopic(6889).TableSwitchRow, obj);
+      return closure_5(adTopic(6895).TableSwitchRow, obj);
     };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj4 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { hasIcons: false, description: null };
         const intl = util.intl;
         const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.MANAGE_SPONSORED_CONTENT) };
-        obj2.description = intl.format(_modDef2173["z/MfaY"], obj3);
+        obj2.description = intl.format(_modDef2174["z/MfaY"], obj3);
         const tmp9 = hasOwnProperty(TableRowGroup.TableRowGroup, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { hasIcons: false, title: null, children: null };
         const intl2 = util.intl;
-        obj5.title = intl2.string(_modDef2173.OkmBx0);
+        obj5.title = intl2.string(_modDef2174.OkmBx0);
         obj5.children = closure_8.map((adTopic) => closure_1_5(closure_1_9, { adTopic }, adTopic));
         const tmp14 = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
         cResult[1] = tmp14;
@@ -180,11 +180,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { hasIcons: false, description: null };
       const intl = util.intl;
       const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.MANAGE_SPONSORED_CONTENT) };
-      obj2.description = intl.format(_modDef2173["z/MfaY"], obj3);
+      obj2.description = intl.format(_modDef2174["z/MfaY"], obj3);
       const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj2)];
       const obj5 = { hasIcons: false, title: null, children: null };
       const intl2 = util.intl;
-      obj5.title = intl2.string(_modDef2173.OkmBx0);
+      obj5.title = intl2.string(_modDef2174.OkmBx0);
       obj5.children = closure_8.map((adTopic) => closure_1_5(closure_1_9, { adTopic }, adTopic));
       items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj5);
       obj.children = items;

@@ -197,7 +197,7 @@ const EmojiIntention = fn(1393).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 20;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" },
@@ -635,7 +635,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
             const stringResult = intl.string(util.t.xIUfJS);
-            const tmp13 = closure_1_15(ForwardingIconDefault, { size: "sm" });
+            const tmp13 = value2(ForwardingIconDefault, { size: "sm" });
             cResult[4] = stringResult;
             cResult[5] = tmp13;
             let tmp9 = tmp13;
@@ -653,7 +653,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { onPress, style: tmp6, accessible: true, disabled, accessibilityLabel: tmp8, children: tmp9 };
-          const tmp16 = closure_1_15(Pressables.PressableOpacity, obj2);
+          const tmp16 = value2(Pressables.PressableOpacity, obj2);
           cResult[6] = disabled;
           cResult[7] = onPress;
           cResult[8] = tmp6;
@@ -692,8 +692,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       obj.disabled = disabled;
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.xIUfJS);
-      obj.children = closure_1_15(ForwardingIconDefault, { size: "sm" });
-      return closure_1_15(Pressables.PressableOpacity, obj);
+      obj.children = value2(ForwardingIconDefault, { size: "sm" });
+      return value2(Pressables.PressableOpacity, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
@@ -714,7 +714,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = util.intl;
             const stringResult = intl.string(util.t["5NwaNY"]);
-            const tmp12 = closure_1_15(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+            const tmp12 = value2(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
             cResult[4] = stringResult;
             cResult[5] = tmp12;
             let tmp9 = tmp12;
@@ -732,7 +732,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { onPress, style: tmp6, accessible: true, disabled, accessibilityLabel: tmp8, children: tmp9 };
-          const tmp15 = closure_1_15(Pressables.PressableOpacity, obj2);
+          const tmp15 = value2(Pressables.PressableOpacity, obj2);
           cResult[6] = disabled;
           cResult[7] = onPress;
           cResult[8] = tmp6;
@@ -771,8 +771,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       obj.disabled = disabled;
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t["5NwaNY"]);
-      obj.children = closure_1_15(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
-      return closure_1_15(Pressables.PressableOpacity, obj);
+      obj.children = value2(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+      return value2(Pressables.PressableOpacity, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1377,8 +1377,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 isBurstReaction: reaction.type === MessageReactionsTypes.ReactionTypes.BURST,
                 handleItemInteracted,
               };
-              const obj2 = { children: closure_2_15(EmojiReaction, obj) };
-              return closure_2_15(hasOwnProperty, obj2, "reaction-" + index);
+              const obj2 = { children: value2(EmojiReaction, obj) };
+              return value2(hasOwnProperty, obj2, "reaction-" + index);
             }),
           ];
           let tmp20Result = null;

@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { display: "flex", flexDirection: "row", gap: 8 },
   favoriteGame: { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 },
@@ -220,9 +220,8 @@ export default function GuildProfileGames(profile) {
     }
     return tmp2;
   }, items);
-  onPressFallback = noop.useCallback((content) => {
-    const obj = lastGameToDisplay(remainingGames[12]);
-    obj.open({ key: "profile-game-" + content.id, content: content.name });
+  onPressFallback = noop.useCallback((name) => {
+    lastGameToDisplay(remainingGames[12]).open("profile-game-" + name.id, { text: name.name });
   }, []);
   [][0] = profile;
   let tmp9 = null;

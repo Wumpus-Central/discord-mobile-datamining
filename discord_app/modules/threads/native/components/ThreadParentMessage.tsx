@@ -9,7 +9,7 @@ import ReferencedMessageStore from "../../../replies/ReferencedMessageStore.tsx"
 import MessageStore from "../../../../stores/MessageStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7306).ReferencedMessageState;
+const ReferencedMessageState = fn(7312).ReferencedMessageState;
 const jsx = fn(21).jsx;
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({
@@ -47,7 +47,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp5 = cResult[3];
         }
         const stateFromStores = PressableOpacity(tmp[7]).useStateFromStores(first, tmp5);
-        state = undefined;
+        let state;
         if (stateFromStores != null) {
           state = stateFromStores.state;
         }
@@ -118,7 +118,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = rowGenerator.useStateFromStores(items, () =>
         ReferencedMessageStore.getMessage(dependencyMap, importDefault),
       );
-      state = undefined;
+      let state;
       if (stateFromStores != null) {
         state = stateFromStores.state;
       }
@@ -179,7 +179,7 @@ export const ThreadCreationStarterMessage = ReactCompilerGating.isReactCompilerE
           }
           if (cResult[5] !== stateFromStores) {
             const obj3 = { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" };
-            tmp2 = jsx(channelId(9346), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
+            tmp2 = jsx(channelId(9373), { rowGenerator, message: stateFromStores, style: tmp9, pointerEvents: "none" });
             cResult[5] = stateFromStores;
             cResult[6] = tmp2;
           }

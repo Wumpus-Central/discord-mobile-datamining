@@ -26,7 +26,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -40,7 +40,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const ICYMIAnalytics = tmp2(14578).ICYMIAnalytics;
+                  const ICYMIAnalytics = tmp2(14632).ICYMIAnalytics;
                   let str = "NoDotShown";
                   if (tmp2) {
                     str = "DotShown";
@@ -93,7 +93,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               } else {
                 const recommendedGuilds = ICYMIActionCreatorsDefault.getRecommendedGuilds();
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp19) {
               c2 = tmp;
@@ -134,7 +134,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -148,7 +148,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  const ICYMIAnalytics = tmp2(14578).ICYMIAnalytics;
+                  const ICYMIAnalytics = tmp2(14632).ICYMIAnalytics;
                   let str = "NoDotShown";
                   if (tmp2) {
                     str = "DotShown";
@@ -157,7 +157,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                   ICYMIAnalytics.trackFeedShown(obj5);
                   v3 = 1;
                   dependencyMap = 1;
-                  const obj7 = { value: v3(8455).fetchDehydrated({ isReloading: true }), done: false };
+                  const obj7 = { value: v3(8471).fetchDehydrated({ isReloading: true }), done: false };
                   return obj7;
                 }
               } else if (1 === tmp5) {
@@ -171,7 +171,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                 } else {
                   v3 = 2;
                   dependencyMap = 1;
-                  const obj9 = { value: v3(8455).reloadICYMITab(), done: false };
+                  const obj9 = { value: v3(8471).reloadICYMITab(), done: false };
                   return obj9;
                 }
               } else if (2 === tmp5) {
@@ -185,7 +185,7 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                 } else {
                   v3 = 3;
                   dependencyMap = 1;
-                  const obj12 = { value: v3(8455).getGuildChannelScores(), done: false };
+                  const obj12 = { value: v3(8471).getGuildChannelScores(), done: false };
                   return obj12;
                 }
               } else if (arg0 === 1) {
@@ -196,9 +196,9 @@ export const useICYMIReloadHandler = ReactCompilerGating.isReactCompilerEnabled(
                 const obj13 = { value, done: true };
                 return obj13;
               } else {
-                const recommendedGuilds = v3(8455).getRecommendedGuilds();
+                const recommendedGuilds = v3(8471).getRecommendedGuilds();
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp19) {
               dependencyMap = tmp;

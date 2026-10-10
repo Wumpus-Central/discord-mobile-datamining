@@ -70,7 +70,7 @@ export const getCanJoin = function getCanJoin(currentUserId) {
     return { canJoin: false, remoteJoinPlatform: null };
   }
 };
-export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
+export const getCanSync = function getCanSync(activity, tmp9Result, arg2, id) {
   let tmp = null != activity;
   if (tmp) {
     let tmp6 = isInviteActiveDefault(activity, arg2, id.id);
@@ -79,8 +79,8 @@ export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
       if (tmp8) {
         let isPlatformEmbedded = PlatformUtils.isPlatformEmbedded;
         if (isPlatformEmbedded) {
-          isPlatformEmbedded = !getIsInParty.getIsInParty(tmp8Result, activity);
-          const tmp9Result = getIsInParty;
+          tmp9Result = getIsInParty;
+          isPlatformEmbedded = !tmp9Result.getIsInParty(tmp9Result, activity);
         }
         tmp8 = isPlatformEmbedded;
       }

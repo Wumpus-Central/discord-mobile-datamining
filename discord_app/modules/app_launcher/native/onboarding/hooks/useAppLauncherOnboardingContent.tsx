@@ -8,9 +8,9 @@ import ApplicationFrecencyStore from "../../../../applications/ApplicationFrecen
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 const initialize = tmp(504);
-const useActivityApplications = tmp(11667);
+const useActivityApplications = tmp(11713);
 require = fn;
-const constants = fn(2061).DismissibleContentGroupName;
+const constants = fn(2062).DismissibleContentGroupName;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasUsedActivities(channel) {
@@ -164,8 +164,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = cResult[7];
       }
       const tmpResult = channelId(504);
-      const tmpResult2 = channelId(7093);
-      [tmp17, tmp18] = channelId(7093).useSelectedDismissibleContent(items1, tmp14);
+      const tmpResult2 = channelId(7099);
+      [tmp17, tmp18] = channelId(7099).useSelectedDismissibleContent(items1, tmp14);
       if (cResult[8] === tmp18) {
         if (cResult[9] === tmp17) {
           let tmp19 = cResult[10];
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = tmp17;
       cResult[10] = obj5;
       tmp19 = obj5;
-      const tmp16 = _slicedToArray(channelId(7093).useSelectedDismissibleContent(items1, tmp14), 2);
+      const tmp16 = _slicedToArray(channelId(7099).useSelectedDismissibleContent(items1, tmp14), 2);
     }
   : function useAppLauncherOnboardingContent(channelId) {
       channelId = channelId.channelId;
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2 = { channel: channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId)) };
       const tmp7 = _slicedToArray(
-        channelId(7093).useSelectedDismissibleContent(items, { groupName: constants.APP_LAUNCHER_ONBOARDING }),
+        channelId(7099).useSelectedDismissibleContent(items, { groupName: constants.APP_LAUNCHER_ONBOARDING }),
         2,
       );
       return { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };

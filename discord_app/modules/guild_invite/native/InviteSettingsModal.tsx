@@ -21,7 +21,7 @@ require = fn;
 const Constants = fn(1085);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 },
   formContent: null,
@@ -159,8 +159,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           class O {
             constructor() {
-              obj = channel(closure_2[20]);
-              waitResult = obj.wait(channel(closure_2[17]).resetSettings);
+              obj = channel(closure_2[17]);
+              resetSettingsResult = obj.resetSettings();
               return;
             }
           }
@@ -168,13 +168,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class O {
             constructor() {
-              obj = channel(closure_2[20]);
-              waitResult = obj.wait(channel(closure_2[17]).resetSettings);
+              obj = channel(closure_2[17]);
+              resetSettingsResult = obj.resetSettings();
               return;
             }
           }
         }
-        const unmountEffect = tmp(5393).useUnmountEffect(O);
+        const unmountEffect = tmp(5396).useUnmountEffect(O);
         if (cResult[9] !== channel) {
           class V {
             constructor() {
@@ -279,7 +279,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { onPress, text: null };
                   const intl = navigation(1126).intl;
                   obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-                  tmp = jsx(navigation(7082).HeaderActionButton, { onPress, text: null });
+                  tmp = jsx(navigation(7088).HeaderActionButton, { onPress, text: null });
                 }
                 return tmp;
               },
@@ -294,7 +294,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = navigation;
         cResult[14] = P;
         cResult[15] = items2;
-        const tmpResult3 = tmp(5393);
+        const tmpResult3 = tmp(5396);
       }
       const tmpResult = navigation(504);
       const isEqualResult = navigation(12).isEqual(settings, inviteSettings);
@@ -358,8 +358,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const tmp2Result = navigation(12);
-      const unmountEffect = navigation(5393).useUnmountEffect(() => {
-        channel(584).wait(channel(8674).resetSettings);
+      const unmountEffect = navigation(5396).useUnmountEffect(() => {
+        channel(8689).resetSettings();
       });
       const items2 = [channel];
       callback = noop.useCallback(() => {
@@ -386,26 +386,26 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj = { onPress, text: null };
               const intl = navigation(1126).intl;
               obj.text = intl.string(navigation(1126).t["R3BPH+"]);
-              tmp = jsx(navigation(7082).HeaderActionButton, { onPress, text: null });
+              tmp = jsx(navigation(7088).HeaderActionButton, { onPress, text: null });
             }
             return tmp;
           },
         });
       }, items3);
       const callback1 = noop.useCallback((maxUses) => {
-        channel(8674).updateSettings({ maxUses });
+        channel(8689).updateSettings({ maxUses });
       }, []);
       const callback2 = noop.useCallback((maxAge) => {
-        channel(8674).updateSettings({ maxAge });
+        channel(8689).updateSettings({ maxAge });
       }, []);
       const callback3 = noop.useCallback((temporary) => {
-        channel(8674).updateSettings({ temporary });
+        channel(8689).updateSettings({ temporary });
       }, []);
       const callback4 = noop.useCallback((flags) => {
-        channel(8674).updateSettings({ flags });
+        channel(8689).updateSettings({ flags });
       }, []);
       const callback5 = noop.useCallback((roleIds) => {
-        channel(8674).updateSettings({ roleIds });
+        channel(8689).updateSettings({ roleIds });
       }, []);
       let obj4 = { contentContainerStyle: tmp.formContainer, children: null };
       let obj5 = {
@@ -424,15 +424,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       };
-      const tmp2Result2 = navigation(5393);
-      obj5.maxUsesOptions = channel(8669).getMaxUsesOptions;
+      const tmp2Result2 = navigation(5396);
+      obj5.maxUsesOptions = channel(8684).getMaxUsesOptions;
       ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
       obj5.onChangeMaxAge = callback2;
       obj5.onChangeMaxUses = callback1;
       obj5.onChangeTemporary = callback3;
       obj5.onChangeFlags = callback4;
       obj5.onChangeRoleIds = callback5;
-      obj4.children = jsx(channel(18486), {
+      obj4.children = jsx(channel(18560), {
         style: tmp.formContent,
         channel: first,
         guild,
@@ -448,7 +448,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       });
-      return jsx(navigation(8563).Form, { contentContainerStyle: tmp.formContainer, children: null });
+      return jsx(navigation(8579).Form, { contentContainerStyle: tmp.formContainer, children: null });
     };
 ReactCompilerGating = fn(558);
 let obj4 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };

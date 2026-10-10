@@ -19,7 +19,7 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_9 = async function _popupBridgeState() {
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
-  state = value.body.state;
+  const state = value.body.state;
   closure_130_1(closure_130_2[6]).dispatch({
     type: "BILLING_POPUP_BRIDGE_STATE_UPDATE",
     state,
@@ -128,7 +128,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -286,7 +286,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
     }
   }
 };
-const StripeErrorTypes = fn(5723).StripeErrorTypes;
+const StripeErrorTypes = fn(5726).StripeErrorTypes;
 const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -390,8 +390,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
     const merged2 = Object.assign(tmp10);
     const merged3 = Object.assign(prop.extra);
     obj9.extra = obj10;
-    const result = tmp13(4743).captureBillingException(error1, obj9);
-    const tmp13Result = tmp13(4743);
+    const result = tmp13(4784).captureBillingException(error1, obj9);
+    const tmp13Result = tmp13(4784);
   }
   return error1;
 };

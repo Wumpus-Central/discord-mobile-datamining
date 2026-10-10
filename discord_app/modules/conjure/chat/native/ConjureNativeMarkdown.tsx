@@ -16,7 +16,7 @@ let obj2 = {};
 const merged = Object.assign(CONJURE_MARKUP_OPTIONS);
 obj2.allowList = false;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 const obj4 = { blocks: { gap: nativeDefault.space.PX_8 }, list: null, item: null, marker: null, itemText: null };
 let obj5 = { gap: nativeDefault.space.PX_8 };
 obj4.list = { gap: nativeDefault.space.PX_4 };
@@ -32,11 +32,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
   let tmp4 = closure_10();
   _require = tmp4;
   if (cResult[0] !== source) {
-    const splitMarkdownBlocksResult = tmp(17088).splitMarkdownBlocks(source);
+    const splitMarkdownBlocksResult = tmp(17157).splitMarkdownBlocks(source);
     cResult[0] = source;
     cResult[1] = splitMarkdownBlocksResult;
     marker = splitMarkdownBlocksResult;
-    const tmpResult = tmp(17088);
+    const tmpResult = tmp(17157);
   } else {
     marker = cResult[1];
   }
@@ -181,11 +181,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativ
           const obj = { style: null, children: null };
           const items = [list.item, { paddingLeft: children.depth * PX_16 }];
           obj.style = items;
-          const obj3 = { style: list.marker, children: closure_2_5(source(5087).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
+          const obj3 = { style: list.marker, children: closure_2_5(source(5088).Text, { variant: "text-md/normal", color: "text-default", children: children.marker }) };
           const items1 = [closure_2_5(View, obj3), ];
           const obj5 = { style: list.itemText, children: null };
-          const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_1(5078).parse(children.text, true, obj2) };
-          obj5.children = closure_2_5(source(5087).Text, obj6);
+          const obj6 = { variant: "text-md/normal", color: "text-default", children: closure_1(5079).parse(children.text, true, obj2) };
+          obj5.children = closure_2_5(source(5088).Text, obj6);
           items1[1] = closure_2_5(View, obj5);
           obj.children = items1;
           return closure_2_6(View, obj, index);

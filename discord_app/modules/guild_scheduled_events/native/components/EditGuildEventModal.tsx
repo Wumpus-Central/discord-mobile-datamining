@@ -17,9 +17,9 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(2070).GuildScheduledEventEntityTypes;
+let closure_8 = fn(2071).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, cardStyle: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.cardStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -180,7 +180,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -208,10 +208,10 @@ export default noop.memo(
                 return obj;
               } else if (null == value) {
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               } else {
                 if (!closure_128_5) {
-                  const AccessibilityAnnouncer = tmp4(4789).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = tmp4(4828).AccessibilityAnnouncer;
                   const intl = tmp4(1126).intl;
                   AccessibilityAnnouncer.announce(intl.string(tmp4(1126).t["5HzXO5"]));
                   closure_128_1();
@@ -221,7 +221,7 @@ export default noop.memo(
                     id = closure_128_2.id;
                   }
                 }
-                const AccessibilityAnnouncer2 = tmp4(4789).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer2 = tmp4(4828).AccessibilityAnnouncer;
                 const intl2 = tmp4(1126).intl;
                 AccessibilityAnnouncer2.announce(intl2.string(tmp4(1126).t["F9On+q"]));
               }

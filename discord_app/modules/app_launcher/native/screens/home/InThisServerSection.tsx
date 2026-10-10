@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginBottom: 16 },
   headerContainer: { justifyContent: "center" },
@@ -54,11 +54,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       const application = onAppSelected.appItem.application;
       if (cResult[0] !== application) {
-        const appLauncherIconSource = tmp(11681).getAppLauncherIconSource(application);
+        const appLauncherIconSource = tmp(11727).getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
         let tmp5 = appLauncherIconSource;
-        const tmpResult = tmp(11681);
+        const tmpResult = tmp(11727);
       } else {
         tmp5 = cResult[1];
       }
@@ -77,7 +77,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               lineClamp: 1,
               children: application.name,
             };
-            const tmp14 = closure_5(tmp(5087).Text, obj2);
+            const tmp14 = closure_5(tmp(5088).Text, obj2);
             cResult[8] = application.name;
             cResult[9] = tmp14;
             let tmp12 = tmp14;
@@ -108,7 +108,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const items = [tmp8, tmp12];
           obj3.children = items;
-          const tmp17 = closure_6(tmp(8525).PressableScale, obj3, application.id);
+          const tmp17 = closure_6(tmp(8541).PressableScale, obj3, application.id);
           cResult[10] = application.id;
           class C {
             constructor() {
@@ -140,7 +140,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp9 = null;
         if (null != tmp5) {
           const obj4 = { iconSource: tmp5, wrapperStyle: tmp4.iconContainer, iconSize: 36 };
-          tmp9 = closure_5(application(11686), obj4);
+          tmp9 = closure_5(application(11732), obj4);
         }
         cResult[5] = tmp5;
         cResult[6] = tmp4.iconContainer;
@@ -177,7 +177,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       onAppSelected = onAppSelected.onAppSelected;
       const tmp = closure_7();
       const application = onAppSelected.appItem.application;
-      const appLauncherIconSource = onAppSelected(11681).getAppLauncherIconSource(application);
+      const appLauncherIconSource = onAppSelected(11727).getAppLauncherIconSource(application);
       const obj2 = {
         accessible: true,
         accessibilityLabel: application.name,
@@ -198,11 +198,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6 = null;
       if (null != appLauncherIconSource) {
         const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-        tmp6 = closure_5(application(11686), obj3);
+        tmp6 = closure_5(application(11732), obj3);
       }
       const items = [
         tmp6,
-        closure_5(onAppSelected(5087).Text, {
+        closure_5(onAppSelected(5088).Text, {
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           lineClamp: 1,
@@ -210,7 +210,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj2.children = items;
-      return closure_6(onAppSelected(8525).PressableScale, obj2, application.id);
+      return closure_6(onAppSelected(8541).PressableScale, obj2, application.id);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/InThisServerSection.tsx");

@@ -4,7 +4,7 @@ import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06334_LegacyBaseButton.js";
 import useMuteStates from "../../../../video_calls/useMuteStates.tsx";
 import MicrophoneDenyIcon from "../../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
 import MediaEngineActionCreators from "../../../../media_engine/MediaEngineActionCreators.tsx";
@@ -31,7 +31,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = new LoggerDefault("VoicePanelMicButton");
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_17 = createStyles.createStyles({
   text: { position: "absolute", left: 0, right: 0, bottom: 4, textAlign: "center", opacity: 0.5 },
 });
@@ -398,14 +398,14 @@ export const MicButton = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === mute) {
         }
         const obj3 = { color, muted: mute };
-        const tmp12 = __initData2(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj3);
+        const tmp12 = map1(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj3);
         cResult[2] = mute;
         cResult[3] = color;
         cResult[4] = tmp12;
       } else {
         if (cResult[0] !== voicePanelButtonStyles.iconFillRed.color) {
           const obj4 = { color: voicePanelButtonStyles.iconFillRed.color };
-          const tmp9 = __initData2(MicrophoneDenyIcon.MicrophoneDenyIcon, obj4);
+          const tmp9 = map1(MicrophoneDenyIcon.MicrophoneDenyIcon, obj4);
           cResult[0] = voicePanelButtonStyles.iconFillRed.color;
           cResult[1] = tmp9;
           let tmp7 = tmp9;
@@ -439,7 +439,7 @@ export const MicButton = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const element = { props, onPress, accessibilityLabel: cResult[6], style: tmp17, children: tmp7 };
-          const tmp20 = __initData2(VoicePanelAnimatedButtonWrapperDefault, element);
+          const tmp20 = map1(VoicePanelAnimatedButtonWrapperDefault, element);
           cResult[7] = tmp7;
           cResult[8] = onPress;
           cResult[9] = props;
@@ -462,7 +462,7 @@ export const MicButton = ReactCompilerGating.isReactCompilerEnabled()
       const memo = noop.useMemo(() => {
         if (dominantMuteState === VoiceActionUtils.DominantMuteState.SERVER_MUTE) {
           const obj2 = { color: voicePanelButtonStyles.iconFillRed.color };
-          let tmp3Result = __initData2(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
+          let tmp3Result = map1(MicrophoneDenyIcon.MicrophoneDenyIcon, obj2);
         } else {
           if (mute) {
             let color = voicePanelButtonStyles.iconFillRed.color;
@@ -470,7 +470,7 @@ export const MicButton = ReactCompilerGating.isReactCompilerEnabled()
             color = voicePanelButtonStyles.iconFill.color;
           }
           const obj = { color, muted: mute };
-          tmp3Result = __initData2(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj);
+          tmp3Result = map1(VoicePanelRiveMicButton.VoicePanelRiveMicButton, obj);
         }
         return tmp3Result;
       }, items);

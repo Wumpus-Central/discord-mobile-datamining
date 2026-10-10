@@ -197,7 +197,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -251,7 +251,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const result = tmp2(stateFromStores[13]).openMemberVerificationModal(tmp2);
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp20) {
               c2 = tmp;
@@ -369,7 +369,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (stateFromStores2 != null) {
                     isPending = stateFromStores2.isPending;
                   }
-                  const obj4 = v1(6123);
+                  const obj4 = v1(6116);
                   if (isPending) {
                     v1 = 2;
                     dependencyMap = 1;
@@ -422,9 +422,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (closure_128_1 != null) {
                   tmp6();
                 }
-                const result = guildId(6151).openMemberVerificationModal(closure_128_0);
+                const result = guildId(6144).openMemberVerificationModal(closure_128_0);
                 dependencyMap = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp19) {
               dependencyMap = tmp;
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -484,7 +484,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (stateFromStores2 != null) {
                   isPending = stateFromStores2.isPending;
                 }
-                const obj4 = v1(6123);
+                const obj4 = v1(6116);
                 if (isPending) {
                   v1 = 2;
                   dependencyMap = 1;
@@ -518,9 +518,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (closure_128_1 != null) {
                 tmp6();
               }
-              const result = guildId(6151).openMemberVerificationModal(closure_128_0);
+              const result = guildId(6144).openMemberVerificationModal(closure_128_0);
               dependencyMap = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp19) {
             dependencyMap = tmp;

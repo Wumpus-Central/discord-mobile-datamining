@@ -3,11 +3,11 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import native from "../../../../../../design/void/native.tsx";
-import _modDef5010 from "../../../../../../../_runtime/metro/05010__.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../../../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import HeaderActionButton from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
+import _modDef7728 from "../../../../../../../_runtime/metro/07728__.js";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import SafetyTipsSectionDefault from "../../../../shared/native/SafetyTipsSection.tsx";
 import WasThisHelpfulSectionDefault from "WasThisHelpfulSection.tsx";
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   scroll: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   contentContainer: null,
@@ -431,7 +431,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return warningId(senderId[14]).popWithKey(channelId);
                 },
-                source: _modDef5010,
+                source: _modDef7728,
                 iconSize: native.IconSizes.MEDIUM,
                 accessibilityLabel: null,
               };

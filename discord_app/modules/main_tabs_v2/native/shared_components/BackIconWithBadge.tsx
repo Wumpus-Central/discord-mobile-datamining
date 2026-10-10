@@ -4,10 +4,10 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import utils_PlatformUtils from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
 import ArrowLargeLeftIcon2 from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
+import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
 import useNotificationsTabBadgeDefault from "../tabs/notifications/useNotificationsTabBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildReadStateStore from "../../../../stores/GuildReadStateStore.tsx";
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   badgeWrapper: { position: "absolute", top: 16, left: 12 },
   backIcon: { height: 24, width: 24 },
@@ -137,7 +137,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let num2 = 0;
       if (flag) {
-        num2 = memo(16761)().value;
+        num2 = memo(16831)().value;
       }
       const sum = num + num2;
       _require = sum;
@@ -188,7 +188,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           color: "interactive-text-default",
         }),
       };
-      const items5 = [closure_6(tmp5(8997), obj4)];
+      const items5 = [closure_6(tmp5(9016), obj4)];
       let tmp9Result = null;
       if (sum > 0) {
         const obj6 = { style: tmp.badgeWrapper, children: null };
@@ -218,7 +218,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(5);
       ({ navigation, includeNotificationsCount } = arg0);
       if (cResult[0] !== navigation) {
-        state = navigation.getState();
+        const state = navigation.getState();
         cResult[0] = navigation;
         cResult[1] = state;
         let tmp4 = state;

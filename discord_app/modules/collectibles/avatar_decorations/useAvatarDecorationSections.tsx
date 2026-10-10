@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-      let avatarDecorations = stateFromStores(7269).getAvatarDecorations(stateFromStores, tmp12);
+      let avatarDecorations = stateFromStores(7275).getAvatarDecorations(stateFromStores, tmp12);
       if (cResult[10] === tmp13) {
         if (cResult[11] === stateFromStores) {
           let tmp17 = cResult[12];
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = stateFromStores;
       cResult[12] = M;
       tmp17 = M;
-      const tmpResult4 = stateFromStores(7269);
+      const tmpResult4 = stateFromStores(7275);
     }
   : function useAvatarDecorationSections() {
       let obj = stateFromStores(573);
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const items2 = [first, tmp2[1], stateFromStores];
       obj2 = stateFromStores(573);
-      return first(13396)(
+      return first(13446)(
         useMemo(() => {
           let obj = CollectiblesUtils;
           const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);

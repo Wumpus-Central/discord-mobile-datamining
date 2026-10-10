@@ -29,7 +29,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout = new applicationId(2059).Timeout();
+      const timeout = new applicationId(2060).Timeout();
       timeout.start(c9, () =>
         DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
       );
@@ -43,7 +43,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout1 = new applicationId(2059).Timeout();
+      const timeout1 = new applicationId(2060).Timeout();
       timeout1.start(num, () =>
         DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
       );
@@ -118,7 +118,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleActivityUpdate);
 };
 prototype["getState"] = function getState(arg0, arg1) {
-  state = undefined;
+  let state;
   if (obj[arg0] != null) {
     if (tmp[arg1] != null) {
       state = tmp4.state;

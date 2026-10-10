@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4692 from "../../../../_runtime/metro/04692__.js";
+import _mod4733 from "../../../../_runtime/metro/04733__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01267__.js";
 import "ReactCompilerGating";
@@ -24,12 +24,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: 12,
-    scrollPosition: 16,
+    listInsets: "DCDPortalView",
+    scrollPosition: null,
     windowSize: null,
-    setStateShallow: 2,
-    dropStart: "flex",
-    dropComplete: "column",
+    setStateShallow: 99,
+    dropStart: null,
+    dropComplete: null,
   };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
@@ -71,7 +71,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "code" }));
+      dropSpecs(1272).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "r", overSpecs: "toCharArray$esjava$1" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -123,7 +123,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === arg1) {
           let tmp4 = cResult[2];
         }
-        return withEqualityFn(tmp4, _mod4692.shallow);
+        return withEqualityFn(tmp4, _mod4733.shallow);
       }
       const fn = function s(arg0) {
         ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
@@ -194,7 +194,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             overState = dropSpecs.overState;
           }
           if (overState == null) {
-            state = undefined;
+            let state;
             if (overSpecs != null) {
               state = overSpecs.state;
             }
@@ -302,7 +302,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             overState = dropSpecs.overState;
           }
           if (overState == null) {
-            state = undefined;
+            let state;
             if (overSpecs != null) {
               state = overSpecs.state;
             }
@@ -332,7 +332,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj.itemSize = num;
         obj.dragDropInProgress = dragDropInProgress;
         return obj;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 

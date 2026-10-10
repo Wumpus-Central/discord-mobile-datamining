@@ -8,7 +8,7 @@ import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import PlainTextEligibility from "PlainTextEligibility.tsx";
-import _modDef5101 from "../../../../../_runtime/metro/05101__.js";
+import _modDef5102 from "../../../../../_runtime/metro/05102__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
@@ -91,7 +91,7 @@ const dependencyMap = {
   code: { 400: null, 700: null },
 };
 let closure_17 = { headline: obj18, nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(5088).TextVariantsFlat;
+const TextVariantsFlat = fn(5089).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -131,9 +131,9 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(5089);
+const useManaTextMigrationHighlight = fn(5090);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_19 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
@@ -255,7 +255,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj4.ellipsizeMode = ellipsizeMode;
         const merged = Object.assign(tmp2);
-        return jsx(_modDef5101, {
+        return jsx(_modDef5102, {
           text: children,
           color: color2,
           fontSize,
@@ -415,7 +415,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj4.ellipsizeMode = ellipsizeMode;
         const merged1 = Object.assign(merged);
-        return jsx(_modDef5101, {
+        return jsx(_modDef5102, {
           text: children,
           color: color2,
           fontSize,

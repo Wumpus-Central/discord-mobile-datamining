@@ -9,10 +9,10 @@ import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(7237).DraftType;
+const DraftType = fn(7243).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   imageContainer: null,
@@ -29,7 +29,7 @@ let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AddDescription(id) {
-      const cResult = channelId(stateFromStores[9]).c(43);
+      const cResult = channelId(stateFromStores[9]).c(45);
       ({ source, channelId } = id);
       id = id.id;
       closure_12();
@@ -141,9 +141,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj2 = {};
                   const merged = Object.assign(dependencyMap);
                   obj2.description = ref.current;
-                  id(9235).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                  const obj = id(9235);
-                  id(12762).close();
+                  id(9262).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                  const obj = id(9262);
+                  id(12809).close();
                 },
               );
               let merged = Object.assign(arg0);
@@ -232,9 +232,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = {};
                 const merged = Object.assign(dependencyMap);
                 obj2.description = ref.current;
-                id(9235).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
-                const obj = id(9235);
-                id(12762).close();
+                id(9262).update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj2);
+                const obj = id(9262);
+                id(12809).close();
               },
             );
             let merged = Object.assign(arg0);
@@ -249,7 +249,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         paddingBottom: insets.bottom + id(stateFromStores[7]).space.PX_16,
       };
       const obj6 = { style: tmp.imageContainer, children: null };
-      const obj7 = { style: null, source };
+      const obj7 = { style: null, source: { uri: source.uri } };
       const items4 = [tmp.image, { aspectRatio: num, maxHeight: tmp6.height / 2 }];
       obj7.style = items4;
       obj6.children = closure_10(closure_6, obj7);

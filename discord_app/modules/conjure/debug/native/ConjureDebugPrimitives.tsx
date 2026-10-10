@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3827 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   toolbar: {
     flexDirection: "row",
@@ -88,7 +88,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = util.intl;
-              const stringResult = intl3.string(_modDef3827.oKEgiu);
+              const stringResult = intl3.string(_modDef3849.oKEgiu);
               cResult[6] = stringResult;
               let tmp19 = stringResult;
             } else {
@@ -134,7 +134,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else if ("failed" === fetchState) {
         const obj5 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const intl2 = util.intl;
-        obj5.children = intl2.string(_modDef3827.ZVByPX);
+        obj5.children = intl2.string(_modDef3849.ZVByPX);
         tmp9 = hasOwnProperty(Text_Text.Text, obj5);
       } else {
         tmp9 = null;
@@ -142,7 +142,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj7 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
-          obj6.children = intl.formatToPlainString(_modDef3827.INVO50, obj7);
+          obj6.children = intl.formatToPlainString(_modDef3849.INVO50, obj7);
           tmp9 = hasOwnProperty(Text_Text.Text, obj6);
           const tmpResult = ConjureDebugFormat;
         }
@@ -161,7 +161,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else if ("failed" === fetchState) {
         const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3827.ZVByPX);
+        obj3.children = intl2.string(_modDef3849.ZVByPX);
         tmp4Result = hasOwnProperty(Text_Text.Text, obj3);
       } else {
         tmp4Result = null;
@@ -169,7 +169,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { variant: "text-xs/normal", color: "text-muted", children: null };
           const intl = util.intl;
           const obj6 = { time: ConjureDebugFormat.formatObservedAt(generatedAt) };
-          obj4.children = intl.formatToPlainString(_modDef3827.INVO50, obj6);
+          obj4.children = intl.formatToPlainString(_modDef3849.INVO50, obj6);
           tmp4Result = hasOwnProperty(Text_Text.Text, obj4);
         }
       }
@@ -177,7 +177,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [hasOwnProperty(React4, obj2)];
       const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = util.intl;
-      obj7.text = intl3.string(_modDef3827.oKEgiu);
+      obj7.text = intl3.string(_modDef3849.oKEgiu);
       obj7.onPress = onRefresh.onRefresh;
       items[1] = hasOwnProperty(components_Button_Button.Button, obj7);
       obj.children = items;

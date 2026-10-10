@@ -13,7 +13,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesGuildAutoAddedThreadsAction() {
       const cResult = hasAccess(576).c(13);
       let obj = hasAccess(576);
-      hasAccess = hasAccess(10279).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+      hasAccess = hasAccess(10312).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function u() {
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp4, tmp5] = cResult;
       }
-      const obj2 = hasAccess(10279);
+      const obj2 = hasAccess(10312);
       if (hasAccess) {
         hasAccess = tmpResult.useStateFromStores(tmp4, tmp5);
       }
@@ -98,8 +98,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult2 = hasAccess(504);
     }
   : function useFavoritesGuildAutoAddedThreadsAction() {
-      hasAccess = hasAccess(10279).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-      let obj = hasAccess(10279);
+      hasAccess = hasAccess(10312).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+      let obj = hasAccess(10312);
       const items = [UserStore];
       if (hasAccess) {
         hasAccess = obj2.useStateFromStores(items, () => {
@@ -128,9 +128,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       const intl = tmp(1126).intl;
-      obj3.label = intl.string(stateFromStores(3439).DIyQIF);
+      obj3.label = intl.string(stateFromStores(3442).DIyQIF);
       const intl2 = tmp(1126).intl;
-      obj3.subLabel = intl2.string(stateFromStores(3439).g2vHYJ);
+      obj3.subLabel = intl2.string(stateFromStores(3442).g2vHYJ);
       obj3.toggle = callback;
       return obj3;
     };

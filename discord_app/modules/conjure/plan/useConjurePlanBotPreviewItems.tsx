@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/plan/useConjurePlanBotPreviewItems.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import MessageRecordUtils from "../../messages/MessageRecordUtils.tsx";
 import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
@@ -135,7 +135,7 @@ const Constants = fn(1085);
 let c10 = "31337";
 let c11 = "31338";
 let c12 = "31339";
-const guildTextChannelRecord = new fn(2068).GuildTextChannelRecord({
+const guildTextChannelRecord = new fn(2069).GuildTextChannelRecord({
   id: "1337",
   guild_id: "1337",
   type: Constants.ChannelTypes.GUILD_TEXT,
@@ -327,11 +327,11 @@ fn(558);
 ReactCompilerGating = fn(558);
 let obj = { id: "1337", guild_id: "1337", type: Constants.ChannelTypes.GUILD_TEXT, name: "preview" };
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? function useConjurePlanBotExchanges(bot) {
+  ? function useConjurePlanBotExchanges(proposal) {
       const cResult = c.c(8);
-      if (cResult[0] !== bot) {
-        const conjurePlanBotInteraction = conjurePlanBot.getConjurePlanBotInteraction(bot);
-        cResult[0] = bot;
+      if (cResult[0] !== proposal) {
+        const conjurePlanBotInteraction = conjurePlanBot.getConjurePlanBotInteraction(proposal);
+        cResult[0] = proposal;
         cResult[1] = conjurePlanBotInteraction;
         let tmp4 = conjurePlanBotInteraction;
         const tmpResult = conjurePlanBot;
@@ -339,7 +339,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === tmp4) {
-        if (cResult[3] === bot) {
+        if (cResult[3] === proposal) {
           if (cResult[5] === cResult[4]) {
             if (cResult[6] === tmp4) {
               let tmp7 = cResult[7];
@@ -358,22 +358,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const obj3 = { message: null, reply: null, event: null };
         const intl = util.intl;
-        obj3.message = intl.string(_modDef3827.J7qggf);
+        obj3.message = intl.string(_modDef3849.J7qggf);
         const intl2 = util.intl;
-        obj3.reply = intl2.string(_modDef3827.nqYtiy);
+        obj3.reply = intl2.string(_modDef3849.nqYtiy);
         const intl3 = util.intl;
-        obj3.event = intl3.string(_modDef3827["05lU9W"]);
-        items = conjurePlanBot.getConjurePlanBotExchanges(bot, tmp4, obj3);
+        obj3.event = intl3.string(_modDef3849["05lU9W"]);
+        items = conjurePlanBot.getConjurePlanBotExchanges(proposal, tmp4, obj3);
         const tmpResult2 = conjurePlanBot;
       }
       cResult[2] = tmp4;
-      cResult[3] = bot;
+      cResult[3] = proposal;
       cResult[4] = items;
     }
-  : function useConjurePlanBotExchanges(bot) {
-      const _require = bot;
-      const conjurePlanBotInteraction = require("conjurePlanBot").getConjurePlanBotInteraction(bot);
-      let items = [bot, conjurePlanBotInteraction];
+  : function useConjurePlanBotExchanges(proposal) {
+      const _require = proposal;
+      const conjurePlanBotInteraction = require("conjurePlanBot").getConjurePlanBotInteraction(proposal);
+      let items = [proposal, conjurePlanBotInteraction];
       let obj = require("conjurePlanBot");
       return {
         botInteraction: conjurePlanBotInteraction,
@@ -383,11 +383,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj2 = { message: null, reply: null, event: null };
             const intl = util.intl;
-            obj2.message = intl.string(_modDef3827.J7qggf);
+            obj2.message = intl.string(_modDef3849.J7qggf);
             const intl2 = util.intl;
-            obj2.reply = intl2.string(_modDef3827.nqYtiy);
+            obj2.reply = intl2.string(_modDef3849.nqYtiy);
             const intl3 = util.intl;
-            obj2.event = intl3.string(_modDef3827["05lU9W"]);
+            obj2.event = intl3.string(_modDef3849["05lU9W"]);
             items = conjurePlanBot.getConjurePlanBotExchanges(closure_0, tmp, obj2);
           }
           return items;
@@ -548,7 +548,7 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
               return iconURL;
             }
           }
-          stringResult = obj5.string(application_id(3827).JEYq8M);
+          stringResult = obj5.string(application_id(3849).JEYq8M);
         }
         if (stateFromStores1 != null) {
           class I {
@@ -741,7 +741,7 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
             return iconURL;
           }
         }
-        const stringResult1 = obj7.string(application_id(3827)["9iAOsw"]);
+        const stringResult1 = obj7.string(application_id(3849)["9iAOsw"]);
         const obj2 = { discriminator: "0003" };
         cResult[17] = stringResult1;
         cResult[18] = obj2;
@@ -971,9 +971,9 @@ export const useConjurePlanBotPreviewItems = ReactCompilerGating.isReactCompiler
                 const obj = { bot: tmp4, currentUser: tmp, viewer: tmp3, member: tmp5 };
                 const obj2 = { targetMessage: null, memberMessage: null };
                 const intl = util.intl;
-                obj2.targetMessage = intl.string(_modDef3827["y+QYes"]);
+                obj2.targetMessage = intl.string(_modDef3849["y+QYes"]);
                 const intl2 = util.intl;
-                obj2.memberMessage = intl2.string(_modDef3827.BUTRDc);
+                obj2.memberMessage = intl2.string(_modDef3849.BUTRDc);
                 buildPreviewItems(closure_1, obj, obj2);
               }
               return [];

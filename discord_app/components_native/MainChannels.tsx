@@ -33,7 +33,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1085);
 const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
-const HOME_DRAWER_SCREEN = fn(16353).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(16420).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -99,7 +99,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.selectedGuildId = tmp8;
       return obj2;
     };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = {
   position: "absolute",

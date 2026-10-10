@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flexDirection: "row", alignItems: "center", marginTop: -10 },
   icon: { alignSelf: "center", marginRight: 5, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL },
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== message) {
         const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", children: message };
-        const tmp13 = closure_4(tmp(5087).Text, obj2);
+        const tmp13 = closure_4(tmp(5088).Text, obj2);
         cResult[5] = message;
         cResult[6] = tmp13;
         let tmp11 = tmp13;
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const size = { width: 16, height: 16, style: tmp.icon };
       const items1 = [
         closure_4(message(1200).WarningCircle, size),
-        closure_4(message(5087).Text, {
+        closure_4(message(5088).Text, {
           variant: "text-xs/medium",
           color: "text-feedback-critical",
           children: message,

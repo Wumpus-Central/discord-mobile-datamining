@@ -52,11 +52,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let label_type;
           if (embeddedActivityConfig != null) {
             const obj = items(1382);
-            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(11670)(undefined, obj.getOS(obj))];
+            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(11716)(undefined, obj.getOS(obj))];
             if (tmp7 != null) {
               label_type = tmp7.label_type;
             }
-            const tmp5 = closure_1(11670);
+            const tmp5 = closure_1(11716);
           }
           let tmp8 = null != label_type;
           if (tmp8) {
@@ -138,11 +138,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let label_type;
           if (embeddedActivityConfig != null) {
             const obj = items(1382);
-            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(11670)(undefined, obj.getOS(obj))];
+            const tmp7 = embeddedActivityConfig.client_platform_config[closure_1(11716)(undefined, obj.getOS(obj))];
             if (tmp7 != null) {
               label_type = tmp7.label_type;
             }
-            const tmp5 = closure_1(11670);
+            const tmp5 = closure_1(11716);
           }
           let tmp8 = null != label_type;
           if (tmp8) {

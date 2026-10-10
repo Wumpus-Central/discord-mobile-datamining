@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
   noop = tmp3[1];
   const tmp = _slicedToArray(noop.useState(null), 2);
   const url = applicationId(names[4]).getAssetImage(applicationId, tmp2, size, str);
-  state = "loading";
+  let state = "loading";
   if (!tmp3[0]) {
     let str3 = "not-found";
     if (null != url) {

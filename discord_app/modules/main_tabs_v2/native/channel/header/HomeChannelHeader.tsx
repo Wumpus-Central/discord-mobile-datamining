@@ -4,14 +4,14 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef12510 from "../../../../../../_runtime/metro/12510__.js";
+import _modDef12557 from "../../../../../../_runtime/metro/12557__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -25,7 +25,7 @@ export default noop.memo(
         const cResult = c.c(4);
         const tmp4 = closure_6();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: _modDef12510, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+          const obj2 = { source: _modDef12557, size: native.Icon.Sizes.MEDIUM, disableColor: true };
           const tmp8 = React4(native.Icon, obj2);
           cResult[0] = tmp8;
           let first = tmp8;
@@ -58,7 +58,7 @@ export default noop.memo(
     : function HomeChannelHeader() {
         const obj = { style: closure_6().container, children: null };
         const items = [
-          React4(native.Icon, { source: _modDef12510, size: native.Icon.Sizes.MEDIUM, disableColor: true }),
+          React4(native.Icon, { source: _modDef12557, size: native.Icon.Sizes.MEDIUM, disableColor: true }),
         ];
         const obj3 = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
         const intl = util.intl;

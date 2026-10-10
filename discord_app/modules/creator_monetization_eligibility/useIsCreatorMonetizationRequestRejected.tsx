@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 );
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
-  state = undefined;
+  let state;
   if (latestRequest != null) {
     latestRequest = latestRequest.latestRequest;
     if (latestRequest != null) {

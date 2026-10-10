@@ -11,7 +11,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const getSection = fn(9220).getSection;
+const getSection = fn(9247).getSection;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const AppLauncherRouteName = fn(1502).AppLauncherRouteName;
 const jsx = fn(21).jsx;
@@ -44,7 +44,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
               const customInstallUrl = application.customInstallUrl;
               if (null != customInstallUrl) {
                 if (!obj2.isDiscordUrl(customInstallUrl)) {
-                  let PlusSmallIcon = tmp(7688).LinkExternalSmallIcon;
+                  let PlusSmallIcon = tmp(7705).LinkExternalSmallIcon;
                 }
                 const _Symbol = Symbol;
                 if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -191,7 +191,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   onAccessibilityAction: C,
                   icon: tmp13,
                 };
-                const tmp18 = jsx(tmp(5376).Button, {
+                const tmp18 = jsx(tmp(5379).Button, {
                   text: tmp11,
                   onPress: tmp4,
                   onLongPress: tmp5,
@@ -206,7 +206,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp18;
                 obj2 = guildId(1384);
               }
-              PlusSmallIcon = tmp(9061).PlusSmallIcon;
+              PlusSmallIcon = tmp(9081).PlusSmallIcon;
             }
           }
         }
@@ -264,7 +264,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const customInstallUrl = application.customInstallUrl;
       if (null != customInstallUrl) {
         if (!obj2.isDiscordUrl(customInstallUrl)) {
-          let PlusSmallIcon = application(7688).LinkExternalSmallIcon;
+          let PlusSmallIcon = application(7705).LinkExternalSmallIcon;
           let tmp6 = application;
         }
         const items1 = [application];
@@ -298,7 +298,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.onAccessibilityAction = callback1;
         const obj4 = { size: "sm", color: guildId(587).colors.WHITE };
         obj3.icon = <PlusSmallIcon size="sm" color={guildId(587).colors.WHITE} />;
-        return jsx(tmp6(5376).Button, {
+        return jsx(tmp6(5379).Button, {
           text: null,
           onPress: null,
           onLongPress: null,
@@ -307,7 +307,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           icon: null,
         });
       }
-      PlusSmallIcon = application(9061).PlusSmallIcon;
+      PlusSmallIcon = application(9081).PlusSmallIcon;
       tmp6 = application;
     };
 ReactCompilerGating = fn(558);
@@ -359,7 +359,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -502,7 +502,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -539,18 +539,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                   if (application1 == null) {
                     c3 = 1;
                     c4 = 1;
-                    const obj7 = { value: tmp2(6849).fetchApplication(profileApplication.id), done: false };
+                    const obj7 = { value: tmp2(6852).fetchApplication(profileApplication.id), done: false };
                     return obj7;
                   } else {
                     closure_129_1 = closure_0;
                     closure_130_3(false);
                     if (null != closure_129_0) {
-                      tmp2(5055).hideAllActionSheets();
-                      const obj5 = tmp2(5055);
+                      tmp2(5056).hideAllActionSheets();
+                      const obj5 = tmp2(5056);
                       const obj8 = { recipientIds: closure_130_1 };
                       c3 = 2;
                       c4 = 1;
-                      const obj10 = { value: tmp2(7008).openPrivateChannel(obj8), done: false };
+                      const obj10 = { value: tmp2(7014).openPrivateChannel(obj8), done: false };
                       return obj10;
                     } else {
                       c4 = 3;

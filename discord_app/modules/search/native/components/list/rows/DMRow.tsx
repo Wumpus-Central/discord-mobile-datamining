@@ -3,10 +3,10 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _modDef8606 from "../../../../../../../_runtime/metro/08606__.js";
+import _modDef8622 from "../../../../../../../_runtime/metro/08622__.js";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13717 from "../../../../../../../_runtime/metro/13717__.js";
+import _modDef13769 from "../../../../../../../_runtime/metro/13769__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -14,8 +14,8 @@ import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 import PresenceStore from "../../../../../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
 
-const UserUtils = Text(4923);
-const Text_Text = Text(5087);
+const UserUtils = Text(4962);
+const Text_Text = Text(5088);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
@@ -23,7 +23,7 @@ const Constants = fn(1085);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   activityStatusIcon: { width: 14, height: 14 },
   activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" },
@@ -52,7 +52,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] !== tmp8) {
           Text = Text_Text.Text;
           const obj3 = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: tmp8 };
-          tmp = __initData2(Text, obj3);
+          tmp = map1(Text, obj3);
           cResult[2] = tmp8;
           cResult[3] = tmp;
         }
@@ -72,7 +72,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { userId: user.id, guildId, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
         ({ activityStatusIcon: obj2.iconStyle, activityStatusText: obj2.textStyle } = tmp3);
         obj4.animate = animate;
-        const tmp7 = __initData2(ActivityStatusDefault, obj4);
+        const tmp7 = map1(ActivityStatusDefault, obj4);
         cResult[4] = animate;
         cResult[5] = guildId;
         cResult[6] = tmp3.activityStatusIcon;
@@ -92,12 +92,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: UserUtils.getUserTag(user),
         };
-        let tmp5 = __initData2(Text_Text.Text, obj2);
+        let tmp5 = map1(Text_Text.Text, obj2);
       } else {
         const obj = { userId: user.id, guildId, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
         ({ activityStatusIcon: obj.iconStyle, activityStatusText: obj.textStyle } = tmp);
         obj.animate = animate;
-        tmp5 = __initData2(ActivityStatusDefault, obj);
+        tmp5 = map1(ActivityStatusDefault, obj);
       }
       return tmp5;
     };
@@ -155,7 +155,7 @@ export default noop.memo(function DMRow(user) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -194,7 +194,7 @@ export default noop.memo(function DMRow(user) {
             c3 = 0;
             closure_128_8(false);
             c4 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } catch (tmp23) {
           closure_2 = tmp23;
@@ -223,7 +223,7 @@ export default noop.memo(function DMRow(user) {
   const memo = obj.useMemo(() => {
     const obj = { style: title.title, children: null };
     const items = [
-      __initData2(Text_Text.Text, {
+      map1(Text_Text.Text, {
         lineClamp: 1,
         variant: "text-md/semibold",
         color: "mobile-text-heading-primary",
@@ -238,27 +238,27 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         const obj4 = { style: title.tag, children: null };
-        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8606, disableColor: true };
-        obj4.children = __initData2(native.Icon, obj5);
-        tmp4Result = __initData2(timestampProducer, obj4);
+        const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef8622, disableColor: true };
+        obj4.children = map1(native.Icon, obj5);
+        tmp4Result = map1(timestampProducer, obj4);
       }
       items[2] = tmp4Result;
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13717, disableColor: true };
-        obj6.children = __initData2(native.Icon, obj7);
-        tmp4Result3 = __initData2(timestampProducer, obj6);
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13769, disableColor: true };
+        obj6.children = map1(native.Icon, obj7);
+        tmp4Result3 = map1(timestampProducer, obj6);
       }
       items[3] = tmp4Result3;
       obj.children = items;
-      return state(timestampProducer, obj);
+      return closure_2_14(timestampProducer, obj);
     } else {
       const obj8 = { style: title.tag, verified: user.isVerifiedBot(), type: null };
       const tmp8 = BotTagDefault;
       const Types = BotTagDefault.Types;
       obj8.type = user.isSystemUser() ? Types.SYSTEM_DM : Types.BOT;
-      __initData2(tmp8, obj8);
+      map1(tmp8, obj8);
       const isSystemUserResult = user.isSystemUser();
     }
     const obj2 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
@@ -284,21 +284,21 @@ export default noop.memo(function DMRow(user) {
     obj.isVROnline = isVROnline;
     obj.size = native.AvatarSizes.LARGE_48;
     obj.avatarDecoration = user.avatarDecoration;
-    return __initData2(native.Avatar, obj);
+    return map1(native.Avatar, obj);
   }, items5);
   const memo2 = obj.useMemo(() => {
     const userTag = UserUtilsDefault.getUserTag(user);
     if (null != userTag) {
       if (!user.isProvisional) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", children: userTag };
-        let tmp6 = __initData2(Text_Text.Text, obj2);
+        let tmp6 = map1(Text_Text.Text, obj2);
       }
       return tmp6;
     }
     let tmp8 = null;
     if (null != type) {
       const obj3 = { user, guildId, type: tmp7, animate: !stateFromStores };
-      tmp8 = __initData2(closure_16, obj3);
+      tmp8 = map1(closure_16, obj3);
     }
     tmp6 = tmp8;
   }, items6);

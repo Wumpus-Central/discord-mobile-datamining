@@ -6,7 +6,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(10629);
+const SettingBuilders = fn(10663);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useEchoCancellationSettingValue() {
       const cResult = c.c(2);
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.iWTwu6);
   },
-  parent: fn(7974).MobileUserSettings.VOICE,
+  parent: fn(7992).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useEchoCancellationSettingValue() {
         const cResult = c.c(2);
@@ -55,7 +55,7 @@ const toggle = SettingBuilders.createToggle({
         const items = [MediaEngineStore];
         return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
       },
-  onValueChange: fn(11048).handleEchoCancellationChange,
+  onValueChange: fn(11088).handleEchoCancellationChange,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");

@@ -226,12 +226,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_4 = tmp4;
       if (null != byWeekday) {
         if (null != stateFromStores) {
-          const tmpResult = tmp(8504);
+          const tmpResult = tmp(8520);
           let _Date = Date;
-          let rRule = tmp(8504).getRRule(byWeekday);
+          let rRule = tmp(8520).getRRule(byWeekday);
           let date = new Date(stateFromStores.scheduled_start_time);
           const nextRecurrences = tmpResult.generateNextRecurrences(4, rRule, date);
-          const tmpResult2 = tmp(8504);
+          const tmpResult2 = tmp(8520);
         }
         const tmp14 = stateFromStores(tmp5([]), 2);
         recurrenceStartTimes = tmp14[0];

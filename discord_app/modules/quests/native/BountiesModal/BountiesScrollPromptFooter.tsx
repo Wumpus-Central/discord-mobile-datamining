@@ -17,10 +17,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 let closure_3 = ["visible"];
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5979).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5972).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles(() => {
   const obj = {
     root: { position: "absolute", bottom: 0, left: 0, right: 0 },
@@ -41,7 +41,7 @@ let entering = function n(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(5092).withTiming, timingStandard: fn(5095).timingStandard };
+entering.__closure = { withTiming: fn(5093).withTiming, timingStandard: fn(5096).timingStandard };
 entering.__workletHash = 11416950434629;
 entering.__initData = {
   code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}",
@@ -50,8 +50,8 @@ let fn2 = function o(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: fn(5092).withTiming, timingStandard: fn(5095).timingStandard };
-fn2.__closure = { withTiming: fn(5092).withTiming, timingStandard: fn(5095).timingStandard };
+let obj2 = { withTiming: fn(5093).withTiming, timingStandard: fn(5096).timingStandard };
+fn2.__closure = { withTiming: fn(5093).withTiming, timingStandard: fn(5096).timingStandard };
 fn2.__workletHash = 9928471408966;
 fn2.__initData = {
   code: "function BountiesScrollPromptFooterTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}",
@@ -225,7 +225,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores) {
         str = "halt";
       }
-      obj3.children = closure_9(zIndex(4861).BountiesScrollGradientRive, {
+      obj3.children = closure_9(zIndex(4900).BountiesScrollGradientRive, {
         stateMachine: "State Machine 1",
         fit: "fill",
         alignment: "bottom-center",
@@ -240,7 +240,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       return closure_10(ReanimatedRexportDefault.View, obj2);
     };
 ReactCompilerGating = fn(558);
-let obj3 = { withTiming: fn(5092).withTiming, timingStandard: fn(5095).timingStandard };
+let obj3 = { withTiming: fn(5093).withTiming, timingStandard: fn(5096).timingStandard };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollPromptFooter.tsx");
 

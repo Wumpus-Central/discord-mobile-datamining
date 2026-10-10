@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return closure_1_6(entry(closure_1_3[15]).IconButton, obj);
                       }
                     }
-                    ContextMenu = ContextMenu(9335).ContextMenu;
+                    ContextMenu = ContextMenu(9362).ContextMenu;
                     const obj3 = { items: arr, children: R };
                     tmp = <ContextMenu items={arr}>{R}</ContextMenu>;
                     cResult[23] = arr;
@@ -245,7 +245,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           tmp9[0] = PencilIcon;
-          PencilIcon = ContextMenu(9694).PencilIcon;
+          PencilIcon = ContextMenu(9723).PencilIcon;
           tmp9[1] = PencilIcon;
           tmp9[2] = tmp4;
           cResult[14] = tmp4;
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj = { label: null, IconComponent: null, action: null };
         let intl = entry(1126).intl;
         obj.label = intl.string(entry(1126).t.XnuOvN);
-        obj.IconComponent = entry(9694).PencilIcon;
+        obj.IconComponent = entry(9723).PencilIcon;
         obj.action = function handleEdit() {
           GuildDirectoryEditDescriptionModalActionCreatorsDefault.open({ entry });
         };
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { label: null, IconComponent: null, variant: "destructive", action: null };
         let intl2 = entry(1126).intl;
         obj2.label = intl2.string(entry(1126).t.KUxYWH);
-        obj2.IconComponent = entry(5048).TrashIcon;
+        obj2.IconComponent = entry(5049).TrashIcon;
         obj2.action = function handleRemove() {
           const obj2 = {
             title: null,
@@ -324,7 +324,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { label: null, IconComponent: null, variant: "destructive", action: null };
         let intl3 = entry(1126).intl;
         obj3.label = intl3.string(entry(1126).t.Aen9eh);
-        obj3.IconComponent = entry(9545).FlagIcon;
+        obj3.IconComponent = entry(9574).FlagIcon;
         obj3.action = function handleReport() {
           const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
         };
@@ -342,11 +342,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.variant = "secondary";
             const intl = entry(1126).intl;
             obj.accessibilityLabel = intl.string(entry(1126).t.PdRCRg);
-            obj.icon = jsx(entry(9214).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-            return jsx(entry(8114).IconButton, { ref: ref.ref });
+            obj.icon = jsx(entry(9241).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+            return jsx(entry(7573).IconButton, { ref: ref.ref });
           },
         };
-        tmp9 = jsx(entry(9335).ContextMenu, {
+        tmp9 = jsx(entry(9362).ContextMenu, {
           items,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -356,8 +356,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj.variant = "secondary";
             const intl = entry(1126).intl;
             obj.accessibilityLabel = intl.string(entry(1126).t.PdRCRg);
-            obj.icon = jsx(entry(9214).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-            return jsx(entry(8114).IconButton, { ref: ref.ref });
+            obj.icon = jsx(entry(9241).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+            return jsx(entry(7573).IconButton, { ref: ref.ref });
           },
         });
       }

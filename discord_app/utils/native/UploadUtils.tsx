@@ -21,7 +21,7 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 function openImagePickerUnhandled() {
   const self = this;
-  const apply = closure_24.apply;
+  const apply = closure_25.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -29,7 +29,7 @@ function openImagePickerUnhandled() {
   }
   return applyArgumentsResult;
 }
-let closure_24 = async function _openImagePickerUnhandled(arg0) {
+let closure_25 = async function _openImagePickerUnhandled(arg0) {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -40,7 +40,7 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -66,8 +66,8 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
             closure_135_8 = undefined;
             closure_135_7 = function cleanPickedImage() {
               if (obj.isIOS()) {
-                promise.then(() => type(7751).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, "")))).catch((error) => logger.warn("Failed to remove picked image", error));
-                const nextPromise = promise.then(() => type(7751).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, ""))));
+                promise.then(() => type(7769).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, "")))).catch((error) => logger.warn("Failed to remove picked image", error));
+                const nextPromise = promise.then(() => type(7769).cleanSingle(decodeURIComponent(uri.uri.replace(/^file:\/\//, ""))));
               }
               obj = closure_0(obj21[13]);
             };
@@ -92,19 +92,19 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
               size = size.size;
               size1.width = size;
               size1.height = closure_135_0.size;
-              let tmp77 = size1;
+              let tmp79 = size1;
             } else {
               size1.width = size.width;
               size1.height = closure_135_0.height;
-              tmp77 = size1;
+              tmp79 = size1;
             }
-            closure_135_1 = tmp77;
+            closure_135_1 = tmp79;
             width = closure_135_1.width;
             height = closure_135_1.height;
             size1 = new Promise((arg0, arg1) => {
               closure_0 = arg0;
               closure_1 = arg1;
-              closure_1(7751).launchImageLibrary({ mediaType: "photo", includeBase64: true, disableNewIOSPicker: true }, (assets) => {
+              closure_1(7769).launchImageLibrary({ mediaType: "photo", includeBase64: true, disableNewIOSPicker: true }, (assets) => {
                 let first = null;
                 if (null != assets.assets) {
                   first = null;
@@ -138,7 +138,7 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
             c12 = 1;
           } else {
             let _Error = Error;
-            let error = new Error("Missing permission");
+            let error = new Error(closure_134_23);
             throw error;
           }
         break;
@@ -331,12 +331,12 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
             return obj29;
           }
       }
-    } catch (tmp92) {
-      closure_10 = tmp92;
+    } catch (tmp94) {
+      closure_10 = tmp94;
       if (tmp4 === c9) {
         c12 = tmp2;
-        throw tmp92;
-      } else if (tmp === tmp94) {
+        throw tmp94;
+      } else if (tmp === tmp96) {
         c11 = tmp6;
       } else {
         c11 = tmp5;
@@ -346,7 +346,7 @@ let closure_24 = async function _openImagePickerUnhandled(arg0) {
 };
 function openImagePicker() {
   const self = this;
-  const apply = closure_25.apply;
+  const apply = closure_26.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -354,7 +354,7 @@ function openImagePicker() {
   }
   return applyArgumentsResult;
 }
-let closure_25 = async function _openImagePicker(arg0) {
+let closure_26 = async function _openImagePicker(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -365,7 +365,7 @@ let closure_25 = async function _openImagePicker(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -376,80 +376,64 @@ let closure_25 = async function _openImagePicker(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj3 = { value, done: true };
+          return obj3;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
-          closure_129_0 = closure_0;
-          closure_129_1 = undefined;
-          c5 = 1;
+          closure_129_0 = undefined;
+          c4 = 1;
+          c5 = 2;
           c6 = 1;
-          const obj6 = { value: NativePermissionUtilsDefault.requestPermission(constants.PHOTOS), done: false };
-          return obj6;
+          const obj4 = { value: openImagePickerUnhandled(closure_0), done: false };
+          return obj4;
         }
       } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else if (value) {
-          c4 = 1;
-          c5 = 3;
-          c6 = 1;
-          const obj8 = { value: closure_130_23(closure_129_0), done: false };
-          return obj8;
-        } else {
-          c6 = 3;
-          const obj9 = { value: { errorStr: "Missing permission" }, done: true };
-          return obj9;
-        }
-      } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_2 = closure_3;
-        if ("E_PICKER_CANCELLED" !== closure_129_2.code) {
-          if (closure_129_2.message !== closure_130_22) {
-            if ("E_CROPPER_IMAGE_NOT_FOUND" === closure_129_2.code) {
-              const intl = closure_130_0(closure_130_2[15]).intl;
-              closure_130_0(closure_130_2[14]).presentFailedToast(intl.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
-              const obj4 = closure_130_0(closure_130_2[14]);
+        closure_129_1 = closure_3;
+        if ("E_PICKER_CANCELLED" !== closure_129_1.code) {
+          if (closure_129_1.message !== closure_130_22) {
+            if (closure_129_1.message === closure_130_23) {
+              const obj7 = { errorStr: closure_130_23 };
+            } else if ("E_CROPPER_IMAGE_NOT_FOUND" === closure_129_1.code) {
+              const intl2 = closure_130_0(closure_130_2[15]).intl;
+              closure_130_0(closure_130_2[14]).presentFailedToast(intl2.string(closure_130_0(closure_130_2[15]).t.TTzyzW));
+              const obj6 = closure_130_0(closure_130_2[14]);
             } else {
-              closure_130_0(closure_130_2[14]).presentFailedToast(closure_129_2.message);
-              { errorStr: null }[0] = closure_129_2.message;
-              const obj3 = closure_130_0(closure_130_2[14]);
+              closure_130_0(closure_130_2[14]).presentFailedToast(closure_129_1.message);
+              { errorStr: null }[0] = closure_129_1.message;
+              const obj5 = closure_130_0(closure_130_2[14]);
             }
           }
           c6 = 3;
         }
+        const obj9 = { errorStr: closure_130_22 };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
+        const obj10 = { value, done: true };
+        return obj10;
       } else {
-        closure_129_1 = value;
-        if (null != closure_129_1.errorStr) {
-          const intl2 = closure_130_0(closure_130_2[15]).intl;
-          const obj15 = { reason: closure_129_1.errorStr };
-          closure_130_0(closure_130_2[14]).presentFailedToast(intl2.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj15));
-          const obj14 = closure_130_0(closure_130_2[14]);
+        closure_129_0 = value;
+        if (null != closure_129_0.errorStr) {
+          const intl = closure_130_0(closure_130_2[15]).intl;
+          const obj11 = { reason: closure_129_0.errorStr };
+          closure_130_0(closure_130_2[14]).presentFailedToast(intl.formatToPlainString(closure_130_0(closure_130_2[15]).t.Ex162J, obj11));
+          const obj = closure_130_0(closure_130_2[14]);
         }
         c4 = 0;
         c6 = 3;
-        const obj = { value: closure_129_1, done: true };
-        return obj;
+        const obj12 = { value: closure_129_0, done: true };
+        return obj12;
       }
-    } catch (tmp36) {
-      closure_3 = tmp36;
+    } catch (tmp46) {
+      closure_3 = tmp46;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp36;
+        throw tmp46;
       } else {
         c5 = tmp;
       }
@@ -458,7 +442,7 @@ let closure_25 = async function _openImagePicker(arg0) {
 };
 function mediaManager() {
   const self = this;
-  const apply = closure_27.apply;
+  const apply = closure_28.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -466,7 +450,7 @@ function mediaManager() {
   }
   return applyArgumentsResult;
 }
-let closure_27 = async function _mediaManager(arg0) {
+let closure_28 = async function _mediaManager(arg0) {
   closure_0 = arg0;
   closure_1 = [...arguments].slice();
   c6 = 0;
@@ -483,7 +467,7 @@ let closure_27 = async function _mediaManager(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -525,7 +509,7 @@ let closure_27 = async function _mediaManager(arg0) {
           closure_130_2 = closure_4;
           closure_131_19.warn(closure_130_2);
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         } else if (arg0 === 1) {
           c7 = 3;
           throw value;
@@ -625,7 +609,7 @@ function getFileInfo(item, arg1) {
       const obj2 = { originalUri, filename, mimeType: mimeType2, fileSize: item.size, spoiler, description, i: str };
       let tmp3 = (function processVideoUpload(arg0) {
         const self = this;
-        const apply = closure_1_36.apply;
+        const apply = closure_1_37.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -639,7 +623,7 @@ function getFileInfo(item, arg1) {
       size.allowOptimization = allowOptimization;
       tmp3 = (function processImageOrFileUpload(size) {
         const self = this;
-        const apply = closure_1_37.apply;
+        const apply = closure_1_38.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -651,7 +635,7 @@ function getFileInfo(item, arg1) {
     return tmp3;
   }
 }
-let closure_29 = async function _getPhotoKitDataUTI(arg0) {
+let closure_30 = async function _getPhotoKitDataUTI(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -662,7 +646,7 @@ let closure_29 = async function _getPhotoKitDataUTI(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -688,7 +672,7 @@ let closure_29 = async function _getPhotoKitDataUTI(arg0) {
             }
           }
           c7 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else if (1 === tmp7) {
         c5 = 0;
@@ -726,7 +710,7 @@ let closure_29 = async function _getPhotoKitDataUTI(arg0) {
     }
   }
 };
-let closure_30 = async function _shouldConvertToPNG(arg0) {
+let closure_31 = async function _shouldConvertToPNG(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -737,7 +721,7 @@ let closure_30 = async function _shouldConvertToPNG(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -860,7 +844,7 @@ function convertVideo(videoMetadata) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -879,7 +863,7 @@ function convertVideo(videoMetadata) {
                   closure_137_0 = undefined;
                   async function _loop() {
                     closure_2 = tmp2;
-                    await closure_3_41(config);
+                    await closure_3_42(config);
                     closure_129_0 = value;
                     if (closure_129_0.isSupported) {
                       return { v: true };
@@ -995,7 +979,7 @@ function convertVideo(videoMetadata) {
                               if (closure_129_1) {
                                 closure_7 = closure_7 + 1;
                                 c4 = 3;
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "+51" };
                               } else {
                                 logger.error("No adjustments possible for current failures", { currentFailures: closure_129_0.failures, config, capabilities: closure_129_0.capabilities, attempt: closure_7 + 1 });
                                 const _Error = Error;
@@ -1277,7 +1261,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      obj8 = { uri, overrideType: "r" };
+                      obj8 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj8).isVideo;
                       const tmp12Result10 = UploadUtils;
                     }
@@ -1296,7 +1280,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj9 = { uri, overrideType: "r" };
+                  const obj9 = { uri, overrideType: "Array" };
                   isVideo = UploadUtils.getFile(obj9).isVideo;
                   const tmp12Result12 = UploadUtils;
                 }
@@ -1321,7 +1305,7 @@ function convertVideo(videoMetadata) {
 }
 function buildResolvedUpload(arg0) {
   const self = this;
-  const apply = closure_35.apply;
+  const apply = closure_36.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1329,7 +1313,7 @@ function buildResolvedUpload(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_35 = async function _buildResolvedUpload(arg0) {
+let closure_36 = async function _buildResolvedUpload(arg0) {
   isImage = arg0;
   c2 = 0;
   c3 = 0;
@@ -1344,7 +1328,7 @@ let closure_35 = async function _buildResolvedUpload(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -1417,7 +1401,7 @@ let closure_35 = async function _buildResolvedUpload(arg0) {
     }
   })();
 };
-let closure_36 = async function _processVideoUpload(arg0) {
+let closure_37 = async function _processVideoUpload(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1428,7 +1412,7 @@ let closure_36 = async function _processVideoUpload(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1471,7 +1455,7 @@ let closure_36 = async function _processVideoUpload(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          closure_129_7 = closure_130_28();
+          closure_129_7 = closure_130_29();
           let dataSavingMode = closure_130_9.dataSavingMode;
           if (dataSavingMode) {
             dataSavingMode = closure_130_10.getType() === closure_130_14.CELLULAR;
@@ -1482,7 +1466,7 @@ let closure_36 = async function _processVideoUpload(arg0) {
           const obj5 = {
             value: (function fetchVideoMetadata(arg0, arg1) {
                       const self = this;
-                      const apply = closure_1_39.apply;
+                      const apply = closure_1_40.apply;
                       if (typeof apply === "unknown") {
                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                       } else {
@@ -1521,7 +1505,7 @@ let closure_36 = async function _processVideoUpload(arg0) {
             const obj7 = { uri: closure_129_0, filename: closure_129_1, isLowQuality: closure_129_8, compressionQuality: closure_130_15.LOW, videoQualitySetting: closure_129_7, videoMetadata: closure_129_9, fileSize: closure_129_3 };
             c3 = 3;
             c4 = 1;
-            const obj8 = { value: closure_130_33(obj7), done: false };
+            const obj8 = { value: closure_130_34(obj7), done: false };
             return obj8;
           }
         }
@@ -1543,7 +1527,7 @@ let closure_36 = async function _processVideoUpload(arg0) {
         } else {
           const obj10 = { path, i: closure_129_6, mimeType: closure_129_2, filename: closure_129_1, originalUri: closure_129_0, spoiler: closure_129_4, description: closure_129_5, compressionQuality: closure_130_15.LOW, videoQualitySetting: closure_129_7, videoMetadata: closure_129_9, encodingConfig, sourceImageDimensions: {}, isImage: false };
           c4 = 3;
-          const obj = { value: closure_130_34(obj10), done: true };
+          const obj = { value: closure_130_35(obj10), done: true };
           return obj;
         }
       }
@@ -1553,7 +1537,7 @@ let closure_36 = async function _processVideoUpload(arg0) {
     }
   }
 };
-let closure_37 = async function _processImageOrFileUpload(arg0) {
+let closure_38 = async function _processImageOrFileUpload(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1564,7 +1548,7 @@ let closure_37 = async function _processImageOrFileUpload(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1626,7 +1610,7 @@ let closure_37 = async function _processImageOrFileUpload(arg0) {
             dataSavingMode = closure_132_10.getType() === closure_132_14.CELLULAR;
           }
           closure_131_11 = dataSavingMode;
-          closure_131_12 = closure_132_32(closure_131_0, closure_131_2);
+          closure_131_12 = closure_132_33(closure_131_0, closure_131_2);
           if (closure_131_12) {
             const size = { width: closure_131_6, height: closure_131_7 };
             let obj5 = size;
@@ -1706,7 +1690,7 @@ let closure_37 = async function _processImageOrFileUpload(arg0) {
           const obj14 = {
             value: (function tryConvertImage(arg0) {
                       const self = this;
-                      const apply = closure_1_38.apply;
+                      const apply = closure_1_39.apply;
                       if (typeof apply === "unknown") {
                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                       } else {
@@ -1747,7 +1731,7 @@ let closure_37 = async function _processImageOrFileUpload(arg0) {
                               }
                               if (isAndroidResult) {
                                 const obj2 = { compressionQuality, isLowQuality, skipVideoTranscode: true, useOriginalIfSmaller, allowOptimization: flag };
-                                return closure_1_26(width(height[16]).resolveToMediaFilePath, str, obj2);
+                                return closure_1_27(width(height[16]).resolveToMediaFilePath, str, obj2);
                               } else {
                                 return Promise.resolve(str);
                               }
@@ -1795,7 +1779,7 @@ let closure_37 = async function _processImageOrFileUpload(arg0) {
           obj17.attachmentQualityMetricsEnabled = enableQualityMetrics;
           obj17.attachmentOriginDetectionEnabled = closure_131_20;
           c6 = 3;
-          const obj18 = { value: closure_132_34(obj17), done: true };
+          const obj18 = { value: closure_132_35(obj17), done: true };
           return obj18;
         }
       }
@@ -1805,7 +1789,7 @@ let closure_37 = async function _processImageOrFileUpload(arg0) {
     }
   }
 };
-let closure_38 = async function _tryConvertImage(arg0) {
+let closure_39 = async function _tryConvertImage(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1816,7 +1800,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -1873,7 +1857,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
             const obj5 = {
               value: (function getPhotoKitDataUTI() {
                           const self = this;
-                          const apply = closure_1_29.apply;
+                          const apply = closure_1_30.apply;
                           if (typeof apply === "unknown") {
                             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                           } else {
@@ -1906,7 +1890,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
               const obj8 = { compressionQuality: closure_130_3 };
               c6 = 3;
               c7 = 1;
-              const obj9 = { value: closure_131_26(closure_131_1(closure_131_2[16]).convertBase64ToJPEG, closure_130_0.replace(closure_131_20, ""), obj8), done: false };
+              const obj9 = { value: closure_131_27(closure_131_1(closure_131_2[16]).convertBase64ToJPEG, closure_130_0.replace(closure_131_20, ""), obj8), done: false };
               return obj9;
             } else if ((function shouldConvertBase64ToGIF(str) {
               let isIOSResult = closure_1_0(1382).isIOS();
@@ -1917,7 +1901,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
             })(closure_130_0)) {
               c6 = 4;
               c7 = 1;
-              const obj10 = { value: closure_131_26(closure_131_1(closure_131_2[16]).convertBase64ToGIF, closure_130_0.replace(closure_131_21, ""), null), done: false };
+              const obj10 = { value: closure_131_27(closure_131_1(closure_131_2[16]).convertBase64ToGIF, closure_130_0.replace(closure_131_21, ""), null), done: false };
               return obj10;
             } else if (closure_130_4) {
               c6 = 6;
@@ -1925,7 +1909,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
               const obj11 = {
                 value: (function shouldConvertToPNG() {
                               const self = this;
-                              const apply = closure_1_30.apply;
+                              const apply = closure_1_31.apply;
                               if (typeof apply === "unknown") {
                                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                               } else {
@@ -1955,7 +1939,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
                       } else {
                         tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
                       }
-                      tmpResult = closure_1_0(7758);
+                      tmpResult = closure_1_0(7776);
                     }
                     const obj = closure_1_0(1382);
                   })(closure_130_0, closure_130_1)) {
@@ -2014,7 +1998,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
               const obj18 = { compressionQuality: closure_130_3, forceConvertToJPG: closure_130_13, useEnhancedConversion: closure_130_5, useJpegliEncoder: closure_130_6, targetWidth: closure_130_8, targetHeight: closure_130_9 };
               c6 = 8;
               c7 = 1;
-              const obj19 = { value: closure_131_26(closure_131_1(closure_131_2[16]).convertToJPEG, closure_130_0, obj18), done: false };
+              const obj19 = { value: closure_131_27(closure_131_1(closure_131_2[16]).convertToJPEG, closure_130_0, obj18), done: false };
               return obj19;
             }
           }
@@ -2151,7 +2135,7 @@ let closure_38 = async function _tryConvertImage(arg0) {
     }
   }
 };
-let closure_39 = async function _fetchVideoMetadata(arg0) {
+let closure_40 = async function _fetchVideoMetadata(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2162,7 +2146,7 @@ let closure_39 = async function _fetchVideoMetadata(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -2243,7 +2227,7 @@ function getCaptionLabel(type, isVideo, playableDuration) {
 }
 function getImageDimensionsIfMissing(uri, arg1, arg2, c1) {
   const self = this;
-  const apply = closure_40.apply;
+  const apply = closure_41.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2251,7 +2235,7 @@ function getImageDimensionsIfMissing(uri, arg1, arg2, c1) {
   }
   return applyArgumentsResult;
 }
-let closure_40 = async function _getImageDimensionsIfMissing() {
+let closure_41 = async function _getImageDimensionsIfMissing() {
   c8 = 0;
   c9 = 0;
   c7 = 0;
@@ -2266,7 +2250,7 @@ let closure_40 = async function _getImageDimensionsIfMissing() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -2388,7 +2372,7 @@ let closure_40 = async function _getImageDimensionsIfMissing() {
 };
 function checkVideoEncodingSupport(arg0) {
   const self = this;
-  const apply = closure_42.apply;
+  const apply = closure_43.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2396,7 +2380,7 @@ function checkVideoEncodingSupport(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_42 = async function _checkVideoEncodingSupport(arg0) {
+let closure_43 = async function _checkVideoEncodingSupport(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2407,7 +2391,7 @@ let closure_42 = async function _checkVideoEncodingSupport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -2465,7 +2449,7 @@ let closure_42 = async function _checkVideoEncodingSupport(arg0) {
 };
 function calculateImageQualityMetrics(originalUri, path, filename, attachmentQualityMetricsEnabled, attachmentOriginDetectionEnabled) {
   const self = this;
-  const apply = closure_44.apply;
+  const apply = closure_45.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2473,7 +2457,7 @@ function calculateImageQualityMetrics(originalUri, path, filename, attachmentQua
   }
   return applyArgumentsResult;
 }
-let closure_44 = async function _calculateImageQualityMetrics(arg0) {
+let closure_45 = async function _calculateImageQualityMetrics(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2484,7 +2468,7 @@ let closure_44 = async function _calculateImageQualityMetrics(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -2608,7 +2592,8 @@ const NativePermissionTypes = fn(7482).NativePermissionTypes;
 let closure_19 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
-const Canceled = "Canceled";
+const Cancelled = "Cancelled";
+let c23 = "Missing permission";
 let size = fn(2);
 let result = size.fileFinishedImporting("utils/native/UploadUtils.tsx");
 
@@ -2672,8 +2657,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(7758).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(7758).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(7776).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(7776).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

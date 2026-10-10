@@ -4862,6 +4862,7 @@ const obj7 = {
   UNDO_MARK_AS_READ: "Undo Mark as Read",
   ACK_DECLINE_REQUEST_TO_JOIN: "Ack - Decline Request to Join",
   ACK_DECLINE_REQUEST_TO_STREAM: "Ack - Decline Request to Stream",
+  ACK_ACCEPT_REQUEST_TO_STREAM: "Ack - Accept Request to Stream",
   ACK_GRAVITY_CLEAR_READ_STATES_BUTTON: "Ack - Gravity Clear Read States Button",
   ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON:
     "Ack - Gravity Regenerate Feed and Clear Read States Button",
@@ -7705,6 +7706,7 @@ export const AnalyticEvents = {
   MODAL_SECTION_VIEWED: "modal_section_viewed",
   DEVICE_DETECTED_PANEL_VIEWED: "device_detected_panel_viewed",
   DEVICE_DETECTED_PANEL_DISMISSED: "device_detected_panel_dismissed",
+  REQUEST_TO_STREAM_REMINDER_DISMISSED: "request_to_stream_reminder_dismissed",
   HOVER_MENU_OPENED: "hover_menu_opened",
   SCHEDULED_MESSAGE_TIME_PICKER_OPENED: "scheduled_message_time_picker_opened",
   CREATE_GUILD_VIEWED: "create_guild_viewed",
@@ -8878,6 +8880,7 @@ export const AnalyticEvents = {
   GATEWAY_SOCKET_RESET: "gateway_socket_reset",
   SESSION_START_CLIENT: "session_start_client",
   APPLE_PARTNER_IAP_REQUEST_SENT: "apple_partner_iap_request_sent",
+  APPLE_DEFERRED_PAYMENT_PROMPTED: "apple_deferred_payment_prompted",
   APPLE_RESTORE_AND_APPLY_PURCHASES_SUCCEEDED: "apple_restore_and_apply_purchases_succeeded",
   APPLE_PURCHASE_UPDATED_LISTENER_SUCCEEDED: "apple_purchase_updated_listener_succeeded",
   POMELO_ERRORS: "pomelo_errors",
@@ -9819,6 +9822,7 @@ export const HelpdeskArticles = {
   LFG_CHANNELS: "41832532728215",
   CUSTOM_TYPING_INDICATOR: "42962943077271",
   BUY_GIFT_CARDS: "41159846304279",
+  BEST_BUY_PROMOTION: "39188406147479",
 };
 export const HelpdeskArticlesInternalGUIDs = {
   INVALID_BILLING_ADDRESS: "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618",

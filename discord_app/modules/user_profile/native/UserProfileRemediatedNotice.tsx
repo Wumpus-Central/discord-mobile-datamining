@@ -11,7 +11,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     padding: nativeDefault.space.PX_12,
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
               const intl = tmp(1126).intl;
               obj2.children = intl.string(tmp(1126).t["oC/fU6"]);
-              tmp14 = closure_6(tmp(5087).Text, obj2);
+              tmp14 = closure_6(tmp(5088).Text, obj2);
             }
             cResult[7] = isBlocked;
             cResult[8] = tmp14;
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl2 = tmp(1126).intl;
             obj5.children = intl2.string(tmp(1126).t.HXz5An);
             const items2 = [
-              closure_6(tmp(5087).Text, obj5),
-              closure_6(tmp(5087).Text, {
+              closure_6(tmp(5088).Text, obj5),
+              closure_6(tmp(5088).Text, {
                 variant: "text-sm/semibold",
                 color: "text-default",
                 accessibilityElementsHidden: true,
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
           const intl = tmp4(1126).intl;
           obj3.children = intl.string(tmp4(1126).t["oC/fU6"]);
-          isBlocked = closure_6(tmp4(5087).Text, obj3);
+          isBlocked = closure_6(tmp4(5088).Text, obj3);
         }
         const items2 = [isBlocked];
         if (isIgnored) {
@@ -181,8 +181,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp4(1126).intl;
           obj5.children = intl2.string(tmp4(1126).t.HXz5An);
           const items3 = [
-            closure_6(tmp4(5087).Text, obj5),
-            closure_6(tmp4(5087).Text, {
+            closure_6(tmp4(5088).Text, obj5),
+            closure_6(tmp4(5088).Text, {
               variant: "text-sm/semibold",
               color: "text-default",
               accessibilityElementsHidden: true,

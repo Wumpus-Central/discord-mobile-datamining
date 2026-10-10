@@ -20,7 +20,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -59,10 +59,10 @@ export default {
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              const obj7 = { key: "GravityGuildScore", content: null };
+              const obj7 = { text: null };
               const intl = tmp3(tmp23[6]).intl;
-              obj7.content = intl.string(tmp3(tmp23[6]).t.CG4Hks);
-              v2(tmp23[5]).open(obj7);
+              obj7.text = intl.string(tmp3(tmp23[6]).t.CG4Hks);
+              v2(tmp23[5]).open("GravityGuildScore", obj7);
               const obj2 = v2(tmp23[5]);
             } else if (arg0 === 1) {
               constants = 3;
@@ -76,10 +76,10 @@ export default {
               };
               v2(tmp23[4]).dispatch(obj8);
               const obj9 = v2(tmp23[4]);
-              const obj10 = { key: "GravityGuildScore", content: null };
+              const obj10 = { text: null };
               const intl2 = tmp3(tmp23[6]).intl;
-              obj10.content = intl2.string(tmp3(tmp23[6]).t.OMdbs1);
-              v2(tmp23[5]).open(obj10);
+              obj10.text = intl2.string(tmp3(tmp23[6]).t.OMdbs1);
+              v2(tmp23[5]).open("GravityGuildScore", obj10);
               c3 = 0;
               const obj11 = v2(tmp23[5]);
             }

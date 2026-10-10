@@ -31,7 +31,7 @@ function CaptchaTestScreen(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -63,14 +63,14 @@ function CaptchaTestScreen(arg0) {
             if (1 === tmp7) {
               c4 = 0;
               closure_129_0 = closure_3;
-              const obj8 = { key: "captcha-test-modal-error", content: closure_129_0.message };
-              closure_1(tmp3[9]).open(obj8);
+              const obj8 = { text: closure_129_0.message };
+              closure_1(tmp3[9]).open("captcha-test-modal-error", obj8);
               const obj3 = closure_1(tmp3[9]);
             } else if (noop === 1) {
               c6 = 3;
               throw value;
             } else if (noop !== 2) {
-              closure_1(tmp3[9]).open({ key: "captcha-test-modal-success", content: "Captcha completed!" });
+              closure_1(tmp3[9]).open("captcha-test-modal-success", { text: "Captcha completed!" });
               c4 = 0;
               const obj = closure_1(tmp3[9]);
             }
@@ -174,7 +174,7 @@ function CaptchaTestScreen(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(5091);
+let createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   separator: null,
@@ -199,15 +199,15 @@ obj2.footerButton = { paddingHorizontal: nativeDefault.space.PX_16 };
 let obj6 = { paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.content = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 let closure_9 = createStyles.createStyles(obj2);
-const prop = fn(15969).HCAPTCHA_DIFFICULTY_OPTIONS;
+const prop = fn(16031).HCAPTCHA_DIFFICULTY_OPTIONS;
 const options = prop.map((label) => ({ name: label.label, value: label.value }));
-let items = [fn(15970).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(15970).CaptchaDeciderType.SMITE_RQDATA];
+let items = [fn(16032).CaptchaDeciderType.HCAPTCHA_RQDATA, fn(16032).CaptchaDeciderType.SMITE_RQDATA];
 const set = new Set(items);
-const prop1 = fn(15969).CAPTCHA_DECIDER_TYPE_OPTIONS;
+const prop1 = fn(16031).CAPTCHA_DECIDER_TYPE_OPTIONS;
 const mapped = prop1.map((label) => ({ name: label.label, value: label.value }));
 const options2 = mapped.filter((value) => set.has(value.value));
 const constants = { TEST_CAPTCHA: "TEST_CAPTCHA" };
-createStyles = fn(5091);
+createStyles = fn(5092);
 let obj9 = { headerStyle: null };
 let obj7 = { margin: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 };
 obj9.headerStyle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

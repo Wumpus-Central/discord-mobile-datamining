@@ -70,7 +70,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "backgroundColor",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -107,7 +107,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "backgroundColor",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -150,7 +150,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "backgroundColor",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -187,7 +187,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToLastQuery: null,
       optionNameToContextKey: null,
       lastErrored: false,
-      lastResponseNonce: "backgroundColor",
+      lastResponseNonce: "code",
     };
     const _Map = Map;
     map = new Map();
@@ -230,7 +230,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         optionNameToLastQuery: null,
         optionNameToContextKey: null,
         lastErrored: false,
-        lastResponseNonce: "backgroundColor",
+        lastResponseNonce: "code",
       };
       const _Map = Map;
       map = new Map();
@@ -268,7 +268,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
       const optionNameToLastQuery3 = value.optionNameToLastQuery;
       const result2 = optionNameToLastQuery3.set(name, query);
       const optionNameToAutocompleteQueries2 = value.optionNameToAutocompleteQueries;
-      const value4 = optionNameToAutocompleteQueries2.get(name);
+      value4 = optionNameToAutocompleteQueries2.get(name);
       let value5;
       if (value4 != null) {
         value5 = value4.get(query);
@@ -323,7 +323,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
           optionNameToLastQuery: null,
           optionNameToContextKey: null,
           lastErrored: false,
-          lastResponseNonce: "backgroundColor",
+          lastResponseNonce: "code",
         };
         const _Map = Map;
         map = new Map();
@@ -342,7 +342,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
         obj3.optionNameToContextKey = map4;
         const result = obj10.set(channelId, obj3);
       }
-      const value4 = obj10.get(channelId);
+      value4 = obj10.get(channelId);
       const optionNameToAutocompleteQueries = value4.optionNameToAutocompleteQueries;
       if (null == optionNameToAutocompleteQueries.get(value.name)) {
         const optionNameToAutocompleteQueries2 = value4.optionNameToAutocompleteQueries;
@@ -450,7 +450,7 @@ const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteSt
             optionNameToLastQuery: null,
             optionNameToContextKey: null,
             lastErrored: false,
-            lastResponseNonce: "backgroundColor",
+            lastResponseNonce: "code",
           };
           const _Map = Map;
           map = new Map();

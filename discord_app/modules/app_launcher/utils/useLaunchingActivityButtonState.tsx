@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] !== applicationId) {
             const fn2 = function b() {
               const mainFrame = FramesStore.getMainFrame();
-              state = undefined;
+              let state;
               if (mainFrame != null) {
                 state = mainFrame.state;
               }
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [FramesStore];
       let stateFromStores1 = applicationId(onSubmissionComplete[6]).useStateFromStores(items1, () => {
         const mainFrame = FramesStore.getMainFrame();
-        state = undefined;
+        let state;
         if (mainFrame != null) {
           state = mainFrame.state;
         }

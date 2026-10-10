@@ -3,14 +3,14 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3181 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3184 from "../../age_assurance/ManualReview.messages.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import SafetyHubModels from "../SafetyHubModels.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
+import SafetyHubModels from "../SafetyHubModels.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import AutomatedUnderageAppealModalActionCreatorsDefault from "../AutomatedUnderageAppealModalActionCreators.native.tsx";
 import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators.tsx";
@@ -40,7 +40,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const tmp19 = closure_13(tmp10(10375).ShieldIcon, obj2);
+      const tmp19 = closure_13(tmp10(10408).ShieldIcon, obj2);
       cResult[2] = tmp19;
       let tmp16 = tmp19;
     } else {
@@ -67,7 +67,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[7] !== tmp24) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp24 };
-      const tmp28 = closure_13(tmp10(5087).Text, obj5);
+      const tmp28 = closure_13(tmp10(5088).Text, obj5);
       cResult[7] = tmp24;
       cResult[8] = tmp28;
       let tmp26 = tmp28;
@@ -118,14 +118,14 @@ function ClassificationPolicyCard(policyExplainerLink) {
     };
     const obj11 = { style: tmp2.classificationPolicyCardIcon, children: null };
     const obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-    obj11.children = closure_13(policyExplainerLink(10375).ShieldIcon, obj12);
+    obj11.children = closure_13(policyExplainerLink(10408).ShieldIcon, obj12);
     const items = [closure_13(closure_4, obj11)];
     const obj13 = { style: tmp2.classificationPolicyCardContent, children: null };
     const obj14 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = policyExplainerLink(1126).intl;
     const obj15 = { classificationDescription: policyExplainerLink.classificationTypeText };
     obj14.children = intl.format(policyExplainerLink(1126).t.zxUdpj, obj15);
-    obj13.children = closure_13(policyExplainerLink(5087).Text, obj14);
+    obj13.children = closure_13(policyExplainerLink(5088).Text, obj14);
     items[1] = closure_13(closure_4, obj13);
     obj10.children = items;
     obj.children = closure_14(TouchableHitBoxDefault, obj10);
@@ -134,7 +134,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const SafetyHubConstants = fn(5922);
+const SafetyHubConstants = fn(7512);
 ({
   SafetyHubAnalyticsActionSource: closure_9,
   SafetyHubAnalyticsActions: c10,
@@ -143,7 +143,7 @@ const SafetyHubConstants = fn(5922);
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   container: null,
@@ -274,7 +274,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp23;
             }
             const obj2 = { style: tmp4.header, children: tmp20 };
-            const tmp26 = __initData2(React4, obj2);
+            const tmp26 = map1(React4, obj2);
             cResult[7] = tmp4.header;
             cResult[8] = tmp20;
             cResult[9] = tmp26;
@@ -286,7 +286,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: cResult[2],
           };
-          const tmp22 = __initData2(Text_Text.Text, obj3);
+          const tmp22 = map1(Text_Text.Text, obj3);
           cResult[4] = cResult[2];
           cResult[5] = tmp4.headerText;
           cResult[6] = tmp22;
@@ -391,7 +391,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           return intl.format(util.t["39jfOz"], obj2);
         }
       }, items);
-      obj.children = closure_13(classificationTypeText(5087).Text, {
+      obj.children = closure_13(classificationTypeText(5088).Text, {
         variant: "text-lg/normal",
         style: tmp.headerText,
         color: "mobile-text-heading-primary",
@@ -417,8 +417,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[0] = children;
       cResult[1] = undefined !== plain && plain;
-      cResult[2] = __initData2(Text_Text.Text, obj3);
-      const tmp5Result = __initData2(Text_Text.Text, obj3);
+      cResult[2] = map1(Text_Text.Text, obj3);
+      const tmp5Result = map1(Text_Text.Text, obj3);
     }
   : function SectionHeader(arg0) {
       ({ children, plain } = arg0);
@@ -431,7 +431,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         obj = { variant: "eyebrow", color: "text-muted", children };
       }
-      return __initData2(Text_Text.Text, obj);
+      return map1(Text_Text.Text, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -445,7 +445,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] !== str) {
         const obj2 = { variant: str, children: [" ", "\u2022"] };
-        const tmp8 = state(Text_Text.Text, obj2);
+        const tmp8 = closure_1_14(Text_Text.Text, obj2);
         cResult[0] = str;
         cResult[1] = tmp8;
         let tmp6 = tmp8;
@@ -468,7 +468,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { style: tmp5.classificationActionDescription, children: null };
           const items = [tmp6, tmp9];
           obj3.children = items;
-          const tmp14 = state(React4, obj3);
+          const tmp14 = closure_1_14(React4, obj3);
           cResult[6] = tmp5.classificationActionDescription;
           cResult[7] = tmp6;
           cResult[8] = tmp9;
@@ -476,7 +476,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = tmp14;
         }
       }
-      const tmp10 = __initData2(Text_Text.Text, { variant: str, style: tmp5.bulletText, children });
+      const tmp10 = map1(Text_Text.Text, { variant: str, style: tmp5.bulletText, children });
       cResult[2] = children;
       cResult[3] = tmp5.bulletText;
       cResult[4] = str;
@@ -497,11 +497,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = { style: tmp.classificationActionDescription, children: null };
       const items = [
-        state(Text_Text.Text, { variant: str, children: [" ", "\u2022"] }),
-        __initData2(Text_Text.Text, { variant: str, style: tmp.bulletText, children: children.children }),
+        closure_1_14(Text_Text.Text, { variant: str, children: [" ", "\u2022"] }),
+        map1(Text_Text.Text, { variant: str, style: tmp.bulletText, children: children.children }),
       ];
       obj.children = items;
-      return state(React4, obj);
+      return closure_1_14(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
@@ -703,7 +703,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj3.children = intl.string(redesigned(1126).t["O2nYk+"]);
         const items1 = [closure_13(closure_18, obj3)];
         const obj4 = { style: tmp4.actionsTaken, children: null };
-        const items2 = [found.map((action) => __initData2(closure_22, { action, large: redesigned }, action.id))];
+        const items2 = [found.map((action) => map1(closure_22, { action, large: redesigned }, action.id))];
         let tmp8Result = null;
         if (null != classificationExpiration) {
           const obj5 = { large: redesigned, children: null };
@@ -733,7 +733,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { plain: true, children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t["O2nYk+"]);
-        const tmp8 = __initData2(closure_18, obj2);
+        const tmp8 = map1(closure_18, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -742,8 +742,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { large: true, children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3181.rn3Gto);
-        const tmp13 = __initData2(closure_19, obj3);
+        obj3.children = intl2.string(_modDef3184.rn3Gto);
+        const tmp13 = map1(closure_19, obj3);
         cResult[1] = tmp13;
         let tmp9 = tmp13;
       } else {
@@ -751,7 +751,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4.actionsTaken) {
         const obj4 = { style: tmp4.actionsTaken, children: tmp9 };
-        const tmp17 = __initData2(React4, obj4);
+        const tmp17 = map1(React4, obj4);
         cResult[2] = tmp4.actionsTaken;
         cResult[3] = tmp17;
         let tmp14 = tmp17;
@@ -767,7 +767,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp4.sectionContainer, children: null };
       const items = [first, tmp14];
       obj5.children = items;
-      const tmp19 = state(React4, obj5);
+      const tmp19 = closure_1_14(React4, obj5);
       cResult[4] = tmp4.sectionContainer;
       cResult[5] = tmp14;
       cResult[6] = tmp19;
@@ -779,15 +779,15 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { plain: true, children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t["O2nYk+"]);
-      const items = [__initData2(closure_18, obj2)];
+      const items = [map1(closure_18, obj2)];
       const obj3 = { style: tmp.actionsTaken, children: null };
       const obj4 = { large: true, children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef3181.rn3Gto);
-      obj3.children = __initData2(closure_19, obj4);
-      items[1] = __initData2(React4, obj3);
+      obj4.children = intl2.string(_modDef3184.rn3Gto);
+      obj3.children = map1(closure_19, obj4);
+      items[1] = map1(React4, obj3);
       obj.children = items;
-      return state(React4, obj);
+      return closure_1_14(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
@@ -810,7 +810,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== large) {
         const fn = function o(children, arg1) {
-          return __initData2(closure_19, { large, children }, arg1);
+          return map1(closure_19, { large, children }, arg1);
         };
         cResult[3] = large;
         cResult[4] = fn;
@@ -830,7 +830,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       large = large.large;
       const obj = { children: null };
       const descriptions = large.action.descriptions;
-      obj.children = descriptions.map((children, index) => __initData2(closure_19, { large, children }, index));
+      obj.children = descriptions.map((children, index) => map1(closure_19, { large, children }, index));
       return closure_13(closure_15, obj);
     };
 ReactCompilerGating = fn(558);
@@ -842,7 +842,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { plain: true, children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t["977iei"]);
-        const tmp8 = __initData2(closure_18, obj2);
+        const tmp8 = map1(closure_18, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -851,8 +851,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { large: true, children: null };
         const intl2 = util.intl;
-        obj3.children = intl2.string(_modDef3181["yV/t/V"]);
-        const tmp13 = __initData2(closure_19, obj3);
+        obj3.children = intl2.string(_modDef3184["yV/t/V"]);
+        const tmp13 = map1(closure_19, obj3);
         cResult[1] = tmp13;
         let tmp9 = tmp13;
       } else {
@@ -860,7 +860,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4.actionsTaken) {
         const obj4 = { style: tmp4.actionsTaken, children: tmp9 };
-        const tmp17 = __initData2(React4, obj4);
+        const tmp17 = map1(React4, obj4);
         cResult[2] = tmp4.actionsTaken;
         cResult[3] = tmp17;
         let tmp14 = tmp17;
@@ -876,7 +876,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp4.sectionContainer, children: null };
       const items = [first, tmp14];
       obj5.children = items;
-      const tmp19 = state(React4, obj5);
+      const tmp19 = closure_1_14(React4, obj5);
       cResult[4] = tmp4.sectionContainer;
       cResult[5] = tmp14;
       cResult[6] = tmp19;
@@ -888,15 +888,15 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { plain: true, children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t["977iei"]);
-      const items = [__initData2(closure_18, obj2)];
+      const items = [map1(closure_18, obj2)];
       const obj3 = { style: tmp.actionsTaken, children: null };
       const obj4 = { large: true, children: null };
       const intl2 = util.intl;
-      obj4.children = intl2.string(_modDef3181["yV/t/V"]);
-      obj3.children = __initData2(closure_19, obj4);
-      items[1] = __initData2(React4, obj3);
+      obj4.children = intl2.string(_modDef3184["yV/t/V"]);
+      obj3.children = map1(closure_19, obj4);
+      items[1] = map1(React4, obj3);
       obj.children = items;
-      return state(React4, obj);
+      return closure_1_14(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
@@ -908,7 +908,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "eyebrow", color: "text-muted", children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t["977iei"]);
-        const tmp7 = __initData2(Text_Text.Text, obj2);
+        const tmp7 = map1(Text_Text.Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -920,7 +920,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== tmp8) {
           const obj3 = { variant: "text-sm/normal", children: tmp8 };
-          const tmp12 = __initData2(Text_Text.Text, obj3);
+          const tmp12 = map1(Text_Text.Text, obj3);
           cResult[4] = tmp8;
           cResult[5] = tmp12;
           let tmp10 = tmp12;
@@ -944,7 +944,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { style: tmp4.sectionContainer, children: null };
           const items = [first, tmp10, tmp13, appealComponent];
           obj4.children = items;
-          const tmp20 = state(React4, obj4);
+          const tmp20 = closure_1_14(React4, obj4);
           cResult[9] = appealComponent;
           cResult[10] = tmp4.sectionContainer;
           cResult[11] = tmp10;
@@ -953,7 +953,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           tmp17 = tmp20;
         }
         const obj5 = { classificationTypeText, policyExplainerLink };
-        const tmp16 = __initData2(ClassificationPolicyCard, obj5);
+        const tmp16 = map1(ClassificationPolicyCard, obj5);
         cResult[6] = classificationTypeText;
         cResult[7] = policyExplainerLink;
         cResult[8] = tmp16;
@@ -972,15 +972,15 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { variant: "eyebrow", color: "text-muted", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t["977iei"]);
-      const items = [__initData2(Text_Text.Text, obj2), , ,];
+      const items = [map1(Text_Text.Text, obj2), , ,];
       const obj3 = { variant: "text-sm/normal", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.format(util.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-      items[1] = __initData2(Text_Text.Text, obj3);
-      items[2] = __initData2(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
+      items[1] = map1(Text_Text.Text, obj3);
+      items[2] = map1(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
       items[3] = appealComponent;
       obj.children = items;
-      return state(React4, obj);
+      return closure_1_14(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_25 = ReactCompilerGating.isReactCompilerEnabled();
@@ -992,7 +992,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { variant: "text-md/normal", color: "text-muted", children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t["I2H0/E"]);
-        const tmp6 = __initData2(Text_Text.Text, obj2);
+        const tmp6 = map1(Text_Text.Text, obj2);
         cResult[0] = tmp6;
         let first = tmp6;
       } else {
@@ -1004,7 +1004,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { variant: "text-md/normal", color: "text-muted", children: null };
       const intl = util.intl;
       obj.children = intl.string(util.t["I2H0/E"]);
-      return __initData2(Text_Text.Text, obj);
+      return map1(Text_Text.Text, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1015,7 +1015,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = tmp(1126).intl;
         const obj2 = {
           letUsKnowHook(children, arg1) {
-            return __initData2(
+            return map1(
               Text_Text.Text,
               { onPress: onPressLetUsKnow.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children },
               arg1,
@@ -1031,7 +1031,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== tmp4) {
         const obj3 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-        const tmp8 = closure_13(tmp(5087).Text, obj3);
+        const tmp8 = closure_13(tmp(5088).Text, obj3);
         cResult[2] = tmp4;
         cResult[3] = tmp8;
         let tmp6 = tmp8;
@@ -1046,7 +1046,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = require("util").intl;
       obj.children = intl.format(require("util").t.IFxUaT, {
         letUsKnowHook(children, arg1) {
-          return __initData2(
+          return map1(
             Text_Text.Text,
             { onPress: onPressLetUsKnow.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children },
             arg1,
@@ -1070,7 +1070,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp8;
           }
           const obj2 = { style: tmp2.letUsKnowContainer, children: cResult[2] };
-          const tmp11 = __initData2(React4, obj2);
+          const tmp11 = map1(React4, obj2);
           cResult[3] = tmp2.letUsKnowContainer;
           cResult[4] = cResult[2];
           cResult[5] = tmp11;
@@ -1078,10 +1078,10 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (onPressLetUsKnow.hasBeenAppealed) {
-        let tmp4Result = __initData2(closure_27, {});
+        let tmp4Result = map1(closure_27, {});
       } else {
         const obj3 = { onPressLetUsKnow: onPressLetUsKnow.onPressLetUsKnow };
-        tmp4Result = __initData2(closure_28, obj3);
+        tmp4Result = map1(closure_28, obj3);
       }
       ({ hasBeenAppealed: tmp[0], onPressLetUsKnow } = onPressLetUsKnow);
       cResult[1] = onPressLetUsKnow;
@@ -1090,13 +1090,13 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
   : function AppealFooter(hasBeenAppealed) {
       const obj = { style: closure_16().letUsKnowContainer, children: null };
       if (hasBeenAppealed.hasBeenAppealed) {
-        let tmpResult = __initData2(closure_27, {});
+        let tmpResult = map1(closure_27, {});
       } else {
         const obj2 = { onPressLetUsKnow: hasBeenAppealed.onPressLetUsKnow };
-        tmpResult = __initData2(closure_28, obj2);
+        tmpResult = map1(closure_28, obj2);
       }
       obj.children = tmpResult;
-      return __initData2(React4, obj);
+      return map1(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1108,7 +1108,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { plain: true, children: null };
         const intl = util.intl;
         obj2.children = intl.string(util.t.RVEiD0);
-        const tmp8 = __initData2(closure_18, obj2);
+        const tmp8 = map1(closure_18, obj2);
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -1124,7 +1124,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== onPressLetUsKnow) {
         const obj3 = { label: tmp9, onPress: onPressLetUsKnow, arrow: true, start: true, end: true };
-        const tmp13 = __initData2(TableRow.TableRow, obj3);
+        const tmp13 = map1(TableRow.TableRow, obj3);
         cResult[2] = onPressLetUsKnow;
         cResult[3] = tmp13;
         let tmp11 = tmp13;
@@ -1150,7 +1150,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { style: tmp4.confirmMinimumAgeSection, children: null };
           const items = [first, tmp11, tmp17];
           obj4.children = items;
-          const tmp23 = state(React4, obj4);
+          const tmp23 = closure_1_14(React4, obj4);
           cResult[10] = tmp4.confirmMinimumAgeSection;
           cResult[11] = tmp11;
           cResult[12] = tmp17;
@@ -1158,7 +1158,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           tmp20 = tmp23;
         }
         const obj5 = { variant: "text-sm/normal", color: "text-muted", style: tmp14, children: tmp15 };
-        const tmp19 = __initData2(Text_Text.Text, obj5);
+        const tmp19 = map1(Text_Text.Text, obj5);
         cResult[7] = tmp4.guidelinesFooter;
         cResult[8] = tmp15;
         cResult[9] = tmp19;
@@ -1178,18 +1178,18 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { plain: true, children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.RVEiD0);
-      const items = [__initData2(closure_18, obj2), ,];
+      const items = [map1(closure_18, obj2), ,];
       const obj3 = { label: null, onPress: null, arrow: true, start: true, end: true };
       const intl2 = util.intl;
       obj3.label = intl2.string(util.t.YQPbuc);
       obj3.onPress = onPressLetUsKnow;
-      items[1] = __initData2(TableRow.TableRow, obj3);
+      items[1] = map1(TableRow.TableRow, obj3);
       const obj4 = { variant: "text-sm/normal", color: "text-muted", style: tmp.guidelinesFooter, children: null };
       const intl3 = util.intl;
       obj4.children = intl3.format(util.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-      items[2] = __initData2(Text_Text.Text, obj4);
+      items[2] = map1(Text_Text.Text, obj4);
       obj.children = items;
-      return state(React4, obj);
+      return closure_1_14(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1202,7 +1202,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== tmp4) {
           const obj2 = { variant: "text-sm/normal", color: "text-muted", children: tmp4 };
-          const tmp8 = __initData2(Text_Text.Text, obj2);
+          const tmp8 = map1(Text_Text.Text, obj2);
           cResult[3] = tmp4;
           cResult[4] = tmp8;
           let tmp6 = tmp8;
@@ -1212,7 +1212,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp6;
       }
       const intl = util.intl;
-      const formatResult = intl.format(_modDef3181.vPOpia, { tosLink, communityGuidelinesLink });
+      const formatResult = intl.format(_modDef3184.vPOpia, { tosLink, communityGuidelinesLink });
       cResult[0] = communityGuidelinesLink;
       cResult[1] = tosLink;
       cResult[2] = formatResult;
@@ -1222,8 +1222,8 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       ({ tosLink, communityGuidelinesLink } = arg0);
       const obj = { variant: "text-sm/normal", color: "text-muted", children: null };
       const intl = util.intl;
-      obj.children = intl.format(_modDef3181.vPOpia, { tosLink, communityGuidelinesLink });
-      return __initData2(Text_Text.Text, obj);
+      obj.children = intl.format(_modDef3184.vPOpia, { tosLink, communityGuidelinesLink });
+      return map1(Text_Text.Text, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1231,11 +1231,11 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { children: null };
-        const items = [__initData2(closure_21, {}), __initData2(closure_23, {})];
+        const items = [map1(closure_21, {}), map1(closure_23, {})];
         ({ TOS_LINK: obj3.tosLink, COMMUNITY_GUIDELINES: obj3.communityGuidelinesLink } = constants);
-        items[2] = __initData2(closure_31, { tosLink: null, communityGuidelinesLink: null });
+        items[2] = map1(closure_31, { tosLink: null, communityGuidelinesLink: null });
         obj2.children = items;
-        const tmp10 = state(closure_1_15, obj2);
+        const tmp10 = closure_1_14(value2, obj2);
         cResult[0] = tmp10;
         let first = tmp10;
         const obj5 = { tosLink: null, communityGuidelinesLink: null };
@@ -1247,15 +1247,12 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
   : function ManualReviewDecidedUnderageView() {
       const obj = { children: null };
       const items = [
-        __initData2(closure_21, {}),
-        __initData2(closure_23, {}),
-        __initData2(closure_31, {
-          tosLink: constants.TOS_LINK,
-          communityGuidelinesLink: constants.COMMUNITY_GUIDELINES,
-        }),
+        map1(closure_21, {}),
+        map1(closure_23, {}),
+        map1(closure_31, { tosLink: constants.TOS_LINK, communityGuidelinesLink: constants.COMMUNITY_GUIDELINES }),
       ];
       obj.children = items;
-      return state(closure_1_15, obj);
+      return closure_1_14(value2, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1273,7 +1270,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== onClose) {
         const obj2 = { size: "md", text: first, onPress: onClose, grow: true };
-        const tmp9 = __initData2(components_Button_Button.Button, obj2);
+        const tmp9 = map1(components_Button_Button.Button, obj2);
         cResult[1] = onClose;
         cResult[2] = tmp9;
         let tmp7 = tmp9;
@@ -1286,7 +1283,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp10;
       }
-      const tmp11 = __initData2(React4, { style: tmp4.redirectButtonWrapper, children: tmp7 });
+      const tmp11 = map1(React4, { style: tmp4.redirectButtonWrapper, children: tmp7 });
       cResult[3] = tmp4.redirectButtonWrapper;
       cResult[4] = tmp7;
       cResult[5] = tmp11;
@@ -1298,8 +1295,8 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj2.text = intl.string(util.t.elrEjL);
       obj2.onPress = onClose.onClose;
-      obj.children = __initData2(components_Button_Button.Button, obj2);
-      return __initData2(React4, obj);
+      obj.children = map1(components_Button_Button.Button, obj2);
+      return map1(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let obj13 = { width: 300, alignSelf: "center", marginTop: nativeDefault.space.PX_32 };

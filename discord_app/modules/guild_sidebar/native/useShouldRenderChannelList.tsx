@@ -65,7 +65,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
             let result1 = CacheStore.addReactChangeListener(handleCacheChange);
             let ComponentDispatch = first(1121).ComponentDispatch;
             const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-            let rootNavigationRef = first(4938).getRootNavigationRef();
+            let rootNavigationRef = first(4977).getRootNavigationRef();
             if (rootNavigationRef != null) {
               rootNavigationRef.addListener("state", handleNavigationChange);
             }
@@ -132,7 +132,7 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
           let result1 = CacheStore.addReactChangeListener(handleCacheChange);
           let ComponentDispatch = first(1121).ComponentDispatch;
           const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-          let rootNavigationRef = first(4938).getRootNavigationRef();
+          let rootNavigationRef = first(4977).getRootNavigationRef();
           if (rootNavigationRef != null) {
             rootNavigationRef.addListener("state", handleNavigationChange);
           }

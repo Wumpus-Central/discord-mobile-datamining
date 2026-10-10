@@ -10,18 +10,18 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function handlePress() {
-  const obj2 = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, IconComponent: null };
+  const obj2 = { text: null, icon: null };
   const intl = util.intl;
-  obj2.content = intl.string(util.t["/ZjyYE"]);
-  obj2.IconComponent = CircleInformationIcon.CircleInformationIcon;
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.text = intl.string(util.t["/ZjyYE"]);
+  obj2.icon = CircleInformationIcon.CircleInformationIcon;
+  ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   container: {
-    marginVertical: fn(11713).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -29,7 +29,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11713).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11758).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };

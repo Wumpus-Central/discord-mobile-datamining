@@ -51,14 +51,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp14 = cResult[7];
         }
         const effect = noop.useEffect(tmp13, tmp14);
-        const guildOpenNudge = tmp(16892).useGuildOpenNudge();
+        const guildOpenNudge = tmp(16960).useGuildOpenNudge();
         class S {
           constructor() {
             return closure_1(closure_1_2[8])(closure_1_4, closure_1_6);
           }
         }
         const postCallDisconnectNudge = obj5.usePostCallDisconnectNudge();
-        const tmpResult4 = tmp(16892);
+        const tmpResult4 = tmp(16960);
       }
       class P {
         constructor() {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       const obj2 = stateFromStores(504);
-      const guildOpenNudge = stateFromStores(16892).useGuildOpenNudge();
-      const obj3 = stateFromStores(16892);
-      const postCallDisconnectNudge = stateFromStores(16894).usePostCallDisconnectNudge();
+      const guildOpenNudge = stateFromStores(16960).useGuildOpenNudge();
+      const obj3 = stateFromStores(16960);
+      const postCallDisconnectNudge = stateFromStores(16962).usePostCallDisconnectNudge();
     };

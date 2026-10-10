@@ -78,7 +78,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
       _require = arg0;
       const cResult = require("c").c(5);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const str = tmp(6035).getSystemVersion();
+        const str = tmp(6028).getSystemVersion();
         let tmp6 = null != str;
         if (tmp6) {
           const parts = str.split(".");
@@ -123,7 +123,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
         }
         cResult[0] = tmp6;
         let first = tmp6;
-        const tmpResult = tmp(6035);
+        const tmpResult = tmp(6028);
       } else {
         first = cResult[0];
       }
@@ -172,7 +172,7 @@ export const useCanUseRoleSubscriptionIAP = ReactCompilerGating.isReactCompilerE
   : function useCanUseRoleSubscriptionIAP(arg0) {
       _require = arg0;
       const memo = noop.useMemo(() => {
-        const str = closure_0(6035).getSystemVersion();
+        const str = closure_0(6028).getSystemVersion();
         let tmp = null != str;
         if (tmp) {
           const parts = str.split(".");

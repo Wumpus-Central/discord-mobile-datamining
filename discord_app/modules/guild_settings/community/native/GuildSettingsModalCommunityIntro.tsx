@@ -1,11 +1,11 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import LightbulbIcon from "../../../../design/components/Icon/native/redesign/generated/LightbulbIcon.tsx";
 import AnalyticsIcon from "../../../../design/components/Icon/native/redesign/generated/AnalyticsIcon.tsx";
 import EnableCommunityModalActionCreatorsDefault from "../../../public_guilds/native/EnableCommunityModalActionCreators.tsx";
@@ -88,7 +88,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { height: "100%" },
   contentPadding: { padding: 16 },
@@ -147,7 +147,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== header) {
           const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header };
-          const tmp11 = __initData2(Text_Text.Heading, obj2);
+          const tmp11 = map1(Text_Text.Heading, obj2);
           cResult[5] = header;
           cResult[6] = tmp11;
           let tmp9 = tmp11;
@@ -156,7 +156,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] !== body) {
           const obj3 = { variant: "text-sm/medium", color: "text-default", children: body };
-          const tmp14 = __initData2(Text_Text.Text, obj3);
+          const tmp14 = map1(Text_Text.Text, obj3);
           cResult[7] = body;
           cResult[8] = tmp14;
           let tmp12 = tmp14;
@@ -179,7 +179,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             const obj4 = { style: featureCard, children: null };
             const items = [tmp7, tmp15];
             obj4.children = items;
-            const tmp22 = state(React4, obj4);
+            const tmp22 = closure_1_14(React4, obj4);
             cResult[13] = tmp4.featureCard;
             cResult[14] = tmp7;
             cResult[15] = tmp15;
@@ -190,14 +190,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp4.featureDescription, children: null };
         const items1 = [tmp9, tmp12];
         obj5.children = items1;
-        const tmp18 = state(React4, obj5);
+        const tmp18 = closure_1_14(React4, obj5);
         cResult[9] = tmp4.featureDescription;
         cResult[10] = tmp9;
         cResult[11] = tmp12;
         cResult[12] = tmp18;
         tmp15 = tmp18;
       }
-      const tmp8 = __initData2(React4, { style: featureIcon, children: tmp5 });
+      const tmp8 = map1(React4, { style: featureIcon, children: tmp5 });
       cResult[2] = tmp4.featureIcon;
       cResult[3] = tmp5;
       cResult[4] = tmp8;
@@ -207,20 +207,20 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       ({ icon, header, body } = arg0);
       const tmp = closure_16();
       const obj = { style: tmp.featureCard, children: null };
-      const items = [__initData2(React4, { style: tmp.featureIcon, children: icon() })];
+      const items = [map1(React4, { style: tmp.featureIcon, children: icon() })];
       const obj3 = { style: tmp.featureDescription, children: null };
       const items1 = [
-        __initData2(Text_Text.Heading, {
+        map1(Text_Text.Heading, {
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           children: header,
         }),
-        __initData2(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body }),
+        map1(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: body }),
       ];
       obj3.children = items1;
-      items[1] = state(React4, obj3);
+      items[1] = closure_1_14(React4, obj3);
       obj.children = items;
-      return state(React4, obj);
+      return closure_1_14(React4, obj);
     };
 ReactCompilerGating = fn(558);
 let obj4 = {
@@ -391,9 +391,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp5 = closure_1;
             tmp6 = closure_2;
             obj = closure_1(closure_2[18]);
-            waitResult = obj.wait(() => onClose(navigation[19]).setSection(constants.COMMUNITY));
-            tmp8 = closure_2;
-            tmp9 = GuildSettingsSections;
+            tmp7 = GuildSettingsSections;
+            setSectionResult = obj.setSection(GuildSettingsSections.COMMUNITY);
+            tmp9 = closure_2;
             obj1 = { onClose: null };
             tmp10 = onClose;
             obj1.onClose = onClose;
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp = hasItem;
         }
         if (tmp) {
-          DispatcherDefault.wait(() => onClose(navigation[19]).setSection(constants.COMMUNITY));
+          GuildSettingsActionCreatorsDefault.setSection(constants3.COMMUNITY);
           const obj2 = { onClose };
           const replaced = navigation.replace(constants3.COMMUNITY, obj2);
         }
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj7.contentContainerStyle = items4;
       const introHeaderSource = require("IntroHeader").useIntroHeaderSource();
       const items5 = [
-        closure_13(onClose(navigation[23]), {
+        closure_13(onClose(navigation[22]), {
           resizeMode: "contain",
           source: introHeaderSource,
           style: tmp.headerImage,
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = { helpdeskArticle: null };
       const obj5 = require("IntroHeader");
       const obj8 = { resizeMode: "contain", source: introHeaderSource, style: tmp.headerImage };
-      obj11.helpdeskArticle = onClose(navigation[24]).getArticleURL(
+      obj11.helpdeskArticle = onClose(navigation[23]).getArticleURL(
         constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES,
       );
       obj10.children = intl2.format(require("util").t["52EgsM"], obj11);
@@ -499,7 +499,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj14.children = intl4.string(require("util").t.HgTI2N);
       items5[4] = closure_13(require("Text/Text").Text, obj14);
       const obj15 = { style: tmp.features, children: null };
-      const obj12 = onClose(navigation[24]);
+      const obj12 = onClose(navigation[23]);
       obj15.children = communityFeatures().map((item, index) => {
         const merged = Object.assign(item);
         return closure_1_13(closure_1_18, {}, index);

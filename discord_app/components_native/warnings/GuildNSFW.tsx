@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         const obj = AgeVerificationActionCreatorsDefault;
         const result = obj.showAgeVerificationGetStartedModal({
-          entryPoint: channelId(5916).AgeVerificationModalEntryPoint.NSFW_GUILD,
+          entryPoint: channelId(5918).AgeVerificationModalEntryPoint.NSFW_GUILD,
         });
       }, []);
       const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_4));
@@ -179,8 +179,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const intl = tmp(1126).intl;
       obj3.disagreement = intl.string(require("util").t["/g10LC"]);
       if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
-        if (tmp(5916).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
-          if (tmp(5916).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+        if (tmp(5918).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+          if (tmp(5918).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
             const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
             const merged1 = Object.assign(obj3);
             return jsx(GatedContentDefault, {

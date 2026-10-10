@@ -162,7 +162,7 @@ function canShowTimeRecurringContent(arg0, lastDismissedAtMs, numTimesDismissed,
   }
   return hasLoadedResult;
 }
-const removeCandidateContent = fn(2056).removeCandidateContent;
+const removeCandidateContent = fn(2057).removeCandidateContent;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const UserSettingsTypes = fn(1095).UserSettingsTypes;
 fn(558);
@@ -540,7 +540,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = version;
         cResult[5] = tmp9;
       } else {
-        result = result(4921).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(4960).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp9 = null;
           if (null != lastDismissedVersion) {
@@ -555,7 +555,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = tmp13;
           }
         }
-        const resultResult1 = result(4921);
+        const resultResult1 = result(4960);
       }
       let tmp14 = null;
       if (!result) {
@@ -733,7 +733,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp10;
         tmp5 = tmp10;
-        tmp2Result = tmp2(4921);
+        tmp2Result = tmp2(4960);
       }
       const items1 = [useGetVisibleContent(tmp5, stateFromStores, groupName)];
       const items2 = [tmp5, groupName, stateFromStores];
@@ -819,7 +819,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[4] = id;
         cResult[5] = tmp8;
       } else {
-        result = result(4921).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(4960).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp8 = null;
           if (null != lastDismissedObjectId) {
@@ -835,7 +835,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp8 = tmp12;
           }
         }
-        const resultResult1 = result(4921);
+        const resultResult1 = result(4960);
       }
       let tmp14 = null;
       if (!result) {
@@ -1003,7 +1003,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = id;
         cResult[6] = tmp11;
       } else {
-        result = result(4921).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        result = result(4960).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (!UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           tmp11 = null;
           if (null != lastDismissedObjectId) {
@@ -1019,7 +1019,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             tmp11 = tmp15;
           }
         }
-        const resultResult1 = result(4921);
+        const resultResult1 = result(4960);
       }
       let tmp17 = null;
       if (!result) {
@@ -1558,7 +1558,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp14 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmp15 = !tmp(4921).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
+        const tmp15 = !tmp(4960).disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         let lastDismissedAtMs1;
         if (tmp8 != null) {
           lastDismissedAtMs1 = tmp8.lastDismissedAtMs;
@@ -1569,7 +1569,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         dependencyMap = tmp22;
         tmp14 = tmp22;
-        const tmpResult2 = tmp(4921);
+        const tmpResult2 = tmp(4960);
       }
       cResult[3] = PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE;
       let lastDismissedAtMs2;

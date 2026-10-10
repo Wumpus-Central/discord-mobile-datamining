@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import Link from "../../../../../_runtime/01504_Link.js";
 import Navigator from "Navigator.native.tsx";
-import NativeStackNavigator from "../../../../../_runtime/09317_NativeStackNavigator.js";
+import NativeStackNavigator from "../../../../../_runtime/09344_NativeStackNavigator.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 

@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod6214 from "../../../../_runtime/metro/06214__.js";
+import _mod6209 from "../../../../_runtime/metro/06209__.js";
 import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 },
   headerRightContainer: null,
@@ -46,11 +46,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[2];
         }
         if (cResult[3] !== onClose) {
-          const headerCloseButton = subtitle(6205).getHeaderCloseButton(onClose);
+          const headerCloseButton = subtitle(6200).getHeaderCloseButton(onClose);
           cResult[3] = onClose;
           cResult[4] = headerCloseButton;
           let tmp8 = headerCloseButton;
-          const tmpResult = subtitle(6205);
+          const tmpResult = subtitle(6200);
         } else {
           tmp8 = cResult[4];
         }
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (!tmpResult3.isIOS()) {
             let num3 = top;
           } else {
-            subtitle(6625);
+            subtitle(6626);
             num3 = 0;
           }
           cResult[5] = top;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ({ headerLeftContainer: obj5.headerLeftContainerStyle, headerRightContainer: obj5.headerRightContainerStyle } =
           tmp4);
         obj2.headerStatusBarHeight = sum;
-        const tmp14 = jsx(subtitle(6214).Header, {
+        const tmp14 = jsx(subtitle(6209).Header, {
           headerStyle: tmp6,
           title,
           headerTitle: tmp7,
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         num = 0;
       }
       obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-      return jsx(_mod6214.Header, {
+      return jsx(_mod6209.Header, {
         headerStyle: tmp.header,
         title,
         headerTitle(children) {

@@ -16,7 +16,7 @@ let closure_7 = async function _fetchSubscriptionsSettings(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -53,7 +53,7 @@ let closure_7 = async function _fetchSubscriptionsSettings(arg0) {
         const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS", settings: closure_129_0 };
         closure_130_1(closure_130_3[4]).dispatch(obj7);
         c4 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp15) {
       c4 = tmp;
@@ -72,7 +72,7 @@ let closure_8 = async function _updateSubscriptionsSettings(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -109,7 +109,7 @@ let closure_8 = async function _updateSubscriptionsSettings(arg0) {
         const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS", settings: closure_130_0 };
         closure_131_1(closure_131_3[4]).dispatch(obj7);
         c5 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp16) {
       c5 = tmp;
@@ -128,7 +128,7 @@ let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     while (true) {
@@ -333,7 +333,7 @@ let closure_13 = async function _fetchSubscriptionListingForPlan() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       while (true) {
@@ -388,7 +388,7 @@ let closure_13 = async function _fetchSubscriptionListingForPlan() {
               closure_2 = closure_132_2[Symbol.iterator]();
               if (closure_2 === undefined) {
                 c9 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               } else {
                 c7 = 1;
                 closure_132_3 = tmp14;
@@ -436,7 +436,7 @@ let closure_14 = async function _deleteSubscriptionListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -472,7 +472,7 @@ let closure_14 = async function _deleteSubscriptionListing(arg0) {
         const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING", listingId: closure_131_0 };
         closure_132_1(closure_132_3[4]).dispatch(obj7);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp17) {
       c6 = tmp;
@@ -491,7 +491,7 @@ let closure_15 = async function _archiveSubscriptionListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -532,7 +532,7 @@ let closure_15 = async function _archiveSubscriptionListing(arg0) {
         const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_131_0 };
         closure_132_1(closure_132_3[4]).dispatch(obj7);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp17) {
       c6 = tmp;
@@ -551,7 +551,7 @@ let closure_16 = async function _updateSubscriptionTrial(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -588,7 +588,7 @@ let closure_16 = async function _updateSubscriptionTrial(arg0) {
         const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL", subscriptionTrial: closure_131_0 };
         closure_132_1(closure_132_3[4]).dispatch(obj7);
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp17) {
       c6 = tmp;
@@ -617,7 +617,7 @@ let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -699,7 +699,7 @@ let closure_19 = async function _createSubscriptionListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -814,7 +814,7 @@ let closure_20 = async function _updateSubscriptionListing(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -912,7 +912,7 @@ let closure_21 = async function _fetchMonetizationRestrictions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -961,7 +961,7 @@ let closure_21 = async function _fetchMonetizationRestrictions(arg0) {
                 const obj7 = closure_132_1(closure_132_3[4]);
               }
               c8 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           }
         } else if (2 === tmp7) {

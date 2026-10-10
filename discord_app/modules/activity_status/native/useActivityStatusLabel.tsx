@@ -11,7 +11,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 const util = v0wJXSh(1126);
-const VoiceActivityStatus = v0wJXSh(10225);
+const VoiceActivityStatus = v0wJXSh(10254);
 require = fn;
 const ActivityTypes = fn(1085).ActivityTypes;
 const ReactCompilerGating = fn(558);
@@ -36,7 +36,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           } else {
             const activities = PresenceStore.getActivities(tmp);
-            state = undefined;
+            let state;
             if (activities != null) {
               const found = activities.find((type) => type.type === constants.CUSTOM_STATUS);
               if (found != null) {
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           } else {
             const activities = PresenceStore.getActivities(tmp);
-            state = undefined;
+            let state;
             if (activities != null) {
               const found = activities.find((type) => type.type === constants.CUSTOM_STATUS);
               if (found != null) {

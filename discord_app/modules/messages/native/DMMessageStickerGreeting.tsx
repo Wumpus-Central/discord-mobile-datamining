@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_13 = createStyles.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
@@ -52,7 +52,7 @@ let closure_13 = createStyles.createStyles((arg0) => {
 let c14 = "847199849233514549";
 let c15 = "749054660769218631";
 let c16 = 180;
-const END = fn(4897).GradientPercentage.END;
+const END = fn(4936).GradientPercentage.END;
 let ReactCompilerGating = fn(558);
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsRendered() {
@@ -170,7 +170,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -191,28 +191,28 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                 closure_128_1 = undefined;
                 if (!c3) {
                   v2(true);
-                  function showErrorToast(content) {
-                    if (closure_1_1 !== content) {
-                      dependencyMap(content);
+                  function showErrorToast(text) {
+                    if (closure_1_1 !== text) {
+                      dependencyMap(text);
                     }
-                    const obj = closure_1(4768);
-                    obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(5011) });
-                    const obj2 = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(5011) };
+                    closure_1(4809).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+                    const obj = closure_1(4809);
+                    const obj2 = { text, variant: "critical" };
                   }
                   closure_128_0 = showErrorToast;
                   if (null !== closure_1) {
                     v2(false);
                     showErrorToast(tmp26);
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   } else {
                     c3 = 1;
                     const obj4 = { channelId: closure_0.id, source: "In-channel greet" };
-                    closure_0(tmp30[17]).trackWaveCtaClicked(obj4);
-                    const obj5 = closure_0(tmp30[17]);
+                    closure_0(tmp30[16]).trackWaveCtaClicked(obj4);
+                    const obj5 = closure_0(tmp30[16]);
                     v2 = 2;
                     c5 = 1;
-                    const obj6 = { value: first(tmp30[18]).sendGreetMessage(closure_0.id, closure_2_15), done: false };
+                    const obj6 = { value: first(tmp30[17]).sendGreetMessage(closure_0.id, closure_2_15), done: false };
                     return obj6;
                   }
                 }
@@ -226,8 +226,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   ok = 429 !== closure_128_1.status;
                 }
                 if (!ok) {
-                  const intl = closure_0(tmp30[19]).intl;
-                  closure_128_0(intl.string(closure_0(tmp30[19]).t.Whhv4w));
+                  const intl = closure_0(tmp30[18]).intl;
+                  closure_128_0(intl.string(closure_0(tmp30[18]).t.Whhv4w));
                 }
               } else if (arg0 === 1) {
                 c5 = 3;
@@ -290,7 +290,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -306,13 +306,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                   return obj3;
                 } else {
                   id = tmp7;
-                  function showErrorToast(content) {
-                    if (closure_1_1 !== content) {
-                      dependencyMap(content);
+                  function showErrorToast(text) {
+                    if (closure_1_1 !== text) {
+                      dependencyMap(text);
                     }
-                    const obj = closure_1(4768);
-                    obj.open({ key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(5011) });
-                    const obj2 = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(5011) };
+                    closure_1(4809).open("HANDLE_WAVE_PRESS_TOAST", { text, variant: "critical" });
+                    const obj = closure_1(4809);
+                    const obj2 = { text, variant: "critical" };
                   }
                   closure_128_0 = showErrorToast;
                   tmp7 = first1;
@@ -322,15 +322,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                       v2(false);
                       showErrorToast(tmp26);
                       c5 = 3;
-                      return { value: "IconComponent", done: null };
+                      return { value: "IconComponent", done: "+51" };
                     } else {
                       c3 = 1;
                       const obj4 = { channelId: id.id, source: "In-channel greet" };
-                      id(tmp30[17]).trackWaveCtaClicked(obj4);
-                      const obj5 = id(tmp30[17]);
+                      id(tmp30[16]).trackWaveCtaClicked(obj4);
+                      const obj5 = id(tmp30[16]);
                       c4 = 2;
                       c5 = 1;
-                      const obj6 = { value: tmp3(tmp30[18]).sendGreetMessage(id.id, closure_1_15), done: false };
+                      const obj6 = { value: tmp3(tmp30[17]).sendGreetMessage(id.id, closure_1_15), done: false };
                       return obj6;
                     }
                   }
@@ -344,8 +344,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                     ok = 429 !== closure_128_1.status;
                   }
                   if (!ok) {
-                    const intl = id(tmp30[19]).intl;
-                    closure_128_0(intl.string(id(tmp30[19]).t.Whhv4w));
+                    const intl = id(tmp30[18]).intl;
+                    closure_128_0(intl.string(id(tmp30[18]).t.Whhv4w));
                   }
                 } else if (arg0 === 1) {
                   c5 = 3;
@@ -390,7 +390,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const hasInputText = channel.hasInputText;
       let obj = channel(576);
-      const tmp4 = closure_13(channel(4897).useGradientValue(END));
+      const tmp4 = closure_13(channel(4936).useGradientValue(END));
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [MessageStore];
@@ -403,7 +403,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn = function h() {
           const messages = MessageStore.getMessages(channel.id);
           return (
-            messages.filter((type) => type.type !== channel(gradient[20]).MessageTypes.FRIEND_REQUEST_ACCEPTED).length >
+            messages.filter((type) => type.type !== channel(gradient[19]).MessageTypes.FRIEND_REQUEST_ACCEPTED).length >
             0
           );
         };
@@ -413,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp7 = cResult[2];
       }
-      let obj2 = channel(4897);
+      let obj2 = channel(4936);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [UserStore];
@@ -423,52 +423,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] !== channel) {
-        class M {
-          constructor() {
-            return closure_9.getUser(channel.getRecipientId());
-          }
-        }
+        const fn2 = function x() {
+          return UserStore.getUser(channel.getRecipientId());
+        };
         cResult[4] = channel;
-        cResult[5] = M;
+        cResult[5] = fn2;
+        let tmp11 = fn2;
       } else {
-        class M {
-          constructor() {
-            return closure_9.getUser(channel.getRecipientId());
-          }
-        }
+        tmp11 = cResult[5];
       }
       const tmpResult = channel(504);
-      const stateFromStores1 = channel(504).useStateFromStores(tmp9, M);
+      const stateFromStores1 = channel(504).useStateFromStores(tmp9, tmp11);
       const tmp13 = hasInputText;
       const tmpResult6 = channel(504);
-      let name = hasInputText(4923).useName(stateFromStores1);
+      let name = hasInputText(4962).useName(stateFromStores1);
       if (name == null) {
-        class M {
-          constructor() {
-            return closure_9.getUser(channel.getRecipientId());
-          }
-        }
-        name = obj6.string(tmp(1126).t.y1Wu2f);
+        const intl = tmp(1126).intl;
+        name = intl.string(tmp(1126).t.y1Wu2f);
       }
-      const intl = tmp(1126).intl;
-      intl.formatToPlainString(channel(1126).t.m0zYbV, { username: name });
-      let obj5 = hasInputText(4923);
-      const showConvoStarterInDM = channel(11919).useShowConvoStarterInDM(channel);
+      const intl2 = tmp(1126).intl;
+      intl2.formatToPlainString(channel(1126).t.m0zYbV, { username: name });
+      let obj5 = hasInputText(4962);
+      const showConvoStarterInDM = channel(11963).useShowConvoStarterInDM(channel);
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        class M {
-          constructor() {
-            return closure_9.getUser(channel.getRecipientId());
-          }
-        }
         const items2 = [StickersStore];
         cResult[6] = items2;
-        const tmp17 = items2;
+        let tmp17 = items2;
       } else {
-        class M {
-          constructor() {
-            return closure_9.getUser(channel.getRecipientId());
-          }
-        }
+        tmp17 = cResult[6];
       }
       if (cResult[7] !== showConvoStarterInDM) {
         class N {
@@ -486,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[7] = showConvoStarterInDM;
         cResult[8] = N;
         cResult[9] = items3;
-        let tmp19 = items3;
+        let tmp20 = items3;
       } else {
         class N {
           constructor() {
@@ -499,17 +481,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return stickerById;
           }
         }
-        tmp19 = cResult[9];
+        tmp20 = cResult[9];
       }
-      const tmpResult7 = channel(11919);
-      const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp19);
+      const tmpResult7 = channel(11963);
+      const stateFromStores2 = channel(504).useStateFromStores(tmp17, N, tmp20);
       if (cResult[10] !== showConvoStarterInDM) {
         class U {
           constructor() {
             if (closure_4) {
               tmp = closure_0;
               tmp2 = closure_2;
-              obj = closure_0(closure_2[24]);
+              obj = closure_0(closure_2[23]);
               tmp3 = c14;
               flag = true;
               stickerPack = obj.fetchStickerPack(c14, true);
@@ -521,14 +503,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = showConvoStarterInDM;
         cResult[11] = U;
         cResult[12] = items4;
-        let tmp22 = items4;
+        let tmp23 = items4;
       } else {
         class U {
           constructor() {
             if (closure_4) {
               tmp = closure_0;
               tmp2 = closure_2;
-              obj = closure_0(closure_2[24]);
+              obj = closure_0(closure_2[23]);
               tmp3 = c14;
               flag = true;
               stickerPack = obj.fetchStickerPack(c14, true);
@@ -536,14 +518,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp22 = cResult[12];
+        tmp23 = cResult[12];
       }
-      const effect = isRendered.useEffect(U, tmp22);
+      const effect = isRendered.useEffect(U, tmp23);
       closure_20(channel);
       const tmpResult8 = channel(504);
       isRendered = closure_18().isRendered;
-      const tmp25 = closure_18();
-      const fn2 = function z() {
+      const tmp26 = closure_18();
+      const fn3 = function z() {
         const height = gradient.gradient.height;
         let tmp = isRendered;
         if (isRendered) {
@@ -571,22 +553,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.height = obj5.withDelay(300, obj6.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 }));
         return obj;
       };
-      const tmpResult9 = channel(4811);
-      fn2.__closure = {
+      const tmpResult9 = channel(4850);
+      fn3.__closure = {
         styles: tmp4,
         isRendered,
         hasInputText,
         hasMessages: stateFromStores,
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
-        withDelay: channel(4811).withDelay,
-        withTiming: channel(5092).withTiming,
+        withDelay: channel(4850).withDelay,
+        withTiming: channel(5093).withTiming,
         STANDARD_EASING: channel(1200).STANDARD_EASING,
       };
-      fn2.__workletHash = 16992012801942;
-      fn2.__initData = __initData;
-      const animatedStyle = tmpResult9.useAnimatedStyle(fn2);
-      const tmp27 = closure_19();
+      fn3.__workletHash = 16992012801942;
+      fn3.__initData = __initData;
+      const animatedStyle = tmpResult9.useAnimatedStyle(fn3);
+      const tmp28 = closure_19();
       let obj3 = {
         styles: tmp4,
         isRendered,
@@ -594,18 +576,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasMessages: stateFromStores,
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
-        withDelay: channel(4811).withDelay,
-        withTiming: channel(5092).withTiming,
+        withDelay: channel(4850).withDelay,
+        withTiming: channel(5093).withTiming,
         STANDARD_EASING: channel(1200).STANDARD_EASING,
       };
-      const shouldAnimateSticker = channel(9728).useShouldAnimateSticker(false);
+      const shouldAnimateSticker = channel(9757).useShouldAnimateSticker(false);
       if (!showConvoStarterInDM) {
         class U {
           constructor() {
             if (closure_4) {
               tmp = closure_0;
               tmp2 = closure_2;
-              obj = closure_0(closure_2[24]);
+              obj = closure_0(closure_2[23]);
               tmp3 = c14;
               flag = true;
               stickerPack = obj.fetchStickerPack(c14, true);
@@ -619,7 +601,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (closure_4) {
               tmp = closure_0;
               tmp2 = closure_2;
-              obj = closure_0(closure_2[24]);
+              obj = closure_0(closure_2[23]);
               tmp3 = c14;
               flag = true;
               stickerPack = obj.fetchStickerPack(c14, true);
@@ -627,13 +609,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        let obj4 = { style: tmp4.gradient, colors: tmp27 };
-        const tmp31 = closure_10(tmp13(5388), obj4);
-        cResult[13] = tmp27;
+        let obj4 = { style: tmp4.gradient, colors: tmp28 };
+        const tmp32 = closure_10(tmp13(5391), obj4);
+        cResult[13] = tmp28;
         cResult[14] = tmp4.gradient;
-        cResult[15] = tmp31;
+        cResult[15] = tmp32;
       }
-      const tmpResult10 = channel(9728);
+      const tmpResult10 = channel(9757);
     }
   : function DMMessageStickerGreeting(channel) {
       channel = channel.channel;
@@ -646,34 +628,34 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       toastContent = closure_13(channel(toastContent[10]).useGradientValue(END));
       let obj = channel(toastContent[10]);
       const items = [MessageStore];
-      const stateFromStores = channel(toastContent[21]).useStateFromStores(items, () => {
+      const stateFromStores = channel(toastContent[20]).useStateFromStores(items, () => {
         const messages = MessageStore.getMessages(channel.id);
         return (
-          messages.filter((type) => type.type !== channel(toastContent[20]).MessageTypes.FRIEND_REQUEST_ACCEPTED)
+          messages.filter((type) => type.type !== channel(toastContent[19]).MessageTypes.FRIEND_REQUEST_ACCEPTED)
             .length > 0
         );
       });
-      let obj2 = channel(toastContent[21]);
+      let obj2 = channel(toastContent[20]);
       const items1 = [UserStore];
       let tmp4 = hasInputText;
-      const stateFromStores1 = channel(toastContent[21]).useStateFromStores(items1, () =>
+      const stateFromStores1 = channel(toastContent[20]).useStateFromStores(items1, () =>
         UserStore.getUser(channel.getRecipientId()),
       );
-      let obj3 = channel(toastContent[21]);
-      let name = hasInputText(toastContent[22]).useName(stateFromStores1);
+      let obj3 = channel(toastContent[20]);
+      let name = hasInputText(toastContent[21]).useName(stateFromStores1);
       let tmp16Result = null;
       if (name == null) {
-        const intl = Text(tmp[19]).intl;
-        name = intl.string(Text(tmp[19]).t.y1Wu2f);
+        const intl = Text(tmp[18]).intl;
+        name = intl.string(Text(tmp[18]).t.y1Wu2f);
       }
-      const intl2 = Text(tmp[19]).intl;
-      const formatToPlainStringResult = intl2.formatToPlainString(Text(tmp[19]).t.m0zYbV, { username: name });
-      let obj4 = hasInputText(toastContent[22]);
-      showConvoStarterInDM = Text(tmp[23]).useShowConvoStarterInDM(channel);
-      const TextResult = Text(tmp[23]);
+      const intl2 = Text(tmp[18]).intl;
+      const formatToPlainStringResult = intl2.formatToPlainString(Text(tmp[18]).t.m0zYbV, { username: name });
+      let obj4 = hasInputText(toastContent[21]);
+      showConvoStarterInDM = Text(tmp[22]).useShowConvoStarterInDM(channel);
+      const TextResult = Text(tmp[22]);
       const items2 = [StickersStore];
       const items3 = [showConvoStarterInDM];
-      const stateFromStores2 = Text(tmp[21]).useStateFromStores(
+      const stateFromStores2 = Text(tmp[20]).useStateFromStores(
         items2,
         () => {
           let stickerById = null;
@@ -693,50 +675,56 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let items6 = closure_20(channel);
       const tmp11 = closure_18();
       isRendered = tmp11.isRendered;
-      const TextResult1 = Text(tmp[21]);
-      const fn = function x() {
-        const height = toastContent.gradient.height;
-        let tmp = isRendered;
-        if (isRendered) {
-          tmp = !hasInputText;
-        }
-        let num = 0;
-        if (tmp) {
-          let num2 = 72;
-          if (!stateFromStores) {
-            num2 = c16;
+      const TextResult1 = Text(tmp[20]);
+      class M {
+        constructor() {
+          height = closure_2.gradient.height;
+          tmp = isRendered;
+          if (isRendered) {
+            tmp2 = hasInputText;
+            tmp = !hasInputText;
           }
-          num = num2 - 1 + height;
+          num = 0;
+          if (tmp) {
+            tmp3 = closure_3;
+            num2 = 72;
+            if (!closure_3) {
+              num2 = c16;
+            }
+            num3 = 1;
+            num = num2 - 1 + height;
+          }
+          num4 = 0;
+          if (tmp) {
+            num4 = -height;
+          }
+          obj = { justifyContent: "flex-end", overflow: "hidden", marginTop: null, height: null };
+          obj2 = closure_0(closure_2[24]);
+          obj3 = closure_0(closure_2[25]);
+          obj1 = { easing: closure_0(closure_2[26]).STANDARD_EASING, duration: 250 };
+          obj.marginTop = obj2.withDelay(300, obj3.withTiming(num4, obj1));
+          obj5 = closure_0(closure_2[24]);
+          obj6 = closure_0(closure_2[25]);
+          obj8 = { easing: closure_0(closure_2[26]).STANDARD_EASING, duration: 250 };
+          obj.height = obj5.withDelay(300, obj6.withTiming(num, obj8));
+          return obj;
         }
-        let num4 = 0;
-        if (tmp) {
-          num4 = -height;
-        }
-        const obj = { justifyContent: "flex-end", overflow: "hidden", marginTop: null, height: null };
-        const obj2 = ReanimatedRexport;
-        const obj3 = timing;
-        obj.marginTop = obj2.withDelay(300, obj3.withTiming(num4, { easing: native.STANDARD_EASING, duration: 250 }));
-        const obj4 = { easing: native.STANDARD_EASING, duration: 250 };
-        const obj5 = ReanimatedRexport;
-        const obj6 = timing;
-        obj.height = obj5.withDelay(300, obj6.withTiming(num, { easing: native.STANDARD_EASING, duration: 250 }));
-        return obj;
-      };
-      const TextResult2 = Text(tmp[25]);
-      fn.__closure = {
+      }
+      const TextResult2 = Text(tmp[24]);
+      M.__closure = {
         styles: toastContent,
         isRendered,
         hasInputText,
         hasMessages: stateFromStores,
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
-        withDelay: Text(tmp[25]).withDelay,
-        withTiming: Text(tmp[26]).withTiming,
-        STANDARD_EASING: Text(tmp[27]).STANDARD_EASING,
+        withDelay: Text(tmp[24]).withDelay,
+        withTiming: Text(tmp[25]).withTiming,
+        STANDARD_EASING: Text(tmp[26]).STANDARD_EASING,
       };
-      fn.__workletHash = 12021273723425;
-      fn.__initData = __initData2;
-      const animatedStyle = TextResult2.useAnimatedStyle(fn);
+      M.__workletHash = 12021273723425;
+      M.__initData = __initData2;
+      const animatedStyle = TextResult2.useAnimatedStyle(M);
       let obj5 = {
         styles: toastContent,
         isRendered,
@@ -744,18 +732,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasMessages: stateFromStores,
         HEIGHT_COMPACT: 72,
         HEIGHT_FULL,
-        withDelay: Text(tmp[25]).withDelay,
-        withTiming: Text(tmp[26]).withTiming,
-        STANDARD_EASING: Text(tmp[27]).STANDARD_EASING,
+        withDelay: Text(tmp[24]).withDelay,
+        withTiming: Text(tmp[25]).withTiming,
+        STANDARD_EASING: Text(tmp[26]).STANDARD_EASING,
       };
       const tmp13 = closure_19();
-      const shouldAnimateSticker = Text(tmp[28]).useShouldAnimateSticker(false);
+      const shouldAnimateSticker = Text(tmp[27]).useShouldAnimateSticker(false);
       if (!showConvoStarterInDM) {
         return null;
       } else {
         let obj6 = { style: animatedStyle, onLayout: tmp11.setIsRendered, children: null };
         const obj7 = { style: toastContent.gradient, colors: tmp13 };
-        const items5 = [closure_10(tmp4(tmp[29]), obj7)];
+        const items5 = [closure_10(tmp4(tmp[28]), obj7)];
         let obj8 = { style: toastContent.container, children: null };
         if (stateFromStores) {
           const obj9 = {
@@ -765,17 +753,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onPress: null,
             children: null,
           };
-          const intl3 = Text(tmp[19]).intl;
-          obj9.accessibilityLabel = intl3.string(Text(tmp[19]).t.pJObYI);
+          const intl3 = Text(tmp[18]).intl;
+          obj9.accessibilityLabel = intl3.string(Text(tmp[18]).t.pJObYI);
           obj9.onPress = items6;
           tmp16Result = null;
           if (tmp21) {
-            tmp4 = tmp4(tmp[31]);
+            tmp4 = tmp4(tmp[30]);
             const obj10 = { sticker: stateFromStores2, size: 24, animated: shouldAnimateSticker };
             tmp16Result = closure_10(tmp4, obj10);
           }
           items6 = [tmp16Result];
-          Text = Text(tmp[32]).Text;
+          Text = Text(tmp[31]).Text;
           const obj11 = { style: null, variant: "text-md/bold", children: null };
           toastContent = toastContent.toastContent;
           obj11.style = toastContent;
@@ -783,20 +771,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp = closure_10(Text, obj11);
           items6[1] = tmp;
           obj9.children = items6;
-          let tmp15Result = closure_11(Text(tmp[30]).PressableOpacity, obj9);
+          let tmp15Result = closure_11(Text(tmp[29]).PressableOpacity, obj9);
           tmp21 = tmp16Result != stateFromStores2;
         } else {
           let tmp16Result2 = null;
           if (tmp16Result != stateFromStores2) {
             const obj12 = { style: toastContent.stickerContainer, children: null };
             const obj13 = { sticker: stateFromStores2, size: 100, animated: shouldAnimateSticker };
-            obj12.children = closure_10(tmp4(tmp[31]), obj13);
+            obj12.children = closure_10(tmp4(tmp[30]), obj13);
             tmp16Result2 = closure_10(View, obj12);
           }
           const obj14 = { children: null };
           const items7 = [tmp16Result2];
           const obj15 = { text: formatToPlainStringResult, onPress: items6, shrink: true };
-          items7[1] = closure_10(Text(tmp[33]).Button, obj15);
+          items7[1] = closure_10(Text(tmp[32]).Button, obj15);
           obj14.children = items7;
           tmp15Result = closure_11(closure_12, obj14);
         }
@@ -804,7 +792,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj8 = closure_10(View, obj8);
         items5[1] = obj8;
         obj6.children = items5;
-        closure_11(tmp4(tmp[25]).View, obj6);
+        closure_11(tmp4(tmp[24]).View, obj6);
       }
-      const TextResult3 = Text(tmp[28]);
+      const TextResult3 = Text(tmp[27]);
     };

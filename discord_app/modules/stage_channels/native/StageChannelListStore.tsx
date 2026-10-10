@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/StageChannelListStore.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4692 from "../../../../_runtime/metro/04692__.js";
+import _mod4733 from "../../../../_runtime/metro/04733__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp5 = _slicedToArray(closure_4(first, _mod4692.shallow), 2);
+      const tmp5 = _slicedToArray(closure_4(first, _mod4733.shallow), 2);
       const first1 = tmp5[0];
       closure_1 = tmp7;
       if (cResult[1] !== tmp5[1]) {
@@ -78,7 +78,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const items = [,];
           ({ listRef: arr[0], setListRef: arr[1] } = arg0);
           return items;
-        }, _mod4692.shallow),
+        }, _mod4733.shallow),
         2,
       );
       const first = tmp[0];
@@ -115,12 +115,12 @@ export const useActiveSpeakerPillState = ReactCompilerGating.isReactCompilerEnab
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4692.shallow);
+      return closure_4(first, _mod4733.shallow);
     }
   : function useActiveSpeakerPillState() {
       return closure_4((arg0) => {
         const items = [,];
         ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
         return items;
-      }, _mod4692.shallow);
+      }, _mod4733.shallow);
     };

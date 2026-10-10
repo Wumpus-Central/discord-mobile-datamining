@@ -12,7 +12,7 @@ let closure_3 = ["children"];
 let closure_4 = ["children"];
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6191).PressableHighlight);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6184).PressableHighlight);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AnimatedPressableHighlightiOS(children) {

@@ -3,10 +3,10 @@ import LoggerDefault from "../debug/Logger.tsx";
 import MessageEmbedTypes from "../../../discord_common/js/shared/shared-constants/MessageEmbedTypes.tsx";
 import Server from "../../flow/Server.tsx";
 import ChannelMessagesDefault from "../../lib/ChannelMessages.tsx";
-import AgeVerificationUtils from "AgeVerificationUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import ManualReviewActionCreators from "ManualReviewActionCreators.tsx";
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
@@ -37,7 +37,8 @@ function handleMessageCreate(channelId) {
           if (fields != null) {
             found = fields.find(
               (rawName) =>
-                rawName.rawName === AgeVerificationUtils.AgeVerificationSystemNotificationEmbedKeys.CONTENT_TYPE,
+                rawName.rawName ===
+                AgeVerificationSystemNotificationUtils.AgeVerificationSystemNotificationEmbedKeys.CONTENT_TYPE,
             );
           }
         }
@@ -47,7 +48,10 @@ function handleMessageCreate(channelId) {
     if (found != null) {
       rawValue = found.rawValue;
     }
-    if (rawValue === AgeVerificationUtils.AgeVerificationSystemNotificationContentType.MANUAL_REVIEW_SUBMITTED) {
+    if (
+      rawValue ===
+      AgeVerificationSystemNotificationUtils.AgeVerificationSystemNotificationContentType.MANUAL_REVIEW_SUBMITTED
+    ) {
       const result = ManualReviewActionCreators.invalidateAgeVerificationCaches();
       const tmp4Result = ManualReviewActionCreators;
     }
@@ -56,7 +60,7 @@ function handleMessageCreate(channelId) {
 const transformUser = fn(1390).transformUser;
 const Constants = fn(1085);
 ({ ChannelTypes: closure_8, MAX_MESSAGES_PER_CHANNEL: closure_9 } = Constants);
-const SafetyToastType = fn(7018).SafetyToastType;
+const SafetyToastType = fn(7019).SafetyToastType;
 let closure_10 = new LoggerDefault("AgeVerificationManager");
 const prototype = function AgeVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -116,7 +120,7 @@ const prototype = function AgeVerificationManager() {
         }
         if (tmp20) {
           (function handleLoadChannelMessages(channelId) {
-            const messages = _true(7172).fetchMessages({ channelId, limit });
+            const messages = _true(7178).fetchMessages({ channelId, limit });
           })(tmp16);
           (function handleLoadForumPosts(arg0) {
             channel = channel.getChannel(arg0);
@@ -133,8 +137,8 @@ const prototype = function AgeVerificationManager() {
               tmp4 = type1 !== tmp3.GUILD_MEDIA;
             }
             if (!tmp4) {
-              channelId(6997).preloadForumThreads(channel);
-              const obj = channelId(6997);
+              channelId(7003).preloadForumThreads(channel);
+              const obj = channelId(7003);
             }
           })(tmp16);
         }

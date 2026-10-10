@@ -3,7 +3,7 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2597 from "../GuildPowerups.messages.js";
+import _modDef2600 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import useGuildPowerupTier3OverrideConfigDefault from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2597["3FRirU"]);
+        const stringResult = intl.string(_modDef2600["3FRirU"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj3.variant = str2;
         const intl = util.intl;
-        obj3.children = intl.string(_modDef2597["3FRirU"]);
+        obj3.children = intl.string(_modDef2600["3FRirU"]);
         const items = [React4(Text_Text.Text, obj3), ,];
         let shouldShow = tmp4.shouldShow;
         if (shouldShow) {

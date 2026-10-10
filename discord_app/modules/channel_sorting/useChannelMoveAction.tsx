@@ -45,11 +45,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("c");
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       if (cResult[2] !== stateFromStores) {
-        const isFavoritesGuildIdResult = tmp(2089).isFavoritesGuildId(stateFromStores);
+        const isFavoritesGuildIdResult = tmp(2090).isFavoritesGuildId(stateFromStores);
         cResult[2] = stateFromStores;
         cResult[3] = isFavoritesGuildIdResult;
         let tmp8 = isFavoritesGuildIdResult;
-        const tmpResult3 = tmp(2089);
+        const tmpResult3 = tmp(2090);
       } else {
         tmp8 = cResult[3];
       }

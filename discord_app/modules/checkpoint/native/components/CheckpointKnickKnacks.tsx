@@ -2,15 +2,15 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4803 from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/index.tsx";
+import _mod4842 from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/index.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(5434).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(5437).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[7] !== tmp9) {
             const obj3 = { artboard: "Entry", dataBinding: tmp9 };
-            const tmp14 = jsx(_mod4803.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
+            const tmp14 = jsx(_mod4842.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
             cResult[7] = tmp9;
             cResult[8] = tmp14;
             let tmp12 = tmp14;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items2 = [tmp4.rive, style.style];
         obj3.style = items2;
         const obj4 = { artboard: "Entry", dataBinding: memo };
-        obj3.children = jsx(tmp(4803).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
+        obj3.children = jsx(tmp(4842).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
         tmp6 = <View style={null}>{null}</View>;
       }
       return tmp6;

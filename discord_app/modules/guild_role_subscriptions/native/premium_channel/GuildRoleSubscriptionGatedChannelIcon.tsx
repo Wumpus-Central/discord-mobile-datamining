@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import native from "../../../../design/void/native.tsx";
-import _modDef9437 from "../../../../../_runtime/metro/09437__.js";
+import _modDef9466 from "../../../../../_runtime/metro/09466__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -24,18 +24,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp6;
       }
-      const tmp7 = jsx(native.Icon, { source: _modDef9437, size: tmp4, disableColor: false !== locked });
+      const tmp7 = jsx(native.Icon, { source: _modDef9466, size: tmp4, disableColor: false !== locked });
       cResult[0] = tmp4;
       cResult[1] = false !== locked;
       cResult[2] = tmp7;
       tmp6 = tmp7;
-      const obj2 = { source: _modDef9437, size: tmp4, disableColor: false !== locked };
+      const obj2 = { source: _modDef9466, size: tmp4, disableColor: false !== locked };
     }
   : function SubscriptionGatedChannelIcon(arg0) {
       ({ locked, isInMainTabsExperiment } = arg0);
-      const obj = { source: _modDef9437, size: null, disableColor: null };
+      const obj = { source: _modDef9466, size: null, disableColor: null };
       const Sizes = native.Icon.Sizes;
       obj.size = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
       obj.disableColor = false !== locked;
-      return jsx(native.Icon, { source: _modDef9437, size: null, disableColor: null });
+      return jsx(native.Icon, { source: _modDef9466, size: null, disableColor: null });
     };

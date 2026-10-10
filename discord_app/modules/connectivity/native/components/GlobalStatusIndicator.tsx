@@ -540,7 +540,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { children: null };
               const items3 = [tmp19, tmp21];
               obj2.children = items3;
-              const tmp25 = state(__initData2, obj2);
+              const tmp25 = closure_1_14(map1, obj2);
               cResult[14] = tmp19;
               cResult[15] = tmp21;
               cResult[16] = tmp25;
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp3Result = __initData(closure_16, obj2);
         }
         children[1] = tmp3Result;
-        return state(__initData2, { children });
+        return closure_2_14(map1, { children });
       }, items2);
     };
 export const useGlobalStatusIndicatorHeightSharedValue = tmp5;

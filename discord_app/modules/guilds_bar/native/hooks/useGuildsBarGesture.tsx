@@ -6,7 +6,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -225,7 +225,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
   global = tmp57;
 }
 function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
-  state = GuildsBarDnDStore.getState();
+  const state = GuildsBarDnDStore.getState();
   ({ dragRegion, scrollPosition } = state);
   let GUILDS = scrollPosition.get() + absoluteY;
   let bound = GUILDS;
@@ -273,19 +273,19 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
   }
 }
 const Dimensions = fn(17).Dimensions;
-const GuildsNodeType = fn(5970).GuildsNodeType;
-const GuildsBarConstants = fn(16645);
+const GuildsNodeType = fn(5963).GuildsNodeType;
+const GuildsBarConstants = fn(16715);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
 let __closure = { pan: null, itemMeasurements: null, activeIndex: null };
-let ReanimatedRexport = fn(4811);
+let ReanimatedRexport = fn(4850);
 __closure.pan = ReanimatedRexport.makeMutable(-1);
-ReanimatedRexport = fn(4811);
+ReanimatedRexport = fn(4850);
 __closure.itemMeasurements = ReanimatedRexport.makeMutable([]);
-ReanimatedRexport = fn(4811);
+ReanimatedRexport = fn(4850);
 __closure.activeIndex = ReanimatedRexport.makeMutable(-1);
-let closure_16 = debounce(fn(5056).triggerHapticFeedback, 16);
+let closure_16 = debounce(fn(5057).triggerHapticFeedback, 16);
 let closure_17 = debounce((intl) => {
   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
@@ -552,7 +552,7 @@ export default function useGuildsBarGesture() {
             tmp11 = "drop-into" === overSpecs.state;
           }
           closure_5 = tmp11;
-          state = overSpecs.state;
+          let state = overSpecs.state;
           if ("self" !== state) {
             if (null != state) {
               let id = node2.id;
@@ -658,7 +658,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state1.setStateShallow({ dragSpecs: "Array", overSpecs: "Set" });
+    state1.setStateShallow({ dragSpecs: "backgroundColor", overSpecs: "IconComponent" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj11 = {};
@@ -669,7 +669,7 @@ export default function useGuildsBarGesture() {
     }
   }, items);
   const callback1 = fastListRef.useCallback((arg0, absoluteY) => {
-    state = GuildsBarDnDStore.getState();
+    const state = GuildsBarDnDStore.getState();
     ({ gestureState, dragDropInProgress } = state);
     value = gestureState.get();
     if (tmp3) {
@@ -682,7 +682,7 @@ export default function useGuildsBarGesture() {
   }, []);
   let items1 = [handleGestureEnd, token];
   const callback2 = fastListRef.useCallback((absoluteX, absoluteY) => {
-    state = dragRegion.getState();
+    const state = dragRegion.getState();
     ({ dragSpecs, scrollPosition, gestureState, dragDropInProgress, setStateShallow } = state);
     let tmp2 = closure_1;
     let result2 = token;
@@ -816,7 +816,7 @@ export default function useGuildsBarGesture() {
   }, []);
   const items2 = [sharedValue, sharedValue1, frameCallback, tmp];
   const callback4 = fastListRef.useCallback((absoluteY) => {
-    state = GuildsBarDnDStore.getState();
+    const state = GuildsBarDnDStore.getState();
     const overSpecs = state.overSpecs;
     ({ dragSpecs: obj2, windowSize } = state);
     ({ setStateShallow: scrollerRef, listInsets, gestureState } = state);
@@ -857,10 +857,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(9336).ContextMenuStore;
+        const ContextMenuStore = tmp66(9363).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(9336).hideContextMenu();
-          const tmp66Result = tmp66(9336);
+          tmp66(9363).hideContextMenu();
+          const tmp66Result = tmp66(9363);
         }
         node2 = node;
         overPercentage2 = overPercentage;
@@ -901,9 +901,9 @@ export default function useGuildsBarGesture() {
                 str3 = "self";
                 if (node3.id !== node2.id) {
                   const type2 = item3.type;
-                  if (tmp66(6759).FastListItemTypes.SECTION === type2) {
+                  if (tmp66(6760).FastListItemTypes.SECTION === type2) {
                     let type = item2.type;
-                    if (tmp66(6759).FastListItemTypes.SECTION === type) {
+                    if (tmp66(6760).FastListItemTypes.SECTION === type) {
                       const str5 = "self";
                       if (item2.recyclerKey !== item3.recyclerKey) {
                         let str6 = "after";

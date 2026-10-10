@@ -148,7 +148,7 @@ prototype["getStorefrontGuildIds"] = function getStorefrontGuildIds() {
   return set1;
 };
 prototype["getSKUEligibility"] = function getSKUEligibility(skuId) {
-  state = undefined;
+  let state;
   if (obj[skuId] != null) {
     state = tmp.state;
   }
@@ -158,7 +158,7 @@ prototype["getSKUEligibilityEntry"] = function getSKUEligibilityEntry(arg0) {
   return obj[arg0];
 };
 prototype["getNormalizedSKUEligibility"] = function getNormalizedSKUEligibility(arg0) {
-  state = undefined;
+  let state;
   if (obj[arg0] != null) {
     state = tmp.state;
   }
@@ -386,7 +386,7 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: null, storefront: "o" };
+      obj = { state: "error", fetchedAt: null, storefront: "r" };
       const _Date = Date;
       obj.fetchedAt = Date.now();
       if (null != guildId) {
@@ -478,7 +478,7 @@ obj = {
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function handleSKUPurchaseEligibilityCheckCreate(arg0) {
     ({ skuId, interactionId } = arg0);
-    state = undefined;
+    let state;
     if (obj[skuId] != null) {
       state = tmp.state;
     }
@@ -498,7 +498,7 @@ obj = {
     if (reason === undefined) {
       reason = "http_error";
     }
-    state = undefined;
+    let state;
     if (obj[skuId] != null) {
       state = tmp.state;
     }

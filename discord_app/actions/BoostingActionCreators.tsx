@@ -18,7 +18,7 @@ let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -113,7 +113,7 @@ let closure_9 = async function _fetchAppliedGuildBoostsForUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -224,7 +224,7 @@ let closure_12 = async function _fetchAppliedBoostsCooldown() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -303,7 +303,7 @@ let closure_13 = async function _applyToGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -419,7 +419,7 @@ let closure_14 = async function _unapplyFromGuild(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -473,7 +473,7 @@ let closure_14 = async function _unapplyFromGuild(arg0) {
         const obj10 = { type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: closure_130_0 };
         closure_131_1(closure_131_2[6]).dispatch(obj10);
         c7 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } catch (tmp33) {
       closure_4 = tmp33;

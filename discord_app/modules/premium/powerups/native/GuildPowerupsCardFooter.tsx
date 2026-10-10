@@ -3,12 +3,12 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2597 from "../GuildPowerups.messages.js";
-import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
+import _modDef2600 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import entitlementExpirationDateToStringDefault from "../utils/entitlementExpirationDateToString.tsx";
 import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
@@ -87,7 +87,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== dateString) {
         const intl = util.intl;
         const obj3 = { dateString: entitlementExpirationDateToStringDefault(dateString) };
-        const result = intl.formatToMarkdownString(_modDef2597["ol/ao/"], obj3);
+        const result = intl.formatToMarkdownString(_modDef2600["ol/ao/"], obj3);
         cResult[1] = dateString;
         cResult[2] = result;
         let tmp9 = result;
@@ -126,7 +126,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
       const intl = util.intl;
       const obj2 = { size: "xs", color: nativeDefault.colors.STATUS_WARNING };
-      obj3.children = intl.formatToMarkdownString(_modDef2597["ol/ao/"], {
+      obj3.children = intl.formatToMarkdownString(_modDef2600["ol/ao/"], {
         dateString: entitlementExpirationDateToStringDefault(dateString.dateString),
       });
       items[1] = React4(Text_Text.Text, obj3);
@@ -151,7 +151,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== removingAt) {
         const intl = util.intl;
         const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(removingAt) };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2597["6e2ry1"], obj3);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2600["6e2ry1"], obj3);
         cResult[1] = removingAt;
         cResult[2] = formatToPlainStringResult;
         let tmp9 = formatToPlainStringResult;
@@ -190,7 +190,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { color: "text-feedback-warning", variant: "text-sm/bold", children: null };
       const intl = util.intl;
       const obj2 = { size: "xs", color: nativeDefault.colors.STATUS_WARNING };
-      obj3.children = intl.formatToPlainString(_modDef2597["6e2ry1"], {
+      obj3.children = intl.formatToPlainString(_modDef2600["6e2ry1"], {
         dateString: getGuildPowerupFormattedDateStringDefault(removingAt.removingAt),
       });
       items[1] = React4(Text_Text.Text, obj3);

@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -25,7 +25,7 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = target(576).c(7);
       target = target.target;
       const children = target.children;
-      const tmp4 = closure_5(noop.useContext(target(4795).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+      const tmp4 = closure_5(noop.useContext(target(4834).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
       if (typeof target === "string") {
         if (cResult[0] !== target) {
           const fn = function s() {
@@ -103,12 +103,12 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp = target;
-      const tmp3 = closure_5(noop.useContext(target(4795).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+      const tmp3 = closure_5(noop.useContext(target(4834).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
       return jsx(tmp(1200).LegacyText, {
         accessible: true,
         accessibilityRole: str,
         onPress: fn,
-        style: closure_5(noop.useContext(target(4795).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
+        style: closure_5(noop.useContext(target(4834).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
         children: children.children,
       });
     };

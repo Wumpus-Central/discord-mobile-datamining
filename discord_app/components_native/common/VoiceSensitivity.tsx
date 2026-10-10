@@ -16,7 +16,7 @@ const AppStates = fn(1085).AppStates;
 const NativePermissionTypes = fn(7482).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
@@ -43,7 +43,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(4928);
+const ColorUtils = fn(4967);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -602,7 +602,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let width;
       let stateFromStores;
       let first2;
-      state = undefined;
+      let state;
       c10 = undefined;
       let ref;
       const tmp = ref();
@@ -659,7 +659,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -696,10 +696,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (tmp5) {
                   mediaEngine = mediaEngine.getMediaEngine();
-                  mediaEngine.on(auto(5136).MediaEngineEvent.VoiceActivity, callback);
+                  mediaEngine.on(auto(5137).MediaEngineEvent.VoiceActivity, callback);
                 }
                 c2 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp17) {
               c2 = tmp;

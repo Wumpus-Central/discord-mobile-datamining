@@ -32,7 +32,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
         const fn2 = function l() {
           if (handleStateChange) {
             handleStateChange = function handleStateChange(data) {
-              state = data.data.state;
+              const state = data.data.state;
               let tmp;
               if (state != null) {
                 const routes = state.routes;
@@ -75,7 +75,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function u() {
         if (closure_0) {
-          state = navigation.getState();
+          const state = navigation.getState();
           let tmp6;
           if (state != null) {
             const routes = state.routes;
@@ -120,7 +120,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = _slicedToArray(
         noop.useState(() => {
           if (flag) {
-            state = navigation.getState();
+            const state = navigation.getState();
             let tmp6;
             if (state != null) {
               const routes = state.routes;
@@ -154,7 +154,7 @@ export const useDrawerOpen = ReactCompilerGating.isReactCompilerEnabled()
       const items = [navigation, flag];
       const effect = noop.useEffect(() => {
         function handleStateChange(data) {
-          state = data.data.state;
+          const state = data.data.state;
           let tmp;
           if (state != null) {
             const routes = state.routes;

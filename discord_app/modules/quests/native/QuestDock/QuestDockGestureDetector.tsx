@@ -2,13 +2,13 @@
 import c from "../../../../../_runtime/00576_c.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06334_LegacyBaseButton.js";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5979).QuestDockMode;
-const QuestDockConstants = fn(15285);
+const QuestDockMode = fn(5972).QuestDockMode;
+const QuestDockConstants = fn(15347);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,
@@ -1241,7 +1241,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           State: LegacyBaseButton.State,
           initialGestureOffset: sharedValue,
           touchMoveCount: sharedValue1,
-          QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: closure_2_13,
+          QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1,
           restingQuestDockMode,
           QuestDockMode,
           QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_2_8,
@@ -1254,7 +1254,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           State: LegacyBaseButton.State,
           initialGestureOffset: sharedValue,
           touchMoveCount: sharedValue1,
-          QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: closure_2_13,
+          QUEST_DOCK_GESTURE_TOUCH_MOVE_COUNT_THRESHOLD: map1,
           restingQuestDockMode,
           QuestDockMode,
           QUEST_DOCK_GESTURE_VERTICAL_DELTA_MINIMUM: closure_2_8,
@@ -1397,7 +1397,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           minExpandedContentHeight,
           activeQuestDockMode,
           QuestDockMode,
-          QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2,
+          QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value3,
           QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: collapsed,
           questDockWrapperSpecs,
           youBarHeight: youBarTotalHeight,
@@ -1406,10 +1406,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           safeArea,
           QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_2_11,
           QUEST_DOCK_CLOSED_HEIGHT,
-          QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_2_15,
+          QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: value2,
           getQuestDockClosedWidth: QuestDockUtils.getQuestDockClosedWidth,
           QUEST_DOCK_COLLAPSED_HEIGHT,
-          QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: state,
+          QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_2_14,
           questDockOffset,
           runOnJS: ReanimatedRexport.runOnJS,
           triggerHapticFeedback: HapticUtils.triggerHapticFeedback,
@@ -1425,7 +1425,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           minExpandedContentHeight,
           activeQuestDockMode,
           QuestDockMode,
-          QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value2,
+          QUEST_DOCK_GESTURE_EXPANDED_EXCESS_HEIGHT_FACTOR: value3,
           QUEST_DOCK_GESTURE_MODE_TRANSITION_HEIGHT: collapsed,
           questDockWrapperSpecs,
           youBarHeight: youBarTotalHeight,
@@ -1434,10 +1434,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           safeArea,
           QUEST_DOCK_GESTURE_MODE_CLOSED_TRANSITION_HEIGHT: closure_2_11,
           QUEST_DOCK_CLOSED_HEIGHT,
-          QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: closure_2_15,
+          QUEST_DOCK_GESTURE_CLOSED_Y_OFFSET_FACTOR: value2,
           getQuestDockClosedWidth: QuestDockUtils.getQuestDockClosedWidth,
           QUEST_DOCK_COLLAPSED_HEIGHT,
-          QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: state,
+          QUEST_DOCK_GESTURE_COLLAPSED_Y_OFFSET_FACTOR: closure_2_14,
           questDockOffset,
           runOnJS: ReanimatedRexport.runOnJS,
           triggerHapticFeedback: HapticUtils.triggerHapticFeedback,

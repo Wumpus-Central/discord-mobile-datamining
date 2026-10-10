@@ -11,7 +11,7 @@ const AppStates = fn(1085).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
 let c9 = 0.0625;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles((fontSize) => ({
   textEmoji: { fontSize },
   imageEmoji: { width: fontSize, height: fontSize },

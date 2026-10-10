@@ -16,13 +16,13 @@ const CheckpointPressableDefault = CheckpointPressable;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
-const CheckpointConstants = fn(5434);
+const CheckpointConstants = fn(5437);
 ({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_PRIMARY } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let items = [fn(15924).CheckpointCustomizationOption.BASE, fn(15924).CheckpointCustomizationOption.OUTFIT_COLOR];
+let items = [fn(15986).CheckpointCustomizationOption.BASE, fn(15986).CheckpointCustomizationOption.OUTFIT_COLOR];
 let closure_10 = items.length + 1;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   scrollContent: { paddingHorizontal: nativeDefault.space.PX_16 },
   row: null,
@@ -294,7 +294,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       closure_3 = tmp5;
       const tmp6 = closure_11();
-      const tmp7 = activeCustomizationOption(15924).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
+      const tmp7 = activeCustomizationOption(15986).CUSTOMIZATION_OPTION_TRAITS[activeCustomizationOption];
       closure_4 = tmp7;
       if (cResult[0] === tmp7) {
         if (cResult[1] === tmp4) {
@@ -310,7 +310,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp10 = cResult[5];
           }
-          const token = tmp(4779).useToken("text-subtle");
+          const token = tmp(4818).useToken("text-subtle");
           let tmp15 = token;
           if (!tmp4) {
             tmp15 = token;
@@ -352,7 +352,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                                       let stringResult = tmp8;
                                       if (tmp8 == null) {
                                         const intl2 = tmp(1126).intl;
-                                        stringResult = intl2.string(onSelectOption(3115)["8cGmXF"]);
+                                        stringResult = intl2.string(onSelectOption(3118)["8cGmXF"]);
                                       }
                                       cResult[26] = tmp8;
                                       cResult[27] = stringResult;
@@ -362,7 +362,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                     if (cResult[28] !== tmp15) {
                                       let obj2 = { color: tmp15, size: "xs" };
-                                      const tmp35 = closure_7(tmp(10498).ChevronSmallDownIcon, obj2);
+                                      const tmp35 = closure_7(tmp(10532).ChevronSmallDownIcon, obj2);
                                       cResult[28] = tmp15;
                                       cResult[29] = tmp35;
                                       let tmp33 = tmp35;
@@ -449,10 +449,10 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                                 if (tmp10) {
                                   const intl = tmp(1126).intl;
-                                  let stringResult1 = intl.string(onSelectOption(3115)["iXpQc+"]);
+                                  let stringResult1 = intl.string(onSelectOption(3118)["iXpQc+"]);
                                 } else {
-                                  stringResult1 = tmp(15924).getCustomizationOptionName(activeCustomizationOption);
-                                  const tmpResult7 = tmp(15924);
+                                  stringResult1 = tmp(15986).getCustomizationOptionName(activeCustomizationOption);
+                                  const tmpResult7 = tmp(15986);
                                 }
                                 cResult[23] = activeCustomizationOption;
                                 cResult[24] = tmp13;
@@ -500,7 +500,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
                     } else {
                       const obj = { selectedOption: activeCustomizationOption, onSelectOption };
                       ActionSheetActionCreatorsDefault.openLazy(
-                        asyncRequireImpl(15954, dependencyMap.paths),
+                        asyncRequireImpl(16016, dependencyMap.paths),
                         "CheckpointFinalizeTraitPicker",
                         obj,
                       );
@@ -532,14 +532,14 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
           cResult[9] = onSelectOption;
           cResult[10] = handleSelectOption;
           tmp18 = handleSelectOption;
-          const tmpResult = tmp(4779);
+          const tmpResult = tmp(4818);
         }
       }
       let nitroLockedMessage;
       if (tmp4) {
         if (!tmp5) {
-          nitroLockedMessage = tmp(15956).getNitroLockedMessage(tmp7);
-          const tmpResult8 = tmp(15956);
+          nitroLockedMessage = tmp(16018).getNitroLockedMessage(tmp7);
+          const tmpResult8 = tmp(16018);
         }
       }
       cResult[0] = tmp7;
@@ -670,7 +670,7 @@ export const FinalizeTraitTabs = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const obj = { selectedOption: activeCustomizationOption, onSelectOption };
             ActionSheetActionCreatorsDefault.openLazy(
-              asyncRequireImpl(15954, dependencyMap.paths),
+              asyncRequireImpl(16016, dependencyMap.paths),
               "CheckpointFinalizeTraitPicker",
               obj,
             );

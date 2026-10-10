@@ -9,7 +9,7 @@ import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import PremiumSubscription from "../PremiumSubscription.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import actions_BillingActionCreators from "../../billing/actions/BillingActionCreators.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
 import SubscriptionPlanActionCreators from "../../../actions/SubscriptionPlanActionCreators.tsx";
@@ -21,12 +21,12 @@ import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/Pay
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet.tsx";
 import TreasureChestBannerSpotIllustration from "../../../design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
-import _modDef13763 from "../../../../_runtime/metro/13763__.js";
-import _modDef13764 from "../../../../_runtime/metro/13764__.js";
-import _modDef13765 from "../../../../_runtime/metro/13765__.js";
-import _modDef13766 from "../../../../_runtime/metro/13766__.js";
-import _modDef13767 from "../../../../_runtime/metro/13767__.js";
-import _modDef13768 from "../../../../_runtime/metro/13768__.js";
+import _modDef13815 from "../../../../_runtime/metro/13815__.js";
+import _modDef13816 from "../../../../_runtime/metro/13816__.js";
+import _modDef13817 from "../../../../_runtime/metro/13817__.js";
+import _modDef13818 from "../../../../_runtime/metro/13818__.js";
+import _modDef13819 from "../../../../_runtime/metro/13819__.js";
+import _modDef13820 from "../../../../_runtime/metro/13820__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -86,7 +86,7 @@ function PlanSection(showBoostOnlyLabels) {
     isIOSResult = null != tmp;
   }
   c12 = isIOSResult;
-  const mapped = plans.map((plan) => __initData4(closure_39, {
+  const mapped = plans.map((plan) => __initData3(closure_39, {
     plan,
     subscription,
     shouldShowModernBoostFlow,
@@ -154,7 +154,7 @@ function PlanSection(showBoostOnlyLabels) {
   }, plan.productId));
   if (shouldShowModernBoostFlow) {
     let obj2 = { title: showBoostOnlyLabels.label, hasIcons: true, children: mapped };
-    let tmp7Result = closure_31(shouldShowModernBoostFlow(6269).TableRowGroup, obj2);
+    let tmp7Result = closure_31(shouldShowModernBoostFlow(6264).TableRowGroup, obj2);
   } else {
     let obj3 = { children: mapped };
     tmp7Result = closure_31(closure_7, obj3);
@@ -165,8 +165,8 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
   if (null != productIdFromSubscription) {
     if (obj3.isValidBundleProductId(productIdFromSubscription)) {
       if (null == productIdFromSubscription2) {
-        let toggledIntervalProduct = tmp7(7119).getToggledIntervalProduct(productIdFromSubscription);
-        let tmp7Result = tmp7(7119);
+        let toggledIntervalProduct = tmp7(7125).getToggledIntervalProduct(productIdFromSubscription);
+        let tmp7Result = tmp7(7125);
       } else {
         toggledIntervalProduct = productIdFromSubscription;
       }
@@ -191,39 +191,39 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
         })) {
           items = [];
           const arraySpreadResult = HermesBuiltin.arraySpread(plans, 0);
-          items[arraySpreadResult] = tmp7(7119).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
+          items[arraySpreadResult] = tmp7(7125).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
           tmp3 = items;
-          const tmp7Result2 = tmp7(7119);
+          const tmp7Result2 = tmp7(7125);
         }
       }
       return tmp3;
     }
-    obj3 = toggledIntervalProduct(7119);
+    obj3 = toggledIntervalProduct(7125);
   }
   return plans;
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let useNativeCheckoutStore = fn(7137).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(13758);
+let useNativeCheckoutStore = fn(7143).useNativeCheckoutStore;
+const PremiumPlanSelectStore = fn(13810);
 ({ setIsPurchasing: closure_14, usePremiumPlanSelectStore: closure_15 } = PremiumPlanSelectStore);
 const PremiumConstants = fn(1392);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_16, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_17, PRICE_PLACEHOLDER: closure_18, PremiumSubscriptionSKUs: closure_19, PremiumTypes: closure_20, SubscriptionIntervalTypes: closure_21, SubscriptionPlans: closure_22 } = PremiumConstants);
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_23, AnalyticsObjects: closure_24, AnalyticsObjectTypes: closure_25, Fonts, HorizontalGradient: closure_26, PaymentGateways: closure_27, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-const ColorConstants = fn(7145);
+const ColorConstants = fn(7151);
 ({ getPremiumGradientColor: closure_28, Gradients: closure_29 } = ColorConstants);
-const ItemPurchaseType = fn(5070).ItemPurchaseType;
+const ItemPurchaseType = fn(5071).ItemPurchaseType;
 const jsxProd = fn(21);
 ({ jsx: items, jsxs: closure_32, Fragment: closure_33 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { header: null, row: null, rowDisabled: null, imgWumpusNitro: null, imgBoost: null, imgWumpusNitroBoost: null, imgWumpusNitroClassic: null, imgWumpusNitroClassicBoost: null, imgWumpusNitroTier0: null, rowText: null, rowPlanDescription: null, rowPlanDescriptionSubtext: null, rowPrice: null, purchasingSpinner: null, container: null, currentPlanGradient: null, currentPlanRow: null, loadingSpinnerContainer: null, offPlatformSubscriptionMessage: null, premiumHeaderLabel: null, boostContainer: null, boostRowIcon: null, nitroBanner: null, nitroBannerText: null, recommendedText: null };
 let obj3 = {};
 let merged = Object.assign(TextStylesDefault(Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.marginTop = 16;
-obj3.color = fn(5976).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(5969).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5976).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5969).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 obj2.rowDisabled = { opacity: 0.5 };
 obj2.imgWumpusNitro = { height: 40, width: 40 };
 obj2.imgBoost = { height: 40, width: 40 };
@@ -231,14 +231,14 @@ obj2.imgWumpusNitroBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroClassic = { width: 40, height: 40 };
 obj2.imgWumpusNitroClassicBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroTier0 = { width: 40, height: 40 };
-let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5976).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj2.rowText = { fontSize: 16, color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(5969).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.rowText = { fontSize: 16, color: fn(5969).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.rowPlanDescription = { marginLeft: 12, fontFamily: Fonts.PRIMARY_SEMIBOLD, lineHeight: 20 };
 obj2.rowPlanDescriptionSubtext = { fontSize: 12, marginLeft: 5, fontFamily: Fonts.PRIMARY_MEDIUM, fontWeight: "400" };
 obj2.rowPrice = { marginLeft: "auto" };
 obj2.purchasingSpinner = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" };
 obj2.container = { marginHorizontal: 14.5, paddingBottom: 10 };
-let obj5 = { fontSize: 16, color: fn(5976).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj5 = { fontSize: 16, color: fn(5969).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.currentPlanGradient = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
 obj2.currentPlanRow = { marginTop: 0.5, marginRight: 0.5, marginLeft: 0.5, marginBottom: 0.5 };
 obj2.loadingSpinnerContainer = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
@@ -258,7 +258,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   const cResult = c.c(13);
   const tmp4 = closure_34();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp7 = __initData4(TreasureChestBannerSpotIllustration.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false });
+    const tmp7 = __initData3(TreasureChestBannerSpotIllustration.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false });
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -271,7 +271,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
     const intl2 = util.intl;
     const obj4 = { percentageOff };
     obj3.children = intl2.format(util.t.RmVM19, obj4);
-    obj2.discount = __initData4(Text_Text.Text, obj3, "discount");
+    obj2.discount = __initData3(Text_Text.Text, obj3, "discount");
     const formatResult = intl.format(util.t.jbrHpT, obj2);
     cResult[1] = formatResult;
     let tmp8 = formatResult;
@@ -280,7 +280,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   }
   if (cResult[2] !== tmp4.nitroBannerText) {
     const obj5 = { variant: "text-md/semibold", color: "text-default", style: tmp4.nitroBannerText, children: tmp8 };
-    const tmp14 = __initData4(Text_Text.Text, obj5);
+    const tmp14 = __initData3(Text_Text.Text, obj5);
     cResult[2] = tmp4.nitroBannerText;
     cResult[3] = tmp14;
     let tmp12 = tmp14;
@@ -298,7 +298,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   }
   if (cResult[5] !== tmp4.nitroBannerText) {
     const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp4.nitroBannerText, children: tmp15 };
-    const tmp20 = __initData4(Text_Text.Text, obj7);
+    const tmp20 = __initData3(Text_Text.Text, obj7);
     cResult[5] = tmp4.nitroBannerText;
     cResult[6] = tmp20;
     let tmp18 = tmp20;
@@ -318,7 +318,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
     const obj8 = { align: "center", spacing: nativeDefault.space.PX_12, style: tmp4.nitroBanner, children: null };
     items = [first, tmp21];
     obj8.children = items;
-    const tmp26 = __initData5(Stack_Stack.Stack, obj8);
+    const tmp26 = __initData4(Stack_Stack.Stack, obj8);
     cResult[10] = tmp4.nitroBanner;
     cResult[11] = tmp21;
     cResult[12] = tmp26;
@@ -327,7 +327,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   const obj9 = { align: "center", spacing: nativeDefault.space.PX_4, children: null };
   const items1 = [tmp12, tmp18];
   obj9.children = items1;
-  const tmp22 = __initData5(Stack_Stack.Stack, obj9);
+  const tmp22 = __initData4(Stack_Stack.Stack, obj9);
   cResult[7] = tmp12;
   cResult[8] = tmp18;
   cResult[9] = tmp22;
@@ -335,7 +335,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
 }) : (function BoostPurchaseNitroBanner() {
   const tmp = closure_34();
   const obj = { align: "center", spacing: nativeDefault.space.PX_12, style: tmp.nitroBanner, children: null };
-  items = [__initData4(TreasureChestBannerSpotIllustration.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
+  items = [__initData3(TreasureChestBannerSpotIllustration.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
   const obj2 = { align: "center", spacing: nativeDefault.space.PX_4, children: null };
   const obj3 = { variant: "text-md/semibold", color: "text-default", style: tmp.nitroBannerText, children: null };
   const intl = util.intl;
@@ -343,26 +343,26 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   const obj5 = { variant: "text-md/semibold", color: "text-feedback-positive", children: null };
   const intl2 = util.intl;
   obj5.children = intl2.format(util.t.RmVM19, { percentageOff });
-  obj4.discount = __initData4(Text_Text.Text, obj5, "discount");
+  obj4.discount = __initData3(Text_Text.Text, obj5, "discount");
   obj3.children = intl.format(util.t.jbrHpT, obj4);
-  const items1 = [__initData4(Text_Text.Text, obj3), ];
+  const items1 = [__initData3(Text_Text.Text, obj3), ];
   const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp.nitroBannerText, children: null };
   const intl3 = util.intl;
   obj7.children = intl3.format(util.t.HYpETY, { boostCount });
-  items1[1] = __initData4(Text_Text.Text, obj7);
+  items1[1] = __initData3(Text_Text.Text, obj7);
   obj2.children = items1;
-  items[1] = __initData5(Stack_Stack.Stack, obj2);
+  items[1] = __initData4(Stack_Stack.Stack, obj2);
   obj.children = items;
-  return __initData5(Stack_Stack.Stack, obj);
+  return __initData4(Stack_Stack.Stack, obj);
 });
-let closure_37 = { [_modDef13766]: "imgWumpusNitro", [_modDef13768]: "imgWumpusNitroBoost", [_modDef13765]: "imgWumpusNitroClassic", [_modDef13767]: "imgWumpusNitroClassicBoost", [_modDef13764]: "imgWumpusNitroTier0", [_modDef13763]: "imgBoost" };
+let closure_37 = { [_modDef13818]: "imgWumpusNitro", [_modDef13820]: "imgWumpusNitroBoost", [_modDef13817]: "imgWumpusNitroClassic", [_modDef13819]: "imgWumpusNitroClassicBoost", [_modDef13816]: "imgWumpusNitroTier0", [_modDef13815]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostDeltaPriceTrailing(arg0) {
   const cResult = c.c(8);
   ({ price, interval } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-    const tmp7 = __initData4(NitroWheelIcon.NitroWheelIcon, obj2);
+    const tmp7 = __initData3(NitroWheelIcon.NitroWheelIcon, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
   } else {
@@ -374,9 +374,9 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostD
         const obj3 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_4, children: null };
         items = [first, ];
         const obj4 = { variant: "text-sm/medium", color: "text-muted", children: tmp8 };
-        items[1] = __initData4(Text_Text.Text, obj4);
+        items[1] = __initData3(Text_Text.Text, obj4);
         obj3.children = items;
-        const tmp18 = __initData5(Stack_Stack.Stack, obj3);
+        const tmp18 = __initData4(Stack_Stack.Stack, obj3);
         cResult[6] = tmp8;
         cResult[7] = tmp18;
         let tmp14 = tmp18;
@@ -388,7 +388,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostD
   }
   if (cResult[4] !== price) {
     const obj5 = { variant: "text-sm/semibold", color: "text-feedback-positive", children: price };
-    const tmp11 = __initData4(Text_Text.Text, obj5, "price");
+    const tmp11 = __initData3(Text_Text.Text, obj5, "price");
     cResult[4] = price;
     cResult[5] = tmp11;
     let tmp9 = tmp11;
@@ -408,7 +408,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostD
 }) : (function BoostDeltaPriceTrailing(arg0) {
   ({ price, interval } = arg0);
   const obj = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_4, children: null };
-  items = [__initData4(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE }), ];
+  items = [__initData3(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE }), ];
   const intl = util.intl;
   if (interval === constants.MONTH) {
     let AbOLNu = util.t.AbOLNu;
@@ -417,10 +417,10 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostD
   }
   const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const obj2 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-  obj3.children = intl.format(AbOLNu, { price: __initData4(Text_Text.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
-  items[1] = __initData4(Text_Text.Text, obj3);
+  obj3.children = intl.format(AbOLNu, { price: __initData3(Text_Text.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
+  items[1] = __initData3(Text_Text.Text, obj3);
   obj.children = items;
-  return __initData5(Stack_Stack.Stack, obj);
+  return __initData4(Stack_Stack.Stack, obj);
 });
 ReactCompilerGating = fn(558);
 let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRow(plan) {
@@ -721,21 +721,21 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRo
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("../../../../_runtime/metro/13763__.js");
+    let tmp7Result = require("../../../../_runtime/metro/13815__.js");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_20.TIER_1) {
-      tmp7Result = require("../../../../_runtime/metro/13767__.js");
+      tmp7Result = require("../../../../_runtime/metro/13819__.js");
     } else {
-      tmp7Result = require("../../../../_runtime/metro/13768__.js");
+      tmp7Result = require("../../../../_runtime/metro/13820__.js");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_20.TIER_0 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13764__.js");
+      tmp7Result = require("../../../../_runtime/metro/13816__.js");
     } else if (closure_20.TIER_1 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13765__.js");
+      tmp7Result = require("../../../../_runtime/metro/13817__.js");
     } else if (closure_20.TIER_2 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/13766__.js");
+      tmp7Result = require("../../../../_runtime/metro/13818__.js");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -942,7 +942,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
                 const obj2 = { style: tmp4.currentPlanGradient, colors: tmp7, start: null, end: null, children: null };
                 ({ START: obj4.start, END: obj4.end } = closure_1_26);
                 obj2.children = tmp15;
-                const tmp23 = __initData4(LinearGradientDefault, obj2);
+                const tmp23 = __initData3(LinearGradientDefault, obj2);
                 cResult[9] = tmp7;
                 cResult[10] = tmp4.currentPlanGradient;
                 cResult[11] = tmp15;
@@ -952,7 +952,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
             }
           }
           const obj3 = { plan: cResult[1], subscription, analyticsLoadId, interactive: false, hasBackground: true, purchase: tmp14, style: tmp4.currentPlanRow };
-          const tmp18 = __initData4(closure_39, obj3);
+          const tmp18 = __initData3(closure_39, obj3);
           cResult[4] = analyticsLoadId;
           cResult[5] = cResult[1];
           cResult[6] = tmp4.currentPlanRow;
@@ -991,8 +991,8 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
                 },
           style: tmp.currentPlanRow
         };
-        obj.children = __initData4(closure_39, obj2);
-        return __initData4(LinearGradientDefault, obj);
+        obj.children = __initData3(closure_39, obj2);
+        return __initData3(LinearGradientDefault, obj);
       }
     }
   }
@@ -1054,7 +1054,7 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSe
     }
     return tmp5;
   }
-  const tmp6 = __initData4(native.LegacyText, { style: tmp4.header, accessibilityRole: "header", children: string });
+  const tmp6 = __initData3(native.LegacyText, { style: tmp4.header, accessibilityRole: "header", children: string });
   cResult[0] = tmp4.header;
   cResult[1] = string;
   cResult[2] = tmp6;
@@ -1062,7 +1062,7 @@ let closure_44 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSe
   const obj2 = { style: tmp4.header, accessibilityRole: "header", children: string };
 }) : (function PlanSectionHeader(children) {
   const tmp = closure_34();
-  return __initData4(native.LegacyText, { style: closure_34().header, accessibilityRole: "header", children: children.string });
+  return __initData3(native.LegacyText, { style: closure_34().header, accessibilityRole: "header", children: children.string });
 });
 ReactCompilerGating = fn(558);
 let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSections(analyticsLoadId) {
@@ -1354,12 +1354,12 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSe
           let tmp6 = !shouldShowModernBoostFlow;
           if (!shouldShowModernBoostFlow) {
             const obj = { string: label };
-            tmp6 = __initData4(closure_44, obj);
+            tmp6 = __initData3(closure_44, obj);
           }
           const obj2 = { children: null };
-          items = [tmp6, __initData4(PlanSection, { trackPaymentFlowStep, trackNewPaymentFlow, analyticsLoadId, plans: plans.plansInSection, label, shouldShowModernBoostFlow, showBoostOnlyLabels, recommendedBoostCount, isBoostPurchaseFlow, purchase, subscription, currentPaymentGatewayPlanId: productIdFromSubscription, shouldRemoveYearlyUpsell })];
+          items = [tmp6, __initData3(PlanSection, { trackPaymentFlowStep, trackNewPaymentFlow, analyticsLoadId, plans: plans.plansInSection, label, shouldShowModernBoostFlow, showBoostOnlyLabels, recommendedBoostCount, isBoostPurchaseFlow, purchase, subscription, currentPaymentGatewayPlanId: productIdFromSubscription, shouldRemoveYearlyUpsell })];
           obj2.children = items;
-          return __initData5(React5, obj2, section.id);
+          return __initData4(React5, obj2, section.id);
         });
         obj2.children = items;
         const tmp39 = closure_32(productIdFromSubscription, obj2);
@@ -1600,12 +1600,12 @@ let closure_45 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanSe
       let tmp6 = !boostContainer;
       if (!boostContainer) {
         const obj = { string: label };
-        tmp6 = __initData4(closure_44, obj);
+        tmp6 = __initData3(closure_44, obj);
       }
       const obj2 = { children: null };
-      items = [tmp6, __initData4(PlanSection, { trackPaymentFlowStep, trackNewPaymentFlow, analyticsLoadId, plans: plans.plansInSection, label, shouldShowModernBoostFlow: boostContainer, showBoostOnlyLabels, recommendedBoostCount, isBoostPurchaseFlow, purchase, subscription, currentPaymentGatewayPlanId: productIdFromSubscription, shouldRemoveYearlyUpsell })];
+      items = [tmp6, __initData3(PlanSection, { trackPaymentFlowStep, trackNewPaymentFlow, analyticsLoadId, plans: plans.plansInSection, label, shouldShowModernBoostFlow: boostContainer, showBoostOnlyLabels, recommendedBoostCount, isBoostPurchaseFlow, purchase, subscription, currentPaymentGatewayPlanId: productIdFromSubscription, shouldRemoveYearlyUpsell })];
       obj2.children = items;
-      return __initData5(React5, obj2, section.id);
+      return __initData4(React5, obj2, section.id);
     })
   ];
   obj7.children = items1;
@@ -1706,7 +1706,7 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -1740,8 +1740,8 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                 const obj7 = {
                   value: v3(modifySubscriptionItemsForProduct.map((planId) => {
                               const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                              const obj2 = applicationId(4728);
-                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(4728).getSkuIdForPlan(planId.planId));
+                              const obj2 = applicationId(4769);
+                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(4769).getSkuIdForPlan(planId.planId));
                               ({ planId: obj.subscription_plan_id, quantity: obj.quantity } = planId);
                               obj.purchase_type = constants.SUBSCRIPTION;
                               return obj;
@@ -1809,20 +1809,20 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           }
           obj13.orderId = id;
           obj13.onPurchaseComplete = function onPurchaseComplete(paymentGateway) {
-            closure_1(5299).close();
+            closure_1(5300).close();
             if (paymentGateway.paymentGateway === constants.APPLE_ADVANCED_COMMERCE) {
               premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
               if (null == premiumTypeSubscription) {
                 const _Error = Error;
                 const error = new Error("PremiumActivatedAlert: no premium subscription in store post-activation");
                 const obj2 = { tags: { source: "showPremiumActivatedAlert.nullSubscription" } };
-                const result = premiumTypeSubscription(4743).captureBillingException(error, obj2);
-                const obj4 = premiumTypeSubscription(4743);
-                closure_1(5941).popWithKey(premiumTypeSubscription(7123).PREMIUM_KEY);
+                const result = premiumTypeSubscription(4784).captureBillingException(error, obj2);
+                const obj4 = premiumTypeSubscription(4784);
+                closure_1(5934).popWithKey(premiumTypeSubscription(7129).PREMIUM_KEY);
                 if (navigation.canGoBack()) {
                   navigation.goBack();
                 }
-                const tmpResult = closure_1(5941);
+                const tmpResult = closure_1(5934);
               } else {
                 const obj3 = {
                   importer() {
@@ -1830,11 +1830,11 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                       },
                   isDismissable: false
                 };
-                closure_1(5299).openLazy(obj3);
-                const tmpResult2 = closure_1(5299);
+                closure_1(5300).openLazy(obj3);
+                const tmpResult2 = closure_1(5300);
               }
             }
-            let obj = closure_1(5299);
+            let obj = closure_1(5300);
           };
           v3 = 3;
           c7 = 1;

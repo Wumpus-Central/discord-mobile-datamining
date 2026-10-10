@@ -121,7 +121,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flex: 1,
@@ -238,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_10.getCustomGuildScore(guildId);
               }
             }
-            const numberToCustomScoreResult = tmp2(8454).numberToCustomScore(stateFromStores1);
+            const numberToCustomScoreResult = tmp2(8470).numberToCustomScore(stateFromStores1);
             cResult[12] = stateFromStores1;
             cResult[13] = numberToCustomScoreResult;
-            const tmp2Result5 = tmp2(8454);
+            const tmp2Result5 = tmp2(8470);
           } else {
             class N {
               constructor() {
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp50 = navigation;
-              if (first1 !== navigation(7244).SECTION_INDEX_GUILD_ACTIONS) {
+              if (first1 !== navigation(7250).SECTION_INDEX_GUILD_ACTIONS) {
                 class R {
                   constructor() {
                     return closure_6.getGuild(guildId);
@@ -636,9 +636,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ICYMIStore.getCustomGuildScore(guildId),
       );
       const tmp2Result = navigation(504);
-      const numberToCustomScoreResult = navigation(8454).numberToCustomScore(stateFromStores1);
+      const numberToCustomScoreResult = navigation(8470).numberToCustomScore(stateFromStores1);
       noop = numberToCustomScoreResult;
-      const tmp2Result3 = navigation(8454);
+      const tmp2Result3 = navigation(8470);
       const items3 = [ChannelListStore];
       guildChannels = navigation(504).useStateFromStoresObject(items3, () =>
         ChannelListStore.getGuild(guildId),
@@ -729,7 +729,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj6.children = intl2.string(util.t.l52PX4);
             items[2] = closure_2_11(Text_Text.Text, obj6);
             obj2.children = items;
-            tmp16 = __initData(__initData2, obj2);
+            tmp16 = __initData(map1, obj2);
           }
           return tmp16;
         } else if ("categoryHeader" === kind) {
@@ -760,6 +760,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj4.renderItem = callback;
       obj4.data = memo;
       obj4.keyExtractor = keyExtractor;
-      obj3.children = closure_11(navigation(8608).AnimatedFlashList, obj4);
+      obj3.children = closure_11(navigation(8624).AnimatedFlashList, obj4);
       return closure_11(guildChannels, obj3);
     };

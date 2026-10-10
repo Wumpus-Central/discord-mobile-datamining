@@ -60,7 +60,7 @@ const audioManagerStore = new AudioManagerStore(DispatcherDefault, {
     if (context.context !== MediaEngineContextTypes.DEFAULT) {
       return false;
     } else {
-      state = context.state;
+      const state = context.state;
       if (RTCConnectionStates.CONNECTING === state) {
         c9 = true;
         const result = NativeAudioManagerModuleDefault.setCommunicationModeOn(true);

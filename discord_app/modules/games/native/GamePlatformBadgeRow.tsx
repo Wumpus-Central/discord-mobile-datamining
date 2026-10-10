@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 let obj = {};
-obj[fn(12053).GamePlatformAvailability.DESKTOP] = fn(9076).ScreenIcon;
-obj[fn(12053).GamePlatformAvailability.MOBILE] = fn(6640).MobilePhoneIcon;
-obj[fn(12053).GamePlatformAvailability.CONSOLE] = fn(9184).GameControllerIcon;
-const createStyles = fn(5091);
+obj[fn(12097).GamePlatformAvailability.DESKTOP] = fn(9096).ScreenIcon;
+obj[fn(12097).GamePlatformAvailability.MOBILE] = fn(6641).MobilePhoneIcon;
+obj[fn(12097).GamePlatformAvailability.CONSOLE] = fn(9211).GameControllerIcon;
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ row: { width: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -91,7 +91,7 @@ export default noop.memo(
         const items = [platforms];
         const memo = noop.useMemo(() => GamePlatformBadges.sortGamePlatformAvailability(platforms), items);
         const tmp = closure_6();
-        return jsx(platforms(5374).Stack, {
+        return jsx(platforms(5377).Stack, {
           direction: "horizontal",
           align: "center",
           spacing: nativeDefault.space.PX_4,

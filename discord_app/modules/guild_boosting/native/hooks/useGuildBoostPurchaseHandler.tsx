@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let newAnalyticsLoadId = tmp2;
                   newAnalyticsLoadId = undefined;
-                  newAnalyticsLoadId = args(10023).getNewAnalyticsLoadId();
-                  const obj7 = args(7115);
+                  newAnalyticsLoadId = args(10052).getNewAnalyticsLoadId();
+                  const obj7 = args(7121);
                   c3 = 1;
                   c4 = 1;
                   const obj4 = {
@@ -98,9 +98,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                args(5966).closeApplyBoostModal();
+                args(5959).closeApplyBoostModal();
                 c4 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp10) {
               c4 = tmp;
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -164,8 +164,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 let newAnalyticsLoadId = tmp2;
                 newAnalyticsLoadId = undefined;
-                newAnalyticsLoadId = args(10023).getNewAnalyticsLoadId();
-                const obj7 = args(7115);
+                newAnalyticsLoadId = args(10052).getNewAnalyticsLoadId();
+                const obj7 = args(7121);
                 c3 = 1;
                 c4 = 1;
                 const obj4 = {
@@ -209,9 +209,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = { value, done: true };
               return obj5;
             } else {
-              args(5966).closeApplyBoostModal();
+              args(5959).closeApplyBoostModal();
               c4 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp10) {
             c4 = tmp;

@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let rowGenerator = new RowGeneratorDefault();
 rowGenerator.setOptions({ renderReplies: false, renderReactions: false });
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj3 = { container: { gap: nativeDefault.space.PX_4 }, header: null, authorRow: null, headerTimestamp: null };
 let obj4 = { gap: nativeDefault.space.PX_4 };
 obj3.header = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -64,15 +64,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores1 = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
         const tmpResult6 = tmp(504);
-        const name = tmp(5406).useName(guildId, message.channelId, message.author);
+        const name = tmp(5409).useName(guildId, message.channelId, message.author);
         if (cResult[7] === stateFromStores1) {
           if (cResult[8] === stateFromStores) {
             let colorStrings;
             if (stateFromStores1 != null) {
               colorStrings = stateFromStores1.colorStrings;
             }
-            const processColorStringsArray = tmp(7961).useProcessColorStringsArray(colorStrings);
-            const tmpResult9 = tmp(7961);
+            const processColorStringsArray = tmp(7979).useProcessColorStringsArray(colorStrings);
+            const tmpResult9 = tmp(7979);
             const isRoleStyleAndRoleColorsEligibleForERC = tmpResult9.useIsRoleStyleAndRoleColorsEligibleForERC(
               guildId,
               message.author.id,
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       message,
                                       rowGenerator,
                                     };
-                                    const tmp57 = closure_7(guildId(9346), obj2);
+                                    const tmp57 = closure_7(guildId(9373), obj2);
                                     cResult[35] = message;
                                     cResult[36] = tmp57;
                                     let tmp52 = tmp57;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             style: tmp4.headerTimestamp,
                             children: tmp28,
                           };
-                          const tmp47 = closure_7(tmp(5087).Text, obj5);
+                          const tmp47 = closure_7(tmp(5088).Text, obj5);
                           cResult[27] = tmp4.headerTimestamp;
                           cResult[28] = tmp28;
                           cResult[29] = tmp47;
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     gradientColors: tmp37,
                     children: name,
                   };
-                  const tmp40 = closure_7(tmp(5087).Text, obj7);
+                  const tmp40 = closure_7(tmp(5088).Text, obj7);
                   cResult[19] = tmp15;
                   cResult[20] = name;
                   cResult[21] = tmp37;
@@ -227,13 +227,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[15] = tmp32;
               tmp30 = tmp32;
             }
-            const tmpResult8 = tmp(7961);
-            const calendarFormatResult = tmp(4752).calendarFormat(message.timestamp, true, setting);
+            const tmpResult8 = tmp(7979);
+            const calendarFormatResult = tmp(4793).calendarFormat(message.timestamp, true, setting);
             cResult[10] = setting;
             cResult[11] = message.timestamp;
             cResult[12] = calendarFormatResult;
             tmp28 = calendarFormatResult;
-            const tmpResult10 = tmp(4752);
+            const tmpResult10 = tmp(4793);
           }
         }
         if ("username" !== stateFromStores) {
@@ -249,7 +249,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj12 = { color: stateFromStores1.colorString };
         obj10 = obj12;
-        const tmpResult7 = tmp(5406);
+        const tmpResult7 = tmp(5409);
       }
       const fn2 = function w() {
         return GuildMemberStore.getMember(guildId, message.author.id);

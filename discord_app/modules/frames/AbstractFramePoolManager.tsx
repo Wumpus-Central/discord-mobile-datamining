@@ -124,7 +124,7 @@ prototype["getWinningTargetState"] = function getWinningTargetState(id) {
   let tmp = null;
   if (this.hasFrameEntry(id)) {
     const pickWinnerResult = self.pickWinner(id);
-    state = undefined;
+    let state;
     if (pickWinnerResult != null) {
       state = pickWinnerResult.state;
     }

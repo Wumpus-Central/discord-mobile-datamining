@@ -206,7 +206,7 @@ function FriendAnniversary() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "+51" };
         }
       } else {
         try {
@@ -247,8 +247,8 @@ function FriendAnniversary() {
               if (closure_129_1) {
                 closure_130_4([]);
               } else {
-                const obj6 = { key: "dev-tools-gift-intent-server", content: describeServerError(closure_129_2) };
-                stateFromStores1(tmp4[16]).open(obj6);
+                const obj6 = { text: describeServerError(closure_129_2) };
+                stateFromStores1(tmp4[16]).open("dev-tools-gift-intent-server", obj6);
                 const obj2 = stateFromStores1(tmp4[16]);
               }
               c4 = 0;
@@ -304,7 +304,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -336,8 +336,8 @@ function FriendAnniversary() {
           if (2 === tmp9) {
             c5 = 1;
             closure_130_1 = closure_4;
-            const obj7 = { key: "dev-tools-gift-intent-server", content: describeServerError(closure_130_1) };
-            stateFromStores1(stateFromStores2[16]).open(obj7);
+            const obj7 = { text: describeServerError(closure_130_1) };
+            stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-server", obj7);
             c5 = 0;
             closure_1_8(false);
             c7 = 3;
@@ -353,8 +353,8 @@ function FriendAnniversary() {
               const obj8 = { value, done: true };
               return obj8;
             } else {
-              const obj9 = { key: "dev-tools-gift-intent-server", content: closure_130_0 };
-              stateFromStores1(stateFromStores2[16]).open(obj9);
+              const obj9 = { text: closure_130_0 };
+              stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-server", obj9);
               c6 = 4;
               c7 = 1;
               const obj10 = { value: onPress(), done: false };
@@ -419,7 +419,7 @@ function FriendAnniversary() {
   );
   new Set(arr.map((userId) => userId.userId));
   const items7 = [...Object.keys(stateFromStores1), ...Array.from(map.keys())];
-  const map1 = new Map(
+  map1 = new Map(
     items6.map((userId) => {
       items = [userId.userId, userId];
       return items;
@@ -487,23 +487,18 @@ function FriendAnniversary() {
             const obj4 = { giftIntentType: set1.FRIEND_ANNIVERSARY, recipientUserId };
             const result = stateFromStores1(stateFromStores2[21]).sendGiftingPromptSystemMessage(channelId, obj4);
             const obj3 = stateFromStores1(stateFromStores2[21]);
-            stateFromStores1(stateFromStores2[16]).open({
-              key: "dev-tools-gift-intent-triggered",
-              content: "Friendship anniversary card sent.",
+            stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-triggered", {
+              text: "Friendship anniversary card sent.",
             });
             const obj5 = stateFromStores1(stateFromStores2[16]);
           } else {
-            stateFromStores1(stateFromStores2[16]).open({
-              key: "dev-tools-gift-intent-no-recipient",
-              content: "Selected channel has no other recipient.",
+            stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-no-recipient", {
+              text: "Selected channel has no other recipient.",
             });
             const obj2 = stateFromStores1(stateFromStores2[16]);
           }
         } else {
-          stateFromStores1(stateFromStores2[16]).open({
-            key: "dev-tools-gift-intent-no-channel",
-            content: "Open a DM first.",
-          });
+          stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-no-channel", { text: "Open a DM first." });
           const obj = stateFromStores1(stateFromStores2[16]);
         }
       },
@@ -580,23 +575,18 @@ function FriendAnniversary() {
           const obj4 = { giftIntentType: set1.FRIEND_ANNIVERSARY, recipientUserId };
           const result = stateFromStores1(stateFromStores2[21]).sendGiftingPromptSystemMessage(channelId, obj4);
           const obj3 = stateFromStores1(stateFromStores2[21]);
-          stateFromStores1(stateFromStores2[16]).open({
-            key: "dev-tools-gift-intent-triggered",
-            content: "Friendship anniversary card sent.",
+          stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-triggered", {
+            text: "Friendship anniversary card sent.",
           });
           const obj5 = stateFromStores1(stateFromStores2[16]);
         } else {
-          stateFromStores1(stateFromStores2[16]).open({
-            key: "dev-tools-gift-intent-no-recipient",
-            content: "Selected channel has no other recipient.",
+          stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-no-recipient", {
+            text: "Selected channel has no other recipient.",
           });
           const obj2 = stateFromStores1(stateFromStores2[16]);
         }
       } else {
-        stateFromStores1(stateFromStores2[16]).open({
-          key: "dev-tools-gift-intent-no-channel",
-          content: "Open a DM first.",
-        });
+        stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-no-channel", { text: "Open a DM first." });
         const obj = stateFromStores1(stateFromStores2[16]);
       }
     },
@@ -721,9 +711,8 @@ function FriendAnniversary() {
     onPress: function handleResetLocalCooldown() {
       stateFromStores1(stateFromStores2[13]).dispatch({ type: "DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET" });
       const obj = stateFromStores1(stateFromStores2[13]);
-      stateFromStores1(stateFromStores2[16]).open({
-        key: "dev-tools-gift-intent-local",
-        content: "Cleared local message cooldown.",
+      stateFromStores1(stateFromStores2[16]).open("dev-tools-gift-intent-local", {
+        text: "Cleared local message cooldown.",
       });
     },
   });
@@ -733,7 +722,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7163).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(7169).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -746,16 +735,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15972, dependencyMap.paths),
+          asyncRequireImpl(16034, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(6186).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(6179).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6186).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(6179).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -767,7 +756,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15972, dependencyMap.paths),
+          asyncRequireImpl(16034, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -775,7 +764,7 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6269).TableRowGroup, obj3);
+  return closure_18(premiumTrialOffer(6264).TableRowGroup, obj3);
 }
 function PaymentFlowTest() {
   const obj = {
@@ -849,7 +838,7 @@ function GuildTagBadges() {
   return constants(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(5090).DevSettingsCategory;
+const DevSettingsCategory = fn(5091).DevSettingsCategory;
 const PremiumConstants = fn(1392);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -866,7 +855,7 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };
@@ -905,7 +894,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp = closure_4(arg0, 3);
             const subLabel = tmp[0];
             return closure_17(
-              subLabel(6889).TableSwitchRow,
+              subLabel(6895).TableSwitchRow,
               {
                 label: tmp[2].label,
                 subLabel,
@@ -957,7 +946,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         children: stateFromStores.map((item) => {
           [tmp, tmp2] = item;
           return closure_17(
-            closure_0(6889).TableSwitchRow,
+            closure_0(6895).TableSwitchRow,
             {
               label: tmp3,
               subLabel: tmp,

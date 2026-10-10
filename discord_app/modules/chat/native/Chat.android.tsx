@@ -1,7 +1,7 @@
 // discord_app/modules/chat/native/Chat.android.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
-import LegacyBaseButton from "../../../../_runtime/06333_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06334_LegacyBaseButton.js";
 import ChatNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import useNavigationTTIContentPainted from "../../tti_analytics/native/navigation/useNavigationTTIContentPainted.tsx";
 import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
@@ -14,7 +14,7 @@ require = fn;
 let closure_3 = ["ref"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_9 = createStyles.createStyles({ chatList: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
@@ -78,7 +78,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function DCDChatList() {
       const tmp = closure_9();
-      navigationTTIContentPainted = navigationTTIContentPainted(11441).useNavigationTTIContentPainted();
+      navigationTTIContentPainted = navigationTTIContentPainted(11486).useNavigationTTIContentPainted();
       const items = [navigationTTIContentPainted];
       const memo = noop.useMemo(() => {
         const Gesture = navigationTTIContentPainted(dependencyMap[8]).Gesture;
@@ -93,12 +93,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         onContentPaintStateChange: callback,
         children: null,
       };
-      const obj = navigationTTIContentPainted(11441);
-      obj3.children = closure_7(navigationTTIContentPainted(11447).TTIFirstContentfulPaint, {
+      const obj = navigationTTIContentPainted(11486);
+      obj3.children = closure_7(navigationTTIContentPainted(11492).TTIFirstContentfulPaint, {
         label: "chat_list_android",
       });
       obj2.children = closure_7(ChatListNativeComponentDefault, obj3);
-      return closure_7(navigationTTIContentPainted(6333).GestureDetector, obj2);
+      return closure_7(navigationTTIContentPainted(6334).GestureDetector, obj2);
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -6,22 +6,28 @@ const require = globalThis.__r;
 
 const require = fn;
 let obj = {};
-obj[fn(8895).GameProfileNavTab.OVERVIEW] = fn(8859).GameProfileTrackActionActions.Overview;
-obj[fn(8895).GameProfileNavTab.COMMUNITIES] = fn(8859).GameProfileTrackActionActions.Communities;
-obj[fn(8895).GameProfileNavTab.COMMERCE] = fn(8859).GameProfileTrackActionActions.GameShop;
+obj[fn(8914).GameProfileNavTab.OVERVIEW] = fn(8878).GameProfileTrackActionActions.Overview;
+obj[fn(8914).GameProfileNavTab.COMMUNITIES] = fn(8878).GameProfileTrackActionActions.Communities;
+obj[fn(8914).GameProfileNavTab.COMMERCE] = fn(8878).GameProfileTrackActionActions.GameShop;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileNavigation.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useGameProfileNavigation(arg0) {
+  ? function useGameProfileNavigation(arg0, arg1) {
       _require = arg0;
+      let OVERVIEW = arg1;
       const cResult = require("c").c(10);
-      [selectedTab, _slicedToArray] = noop.useState(require("GameProfileNavTypes").GameProfileNavTab.OVERVIEW);
+      if (undefined === arg1) {
+        OVERVIEW = tmp(tmp2[2]).GameProfileNavTab.OVERVIEW;
+      }
+      [selectedTab, _slicedToArray] = noop.useState(OVERVIEW);
       obj = require("c");
-      [tmp5, noop] = noop.useState(0);
+      tmp = _require;
+      tmp2 = selectedTab;
+      [tmp7, noop] = noop.useState(0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function s(arg0) {
+        const fn = function c(arg0) {
           closure_2(arg0);
           noop((arg0) => arg0 + 1);
         };
@@ -32,31 +38,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === selectedTab) {
         if (cResult[2] === arg0) {
-          let tmp7 = cResult[3];
+          let tmp9 = cResult[3];
         }
-        if (cResult[4] === tmp7) {
+        if (cResult[4] === tmp9) {
           if (cResult[5] === selectedTab) {
-            let tmp8 = cResult[6];
+            let tmp10 = cResult[6];
           }
-          if (cResult[7] === tmp8) {
-            if (cResult[8] === tmp5) {
-              let tmp9 = cResult[9];
+          if (cResult[7] === tmp10) {
+            if (cResult[8] === tmp7) {
+              let tmp11 = cResult[9];
             }
-            return tmp9;
+            return tmp11;
           }
-          const obj2 = { navigation: tmp8, selectionVersion: tmp5 };
-          cResult[7] = tmp8;
-          cResult[8] = tmp5;
+          const obj2 = { navigation: tmp10, selectionVersion: tmp7 };
+          cResult[7] = tmp10;
+          cResult[8] = tmp7;
           cResult[9] = obj2;
-          tmp9 = obj2;
+          tmp11 = obj2;
         }
-        const obj3 = { selectedTab, selectTab: tmp7 };
-        cResult[4] = tmp7;
+        const obj3 = { selectedTab, selectTab: tmp9 };
+        cResult[4] = tmp9;
         cResult[5] = selectedTab;
         cResult[6] = obj3;
-        tmp8 = obj3;
+        tmp10 = obj3;
       }
-      class N {
+      class C {
         constructor(arg0) {
           if (arg0 !== closure_1) {
             tmp = closure_4;
@@ -73,16 +79,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[1] = selectedTab;
       cResult[2] = arg0;
-      cResult[3] = N;
-      tmp7 = N;
+      cResult[3] = C;
+      tmp9 = C;
     }
   : function useGameProfileNavigation(arg0) {
       _require = arg0;
-      [selectedTab, _slicedToArray] = noop.useState(require("GameProfileNavTypes").GameProfileNavTab.OVERVIEW);
-      [tmp4, noop] = noop.useState(0);
+      let OVERVIEW = arg1;
+      if (arg1 === undefined) {
+        OVERVIEW = require("GameProfileNavTypes").GameProfileNavTab.OVERVIEW;
+      }
+      selectedTab = undefined;
+      _slicedToArray = undefined;
+      noop = undefined;
+      [selectedTab, _slicedToArray] = noop.useState(OVERVIEW);
+      [tmp6, c3] = noop.useState(0);
       const callback = noop.useCallback((arg0) => {
         closure_2(arg0);
-        noop((arg0) => arg0 + 1);
+        _undefined((arg0) => arg0 + 1);
       }, []);
       const items = [selectedTab, callback, arg0];
       const callback1 = noop.useCallback((arg0) => {
@@ -93,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         callback(arg0);
       }, items);
-      obj = { navigation: null, selectionVersion: tmp4 };
+      obj = { navigation: null, selectionVersion: tmp6 };
       const items1 = [selectedTab, callback1];
       obj.navigation = noop.useMemo(() => ({ selectedTab, selectTab: callback1 }), items1);
       return obj;

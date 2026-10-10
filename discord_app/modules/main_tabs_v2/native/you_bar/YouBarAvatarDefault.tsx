@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(15288);
+const YouBarConstants = fn(15350);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -24,7 +24,7 @@ const YouBarConstants = fn(15288);
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,
@@ -155,7 +155,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { style: tmp18, children: null };
             const items1 = [tmp29, tmp35];
             obj6.children = items1;
-            const tmp43 = __initData2(View, obj6);
+            const tmp43 = map1(View, obj6);
             cResult[16] = tmp29;
             cResult[17] = tmp43;
             let tmp40 = tmp43;
@@ -168,7 +168,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { style: tmp21, children: null };
         const items2 = [tmp22, tmp26];
         obj8.children = items2;
-        obj7.children = __initData2(View, obj8);
+        obj7.children = map1(View, obj8);
         const tmp34 = __initData(ClipViewDefault, obj7);
         cResult[12] = tmp21;
         cResult[13] = tmp22;
@@ -217,7 +217,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       obj5.children = items2;
-      obj4.children = __initData2(View, obj5);
+      obj4.children = map1(View, obj5);
       const items3 = [__initData(ClipViewDefault, obj4)];
       const obj8 = {
         size: num,
@@ -231,7 +231,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       obj8.style = rect;
       items3[1] = __initData(native.Status, obj8);
       obj3.children = items3;
-      return __initData2(View, obj3);
+      return map1(View, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
@@ -363,7 +363,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { style: tmp23, children: null };
           const items2 = [tmp35, tmp41];
           obj7.children = items2;
-          obj6.children = __initData2(View, obj7);
+          obj6.children = map1(View, obj7);
           const tmp51 = __initData(View, obj6);
           cResult[18] = tmp23;
           cResult[19] = tmp35;
@@ -374,7 +374,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: tmp26, children: null };
         const items3 = [tmp27, tmp31];
         obj9.children = items3;
-        obj8.children = __initData2(View, obj9);
+        obj8.children = map1(View, obj9);
         const tmp40 = __initData(ClipViewDefault, obj8);
         cResult[14] = tmp26;
         cResult[15] = tmp27;
@@ -428,7 +428,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj7.style = size2;
       items3[1] = __initData(ReactionIcon.ReactionIcon, obj7);
       obj5.children = items3;
-      obj4.children = __initData2(View, obj5);
+      obj4.children = map1(View, obj5);
       const items4 = [__initData(ClipViewDefault, obj4)];
       const obj8 = {
         size,
@@ -446,7 +446,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj8.style = rect;
       items4[1] = __initData(native.Status, obj8);
       obj3.children = items4;
-      obj2.children = __initData2(View, obj3);
+      obj2.children = map1(View, obj3);
       return __initData(View, obj2);
     };
 ReactCompilerGating = fn(558);

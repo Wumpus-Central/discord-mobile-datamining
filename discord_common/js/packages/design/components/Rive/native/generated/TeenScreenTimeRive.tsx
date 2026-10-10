@@ -2,7 +2,7 @@
 import c from "../../../../../../../../_runtime/00576_c.js";
 import BaseRive from "../BaseRive.tsx";
 import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
-import _modDef4892 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
+import _modDef4931 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
 import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -70,7 +70,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(tmp5);
       const tmp15 = jsx(BaseRive.BaseRive, {
         ref: tmp4,
-        src: _modDef4892,
+        src: _modDef4931,
         artboard: str,
         artboardProperties,
         artboardViewModelInstances,
@@ -86,7 +86,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       tmp13 = tmp15;
       const obj2 = {
         ref: tmp4,
-        src: _modDef4892,
+        src: _modDef4931,
         artboard: str,
         artboardProperties,
         artboardViewModelInstances,
@@ -109,7 +109,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(tmp2);
       return jsx(BaseRive.BaseRive, {
         ref: defaultViewModelInstance.ref,
-        src: _modDef4892,
+        src: _modDef4931,
         artboard: str,
         artboardProperties,
         artboardViewModelInstances,

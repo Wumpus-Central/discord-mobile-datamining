@@ -1,13 +1,13 @@
 // discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef4661 from "../../../_runtime/metro/04661__.js";
+import _modDef4702 from "../../../_runtime/metro/04702__.js";
 import MessageStore from "../../stores/MessageStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(2071).ChannelFlags;
+const ChannelFlags = fn(2072).ChannelFlags;
 const MessageTypes = fn(1085).MessageTypes;
 let c7 = 1814400000;
 const ReactCompilerGating = fn(558);
@@ -254,15 +254,15 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
             }
           }
           const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(isDM.id);
-          const tmpResult9 = tmp(4752);
+          const tmpResult9 = tmp(4793);
           const isWithinIntervalResult = tmpResult9.isWithinInterval(
-            _modDef4661(),
-            _modDef4661(extractTimestampResult),
+            _modDef4702(),
+            _modDef4702(extractTimestampResult),
             c7,
           );
           cResult[19] = isDM.id;
           cResult[20] = isWithinIntervalResult;
-          const tmp28 = _modDef4661();
+          const tmp28 = _modDef4702();
         } else {
           class T {
             constructor() {
@@ -271,7 +271,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
           }
         }
         const tmpResult8 = tmp(504);
-        const strangerDangerWarning = tmp(10349).useStrangerDangerWarning(isDM.id);
+        const strangerDangerWarning = tmp(10382).useStrangerDangerWarning(isDM.id);
         if (tmp4) {
           class T {
             constructor() {
@@ -391,10 +391,10 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
       const obj5 = recipientId(11);
       const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
       const obj6 = require("DateUtils");
-      const tmp9 = recipientId(4661)();
+      const tmp9 = recipientId(4702)();
       const isWithinIntervalResult = obj6.isWithinInterval(
-        recipientId(4661)(),
-        recipientId(4661)(extractTimestampResult),
+        recipientId(4702)(),
+        recipientId(4702)(extractTimestampResult),
         c7,
       );
       const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);

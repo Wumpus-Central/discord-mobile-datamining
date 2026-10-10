@@ -3,11 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function viewPrompt(REAL_NAME_PROMPT, guildId) {
-  importDefault = REAL_NAME_PROMPT;
-  dependencyMap = guildId;
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: _prompt, guildId });
-  });
+  DispatcherDefault.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: REAL_NAME_PROMPT, guildId });
 }
 const result = size.fileFinishedImporting("modules/guild/GuildPromptsActionCreators.tsx");
 

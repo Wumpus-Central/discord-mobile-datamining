@@ -13,6 +13,7 @@ export const ServerHubSettingType = {
 };
 export const ServerHubVisitSource = {
   WINNER_BADGE: "winner_badge",
+  LEADER_BADGE: "leader_badge",
   LEADERBOARD_SYSTEM_MESSAGE: "leaderboard_system_message",
 };
 export const trackServerHubToggleSetting = function trackServerHubToggleSetting(id, settingType, value) {

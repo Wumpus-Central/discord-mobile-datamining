@@ -34,7 +34,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 },
   rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" },
@@ -116,7 +116,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] !== name) {
         const obj3 = { variant: "text-sm/semibold", children: name };
-        const tmp8 = state(Text_Text.Text, obj3);
+        const tmp8 = closure_1_14(Text_Text.Text, obj3);
         cResult[0] = name;
         cResult[1] = tmp8;
         let tmp6 = tmp8;
@@ -135,7 +135,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       if (children == null) {
         children = applicationId;
       }
-      return state(Text_Text.Text, { variant: "text-sm/semibold", children });
+      return closure_1_14(Text_Text.Text, { variant: "text-sm/semibold", children });
     };
 const PlatformUtils = fn(1382);
 let tmp6;
@@ -155,7 +155,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         return children;
       } else if (cResult[0] !== children) {
         const obj2 = { style: tmp2, children };
-        const tmp6 = state(View, obj2);
+        const tmp6 = closure_1_14(View, obj2);
         cResult[0] = children;
         cResult[1] = tmp6;
       }
@@ -165,7 +165,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp2 = children;
       if (null != obj9) {
         const obj = { style: tmp, children };
-        tmp2 = state(View, obj);
+        tmp2 = closure_1_14(View, obj);
       }
       return tmp2;
     };
@@ -211,12 +211,12 @@ prototype["renderTitle"] = function renderTitle() {
           let tmp22 = !hasUniqueUsernameResult;
           if (!hasUniqueUsernameResult) {
             const obj3 = { style: closure_0.discriminator, children: `#${obj.discriminator}` };
-            tmp22 = state(native.LegacyText, obj3);
+            tmp22 = closure_2_14(native.LegacyText, obj3);
           }
           const obj5 = { variant: "text-md/medium", color: "text-default", children: null };
           items[1] = tmp22;
           obj5.children = items;
-          return closure_2_15(Text_Text.Text, obj5, "user" + user.id);
+          return value2(Text_Text.Text, obj5, "user" + user.id);
         } else if (null != subtarget.integration_type) {
           value = PlatformsDefault.get(subtarget.integration_type);
           let name;
@@ -228,7 +228,7 @@ prototype["renderTitle"] = function renderTitle() {
             name = intl2.string(util.t["n+olu7"]);
           }
           const obj6 = { variant: "text-md/medium", color: "text-default", children: name };
-          return state(Text_Text.Text, obj6, "integration" + subtarget.integration_type);
+          return closure_2_14(Text_Text.Text, obj6, "integration" + subtarget.integration_type);
         } else {
           const intl = util.intl;
           return intl.string(util.t["30mdIx"]);
@@ -241,12 +241,12 @@ prototype["renderTitle"] = function renderTitle() {
             let tmp12 = "0" !== target.discriminator;
             if (tmp12) {
               const obj2 = { style: closure_0.discriminator, children: `#${tmp3.discriminator}` };
-              tmp12 = state(native.LegacyText, obj2);
+              tmp12 = closure_2_14(native.LegacyText, obj2);
             }
             const obj4 = { variant: "text-md/medium", color: "text-default", children: null };
             items[1] = tmp12;
             obj4.children = items;
-            let tmp8Result = closure_2_15(Text_Text.Text, obj4, `target${tmp3.id}`);
+            let tmp8Result = value2(Text_Text.Text, obj4, `target${tmp3.id}`);
           }
           return tmp8Result;
         }
@@ -254,12 +254,12 @@ prototype["renderTitle"] = function renderTitle() {
           if (typeof target === "object") {
             if (obj6.isGuildRecord(target)) {
               const obj5 = { variant: "text-md/medium", color: "text-default", children: target.name };
-              tmp8Result = state(Text_Text.Text, obj5, `target${tmp5.id}`);
+              tmp8Result = closure_2_14(Text_Text.Text, obj5, `target${tmp5.id}`);
             }
             obj6 = GuildRecordUtils;
           }
         }
-        tmp8Result = state(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children }, arg1);
+        tmp8Result = closure_2_14(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children }, arg1);
         const obj = { variant: "text-md/medium", color: "text-default", children };
       },
       count: null,
@@ -290,17 +290,17 @@ prototype["renderTitle"] = function renderTitle() {
         let tmp15 = "0" !== member.discriminator;
         if (tmp15) {
           const obj3 = { style: closure_0.discriminator, children: `#${tmp.discriminator}` };
-          tmp15 = state(native.LegacyText, obj3);
+          tmp15 = closure_2_14(native.LegacyText, obj3);
         }
         const obj4 = { variant: "text-md/medium", color: "text-default", children: null };
         items[1] = tmp15;
         obj4.children = items;
-        let tmp10Result = closure_2_15(Text_Text.Text, obj4, `member${arg1}${tmp.id}`);
+        let tmp10Result = value2(Text_Text.Text, obj4, `member${arg1}${tmp.id}`);
       } else {
         const obj = { variant: "text-md/medium", color: "text-default", children: null };
         const intl = util.intl;
         obj.children = intl.string(util.t["30mdIx"]);
-        tmp10Result = state(Text_Text.Text, obj, arg1);
+        tmp10Result = closure_2_14(Text_Text.Text, obj, arg1);
       }
       return tmp10Result;
     };
@@ -358,7 +358,7 @@ prototype["renderPermissionUpdate"] = function renderPermissionUpdate(newValue) 
         color: "text-muted",
         children: AuditLogUtilsAll.getStringForPermission(item, self.props.log),
       };
-      return state(Text_Text.Text, obj, item);
+      return closure_2_14(Text_Text.Text, obj, item);
     });
   }
   return mapped;
@@ -446,8 +446,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     const obj2 = { style: null };
                     const items = [children.colorHook, { backgroundColor: items3 }];
                     obj2.style = items;
-                    obj.children = state(View, obj2);
-                    return state(closure_19, obj, arg1);
+                    obj.children = closure_3_14(View, obj2);
+                    return closure_3_14(closure_19, obj, arg1);
                   };
                   obj10.newColorsHook = function newColorsHook(arg0, arg1) {
                     let obj = { children: null };
@@ -476,31 +476,31 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       obj.children = items;
                       return closure_2_15(React.Fragment, obj, index);
                     });
-                    obj.children = state(View, obj2);
-                    return state(closure_19, obj, arg1);
+                    obj.children = closure_3_14(View, obj2);
+                    return closure_3_14(closure_19, obj, arg1);
                   };
                   obj10.oldColorHook = function oldColorHook() {
                     return null;
                   };
                   obj10.oldTagHook = function oldTagHook(arg0, arg1) {
                     const obj = {
-                      children: state(AppliedForumTag.AppliedForumTagPill, {
+                      children: closure_3_14(AppliedForumTag.AppliedForumTagPill, {
                         tag: changeItemTextLine,
                         containerStyle: children.forumTag,
                         disableEndMargin: true,
                       }),
                     };
-                    return state(closure_19, obj, arg1);
+                    return closure_3_14(closure_19, obj, arg1);
                   };
                   obj10.newTagHook = function newTagHook(arg0, arg1) {
                     const obj = {
-                      children: state(AppliedForumTag.AppliedForumTagPill, {
+                      children: closure_3_14(AppliedForumTag.AppliedForumTagPill, {
                         tag: items3,
                         containerStyle: children.forumTag,
                         disableEndMargin: true,
                       }),
                     };
-                    return state(closure_19, obj, arg1);
+                    return closure_3_14(closure_19, obj, arg1);
                   };
                   obj10.oldEmojiHook = function oldEmojiHook(arg0, arg1) {
                     let emojiURL;
@@ -509,14 +509,14 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
                     }
                     const obj3 = {
-                      children: state(EmojiDefault, {
+                      children: closure_3_14(EmojiDefault, {
                         src: emojiURL,
                         name: changeItemTextLine,
                         textEmojiStyle: children.textEmoji,
                         fastImageStyle: children.imageEmoji,
                       }),
                     };
-                    return state(closure_19, obj3, arg1);
+                    return closure_3_14(closure_19, obj3, arg1);
                   };
                   obj10.newEmojiHook = function newEmojiHook(arg0, arg1) {
                     let emojiURL;
@@ -525,14 +525,14 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       emojiURL = AvatarUtilsDefault.getEmojiURL(obj2);
                     }
                     const obj3 = {
-                      children: state(EmojiDefault, {
+                      children: closure_3_14(EmojiDefault, {
                         src: emojiURL,
                         name: items3,
                         textEmojiStyle: children.textEmoji,
                         fastImageStyle: children.imageEmoji,
                       }),
                     };
-                    return state(closure_19, obj3, arg1);
+                    return closure_3_14(closure_19, obj3, arg1);
                   };
                   obj10.applicationHook = function applicationHook(arg0, arg1) {
                     let applicationId;
@@ -546,13 +546,13 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       }
                       applicationId = application_id1;
                     }
-                    return state(closure_17, { applicationId }, arg1);
+                    return closure_3_14(closure_17, { applicationId }, arg1);
                   };
                   obj10.oldApplicationHook = function oldApplicationHook(arg0, arg1) {
-                    return state(closure_17, { applicationId: changeItemTextLine }, arg1);
+                    return closure_3_14(closure_17, { applicationId: changeItemTextLine }, arg1);
                   };
                   obj10.newApplicationHook = function newApplicationHook(arg0, arg1) {
-                    return state(closure_17, { applicationId: items3 }, arg1);
+                    return closure_3_14(closure_17, { applicationId: items3 }, arg1);
                   };
                   const formatResult = intl.format(tmp18Result, obj10);
                   if (null == formatResult) {
@@ -719,7 +719,7 @@ prototype["render"] = function render() {
   obj4.border = str3;
   obj4.onPress = onHeaderClick;
   const obj5 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(18212), { action: log.action }), , ,];
+  const items2 = [closure_14(user(18286), { action: log.action }), , ,];
   const obj7 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -747,15 +747,15 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(5760).get(log.options.integration_type);
+            value = tmp18(5763).get(log.options.integration_type);
             if (null != value) {
               const icon = value.icon;
-              const tmp9Result = tmp9(4930);
-              const tmp25 = tmp9(4930).isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
+              const tmp9Result = tmp9(4969);
+              const tmp25 = tmp9(4969).isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
               let source = tmp9(1415).makeSource(tmp25);
               const tmp9Result5 = tmp9(1415);
             }
-            const tmp18Result = tmp18(5760);
+            const tmp18Result = tmp18(5763);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -769,7 +769,7 @@ prototype["render"] = function render() {
         obj8.source = source;
         obj8.size = tmp10(1200).AvatarSizes.SMALL;
         obj7.children = closure_14(tmp20, obj8);
-        items2[1] = closure_14(tmp10(6191).PressableOpacity, obj7);
+        items2[1] = closure_14(tmp10(6184).PressableOpacity, obj7);
         obj9 = {
           accessibilityRole: "button",
           accessibilityState: null,
@@ -785,14 +785,14 @@ prototype["render"] = function render() {
         obj9.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj9.children = items3;
-        items2[2] = closure_15(tmp10(6191).PressableOpacity, obj9);
+        items2[2] = closure_15(tmp10(6184).PressableOpacity, obj9);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj11 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj11.style = items4;
           obj11.size = tmp10(1200).Icon.Sizes.CUSTOM;
-          obj11.source = tmp18(14774);
+          obj11.source = tmp18(14829);
           tmp17Result = closure_14(tmp10(1200).Icon, obj11);
         }
         items2[3] = tmp17Result;
@@ -804,7 +804,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj4.children = items5;
-        return closure_15(tmp10(6188).Card, obj4);
+        return closure_15(tmp10(6181).Card, obj4);
       }
     }
   }
@@ -814,7 +814,7 @@ prototype["render"] = function render() {
   source = tmp9Result6.ensureAvatarSource(tmp9Result7.makeSource(tmp9(1418).getAutomodAvatarURL()));
   const tmp9Result8 = tmp9(1418);
 };
-AuditLog.contextType = fn(4788).ThemeContext;
+AuditLog.contextType = fn(4827).ThemeContext;
 let items3 = [ThemeStore];
 let obj7 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 size = fn(2);

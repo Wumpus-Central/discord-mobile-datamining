@@ -3,11 +3,11 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3277 from "../premium_group/PremiumGroup.messages.js";
+import _modDef3280 from "../premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GameIcon from "../../game_detection/native/GameIcon.tsx";
+import BoostGemIcon from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EntitlementStore from "../../../stores/game_store/EntitlementStore.tsx";
 
@@ -19,7 +19,7 @@ let View = fn(17).View;
 const SubscriptionStatusTypes = fn(1085).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   title: { marginBottom: 12 },
   creditList: { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -33,8 +33,8 @@ let obj2 = {
   creditDescription: null,
 };
 let size = {
-  width: fn(6858).GameIconImageSize[fn(undefined, 6858).GameIconSizes.SMALL],
-  height: fn(6858).GameIconImageSize[fn(undefined, 6858).GameIconSizes.SMALL],
+  width: fn(6861).GameIconImageSize[fn(undefined, 6861).GameIconSizes.SMALL],
+  height: fn(6861).GameIconImageSize[fn(undefined, 6861).GameIconSizes.SMALL],
   alignItems: "center",
   justifyContent: "center",
 };
@@ -223,7 +223,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
           const intl4 = util.intl;
-          const stringResult = intl4.string(intl(3277)["5asczk"]);
+          const stringResult = intl4.string(intl(3280)["5asczk"]);
           cResult[28] = stringResult;
         }
       } else {
@@ -319,8 +319,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
               let tmp46Result = timestampProducer(View, obj12);
             } else {
               const obj14 = { size: GameIcon.GameIconSizes.SMALL, skuId: str };
-              tmp46Result = timestampProducer(intl(6858), obj14);
-              const intlResult = intl(6858);
+              tmp46Result = timestampProducer(intl(6861), obj14);
+              const intlResult = intl(6861);
             }
             cResult[37] = tmp7;
             cResult[38] = str;
@@ -353,7 +353,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (hasPremiumGroup) {
         const intl3 = util.intl;
-        let stringResult = intl3.string(_modDef3277["5asczk"]);
+        let stringResult = intl3.string(_modDef3280["5asczk"]);
       } else {
         if (null != currentSubscription) {
           if (currentSubscription.planId === planId) {
@@ -655,7 +655,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = tmp2(1126).intl;
           obj3.children = intl.string(tmp2(1126).t.YugZY0);
-          const items1 = [closure_6(tmp2(5087).Text, obj3), , ,];
+          const items1 = [closure_6(tmp2(5088).Text, obj3), , ,];
           const obj4 = { style: null, children: null };
           const items2 = [tmp.creditList, creditListContainerStyle];
           obj4.style = items2;
@@ -680,7 +680,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl2 = tmp2(1126).intl;
           obj5.children = intl2.string(tmp2(1126).t.Z5b2Gf);
-          items1[2] = closure_6(tmp2(5087).Text, obj5);
+          items1[2] = closure_6(tmp2(5088).Text, obj5);
           let tmp9Result = null;
           if (null != currentSubscription) {
             tmp9Result = null;
@@ -688,7 +688,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
               const intl3 = tmp2(1126).intl;
               obj6.children = intl3.string(tmp2(1126).t.azRP0E);
-              tmp9Result = closure_6(tmp2(5087).Text, obj6);
+              tmp9Result = closure_6(tmp2(5088).Text, obj6);
             }
           }
           items1[3] = tmp9Result;

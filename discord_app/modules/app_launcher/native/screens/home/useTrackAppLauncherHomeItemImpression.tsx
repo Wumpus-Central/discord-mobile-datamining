@@ -14,7 +14,7 @@ export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReact
       const cResult = trackAppLauncherItemImpressionOnFirstView(576).c(4);
       let obj = trackAppLauncherItemImpressionOnFirstView(576);
       trackAppLauncherItemImpressionOnFirstView =
-        trackAppLauncherItemImpressionOnFirstView(11742).useTrackAppLauncherItemImpressionOnFirstView()
+        trackAppLauncherItemImpressionOnFirstView(11787).useTrackAppLauncherItemImpressionOnFirstView()
           .trackAppLauncherItemImpressionOnFirstView;
       if (cResult[0] !== trackAppLauncherItemImpressionOnFirstView) {
         const fn = function t(viewableItems) {
@@ -117,7 +117,7 @@ export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReact
     }
   : function useTrackAppLauncherHomeItemImpression() {
       trackAppLauncherItemImpressionOnFirstView =
-        trackAppLauncherItemImpressionOnFirstView(11742).useTrackAppLauncherItemImpressionOnFirstView()
+        trackAppLauncherItemImpressionOnFirstView(11787).useTrackAppLauncherItemImpressionOnFirstView()
           .trackAppLauncherItemImpressionOnFirstView;
       let obj2 = { trackAppLauncherHomeItemImpression: null };
       const items = [trackAppLauncherItemImpressionOnFirstView];

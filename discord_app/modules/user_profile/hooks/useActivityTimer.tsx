@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = first1(576).c(9);
       start = start.start;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const interval = new tmp(2059).Interval();
+        const interval = new tmp(2060).Interval();
         cResult[0] = interval;
         let first = interval;
       } else {
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function useActivityTimer(start) {
       start = start.start;
       let first;
-      const interval = new first(2059).Interval();
+      const interval = new first(2060).Interval();
       first = _slicedToArray(closure_5(interval), 1)[0];
       const tmp3 = _slicedToArray(
         closure_5(() => Date.now()),

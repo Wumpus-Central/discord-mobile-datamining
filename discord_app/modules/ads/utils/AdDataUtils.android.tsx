@@ -7,7 +7,7 @@ import AdUserStore from "../native/AdUserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7417).DEFAULT_TIMEOUT_MS;
+const DEFAULT_TIMEOUT_MS = fn(7418).DEFAULT_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");

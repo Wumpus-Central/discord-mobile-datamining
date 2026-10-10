@@ -25,11 +25,11 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let FrecencySectionSelection = fn(11683).FrecencySectionSelection;
+let FrecencySectionSelection = fn(11729).FrecencySectionSelection;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { marginBottom: nativeDefault.space.PX_16 },
   headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -194,7 +194,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return mapped.filter(GlobalUtils.isNotNullish);
       }, items);
-      onlyActivityApps(6854)(memo);
+      onlyActivityApps(6857)(memo);
     };
 ReactCompilerGating = fn(558);
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
@@ -205,7 +205,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(20, 70);
       if (cResult[0] !== tmp2.loadingCommandIcon) {
         const obj4 = { style: tmp2.loadingCommandIcon };
-        const tmp8 = __initData2(React5, obj4);
+        const tmp8 = map1(React5, obj4);
         cResult[0] = tmp2.loadingCommandIcon;
         cResult[1] = tmp8;
         let tmp5 = tmp8;
@@ -251,7 +251,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { style: tmp2.commandContainer, children: null };
             const items = [tmp5, tmp17];
             obj7.children = items;
-            const tmp24 = state(React5, obj7);
+            const tmp24 = closure_1_14(React5, obj7);
             cResult[15] = tmp2.commandContainer;
             cResult[16] = tmp5;
             cResult[17] = tmp17;
@@ -261,7 +261,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           const obj8 = { children: null };
           const items1 = [tmp10, tmp13];
           obj8.children = items1;
-          const tmp20 = state(React5, obj8);
+          const tmp20 = closure_1_14(React5, obj8);
           cResult[12] = tmp10;
           cResult[13] = tmp13;
           cResult[14] = tmp20;
@@ -270,7 +270,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: null };
         const items2 = [tmp2.loadingTextPlaceholderSmall, tmp12];
         obj9.style = items2;
-        const tmp16 = __initData2(React5, obj9);
+        const tmp16 = map1(React5, obj9);
         cResult[9] = tmp2.loadingTextPlaceholderSmall;
         cResult[10] = tmp12;
         cResult[11] = tmp16;
@@ -279,7 +279,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: null };
       const items3 = [tmp2.loadingTextPlaceholder, tmp9];
       obj10.style = items3;
-      const tmp11 = __initData2(React5, obj10);
+      const tmp11 = map1(React5, obj10);
       cResult[4] = tmp2.loadingTextPlaceholder;
       cResult[5] = tmp9;
       cResult[6] = tmp11;
@@ -290,20 +290,20 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const placeholderWidth = usePlaceholderSize.usePlaceholderWidth(20, 90);
       const obj3 = { style: tmp.commandContainer, children: null };
       const placeholderWidth1 = usePlaceholderSize.usePlaceholderWidth(20, 70);
-      const items = [__initData2(React5, { style: tmp.loadingCommandIcon })];
+      const items = [map1(React5, { style: tmp.loadingCommandIcon })];
       const obj5 = { children: null };
       const obj6 = { style: null };
       const items1 = [tmp.loadingTextPlaceholder, { width: placeholderWidth }];
       obj6.style = items1;
-      const items2 = [__initData2(React5, obj6)];
+      const items2 = [map1(React5, obj6)];
       const obj7 = { style: null };
       const items3 = [tmp.loadingTextPlaceholderSmall, { width: placeholderWidth1 }];
       obj7.style = items3;
-      items2[1] = __initData2(React5, obj7);
+      items2[1] = map1(React5, obj7);
       obj5.children = items2;
-      items[1] = state(React5, obj5);
+      items[1] = closure_1_14(React5, obj5);
       obj3.children = items;
-      return state(React5, obj3);
+      return closure_1_14(React5, obj3);
     };
 let obj11 = { APPS: 0, [0]: "APPS", COMMANDS: 1, [1]: "COMMANDS" };
 let closure_19 = {
@@ -532,7 +532,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         if (cResult[0] !== app.section.application) {
-          const appLauncherIconSource = tmp(11681).getAppLauncherIconSource(app.section.application);
+          const appLauncherIconSource = tmp(11727).getAppLauncherIconSource(app.section.application);
           cResult[0] = app.section.application;
           cResult[1] = appLauncherIconSource;
           class A {
@@ -555,7 +555,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmpResult = tmp(11681);
+          const tmpResult = tmp(11727);
         }
         const tmp8 = disabled ? tmp5.appContainerDisabled : tmp5.appContainer;
         const application = app.section.application;
@@ -622,7 +622,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               obj2.onPress = tmp9;
               const items = [tmp10, tmp14];
               obj2.children = items;
-              const tmp19 = closure_14(tmp(6191).PressableOpacity, obj2, app.applicationId);
+              const tmp19 = closure_14(tmp(6184).PressableOpacity, obj2, app.applicationId);
               cResult[11] = app.applicationId;
               cResult[12] = disabled;
               cResult[13] = tmp8;
@@ -662,7 +662,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp11 = null != tmp6;
           if (tmp11) {
             const obj4 = { style: tmp5.appIcon, source: tmp6 };
-            tmp11 = closure_13(onAppSelected(6163), obj4);
+            tmp11 = closure_13(onAppSelected(6156), obj4);
           }
           cResult[5] = tmp6;
           class A {
@@ -727,7 +727,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == app.section) {
         return null;
       } else {
-        const appLauncherIconSource = app(11681).getAppLauncherIconSource(app.section.application);
+        const appLauncherIconSource = app(11727).getAppLauncherIconSource(app.section.application);
         let obj = {
           style: disabled ? tmp.appContainerDisabled : tmp.appContainer,
           disabled,
@@ -759,13 +759,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp3 = null != appLauncherIconSource;
         if (tmp3) {
           const obj2 = { style: tmp.appIcon, source: appLauncherIconSource };
-          tmp3 = closure_13(onAppSelected(6163), obj2);
+          tmp3 = closure_13(onAppSelected(6156), obj2);
         }
         const items = [tmp3];
         const obj3 = { submitting, style: tmp.submittingOverlay };
-        items[1] = closure_13(app(11690).SubmittingOverlay, obj3);
+        items[1] = closure_13(app(11736).SubmittingOverlay, obj3);
         obj.children = items;
-        return closure_14(app(6191).PressableOpacity, obj, app.applicationId);
+        return closure_14(app(6184).PressableOpacity, obj, app.applicationId);
       }
     };
 size = fn(2);
@@ -1087,10 +1087,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp = undefined;
               const obj2 = { context, app: applicationId };
               applicationId = applicationId.applicationId;
-              let tmp8 = __initData2(closure_21, obj2, applicationId);
+              let tmp8 = map1(closure_21, obj2, applicationId);
             }
             const obj3 = { app: applicationId, onAppSelected };
-            tmp8 = __initData2(closure_22, obj3, applicationId.applicationId);
+            tmp8 = map1(closure_22, obj3, applicationId.applicationId);
           }
         });
         const filter = mapped1.filter;
@@ -1130,20 +1130,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               const intl = util.intl;
               obj2.children = intl.string(util.t.acSE0h);
-              const items = [__initData2(Text_Text.Text, obj2)];
+              const items = [map1(Text_Text.Text, obj2)];
               let tmp5Result = null;
               if (commands.length > 0) {
                 tmp5Result = null;
                 if (apps.length > 0) {
                   const obj3 = { style, children: null };
                   const obj4 = { color: "interactive-text-default", style: closure_8.contextMenuIcon };
-                  obj3.children = __initData2(ChevronSmallDownIcon.ChevronSmallDownIcon, obj4);
-                  tmp5Result = __initData2(ReanimatedRexportDefault.View, obj3);
+                  obj3.children = map1(ChevronSmallDownIcon.ChevronSmallDownIcon, obj4);
+                  tmp5Result = map1(ReanimatedRexportDefault.View, obj3);
                 }
               }
               items[1] = tmp5Result;
               obj.children = items;
-              return state(React5, obj);
+              return closure_2_14(React5, obj);
             },
           };
           const items4 = [closure_13(require("ContextMenu").ContextMenu, obj10)];

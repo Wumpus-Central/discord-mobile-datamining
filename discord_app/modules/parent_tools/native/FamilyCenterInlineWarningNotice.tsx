@@ -1,15 +1,15 @@
 // discord_app/modules/parent_tools/native/FamilyCenterInlineWarningNotice.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     flexDirection: "row",

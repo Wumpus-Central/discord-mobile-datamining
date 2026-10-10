@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.text = intl.string(util.t["Mv4E/M"]);
           obj2.icon = CircleInformationIcon.CircleInformationIcon;
           obj2.iconColor = nativeDefault.colors.STATUS_WARNING;
-          ToastActionCreatorsDefault.openMana("LARGE_COUNTDOWN_PILL_TOAST", obj2);
+          ToastActionCreatorsDefault.open("LARGE_COUNTDOWN_PILL_TOAST", obj2);
         }
         cResult[0] = handlePress;
         let first = handlePress;
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj2.text = intl.string(util.t["Mv4E/M"]);
           obj2.icon = CircleInformationIcon.CircleInformationIcon;
           obj2.iconColor = nativeDefault.colors.STATUS_WARNING;
-          ToastActionCreatorsDefault.openMana("LARGE_COUNTDOWN_PILL_TOAST", obj2);
+          ToastActionCreatorsDefault.open("LARGE_COUNTDOWN_PILL_TOAST", obj2);
         },
         children: null,
       };

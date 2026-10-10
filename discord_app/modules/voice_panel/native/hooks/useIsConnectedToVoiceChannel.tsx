@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
             return true;
           } else {
-            state = RTCConnectionStore.getState();
+            const state = RTCConnectionStore.getState();
             if (RTCConnectionStates.DISCONNECTED !== state) {
               if (RTCConnectionStates.NO_ROUTE !== state) {
                 return true;
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else if (VoiceStateStore.isInChannel(tmp2, AuthenticationStore.getId())) {
           return true;
         } else {
-          state = RTCConnectionStore.getState();
+          const state = RTCConnectionStore.getState();
           if (RTCConnectionStates.DISCONNECTED !== state) {
             if (RTCConnectionStates.NO_ROUTE !== state) {
               return true;

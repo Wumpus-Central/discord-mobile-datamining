@@ -15,9 +15,9 @@ const useVoicePanelCardUserStateIconsDefault = useVoicePanelCardUserStateIcons;
 
 require = fn;
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8525).BackgroundBlurView);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(8541).BackgroundBlurView);
 const OPACITY_TIMING = { duration: 100 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
 const rect = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.round, padding: 6 };
 obj.container = rect;
@@ -193,7 +193,7 @@ export default noop.memo(
     ? function VoicePanelHeaderUserState(isHeaderHidden) {
         const cResult = isHeaderHidden(576).c(9);
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
-        const context = noop.useContext(channelId(11925));
+        const context = noop.useContext(channelId(11969));
         channelId = context.channelId;
         const guildId = context.guildId;
         const tmp6 = closure_8();
@@ -222,7 +222,7 @@ export default noop.memo(
         let obj = isHeaderHidden(576);
         const tmp4 = channelId;
         const stateFromStores = isHeaderHidden(504).useStateFromStores(first, tmp9);
-        const tmp11 = closure_9(tmp4(17681)(stateFromStores, channelId, guildId), guildId);
+        const tmp11 = closure_9(tmp4(17753)(stateFromStores, channelId, guildId), guildId);
         const tmpResult = isHeaderHidden(504);
         class P {
           constructor() {
@@ -235,8 +235,8 @@ export default noop.memo(
             return obj1;
           }
         }
-        const tmpResult2 = isHeaderHidden(4811);
-        P.__closure = { withTiming: isHeaderHidden(5092).withTiming, isHeaderHidden, OPACITY_TIMING };
+        const tmpResult2 = isHeaderHidden(4850);
+        P.__closure = { withTiming: isHeaderHidden(5093).withTiming, isHeaderHidden, OPACITY_TIMING };
         P.__workletHash = 7032221979181;
         P.__initData = __initData;
         const animatedStyle = tmpResult2.useAnimatedStyle(P);
@@ -265,12 +265,12 @@ export default noop.memo(
           cResult[5] = items1;
           tmp13 = items1;
         }
-        const obj2 = { withTiming: isHeaderHidden(5092).withTiming, isHeaderHidden, OPACITY_TIMING };
+        const obj2 = { withTiming: isHeaderHidden(5093).withTiming, isHeaderHidden, OPACITY_TIMING };
       }
     : function VoicePanelHeaderUserState(isHeaderHidden) {
         isHeaderHidden = isHeaderHidden.isHeaderHidden;
         let channelId;
-        const context = noop.useContext(channelId(11925));
+        const context = noop.useContext(channelId(11969));
         channelId = context.channelId;
         const guildId = context.guildId;
         const tmp2 = closure_8();
@@ -283,8 +283,8 @@ export default noop.memo(
           }
           return id;
         });
-        const tmp4 = closure_9(channelId(17681)(stateFromStores, channelId, guildId), guildId);
-        isHeaderHidden(4811);
+        const tmp4 = closure_9(channelId(17753)(stateFromStores, channelId, guildId), guildId);
+        isHeaderHidden(4850);
         const fn = function f() {
           let num = 0;
           if (isHeaderHidden.get()) {
@@ -293,7 +293,7 @@ export default noop.memo(
           return { opacity: timing.withTiming(num, closure_7) };
         };
         let obj = isHeaderHidden(504);
-        fn.__closure = { withTiming: isHeaderHidden(5092).withTiming, isHeaderHidden, OPACITY_TIMING };
+        fn.__closure = { withTiming: isHeaderHidden(5093).withTiming, isHeaderHidden, OPACITY_TIMING };
         fn.__workletHash = 1281074829646;
         fn.__initData = __initData2;
         let tmp7 = null;

@@ -13,7 +13,7 @@ import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import Client from "../../../flow/Client.tsx";
-import _modDef5012 from "../../../../_runtime/metro/05012__.js";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
@@ -124,7 +124,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -161,7 +161,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -215,8 +215,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9356).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7729);
+let closure_5 = fn(9383).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7747);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1085);
 ({
@@ -287,13 +287,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          const obj3 = {
-            sourceType: "embed",
-            source: tmp8,
-            mediaType: "image",
-            mediaUrl: tmp8.url,
-            contentType: "Array",
-          };
+          const obj3 = { sourceType: "embed", source: tmp8, mediaType: "image", mediaUrl: tmp8.url, contentType: "o" };
           return obj3;
         }
       }
@@ -428,7 +422,6 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       member = GuildMemberStore.getMember(guildId, id);
     }
   }
-  let tmp36Result = dependencyMap;
   const result1 = CommunicationDisabledUtils.isMemberCommunicationDisabled(member);
   if (channel.isArchivedLockedThread()) {
     const obj15 = ToastActionCreatorsDefault;
@@ -440,10 +433,8 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     } else {
       stringResult = string(t.X2L3Oa);
     }
-    const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef5012;
-    obj3.icon = tmp36Result;
-    t = obj15.open(obj3);
+    t = { text: stringResult, icon: CircleInformationIcon.CircleInformationIcon };
+    obj15.open("ARCHIVED_POST_REACTIONS_DISABLED_TOAST", t);
     isForumPostResult = channel.isForumPost();
   } else if (null != reaction) {
     if (flag) {
@@ -458,18 +449,18 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     if (tmp12Result10.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
       const result2 = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       const tmp12Result11 = HapticUtils;
-      const obj4 = { channelId: channel.id, messageId, emoji: reaction.emoji, location: MESSAGE, options: null };
-      const obj5 = { burst: flag };
-      obj4.options = obj5;
-      ReactionActionCreators.removeReaction(obj4);
+      const obj3 = { channelId: channel.id, messageId, emoji: reaction.emoji, location: MESSAGE, options: null };
+      const obj4 = { burst: flag };
+      obj3.options = obj4;
+      ReactionActionCreators.removeReaction(obj3);
       const tmp12Result12 = ReactionActionCreators;
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
             const tmp12Result13 = ReactionActionCreators;
-            const obj6 = { burst: flag };
-            tmp12Result13.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj6);
+            const obj5 = { burst: flag };
+            tmp12Result13.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj5);
             if (!flag) {
               const result3 = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
               const tmp12Result14 = HapticUtils;
@@ -488,8 +479,8 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
     const tmp12Result16 = reactions_ReactionUtils;
-    const obj7 = { burst: flag };
-    const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj7);
+    const obj6 = { burst: flag };
+    const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj6);
   }
 };
 export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, stateFromStores1) {

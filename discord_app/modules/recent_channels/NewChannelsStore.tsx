@@ -40,7 +40,6 @@ function seedCommunityBaseline() {
   return false;
 }
 function maybeAckViewedChannel(guildId, channelId) {
-  closure_0 = channelId;
   let tmp = null != obj && null != channelId && obj.has(channelId);
   if (tmp) {
     guild = GuildStore.getGuild(guildId);
@@ -66,11 +65,9 @@ function maybeAckViewedChannel(guildId, channelId) {
     tmp = 0 === ReadStateStore.getMentionCount(channelId);
   }
   if (tmp) {
-    DispatcherDefault.wait(() => {
-      const obj = ReadStateActionCreators;
-      const obj2 = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
-      return obj.ack(closure_0, obj2, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(closure_0));
-    });
+    const obj3 = ReadStateActionCreators;
+    const obj2 = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
+    obj3.ack(channelId, obj2, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(channelId));
   }
 }
 function initializeNewChannels(guildId) {
@@ -130,7 +127,7 @@ function pruneNewChannels() {
     );
   });
 }
-let closure_7 = fn(4707).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_7 = fn(4748).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();

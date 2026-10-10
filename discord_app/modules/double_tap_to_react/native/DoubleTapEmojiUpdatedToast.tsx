@@ -72,7 +72,7 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
       }
     }
     obj4.icon = obj9;
-    ToastActionCreatorsDefault.openMana("DEFAULT_REACTION_EMOJI_UPDATED", obj4);
+    ToastActionCreatorsDefault.open("DEFAULT_REACTION_EMOJI_UPDATED", obj4);
   }
   obj = useIsScreenReaderEnabled;
 };

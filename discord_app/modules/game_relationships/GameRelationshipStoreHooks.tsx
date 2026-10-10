@@ -26,7 +26,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp7 = cResult[4];
         }
         const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5964).isVersionEqual), 1)[0];
+        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5957).isVersionEqual), 1)[0];
       }
       const fn = function u() {
         const items = [
@@ -208,7 +208,7 @@ export const useHasGameRelationshipsForUserByType = ReactCompilerGating.isReactC
           let tmp7 = cResult[4];
         }
         const tmpResult = tmp(504);
-        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5964).isVersionEqual), 1)[0];
+        return _slicedToArray(tmpResult.useStateFromStores(first, tmp6, tmp7, tmp(5957).isVersionEqual), 1)[0];
       }
       const fn = function u() {
         const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(

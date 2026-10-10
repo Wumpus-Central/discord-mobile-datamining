@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2795 from "../intl/ClientThemes.messages.js";
+import _modDef2798 from "../intl/ClientThemes.messages.js";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import SavedCustomThemeStore from "../SavedCustomThemeStore.tsx";
@@ -12,7 +12,7 @@ import CustomThemeMobileStore from "CustomThemeMobileStore.tsx";
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2795.yl1iMm);
+  return intl.string(_modDef2798.yl1iMm);
 }
 const ClientThemesConstants = fn(1253);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: closure_7 } =

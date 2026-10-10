@@ -21,7 +21,7 @@ export default {
     );
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(8866, dependencyMap.paths),
+      asyncRequireImpl(8885, dependencyMap.paths),
       "game-profile-" + gameId,
       { gameId, source, sourceUserId },
       stackingBehavior,
@@ -29,18 +29,26 @@ export default {
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
-    ({ source, initialScrollOffset } = gameId);
+    ({ source, initialScrollOffset, initialTab } = gameId);
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(8866, dependencyMap.paths), "game-profile-" + gameId, {
+    obj2.openLazy(asyncRequireImpl(8885, dependencyMap.paths), "game-profile-" + gameId, {
       gameId,
       source,
       initialScrollOffset,
+      initialTab,
     });
   },
   setGameProfilePendingReturn(arg0) {
-    ({ gameId, channelId, initialScrollOffset } = arg0);
-    DispatcherDefault.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
+    ({ gameId, channelId, initialScrollOffset, tab, source } = arg0);
+    DispatcherDefault.dispatch({
+      type: "GAME_PROFILE_SET_PENDING_RETURN",
+      gameId,
+      channelId,
+      initialScrollOffset,
+      tab,
+      source,
+    });
   },
   clearGameProfilePendingReturn(id) {
     DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id });

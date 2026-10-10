@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(9731).useStickerPickerStore;
+let useStickerPickerStore = fn(9760).useStickerPickerStore;
 const Constants = fn(1085);
 ({
   AnalyticEvents: closure_8,
@@ -23,7 +23,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1241).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -1091,7 +1091,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items7);
       const callback5 = first.useCallback(
         (arg0, index) =>
-          state(closure_17, {
+          closure_2_14(closure_17, {
             category: categories[index],
             index,
             isActive: index === categoryIndex,
@@ -1102,9 +1102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
       const tmp17 = categoryIndex;
-      const tmp19 = categoryIndex(9547)();
+      const tmp19 = categoryIndex(9576)();
       const items9 = [
-        closure_14(categoryIndex(6742), {
+        closure_14(categoryIndex(6743), {
           estimatedListSize: "windowSize",
           horizontal: true,
           itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -1130,12 +1130,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items10 = [,];
         ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
         obj4.style = items10;
-        const obj5 = { style: tmp.guildIcon, source: tmp17(9767) };
+        const obj5 = { style: tmp.guildIcon, source: tmp17(9796) };
         obj4.children = closure_14(categories(1200).Icon, obj5);
         obj3.children = closure_14(closure_5, obj4);
-        tmp22Result = closure_14(categories(6191).PressableOpacity, obj3);
+        tmp22Result = closure_14(categories(6184).PressableOpacity, obj3);
       }
       items9[1] = tmp22Result;
       obj.children = items9;
-      return closure_15(categoryIndex(9548), obj);
+      return closure_15(categoryIndex(9577), obj);
     };

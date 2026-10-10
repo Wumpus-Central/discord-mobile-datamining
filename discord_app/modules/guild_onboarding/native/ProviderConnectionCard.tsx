@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -202,7 +202,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 } else {
                   c1 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp9) {
                 c1 = tmp;
@@ -280,7 +280,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     const obj4 = {};
                     const obj5 = v3(1265);
-                    const merged = Object.assign(provider_id(5106).collectGuildAnalyticsMetadata(guildId));
+                    const merged = Object.assign(provider_id(5107).collectGuildAnalyticsMetadata(guildId));
                     obj4.connection_type = "provider";
                     provider_id = connection.provider_id;
                     if (provider_id == null) {
@@ -319,7 +319,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return obj;
                 } else {
                   v3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } catch (tmp9) {
                 v3 = tmp;

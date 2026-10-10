@@ -72,7 +72,7 @@ prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
   this.guilds = new Map();
   const map = new Map();
   this.channels = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   while (tmp3 !== undefined) {
     let tmp6 = _slicedToArray(tmp4, 2);
     let arr = tmp6[1];

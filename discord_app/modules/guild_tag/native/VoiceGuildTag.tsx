@@ -5,7 +5,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(7869).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7887).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let PlatformUtils = fn(1382);
@@ -13,7 +13,7 @@ let num = 10;
 if (PlatformUtils.isAndroid()) {
   num = 14;
 }
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj3 = {
   gapContainer: { height: num },
   tagContainer: {
@@ -90,16 +90,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           primaryGuild1 = stateFromStores.primaryGuild;
         }
-        const userPrimaryGuild = tmp(8273).getUserPrimaryGuild(primaryGuild1);
+        const userPrimaryGuild = tmp(8289).getUserPrimaryGuild(primaryGuild1);
         ({ tag, guildId } = userPrimaryGuild);
         let tmp18 = null;
         let guildTagBadgeUrl;
         if (null != guildId) {
           tmp18 = null;
           if (null != tag) {
-            guildTagBadgeUrl = tmp(8273).getGuildTagBadgeUrl(guildId, tmp17, GuildTagBadgeSize.SIZE_12);
+            guildTagBadgeUrl = tmp(8289).getGuildTagBadgeUrl(guildId, tmp17, GuildTagBadgeSize.SIZE_12);
             tmp18 = forResult;
-            const tmpResult4 = tmp(8273);
+            const tmpResult4 = tmp(8289);
           }
         }
         let primaryGuild2;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp13 = tag;
         let tmp12 = tmp18;
         let tmp11 = guildTagBadgeUrl;
-        const tmpResult3 = tmp(8273);
+        const tmpResult3 = tmp(8289);
       } else {
         tmp11 = cResult[5];
         tmp12 = cResult[6];
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { uri: tmp11 };
           obj2.source = obj3;
           obj2.size = GuildTagBadgeSize.SIZE_12;
-          const tmp25 = closure_5(tmp(8839).GuildTagBadge, obj2);
+          const tmp25 = closure_5(tmp(8858).GuildTagBadge, obj2);
           cResult[8] = tmp11;
           cResult[9] = tmp25;
           let tmp22 = tmp25;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp29 = tmp32;
         }
         const obj6 = { variant: "text-xs/semibold", color: "text-default", style: tmp4.tag, children: tmp13 };
-        const tmp28 = closure_5(tmp(5087).Text, obj6);
+        const tmp28 = closure_5(tmp(5088).Text, obj6);
         cResult[10] = tmp4.tag;
         cResult[11] = tmp13;
         cResult[12] = tmp28;
@@ -187,20 +187,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         primaryGuild = stateFromStores.primaryGuild;
       }
-      const userPrimaryGuild = userId(8273).getUserPrimaryGuild(primaryGuild);
+      const userPrimaryGuild = userId(8289).getUserPrimaryGuild(primaryGuild);
       ({ tag, guildId } = userPrimaryGuild);
       if (null != guildId) {
         if (null != tag) {
           const obj3 = { style: tmp.gapContainer, children: null };
           const obj4 = { style: tmp.tagContainer, children: null };
-          const guildTagBadgeUrl = tmp2(8273).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
+          const guildTagBadgeUrl = tmp2(8289).getGuildTagBadgeUrl(guildId, tmp7, GuildTagBadgeSize.SIZE_12);
           const obj5 = { source: null, size: null };
           const obj6 = { uri: guildTagBadgeUrl };
           obj5.source = obj6;
           obj5.size = GuildTagBadgeSize.SIZE_12;
-          const items2 = [closure_5(tmp2(8839).GuildTagBadge, obj5)];
+          const items2 = [closure_5(tmp2(8858).GuildTagBadge, obj5)];
           const obj7 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-          items2[1] = closure_5(tmp2(5087).Text, obj7);
+          items2[1] = closure_5(tmp2(5088).Text, obj7);
           obj4.children = items2;
           obj3.children = closure_6(View, obj4);
           return closure_5(View, obj3);

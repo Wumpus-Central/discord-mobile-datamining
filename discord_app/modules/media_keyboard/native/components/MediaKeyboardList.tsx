@@ -18,12 +18,12 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let closure_6 = fn(1627).InAppCameraUsedCameraPreviewTypes;
-let closure_7 = fn(6837).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(6840).ACTION_SHEET_START_HEIGHT_RATIO;
 const NativePermissionStatus = fn(7482).NativePermissionStatus;
 const jsx = fn(21).jsx;
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PhotoLibraryHelper);
 const photoLibraryChanged = "photoLibraryChanged";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   listContainer: {
     backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,

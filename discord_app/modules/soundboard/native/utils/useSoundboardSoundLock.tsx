@@ -2,9 +2,9 @@
 import util from "../../../../intl/index.native.tsx";
 import PremiumUtilsDefault from "../../../../utils/PremiumUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5026 from "../../../../../_runtime/metro/05026__.js";
 import openPremiumUpsellActionSheetDefault from "../../../premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
+import BoostGemIcon from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import SoundboardSoundPreviewMenuExperiment2 from "../../experiments/SoundboardSoundPreviewMenuExperiment.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -12,7 +12,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(5427).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5430).DEFAULT_SOUND_GUILD_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
@@ -91,17 +91,18 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                           tmp2 = closure_1;
                           tmp3 = closure_2;
                           obj = closure_1(closure_2[11]);
-                          obj1 = { key: "DISABLED_SOUND_PRESSED", icon: null, content: null, toastDurationMs: 3000 };
-                          tmp4 = closure_1;
+                          obj1 = { text: null, icon: null, duration: 3000 };
+                          tmp4 = closure_0;
                           tmp5 = closure_2;
-                          obj1.icon = closure_1(closure_2[12]);
+                          intl = closure_0(closure_2[12]).intl;
                           tmp6 = closure_0;
                           tmp7 = closure_2;
-                          intl = closure_0(closure_2[13]).intl;
+                          obj1.text = intl.string(closure_0(closure_2[12]).t.MDOXJR);
                           tmp8 = closure_0;
                           tmp9 = closure_2;
-                          obj1.content = intl.string(closure_0(closure_2[13]).t.MDOXJR);
-                          openResult = obj.open(obj1);
+                          obj1.icon = closure_0(closure_2[13]).BoostGemIcon;
+                          str = "DISABLED_SOUND_PRESSED";
+                          openResult = obj.open("DISABLED_SOUND_PRESSED", obj1);
                         }
                       }
                       return;
@@ -151,22 +152,18 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                                 tmp2 = closure_1;
                                 tmp3 = closure_2;
                                 obj = closure_1(closure_2[11]);
-                                obj1 = {
-                                  key: "DISABLED_SOUND_PRESSED",
-                                  icon: null,
-                                  content: null,
-                                  toastDurationMs: 3000,
-                                };
-                                tmp4 = closure_1;
+                                obj1 = { text: null, icon: null, duration: 3000 };
+                                tmp4 = closure_0;
                                 tmp5 = closure_2;
-                                obj1.icon = closure_1(closure_2[12]);
+                                intl = closure_0(closure_2[12]).intl;
                                 tmp6 = closure_0;
                                 tmp7 = closure_2;
-                                intl = closure_0(closure_2[13]).intl;
+                                obj1.text = intl.string(closure_0(closure_2[12]).t.MDOXJR);
                                 tmp8 = closure_0;
                                 tmp9 = closure_2;
-                                obj1.content = intl.string(closure_0(closure_2[13]).t.MDOXJR);
-                                openResult = obj.open(obj1);
+                                obj1.icon = closure_0(closure_2[13]).BoostGemIcon;
+                                str = "DISABLED_SOUND_PRESSED";
+                                openResult = obj.open("DISABLED_SOUND_PRESSED", obj1);
                               }
                             }
                             return;
@@ -205,22 +202,18 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                               tmp2 = closure_1;
                               tmp3 = closure_2;
                               obj = closure_1(closure_2[11]);
-                              obj1 = {
-                                key: "DISABLED_SOUND_PRESSED",
-                                icon: null,
-                                content: null,
-                                toastDurationMs: 3000,
-                              };
-                              tmp4 = closure_1;
+                              obj1 = { text: null, icon: null, duration: 3000 };
+                              tmp4 = closure_0;
                               tmp5 = closure_2;
-                              obj1.icon = closure_1(closure_2[12]);
+                              intl = closure_0(closure_2[12]).intl;
                               tmp6 = closure_0;
                               tmp7 = closure_2;
-                              intl = closure_0(closure_2[13]).intl;
+                              obj1.text = intl.string(closure_0(closure_2[12]).t.MDOXJR);
                               tmp8 = closure_0;
                               tmp9 = closure_2;
-                              obj1.content = intl.string(closure_0(closure_2[13]).t.MDOXJR);
-                              openResult = obj.open(obj1);
+                              obj1.icon = closure_0(closure_2[13]).BoostGemIcon;
+                              str = "DISABLED_SOUND_PRESSED";
+                              openResult = obj.open("DISABLED_SOUND_PRESSED", obj1);
                             }
                           }
                           return;
@@ -260,17 +253,18 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                           tmp2 = closure_1;
                           tmp3 = closure_2;
                           obj = closure_1(closure_2[11]);
-                          obj1 = { key: "DISABLED_SOUND_PRESSED", icon: null, content: null, toastDurationMs: 3000 };
-                          tmp4 = closure_1;
+                          obj1 = { text: null, icon: null, duration: 3000 };
+                          tmp4 = closure_0;
                           tmp5 = closure_2;
-                          obj1.icon = closure_1(closure_2[12]);
+                          intl = closure_0(closure_2[12]).intl;
                           tmp6 = closure_0;
                           tmp7 = closure_2;
-                          intl = closure_0(closure_2[13]).intl;
+                          obj1.text = intl.string(closure_0(closure_2[12]).t.MDOXJR);
                           tmp8 = closure_0;
                           tmp9 = closure_2;
-                          obj1.content = intl.string(closure_0(closure_2[13]).t.MDOXJR);
-                          openResult = obj.open(obj1);
+                          obj1.icon = closure_0(closure_2[13]).BoostGemIcon;
+                          str = "DISABLED_SOUND_PRESSED";
+                          openResult = obj.open("DISABLED_SOUND_PRESSED", obj1);
                         }
                       }
                       return;
@@ -307,17 +301,18 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                       tmp2 = closure_1;
                       tmp3 = closure_2;
                       obj = closure_1(closure_2[11]);
-                      obj1 = { key: "DISABLED_SOUND_PRESSED", icon: null, content: null, toastDurationMs: 3000 };
-                      tmp4 = closure_1;
+                      obj1 = { text: null, icon: null, duration: 3000 };
+                      tmp4 = closure_0;
                       tmp5 = closure_2;
-                      obj1.icon = closure_1(closure_2[12]);
+                      intl = closure_0(closure_2[12]).intl;
                       tmp6 = closure_0;
                       tmp7 = closure_2;
-                      intl = closure_0(closure_2[13]).intl;
+                      obj1.text = intl.string(closure_0(closure_2[12]).t.MDOXJR);
                       tmp8 = closure_0;
                       tmp9 = closure_2;
-                      obj1.content = intl.string(closure_0(closure_2[13]).t.MDOXJR);
-                      openResult = obj.open(obj1);
+                      obj1.icon = closure_0(closure_2[13]).BoostGemIcon;
+                      str = "DISABLED_SOUND_PRESSED";
+                      openResult = obj.open("DISABLED_SOUND_PRESSED", obj1);
                     }
                   }
                   return;

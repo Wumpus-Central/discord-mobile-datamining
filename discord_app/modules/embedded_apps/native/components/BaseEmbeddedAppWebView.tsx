@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import WebView from "../../../../../_runtime/07518_WebView.js";
+import WebView from "../../../../../_runtime/07521_WebView.js";
 import getPostMessageJavaScriptDefault from "../utils/getPostMessageJavaScript.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -38,7 +38,7 @@ const Linking = fn(17).Linking;
 const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_10 = fn(2024).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_12 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_13 = new LoggerDefault("BaseEmbeddedAppWebView");
 const PlatformUtils = fn(1382);
@@ -301,7 +301,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                 const obj2 = { value, done: true };
                                                                 return obj2;
                                                               } else {
-                                                                return { value: "IconComponent", done: null };
+                                                                return { value: "IconComponent", done: "+51" };
                                                               }
                                                             } else {
                                                               try {
@@ -376,7 +376,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                   );
                                                                   closure_2_23(true);
                                                                   c5 = 3;
-                                                                  return { value: "IconComponent", done: null };
+                                                                  return { value: "IconComponent", done: "+51" };
                                                                 }
                                                               } catch (tmp10) {
                                                                 c5 = tmp;
@@ -629,7 +629,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                   const obj2 = { value, done: true };
                                                                   return obj2;
                                                                 } else {
-                                                                  return { value: "IconComponent", done: null };
+                                                                  return { value: "IconComponent", done: "+51" };
                                                                 }
                                                               } else {
                                                                 try {
@@ -728,7 +728,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                         c9 = 1;
                                                                         const obj6 = {
                                                                           value: closure_1_15.injectJavaScript(
-                                                                            applicationId(10891)(obj4),
+                                                                            applicationId(10931)(obj4),
                                                                           ),
                                                                           done: false,
                                                                         };
@@ -740,7 +740,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                                                                       c7 = 0;
                                                                       if (null != ref.current) {
                                                                         closure_1_28(
-                                                                          applicationId(10891)(closure_132_0),
+                                                                          applicationId(10931)(closure_132_0),
                                                                         );
                                                                       }
                                                                     } else if (arg0 === 1) {
@@ -1093,7 +1093,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -1294,7 +1294,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -1523,7 +1523,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
               } else {
                 try {
@@ -1579,7 +1579,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                     );
                     closure_1_24(true);
                     c5 = 3;
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } catch (tmp10) {
                   c5 = tmp;
@@ -1666,7 +1666,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                     const obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "+51" };
                   }
                 } else {
                   try {
@@ -1750,7 +1750,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                           c7 = 1;
                           c8 = 2;
                           c9 = 1;
-                          const obj6 = { value: memo.injectJavaScript(applicationId(10891)(obj4)), done: false };
+                          const obj6 = { value: memo.injectJavaScript(applicationId(10931)(obj4)), done: false };
                           return obj6;
                         }
                       }
@@ -1758,7 +1758,7 @@ export const BaseEmbeddedAppWebView = ReactCompilerGating.isReactCompilerEnabled
                       if (1 === tmp8) {
                         c7 = 0;
                         if (null != ref.current) {
-                          callback4(applicationId(10891)(closure_132_0));
+                          callback4(applicationId(10931)(closure_132_0));
                         }
                       } else if (arg0 === 1) {
                         c9 = 3;

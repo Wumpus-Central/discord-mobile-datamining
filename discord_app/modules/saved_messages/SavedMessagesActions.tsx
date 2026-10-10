@@ -55,7 +55,7 @@ let closure_11 = async function _fetchBookmarks() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

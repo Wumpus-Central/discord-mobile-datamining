@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2955 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2958 from "../intl/DisplayNameStyles.messages.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { number: arg1 + 1, hexList: null };
             const mapped = colors.map(utils_ColorUtils.int2hex);
             obj2.hexList = mapped.join(", ");
-            obj.a11yLabel = intl.formatToPlainString(_modDef2955.FHfTsV, obj2);
+            obj.a11yLabel = intl.formatToPlainString(_modDef2958.FHfTsV, obj2);
             return obj;
           };
           cResult[2] = fn;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { number: index + 1, hexList: null };
             const mapped = colors.map(closure_1_0(1103).int2hex);
             obj2.hexList = mapped.join(", ");
-            obj.a11yLabel = intl.formatToPlainString(closure_1_1(2955).FHfTsV, obj2);
+            obj.a11yLabel = intl.formatToPlainString(closure_1_1(2958).FHfTsV, obj2);
             return obj;
           }),
         items,

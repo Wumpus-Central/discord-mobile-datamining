@@ -11,7 +11,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import showEmojiOverflowActionSheetDefault from "../showEmojiOverflowActionSheet.tsx";
-import _modDef18232 from "../../../../../_runtime/metro/18232__.js";
+import _modDef18306 from "../../../../../_runtime/metro/18306__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   flex: { flex: 1 },
   flexCenterRow: { flexDirection: "row", alignItems: "center" },
@@ -283,10 +283,10 @@ export const EmojiRow = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj5 = {
         onPress() {
-          const obj2 = { key: "EMOJI_DISABLED", content: null };
+          const obj2 = { text: null };
           const intl = guildId(onSelectRolesForEmoji[20]).intl;
-          obj2.content = intl.string(guildId(onSelectRolesForEmoji[20]).t.KUzI73);
-          emoji(onSelectRolesForEmoji[19]).open(obj2);
+          obj2.text = intl.string(guildId(onSelectRolesForEmoji[20]).t.KUzI73);
+          emoji(onSelectRolesForEmoji[19]).open("EMOJI_DISABLED", obj2);
         },
         disabled: emoji.available,
         children: null,

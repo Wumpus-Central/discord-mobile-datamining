@@ -21,7 +21,7 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       }
     } else {
       try {
@@ -162,9 +162,7 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
   if (arg1 === undefined) {
     flag = true;
   }
-  DispatcherDefault.wait(() => {
-    DispatcherDefault.dispatch({ type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId });
-  });
+  DispatcherDefault.dispatch({ type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: id });
   const HTTP = require("HTTPUtils").HTTP;
   const request = {
     url: Endpoints.ENTITLEMENTS_FOR_APPLICATION(id),
@@ -173,6 +171,7 @@ export const fetchUserEntitlementsForApplication = function fetchUserEntitlement
     rejectWithError: true,
   };
   value = HTTP.get(request);
+  const obj2 = { type: "ENTITLEMENT_FETCH_APPLICATION_START", applicationId: id };
   return value
     .then((body) => {
       DispatcherDefault.dispatch({

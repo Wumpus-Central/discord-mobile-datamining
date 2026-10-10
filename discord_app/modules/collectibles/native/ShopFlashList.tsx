@@ -4,13 +4,13 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import _mod8608 from "../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8624 from "../../../../discord_common/js/packages/flash-list/index.js";
 import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { contentContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_4 = createStyles.createStyles(obj2);
 fn(558);
@@ -53,8 +53,8 @@ const result = size.fileFinishedImporting("modules/collectibles/native/ShopFlash
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ShopFlashList(arg0) {
-      const cResult = c.c(9);
-      ({ data, renderItem, initialScrollIndex, getItemType } = arg0);
+      const cResult = c.c(11);
+      ({ data, renderItem, initialScrollIndex, getItemType, keyExtractor, onViewableItemsChanged } = arg0);
       const ref = noop.useRef(null);
       const tmp5 = closure_4();
       let tmp6 = null != initialScrollIndex;
@@ -69,11 +69,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === data) {
           if (cResult[4] === getItemType) {
             if (cResult[5] === initialScrollIndex) {
-              if (cResult[6] === renderItem) {
-                if (cResult[7] === tmp5.contentContainer) {
-                  let tmp9 = cResult[8];
+              if (cResult[6] === keyExtractor) {
+                if (cResult[7] === onViewableItemsChanged) {
+                  if (cResult[8] === renderItem) {
+                    if (cResult[9] === tmp5.contentContainer) {
+                      let tmp9 = cResult[10];
+                    }
+                    return tmp9;
+                  }
                 }
-                return tmp9;
               }
             }
           }
@@ -86,9 +90,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ListEmptyComponent,
           initialScrollIndex,
           getItemType,
+          keyExtractor,
+          onViewableItemsChanged,
           contentContainerStyle: tmp5.contentContainer,
         };
-        const tmp12 = jsx(_mod8608.FlashList, {
+        const tmp12 = jsx(_mod8624.FlashList, {
           ref,
           data,
           renderItem,
@@ -96,14 +102,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ListEmptyComponent,
           initialScrollIndex,
           getItemType,
+          keyExtractor,
+          onViewableItemsChanged,
           contentContainerStyle: tmp5.contentContainer,
         });
         cResult[3] = data;
         cResult[4] = getItemType;
         cResult[5] = initialScrollIndex;
-        cResult[6] = renderItem;
-        cResult[7] = tmp5.contentContainer;
-        cResult[8] = tmp12;
+        cResult[6] = keyExtractor;
+        cResult[7] = onViewableItemsChanged;
+        cResult[8] = renderItem;
+        cResult[9] = tmp5.contentContainer;
+        cResult[10] = tmp12;
         tmp9 = tmp12;
         const tmpResult = useScrollToInitialIndexOnce;
       }
@@ -120,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ShopFlashList(initialScrollIndex) {
       initialScrollIndex = initialScrollIndex.initialScrollIndex;
-      ({ data, renderItem, getItemType } = initialScrollIndex);
+      ({ data, renderItem, getItemType, keyExtractor, onViewableItemsChanged } = initialScrollIndex);
       const ref = noop.useRef(null);
       const tmp2 = closure_4();
       let tmp5 = null != initialScrollIndex;
@@ -134,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flashListRef: ref,
         afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS,
       });
-      return jsx(_mod8608.FlashList, {
+      return jsx(_mod8624.FlashList, {
         ref,
         data,
         renderItem,
@@ -142,6 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         ListEmptyComponent,
         initialScrollIndex,
         getItemType,
+        keyExtractor,
+        onViewableItemsChanged,
         contentContainerStyle: tmp2.contentContainer,
       });
     };

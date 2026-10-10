@@ -5,19 +5,19 @@ import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objec
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = prop(1126);
-const native = prop(4781);
-const Text_Text = prop(5087);
-const useTextField = prop(6295);
-const InputFieldContainer2 = prop(6299);
-const NativeTextInput = prop(6302);
-const propsForNativeTextInput = prop(6616);
-const useCharacterLimitAnnouncement = prop(6772);
+const native = prop(4820);
+const Text_Text = prop(5088);
+const useTextField = prop(6293);
+const InputFieldContainer2 = prop(6300);
+const NativeTextInput = prop(6303);
+const propsForNativeTextInput = prop(6617);
+const useCharacterLimitAnnouncement = prop(6775);
 require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
 obj2.maxLengthIndicator = rect;

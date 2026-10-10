@@ -16,8 +16,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     let obj = require("PlatformUtils");
     if (obj.isAndroid()) {
-      let supportsZstd = obj4(13870).getConstants().supportsZstd;
-      const obj2 = obj4(13870);
+      let supportsZstd = obj4(13923).getConstants().supportsZstd;
+      const obj2 = obj4(13923);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -38,7 +38,7 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp8}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp11 = obj4(13857)(combined);
+    const tmp11 = obj4(13910)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp11._socketId);
     const _isNaN = isNaN;
@@ -48,15 +48,15 @@ function createFastConnectSocket() {
       const isAndroidResult = tmp3(1382).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          const result = tmp10(13870).enableZstdStreamSupport(parsed);
-          const tmp10Result = tmp10(13870);
+          const result = tmp10(13923).enableZstdStreamSupport(parsed);
+          const tmp10Result = tmp10(13923);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        const result2 = tmp10(13870).enableZlibStreamSupport(parsed);
-        const tmp10Result3 = tmp10(13870);
+        const result2 = tmp10(13923).enableZlibStreamSupport(parsed);
+        const tmp10Result3 = tmp10(13923);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;
         const result3 = DCDCompressionManager.enableZlibStreamSupport(parsed);
@@ -126,7 +126,7 @@ export const identifyWebSocket = function identifyWebSocket() {
       if (null != token) {
         if ("" !== token) {
           const _window = window;
-          state = _ws.state;
+          const state = _ws.state;
           let tmp7 = str2;
           if (measureResult.userId == null) {
             tmp7 = null;

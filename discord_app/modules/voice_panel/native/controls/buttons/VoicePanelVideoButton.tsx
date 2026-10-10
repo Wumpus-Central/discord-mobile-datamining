@@ -2,13 +2,13 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import CameraRive from "../../../../../../discord_common/js/packages/design/components/Rive/native/generated/CameraRive.tsx";
-import VideoSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import useAlertStore from "../../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import StreamPermissionUtils from "../../../../go_live/utils/StreamPermissionUtils.tsx";
 import CallsUtils from "../../../../voice_calls/native/CallsUtils.tsx";
 import VideoIcon from "../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import openIgnoreThermalStateAlert from "../../../../activities/native/openIgnoreThermalStateAlert.tsx";
 import VoicePanelVideoGuardErrorAlert from "../../alerts/VoicePanelVideoGuardErrorAlert.tsx";
+import VideoSlashIcon2 from "../../../../../design/components/Icon/native/redesign/generated/VideoSlashIcon.tsx";
 import VoicePanelNoVideoPermissionsAlert from "../../alerts/VoicePanelNoVideoPermissionsAlert.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelCallLifecycleStore from "../../../../video_calls/native/ChannelCallLifecycleStore.tsx";
@@ -19,7 +19,7 @@ import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5116).Features;
+const Features = fn(5117).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

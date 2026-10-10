@@ -17,7 +17,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === arg0) {
         COLLECTIBLES_SHOP = constants2.COLLECTIBLES_SHOP;
       }
-      analyticsLocations = analyticsLocations(6848)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6851)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         if (cResult[1] === COLLECTIBLES_SHOP) {
           let tmp4 = cResult[2];
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         COLLECTIBLES_SHOP = constants2.COLLECTIBLES_SHOP;
       }
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(6848)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6851)().analyticsLocations;
       const items = [analyticsLocations, COLLECTIBLES_SHOP];
       return noop.useCallback(() => {
         const obj = {

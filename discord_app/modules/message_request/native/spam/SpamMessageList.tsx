@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const MessageRequestEmptyDefault = tmp2(17521);
+const MessageRequestEmptyDefault = tmp2(17593);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
@@ -20,7 +20,7 @@ const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = "header-section";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   sectionContainer: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -103,11 +103,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = hasSingleMessageRequest(user[10]);
-            obj1 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+            obj1 = { text: null, variant: "critical" };
             intl = goToMessageRequestPreview(user[6]).intl;
-            obj1.content = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
-            obj1.icon = hasSingleMessageRequest(user[11]);
-            openResult = obj.open(obj1);
+            obj1.text = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
+            openResult = obj.open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj1);
             return;
           }
         }
@@ -116,11 +115,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = hasSingleMessageRequest(user[10]);
-            obj1 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+            obj1 = { text: null, variant: "critical" };
             intl = goToMessageRequestPreview(user[6]).intl;
-            obj1.content = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
-            obj1.icon = hasSingleMessageRequest(user[11]);
-            openResult = obj.open(obj1);
+            obj1.text = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
+            openResult = obj.open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj1);
             return;
           }
         }
@@ -129,27 +127,25 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             obj = hasSingleMessageRequest(user[10]);
-            obj1 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+            obj1 = { text: null, variant: "critical" };
             intl = goToMessageRequestPreview(user[6]).intl;
-            obj1.content = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
-            obj1.icon = hasSingleMessageRequest(user[11]);
-            openResult = obj.open(obj1);
+            obj1.text = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
+            openResult = obj.open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj1);
             return;
           }
         }
-        if (cResult[6] === tmp9) {
+        if (cResult[6] === C) {
           class I {
             constructor() {
               obj = hasSingleMessageRequest(user[10]);
-              obj1 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+              obj1 = { text: null, variant: "critical" };
               intl = goToMessageRequestPreview(user[6]).intl;
-              obj1.content = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
-              obj1.icon = hasSingleMessageRequest(user[11]);
-              openResult = obj.open(obj1);
+              obj1.text = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
+              openResult = obj.open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj1);
               return;
             }
           }
-          const messageRequestActions = goToMessageRequestPreview(tmp2[14]).useMessageRequestActions(tmp10);
+          const messageRequestActions = goToMessageRequestPreview(tmp2[13]).useMessageRequestActions(tmp10);
           const rejectMessageRequest = messageRequestActions.rejectMessageRequest;
           ({
             isAcceptLoading,
@@ -163,11 +159,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             class I {
               constructor() {
                 obj = hasSingleMessageRequest(user[10]);
-                obj1 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+                obj1 = { text: null, variant: "critical" };
                 intl = goToMessageRequestPreview(user[6]).intl;
-                obj1.content = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
-                obj1.icon = hasSingleMessageRequest(user[11]);
-                openResult = obj.open(obj1);
+                obj1.text = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
+                openResult = obj.open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj1);
                 return;
               }
             }
@@ -175,11 +170,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               class I {
                 constructor() {
                   obj = hasSingleMessageRequest(user[10]);
-                  obj1 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+                  obj1 = { text: null, variant: "critical" };
                   intl = goToMessageRequestPreview(user[6]).intl;
-                  obj1.content = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
-                  obj1.icon = hasSingleMessageRequest(user[11]);
-                  openResult = obj.open(obj1);
+                  obj1.text = intl.string(goToMessageRequestPreview(user[6]).t.pIQ3h4);
+                  openResult = obj.open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj1);
                   return;
                 }
               }
@@ -198,23 +192,32 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[9] = channel.id;
           cResult[10] = rejectMessageRequest;
           cResult[11] = handleRejectMessageRequest;
-          const tmpResult2 = goToMessageRequestPreview(tmp2[14]);
+          const tmpResult2 = goToMessageRequestPreview(tmp2[13]);
         }
-        let obj2 = { user, onAcceptSuccess: tmp9, onError: I };
-        cResult[6] = tmp9;
+        let obj2 = { user, onAcceptSuccess: C, onError: I };
+        cResult[6] = C;
         cResult[7] = user;
         cResult[8] = obj2;
         tmp10 = obj2;
       }
-      const fn = function f() {
-        if (hasSingleMessageRequest) {
-          transitionToChannel.transitionToChannel(id);
-          ModalActionCreatorsDefault.pop();
+      class C {
+        constructor() {
+          if (hasSingleMessageRequest) {
+            tmp = closure_0;
+            tmp2 = closure_2;
+            obj = closure_0(closure_2[11]);
+            tmp3 = id;
+            transitionToChannelResult = obj.transitionToChannel(id);
+            tmp5 = closure_1;
+            arr = closure_1(closure_2[12]);
+            arr1 = arr.pop();
+          }
+          return;
         }
-      };
+      }
       cResult[3] = id;
       cResult[4] = hasSingleMessageRequest;
-      cResult[5] = fn;
+      cResult[5] = C;
       const tmpResult = goToMessageRequestPreview(user[9]);
     }
   : function PendingSpamMessageRequestRow(isLastRow) {
@@ -231,11 +234,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items = [id, hasSingleMessageRequest];
       const callback = channel.useCallback(() => {
-        const obj2 = { key: "MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", content: null, icon: null };
+        const obj2 = { text: null, variant: "critical" };
         const intl = require("util").intl;
-        obj2.content = intl.string(require("util").t.pIQ3h4);
-        obj2.icon = hasSingleMessageRequest(str[11]);
-        hasSingleMessageRequest(str[10]).open(obj2);
+        obj2.text = intl.string(require("util").t.pIQ3h4);
+        hasSingleMessageRequest(str[10]).open("MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE", obj2);
       }, []);
       const callback1 = channel.useCallback(() => {
         if (hasSingleMessageRequest) {
@@ -277,7 +279,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           channel_id: channel.id,
           other_user_id: str.id,
         });
-        require();
+        _require();
       }
       const obj3 = {
         onPress: handleSelectRow,
@@ -309,13 +311,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (constants.PREVIEW_SPAM_MESSAGE === actionName) {
           const obj2 = { is_spam: true, channel_id: channel.id, other_user_id: str.id };
           AnalyticsUtilsDefault.track(AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, obj2);
-          require();
+          _require();
         }
       };
       obj3.style = tmp.pressableRow;
       const obj7 = { style: tmp.rowContainer, children: null };
       const items2 = [
-        closure_8(hasSingleMessageRequest(str[16]), {
+        closure_8(hasSingleMessageRequest(str[15]), {
           channel: messageRequest.channel,
           otherUser: messageRequest.user,
         }),
@@ -347,7 +349,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             const obj11 = {
               size: require("native").Icon.Sizes.SMALL,
               disableColor: true,
-              source: hasSingleMessageRequest(tmp3[18]),
+              source: hasSingleMessageRequest(tmp3[17]),
             };
             let tmp10Result = closure_8(require("native").Icon, obj11);
           }
@@ -379,7 +381,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj14 = {
                 size: require("native").Icon.Sizes.SMALL,
                 disableColor: true,
-                source: hasSingleMessageRequest(tmp3[20]),
+                source: hasSingleMessageRequest(tmp3[19]),
               };
               let tmp10Result3 = closure_8(require("native").Icon, obj14);
             }
@@ -424,11 +426,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = tmp4;
       const bottom = require("useSafeAreaInsets")().bottom;
       let obj = goToMessageRequestPreview(spamMessageRequestCount[8]);
-      spamMessageRequestCount = goToMessageRequestPreview(spamMessageRequestCount[23]).useSpamMessageRequestCount();
+      spamMessageRequestCount = goToMessageRequestPreview(spamMessageRequestCount[22]).useSpamMessageRequestCount();
       const arr = require("useSortedSpamMessageRequests")();
-      let obj2 = goToMessageRequestPreview(spamMessageRequestCount[23]);
+      let obj2 = goToMessageRequestPreview(spamMessageRequestCount[22]);
       const listHasSingleSpamMessageRequest = goToMessageRequestPreview(
-        spamMessageRequestCount[25],
+        spamMessageRequestCount[24],
       ).useListHasSingleSpamMessageRequest();
       if (cResult[0] !== spamMessageRequestCount) {
         const fn = function n() {
@@ -452,10 +454,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj4 = { bodyText: null };
           let intl = tmp(tmp2[6]).intl;
           obj4.bodyText = intl.string(tmp(tmp2[6]).t.hasFPQ);
-          const tmp30 = closure_8(tmp5(tmp2[29]), obj4);
+          const tmp30 = closure_8(tmp5(tmp2[28]), obj4);
           cResult[2] = tmp30;
           let tmp27 = tmp30;
-          const tmp5Result = tmp5(tmp2[29]);
+          const tmp5Result = tmp5(tmp2[28]);
         } else {
           tmp27 = cResult[2];
         }
@@ -484,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[10] = bottom;
                 cResult[11] = num11;
                 let tmp16 = num11;
-                tmpResult = tmp(tmp2[31]);
+                tmpResult = tmp(tmp2[30]);
               } else {
                 tmp16 = cResult[11];
               }
@@ -557,7 +559,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = goToMessageRequestPreview(spamMessageRequestCount[6]).intl;
             const obj3 = { count: arr.length };
             obj2.children = intl.format(goToMessageRequestPreview(spamMessageRequestCount[6]).t.aNh5Kf, obj3);
-            obj.children = closure_1_8(goToMessageRequestPreview(spamMessageRequestCount[30]).Text, obj2);
+            obj.children = closure_1_8(goToMessageRequestPreview(spamMessageRequestCount[29]).Text, obj2);
             let tmp11Result = closure_1_8(closure_1_5, obj);
           } else {
             const obj4 = {
@@ -585,17 +587,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = renderData;
         tmp15 = renderData;
       }
-      let obj3 = goToMessageRequestPreview(spamMessageRequestCount[25]);
+      let obj3 = goToMessageRequestPreview(spamMessageRequestCount[24]);
     }
   : function SpamMessageList(goToMessageRequestPreview) {
       goToMessageRequestPreview = goToMessageRequestPreview.goToMessageRequestPreview;
       const tmp = closure_11();
       importDefault = tmp;
       const bottom = useSafeAreaInsetsDefault().bottom;
-      dependencyMap = goToMessageRequestPreview(17520).useSpamMessageRequestCount();
+      dependencyMap = goToMessageRequestPreview(17592).useSpamMessageRequestCount();
       const arr = useSortedSpamMessageRequestsDefault();
-      let obj = goToMessageRequestPreview(17520);
-      const hasSingleMessageRequest = goToMessageRequestPreview(17518).useListHasSingleSpamMessageRequest();
+      let obj = goToMessageRequestPreview(17592);
+      const hasSingleMessageRequest = goToMessageRequestPreview(17590).useListHasSingleSpamMessageRequest();
       useMountEffectDefault(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests });
         const obj2 = { num_spam_message_requests };
@@ -636,7 +638,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const intl = goToMessageRequestPreview(num_spam_message_requests[6]).intl;
             const obj3 = { count: arr.length };
             obj2.children = intl.format(goToMessageRequestPreview(num_spam_message_requests[6]).t.aNh5Kf, obj3);
-            obj.children = closure_1_8(goToMessageRequestPreview(num_spam_message_requests[30]).Text, obj2);
+            obj.children = closure_1_8(goToMessageRequestPreview(num_spam_message_requests[29]).Text, obj2);
             let tmp11Result = closure_1_8(closure_1_5, obj);
           } else {
             const obj4 = {
@@ -660,5 +662,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj4.data = items;
         return closure_8(closure_6, obj4);
       }
-      let obj2 = goToMessageRequestPreview(17518);
+      let obj2 = goToMessageRequestPreview(17590);
     };

@@ -19,10 +19,10 @@ const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(2049);
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1085).UserSettingsSections;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol3 = Symbol;
                         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                          const tmp38 = closure_7(tmp(6212).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                          const tmp38 = closure_7(tmp(6207).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                           cResult[25] = tmp38;
                           let tmp36 = tmp38;
                         } else {
@@ -220,7 +220,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           style: tmp4.closeButton,
                           children: tmp36,
                         };
-                        const tmp41 = closure_7(tmp(6191).PressableOpacity, obj4);
+                        const tmp41 = closure_7(tmp(6184).PressableOpacity, obj4);
                         cResult[26] = tmp4.closeButton;
                         cResult[27] = tmp35;
                         cResult[28] = tmp41;
@@ -253,7 +253,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const container = tmp4.container;
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_7(tmp(5013).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+          const tmp19 = closure_7(tmp(5046).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
           cResult[13] = tmp19;
           let str2 = tmp19;
         } else {
@@ -268,7 +268,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp20 = cResult[15];
         }
-        const Text = tmp(5087).Text;
+        const Text = tmp(5088).Text;
         const text = tmp4.text;
         const intl = tmp(1126).intl;
         const obj7 = { privacySettingsLink: first };

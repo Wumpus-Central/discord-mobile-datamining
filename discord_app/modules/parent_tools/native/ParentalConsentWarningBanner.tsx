@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
-import tinycolorDefault from "../../../../_runtime/07267_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07273_tinycolor.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -13,14 +13,14 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-const FamilyCenterSubPages = fn(7253).FamilyCenterSubPages;
+const FamilyCenterSubPages = fn(7259).FamilyCenterSubPages;
 const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = 28 + nativeDefault.space.PX_16;
 const locations = [0.5875, 1];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { strip: null, pressable: null, label: null, link: null };
 const rect = {
   position: "absolute",
@@ -66,12 +66,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = require("useGlobalStatusIndicatorState");
       const token = require("useToken").useToken(daysRemaining(587).colors.BACKGROUND_FEEDBACK_WARNING);
       if (cResult[0] !== token) {
-        const obj9 = Gfqlpa(7267)(token);
-        const toRgbStringResult = Gfqlpa(7267)(token).setAlpha(0).toRgbString();
+        const obj9 = Gfqlpa(7273)(token);
+        const toRgbStringResult = Gfqlpa(7273)(token).setAlpha(0).toRgbString();
         cResult[0] = token;
         cResult[1] = toRgbStringResult;
         let tmp8 = toRgbStringResult;
-        const setAlphaResult = Gfqlpa(7267)(token).setAlpha(0);
+        const setAlphaResult = Gfqlpa(7273)(token).setAlpha(0);
       } else {
         tmp8 = cResult[1];
       }
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 end: null,
               };
               ({ START: obj14.start, END: obj14.end } = closure_10);
-              const items2 = [closure_11(Gfqlpa(5388), obj11)];
+              const items2 = [closure_11(Gfqlpa(5391), obj11)];
               let obj12 = {
                 accessibilityRole: "button",
                 accessibilityHint: null,
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 children: null,
               };
               const intl = obj(1126).intl;
-              obj12.accessibilityHint = intl.string(Gfqlpa(2565).O2HKdA);
+              obj12.accessibilityHint = intl.string(Gfqlpa(2568).O2HKdA);
               obj12.onPress = I;
               const items3 = [tmp2.pressable];
               const obj13 = { paddingTop: tmp3.top + 8 };
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return jsx(closure_0(closure_2[19]).Text, obj, arg1);
                   }
                 }
-                Gfqlpa = Gfqlpa(2565).Gfqlpa;
+                Gfqlpa = Gfqlpa(2568).Gfqlpa;
                 obj16 = { connectHook: W };
                 let formatResult = obj.format(Gfqlpa, obj16);
               } else {
@@ -258,10 +258,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj17 = { count: daysRemaining, connectHook: W };
-                formatResult = obj18.format(Gfqlpa(2565).ZBK5mM, obj17);
+                formatResult = obj18.format(Gfqlpa(2568).ZBK5mM, obj17);
               }
               obj15.children = formatResult;
-              obj15 = closure_11(obj(5087).Text, obj15);
+              obj15 = closure_11(obj(5088).Text, obj15);
               obj12.children = obj15;
               obj12 = closure_11(closure_4, obj12);
               items2[1] = obj12;

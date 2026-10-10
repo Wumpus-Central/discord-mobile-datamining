@@ -30,7 +30,7 @@ const Constants = fn(1085);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   nitroWheel: { height: 32, width: 32 },
   nitroWheelPurple: { tintColor: nativeDefault.colors.CONTROL_BRAND_FOREGROUND_NEW },
@@ -282,7 +282,7 @@ export default function CustomEmojiContent(emojiNode) {
       const intl2 = util.intl;
       obj5.text = intl2.string(util.t.in1rga);
       obj5.icon = StarOutlineIcon.StarOutlineIcon;
-      ToastActionCreatorsDefault.openMana("EMOJI_UNFAVORITED", obj5);
+      ToastActionCreatorsDefault.open("EMOJI_UNFAVORITED", obj5);
       const tmpResult = ToastActionCreatorsDefault;
     } else {
       obj4.favoriteEmoji(customEmojiFromJoinedGuild);
@@ -291,7 +291,7 @@ export default function CustomEmojiContent(emojiNode) {
       obj6.text = intl.string(util.t.mE2e8A);
       obj6.icon = StarIcon.StarIcon;
       obj6.iconColor = nativeDefault.colors.ICON_FEEDBACK_WARNING;
-      ToastActionCreatorsDefault.openMana("EMOJI_FAVORITED", obj6);
+      ToastActionCreatorsDefault.open("EMOJI_FAVORITED", obj6);
       const tmpResult2 = ToastActionCreatorsDefault;
     }
     const obj3 = { nonce };
@@ -344,7 +344,7 @@ export default function CustomEmojiContent(emojiNode) {
       const obj22 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(9525, dependencyMap.paths),
+          asyncRequireImpl(9554, dependencyMap.paths),
           "EmojiOptionsActionSheet",
           { emojiSrc: emojiNode.src },
           "stack",

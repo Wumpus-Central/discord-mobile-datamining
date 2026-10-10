@@ -150,6 +150,20 @@ prototype["sendLiveReload"] = function sendLiveReload(enabled) {
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendOverlayBackgroundBlur"] = function sendOverlayBackgroundBlur(enabled) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "set_overlay_background_blur", enabled };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendModelSettings"] = function sendModelSettings(settings) {
   const self = this;
   if (null != this.socket) {
@@ -230,6 +244,19 @@ prototype["sendForceCompaction"] = function sendForceCompaction() {
       const obj = { type: "force_compaction" };
       const merged = Object.assign(tmp2);
       socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendRestartSandbox"] = function sendRestartSandbox() {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      socket.send(JSON.stringify({ type: "restart_sandbox" }));
     }
   }
   const error = new Error("WebSocket not open");

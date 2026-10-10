@@ -100,7 +100,7 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = found1;
       } else {
         _require = tmp4;
-        const games = tmp(7002).useGames(tmp4);
+        const games = tmp(7008).useGames(tmp4);
         const _Symbol2 = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [GameStore];
@@ -120,13 +120,13 @@ export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[5];
         }
-        const tmpResult = tmp(7002);
+        const tmpResult = tmp(7008);
         return tmp(504).useStateFromStoresArray(tmp11, tmp13);
       }
       const obj = require("c");
     }
   : function useGetGamesForAppIds(arg0) {
-      const tmp = memo(6854)(arg0);
+      const tmp = memo(6857)(arg0);
       _require = tmp;
       const items = [tmp];
       memo = noop.useMemo(() => {

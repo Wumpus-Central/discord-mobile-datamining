@@ -22,7 +22,7 @@ const InviteTargetTypes = fn(7423).InviteTargetTypes;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   placeholderHeader: null,
   placeholderLabel: null,
@@ -80,7 +80,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         let num4 = 0;
         do {
           let obj2 = { row: num4 };
-          let arr = items.push(__initData2(UserPlaceholderRowDefault, obj2, num4));
+          let arr = items.push(map1(UserPlaceholderRowDefault, obj2, num4));
           num4 = num4 + 1;
         } while (num4 < 10);
         cResult[0] = items;
@@ -90,7 +90,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp2.placeholderHeader) {
         const obj3 = { style: tmp2.placeholderHeader };
-        const tmp11 = __initData2(hasOwnProperty, obj3);
+        const tmp11 = map1(hasOwnProperty, obj3);
         cResult[1] = tmp2.placeholderHeader;
         cResult[2] = tmp11;
         let tmp8 = tmp11;
@@ -99,7 +99,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp2.placeholderLabel) {
         const obj4 = { style: tmp2.placeholderLabel };
-        const tmp15 = __initData2(hasOwnProperty, obj4);
+        const tmp15 = map1(hasOwnProperty, obj4);
         cResult[3] = tmp2.placeholderLabel;
         cResult[4] = tmp15;
         let tmp12 = tmp15;
@@ -115,7 +115,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { children: null };
       const items1 = [tmp8, tmp12, first];
       obj5.children = items1;
-      const tmp17 = closure_1_15(state, obj5);
+      const tmp17 = value2(closure_1_14, obj5);
       cResult[5] = tmp8;
       cResult[6] = tmp12;
       cResult[7] = tmp17;
@@ -127,17 +127,17 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       let num = 0;
       do {
         let obj = { row: num };
-        let arr = items.push(__initData2(UserPlaceholderRowDefault, obj, num));
+        let arr = items.push(map1(UserPlaceholderRowDefault, obj, num));
         num = num + 1;
       } while (num < 10);
       const obj2 = { children: null };
       const items1 = [
-        __initData2(hasOwnProperty, { style: tmp.placeholderHeader }),
-        __initData2(hasOwnProperty, { style: tmp.placeholderLabel }),
+        map1(hasOwnProperty, { style: tmp.placeholderHeader }),
+        map1(hasOwnProperty, { style: tmp.placeholderLabel }),
         items,
       ];
       obj2.children = items1;
-      return closure_1_15(state, obj2);
+      return value2(closure_1_14, obj2);
     };
 ReactCompilerGating = fn(558);
 let obj4 = { paddingBottom: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_4 };

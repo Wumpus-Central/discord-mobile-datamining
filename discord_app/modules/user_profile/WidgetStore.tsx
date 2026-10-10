@@ -69,7 +69,7 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
         }),
       );
       const _Map2 = Map;
-      const map1 = new Map(
+      map1 = new Map(
         changedWidgets.map((id) => {
           const items = [id.id, id];
           return items;

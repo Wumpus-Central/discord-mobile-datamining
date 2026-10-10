@@ -15,7 +15,7 @@ const Constants = fn(1085);
   AnalyticEvents: closure_7,
   LoggingInviteTypes: closure_8,
 } = Constants);
-const MessageSendLocation = fn(5084).MessageSendLocation;
+const MessageSendLocation = fn(5085).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -51,9 +51,7 @@ export default {
     if (mediaSessionId === undefined) {
       mediaSessionId = null;
     }
-    distributor(num[4]).wait(() =>
-      DispatcherDefault.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor }),
-    );
+    distributor(num[4]).dispatch({ type: "ACTIVITY_UPDATE_START", applicationId, duration: num, distributor });
     const HTTP = applicationId(num[5]).HTTP;
     const request = {
       url: constants.ACTIVITIES,

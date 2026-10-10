@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   dot: { width: 8, height: 8, borderRadius: 4 },
   running: { backgroundColor: nativeDefault.colors.STATUS_WARNING },

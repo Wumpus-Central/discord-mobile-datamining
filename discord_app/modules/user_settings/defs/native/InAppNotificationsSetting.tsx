@@ -4,7 +4,7 @@ import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import _modDef2891 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef2894 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FocusModeUtils from "../../../notifications/FocusModeUtils.tsx";
 import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
@@ -92,7 +92,7 @@ const obj3 = {};
 const merged1 = Object.assign(obj);
 obj3.useTitle = function useTitle() {
   const intl = util.intl;
-  return intl.string(_modDef2891.sH5mu9);
+  return intl.string(_modDef2894.sH5mu9);
 };
 obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled()
   ? function useRedesignInAppNotificationsDescription() {
@@ -106,7 +106,7 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled()
           cIRG0s = util.t.cIRG0s;
           let stringResult = string(cIRG0s);
         } else {
-          stringResult = string(_modDef2891["T/zMdV"]);
+          stringResult = string(_modDef2894["T/zMdV"]);
         }
         cResult[0] = focusModeEnabled;
         cResult[1] = stringResult;
@@ -121,7 +121,7 @@ obj3.useDescription = ReactCompilerGating.isReactCompilerEnabled()
       if (focusModeEnabled) {
         let stringResult = string(util.t.cIRG0s);
       } else {
-        stringResult = string(_modDef2891["T/zMdV"]);
+        stringResult = string(_modDef2894["T/zMdV"]);
       }
       return stringResult;
     };

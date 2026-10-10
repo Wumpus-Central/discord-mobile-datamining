@@ -1,5 +1,6 @@
 // discord_app/modules/dismissible_content/DismissibleContentFatigueConfig.tsx
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
+import ShopMarketingFatigueExperiment from "ShopMarketingFatigueExperiment.tsx";
 import DismissibleContentSettings from "../../../discord_common/js/shared/shared-constants/DismissibleContentSettings.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -73,6 +74,7 @@ const items = [
   dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
   dismissible_content.DismissibleContent.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL,
   dismissible_content.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,
+  dismissible_content.DismissibleContent.SHOP_TAB_TOOLTIP,
   dismissible_content.DismissibleContent.DISCOUNT_OFFER_ACTION_SHEET,
   dismissible_content.DismissibleContent.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_WIDE_BANNER,
@@ -105,10 +107,24 @@ const items = [
   dismissible_content.DismissibleContent.TINY_BRONCO_NOTICE,
   dismissible_content.DismissibleContent.PREMIUM_GIFT_QUANTITY_STEPPER_NEW_BADGE,
   dismissible_content.DismissibleContent.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
+  dismissible_content.DismissibleContent.PINOT_MEMBER_SETTING_NEW_BADGE,
 ];
+const set = new Set(items);
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");
 
-export const CONTENT_TYPES_WITH_BYPASS_FATIGUE = new Set(items);
+export const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set;
+export const bypassesFatigue = function bypassesFatigue(content) {
+  let hasItem = set.has(content);
+  if (hasItem) {
+    let tmp4 = content !== dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING;
+    if (!tmp4) {
+      tmp4 = !ShopMarketingFatigueExperiment.getShopMarketingEnforcesFatigue();
+      const tmp2Result = ShopMarketingFatigueExperiment;
+    }
+    hasItem = tmp4;
+  }
+  return hasItem;
+};
 export const isServerArbitrated = function isServerArbitrated(item) {
   const tmp = DismissibleContentSettings.DISMISSIBLE_CONTENT_SETTINGS[item];
   let is_server_arbitrated;

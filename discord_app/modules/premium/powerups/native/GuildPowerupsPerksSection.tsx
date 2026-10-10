@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2597 from "../GuildPowerups.messages.js";
+import _modDef2600 from "../GuildPowerups.messages.js";
 import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader.tsx";
 import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard.tsx";
 import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard.tsx";
@@ -28,9 +28,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { title: null, description: null };
         const intl = tmp(1126).intl;
-        obj2.title = intl.string(_modDef2597.TV3Vm8);
+        obj2.title = intl.string(_modDef2600.TV3Vm8);
         const intl2 = tmp(1126).intl;
-        obj2.description = intl2.string(_modDef2597.STx9hp);
+        obj2.description = intl2.string(_modDef2600.STx9hp);
         const tmp9 = closure_4(GuildPowerupsSectionHeaderDefault, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -94,9 +94,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { title: null, description: null };
       const tmp = closure_7();
       const intl = util.intl;
-      obj2.title = intl.string(_modDef2597.TV3Vm8);
+      obj2.title = intl.string(_modDef2600.TV3Vm8);
       const intl2 = util.intl;
-      obj2.description = intl2.string(_modDef2597.STx9hp);
+      obj2.description = intl2.string(_modDef2600.STx9hp);
       const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj2)];
       items[1] = closure_4(View, {
         style: tmp.container,

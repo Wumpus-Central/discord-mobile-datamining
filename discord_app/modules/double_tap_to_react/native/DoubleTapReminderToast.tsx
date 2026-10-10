@@ -41,7 +41,7 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
       obj2.text = intl.formatToPlainString(util.t.C2tQIV, obj3);
       const obj4 = ToastActionCreatorsDefault;
       obj2.icon = DoubleTapEmojiUpdatedToast.getToastEmojiEntity(name);
-      obj4.openMana("DOUBLE_TAP_TO_REACT_REMINDER", obj2);
+      obj4.open("DOUBLE_TAP_TO_REACT_REMINDER", obj2);
       const tmpResult5 = DoubleTapEmojiUpdatedToast;
       const obj5 = { dismissAction: ContentDismissActionType.AUTO_DISMISS, forceTrack: true };
       const result1 = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(

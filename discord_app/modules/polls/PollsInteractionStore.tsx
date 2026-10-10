@@ -160,7 +160,7 @@ export const clearPollState = function clearPollState(arg0, arg1) {
   });
 };
 export const updatePollState = function updatePollState(arg0, arg1, arg2) {
-  state = closure_4.getState();
+  const state = closure_4.getState();
   state.updatePollState(arg0, arg1, arg2);
 };
 export const getPollState = function getPollState(channelId, id) {

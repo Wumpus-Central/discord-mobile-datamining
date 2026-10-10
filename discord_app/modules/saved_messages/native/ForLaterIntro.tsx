@@ -11,7 +11,7 @@ import SavedMessagesTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
 import ReminderWatchSpotIllustration from "../../../design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx";
 import BookmarksSpotIllustration2 from "../../../design/components/mana-assets/native/generated/BookmarksSpotIllustration.native.tsx";
-import _modDef12633 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef12680 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -135,7 +135,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       isReminder = isReminder.isReminder;
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef12633 };
+        const obj2 = { uri: _modDef12680 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -315,7 +315,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj2 = { style: tmp.messages, children: null };
       const obj3 = { source: null, style: null };
-      const obj4 = { uri: _modDef12633 };
+      const obj4 = { uri: _modDef12680 };
       obj3.source = obj4;
       obj3.style = tmp.avatar;
       const items = [hasOwnProperty(FastImageDefault, obj3)];

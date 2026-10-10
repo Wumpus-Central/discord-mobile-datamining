@@ -4,7 +4,6 @@ import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef5006 from "../../../../_runtime/metro/05006__.js";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import EmbeddedActivitiesActionCreators from "../EmbeddedActivitiesActionCreators.tsx";
@@ -125,16 +124,10 @@ prototype["showErrorModal"] = function showErrorModal(reason) {
   actions_AlertActionCreatorsDefault.show(obj2);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
-  const obj2 = {
-    key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED",
-    content: null,
-    icon: null,
-    iconColor: "status-positive",
-  };
+  const obj2 = { text: null, variant: "success" };
   const intl = util.intl;
-  obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef5006;
-  ToastActionCreatorsDefault.open(obj2);
+  obj2.text = intl.string(util.t.JfA7IK);
+  ToastActionCreatorsDefault.open("EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", obj2);
 };
 prototype["leaveActivity"] = function leaveActivity(arg0) {
   const self = this;

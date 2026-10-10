@@ -55,6 +55,35 @@ prototype["fromServer"] = function fromServer(badge_countdown_ends_at) {
     throw new TypeError("Trying to call a non-function");
   }
 };
+prototype["fromPersisted"] = function fromPersisted(badgeCountdownEndsAt) {
+  const obj = {};
+  const merged = Object.assign(badgeCountdownEndsAt);
+  let date;
+  if (null != badgeCountdownEndsAt.badgeCountdownEndsAt) {
+    const _Date = Date;
+    date = new Date(badgeCountdownEndsAt.badgeCountdownEndsAt);
+  }
+  obj.badgeCountdownEndsAt = date;
+  if (typeof prototype === "function") {
+    const obj2 = Object.create(prototype.prototype);
+    obj2.type = CollectiblesMarketingType.CollectiblesMarketingType.TAB_TOOLTIP;
+    ({
+      title: tmp7.title,
+      body: tmp7.body,
+      asset: tmp7.asset,
+      dismissibleContent: tmp7.dismissibleContent,
+      version: tmp7.version,
+      refTargetBackground: tmp7.refTargetBackground,
+      badgeIcon: tmp7.badgeIcon,
+      badgeText: tmp7.badgeText,
+      badgeCountdownEndsAt: tmp7.badgeCountdownEndsAt,
+      showHoverGradient: tmp7.showHoverGradient,
+    } = obj);
+    return obj2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingTabTooltipRecord.tsx");
 
 export default prototype;

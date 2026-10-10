@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef10978 from "../../../../../_runtime/metro/10978__.js";
+import _modDef11018 from "../../../../../_runtime/metro/11018__.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
@@ -27,7 +27,7 @@ const Constants = fn(1085);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   heroImage: { aspectRatio: 4, width: "100%" },
@@ -114,7 +114,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_17();
       if (cResult[0] !== tmp2.separator) {
         const obj2 = { style: tmp2.separator };
-        const tmp6 = state(timestampProducer, obj2);
+        const tmp6 = closure_1_14(timestampProducer, obj2);
         cResult[0] = tmp2.separator;
         cResult[1] = tmp6;
         let tmp3 = tmp6;
@@ -124,7 +124,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp3;
     }
   : function Separator() {
-      return state(timestampProducer, { style: closure_17().separator });
+      return closure_1_14(timestampProducer, { style: closure_17().separator });
     };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
@@ -135,7 +135,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         ({ TERMS: obj3.termsURL, PAID_TERMS: obj3.paidURL } = constants3);
         obj2.children = intl.format(util.t.FSPTDI, { termsURL: null, paidURL: null });
-        const tmp7 = state(Text_Text.Text, obj2);
+        const tmp7 = closure_1_14(Text_Text.Text, obj2);
         cResult[0] = tmp7;
         let first = tmp7;
         const obj5 = { termsURL: null, paidURL: null };
@@ -148,7 +148,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { variant: "text-xs/normal", color: "text-muted", children: null };
       const intl = util.intl;
       obj.children = intl.format(util.t.FSPTDI, { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS });
-      return state(Text_Text.Text, obj);
+      return closure_1_14(Text_Text.Text, obj);
     };
 ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
@@ -166,7 +166,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== text) {
           const obj2 = { variant: "text-sm/medium", color: "text-default", children: text };
-          const tmp10 = state(Text_Text.Text, obj2);
+          const tmp10 = closure_1_14(Text_Text.Text, obj2);
           cResult[3] = text;
           cResult[4] = tmp10;
           let tmp8 = tmp10;
@@ -194,7 +194,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { style: tmp4.socialBadge, activeOpacity: num, onPress, children: null };
           const items = [tmp6, tmp8, tmp11];
           obj3.children = items;
-          const tmp18 = closure_1_15(hasOwnProperty, obj3);
+          const tmp18 = value2(hasOwnProperty, obj3);
           cResult[8] = onPress;
           cResult[9] = tmp4.socialBadge;
           cResult[10] = num;
@@ -206,15 +206,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp12 = tmp5;
         if (tmp5) {
-          const obj4 = { source: _modDef10978, style: tmp4.socialBadgeArrow };
-          tmp12 = state(native.Icon, obj4);
+          const obj4 = { source: _modDef11018, style: tmp4.socialBadgeArrow };
+          tmp12 = closure_1_14(native.Icon, obj4);
         }
         cResult[5] = tmp5;
         cResult[6] = tmp4.socialBadgeArrow;
         cResult[7] = tmp12;
         tmp11 = tmp12;
       }
-      const tmp7 = state(native.Icon, {
+      const tmp7 = closure_1_14(native.Icon, {
         source: iconSource,
         style: tmp4.socialBadgeIcon,
         resizeMode: "contain",
@@ -239,21 +239,21 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       obj.activeOpacity = num;
       obj.onPress = onPress;
       const items = [
-        state(native.Icon, {
+        closure_1_14(native.Icon, {
           source: iconSource,
           style: tmp.socialBadgeIcon,
           resizeMode: "contain",
           disableColor: true,
         }),
-        state(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }),
+        closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }),
       ];
       if (tmp5Result) {
-        const obj3 = { source: _modDef10978, style: tmp.socialBadgeArrow };
-        tmp5Result = state(native.Icon, obj3);
+        const obj3 = { source: _modDef11018, style: tmp.socialBadgeArrow };
+        tmp5Result = closure_1_14(native.Icon, obj3);
       }
       items[2] = tmp5Result;
       obj.children = items;
-      return closure_1_15(hasOwnProperty, obj);
+      return value2(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
 let obj8 = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
@@ -601,21 +601,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj8 = {
                     unlockHook() {
                       const obj = { style: closure_2.gatedChannel, children: null };
-                      const items = [state(native.Spacer, { size: 3 }), , ,];
+                      const items = [closure_2_14(native.Spacer, { size: 3 }), , ,];
                       const obj2 = {
                         size: native.Icon.Sizes.SMALL_20,
                         style: closure_2.gatedChannelIcon,
                         source: utils_ChannelUtils.getChannelIcon(stateFromStores1),
                       };
-                      items[1] = state(native.Icon, obj2);
-                      items[2] = state(native.Spacer, { size: 3 });
-                      items[3] = state(Text_Text.Text, {
+                      items[1] = closure_2_14(native.Icon, obj2);
+                      items[2] = closure_2_14(native.Spacer, { size: 3 });
+                      items[3] = closure_2_14(Text_Text.Text, {
                         variant: "text-xs/semibold",
                         color: "text-default",
                         children,
                       });
                       obj.children = items;
-                      return closure_2_15(timestampProducer, obj);
+                      return value2(timestampProducer, obj);
                     },
                   };
                   let formatResult = intl2.format(tmp(tmp2[12]).t.A1L1hU, obj8);
@@ -696,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj23 = {
                   gap: 16,
                   children: mapped.map((listingId) =>
-                    state(GuildRoleSubscriptionPurchasePreviewCardDefault, { listingId, guildId }, listingId),
+                    closure_2_14(GuildRoleSubscriptionPurchasePreviewCardDefault, { listingId, guildId }, listingId),
                   ),
                 };
                 items4[10] = closure_14(tmp(tmp2[29]).GappedList, obj23);

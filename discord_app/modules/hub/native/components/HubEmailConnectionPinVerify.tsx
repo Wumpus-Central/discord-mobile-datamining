@@ -1,6 +1,6 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef5017 from "../../../../../_runtime/metro/05017__.js";
+import EnvelopeIcon from "../../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
 import HubJoinManagerDefault from "../../HubJoinManager.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -9,15 +9,15 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const require = fn;
-function presentResendToast(content) {
+require = fn;
+function presentResendToast(text) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "HUB_EMAIL_RESET", content, icon: _modDef5017 });
+  obj.open("HUB_EMAIL_RESET", { text, icon: EnvelopeIcon.EnvelopeIcon });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_10 = createStyles.createStyles({
   container: { alignItems: "center" },
   title: { marginBottom: 8, textAlign: "center" },
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             guildId(onClose[12])();
           });
           return () => {
-            guildId(12458).terminate();
+            guildId(12505).terminate();
           };
         };
         const items = [onClose];
@@ -343,7 +343,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           require("navigateToLastChannel")();
         });
         return () => {
-          closure_1_1(12458).terminate();
+          closure_1_1(12505).terminate();
         };
       }, items);
       const obj = require("../../../../../_runtime/metro/00012__.js");
@@ -384,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { source: null };
       const tmp5 = _slicedToArray(noop.useState(null), 2);
       const tmp7 = email;
-      obj4.source = require("../../../../../_runtime/metro/12459__.js");
+      obj4.source = require("../../../../../_runtime/metro/12506__.js");
       const items1 = [closure_8(require("FastImage"), obj4), , , , ,];
       const obj5 = {
         style: tmp.title,

@@ -1,5 +1,7 @@
 // discord_app/modules/conjure/plan/conjurePlanBot.tsx
 import Server from "../../../flow/Server.tsx";
+import ConjureTypes from "../ConjureTypes.tsx";
+import conjurePlanTags from "conjurePlanTags.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function isAppCommand(kind) {
@@ -83,38 +85,30 @@ let items = [
 const set = new Set(items);
 const result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanBot.tsx");
 
-export const getConjurePlanBotInteraction = function getConjurePlanBotInteraction(bot) {
-  if (null != bot.bot) {
-    return bot.bot.interaction;
-  } else {
-    const commands = bot.commands;
-    const someResult = commands.some(isAppCommand);
-    const privileged_intents = bot.privileged_intents;
-    let hasItem;
-    if (privileged_intents != null) {
-      hasItem = privileged_intents.includes("MESSAGE_CONTENT");
+export const getConjurePlanBotInteraction = function getConjurePlanBotInteraction(proposal) {
+  bot = proposal;
+  const planDeclaresSurfaceResult = conjurePlanTags.planDeclaresSurface(
+    proposal,
+    ConjureTypes.ConjureSupportedSurface.APPLICATION_COMMANDS,
+  );
+  if (!obj2.planDeclaresSurface(proposal, ConjureTypes.ConjureSupportedSurface.BOT)) {
+    if (!planDeclaresSurfaceResult) {
+      return null;
     }
-    if (!someResult) {
-      let str3 = "commands";
-      if (!someResult) {
-        let str4 = "messages";
-        if (!tmp2) {
-          if (true !== bot.is_activity) {
-            if (null == bot.automod) {
-              let tmp3 = "events";
-            }
-            str4 = tmp3;
-          }
-          tmp3 = null;
-        }
-        str3 = str4;
-      }
-      let str2 = str3;
-    } else {
-      str2 = "both";
-    }
-    return str2;
   }
+  if (null != bot.bot) {
+    ({ bot, interaction } = bot);
+  } else {
+    interaction = null;
+    if (planDeclaresSurfaceResult) {
+      const commands = bot.commands;
+      interaction = null;
+      if (commands.some(isAppCommand)) {
+        interaction = "commands";
+      }
+    }
+  }
+  obj2 = conjurePlanTags;
 };
 export const getConjurePlanBotExchanges = function getConjurePlanBotExchanges(bot, cResult, bot2) {
   closure_0 = cResult;

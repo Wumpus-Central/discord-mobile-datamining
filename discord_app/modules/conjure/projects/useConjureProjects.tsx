@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/useConjureProjects.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3827 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3849 from "../intl/ConjureUntranslated.messages.js";
 import ConjureGuildExperiment from "../experiments/ConjureGuildExperiment.tsx";
 import conjureAppInServer from "conjureAppInServer.tsx";
 import ConjureActivity from "ConjureActivity.tsx";
@@ -338,24 +338,24 @@ export const describeConjureProjectRow = function describeConjureProjectRow(entr
   if (entry.notInServer) {
     const obj3 = { serverName: null, label: null };
     const intl4 = util.intl;
-    obj3.serverName = intl4.string(_modDef3827["08PzLy"]);
+    obj3.serverName = intl4.string(_modDef3849["08PzLy"]);
     const intl5 = util.intl;
     const obj4 = { name: entry.name };
-    obj3.label = intl5.formatToPlainString(_modDef3827.pyh2pa, obj4);
+    obj3.label = intl5.formatToPlainString(_modDef3849.pyh2pa, obj4);
     let obj = obj3;
   } else if (null == entry.guildName) {
     const obj5 = { serverName: null, label: null };
     const intl2 = util.intl;
-    obj5.serverName = intl2.string(_modDef3827["3QFps8"]);
+    obj5.serverName = intl2.string(_modDef3849["3QFps8"]);
     const intl3 = util.intl;
     const obj6 = { name: entry.name };
-    obj5.label = intl3.formatToPlainString(_modDef3827["2sBOnp"], obj6);
+    obj5.label = intl3.formatToPlainString(_modDef3849["2sBOnp"], obj6);
     obj = obj5;
   } else {
     obj = { serverName: entry.guildName, label: null };
     const intl = util.intl;
     ({ name: obj2.name, guildName: obj2.server } = entry);
-    obj.label = intl.formatToPlainString(_modDef3827["hd+GF1"], { name: null, server: null });
+    obj.label = intl.formatToPlainString(_modDef3849["hd+GF1"], { name: null, server: null });
     const obj11 = { name: null, server: null };
   }
   return obj;

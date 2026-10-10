@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
@@ -16,12 +16,12 @@ const PX_82 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_4 = nativeDefault.space.PX_4;
-const NORMAL = fn(6858).GameIconSizes.NORMAL;
-let closure_14 = fn(6858).GameIconImageSize[NORMAL];
+const NORMAL = fn(6861).GameIconSizes.NORMAL;
+let closure_14 = fn(6861).GameIconImageSize[NORMAL];
 let c15 = "heading-md/bold";
 let c16 = "text-sm/medium";
 const PX_162 = nativeDefault.space.PX_16;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj = {
   card: { padding: PX_12 },
   closeButton: null,
@@ -244,7 +244,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         items3[2] = closure_6(View, obj9);
         obj6.children = items3;
         items2[1] = closure_7(View, obj6);
-        const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
+        const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
         items2[2] = closure_6(require("native").Avatar, obj10);
         obj4.children = items2;
         items1[1] = closure_7(View, obj4);

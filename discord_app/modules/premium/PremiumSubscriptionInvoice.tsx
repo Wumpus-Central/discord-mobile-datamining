@@ -28,7 +28,7 @@ let closure_14 = async function _createSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -194,7 +194,7 @@ let closure_16 = async function _updateSubscriptionInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -365,7 +365,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -387,6 +387,7 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
           closure_129_3 = undefined;
           closure_129_4 = undefined;
           closure_129_5 = undefined;
+          closure_129_6 = undefined;
           ({
             paymentSourceId: closure_129_0,
             skuId: closure_129_1,
@@ -394,9 +395,10 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
             currency: closure_129_3,
             loadId: closure_129_4,
             quantity: closure_129_5,
+            applyWalletBalance: closure_129_6,
           } = closure_0);
-          closure_129_6 = undefined;
           closure_129_7 = undefined;
+          closure_129_8 = undefined;
           c5 = 1;
           c6 = 1;
           return { value: "Set", done: true };
@@ -422,15 +424,18 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
             currency: closure_129_3,
             load_id: closure_129_4,
           };
-          closure_129_6 = obj6;
+          closure_129_7 = obj6;
           if (null != closure_129_5) {
-            closure_129_6.quantity = closure_129_5;
+            closure_129_7.quantity = closure_129_5;
+          }
+          if (null != closure_129_6) {
+            closure_129_7.apply_wallet_balance = closure_129_6;
           }
           c4 = 1;
-          const tmp55 = closure_130_1(closure_130_2[10]);
+          const tmp60 = closure_130_1(closure_130_2[10]);
           const request = {
             url: closure_130_12.STORE_SKU_PURCHASE(closure_129_1),
-            query: closure_129_6,
+            query: closure_129_7,
             oldFormErrors: true,
             rejectWithError: false,
           };
@@ -441,8 +446,8 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
         }
       } else if (2 === tmp7) {
         c4 = 0;
-        closure_129_8 = closure_3;
-        const billingError = new closure_130_0(closure_130_2[9]).BillingError(closure_129_8);
+        closure_129_9 = closure_3;
+        const billingError = new closure_130_0(closure_130_2[9]).BillingError(closure_129_9);
         throw billingError;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -453,17 +458,17 @@ let closure_18 = async function _createOneTimePurchaseInvoicePreview(arg0) {
         const obj8 = { value, done: true };
         return obj8;
       } else {
-        closure_129_7 = value;
+        closure_129_8 = value;
         c4 = 0;
         c6 = 3;
-        const obj = { value: closure_130_11.createInvoiceFromServer(closure_129_7.body), done: true };
+        const obj = { value: closure_130_11.createFromOTPPreview(closure_129_8.body), done: true };
         return obj;
       }
-    } catch (tmp43) {
-      closure_3 = tmp43;
+    } catch (tmp48) {
+      closure_3 = tmp48;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp43;
+        throw tmp48;
       } else {
         c5 = tmp;
       }
@@ -491,7 +496,7 @@ let closure_20 = async function _getSubscriptionInvoice(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {

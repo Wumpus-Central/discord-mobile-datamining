@@ -44,14 +44,24 @@ export const parseGuildSpaceLeaderboardMessageData = function parseGuildSpaceLea
                 if (leaderboard.stat !== obj.GAMING_LEADERBOARD_STAT_UNSPECIFIED) {
                   tmp = null;
                   if (leaderboard.stat in tmp3) {
-                    obj = { event: null, stat: null, userId: null, secondaryUserId: null, value: null };
+                    obj = {
+                      event: null,
+                      stat: null,
+                      userId: null,
+                      secondaryUserId: null,
+                      value: null,
+                      secondaryValue: null,
+                    };
                     ({ event: obj.event, stat: obj.stat, user_id: obj.userId, secondary_user_id } = leaderboard);
                     if (secondary_user_id == null) {
                       secondary_user_id = null;
                     }
                     obj.secondaryUserId = secondary_user_id;
                     obj.value = leaderboard.value;
-                    tmp = obj;
+                    if (null == leaderboard.secondary_value) {
+                      obj.secondaryValue = leaderboard.value;
+                    }
+                    const secondary_value = leaderboard.secondary_value;
                   }
                 }
               }

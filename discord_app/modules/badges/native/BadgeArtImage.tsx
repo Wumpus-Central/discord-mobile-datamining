@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const formatted = url.split(/[?#]/)[0].toLowerCase();
             if (formatted.endsWith(".svg")) {
-              SvgUri = SvgUri(7559).SvgUri;
+              SvgUri = SvgUri(7576).SvgUri;
               size = { uri: url, width, height, onError: ignoreSvgError, fallback: null };
               let tmp4Result;
               if (null != fallbackUrl) {
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             APNGPlayer(1382);
           }
-          APNGPlayer = APNGPlayer(8992).APNGPlayer;
+          APNGPlayer = APNGPlayer(9011).APNGPlayer;
           const obj5 = { url: fallbackUrl, style: size, autoplay: true };
           tmpResult2 = <APNGPlayer url={fallbackUrl} style={size} autoplay />;
         }

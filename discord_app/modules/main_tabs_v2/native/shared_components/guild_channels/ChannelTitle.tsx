@@ -6,9 +6,9 @@ import ChannelListLayout from "layouts/ChannelListLayout.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const UnreadSetting = fn(5974).UnreadSetting;
+const UnreadSetting = fn(5967).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_5 = createStyles.createStyleProperties({
   muted: nativeDefault.colors.TEXT_MUTED,
   normal: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT,

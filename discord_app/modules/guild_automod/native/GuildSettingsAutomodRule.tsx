@@ -11,15 +11,15 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const useAutomodRulesList = fn(18168).useAutomodRulesList;
-const GuildSettingsAutomodRuleStore = fn(18170);
+const useAutomodRulesList = fn(18242).useAutomodRulesList;
+const GuildSettingsAutomodRuleStore = fn(18244);
 ({ useAutomodEditingRuleActions: closure_7, useAutomodEditingRuleState: closure_8 } = GuildSettingsAutomodRuleStore);
-const MAX_RULE_NAME_LENGTH = fn(11403).MAX_RULE_NAME_LENGTH;
+const MAX_RULE_NAME_LENGTH = fn(11448).MAX_RULE_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let c13 = "automod-delete-rule";
 let c14 = "automod-unsaved-changes";
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   stack: { marginTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING },
 };
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "+51" };
           }
         } else {
           try {
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               c3 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } catch (tmp20) {
             c3 = tmp;
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -353,7 +353,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } catch (tmp20) {
               c3 = tmp;
@@ -537,7 +537,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj3 = { value, done: true };
                         return obj3;
                       } else {
-                        return { value: "IconComponent", done: null };
+                        return { value: "IconComponent", done: "+51" };
                       }
                     } else {
                       try {
@@ -556,20 +556,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                             let v0 = 1;
                             c5 = 2;
                             c6 = 1;
-                            const obj6 = { value: closure_0(11408).deleteAutomodRule(id, closure_0), done: false };
+                            const obj6 = { value: closure_0(11453).deleteAutomodRule(id, closure_0), done: false };
                             return obj6;
                           }
                         } else if (1 === tmp7) {
                           v0 = 0;
                           closure_129_0 = closure_3;
-                          const aPIError = new closure_0(5632).APIError(closure_129_0);
+                          const aPIError = new closure_0(5635).APIError(closure_129_0);
                           const anyErrorMessage = aPIError.getAnyErrorMessage();
                           closure_0 = anyErrorMessage;
                           if (anyErrorMessage == null) {
                             const intl = closure_0(1126).intl;
                             closure_0 = intl.string(closure_0(1126).t.fEptJP);
                           }
-                          closure_0(4767).presentError(closure_0);
+                          closure_0(4808).presentError(closure_0);
                           throw closure_129_0;
                         } else if (arg0 === 1) {
                           c6 = 3;
@@ -584,7 +584,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           v0(closure_130_1, closure_0);
                           closure_1.pop();
                           c6 = 3;
-                          return { value: "IconComponent", done: null };
+                          return { value: "IconComponent", done: "+51" };
                         }
                       } catch (tmp41) {
                         closure_3 = tmp41;

@@ -31,7 +31,7 @@ class GameSearchSession {
         if (tmp3) {
           obj4.endAt(obj4.state.lastActivityAt);
         }
-        state = obj4.state;
+        let state = obj4.state;
         if (state == null) {
           obj2 = {
             id: AnalyticsUtils.getNewAnalyticsLoadId(),
@@ -57,7 +57,7 @@ class GameSearchSession {
       }
     };
     obj.onResults = function onResults(query, results1) {
-      state = obj2.state;
+      const state = obj2.state;
       let tmp2 = null != state;
       if (tmp2) {
         tmp2 = null != state.query;
@@ -89,7 +89,7 @@ class GameSearchSession {
     };
     obj.select = function select(game_id) {
       closure_0 = game_id;
-      state = obj2.state;
+      const state = obj2.state;
       if (null != state) {
         if (null != state.query) {
           const _Date = Date;
@@ -179,7 +179,7 @@ class GameSearchSession {
   }
 }
 GameSearchSession.prototype["endAt"] = function endAt(lastActivityAt) {
-  state = this.state;
+  const state = this.state;
   this.state = null;
   this.selectedQuery = null;
   if (null != state) {
@@ -268,7 +268,7 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, 
           if (tmp3) {
             obj4.endAt(obj4.state.lastActivityAt);
           }
-          state = obj4.state;
+          let state = obj4.state;
           if (state == null) {
             obj2 = {
               id: AnalyticsUtils.getNewAnalyticsLoadId(),
@@ -294,7 +294,7 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, 
         }
       };
       obj2.onResults = function onResults(query, results1) {
-        state = obj2.state;
+        const state = obj2.state;
         let tmp2 = null != state;
         if (tmp2) {
           tmp2 = null != state.query;
@@ -326,7 +326,7 @@ export const getGameSearchSession = function getGameSearchSession(CHAT_MENTION, 
       };
       obj2.select = function select(game_id) {
         closure_0 = game_id;
-        state = obj2.state;
+        const state = obj2.state;
         if (null != state) {
           if (null != state.query) {
             const _Date = Date;

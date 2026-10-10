@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const GiftingBadgeExperiment = tmp(10066).GiftingBadgeExperiment;
+      const GiftingBadgeExperiment = tmp(10095).GiftingBadgeExperiment;
       const enabled = GiftingBadgeExperiment.useConfig(first).enabled;
       if (cResult[1] !== enabled) {
         class O {
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(6872).COLLECTIBLES_MOBILE_GIFT_MODAL;
+        tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(6878).COLLECTIBLES_MOBILE_GIFT_MODAL;
         cResult[8] = analyticsLocations;
         cResult[9] = tmp14;
         const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
@@ -425,7 +425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const analyticsLocations2 = enabled(6848)(tmp14).analyticsLocations;
+      const analyticsLocations2 = enabled(6851)(tmp14).analyticsLocations;
       if (stateFromStores != null) {
         class O {
           constructor() {
@@ -608,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onDismiss: onGiftModalDismiss, title: tmp22 };
-            const tmp25 = jsx(tmp19(10149), { onDismiss: onGiftModalDismiss, title: tmp22 });
+            const tmp25 = jsx(tmp19(10178), { onDismiss: onGiftModalDismiss, title: tmp22 });
             cResult[13] = onGiftModalDismiss;
             cResult[14] = tmp25;
           } else {

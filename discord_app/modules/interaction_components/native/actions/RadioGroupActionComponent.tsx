@@ -234,7 +234,7 @@ export default noop.memo(
           tmp5 = obj3;
         }
         const componentState = type(required[4]).useComponentState(type, tmp5);
-        state = componentState.state;
+        const state = componentState.state;
         const executeStateUpdate = componentState.executeStateUpdate;
         const items1 = [state, type];
         const memo1 = ref.useMemo(() => {

@@ -23,7 +23,7 @@ const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1627).MEDIA_PICKER_SEND_BUTTON_SPRING
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [fn(1409).DisplayNameEffect.GRADIENT, fn(1409).DisplayNameEffect.GUMMY, fn(1409).DisplayNameEffect.PRISM];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: null,
@@ -106,7 +106,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       stateFromStores = onPress(stateFromStores[12]).useStateFromStores(tmp4, tmp5);
       const bottom = visible(tmp2[54])().bottom;
       const tmpResult = onPress(stateFromStores[12]);
-      const fn2 = function p() {
+      const fn2 = function y() {
         let pointerEvents = "none";
         if (visible) {
           pointerEvents = "box-none";
@@ -118,7 +118,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__initData = __initData;
       const animatedProps = onPress(stateFromStores[55]).useAnimatedProps(fn2);
       const tmpResult3 = onPress(stateFromStores[55]);
-      const fn3 = function y() {
+      const fn3 = function p() {
         let num = 0;
         if (visible) {
           num = 1;
@@ -481,7 +481,7 @@ export default function DisplayNameStylesEditScreen() {
     }, items2);
     let obj4 = {
       hasChanges: memo1,
-      location: tmp2(tmp3[23]).DisplayNameStylesApplyLocations.PROFILE_EDITOR,
+      entryPoint: tmp2(tmp3[23]).DisplayNameStylesEntryPoints.PROFILE_EDITOR,
       selectedFontId,
       selectedEffectId: first1,
       selectedColors: memo,
@@ -549,7 +549,7 @@ export default function DisplayNameStylesEditScreen() {
         dismissFontsBadge();
       }
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(15552, dependencyMap.paths),
+        asyncRequireImpl(15614, dependencyMap.paths),
         "DisplayNameStylesFontPickerSheet",
         { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName },
       );
@@ -571,13 +571,13 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj.openLazy(asyncRequireImpl(15554, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+      obj.openLazy(asyncRequireImpl(15616, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
         userId: id,
         selectedEffectId: first1,
         onSelectEffect,
       });
       const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-      const tmp3 = asyncRequireImpl(15554, dependencyMap.paths);
+      const tmp3 = asyncRequireImpl(15616, dependencyMap.paths);
     }, items7);
     const callback6 = obj8.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -588,7 +588,7 @@ export default function DisplayNameStylesEditScreen() {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15555, dependencyMap.paths),
+          asyncRequireImpl(15617, dependencyMap.paths),
           "DisplayNameStylesGummyColorPickerSheet",
           obj2,
         );
@@ -603,10 +603,10 @@ export default function DisplayNameStylesEditScreen() {
               return callback(first1, arg0);
             },
           };
-          openLazy(tmp2Result(15560, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+          openLazy(tmp2Result(15622, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
           const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(15564, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(15626, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);
@@ -633,6 +633,7 @@ export default function DisplayNameStylesEditScreen() {
         selectedFontId,
         selectedEffectId: first1,
         selectedColors: memo,
+        isTryItOut,
       };
       const items9 = [closure_12(tmp9(tmp3[42]), obj11), ,];
       const obj12 = { style: tmp.fieldButtonGroup, children: null };

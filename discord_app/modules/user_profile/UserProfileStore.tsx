@@ -132,7 +132,7 @@ function checkUserProfileCollectiblesExpiration(id, guild_id) {
   closure_1 = guild_id;
   if (null != guild_id) {
     value = map2.get(value6);
-    let value4;
+    value4 = undefined;
     if (value != null) {
       value4 = value.get(guild_id);
     }
@@ -582,7 +582,7 @@ function handleProfileFetchFailure(arg0) {
     value.delete(tmp);
   }
   set.delete(userId);
-  let value4 = map1.get(userId);
+  value4 = map1.get(userId);
   if (value4 == null) {
     obj = {
       connectedAccounts: [],
@@ -669,7 +669,7 @@ function handleProfileUpdateSuccess(guild_id) {
       theme_colors: theme_colors2,
       collectibles: collectibles2,
     } = guild_id);
-    const value4 = map1.get(userId2);
+    value4 = map1.get(userId2);
     if (null != value4) {
       const obj3 = {};
       const merged2 = Object.assign(value4);

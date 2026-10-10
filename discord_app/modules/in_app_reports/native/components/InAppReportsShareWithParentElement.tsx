@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                           const _Symbol = Symbol;
                           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                            const tmp52 = jsx(tmp(13000).ShareIcon, {});
+                            const tmp52 = jsx(tmp(13047).ShareIcon, {});
                             const intl3 = tmp(1126).intl;
                             const stringResult = intl3.string(tmp(1126).t["5l/hlt"]);
                             cResult[15] = tmp52;
@@ -198,12 +198,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               username1 = tmp4.username;
             }
             obj2.parent3 = username1;
-            parents(4767).showSafetySuccess(
+            parents(4808).showSafetySuccess(
               "IAR_SHARE_WITH_PARENT_SUCCESS",
               intl.formatToPlainString(parents(1126).t.wr4IT5, obj2),
             );
             closure_1_1(true);
-            const obj = parents(4767);
+            const obj = parents(4808);
           })
           .catch(() => {
             closure_1_1(dependencyMap[8]).showFailedToast();
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         obj3.parent3 = username3;
         obj.disabledTitle = intl.formatToPlainString(parents(1126).t.BlAMme, obj3);
-        obj.icon = jsx(parents(13000).ShareIcon, {});
+        obj.icon = jsx(parents(13047).ShareIcon, {});
         const intl2 = tmp15(1126).intl;
         obj.description = intl2.string(parents(1126).t["5l/hlt"]);
         obj.disabled = tmp[0];

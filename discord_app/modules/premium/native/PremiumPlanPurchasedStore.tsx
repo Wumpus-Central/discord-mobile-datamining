@@ -32,7 +32,7 @@ export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFrom
 };
 export const setPaymentSuccess = function setPaymentSuccess() {
   if (obj3.getState().initiatedPurchaseFromNewFlow) {
-    state = obj3.getState();
+    const state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     ReactBatchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
@@ -49,7 +49,7 @@ export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectC
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(mobileWebRedirectCheckoutStatus) {
   _require = mobileWebRedirectCheckoutStatus;
   if ("succeeded" === mobileWebRedirectCheckoutStatus) {
-    state = obj3.getState();
+    const state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     if ("dismissed" !== state.mobileWebRedirectCheckoutStatus) {
       if (ActionSheetStore.getKey() !== closure_4) {
@@ -77,7 +77,7 @@ export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(fn) 
   }
 };
 export const reset = function reset() {
-  state = obj3.getState();
+  const state = obj3.getState();
   ({ onPaymentDismiss, mobileWebRedirectCheckoutStatus: require } = state);
   if (onPaymentDismiss != null) {
     const obj = { productId: tmp2, isSuccess: tmp3 };
@@ -97,7 +97,7 @@ export const reset = function reset() {
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
       onPaymentSuccess: "emoji",
-      onPaymentDismiss: "Map",
+      onPaymentDismiss: "flexDirection",
     });
   });
 };

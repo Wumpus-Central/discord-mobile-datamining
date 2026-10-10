@@ -46,7 +46,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_2 = ["badge", "primaryTintColor", "secondaryTintColor"];
-const GuildTagBadgeKind = fn(7869).GuildTagBadgeKind;
+const GuildTagBadgeKind = fn(7887).GuildTagBadgeKind;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

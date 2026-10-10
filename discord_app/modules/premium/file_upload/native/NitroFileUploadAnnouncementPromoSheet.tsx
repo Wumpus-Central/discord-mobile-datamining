@@ -1,15 +1,15 @@
 // discord_app/modules/premium/file_upload/native/NitroFileUploadAnnouncementPromoSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2665 from "../NitroFileUpload.messages.js";
+import _modDef2668 from "../NitroFileUpload.messages.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(2061).ContentDismissActionType;
+const ContentDismissActionType = fn(2062).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = { illustration: { paddingTop: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[3];
       }
       const obj = markAsDismissed(576);
-      const unmountEffect = markAsDismissed(5393).useUnmountEffect(tmp6);
+      const unmountEffect = markAsDismissed(5396).useUnmountEffect(tmp6);
       if (cResult[4] !== tmp5) {
         class I {
           constructor() {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp10 = jsx(tmp(17593).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp10 = jsx(tmp(17665).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[6] = tmp10;
         const tmp9 = tmp10;
       } else {
@@ -112,9 +112,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult = obj4.string(_modDef2665.IyCdAU);
+        const stringResult = obj4.string(_modDef2668.IyCdAU);
         const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(_modDef2665.LhfXZN);
+        const stringResult1 = intl.string(_modDef2668.LhfXZN);
         cResult[9] = stringResult;
         cResult[10] = stringResult1;
         let tmp15 = stringResult1;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I };
-        const tmp22 = jsx(tmp(5376).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
+        const tmp22 = jsx(tmp(5379).Button, { grow: true, size: "lg", variant: "primary", text: tmp19, onPress: I });
         cResult[12] = I;
         cResult[13] = tmp22;
       } else {
@@ -173,18 +173,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = markAsDismissed(5393);
+      const tmpResult = markAsDismissed(5396);
       cResult[14] = I;
       cResult[15] = tmp11;
       cResult[16] = tmp21;
-      cResult[17] = jsx(markAsDismissed(10290).PromoSheet, {
+      cResult[17] = jsx(markAsDismissed(10323).PromoSheet, {
         illustration: tmp11,
         title: tmp14,
         description: tmp15,
         onDismiss: I,
         actions: tmp21,
       });
-      const tmp23 = jsx(markAsDismissed(10290).PromoSheet, {
+      const tmp23 = jsx(markAsDismissed(10323).PromoSheet, {
         illustration: tmp11,
         title: tmp14,
         description: tmp15,

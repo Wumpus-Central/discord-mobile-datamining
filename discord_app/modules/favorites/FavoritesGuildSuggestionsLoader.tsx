@@ -3,7 +3,7 @@ import useFavoritesGuildSuggestionCandidatesDefault from "hooks/useFavoritesGuil
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const FavoritesGuildSuggestionsStore = fn(16545);
+const FavoritesGuildSuggestionsStore = fn(16615);
 ({
   NO_SUGGESTIONS: closure_4,
   setFavoritesGuildSuggestions: hasOwnProperty,

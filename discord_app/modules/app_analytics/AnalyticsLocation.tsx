@@ -196,6 +196,7 @@ export default {
   USERNAME: "username",
   MEMBER_LIST: "member list",
   CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST: "contextual referral gdm member list",
+  CONTEXTUAL_REFERRAL_SERVER_CHANNEL_MEMBER_LIST: "contextual referral server channel member list",
   USER_MENTION: "user mention",
   ROLE_MENTION: "role mention",
   CONNECTIONS_ROLE_POPOUT: "connections role popout",
@@ -599,6 +600,7 @@ export default {
   GO_LIVE_KEYBIND: "go live keybind",
   OVERLAY_VOICE_WIDGET: "overlay voice widget",
   REQUEST_TO_STREAM_INVITE_EMBED: "request to stream invite embed",
+  REQUEST_TO_STREAM_REMINDER: "request to stream reminder",
   MEMBER_LIST_ACTIVITY_CONTENT_POPOUT: "member list activity content popout",
   MEMBER_LIST_GAMING_CONTENT_POPOUT: "member list gaming content popout",
   CLOUD_PLAY_POPOVER: "cloud play popover",
@@ -655,5 +657,5 @@ export default {
   CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK: "custom typing indicator profile coachmark",
   CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET: "custom typing indicator announcement sheet",
   CHAT_TYPING_INDICATOR: "chat typing indicator",
-  MACARON_PREMIUM_TAB_POPOVER: "",
+  BEST_BUY_PREMIUM_TAB_POPOVER: "best buy premium tab popover",
 };

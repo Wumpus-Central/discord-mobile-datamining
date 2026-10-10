@@ -18,7 +18,7 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildDisableCommunicationConstants = fn(2126);
+const GuildDisableCommunicationConstants = fn(2127);
 ({
   DisableCommunicationDuration,
   GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8,
@@ -71,7 +71,7 @@ let items = [
     },
   },
 ];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   reasonTextArea: null,
@@ -165,7 +165,7 @@ export default noop.memo(
                   let intl = tmp(tmp2[7]).intl;
                   let obj8 = { helpdeskArticle };
                   obj7.children = intl.format(tmp(tmp2[7]).t.Ns83GT, obj8);
-                  const tmp23 = closure_11(tmp(tmp2[20]).Text, obj7);
+                  const tmp23 = closure_11(tmp(tmp2[19]).Text, obj7);
                   cResult[15] = tmp23;
                   let tmp20 = tmp23;
                 } else {
@@ -211,10 +211,10 @@ export default noop.memo(
                     onChange: X,
                     hasIcons: false,
                     children: items.map((getLabel, value) =>
-                      closure_1_11(closure_0(onClose[22]).TableRadioRow, { value, label: getLabel.getLabel() }, value),
+                      closure_1_11(closure_0(onClose[21]).TableRadioRow, { value, label: getLabel.getLabel() }, value),
                     ),
                   };
-                  const tmp29 = closure_11(tmp(tmp2[21]).TableRadioGroup, obj9);
+                  const tmp29 = closure_11(tmp(tmp2[20]).TableRadioGroup, obj9);
                   cResult[18] = tmp29;
                   const tmp27 = tmp29;
                 } else {
@@ -281,7 +281,7 @@ export default noop.memo(
                     maxLength: 512,
                     onChange: Y,
                   };
-                  const tmp36 = closure_11(tmp(tmp2[23]).TextArea, obj11);
+                  const tmp36 = closure_11(tmp(tmp2[22]).TextArea, obj11);
                   cResult[22] = tmp4.reasonTextArea;
                   cResult[23] = tmp36;
                 } else {
@@ -319,7 +319,7 @@ export default noop.memo(
                     }
                   }
                   const obj13 = { variant: "primary", text: tmp37, onPress: tmp16 };
-                  const tmp40 = closure_11(tmp(tmp2[24]).Button, obj13);
+                  const tmp40 = closure_11(tmp(tmp2[23]).Button, obj13);
                   cResult[25] = tmp16;
                   cResult[26] = tmp40;
                   const tmp39 = tmp40;
@@ -394,7 +394,7 @@ export default noop.memo(
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
             } else {
               try {
@@ -433,18 +433,17 @@ export default noop.memo(
                   if (name == null) {
                     user = "";
                   }
-                  const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
+                  const obj = { text: null, variant: "success" };
                   const obj7 = { user };
-                  obj.content = intl.formatToPlainString(user(onClose[7]).t.O9C3Nt, obj7);
-                  obj.icon = guildId(onClose[19]);
-                  obj8.open(obj);
+                  obj.text = intl.formatToPlainString(user(onClose[7]).t.O9C3Nt, obj7);
+                  obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
                   v1();
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "+51" };
                 }
-              } catch (tmp20) {
+              } catch (tmp18) {
                 c3 = tmp;
-                throw tmp20;
+                throw tmp18;
               }
             }
           });
@@ -495,7 +494,7 @@ export default noop.memo(
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "+51" };
             }
           } else {
             try {
@@ -509,7 +508,7 @@ export default noop.memo(
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  const obj4 = tmp4(11358);
+                  const obj4 = tmp4(11400);
                   dependencyMap = 1;
                   c3 = 1;
                   const obj5 = {
@@ -532,24 +531,23 @@ export default noop.memo(
                 return obj6;
               } else {
                 const intl = user(1126).intl;
-                const obj8 = tmp4(4768);
-                const name = tmp4(5406).getName(closure_129_1, null, closure_129_0);
+                const obj8 = tmp4(4809);
+                const name = tmp4(5409).getName(closure_129_1, null, closure_129_0);
                 user = name;
                 if (name == null) {
                   user = "";
                 }
-                const obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
+                const obj = { text: null, variant: "success" };
                 const obj7 = { user };
-                obj.content = intl.formatToPlainString(user(1126).t.O9C3Nt, obj7);
-                obj.icon = tmp4(5006);
-                obj8.open(obj);
+                obj.text = intl.formatToPlainString(user(1126).t.O9C3Nt, obj7);
+                obj8.open("GUILD_COMMUNICATION_DISABLED_SUCCESS", obj);
                 closure_129_2();
                 c3 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "+51" };
               }
-            } catch (tmp20) {
+            } catch (tmp18) {
               c3 = tmp;
-              throw tmp20;
+              throw tmp18;
             }
           }
         };

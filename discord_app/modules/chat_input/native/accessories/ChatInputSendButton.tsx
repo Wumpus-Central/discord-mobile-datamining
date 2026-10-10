@@ -25,7 +25,7 @@ function getChatInputSendButtonItemKey(sendVoiceMessageEnabled) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(11588).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+let closure_8 = fn(11634).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsx = fn(21).jsx;
 const constants = {
   BUTTON_SEND: "send-button",
@@ -33,7 +33,7 @@ const constants = {
   BUTTON_SEND_VOICE_MESSAGE: "voice-message-button",
   BUTTON_SEND_VOICE_MESSAGE_DISABLED: "voice-message-button-disabled",
 };
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_11 = createStyles.createStyles((width, height) => {
   const obj = {
     button: null,
@@ -204,11 +204,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = requireTextContent;
       }
       const obj2 = id(576);
-      const token = id(4779).useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-      const tmpResult = id(4779);
-      const token1 = id(4779).useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-      const tmpResult5 = id(4779);
-      const token2 = id(4779).useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      const token = id(4818).useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+      const tmpResult = id(4818);
+      const token1 = id(4818).useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+      const tmpResult5 = id(4818);
+      const token2 = id(4818).useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
       const tmp8 = closure_11(token, token1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
@@ -222,7 +222,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp9, tmp10] = cResult;
       }
-      const tmpResult6 = id(4779);
+      const tmpResult6 = id(4818);
       const stateFromStores = id(504).useStateFromStores(tmp9, tmp10);
       const tmpResult7 = id(504);
       [tmp14, importDefault] = noop.useState(defaultValue.length > 0);
@@ -327,7 +327,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     ({ button: tmp34[1], buttonActive: tmp34[2], iconActive: tmp34[3] } = tmp8);
-                    tmp34[4] = tmp(5042).SendMessageIcon;
+                    tmp34[4] = tmp(5040).SendMessageIcon;
                     const intl = tmp(1126).intl;
                     tmp34[5] = intl.string(tmp(1126).t.TXNS7S);
                     tmp34[6] = onSendMessage;
@@ -429,12 +429,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores1;
       noop = undefined;
       canSendVoiceMessage = undefined;
-      const token = channel(4779).useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-      const obj = channel(4779);
-      const token1 = channel(4779).useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-      const obj2 = channel(4779);
-      const token2 = channel(4779).useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-      const obj3 = channel(4779);
+      const token = channel(4818).useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
+      const obj = channel(4818);
+      const token1 = channel(4818).useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
+      const obj2 = channel(4818);
+      const token2 = channel(4818).useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+      const obj3 = channel(4818);
       const tmp7 = closure_11(token, token1);
       let items = [AccessibilityStore];
       const stateFromStores = channel(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -492,7 +492,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         obj7.style = size;
         if (canSendVoiceMessage) {
           const obj8 = { disabled: stateFromStores1, channelId: channel.id };
-          let tmp15Result = jsx(onSendMessage(11909), { disabled: stateFromStores1, channelId: channel.id });
+          let tmp15Result = jsx(onSendMessage(11953), { disabled: stateFromStores1, channelId: channel.id });
         } else {
           const obj9 = {
             active: true,
@@ -505,12 +505,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             disabled: null,
           };
           ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
-          obj9.IconComponent = tmp(5042).SendMessageIcon;
+          obj9.IconComponent = tmp(5040).SendMessageIcon;
           const intl = tmp(1126).intl;
           obj9.accessibilityLabel = intl.string(tmp(1126).t.TXNS7S);
           obj9.onPress = onSendMessage;
           obj9.disabled = !tmp12;
-          tmp15Result = jsx(onSendMessage(11891), {
+          tmp15Result = jsx(onSendMessage(11935), {
             active: true,
             style: null,
             activeStyle: null,
@@ -520,7 +520,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             onPress: null,
             disabled: null,
           });
-          const tmp3Result = onSendMessage(11891);
+          const tmp3Result = onSendMessage(11935);
         }
         obj7.children = tmp15Result;
         return <canSendVoiceMessage style={null}>{null}</canSendVoiceMessage>;
@@ -531,7 +531,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           buttonHeight: token1,
           buttonMargin: token2,
           sendVoiceMessageEnabled: canSendVoiceMessage,
-          children: jsx(tmp(4788).TransitionGroup, {
+          children: jsx(tmp(4827).TransitionGroup, {
             items: memo,
             renderItem: renderChatInputSendButton,
             getItemKey: getChatInputSendButtonItemKey,
@@ -544,7 +544,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             buttonMargin={token2}
             sendVoiceMessageEnabled={canSendVoiceMessage}
           >
-            {jsx(tmp(4788).TransitionGroup, {
+            {jsx(tmp(4827).TransitionGroup, {
               items: memo,
               renderItem: renderChatInputSendButton,
               getItemKey: getChatInputSendButtonItemKey,

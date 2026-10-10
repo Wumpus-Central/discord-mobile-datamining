@@ -1,10 +1,9 @@
 // discord_app/modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2661 from "../../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2664 from "../../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
@@ -12,11 +11,13 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
+import EntitlementActionCreators from "../../../../actions/EntitlementActionCreators.tsx";
 import useStoreConnectionErrorAlertDefault from "../../../premium/native/useStoreConnectionErrorAlert.tsx";
+import BillingActionCreatorsDefault from "../../../../actions/native/BillingActionCreators.tsx";
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
-import _modDef13774 from "../../../../../_runtime/metro/13774__.js";
+import _modDef13826 from "../../../../../_runtime/metro/13826__.js";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
 import PremiumTierCardDefault from "../../../../components_native/premium/PremiumTierCard.tsx";
@@ -40,7 +41,7 @@ const PremiumConstants = fn(1392);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL },
   giftingSettingsContainer: { flex: 1 },
@@ -88,7 +89,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       title = title.title;
       if (cResult[0] !== title) {
         const obj2 = { title };
-        const tmp6 = __initData2(TableRowGroup.TableRowGroupTitle, obj2);
+        const tmp6 = map1(TableRowGroup.TableRowGroupTitle, obj2);
         cResult[0] = title;
         cResult[1] = tmp6;
         let tmp4 = tmp6;
@@ -98,7 +99,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       return tmp4;
     }
   : function GiftingSectionTitle(title) {
-      return __initData2(TableRowGroup.TableRowGroupTitle, { title: title.title });
+      return map1(TableRowGroup.TableRowGroupTitle, { title: title.title });
     };
 ReactCompilerGating = fn(558);
 let obj4 = {
@@ -194,9 +195,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         noop = tmp15;
-        const isPaymentsBlocked = tmp(7130).useIsPaymentsBlocked();
-        const tmpResult7 = tmp(7130);
-        const outboundPromotions = tmp(9100).useOutboundPromotions();
+        const isPaymentsBlocked = tmp(7136).useIsPaymentsBlocked();
+        const tmpResult7 = tmp(7136);
+        const outboundPromotions = tmp(9120).useOutboundPromotions();
         const promotionsLoaded = outboundPromotions.promotionsLoaded;
         const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
         BadgeDirectoryStore = outboundPromotions.claimedEndedOutboundPromotions;
@@ -226,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const GiftingBadgeExperiment = tmp(10066).GiftingBadgeExperiment;
+        const GiftingBadgeExperiment = tmp(10095).GiftingBadgeExperiment;
         const enabled = GiftingBadgeExperiment.useConfig(tmp22).enabled;
         const _Symbol3 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -263,13 +264,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp24 = cResult[9];
         }
-        const tmpResult8 = tmp(9100);
+        const tmpResult8 = tmp(9120);
         const stateFromStores = tmp(504).useStateFromStores(tmp23, tmp24);
         const tmp27 = navigation(noop.useState(false), 2);
         constants2 = tmp27[0];
         closure_11 = tmp27[1];
         const tmpResult9 = tmp(504);
-        const subscriptionPlansLoaded = tmp(13616).useSubscriptionPlansLoaded();
+        const subscriptionPlansLoaded = tmp(13668).useSubscriptionPlansLoaded();
         const _Symbol4 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           class L {
@@ -311,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -333,7 +334,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -348,7 +349,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -367,7 +368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -381,7 +382,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -400,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -414,7 +415,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (enabled) {
                 tmp = closure_0;
                 tmp2 = closure_2;
-                obj = closure_0(closure_2[27]);
+                obj = closure_0(closure_2[26]);
                 badge = obj.fetchBadge(closure_0(closure_2[22]).BadgeId.GIFTING);
               }
               return;
@@ -423,8 +424,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         function renderEmptyState() {
           const obj = { style: closure_2.emptyGiftLinks, children: null };
-          const obj2 = { style: closure_2.emptyImage, source: _modDef13774 };
-          const items = [__initData2(FastImageDefault, obj2)];
+          const obj2 = { style: closure_2.emptyImage, source: _modDef13826 };
+          const items = [map1(FastImageDefault, obj2)];
           const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
           const obj4 = {
             style: closure_2.emptyGiftHeader,
@@ -434,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl = util.intl;
           obj4.children = intl.string(util.t.B1qgZn);
-          const items1 = [__initData2(Text_Text.Text, obj4)];
+          const items1 = [map1(Text_Text.Text, obj4)];
           const obj5 = {
             style: closure_2.emptyGiftInformation,
             variant: "text-sm/medium",
@@ -443,11 +444,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl2 = util.intl;
           obj5.children = intl2.string(util.t["OV/u0n"]);
-          items1[1] = __initData2(Text_Text.Text, obj5);
+          items1[1] = map1(Text_Text.Text, obj5);
           obj3.children = items1;
-          items[1] = state(hasOwnProperty, obj3);
+          items[1] = closure_2_14(hasOwnProperty, obj3);
           obj.children = items;
-          return state(hasOwnProperty, obj);
+          return closure_2_14(hasOwnProperty, obj);
         }
         cResult[19] = tmp7.emptyGiftDescription;
         cResult[20] = tmp7.emptyGiftHeader;
@@ -455,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[22] = tmp7.emptyGiftLinks;
         cResult[23] = tmp7.emptyImage;
         cResult[24] = renderEmptyState;
-        const tmpResult10 = tmp(13616);
+        const tmpResult10 = tmp(13668);
       }
       const tmpResult6 = recipientUserId(504);
     }
@@ -507,12 +508,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp12 = _slicedToArray(enabled.useState(false), 2);
       const subscriptionPlansLoaded = require("useSubscriptionPlansLoaded").useSubscriptionPlansLoaded();
       const effect = enabled.useEffect(() => {
-        DispatcherDefault.wait(() => {
-          const giftableEntitlements = closure_0(memo[25]).fetchGiftableEntitlements();
-          giftableEntitlements.then(() => closure_1_5(true));
-          const obj = closure_0(memo[25]);
-          stateFromStoresArray(memo[26]).init();
-        });
+        const giftableEntitlements = EntitlementActionCreators.fetchGiftableEntitlements();
+        giftableEntitlements.then(() => closure_1_5(true));
+        BillingActionCreatorsDefault.init();
       }, []);
       const items3 = [enabled];
       const effect1 = enabled.useEffect(() => {
@@ -530,13 +528,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           contentInset: { top: 40 },
           contentContainerStyle: obj8,
           style: tmp2.scrollView,
-          children: closure_13(tmp3(tmp4[43]), {}),
+          children: closure_13(tmp3(tmp4[42]), {}),
         };
         obj9.children = closure_13(closure_6, obj10);
         let tmp17Result8 = closure_13(c5, obj9);
       } else {
         const obj11 = { style: tmp2.giftingSettingsContainer, children: null };
-        const items4 = [closure_13(tmp3(tmp4[44]), {})];
+        const items4 = [closure_13(tmp3(tmp4[43]), {})];
         const obj12 = { ref, style: tmp2.scrollView, contentContainerStyle: obj8, children: null };
         if (enabled) {
           enabled = null != stateFromStores;
@@ -545,12 +543,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj13 = { children: null };
           const obj14 = { style: tmp2.titleWrapper, children: null };
           const obj15 = { title: null };
-          const intl = tmp6(tmp4[34]).intl;
-          obj15.title = intl.string(tmp3(tmp4[40]).sFokBp);
+          const intl = tmp6(tmp4[33]).intl;
+          obj15.title = intl.string(tmp3(tmp4[39]).sFokBp);
           obj14.children = closure_13(closure_17, obj15);
           const items5 = [closure_13(tmp18, obj14)];
           const obj16 = { analyticsLocation };
-          items5[1] = closure_13(tmp3(tmp4[41]), obj16);
+          items5[1] = closure_13(tmp3(tmp4[40]), obj16);
           obj13.children = items5;
           enabled = closure_14(closure_15, obj13);
         }
@@ -562,8 +560,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const keys = Object.keys(memo);
               if (0 === keys.length) {
                 const obj17 = { style: tmp2.emptyGiftLinks, children: null };
-                const obj18 = { style: tmp2.emptyImage, source: tmp3(tmp4[32]) };
-                const items7 = [closure_13(tmp3(tmp4[31]), obj18)];
+                const obj18 = { style: tmp2.emptyImage, source: tmp3(tmp4[31]) };
+                const items7 = [closure_13(tmp3(tmp4[30]), obj18)];
                 const obj19 = { style: tmp2.emptyGiftDescription, accessible: true, children: null };
                 const obj20 = {
                   style: tmp2.emptyGiftHeader,
@@ -571,23 +569,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   color: "mobile-text-heading-primary",
                   children: null,
                 };
-                const intl3 = tmp6(tmp4[34]).intl;
-                obj20.children = intl3.string(tmp6(tmp4[34]).t.B1qgZn);
-                const items8 = [closure_13(tmp6(tmp4[33]).Text, obj20)];
+                const intl3 = tmp6(tmp4[33]).intl;
+                obj20.children = intl3.string(tmp6(tmp4[33]).t.B1qgZn);
+                const items8 = [closure_13(tmp6(tmp4[32]).Text, obj20)];
                 const obj21 = {
                   style: tmp2.emptyGiftInformation,
                   variant: "text-sm/medium",
                   color: "text-default",
                   children: null,
                 };
-                const intl4 = tmp6(tmp4[34]).intl;
-                obj21.children = intl4.string(tmp6(tmp4[34]).t["OV/u0n"]);
-                items8[1] = closure_13(tmp6(tmp4[33]).Text, obj21);
+                const intl4 = tmp6(tmp4[33]).intl;
+                obj21.children = intl4.string(tmp6(tmp4[33]).t["OV/u0n"]);
+                items8[1] = closure_13(tmp6(tmp4[32]).Text, obj21);
                 obj19.children = items8;
                 items7[1] = closure_14(tmp18, obj19);
                 obj17.children = items7;
                 let tmp17Result = closure_14(tmp18, obj17);
-                const tmp3Result = tmp3(tmp4[31]);
+                const tmp3Result = tmp3(tmp4[30]);
               }
               const obj22 = { style: tmp2.inventorySectionWrapper, children: null };
               let tmp17Result5 = null;
@@ -595,21 +593,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj23 = { children: null };
                 const obj24 = { style: tmp2.titleWrapper, children: null };
                 const obj25 = { title: null };
-                const intl8 = tmp6(tmp4[34]).intl;
-                obj25.title = intl8.string(tmp6(tmp4[34]).t.wFsj3B);
+                const intl8 = tmp6(tmp4[33]).intl;
+                obj25.title = intl8.string(tmp6(tmp4[33]).t.wFsj3B);
                 obj24.children = closure_13(closure_17, obj25);
                 const items9 = [
                   closure_13(tmp18, obj24),
                   claimedEndedOutboundPromotions.map((code) => {
                     const outboundPromotion = code.promotion;
                     return closure_1_13(
-                      stateFromStoresArray(memo[35]),
+                      stateFromStoresArray(memo[34]),
                       { outboundPromotion, code: code.code },
                       outboundPromotion.id,
                     );
                   }),
                   activeOutboundPromotions.map((outboundPromotion) =>
-                    __initData2(
+                    map1(
                       OutboundPromotionCardDefault,
                       { outboundPromotion, code: _undefined[outboundPromotion.id] },
                       outboundPromotion.id,
@@ -625,14 +623,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj26 = { children: null };
                 const obj27 = { style: tmp2.titleWrapper, children: null };
                 const obj28 = { title: null };
-                const intl2 = tmp6(tmp4[34]).intl;
-                obj28.title = intl2.string(tmp6(tmp4[34]).t["9KeUbY"]);
+                const intl2 = tmp6(tmp4[33]).intl;
+                obj28.title = intl2.string(tmp6(tmp4[33]).t["9KeUbY"]);
                 obj27.children = closure_13(closure_17, obj28);
                 const items11 = [
                   closure_13(tmp18, obj27),
                   keys.map((item) => {
                     ({ skuId, subscriptionPlanId, giftStyle } = GiftCodeUtils.parseComboId(item));
-                    return __initData2(
+                    return map1(
                       EntitlementGiftGroupCardDefault,
                       { skuId, subscriptionPlanId, entitlements: memo[item], giftStyle },
                       item,
@@ -649,7 +647,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj29 = { style: tmp2.loading };
-        const obj30 = { children: closure_13(tmp6(tmp4[42]).ActivityIndicator, obj29) };
+        const obj30 = { children: closure_13(tmp6(tmp4[41]).ActivityIndicator, obj29) };
         items6[1] = closure_13(c5, obj30);
         let tmp17Result7 = null;
         if (subscriptionPlansLoaded) {
@@ -672,15 +670,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_0_LEADING,
             });
           }
-          const intl5 = tmp6(tmp4[34]).intl;
-          obj32.title = intl5.string(tmp6(tmp4[34]).t["55Ccy0"]);
+          const intl5 = tmp6(tmp4[33]).intl;
+          obj32.title = intl5.string(tmp6(tmp4[33]).t["55Ccy0"]);
           const items12 = [closure_13(closure_17, obj32), , ,];
           const obj33 = { premiumType: closure_11.TIER_2, style: tmp2.tierCard, children: null };
           const obj34 = { style: tmp2.cardText, variant: "text-sm/medium", color: "text-default", children: null };
-          const intl6 = tmp6(tmp4[34]).intl;
+          const intl6 = tmp6(tmp4[33]).intl;
           const obj35 = { onClick: handleLearnMorePremiumClick };
-          obj34.children = intl6.format(tmp6(tmp4[34]).t.thORji, obj35);
-          const items13 = [closure_13(tmp6(tmp4[33]).Text, obj34)];
+          obj34.children = intl6.format(tmp6(tmp4[33]).t.thORji, obj35);
+          const items13 = [closure_13(tmp6(tmp4[32]).Text, obj34)];
           const obj36 = { style: tmp2.buttonWrapper, children: null };
           const obj37 = {
             recipientUserId,
@@ -689,7 +687,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             planId: closure_12.PREMIUM_YEAR_TIER_2,
             analyticsLocation,
           };
-          const items14 = [closure_13(tmp3(tmp4[38]), obj37)];
+          const items14 = [closure_13(tmp3(tmp4[37]), obj37)];
           const obj38 = {
             recipientUserId,
             style: tmp2.giftPurchaseButton,
@@ -697,21 +695,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             planId: closure_12.PREMIUM_MONTH_TIER_2,
             analyticsLocation,
           };
-          items14[1] = closure_13(tmp3(tmp4[38]), obj38);
+          items14[1] = closure_13(tmp3(tmp4[37]), obj38);
           obj36.children = items14;
           items13[1] = closure_14(tmp18, obj36);
           obj33.children = items13;
-          items12[1] = closure_14(tmp3(tmp4[37]), obj33);
+          items12[1] = closure_14(tmp3(tmp4[36]), obj33);
           const obj39 = { style: tmp2.warningMargins };
-          items12[2] = closure_13(tmp3(tmp4[39]), obj39);
+          items12[2] = closure_13(tmp3(tmp4[38]), obj39);
           const obj40 = { children: null };
           const obj41 = { premiumType: closure_11.TIER_0, style: tmp2.tierCard, children: null };
-          const tmp3Result3 = tmp3(tmp4[37]);
+          const tmp3Result3 = tmp3(tmp4[36]);
           const obj42 = { style: tmp2.cardText, variant: "text-sm/medium", color: "text-default", children: null };
-          const intl7 = tmp6(tmp4[34]).intl;
+          const intl7 = tmp6(tmp4[33]).intl;
           const obj43 = { onClick: handleLearnMoreNitroBasicClick };
-          obj42.children = intl7.format(tmp6(tmp4[34]).t.NmpnsP, obj43);
-          const items15 = [closure_13(tmp6(tmp4[33]).Text, obj42)];
+          obj42.children = intl7.format(tmp6(tmp4[33]).t.NmpnsP, obj43);
+          const items15 = [closure_13(tmp6(tmp4[32]).Text, obj42)];
           const obj44 = { style: tmp2.buttonWrapper, children: null };
           const obj45 = {
             recipientUserId,
@@ -720,7 +718,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             planId: closure_12.PREMIUM_YEAR_TIER_0,
             analyticsLocation,
           };
-          const items16 = [closure_13(tmp3(tmp4[38]), obj45)];
+          const items16 = [closure_13(tmp3(tmp4[37]), obj45)];
           const obj46 = {
             recipientUserId,
             style: tmp2.giftPurchaseButton,
@@ -728,18 +726,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             planId: closure_12.PREMIUM_MONTH_TIER_0,
             analyticsLocation,
           };
-          items16[1] = closure_13(tmp3(tmp4[38]), obj46);
+          items16[1] = closure_13(tmp3(tmp4[37]), obj46);
           obj44.children = items16;
           items15[1] = closure_14(tmp18, obj44);
           obj41.children = items15;
-          const items17 = [closure_14(tmp3(tmp4[37]), obj41)];
+          const items17 = [closure_14(tmp3(tmp4[36]), obj41)];
           const obj47 = { style: tmp2.warningMargins };
-          items17[1] = closure_13(tmp3(tmp4[39]), obj47);
+          items17[1] = closure_13(tmp3(tmp4[38]), obj47);
           obj40.children = items17;
           items12[3] = closure_14(closure_15, obj40);
           obj31.children = items12;
           tmp17Result7 = closure_14(tmp18, obj31);
-          const tmp3Result4 = tmp3(tmp4[37]);
+          const tmp3Result4 = tmp3(tmp4[36]);
         }
         items6[2] = tmp17Result7;
         obj12.children = items6;

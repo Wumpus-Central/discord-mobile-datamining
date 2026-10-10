@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let sum1 = tmp7;
           if (0 !== tmp9) {
             let tmp39 = map;
-            let SECTION = map(6759).FastListItemTypes.SECTION;
+            let SECTION = map(6760).FastListItemTypes.SECTION;
             let sectionHeaderSize = getSectionHeaderSize(num);
             let _HermesInternal5 = HermesInternal;
             let str13 = "";
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (0 < tmp9) {
               do {
                 let tmp21 = map;
-                let ITEM = map(6759).FastListItemTypes.ITEM;
+                let ITEM = map(6760).FastListItemTypes.ITEM;
                 let itemSize = getItemSize(num, num3);
                 let _HermesInternal2 = HermesInternal;
                 let str4 = "";
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let sectionFooterSize = getSectionFooterSize(num);
             sum1 = tmp20;
             if (sectionFooterSize > 0) {
-              let SECTION_FOOTER = tmp39(6759).FastListItemTypes.SECTION_FOOTER;
+              let SECTION_FOOTER = tmp39(6760).FastListItemTypes.SECTION_FOOTER;
               let _HermesInternal6 = HermesInternal;
               let str16 = "";
               let str17 = ":";
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               let tmp39 = getSectionFooterSize(num);
               sum1 = tmp15;
               if (tmp39 > 0) {
-                let SECTION_FOOTER = tmp36(6759).FastListItemTypes.SECTION_FOOTER;
+                let SECTION_FOOTER = tmp36(6760).FastListItemTypes.SECTION_FOOTER;
                 let _HermesInternal6 = HermesInternal;
                 let str16 = "";
                 let str17 = ":";

@@ -189,7 +189,7 @@ export default noop.memo(
           tmp3 = obj3;
         }
         const componentState = type(options[4]).useComponentState(type, tmp3);
-        state = componentState.state;
+        const state = componentState.state;
         const executeStateUpdate = componentState.executeStateUpdate;
         const items1 = [state, type];
         closure_5 = maxValues.useMemo(() => {

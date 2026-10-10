@@ -19,7 +19,7 @@ let items = [
   [400, 20, -20],
   [410, 0, 40],
 ];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_7 = createStyles.createStyles({
   emojisContainer: {
     alignItems: "center",
@@ -102,8 +102,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       let tmp = closure_7();
-      dependencyMap = flag(4727).getURL(emojiName);
-      let obj = flag(4727);
+      dependencyMap = flag(4768).getURL(emojiName);
+      let obj = flag(4768);
       return (
         <View style={tmp.emojisContainer}>
           {items.map((item, index) => {

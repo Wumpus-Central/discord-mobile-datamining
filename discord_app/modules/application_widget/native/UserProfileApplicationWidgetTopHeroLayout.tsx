@@ -1,9 +1,9 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopHeroLayout.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05388_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05391_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef6247 from "../../../../_runtime/metro/06247__.js";
+import _modDef6242 from "../../../../_runtime/metro/06242__.js";
 import UserProfileSharedStyles from "../../user_profile/native/UserProfileSharedStyles.tsx";
 import resolvedValuesFromUserApplicationIdentityProfile from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
@@ -16,11 +16,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const HorizontalGradient = fn(1085).HorizontalGradient;
-const CARD_PADDING = fn(6898).CARD_PADDING;
+const CARD_PADDING = fn(6904).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let obj2 = {
   root: { position: "relative" },
   contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 },
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                               obj13.source = obj14;
                                               obj13.style = { width: "100%", height: "100%" };
                                               obj9.children = React5(FastImageDefault, obj13);
-                                              tmp48Result = React5(_modDef6247, obj9);
+                                              tmp48Result = React5(_modDef6242, obj9);
                                             }
                                             obj7.children = tmp48Result;
                                             tmp48Result2 = React5(View, obj7);
@@ -456,7 +456,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj17.source = obj18;
           obj17.style = { width: "100%", height: "100%" };
           obj12.children = React5(FastImageDefault, obj17);
-          tmp15Result3 = React5(_modDef6247, obj12);
+          tmp15Result3 = React5(_modDef6242, obj12);
         }
         obj10.children = tmp15Result3;
         tmp15Result4 = React5(View, obj10);

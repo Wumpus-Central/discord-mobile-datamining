@@ -27,7 +27,7 @@ let closure_8 = async function _fetchVirtualCurrencyBalance() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -46,9 +46,7 @@ let closure_8 = async function _fetchVirtualCurrencyBalance() {
           closure_128_0 = undefined;
           let balance;
           closure_128_2 = undefined;
-          DispatcherDefault.wait(() => {
-            closure_1_1(closure_1_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
-          });
+          DispatcherDefault.dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
           const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_BALANCE, rejectWithError: false };
@@ -110,7 +108,7 @@ let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -129,9 +127,7 @@ let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
           closure_128_0 = undefined;
           let total_redeemed;
           closure_128_2 = undefined;
-          DispatcherDefault.wait(() => {
-            closure_1_1(closure_1_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
-          });
+          DispatcherDefault.dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
           c3 = 1;
           const HTTP = HTTPUtils.HTTP;
           const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED, rejectWithError: false };
@@ -193,7 +189,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -222,7 +218,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
             onRedeemSucceed: closure_129_3,
             onRedeemFail: closure_129_4,
             shouldRefetchBalance,
-          } = skuId);
+          } = closure_0);
           if (shouldRefetchBalance === undefined) {
             shouldRefetchBalance = true;
           }
@@ -248,9 +244,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          closure_130_1(closure_130_2[4]).wait(() => {
-            closure_1(closure_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_REDEEM_START", skuId });
-          });
+          const obj6 = { type: "VIRTUAL_CURRENCY_REDEEM_START", skuId: closure_129_0 };
+          closure_130_1(closure_130_2[4]).dispatch(obj6);
           if (closure_129_2 != null) {
             closure_129_2();
           }
@@ -267,8 +262,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
             const obj9 = closure_130_0(closure_130_2[7]);
           }
           closure_129_8 = result;
-          const obj6 = { checkout_session_id: closure_129_1 };
-          closure_129_9 = obj6;
+          const obj8 = { checkout_session_id: closure_129_1 };
+          closure_129_9 = obj8;
           if (closure_129_8) {
             closure_129_9.test_mode = true;
           }
@@ -280,8 +275,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           };
           c5 = 3;
           c6 = 1;
-          const obj8 = { value: HTTP.post(request), done: false };
-          return obj8;
+          const obj10 = { value: HTTP.post(request), done: false };
+          return obj10;
         }
       } else if (2 === tmp7) {
         c4 = 0;
@@ -292,8 +287,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           billingError = new closure_130_0(closure_130_2[6]).BillingError(closure_129_14);
         }
         closure_129_13 = billingError;
-        const obj10 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: closure_129_0, error: closure_129_13 };
-        closure_130_1(closure_130_2[4]).dispatch(obj10);
+        const obj11 = { type: "VIRTUAL_CURRENCY_REDEEM_FAIL", skuId: closure_129_0, error: closure_129_13 };
+        closure_130_1(closure_130_2[4]).dispatch(obj11);
         if (closure_129_5) {
           closure_130_7();
         }
@@ -301,22 +296,22 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
           tmp69(closure_129_13);
         }
         c6 = 3;
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "+51" };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
       } else if (arg0 === 2) {
         c4 = 0;
         c6 = 3;
-        const obj11 = { value, done: true };
-        return obj11;
+        const obj12 = { value, done: true };
+        return obj12;
       } else {
         body = value.body;
         if (null != body) {
           const _Array = Array;
           if (Array.isArray(body)) {
-            const obj12 = { type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: closure_129_0, entitlements: body };
-            closure_130_1(closure_130_2[4]).dispatch(obj12);
+            const obj13 = { type: "VIRTUAL_CURRENCY_REDEEM_SUCCESS", skuId: closure_129_0, entitlements: body };
+            closure_130_1(closure_130_2[4]).dispatch(obj13);
             if (closure_129_5) {
               closure_130_7();
             }
@@ -325,8 +320,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
             }
             c4 = 0;
             c6 = 3;
-            const obj13 = { value: body, done: true };
-            return obj13;
+            const obj14 = { value: body, done: true };
+            return obj14;
           }
         }
         closure_129_11 = "Could not read entitlements from Virtual Currency redemption response. Response: ";
@@ -334,8 +329,8 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
         const error = new Error(closure_129_11, body);
         closure_129_12 = error;
         closure_130_6.error(closure_129_11, body);
-        const obj14 = { tags: { app_context: "virtual_currency" } };
-        closure_130_1(closure_130_2[8]).captureException(closure_129_12, obj14);
+        const obj15 = { tags: { app_context: "virtual_currency" } };
+        closure_130_1(closure_130_2[8]).captureException(closure_129_12, obj15);
         throw closure_129_12;
       }
     } catch (tmp98) {

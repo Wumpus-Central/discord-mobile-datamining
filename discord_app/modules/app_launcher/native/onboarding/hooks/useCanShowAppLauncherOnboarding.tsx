@@ -13,7 +13,7 @@ import AppLauncherOnboardingPersistedStore from "../stores/AppLauncherOnboarding
 import AppLauncherOnboardingStore from "../stores/AppLauncherOnboardingStore.tsx";
 
 require = fn;
-const BuiltInSectionId = fn(5400).BuiltInSectionId;
+const BuiltInSectionId = fn(5403).BuiltInSectionId;
 let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
 let closure_11 = 5 * DurationsDefault.Millis.SECOND;
@@ -324,15 +324,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (recentApplicationCommandMetadata != null) {
             applicationId = recentApplicationCommandMetadata.applicationId;
           }
-          result = tmp(4899).useIsDismissibleContentDismissed_UNSAFE(
+          result = tmp(4938).useIsDismissibleContentDismissed_UNSAFE(
             tmp(2049).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
           );
-          const tmpResult8 = tmp(4899);
-          const result1 = tmp(4899).useIsDismissibleContentDismissed_UNSAFE(
+          const tmpResult8 = tmp(4938);
+          const result1 = tmp(4938).useIsDismissibleContentDismissed_UNSAFE(
             tmp(2049).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
           );
-          const tmpResult9 = tmp(4899);
-          const result2 = tmp(4899).useIsDismissibleContentDismissed_UNSAFE(
+          const tmpResult9 = tmp(4938);
+          const result2 = tmp(4938).useIsDismissibleContentDismissed_UNSAFE(
             tmp(2049).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
           );
           if (cResult[18] === stateFromStores) {
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[30] = willShowGlobalSearchOnboarding;
           cResult[31] = obj5;
           tmp42 = obj5;
-          const tmpResult10 = tmp(4899);
+          const tmpResult10 = tmp(4938);
         }
         const obj6 = { currentTimeMs: timestamp, recentApplicationCommandMetadata, channelId };
         cResult[15] = channelId;
@@ -513,16 +513,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const applicationId = recentApplicationCommandMetadata.applicationId;
       }
       const tmp2Result5 = channelId(504);
-      result = channelId(4899).useIsDismissibleContentDismissed_UNSAFE(
+      result = channelId(4938).useIsDismissibleContentDismissed_UNSAFE(
         tmp2(2049).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
       );
-      const tmp2Result6 = channelId(4899);
-      let result1 = channelId(4899).useIsDismissibleContentDismissed_UNSAFE(
+      const tmp2Result6 = channelId(4938);
+      let result1 = channelId(4938).useIsDismissibleContentDismissed_UNSAFE(
         tmp2(2049).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
       );
-      const tmp2Result7 = channelId(4899);
+      const tmp2Result7 = channelId(4938);
       let tmp20 = null != stateFromStores1;
-      const result2 = channelId(4899).useIsDismissibleContentDismissed_UNSAFE(
+      const result2 = channelId(4938).useIsDismissibleContentDismissed_UNSAFE(
         tmp2(2049).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
       );
       if (tmp20) {

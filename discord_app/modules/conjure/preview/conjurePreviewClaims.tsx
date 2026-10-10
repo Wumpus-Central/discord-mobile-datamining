@@ -23,7 +23,7 @@ export const awaitConjurePreviewClaim = function awaitConjurePreviewClaim(projec
     clearTimeout(value.timer);
     value.resolve(null);
   }
-  const value4 = map1.get(id);
+  value4 = map1.get(id);
   if (null != value4) {
     const value5 = map1.get(id);
     if (null != value5) {
@@ -88,7 +88,7 @@ export const resolveConjurePreviewClaim = function resolveConjurePreviewClaim(pr
   } else if (!map2.has(id)) {
     const obj7 = { uploadToken: upload_token, projectId };
     closure_1 = id;
-    const value4 = map1.get(id);
+    value4 = map1.get(id);
     if (null != value4) {
       const _clearTimeout = clearTimeout;
       clearTimeout(value4.timer);

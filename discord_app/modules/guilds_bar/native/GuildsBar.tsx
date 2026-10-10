@@ -12,7 +12,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "visible", flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -208,9 +208,9 @@ export default noop.memo(
                             }
                             return tmp28;
                           }
-                          const obj3 = { profile: fastListRef(11583).Profiles.Guilds, children: null };
+                          const obj3 = { profile: fastListRef(11629).Profiles.Guilds, children: null };
                           const obj4 = { gesture, children: tmp25 };
-                          obj3.children = closure_4(fastListRef(6333).GestureDetector, obj4);
+                          obj3.children = closure_4(fastListRef(6334).GestureDetector, obj4);
                           const tmp31 = closure_4(StartupProfilerDefault, obj3);
                           cResult[20] = gesture;
                           cResult[21] = tmp25;
@@ -286,7 +286,7 @@ export default noop.memo(
         closure_7(listProps, fastListRef);
         const obj = { profile: null, children: null };
         const tmp5 = useGuildsBarPropsDefault(fastListRef);
-        obj.profile = fastListRef(11583).Profiles.Guilds;
+        obj.profile = fastListRef(11629).Profiles.Guilds;
         const obj2 = { gesture, children: null };
         const obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: null };
         const tmp9 = StartupProfilerDefault;
@@ -317,7 +317,7 @@ export default noop.memo(
         ];
         obj3.children = items1;
         obj2.children = closure_5(tmp11, obj3);
-        obj.children = closure_4(fastListRef(6333).GestureDetector, obj2);
+        obj.children = closure_4(fastListRef(6334).GestureDetector, obj2);
         return closure_4(tmp9, obj);
       },
 );

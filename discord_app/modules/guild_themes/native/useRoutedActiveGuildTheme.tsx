@@ -20,7 +20,7 @@ function getGuildIdFromNavigationState(routes) {
         }
       }
       if (null == guildId) {
-        state = undefined;
+        let state;
         if (tmp != null) {
           state = tmp.state;
         }
@@ -47,7 +47,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
             }
           }
           if (null == guildId) {
-            state = undefined;
+            let state;
             if (tmp5 != null) {
               state = tmp5.state;
             }

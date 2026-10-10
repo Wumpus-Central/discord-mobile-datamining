@@ -34,3 +34,13 @@ prototype["fromServer"] = function fromServer(marketings) {
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingRecord.tsx");
 
 export const CollectiblesMarketingsRecord = prototype;
+export const rehydratePersistedMarketings = function rehydratePersistedMarketings(arg0) {
+  const entries = Object.entries(arg0);
+  if (typeof prototype === "function") {
+    const obj = Object.create(prototype.prototype);
+    obj.marketingsBySurfaces = tmp3;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};

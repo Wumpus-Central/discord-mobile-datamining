@@ -31,7 +31,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "IconComponent", done: null };
+      return { value: "IconComponent", done: "+51" };
     }
   } else {
     try {
@@ -59,7 +59,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
               const obj6 = {
                 value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () =>
-                    closure_2_1(6040).getAsync(closure_1_0),
+                    closure_2_1(6033).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,

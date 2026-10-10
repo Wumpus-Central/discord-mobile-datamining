@@ -28,13 +28,12 @@ let closure_4 = async function _removeConjureServerApp() {
     if (appName == null) {
       targetAppName = closure_130_0.targetAppName;
     }
-    const obj7 = { key: "CONJURE_APP_REMOVED", content: null, IconComponent: null };
-    obj7.content = intl.formatToPlainString(closure_131_1(closure_131_2[4]).SNFGxP, {
+    const obj7 = { text: null, variant: "success" };
+    obj7.text = intl.formatToPlainString(closure_131_1(closure_131_2[4]).SNFGxP, {
       app: targetAppName,
       server: closure_130_0.guildName,
     });
-    obj7.IconComponent = closure_131_0(closure_131_2[5]).CircleCheckIcon;
-    closure_131_1(closure_131_2[2]).open(obj7);
+    closure_131_1(closure_131_2[2]).open("CONJURE_APP_REMOVED", obj7);
     flag2 = true;
     closure_131_1(closure_131_2[2]);
   }

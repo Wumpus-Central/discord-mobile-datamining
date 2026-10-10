@@ -1,7 +1,7 @@
 // discord_app/modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3117 from "../AgeAssurance.messages.js";
+import _modDef3120 from "../AgeAssurance.messages.js";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -16,9 +16,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3117.gUqXQN);
+        const stringResult = intl.string(_modDef3120.gUqXQN);
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef3117.yBHwMy);
+        const stringResult1 = intl2.string(_modDef3120.yBHwMy);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -45,9 +45,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function AgeVerificationQuestUnsupportedAlertModal() {
       const obj = { title: null, content: null, actions: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef3117.gUqXQN);
+      obj.title = intl.string(_modDef3120.gUqXQN);
       const intl2 = util.intl;
-      obj.content = intl2.string(_modDef3117.yBHwMy);
+      obj.content = intl2.string(_modDef3120.yBHwMy);
       const obj2 = { children: null };
       const obj3 = { text: null };
       const intl3 = util.intl;

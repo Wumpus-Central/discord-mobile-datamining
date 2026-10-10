@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2565 from "../FamilyCenter.messages.js";
+import _modDef2568 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(5091);
+const createStyles = fn(5092);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -33,7 +33,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp7;
           } else {
             if (cResult[11] !== tmp8) {
-              const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "r" };
+              const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "Array" };
               const tmp20 = React4(native.Avatar, obj2);
               cResult[11] = tmp8;
               cResult[12] = tmp20;
@@ -98,7 +98,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { label: null, subLabel: null, icon: null };
         obj2.label = UserUtilsDefault.getName(user);
         obj2.subLabel = topUserOrGuildDescription;
-        const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+        const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
         obj2.icon = React4(native.Avatar, obj4);
         return React4(TableRow2.TableRow, obj2);
       }
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef2565.BxbvS7);
+        const stringResult = intl.string(_modDef2568.BxbvS7);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj = { children: null };
       const obj2 = { variant: "text-md/bold", style: closure_6().header, children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef2565.BxbvS7);
+      obj2.children = intl.string(_modDef2568.BxbvS7);
       const items = [React4(Text_Text.Text, obj2)];
       const tmp = closure_6();
       items[1] = React4(TableRowGroup.TableRowGroup, {
