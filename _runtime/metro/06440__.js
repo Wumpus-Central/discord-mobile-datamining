@@ -1,11 +1,13 @@
 // === Module 6440: ? ===
 
 // Module 6440
-import _mod6441 from "module_6441" /* 6441 */;
-import _mod6443 from "module_6443" /* 6443 */;
-import _mod6444 from "module_6444" /* 6444 */;
+const require = globalThis.__r;
 
-
-export const useCompetingGestures = _mod6441.useCompetingGestures;
-export const useExclusiveGestures = _mod6443.useExclusiveGestures;
-export const useSimultaneousGestures = _mod6444.useSimultaneousGestures;
+for (const key10013 in require("module_6441")) {
+  arg5[key10013] = require("module_6441")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

@@ -1,49 +1,39 @@
 // === Module 14585: ? ===
 
 // Module 14585
-import _mod14529 from "module_14529" /* 14529 */;
-import _mod14554 from "module_14554" /* 14554 */;
-import _mod14582 from "module_14582" /* 14582 */;
-import _mod14586 from "module_14586" /* 14586 */;
+import _mod14576 from "module_14576" /* 14576 */;
+import _mod14577 from "module_14577" /* 14577 */;
+import _mod14584 from "module_14584" /* 14584 */;
 
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14554(value)) {
-    _mod14586(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod14529(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
-        }
-      } else {
-        delete tmp[tmp2];
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod14577(toString)) {
+      const tmp4 = _mod14584(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
       }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        const obj2 = { value, enumerable: false, configurable: !obj.nonConfigurable, writable: !obj.nonWritable };
-        _mod14582.f(arg0, arg1, obj2);
-        const tmp3Result = _mod14582;
-      }
-    } catch (err) {
+      tmpResult = _mod14576;
     }
   }
-  return arg0;
+  const valueOf = arg0.valueOf;
+  if (_mod14577(valueOf)) {
+    const tmp8 = _mod14584(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+    tmp5Result = _mod14576;
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod14577(toString2)) {
+      const tmp10 = _mod14584(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+      tmp5Result2 = _mod14576;
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
 };

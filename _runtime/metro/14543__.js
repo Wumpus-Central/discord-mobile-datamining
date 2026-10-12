@@ -1,19 +1,25 @@
 // === Module 14543: ? ===
 
 // Module 14543
-import _mod14544 from "module_14544" /* 14544 */;
+const require = globalThis.__r;
 
+const require = arg1;
+const dependencyMap = arg6;
 
-export default (arg0, arg1) => {
-  let tmp3 = _mod14544[arg0];
-  if (!tmp3) {
-    let obj = arg1;
-    if (!arg1) {
-      obj = {};
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_14544").units;
+  return units.filter((item) => (function isSupported(unit, arg1) {
+    let str = arg1;
+    if (undefined === arg1) {
+      str = "en";
     }
-    _mod14544[arg0] = obj;
-    tmp3 = obj;
-    const tmpResult = _mod14544;
-  }
-  return tmp3;
+    try {
+      const obj = { style: "unit", unit };
+      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+      return memoizedNumberFormat.resolvedOptions().unit === unit;
+    } catch (err) {
+      return false;
+    }
+  })(item, closure_0));
 };

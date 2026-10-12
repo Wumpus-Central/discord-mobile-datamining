@@ -237,7 +237,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "+51" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -260,7 +260,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
               closure_136_6 = undefined;
               closure_136_7 = undefined;
               value4 = undefined;
-              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "k", cacheCreationInputTokens: "c", cacheReadInputTokens: "getCurrentUser", toolCalls: [], activeToolBlocks: {} };
+              const obj5 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "k", cacheCreationInputTokens: "ti", cacheReadInputTokens: "mode", toolCalls: [], activeToolBlocks: {} };
               closure_136_2 = obj5;
               closure_136_4 = false;
               closure_136_5 = false;
@@ -452,7 +452,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "IconComponent", done: "+51" };
+                return { value: "IconComponent", done: null };
               }
             }
           break;
@@ -1056,7 +1056,7 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "k", cacheCreationInputTokens: "c", cacheReadInputTokens: "getCurrentUser", toolCalls: [], activeToolBlocks: {} };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "k", cacheCreationInputTokens: "ti", cacheReadInputTokens: "mode", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
     processEvent(arg0, obj, closure_1, closure_0);
   });

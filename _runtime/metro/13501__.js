@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_templates/native/images", width: 32, height: 32, scales: [2, 3], hash: "10db56263423f61f9d871a4581be001b", name: "ic_guild_template", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/seasonal", width: 144, height: 150, scales: [1], hash: "ccdfa582cc7b9c2866cdcd81d25dbd3c", name: "box_idle", type: "png" });

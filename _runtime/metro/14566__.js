@@ -1,21 +1,19 @@
 // === Module 14566: ? ===
 
 // Module 14566
-let propertyIsEnumerable = {}.propertyIsEnumerable;
-if (!getOwnPropertyDescriptor) {
-  if (getOwnPropertyDescriptor) {
-    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
-      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
-      return tmp && tmp.enumerable;
-    };
+import _mod14567 from "module_14567" /* 14567 */;
+
+
+export default (arg0, arg1) => {
+  let tmp3 = _mod14567[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod14567[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod14567;
   }
-  arg5.f = propertyIsEnumerable;
-} else {
-  const call = propertyIsEnumerable.call;
-  if (typeof call === "unknown") {
-    let propertyIsEnumerableResult = propertyIsEnumerable(1);
-  } else {
-    propertyIsEnumerableResult = call(obj, 1);
-  }
-  obj = { 1: 2 };
-}
+  return tmp3;
+};

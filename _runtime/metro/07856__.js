@@ -1,11 +1,15 @@
 // === Module 7856: ? ===
 
 // Module 7856
-const obj = { 4: null };
-obj[4] = {
-  name: "ShotInfo",
-  description(arg0) {
-    return arg0;
+import _mod7853 from "module_7853" /* 7853 */;
+
+require = arg1;
+const dependencyMap = arg6;
+const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
+obj[45056] = {
+  name: "MPFVersion",
+  description(value) {
+    return _mod7853.getStringValue(value);
   }
 };
 

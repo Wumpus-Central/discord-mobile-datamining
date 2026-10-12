@@ -1,25 +1,49 @@
 // === Module 14518: ? ===
 
 // Module 14518
+import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 14519 */;
+import compareKV from "compareKV" /* 14520 */;
+import likelySubtags from "likelySubtags" /* 14523 */;
+import _mod14524 from "module_14524" /* 14524 */;
+import e_mod from "e" /* 1172 */;
+
 const require = globalThis.__r;
 
-const require = arg1;
-const dependencyMap = arg6;
+let e = e_mod;
+e.__exportStar(emitUnicodeLanguageId, exports);
+let e = e_mod;
+e.__exportStar(_mod14524, exports);
+let e = e_mod;
+e.__exportStar(likelySubtags, exports);
 
-export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
-  _require = locale;
-  const timezones = require("module_14519").timezones;
-  return timezones.filter((item) => (function isSupported(timeZone, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
+export const getCanonicalLocales = function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
     }
-    try {
-      const obj = { timeZone };
-      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(str, obj);
-      return memoizedDateTimeFormat.resolvedOptions().timeZone === timeZone;
-    } catch (err) {
-      return false;
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(require("module_14522").parseUnicodeLocaleId(arr3[num3])));
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
     }
-  })(item, closure_0));
+  }
+  return items;
 };
+export const isStructurallyValidLanguageTag = require("module_14522").isStructurallyValidLanguageTag;
+export const isUnicodeLanguageSubtag = require("module_14522").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("module_14522").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("module_14522").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("module_14522").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("module_14522").parseUnicodeLocaleId;

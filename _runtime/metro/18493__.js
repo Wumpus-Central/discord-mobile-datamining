@@ -1,7 +1,31 @@
 // === Module 18493: ? ===
 
 // Module 18493
-import registerAsset from "module_1132" /* 1132 */;
+import _mod637 from "module_637" /* 637 */;
+import _mod18494 from "module_18494" /* 18494 */;
+import stringToArray from "stringToArray" /* 18495 */;
+import castSlice from "castSlice" /* 18498 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "ed13dc1c27325d7ffd6ba2403047329c", name: "ic_full_server_gating_24px", type: "png" });
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod637(arg0);
+    let tmp3;
+    if (_mod18494(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+};

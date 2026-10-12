@@ -1,14 +1,27 @@
 // === Module 14558: ? ===
 
 // Module 14558
-import _mod14539 from "module_14539" /* 14539 */;
-import _mod14559 from "module_14559" /* 14559 */;
+import module_14559_mod from "module_14559" /* 14559 */;
 
+const call = prototype.call;
+let module_14559 = module_14559_mod;
+if (module_14559) {
+  const bind = prototype.bind;
+  module_14559 = bind.bind(call, call);
+}
+if (!module_14559) {
+  module_14559 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14539(arg0[arg1])) {
-    tmp4 = _mod14559(tmp);
-  }
-  return tmp4;
-};
+export default module_14559;

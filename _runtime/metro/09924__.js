@@ -1,15 +1,15 @@
 // === Module 9924: ? ===
 
 // Module 9924
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9826 */;
-import _mod9913 from "module_9913" /* 9913 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 9827 */;
+import _mod9914 from "module_9914" /* 9914 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLTimeUnitLaterFormatParser = require;
+const NLTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,14 +29,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + _mod9913.TIME_UNITS_PATTERN + ")(later|na|vanaf nu|voortaan|vooruit|uit)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod9913.TIME_UNITS_PATTERN + ")(later|vanaf nu)(?=(?:\\W|$))", "i");
-class NLTimeUnitLaterFormatParser {
+const regExp = new RegExp("(" + _mod9914.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
+const regExp1 = new RegExp("(" + _mod9914.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
+class NLTimeUnitAgoFormatParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, NLTimeUnitLaterFormatParser);
+    tmp = c2(this, NLTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitLaterFormatParser);
+    obj = closure_4(NLTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -50,7 +50,7 @@ class NLTimeUnitLaterFormatParser {
     return tmp3Result;
   }
 }
-_inherits(NLTimeUnitLaterFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,10 +62,11 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const ParsingComponents = NLTimeUnitLaterFormatParser(9822).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitLaterFormatParser(9913).parseDuration(arg1[1]));
+      const parseDurationResult = NLTimeUnitAgoFormatParser(9914).parseDuration(arg1[1]);
+      const ParsingComponents = NLTimeUnitAgoFormatParser(9823).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, NLTimeUnitAgoFormatParser(9822).reverseDuration(NLTimeUnitAgoFormatParser(9914).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(NLTimeUnitLaterFormatParser, items);
+export default _createClass(NLTimeUnitAgoFormatParser, items);

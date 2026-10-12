@@ -1,71 +1,34 @@
 // === Module 14663: ? ===
 
 // Module 14663
-import get_ActivityIndicator from "module_17" /* 17 */;
 
-function getDevMenu() {
-
-}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
+export const getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
+  try {
+    let obj = {};
+    let obj2 = {};
+    if (width) {
+      const obj5 = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
+      const _Math = Math;
+      obj5.screenWidth = Math.ceil(width.width);
+      const _Math2 = Math;
+      obj5.screenHeight = Math.ceil(width.height);
+      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
+      obj = obj5;
     }
+    if (value) {
+      const obj9 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
+      const _Math3 = Math;
+      obj9.windowWidth = Math.ceil(value.width);
+      const _Math4 = Math;
+      obj9.windowHeight = Math.ceil(value.height);
+      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
+      obj2 = obj9;
+    }
+    const obj10 = {};
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(obj2);
+    return obj10;
+  } catch (err) {
+    return null;
   }
-});
+};

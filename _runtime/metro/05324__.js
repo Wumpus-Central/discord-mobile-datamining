@@ -129,7 +129,7 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg
         };
       }
       obj4.onGestureCancel = onGestureCancel;
-      const items = [style, { zIndex: "r" }];
+      const items = [style, { zIndex: "top" }];
       obj4.style = items;
       obj4.activityState = activityState2;
       obj4.screenId = tmp14;

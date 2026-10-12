@@ -1,34 +1,14 @@
 // === Module 14599: ? ===
 
 // Module 14599
-import _mod17 from "module_17" /* 17 */;
-import replaceByteInByteSequence from "replaceByteInByteSequence" /* 14600 */;
+import _mod14600 from "module_14600" /* 14600 */;
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+
+export default (arg0) => {
+  const tmp = _mod14600(arg0);
+  let num = 0;
+  if (tmp > 0) {
+    num = min(tmp, 9007199254740991);
   }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
-  }
+  return num;
 };
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {
-
-};
-
-export const URL = replaceByteInByteSequence.URL;

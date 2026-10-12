@@ -1,30 +1,27 @@
 // === Module 14510: ? ===
 
 // Module 14510
-const require = globalThis.__r;
+import e from "e" /* 1172 */;
 
-const require = arg1;
-const dependencyMap = arg6;
+e.__extends(function MissingLocaleDataError() {
+  const self = this;
+  let tmp2 = null !== Error;
+  if (!tmp2) {
+    if (!tmp2) {
+      tmp2 = self;
+    }
+    tmp2.type = "MISSING_LOCALE_DATA";
+    return tmp2;
+  } else {
+    const apply = Error.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+  }
+}, Error);
 
-export const getSupportedCalendars = function getSupportedCalendars(locale) {
-  _require = locale;
-  const calendars = require("module_14511").calendars;
-  return calendars.filter((item) => (function isSupportedCalendar(item, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
-    }
-    try {
-      const concat = "".concat;
-      const combined = "".concat(str, "-u-ca-");
-      const memoizedDateTimeFormat = locale(closure_1_1[0]).createMemoizedDateTimeFormat(combined.concat(item));
-      if ("gregory" === item) {
-        if ("gregory" === memoizedDateTimeFormat.resolvedOptions().calendar) {
-          return false;
-        }
-      }
-      return true;
-    } catch (err) {
-    }
-  })(item, closure_0));
+export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
+  return "MISSING_LOCALE_DATA" === type.type;
 };

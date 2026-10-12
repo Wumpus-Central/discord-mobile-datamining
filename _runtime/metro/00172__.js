@@ -58,16 +58,16 @@ class PerformanceResourceTiming {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    definePropertyResult = Object.defineProperty(tmp3Result, metroRequire, { writable: true, value: "a" });
-    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "a" });
-    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "a" });
-    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "a" });
-    definePropertyResult4 = Object.defineProperty(tmp3Result, c10, { writable: true, value: "a" });
-    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "a" });
-    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "a" });
-    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "a" });
-    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_2_14, { writable: true, value: "a" });
-    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_2_15, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(tmp3Result, metroRequire, { writable: true, value: "Array" });
+    definePropertyResult1 = Object.defineProperty(tmp3Result, closure_7, { writable: true, value: "Array" });
+    definePropertyResult2 = Object.defineProperty(tmp3Result, closure_8, { writable: true, value: "Array" });
+    definePropertyResult3 = Object.defineProperty(tmp3Result, closure_9, { writable: true, value: "Array" });
+    definePropertyResult4 = Object.defineProperty(tmp3Result, c10, { writable: true, value: "Array" });
+    definePropertyResult5 = Object.defineProperty(tmp3Result, closure_11, { writable: true, value: "Array" });
+    definePropertyResult6 = Object.defineProperty(tmp3Result, closure_12, { writable: true, value: "Array" });
+    definePropertyResult7 = Object.defineProperty(tmp3Result, closure_13, { writable: true, value: "Array" });
+    definePropertyResult8 = Object.defineProperty(tmp3Result, closure_2_14, { writable: true, value: "Array" });
+    definePropertyResult9 = Object.defineProperty(tmp3Result, closure_2_15, { writable: true, value: "Array" });
     ({ fetchStart: closure_4(undefined, tmp6, metroRequire)[metroRequire], requestStart: closure_4(undefined, tmp6, closure_7)[closure_7], connectStart: closure_4(undefined, tmp6, closure_8)[closure_8], connectEnd: closure_4(undefined, tmp6, closure_9)[closure_9], responseStart: closure_4(undefined, tmp6, c10)[c10], responseEnd: closure_4(undefined, tmp6, closure_11)[closure_11], responseStatus: closure_4(undefined, tmp6, closure_12)[closure_12], contentType: closure_4(undefined, tmp6, closure_13)[closure_13], encodedBodySize: closure_4(undefined, tmp6, closure_2_14)[closure_2_14], decodedBodySize: closure_4(undefined, tmp6, closure_2_15)[closure_2_15] } = global);
     return tmp3Result;
   }

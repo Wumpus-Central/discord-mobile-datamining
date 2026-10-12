@@ -1,449 +1,576 @@
 // === Module 14458: ? ===
 
 // Module 14458
-import digitsToString2 from "digitsToString" /* 14436 */;
-import GetUnsignedRoundingMode from "GetUnsignedRoundingMode" /* 14454 */;
-import ToRawFixed from "ToRawFixed" /* 14456 */;
-import S_UNICODE_REGEX from "S_UNICODE_REGEX" /* 14459 */;
-import e from "e" /* 1172 */;
+import digitsToString from "digitsToString" /* 14459 */;
+import _mod14460 from "module_14460" /* 14460 */;
+import TEN from "TEN" /* 14462 */;
 
-const digitsToString = e.__importDefault(digitsToString2);
-const regExp = new RegExp("^".concat(S_UNICODE_REGEX.S_UNICODE_REGEX.source));
-const regExp1 = new RegExp("".concat(S_UNICODE_REGEX.S_UNICODE_REGEX.source, "$"));
-const re5 = /[#0](?:[\.,][#0]+)*/g;
-
-export default function formatToParts(magnitude, numbers, arg2, currencyDisplay) {
-  ({ sign, exponent } = magnitude);
-  ({ notation, style, numberingSystem } = currencyDisplay);
-  const first = numbers.numbers.nu[0];
-  let tmp3 = null;
-  if (tmp2) {
-    ({ roundedNumber, sign: sign2 } = magnitude);
-    const _String = String;
-    const _Math = Math;
-    ({ compactDisplay, currencyDisplay } = currencyDisplay);
-    const StringResult = String(Math.pow(10, magnitude.magnitude));
-    const first1 = numbers.numbers.nu[0];
-    if ("currency" === style) {
-      if ("name" !== currencyDisplay) {
-        const currency = numbers.numbers.currency;
-        const short = currency[numberingSystem] || currency[first1].short;
-        let tmp11;
-        if (null !== short) {
-          if (undefined !== short) {
-            tmp11 = short[StringResult];
-          }
-        }
-        let tmp9 = null;
-        if (tmp11) {
-          let arr = tmp11[arg2.select(arg2, roundedNumber.toNumber(roundedNumber))] || tmp11.other;
-          tmp9 = null;
-          if ("0" !== arr) {
-            let str6 = arr;
-            if (arr.indexOf(";") < 0) {
-              const concat = "".concat;
-              const combined = "".concat(arr, ";-");
-              str6 = combined.concat(arr);
-            }
-            const parts = str6.split(";");
-            [tmp14, arr2] = parts;
-            if (0 === sign2) {
-              let str7 = tmp14;
+require = arg1;
+const dependencyMap = arg6;
+class ToNumber {
+  constructor(arg0) {
+    if (typeof arg0 === "number") {
+      tmp23 = closure_0;
+      tmp24 = closure_1;
+      tmp25 = new.target;
+      tmp26 = new.target;
+      tmp27 = arg0;
+      decimal = new closure_0(closure_1[0]).Decimal(arg0);
+      tmp29 = decimal;
+      return decimal;
+    } else {
+      tmp30 = closure_0;
+      tmp31 = closure_1;
+      tmp32 = typeof arg0 !== "bigint";
+      if (typeof arg0 !== "bigint") {
+        tmp32 = typeof arg0 !== "symbol";
+      }
+      tmp4 = globalThis;
+      _TypeError = TypeError;
+      str = "BigInt and Symbol are not supported";
+      invariantResult = closure_0(closure_1[1]).invariant(tmp32, "BigInt and Symbol are not supported", TypeError);
+      if (undefined === arg0) {
+        tmp19 = new.target;
+        num3 = NaN;
+        tmp20 = new.target;
+        decimal1 = new tmp30(tmp31[0]).Decimal(NaN);
+        tmp22 = decimal1;
+        return decimal1;
+      } else {
+        tmp33 = null;
+        if (null !== arg0) {
+          num4 = 0;
+          if (0 !== arg0) {
+            flag = true;
+            if (true === arg0) {
+              tmp15 = new.target;
+              num2 = 1;
+              tmp16 = new.target;
+              decimal2 = new tmp30(tmp31[0]).Decimal(1);
+              tmp18 = decimal2;
+              return decimal2;
+            } else if (typeof arg0 === "string") {
+              try {
+                tmp6 = new.target;
+                tmp7 = new.target;
+                tmp8 = arg0;
+                decimal3 = new tmp30(tmp31[0]).Decimal(arg0);
+                tmp10 = decimal3;
+                return decimal3;
+              } catch (err) {
+                tmp11 = new.target;
+                num = NaN;
+                tmp12 = new.target;
+                decimal4 = new tmp3(tmp[0]).Decimal(NaN);
+                tmp14 = decimal4;
+                return decimal4;
+              }
             } else {
-              str7 = arr2;
-              if (-1 !== sign2) {
-                if (arr2.indexOf("-") >= 0) {
-                  let replaced = arr2.replace(/-/g, "+");
+              _TypeError2 = TypeError;
+              str2 = "object expected";
+              invariantResult1 = tmp30(tmp31[1]).invariant(typeof arg0 === "object", "object expected", TypeError);
+              tmp35 = ToPrimitive;
+              str3 = "number";
+              tmp36 = ToPrimitive(arg0, "number");
+              _TypeError3 = TypeError;
+              invariantResult2 = tmp30(tmp31[1]).invariant(typeof tmp36 !== "object", "object expected", TypeError);
+              tmp38 = ToNumber;
+              return ToNumber(tmp36);
+            }
+          }
+        }
+        return tmp30(tmp31[2]).ZERO;
+      }
+    }
+  }
+}
+class MonthFromTime {
+  constructor(arg0) {
+    tmp = c3;
+    rounded = Math.floor(arg0 / c3);
+    date = new Date(arg0);
+    uTCFullYear = date.getUTCFullYear();
+    if (uTCFullYear < 100) {
+      _Date2 = Date;
+      tmp5 = new.target;
+      num2 = 0;
+      tmp6 = new.target;
+      num3 = 0;
+      date1 = new Date(0);
+      tmp7 = date1;
+      num4 = 1;
+      setUTCFullYearResult = date1.setUTCFullYear(uTCFullYear, 0, 1);
+      tmp9 = date1;
+      num5 = 0;
+      num6 = 0;
+      num7 = 0;
+      num8 = 0;
+      setUTCHoursResult = date1.setUTCHours(0, 0, 0, 0);
+      result = date1.getTime() / tmp;
+    } else {
+      _Date = Date;
+      num = 0;
+      result = Date.UTC(uTCFullYear, 0) / tmp;
+    }
+    diff = rounded - result;
+    date2 = new Date(arg0);
+    uTCFullYear1 = date2.getUTCFullYear();
+    num9 = 365;
+    if (uTCFullYear1 % 4 === 0) {
+      num10 = 366;
+      num11 = 366;
+      if (uTCFullYear1 % 100 === 0) {
+        num12 = 400;
+        if (uTCFullYear1 % 400 !== 0) {
+          num10 = 365;
+        }
+        num11 = num10;
+      }
+      num9 = num11;
+    }
+    num13 = 1;
+    if (365 === num9) {
+      num13 = 0;
+    }
+    if (0 <= diff) {
+      num14 = 31;
+      if (diff < 31) {
+        return 0;
+      }
+    }
+    if (diff < 59 + num13) {
+      return 1;
+    } else {
+      num28 = 90;
+      if (diff < 90 + num13) {
+        num27 = 2;
+        return 2;
+      } else {
+        num29 = 120;
+        if (diff < 120 + num13) {
+          num26 = 3;
+          return 3;
+        } else {
+          num30 = 151;
+          if (diff < 151 + num13) {
+            return 4;
+          } else {
+            num31 = 181;
+            if (diff < 181 + num13) {
+              num25 = 5;
+              return 5;
+            } else {
+              num32 = 212;
+              if (diff < 212 + num13) {
+                num24 = 6;
+                return 6;
+              } else {
+                num15 = 243;
+                if (diff < 243 + num13) {
+                  num23 = 7;
+                  return 7;
                 } else {
-                  const concat2 = "+".concat;
-                  replaced = "+".concat(tmp14);
+                  num16 = 273;
+                  if (diff < 273 + num13) {
+                    num22 = 8;
+                    return 8;
+                  } else {
+                    num17 = 304;
+                    if (diff < 304 + num13) {
+                      num21 = 9;
+                      return 9;
+                    } else {
+                      num18 = 334;
+                      if (diff < 334 + num13) {
+                        num20 = 10;
+                        return 10;
+                      } else if (diff < 365 + num13) {
+                        num19 = 11;
+                        return 11;
+                      } else {
+                        _Error = Error;
+                        tmp13 = new.target;
+                        str = "Invalid time";
+                        tmp14 = new.target;
+                        error = new Error("Invalid time");
+                        tmp16 = error;
+                        throw error;
+                      }
+                    }
+                  }
                 }
-                str7 = replaced;
               }
             }
-            tmp14 = /0+/;
-            const replaced1 = str7.replace(/([^\s;\-\+\d¤]+)/g, "{c:$1}").replace(tmp14, "0");
-            const str12 = str7.replace(/([^\s;\-\+\d¤]+)/g, "{c:$1}");
           }
-          const tmp12 = tmp11[arg2.select(arg2, roundedNumber.toNumber(roundedNumber))] || tmp11.other;
         }
-        const tmp10 = currency[numberingSystem] || currency[first1];
       }
-      tmp3 = tmp9;
     }
-    const decimal = numbers.numbers.decimal;
-    tmp9 = null;
-    if (decimal[numberingSystem] || decimal[first1][compactDisplay][StringResult]) {
-      arr = tmp8[arg2.select(arg2, roundedNumber.toNumber(roundedNumber))] || tmp8.other;
-    }
-    const tmp7 = decimal[numberingSystem] || decimal[first1];
   }
-  if ("currency" === style) {
-    if ("name" !== currencyDisplay.currencyDisplay) {
-      if (numbers.currencies[currencyDisplay.currency]) {
-        const currencyDisplay2 = currencyDisplay.currencyDisplay;
-        if ("code" === currencyDisplay2) {
-          let currency2 = currencyDisplay.currency;
+}
+class ToPrimitive {
+  constructor(arg0, arg1) {
+    if (typeof arg0 === "object") {
+      tmp15 = null;
+      if (null != arg0) {
+        tmp = globalThis;
+        _Symbol = Symbol;
+        tmp2 = undefined;
+        if (Symbol.toPrimitive in arg0) {
+          _Symbol2 = Symbol;
+          tmp2 = arg0[Symbol.toPrimitive];
+        }
+        tmp3 = arg1;
+        if (undefined !== tmp2) {
+          str4 = "default";
+          if (undefined !== arg1) {
+            str4 = "string";
+            if ("string" !== arg1) {
+              tmp11 = closure_0;
+              tmp12 = closure_1;
+              str5 = "preferredType must be \"string\" or \"number\"";
+              str6 = "number";
+              invariantResult = closure_0(closure_1[1]).invariant("number" === arg1, "preferredType must be \"string\" or \"number\"");
+              str4 = "number";
+            }
+          }
+          call = tmp2.call;
+          tmp14 = typeof call === "unknown" ? tmp2(str4) : call(arg0, str4);
+          if (typeof tmp14 !== "object") {
+            return tmp14;
+          } else {
+            _TypeError2 = TypeError;
+            tmp16 = new.target;
+            str7 = "Cannot convert exotic object to primitive.";
+            tmp17 = new.target;
+            typeError = new TypeError("Cannot convert exotic object to primitive.");
+            tmp19 = typeError;
+            throw typeError;
+          }
         } else {
-          currency2 = "symbol" === currencyDisplay2 ? tmp18.symbol : tmp18.narrow;
-        }
-      } else {
-        currency2 = currencyDisplay.currency;
-      }
-    }
-  }
-  let str16 = tmp3;
-  if (!tmp3) {
-    if ("decimal" !== style) {
-      if ("unit" !== style) {
-        numbers = numbers.numbers;
-        if (tmp17) {
-          const arr5 = numbers.currency[numberingSystem] || numbers.numbers.currency[first][currencyDisplay.currencySign];
-          let str27 = arr5;
-          if (arr5.indexOf(";") < 0) {
-            const concat5 = "".concat;
-            const combined1 = "".concat(arr5, ";-");
-            str27 = combined1.concat(arr5);
+          str = arg1;
+          if (undefined === arg1) {
+            str = "number";
           }
-          const parts1 = str27.split(";");
-          [tmp26, arr6] = parts1;
-          if (0 === sign) {
-            let tmp27 = tmp26;
-          } else {
-            tmp27 = arr6;
-            if (-1 !== sign) {
-              if (arr6.indexOf("-") >= 0) {
-                let replaced2 = arr6.replace(/-/g, "+");
-              } else {
-                const concat6 = "+".concat;
-                replaced2 = "+".concat(tmp26);
+          str2 = "string";
+          arr = "string" === str ? ["toString", "valueOf"] : ["valueOf", "toString"];
+          num = 0;
+          num2 = 1;
+          if (0 < arr.length) {
+            while (true) {
+              tmp4 = arg0[arr[num]];
+              tmp5 = num;
+              if (typeof tmp4 === "function") {
+                call2 = tmp4.call;
+                tmp6 = typeof call2 === "unknown" ? tmp4() : call2(arg0);
+                if (typeof tmp6 !== "object") {
+                  break;
+                }
               }
-              tmp27 = replaced2;
+              num = num + 1;
             }
+            return tmp6;
           }
-          str16 = tmp27;
-          const tmp24 = numbers.currency[numberingSystem] || numbers.numbers.currency[first];
-        } else {
-          let str20 = arr3;
-          if (numbers.percent[numberingSystem] || numbers.numbers.percent[first].indexOf(";") < 0) {
-            const concat3 = "".concat;
-            const combined2 = "".concat(arr3, ";-");
-            str20 = combined2.concat(arr3);
-          }
-          const parts2 = str20.split(";");
-          [tmp21, arr4] = parts2;
-          if (0 === sign) {
-            let tmp22 = tmp21;
-          } else {
-            tmp22 = arr4;
-            if (-1 !== sign) {
-              if (arr4.indexOf("-") >= 0) {
-                let replaced3 = arr4.replace(/-/g, "+");
-              } else {
-                const concat4 = "+".concat;
-                replaced3 = "+".concat(tmp21);
-              }
-              tmp22 = replaced3;
-            }
-          }
-          str16 = tmp22;
+          _TypeError = TypeError;
+          tmp7 = new.target;
+          str3 = "Cannot convert object to primitive value";
+          tmp8 = new.target;
+          typeError1 = new TypeError("Cannot convert object to primitive value");
+          tmp10 = typeError1;
+          throw typeError1;
         }
       }
     }
-    const standard = numbers.numbers.decimal[numberingSystem] || numbers.numbers.decimal[first].standard;
-    let str34 = standard;
-    if (standard.indexOf(";") < 0) {
-      const concat7 = "".concat;
-      const combined3 = "".concat(standard, ";-");
-      str34 = combined3.concat(standard);
-    }
-    const parts3 = str34.split(";");
-    [tmp31, arr8] = parts3;
-    if (0 === sign) {
-    } else if (-1 !== sign) {
-      if (arr8.indexOf("-") >= 0) {
-        let replaced4 = arr8.replace(/-/g, "+");
-      } else {
-        const concat8 = "+".concat;
-        replaced4 = "+".concat(tmp31);
-      }
-    }
-    const tmp29 = numbers.numbers.decimal[numberingSystem] || numbers.numbers.decimal[first];
+    return arg0;
   }
-  const str40 = re5.exec(str16)[0];
-  tmp2 = "compact" === notation && magnitude.magnitude;
-  const str42 = str16.replace(re5, "{0}").replace(/'(.)'/g, "$1");
-  let str43 = str42;
-  if ("currency" === style) {
-    str43 = str42;
-    if ("name" !== currencyDisplay.currencyDisplay) {
-      const afterInsertBetween = tmp35.currencySpacing.afterInsertBetween;
-      let tmp36 = afterInsertBetween;
-      if (afterInsertBetween) {
-        tmp36 = !regExp1.test(currency2);
-      }
-      let str45 = str42;
-      if (tmp36) {
-        const concat9 = "\u00A4".concat;
-        str45 = str42.replace("\u00A4{0}", "\u00A4".concat(afterInsertBetween, "{0}"));
-      }
-      const beforeInsertBetween = tmp35.currencySpacing.beforeInsertBetween;
-      let tmp38 = beforeInsertBetween;
-      if (beforeInsertBetween) {
-        tmp38 = !regExp.test(currency2);
-      }
-      str43 = str45;
-      if (tmp38) {
-        const concat10 = "{0}".concat;
-        str43 = str45.replace("{0}\u00A4", "{0}".concat(beforeInsertBetween, "\u00A4"));
-      }
-    }
-  }
-  const parts4 = str43.split(/({c:[^}]+}|\{0\}|[¤%\-\+])/g);
-  const items = [];
-  let num9 = 0;
-  if (0 < parts4.length) {
-    while (true) {
-      let str50 = parts4[num9];
-      if (str50) {
-        if ("{0}" === str50) {
-          break;
-        } else if ("-" === str50) {
-          let obj = { type: "minusSign", value: tmp40.minusSign };
-          let arr7 = items.push(obj);
-        } else if ("+" === str50) {
-          let obj2 = { type: "plusSign", value: tmp40.plusSign };
-          let arr9 = items.push(obj2);
-        } else if ("%" === str50) {
-          let obj3 = { type: "percentSign", value: tmp40.percentSign };
-          let arr10 = items.push(obj3);
-        } else if ("\u00A4" === str50) {
-          let obj4 = { type: "currency", value: currency2 };
-          let arr11 = items.push(obj4);
-        } else {
-          let obj5 = /^\{c:/;
-          let push = items.push;
-          if (obj5.test(str50)) {
-            let obj6 = { type: "compact", value: str50.substring(3, str50.length - 1) };
-            let arr12 = push(obj6);
-          } else {
-            let obj7 = { type: "literal", value: str50 };
-            let arr13 = push(obj7);
-          }
-        }
-      }
-      num9 = num9 + 1;
-    }
-    const push2 = items.push;
-    let items2 = !tmp3;
-    if (!tmp3) {
-      const useGrouping = currencyDisplay.useGrouping;
-      items2 = null === useGrouping || undefined === useGrouping || useGrouping;
-      const tmp50 = null === useGrouping || undefined === useGrouping || useGrouping;
-    }
-    const roundingIncrement = currencyDisplay.roundingIncrement;
-    let obj8 = dependencyMap;
-    let formattedString = GetUnsignedRoundingMode.GetUnsignedRoundingMode(currencyDisplay.roundingMode, tmp42);
-    value = undefined;
-    ({ formattedString: formattedString2, roundedNumber: roundedNumber2 } = magnitude);
-    if (roundedNumber2.isNaN()) {
-      obj8 = { type: "nan", value: formattedString2 };
-      formattedString2 = [obj8];
-      let items1 = formattedString2;
-      push2.apply(items, items1);
-    } else if (!roundedNumber2.isFinite()) {
-      const obj9 = { type: "infinity", value: formattedString2 };
-      items1 = [obj9];
-    }
-    value = value(14460).digitMapping[numberingSystem];
-    let replaced5 = formattedString2;
-    if (value) {
-      value = (arg0) => fn[+arg0] || arg0;
-      replaced5 = formattedString2.replace(/\d/g, value);
-    }
-    const index = replaced5.indexOf(".");
-    let substr1;
-    let substr = replaced5;
-    if (index > 0) {
-      substr = replaced5.slice(0, index);
-      substr1 = replaced5.slice(index + 1);
-    }
-    let flag = true;
-    if ("always" !== items2) {
-      if ("min2" === items2) {
-        flag = roundedNumber2.greaterThanOrEqualTo(10000);
-      } else {
-        flag = false;
-        if (tmp54) {
-          let greaterThanOrEqualToResult = tmp41;
-          if (!tmp41) {
-            greaterThanOrEqualToResult = roundedNumber2.greaterThanOrEqualTo(10000);
-          }
-          flag = greaterThanOrEqualToResult;
-        }
-        tmp54 = "auto" === items2 || items2;
-      }
-    }
-    obj8 = [];
-    if (flag) {
-      if (tmp17) {
-        if (null != tmp40.currencyGroup) {
-          const parts5 = str40.split(".")[0].split(",");
-          let num10 = 3;
-          if (parts5.length > 1) {
-            num10 = parts5[parts5.length - 1].length;
-          }
-          let num11 = 3;
-          if (parts5.length > 2) {
-            num11 = parts5[parts5.length - 2].length;
-          }
-          items2 = [];
-          const diff = substr.length - num10;
-          if (diff > 0) {
-            items2.push(substr.slice(diff, diff + num10));
-            let diff1 = diff - num11;
-            let tmp61 = diff1;
-            if (diff1 > 0) {
-              do {
-                let arr15 = items2.push(substr.slice(diff1, diff1 + num11));
-                diff1 = diff1 - num11;
-                tmp61 = diff1;
-              } while (diff1 > 0);
-            }
-            items2.push(substr.slice(0, tmp61 + num11));
-          } else {
-            items2.push(substr);
-          }
-          if (items2.length > 0) {
-            do {
-              let obj10 = { type: "integer", value: items2.pop() };
-              let arr18 = obj8.push(obj10);
-              if (items2.length > 0) {
-                let obj11 = { type: "group", value };
-                let arr19 = obj8.push(obj11);
-              }
-            } while (items2.length > 0);
-          }
-          const str51 = str40.split(".")[0];
-        }
-      }
-      value = tmp40.group;
-    } else {
-      const obj12 = { type: "integer", value: substr };
-      obj8.push(obj12);
-    }
-    if (undefined === substr1) {
-      if ("scientific" === notation) {
-        items1 = obj8;
-        if (roundedNumber2.isFinite()) {
-          const obj13 = { type: "exponentSeparator", value: tmp40.exponential };
-          obj8.push(obj13);
-          value = exponent;
-          if (exponent < 0) {
-            const obj14 = { type: "exponentMinusSign", value: tmp40.minusSign };
-            obj8.push(obj14);
-            value = -exponent;
-          }
-          items2 = new.target;
-          const _default1 = new digitsToString.default(value);
-          const obj15 = { type: "exponentInteger", value: null };
-          formattedString = ToRawFixed.ToRawFixed(_default1, 0, 0, roundingIncrement, formattedString).formattedString;
-          obj15.value = formattedString;
-          obj8.push(obj15);
-          items1 = obj8;
-        }
-      } else {
-        items1 = obj8;
-      }
-    } else {
-      if (!tmp17) {
-        const obj16 = { type: "decimal", value: tmp40.decimal };
-        const obj17 = { type: "fraction", value: substr1 };
-        obj8.push(obj16, obj17);
-      }
-      const currencyDecimal = tmp40.currencyDecimal;
-    }
-  }
-  if ("currency" === style) {
-    if ("name" === currencyDisplay.currencyDisplay) {
-      if (numbers.currencies[currencyDisplay.currency]) {
-        const roundedNumber5 = magnitude.roundedNumber;
-        const timesResult = roundedNumber5.times(digitsToString.default.pow(10, exponent));
-        const displayName = tmp99.displayName;
-        let currency3 = displayName[arg2.select(arg2, timesResult.toNumber(timesResult))] || displayName.other;
-        const _default3 = digitsToString.default;
-        const tmp101 = displayName[arg2.select(arg2, timesResult.toNumber(timesResult))] || displayName.other;
-      } else {
-        currency3 = currencyDisplay.currency;
-      }
-      const items3 = [];
-      const parts6 = numbers.numbers.currency[numberingSystem] || numbers.numbers.currency[first].unitPattern.split(/(\{[01]\})/g);
-      for (let num18 = 0; num18 < parts6.length; num18 = num18 + 1) {
-        let tmp102 = parts6[num18];
-        if ("{0}" === tmp102) {
-          let push4 = items3.push;
-          let applyResult1 = push4.apply(items3, items);
-        } else if ("{1}" === tmp102) {
-          let obj18 = { type: "currency", value: currency3 };
-          let arr46 = items3.push(obj18);
-        } else if (tmp102) {
-          let obj19 = { type: "literal", value: tmp102 };
-          let arr47 = items3.push(obj19);
-        }
-      }
-      return items3;
-    } else {
-      return items;
-    }
-  } else if ("unit" === style) {
-    ({ unit, unitDisplay } = currencyDisplay);
-    if (numbers.units.simple[unit]) {
-      const roundedNumber4 = magnitude.roundedNumber;
-      const timesResult1 = roundedNumber4.times(digitsToString.default.pow(10, exponent));
-      let str59 = numbers.units.simple[unit][unitDisplay][arg2.select(arg2, timesResult1.toNumber(timesResult1))] || numbers.units.simple[unit][unitDisplay].other;
-      const _default2 = digitsToString.default;
-      const tmp90 = numbers.units.simple[unit][unitDisplay][arg2.select(arg2, timesResult1.toNumber(timesResult1))] || numbers.units.simple[unit][unitDisplay].other;
-    } else {
-      const parts7 = unit.split("-per-");
-      [tmp81, tmp82] = parts7;
-      const roundedNumber3 = magnitude.roundedNumber;
-      const timesResult2 = roundedNumber3.times(digitsToString.default.pow(10, exponent));
-      const tmp86 = numbers.units.simple[tmp81][unitDisplay][arg2.select(arg2, timesResult2.toNumber(timesResult2))] || numbers.units.simple[tmp81][unitDisplay].other;
-      const str53 = numbers.units.simple[tmp82].perUnit[unitDisplay];
-      if (str53) {
-        str59 = str53.replace("{0}", tmp86);
-      } else {
-        const str55 = numbers.units.simple[tmp82][unitDisplay][arg2.select(arg2, 1)] || numbers.units.simple[tmp82][unitDisplay].other;
-        str59 = numbers.units.compound.per[unitDisplay].replace("{0}", tmp86).replace("{1}", str55.replace("{0}", ""));
-        const str56 = numbers.units.compound.per[unitDisplay].replace("{0}", tmp86);
-      }
-      const _default = digitsToString.default;
-    }
-    const items4 = [];
-    const parts8 = str59.split(/(\s*\{0\}\s*)/);
-    for (let num16 = 0; num16 < parts8.length; num16 = num16 + 1) {
-      let tmp91 = parts8[num16];
-      let obj23 = /^(\s*)\{0\}(\s*)$/;
-      let match = obj23.exec(tmp91);
-      if (match) {
-        if (match[1]) {
-          let obj20 = { type: "literal", value: match[1] };
-          let arr48 = items4.push(obj20);
-        }
-        let push3 = items4.push;
-        let applyResult2 = push3.apply(items4, items);
-        if (match[2]) {
-          let obj21 = { type: "literal", value: match[2] };
-          let arr49 = items4.push(obj21);
-        }
-      } else if (tmp91) {
-        let obj22 = { type: "unit", value: tmp91 };
-        let arr50 = items4.push(obj22);
-      }
-    }
-    return items4;
+}
+let c3 = 86400000;
+let c5 = 24;
+let c6 = 60;
+let c7 = 60;
+let c8 = 1000;
+let c9 = 60000;
+let c10 = 3600000;
+
+export const ToString = function ToString(arg0) {
+  if (typeof arg0 === "symbol") {
+    const _TypeError = TypeError;
+    throw TypeError("Cannot convert a Symbol value to a string");
   } else {
-    return items;
+    const _String = String;
+    return String(arg0);
   }
-  const str41 = str16.replace(re5, "{0}");
 };
+export { ToNumber };
+export const TimeClip = function TimeClip(isFinite) {
+  if (isFinite.isFinite()) {
+    if (absResult.greaterThan(8640000000000001)) {
+      const decimal = new digitsToString.Decimal(NaN);
+      return decimal;
+    } else {
+      const obj2 = ToNumber(isFinite);
+      if (!obj2.isNaN()) {
+        if (!obj2.isZero()) {
+          let ZERO = obj2;
+          if (!obj2.isFinite()) {
+            const floorResult = obj2.abs().floor();
+            let negatedResult = floorResult;
+            if (obj2.isNegative()) {
+              negatedResult = floorResult.negated();
+            }
+            ZERO = negatedResult;
+            const absResult1 = obj2.abs();
+          }
+        }
+        return ZERO;
+      }
+      ZERO = TEN.ZERO;
+    }
+    absResult = isFinite.abs();
+  } else {
+    const decimal1 = new digitsToString.Decimal(NaN);
+    return decimal1;
+  }
+};
+export const ToObject = function ToObject(arg0) {
+  if (null == arg0) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("undefined/null cannot be converted to object");
+    throw typeError;
+  } else {
+    const _Object = Object;
+    return Object(arg0);
+  }
+};
+export const SameValue = function SameValue(arg0, arg1) {
+  if (Object.is) {
+    const _Object = Object;
+    return Object.is(arg0, arg1);
+  } else if (arg0 === arg1) {
+    let tmp2 = 0 !== arg0;
+    if (!tmp2) {
+      tmp2 = 1 / arg0 === 1 / arg1;
+    }
+    return tmp2;
+  } else {
+    return arg0 != arg0 && arg1 != arg1;
+  }
+};
+export const ArrayCreate = function ArrayCreate(arg0) {
+  const array = new Array(arg0);
+  return array;
+};
+export const HasOwnProperty = function HasOwnProperty(defaultResult, initializedLocale) {
+  hasOwnProperty = Object.prototype.hasOwnProperty;
+  const call = hasOwnProperty.call;
+  return typeof call === "unknown" ? hasOwnProperty(initializedLocale) : call(defaultResult, initializedLocale);
+};
+export const Type = function Type(fn) {
+  if (null === fn) {
+    return "Null";
+  } else if (undefined === fn) {
+    return "Undefined";
+  } else {
+    if (typeof fn !== "function") {
+      if (typeof fn !== "object") {
+        if (typeof fn === "number") {
+          return "Number";
+        } else if (typeof fn === "boolean") {
+          return "Boolean";
+        } else if (typeof fn === "string") {
+          return "String";
+        } else if (typeof fn === "symbol") {
+          return "Symbol";
+        } else if (typeof fn === "bigint") {
+          return "BigInt";
+        }
+      }
+    }
+    return "Object";
+  }
+};
+export const Day = function Day(arg0) {
+  return Math.floor(arg0 / c3);
+};
+export const WeekDay = function WeekDay(arg0) {
+  const sum = Math.floor(arg0 / c3) + 4;
+  return sum - Math.floor(sum / 7) * 7;
+};
+export const DayFromYear = function DayFromYear(arg0) {
+  if (arg0 < 100) {
+    const _Date2 = Date;
+    const date = new Date(0);
+    date.setUTCFullYear(arg0, 0, 1);
+    date.setUTCHours(0, 0, 0, 0);
+    return date.getTime() / c3;
+  } else {
+    const _Date = Date;
+    return Date.UTC(arg0, 0) / c3;
+  }
+};
+export const TimeFromYear = function TimeFromYear(arg0) {
+  return Date.UTC(arg0, 0);
+};
+export const YearFromTime = function YearFromTime(arg0) {
+  return new Date(arg0).getUTCFullYear();
+};
+export const DaysInYear = function DaysInYear(arg0) {
+  let num = 365;
+  if (arg0 % 4 === 0) {
+    let num3 = 366;
+    let num4 = 366;
+    if (arg0 % 100 === 0) {
+      if (arg0 % 400 !== 0) {
+        num3 = 365;
+      }
+      num4 = num3;
+    }
+    num = num4;
+  }
+  return num;
+};
+export const DayWithinYear = function DayWithinYear(arg0) {
+  const rounded = Math.floor(arg0 / c3);
+  const uTCFullYear = new Date(arg0).getUTCFullYear();
+  if (uTCFullYear < 100) {
+    const _Date2 = Date;
+    const date1 = new Date(0);
+    date1.setUTCFullYear(uTCFullYear, 0, 1);
+    date1.setUTCHours(0, 0, 0, 0);
+    let result = date1.getTime() / c3;
+  } else {
+    const _Date = Date;
+    result = Date.UTC(uTCFullYear, 0) / c3;
+  }
+  return rounded - result;
+};
+export const InLeapYear = function InLeapYear(arg0) {
+  const uTCFullYear = new Date(arg0).getUTCFullYear();
+  let num = 365;
+  if (uTCFullYear % 4 === 0) {
+    let num3 = 366;
+    let num4 = 366;
+    if (uTCFullYear % 100 === 0) {
+      if (uTCFullYear % 400 !== 0) {
+        num3 = 365;
+      }
+      num4 = num3;
+    }
+    num = num4;
+  }
+  let num6 = 1;
+  if (365 === num) {
+    num6 = 0;
+  }
+  return num6;
+};
+export { MonthFromTime };
+export const DateFromTime = function DateFromTime(arg0) {
+  const rounded = Math.floor(arg0 / c3);
+  const uTCFullYear = new Date(arg0).getUTCFullYear();
+  if (uTCFullYear < 100) {
+    const _Date2 = Date;
+    const date1 = new Date(0);
+    date1.setUTCFullYear(uTCFullYear, 0, 1);
+    date1.setUTCHours(0, 0, 0, 0);
+    let result = date1.getTime() / c3;
+  } else {
+    const _Date = Date;
+    result = Date.UTC(uTCFullYear, 0) / c3;
+  }
+  const diff = rounded - result;
+  const tmp12 = MonthFromTime(arg0);
+  const date = new Date(arg0);
+  const uTCFullYear1 = new Date(arg0).getUTCFullYear();
+  let num9 = 365;
+  if (uTCFullYear1 % 4 === 0) {
+    let num10 = 366;
+    let num11 = 366;
+    if (uTCFullYear1 % 100 === 0) {
+      if (uTCFullYear1 % 400 !== 0) {
+        num10 = 365;
+      }
+      num11 = num10;
+    }
+    num9 = num11;
+  }
+  let num13 = 1;
+  if (365 === num9) {
+    num13 = 0;
+  }
+  if (0 === tmp12) {
+    return diff + 1;
+  } else if (1 === tmp12) {
+    return diff - 30;
+  } else if (2 === tmp12) {
+    return diff - 58 - num13;
+  } else if (3 === tmp12) {
+    return diff - 89 - num13;
+  } else if (4 === tmp12) {
+    return diff - 119 - num13;
+  } else if (5 === tmp12) {
+    return diff - 150 - num13;
+  } else if (6 === tmp12) {
+    return diff - 180 - num13;
+  } else if (7 === tmp12) {
+    return diff - 211 - num13;
+  } else if (8 === tmp12) {
+    return diff - 242 - num13;
+  } else if (9 === tmp12) {
+    return diff - 272 - num13;
+  } else if (10 === tmp12) {
+    return diff - 303 - num13;
+  } else if (11 === tmp12) {
+    return diff - 333 - num13;
+  } else {
+    const _Error = Error;
+    const error = new Error("Invalid time");
+    throw error;
+  }
+  const date2 = new Date(arg0);
+};
+export const HourFromTime = function HourFromTime(arg0) {
+  const rounded = Math.floor(arg0 / c10);
+  return rounded - Math.floor(rounded / c5) * c5;
+};
+export const MinFromTime = function MinFromTime(arg0) {
+  const rounded = Math.floor(arg0 / c9);
+  return rounded - Math.floor(rounded / c6) * c6;
+};
+export const SecFromTime = function SecFromTime(arg0) {
+  const rounded = Math.floor(arg0 / c8);
+  return rounded - Math.floor(rounded / c7) * c7;
+};
+export const OrdinaryHasInstance = function OrdinaryHasInstance(fn, obj, boundTargetFunction) {
+  if (typeof fn === "function") {
+    boundTargetFunction = undefined;
+    if (null != boundTargetFunction) {
+      boundTargetFunction = boundTargetFunction.boundTargetFunction;
+    }
+    if (boundTargetFunction) {
+      let boundTargetFunction1;
+      if (null != boundTargetFunction) {
+        boundTargetFunction1 = boundTargetFunction.boundTargetFunction;
+      }
+      return obj instanceof boundTargetFunction1;
+    } else if (typeof obj !== "object") {
+      return false;
+    } else {
+      const prototype = fn.prototype;
+      if (typeof prototype !== "object") {
+        const _TypeError = TypeError;
+        const typeError = new TypeError("OrdinaryHasInstance called on an object with an invalid prototype property.");
+        throw typeError;
+      } else {
+        const _Object = Object;
+        const call = isPrototypeOf.call;
+        return typeof call === "unknown" ? isPrototypeOf(obj) : call(prototype, obj);
+      }
+    }
+  } else {
+    return false;
+  }
+};
+export const msFromTime = function msFromTime(arg0) {
+  return arg0 - Math.floor(arg0 / c8) * c8;
+};
+export { ToPrimitive };

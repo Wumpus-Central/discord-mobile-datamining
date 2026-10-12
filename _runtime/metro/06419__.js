@@ -1,20 +1,29 @@
 // === Module 6419: ? ===
 
 // Module 6419
-import _mod19 from "module_19" /* 19 */;
+import _mod6378 from "module_6378" /* 6378 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6403 */;
+import _mod6420 from "module_6420" /* 6420 */;
+import _mod6422 from "module_6422" /* 6422 */;
 
-let useMemo = _mod19.useMemo;
+require = arg1;
+const dependencyMap = arg6;
 
-export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
-  closure_0 = handlerTag;
-  closure_1 = memoizedGestureCallbacks;
-  useMemo = disableReanimated;
-  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
-  closure_3 = tmp;
-  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
-  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
-  items[5] = tmp;
-  return useMemo(() => (arg0) => {
-    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
-  }, items);
+export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
+  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = _mod6378.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
+    }
+    const tmpResult = _mod6422;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
+  }
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
+  }
+  return { jsEventHandler: _mod6420.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
 };

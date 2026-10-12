@@ -1,13 +1,20 @@
 // === Module 6565: ? ===
 
 // Module 6565
+import _mod6550 from "module_6550" /* 6550 */;
+import _mod6566 from "module_6566" /* 6566 */;
 
-export default function _assertThisInitialized(arg0) {
-  if (undefined === arg0) {
-    const _ReferenceError = ReferenceError;
-    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    throw referenceError;
+
+export default function _possibleConstructorReturn(arg0, fn) {
+  if (fn) {
+    _mod6550;
+    return fn;
+  }
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
   } else {
-    return arg0;
+    return _mod6566(arg0);
   }
 };

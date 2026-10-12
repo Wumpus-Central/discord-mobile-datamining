@@ -1,42 +1,20 @@
 // === Module 14592: ? ===
 
 // Module 14592
-import _mod14531 from "module_14531" /* 14531 */;
-import _mod14532 from "module_14532" /* 14532 */;
-import _mod14534 from "module_14534" /* 14534 */;
-import _mod14535 from "module_14535" /* 14535 */;
-import _mod14552 from "module_14552" /* 14552 */;
-import _mod14561 from "module_14561" /* 14561 */;
-import _mod14581 from "module_14581" /* 14581 */;
-import _mod14593 from "module_14593" /* 14593 */;
+import _mod14558 from "module_14558" /* 14558 */;
+import _mod14579 from "module_14579" /* 14579 */;
+import f2 from "f" /* 14593 */;
+import _mod14603 from "module_14603" /* 14603 */;
+import _mod14604 from "module_14604" /* 14604 */;
 
-let closure_4 = _mod14535([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod14552(arg0);
-    const f = _mod14581.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod14534(arguments[num]);
-      if (f) {
-        let tmp8 = _mod14593(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
-      } else {
-        arr = _mod14593(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod14531;
-        if (tmp12) {
-          tmp12 = !_mod14561(tmp2, tmp5, tmp9);
-        }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
-        }
-      }
-    }
-    return tmp;
-  };
-}
+let closure_2 = _mod14558([].concat);
 
-export default assign;
+export default _mod14579("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f2.f(_mod14603(arg0));
+  const f = _mod14604.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
+  }
+  return tmp2;
+});

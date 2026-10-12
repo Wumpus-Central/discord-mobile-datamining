@@ -15,9 +15,9 @@ class NativeReanimatedModule {
   constructor() {
     self = this;
     tmp = closure_3(this, DummyReanimatedModuleProxy);
-    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
+    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "Array" });
     tmp3 = metroRequire;
-    definePropertyResult1 = Object.defineProperty(this, metroRequire, { writable: true, value: "a" });
+    definePropertyResult1 = Object.defineProperty(this, metroRequire, { writable: true, value: "Array" });
     tmp5 = closure_4;
     tmp7 = closure_1;
     tmp8 = c2;

@@ -1,53 +1,193 @@
 // === Module 7803: ? ===
 
 // Module 7803
-import _mod7799 from "module_7799" /* 7799 */;
 import _mod7800 from "module_7800" /* 7800 */;
+import _mod7801 from "module_7801" /* 7801 */;
+import _mod7804 from "module_7804" /* 7804 */;
+import is7Z from "is7Z" /* 7805 */;
+import _mod7806 from "module_7806" /* 7806 */;
+import _mod7807 from "module_7807" /* 7807 */;
+import _mod7808 from "module_7808" /* 7808 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
-  fileChunk = _mod7799.getFileChunk(fileChunk);
-  const FileTypes = _mod7800.FileTypes;
-  let checkByFileTypeResult1 = FileTypes.checkByFileType(fileChunk, "aac");
-  if (!checkByFileTypeResult1) {
-    excludeSimilarTypes = undefined;
-    if (null != excludeSimilarTypes) {
-      excludeSimilarTypes = excludeSimilarTypes.excludeSimilarTypes;
-    }
-    let checkByFileTypeResult = !excludeSimilarTypes;
-    if (!excludeSimilarTypes) {
-      const fileChunk1 = _mod7799.getFileChunk(fileChunk);
-      const FileTypes2 = _mod7800.FileTypes;
-      checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
-    }
-    checkByFileTypeResult1 = checkByFileTypeResult;
+const self = this;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let fn = self;
+  if (self) {
+    fn = self.__exportStar;
   }
-  return checkByFileTypeResult1;
-};
-export const isAMR = function isAMR(fileChunk) {
-  fileChunk = _mod7799.getFileChunk(fileChunk);
-  const FileTypes = _mod7800.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "amr");
-};
-export const isFLAC = function isFLAC(fileChunk) {
-  fileChunk = _mod7799.getFileChunk(fileChunk);
-  const FileTypes = _mod7800.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flac");
-};
-export const isM4A = function isM4A(fileChunk) {
-  fileChunk = _mod7799.getFileChunk(fileChunk);
-  const FileTypes = _mod7800.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4a");
-};
-export const isMP3 = function isMP3(fileChunk) {
-  fileChunk = _mod7799.getFileChunk(fileChunk);
-  const FileTypes = _mod7800.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mp3");
-};
-export const isWAV = function isWAV(fileChunk) {
-  fileChunk = _mod7799.getFileChunk(fileChunk);
-  const FileTypes = _mod7800.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "wav");
-};
+  if (!fn) {
+    fn = (obj, exports) => {
+      for (const key10007 in arg0) {
+        let tmp6 = "default" === key10007;
+        if (tmp6) {
+          if (tmp6) {
+            continue;
+          } else {
+            let tmp4 = self2(arg1, arg0, key10007);
+            continue;
+          }
+          continue;
+        } else {
+          let _Object = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10007);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10007);
+          }
+        }
+      }
+    };
+  }
+  let _Object2 = Object;
+  exports.validateFileType = undefined;
+  fn(_mod7804, exports);
+  fn(is7Z, exports);
+  fn(_mod7806, exports);
+  fn(_mod7807, exports);
+  fn(_mod7808, exports);
+  exports.validateFileType = function validateFileType(fileChunk, arr, chunkSize) {
+    let items = [];
+    const items1 = [
+      ...new Set(arr.map((item) => {
+        const parts = item.split(".");
+        const formatted = parts.join("").toUpperCase();
+        let combined = formatted;
+        if ("7Z" === formatted) {
+          const _HermesInternal = HermesInternal;
+          combined = "_" + formatted;
+        }
+        return combined;
+      }))
+    ];
+    for (const item10023 of items1) {
+      let _Object = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
+      let call = hasOwnProperty.call;
+      let FileTypes = _mod7801.FileTypes;
+      if (typeof call === "unknown") {
+        let hasOwnPropertyResult = hasOwnProperty(item10023);
+      } else {
+        hasOwnPropertyResult = call(FileTypes, item10023);
+      }
+      if (hasOwnPropertyResult) {
+        arr = items.push(item10023);
+        continue;
+      } else {
+        let _TypeError = TypeError;
+        let _HermesInternal = HermesInternal;
+        let str2 = "` is not supported. Please make sure that `types` list conatins only supported files";
+        let str3 = "Type `";
+        let tmp8 = new.target;
+        let tmp9 = new.target;
+        let typeError = new TypeError("Type `" + item10023.toLowerCase() + "` is not supported. Please make sure that `types` list conatins only supported files");
+        throw typeError;
+      }
+    }
+    if (chunkSize) {
+      const _Object2 = Object;
+      const call2 = hasOwnProperty2.call;
+      if (typeof call2 === "unknown") {
+        let hasOwnProperty2Result = hasOwnProperty2("chunkSize");
+      } else {
+        hasOwnProperty2Result = call2(chunkSize, "chunkSize");
+      }
+      if (hasOwnProperty2Result) {
+        chunkSize = undefined;
+        if (null != chunkSize) {
+          chunkSize = chunkSize.chunkSize;
+        }
+        let num = 0;
+        if (null !== chunkSize) {
+          num = 0;
+          if (undefined !== chunkSize) {
+            num = chunkSize;
+          }
+        }
+        if (num <= 0) {
+          const _RangeError = RangeError;
+          const rangeError = new RangeError("chunkSize must be bigger than zero");
+          throw rangeError;
+        }
+      }
+    }
+    if (!chunkSize) {
+      const arr3 = (function addSimilarTypes(items) {
+        if (items.some((item) => "MP4" === item)) {
+          items = ["M4V"];
+        } else {
+          items = items.some((item) => "AAC" === item) ? ["M4A"] : [];
+        }
+        return items;
+      })(items);
+      let combined = items;
+      if (arr3.length > 0) {
+        combined = items.concat(arr3);
+      }
+    } else {
+      let excludeSimilarTypes;
+      if (null != chunkSize) {
+        excludeSimilarTypes = chunkSize.excludeSimilarTypes;
+      }
+      combined = items;
+    }
+    let items2 = [];
+    const items3 = [];
+    for (const item10079 of combined) {
+      let tmp21 = require;
+      let FileTypes2 = _mod7801.FileTypes;
+      items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
+      let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod7801.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
+      if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
+        let FileTypes3 = tmp21(7801).FileTypes;
+        let arr2 = items3.push(FileTypes3.getInfoByName(item10079));
+      }
+      continue;
+    }
+    let num2;
+    if (null != chunkSize) {
+      num2 = chunkSize.chunkSize;
+    }
+    if (!num2) {
+      num2 = 64;
+    }
+    fileChunk = _mod7800.getFileChunk(fileChunk, num2);
+    const FileTypes4 = _mod7801.FileTypes;
+    const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
+    require = detectSignatureResult;
+    if (detectSignatureResult) {
+      if (items3.length > 0) {
+        const found = items3.filter((signatures) => {
+          signatures = signatures.signatures;
+          return signatures.includes(detectSignatureResult);
+        });
+        if (found.length > 0) {
+          const FileTypes5 = _mod7801.FileTypes;
+          const result = FileTypes5.detectTypeByAdditionalCheck(fileChunk, found);
+          dependencyMap = result;
+          return result && combined.some((item) => item.toLowerCase() === result);
+        }
+      }
+      return true;
+    } else {
+      return false;
+    }
+    const set = new Set(arr.map((item) => {
+      const parts = item.split(".");
+      const formatted = parts.join("").toUpperCase();
+      let combined = formatted;
+      if ("7Z" === formatted) {
+        const _HermesInternal = HermesInternal;
+        combined = "_" + formatted;
+      }
+      return combined;
+    }));
+  };
+} else {
+  let _Object = Object;
+}

@@ -4,11 +4,11 @@
 import _mod14577 from "module_14577" /* 14577 */;
 
 
-export default (arg0) => {
-  const tmp = _mod14577(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod14577(obj);
   }
-  return num;
+  return tmp2;
 };

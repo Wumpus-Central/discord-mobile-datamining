@@ -1,44 +1,24 @@
 // === Module 14567: ? ===
 
 // Module 14567
-import _mod14532 from "module_14532" /* 14532 */;
-import _mod14554 from "module_14554" /* 14554 */;
+import _mod14551 from "module_14551" /* 14551 */;
+import _mod14552 from "module_14552" /* 14552 */;
+import _mod14568 from "module_14568" /* 14568 */;
 
-const re2 = /#|\.prototype\./;
-function isForced(arg0, arg1) {
-  if (typeof fn === "function") {
-    const _String = String;
-    const str3 = String(arg0).replace(re2, ".");
-    const tmp5 = tmp[str3.toLowerCase(str3)];
-    let tmp7 = tmp5 === P;
-    if (!tmp7) {
-      if (tmp5 === N) {
-        tmp7 = tmp9;
-      } else {
-        let tmp11Result = dependencyMap;
-        if (_mod14554(arg1)) {
-          tmp11Result = _mod14532;
-          let tmp11ResultResult = tmp11Result(arg1);
-        } else {
-          tmp11ResultResult = arg1;
-        }
-      }
-    }
-    return tmp7;
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+let prop = _mod14551["__core-js_shared__"];
+if (!prop) {
+  prop = _mod14552("__core-js_shared__", {});
 }
-const normalize = (arg0) => {
-  const str = String(arg0);
-  return String(arg0).replace(re2, ".").toLowerCase();
-};
-isForced.normalize = normalize;
-const data = {};
-isForced.data = data;
-isForced.NATIVE = "N";
-const N = "N";
-isForced.POLYFILL = "P";
-const P = "P";
+let versions = prop.versions;
+if (!versions) {
+  const items = [];
+  prop.versions = items;
+  versions = items;
+}
+let str2 = "global";
+if (_mod14568) {
+  str2 = "pure";
+}
+versions.push({ version: "3.41.0", mode: str2, copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)", license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE", source: "https://github.com/zloirock/core-js" });
 
-export default isForced;
+export default prop;
